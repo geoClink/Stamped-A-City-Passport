@@ -1,0 +1,135 @@
+//
+//  SwiftUIView.swift
+//  Stamped
+//
+//  Created by George Clinkscales on 2/1/26.
+//
+import SwiftUI
+
+struct QuickConverterView: View {
+    @ObservedObject var viewModel: CityDetailViewModel
+    @Binding var userAmount: String
+    @AppStorage("reduce_motion") var reduceMotion = false
+
+    @AppStorage("user_home_currency") var homeCurrencyCode = "USD"
+    @AppStorage("high_contrast_mode") var isHighContrast = false
+    
+    let allCurrencies = [
+        "AED", "ARS", "AUD", "BRL", "CAD", "CLP", "CNY", "COP", "CZK",
+        "DKK", "EGP", "EUR", "GBP", "HKD", "HUF", "IDR", "ILS", "INR",
+        "JPY", "KES", "KRW", "MAD", "MXN", "MYR", "NOK", "NZD", "PEN",
+        "PHP", "QAR", "SAR", "SGD", "THB", "TRY", "TWD", "USD", "VND", "ZAR"
+    ].sorted()
+    
+    private var accentColor: Color {
+        isHighContrast ? .primary : Color("adventureOrange")
+    }
+    
+    var body: some View {
+        VStack(spacing: 12) {
+            HStack(alignment: .center) {
+                VStack(alignment: .leading, spacing: 6) {
+                    headerLabel(isInput: true)
+                    
+                    TextField("1.00", text: $userAmount)
+                        .keyboardType(.decimalPad)
+                        .font(.title3.bold())
+                        .padding(10)
+                        .background(isHighContrast ? Color.clear : Color(.systemGray6))
+                        .cornerRadius(isHighContrast ? 0 : 10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: isHighContrast ? 0 : 10)
+                                .stroke(Color.primary, lineWidth: isHighContrast ? 2 : 0)
+                        )
+                        .frame(minHeight: 44)
+                        .accessibilityLabel("Amount to convert")
+                }
+                
+                Button {
+                    withAnimation(reduceMotion ? .none : .spring(response: 0.3, dampingFraction: 0.6)) {
+                        viewModel.isSwapped.toggle()
+                        HapticManager.shared.trigger(.impact)
+                    }
+                    let from = viewModel.isSwapped ? viewModel.city.details.currencyCode : homeCurrencyCode
+                    let to = viewModel.isSwapped ? homeCurrencyCode : viewModel.city.details.currencyCode
+                    UIAccessibility.post(notification: .announcement, argument: "Swapped. Converting from \(from) to \(to)")
+                } label: {
+                    Image(systemName: "arrow.left.arrow.right.circle.fill")
+                        .font(.system(size: 28))
+                        .foregroundColor(accentColor)
+                        .frame(width: 44, height: 44)
+                        .background(Color.white.opacity(0.001))
+                        .contentShape(Rectangle())
+                }
+                .padding(.top, 20)
+                .accessibilityLabel("Swap conversion direction")
+                .accessibilityHint("Currently converting from \(viewModel.isSwapped ? "Local" : "Home") to \(viewModel.isSwapped ? "Home" : "Local") currency.")
+                
+                VStack(alignment: .trailing, spacing: 6) {
+                    headerLabel(isInput: false)
+                    
+                    Text(viewModel.convertAmount(userAmount))
+                        .font(.title3.bold())
+                        .foregroundColor(accentColor)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .frame(height: 44)
+                        .padding(.horizontal, 4)
+                        .accessibilityElement(children: .combine)
+                        .accessibilityLabel("Converted amount")
+                        .accessibilityValue(viewModel.convertAmount(userAmount))
+                }
+            }
+            
+            Text("Rates updated February 2026.")
+                .font(.caption2)
+                .italic()
+                .foregroundStyle(isHighContrast ? .primary : .secondary)
+                .padding(.top, 4)
+        }
+        .padding(14)
+        .background(
+            RoundedRectangle(cornerRadius: isHighContrast ? 0 : 16)
+                .fill(isHighContrast ? Color(UIColor.systemBackground) : accentColor.opacity(0.06))
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: isHighContrast ? 0 : 16)
+                .stroke(Color.primary, lineWidth: isHighContrast ? 3 : 0)
+        )
+        .accessibilityElement(children: .contain)
+        .accessibilityLabel("Currency Converter")
+    }
+    
+    @ViewBuilder
+    private func headerLabel(isInput: Bool) -> some View {
+        let isLocal = isInput ? viewModel.isSwapped : !viewModel.isSwapped
+        
+        if isLocal {
+            Text("Local (\(viewModel.city.details.currencyCode))")
+                .font(.caption2.bold())
+                .fontWeight(isHighContrast ? .black : .bold)
+                .foregroundStyle(isHighContrast ? .primary : .secondary)
+                .textCase(.uppercase)
+                .accessibilityAddTraits(.isHeader)
+        } else {
+            Menu {
+                Picker("Home Currency", selection: $homeCurrencyCode) {
+                    ForEach(allCurrencies, id: \.self) { code in
+                        Text(code).tag(code)
+                    }
+                }
+            } label: {
+                HStack(spacing: 4) {
+                    Text("Home (\(homeCurrencyCode))")
+                    Image(systemName: "chevron.up.chevron.down")
+                        .font(.system(size: 10, weight: .bold))
+                }
+                .font(.caption2.bold())
+                .fontWeight(isHighContrast ? .black : .bold)
+                .textCase(.uppercase)
+                .foregroundColor(accentColor)
+            }
+            .accessibilityLabel("Home currency: \(homeCurrencyCode)")
+            .accessibilityHint("Double tap to change your home currency.")
+        }
+    }
+}
