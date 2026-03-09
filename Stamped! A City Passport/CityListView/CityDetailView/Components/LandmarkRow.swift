@@ -22,16 +22,13 @@ struct LandmarkRow: View {
                      AnyLayout(HStackLayout(spacing: 16))
 
         layout {
-            Image(systemName: isVisited ? "checkmark.seal.fill" : "mappin.circle.fill") // mappan.circle is bolder
-                .font(.title) // Larger font for the unvisited one
+            Image(systemName: isVisited ? "checkmark.seal.fill" : "mappin.circle.fill")
+                .font(.title)
                 .foregroundColor(
                     isHighContrast ? .primary : (isVisited ? .adventureOrange : .blue)
                 )
-                // 1. Double the shadow to make it "glow"
                 .shadow(color: !isVisited ? .blue.opacity(isPulsing ? 0.8 : 0.3) : .clear, radius: isPulsing ? 15 : 5)
-                // 2. Make the scale change more dramatic
                 .scaleEffect(!isVisited && isPulsing ? 1.3 : 1.0)
-                // 3. Add a slight color shift so it "shimmers"
                 .hueRotation(.degrees(isPulsing ? 10 : 0))
                 .onAppear {
                     if !isVisited {

@@ -225,6 +225,8 @@ private extension QuizView {
                         .font(.system(isIPad ? .title3 : .body, design: .rounded))
                         .fontWeight(isHighContrast ? .black : .bold)
                         .multilineTextAlignment(.leading)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.85)
                     
                     Spacer()
                     
@@ -233,7 +235,7 @@ private extension QuizView {
                 .padding(.horizontal, 24)
                 .padding(.vertical, 18)
                 .frame(maxWidth: .infinity)
-                .frame(minHeight: isIPad ? 80 : 70)
+                .frame(height: isIPad ? 80 : 70)
                 .background(
                     RoundedRectangle(cornerRadius: 16)
                         .fill(buttonBackgroundColor(for: option))

@@ -16,10 +16,10 @@ struct CityHeroHeader: View {
     var body: some View {
         VStack(spacing: 8) {
             Text(city.details.nickname.uppercased())
-                .font(.caption2.bold())
+                .font(Font.caption2.bold())
                 .tracking(2)
                 .foregroundColor(isHighContrast ? .primary : .adventureOrange)
-                .accessibilityHidden(true) // Hidden because it's decorative/flavor text
+                .accessibilityHidden(true) 
             
             Text(city.name)
                 .font(.system(.largeTitle, design: .serif).bold())
