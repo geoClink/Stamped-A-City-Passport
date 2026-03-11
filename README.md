@@ -1,4 +1,4 @@
-i n# Stamped! — A City Passport
+# Stamped! — A City Passport
 
 A SwiftUI iOS app for discovering and "collecting" architectural landmarks across cities. Users navigate a curated city library, mark buildings as visited, collect digital passport stamps, save photos to their passport entries, and track progress by city and country.
 
@@ -119,9 +119,3 @@ Contact
 
 ---
 
-If you'd like, I can:
-- Add a `LICENSE` (MIT) and commit it.
-- Insert example screenshots into `Assets.xcassets` and reference them in the README.
-- Add a short `CONTRIBUTING.md` and `CODE_OF_CONDUCT.md` template.
-
-Next steps I'll take if you confirm: write this improved README to the repo (overwrite), commit, and push to `origin/main`.
