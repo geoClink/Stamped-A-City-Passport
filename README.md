@@ -1,81 +1,127 @@
-# Stamped! — A City Passport
+i n# Stamped! — A City Passport
 
-TL;DR
-A SwiftUI app that lets users collect “passport” stamps while exploring city sites. This repository contains the Stamped! iOS app (and a sample/tutorial subproject) built with Swift and SwiftUI.
+A SwiftUI iOS app for discovering and "collecting" architectural landmarks across cities. Users navigate a curated city library, mark buildings as visited, collect digital passport stamps, save photos to their passport entries, and track progress by city and country.
+
+This README was generated from the repository source (entry point: `GlobalDiscoveryApp` in `Stamped__A_City_PassportApp.swift`) and reflects the app structure, managers, persistence, and accessibility features implemented in the code.
+
+Table of contents
+- Features
+- Architecture & notable files
+- Persistence & storage
+- Permissions
+- Build & run (Xcode)
+- Quick testing checklist
+- Accessibility
+- Contributing
+- Suggested license
+- Contact
+
 
 Features
-- City list and detail views with interactive passport stamps
-- Passport gallery and stamp views
-- Quiz and onboarding flows
-- Local models and a lightweight MVVM-like structure
-- Managers for haptics, sound, speech, camera, and visit tracking
+- Browse cities grouped by continent and country with a searchable sidebar (`CityListView`).
+- City detail pages and curated architectural itineraries (uses `Building` and `BuildingRegistry`).
+- Passport stamping: earn an illustrated stamp when marking a landmark as visited (`PassportStampView`, `PassportGalleryView`).
+- Save a photo per building using the camera or photo library (`CameraPicker`) and persist it to app Documents.
+- Local progress tracking (visited landmarks and saved images) with persistence via `UserDefaults` and stored JPGs (`GlobalProgressManager`).
+- Audio and haptic feedback support (configurable in Settings) via `SoundManager` and `HapticManager`.
+- Onboarding flow that gates first-run experience (`OnboardingView` + `OnboardingViewModel`).
+- Offline-ready: the app keeps a local library of cities and itineraries in code (no remote backend required by default).
 
-Screenshots
-- (Add screenshots to `Assets.xcassets` and reference them here.)
 
-Repository layout (top-level)
-- `Stamped! A City Passport/` — main app folder (project root)
-  - `Stamped__A_City_PassportApp.swift` — app entry point
-  - `Assets.xcassets/` — app images & colors
-  - `CityListView/` — city list UI and view model
-  - `Itinerary/` — itinerary service and logic
-  - `Managers/` — Accessibility, CameraPicker, HapticManager, SoundManager, SpeechManager, VisitManager
-  - `Models/` — building/city models and view models
-  - `OnBoardingView/` — onboarding UI and view model
-  - `PassportGallery/` — gallery UI
-  - `PassportStampView/` — stamp UI and view model
-  - `PassportView/` — passport UI and components
-  - `QuizView/` — quiz UI and view model
-  - `SettingsView/` — settings UI and view model
-  - `Stamped! A City Passport.xcodeproj/` — Xcode project
+Architecture & notable files
+- App entry:
+  - `Stamped! A City Passport/Stamped__A_City_PassportApp.swift` — App entry using `GlobalDiscoveryApp` with an `AppDelegate` to force orientation on iPad and onboarding state stored via `@AppStorage("hasSeenOnboarding")`.
 
-- `AirBnBTutorial/` — separate sample project (can be removed or kept as reference)
+- Models:
+  - `Models/Model.swift` — `CityLocation` types (City, Country, Continent) and helpers.
+  - `Models/Building.swift` — `Building` model for each landmark.
+  - `Models/CityData.swift` — city details and localized metadata (nicknames, airport, fun facts).
+  - `Models/BuildingRegistry.swift` — mapping of `City` to `[Building]` (city-specific itineraries).
 
-Requirements
-- Xcode 14+ (or the latest stable Xcode matching your toolchain)
-- Swift 5.7+ (check project settings if unsure)
-- iOS 15+ deployment target (confirm in project settings)
+- State & Persistence:
+  - `Managers/VisitManager.swift` (GlobalProgressManager) — central progress store; tracks `visitedIDs: Set<String>` and `userImages: [String: UIImage]`; persists visited IDs in `UserDefaults` and saves images as JPEG files in the app Documents directory.
+  - `SettingsView/SettingsView-ViewModel.swift` — various `@AppStorage` flags (sound, haptics, high contrast, reduce motion, metric units) and app reset logic.
 
-Build & run (open in Xcode)
-1. Open Terminal and change to the project root:
+- UI & Flows:
+  - `CityListView/CityListView.swift` — main navigation and city browser.
+  - `CityListView/CityDetailView/` — detail content for a selected city (itinerary, map, landmarks).
+  - `PassportStampView/` — UI for the stamp card and celebratory view when a building is stamped.
+  - `PassportGallery/PassportGalleryView.swift` — shows user's collected stamps grouped by country.
+  - `OnBoardingView/` — onboarding steps and logic.
+  - `SettingsView/` — toggles for motion, contrast, haptics, sound and the danger zone to reset the app.
 
-   cd "/Users/georgeclinkscales/Documents/Swift/Stamped! A City Passport"
+- Managers & Helpers:
+  - `Managers/CameraPicker.swift` — wrapper to use `UIImagePickerController` for camera/photo library.
+  - `Managers/SoundManager.swift` — plays system sounds and handles speech synthesis for greetings.
+  - `Managers/HapticManager.swift` — central haptic triggers with persisted setting.
+  - `Managers/SpeechManager.swift` — (if present) higher-level speech helper wrappers.
 
-2. Open the Xcode project:
 
-   open "Stamped! A City Passport.xcodeproj"
+Persistence & storage details
+- Visited IDs: the app stores visited building IDs in `UserDefaults` under key `GlobalVisitedBuildingsKey`.
+- Saved photos: photos taken or chosen for a building are saved as `BuildingID.jpg` in the app's Documents directory and loaded back into `GlobalProgressManager.userImages` on startup.
+- Settings: toggles like `haptics_enabled`, `is_sound_enabled`, `high_contrast_mode`, `reduce_motion`, and `use_metric_units` are persisted using `@AppStorage` (backed by `UserDefaults`).
+- Reset: `SettingsViewModel.resetAllContent()` clears the user defaults for this bundle and removes saved images via `GlobalProgressManager.resetAllProgress()`.
 
-3. In Xcode: choose a simulator or device, select the app scheme, then Build (Cmd-B) and Run (Cmd-R).
 
-Testing
-- There are no dedicated test targets by default. Add an Xcode test target and place unit/UI tests under `*Tests` when ready.
-- Quick manual checks:
-  - Launch the app in Simulator and navigate City List -> City Detail -> Stamp -> Passport Gallery.
-  - Test camera/speech features on a real device where relevant.
+Permissions
+- Camera / Photo Library: the app uses `UIImagePickerController` and will need the appropriate Info.plist keys if you exercise the camera or photo library at runtime. Add these keys to your target Info.plist before publishing:
+  - NSCameraUsageDescription
+  - NSPhotoLibraryUsageDescription
+  - NSPhotoLibraryAddUsageDescription (if saving back to photos)
+- Microphone: only required if you add audio recording features; speech synthesis itself does not need mic permission.
+
+
+Build & run (Xcode)
+1. Open the project in Xcode (match Xcode version to your local toolchain):
+
+```bash
+cd "/Users/georgeclinkscales/Documents/Swift/Stamped! A City Passport"
+open "Stamped! A City Passport.xcodeproj"
+```
+
+2. Select the `Stamped! A City Passport` scheme (or `main` app target), choose a simulator/device, Build (Cmd-B), and Run (Cmd-R).
+3. First run shows the onboarding flow (toggle `hasSeenOnboarding` via Settings or complete onboarding to proceed to the City List).
+
+Notes:
+- If the project uses a minimum iOS deployment or Swift version incompatible with your Xcode, Xcode will prompt to update settings/convert the project.
+- Add camera/photo usage strings in Info.plist before using photo capture on device.
+
+
+Quick testing checklist
+- Launch app in Simulator: navigate City List -> select a city -> open a building -> mark as visited -> view the `StampCelebrationView`.
+- Open Passport: use the floating passport button on the City List to open `PassportGalleryView` and inspect collected stamps.
+- Settings: toggle Sound/Haptics/High contrast/Reduce motion and verify UI behavior.
+- Reset: in Settings -> Reset All Content, test the two-step alert and confirm progress/image clearing.
+- Camera: test camera/photo flows on a physical device (simulator often lacks camera hardware).
+
+
+Accessibility
+- Respect for reduce motion: the UI disables or simplifies animations when system or app `reduce_motion` is enabled.
+- High-contrast mode: `high_contrast_mode` toggles alternate colors and stronger contrast throughout UI components.
+- Accessibility labels: key views like `PassportStampView` set `accessibilityLabel` and `accessibilityValue` for screen readers.
+- Voice: `SoundManager` can speak greetings in localized languages for several countries.
+
 
 Contributing
-1. Fork the repository and create a branch: `feature/your-feature` or `fix/issue-123`.
-2. Keep commits small and include tests for new logic where appropriate.
-3. Open a pull request with a clear description and testing steps.
+- Fork the repository and open a PR against `main`.
+- Keep changes small and descriptive — include tests where applicable.
+- Naming convention: view/view model pairs follow `Something-ViewModel.swift` and `Something.swift` patterns.
+- If you add new persisted values, add tests or manual migration steps for existing `UserDefaults` keys.
 
-Coding style & notes
-- Follows SwiftUI idioms and lightweight MVVM-style view models (`*View-ViewModel.swift`).
-- Keep folder and naming conventions consistent.
+Suggested License
+- MIT is a good, permissive option for this project. Create a `LICENSE` file with MIT text and your name/year.
 
-License
-- Suggested: MIT License. Add `LICENSE` with your name and year if you want to apply it to the repo.
-
-Placeholders to update
+Contact
 - Author: George Clinkscales
-- Repository URL: https://github.com/geoClink/Stamped-A-City-Passport
+- Repo: https://github.com/geoClink/Stamped-A-City-Passport
 
-Support / Issues
-- Use the repository Issues page to report bugs or request features: https://github.com/geoClink/Stamped-A-City-Passport/issues
-
-Acknowledgements
-- Credit any third-party assets, icons, or libraries used in the project.
 
 ---
 
-Author: George Clinkscales
-Repository: https://github.com/geoClink/Stamped-A-City-Passport
+If you'd like, I can:
+- Add a `LICENSE` (MIT) and commit it.
+- Insert example screenshots into `Assets.xcassets` and reference them in the README.
+- Add a short `CONTRIBUTING.md` and `CODE_OF_CONDUCT.md` template.
+
+Next steps I'll take if you confirm: write this improved README to the repo (overwrite), commit, and push to `origin/main`.
