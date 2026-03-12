@@ -76,19 +76,39 @@ class CityDetailViewModel: ObservableObject {
     }
 
     // MARK: - Currency Conversion
+    // Available offline currencies (keys of the offlineRates map)
+    var availableCurrencies: [String] {
+        return Array(offlineRates.keys).sorted()
+    }
+
     func convertAmount(_ amount: String) -> String {
-        let sanitized = amount.replacingOccurrences(of: ",", with: ".")
-        guard let value = Double(sanitized),
+        // Parse user input in a locale-aware way
+        let inputFormatter = NumberFormatter()
+        inputFormatter.numberStyle = .decimal
+        inputFormatter.locale = Locale.current
+
+        // Try direct parse first; fall back to replacing commas with dots for legacy inputs
+        var numericValue: Double?
+        if let number = inputFormatter.number(from: amount) {
+            numericValue = number.doubleValue
+        } else {
+            let fallback = amount.replacingOccurrences(of: ",", with: ".")
+            numericValue = Double(fallback)
+        }
+
+        guard let value = numericValue,
               let homeRate = offlineRates[selectedHomeCurrency],
-              let localRate = offlineRates[city.details.currencyCode] else { return "0.00" }
-        
+              let localRate = offlineRates[city.details.currencyCode] else { return "--" }
+
+        // Convert: if not swapped => home -> local, if swapped => local -> home
         let convertedValue = isSwapped ? (value / localRate) * homeRate : (value / homeRate) * localRate
-        
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.minimumFractionDigits = 2
-        formatter.maximumFractionDigits = 2
-        return formatter.string(from: NSNumber(value: convertedValue)) ?? "0.00"
+
+        let outputFormatter = NumberFormatter()
+        outputFormatter.numberStyle = .decimal
+        outputFormatter.minimumFractionDigits = 2
+        outputFormatter.maximumFractionDigits = 2
+        outputFormatter.locale = Locale.current
+        return outputFormatter.string(from: NSNumber(value: convertedValue)) ?? "--"
     }
 
     // MARK: - Reset Logic

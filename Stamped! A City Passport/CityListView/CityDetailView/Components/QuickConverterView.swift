@@ -11,20 +11,15 @@ struct QuickConverterView: View {
     @Binding var userAmount: String
     @AppStorage("reduce_motion") var reduceMotion = false
 
-    @AppStorage("user_home_currency") var homeCurrencyCode = "USD"
     @AppStorage("high_contrast_mode") var isHighContrast = false
     
-    let allCurrencies = [
-        "AED", "ARS", "AUD", "BRL", "CAD", "CLP", "CNY", "COP", "CZK",
-        "DKK", "EGP", "EUR", "GBP", "HKD", "HUF", "IDR", "ILS", "INR",
-        "JPY", "KES", "KRW", "MAD", "MXN", "MYR", "NOK", "NZD", "PEN",
-        "PHP", "QAR", "SAR", "SGD", "THB", "TRY", "TWD", "USD", "VND", "ZAR"
-    ].sorted()
-    
+    // Use available currencies from view model to keep a single source of truth
+    private var allCurrencies: [String] { viewModel.availableCurrencies }
+
     private var accentColor: Color {
         isHighContrast ? .primary : Color("adventureOrange")
     }
-    
+
     var body: some View {
         VStack(spacing: 12) {
             HStack(alignment: .center) {
@@ -50,8 +45,8 @@ struct QuickConverterView: View {
                         viewModel.isSwapped.toggle()
                         HapticManager.shared.trigger(.impact)
                     }
-                    let from = viewModel.isSwapped ? viewModel.city.details.currencyCode : homeCurrencyCode
-                    let to = viewModel.isSwapped ? homeCurrencyCode : viewModel.city.details.currencyCode
+                    let from = viewModel.isSwapped ? viewModel.city.details.currencyCode : viewModel.selectedHomeCurrency
+                    let to = viewModel.isSwapped ? viewModel.selectedHomeCurrency : viewModel.city.details.currencyCode
                     UIAccessibility.post(notification: .announcement, argument: "Swapped. Converting from \(from) to \(to)")
                 } label: {
                     Image(systemName: "arrow.left.arrow.right.circle.fill")
@@ -112,14 +107,14 @@ struct QuickConverterView: View {
                 .accessibilityAddTraits(.isHeader)
         } else {
             Menu {
-                Picker("Home Currency", selection: $homeCurrencyCode) {
+                Picker("Home Currency", selection: $viewModel.selectedHomeCurrency) {
                     ForEach(allCurrencies, id: \.self) { code in
                         Text(code).tag(code)
                     }
                 }
             } label: {
                 HStack(spacing: 4) {
-                    Text("Home (\(homeCurrencyCode))")
+                    Text("Home (\(viewModel.selectedHomeCurrency))")
                     Image(systemName: "chevron.up.chevron.down")
                         .font(.system(size: 10, weight: .bold))
                 }
@@ -128,7 +123,7 @@ struct QuickConverterView: View {
                 .textCase(.uppercase)
                 .foregroundColor(accentColor)
             }
-            .accessibilityLabel("Home currency: \(homeCurrencyCode)")
+            .accessibilityLabel("Home currency: \(viewModel.selectedHomeCurrency)")
             .accessibilityHint("Double tap to change your home currency.")
         }
     }
