@@ -2,6 +2,10 @@
 
 A SwiftUI iOS app for discovering and "collecting" architectural landmarks across cities. Users navigate a curated city library, mark buildings as visited, collect digital passport stamps, save photos to their passport entries, and track progress by city and country.
 
+> About
+>
+> Stamped! is a lightweight travel and architecture app built with SwiftUI that helps users explore cities via curated itineraries and collect illustrated passport stamps as they visit landmarks. Designed for offline-first use with accessible UI options (high-contrast, reduced motion) and local persistence, the app is ideal for travel enthusiasts who want a playful way to track and celebrate architecture discoveries.
+
 This README was generated from the repository source (entry point: `GlobalDiscoveryApp` in `Stamped__A_City_PassportApp.swift`) and reflects the app structure, managers, persistence, and accessibility features implemented in the code.
 
 Table of contents
@@ -118,4 +122,3 @@ Contact
 
 
 ---
-
