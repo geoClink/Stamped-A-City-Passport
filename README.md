@@ -113,8 +113,7 @@ Contributing
 - Naming convention: view/view model pairs follow `Something-ViewModel.swift` and `Something.swift` patterns.
 - If you add new persisted values, add tests or manual migration steps for existing `UserDefaults` keys.
 
-License: [MIT](LICENSE)  
-`Licensed under the MIT License — see LICENSE file for details.`
+
 
 Contact
 - Author: George Clinkscales
