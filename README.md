@@ -116,6 +116,9 @@ Contributing
 Suggested License
 - MIT is a good, permissive option for this project. Create a `LICENSE` file with MIT text and your name/year.
 
+License: [MIT](LICENSE)  
+`Licensed under the MIT License — see LICENSE file for details.`
+
 Contact
 - Author: George Clinkscales
 - Repo: https://github.com/geoClink/Stamped-A-City-Passport
