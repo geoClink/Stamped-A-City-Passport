@@ -28,13 +28,7 @@ class GlobalProgressManager: ObservableObject {
         if let savedData = UserDefaults.standard.array(forKey: saveKey) as? [String] {
             self.visitedIDs = Set(savedData)
         } else {
-            self.visitedIDs = [
-                        "sf-01", "sf-02", "sf-03", "sf-04", "sf-05",
-                        "sf-06", "sf-07", "sf-08", "sf-09", "sf-10",
-                         "sf_mira_tower", "sf_hyatt_regency",
-                        "sf_grace_cathedral", "sf-12", "sf-14",
-                        "sf-17", "sf-16", "sf-20", "sf-15","sf-19", "sf-18","sf-13", "sf-11"
-                    ]
+            self.visitedIDs = [] // Blank slate for App Store version
             save()
         }
         

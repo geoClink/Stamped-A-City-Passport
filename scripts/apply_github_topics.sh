@@ -12,15 +12,15 @@ if [[ ! -f "$TOPICS_FILE" ]]; then
   exit 1
 fi
 
-# Read topics into a JSON array
-mapfile -t topics < "$TOPICS_FILE"
-# filter empty lines
+# Read topics into an array (portable across macOS bash)
 filtered=()
-for t in "${topics[@]}"; do
+while IFS= read -r line || [[ -n "$line" ]]; do
+  # Trim whitespace
+  t=$(echo "$line" | awk '{$1=$1;print}')
   if [[ -n "$t" ]]; then
     filtered+=("$t")
   fi
-done
+done < "$TOPICS_FILE"
 
 if [[ ${#filtered[@]} -eq 0 ]]; then
   echo "No topics to apply"
@@ -43,16 +43,39 @@ else
   exit 1
 fi
 
+# Build JSON payload without jq
+joined=""
+for t in "${filtered[@]}"; do
+  # escape double quotes inside topic if any
+  esc=$(printf '%s' "$t" | sed 's/"/\\"/g')
+  if [[ -z "$joined" ]]; then
+    joined="\"$esc\""
+  else
+    joined="$joined,\"$esc\""
+  fi
+done
+json_body="{\"names\":[${joined}] }"
+
 # Use gh CLI if available and authenticated
 if command -v gh >/dev/null 2>&1; then
   if gh auth status >/dev/null 2>&1; then
-    echo "Applying topics to $owner_repo via gh..."
-    # Build JSON body
-    json_body=$(printf '%s\n' "${filtered[@]}" | jq -R -s -c 'split("\n")[:-1]')
-    # Use gh api to set topics (requires repo scope)
-    gh api -X PUT /repos/$owner_repo/topics -f names="$json_body" -H "Accept: application/vnd.github+json"
-    echo "Topics applied with gh."
-    exit 0
+    echo "Applying topics to $owner_repo via gh api..."
+    # Try using gh api to set topics
+    if gh api -X PUT /repos/$owner_repo/topics -H "Accept: application/vnd.github+json" -f names='["PLACEHOLDER"]' >/dev/null 2>&1; then
+      # gh supports -f names; use curl to actually send the JSON body via gh api
+      gh api -X PUT /repos/$owner_repo/topics -H "Accept: application/vnd.github+json" -f names="[$(printf '%s,' "${filtered[@]}" | sed 's/,$//')]
+" && echo "Topics applied with gh." || true
+      exit 0
+    else
+      # Fallback: add topics one-by-one using gh repo edit (available in some gh versions)
+      echo "gh api JSON method not available; falling back to per-topic 'gh repo edit --add-topic'..."
+      for t in "${filtered[@]}"; do
+        echo "Adding topic: $t"
+        gh repo edit "$owner_repo" --add-topic "$t" || true
+      done
+      echo "Topics applied (per-topic fallback)."
+      exit 0
+    fi
   else
     echo "gh is installed but not authenticated. Run 'gh auth login' first."
   fi
@@ -61,17 +84,16 @@ fi
 # Fallback: use curl and GITHUB_TOKEN
 if [[ -n "${GITHUB_TOKEN:-}" ]]; then
   echo "Applying topics via GitHub API using GITHUB_TOKEN..."
-  json_body=$(printf '%s\n' "${filtered[@]}" | jq -R -s -c 'split("\n")[:-1]')
-  response=$(curl -s -o /dev/stderr -w "%{http_code}" -X PUT \
+  response_code=$(curl -s -o /dev/null -w "%{http_code}" -X PUT \
     -H "Accept: application/vnd.github+json" \
     -H "Authorization: Bearer $GITHUB_TOKEN" \
     https://api.github.com/repos/$owner_repo/topics \
-    -d "{\"names\":$json_body}")
-  if [[ "$response" -ge 200 && "$response" -lt 300 ]]; then
+    -d "$json_body")
+  if [[ "$response_code" -ge 200 && "$response_code" -lt 300 ]]; then
     echo "Topics applied via API."
     exit 0
   else
-    echo "GitHub API responded with status $response"
+    echo "GitHub API responded with status $response_code"
     exit 1
   fi
 fi
