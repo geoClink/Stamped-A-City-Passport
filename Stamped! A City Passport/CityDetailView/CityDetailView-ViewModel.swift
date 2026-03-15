@@ -1,4 +1,4 @@
-//
+//viewModel.city.details.languageInfo//
 //  SwiftUIView.swift
 //  Stamped
 //
@@ -29,6 +29,8 @@ class CityDetailViewModel: ObservableObject {
     @Published var currencyStatusText: String = "" // single source of truth for UI status
     @Published var isFetchingRates: Bool = false
     @Published var currencyMode: CurrencyMode = .offline
+    @Published var currencyUpdatedDate: Date? = nil
+    @Published var currencyProvider: String? = nil
 
     // Current effective rates (starts as offlineRates)
     private var currentRates: [String: Double] = [:]
@@ -289,6 +291,14 @@ class CityDetailViewModel: ObservableObject {
         }
         return nil
     }
+    
+    private var providerHostFallback: String {
+        if let base = apiBaseURLString, !base.isEmpty {
+            return URL(string: base)?.host ?? base
+        }
+        // default provider host for fallback URL
+        return URL(string: "https://api.exchangerate-api.com/v4/latest/USD")?.host ?? "exchangerate-api.com"
+    }
 
     private func fetchLiveRatesIfPossible() async {
         // Prevent concurrent fetches
@@ -404,5 +414,9 @@ class CityDetailViewModel: ObservableObject {
         case "cached": self.currencyMode = .cached
         default: self.currencyMode = .offline
         }
+        // Update provider and timestamp for modal/details
+        self.currencyUpdatedDate = date
+        // Prefer full host from makeRatesURL if configured, else use fallback host
+        self.currencyProvider = makeRatesURL()?.host ?? providerHostFallback
     }
 }

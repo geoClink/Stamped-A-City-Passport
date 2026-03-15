@@ -5,3 +5,19 @@
 "mode.offline" = "Offline";
 "rates.updated" = "Rates updated %@ (%@)";
 "rates.disclaimer" = "Rates are for reference only and may vary; verify with your provider for exact amounts.";
+
+/* Modal strings */
+"modal.header" = "Currency Rates";
+"modal.title" = "Rate Source";
+"modal.provider" = "Provider";
+"modal.last_updated" = "Last updated";
+"modal.explain_live" = "Live rates were fetched from the provider and reflect current market rates.";
+"modal.explain_cached" = "Cached rates are from a previously successful fetch and may be slightly out of date.";
+"modal.explain_offline" = "Offline fallback rates are used when network access is unavailable; these are for reference only.";
+"modal.close" = "Done";
+"modal.never" = "Never";
+
+/* Accessibility */
+"status.icon.accessibility" = "Currency rates status, tap for details";
+"refresh.rates.accessibility" = "Refresh currency rates";
+"refresh.rates.hint" = "Fetch latest exchange rates";

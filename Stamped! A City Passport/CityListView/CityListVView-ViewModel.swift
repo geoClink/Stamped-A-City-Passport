@@ -40,7 +40,7 @@ extension CityViewModel {
                 if buildingMatch || architectMatch {
                     results.append(MixedSearchResult(
                         title: building.name,
-                        subtitle: "Designed by \(building.architect)", // Architect goes here!
+                        subtitle: "Designed by \(building.architect)",
                         city: city,
                         isLandmark: true
                     ))
@@ -142,7 +142,7 @@ extension CityListView {
                                         .foregroundColor(.primary)
                                     Text(result.subtitle)
                                         .font(.caption)
-                                        .foregroundColor(.secondary)
+                                        .accessibleSecondary(isHighContrast: isHighContrast)
                                 }
                             }
                         }
@@ -179,13 +179,13 @@ extension CityListView {
         VStack(spacing: 20) {
             Image(systemName: "mappin.slash.circle.fill")
                 .font(.system(size: 40))
-                .foregroundColor(.secondary.opacity(0.6))
+                .accessibleSecondary(isHighContrast: isHighContrast).opacity(0.6)
             Text("No Cities Found")
                 .font(.headline)
             Text("Try searching for a different country or city.")
                 .font(.subheadline)
-                .foregroundColor(.secondary)
-                .multilineTextAlignment(.center)
+                .accessibleSecondary(isHighContrast: isHighContrast)
+                 .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity)
         .padding(.top, 40)
@@ -268,9 +268,9 @@ extension CityListView {
                     .font(.title2.bold())
                 Text("Select a city from the sidebar to view its landmarks and earn your passport stamp.")
                     .font(.body)
-                    .foregroundColor(.secondary)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 40)
+                    .accessibleSecondary(isHighContrast: isHighContrast)
+                     .multilineTextAlignment(.center)
+                     .padding(.horizontal, 40)
             }
         }
     }
@@ -382,6 +382,7 @@ struct CountryHeaderLabel: View {
     let country: CityLocation.Country
     let isMastered: Bool
     let isHighContrast: Bool
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
@@ -396,7 +397,7 @@ struct CountryHeaderLabel: View {
                 Text(country.rawValue.uppercased())
                     .font(.subheadline)
                     .fontWeight(isHighContrast ? .black : .bold)
-                    .foregroundColor(isHighContrast ? .primary : (isMastered ? .primary : .secondary))
+                    .foregroundColor(headerColor)
                 
                 if isMastered {
                     Image(systemName: "trophy.fill")
@@ -422,14 +423,34 @@ struct CountryHeaderLabel: View {
         .padding(.vertical, 10)
         .frame(maxWidth: .infinity, alignment: .leading)
     }
+    
+    private var headerColor: Color {
+        // High contrast wins
+        if isHighContrast { return .primary }
+        // Mastered countries use primary color
+        if isMastered { return .primary }
+        // In dark mode, system .secondary may be low contrast; use a stronger primary-based color
+        if colorScheme == .dark { return Color.primary.opacity(0.88) }
+        // Light mode: use nearly full primary to ensure >=4.5:1 contrast against white backgrounds
+        return Color.primary.opacity(0.95)
+    }
 }
 
 struct ZeroProgressHeader: View {
     let isHighContrast: Bool
+    @Environment(\.colorScheme) private var colorScheme
     
     private var accent: Color { isHighContrast ? .primary : Color.adventureOrange }
     private var cardBG: Color {
         isHighContrast ? Color(UIColor.systemBackground) : Color(.secondarySystemGroupedBackground)
+    }
+
+    // Accessible secondary color: strong enough in light mode to meet contrast requirements,
+    // slightly softer in dark mode, and full primary for high-contrast accessibility setting.
+    private var accessibleSecondary: Color {
+        if isHighContrast { return .primary }
+        if colorScheme == .dark { return Color.primary.opacity(0.85) }
+        return Color.primary.opacity(0.95)
     }
 
     var body: some View {
@@ -456,7 +477,7 @@ struct ZeroProgressHeader: View {
                     .font(.system(.caption, design: .monospaced))
                     .fontWeight(.bold)
                     .tracking(3)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(accessibleSecondary)
                 
                 Text("Unlock your first badge")
                     .font(.title2.bold())
@@ -467,7 +488,7 @@ struct ZeroProgressHeader: View {
             // MARK: - Body Text
             Text("Master a city by visiting all of its landmarks to earn your first official ink-pressed stamp.")
                 .font(.subheadline)
-                .foregroundColor(.secondary)
+                .foregroundColor(accessibleSecondary)
                 .multilineTextAlignment(.center)
                 .lineSpacing(4)
                 .padding(.horizontal, 10)
@@ -591,6 +612,7 @@ struct CityRow: View {
     let city: CityLocation.City
     let isCompleted: Bool
     let isHighContrast: Bool
+    @Environment(\.colorScheme) private var colorScheme
     
     @ScaledMetric(relativeTo: .body) private var stampSize: CGFloat = 44
     
@@ -603,7 +625,7 @@ struct CityRow: View {
                 Text(city.details.airportCode)
                     .font(.system(.caption, design: .monospaced))
                     .fontWeight(.bold)
-                    .foregroundColor(isCompleted ? (isHighContrast ? .primary : Color.adventureOrange) : .secondary)
+                    .foregroundColor(isCompleted ? (isHighContrast ? .primary : Color.adventureOrange) : (isHighContrast ? .primary : (colorScheme == .dark ? Color.primary.opacity(0.85) : Color.primary.opacity(0.95))))
                     .padding(8)
             }
             .frame(minWidth: stampSize, minHeight: stampSize)
@@ -615,7 +637,7 @@ struct CityRow: View {
                     .font(.headline)
                 Text(city.details.nickname)
                     .font(.caption)
-                    .foregroundColor(.secondary)
+                    .accessibleSecondary(isHighContrast: isHighContrast)
                     .italic()
             }
             Spacer()
@@ -802,8 +824,8 @@ struct PassportHintOverlayView: View {
             }
             VStack(alignment: .leading, spacing: 4) {
                 Text(title).font(.headline.bold())
-                Text(detail).font(.footnote).foregroundColor(.secondary)
-                    .fixedSize(horizontal: false, vertical: true)
+                Text(detail).font(.footnote).accessibleSecondary(isHighContrast: isHighContrast)
+                     .fixedSize(horizontal: false, vertical: true)
             }
         }
     }
@@ -826,11 +848,29 @@ struct PassportHintOverlayView: View {
         HapticManager.shared.trigger(.heavy)
         withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
             hasSeenHint = true
-            if let sanFran = viewModel.allCities.first(where: { $0.name.localizedCaseInsensitiveContains("San Francisco") }) {
-                selectedCity = sanFran
-                expandedContinents[.northAmerica] = true
-                expandedCountries[.unitedStates] = true
-            }
+            // Do not auto-select San Francisco on first-run. Instead, leave the detail pane showing the
+            // ZeroProgressHeader / "Unlock your first badge" placeholder so users can begin there.
+            selectedCity = nil
+            // Keep continent and country expansion state unchanged so the sidebar remains as the user left it.
         }
+    }
+}
+
+// Small helper modifier to apply an accessible 'secondary' color that adapts to dark mode and high-contrast
+private struct AccessibleSecondary: ViewModifier {
+    @Environment(\.colorScheme) var colorScheme
+    let isHighContrast: Bool
+    func body(content: Content) -> some View {
+        let c: Color
+        if isHighContrast { c = .primary }
+        else if colorScheme == .dark { c = Color.primary.opacity(0.85) }
+        else { c = Color.primary.opacity(0.95) }
+        return content.foregroundColor(c)
+    }
+}
+
+private extension View {
+    func accessibleSecondary(isHighContrast: Bool) -> some View {
+        modifier(AccessibleSecondary(isHighContrast: isHighContrast))
     }
 }

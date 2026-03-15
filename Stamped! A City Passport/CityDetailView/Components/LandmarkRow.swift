@@ -27,7 +27,8 @@ struct LandmarkRow: View {
                 .foregroundColor(
                     isHighContrast ? .primary : (isVisited ? .adventureOrange : .blue)
                 )
-                .shadow(color: !isVisited ? .blue.opacity(isPulsing ? 0.8 : 0.3) : .clear, radius: isPulsing ? 15 : 5)
+                // Remove decorative blue shadow in high-contrast mode to avoid introducing color-only cues
+                .shadow(color: isHighContrast ? Color.clear : (!isVisited ? .blue.opacity(isPulsing ? 0.8 : 0.3) : .clear), radius: isPulsing ? 15 : 5)
                 .scaleEffect(!isVisited && isPulsing ? 1.3 : 1.0)
                 .hueRotation(.degrees(isPulsing ? 10 : 0))
                 .onAppear {

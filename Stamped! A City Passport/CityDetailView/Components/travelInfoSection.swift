@@ -13,11 +13,22 @@ struct TravelInfoSection: View {
     var isHighContrast: Bool
     
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @Environment(\.colorScheme) var colorScheme
     
     // MARK: - Accessible Color Palette
     private var primaryText: Color { .primary }
     private var descriptiveText: Color {
-        isHighContrast ? .primary : Color(white: 0.35)
+        // Use semantic secondary label so the color adapts to Light/Dark modes and accessibility
+        if isHighContrast {
+            return .primary
+        }
+        // In dark mode the default secondaryLabel can be too low-contrast against some backgrounds.
+        // Use a slightly stronger primary-based color to ensure readability while keeping subtlety.
+        if colorScheme == .dark {
+            return Color.primary.opacity(0.85)
+        }
+        // In light mode use pure black to guarantee >= 4.5:1 contrast against white backgrounds.
+        return Color.black
     }
     private var accentColor: Color {
         isHighContrast ? .primary : .adventureOrange

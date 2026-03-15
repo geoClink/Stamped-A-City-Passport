@@ -9,6 +9,7 @@ import SwiftUI
 struct QuickConverterView: View {
     @ObservedObject var viewModel: CityDetailViewModel
     @Binding var userAmount: String
+    @State private var showingCurrencyInfo = false
     @AppStorage("reduce_motion") var reduceMotion = false
 
     @AppStorage("high_contrast_mode") var isHighContrast = false
@@ -80,20 +81,26 @@ struct QuickConverterView: View {
             }
             
             HStack(alignment: .center, spacing: 8) {
-                // Compact status icon
-                Group {
-                    switch viewModel.currencyMode {
-                    case .live:
-                        Image(systemName: "checkmark.seal.fill").foregroundColor(.green)
-                    case .cached:
-                        Image(systemName: "clock.fill").foregroundColor(accentColor)
-                    case .offline:
-                        Image(systemName: "wifi.slash").foregroundColor(.secondary)
+                // Tappable compact status icon (opens modal)
+                Button { showingCurrencyInfo = true } label: {
+                    Group {
+                        switch viewModel.currencyMode {
+                        case .live:
+                            Image(systemName: "checkmark.seal.fill")
+                                .foregroundColor(isHighContrast ? .primary : .green)
+                        case .cached:
+                            Image(systemName: "clock.fill")
+                                .foregroundColor(accentColor)
+                        case .offline:
+                            Image(systemName: "wifi.slash")
+                                .foregroundColor(isHighContrast ? .primary : .secondary)
+                        }
                     }
                 }
                 .font(.caption2)
-                .accessibilityHidden(true)
-                
+                .accessibilityLabel(NSLocalizedString("status.icon.accessibility", comment: "Accessibility label for currency status icon"))
+                .accessibilityAddTraits(.isButton)
+
                 // Status text (single source of truth)
                 Text(viewModel.currencyStatusText)
                     .font(.caption2)
@@ -101,9 +108,9 @@ struct QuickConverterView: View {
                     .foregroundStyle(isHighContrast ? .primary : .secondary)
                     .lineLimit(2)
                     .minimumScaleFactor(0.7)
-                
+
                 Spacer()
-                
+
                 // Refresh button + spinner
                 Button {
                     Task { await viewModel.refreshRates() }
@@ -119,10 +126,13 @@ struct QuickConverterView: View {
                 }
                 .buttonStyle(PlainButtonStyle())
                 .padding(.leading, 6)
-                .accessibilityLabel("Refresh currency rates")
-                .accessibilityHint("Fetch latest exchange rates")
+                .accessibilityLabel(NSLocalizedString("refresh.rates.accessibility", comment: "Accessibility label for refresh rates button"))
+                .accessibilityHint(NSLocalizedString("refresh.rates.hint", comment: "Accessibility hint for refresh rates button"))
             }
             .padding(.top, 4)
+            .sheet(isPresented: $showingCurrencyInfo) {
+                CurrencyInfoModal(viewModel: viewModel, isHighContrast: isHighContrast)
+            }
 
             // Subtle inline accuracy note
             Text(NSLocalizedString("rates.disclaimer", comment: "Short disclaimer about currency accuracy"))
@@ -176,6 +186,83 @@ struct QuickConverterView: View {
             }
             .accessibilityLabel("Home currency: \(viewModel.selectedHomeCurrency)")
             .accessibilityHint("Double tap to change your home currency.")
+        }
+    }
+}
+
+// MARK: - Currency Info Modal
+private struct CurrencyInfoModal: View {
+    @ObservedObject var viewModel: CityDetailViewModel
+    var isHighContrast: Bool
+    @Environment(\.dismiss) var dismiss
+
+    private var dateText: String {
+        guard let d = viewModel.currencyUpdatedDate else { return NSLocalizedString("modal.never", comment: "Never updated") }
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .full
+        return formatter.localizedString(for: d, relativeTo: Date())
+    }
+
+    var body: some View {
+        NavigationView {
+            VStack(alignment: .leading, spacing: 16) {
+                HStack(spacing: 12) {
+                    Group {
+                        switch viewModel.currencyMode {
+                        case .live:
+                            Image(systemName: "checkmark.seal.fill")
+                                .foregroundColor(isHighContrast ? .primary : .green)
+                        case .cached:
+                            Image(systemName: "clock.fill")
+                                .foregroundColor(isHighContrast ? .primary : Color("adventureOrange"))
+                        case .offline:
+                            Image(systemName: "wifi.slash")
+                                .foregroundColor(isHighContrast ? .primary : .secondary)
+                        }
+                    }
+                    .font(.title2)
+
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(NSLocalizedString("modal.title", comment: "Title for currency info modal"))
+                            .font(.headline)
+                        Text("")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
+                    Spacer()
+                }
+
+                Divider()
+
+                VStack(alignment: .leading, spacing: 8) {
+                    HStack { Text(NSLocalizedString("modal.provider", comment: "Label for provider")); Spacer(); Text(viewModel.currencyProvider ?? "—") }
+                    HStack { Text(NSLocalizedString("modal.last_updated", comment: "Label for last updated")); Spacer(); Text(dateText) }
+                }
+                .font(.subheadline)
+
+                Divider()
+
+                VStack(alignment: .leading, spacing: 10) {
+                    if viewModel.currencyMode == .live {
+                        Text(NSLocalizedString("modal.explain_live", comment: "Explanation for live mode"))
+                    } else if viewModel.currencyMode == .cached {
+                        Text(NSLocalizedString("modal.explain_cached", comment: "Explanation for cached mode"))
+                    } else {
+                        Text(NSLocalizedString("modal.explain_offline", comment: "Explanation for offline mode"))
+                    }
+                }
+                .font(.footnote)
+                .foregroundColor(.secondary)
+
+                Spacer()
+            }
+            .padding()
+            .navigationTitle(Text(NSLocalizedString("modal.header", comment: "Modal header")))
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    Button(NSLocalizedString("modal.close", comment: "Close button")) { dismiss() }
+                }
+            }
         }
     }
 }
