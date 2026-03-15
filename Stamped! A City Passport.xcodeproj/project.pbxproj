@@ -178,6 +178,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow access to the photo library so you can save and choose landmark photos for your passport.";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "We use speech recognition to help users answer quiz questions with your voice.";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
@@ -237,6 +238,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow access to the photo library so you can save and choose landmark photos for your passport.";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "We use speech recognition to help users answer quiz questions with your voice.";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
@@ -262,6 +264,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to the camera so you can take picture of the landmark you are visiting!";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "I need to hear your voice to check your quiz answers.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow access to the photo library so you can save and choose landmark photos for your passport.";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Allow speech recognition so that you can better answer quiz questions using your voice.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -300,6 +303,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to the camera so you can take picture of the landmark you are visiting!";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "I need to hear your voice to check your quiz answers.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow access to the photo library so you can save and choose landmark photos for your passport.";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Allow speech recognition so that you can better answer quiz questions using your voice.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

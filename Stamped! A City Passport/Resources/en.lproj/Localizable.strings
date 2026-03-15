@@ -1,0 +1,7 @@
+/* Localized strings for currency converter */
+"checking.rates" = "Checking rates...";
+"mode.live" = "Live";
+"mode.cached" = "Cached";
+"mode.offline" = "Offline";
+"rates.updated" = "Rates updated %@ (%@)";
+"rates.disclaimer" = "Rates are for reference only and may vary; verify with your provider for exact amounts.";

@@ -72,14 +72,65 @@ struct QuickConverterView: View {
                         .accessibilityElement(children: .combine)
                         .accessibilityLabel("Converted amount")
                         .accessibilityValue(viewModel.convertAmount(userAmount))
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.6)
+                        .allowsTightening(true)
+                        .layoutPriority(1)
                 }
             }
             
-            Text("Rates updated February 2026.")
+            HStack(alignment: .center, spacing: 8) {
+                // Compact status icon
+                Group {
+                    switch viewModel.currencyMode {
+                    case .live:
+                        Image(systemName: "checkmark.seal.fill").foregroundColor(.green)
+                    case .cached:
+                        Image(systemName: "clock.fill").foregroundColor(accentColor)
+                    case .offline:
+                        Image(systemName: "wifi.slash").foregroundColor(.secondary)
+                    }
+                }
                 .font(.caption2)
-                .italic()
+                .accessibilityHidden(true)
+                
+                // Status text (single source of truth)
+                Text(viewModel.currencyStatusText)
+                    .font(.caption2)
+                    .italic()
+                    .foregroundStyle(isHighContrast ? .primary : .secondary)
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.7)
+                
+                Spacer()
+                
+                // Refresh button + spinner
+                Button {
+                    Task { await viewModel.refreshRates() }
+                } label: {
+                    if viewModel.isFetchingRates {
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle())
+                            .scaleEffect(0.8)
+                    } else {
+                        Image(systemName: "arrow.clockwise")
+                            .font(.system(size: 14, weight: .semibold))
+                    }
+                }
+                .buttonStyle(PlainButtonStyle())
+                .padding(.leading, 6)
+                .accessibilityLabel("Refresh currency rates")
+                .accessibilityHint("Fetch latest exchange rates")
+            }
+            .padding(.top, 4)
+
+            // Subtle inline accuracy note
+            Text(NSLocalizedString("rates.disclaimer", comment: "Short disclaimer about currency accuracy"))
+                .font(.caption2)
                 .foregroundStyle(isHighContrast ? .primary : .secondary)
-                .padding(.top, 4)
+                .lineLimit(2)
+                .minimumScaleFactor(0.7)
+                .padding(.top, 2)
         }
         .padding(14)
         .background(
