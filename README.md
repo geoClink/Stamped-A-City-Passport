@@ -1,5 +1,7 @@
 # Stamped! — A City Passport
 
+View on App Store: https://apps.apple.com/us/app/stamped-a-city-passport/id6759680336
+
 A SwiftUI iOS app for discovering and "collecting" architectural landmarks across cities. Users navigate a curated city library, mark buildings as visited, collect digital passport stamps, save photos to their passport entries, and track progress by city and country.
 
 > About
