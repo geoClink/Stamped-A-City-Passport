@@ -90,6 +90,18 @@ struct CityDetailView: View {
                 showingCelebration = true
             }
         }
+        .onReceive(viewModel.$didJustComplete) { justCompleted in
+            if justCompleted {
+                // One-shot presentation for the celebration overlay
+                HapticManager.shared.trigger(.success)
+                SoundManager.shared.playStampSound()
+                showingCelebration = true
+                // Reset the flag so it can fire again for future completions
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    viewModel.didJustComplete = false
+                }
+            }
+        }
         .fullScreenCover(isPresented: $showingCelebration) {
             celebrationCover
         }
@@ -142,4 +154,3 @@ struct CityDetailView: View {
         resetType = .none
     }
 }
-

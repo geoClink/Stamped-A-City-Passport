@@ -18,7 +18,7 @@ class CityDetailViewModel: ObservableObject {
         case offline = "Offline"
     }
     let city: CityLocation.City
-    
+
     // MARK: - Published Properties
     @Published var selectedHomeCurrency: String = UserDefaults.standard.string(forKey: "user_home_currency") ?? "USD" {
         didSet { UserDefaults.standard.set(selectedHomeCurrency, forKey: "user_home_currency") }
@@ -32,8 +32,14 @@ class CityDetailViewModel: ObservableObject {
     @Published var currencyUpdatedDate: Date? = nil
     @Published var currencyProvider: String? = nil
 
+    // New: one-shot completion event flag (observed by the view to present celebration)
+    @Published var didJustComplete: Bool = false
+
     // Current effective rates (starts as offlineRates)
     private var currentRates: [String: Double] = [:]
+
+    // Track previous completion state so we only fire the event on the transition
+    private var previouslyCompleted: Bool = false
 
     // MARK: - Private Dependencies
     private var progressManager = GlobalProgressManager.shared
@@ -75,11 +81,17 @@ class CityDetailViewModel: ObservableObject {
 
         print("[CityDetailViewModel] Initialized for city:", city.name)
 
+        // Observe progress changes to update UI and detect the completion transition
         progressManager.$visitedIDs
             .receive(on: RunLoop.main)
             .sink { [weak self] _ in
-                self?.updateCompletionStatus()
-                self?.objectWillChange.send()
+                guard let self = self else { return }
+                // Update any UI state that depends on progress
+                self.updateCompletionStatus()
+                self.objectWillChange.send()
+
+                // Detect a one-shot completion event (transition from not-complete -> complete)
+                self.detectCompletionTransition()
             }
             .store(in: &cancellables)
 
@@ -108,14 +120,31 @@ class CityDetailViewModel: ObservableObject {
         pathMonitor.cancel()
     }
 
+    // MARK: - Completion detection
+    private func detectCompletionTransition() {
+        let currentlyCompleted = self.isCompleted
+        if currentlyCompleted && !previouslyCompleted {
+            // Just completed
+            previouslyCompleted = true
+            // Persist completion date and expose a one-shot flag for the view
+            handleCompletion()
+            self.didJustComplete = true
+            print("[CityDetailViewModel] Detected completion for city: \(city.name)")
+        } else if !currentlyCompleted {
+            // Reset flag so we can fire again if user resets progress and completes again
+            previouslyCompleted = false
+            self.didJustComplete = false
+        }
+    }
+
     // MARK: - Public Methods
-    
+
     public func refreshRates() async {
         // allow callers (UI) to trigger a refresh; avoid overlapping fetches
         guard !isFetchingRates else { return }
         await fetchLiveRatesIfPossible()
     }
-    
+
     // MARK: - Mastery & Progress
     func getMastery(isHighContrast: Bool) -> (tier: String, color: Color, progress: Double, count: Int) {
         let base = progressManager.getMastery(for: city.buildings)
@@ -123,20 +152,20 @@ class CityDetailViewModel: ObservableObject {
         let displayColor = isHighContrast ? .primary : base.color
         return (base.tier, displayColor, base.progress, base.count)
     }
-    
+
     func toggleVisited(for building: Building) {
         let isMarkingAsVisited = !progressManager.visitedIDs.contains(building.id)
         progressManager.toggleVisit(for: building.id, in: city.buildings)
         if isMarkingAsVisited { HapticManager.shared.trigger(.impact) }
     }
-    
+
     func handleCompletion() {
         guard isCompleted else { return }
         let dateString = Date().formatted(date: .abbreviated, time: .omitted)
         self.completionDate = dateString
         UserDefaults.standard.set(dateString, forKey: "date_completed_\(city.name)")
     }
-    
+
     // MARK: - Currency Conversion
     // Available offline currencies (keys of the offlineRates map)
     var availableCurrencies: [String] {
