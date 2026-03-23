@@ -1,0 +1,187 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project "Stamped! A City Passport.xcodeproj" -scheme "Stamped! A City Passport" -configuration Debug -destination "platform=iOS Simulator,name=iPhone 16,OS=18.6" clean build CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+    CODE_SIGNING_REQUIRED = NO
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+** CLEAN SUCCEEDED **
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (1 target)
+    Target 'Stamped! A City Passport' in project 'Stamped! A City Passport' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport/Stamped! A City Passport/Assets.xcassets
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: cafafb04b56e559d1ab1103c9454bf34
+Build description path: /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/XCBuildData/cafafb04b56e559d1ab1103c9454bf34.xcbuilddata
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphonesimulator26.2-23C57-7d00a8b37fbd7999ea79df8ebc024bf0.sdkstatcache
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport/Stamped\!\ A\ City\ Passport.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -o /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphonesimulator26.2-23C57-7d00a8b37fbd7999ea79df8ebc024bf0.sdkstatcache
+
+CreateBuildDirectory /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport/Stamped\!\ A\ City\ Passport.xcodeproj
+    builtin-create-build-directory /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex
+
+CreateBuildDirectory /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Products
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport/Stamped\!\ A\ City\ Passport.xcodeproj
+    builtin-create-build-directory /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Products
+
+CreateBuildDirectory /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport/Stamped\!\ A\ City\ Passport.xcodeproj
+    builtin-create-build-directory /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+CreateBuildDirectory /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport/Stamped\!\ A\ City\ Passport.xcodeproj
+    builtin-create-build-directory /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator
+
+CreateBuildDirectory /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/ExplicitPrecompiledModules
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport/Stamped\!\ A\ City\ Passport.xcodeproj
+    builtin-create-build-directory /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+CreateBuildDirectory /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport/Stamped\!\ A\ City\ Passport.xcodeproj
+    builtin-create-build-directory /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator
+
+WriteAuxiliaryFile /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped!\ A\ City\ Passport-427c5a2251bb49e7b2c0faaeaf8400f5-VFS-iphonesimulator/all-product-headers.yaml
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport/Stamped\!\ A\ City\ Passport.xcodeproj
+    write-file /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport-427c5a2251bb49e7b2c0faaeaf8400f5-VFS-iphonesimulator/all-product-headers.yaml
+
+WriteAuxiliaryFile /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped!\ A\ City\ Passport.build/Stamped!-project-headers.hmap (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    write-file /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/Stamped\!-project-headers.hmap
+
+WriteAuxiliaryFile /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped!\ A\ City\ Passport.build/Stamped!-generated-files.hmap (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    write-file /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/Stamped\!-generated-files.hmap
+
+WriteAuxiliaryFile /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped!\ A\ City\ Passport.build/Stamped!-own-target-headers.hmap (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    write-file /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/Stamped\!-own-target-headers.hmap
+
+WriteAuxiliaryFile /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped!\ A\ City\ Passport.build/empty-Stamped!.plist (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    write-file /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/empty-Stamped\!.plist
+
+WriteAuxiliaryFile /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped!\ A\ City\ Passport.build/Stamped!-all-target-headers.hmap (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    write-file /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/Stamped\!-all-target-headers.hmap
+
+WriteAuxiliaryFile /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped!\ A\ City\ Passport.build/Stamped!-all-non-framework-target-headers.hmap (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    write-file /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/Stamped\!-all-non-framework-target-headers.hmap
+
+WriteAuxiliaryFile /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped!\ A\ City\ Passport.build/Stamped!.DependencyStaticMetadataFileList (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    write-file /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/Stamped\!.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped!\ A\ City\ Passport.build/Stamped!.DependencyMetadataFileList (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    write-file /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/Stamped\!.DependencyMetadataFileList
+
+WriteAuxiliaryFile /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped!\ A\ City\ Passport.build/Stamped!.hmap (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    write-file /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/Stamped\!.hmap
+
+WriteAuxiliaryFile /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped!\ A\ City\ Passport.build/Stamped!-DebugDylibPath-normal-arm64.txt (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    write-file /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/Stamped\!-DebugDylibPath-normal-arm64.txt
+
+WriteAuxiliaryFile /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped!\ A\ City\ Passport.build/Stamped!-DebugDylibInstallName-normal-arm64.txt (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    write-file /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/Stamped\!-DebugDylibInstallName-normal-arm64.txt
+
+WriteAuxiliaryFile /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped!\ A\ City\ Passport.build/Objects-normal/arm64/Stamped!.SwiftFileList (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    write-file /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/Objects-normal/arm64/Stamped\!.SwiftFileList
+
+WriteAuxiliaryFile /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped!\ A\ City\ Passport.build/Objects-normal/arm64/Stamped!.LinkFileList (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    write-file /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/Objects-normal/arm64/Stamped\!.LinkFileList
+
+WriteAuxiliaryFile /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped!\ A\ City\ Passport.build/Objects-normal/arm64/Stamped!.SwiftConstValuesFileList (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    write-file /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/Objects-normal/arm64/Stamped\!.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped!\ A\ City\ Passport.build/Objects-normal/arm64/Stamped!\ A\ City\ Passport_const_extract_protocols.json (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    write-file /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/Objects-normal/arm64/Stamped\!\ A\ City\ Passport_const_extract_protocols.json
+
+WriteAuxiliaryFile /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped!\ A\ City\ Passport.build/Objects-normal/arm64/Stamped!\ A\ City\ Passport-OutputFileMap.json (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    write-file /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/Objects-normal/arm64/Stamped\!\ A\ City\ Passport-OutputFileMap.json
+
+MkDir /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Stamped!.app (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    /bin/mkdir -p /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Stamped\!.app
+
+Ld /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Stamped!.app/__preview.dylib normal (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios18.6-simulator -dynamiclib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -O0 -L/Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator -F/Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator -install_name @rpath/Stamped\!.debug.dylib -dead_strip -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/Objects-normal/arm64/Stamped\!_dependency_info.dat -o /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Stamped\!.app/__preview.dylib
+
+CpResource /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Stamped!.app/.swift /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport/Stamped!\ A\ City\ Passport/CityListView/Componenets/.swift (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport/Stamped\!\ A\ City\ Passport/CityListView/Componenets/.swift /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Stamped\!.app
+
+CpResource /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Stamped!.app/BuildingRegistry.json /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport/Stamped!\ A\ City\ Passport/Resources/BuildingRegistry.json (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport/Stamped\!\ A\ City\ Passport/Resources/BuildingRegistry.json /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Stamped\!.app
+
+CpResource /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Stamped!.app/Info.plist.bak /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport/Stamped!\ A\ City\ Passport/Info.plist.bak (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport/Stamped\!\ A\ City\ Passport/Info.plist.bak /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Stamped\!.app
+
+MkDir /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped!\ A\ City\ Passport.build/assetcatalog_output/thinned (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    /bin/mkdir -p /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/assetcatalog_output/thinned
+
+MkDir /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped!\ A\ City\ Passport.build/assetcatalog_output/unthinned (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    /bin/mkdir -p /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/assetcatalog_output/unthinned
+
+CopyStringsFile /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Stamped!.app/en.lproj/Localizable.strings /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport/Stamped!\ A\ City\ Passport/Resources/en.lproj/Localizable.strings (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    builtin-copyStrings --validate --outputencoding binary --outfilename Localizable.strings --outdir /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Stamped\!.app/en.lproj -- /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport/Stamped\!\ A\ City\ Passport/Resources/en.lproj/Localizable.strings
+/Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport/Stamped! A City Passport/Resources/en.lproj/Localizable.strings:1:1: note: detected encoding of input file as Unicode (UTF-8) (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+
+GenerateAssetSymbols /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport/Stamped!\ A\ City\ Passport/Assets.xcassets (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    /Applications/Xcode.app/Contents/Developer/usr/bin/actool /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport/Stamped\!\ A\ City\ Passport/Assets.xcassets --compile /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Stamped\!.app --output-format human-readable-text --notices --warnings --export-dependency-info /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/assetcatalog_dependencies --output-partial-info-plist /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/assetcatalog_generated_info.plist --app-icon AppIcon --accent-color AccentColor --compress-pngs --enable-on-demand-resources YES --development-region en --target-device iphone --target-device ipad --minimum-deployment-target 18.6 --platform iphonesimulator --bundle-identifier name.GeorgeClinkscales.Stamped--A-City-Passport --generate-swift-asset-symbols /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/DerivedSources/GeneratedAssetSymbols.swift --generate-objc-asset-symbols /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/DerivedSources/GeneratedAssetSymbols.h --generate-asset-symbol-index /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/* com.apple.actool.compilation-results */
+/Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped! A City Passport.build/Debug-iphonesimulator/Stamped! A City Passport.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped! A City Passport.build/Debug-iphonesimulator/Stamped! A City Passport.build/DerivedSources/GeneratedAssetSymbols.h
+/Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped! A City Passport.build/Debug-iphonesimulator/Stamped! A City Passport.build/DerivedSources/GeneratedAssetSymbols.swift
+
+
+CompileAssetCatalogVariant thinned /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphonesimulator/Stamped!.app /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport/Stamped!\ A\ City\ Passport/Assets.xcassets (in target 'Stamped! A City Passport' from project 'Stamped! A City Passport')
+    cd /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport
+    /Applications/Xcode.app/Contents/Developer/usr/bin/actool /Users/georgeclinkscales/Documents/GitHub/Stamped-A-City-Passport/Stamped\!\ A\ City\ Passport/Assets.xcassets --compile /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/assetcatalog_output/thinned --output-format human-readable-text --notices --warnings --export-dependency-info /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/assetcatalog_dependencies_thinned --output-partial-info-plist /Users/georgeclinkscales/Library/Developer/Xcode/DerivedData/Build/Intermediates.noindex/Stamped\!\ A\ City\ Passport.build/Debug-iphonesimulator/Stamped\!\ A\ City\ Passport.build/assetcatalog_generated_info.plist_thinned --app-icon AppIcon --accent-color AccentColor --compress-pngs --enable-on-demand-resources YES --filter-for-thinning-device-configuration iPhone17,3 --filter-for-device-os-version 18.6 --development-region en --target-device iphone --target-device ipad --minimum-deployment-target 18.6 --platform iphonesimulator

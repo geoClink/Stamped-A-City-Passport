@@ -46,6 +46,10 @@ struct GlobalDiscoveryApp: App {
                 }
             }
             .animation(.spring(response: 0.7, dampingFraction: 0.85), value: hasSeenOnboarding)
+            .task {
+                // Attempt to refresh the remote registry if configured in Info.plist
+                await BuildingRegistryUpdater.refreshIfNeeded()
+            }
         }
     }
 }
