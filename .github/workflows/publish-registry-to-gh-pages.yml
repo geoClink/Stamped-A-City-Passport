@@ -1,0 +1,26 @@
+name: Publish BuildingRegistry to GitHub Pages
+
+on:
+  push:
+    paths:
+      - 'Stamped! A City Passport/Resources/BuildingRegistry.json'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Copy registry into docs
+        run: |
+          mkdir -p docs/v1
+          cp "Stamped! A City Passport/Resources/BuildingRegistry.json" docs/v1/registry.json
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
