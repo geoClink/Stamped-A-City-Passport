@@ -8,61 +8,12 @@
 import Foundation
 
 struct BuildingRegistry {
+    // Minimal embedded fallback in case bundle JSON isn't available.
+    // Keep this small to avoid large compile-time literals; it's only a last-resort fallback.
+    static let embeddedData: [CityLocation.City: [Building]] = [:]
 
-    // Replaced the huge compile-time literal with a runtime loader to avoid
-    // compile-time crashes and to keep the API compatible with callers/tests.
-    // Public API compatibility:
-    //  - `embeddedData` remains available (now populated at runtime from bundle JSON)
-    //  - `data` remains available and follows: Documents override -> bundle -> embeddedData
-
-    /// Embedded data (was previously a huge static literal). Populated at runtime
-    /// by decoding the bundled `Resources/BuildingRegistry.json` file.
-    static let embeddedData: [CityLocation.City: [Building]] = {
-        return loadFromBundle() ?? [:]
-    }()
-
-    /// Try to load a JSON file placed in the app's Documents folder. This allows
-    /// runtime overrides (for development or remote updates saved to disk).
-    private static func loadFromDocuments() -> [CityLocation.City: [Building]]? {
-        let fm = FileManager.default
-        guard let docs = fm.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
-        let url = docs.appendingPathComponent("BuildingRegistry.json")
-        guard fm.fileExists(atPath: url.path) else { return nil }
-        do {
-            let raw = try Data(contentsOf: url)
-            let decoder = JSONDecoder()
-            let dict = try decoder.decode([String: [Building]].self, from: raw)
-            var mapped: [CityLocation.City: [Building]] = [:]
-            for (k, v) in dict {
-                if let city = CityLocation.City(rawValue: k) {
-                    mapped[city] = v
-                }
-            }
-            print("BuildingRegistry: loaded JSON from Documents with \(mapped.keys.count) cities")
-            return mapped
-        } catch {
-            print("BuildingRegistry: failed to load from Documents: \(error)")
-            return nil
-        }
-    }
-
-    /// Primary data source used by the app. Lookup order:
-    /// 1) Documents/BuildingRegistry.json (runtime override)
-    /// 2) Bundled Resources/BuildingRegistry.json
-    /// 3) embeddedData (falls back to whatever bundle provided earlier)
-    static var data: [CityLocation.City: [Building]] {
-        if let docs = loadFromDocuments() { return docs }
-        if let bundle = loadFromBundle() { return bundle }
-        return embeddedData
-    }
-    
-    
-    // Fallback embedded registry data (was `data`)
-  
-                           
-                      
-                    
-          
+    // Cache decoded registry so subsequent accesses are fast and do not re-log.
+    private static var cachedData: [CityLocation.City: [Building]]?
 
     // Attempt to load a JSON file named "BuildingRegistry.json" from the app bundle.
     private static func loadFromBundle() -> [CityLocation.City: [Building]]? {
@@ -90,7 +41,13 @@ struct BuildingRegistry {
         }
     }
 
-    // Note: `data` is implemented later as a remote-first Documents -> bundle -> embedded loader.
+    // Public `data` prefers bundle-provided JSON and falls back to the embedded data.
+    static var data: [CityLocation.City: [Building]] {
+        if let c = cachedData { return c }
+        let loaded = loadFromBundle() ?? embeddedData
+        cachedData = loaded
+        return loaded
+    }
 
     // MARK: - Add this inside your BuildingRegistry struct
     static func getBuildings(for city: CityLocation.City, day: Int) -> [Building] {
@@ -109,6 +66,4 @@ struct BuildingRegistry {
 
         return Array(allBuildings[startIndex..<endIndex])
     }
-
 }
-
