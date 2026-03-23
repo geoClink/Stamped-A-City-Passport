@@ -1,9 +1,15 @@
 name: Publish BuildingRegistry to GitHub Pages
 
+# Allow this workflow to be run manually and ensure the GITHUB_TOKEN has write rights
+permissions:
+  contents: write
+  pages: write
+
 on:
   push:
     paths:
       - 'Stamped! A City Passport/Resources/BuildingRegistry.json'
+  workflow_dispatch: {}
 
 jobs:
   publish:
@@ -12,6 +18,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           persist-credentials: true
 
       - name: Copy registry into docs
