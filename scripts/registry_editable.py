@@ -43,6 +43,8 @@ else:
         ]
     }
 
+
+    
 # Merge in any loaded registry entries not present (safe union).
 for city, buildings in LOADED_REGISTRY.items():
     if city not in REGISTRY:
