@@ -43,8 +43,15 @@ else:
         ]
     }
 
+# If Asheville isn't already present, add the provided buildings as a list.
+# NOTE: The large Asheville example was removed to avoid re-adding it when
+# regenerating the canonical JSON. If you want to re-add Asheville later,
+# edit REGISTRY here or import from a small JSON file and run:
+#   ./scripts/convert_registry.py import
+#
+# Previously this file contained a large REGISTRY["Asheville"] = [ ... ]
+# block. That block has been intentionally removed.
 
-    
 # Merge in any loaded registry entries not present (safe union).
 for city, buildings in LOADED_REGISTRY.items():
     if city not in REGISTRY:
