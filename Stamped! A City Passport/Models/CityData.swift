@@ -47,6 +47,20 @@ extension CityLocation.City {
                         "MARTA",
                         "The heavy rail system provides rapid cross-city transit between the airport and downtown. Complementing the trains, the regional Xpress bus service connects the broader metro area. The Atlanta Streetcar offers a loop through the historic Centennial Olympic Park district.")
             
+        case .asheville: return info(
+            "Land of the Sky",
+            "Asheville Regional Airport",
+            "AVL",
+            "Asheville is home to the Biltmore Estate, the largest privately owned house in the United States. The city also boasts one of the highest concentrations of Art Deco architecture in the Southeast, preserved from the 1920s.",
+            "English",
+            "Asheville Regional (AVL) is the primary gateway to the Blue Ridge Mountains. It is currently undergoing the 'AVL Forward' expansion, a massive project to build a brand-new terminal and modernized gates to accommodate its status as one of the fastest-growing regional airports in the U.S.",
+            "The local speech is a unique blend of Appalachian mountain heritage and a modern, eclectic 'Blue Ridge' influence. The tone is generally friendly, artistic, and deeply connected to the surrounding mountain culture.",
+            "US Dollar ($)",
+            "USD",
+            "ART (Asheville Rides Transit)",
+            "The ART bus system provides localized transit across the city's unique mountain topography. It features a fleet of hybrid-electric buses that connect the downtown hub to the River Arts District and Biltmore Village."
+        )
+            
         case .bath: return info(
                                 "The City of Ships (or The Roman City)",
                                 "Bristol Airport",

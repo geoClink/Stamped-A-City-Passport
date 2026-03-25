@@ -32,6 +32,11 @@ struct BuildingRegistry {
                     mapped[city] = v
                 }
             }
+            // Ensure no duplicate landmarks are present for any city by unique id
+            for (city, buildings) in mapped {
+                let unique = Array(Dictionary(grouping: buildings, by: { $0.id }).values.compactMap { $0.first })
+                mapped[city] = unique
+            }
             // Log successful load with number of cities to make runtime verification easy
             print("BuildingRegistry: loaded JSON from bundle with \(dict.keys.count) cities")
             return mapped
@@ -44,7 +49,10 @@ struct BuildingRegistry {
     // Public `data` prefers bundle-provided JSON and falls back to the embedded data.
     static var data: [CityLocation.City: [Building]] {
         if let c = cachedData { return c }
-        let loaded = loadFromBundle() ?? embeddedData
+        // Ensure no duplicate landmarks are present for any city by unique id
+        let loaded = loadFromBundle() ?? embeddedData.mapValues { buildings in
+            Array(Dictionary(grouping: buildings, by: { $0.id }).values.compactMap { $0.first })
+        }
         cachedData = loaded
         return loaded
     }

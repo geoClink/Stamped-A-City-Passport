@@ -1,0 +1,6817 @@
+{
+  "generated": true,
+  "count": 1135,
+  "missing_count": 0,
+  "coords": {
+    "uk_roman_baths": {
+      "city": "Bath",
+      "name": "The Roman Baths",
+      "latitude": 51.3813419,
+      "longitude": -2.3596754
+    },
+    "uk_royal_crescent": {
+      "city": "Bath",
+      "name": "The Royal Crescent",
+      "latitude": 51.3872718,
+      "longitude": -2.3682297
+    },
+    "uk_bath_abbey": {
+      "city": "Bath",
+      "name": "Bath Abbey",
+      "latitude": 51.3813177,
+      "longitude": -2.3587036
+    },
+    "uk_pulteney_bridge": {
+      "city": "Bath",
+      "name": "Pulteney Bridge",
+      "latitude": 51.3828263,
+      "longitude": -2.358643
+    },
+    "uk_thermae_bath_spa": {
+      "city": "Bath",
+      "name": "Thermae Bath Spa",
+      "latitude": 51.38032,
+      "longitude": -2.361506
+    },
+    "uk_holburne_museum": {
+      "city": "Bath",
+      "name": "The Holburne Museum",
+      "latitude": 51.3853491,
+      "longitude": -2.3518749
+    },
+    "uk_the_circus": {
+      "city": "Bath",
+      "name": "The Circus",
+      "latitude": 51.3862004,
+      "longitude": -2.3637578
+    },
+    "uk_prior_park": {
+      "city": "Bath",
+      "name": "Prior Park Mansion",
+      "latitude": 51.3676817,
+      "longitude": -2.3461435
+    },
+    "uk_assembly_rooms": {
+      "city": "Bath",
+      "name": "Bath Assembly Rooms",
+      "latitude": 51.3865985,
+      "longitude": -2.362584
+    },
+    "uk_guildhall": {
+      "city": "Bath",
+      "name": "Bath Guildhall",
+      "latitude": 51.3820103,
+      "longitude": -2.3590679
+    },
+    "uk_beckfords_tower": {
+      "city": "Bath",
+      "name": "Beckford's Tower",
+      "latitude": 51.4067969,
+      "longitude": -2.3784787
+    },
+    "uk_theatre_royal": {
+      "city": "Bath",
+      "name": "Theatre Royal Bath",
+      "latitude": 51.3817229,
+      "longitude": -2.3624992
+    },
+    "uk_milsom_place": {
+      "city": "Bath",
+      "name": "Milsom Place",
+      "latitude": 51.3841215,
+      "longitude": -2.3616233
+    },
+    "uk_victoria_art_gallery": {
+      "city": "Bath",
+      "name": "Victoria Art Gallery",
+      "latitude": 51.3828263,
+      "longitude": -2.358643
+    },
+    "uk_green_park_station": {
+      "city": "Bath",
+      "name": "Green Park Station",
+      "latitude": 51.381065,
+      "longitude": -2.3662473
+    },
+    "usa_apple_downtown_detroit": {
+      "city": "Detroit",
+      "name": "Apple Downtown Detroit",
+      "latitude": 42.3347221,
+      "longitude": -83.0488589
+    },
+    "detroit_first_national": {
+      "city": "Detroit",
+      "name": "First National Building",
+      "latitude": 42.3308998,
+      "longitude": -83.0448095
+    },
+    "detroit_the_z": {
+      "city": "Detroit",
+      "name": "The Z Garage",
+      "latitude": 42.334633,
+      "longitude": -83.0465162
+    },
+    "detroit_packard_plant": {
+      "city": "Detroit",
+      "name": "Packard Automotive Plant",
+      "latitude": 42.377922,
+      "longitude": -83.028897
+    },
+    "detroit_one_kennedy": {
+      "city": "Detroit",
+      "name": "One Kennedy Square",
+      "latitude": 42.3313087,
+      "longitude": -83.0474918
+    },
+    "detroit_mcgregor_center": {
+      "city": "Detroit",
+      "name": "McGregor Memorial Conference Center",
+      "latitude": 42.360437,
+      "longitude": -83.069685
+    },
+    "detroit_book_tower": {
+      "city": "Detroit",
+      "name": "Book Tower",
+      "latitude": 42.3334948,
+      "longitude": -83.0515783
+    },
+    "detroit_ren_cen": {
+      "city": "Detroit",
+      "name": "Renaissance Center",
+      "latitude": 42.3289907,
+      "longitude": -83.0397978
+    },
+    "detroit_hudson": {
+      "city": "Detroit",
+      "name": "Hudson's Detroit",
+      "latitude": 42.3331133,
+      "longitude": -83.0478607
+    },
+    "detroit_guardian": {
+      "city": "Detroit",
+      "name": "Guardian Building",
+      "latitude": 42.3295212,
+      "longitude": -83.046064
+    },
+    "detroit_michigan_central": {
+      "city": "Detroit",
+      "name": "Michigan Central",
+      "latitude": 42.3288907,
+      "longitude": -83.0766103
+    },
+    "detroit_ally_center": {
+      "city": "Detroit",
+      "name": "Ally Detroit Center",
+      "latitude": 42.3300644,
+      "longitude": -83.0449346
+    },
+    "detroit_fisher_building": {
+      "city": "Detroit",
+      "name": "Fisher Building",
+      "latitude": 42.3695754,
+      "longitude": -83.0772691
+    },
+    "detroit_fox_theatre": {
+      "city": "Detroit",
+      "name": "Fox Theatre",
+      "latitude": 42.3385829,
+      "longitude": -83.0522455
+    },
+    "detroit_penobscot": {
+      "city": "Detroit",
+      "name": "Penobscot Building",
+      "latitude": 42.33027,
+      "longitude": -83.0475557
+    },
+    "detroit_dia": {
+      "city": "Detroit",
+      "name": "Detroit Institute of Arts (DIA)",
+      "latitude": 42.3595055,
+      "longitude": -83.0645225
+    },
+    "detroit_cadillac_place": {
+      "city": "Detroit",
+      "name": "General Motors Building (Cadillac Place)",
+      "latitude": 42.3687984,
+      "longitude": -83.0754165
+    },
+    "detroit_masonic_temple": {
+      "city": "Detroit",
+      "name": "Masonic Temple",
+      "latitude": 42.3417465,
+      "longitude": -83.0600967
+    },
+    "detroit_lafayette_towers": {
+      "city": "Detroit",
+      "name": "Lafayette Towers",
+      "latitude": 42.3405593,
+      "longitude": -83.0320507
+    },
+    "detroit_david_stott": {
+      "city": "Detroit",
+      "name": "David Stott Building",
+      "latitude": 42.3324349,
+      "longitude": -83.0485357
+    },
+    "detroit_david_whitney": {
+      "city": "Detroit",
+      "name": "David Whitney Building",
+      "latitude": 42.335441,
+      "longitude": -83.0499532
+    },
+    "detroit_book_cadillac": {
+      "city": "Detroit",
+      "name": "Westin Book Cadillac",
+      "latitude": 42.3319996,
+      "longitude": -83.0502138
+    },
+    "detroit_buhl_building": {
+      "city": "Detroit",
+      "name": "Buhl Building",
+      "latitude": 42.3294212,
+      "longitude": -83.0469564
+    },
+    "detroit_dpl_main": {
+      "city": "Detroit",
+      "name": "Detroit Public Library (Main)",
+      "latitude": 42.3583548,
+      "longitude": -83.0668625
+    },
+    "detroit_vinton": {
+      "city": "Detroit",
+      "name": "Vinton Building",
+      "latitude": 42.3305201,
+      "longitude": -83.0454296
+    },
+    "detroit_cadillac_tower": {
+      "city": "Detroit",
+      "name": "Cadillac Tower",
+      "latitude": 42.3319622,
+      "longitude": -83.0448932
+    },
+    "detroit_fort_shelby": {
+      "city": "Detroit",
+      "name": "Fort Shelby Hotel",
+      "latitude": 42.3292478,
+      "longitude": -83.0527084
+    },
+    "detroit_united_artists": {
+      "city": "Detroit",
+      "name": "United Artists Theatre Building",
+      "latitude": 42.3355006,
+      "longitude": -83.0523484
+    },
+    "detroit_fillmore": {
+      "city": "Detroit",
+      "name": "The Fillmore Detroit",
+      "latitude": 42.3378334,
+      "longitude": -83.051768
+    },
+    "detroit_motown_museum": {
+      "city": "Detroit",
+      "name": "Motown Museum (Hitsville U.S.A.)",
+      "latitude": 42.3641217,
+      "longitude": -83.0884919
+    },
+    "detroit_wright_kay": {
+      "city": "Detroit",
+      "name": "Wright-Kay Building",
+      "latitude": 42.3352177,
+      "longitude": -83.0491053
+    },
+    "la_disney_hall": {
+      "city": "Los Angeles",
+      "name": "Walt Disney Concert Hall",
+      "latitude": 34.0555404,
+      "longitude": -118.2490211
+    },
+    "glbl_apple_tower_theatre": {
+      "city": "Los Angeles",
+      "name": "Apple Tower Theatre",
+      "latitude": 34.0434588,
+      "longitude": -118.2545202
+    },
+    "la_griffith_observatory": {
+      "city": "Los Angeles",
+      "name": "Griffith Observatory",
+      "latitude": 34.1182188,
+      "longitude": -118.3002933
+    },
+    "la_bradbury_building": {
+      "city": "Los Angeles",
+      "name": "The Bradbury Building",
+      "latitude": 34.0507641,
+      "longitude": -118.2480773
+    },
+    "la_lax_theme": {
+      "city": "Los Angeles",
+      "name": "Theme Building (LAX)",
+      "latitude": 33.9454937,
+      "longitude": -118.4007015
+    },
+    "la_hollyhock_house": {
+      "city": "Los Angeles",
+      "name": "Hollyhock House",
+      "latitude": 34.10169,
+      "longitude": -118.294655
+    },
+    "la_getty_center": {
+      "city": "Los Angeles",
+      "name": "The Getty Center",
+      "latitude": 34.0769513,
+      "longitude": -118.475712
+    },
+    "la_wilshire_grand": {
+      "city": "Los Angeles",
+      "name": "Wilshire Grand Center",
+      "latitude": 34.0501526,
+      "longitude": -118.2603791
+    },
+    "la_eastern_columbia": {
+      "city": "Los Angeles",
+      "name": "Eastern Columbia Building",
+      "latitude": 34.0427446,
+      "longitude": -118.2562094
+    },
+    "la_stahl_house": {
+      "city": "Los Angeles",
+      "name": "Stahl House (Case Study House #22)",
+      "latitude": 34.1004003,
+      "longitude": -118.3701384
+    },
+    "la_academy_museum": {
+      "city": "Los Angeles",
+      "name": "Academy Museum of Motion Pictures",
+      "latitude": 34.0638179,
+      "longitude": -118.3608348
+    },
+    "la_union_station": {
+      "city": "Los Angeles",
+      "name": "Union Station",
+      "latitude": 34.0561575,
+      "longitude": -118.2355206
+    },
+    "la_capitol_records": {
+      "city": "Los Angeles",
+      "name": "Capitol Records Building",
+      "latitude": 34.1031111,
+      "longitude": -118.3263493
+    },
+    "la_binoculars_building": {
+      "city": "Los Angeles",
+      "name": "Chiat/Day 'Binoculars' Building",
+      "latitude": 33.994745,
+      "longitude": -118.4764353
+    },
+    "la_apple_the_grove": {
+      "city": "Los Angeles",
+      "name": "Apple The Grove",
+      "latitude": 34.0730818,
+      "longitude": -118.3584146
+    },
+    "nola_st_louis_cathedral": {
+      "city": "New Orleans",
+      "name": "St. Louis Cathedral",
+      "latitude": 29.957999,
+      "longitude": -90.0637541
+    },
+    "nola_apple_lakeside": {
+      "city": "New Orleans",
+      "name": "Apple Lakeside Shopping Center",
+      "latitude": 30.0087798,
+      "longitude": -90.1589001
+    },
+    "nola_the_sazerac_house": {
+      "city": "New Orleans",
+      "name": "The Sazerac House",
+      "latitude": 29.9516891,
+      "longitude": -90.0675554
+    },
+    "nola_preservation_hall": {
+      "city": "New Orleans",
+      "name": "Preservation Hall",
+      "latitude": 29.9582989,
+      "longitude": -90.0654337
+    },
+    "nola_hotel_monteleone": {
+      "city": "New Orleans",
+      "name": "Hotel Monteleone",
+      "latitude": 29.9541881,
+      "longitude": -90.067944
+    },
+    "nola_superdome": {
+      "city": "New Orleans",
+      "name": "Caesars Superdome",
+      "latitude": 29.9510489,
+      "longitude": -90.0823076
+    },
+    "nola_custom_house": {
+      "city": "New Orleans",
+      "name": "U.S. Custom House",
+      "latitude": 29.9515122,
+      "longitude": -90.0662021
+    },
+    "nola_commanders_palace": {
+      "city": "New Orleans",
+      "name": "Commander's Palace",
+      "latitude": 29.928834,
+      "longitude": -90.0842132
+    },
+    "nola_old_ursuline_convent": {
+      "city": "New Orleans",
+      "name": "Old Ursuline Convent",
+      "latitude": 29.9608478,
+      "longitude": -90.0606573
+    },
+    "nola_gallier_hall": {
+      "city": "New Orleans",
+      "name": "Gallier Hall",
+      "latitude": 29.9485713,
+      "longitude": -90.0713568
+    },
+    "nola_contemporary_arts_center": {
+      "city": "New Orleans",
+      "name": "Contemporary Arts Center",
+      "latitude": 29.9437776,
+      "longitude": -90.0708533
+    },
+    "nola_pitot_house": {
+      "city": "New Orleans",
+      "name": "The Pitot House",
+      "latitude": 29.9819676,
+      "longitude": -90.0890948
+    },
+    "nola_hancock_whitney": {
+      "city": "New Orleans",
+      "name": "Hancock Whitney Center",
+      "latitude": 29.9502763,
+      "longitude": -90.0707983
+    },
+    "nola_cornstalk_hotel": {
+      "city": "New Orleans",
+      "name": "The Cornstalk Hotel",
+      "latitude": 29.9600973,
+      "longitude": -90.0632816
+    },
+    "nola_wwii_museum": {
+      "city": "New Orleans",
+      "name": "The National WWII Museum",
+      "latitude": 29.9421393,
+      "longitude": -90.0707711
+    },
+    "lv_luxor": {
+      "city": "Las Vegas",
+      "name": "Luxor Las Vegas",
+      "latitude": 36.0958724,
+      "longitude": -115.1758074
+    },
+    "lv_strator": {
+      "city": "Las Vegas",
+      "name": "The STRAT Hotel & Tower",
+      "latitude": 36.1476992,
+      "longitude": -115.1561024
+    },
+    "lv_bellagio": {
+      "city": "Las Vegas",
+      "name": "Bellagio Las Vegas",
+      "latitude": 36.1473441,
+      "longitude": -115.1548642
+    },
+    "lv_sphere": {
+      "city": "Las Vegas",
+      "name": "Sphere at The Venetian Resort",
+      "latitude": 36.1212076,
+      "longitude": -115.1620674
+    },
+    "lv_caesars": {
+      "city": "Las Vegas",
+      "name": "Caesars Palace",
+      "latitude": 36.1480207,
+      "longitude": -115.1543981
+    },
+    "lv_lou_ruvo": {
+      "city": "Las Vegas",
+      "name": "Lou Ruvo Center for Brain Health",
+      "latitude": 36.1676691,
+      "longitude": -115.1544511
+    },
+    "lv_vegas_city_hall": {
+      "city": "Las Vegas",
+      "name": "Las Vegas City Hall",
+      "latitude": 36.1672954,
+      "longitude": -115.1484965
+    },
+    "lv_circus_circus": {
+      "city": "Las Vegas",
+      "name": "Circus Circus Adventuredome",
+      "latitude": 36.1377199,
+      "longitude": -115.1658402
+    },
+    "lv_new_york": {
+      "city": "Las Vegas",
+      "name": "New York-New York Hotel",
+      "latitude": 36.1021436,
+      "longitude": -115.1744946
+    },
+    "lv_encore": {
+      "city": "Las Vegas",
+      "name": "Encore at Wynn Las Vegas",
+      "latitude": 36.1480207,
+      "longitude": -115.1543981
+    },
+    "lv_apple_forum_shops": {
+      "city": "Las Vegas",
+      "name": "Apple The Forum Shops",
+      "latitude": 36.1190618,
+      "longitude": -115.173594
+    },
+    "orl_cinderella_castle": {
+      "city": "Orlando",
+      "name": "Cinderella Castle",
+      "latitude": 28.4190753,
+      "longitude": -81.5817158
+    },
+    "orl_spaceship_earth": {
+      "city": "Orlando",
+      "name": "Spaceship Earth",
+      "latitude": 28.3714061,
+      "longitude": -81.5489587
+    },
+    "orl_dr_phillips_center": {
+      "city": "Orlando",
+      "name": "Dr. Phillips Center for the Performing Arts",
+      "latitude": 28.5377847,
+      "longitude": -81.377297
+    },
+    "orl_lake_eola_pagoda": {
+      "city": "Orlando",
+      "name": "Chinese Pagoda at Lake Eola",
+      "latitude": 28.5436641,
+      "longitude": -81.3673426
+    },
+    "orl_orlando_public_library": {
+      "city": "Orlando",
+      "name": "Orlando Public Library",
+      "latitude": 28.5425394,
+      "longitude": -81.3766818
+    },
+    "orl_creative_village_ea": {
+      "city": "Orlando",
+      "name": "EA Orlando (Creative Village)",
+      "latitude": 28.5493884,
+      "longitude": -81.3825015
+    },
+    "orl_suntrust_center": {
+      "city": "Orlando",
+      "name": "Truist Plaza (SunTrust Center)",
+      "latitude": 28.5400099,
+      "longitude": -81.3794971
+    },
+    "orl_citrus_bowl": {
+      "city": "Orlando",
+      "name": "Camping World Stadium",
+      "latitude": 28.538374,
+      "longitude": -81.401394
+    },
+    "orl_science_center": {
+      "city": "Orlando",
+      "name": "Orlando Science Center",
+      "latitude": 28.5702808,
+      "longitude": -81.3647912
+    },
+    "orl_the_wheel": {
+      "city": "Orlando",
+      "name": "The Wheel at ICON Park",
+      "latitude": 28.4436157,
+      "longitude": -81.468754
+    },
+    "orl_apple_millenia": {
+      "city": "Orlando",
+      "name": "Apple Millenia",
+      "latitude": 28.4840857,
+      "longitude": -81.4300389
+    },
+    "dxb_burj_al_arab": {
+      "city": "Dubai",
+      "name": "Burj Al Arab",
+      "latitude": 25.1388612,
+      "longitude": 55.1898536
+    },
+    "dxb_museum_future": {
+      "city": "Dubai",
+      "name": "Museum of the Future",
+      "latitude": 25.2080852,
+      "longitude": 55.2741878
+    },
+    "dxb_atlantis_royal": {
+      "city": "Dubai",
+      "name": "Atlantis The Royal",
+      "latitude": 25.130764,
+      "longitude": 55.1536375
+    },
+    "dxb_cayan_tower": {
+      "city": "Dubai",
+      "name": "Cayan Tower",
+      "latitude": 25.08525,
+      "longitude": 55.14646
+    },
+    "dxb_dubai_frame": {
+      "city": "Dubai",
+      "name": "The Dubai Frame",
+      "latitude": 25.0657,
+      "longitude": 55.17128
+    },
+    "dxb_jumeirah_emirates": {
+      "city": "Dubai",
+      "name": "Jumeirah Emirates Towers",
+      "latitude": 25.0657,
+      "longitude": 55.17128
+    },
+    "dxb_opus": {
+      "city": "Dubai",
+      "name": "The Opus",
+      "latitude": 25.1886255,
+      "longitude": 55.2668535
+    },
+    "dxb_index_tower": {
+      "city": "Dubai",
+      "name": "The Index",
+      "latitude": 34.31815,
+      "longitude": -86.49582
+    },
+    "dxb_etihad_museum": {
+      "city": "Dubai",
+      "name": "Etihad Museum",
+      "latitude": 25.0657,
+      "longitude": 55.17128
+    },
+    "sg_marina_bay_sands": {
+      "city": "Singapore",
+      "name": "Marina Bay Sands",
+      "latitude": 1.2833026,
+      "longitude": 103.8582884
+    },
+    "sg_artscience_museum": {
+      "city": "Singapore",
+      "name": "ArtScience Museum",
+      "latitude": 1.2861382,
+      "longitude": 103.8592297
+    },
+    "sg_the_interlace": {
+      "city": "Singapore",
+      "name": "The Interlace",
+      "latitude": 1.2818153,
+      "longitude": 103.8030293
+    },
+    "sg_jewel_changi": {
+      "city": "Singapore",
+      "name": "Jewel Changi Airport",
+      "latitude": 1.3602243,
+      "longitude": 103.9896749
+    },
+    "sg_victoria_theatre": {
+      "city": "Singapore",
+      "name": "Victoria Theatre & Concert Hall",
+      "latitude": 1.2869662,
+      "longitude": 103.8519142
+    },
+    "sg_parkroyal_pickering": {
+      "city": "Singapore",
+      "name": "PARKROYAL COLLECTION Pickering",
+      "latitude": 1.2856566,
+      "longitude": 103.8462571
+    },
+    "sg_the_hive": {
+      "city": "Singapore",
+      "name": "The Hive (Learning Hub North)",
+      "latitude": 1.3555658,
+      "longitude": 103.6884216
+    },
+    "sg_duxton_plain": {
+      "city": "Singapore",
+      "name": "Pinnacle@Duxton",
+      "latitude": 1.2770334,
+      "longitude": 103.8419461
+    },
+    "sg_old_hill_street": {
+      "city": "Singapore",
+      "name": "Old Hill Street Police Station",
+      "latitude": 1.2908517,
+      "longitude": 103.8482775
+    },
+    "sg_capitaspring": {
+      "city": "Singapore",
+      "name": "CapitaSpring",
+      "latitude": 1.2842204,
+      "longitude": 103.8501314
+    },
+    "sg-apple-mbs": {
+      "city": "Singapore",
+      "name": "Apple Marina Bay Sands",
+      "latitude": 1.2833109,
+      "longitude": 103.8575712
+    },
+    "sg-apple-amk": {
+      "city": "Singapore",
+      "name": "Apple Ang Mo Kio Campus",
+      "latitude": 1.3904385,
+      "longitude": 103.8465536
+    },
+    "sea_space_needle": {
+      "city": "Seattle",
+      "name": "Space Needle",
+      "latitude": 47.6205131,
+      "longitude": -122.3493036
+    },
+    "sea_central_library": {
+      "city": "Seattle",
+      "name": "Seattle Central Library",
+      "latitude": 47.6067142,
+      "longitude": -122.3326983
+    },
+    "sea_amazon_spheres": {
+      "city": "Seattle",
+      "name": "The Spheres (Amazon HQ)",
+      "latitude": 47.6158629,
+      "longitude": -122.3390022
+    },
+    "sea_mopop": {
+      "city": "Seattle",
+      "name": "Museum of Pop Culture (MoPOP)",
+      "latitude": 47.6214931,
+      "longitude": -122.3482253
+    },
+    "sea_columbia_center": {
+      "city": "Seattle",
+      "name": "Columbia Center",
+      "latitude": 47.6045429,
+      "longitude": -122.3307181
+    },
+    "sea_rainier_tower": {
+      "city": "Seattle",
+      "name": "Rainier Tower",
+      "latitude": 47.6088172,
+      "longitude": -122.3343526
+    },
+    "sea_pike_place": {
+      "city": "Seattle",
+      "name": "Pike Place Market",
+      "latitude": 47.6087536,
+      "longitude": -122.3401999
+    },
+    "sea_smith_tower": {
+      "city": "Seattle",
+      "name": "Smith Tower",
+      "latitude": 47.6020094,
+      "longitude": -122.3317853
+    },
+    "sea_bullitt_center": {
+      "city": "Seattle",
+      "name": "Bullitt Center",
+      "latitude": 47.614394,
+      "longitude": -122.3124501
+    },
+    "sea_pacific_science_arches": {
+      "city": "Seattle",
+      "name": "Pacific Science Center (Arches)",
+      "latitude": 47.6194061,
+      "longitude": -122.350778
+    },
+    "sea_apple_u_village": {
+      "city": "Seattle",
+      "name": "Apple University Village",
+      "latitude": 47.6644178,
+      "longitude": -122.2988382
+    },
+    "pdx_portland_building": {
+      "city": "Portland",
+      "name": "The Portland Building",
+      "latitude": 45.5156671,
+      "longitude": -122.6786909
+    },
+    "pdx_pioneer_courthouse": {
+      "city": "Portland",
+      "name": "Pioneer Courthouse",
+      "latitude": 45.5185852,
+      "longitude": -122.6783966
+    },
+    "pdx_big_pink": {
+      "city": "Portland",
+      "name": "US Bancorp Tower (Big Pink)",
+      "latitude": 45.5226107,
+      "longitude": -122.6759928
+    },
+    "pdx_wells_fargo": {
+      "city": "Portland",
+      "name": "Wells Fargo Center",
+      "latitude": 45.5143403,
+      "longitude": -122.6793519
+    },
+    "pdx_pae_living": {
+      "city": "Portland",
+      "name": "PAE Living Building",
+      "latitude": 45.5213773,
+      "longitude": -122.6719868
+    },
+    "pdx_union_station": {
+      "city": "Portland",
+      "name": "Union Station",
+      "latitude": 45.5290114,
+      "longitude": -122.6767644
+    },
+    "pdx_commonwealth_building": {
+      "city": "Portland",
+      "name": "The Commonwealth Building",
+      "latitude": 45.5207481,
+      "longitude": -122.6780804
+    },
+    "pdx_moda_center": {
+      "city": "Portland",
+      "name": "Moda Center",
+      "latitude": 45.53221,
+      "longitude": -122.667893
+    },
+    "pdx_custom_house": {
+      "city": "Portland",
+      "name": "Custom House",
+      "latitude": 45.5248246,
+      "longitude": -122.6779587
+    },
+    "pdx_tilikum_crossing": {
+      "city": "Portland",
+      "name": "Tilikum Crossing",
+      "latitude": 45.5048878,
+      "longitude": -122.6670779
+    },
+    "dc-01": {
+      "city": "Washington D.C.",
+      "name": "The United States Capitol",
+      "latitude": 38.8716043,
+      "longitude": -77.0057659
+    },
+    "glbl_apple_carnegie_library": {
+      "city": "Washington D.C.",
+      "name": "Apple Carnegie Library",
+      "latitude": 38.9025677,
+      "longitude": -77.0229533
+    },
+    "dc-02": {
+      "city": "Washington D.C.",
+      "name": "The White House",
+      "latitude": 38.8976387,
+      "longitude": -77.0365528
+    },
+    "dc-03": {
+      "city": "Washington D.C.",
+      "name": "Library of Congress (Jefferson Building)",
+      "latitude": 38.8867409,
+      "longitude": -77.0047055
+    },
+    "dc-04": {
+      "city": "Washington D.C.",
+      "name": "National Museum of African American History and Culture",
+      "latitude": 38.891067,
+      "longitude": -77.032704
+    },
+    "dc-05": {
+      "city": "Washington D.C.",
+      "name": "The Pentagon",
+      "latitude": 38.873342,
+      "longitude": -77.057715
+    },
+    "dc-06": {
+      "city": "Washington D.C.",
+      "name": "National Cathedral",
+      "latitude": 38.930651,
+      "longitude": -77.0705952
+    },
+    "dc-07": {
+      "city": "Washington D.C.",
+      "name": "Hirshhorn Museum",
+      "latitude": 38.8878698,
+      "longitude": -77.0220725
+    },
+    "dc-08": {
+      "city": "Washington D.C.",
+      "name": "Union Station DC",
+      "latitude": 38.8977149,
+      "longitude": -77.0070889
+    },
+    "dc-09": {
+      "city": "Washington D.C.",
+      "name": "The Watergate Complex",
+      "latitude": 38.8993379,
+      "longitude": -77.0558434
+    },
+    "dc-10": {
+      "city": "Washington D.C.",
+      "name": "National Gallery of Art (East Building)",
+      "latitude": 38.892075,
+      "longitude": -77.019911
+    },
+    "mia-01": {
+      "city": "Miami",
+      "name": "Freedom Tower",
+      "latitude": 25.780295,
+      "longitude": -80.18971
+    },
+    "mia-02": {
+      "city": "Miami",
+      "name": "One Thousand Museum",
+      "latitude": 25.7841908,
+      "longitude": -80.1901461
+    },
+    "mia-03": {
+      "city": "Miami",
+      "name": "The Carlyle",
+      "latitude": 25.7838011,
+      "longitude": -80.1302747
+    },
+    "mia-04": {
+      "city": "Miami",
+      "name": "Vizcaya Museum & Gardens",
+      "latitude": 25.7443808,
+      "longitude": -80.2105015
+    },
+    "mia-05": {
+      "city": "Miami",
+      "name": "Pérez Art Museum Miami (PAMM)",
+      "latitude": 25.7860327,
+      "longitude": -80.1863392
+    },
+    "mia-06": {
+      "city": "Miami",
+      "name": "Bacardi Building",
+      "latitude": 25.797257,
+      "longitude": -80.189149
+    },
+    "mia-07": {
+      "city": "Miami",
+      "name": "Espirito Santo Plaza",
+      "latitude": 25.7605546,
+      "longitude": -80.1916886
+    },
+    "mia-08": {
+      "city": "Miami",
+      "name": "Biltmore Hotel",
+      "latitude": 25.7408959,
+      "longitude": -80.2777056
+    },
+    "mia-09": {
+      "city": "Miami",
+      "name": "Miami Beach Convention Center",
+      "latitude": 25.7955257,
+      "longitude": -80.133515
+    },
+    "mia-10": {
+      "city": "Miami",
+      "name": "Jade Signature",
+      "latitude": 25.9327098,
+      "longitude": -80.1211334
+    },
+    "mia_1111_lincoln": {
+      "city": "Miami",
+      "name": "1111 Lincoln Road",
+      "latitude": 25.7907641,
+      "longitude": -80.1408191
+    },
+    "mia_apple_aventura": {
+      "city": "Miami",
+      "name": "Apple Aventura",
+      "latitude": 25.9562444,
+      "longitude": -80.1396569
+    },
+    "blr-01": {
+      "city": "Bengaluru",
+      "name": "Vidhana Soudha",
+      "latitude": 12.9914,
+      "longitude": 77.5944
+    },
+    "blr-02": {
+      "city": "Bengaluru",
+      "name": "Bangalore Palace",
+      "latitude": 12.9921738,
+      "longitude": 77.591459
+    },
+    "blr-03": {
+      "city": "Bengaluru",
+      "name": "UB Tower",
+      "latitude": 12.9914,
+      "longitude": 77.5944
+    },
+    "blr-04": {
+      "city": "Bengaluru",
+      "name": "IIM Bangalore Campus",
+      "latitude": 12.8992052,
+      "longitude": 77.6006185
+    },
+    "blr-05": {
+      "city": "Bengaluru",
+      "name": "World Trade Center Bengaluru",
+      "latitude": 13.0323,
+      "longitude": 77.5609
+    },
+    "atl-01": {
+      "city": "Atlanta",
+      "name": "Bank of America Plaza",
+      "latitude": 33.7708502,
+      "longitude": -84.3861373
+    },
+    "atl-02": {
+      "city": "Atlanta",
+      "name": "Hyatt Regency Atlanta",
+      "latitude": 33.7616304,
+      "longitude": -84.3866362
+    },
+    "atl-03": {
+      "city": "Atlanta",
+      "name": "Ponce City Market",
+      "latitude": 33.7724397,
+      "longitude": -84.3652032
+    },
+    "atl-04": {
+      "city": "Atlanta",
+      "name": "High Museum of Art",
+      "latitude": 33.7895458,
+      "longitude": -84.3862715
+    },
+    "atl-05": {
+      "city": "Atlanta",
+      "name": "Flatiron Building (English-American)",
+      "latitude": 33.755765,
+      "longitude": -84.388883
+    },
+    "atl-06": {
+      "city": "Atlanta",
+      "name": "Mercedes-Benz Stadium",
+      "latitude": 33.7543348,
+      "longitude": -84.4023232
+    },
+    "atl-07": {
+      "city": "Atlanta",
+      "name": "The Fox Theatre",
+      "latitude": 33.7726429,
+      "longitude": -84.3855618
+    },
+    "atl-08": {
+      "city": "Atlanta",
+      "name": "Swan House",
+      "latitude": 33.8417815,
+      "longitude": -84.3860102
+    },
+    "atl-09": {
+      "city": "Atlanta",
+      "name": "1180 Peachtree (Symphony Tower)",
+      "latitude": 33.7869256,
+      "longitude": -84.3842034
+    },
+    "atl-10": {
+      "city": "Atlanta",
+      "name": "The King Center",
+      "latitude": 33.7547816,
+      "longitude": -84.3727671
+    },
+    "atl_apple_lenox": {
+      "city": "Atlanta",
+      "name": "Apple Lenox Square",
+      "latitude": 33.848239,
+      "longitude": -84.362789
+    },
+    "atl_westin_peachtree": {
+      "city": "Atlanta",
+      "name": "Westin Peachtree Plaza",
+      "latitude": 33.7594396,
+      "longitude": -84.3883759
+    },
+    "hnl-01": {
+      "city": "Honolulu",
+      "name": "ʻIolani Palace",
+      "latitude": 21.3068147,
+      "longitude": -157.8587655
+    },
+    "hnl-02": {
+      "city": "Honolulu",
+      "name": "Aliʻiōlani Hale",
+      "latitude": 21.3054007,
+      "longitude": -157.8600482
+    },
+    "hnl-03": {
+      "city": "Honolulu",
+      "name": "Aloha Tower",
+      "latitude": 21.3072529,
+      "longitude": -157.8640516
+    },
+    "hnl-04": {
+      "city": "Honolulu",
+      "name": "Hawaii State Capitol",
+      "latitude": 21.3073335,
+      "longitude": -157.8569903
+    },
+    "hnl-05": {
+      "city": "Honolulu",
+      "name": "First Hawaiian Center",
+      "latitude": 21.3078741,
+      "longitude": -157.8616424
+    },
+    "hnl-06": {
+      "city": "Honolulu",
+      "name": "IBM Building",
+      "latitude": 21.2913423,
+      "longitude": -157.8493396
+    },
+    "hnl-07": {
+      "city": "Honolulu",
+      "name": "Hawaii Theatre",
+      "latitude": 21.3109813,
+      "longitude": -157.8612348
+    },
+    "hnl-08": {
+      "city": "Honolulu",
+      "name": "Alexander & Baldwin Building",
+      "latitude": 21.3079897,
+      "longitude": -157.8626737
+    },
+    "hnl-09": {
+      "city": "Honolulu",
+      "name": "Liljestrand House",
+      "latitude": 21.3241621,
+      "longitude": -157.8312814
+    },
+    "hnl-10": {
+      "city": "Honolulu",
+      "name": "Kawaiahaʻo Church",
+      "latitude": 21.3043456,
+      "longitude": -157.8578157
+    },
+    "chi-01": {
+      "city": "Chicago",
+      "name": "Willis Tower",
+      "latitude": 41.8787381,
+      "longitude": -87.6359612
+    },
+    "us_apple_michigan_ave": {
+      "city": "Chicago",
+      "name": "Apple Michigan Avenue",
+      "latitude": 41.8894215,
+      "longitude": -87.6235164
+    },
+    "chi-02": {
+      "city": "Chicago",
+      "name": "Tribune Tower",
+      "latitude": 41.890584,
+      "longitude": -87.6232046
+    },
+    "chi-03": {
+      "city": "Chicago",
+      "name": "875 North Michigan",
+      "latitude": 41.8988813,
+      "longitude": -87.6230962
+    },
+    "chi-04": {
+      "city": "Chicago",
+      "name": "Marina City",
+      "latitude": 41.8882027,
+      "longitude": -87.6284883
+    },
+    "chi-05": {
+      "city": "Chicago",
+      "name": "St. Regis Chicago",
+      "latitude": 41.8875465,
+      "longitude": -87.6187974
+    },
+    "chi-06": {
+      "city": "Chicago",
+      "name": "The Rookery",
+      "latitude": 41.879122,
+      "longitude": -87.6321736
+    },
+    "chi-07": {
+      "city": "Chicago",
+      "name": "Aqua Tower",
+      "latitude": 41.8863356,
+      "longitude": -87.6199063
+    },
+    "chi-08": {
+      "city": "Chicago",
+      "name": "Carson Pirie Scott Building",
+      "latitude": 41.8814633,
+      "longitude": -87.6272684
+    },
+    "chi-09": {
+      "city": "Chicago",
+      "name": "The Merchandise Mart",
+      "latitude": 41.8884976,
+      "longitude": -87.6344561
+    },
+    "chi-10": {
+      "city": "Chicago",
+      "name": "Auditorium Building",
+      "latitude": 41.8761349,
+      "longitude": -87.6251817
+    },
+    "chi-11": {
+      "city": "Chicago",
+      "name": "Chicago Board of Trade Building",
+      "latitude": 41.8778674,
+      "longitude": -87.6320417
+    },
+    "chi-12": {
+      "city": "Chicago",
+      "name": "The Wrigley Building",
+      "latitude": 41.8895686,
+      "longitude": -87.6247284
+    },
+    "chi-13": {
+      "city": "Chicago",
+      "name": "S.R. Crown Hall (IIT)",
+      "latitude": 41.8331989,
+      "longitude": -87.6272734
+    },
+    "chi-14": {
+      "city": "Chicago",
+      "name": "Carbide & Carbon Building",
+      "latitude": 41.8865558,
+      "longitude": -87.6250085
+    },
+    "chi-15": {
+      "city": "Chicago",
+      "name": "Frederick C. Robie House",
+      "latitude": 41.7897893,
+      "longitude": -87.595994
+    },
+    "bos-01": {
+      "city": "Boston",
+      "name": "200 Clarendon",
+      "latitude": 42.3491677,
+      "longitude": -71.075124
+    },
+    "bos-02": {
+      "city": "Boston",
+      "name": "Custom House Tower",
+      "latitude": 42.3590801,
+      "longitude": -71.0536495
+    },
+    "bos-03": {
+      "city": "Boston",
+      "name": "Prudential Tower",
+      "latitude": 42.3471718,
+      "longitude": -71.0825069
+    },
+    "bos-04": {
+      "city": "Boston",
+      "name": "Old State House",
+      "latitude": 42.3586922,
+      "longitude": -71.0575878
+    },
+    "bos-05": {
+      "city": "Boston",
+      "name": "Boston City Hall",
+      "latitude": 42.3603713,
+      "longitude": -71.0579762
+    },
+    "bos-06": {
+      "city": "Boston",
+      "name": "Trinity Church",
+      "latitude": 42.3500677,
+      "longitude": -71.0754254
+    },
+    "bos-07": {
+      "city": "Boston",
+      "name": "Ray and Maria Stata Center (MIT)",
+      "latitude": 42.3616394,
+      "longitude": -71.0911163
+    },
+    "bos-08": {
+      "city": "Boston",
+      "name": "The Rowes Wharf",
+      "latitude": 42.3566602,
+      "longitude": -71.0503163
+    },
+    "bos-09": {
+      "city": "Boston",
+      "name": "Winthrop Center",
+      "latitude": 42.3236576,
+      "longitude": -71.0767362
+    },
+    "bos-10": {
+      "city": "Boston",
+      "name": "Boston Public Library (McKim Building)",
+      "latitude": 42.3493298,
+      "longitude": -71.0786547
+    },
+    "bos-11": {
+      "city": "Boston",
+      "name": "Apple Boylston Street",
+      "latitude": 42.3487978,
+      "longitude": -71.0823878
+    },
+    "bos-12": {
+      "city": "Boston",
+      "name": "Massachusetts State House",
+      "latitude": 42.358602,
+      "longitude": -71.0638751
+    },
+    "bos-13": {
+      "city": "Boston",
+      "name": "Institute of Contemporary Art",
+      "latitude": 42.3528651,
+      "longitude": -71.0429628
+    },
+    "bos-14": {
+      "city": "Boston",
+      "name": "Faneuil Hall",
+      "latitude": 42.3600335,
+      "longitude": -71.0562341
+    },
+    "bos-15": {
+      "city": "Boston",
+      "name": "Federal Reserve Bank Building",
+      "latitude": 42.352744,
+      "longitude": -71.0533737
+    },
+    "den-01": {
+      "city": "Denver",
+      "name": "Wells Fargo Center",
+      "latitude": 39.7435942,
+      "longitude": -104.9854851
+    },
+    "den-02": {
+      "city": "Denver",
+      "name": "Denver Art Museum",
+      "latitude": 39.7373941,
+      "longitude": -104.9896237
+    },
+    "den-03": {
+      "city": "Denver",
+      "name": "Denver Union Station",
+      "latitude": 39.7532277,
+      "longitude": -105.0000944
+    },
+    "den-04": {
+      "city": "Denver",
+      "name": "Colorado State Capitol",
+      "latitude": 39.7392252,
+      "longitude": -104.9848373
+    },
+    "den-05": {
+      "city": "Denver",
+      "name": "Denver Public Library (Central)",
+      "latitude": 39.7384615,
+      "longitude": -104.9902638
+    },
+    "den-06": {
+      "city": "Denver",
+      "name": "United States Air Force Academy Cadet Chapel",
+      "latitude": 39.0087832,
+      "longitude": -104.8965013
+    },
+    "den-07": {
+      "city": "Denver",
+      "name": "Clyfford Still Museum",
+      "latitude": 39.7362911,
+      "longitude": -104.9898454
+    },
+    "den-08": {
+      "city": "Denver",
+      "name": "One River North",
+      "latitude": 39.7719701,
+      "longitude": -104.9713268
+    },
+    "den-09": {
+      "city": "Denver",
+      "name": "The Brown Palace Hotel",
+      "latitude": 39.7441138,
+      "longitude": -104.9878711
+    },
+    "den-10": {
+      "city": "Denver",
+      "name": "1144 Fifteenth",
+      "latitude": 39.7470275,
+      "longitude": -104.9976087
+    },
+    "den-11": {
+      "city": "Denver",
+      "name": "Apple Cherry Creek",
+      "latitude": 39.7166139,
+      "longitude": -104.9524963
+    },
+    "den-12": {
+      "city": "Denver",
+      "name": "Denver International Airport (Jeppesen Terminal)",
+      "latitude": 39.8606676,
+      "longitude": -104.6853673
+    },
+    "den-13": {
+      "city": "Denver",
+      "name": "Daniels & Fisher Tower",
+      "latitude": 39.7481018,
+      "longitude": -104.9956876
+    },
+    "den-14": {
+      "city": "Denver",
+      "name": "Ellie Caulkins Opera House",
+      "latitude": 39.7452146,
+      "longitude": -104.9974822
+    },
+    "den-15": {
+      "city": "Denver",
+      "name": "The Crawford Hill Mansion",
+      "latitude": 39.731685,
+      "longitude": -104.9853051
+    },
+    "pit-01": {
+      "city": "Pittsburgh",
+      "name": "PPG Place",
+      "latitude": 40.4400104,
+      "longitude": -80.0037606
+    },
+    "pit-02": {
+      "city": "Pittsburgh",
+      "name": "Cathedral of Learning",
+      "latitude": 40.4441886,
+      "longitude": -79.9548591
+    },
+    "pit-03": {
+      "city": "Pittsburgh",
+      "name": "The Gulf Tower",
+      "latitude": 40.4426022,
+      "longitude": -79.995213
+    },
+    "pit-04": {
+      "city": "Pittsburgh",
+      "name": "Fallingwater",
+      "latitude": 39.9382383,
+      "longitude": -79.4473901
+    },
+    "pit-05": {
+      "city": "Pittsburgh",
+      "name": "Smithfield United Church",
+      "latitude": 40.44203,
+      "longitude": -79.9974788
+    },
+    "pit-06": {
+      "city": "Pittsburgh",
+      "name": "Union Trust Building",
+      "latitude": 40.4400734,
+      "longitude": -79.9965855
+    },
+    "pit-07": {
+      "city": "Pittsburgh",
+      "name": "Alcoa Building",
+      "latitude": 40.4415091,
+      "longitude": -79.9967693
+    },
+    "pit-08": {
+      "city": "Pittsburgh",
+      "name": "The Tower at PNC Plaza",
+      "latitude": 40.440612,
+      "longitude": -80.000293
+    },
+    "pit-09": {
+      "city": "Pittsburgh",
+      "name": "Allegheny County Courthouse",
+      "latitude": 40.4390325,
+      "longitude": -79.9972317
+    },
+    "pit-10": {
+      "city": "Pittsburgh",
+      "name": "Heinz Hall",
+      "latitude": 40.442703,
+      "longitude": -80.001962
+    },
+    "pit-11": {
+      "city": "Pittsburgh",
+      "name": "Apple Shadyside",
+      "latitude": 40.4508561,
+      "longitude": -79.934531
+    },
+    "pit-12": {
+      "city": "Pittsburgh",
+      "name": "U.S. Steel Tower",
+      "latitude": 40.4413073,
+      "longitude": -79.9945084
+    },
+    "pit-13": {
+      "city": "Pittsburgh",
+      "name": "Frick Building",
+      "latitude": 40.4391819,
+      "longitude": -79.997314
+    },
+    "pit-14": {
+      "city": "Pittsburgh",
+      "name": "Benedum Center for the Performing Arts",
+      "latitude": 40.4430914,
+      "longitude": -79.9996284
+    },
+    "pit-15": {
+      "city": "Pittsburgh",
+      "name": "Koppers Building",
+      "latitude": 40.4421088,
+      "longitude": -79.9955426
+    },
+    "phi-01": {
+      "city": "Philadelphia",
+      "name": "Philadelphia City Hall",
+      "latitude": 39.953206,
+      "longitude": -75.1643762
+    },
+    "phi-02": {
+      "city": "Philadelphia",
+      "name": "Independence Hall",
+      "latitude": 39.9488873,
+      "longitude": -75.150026
+    },
+    "phi-03": {
+      "city": "Philadelphia",
+      "name": "Philadelphia Museum of Art",
+      "latitude": 39.9655661,
+      "longitude": -75.1815202
+    },
+    "phi-04": {
+      "city": "Philadelphia",
+      "name": "One Liberty Place",
+      "latitude": 39.9525789,
+      "longitude": -75.1681341
+    },
+    "phi-05": {
+      "city": "Philadelphia",
+      "name": "Comcast Technology Center",
+      "latitude": 39.9549781,
+      "longitude": -75.1704034
+    },
+    "phi-06": {
+      "city": "Philadelphia",
+      "name": "Pennsylvania Academy of the Fine Arts (PAFA)",
+      "latitude": 39.9552373,
+      "longitude": -75.1636673
+    },
+    "phi-07": {
+      "city": "Philadelphia",
+      "name": "The PSFS Building",
+      "latitude": 39.9515897,
+      "longitude": -75.160309
+    },
+    "phi-08": {
+      "city": "Philadelphia",
+      "name": "Fisher Fine Arts Library",
+      "latitude": 39.9515981,
+      "longitude": -75.1927152
+    },
+    "phi-09": {
+      "city": "Philadelphia",
+      "name": "Vanna Venturi House",
+      "latitude": 40.0706588,
+      "longitude": -75.2081297
+    },
+    "phi-10": {
+      "city": "Philadelphia",
+      "name": "Eastern State Penitentiary",
+      "latitude": 39.9683406,
+      "longitude": -75.1726626
+    },
+    "phi-11": {
+      "city": "Philadelphia",
+      "name": "Apple Walnut Street",
+      "latitude": 39.9500344,
+      "longitude": -75.1678868
+    },
+    "phi-12": {
+      "city": "Philadelphia",
+      "name": "Richards Medical Research Laboratories",
+      "latitude": 39.9497307,
+      "longitude": -75.1975274
+    },
+    "phi-13": {
+      "city": "Philadelphia",
+      "name": "Masonic Temple of Philadelphia",
+      "latitude": 39.9536203,
+      "longitude": -75.1626572
+    },
+    "phi-14": {
+      "city": "Philadelphia",
+      "name": "The Barnes Foundation",
+      "latitude": 39.9605495,
+      "longitude": -75.1726581
+    },
+    "phi-15": {
+      "city": "Philadelphia",
+      "name": "30th Street Station",
+      "latitude": 39.9559262,
+      "longitude": -75.1819978
+    },
+    "yvr-01": {
+      "city": "Vancouver",
+      "name": "Marine Building",
+      "latitude": 49.2874964,
+      "longitude": -123.1170986
+    },
+    "yvr-02": {
+      "city": "Vancouver",
+      "name": "Vancouver Art Gallery (Old Courthouse)",
+      "latitude": 49.2828495,
+      "longitude": -123.1206248
+    },
+    "yvr-03": {
+      "city": "Vancouver",
+      "name": "Canada Place",
+      "latitude": 49.2878972,
+      "longitude": -123.113048
+    },
+    "yvr-04": {
+      "city": "Vancouver",
+      "name": "Vancouver Public Library (Central Branch)",
+      "latitude": 49.279659,
+      "longitude": -123.115614
+    },
+    "yvr-05": {
+      "city": "Vancouver",
+      "name": "Hotel Vancouver",
+      "latitude": 49.2837697,
+      "longitude": -123.1209858
+    },
+    "yvr-06": {
+      "city": "Vancouver",
+      "name": "Museum of Anthropology (MOA)",
+      "latitude": 49.2694691,
+      "longitude": -123.2594145
+    },
+    "yvr-07": {
+      "city": "Vancouver",
+      "name": "The Electra (B.C. Electric Building)",
+      "latitude": 49.2812824,
+      "longitude": -123.125337
+    },
+    "yvr-08": {
+      "city": "Vancouver",
+      "name": "Bloedel Conservatory",
+      "latitude": 49.2748815,
+      "longitude": -123.1192317
+    },
+    "yvr-09": {
+      "city": "Vancouver",
+      "name": "Living Shangri-La",
+      "latitude": 49.2857822,
+      "longitude": -123.1239175
+    },
+    "yvr-10": {
+      "city": "Vancouver",
+      "name": "Sun Tower",
+      "latitude": 49.2810077,
+      "longitude": -123.1084552
+    },
+    "yvr-11": {
+      "city": "Vancouver",
+      "name": "Vancouver House",
+      "latitude": 49.2749095,
+      "longitude": -123.1310166
+    },
+    "yvr-12": {
+      "city": "Vancouver",
+      "name": "Gastown Steam Clock",
+      "latitude": 49.2843841,
+      "longitude": -123.10889
+    },
+    "yvr-13": {
+      "city": "Vancouver",
+      "name": "Harbour Centre",
+      "latitude": 49.2846668,
+      "longitude": -123.1119122
+    },
+    "yvr-14": {
+      "city": "Vancouver",
+      "name": "Woodward’s Building",
+      "latitude": 49.282344,
+      "longitude": -123.1090797
+    },
+    "yvr-15": {
+      "city": "Vancouver",
+      "name": "The Qube",
+      "latitude": 49.2890055,
+      "longitude": -123.1275092
+    },
+    "cle-01": {
+      "city": "Cleveland",
+      "name": "Rock & Roll Hall of Fame",
+      "latitude": 41.449505,
+      "longitude": -81.944711
+    },
+    "cle-02": {
+      "city": "Cleveland",
+      "name": "Terminal Tower",
+      "latitude": 41.320694,
+      "longitude": -81.6281165
+    },
+    "cle-03": {
+      "city": "Cleveland",
+      "name": "The Arcade",
+      "latitude": 41.500332,
+      "longitude": -81.6903643
+    },
+    "cle-04": {
+      "city": "Cleveland",
+      "name": "Guardian Building (668 Euclid)",
+      "latitude": 41.4991043,
+      "longitude": -81.688547
+    },
+    "cle-05": {
+      "city": "Cleveland",
+      "name": "Peter B. Lewis Building",
+      "latitude": 41.5099683,
+      "longitude": -81.6079794
+    },
+    "cle-06": {
+      "city": "Cleveland",
+      "name": "Cleveland Museum of Art",
+      "latitude": 41.5090438,
+      "longitude": -81.6117367
+    },
+    "cle-07": {
+      "city": "Cleveland",
+      "name": "West Side Market",
+      "latitude": 41.4846588,
+      "longitude": -81.7029998
+    },
+    "cle-08": {
+      "city": "Cleveland",
+      "name": "Cleveland Trust Company Building",
+      "latitude": 41.500985,
+      "longitude": -81.6865215
+    },
+    "cle-09": {
+      "city": "Cleveland",
+      "name": "Key Tower",
+      "latitude": 41.3816057,
+      "longitude": -81.6409781
+    },
+    "cle-10": {
+      "city": "Cleveland",
+      "name": "Museum of Contemporary Art (MOCA)",
+      "latitude": 41.508845,
+      "longitude": -81.605129
+    },
+    "cle-11": {
+      "city": "Cleveland",
+      "name": "Apple Crocker Park",
+      "latitude": 41.4574755,
+      "longitude": -81.9520727
+    },
+    "cle-12": {
+      "city": "Cleveland",
+      "name": "Cleveland Public Library (Main)",
+      "latitude": 41.5011744,
+      "longitude": -81.6918045
+    },
+    "cle-13": {
+      "city": "Cleveland",
+      "name": "Severance Music Center",
+      "latitude": 41.5063871,
+      "longitude": -81.6093686
+    },
+    "cle-14": {
+      "city": "Cleveland",
+      "name": "Old Federal Building & Post Office",
+      "latitude": 41.500219,
+      "longitude": -81.692802
+    },
+    "cle-15": {
+      "city": "Cleveland",
+      "name": "Playhouse Square (State Theatre)",
+      "latitude": 41.5014734,
+      "longitude": -81.6808235
+    },
+    "vic-01": {
+      "city": "Victoria",
+      "name": "British Columbia Parliament Buildings",
+      "latitude": 48.4193828,
+      "longitude": -123.3702957
+    },
+    "vic-02": {
+      "city": "Victoria",
+      "name": "The Fairmont Empress",
+      "latitude": 48.4215129,
+      "longitude": -123.3679561
+    },
+    "vic-03": {
+      "city": "Victoria",
+      "name": "Craigdarroch Castle",
+      "latitude": 48.4226307,
+      "longitude": -123.3437592
+    },
+    "vic-04": {
+      "city": "Victoria",
+      "name": "Royal BC Museum",
+      "latitude": 48.4197241,
+      "longitude": -123.3678678
+    },
+    "vic-05": {
+      "city": "Victoria",
+      "name": "Fan Tan Alley (Building Complex)",
+      "latitude": 48.4289362,
+      "longitude": -123.3679221
+    },
+    "vic-06": {
+      "city": "Victoria",
+      "name": "Victoria Public Library (Central)",
+      "latitude": 48.4230466,
+      "longitude": -123.3641874
+    },
+    "vic-07": {
+      "city": "Victoria",
+      "name": "St. Andrew’s Cathedral",
+      "latitude": 48.4254175,
+      "longitude": -123.3628055
+    },
+    "vic-08": {
+      "city": "Victoria",
+      "name": "Hatley Castle",
+      "latitude": 48.5759851,
+      "longitude": -123.6378831
+    },
+    "vic-09": {
+      "city": "Victoria",
+      "name": "The Customs House",
+      "latitude": 48.423392,
+      "longitude": -123.3687477
+    },
+    "vic-10": {
+      "city": "Victoria",
+      "name": "Mayfair Shopping Centre",
+      "latitude": 48.4466353,
+      "longitude": -123.369845
+    },
+    "vic-11": {
+      "city": "Victoria",
+      "name": "Christ Church Cathedral",
+      "latitude": 48.4218983,
+      "longitude": -123.3586835
+    },
+    "vic-12": {
+      "city": "Victoria",
+      "name": "Victoria City Hall",
+      "latitude": 48.4283126,
+      "longitude": -123.3650195
+    },
+    "vic-13": {
+      "city": "Victoria",
+      "name": "The Janion Building",
+      "latitude": 48.4329875,
+      "longitude": -123.3697294
+    },
+    "vic-14": {
+      "city": "Victoria",
+      "name": "The Bay Centre",
+      "latitude": 48.4253202,
+      "longitude": -123.3657405
+    },
+    "vic-15": {
+      "city": "Victoria",
+      "name": "Market Square",
+      "latitude": 48.4277744,
+      "longitude": -123.3688615
+    },
+    "hk_bank_of_china": {
+      "city": "Hong Kong",
+      "name": "Bank of China Tower",
+      "latitude": 22.2792403,
+      "longitude": 114.1615832
+    },
+    "hk_hsbc_main": {
+      "city": "Hong Kong",
+      "name": "HSBC Main Building",
+      "latitude": 22.2802889,
+      "longitude": 114.1595474
+    },
+    "hk_icc": {
+      "city": "Hong Kong",
+      "name": "International Commerce Centre (ICC)",
+      "latitude": 22.3046362,
+      "longitude": 114.1605933
+    },
+    "hk_ifc_two": {
+      "city": "Hong Kong",
+      "name": "Two International Finance Centre",
+      "latitude": 22.2866255,
+      "longitude": 114.156663
+    },
+    "hk_jockey_club_innovation": {
+      "city": "Hong Kong",
+      "name": "Jockey Club Innovation Tower",
+      "latitude": 22.3037768,
+      "longitude": 114.185388
+    },
+    "hk_lippo_centre": {
+      "city": "Hong Kong",
+      "name": "Lippo Centre",
+      "latitude": 22.2794895,
+      "longitude": 114.163316
+    },
+    "hk_taikwun": {
+      "city": "Hong Kong",
+      "name": "Tai Kwun (Centre for Heritage and Arts)",
+      "latitude": 22.2811562,
+      "longitude": 114.154009
+    },
+    "hk_convention_centre": {
+      "city": "Hong Kong",
+      "name": "HK Convention and Exhibition Centre",
+      "latitude": 22.2824456,
+      "longitude": 114.1685025
+    },
+    "hk_skyline_mansion": {
+      "city": "Hong Kong",
+      "name": "Choi Hung Estate",
+      "latitude": 22.335139,
+      "longitude": 114.2088185
+    },
+    "hk_monastery": {
+      "city": "Hong Kong",
+      "name": "Chi Lin Nunnery",
+      "latitude": 22.3398966,
+      "longitude": 114.2052501
+    },
+    "hk_apple_ifc": {
+      "city": "Hong Kong",
+      "name": "Apple IFC Mall",
+      "latitude": 22.2866255,
+      "longitude": 114.156663
+    },
+    "hk_jardine_house": {
+      "city": "Hong Kong",
+      "name": "Jardine House",
+      "latitude": 22.2830026,
+      "longitude": 114.1591547
+    },
+    "hk_m_plus": {
+      "city": "Hong Kong",
+      "name": "M+",
+      "latitude": 22.3010537,
+      "longitude": 114.1591472
+    },
+    "hk_peak_tower": {
+      "city": "Hong Kong",
+      "name": "The Peak Tower",
+      "latitude": 22.271123,
+      "longitude": 114.1501414
+    },
+    "hk_xiqu_centre": {
+      "city": "Hong Kong",
+      "name": "Xiqu Centre",
+      "latitude": 22.3020689,
+      "longitude": 114.1671776
+    },
+    "ber_reichstag": {
+      "city": "Berlin",
+      "name": "Reichstag Building",
+      "latitude": 52.5186538,
+      "longitude": 13.3761015
+    },
+    "ber_brandenburg_gate": {
+      "city": "Berlin",
+      "name": "Brandenburg Gate",
+      "latitude": 52.5163514,
+      "longitude": 13.3786908
+    },
+    "ber_tv_tower": {
+      "city": "Berlin",
+      "name": "Berliner Fernsehturm",
+      "latitude": 52.5208279,
+      "longitude": 13.4094214
+    },
+    "ber_jewish_museum": {
+      "city": "Berlin",
+      "name": "Jewish Museum Berlin",
+      "latitude": 52.5016941,
+      "longitude": 13.3951413
+    },
+    "ber_philharmonic": {
+      "city": "Berlin",
+      "name": "Berliner Philharmonie",
+      "latitude": 52.5099888,
+      "longitude": 13.3696059
+    },
+    "ber_neue_national": {
+      "city": "Berlin",
+      "name": "Neue Nationalgalerie",
+      "latitude": 52.5070409,
+      "longitude": 13.3676212
+    },
+    "ber_kaiser_wilhelm": {
+      "city": "Berlin",
+      "name": "Kaiser Wilhelm Memorial Church",
+      "latitude": 52.5049676,
+      "longitude": 13.335294
+    },
+    "ber_chancellery": {
+      "city": "Berlin",
+      "name": "Federal Chancellery",
+      "latitude": 52.5201946,
+      "longitude": 13.3691292
+    },
+    "ber_unite_d_habitation": {
+      "city": "Berlin",
+      "name": "Corbusierhaus",
+      "latitude": 52.5102002,
+      "longitude": 13.2438932
+    },
+    "ber_shell_haus": {
+      "city": "Berlin",
+      "name": "Shell-Haus",
+      "latitude": 52.5060586,
+      "longitude": 13.3629876
+    },
+    "ber_apple_rosenthaler": {
+      "city": "Berlin",
+      "name": "Apple Rosenthaler Straße",
+      "latitude": 52.5243125,
+      "longitude": 13.4031361
+    },
+    "ber_humboldt_forum": {
+      "city": "Berlin",
+      "name": "Humboldt Forum",
+      "latitude": 52.516714,
+      "longitude": 13.4031305
+    },
+    "ber_sony_center": {
+      "city": "Berlin",
+      "name": "Sony Center",
+      "latitude": 52.5098014,
+      "longitude": 13.3755898
+    },
+    "ber_gsw_hq": {
+      "city": "Berlin",
+      "name": "GSW Headquarters (Rocket Tower)",
+      "latitude": 52.5065424,
+      "longitude": 13.392988
+    },
+    "ber_james_simon_galerie": {
+      "city": "Berlin",
+      "name": "James-Simon-Galerie",
+      "latitude": 52.5201352,
+      "longitude": 13.3993615
+    },
+    "ams_rijksmuseum": {
+      "city": "Amsterdam",
+      "name": "Rijksmuseum",
+      "latitude": 52.3596632,
+      "longitude": 4.8842791
+    },
+    "ams_royal_palace": {
+      "city": "Amsterdam",
+      "name": "Royal Palace",
+      "latitude": 52.3731449,
+      "longitude": 4.8913363
+    },
+    "ams_eye_film": {
+      "city": "Amsterdam",
+      "name": "Eye Film Institute",
+      "latitude": 52.384335,
+      "longitude": 4.900812
+    },
+    "ams_nemo": {
+      "city": "Amsterdam",
+      "name": "NEMO Science Museum",
+      "latitude": 52.3738532,
+      "longitude": 4.9121113
+    },
+    "ams_het_schip": {
+      "city": "Amsterdam",
+      "name": "Het Schip",
+      "latitude": 52.3904885,
+      "longitude": 4.8737264
+    },
+    "ams_centraal": {
+      "city": "Amsterdam",
+      "name": "Amsterdam Centraal Station",
+      "latitude": 52.37798,
+      "longitude": 4.9016073
+    },
+    "ams_westerkerk": {
+      "city": "Amsterdam",
+      "name": "Westerkerk",
+      "latitude": 52.374427,
+      "longitude": 4.8834988
+    },
+    "ams_arcam": {
+      "city": "Amsterdam",
+      "name": "ARCAM",
+      "latitude": 52.3715088,
+      "longitude": 4.9124742
+    },
+    "ams_beurs_van_berlage": {
+      "city": "Amsterdam",
+      "name": "Beurs van Berlage",
+      "latitude": 52.3750218,
+      "longitude": 4.8962647
+    },
+    "ams_black_diamond": {
+      "city": "Amsterdam",
+      "name": "The Rock (Zuidas)",
+      "latitude": 52.3374936,
+      "longitude": 4.8703748
+    },
+    "ams_apple_hirsch": {
+      "city": "Amsterdam",
+      "name": "Apple Haarlemmerstraat (Leidseplein)",
+      "latitude": 52.3635832,
+      "longitude": 4.8825438
+    },
+    "ams_valley": {
+      "city": "Amsterdam",
+      "name": "Valley",
+      "latitude": 52.3376238,
+      "longitude": 4.8772228
+    },
+    "ams_scheepvaartmuseum": {
+      "city": "Amsterdam",
+      "name": "National Maritime Museum",
+      "latitude": 52.372005,
+      "longitude": 4.9149527
+    },
+    "ams_silodam": {
+      "city": "Amsterdam",
+      "name": "Silodam",
+      "latitude": 52.3902604,
+      "longitude": 4.8913251
+    },
+    "ams_stedelijk": {
+      "city": "Amsterdam",
+      "name": "Stedelijk Museum (The Bathtub)",
+      "latitude": 52.3579003,
+      "longitude": 4.8798598
+    },
+    "pek_forbidden_city": {
+      "city": "Beijing",
+      "name": "Forbidden City (Hall of Supreme Harmony)",
+      "latitude": 39.93264,
+      "longitude": 116.41834
+    },
+    "pek_birds_nest": {
+      "city": "Beijing",
+      "name": "National Stadium",
+      "latitude": 39.9710491,
+      "longitude": 116.4013719
+    },
+    "pek_cctv": {
+      "city": "Beijing",
+      "name": "CCTV Headquarters",
+      "latitude": 39.9158128,
+      "longitude": 116.4459674
+    },
+    "pek_temple_heaven": {
+      "city": "Beijing",
+      "name": "Temple of Heaven (Hall of Prayer)",
+      "latitude": 39.8867875,
+      "longitude": 116.3977728
+    },
+    "pek_galaxy_soho": {
+      "city": "Beijing",
+      "name": "Galaxy SOHO",
+      "latitude": 39.93264,
+      "longitude": 116.41834
+    },
+    "pek_water_cube": {
+      "city": "Beijing",
+      "name": "National Aquatics Center",
+      "latitude": 39.9915785,
+      "longitude": 116.3841726
+    },
+    "pek_great_hall": {
+      "city": "Beijing",
+      "name": "Great Hall of the People",
+      "latitude": 39.93317,
+      "longitude": 116.37337
+    },
+    "pek_citic_tower": {
+      "city": "Beijing",
+      "name": "CITIC Tower (China Zun)",
+      "latitude": 39.95462,
+      "longitude": 116.5029
+    },
+    "pek_national_theatre": {
+      "city": "Beijing",
+      "name": "National Centre for the Performing Arts",
+      "latitude": 39.93317,
+      "longitude": 116.37337
+    },
+    "pek_daxing_airport": {
+      "city": "Beijing",
+      "name": "Beijing Daxing International",
+      "latitude": 39.50972,
+      "longitude": 116.69472
+    },
+    "glbl_apple_sanlitun": {
+      "city": "Beijing",
+      "name": "Apple Sanlitun",
+      "latitude": 39.9335515,
+      "longitude": 116.4481984
+    },
+    "pek_white_pagoda": {
+      "city": "Beijing",
+      "name": "White Dagoba (Miaoying Temple)",
+      "latitude": 39.9223313,
+      "longitude": 116.3542957
+    },
+    "pek_leeza_soho": {
+      "city": "Beijing",
+      "name": "Leeza SOHO",
+      "latitude": 39.84757,
+      "longitude": 116.27227
+    },
+    "pek_poly_victory": {
+      "city": "Beijing",
+      "name": "New Poly Plaza",
+      "latitude": 39.95462,
+      "longitude": 116.5029
+    },
+    "pek_white_mountain": {
+      "city": "Beijing",
+      "name": "Chaoyang Park Plaza",
+      "latitude": 39.9325388,
+      "longitude": 116.4666179
+    },
+    "pek_drum_tower": {
+      "city": "Beijing",
+      "name": "Drum and Bell Towers",
+      "latitude": 39.9398054,
+      "longitude": 116.3896604
+    },
+    "glbl_apple_al_maryah": {
+      "city": "Abu Dhabi",
+      "name": "Apple Al Maryah Island",
+      "latitude": 24.501449,
+      "longitude": 54.3890553
+    },
+    "auh_sheikh_zayed_mosque": {
+      "city": "Abu Dhabi",
+      "name": "Sheikh Zayed Grand Mosque",
+      "latitude": 24.4132249,
+      "longitude": 54.5065238
+    },
+    "auh_louvre_abudhabi": {
+      "city": "Abu Dhabi",
+      "name": "Louvre Abu Dhabi",
+      "latitude": 23.66667,
+      "longitude": 54.0
+    },
+    "auh_capital_gate": {
+      "city": "Abu Dhabi",
+      "name": "Capital Gate",
+      "latitude": 24.4241579,
+      "longitude": 54.4130775
+    },
+    "auh_aldar_hq": {
+      "city": "Abu Dhabi",
+      "name": "Aldar Headquarters",
+      "latitude": 24.4478529,
+      "longitude": 54.5963
+    },
+    "auh_emirates_palace": {
+      "city": "Abu Dhabi",
+      "name": "Emirates Palace",
+      "latitude": 23.66667,
+      "longitude": 54.0
+    },
+    "auh_etihad_towers": {
+      "city": "Abu Dhabi",
+      "name": "Etihad Towers (Tower 2)",
+      "latitude": 24.4650615,
+      "longitude": 54.32567
+    },
+    "auh_yas_viceroy": {
+      "city": "Abu Dhabi",
+      "name": "W Abu Dhabi - Yas Island",
+      "latitude": 24.486404,
+      "longitude": 54.6090712
+    },
+    "auh_al_bahr_towers": {
+      "city": "Abu Dhabi",
+      "name": "Al Bahr Towers",
+      "latitude": 24.4561887,
+      "longitude": 54.4009387
+    },
+    "auh_qasr_al_hosn": {
+      "city": "Abu Dhabi",
+      "name": "Qasr Al Hosn",
+      "latitude": 24.4823376,
+      "longitude": 54.3552764
+    },
+    "auh_abrahamic_family_house": {
+      "city": "Abu Dhabi",
+      "name": "Abrahamic Family House",
+      "latitude": 23.66667,
+      "longitude": 54.0
+    },
+    "auh_masdar_hq": {
+      "city": "Abu Dhabi",
+      "name": "Siemens Middle East HQ (Masdar City)",
+      "latitude": 24.4274827,
+      "longitude": 54.6234876
+    },
+    "auh_qasr_al_watan": {
+      "city": "Abu Dhabi",
+      "name": "Qasr Al Watan",
+      "latitude": 24.4621308,
+      "longitude": 54.3101907
+    },
+    "auh_guggenheim": {
+      "city": "Abu Dhabi",
+      "name": "Guggenheim Abu Dhabi (Upcoming)",
+      "latitude": 23.66667,
+      "longitude": 54.0
+    },
+    "auh_warner_bros": {
+      "city": "Abu Dhabi",
+      "name": "Warner Bros. World Abu Dhabi",
+      "latitude": 24.486404,
+      "longitude": 54.6090712
+    },
+    "bom_cst": {
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Terminus",
+      "latitude": 18.6291,
+      "longitude": 72.8919
+    },
+    "bom_gateway": {
+      "city": "Mumbai",
+      "name": "Gateway of India",
+      "latitude": 18.9219661,
+      "longitude": 72.8345657
+    },
+    "bom_taj_palace": {
+      "city": "Mumbai",
+      "name": "Taj Mahal Palace Hotel",
+      "latitude": 18.9219661,
+      "longitude": 72.8345657
+    },
+    "bom_rajabai": {
+      "city": "Mumbai",
+      "name": "Rajabai Clock Tower",
+      "latitude": 19.0167,
+      "longitude": 72.85
+    },
+    "bom_antilia": {
+      "city": "Mumbai",
+      "name": "Antilia",
+      "latitude": 18.9662078,
+      "longitude": 72.8090548
+    },
+    "bom_kanchanjunga": {
+      "city": "Mumbai",
+      "name": "Kanchanjunga Apartments",
+      "latitude": 18.9730483,
+      "longitude": 72.8101437
+    },
+    "bom_world_one": {
+      "city": "Mumbai",
+      "name": "World One",
+      "latitude": 18.9448,
+      "longitude": 72.8524
+    },
+    "bom_municipal": {
+      "city": "Mumbai",
+      "name": "BMC Headquarters",
+      "latitude": 18.6291,
+      "longitude": 72.8919
+    },
+    "bom_elphinstone": {
+      "city": "Mumbai",
+      "name": "Elphinstone College",
+      "latitude": 18.9310786,
+      "longitude": 72.8315319
+    },
+    "bom_metro_inox": {
+      "city": "Mumbai",
+      "name": "Metro Inox Cinema",
+      "latitude": 18.986,
+      "longitude": 72.8259
+    },
+    "bom_apple_bkc": {
+      "city": "Mumbai",
+      "name": "Apple BKC",
+      "latitude": 19.07283,
+      "longitude": 72.88261
+    },
+    "bom_t2_terminal": {
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj T2",
+      "latitude": 19.1064114,
+      "longitude": 72.8635833
+    },
+    "bom_isckon": {
+      "city": "Mumbai",
+      "name": "ISKCON Temple (Hare Krishna Land)",
+      "latitude": 19.1026,
+      "longitude": 72.8242
+    },
+    "bom_global_vipassana": {
+      "city": "Mumbai",
+      "name": "Global Vipassana Pagoda",
+      "latitude": 19.235,
+      "longitude": 72.8598
+    },
+    "bom_national_gallery": {
+      "city": "Mumbai",
+      "name": "NGMA (Sir Cowasji Jehangir Hall)",
+      "latitude": 19.0167,
+      "longitude": 72.85
+    },
+    "mil_duomo": {
+      "city": "Milan",
+      "name": "Duomo di Milano",
+      "latitude": 45.4639102,
+      "longitude": 9.1906398
+    },
+    "mil_galleria": {
+      "city": "Milan",
+      "name": "Galleria Vittorio Emanuele II",
+      "latitude": 45.4639102,
+      "longitude": 9.1906398
+    },
+    "mil_bosco": {
+      "city": "Milan",
+      "name": "Bosco Verticale",
+      "latitude": 45.4856052,
+      "longitude": 9.1908346
+    },
+    "mil_velasca": {
+      "city": "Milan",
+      "name": "Torre Velasca",
+      "latitude": 45.4600514,
+      "longitude": 9.1904367
+    },
+    "mil_prada": {
+      "city": "Milan",
+      "name": "Fondazione Prada",
+      "latitude": 45.4442572,
+      "longitude": 9.2053389
+    },
+    "mil_pirelli": {
+      "city": "Milan",
+      "name": "Pirelli Tower",
+      "latitude": 45.4849273,
+      "longitude": 9.2008316
+    },
+    "mil_castello": {
+      "city": "Milan",
+      "name": "Castello Sforzesco",
+      "latitude": 45.471037,
+      "longitude": 9.1811406
+    },
+    "mil_feltrinelli": {
+      "city": "Milan",
+      "name": "Fondazione Feltrinelli",
+      "latitude": 45.4814162,
+      "longitude": 9.1843119
+    },
+    "mil_stazione": {
+      "city": "Milan",
+      "name": "Milano Centrale",
+      "latitude": 45.4852065,
+      "longitude": 9.2052893
+    },
+    "mil_villa_necchi": {
+      "city": "Milan",
+      "name": "Villa Necchi Campiglio",
+      "latitude": 45.4159579,
+      "longitude": 9.0475197
+    },
+    "mil_apple_liberty": {
+      "city": "Milan",
+      "name": "Apple Piazza Liberty",
+      "latitude": 45.4655046,
+      "longitude": 9.1942913
+    },
+    "mil_unicredit": {
+      "city": "Milan",
+      "name": "UniCredit Tower",
+      "latitude": 45.4834778,
+      "longitude": 9.1902248
+    },
+    "mil_triennale": {
+      "city": "Milan",
+      "name": "Palazzo dell'Arte (Triennale)",
+      "latitude": 45.4721606,
+      "longitude": 9.1735004
+    },
+    "mil_generali": {
+      "city": "Milan",
+      "name": "Generali Tower (Lo Storto)",
+      "latitude": 45.4783108,
+      "longitude": 9.1570584
+    },
+    "mil_ca_brutta": {
+      "city": "Milan",
+      "name": "Ca' Brütta",
+      "latitude": 45.47562,
+      "longitude": 9.1962699
+    },
+    "mil_san_siro": {
+      "city": "Milan",
+      "name": "San Siro Stadium",
+      "latitude": 45.478178,
+      "longitude": 9.1212742
+    },
+    "cph_copenhill": {
+      "city": "Copenhagen",
+      "name": "CopenHill",
+      "latitude": 55.684214,
+      "longitude": 12.619183
+    },
+    "cph_black_diamond": {
+      "city": "Copenhagen",
+      "name": "The Black Diamond",
+      "latitude": 55.6730401,
+      "longitude": 12.5810081
+    },
+    "cph_opera": {
+      "city": "Copenhagen",
+      "name": "Copenhagen Opera House",
+      "latitude": 55.682035,
+      "longitude": 12.602023
+    },
+    "cph_blox": {
+      "city": "Copenhagen",
+      "name": "BLOX (Danish Architecture Center)",
+      "latitude": 55.672076,
+      "longitude": 12.579179
+    },
+    "cph_grundtvig": {
+      "city": "Copenhagen",
+      "name": "Grundtvig's Church",
+      "latitude": 55.716477,
+      "longitude": 12.533685
+    },
+    "cph_round_tower": {
+      "city": "Copenhagen",
+      "name": "Rundetårn",
+      "latitude": 55.681339,
+      "longitude": 12.575772
+    },
+    "cph_axeltowers": {
+      "city": "Copenhagen",
+      "name": "Axel Towers",
+      "latitude": 55.675515,
+      "longitude": 12.565704
+    },
+    "cph_amalienborg": {
+      "city": "Copenhagen",
+      "name": "Amalienborg Palace",
+      "latitude": 55.6839722,
+      "longitude": 12.5932212
+    },
+    "cph_silo": {
+      "city": "Copenhagen",
+      "name": "The Silo",
+      "latitude": 55.708396,
+      "longitude": 12.598071
+    },
+    "cph_superkilen": {
+      "city": "Copenhagen",
+      "name": "Superkilen Park (Red Square)",
+      "latitude": 55.698991,
+      "longitude": 12.54212
+    },
+    "cph_apple_kongens": {
+      "city": "Copenhagen",
+      "name": "Apple Kongens Nytorv",
+      "latitude": 55.681331,
+      "longitude": 12.584993
+    },
+    "cph_8_house": {
+      "city": "Copenhagen",
+      "name": "8 House",
+      "latitude": 55.616765,
+      "longitude": 12.570585
+    },
+    "cph_royal_library": {
+      "city": "Copenhagen",
+      "name": "Old Royal Library",
+      "latitude": 55.6730401,
+      "longitude": 12.5810081
+    },
+    "cph_bicycle_snake": {
+      "city": "Copenhagen",
+      "name": "Cykelslangen (The Bicycle Snake)",
+      "latitude": 55.6626217,
+      "longitude": 12.563508
+    },
+    "cph_tivoli_nimb": {
+      "city": "Copenhagen",
+      "name": "Nimb Hotel (Tivoli Gardens)",
+      "latitude": 55.673606,
+      "longitude": 12.566004
+    },
+    "cph_royal_playhouse": {
+      "city": "Copenhagen",
+      "name": "Royal Danish Playhouse",
+      "latitude": 55.680448,
+      "longitude": 12.594691
+    },
+    "tlv_museum_art": {
+      "city": "Tel Aviv",
+      "name": "Tel Aviv Museum of Art",
+      "latitude": 32.08088,
+      "longitude": 34.78057
+    },
+    "tlv_azrieli": {
+      "city": "Tel Aviv",
+      "name": "Azrieli Center",
+      "latitude": 32.078307,
+      "longitude": 34.793389
+    },
+    "tlv_crazy_house": {
+      "city": "Tel Aviv",
+      "name": "Crazy House",
+      "latitude": 32.070539,
+      "longitude": 34.7649717
+    },
+    "tlv_shalom_meir": {
+      "city": "Tel Aviv",
+      "name": "Shalom Meir Tower",
+      "latitude": 32.0460065,
+      "longitude": 34.7685921
+    },
+    "tlv_pagoda": {
+      "city": "Tel Aviv",
+      "name": "Pagoda House",
+      "latitude": 32.0652948,
+      "longitude": 34.7772875
+    },
+    "tlv_rubinsky": {
+      "city": "Tel Aviv",
+      "name": "Rubinsky House",
+      "latitude": 32.0688378,
+      "longitude": 34.7751917
+    },
+    "tlv_opera_tower": {
+      "city": "Tel Aviv",
+      "name": "Opera Tower",
+      "latitude": 32.0740078,
+      "longitude": 34.7652105
+    },
+    "tlv_great_synagogue": {
+      "city": "Tel Aviv",
+      "name": "Great Synagogue",
+      "latitude": 32.0634816,
+      "longitude": 34.773166
+    },
+    "tlv_habima": {
+      "city": "Tel Aviv",
+      "name": "Habima National Theatre",
+      "latitude": 32.0731749,
+      "longitude": 34.7787175
+    },
+    "tlv_design_museum": {
+      "city": "Tel Aviv",
+      "name": "Design Museum Holon",
+      "latitude": 32.01034,
+      "longitude": 34.77918
+    },
+    "tlv_apple_sarona": {
+      "city": "Tel Aviv",
+      "name": "Apple Azrieli Sarona",
+      "latitude": 32.078307,
+      "longitude": 34.793389
+    },
+    "tlv_sarona_tower": {
+      "city": "Tel Aviv",
+      "name": "Azrieli Sarona Tower",
+      "latitude": 32.078307,
+      "longitude": 34.793389
+    },
+    "tlv_town_hall": {
+      "city": "Tel Aviv",
+      "name": "Tel Aviv City Hall",
+      "latitude": 32.0928536,
+      "longitude": 34.7832834
+    },
+    "tlv_center_bauhaus": {
+      "city": "Tel Aviv",
+      "name": "The White City Center (Liebling Haus)",
+      "latitude": 32.0736642,
+      "longitude": 34.7674748
+    },
+    "tlv_sourasky_library": {
+      "city": "Tel Aviv",
+      "name": "Sourasky Central Library",
+      "latitude": 32.08088,
+      "longitude": 34.78057
+    },
+    "tlv_independence_hall": {
+      "city": "Tel Aviv",
+      "name": "Independence Hall (Dizengoff House)",
+      "latitude": 32.0627835,
+      "longitude": 34.7709248
+    },
+    "rom_colosseum": {
+      "city": "Rome",
+      "name": "The Colosseum",
+      "latitude": 41.891635,
+      "longitude": 12.4927622
+    },
+    "rom_pantheon": {
+      "city": "Rome",
+      "name": "The Pantheon",
+      "latitude": 41.8994796,
+      "longitude": 12.4764874
+    },
+    "rom_st_peters": {
+      "city": "Rome",
+      "name": "St. Peter's Basilica",
+      "latitude": 41.9022351,
+      "longitude": 12.4573573
+    },
+    "rom_vittorio": {
+      "city": "Rome",
+      "name": "Altare della Patria",
+      "latitude": 41.8963001,
+      "longitude": 12.4823475
+    },
+    "rom_maxxi": {
+      "city": "Rome",
+      "name": "MAXXI Museum",
+      "latitude": 41.9288233,
+      "longitude": 12.4666714
+    },
+    "rom_fendi": {
+      "city": "Rome",
+      "name": "Palazzo della Civiltà Italiana",
+      "latitude": 41.8366672,
+      "longitude": 12.4654704
+    },
+    "rom_castel_sant": {
+      "city": "Rome",
+      "name": "Castel Sant'Angelo",
+      "latitude": 41.90308,
+      "longitude": 12.4661811
+    },
+    "rom_villa_medici": {
+      "city": "Rome",
+      "name": "Villa Medici",
+      "latitude": 41.9083045,
+      "longitude": 12.4824664
+    },
+    "rom_doria_pamphilj": {
+      "city": "Rome",
+      "name": "Palazzo Doria Pamphilj",
+      "latitude": 41.8978235,
+      "longitude": 12.4815609
+    },
+    "rom_auditorium": {
+      "city": "Rome",
+      "name": "Auditorium Parco della Musica",
+      "latitude": 41.9292508,
+      "longitude": 12.4720097
+    },
+    "rom_apple_corso": {
+      "city": "Rome",
+      "name": "Apple Via del Corso",
+      "latitude": 41.9022472,
+      "longitude": 12.4801326
+    },
+    "rom_ara_pacis": {
+      "city": "Rome",
+      "name": "Ara Pacis Museum",
+      "latitude": 41.9058841,
+      "longitude": 12.4752027
+    },
+    "rom_vatican_museums": {
+      "city": "Rome",
+      "name": "Vatican Museums (The Spiral Ramp)",
+      "latitude": 41.9057435,
+      "longitude": 12.4499096
+    },
+    "rom_borromini_church": {
+      "city": "Rome",
+      "name": "San Carlo alle Quattro Fontane",
+      "latitude": 41.9011938,
+      "longitude": 12.4896073
+    },
+    "rom_la_nuvola": {
+      "city": "Rome",
+      "name": "La Nuvola (The Cloud)",
+      "latitude": 41.830872,
+      "longitude": 12.4715943
+    },
+    "rom_villa_borghese": {
+      "city": "Rome",
+      "name": "Galleria Borghese",
+      "latitude": 41.9141133,
+      "longitude": 12.4921053
+    },
+    "bcn_sagrada_familia": {
+      "city": "Barcelona",
+      "name": "Sagrada Família",
+      "latitude": 41.4035046,
+      "longitude": 2.1744283
+    },
+    "bcn_casa_batllo": {
+      "city": "Barcelona",
+      "name": "Casa Batlló",
+      "latitude": 41.3915446,
+      "longitude": 2.1646961
+    },
+    "bcn_casa_mila": {
+      "city": "Barcelona",
+      "name": "Casa Milà (La Pedrera)",
+      "latitude": 41.3952564,
+      "longitude": 2.1615724
+    },
+    "bcn_pabellon": {
+      "city": "Barcelona",
+      "name": "Barcelona Pavilion",
+      "latitude": 41.3888,
+      "longitude": 2.159
+    },
+    "bcn_palau_musica": {
+      "city": "Barcelona",
+      "name": "Palau de la Música Catalana",
+      "latitude": 41.3888,
+      "longitude": 2.159
+    },
+    "bcn_agbar": {
+      "city": "Barcelona",
+      "name": "Torre Glòries (Agbar Tower)",
+      "latitude": 41.4038823,
+      "longitude": 2.1898615
+    },
+    "bcn_macba": {
+      "city": "Barcelona",
+      "name": "MACBA",
+      "latitude": 41.3827586,
+      "longitude": 2.1670687
+    },
+    "bcn_mercado": {
+      "city": "Barcelona",
+      "name": "Mercat de Santa Caterina",
+      "latitude": 41.3863594,
+      "longitude": 2.1781611
+    },
+    "bcn_forum": {
+      "city": "Barcelona",
+      "name": "Edifici Fòrum",
+      "latitude": 41.4103918,
+      "longitude": 2.2203082
+    },
+    "bcn_walden7": {
+      "city": "Barcelona",
+      "name": "Walden 7",
+      "latitude": 41.3799446,
+      "longitude": 2.0678506
+    },
+    "bcn_apple_gracia": {
+      "city": "Barcelona",
+      "name": "Apple Passeig de Gràcia",
+      "latitude": 41.3879538,
+      "longitude": 2.169488
+    },
+    "bcn_catedral": {
+      "city": "Barcelona",
+      "name": "Barcelona Cathedral",
+      "latitude": 41.4548563,
+      "longitude": 2.2519763
+    },
+    "bcn_hotel_arts": {
+      "city": "Barcelona",
+      "name": "Hotel Arts Barcelona",
+      "latitude": 41.3870828,
+      "longitude": 2.1965607
+    },
+    "bcn_hospital_sant_pau": {
+      "city": "Barcelona",
+      "name": "Hospital de Sant Pau",
+      "latitude": 41.4126653,
+      "longitude": 2.1743359
+    },
+    "bcn_torre_communications": {
+      "city": "Barcelona",
+      "name": "Montjuïc Communications Tower",
+      "latitude": 41.3648819,
+      "longitude": 2.1490715
+    },
+    "bcn_santa_maria_mar": {
+      "city": "Barcelona",
+      "name": "Santa Maria del Mar",
+      "latitude": 41.3835104,
+      "longitude": 2.1817923
+    },
+    "cup_apple_park": {
+      "city": "Cupertino",
+      "name": "Apple Park",
+      "latitude": 37.3349372,
+      "longitude": -122.0126936
+    },
+    "hq-02": {
+      "city": "Cupertino",
+      "name": "Steve Jobs Theater",
+      "latitude": 37.332577,
+      "longitude": -122.005789
+    },
+    "cup_le_petit_trianon": {
+      "city": "Cupertino",
+      "name": "Le Petit Trianon",
+      "latitude": 37.3209709,
+      "longitude": -122.0461135
+    },
+    "cup_apple_infinite_loop": {
+      "city": "Cupertino",
+      "name": "Apple Infinite Loop",
+      "latitude": 37.3316697,
+      "longitude": -122.0300982
+    },
+    "cup_fujitsu_planetarium": {
+      "city": "Cupertino",
+      "name": "Fujitsu Planetarium",
+      "latitude": 37.3209709,
+      "longitude": -122.0461135
+    },
+    "cup_city_hall": {
+      "city": "Cupertino",
+      "name": "Cupertino City Hall",
+      "latitude": 37.3189504,
+      "longitude": -122.0287409
+    },
+    "cup_cupertino_library": {
+      "city": "Cupertino",
+      "name": "Cupertino Library",
+      "latitude": 37.3178237,
+      "longitude": -122.0289235
+    },
+    "cup_quinlan_center": {
+      "city": "Cupertino",
+      "name": "Quinlan Community Center",
+      "latitude": 37.3258474,
+      "longitude": -122.0424025
+    },
+    "cup_main_street_garage": {
+      "city": "Cupertino",
+      "name": "Main Street Parking Structure",
+      "latitude": 37.324194,
+      "longitude": -122.0098622
+    },
+    "cup_mcclellan_ranch": {
+      "city": "Cupertino",
+      "name": "McClellan Ranch Milk Barn",
+      "latitude": 37.3132039,
+      "longitude": -122.0627561
+    },
+    "cup_vallco_redevelopment": {
+      "city": "Cupertino",
+      "name": "The Hills at Vallco (Phase 1)",
+      "latitude": 37.3243845,
+      "longitude": -122.0146307
+    },
+    "cup_apple_visitor_center": {
+      "city": "Cupertino",
+      "name": "Apple Park Visitor Center",
+      "latitude": 37.331483,
+      "longitude": -122.005697
+    },
+    "cup_vpac_de_anza": {
+      "city": "Cupertino",
+      "name": "Visual & Performing Arts Center (VPAC)",
+      "latitude": 37.3209709,
+      "longitude": -122.0461135
+    },
+    "cup_st_jude": {
+      "city": "Cupertino",
+      "name": "St. Jude the Apostle Church",
+      "latitude": 37.3265556,
+      "longitude": -122.0285427
+    },
+    "cup_apple_results_way": {
+      "city": "Cupertino",
+      "name": "Apple Results Way",
+      "latitude": 37.3167459,
+      "longitude": -122.05094
+    },
+    "cup_memorial_park_amphitheater": {
+      "city": "Cupertino",
+      "name": "Cupertino Memorial Park Amphitheater",
+      "latitude": 37.3227003,
+      "longitude": -122.0468305
+    },
+    "sha_shanghai_tower": {
+      "city": "Shanghai",
+      "name": "Shanghai Tower",
+      "latitude": 31.22222,
+      "longitude": 121.45806
+    },
+    "sha_apple_campus": {
+      "city": "Shanghai",
+      "name": "Apple Shanghai Campus",
+      "latitude": 31.22222,
+      "longitude": 121.45806
+    },
+    "sha_apple_jingan": {
+      "city": "Shanghai",
+      "name": "Apple Jing’an",
+      "latitude": 31.2250141,
+      "longitude": 121.4416159
+    },
+    "sha_oriental_pearl": {
+      "city": "Shanghai",
+      "name": "Oriental Pearl Tower",
+      "latitude": 31.22222,
+      "longitude": 121.45806
+    },
+    "sha_jin_mao": {
+      "city": "Shanghai",
+      "name": "Jin Mao Tower",
+      "latitude": 31.22222,
+      "longitude": 121.45806
+    },
+    "sha_world_financial": {
+      "city": "Shanghai",
+      "name": "Shanghai World Financial Center",
+      "latitude": 31.22222,
+      "longitude": 121.45806
+    },
+    "sha_customs_house": {
+      "city": "Shanghai",
+      "name": "Customs House",
+      "latitude": 31.2378,
+      "longitude": 121.4781
+    },
+    "sha_shanghai_grand": {
+      "city": "Shanghai",
+      "name": "Shanghai Grand Theatre",
+      "latitude": 31.2378,
+      "longitude": 121.4781
+    },
+    "sha_power_station": {
+      "city": "Shanghai",
+      "name": "Power Station of Art",
+      "latitude": 31.2378,
+      "longitude": 121.4781
+    },
+    "sha_intercontinental": {
+      "city": "Shanghai",
+      "name": "InterContinental Shanghai Wonderland",
+      "latitude": 31.03595,
+      "longitude": 121.2146
+    },
+    "sha_wu_kang": {
+      "city": "Shanghai",
+      "name": "Wukang Mansion",
+      "latitude": 31.2138866,
+      "longitude": 121.4361757
+    },
+    "sha_china_art": {
+      "city": "Shanghai",
+      "name": "China Art Museum",
+      "latitude": 31.22222,
+      "longitude": 121.45806
+    },
+    "sha_peace_hotel": {
+      "city": "Shanghai",
+      "name": "Fairmont Peace Hotel",
+      "latitude": 31.2378,
+      "longitude": 121.4781
+    },
+    "sha_1000_trees": {
+      "city": "Shanghai",
+      "name": "1,000 Trees",
+      "latitude": 31.2506452,
+      "longitude": 121.4424283
+    },
+    "sha_jingan_temple": {
+      "city": "Shanghai",
+      "name": "Jing’an Temple",
+      "latitude": 31.225215,
+      "longitude": 121.4407923
+    },
+    "sha_shanghai_museum": {
+      "city": "Shanghai",
+      "name": "Shanghai Museum (East)",
+      "latitude": 31.22222,
+      "longitude": 121.45806
+    },
+    "sha_1933_old_millfun": {
+      "city": "Shanghai",
+      "name": "1933 Old Millfun",
+      "latitude": 31.256553,
+      "longitude": 121.4877509
+    },
+    "bkk_grand_palace": {
+      "city": "Bangkok",
+      "name": "Grand Palace (Chakri Maha Prasat)",
+      "latitude": 13.7524072,
+      "longitude": 100.4903417
+    },
+    "bkk_maha_nakhon": {
+      "city": "Bangkok",
+      "name": "King Power MahaNakhon",
+      "latitude": 13.7333,
+      "longitude": 100.5333
+    },
+    "bkk_wat_arun": {
+      "city": "Bangkok",
+      "name": "Wat Arun (Temple of Dawn)",
+      "latitude": 13.7438976,
+      "longitude": 100.4885137
+    },
+    "bkk_wat_phra_kaew": {
+      "city": "Bangkok",
+      "name": "Wat Phra Kaew",
+      "latitude": 13.7524072,
+      "longitude": 100.4903417
+    },
+    "bkk_moca": {
+      "city": "Bangkok",
+      "name": "MOCA Bangkok",
+      "latitude": 13.8462056,
+      "longitude": 100.5599433
+    },
+    "bkk_g_tower": {
+      "city": "Bangkok",
+      "name": "G Tower",
+      "latitude": 13.7585717,
+      "longitude": 100.5660604
+    },
+    "bkk_icon_siam": {
+      "city": "Bangkok",
+      "name": "ICONSIAM",
+      "latitude": 13.7268226,
+      "longitude": 100.510294
+    },
+    "bkk_baur_museum": {
+      "city": "Bangkok",
+      "name": "Bangkok Art and Culture Centre (BACC)",
+      "latitude": 13.746778,
+      "longitude": 100.5302625
+    },
+    "bkk_elephant_tower": {
+      "city": "Bangkok",
+      "name": "Elephant Tower (Chang Building)",
+      "latitude": 13.82893,
+      "longitude": 100.55985
+    },
+    "bkk_lebua_state": {
+      "city": "Bangkok",
+      "name": "State Tower (Lebua)",
+      "latitude": 13.7212917,
+      "longitude": 100.5168726
+    },
+    "bkk_apple_central_world": {
+      "city": "Bangkok",
+      "name": "Apple Central World",
+      "latitude": 13.7833,
+      "longitude": 100.5167
+    },
+    "bkk_apple_iconsiam": {
+      "city": "Bangkok",
+      "name": "Apple Iconsiam",
+      "latitude": 13.7268226,
+      "longitude": 100.510294
+    },
+    "bkk_robot_building": {
+      "city": "Bangkok",
+      "name": "Robot Building",
+      "latitude": 13.7184367,
+      "longitude": 100.5151415
+    },
+    "bkk_jim_thompson": {
+      "city": "Bangkok",
+      "name": "Jim Thompson House",
+      "latitude": 13.7833,
+      "longitude": 100.5167
+    },
+    "bkk_nailert_park": {
+      "city": "Bangkok",
+      "name": "Nai Lert Park Heritage Home",
+      "latitude": 13.7833,
+      "longitude": 100.5167
+    },
+    "buf_city_hall": {
+      "city": "Buffalo",
+      "name": "Buffalo City Hall",
+      "latitude": 42.8867082,
+      "longitude": -78.879256
+    },
+    "buf_darwin_martin": {
+      "city": "Buffalo",
+      "name": "Darwin D. Martin House",
+      "latitude": 42.9361233,
+      "longitude": -78.8480871
+    },
+    "buf_guaranty_building": {
+      "city": "Buffalo",
+      "name": "Guaranty Building",
+      "latitude": 42.8831811,
+      "longitude": -78.8767925
+    },
+    "buf_richardson_olmsted": {
+      "city": "Buffalo",
+      "name": "Richardson Olmsted Campus",
+      "latitude": 42.9278044,
+      "longitude": -78.882447
+    },
+    "buf_albright_knox": {
+      "city": "Buffalo",
+      "name": "Buffalo AKG Art Museum",
+      "latitude": 42.9322857,
+      "longitude": -78.8756377
+    },
+    "buf_electric_tower": {
+      "city": "Buffalo",
+      "name": "Electric Tower",
+      "latitude": 42.8881832,
+      "longitude": -78.872376
+    },
+    "buf_gold_dome": {
+      "city": "Buffalo",
+      "name": "Buffalo Savings Bank (Gold Dome)",
+      "latitude": 42.8884035,
+      "longitude": -78.8734005
+    },
+    "buf_grain_elevators": {
+      "city": "Buffalo",
+      "name": "Concrete Central Grain Elevator",
+      "latitude": 42.8574845,
+      "longitude": -78.869203
+    },
+    "buf_kleinhans": {
+      "city": "Buffalo",
+      "name": "Kleinhans Music Hall",
+      "latitude": 42.9029244,
+      "longitude": -78.8816923
+    },
+    "buf_st_louis": {
+      "city": "Buffalo",
+      "name": "St. Louis Roman Catholic Church",
+      "latitude": 42.8956242,
+      "longitude": -78.8718674
+    },
+    "buf_apple_walden_galleria": {
+      "city": "Buffalo",
+      "name": "Apple Walden Galleria",
+      "latitude": 42.913815,
+      "longitude": -78.7628999
+    },
+    "buf_old_post_office": {
+      "city": "Buffalo",
+      "name": "Old Post Office (ECC City Campus)",
+      "latitude": 42.8817738,
+      "longitude": -78.8725853
+    },
+    "buf_seneca_one": {
+      "city": "Buffalo",
+      "name": "Seneca One Tower",
+      "latitude": 42.8795322,
+      "longitude": -78.8759022
+    },
+    "buf_statler_city": {
+      "city": "Buffalo",
+      "name": "Statler City",
+      "latitude": 42.8874079,
+      "longitude": -78.8769715
+    },
+    "buf_darwin_martin_gardners": {
+      "city": "Buffalo",
+      "name": "Gardner's Cottage (Martin House Complex)",
+      "latitude": 42.936585,
+      "longitude": -78.8477754
+    },
+    "cai_great_pyramid": {
+      "city": "Cairo",
+      "name": "Great Pyramid of Giza",
+      "latitude": 30.0120843,
+      "longitude": 31.2075108
+    },
+    "cai_tower": {
+      "city": "Cairo",
+      "name": "Cairo Tower",
+      "latitude": 27.0,
+      "longitude": 30.0
+    },
+    "cai_muhammad_ali": {
+      "city": "Cairo",
+      "name": "Mosque of Muhammad Ali",
+      "latitude": 27.0,
+      "longitude": 30.0
+    },
+    "cai_baron_empain": {
+      "city": "Cairo",
+      "name": "Baron Empain Palace",
+      "latitude": 30.0964969,
+      "longitude": 31.3431796
+    },
+    "cai_gem": {
+      "city": "Cairo",
+      "name": "Grand Egyptian Museum",
+      "latitude": 29.9945754,
+      "longitude": 31.1190738
+    },
+    "cai_al_azhar": {
+      "city": "Cairo",
+      "name": "Al-Azhar Mosque",
+      "latitude": 30.0421731,
+      "longitude": 31.2620473
+    },
+    "cai_mogamma": {
+      "city": "Cairo",
+      "name": "The Mogamma",
+      "latitude": 27.0,
+      "longitude": 30.0
+    },
+    "cai_bab_zuwayla": {
+      "city": "Cairo",
+      "name": "Bab Zuwayla",
+      "latitude": 30.04125,
+      "longitude": 31.25632
+    },
+    "cai_st_virgin_mary": {
+      "city": "Cairo",
+      "name": "The Hanging Church",
+      "latitude": 27.0,
+      "longitude": 30.0
+    },
+    "cai_opera_house": {
+      "city": "Cairo",
+      "name": "Cairo Opera House",
+      "latitude": 27.0,
+      "longitude": 30.0
+    },
+    "cai_iconic_tower": {
+      "city": "Cairo",
+      "name": "Iconic Tower",
+      "latitude": 30.0118657,
+      "longitude": 31.697749
+    },
+    "cai_apple_tradeline_cfc": {
+      "city": "Cairo",
+      "name": "Apple (Tradeline - Cairo Festival City)",
+      "latitude": 27.0,
+      "longitude": 30.0
+    },
+    "cai_abdeen_palace": {
+      "city": "Cairo",
+      "name": "Abdeen Palace",
+      "latitude": 27.0,
+      "longitude": 30.0
+    },
+    "cai_mosque_madrasa_sultan_hassan": {
+      "city": "Cairo",
+      "name": "Mosque-Madrasa of Sultan Hassan",
+      "latitude": 27.0,
+      "longitude": 30.0
+    },
+    "cai_egyptian_museum_tahrir": {
+      "city": "Cairo",
+      "name": "Museum of Egyptian Antiquities (The Red Museum)",
+      "latitude": 27.0,
+      "longitude": 30.0
+    },
+    "syd_opera_house": {
+      "city": "Sydney",
+      "name": "Sydney Opera House",
+      "latitude": -33.8274348,
+      "longitude": 151.0818508
+    },
+    "syd_harbour_bridge": {
+      "city": "Sydney",
+      "name": "Sydney Harbour Bridge",
+      "latitude": -33.8521165,
+      "longitude": 151.2107812
+    },
+    "syd_tower_eye": {
+      "city": "Sydney",
+      "name": "Sydney Tower Eye",
+      "latitude": -33.8704851,
+      "longitude": 151.2088822
+    },
+    "syd_qvb": {
+      "city": "Sydney",
+      "name": "Queen Victoria Building (QVB)",
+      "latitude": -33.8714355,
+      "longitude": 151.2066693
+    },
+    "syd_one_central_park": {
+      "city": "Sydney",
+      "name": "One Central Park",
+      "latitude": -33.8845493,
+      "longitude": 151.2004523
+    },
+    "syd_crown": {
+      "city": "Sydney",
+      "name": "Crown Sydney",
+      "latitude": -33.8629962,
+      "longitude": 151.2012924
+    },
+    "syd_art_gallery": {
+      "city": "Sydney",
+      "name": "Art Gallery of New South Wales",
+      "latitude": -33.8688042,
+      "longitude": 151.2162263
+    },
+    "syd_st_marys": {
+      "city": "Sydney",
+      "name": "St Mary's Cathedral",
+      "latitude": -33.6911442,
+      "longitude": 150.7860695
+    },
+    "syd_customs_house": {
+      "city": "Sydney",
+      "name": "Customs House",
+      "latitude": -33.8622498,
+      "longitude": 151.2108499
+    },
+    "syd_dr_chau_chak": {
+      "city": "Sydney",
+      "name": "Dr Chau Chak Wing Building",
+      "latitude": -33.8808899,
+      "longitude": 151.2012593
+    },
+    "syd_international_towers": {
+      "city": "Sydney",
+      "name": "International Towers Sydney",
+      "latitude": -33.8650642,
+      "longitude": 151.202236
+    },
+    "syd_mca": {
+      "city": "Sydney",
+      "name": "Museum of Contemporary Art (MCA)",
+      "latitude": -33.8599007,
+      "longitude": 151.2088286
+    },
+    "syd_apple_tower_house": {
+      "city": "Sydney",
+      "name": "Apple Tower House",
+      "latitude": -33.8824813,
+      "longitude": 151.2049518
+    },
+    "syd_town_hall": {
+      "city": "Sydney",
+      "name": "Sydney Town Hall",
+      "latitude": -33.8629208,
+      "longitude": 151.2075356
+    },
+    "syd_quay_quarter": {
+      "city": "Sydney",
+      "name": "Quay Quarter Tower",
+      "latitude": -33.8629958,
+      "longitude": 151.2115076
+    },
+    "syd_rose_seidler": {
+      "city": "Sydney",
+      "name": "Rose Seidler House",
+      "latitude": -33.7097372,
+      "longitude": 151.1418892
+    },
+    "syd_anitpodes_tower": {
+      "city": "Sydney",
+      "name": "Salesforce Tower (Sydney Place)",
+      "latitude": -33.8623951,
+      "longitude": 151.2086594
+    },
+    "mex_bellas_artes": {
+      "city": "Mexico City",
+      "name": "Palacio de Bellas Artes",
+      "latitude": 23.0,
+      "longitude": -102.0
+    },
+    "mex_soumaya": {
+      "city": "Mexico City",
+      "name": "Museo Soumaya",
+      "latitude": 19.4410129,
+      "longitude": -99.1968752
+    },
+    "mex_met_cathedral": {
+      "city": "Mexico City",
+      "name": "Mexico City Metropolitan Cathedral",
+      "latitude": 19.44506,
+      "longitude": -99.14612
+    },
+    "mex_torre_latino": {
+      "city": "Mexico City",
+      "name": "Torre Latinoamericana",
+      "latitude": 19.44506,
+      "longitude": -99.14612
+    },
+    "mex_vasconcelos": {
+      "city": "Mexico City",
+      "name": "Biblioteca Vasconcelos",
+      "latitude": 19.4455855,
+      "longitude": -99.1489572
+    },
+    "mex_torre_reforma": {
+      "city": "Mexico City",
+      "name": "Torre Reforma",
+      "latitude": 19.4247518,
+      "longitude": -99.1744162
+    },
+    "mex_estadio_azteca": {
+      "city": "Mexico City",
+      "name": "Estadio Azteca",
+      "latitude": 19.2997079,
+      "longitude": -99.1481247
+    },
+    "mex_camino_real": {
+      "city": "Mexico City",
+      "name": "Camino Real Polanco",
+      "latitude": 19.43471,
+      "longitude": -99.20091
+    },
+    "mex_jumex": {
+      "city": "Mexico City",
+      "name": "Museo Jumex",
+      "latitude": 19.4410129,
+      "longitude": -99.1968752
+    },
+    "mex_casas_estudio": {
+      "city": "Mexico City",
+      "name": "Museo Casa Estudio Diego Rivera y Frida Kahlo",
+      "latitude": 19.3492727,
+      "longitude": -99.1977649
+    },
+    "mex_apple_antara": {
+      "city": "Mexico City",
+      "name": "Apple Antara",
+      "latitude": 19.4393996,
+      "longitude": -99.2018178
+    },
+    "mex_postal_palace": {
+      "city": "Mexico City",
+      "name": "Palacio de Correos de México",
+      "latitude": 23.0,
+      "longitude": -102.0
+    },
+    "mex_casa_barragan": {
+      "city": "Mexico City",
+      "name": "Casa Luis Barragán",
+      "latitude": 19.4111222,
+      "longitude": -99.1924403
+    },
+    "mex_torre_bbva": {
+      "city": "Mexico City",
+      "name": "Torre BBVA México",
+      "latitude": 19.4301958,
+      "longitude": -99.1600089
+    },
+    "usa_apple_houston_galleria": {
+      "city": "Houston",
+      "name": "Apple Houston Galleria",
+      "latitude": 29.7379616,
+      "longitude": -95.4642783
+    },
+    "hou-01": {
+      "city": "Houston",
+      "name": "JPMorgan Chase Tower",
+      "latitude": 29.7603205,
+      "longitude": -95.3639963
+    },
+    "hou-02": {
+      "city": "Houston",
+      "name": "Pennzoil Place",
+      "latitude": 29.7598388,
+      "longitude": -95.3657052
+    },
+    "hou-03": {
+      "city": "Houston",
+      "name": "Williams Tower",
+      "latitude": 29.7373,
+      "longitude": -95.4612679
+    },
+    "hou-04": {
+      "city": "Houston",
+      "name": "Houston City Hall",
+      "latitude": 29.760179,
+      "longitude": -95.3693747
+    },
+    "hou-05": {
+      "city": "Houston",
+      "name": "The Astrodome",
+      "latitude": 29.6878279,
+      "longitude": -95.4125866
+    },
+    "hou-06": {
+      "city": "Houston",
+      "name": "The Menil Collection",
+      "latitude": 29.7373004,
+      "longitude": -95.3984685
+    },
+    "hou-07": {
+      "city": "Houston",
+      "name": "Bank of America Center",
+      "latitude": 29.7606455,
+      "longitude": -95.3664587
+    },
+    "hou-08": {
+      "city": "Houston",
+      "name": "The Julia Ideson Building",
+      "latitude": 29.7589153,
+      "longitude": -95.3691366
+    },
+    "hou-09": {
+      "city": "Houston",
+      "name": "One Shell Plaza",
+      "latitude": 29.7591492,
+      "longitude": -95.3676646
+    },
+    "hou-10": {
+      "city": "Houston",
+      "name": "Esperson Buildings",
+      "latitude": 29.7588001,
+      "longitude": -95.3650524
+    },
+    "hou-11": {
+      "city": "Houston",
+      "name": "NASA Johnson Space Center (Building 30)",
+      "latitude": 29.5527874,
+      "longitude": -95.0846405
+    },
+    "hou_rothko_chapel": {
+      "city": "Houston",
+      "name": "The Rothko Chapel",
+      "latitude": 29.7376165,
+      "longitude": -95.3962018
+    },
+    "hou_post_houston": {
+      "city": "Houston",
+      "name": "POST Houston",
+      "latitude": 29.7666,
+      "longitude": -95.36612
+    },
+    "nyc-01": {
+      "city": "New York",
+      "name": "Empire State Building",
+      "latitude": 40.7484421,
+      "longitude": -73.9856589
+    },
+    "us_apple_upper_east_side": {
+      "city": "New York",
+      "name": "Apple Upper East Side",
+      "latitude": 40.7733551,
+      "longitude": -73.9644948
+    },
+    "nyc-02": {
+      "city": "New York",
+      "name": "Chrysler Building",
+      "latitude": 40.7516676,
+      "longitude": -73.9755644
+    },
+    "nyc-03": {
+      "city": "New York",
+      "name": "One World Trade Center",
+      "latitude": 40.7129992,
+      "longitude": -74.0131894
+    },
+    "nyc-04": {
+      "city": "New York",
+      "name": "The Flatiron Building",
+      "latitude": 40.7410592,
+      "longitude": -73.9896416
+    },
+    "nyc-05": {
+      "city": "New York",
+      "name": "Woolworth Building",
+      "latitude": 40.7124684,
+      "longitude": -74.0079294
+    },
+    "nyc-06": {
+      "city": "New York",
+      "name": "Rockefeller Center (30 Rock)",
+      "latitude": 40.7591232,
+      "longitude": -73.979556
+    },
+    "nyc-07": {
+      "city": "New York",
+      "name": "The Guggenheim Museum",
+      "latitude": 40.7829932,
+      "longitude": -73.958925
+    },
+    "nyc-08": {
+      "city": "New York",
+      "name": "Seagram Building",
+      "latitude": 40.7584073,
+      "longitude": -73.9719841
+    },
+    "nyc-09": {
+      "city": "New York",
+      "name": "The Vessel (Hudson Yards)",
+      "latitude": 40.7559064,
+      "longitude": -74.0005322
+    },
+    "nyc-10": {
+      "city": "New York",
+      "name": "Grand Central Terminal",
+      "latitude": 40.7528064,
+      "longitude": -73.9771792
+    },
+    "glbl_apple_fifth_ave": {
+      "city": "New York",
+      "name": "Apple Fifth Avenue",
+      "latitude": 40.7638426,
+      "longitude": -73.9729641
+    },
+    "nyc_twa_flight_center": {
+      "city": "New York",
+      "name": "TWA Flight Center",
+      "latitude": 40.655246,
+      "longitude": -73.797769
+    },
+    "nyc_oculus": {
+      "city": "New York",
+      "name": "The Oculus",
+      "latitude": 40.7115549,
+      "longitude": -74.0114199
+    },
+    "nyc_apple_soho": {
+      "city": "New York",
+      "name": "Apple SoHo",
+      "latitude": 40.725039,
+      "longitude": -73.9991532
+    },
+    "nyc_un_hq": {
+      "city": "New York",
+      "name": "United Nations Headquarters",
+      "latitude": 40.7489457,
+      "longitude": -73.9680842
+    },
+    "sf-01": {
+      "city": "San Francisco",
+      "name": "Transamerica Pyramid",
+      "latitude": 37.7951883,
+      "longitude": -122.4027902
+    },
+    "sf-02": {
+      "city": "San Francisco",
+      "name": "Salesforce Tower",
+      "latitude": 37.7897744,
+      "longitude": -122.3969321
+    },
+    "sf-03": {
+      "city": "San Francisco",
+      "name": "Ferry Building",
+      "latitude": 37.7955487,
+      "longitude": -122.3934746
+    },
+    "sf-04": {
+      "city": "San Francisco",
+      "name": "Palace of Fine Arts",
+      "latitude": 37.801491,
+      "longitude": -122.447875
+    },
+    "sf-05": {
+      "city": "San Francisco",
+      "name": "The Painted Ladies",
+      "latitude": 37.7705056,
+      "longitude": -122.4318265
+    },
+    "sf-06": {
+      "city": "San Francisco",
+      "name": "Coit Tower",
+      "latitude": 37.8022765,
+      "longitude": -122.4062978
+    },
+    "sf-07": {
+      "city": "San Francisco",
+      "name": "Saint Mary's Cathedral",
+      "latitude": 37.7840235,
+      "longitude": -122.4253376
+    },
+    "sf-08": {
+      "city": "San Francisco",
+      "name": "City Hall",
+      "latitude": 37.7792929,
+      "longitude": -122.4192601
+    },
+    "sf-09": {
+      "city": "San Francisco",
+      "name": "Ghirardelli Square",
+      "latitude": 37.8058477,
+      "longitude": -122.4229027
+    },
+    "sf-10": {
+      "city": "San Francisco",
+      "name": "de Young Museum",
+      "latitude": 37.7714976,
+      "longitude": -122.4690915
+    },
+    "us_apple_union_square": {
+      "city": "San Francisco",
+      "name": "Apple Union Square",
+      "latitude": 37.788561,
+      "longitude": -122.406941
+    },
+    "sf_mira_tower": {
+      "city": "San Francisco",
+      "name": "Mira Tower",
+      "latitude": 37.7902956,
+      "longitude": -122.3913992
+    },
+    "sf_hyatt_regency": {
+      "city": "San Francisco",
+      "name": "Hyatt Regency San Francisco",
+      "latitude": 37.7945298,
+      "longitude": -122.3951458
+    },
+    "sf_grace_cathedral": {
+      "city": "San Francisco",
+      "name": "Grace Cathedral",
+      "latitude": 37.7858499,
+      "longitude": -122.4211811
+    },
+    "sf-11": {
+      "city": "San Francisco",
+      "name": "Golden Gate Bridge",
+      "latitude": 37.8202408,
+      "longitude": -122.47857
+    },
+    "sf-12": {
+      "city": "San Francisco",
+      "name": "Lombard Street",
+      "latitude": 37.802219,
+      "longitude": -122.418152
+    },
+    "sf-13": {
+      "city": "San Francisco",
+      "name": "Alcatraz Cellhouse",
+      "latitude": 37.8262551,
+      "longitude": -122.422295
+    },
+    "sf-14": {
+      "city": "San Francisco",
+      "name": "The Castro Theatre",
+      "latitude": 37.7619914,
+      "longitude": -122.43475
+    },
+    "sf-15": {
+      "city": "San Francisco",
+      "name": "Oracle Park",
+      "latitude": 37.7786059,
+      "longitude": -122.3894716
+    },
+    "sf-16": {
+      "city": "San Francisco",
+      "name": "Japanese Tea Garden",
+      "latitude": 37.770293,
+      "longitude": -122.4701237
+    },
+    "sf-17": {
+      "city": "San Francisco",
+      "name": "City Lights Bookstore",
+      "latitude": 37.7976525,
+      "longitude": -122.4066167
+    },
+    "sf-18": {
+      "city": "San Francisco",
+      "name": "The Exploratorium (Pier 15)",
+      "latitude": 37.8016231,
+      "longitude": -122.3973665
+    },
+    "sf-19": {
+      "city": "San Francisco",
+      "name": "Sentinel Building (Columbus Tower)",
+      "latitude": 37.7965795,
+      "longitude": -122.4050553
+    },
+    "sf-20": {
+      "city": "San Francisco",
+      "name": "Levi’s Plaza",
+      "latitude": 37.801869,
+      "longitude": -122.4018137
+    },
+    "dal_reunion_tower": {
+      "city": "Dallas",
+      "name": "Reunion Tower",
+      "latitude": 32.775236,
+      "longitude": -96.809941
+    },
+    "dal_bank_of_america": {
+      "city": "Dallas",
+      "name": "Bank of America Plaza",
+      "latitude": 32.7800722,
+      "longitude": -96.8038898
+    },
+    "dal_perot_museum": {
+      "city": "Dallas",
+      "name": "Perot Museum of Nature and Science",
+      "latitude": 32.7869273,
+      "longitude": -96.8064108
+    },
+    "dal_fountain_place": {
+      "city": "Dallas",
+      "name": "Fountain Place",
+      "latitude": 32.7847974,
+      "longitude": -96.8025421
+    },
+    "dal_city_hall": {
+      "city": "Dallas",
+      "name": "Dallas City Hall",
+      "latitude": 32.7762715,
+      "longitude": -96.7969417
+    },
+    "dal_old_red": {
+      "city": "Dallas",
+      "name": "Old Red Courthouse",
+      "latitude": 32.7786089,
+      "longitude": -96.8073166
+    },
+    "dal_adolphus_hotel": {
+      "city": "Dallas",
+      "name": "The Adolphus Hotel",
+      "latitude": 32.7799374,
+      "longitude": -96.800204
+    },
+    "dal_winspear": {
+      "city": "Dallas",
+      "name": "Winspear Opera House",
+      "latitude": 32.7909512,
+      "longitude": -96.7980077
+    },
+    "dal_hunt_hill_bridge": {
+      "city": "Dallas",
+      "name": "Margaret Hunt Hill Bridge",
+      "latitude": 32.7800134,
+      "longitude": -96.8220017
+    },
+    "dal_jfk_memorial": {
+      "city": "Dallas",
+      "name": "John F. Kennedy Memorial",
+      "latitude": 32.7789963,
+      "longitude": -96.8065296
+    },
+    "dal_meyerson_center": {
+      "city": "Dallas",
+      "name": "Morton H. Meyerson Symphony Center",
+      "latitude": 32.7899506,
+      "longitude": -96.7986258
+    },
+    "dal_chase_tower": {
+      "city": "Dallas",
+      "name": "Chase Tower",
+      "latitude": 32.787973,
+      "longitude": -96.7966332
+    },
+    "dal_apple_northpark": {
+      "city": "Dallas",
+      "name": "Apple NorthPark Center",
+      "latitude": 32.8677706,
+      "longitude": -96.7749486
+    },
+    "dal_apple_knox_street": {
+      "city": "Dallas",
+      "name": "Apple Knox Street",
+      "latitude": 32.8225906,
+      "longitude": -96.7878798
+    },
+    "zqn_skyline_queenstown": {
+      "city": "Queenstown",
+      "name": "Skyline Queenstown",
+      "latitude": -45.0315233,
+      "longitude": 168.6588795
+    },
+    "nsh_the_parthenon": {
+      "city": "Nashville",
+      "name": "The Parthenon",
+      "latitude": 36.1542254,
+      "longitude": -86.7930645
+    },
+    "nsh_ryman_auditorium": {
+      "city": "Nashville",
+      "name": "Ryman Auditorium",
+      "latitude": 36.1612473,
+      "longitude": -86.7784951
+    },
+    "nsh_batman_building": {
+      "city": "Nashville",
+      "name": "AT&T Building",
+      "latitude": 36.1625089,
+      "longitude": -86.776915
+    },
+    "nsh_union_station": {
+      "city": "Nashville",
+      "name": "Union Station Hotel",
+      "latitude": 36.157754,
+      "longitude": -86.784504
+    },
+    "nsh_state_capitol": {
+      "city": "Nashville",
+      "name": "Tennessee State Capitol",
+      "latitude": 36.201815,
+      "longitude": -86.747012
+    },
+    "nsh_country_music_hof": {
+      "city": "Nashville",
+      "name": "Country Music Hall of Fame",
+      "latitude": 36.1581728,
+      "longitude": -86.7760929
+    },
+    "nsh_customs_house": {
+      "city": "Nashville",
+      "name": "U.S. Customs House",
+      "latitude": 36.1587806,
+      "longitude": -86.7812365
+    },
+    "nsh_belmont_mansion": {
+      "city": "Nashville",
+      "name": "Belmont Mansion",
+      "latitude": 36.135233,
+      "longitude": -86.795485
+    },
+    "nsh_frist_art": {
+      "city": "Nashville",
+      "name": "Frist Art Museum",
+      "latitude": 36.1575982,
+      "longitude": -86.7836099
+    },
+    "nsh_schermerhorn": {
+      "city": "Nashville",
+      "name": "Schermerhorn Symphony Center",
+      "latitude": 36.1602291,
+      "longitude": -86.7758709
+    },
+    "nsh_pinnacle_tower": {
+      "city": "Nashville",
+      "name": "Pinnacle at Symphony Place",
+      "latitude": 36.1610366,
+      "longitude": -86.7755294
+    },
+    "nsh_john_seigenthaler_bridge": {
+      "city": "Nashville",
+      "name": "John Seigenthaler Pedestrian Bridge",
+      "latitude": 36.157811,
+      "longitude": -86.771581
+    },
+    "us_apple_green_hills": {
+      "city": "Nashville",
+      "name": "Apple Green Hills",
+      "latitude": 36.1075183,
+      "longitude": -86.8164804
+    },
+    "phx-01": {
+      "city": "Phoenix",
+      "name": "Taliesin West",
+      "latitude": 33.6046921,
+      "longitude": -111.8420527
+    },
+    "phx-02": {
+      "city": "Phoenix",
+      "name": "Arizona Biltmore",
+      "latitude": 33.5203477,
+      "longitude": -112.0176764
+    },
+    "phx-03": {
+      "city": "Phoenix",
+      "name": "Burton Barr Central Library",
+      "latitude": 33.4624422,
+      "longitude": -112.0731695
+    },
+    "phx-04": {
+      "city": "Phoenix",
+      "name": "Luhrs Tower",
+      "latitude": 33.447063,
+      "longitude": -112.0743959
+    },
+    "phx-05": {
+      "city": "Phoenix",
+      "name": "Chase Tower",
+      "latitude": 33.4508805,
+      "longitude": -112.0731909
+    },
+    "phx-06": {
+      "city": "Phoenix",
+      "name": "Heard Museum",
+      "latitude": 33.4715984,
+      "longitude": -112.0721993
+    },
+    "phx-07": {
+      "city": "Phoenix",
+      "name": "Phoenix Financial Center",
+      "latitude": 33.4883939,
+      "longitude": -112.0734145
+    },
+    "phx-08": {
+      "city": "Phoenix",
+      "name": "Science Center (Dorrance Planetarium)",
+      "latitude": 33.44867,
+      "longitude": -112.0666392
+    },
+    "phx-09": {
+      "city": "Phoenix",
+      "name": "Orpheum Theatre",
+      "latitude": 33.4490155,
+      "longitude": -112.07687
+    },
+    "phx-10": {
+      "city": "Phoenix",
+      "name": "The Rosson House",
+      "latitude": 33.45654,
+      "longitude": -112.066255
+    },
+    "phx-11": {
+      "city": "Phoenix",
+      "name": "Tovrea Castle",
+      "latitude": 33.4512713,
+      "longitude": -112.0031042
+    },
+    "phx-12": {
+      "city": "Phoenix",
+      "name": "Westward Ho",
+      "latitude": 33.45526,
+      "longitude": -112.0742742
+    },
+    "phx-13": {
+      "city": "Phoenix",
+      "name": "St. Mary's Basilica",
+      "latitude": 33.4507598,
+      "longitude": -112.0693927
+    },
+    "ruh-01": {
+      "city": "Riyadh",
+      "name": "Kingdom Centre",
+      "latitude": 23.05,
+      "longitude": 45.55
+    },
+    "ruh-02": {
+      "city": "Riyadh",
+      "name": "Al Masmak Fortress",
+      "latitude": 24.63225,
+      "longitude": 46.71058
+    },
+    "ruh-03": {
+      "city": "Riyadh",
+      "name": "Al Faisaliah Center",
+      "latitude": 23.05,
+      "longitude": 45.55
+    },
+    "ruh-04": {
+      "city": "Riyadh",
+      "name": "King Abdulaziz Center for World Culture (Ithra)",
+      "latitude": 26.28864,
+      "longitude": 50.11396
+    },
+    "ruh-05": {
+      "city": "Riyadh",
+      "name": "The National Museum of Saudi Arabia",
+      "latitude": 24.66097,
+      "longitude": 46.70373
+    },
+    "ruh-06": {
+      "city": "Riyadh",
+      "name": "KAFD World Trade Center",
+      "latitude": 24.7656964,
+      "longitude": 46.6407087
+    },
+    "ruh-07": {
+      "city": "Riyadh",
+      "name": "KAPSARC",
+      "latitude": 24.8460149,
+      "longitude": 46.7317529
+    },
+    "ruh-08": {
+      "city": "Riyadh",
+      "name": "At-Turaif District (Diriyah)",
+      "latitude": 25.0,
+      "longitude": 45.0
+    },
+    "ruh-09": {
+      "city": "Riyadh",
+      "name": "KAFD Metro Station",
+      "latitude": 24.7656964,
+      "longitude": 46.6407087
+    },
+    "ruh-10": {
+      "city": "Riyadh",
+      "name": "Al Rajhi Grand Mosque",
+      "latitude": 24.66434,
+      "longitude": 46.79827
+    },
+    "ruh-11": {
+      "city": "Riyadh",
+      "name": "PIF Tower",
+      "latitude": 24.7656964,
+      "longitude": 46.6407087
+    },
+    "ruh-12": {
+      "city": "Riyadh",
+      "name": "Tuwaiq Palace",
+      "latitude": 24.6816491,
+      "longitude": 46.6236184
+    },
+    "ruh-13": {
+      "city": "Riyadh",
+      "name": "King Khalid International Airport (Terminal 5)",
+      "latitude": 24.8460149,
+      "longitude": 46.7317529
+    },
+    "ruh-apple-roshn": {
+      "city": "Riyadh",
+      "name": "Apple ROSHN Front",
+      "latitude": 23.05,
+      "longitude": 45.55
+    },
+    "atx-01": {
+      "city": "Austin",
+      "name": "Texas State Capitol",
+      "latitude": 30.276485,
+      "longitude": -97.739768
+    },
+    "atx-02": {
+      "city": "Austin",
+      "name": "The Frost Bank Tower",
+      "latitude": 30.266401,
+      "longitude": -97.743028
+    },
+    "atx-03": {
+      "city": "Austin",
+      "name": "The Independent",
+      "latitude": 30.2678018,
+      "longitude": -97.7511675
+    },
+    "atx-04": {
+      "city": "Austin",
+      "name": "Apple NW Austin Campus (Capstone)",
+      "latitude": 30.4757353,
+      "longitude": -97.7646542
+    },
+    "atx-05": {
+      "city": "Austin",
+      "name": "UT Tower (Main Building)",
+      "latitude": 30.2860708,
+      "longitude": -97.7393521
+    },
+    "atx-06": {
+      "city": "Austin",
+      "name": "Austin Central Library",
+      "latitude": 30.2660164,
+      "longitude": -97.7517064
+    },
+    "atx-07": {
+      "city": "Austin",
+      "name": "The Driskill Hotel",
+      "latitude": 30.2681379,
+      "longitude": -97.7417071
+    },
+    "atx-08": {
+      "city": "Austin",
+      "name": "Austin City Hall",
+      "latitude": 30.2648968,
+      "longitude": -97.7469115
+    },
+    "atx-09": {
+      "city": "Austin",
+      "name": "St. Mary's Cathedral",
+      "latitude": 30.2710812,
+      "longitude": -97.7400069
+    },
+    "atx-10": {
+      "city": "Austin",
+      "name": "Fairmont Austin",
+      "latitude": 30.2620509,
+      "longitude": -97.738249
+    },
+    "atx-11": {
+      "city": "Austin",
+      "name": "The Moody Center",
+      "latitude": 30.2809367,
+      "longitude": -97.7306522
+    },
+    "atx-12": {
+      "city": "Austin",
+      "name": "Waterline",
+      "latitude": 30.2608346,
+      "longitude": -97.7395417
+    },
+    "atx-13": {
+      "city": "Austin",
+      "name": "COTA Observation Tower",
+      "latitude": 30.135635,
+      "longitude": -97.644044
+    },
+    "atx-14": {
+      "city": "Austin",
+      "name": "Sixth and Guadalupe",
+      "latitude": 30.2696543,
+      "longitude": -97.7466546
+    },
+    "atx-apple-domain": {
+      "city": "Austin",
+      "name": "Apple Domain NORTHSIDE",
+      "latitude": 30.4015968,
+      "longitude": -97.7269361
+    },
+    "crk-01": {
+      "city": "Cork",
+      "name": "Saint Fin Barre's Cathedral",
+      "latitude": 51.89797,
+      "longitude": -8.47061
+    },
+    "crk-02": {
+      "city": "Cork",
+      "name": "Apple European Headquarters",
+      "latitude": 51.9055706,
+      "longitude": -8.5142723
+    },
+    "crk-03": {
+      "city": "Cork",
+      "name": "Shandon Bells (St. Anne's Church)",
+      "latitude": 51.9032598,
+      "longitude": -8.4772695
+    },
+    "crk-04": {
+      "city": "Cork",
+      "name": "Cork City Hall",
+      "latitude": 51.8947946,
+      "longitude": -8.4649477
+    },
+    "crk-05": {
+      "city": "Cork",
+      "name": "The Elysian",
+      "latitude": 51.8968176,
+      "longitude": -8.4643666
+    },
+    "crk-06": {
+      "city": "Cork",
+      "name": "University College Cork (Main Quad)",
+      "latitude": 51.89291,
+      "longitude": -8.49289
+    },
+    "crk-07": {
+      "city": "Cork",
+      "name": "Blackrock Castle Observatory",
+      "latitude": 51.8970201,
+      "longitude": -8.3967546
+    },
+    "crk-08": {
+      "city": "Cork",
+      "name": "The English Market",
+      "latitude": 51.8969222,
+      "longitude": -8.4730178
+    },
+    "crk-09": {
+      "city": "Cork",
+      "name": "Elizabeth Fort",
+      "latitude": 51.8928859,
+      "longitude": -8.4798599
+    },
+    "crk-10": {
+      "city": "Cork",
+      "name": "Cork Opera House",
+      "latitude": 51.7056254,
+      "longitude": -8.5223155
+    },
+    "crk-11": {
+      "city": "Cork",
+      "name": "Custom House (Port of Cork)",
+      "latitude": 51.8994865,
+      "longitude": -8.4632676
+    },
+    "crk-12": {
+      "city": "Cork",
+      "name": "Nano Nagle Place",
+      "latitude": 51.8933258,
+      "longitude": -8.4697514
+    },
+    "crk-13": {
+      "city": "Cork",
+      "name": "Lewis Glucksman Gallery",
+      "latitude": 51.8947012,
+      "longitude": -8.4903105
+    },
+    "crk-apple-opera": {
+      "city": "Cork",
+      "name": "Apple Opera Lane",
+      "latitude": 51.89797,
+      "longitude": -8.47061
+    },
+    "stl-01": {
+      "city": "St. Louis",
+      "name": "Gateway Arch",
+      "latitude": 38.6246257,
+      "longitude": -90.1849637
+    },
+    "stl-02": {
+      "city": "St. Louis",
+      "name": "Wainwright Building",
+      "latitude": 38.626905,
+      "longitude": -90.1921302
+    },
+    "stl-03": {
+      "city": "St. Louis",
+      "name": "St. Louis Union Station",
+      "latitude": 38.6281219,
+      "longitude": -90.2080262
+    },
+    "stl-04": {
+      "city": "St. Louis",
+      "name": "Cathedral Basilica of Saint Louis",
+      "latitude": 38.6425329,
+      "longitude": -90.2546376
+    },
+    "stl-05": {
+      "city": "St. Louis",
+      "name": "City Museum",
+      "latitude": 38.6337006,
+      "longitude": -90.2004142
+    },
+    "stl-06": {
+      "city": "St. Louis",
+      "name": "Anheuser-Busch Brew House",
+      "latitude": 38.5991061,
+      "longitude": -90.2145576
+    },
+    "stl-07": {
+      "city": "St. Louis",
+      "name": "The Fox Theatre",
+      "latitude": 38.6391224,
+      "longitude": -90.2323843
+    },
+    "stl-08": {
+      "city": "St. Louis",
+      "name": "One Hundred (100 Above Park)",
+      "latitude": 38.6427365,
+      "longitude": -90.2646384
+    },
+    "stl-09": {
+      "city": "St. Louis",
+      "name": "Soldiers Memorial Military Museum",
+      "latitude": 38.6290173,
+      "longitude": -90.2000503
+    },
+    "stl-10": {
+      "city": "St. Louis",
+      "name": "Pulitzer Arts Foundation",
+      "latitude": 38.6402169,
+      "longitude": -90.2345979
+    },
+    "stl-11": {
+      "city": "St. Louis",
+      "name": "The Old Courthouse",
+      "latitude": 38.6246257,
+      "longitude": -90.1849637
+    },
+    "stl-12": {
+      "city": "St. Louis",
+      "name": "Saint Louis Art Museum",
+      "latitude": 38.6394679,
+      "longitude": -90.2944031
+    },
+    "stl-13": {
+      "city": "St. Louis",
+      "name": "The Jewel Box",
+      "latitude": 38.6361767,
+      "longitude": -90.2755225
+    },
+    "stl-apple-galleria": {
+      "city": "St. Louis",
+      "name": "Apple Saint Louis Galleria",
+      "latitude": 38.6356793,
+      "longitude": -90.3481344
+    },
+    "msp-01": {
+      "city": "Minnesota",
+      "name": "IDS Center",
+      "latitude": 44.9759741,
+      "longitude": -93.2723214
+    },
+    "msp-02": {
+      "city": "Minnesota",
+      "name": "Foshay Tower",
+      "latitude": 44.9750045,
+      "longitude": -93.2718287
+    },
+    "msp-03": {
+      "city": "Minnesota",
+      "name": "Cathedral of Saint Paul",
+      "latitude": 44.9469589,
+      "longitude": -93.1092362
+    },
+    "msp-04": {
+      "city": "Minnesota",
+      "name": "Guthrie Theater",
+      "latitude": 44.9782261,
+      "longitude": -93.2555176
+    },
+    "msp-05": {
+      "city": "Minnesota",
+      "name": "Weisman Art Museum",
+      "latitude": 44.9770036,
+      "longitude": -93.2384011
+    },
+    "msp-06": {
+      "city": "Minnesota",
+      "name": "Minnesota State Capitol",
+      "latitude": 44.916165,
+      "longitude": -93.187377
+    },
+    "msp-07": {
+      "city": "Minnesota",
+      "name": "Mill City Museum",
+      "latitude": 44.9788405,
+      "longitude": -93.2571837
+    },
+    "msp-08": {
+      "city": "Minnesota",
+      "name": "Landmark Center",
+      "latitude": 44.9456587,
+      "longitude": -93.0971312
+    },
+    "msp-09": {
+      "city": "Minnesota",
+      "name": "U.S. Bank Stadium",
+      "latitude": 44.9736155,
+      "longitude": -93.2574663
+    },
+    "msp-10": {
+      "city": "Minnesota",
+      "name": "James J. Hill House",
+      "latitude": 44.945101,
+      "longitude": -93.1089265
+    },
+    "msp-11": {
+      "city": "Minnesota",
+      "name": "Mall of America",
+      "latitude": 44.8550204,
+      "longitude": -93.2421195
+    },
+    "msp-13": {
+      "city": "Minnesota",
+      "name": "Basilica of Saint Mary",
+      "latitude": 44.9729824,
+      "longitude": -93.2862811
+    },
+    "msp-14": {
+      "city": "Minnesota",
+      "name": "Riverside Plaza",
+      "latitude": 44.970496,
+      "longitude": -93.248033
+    },
+    "nap-01": {
+      "city": "Naples",
+      "name": "Castel dell'Ovo (Egg Castle)",
+      "latitude": 40.8280557,
+      "longitude": 14.2482843
+    },
+    "nap-02": {
+      "city": "Naples",
+      "name": "Galleria Umberto I",
+      "latitude": 40.8380385,
+      "longitude": 14.2497982
+    },
+    "nap-03": {
+      "city": "Naples",
+      "name": "Duomo di Napoli (Naples Cathedral)",
+      "latitude": 40.8489894,
+      "longitude": 14.2610945
+    },
+    "nap-04": {
+      "city": "Naples",
+      "name": "Teatro di San Carlo",
+      "latitude": 40.8387165,
+      "longitude": 14.2513842
+    },
+    "nap-05": {
+      "city": "Naples",
+      "name": "Certosa di San Martino",
+      "latitude": 40.8441955,
+      "longitude": 14.2403501
+    },
+    "nap-06": {
+      "city": "Naples",
+      "name": "Toledo Metro Station",
+      "latitude": 40.8416773,
+      "longitude": 14.2487536
+    },
+    "nap-07": {
+      "city": "Naples",
+      "name": "Palazzo Reale (Royal Palace of Naples)",
+      "latitude": 40.8368476,
+      "longitude": 14.250992
+    },
+    "nap-08": {
+      "city": "Naples",
+      "name": "Castel Nuovo (Maschio Angioino)",
+      "latitude": 40.8387165,
+      "longitude": 14.2513842
+    },
+    "nap-09": {
+      "city": "Naples",
+      "name": "Museo Archeologico Nazionale di Napoli (MANN)",
+      "latitude": 40.8536064,
+      "longitude": 14.25115
+    },
+    "nap-10": {
+      "city": "Naples",
+      "name": "Basilica di Santa Chiara",
+      "latitude": 40.8479249,
+      "longitude": 14.2537892
+    },
+    "nap-11": {
+      "city": "Naples",
+      "name": "Cappella Sansevero",
+      "latitude": 40.8492994,
+      "longitude": 14.2549332
+    },
+    "nap-12": {
+      "city": "Naples",
+      "name": "Stazione Marittima di Napoli",
+      "latitude": 40.8379314,
+      "longitude": 14.2594336
+    },
+    "nap-apple-toledo": {
+      "city": "Naples",
+      "name": "Apple Via Toledo",
+      "latitude": 40.8425034,
+      "longitude": 14.2488703
+    },
+    "bali-tanah-lot": {
+      "city": "Bali",
+      "name": "Pura Tanah Lot",
+      "latitude": -8.5,
+      "longitude": 115.0
+    },
+    "bali-besakih": {
+      "city": "Bali",
+      "name": "Pura Besakih (Mother Temple)",
+      "latitude": -8.4689294,
+      "longitude": 115.4030734
+    },
+    "bali-tirta-gangga": {
+      "city": "Bali",
+      "name": "Tirta Gangga Water Palace",
+      "latitude": -8.5,
+      "longitude": 115.0
+    },
+    "bali-green-school": {
+      "city": "Bali",
+      "name": "The Green School (Heart of School)",
+      "latitude": -8.5,
+      "longitude": 115.0
+    },
+    "bali-gwk-statue": {
+      "city": "Bali",
+      "name": "Garuda Wisnu Kencana (GWK Statue)",
+      "latitude": -8.5,
+      "longitude": 115.0
+    },
+    "bali-ulun-danu": {
+      "city": "Bali",
+      "name": "Pura Ulun Danu Beratan",
+      "latitude": -8.5,
+      "longitude": 115.0
+    },
+    "bali-uluwatu": {
+      "city": "Bali",
+      "name": "Pura Luhur Uluwatu",
+      "latitude": -8.5,
+      "longitude": 115.0
+    },
+    "bali-ubud-palace": {
+      "city": "Bali",
+      "name": "Ubud Royal Palace (Puri Saren Agung)",
+      "latitude": -8.5,
+      "longitude": 115.0
+    },
+    "bali-potato-head": {
+      "city": "Bali",
+      "name": "Potato Head Studios (Desa Potato Head)",
+      "latitude": -8.5,
+      "longitude": 115.0
+    },
+    "bali-sharma-springs": {
+      "city": "Bali",
+      "name": "Sharma Springs",
+      "latitude": -8.5,
+      "longitude": 115.0
+    },
+    "retail_bali_imaginaria": {
+      "city": "Bali",
+      "name": "Imaginaria (Digimap Flagship)",
+      "latitude": -8.7176835,
+      "longitude": 115.1844956
+    },
+    "batam-barelang-bridge": {
+      "city": "Batam",
+      "name": "Barelang Bridge (Tengku Fisabilillah)",
+      "latitude": 1.08333,
+      "longitude": 104.05
+    },
+    "batam-marriott-hotel": {
+      "city": "Batam",
+      "name": "Batam Marriott Hotel Harbour Bay",
+      "latitude": 1.1541455,
+      "longitude": 103.9967417
+    },
+    "batam-great-mosque": {
+      "city": "Batam",
+      "name": "Great Mosque of Batam (Masjid Raya)",
+      "latitude": 1.08333,
+      "longitude": 104.05
+    },
+    "batam-nagoya-hill": {
+      "city": "Batam",
+      "name": "Nagoya Hill Mall",
+      "latitude": 1.13924,
+      "longitude": 104.01237
+    },
+    "batam-maitreya-monastery": {
+      "city": "Batam",
+      "name": "Maha Vihara Duta Maitreya Monastery",
+      "latitude": 1.08333,
+      "longitude": 104.05
+    },
+    "batam-tanjak-mosque": {
+      "city": "Batam",
+      "name": "Masjid Tanwirun Naja (Tanjak Mosque)",
+      "latitude": 1.08333,
+      "longitude": 104.05
+    },
+    "batam-one-residence": {
+      "city": "Batam",
+      "name": "One Residence Batam",
+      "latitude": 1.08333,
+      "longitude": 104.05
+    },
+    "batam-galang-hospital": {
+      "city": "Batam",
+      "name": "Galang Refugee Hospital (Historical Site)",
+      "latitude": 1.08333,
+      "longitude": 104.05
+    },
+    "batam-pollux-habibie": {
+      "city": "Batam",
+      "name": "Meisterstadt (Pollux Habibie Towers)",
+      "latitude": 1.08333,
+      "longitude": 104.05
+    },
+    "batam-vihara-budhi-bhakti": {
+      "city": "Batam",
+      "name": "Vihara Budhi Bhakti (Tua Pek Kong)",
+      "latitude": 1.08333,
+      "longitude": 104.05
+    },
+    "batam-hang-nadim-t2": {
+      "city": "Batam",
+      "name": "Hang Nadim Terminal 2",
+      "latitude": 1.123377,
+      "longitude": 104.1151155
+    },
+    "batam-city-hall": {
+      "city": "Batam",
+      "name": "Kantor Walikota Batam (City Hall)",
+      "latitude": 1.08333,
+      "longitude": 104.05
+    },
+    "batam-apple-grand": {
+      "city": "Batam",
+      "name": "Apple Premium Partner (Grand Batam Mall)",
+      "latitude": 1.13924,
+      "longitude": 104.01237
+    },
+    "jakarta-monas": {
+      "city": "Central Jakarta",
+      "name": "National Monument (Monas)",
+      "latitude": -6.1627023,
+      "longitude": 106.8062387
+    },
+    "jakarta-istiqlal": {
+      "city": "Central Jakarta",
+      "name": "Istiqlal Mosque",
+      "latitude": -6.21462,
+      "longitude": 106.84513
+    },
+    "jakarta-bundaran-hi": {
+      "city": "Central Jakarta",
+      "name": "Bundaran HI (Hotel Indonesia Roundabout)",
+      "latitude": -6.1949853,
+      "longitude": 106.8226741
+    },
+    "jakarta-arts-theater": {
+      "city": "Central Jakarta",
+      "name": "Gedung Kesenian Jakarta (Jakarta Arts Theater)",
+      "latitude": -6.1665103,
+      "longitude": 106.8344295
+    },
+    "jakarta-autograph-tower": {
+      "city": "Central Jakarta",
+      "name": "Autograph Tower (Thamrin Nine)",
+      "latitude": -6.21462,
+      "longitude": 106.84513
+    },
+    "jakarta-national-gallery": {
+      "city": "Central Jakarta",
+      "name": "National Gallery of Indonesia",
+      "latitude": -6.21462,
+      "longitude": 106.84513
+    },
+    "jakarta-cathedral": {
+      "city": "Central Jakarta",
+      "name": "Jakarta Cathedral",
+      "latitude": -6.21462,
+      "longitude": 106.84513
+    },
+    "jakarta-national-museum": {
+      "city": "Central Jakarta",
+      "name": "National Museum (Gedung Gajah)",
+      "latitude": -6.21462,
+      "longitude": 106.84513
+    },
+    "jakarta-marathon-building": {
+      "city": "Central Jakarta",
+      "name": "Indosat Building (Gedung Indosat)",
+      "latitude": -6.21462,
+      "longitude": 106.84513
+    },
+    "jakarta-dharmapala": {
+      "city": "Central Jakarta",
+      "name": "The Hermitage (Gedung Telepon)",
+      "latitude": -6.16639,
+      "longitude": 106.78778
+    },
+    "jakarta-perpusnas": {
+      "city": "Central Jakarta",
+      "name": "National Library of Indonesia",
+      "latitude": -6.21462,
+      "longitude": 106.84513
+    },
+    "jakarta-pos-bloc": {
+      "city": "Central Jakarta",
+      "name": "Pos Bloc (Gedung Filateli)",
+      "latitude": -6.21462,
+      "longitude": 106.84513
+    },
+    "jakarta-apple-plaza-indo": {
+      "city": "Central Jakarta",
+      "name": "iBox Apple Premium Partner (Plaza Indonesia)",
+      "latitude": -6.1931372,
+      "longitude": 106.8218714
+    },
+    "paris-eiffel-tower": {
+      "city": "Paris",
+      "name": "Eiffel Tower",
+      "latitude": 48.856463,
+      "longitude": 2.3061652
+    },
+    "paris-louvre-pyramid": {
+      "city": "Paris",
+      "name": "Louvre Museum (Pyramid)",
+      "latitude": 48.8624906,
+      "longitude": 2.3360431
+    },
+    "paris-sacre-coeur": {
+      "city": "Paris",
+      "name": "Sacré-Cœur Basilica",
+      "latitude": 48.8871066,
+      "longitude": 2.3434906
+    },
+    "paris-arc-de-triomphe": {
+      "city": "Paris",
+      "name": "Arc de Triomphe",
+      "latitude": 48.8737673,
+      "longitude": 2.2954441
+    },
+    "paris-centre-pompidou": {
+      "city": "Paris",
+      "name": "Centre Pompidou",
+      "latitude": 48.8607767,
+      "longitude": 2.3517736
+    },
+    "paris-palais-garnier": {
+      "city": "Paris",
+      "name": "Palais Garnier",
+      "latitude": 48.8709021,
+      "longitude": 2.332151
+    },
+    "paris-pantheon": {
+      "city": "Paris",
+      "name": "The Panthéon",
+      "latitude": 48.8464478,
+      "longitude": 2.3448919
+    },
+    "paris-fondation-lv": {
+      "city": "Paris",
+      "name": "Fondation Louis Vuitton",
+      "latitude": 48.87665,
+      "longitude": 2.2633381
+    },
+    "paris-sainte-chapelle": {
+      "city": "Paris",
+      "name": "Sainte-Chapelle",
+      "latitude": 48.8546638,
+      "longitude": 2.3449698
+    },
+    "paris-grande-arche": {
+      "city": "Paris",
+      "name": "La Grande Arche",
+      "latitude": 48.8921627,
+      "longitude": 2.2380913
+    },
+    "sub-suramadu-bridge": {
+      "city": "Surabaya",
+      "name": "Suramadu Bridge",
+      "latitude": -7.24917,
+      "longitude": 112.75083
+    },
+    "sub-hotel-majapahit": {
+      "city": "Surabaya",
+      "name": "Hotel Majapahit",
+      "latitude": -7.24917,
+      "longitude": 112.75083
+    },
+    "sub-monkasel": {
+      "city": "Surabaya",
+      "name": "Monkasel (Submarine Monument)",
+      "latitude": -7.24917,
+      "longitude": 112.75083
+    },
+    "sub-heroes-monument": {
+      "city": "Surabaya",
+      "name": "Heroes Monument (Tugu Pahlawan)",
+      "latitude": -7.24917,
+      "longitude": 112.75083
+    },
+    "sub-al-akbar-mosque": {
+      "city": "Surabaya",
+      "name": "Masjid Nasional Al-Akbar",
+      "latitude": -7.24917,
+      "longitude": 112.75083
+    },
+    "sub-house-of-sampoerna": {
+      "city": "Surabaya",
+      "name": "House of Sampoerna",
+      "latitude": -7.24917,
+      "longitude": 112.75083
+    },
+    "sub-tunjungan-plaza": {
+      "city": "Surabaya",
+      "name": "Tunjungan Plaza 6",
+      "latitude": -7.24917,
+      "longitude": 112.75083
+    },
+    "sub-cheng-hoo-mosque": {
+      "city": "Surabaya",
+      "name": "Cheng Hoo Mosque",
+      "latitude": -7.24917,
+      "longitude": 112.75083
+    },
+    "sub-de-javasche-bank": {
+      "city": "Surabaya",
+      "name": "De Javasche Bank (Bank Indonesia Museum)",
+      "latitude": -7.24917,
+      "longitude": 112.75083
+    },
+    "sub-kyad-kyad": {
+      "city": "Surabaya",
+      "name": "Kya-Kya Kembang Jepun",
+      "latitude": -7.24917,
+      "longitude": 112.75083
+    },
+    "sub-balai-pemuda": {
+      "city": "Surabaya",
+      "name": "Balai Pemuda (Surabaya Culture Center)",
+      "latitude": -7.24917,
+      "longitude": 112.75083
+    },
+    "sub-pakuwon-tower": {
+      "city": "Surabaya",
+      "name": "Pakuwon Tower",
+      "latitude": -7.24917,
+      "longitude": 112.75083
+    },
+    "sub-apple-tunjungan-plaza": {
+      "city": "Surabaya",
+      "name": "Digimap Apple Premium Partner (Tunjungan Plaza 3)",
+      "latitude": -7.2620638,
+      "longitude": 112.740365
+    },
+    "tng-the-breeze": {
+      "city": "Tangerang",
+      "name": "The Breeze BSD",
+      "latitude": -6.25,
+      "longitude": 106.58333
+    },
+    "tng-ice-bsd": {
+      "city": "Tangerang",
+      "name": "Indonesia Convention Exhibition (ICE)",
+      "latitude": -6.25,
+      "longitude": 106.58333
+    },
+    "tng-scientia-square": {
+      "city": "Tangerang",
+      "name": "Scientia Square Park (SQP) & SDC",
+      "latitude": -6.25,
+      "longitude": 106.58333
+    },
+    "tng-uph-tower": {
+      "city": "Tangerang",
+      "name": "Universitas Pelita Harapan (UPH) Tower",
+      "latitude": -6.25,
+      "longitude": 106.58333
+    },
+    "tng-boen-tek-bio": {
+      "city": "Tangerang",
+      "name": "Boen Tek Bio Chinese Temple",
+      "latitude": -6.17806,
+      "longitude": 106.63
+    },
+    "tng-qbig-bsd": {
+      "city": "Tangerang",
+      "name": "QBig BSD City",
+      "latitude": -6.25,
+      "longitude": 106.58333
+    },
+    "tng-benteng-heritage": {
+      "city": "Tangerang",
+      "name": "Benteng Heritage Museum",
+      "latitude": -6.17806,
+      "longitude": 106.63
+    },
+    "tng-soekarno-hatta-t3": {
+      "city": "Tangerang",
+      "name": "Soekarno-Hatta Terminal 3",
+      "latitude": -6.17806,
+      "longitude": 106.63
+    },
+    "tng-gop-office": {
+      "city": "Tangerang",
+      "name": "Green Office Park 9 (GOP 9)",
+      "latitude": -6.25,
+      "longitude": 106.58333
+    },
+    "tng-al-adzhom": {
+      "city": "Tangerang",
+      "name": "Al-Adzhom Grand Mosque",
+      "latitude": -6.17806,
+      "longitude": 106.63
+    },
+    "tng-ikea-alam-sutera": {
+      "city": "Tangerang",
+      "name": "IKEA Alam Sutera",
+      "latitude": -6.2196901,
+      "longitude": 106.6631824
+    },
+    "tng-knowledge-hub": {
+      "city": "Tangerang",
+      "name": "Traveloka Campus (Knowledge Hub)",
+      "latitude": -6.25,
+      "longitude": 106.58333
+    },
+    "tng-apple-summarecon": {
+      "city": "Tangerang",
+      "name": "Digimap Apple Premium Partner (SMS)",
+      "latitude": -6.31694,
+      "longitude": 106.66417
+    },
+    "cpq-sirius": {
+      "city": "Campinas",
+      "name": "Sirius (LNLS)",
+      "latitude": -22.90556,
+      "longitude": -47.06083
+    },
+    "cpq-mercado-municipal": {
+      "city": "Campinas",
+      "name": "Mercado Municipal",
+      "latitude": -23.0489602,
+      "longitude": -47.8380255
+    },
+    "cpq-torre-do-castelo": {
+      "city": "Campinas",
+      "name": "Torre do Castelo",
+      "latitude": -22.90556,
+      "longitude": -47.06083
+    },
+    "cpq-metropolitan-cathedral": {
+      "city": "Campinas",
+      "name": "Catedral Metropolitana",
+      "latitude": -22.9568718,
+      "longitude": -46.5415867
+    },
+    "cpq-estacao-cultura": {
+      "city": "Campinas",
+      "name": "Estação Cultura",
+      "latitude": -22.90556,
+      "longitude": -47.06083
+    },
+    "cpq-unicamp-library": {
+      "city": "Campinas",
+      "name": "Biblioteca Central Unicamp",
+      "latitude": -22.90556,
+      "longitude": -47.06083
+    },
+    "cpq-jockey-club": {
+      "city": "Campinas",
+      "name": "Jockey Club Campineiro",
+      "latitude": -22.90556,
+      "longitude": -47.06083
+    },
+    "cpq-brinco-de-ouro": {
+      "city": "Campinas",
+      "name": "Estádio Brinco de Ouro",
+      "latitude": -22.9095729,
+      "longitude": -47.0433697
+    },
+    "cpq-palacio-dos-jequitibas": {
+      "city": "Campinas",
+      "name": "Palácio dos Jequitibás",
+      "latitude": -22.9009117,
+      "longitude": -47.0572706
+    },
+    "cpq-teatro-castro-mendes": {
+      "city": "Campinas",
+      "name": "Teatro Castro Mendes",
+      "latitude": -22.90556,
+      "longitude": -47.06083
+    },
+    "cpq-fazenda-santa-genebra": {
+      "city": "Campinas",
+      "name": "Mata de Santa Genebra Gatehouse",
+      "latitude": -22.90556,
+      "longitude": -47.06083
+    },
+    "cpq-galleria-shopping": {
+      "city": "Campinas",
+      "name": "Galleria Shopping Campinas",
+      "latitude": -22.90556,
+      "longitude": -47.06083
+    },
+    "cpq-apple-iguatemi": {
+      "city": "Campinas",
+      "name": "iPlace Apple Premium Partner (Iguatemi)",
+      "latitude": -22.8924024,
+      "longitude": -47.0272094
+    },
+    "cwb-botanical-garden": {
+      "city": "Curitiba",
+      "name": "Botanical Garden of Curitiba",
+      "latitude": -25.4393623,
+      "longitude": -49.23854
+    },
+    "cwb-mon-museum": {
+      "city": "Curitiba",
+      "name": "Oscar Niemeyer Museum (MON)",
+      "latitude": -25.4098954,
+      "longitude": -49.2662046
+    },
+    "cwb-wire-opera": {
+      "city": "Curitiba",
+      "name": "Wire Opera House (Ópera de Arame)",
+      "latitude": -25.3855096,
+      "longitude": -49.2769068
+    },
+    "cwb-unilivre": {
+      "city": "Curitiba",
+      "name": "University of the Environment (Unilivre)",
+      "latitude": -25.3983193,
+      "longitude": -49.2820013
+    },
+    "cwb-panoramic-tower": {
+      "city": "Curitiba",
+      "name": "Panoramic Tower (Torre das Mercês)",
+      "latitude": -25.4238911,
+      "longitude": -49.2940444
+    },
+    "cwb-paco-da-liberdade": {
+      "city": "Curitiba",
+      "name": "Paço da Liberdade",
+      "latitude": -25.4296227,
+      "longitude": -49.2697089
+    },
+    "cwb-memorial-ucraniano": {
+      "city": "Curitiba",
+      "name": "Ukrainian Memorial",
+      "latitude": -25.42778,
+      "longitude": -49.27306
+    },
+    "cwb-tube-station": {
+      "city": "Curitiba",
+      "name": "Estação Tubo (Tube Station)",
+      "latitude": -25.4297354,
+      "longitude": -49.2719544
+    },
+    "cwb-castelo-batel": {
+      "city": "Curitiba",
+      "name": "Castelo do Batel",
+      "latitude": -25.442682,
+      "longitude": -49.2856866
+    },
+    "cwb-cathedral-basilica": {
+      "city": "Curitiba",
+      "name": "Cathedral Basilica of Curitiba",
+      "latitude": -25.4297354,
+      "longitude": -49.2719544
+    },
+    "cwb-ufpr-historic": {
+      "city": "Curitiba",
+      "name": "Federal University of Paraná (Historic Building)",
+      "latitude": -25.4281729,
+      "longitude": -49.2660489
+    },
+    "cwb-municipal-market": {
+      "city": "Curitiba",
+      "name": "Mercado Municipal de Curitiba",
+      "latitude": -25.434744,
+      "longitude": -49.25702
+    },
+    "cwb-apple-barigui": {
+      "city": "Curitiba",
+      "name": "iPlace Apple Premium Partner (ParkShoppingBarigui)",
+      "latitude": -25.42778,
+      "longitude": -49.27306
+    },
+    "for-dragao-do-mar": {
+      "city": "Fortaleza",
+      "name": "Dragão do Mar Center",
+      "latitude": -3.7216677,
+      "longitude": -38.5201742
+    },
+    "for-cathedral": {
+      "city": "Fortaleza",
+      "name": "Metropolitan Cathedral of Fortaleza",
+      "latitude": -3.71722,
+      "longitude": -38.54306
+    },
+    "for-jose-de-alencar": {
+      "city": "Fortaleza",
+      "name": "Theatro José de Alencar",
+      "latitude": -3.727786,
+      "longitude": -38.5317064
+    },
+    "for-fortress-assuncao": {
+      "city": "Fortaleza",
+      "name": "Fortress of Nossa Senhora da Assunção",
+      "latitude": -3.7217985,
+      "longitude": -38.5233894
+    },
+    "for-one-residencial": {
+      "city": "Fortaleza",
+      "name": "One Residencial",
+      "latitude": -3.7233377,
+      "longitude": -38.4876583
+    },
+    "for-estoril": {
+      "city": "Fortaleza",
+      "name": "Estoril",
+      "latitude": -3.7190974,
+      "longitude": -38.516258
+    },
+    "for-mucuripe-lighthouse": {
+      "city": "Fortaleza",
+      "name": "Mucuripe Lighthouse",
+      "latitude": -3.7140581,
+      "longitude": -38.4734732
+    },
+    "for-mis": {
+      "city": "Fortaleza",
+      "name": "Museum of Image and Sound (MIS)",
+      "latitude": -3.7276821,
+      "longitude": -38.5046208
+    },
+    "for-cine-sao-luiz": {
+      "city": "Fortaleza",
+      "name": "Cineteatro São Luiz",
+      "latitude": -3.7273553,
+      "longitude": -38.5281144
+    },
+    "for-escritorio-nasser-hissa": {
+      "city": "Fortaleza",
+      "name": "BS Design Corporate",
+      "latitude": -3.7375352,
+      "longitude": -38.4993738
+    },
+    "for-mercado-central": {
+      "city": "Fortaleza",
+      "name": "Mercado Central de Fortaleza",
+      "latitude": -3.723429,
+      "longitude": -38.5239495
+    },
+    "for-casa-jose-alencar": {
+      "city": "Fortaleza",
+      "name": "Casa de José de Alencar",
+      "latitude": -3.8262821,
+      "longitude": -38.4816911
+    },
+    "for-apple-iguatemi": {
+      "city": "Fortaleza",
+      "name": "iPlace Apple Premium Partner (Iguatemi Bosque)",
+      "latitude": -3.71722,
+      "longitude": -38.54306
+    },
+    "mao-amazon-theatre": {
+      "city": "Manaus",
+      "name": "Amazon Theatre (Teatro Amazonas)",
+      "latitude": -3.10194,
+      "longitude": -60.025
+    },
+    "mao-rio-negro-palace": {
+      "city": "Manaus",
+      "name": "Palácio Rio Negro",
+      "latitude": -3.1350552,
+      "longitude": -60.0167709
+    },
+    "mao-adolpho-lisboa": {
+      "city": "Manaus",
+      "name": "Mercado Municipal Adolpho Lisboa",
+      "latitude": -3.1411048,
+      "longitude": -60.0199113
+    },
+    "mao-custom-house": {
+      "city": "Manaus",
+      "name": "Custom House (Alfandega de Manaus)",
+      "latitude": -3.137786,
+      "longitude": -60.0247438
+    },
+    "mao-fas": {
+      "city": "Manaus",
+      "name": "Amazonas Sustainable Foundation (FAS)",
+      "latitude": -3.10194,
+      "longitude": -60.025
+    },
+    "mao-palacete-provincial": {
+      "city": "Manaus",
+      "name": "Palacete Provincial",
+      "latitude": -3.10194,
+      "longitude": -60.025
+    },
+    "mao-rio-negro-bridge": {
+      "city": "Manaus",
+      "name": "Ponte Rio Negro",
+      "latitude": -3.10194,
+      "longitude": -60.025
+    },
+    "mao-arena-amazonia": {
+      "city": "Manaus",
+      "name": "Arena da Amazônia",
+      "latitude": -3.0836426,
+      "longitude": -60.0266724
+    },
+    "mao-justice-palace": {
+      "city": "Manaus",
+      "name": "Palace of Justice",
+      "latitude": -3.134384,
+      "longitude": -60.024135
+    },
+    "mao-musa-tower": {
+      "city": "Manaus",
+      "name": "MUSA Observation Tower",
+      "latitude": -3.0096285,
+      "longitude": -59.9507856
+    },
+    "mao-floating-harbor": {
+      "city": "Manaus",
+      "name": "Manaus Floating Harbor (Roadway)",
+      "latitude": -3.137786,
+      "longitude": -60.0247438
+    },
+    "mao-cigs-center": {
+      "city": "Manaus",
+      "name": "CIGS Jungle Warfare Center",
+      "latitude": -3.095461,
+      "longitude": -60.0512741
+    },
+    "mao-apple-manauara": {
+      "city": "Manaus",
+      "name": "iPlace Apple Premium Partner (Manauara Shopping)",
+      "latitude": -3.1041306,
+      "longitude": -60.0113529
+    },
+    "poa-ibere-camargo": {
+      "city": "Porto Alegre",
+      "name": "Iberê Camargo Foundation",
+      "latitude": -30.077732,
+      "longitude": -51.2453919
+    },
+    "poa-public-market": {
+      "city": "Porto Alegre",
+      "name": "Public Market of Porto Alegre",
+      "latitude": -30.0280671,
+      "longitude": -51.2276134
+    },
+    "poa-cathedral": {
+      "city": "Porto Alegre",
+      "name": "Metropolitan Cathedral of Porto Alegre",
+      "latitude": -30.0333192,
+      "longitude": -51.2317838
+    },
+    "poa-ccmq": {
+      "city": "Porto Alegre",
+      "name": "Casa de Cultura Mario Quintana",
+      "latitude": -30.0310943,
+      "longitude": -51.2344781
+    },
+    "poa-beira-rio": {
+      "city": "Porto Alegre",
+      "name": "Beira-Rio Stadium",
+      "latitude": -30.0654898,
+      "longitude": -51.2349178
+    },
+    "poa-farol-santander": {
+      "city": "Porto Alegre",
+      "name": "Farol Santander (Old Guardianship Bank)",
+      "latitude": -30.0287413,
+      "longitude": -51.2304012
+    },
+    "poa-gasometro": {
+      "city": "Porto Alegre",
+      "name": "Usina do Gasômetro",
+      "latitude": -30.0340842,
+      "longitude": -51.2410902
+    },
+    "poa-theatro-sao-pedro": {
+      "city": "Porto Alegre",
+      "name": "Theatro São Pedro",
+      "latitude": -30.0323687,
+      "longitude": -51.2305979
+    },
+    "poa-piratini": {
+      "city": "Porto Alegre",
+      "name": "Palácio Piratini",
+      "latitude": -30.03306,
+      "longitude": -51.23
+    },
+    "poa-margs": {
+      "city": "Porto Alegre",
+      "name": "MARGS (Museum of Art of RS)",
+      "latitude": -30.0296672,
+      "longitude": -51.2303215
+    },
+    "poa-cais-embarcadero": {
+      "city": "Porto Alegre",
+      "name": "Cais Embarcadero",
+      "latitude": -30.0270249,
+      "longitude": -51.2311512
+    },
+    "poa-viaduto-otavio-rocha": {
+      "city": "Porto Alegre",
+      "name": "Viaduto Otávio Rocha",
+      "latitude": -30.0386962,
+      "longitude": -51.2284076
+    },
+    "poa-apple-iguatemi": {
+      "city": "Porto Alegre",
+      "name": "iPlace Apple Premium Partner (Iguatemi POA)",
+      "latitude": -30.03306,
+      "longitude": -51.23
+    },
+    "rec-kahal-zur": {
+      "city": "Recife",
+      "name": "Kahal Zur Israel Synagogue",
+      "latitude": -8.0618906,
+      "longitude": -34.871362
+    },
+    "rec-brennand-institute": {
+      "city": "Recife",
+      "name": "Ricardo Brennand Institute",
+      "latitude": -8.0558165,
+      "longitude": -34.9592619
+    },
+    "rec-santa-isabel": {
+      "city": "Recife",
+      "name": "Santa Isabel Theater",
+      "latitude": -8.0613709,
+      "longitude": -34.8775682
+    },
+    "rec-paco-frevo": {
+      "city": "Recife",
+      "name": "Paço do Frevo",
+      "latitude": -8.0587934,
+      "longitude": -34.8723948
+    },
+    "rec-malakoff-tower": {
+      "city": "Recife",
+      "name": "Malakoff Tower",
+      "latitude": -8.05389,
+      "longitude": -34.88111
+    },
+    "rec-capibaribe-building": {
+      "city": "Recife",
+      "name": "Capibaribe Building (Edifício Capibaribe)",
+      "latitude": -8.0601398,
+      "longitude": -34.8804122
+    },
+    "rec-brennand-sculpture": {
+      "city": "Recife",
+      "name": "Brennand Sculpture Park",
+      "latitude": -8.05389,
+      "longitude": -34.88111
+    },
+    "rec-mirante-da-aurora": {
+      "city": "Recife",
+      "name": "Mirante da Aurora",
+      "latitude": -8.0530544,
+      "longitude": -34.875893
+    },
+    "rec-paco-alfandega": {
+      "city": "Recife",
+      "name": "Paço Alfândega",
+      "latitude": -8.0649155,
+      "longitude": -34.8738084
+    },
+    "rec-casa-cultura": {
+      "city": "Recife",
+      "name": "Recife House of Culture",
+      "latitude": -8.0646827,
+      "longitude": -34.8815882
+    },
+    "rec-officina-brennand": {
+      "city": "Recife",
+      "name": "Officina Francisco Brennand",
+      "latitude": -8.05389,
+      "longitude": -34.88111
+    },
+    "rec-cais-do-sertao": {
+      "city": "Recife",
+      "name": "Cais do Sertão Museum",
+      "latitude": -8.0663168,
+      "longitude": -34.8731953
+    },
+    "rec-apple-shopping-recife": {
+      "city": "Recife",
+      "name": "iPlace Apple Premium Partner (Shopping Recife)",
+      "latitude": -8.1190199,
+      "longitude": -34.9048827
+    },
+    "rio-christ-redeemer": {
+      "city": "Rio de Janeiro",
+      "name": "Christ the Redeemer",
+      "latitude": -22.9625137,
+      "longitude": -43.2891205
+    },
+    "rio-museum-tomorrow": {
+      "city": "Rio de Janeiro",
+      "name": "Museum of Tomorrow (Museu do Amanhã)",
+      "latitude": -22.8940683,
+      "longitude": -43.1794045
+    },
+    "rio-mac-niteroi": {
+      "city": "Rio de Janeiro",
+      "name": "Niteroi Contemporary Art Museum (MAC)",
+      "latitude": -22.9071493,
+      "longitude": -43.1267374
+    },
+    "rio-cathedral": {
+      "city": "Rio de Janeiro",
+      "name": "Metropolitan Cathedral of Saint Sebastian",
+      "latitude": -22.9107983,
+      "longitude": -43.1806914
+    },
+    "rio-portuguese-cabinet": {
+      "city": "Rio de Janeiro",
+      "name": "Royal Portuguese Cabinet of Reading",
+      "latitude": -22.9053692,
+      "longitude": -43.1822094
+    },
+    "rio-maracana": {
+      "city": "Rio de Janeiro",
+      "name": "Maracanã Stadium",
+      "latitude": -22.9103669,
+      "longitude": -43.2310661
+    },
+    "rio-copacabana-palace": {
+      "city": "Rio de Janeiro",
+      "name": "Copacabana Palace",
+      "latitude": -22.9670133,
+      "longitude": -43.1791849
+    },
+    "rio-teatro-municipal": {
+      "city": "Rio de Janeiro",
+      "name": "Municipal Theatre",
+      "latitude": -22.9094974,
+      "longitude": -43.1763519
+    },
+    "rio-capanema": {
+      "city": "Rio de Janeiro",
+      "name": "Gustavo Capanema Palace",
+      "latitude": -22.9089442,
+      "longitude": -43.1733643
+    },
+    "rio-parque-lage": {
+      "city": "Rio de Janeiro",
+      "name": "Parque Lage (School of Visual Arts)",
+      "latitude": -22.9600305,
+      "longitude": -43.2120378
+    },
+    "rio-mam": {
+      "city": "Rio de Janeiro",
+      "name": "Museum of Modern Art (MAM Rio)",
+      "latitude": -22.9139951,
+      "longitude": -43.1728309
+    },
+    "rio-ilha-fiscal": {
+      "city": "Rio de Janeiro",
+      "name": "Ilha Fiscal",
+      "latitude": -22.88899,
+      "longitude": -43.12314
+    },
+    "rio-apple-villagemall": {
+      "city": "Rio de Janeiro",
+      "name": "Apple VillageMall",
+      "latitude": -22.9982714,
+      "longitude": -43.3502606
+    },
+    "pohang-01": {
+      "city": "Pohang",
+      "name": "Space Walk",
+      "latitude": 36.08333,
+      "longitude": 129.36667
+    },
+    "pohang-02": {
+      "city": "Pohang",
+      "name": "Yeongildae Maritime Pavilion",
+      "latitude": 36.1160689,
+      "longitude": 129.4113453
+    },
+    "pohang-03": {
+      "city": "Pohang",
+      "name": "POSCO Global Center",
+      "latitude": 35.9863018,
+      "longitude": 129.4803929
+    },
+    "pohang-04": {
+      "city": "Pohang",
+      "name": "Guryongpo Japanese Houses Street",
+      "latitude": 35.988666,
+      "longitude": 129.5507424
+    },
+    "pohang-05": {
+      "city": "Pohang",
+      "name": "Pohang Museum of Steel Art (POMA)",
+      "latitude": 36.08333,
+      "longitude": 129.36667
+    },
+    "pohang-06": {
+      "city": "Pohang",
+      "name": "Homigot Lighthouse",
+      "latitude": 36.0774436,
+      "longitude": 129.5689568
+    },
+    "pohang-07": {
+      "city": "Pohang",
+      "name": "POSTECH Chanel Hall",
+      "latitude": 36.0180795,
+      "longitude": 129.3208556
+    },
+    "pohang-08": {
+      "city": "Pohang",
+      "name": "Oeosa Temple",
+      "latitude": 35.9349088,
+      "longitude": 129.3884926
+    },
+    "pohang-09": {
+      "city": "Pohang",
+      "name": "Park 1538",
+      "latitude": 35.9863018,
+      "longitude": 129.4803929
+    },
+    "pohang-10": {
+      "city": "Pohang",
+      "name": "Pohang Canal Pavilion",
+      "latitude": 36.08333,
+      "longitude": 129.36667
+    },
+    "pohang-apple-academy": {
+      "city": "Pohang",
+      "name": "Apple Developer Academy (POSTECH C5)",
+      "latitude": 36.08333,
+      "longitude": 129.36667
+    },
+    "montreal_mont_royal": {
+      "city": "Montreal",
+      "name": "Mount Royal Park",
+      "latitude": 45.502105,
+      "longitude": -73.594411
+    },
+    "notre-dame-basilica": {
+      "city": "Montreal",
+      "name": "Notre-Dame Basilica",
+      "latitude": 45.4452815,
+      "longitude": -73.6415724
+    },
+    "montreal_schwartzs_deli": {
+      "city": "Montreal",
+      "name": "Schwartz’s Deli",
+      "latitude": 45.5163277,
+      "longitude": -73.5776499
+    },
+    "habitat-67": {
+      "city": "Montreal",
+      "name": "Habitat 67",
+      "latitude": 45.4998761,
+      "longitude": -73.5437882
+    },
+    "olympic-stadium": {
+      "city": "Montreal",
+      "name": "Olympic Stadium",
+      "latitude": 45.5560792,
+      "longitude": -73.5504626
+    },
+    "sun-life-building": {
+      "city": "Montreal",
+      "name": "Sun Life Building",
+      "latitude": 45.501043,
+      "longitude": -73.570243
+    },
+    "place-ville-marie": {
+      "city": "Montreal",
+      "name": "Place Ville Marie",
+      "latitude": 45.5015847,
+      "longitude": -73.5686303
+    },
+    "montreal-city-hall": {
+      "city": "Montreal",
+      "name": "Montreal City Hall",
+      "latitude": 45.568015,
+      "longitude": -73.566748
+    },
+    "the-biosphere": {
+      "city": "Montreal",
+      "name": "The Biosphere",
+      "latitude": 45.5141013,
+      "longitude": -73.53139
+    },
+    "st-josephs-oratory": {
+      "city": "Montreal",
+      "name": "Saint Joseph's Oratory",
+      "latitude": 45.4837462,
+      "longitude": -73.628946
+    },
+    "marche-bonsecours": {
+      "city": "Montreal",
+      "name": "Marche Bonsecours",
+      "latitude": 45.508846,
+      "longitude": -73.551684
+    },
+    "1000-de-la-gauchetiere": {
+      "city": "Montreal",
+      "name": "1000 de La Gauchetiere",
+      "latitude": 45.4983565,
+      "longitude": -73.5665041
+    },
+    "montreal_cca": {
+      "city": "Montreal",
+      "name": "Canadian Centre for Architecture (CCA)",
+      "latitude": 45.491476,
+      "longitude": -73.578638
+    },
+    "montreal_orange_julep": {
+      "city": "Montreal",
+      "name": "Gibeau Orange Julep",
+      "latitude": 45.4957171,
+      "longitude": -73.6567848
+    },
+    "montreal_apple_sainte_catherine": {
+      "city": "Montreal",
+      "name": "Apple Sainte-Catherine",
+      "latitude": 45.4893141,
+      "longitude": -73.5845122
+    },
+    "cn-tower": {
+      "city": "Toronto",
+      "name": "CN Tower",
+      "latitude": 43.6425637,
+      "longitude": -79.3870872
+    },
+    "royal-ontario-museum": {
+      "city": "Toronto",
+      "name": "Royal Ontario Museum (ROM)",
+      "latitude": 43.667798,
+      "longitude": -79.394213
+    },
+    "gooderham-building": {
+      "city": "Toronto",
+      "name": "Gooderham Building",
+      "latitude": 43.6483668,
+      "longitude": -79.3743953
+    },
+    "toronto-city-hall": {
+      "city": "Toronto",
+      "name": "Toronto City Hall",
+      "latitude": 43.6536032,
+      "longitude": -79.3840055
+    },
+    "ocad-university": {
+      "city": "Toronto",
+      "name": "OCAD University (Sharp Centre)",
+      "latitude": 43.6532853,
+      "longitude": -79.3915144
+    },
+    "brookfield-place": {
+      "city": "Toronto",
+      "name": "Brookfield Place (Allen Lambert Galleria)",
+      "latitude": 43.6465062,
+      "longitude": -79.3786735
+    },
+    "casa-loma": {
+      "city": "Toronto",
+      "name": "Casa Loma",
+      "latitude": 43.6781015,
+      "longitude": -79.4094159
+    },
+    "old-city-hall-toronto": {
+      "city": "Toronto",
+      "name": "Old City Hall",
+      "latitude": 43.6526536,
+      "longitude": -79.3821434
+    },
+    "first-canadian-place": {
+      "city": "Toronto",
+      "name": "First Canadian Place",
+      "latitude": 43.6487681,
+      "longitude": -79.3816921
+    },
+    "distillery-district": {
+      "city": "Toronto",
+      "name": "Distillery District (Stone Distillery)",
+      "latitude": 43.6511815,
+      "longitude": -79.3575749
+    },
+    "the-shard": {
+      "city": "London",
+      "name": "The Shard",
+      "latitude": 51.5043655,
+      "longitude": -0.0864741
+    },
+    "st-pauls-cathedral": {
+      "city": "London",
+      "name": "St. Paul's Cathedral",
+      "latitude": 51.5142205,
+      "longitude": -0.0986513
+    },
+    "the-gherkin": {
+      "city": "London",
+      "name": "The Gherkin",
+      "latitude": 51.514497,
+      "longitude": -0.0803325
+    },
+    "tower-of-london": {
+      "city": "London",
+      "name": "Tower of London",
+      "latitude": 51.5101234,
+      "longitude": -0.0769284
+    },
+    "palace-of-westminster": {
+      "city": "London",
+      "name": "Palace of Westminster",
+      "latitude": 51.5004439,
+      "longitude": -0.1265398
+    },
+    "lloyds-building": {
+      "city": "London",
+      "name": "Lloyd's Building",
+      "latitude": 51.5129645,
+      "longitude": -0.0824073
+    },
+    "walkie-talkie": {
+      "city": "London",
+      "name": "The Walkie Talkie",
+      "latitude": 51.51127,
+      "longitude": -0.0835396
+    },
+    "battersea-power-station": {
+      "city": "London",
+      "name": "Battersea Power Station",
+      "latitude": 51.4817519,
+      "longitude": -0.1460471
+    },
+    "tate-modern": {
+      "city": "London",
+      "name": "Tate Modern",
+      "latitude": 51.508176,
+      "longitude": -0.0991338
+    },
+    "natural-history-museum": {
+      "city": "London",
+      "name": "Natural History Museum",
+      "latitude": 51.4949176,
+      "longitude": -0.1848924
+    },
+    "apple-battersea": {
+      "city": "London",
+      "name": "Apple London Headquarters",
+      "latitude": 51.4810677,
+      "longitude": -0.1406001
+    },
+    "the-barbican": {
+      "city": "London",
+      "name": "The Barbican Centre",
+      "latitude": 51.5207582,
+      "longitude": -0.092396
+    },
+    "buckingham-palace": {
+      "city": "London",
+      "name": "Buckingham Palace",
+      "latitude": 51.5008349,
+      "longitude": -0.1430045
+    },
+    "apple-regent-street": {
+      "city": "London",
+      "name": "Apple Regent Street",
+      "latitude": 51.5142744,
+      "longitude": -0.1421067
+    },
+    "ist_topkapi_palace": {
+      "city": "Istanbul",
+      "name": "Topkapı Palace",
+      "latitude": 41.0055376,
+      "longitude": 28.9830122
+    },
+    "ist_dolmabahce_palace": {
+      "city": "Istanbul",
+      "name": "Dolmabahçe Palace",
+      "latitude": 41.0641,
+      "longitude": 28.9941
+    },
+    "ist_maidens_tower": {
+      "city": "Istanbul",
+      "name": "Maiden's Tower (Kız Kulesi)",
+      "latitude": 41.0087,
+      "longitude": 29.0173
+    },
+    "ist_chora_mosque": {
+      "city": "Istanbul",
+      "name": "Chora Mosque (Kariye)",
+      "latitude": 41.0349,
+      "longitude": 28.9481
+    },
+    "ist_haydarpasa_station": {
+      "city": "Istanbul",
+      "name": "Haydarpaşa Terminal",
+      "latitude": 40.9970269,
+      "longitude": 29.0265413
+    },
+    "ist_apple_bagdat": {
+      "city": "Istanbul",
+      "name": "Apple Bağdat Caddesi",
+      "latitude": 40.9669,
+      "longitude": 29.0658
+    },
+    "ist_hagia_sophia": {
+      "city": "Istanbul",
+      "name": "Hagia Sophia",
+      "latitude": 41.004,
+      "longitude": 28.9788
+    },
+    "ist_galata_tower": {
+      "city": "Istanbul",
+      "name": "Galata Tower",
+      "latitude": 41.0941,
+      "longitude": 28.9757
+    },
+    "ist_suleymaniye": {
+      "city": "Istanbul",
+      "name": "Süleymaniye Mosque",
+      "latitude": 41.0162287,
+      "longitude": 28.9639548
+    },
+    "ist_sapphire": {
+      "city": "Istanbul",
+      "name": "Istanbul Sapphire",
+      "latitude": 41.0887396,
+      "longitude": 29.006075
+    },
+    "ist_ataturk_cultural_center": {
+      "city": "Istanbul",
+      "name": "Atatürk Cultural Center (AKM)",
+      "latitude": 41.0398701,
+      "longitude": 28.9894785
+    },
+    "ist_basilica_cistern": {
+      "city": "Istanbul",
+      "name": "Basilica Cistern (Yerebatan Sarnıcı)",
+      "latitude": 41.0177,
+      "longitude": 28.9744
+    },
+    "ist_apple_zorlu": {
+      "city": "Istanbul",
+      "name": "Apple Zorlu Center",
+      "latitude": 41.065,
+      "longitude": 29.0296
+    },
+    "kyo_nijo_castle": {
+      "city": "Kyoto",
+      "name": "Nijo Castle",
+      "latitude": 35.013878,
+      "longitude": 135.748636
+    },
+    "kyo_fushimi_inari": {
+      "city": "Kyoto",
+      "name": "Fushimi Inari Taisha (Honden)",
+      "latitude": 34.9678,
+      "longitude": 135.7822
+    },
+    "kyo_intl_conference_center": {
+      "city": "Kyoto",
+      "name": "Kyoto International Conference Center",
+      "latitude": 35.0664,
+      "longitude": 135.7876
+    },
+    "kyo_sanjusangendo": {
+      "city": "Kyoto",
+      "name": "Sanjusangen-do",
+      "latitude": 34.9883,
+      "longitude": 135.7726
+    },
+    "kyo_heian_shrine": {
+      "city": "Kyoto",
+      "name": "Heian Jingu Shrine",
+      "latitude": 35.0156015,
+      "longitude": 135.7812184
+    },
+    "kyo_apple_kyoto": {
+      "city": "Kyoto",
+      "name": "Apple Kyoto",
+      "latitude": 35.0036,
+      "longitude": 135.7633
+    },
+    "kyo_kinkaku_ji": {
+      "city": "Kyoto",
+      "name": "Kinkaku-ji (Golden Pavilion)",
+      "latitude": 35.0395,
+      "longitude": 135.7294
+    },
+    "kyo_kyoto_station": {
+      "city": "Kyoto",
+      "name": "Kyoto Station",
+      "latitude": 34.984936,
+      "longitude": 135.75769
+    },
+    "kyo_kiyomizu_dera": {
+      "city": "Kyoto",
+      "name": "Kiyomizu-dera",
+      "latitude": 34.994871,
+      "longitude": 135.783514
+    },
+    "kyo_kyoto_kyocera_museum": {
+      "city": "Kyoto",
+      "name": "Kyoto City Kyocera Museum of Art",
+      "latitude": 35.0115992,
+      "longitude": 135.7815204
+    },
+    "kyo_katsura_imperial_villa": {
+      "city": "Kyoto",
+      "name": "Katsura Imperial Villa",
+      "latitude": 34.984066,
+      "longitude": 135.710587
+    },
+    "kyo_kyoto_tower": {
+      "city": "Kyoto",
+      "name": "Kyoto Tower",
+      "latitude": 34.987182,
+      "longitude": 135.758744
+    },
+    "tokyo-skytree": {
+      "city": "Tokyo",
+      "name": "Tokyo Skytree",
+      "latitude": 35.7117,
+      "longitude": 139.8162
+    },
+    "cocoon-tower": {
+      "city": "Tokyo",
+      "name": "Mode Gakuen Cocoon Tower",
+      "latitude": 35.6914,
+      "longitude": 139.6932
+    },
+    "glbl_apple_marunouchi": {
+      "city": "Tokyo",
+      "name": "Apple Marunouchi",
+      "latitude": 35.6802,
+      "longitude": 139.7642
+    },
+    "tokyo-station": {
+      "city": "Tokyo",
+      "name": "Tokyo Station (Marunouchi)",
+      "latitude": 35.6802,
+      "longitude": 139.7642
+    },
+    "sensoji-temple": {
+      "city": "Tokyo",
+      "name": "Sensō-ji Temple (Main Hall)",
+      "latitude": 35.7167,
+      "longitude": 139.7966
+    },
+    "tokyo-tower": {
+      "city": "Tokyo",
+      "name": "Tokyo Tower",
+      "latitude": 35.6576,
+      "longitude": 139.7499
+    },
+    "nakagin-capsule": {
+      "city": "Tokyo",
+      "name": "Nakagin Capsule Tower (Legacy)",
+      "latitude": 35.6706,
+      "longitude": 139.7649
+    },
+    "tokyo-gov-building": {
+      "city": "Tokyo",
+      "name": "Tokyo Metropolitan Government Building",
+      "latitude": 35.68802,
+      "longitude": 139.68897
+    },
+    "prada-aoyama": {
+      "city": "Tokyo",
+      "name": "Prada Aoyama",
+      "latitude": 35.6657,
+      "longitude": 139.7178
+    },
+    "shibuya-scramble": {
+      "city": "Tokyo",
+      "name": "Shibuya Scramble Square",
+      "latitude": 35.6593,
+      "longitude": 139.7054
+    },
+    "fuji-tv-building": {
+      "city": "Tokyo",
+      "name": "Fuji TV Building",
+      "latitude": 35.6288,
+      "longitude": 139.7757
+    },
+    "apple-japan-hq": {
+      "city": "Tokyo",
+      "name": "Apple Japan Headquarters (Roppongi Hills Mori Tower)",
+      "latitude": 35.65,
+      "longitude": 139.73333
+    },
+    "yoyogi-gymnasium": {
+      "city": "Tokyo",
+      "name": "Yoyogi National Gymnasium",
+      "latitude": 35.6633,
+      "longitude": 139.7004
+    },
+    "nmwa-ueno": {
+      "city": "Tokyo",
+      "name": "National Museum of Western Art",
+      "latitude": 35.7164,
+      "longitude": 139.775
+    },
+    "meiji-jingu": {
+      "city": "Tokyo",
+      "name": "Meiji Jingu Shrine",
+      "latitude": 35.65835,
+      "longitude": 139.702
+    },
+    "glbl_apple_ginza": {
+      "city": "Tokyo",
+      "name": "Apple Ginza",
+      "latitude": 35.6706,
+      "longitude": 139.7649
+    },
+    "lotte-world-tower": {
+      "city": "Seoul",
+      "name": "Lotte World Tower",
+      "latitude": 37.5135157,
+      "longitude": 127.1035414
+    },
+    "glbl_apple_myeongdong": {
+      "city": "Seoul",
+      "name": "Apple Myeongdong",
+      "latitude": 37.5616229,
+      "longitude": 126.9848251
+    },
+    "ddp-seoul": {
+      "city": "Seoul",
+      "name": "Dongdaemun Design Plaza (DDP)",
+      "latitude": 37.5662336,
+      "longitude": 127.0091598
+    },
+    "gyeongbokgung-palace": {
+      "city": "Seoul",
+      "name": "Gyeongbokgung Palace (Gwanghwamun Gate)",
+      "latitude": 37.5759194,
+      "longitude": 126.9768156
+    },
+    "n-seoul-tower": {
+      "city": "Seoul",
+      "name": "N Seoul Tower",
+      "latitude": 37.5522424,
+      "longitude": 126.9820623
+    },
+    "63-building": {
+      "city": "Seoul",
+      "name": "63 Building (63 City)",
+      "latitude": 37.5198496,
+      "longitude": 126.9402516
+    },
+    "seoul-city-hall": {
+      "city": "Seoul",
+      "name": "Seoul City Hall",
+      "latitude": 37.5667893,
+      "longitude": 126.9784204
+    },
+    "ewha-campus-center": {
+      "city": "Seoul",
+      "name": "Ewha Womans University Campus Center",
+      "latitude": 37.5643371,
+      "longitude": 126.9468925
+    },
+    "gt-tower-east": {
+      "city": "Seoul",
+      "name": "GT Tower East",
+      "latitude": 37.4980633,
+      "longitude": 127.0259442
+    },
+    "some-sevit": {
+      "city": "Seoul",
+      "name": "Some Sevit (Floating Islands)",
+      "latitude": 37.49447,
+      "longitude": 127.01088
+    },
+    "leeum-museum": {
+      "city": "Seoul",
+      "name": "Leeum Museum of Art",
+      "latitude": 37.5379627,
+      "longitude": 126.9987684
+    },
+    "national-museum-korea": {
+      "city": "Seoul",
+      "name": "National Museum of Korea",
+      "latitude": 37.5198634,
+      "longitude": 126.9826534
+    },
+    "glbl_apple_gangnam": {
+      "city": "Seoul",
+      "name": "Apple Gangnam",
+      "latitude": 37.5030713,
+      "longitude": 127.0253238
+    },
+    "palacio-barolo": {
+      "city": "Buenos Aires",
+      "name": "Palacio Barolo",
+      "latitude": -34.6096625,
+      "longitude": -58.3857277
+    },
+    "teatro-colon": {
+      "city": "Buenos Aires",
+      "name": "Teatro Colón",
+      "latitude": -34.6010855,
+      "longitude": -58.3831869
+    },
+    "kavanagh-building": {
+      "city": "Buenos Aires",
+      "name": "Kavanagh Building",
+      "latitude": -34.5954656,
+      "longitude": -58.374821
+    },
+    "casa-rosada": {
+      "city": "Buenos Aires",
+      "name": "Casa Rosada",
+      "latitude": -34.6080692,
+      "longitude": -58.3702762
+    },
+    "puente-de-la-mujer": {
+      "city": "Buenos Aires",
+      "name": "Puente de la Mujer",
+      "latitude": -34.6086483,
+      "longitude": -58.3641039
+    },
+    "el-ateneo-grand-splendid": {
+      "city": "Buenos Aires",
+      "name": "El Ateneo Grand Splendid",
+      "latitude": -34.5959828,
+      "longitude": -58.3942623
+    },
+    "gran-torre-santiago": {
+      "city": "Santiago",
+      "name": "Gran Torre Santiago",
+      "latitude": -33.417987,
+      "longitude": -70.6064246
+    },
+    "la-moneda-palace": {
+      "city": "Santiago",
+      "name": "La Moneda Palace",
+      "latitude": -33.4426721,
+      "longitude": -70.6583109
+    },
+    "bahai-temple-south-america": {
+      "city": "Santiago",
+      "name": "Bahá'í Temple of South America",
+      "latitude": -33.47992,
+      "longitude": -70.523453
+    },
+    "museo-historico-nacional": {
+      "city": "Santiago",
+      "name": "National History Museum",
+      "latitude": -33.4371206,
+      "longitude": -70.6506217
+    },
+    "gabriela-mistral-cultural-center": {
+      "city": "Santiago",
+      "name": "GAM (Gabriela Mistral Cultural Center)",
+      "latitude": -33.4393115,
+      "longitude": -70.6399272
+    },
+    "zeitz-mocaa": {
+      "city": "Cape Town",
+      "name": "Zeitz MOCAA",
+      "latitude": -33.9258,
+      "longitude": 18.4232
+    },
+    "cape-town-city-hall": {
+      "city": "Cape Town",
+      "name": "Cape Town City Hall",
+      "latitude": -33.9234248,
+      "longitude": 18.4217087
+    },
+    "castle-of-good-hope": {
+      "city": "Cape Town",
+      "name": "Castle of Good Hope",
+      "latitude": -33.9258,
+      "longitude": 18.4232
+    },
+    "portside-tower": {
+      "city": "Cape Town",
+      "name": "Portside Tower",
+      "latitude": -33.9170756,
+      "longitude": 18.4220748
+    },
+    "groot-constantia-manor": {
+      "city": "Cape Town",
+      "name": "Groot Constantia Manor House",
+      "latitude": -34.0250643,
+      "longitude": 18.4280242
+    },
+    "sky-tower-auckland": {
+      "city": "Auckland",
+      "name": "Sky Tower",
+      "latitude": -36.8490776,
+      "longitude": 174.7616161
+    },
+    "auckland-art-gallery": {
+      "city": "Auckland",
+      "name": "Auckland Art Gallery Toi o Tāmaki",
+      "latitude": -36.8520151,
+      "longitude": 174.7665069
+    },
+    "auckland-museum": {
+      "city": "Auckland",
+      "name": "Auckland War Memorial Museum",
+      "latitude": -36.8052,
+      "longitude": 174.9811
+    },
+    "pwc-tower-commercial-bay": {
+      "city": "Auckland",
+      "name": "PwC Tower at Commercial Bay",
+      "latitude": -36.8442296,
+      "longitude": 174.7658072
+    },
+    "britomart-transport-centre": {
+      "city": "Auckland",
+      "name": "Britomart Transport Centre",
+      "latitude": -36.8440815,
+      "longitude": 174.7674151
+    },
+    "stephansdom": {
+      "city": "Vienna",
+      "name": "St. Stephen's Cathedral",
+      "latitude": 48.2084923,
+      "longitude": 16.3731269
+    },
+    "hundertwasserhaus": {
+      "city": "Vienna",
+      "name": "Hundertwasserhaus",
+      "latitude": 48.2075444,
+      "longitude": 16.3939944
+    },
+    "schonbrunn-palace": {
+      "city": "Vienna",
+      "name": "Schönbrunn Palace",
+      "latitude": 48.1849457,
+      "longitude": 16.3154107
+    },
+    "dc-tower-1": {
+      "city": "Vienna",
+      "name": "DC Tower 1",
+      "latitude": 48.2316473,
+      "longitude": 16.4126135
+    },
+    "vienna-secession": {
+      "city": "Vienna",
+      "name": "Secession Building",
+      "latitude": 48.200497,
+      "longitude": 16.3657683
+    },
+    "maat-lisbon": {
+      "city": "Lisbon",
+      "name": "MAAT (Museum of Art, Architecture and Technology)",
+      "latitude": 38.6962598,
+      "longitude": -9.1954109
+    },
+    "belem-tower": {
+      "city": "Lisbon",
+      "name": "Belém Tower",
+      "latitude": 38.6962598,
+      "longitude": -9.1954109
+    },
+    "jeronimos-monastery": {
+      "city": "Lisbon",
+      "name": "Jerónimos Monastery",
+      "latitude": 38.6971218,
+      "longitude": -9.2080263
+    },
+    "portugal-pavilion": {
+      "city": "Lisbon",
+      "name": "Portugal Pavilion",
+      "latitude": 38.761839,
+      "longitude": -9.0960548
+    },
+    "santa-justa-lift": {
+      "city": "Lisbon",
+      "name": "Santa Justa Lift",
+      "latitude": 38.7090243,
+      "longitude": -9.1379117
+    },
+    "dancing-house": {
+      "city": "Prague",
+      "name": "Dancing House",
+      "latitude": 50.0755185,
+      "longitude": 14.4141995
+    },
+    "st-vitus-cathedral": {
+      "city": "Prague",
+      "name": "St. Vitus Cathedral",
+      "latitude": 50.08804,
+      "longitude": 14.42076
+    },
+    "charles-bridge": {
+      "city": "Prague",
+      "name": "Charles Bridge",
+      "latitude": 50.0861526,
+      "longitude": 14.4137572
+    },
+    "house-of-the-black-madonna": {
+      "city": "Prague",
+      "name": "House of the Black Madonna",
+      "latitude": 50.0869368,
+      "longitude": 14.4254679
+    },
+    "zizkov-tv-tower": {
+      "city": "Prague",
+      "name": "Žižkov Television Tower",
+      "latitude": 50.0810217,
+      "longitude": 14.4510584
+    },
+    "britam-tower": {
+      "city": "Nairobi",
+      "name": "Britam Tower",
+      "latitude": -1.2946974,
+      "longitude": 36.8060237
+    },
+    "kicc-nairobi": {
+      "city": "Nairobi",
+      "name": "Kenyatta International Convention Centre",
+      "latitude": -1.2884884,
+      "longitude": 36.8253662
+    },
+    "apple_premium_nairobi": {
+      "city": "Nairobi",
+      "name": "iStore Westgate (Apple Premium)",
+      "latitude": -1.2570443,
+      "longitude": 36.803133
+    },
+    "gtc-office-tower": {
+      "city": "Nairobi",
+      "name": "GTC Office Tower",
+      "latitude": -1.2635123,
+      "longitude": 36.8010774
+    },
+    "all-saints-cathedral": {
+      "city": "Nairobi",
+      "name": "All Saints' Cathedral",
+      "latitude": -1.2834527,
+      "longitude": 36.8236328
+    },
+    "uap-old-mutual-tower": {
+      "city": "Nairobi",
+      "name": "UAP Old Mutual Tower",
+      "latitude": -1.2971316,
+      "longitude": 36.8175921
+    },
+    "nairobi-national-museum": {
+      "city": "Nairobi",
+      "name": "Nairobi National Museum",
+      "latitude": -1.28333,
+      "longitude": 36.81667
+    },
+    "cbk-pension-tower": {
+      "city": "Nairobi",
+      "name": "CBK Pension Tower",
+      "latitude": -1.2884884,
+      "longitude": 36.8253662
+    },
+    "koutoubia-mosque": {
+      "city": "Marrakech",
+      "name": "Koutoubia Mosque",
+      "latitude": 32.3105396,
+      "longitude": -9.2273703
+    },
+    "yves-saint-laurent-museum": {
+      "city": "Marrakech",
+      "name": "Musée Yves Saint Laurent",
+      "latitude": 31.6412481,
+      "longitude": -8.0020919
+    },
+    "bahia-palace": {
+      "city": "Marrakech",
+      "name": "Bahia Palace",
+      "latitude": 31.6205,
+      "longitude": -7.98466
+    },
+    "ben-youssef-madrasa": {
+      "city": "Marrakech",
+      "name": "Ben Youssef Madrasa",
+      "latitude": 31.6317026,
+      "longitude": -7.9867621
+    },
+    "el-badi-palace": {
+      "city": "Marrakech",
+      "name": "El Badi Palace",
+      "latitude": 31.6205,
+      "longitude": -7.98466
+    },
+    "royal-mansour": {
+      "city": "Marrakech",
+      "name": "Royal Mansour Marrakech",
+      "latitude": 31.6244887,
+      "longitude": -8.0000969
+    },
+    "saadian-tombs": {
+      "city": "Marrakech",
+      "name": "Saadian Tombs",
+      "latitude": 31.6232198,
+      "longitude": -7.9890269
+    },
+    "dar-si-said": {
+      "city": "Marrakech",
+      "name": "Dar Si Said Museum",
+      "latitude": 31.63416,
+      "longitude": -7.99994
+    },
+    "banco-de-la-nacion": {
+      "city": "Lima",
+      "name": "Torre Banco de la Nación",
+      "latitude": -12.0872499,
+      "longitude": -76.9960806
+    },
+    "basilica-cathedral-lima": {
+      "city": "Lima",
+      "name": "Cathedral of Lima",
+      "latitude": -12.04318,
+      "longitude": -77.02824
+    },
+    "ispace_jockey_plaza": {
+      "city": "Lima",
+      "name": "iSpace Jockey Plaza (Apple Premium)",
+      "latitude": -12.0846676,
+      "longitude": -76.9784107
+    },
+    "convent-of-san-francisco": {
+      "city": "Lima",
+      "name": "Convent of San Francisco",
+      "latitude": -12.0519212,
+      "longitude": -77.0325043
+    },
+    "utec-campus": {
+      "city": "Lima",
+      "name": "UTEC Campus",
+      "latitude": -12.1351351,
+      "longitude": -77.0221296
+    },
+    "palacio-de-gobierno": {
+      "city": "Lima",
+      "name": "Government Palace",
+      "latitude": -12.04318,
+      "longitude": -77.02824
+    },
+    "eureka-tower": {
+      "city": "Melbourne",
+      "name": "Eureka Tower",
+      "latitude": -37.8217537,
+      "longitude": 144.9646549
+    },
+    "flinders-street-station": {
+      "city": "Melbourne",
+      "name": "Flinders Street Station",
+      "latitude": -37.8180051,
+      "longitude": 144.9673833
+    },
+    "apple-chadstone": {
+      "city": "Melbourne",
+      "name": "Apple Chadstone",
+      "latitude": -37.8875553,
+      "longitude": 145.0803835
+    },
+    "royal-exhibition-building": {
+      "city": "Melbourne",
+      "name": "Royal Exhibition Building",
+      "latitude": -37.8046669,
+      "longitude": 144.9714669
+    },
+    "federation-square": {
+      "city": "Melbourne",
+      "name": "Federation Square",
+      "latitude": -37.8177957,
+      "longitude": 144.9664432
+    },
+    "the-ian-potter-centre": {
+      "city": "Melbourne",
+      "name": "The Ian Potter Centre: NGV Australia",
+      "latitude": -37.8177396,
+      "longitude": 144.9691559
+    },
+    "br_cathedral_brasilia": {
+      "city": "Brasília",
+      "name": "Cathedral of Brasília",
+      "latitude": -15.77972,
+      "longitude": -47.92972
+    },
+    "br_national_congress": {
+      "city": "Brasília",
+      "name": "National Congress of Brazil",
+      "latitude": -15.8011592,
+      "longitude": -47.8613363
+    },
+    "br_itamaraty_palace": {
+      "city": "Brasília",
+      "name": "Itamaraty Palace",
+      "latitude": -15.77972,
+      "longitude": -47.92972
+    },
+    "br_jk_bridge": {
+      "city": "Brasília",
+      "name": "Juscelino Kubitschek Bridge",
+      "latitude": -15.8161052,
+      "longitude": -47.8392227
+    },
+    "br_alvorada_palace": {
+      "city": "Brasília",
+      "name": "Palácio da Alvorada",
+      "latitude": 48.19811,
+      "longitude": 16.39482
+    },
+    "br_tv_tower": {
+      "city": "Brasília",
+      "name": "Brasília TV Tower",
+      "latitude": -15.7831095,
+      "longitude": -47.9198723
+    },
+    "br_national_museum": {
+      "city": "Brasília",
+      "name": "National Museum of the Republic",
+      "latitude": 28.41667,
+      "longitude": 79.38333
+    },
+    "br_jk_memorial": {
+      "city": "Brasília",
+      "name": "Memorial JK",
+      "latitude": -15.79473,
+      "longitude": -47.92794
+    },
+    "br_sanctuary_dom_bosco": {
+      "city": "Brasília",
+      "name": "Sanctuary of Don Bosco",
+      "latitude": 59.97718,
+      "longitude": 23.43633
+    },
+    "br_national_theater": {
+      "city": "Brasília",
+      "name": "Cláudio Santoro National Theater",
+      "latitude": 47.41323,
+      "longitude": 8.64592
+    },
+    "br_pontao_lago_sul": {
+      "city": "Brasília",
+      "name": "Pontão do Lago Sul",
+      "latitude": 62.9833,
+      "longitude": 27.1
+    },
+    "br_planalto_palace": {
+      "city": "Brasília",
+      "name": "Palácio do Planalto",
+      "latitude": -15.8011592,
+      "longitude": -47.8613363
+    },
+    "br_supreme_court": {
+      "city": "Brasília",
+      "name": "Supreme Federal Court",
+      "latitude": -15.8011592,
+      "longitude": -47.8613363
+    },
+    "br_national_library": {
+      "city": "Brasília",
+      "name": "National Library of Brasília",
+      "latitude": 28.41667,
+      "longitude": 79.38333
+    },
+    "br_pantheon_liberty": {
+      "city": "Brasília",
+      "name": "Pantheon of Liberty and Democracy",
+      "latitude": -15.8011592,
+      "longitude": -47.8613363
+    },
+    "br_masp": {
+      "city": "São Paulo",
+      "name": "MASP (São Paulo Museum of Art)",
+      "latitude": -23.5614961,
+      "longitude": -46.6559677
+    },
+    "br_copan": {
+      "city": "São Paulo",
+      "name": "Edifício Copan",
+      "latitude": -23.802029,
+      "longitude": -45.4014943
+    },
+    "br_altino_arantes": {
+      "city": "São Paulo",
+      "name": "Farol Santander (Altino Arantes Building)",
+      "latitude": -23.38193,
+      "longitude": -48.72265
+    },
+    "br_estaiada_bridge": {
+      "city": "São Paulo",
+      "name": "Octávio Frias de Oliveira Bridge",
+      "latitude": -23.6154391,
+      "longitude": -46.6992167
+    },
+    "br_theatre_municipal": {
+      "city": "São Paulo",
+      "name": "Theatro Municipal de São Paulo",
+      "latitude": -23.38193,
+      "longitude": -48.72265
+    },
+    "br_pinacoteca": {
+      "city": "São Paulo",
+      "name": "Pinacoteca do Estado",
+      "latitude": -23.5342741,
+      "longitude": -46.6339157
+    },
+    "br_estacao_da_luz": {
+      "city": "São Paulo",
+      "name": "Luz Station",
+      "latitude": -23.5351161,
+      "longitude": -46.6353906
+    },
+    "br_cathedral_se": {
+      "city": "São Paulo",
+      "name": "São Paulo Cathedral (Catedral da Sé)",
+      "latitude": -23.2575961,
+      "longitude": -47.3053126
+    },
+    "br_sesc_pompeia": {
+      "city": "São Paulo",
+      "name": "SESC Pompéia",
+      "latitude": -23.5247354,
+      "longitude": -46.7036039
+    },
+    "br_italia_building": {
+      "city": "São Paulo",
+      "name": "Edifício Itália",
+      "latitude": -23.5453075,
+      "longitude": -46.6436337
+    },
+    "br_mosteiro_sao_bento": {
+      "city": "São Paulo",
+      "name": "Saint Benedict Monastery",
+      "latitude": -23.445188,
+      "longitude": -46.916441
+    },
+    "br_mercadao": {
+      "city": "São Paulo",
+      "name": "Municipal Market of São Paulo",
+      "latitude": -23.3913677,
+      "longitude": -46.3078695
+    },
+    "br_ibirapuera_auditorium": {
+      "city": "São Paulo",
+      "name": "Ibirapuera Auditorium",
+      "latitude": -23.5879351,
+      "longitude": -46.6514106
+    },
+    "br_japan_house": {
+      "city": "São Paulo",
+      "name": "Japan House São Paulo",
+      "latitude": -23.5705607,
+      "longitude": -46.6447649
+    },
+    "br_casa_das_rosas": {
+      "city": "São Paulo",
+      "name": "Casa das Rosas",
+      "latitude": -23.5707488,
+      "longitude": -46.6448342
+    },
+    "nc_biltmore_estate": {
+      "city": "Asheville",
+      "name": "Biltmore Estate",
+      "latitude": 35.567214,
+      "longitude": -82.543585
+    },
+    "nc_basilica_st_lawrence": {
+      "city": "Asheville",
+      "name": "Basilica of Saint Lawrence",
+      "latitude": 35.597327,
+      "longitude": -82.5562877
+    },
+    "nc_grove_arcade": {
+      "city": "Asheville",
+      "name": "Grove Arcade",
+      "latitude": 35.595542,
+      "longitude": -82.5566053
+    },
+    "nc_omni_grove_park_inn": {
+      "city": "Asheville",
+      "name": "The Omni Grove Park Inn",
+      "latitude": 35.6201674,
+      "longitude": -82.5419477
+    }
+  }
+}

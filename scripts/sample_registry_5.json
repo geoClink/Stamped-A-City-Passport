@@ -1,0 +1,112 @@
+{
+  "Bath": [
+    {
+      "id": "uk_roman_baths",
+      "name": "The Roman Baths",
+      "assetName": "romanBaths",
+      "description": "Constructed around 70 AD as a grand bathing and socializing complex, this is one of the best-preserved Roman remains in the world. The site flows with natural thermal springs that still reach 46°C today. Visitors can walk on the original Roman pavements and see the Great Bath, which is lined with 45 sheets of lead. While you can no longer swim here, the site remains the spiritual and historical heart of the city, perfectly blending ancient engineering with a Victorian superstructure.",
+      "architect": "Ancient Romans / John Wood the Elder & Younger",
+      "yearBuilt": 70,
+      "address": "Abbey Churchyard, Bath BA1 1LZ",
+      "oldUse": "Public Bathing House",
+      "newUse": "Museum / Historical Site",
+      "buildingStyle": "Roman / Neoclassical",
+      "numberOfStories": 2,
+      "height": 12,
+      "foodSpots": [
+        "The Pump Room",
+        "Sally Lunn’s Eating House",
+        "The Bath Bun"
+      ],
+      "currency": "GBP (£)",
+      "latitude": 51.3813419,
+      "longitude": -2.3596754
+    },
+    {
+      "id": "uk_royal_crescent",
+      "name": "The Royal Crescent",
+      "assetName": "royalCrescent",
+      "description": "Arguably the most famous example of Georgian architecture in the world, this crescent of 30 terraced houses is arranged in a sweeping semi-ellipse. Its facade features 114 Ionic columns and remains virtually unchanged since it was built in the 18th century. It represents the height of the 'Palladian' style that defines Bath’s golden-hued aesthetic. Today, it houses a luxury hotel, a museum at No. 1, and several private residences, overlooking the vast Royal Victoria Park.",
+      "architect": "John Wood the Younger",
+      "yearBuilt": 1774,
+      "address": "1-30 Royal Crescent, Bath BA1 2LS",
+      "oldUse": "Private Residences",
+      "newUse": "Hotel / Museum / Residential",
+      "buildingStyle": "Georgian Palladian",
+      "numberOfStories": 4,
+      "height": 18,
+      "foodSpots": [
+        "The Royal Crescent Hotel & Spa",
+        "The Marlborough Tavern"
+      ],
+      "currency": "GBP (£)",
+      "latitude": 51.3872718,
+      "longitude": -2.3682297
+    },
+    {
+      "id": "uk_bath_abbey",
+      "name": "Bath Abbey",
+      "assetName": "bathAbbey",
+      "description": "A former Benedictine monastery, this Abbey is a premier example of Perpendicular Gothic architecture. It is famous for its 'Ladder of Angels' on the West Front and its magnificent fan-vaulted ceiling, which creates a forest of stone overhead. The Abbey is known as the 'Lantern of the West' due to the vast amount of stained glass that fills the interior with light. It stands on the site where the first King of all England, King Edgar, was crowned in 973 AD.",
+      "architect": "Robert and William Vertue",
+      "yearBuilt": 1499,
+      "address": "Bath BA1 1LT",
+      "oldUse": "Monastery / Church",
+      "newUse": "Cathedral / Parish Church",
+      "buildingStyle": "Perpendicular Gothic",
+      "numberOfStories": 1,
+      "height": 49,
+      "foodSpots": [
+        "The Abbey Deli",
+        "Mokoko Coffee",
+        "Hands Victorian Tearooms"
+      ],
+      "currency": "GBP (£)",
+      "latitude": 51.3813177,
+      "longitude": -2.3587036
+    },
+    {
+      "id": "uk_pulteney_bridge",
+      "name": "Pulteney Bridge",
+      "assetName": "pulteneyBridge",
+      "description": "One of only four bridges in the world to have shops built across its full span on both sides, Pulteney Bridge is an architectural marvel crossing the River Avon. It was designed to connect the city of Bath to the newly developed land of Bathwick. Its design was inspired by the Ponte Vecchio in Florence. The view of the bridge alongside the horseshoe-shaped Pulteney Weir is the most photographed spot in the city, blending functional infrastructure with high-end retail elegance.",
+      "architect": "Robert Adam",
+      "yearBuilt": 1774,
+      "address": "Bridge St, Bath BA2 4AT",
+      "oldUse": "Bridge / Retail",
+      "newUse": "Bridge / Retail",
+      "buildingStyle": "Palladian",
+      "numberOfStories": 2,
+      "height": 10,
+      "foodSpots": [
+        "The Bridge Coffee Shop",
+        "Sotto Sotto",
+        "The Pulteney Arms"
+      ],
+      "currency": "GBP (£)",
+      "latitude": 51.3828263,
+      "longitude": -2.358643
+    },
+    {
+      "id": "uk_thermae_bath_spa",
+      "name": "Thermae Bath Spa",
+      "assetName": "thermaeSpa",
+      "description": "This project is a striking example of modern architecture in a historic setting. It successfully integrated original Georgian buildings with a contemporary glass-and-stone structure. The highlight is the open-air rooftop pool, where visitors can bathe in the city’s naturally warm, mineral-rich waters while overlooking the Bath Abbey. It serves as the modern successor to the Roman Baths, proving that Bath's thermal water heritage is still a living, breathing part of the city.",
+      "architect": "Grimshaw Architects",
+      "yearBuilt": 2006,
+      "address": "The Hetling Pump Room, Bath BA1 1SJ",
+      "oldUse": "Various Historic Buildings",
+      "newUse": "Commercial Spa",
+      "buildingStyle": "Contemporary / Adaptive Reuse",
+      "numberOfStories": 4,
+      "height": 15,
+      "foodSpots": [
+        "Springs Cafe Restaurant",
+        "The Gainsborough Brasserie"
+      ],
+      "currency": "GBP (£)",
+      "latitude": 51.38032,
+      "longitude": -2.361506
+    }
+  ]
+}

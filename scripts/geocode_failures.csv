@@ -1,0 +1,15 @@
+id,address,city
+uk_thermae_bath_spa,"The Hetling Pump Room, Bath BA1 1SJ",Bath
+detroit_mcgregor_center,"495 West Ferry Mall, Detroit, MI 48202",Detroit
+orl_citrus_bowl,"1 Citrus Bowl Pl, Orlando, FL 32805",Orlando
+dxb_burj_al_arab,"Jumeirah St, Umm Suqeim 3, PO Box 74147, Dubai, United Arab Emirates",Dubai
+dxb_museum_future,"Building 65, Sheikh Zayed Rd, Trade Centre 2, P.O. Box 66610, Dubai, United Arab Emirates",Dubai
+dxb_atlantis_royal,"Crescent Road, Palm Jumeirah, PO Box 211222, Dubai, United Arab Emirates",Dubai
+dxb_cayan_tower,"14 Al Sharta Street, Dubai Marina, PO Box 12922, Dubai, United Arab Emirates",Dubai
+dxb_dubai_frame,"Zabeel Park Jogging Track, Za'abeel, Al Kifaf, Dubai, United Arab Emirates",Dubai
+dxb_jumeirah_emirates,"Sheikh Zayed Road, Trade Centre 2, PO Box 72127, Dubai, United Arab Emirates",Dubai
+dxb_opus,"5-7 Al A'amal Street, Business Bay, PO Box 25394, Dubai, United Arab Emirates",Dubai
+dxb_index_tower,"Al Sa'ada Street, Dubai International Financial Centre (DIFC), PO Box 507341, Dubai, United Arab Emirates",Dubai
+dxb_etihad_museum,"1 Jumeirah St, Al Mina, PO Box 115222, Dubai, United Arab Emirates",Dubai
+
+# NOTE: This CSV contains the first 12 failure rows as a template. The full failures list is in scripts/geocode_failures.json
