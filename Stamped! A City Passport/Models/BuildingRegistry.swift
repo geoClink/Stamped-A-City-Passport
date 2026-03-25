@@ -74,4 +74,23 @@ struct BuildingRegistry {
 
         return Array(allBuildings[startIndex..<endIndex])
     }
+    
+    /// Finds a building by its unique string ID, searching all cities.
+    static func getBuilding(by id: String) -> Building? {
+        for buildings in data.values {
+            if let found = buildings.first(where: { $0.id == id }) {
+                return found
+            }
+        }
+        return nil
+    }
+    
+    /// Returns all buildings for a given city ID (String).
+    static func getAllBuildings(forCityName cityID: String) -> [Building] {
+        // Try to convert cityID to CityLocation.City
+        if let city = CityLocation.City(rawValue: cityID) {
+            return data[city] ?? []
+        }
+        return []
+    }
 }

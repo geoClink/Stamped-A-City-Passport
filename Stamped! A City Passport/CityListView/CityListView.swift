@@ -144,7 +144,7 @@ struct CityListView: View {
                                 .padding(.bottom, 25)
                                 .padding(.horizontal, 25)
                             
-                            CityItineraryView(city: city)
+//                            CityItineraryView(city: city)
                         }
                     }
                     .id(city.id)
