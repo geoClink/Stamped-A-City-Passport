@@ -102,6 +102,10 @@ actor ItinerarySaveDebouncer {
 // MARK: - 2. VIEW MODEL
 @MainActor
 class ItineraryStep: Identifiable, ObservableObject {
+    static var debugForceMockAI: Bool {
+        UserDefaults.standard.bool(forKey: "debug_force_mock_ai")
+    }
+
     let id = UUID()
     let timeSlot: String
     let building: Building
@@ -158,7 +162,7 @@ class ItineraryStep: Identifiable, ObservableObject {
         #endif
 
         // Debug: short-circuit AI generation if mock toggle is on
-        if debugForceMockAI {
+        if Self.debugForceMockAI {
             self.curatedActivity = "\(distanceHint) Admire the \(building.buildingStyle) details at \(building.address)."
             self.icon = "mappin.and.ellipse"
             self.foodSuggestion = building.foodSpots.randomElement() ?? "Local Favorite"
@@ -704,3 +708,4 @@ struct CityItineraryView: View {
         func updateUIView(_ uiView: UIVisualEffectView, context: Context) {}
     }
 }
+
