@@ -1,0 +1,308 @@
+[
+  {
+    "city": "Detroit",
+    "id": "detroit_dpl_main",
+    "name": "Detroit Public Library (Main)",
+    "address": "5201 Woodward Ave, Detroit, MI 48202",
+    "latitude": 42.3583548,
+    "longitude": -83.0668625,
+    "cuisine": null
+  },
+  {
+    "city": "Orlando",
+    "id": "orl_orlando_public_library",
+    "name": "Orlando Public Library",
+    "address": "101 E Central Blvd, Orlando, FL 32801",
+    "latitude": 28.5425394,
+    "longitude": -81.3766818,
+    "cuisine": null
+  },
+  {
+    "city": "Boston",
+    "id": "bos-10",
+    "name": "Boston Public Library (McKim Building)",
+    "address": "700 Boylston St, Boston, MA 02116",
+    "latitude": 42.3493298,
+    "longitude": -71.0786547,
+    "cuisine": null
+  },
+  {
+    "city": "Denver",
+    "id": "den-05",
+    "name": "Denver Public Library (Central)",
+    "address": "10 W 14th Ave Pkwy, Denver, CO 80204",
+    "latitude": 39.7384615,
+    "longitude": -104.9902638,
+    "cuisine": null
+  },
+  {
+    "city": "Philadelphia",
+    "id": "phi-14",
+    "name": "The Barnes Foundation",
+    "address": "2025 Benjamin Franklin Pkwy, Philadelphia, PA 19130",
+    "latitude": 39.9605495,
+    "longitude": -75.1726581,
+    "cuisine": null
+  },
+  {
+    "city": "Vancouver",
+    "id": "yvr-04",
+    "name": "Vancouver Public Library (Central Branch)",
+    "address": "350 W Georgia St, Vancouver, BC V6B 6B4",
+    "latitude": 49.279659,
+    "longitude": -123.115614,
+    "cuisine": null
+  },
+  {
+    "city": "Vancouver",
+    "id": "yvr-12",
+    "name": "Gastown Steam Clock",
+    "address": "305 Water St, Vancouver, BC V6B 1A5",
+    "latitude": 49.2843841,
+    "longitude": -123.10889,
+    "cuisine": null
+  },
+  {
+    "city": "Cleveland",
+    "id": "cle-12",
+    "name": "Cleveland Public Library (Main)",
+    "address": "325 Superior Ave, Cleveland, OH 44114",
+    "latitude": 41.5011744,
+    "longitude": -81.6918045,
+    "cuisine": null
+  },
+  {
+    "city": "Victoria",
+    "id": "vic-06",
+    "name": "Victoria Public Library (Central)",
+    "address": "735 Broughton St, Victoria, BC V8W 3H2",
+    "latitude": 48.4230466,
+    "longitude": -123.3641874,
+    "cuisine": null
+  },
+  {
+    "city": "Barcelona",
+    "id": "bcn_pabellon",
+    "name": "Barcelona Pavilion",
+    "address": "Av. Francesc Ferrer i Guàrdia 7, 08038 Barcelona, Spain",
+    "latitude": 41.3888,
+    "longitude": 2.159,
+    "cuisine": null
+  },
+  {
+    "city": "Barcelona",
+    "id": "bcn_agbar",
+    "name": "Torre Glòries (Agbar Tower)",
+    "address": "Avinguda Diagonal 211, 08018 Barcelona, Spain",
+    "latitude": 41.4038823,
+    "longitude": 2.1898615,
+    "cuisine": null
+  },
+  {
+    "city": "Barcelona",
+    "id": "bcn_catedral",
+    "name": "Barcelona Cathedral",
+    "address": "Plaça de la Seu, 08002 Barcelona, Spain",
+    "latitude": 41.4548563,
+    "longitude": 2.2519763,
+    "cuisine": null
+  },
+  {
+    "city": "Barcelona",
+    "id": "bcn_hotel_arts",
+    "name": "Hotel Arts Barcelona",
+    "address": "Carrer de la Marina 19, 08005 Barcelona, Spain",
+    "latitude": 41.3870828,
+    "longitude": 2.1965607,
+    "cuisine": null
+  },
+  {
+    "city": "Cupertino",
+    "id": "cup_mcclellan_ranch",
+    "name": "McClellan Ranch Milk Barn",
+    "address": "22221 McClellan Rd, Cupertino, CA 95014, USA",
+    "latitude": 37.3132039,
+    "longitude": -122.0627561,
+    "cuisine": null
+  },
+  {
+    "city": "Cairo",
+    "id": "cai_baron_empain",
+    "name": "Baron Empain Palace",
+    "address": "El-Orouba St, Heliopolis, Cairo Governorate 4460303, Egypt",
+    "latitude": 30.0964969,
+    "longitude": 31.3431796,
+    "cuisine": null
+  },
+  {
+    "city": "Mexico City",
+    "id": "mex_casa_barragan",
+    "name": "Casa Luis Barragán",
+    "address": "Gral. Francisco Ramírez 12, Ampliación Daniel Garza, Miguel Hidalgo, 11840 Ciudad de México, CDMX, Mexico",
+    "latitude": 19.4111222,
+    "longitude": -99.1924403,
+    "cuisine": null
+  },
+  {
+    "city": "San Francisco",
+    "id": "sf-12",
+    "name": "Lombard Street",
+    "address": "1000 Lombard St, San Francisco, CA 94133",
+    "latitude": 37.802219,
+    "longitude": -122.418152,
+    "cuisine": null
+  },
+  {
+    "city": "San Francisco",
+    "id": "sf-16",
+    "name": "Japanese Tea Garden",
+    "address": "75 Hagiwara Tea Garden Dr, San Francisco, CA 94118",
+    "latitude": 37.770293,
+    "longitude": -122.4701237,
+    "cuisine": null
+  },
+  {
+    "city": "Phoenix",
+    "id": "phx-03",
+    "name": "Burton Barr Central Library",
+    "address": "1221 N Central Ave, Phoenix, AZ 85004",
+    "latitude": 33.4624422,
+    "longitude": -112.0731695,
+    "cuisine": null
+  },
+  {
+    "city": "Cork",
+    "id": "crk-01",
+    "name": "Saint Fin Barre's Cathedral",
+    "address": "Bishop St, The Lough, Cork, T12 KN70, Ireland",
+    "latitude": 51.89797,
+    "longitude": -8.47061,
+    "cuisine": null
+  },
+  {
+    "city": "Naples",
+    "id": "nap-04",
+    "name": "Teatro di San Carlo",
+    "address": "Via Vittorio Emanuele III, 80132 Napoli NA, Italy",
+    "latitude": 40.8387165,
+    "longitude": 14.2513842,
+    "cuisine": null
+  },
+  {
+    "city": "Batam",
+    "id": "batam-barelang-bridge",
+    "name": "Barelang Bridge (Tengku Fisabilillah)",
+    "address": "Jl. Trans Barelang, Pulau Tonton, Galang, Kota Batam, Kepulauan Riau 29481, Indonesia",
+    "latitude": 1.08333,
+    "longitude": 104.05,
+    "cuisine": null
+  },
+  {
+    "city": "Surabaya",
+    "id": "sub-al-akbar-mosque",
+    "name": "Masjid Nasional Al-Akbar",
+    "address": "Jl. Masjid Al-Akbar Utara No. 1, Pagesangan, Kec. Jambangan, Surabaya, Jawa Timur 60274, Indonesia",
+    "latitude": -7.24917,
+    "longitude": 112.75083,
+    "cuisine": null
+  },
+  {
+    "city": "Campinas",
+    "id": "cpq-teatro-castro-mendes",
+    "name": "Teatro Castro Mendes",
+    "address": "Praça Correa de Lemos, s/n, Vila Industrial, Campinas, SP, 13035-050, Brazil",
+    "latitude": -22.90556,
+    "longitude": -47.06083,
+    "cuisine": null
+  },
+  {
+    "city": "Curitiba",
+    "id": "cwb-apple-barigui",
+    "name": "iPlace Apple Premium Partner (ParkShoppingBarigui)",
+    "address": "ParkShoppingBarigui, Rua Professor Pedro Viriato Parigot de Souza, 600, Mossunguê, Curitiba, PR, 81200-100, Brazil",
+    "latitude": -25.42778,
+    "longitude": -49.27306,
+    "cuisine": null
+  },
+  {
+    "city": "Fortaleza",
+    "id": "for-cine-sao-luiz",
+    "name": "Cineteatro São Luiz",
+    "address": "Rua Major Facundo, 500, Centro, Fortaleza, CE, 60025-100, Brazil",
+    "latitude": -3.7273553,
+    "longitude": -38.5281144,
+    "cuisine": null
+  },
+  {
+    "city": "Manaus",
+    "id": "mao-amazon-theatre",
+    "name": "Amazon Theatre (Teatro Amazonas)",
+    "address": "Largo de São Sebastião, s/n, Centro, Manaus, AM, 69010-240, Brazil",
+    "latitude": -3.10194,
+    "longitude": -60.025,
+    "cuisine": null
+  },
+  {
+    "city": "Porto Alegre",
+    "id": "poa-public-market",
+    "name": "Public Market of Porto Alegre",
+    "address": "Largo Glênio Peres, s/n, Centro Histórico, Porto Alegre, RS, 90020-070, Brazil",
+    "latitude": -30.0280671,
+    "longitude": -51.2276134,
+    "cuisine": null
+  },
+  {
+    "city": "Porto Alegre",
+    "id": "poa-cais-embarcadero",
+    "name": "Cais Embarcadero",
+    "address": "Avenida Mauá, 1050, Centro Histórico, Porto Alegre, RS, 90010-110, Brazil",
+    "latitude": -30.0270249,
+    "longitude": -51.2311512,
+    "cuisine": null
+  },
+  {
+    "city": "Recife",
+    "id": "rec-capibaribe-building",
+    "name": "Capibaribe Building (Edifício Capibaribe)",
+    "address": "Rua da Aurora, 137, Boa Vista, Recife, PE, 50050-000, Brazil",
+    "latitude": -8.0601398,
+    "longitude": -34.8804122,
+    "cuisine": null
+  },
+  {
+    "city": "London",
+    "id": "the-barbican",
+    "name": "The Barbican Centre",
+    "address": "Silk St, Barbican, London EC2Y 8DS, United Kingdom",
+    "latitude": 51.5207582,
+    "longitude": -0.092396,
+    "cuisine": null
+  },
+  {
+    "city": "Buenos Aires",
+    "id": "palacio-barolo",
+    "name": "Palacio Barolo",
+    "address": "Av. de Mayo 1370, C1085 CABA, Argentina",
+    "latitude": -34.6096625,
+    "longitude": -58.3857277,
+    "cuisine": null
+  },
+  {
+    "city": "Buenos Aires",
+    "id": "teatro-colon",
+    "name": "Teatro Colón",
+    "address": "Cerrito 628, C1010 CABA, Argentina",
+    "latitude": -34.6010855,
+    "longitude": -58.3831869,
+    "cuisine": null
+  },
+  {
+    "city": "Brasília",
+    "id": "br_national_museum",
+    "name": "National Museum of the Republic",
+    "address": "Setor Cultural Sul, Lote 2, Brasília - DF, 70070-150",
+    "latitude": 28.41667,
+    "longitude": 79.38333,
+    "cuisine": null
+  }
+]

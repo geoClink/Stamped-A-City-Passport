@@ -7,6 +7,7 @@
 
 import SwiftUI
 import PhotosUI
+import MapKit
 
 struct BuildingDetailView: View {
     // MARK: - Properties
@@ -27,7 +28,9 @@ struct BuildingDetailView: View {
     @State private var showCamera = false
     @State private var showingDeleteConfirmation = false
     @State private var isEditingPhoto = false
-    
+    @State private var showGeocodeError = false
+    @State private var geocodeErrorMessage: String = ""
+
     // Manipulation State (Zoom/Pan)
     @State private var photoScale: CGFloat = 1.0
     @State private var lastScale: CGFloat = 1.0
@@ -490,21 +493,92 @@ extension BuildingDetailView {
                 Text(label)
                     .font(.caption.bold())
                     .foregroundColor(.secondary)
-                Text(value)
-                    .font(.callout.monospaced())
-                    .fontWeight(.bold)
-            }
-            Spacer()
-        }
-        .padding()
-        .background(isHighContrast ? Color.clear : Color.primary.opacity(0.05))
-        .cornerRadius(12)
-        .overlay(
-            RoundedRectangle(cornerRadius: 12)
-                .stroke(Color.primary, lineWidth: isHighContrast ? 2 : 0)
-        )
-    }
+                if label == "Location" {
+                    // Make address tappable: open in Maps when tapped
+                    Button(action: {
+                        Task { await openInMaps(address: value) }
+                    }) {
+                        HStack(spacing: 6) {
+                            Text(value)
+                                .font(.callout.monospaced())
+                                .fontWeight(.bold)
+                                .foregroundColor(.primary)
+                                .multilineTextAlignment(.leading)
+                            Image(systemName: "arrow.up.right.square")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                    .buttonStyle(.plain)
+                    .alert("Map lookup", isPresented: $showGeocodeError, actions: {
+                        Button("OK", role: .cancel) { showGeocodeError = false }
+                    }, message: {
+                        Text(geocodeErrorMessage)
+                    })
+                 } else {
+                     Text(value)
+                         .font(.callout.monospaced())
+                         .fontWeight(.bold)
+                 }
+              }
+             Spacer()
+         }
+         .padding()
+         .background(isHighContrast ? Color.clear : Color.primary.opacity(0.05))
+         .cornerRadius(12)
+         .overlay(
+             RoundedRectangle(cornerRadius: 12)
+                 .stroke(Color.primary, lineWidth: isHighContrast ? 2 : 0)
+         )
+     }
 
+    // Open the provided address in Apple Maps. Prefer coordinate-based pin if geocoding succeeds.
+    private func openInMaps(address: String) async {
+        let trimmed = address.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return }
+
+        // Try to geocode via our GeocodingManager
+        // debug log start
+        print("openInMaps: attempting geocode for: \(trimmed)")
+        // If building already has coordinates, use them immediately
+        if let lat = building.latitude, let lon = building.longitude {
+            print("openInMaps: using building coordinates \(lat),\(lon)")
+            let placemark = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon))
+            let mapItem = MKMapItem(placemark: placemark)
+            mapItem.name = building.name
+            let launchOptions: [String: Any] = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking]
+            await MainActor.run {
+                _ = mapItem.openInMaps(launchOptions: launchOptions)
+            }
+            return
+        }
+
+        if let coord = await GeocodingManager.shared.coordinate(for: trimmed) {
+             print("openInMaps: geocoded to \(coord.latitude),\(coord.longitude)")
+             let placemark = MKPlacemark(coordinate: coord)
+             let mapItem = MKMapItem(placemark: placemark)
+             mapItem.name = building.name
+             let launchOptions: [String: Any] = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking]
+             await MainActor.run {
+                 // openInMaps returns a Bool; explicitly ignore it to avoid unused-result warnings
+                 _ = mapItem.openInMaps(launchOptions: launchOptions)
+             }
+             return
+         } else {
+             // geocoding failed — fallback to search URL and show an alert to the user explaining it
+             let urlStr = "http://maps.apple.com/?q=\(trimmed.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")"
+             print("openInMaps: geocode failed, falling back to URL search: \(urlStr)")
+             await MainActor.run {
+                 if let url = URL(string: urlStr) {
+                     UIApplication.shared.open(url)
+                 }
+                 geocodeErrorMessage = "Unable to resolve exact coordinates for this address; opened Maps search instead."
+                 showGeocodeError = true
+             }
+         }
+     }
+    
     func handleActionTap() {
         withAnimation(.spring()) { viewModel.toggleVisited(for: building) }
         if hapticsEnabled { HapticManager.shared.trigger(isVisited ? .success : .warning) }

@@ -1,0 +1,325 @@
+{
+  "checked_at": "2026-03-24T15:41:40Z",
+  "count": 29,
+  "results": [
+    {
+      "id": "jakarta-istiqlal",
+      "name": "Istiqlal Mosque",
+      "city": "Central Jakarta",
+      "latitude": -6.21462,
+      "longitude": 106.84513,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "auh_al_bahr_towers",
+      "name": "Al Bahr Towers",
+      "city": "Abu Dhabi",
+      "latitude": 24.4561887,
+      "longitude": 54.4009387,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "cwb-municipal-market",
+      "name": "Mercado Municipal de Curitiba",
+      "city": "Curitiba",
+      "latitude": -25.434744,
+      "longitude": -49.25702,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "den-09",
+      "name": "The Brown Palace Hotel",
+      "city": "Denver",
+      "latitude": 39.7441138,
+      "longitude": -104.9878711,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "den-06",
+      "name": "United States Air Force Academy Cadet Chapel",
+      "city": "Denver",
+      "latitude": 39.0087832,
+      "longitude": -104.8965013,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "bom_apple_bkc",
+      "name": "Apple BKC",
+      "city": "Mumbai",
+      "latitude": 19.07283,
+      "longitude": 72.88261,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "nola_hotel_monteleone",
+      "name": "Hotel Monteleone",
+      "city": "New Orleans",
+      "latitude": 29.9541881,
+      "longitude": -90.067944,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "pit-04",
+      "name": "Fallingwater",
+      "city": "Pittsburgh",
+      "latitude": 39.9382383,
+      "longitude": -79.4473901,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "la_hollyhock_house",
+      "name": "Hollyhock House",
+      "city": "Los Angeles",
+      "latitude": 34.10169,
+      "longitude": -118.294655,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "bali-potato-head",
+      "name": "Potato Head Studios (Desa Potato Head)",
+      "city": "Bali",
+      "latitude": -8.5,
+      "longitude": 115.0,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "br_ibirapuera_auditorium",
+      "name": "Ibirapuera Auditorium",
+      "city": "São Paulo",
+      "latitude": -23.5879351,
+      "longitude": -46.6514106,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "br_sesc_pompeia",
+      "name": "SESC Pompéia",
+      "city": "São Paulo",
+      "latitude": -23.5247354,
+      "longitude": -46.7036039,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "sha_apple_campus",
+      "name": "Apple Shanghai Campus",
+      "city": "Shanghai",
+      "latitude": 31.22222,
+      "longitude": 121.45806,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "rom_fendi",
+      "name": "Palazzo della Civiltà Italiana",
+      "city": "Rome",
+      "latitude": 41.8366672,
+      "longitude": 12.4654704,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "syd_customs_house",
+      "name": "Customs House",
+      "city": "Sydney",
+      "latitude": -33.8622498,
+      "longitude": 151.2108499,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "el-ateneo-grand-splendid",
+      "name": "El Ateneo Grand Splendid",
+      "city": "Buenos Aires",
+      "latitude": -34.5959828,
+      "longitude": -58.3942623,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "la_eastern_columbia",
+      "name": "Eastern Columbia Building",
+      "city": "Los Angeles",
+      "latitude": 34.0427446,
+      "longitude": -118.2562094,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "cle-07",
+      "name": "West Side Market",
+      "city": "Cleveland",
+      "latitude": 41.4846588,
+      "longitude": -81.7029998,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "ist_suleymaniye",
+      "name": "Süleymaniye Mosque",
+      "city": "Istanbul",
+      "latitude": 41.0162287,
+      "longitude": 28.9639548,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "rom_pantheon",
+      "name": "The Pantheon",
+      "city": "Rome",
+      "latitude": 41.8994796,
+      "longitude": 12.4764874,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "mil_villa_necchi",
+      "name": "Villa Necchi Campiglio",
+      "city": "Milan",
+      "latitude": 45.4159579,
+      "longitude": 9.0475197,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "atl_apple_lenox",
+      "name": "Apple Lenox Square",
+      "city": "Atlanta",
+      "latitude": 33.848239,
+      "longitude": -84.362789,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "bcn_torre_communications",
+      "name": "Montjuïc Communications Tower",
+      "city": "Barcelona",
+      "latitude": 41.3648819,
+      "longitude": 2.1490715,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "bos-04",
+      "name": "Old State House",
+      "city": "Boston",
+      "latitude": 42.3586922,
+      "longitude": -71.0575878,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "nola_st_louis_cathedral",
+      "name": "St. Louis Cathedral",
+      "city": "New Orleans",
+      "latitude": 29.957999,
+      "longitude": -90.0637541,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "sha_power_station",
+      "name": "Power Station of Art",
+      "city": "Shanghai",
+      "latitude": 31.2378,
+      "longitude": 121.4781,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "us_apple_michigan_ave",
+      "name": "Apple Michigan Avenue",
+      "city": "Chicago",
+      "latitude": 41.8894215,
+      "longitude": -87.6235164,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "rom_ara_pacis",
+      "name": "Ara Pacis Museum",
+      "city": "Rome",
+      "latitude": 41.9058841,
+      "longitude": 12.4752027,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    },
+    {
+      "id": "for-fortress-assuncao",
+      "name": "Fortress of Nossa Senhora da Assunção",
+      "city": "Fortaleza",
+      "latitude": -3.7217985,
+      "longitude": -38.5233894,
+      "nominatim": {
+        "error": "status_403"
+      },
+      "match": "nominatim_error"
+    }
+  ]
+}

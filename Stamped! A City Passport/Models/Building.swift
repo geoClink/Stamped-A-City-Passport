@@ -22,4 +22,7 @@ struct Building: Identifiable, Hashable, Codable {
     let height: Int
     let foodSpots: [String]
     let currency: String
+    // Optional geographic coordinates — preferred if present in the registry JSON
+    let latitude: Double?
+    let longitude: Double?
 }

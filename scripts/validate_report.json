@@ -1,0 +1,133 @@
+{
+  "total_buildings": 1135,
+  "with_coordinates": 1135,
+  "missing_coordinates": 0,
+  "invalid_coords": [],
+  "zero_coords": [],
+  "outliers": [
+    {
+      "id": "den-06",
+      "city": "Denver",
+      "name": "United States Air Force Academy Cadet Chapel",
+      "lat": 39.0087832,
+      "lon": -104.8965013,
+      "dist_km": 77.22286749017044,
+      "city_centroid_lat": 39.70149142,
+      "city_centroid_lon": -104.96065307333335,
+      "threshold_km": 69.33597959403772
+    },
+    {
+      "id": "pit-04",
+      "city": "Pittsburgh",
+      "name": "Fallingwater",
+      "lat": 39.9382383,
+      "lon": -79.4473901,
+      "dist_km": 67.7388082350179,
+      "city_centroid_lat": 40.408503,
+      "city_centroid_lon": -79.9542045,
+      "threshold_km": 57.80705667009784
+    }
+  ],
+  "city_stats_sample": {
+    "Bath": {
+      "count": 15,
+      "centroid": {
+        "lat": 51.383830020000005,
+        "lon": -2.3611784866666663
+      },
+      "mean_dist_km": 0.6182245021254681,
+      "sd_km": 0.7727710127593633,
+      "threshold_km": 50.0
+    },
+    "Detroit": {
+      "count": 31,
+      "centroid": {
+        "lat": 42.34048679677419,
+        "lon": -83.0532105548387
+      },
+      "mean_dist_km": 1.563970536009996,
+      "sd_km": 1.1197455028537102,
+      "threshold_km": 50.0
+    },
+    "Los Angeles": {
+      "count": 15,
+      "centroid": {
+        "lat": 34.058421859999996,
+        "lon": -118.32448412666669
+      },
+      "mean_dist_km": 7.753735448846299,
+      "sd_km": 3.8394502340085244,
+      "threshold_km": 50.0
+    },
+    "New Orleans": {
+      "count": 15,
+      "centroid": {
+        "lat": 29.95666848,
+        "lon": -90.07687489333333
+      },
+      "mean_dist_km": 2.039214388287964,
+      "sd_km": 2.26218808058628,
+      "threshold_km": 50.0
+    },
+    "Las Vegas": {
+      "count": 11,
+      "centroid": {
+        "lat": 36.1365504090909,
+        "lon": -115.16131945454545
+      },
+      "mean_dist_km": 2.3362054223863438,
+      "sd_km": 1.3846738868099466,
+      "threshold_km": 50.0
+    },
+    "Orlando": {
+      "count": 11,
+      "centroid": {
+        "lat": 28.503656736363634,
+        "lon": -81.42536114545454
+      },
+      "mean_dist_km": 8.491148672533265,
+      "sd_km": 5.277860378137979,
+      "threshold_km": 50.0
+    },
+    "Dubai": {
+      "count": 9,
+      "centroid": {
+        "lat": 26.140759544444442,
+        "lon": 39.44989026666668
+      },
+      "mean_dist_km": 2650.736206485391,
+      "sd_km": 3207.8440305366385,
+      "threshold_km": 12274.268298095307
+    },
+    "Singapore": {
+      "count": 12,
+      "centroid": {
+        "lat": 1.305460325,
+        "lon": 103.84510791666666
+      },
+      "mean_dist_km": 5.859132153628759,
+      "sd_km": 5.93641430280263,
+      "threshold_km": 50.0
+    },
+    "Seattle": {
+      "count": 11,
+      "centroid": {
+        "lat": 47.61699311818182,
+        "lon": -122.33348650909092
+      },
+      "mean_dist_km": 1.6245171515828984,
+      "sd_km": 1.450527460154026,
+      "threshold_km": 50.0
+    },
+    "Portland": {
+      "count": 10,
+      "centroid": {
+        "lat": 45.52042625,
+        "lon": -122.67521934000001
+      },
+      "mean_dist_km": 0.7179685358625824,
+      "sd_km": 0.5469406908416564,
+      "threshold_km": 50.0
+    }
+  }
+}

@@ -1,0 +1,891 @@
+[
+  {
+    "id": "detroit_dpl_main",
+    "name": "Detroit Public Library (Main)",
+    "city": "Detroit",
+    "address": "5201 Woodward Ave, Detroit, MI 48202",
+    "latitude": 42.3583548,
+    "longitude": -83.0668625,
+    "sources": [
+      "osm"
+    ],
+    "hours": {
+      "monday": [
+        [
+          "11:00",
+          "21:00"
+        ]
+      ],
+      "tuesday": [
+        [
+          "11:00",
+          "21:00"
+        ]
+      ],
+      "wednesday": [
+        [
+          "11:00",
+          "21:00"
+        ]
+      ],
+      "thursday": [
+        [
+          "11:00",
+          "21:00"
+        ]
+      ],
+      "friday": [
+        [
+          "11:00",
+          "22:00"
+        ]
+      ],
+      "saturday": [
+        [
+          "11:00",
+          "22:00"
+        ]
+      ],
+      "sunday": []
+    },
+    "cuisine": [
+      "chinese"
+    ],
+    "website": "http://www.midtownshangri-la.com/",
+    "confidence": "high",
+    "last_checked": "2026-03-24T18:53:45.724229Z"
+  },
+  {
+    "id": "orl_orlando_public_library",
+    "name": "Orlando Public Library",
+    "city": "Orlando",
+    "address": "101 E Central Blvd, Orlando, FL 32801",
+    "latitude": 28.5425394,
+    "longitude": -81.3766818,
+    "sources": [],
+    "hours": null,
+    "cuisine": null,
+    "website": null,
+    "confidence": "none",
+    "last_checked": "2026-03-24T18:53:52.459124Z"
+  },
+  {
+    "id": "bos-10",
+    "name": "Boston Public Library (McKim Building)",
+    "city": "Boston",
+    "address": "700 Boylston St, Boston, MA 02116",
+    "latitude": 42.3493298,
+    "longitude": -71.0786547,
+    "sources": [
+      "osm"
+    ],
+    "hours": {
+      "monday": [
+        [
+          "09:00",
+          "17:00"
+        ]
+      ],
+      "tuesday": [
+        [
+          "09:00",
+          "17:00"
+        ]
+      ],
+      "wednesday": [
+        [
+          "09:00",
+          "17:00"
+        ]
+      ],
+      "thursday": [
+        [
+          "09:00",
+          "17:00"
+        ]
+      ],
+      "friday": [
+        [
+          "09:00",
+          "17:00"
+        ]
+      ],
+      "saturday": [
+        [
+          "09:00",
+          "17:00"
+        ]
+      ],
+      "sunday": [
+        [
+          "11:00",
+          "17:00"
+        ]
+      ]
+    },
+    "cuisine": null,
+    "website": null,
+    "confidence": "high",
+    "last_checked": "2026-03-24T18:53:56.492590Z"
+  },
+  {
+    "id": "den-05",
+    "name": "Denver Public Library (Central)",
+    "city": "Denver",
+    "address": "10 W 14th Ave Pkwy, Denver, CO 80204",
+    "latitude": 39.7384615,
+    "longitude": -104.9902638,
+    "sources": [],
+    "hours": null,
+    "cuisine": null,
+    "website": null,
+    "confidence": "none",
+    "last_checked": "2026-03-24T18:54:05.713661Z"
+  },
+  {
+    "id": "phi-14",
+    "name": "The Barnes Foundation",
+    "city": "Philadelphia",
+    "address": "2025 Benjamin Franklin Pkwy, Philadelphia, PA 19130",
+    "latitude": 39.9605495,
+    "longitude": -75.1726581,
+    "sources": [
+      "osm"
+    ],
+    "hours": {
+      "monday": [
+        [
+          "11:30",
+          "20:00"
+        ]
+      ],
+      "tuesday": [
+        [
+          "11:30",
+          "20:00"
+        ]
+      ],
+      "wednesday": [
+        [
+          "11:30",
+          "20:00"
+        ]
+      ],
+      "thursday": [
+        [
+          "11:30",
+          "20:00"
+        ]
+      ],
+      "friday": [
+        [
+          "11:30",
+          "20:00"
+        ],
+        [
+          "11:30",
+          "21:00"
+        ]
+      ],
+      "saturday": [
+        [
+          "11:30",
+          "20:00"
+        ],
+        [
+          "11:30",
+          "21:00"
+        ]
+      ],
+      "sunday": [
+        [
+          "11:30",
+          "20:00"
+        ]
+      ]
+    },
+    "cuisine": [
+      "pizza"
+    ],
+    "website": "https://www.pizzeriavetri.com/",
+    "confidence": "high",
+    "last_checked": "2026-03-24T18:54:12.486194Z"
+  },
+  {
+    "id": "yvr-04",
+    "name": "Vancouver Public Library (Central Branch)",
+    "city": "Vancouver",
+    "address": "350 W Georgia St, Vancouver, BC V6B 6B4",
+    "latitude": 49.279659,
+    "longitude": -123.115614,
+    "sources": [
+      "osm"
+    ],
+    "hours": {
+      "monday": [
+        [
+          "11:30",
+          "14:00"
+        ]
+      ],
+      "tuesday": [
+        [
+          "11:30",
+          "14:00"
+        ]
+      ],
+      "wednesday": [
+        [
+          "11:30",
+          "14:00"
+        ]
+      ],
+      "thursday": [
+        [
+          "11:30",
+          "14:00"
+        ]
+      ],
+      "friday": [
+        [
+          "11:30",
+          "14:00"
+        ]
+      ],
+      "saturday": [],
+      "sunday": []
+    },
+    "cuisine": [
+      "japanese"
+    ],
+    "website": "https://www.onigiriya.ca/",
+    "confidence": "high",
+    "last_checked": "2026-03-24T18:54:14.815453Z"
+  },
+  {
+    "id": "yvr-12",
+    "name": "Gastown Steam Clock",
+    "city": "Vancouver",
+    "address": "305 Water St, Vancouver, BC V6B 1A5",
+    "latitude": 49.2843841,
+    "longitude": -123.10889,
+    "sources": [],
+    "hours": null,
+    "cuisine": null,
+    "website": null,
+    "confidence": "none",
+    "last_checked": "2026-03-24T18:54:21.589537Z"
+  },
+  {
+    "id": "cle-12",
+    "name": "Cleveland Public Library (Main)",
+    "city": "Cleveland",
+    "address": "325 Superior Ave, Cleveland, OH 44114",
+    "latitude": 41.5011744,
+    "longitude": -81.6918045,
+    "sources": [],
+    "hours": null,
+    "cuisine": null,
+    "website": null,
+    "confidence": "none",
+    "last_checked": "2026-03-24T18:54:28.361824Z"
+  },
+  {
+    "id": "vic-06",
+    "name": "Victoria Public Library (Central)",
+    "city": "Victoria",
+    "address": "735 Broughton St, Victoria, BC V8W 3H2",
+    "latitude": 48.4230466,
+    "longitude": -123.3641874,
+    "sources": [],
+    "hours": null,
+    "cuisine": null,
+    "website": null,
+    "confidence": "none",
+    "last_checked": "2026-03-24T18:54:34.532024Z"
+  },
+  {
+    "id": "bcn_pabellon",
+    "name": "Barcelona Pavilion",
+    "city": "Barcelona",
+    "address": "Av. Francesc Ferrer i Guàrdia 7, 08038 Barcelona, Spain",
+    "latitude": 41.3888,
+    "longitude": 2.159,
+    "sources": [],
+    "hours": null,
+    "cuisine": null,
+    "website": null,
+    "confidence": "none",
+    "last_checked": "2026-03-24T18:54:41.625346Z"
+  },
+  {
+    "id": "bcn_agbar",
+    "name": "Torre Glòries (Agbar Tower)",
+    "city": "Barcelona",
+    "address": "Avinguda Diagonal 211, 08018 Barcelona, Spain",
+    "latitude": 41.4038823,
+    "longitude": 2.1898615,
+    "sources": [],
+    "hours": null,
+    "cuisine": null,
+    "website": null,
+    "confidence": "none",
+    "last_checked": "2026-03-24T18:54:49.370690Z"
+  },
+  {
+    "id": "bcn_catedral",
+    "name": "Barcelona Cathedral",
+    "city": "Barcelona",
+    "address": "Plaça de la Seu, 08002 Barcelona, Spain",
+    "latitude": 41.4548563,
+    "longitude": 2.2519763,
+    "sources": [],
+    "hours": null,
+    "cuisine": null,
+    "website": null,
+    "confidence": "none",
+    "last_checked": "2026-03-24T18:54:55.854519Z"
+  },
+  {
+    "id": "bcn_hotel_arts",
+    "name": "Hotel Arts Barcelona",
+    "city": "Barcelona",
+    "address": "Carrer de la Marina 19, 08005 Barcelona, Spain",
+    "latitude": 41.3870828,
+    "longitude": 2.1965607,
+    "sources": [
+      "osm"
+    ],
+    "hours": {
+      "monday": [
+        [
+          "12:00",
+          "03:00"
+        ]
+      ],
+      "tuesday": [
+        [
+          "12:00",
+          "03:00"
+        ]
+      ],
+      "wednesday": [
+        [
+          "12:00",
+          "03:00"
+        ]
+      ],
+      "thursday": [
+        [
+          "12:00",
+          "03:00"
+        ]
+      ],
+      "friday": [
+        [
+          "12:00",
+          "03:00"
+        ]
+      ],
+      "saturday": [
+        [
+          "12:00",
+          "03:00"
+        ]
+      ],
+      "sunday": [
+        [
+          "12:00",
+          "03:00"
+        ]
+      ]
+    },
+    "cuisine": null,
+    "website": null,
+    "confidence": "high",
+    "last_checked": "2026-03-24T18:54:59.933237Z"
+  },
+  {
+    "id": "cup_mcclellan_ranch",
+    "name": "McClellan Ranch Milk Barn",
+    "city": "Cupertino",
+    "address": "22221 McClellan Rd, Cupertino, CA 95014, USA",
+    "latitude": 37.3132039,
+    "longitude": -122.0627561,
+    "sources": [],
+    "hours": null,
+    "cuisine": null,
+    "website": null,
+    "confidence": "none",
+    "last_checked": "2026-03-24T18:55:06.951055Z"
+  },
+  {
+    "id": "cai_baron_empain",
+    "name": "Baron Empain Palace",
+    "city": "Cairo",
+    "address": "El-Orouba St, Heliopolis, Cairo Governorate 4460303, Egypt",
+    "latitude": 30.0964969,
+    "longitude": 31.3431796,
+    "sources": [
+      "osm",
+      "website"
+    ],
+    "hours": null,
+    "cuisine": [
+      "burger"
+    ],
+    "website": "https://www.thebuffaloburger.com/",
+    "confidence": "medium",
+    "last_checked": "2026-03-24T18:55:11.319387Z"
+  },
+  {
+    "id": "mex_casa_barragan",
+    "name": "Casa Luis Barragán",
+    "city": "Mexico City",
+    "address": "Gral. Francisco Ramírez 12, Ampliación Daniel Garza, Miguel Hidalgo, 11840 Ciudad de México, CDMX, Mexico",
+    "latitude": 19.4111222,
+    "longitude": -99.1924403,
+    "sources": [],
+    "hours": null,
+    "cuisine": null,
+    "website": null,
+    "confidence": "none",
+    "last_checked": "2026-03-24T18:55:17.436171Z"
+  },
+  {
+    "id": "sf-12",
+    "name": "Lombard Street",
+    "city": "San Francisco",
+    "address": "1000 Lombard St, San Francisco, CA 94133",
+    "latitude": 37.802219,
+    "longitude": -122.418152,
+    "sources": [],
+    "hours": null,
+    "cuisine": null,
+    "website": null,
+    "confidence": "none",
+    "last_checked": "2026-03-24T18:55:23.574103Z"
+  },
+  {
+    "id": "sf-16",
+    "name": "Japanese Tea Garden",
+    "city": "San Francisco",
+    "address": "75 Hagiwara Tea Garden Dr, San Francisco, CA 94118",
+    "latitude": 37.770293,
+    "longitude": -122.4701237,
+    "sources": [],
+    "hours": null,
+    "cuisine": null,
+    "website": null,
+    "confidence": "none",
+    "last_checked": "2026-03-24T18:55:30.380035Z"
+  },
+  {
+    "id": "phx-03",
+    "name": "Burton Barr Central Library",
+    "city": "Phoenix",
+    "address": "1221 N Central Ave, Phoenix, AZ 85004",
+    "latitude": 33.4624422,
+    "longitude": -112.0731695,
+    "sources": [],
+    "hours": null,
+    "cuisine": null,
+    "website": null,
+    "confidence": "none",
+    "last_checked": "2026-03-24T18:55:36.503937Z"
+  },
+  {
+    "id": "crk-01",
+    "name": "Saint Fin Barre's Cathedral",
+    "city": "Cork",
+    "address": "Bishop St, The Lough, Cork, T12 KN70, Ireland",
+    "latitude": 51.89797,
+    "longitude": -8.47061,
+    "sources": [],
+    "hours": null,
+    "cuisine": null,
+    "website": null,
+    "confidence": "none",
+    "last_checked": "2026-03-24T18:55:43.597210Z"
+  },
+  {
+    "id": "nap-04",
+    "name": "Teatro di San Carlo",
+    "city": "Naples",
+    "address": "Via Vittorio Emanuele III, 80132 Napoli NA, Italy",
+    "latitude": 40.8387165,
+    "longitude": 14.2513842,
+    "sources": [
+      "osm"
+    ],
+    "hours": {
+      "monday": [
+        [
+          "06:30",
+          "20:00"
+        ]
+      ],
+      "tuesday": [
+        [
+          "06:30",
+          "20:00"
+        ]
+      ],
+      "wednesday": [
+        [
+          "06:30",
+          "20:00"
+        ]
+      ],
+      "thursday": [
+        [
+          "06:30",
+          "20:00"
+        ]
+      ],
+      "friday": [
+        [
+          "06:30",
+          "20:00"
+        ]
+      ],
+      "saturday": [
+        [
+          "07:00",
+          "19:00"
+        ]
+      ],
+      "sunday": [
+        [
+          "07:00",
+          "19:00"
+        ]
+      ]
+    },
+    "cuisine": null,
+    "website": null,
+    "confidence": "high",
+    "last_checked": "2026-03-24T18:55:45.980496Z"
+  },
+  {
+    "id": "batam-barelang-bridge",
+    "name": "Barelang Bridge (Tengku Fisabilillah)",
+    "city": "Batam",
+    "address": "Jl. Trans Barelang, Pulau Tonton, Galang, Kota Batam, Kepulauan Riau 29481, Indonesia",
+    "latitude": 1.08333,
+    "longitude": 104.05,
+    "sources": [],
+    "hours": null,
+    "cuisine": null,
+    "website": null,
+    "confidence": "none",
+    "last_checked": "2026-03-24T18:55:52.425546Z"
+  },
+  {
+    "id": "sub-al-akbar-mosque",
+    "name": "Masjid Nasional Al-Akbar",
+    "city": "Surabaya",
+    "address": "Jl. Masjid Al-Akbar Utara No. 1, Pagesangan, Kec. Jambangan, Surabaya, Jawa Timur 60274, Indonesia",
+    "latitude": -7.24917,
+    "longitude": 112.75083,
+    "sources": [],
+    "hours": null,
+    "cuisine": null,
+    "website": null,
+    "confidence": "none",
+    "last_checked": "2026-03-24T18:55:58.558469Z"
+  },
+  {
+    "id": "cpq-teatro-castro-mendes",
+    "name": "Teatro Castro Mendes",
+    "city": "Campinas",
+    "address": "Praça Correa de Lemos, s/n, Vila Industrial, Campinas, SP, 13035-050, Brazil",
+    "latitude": -22.90556,
+    "longitude": -47.06083,
+    "sources": [],
+    "hours": null,
+    "cuisine": null,
+    "website": null,
+    "confidence": "none",
+    "last_checked": "2026-03-24T18:56:07.231082Z"
+  },
+  {
+    "id": "cwb-apple-barigui",
+    "name": "iPlace Apple Premium Partner (ParkShoppingBarigui)",
+    "city": "Curitiba",
+    "address": "ParkShoppingBarigui, Rua Professor Pedro Viriato Parigot de Souza, 600, Mossunguê, Curitiba, PR, 81200-100, Brazil",
+    "latitude": -25.42778,
+    "longitude": -49.27306,
+    "sources": [
+      "osm"
+    ],
+    "hours": {
+      "monday": [
+        [
+          "11:00",
+          "21:00"
+        ]
+      ],
+      "tuesday": [
+        [
+          "11:00",
+          "21:00"
+        ]
+      ],
+      "wednesday": [
+        [
+          "11:00",
+          "21:00"
+        ]
+      ],
+      "thursday": [
+        [
+          "11:00",
+          "21:00"
+        ]
+      ],
+      "friday": [
+        [
+          "11:00",
+          "21:00"
+        ]
+      ],
+      "saturday": [
+        [
+          "11:00",
+          "21:00"
+        ]
+      ],
+      "sunday": [
+        [
+          "11:00",
+          "19:00"
+        ]
+      ]
+    },
+    "cuisine": null,
+    "website": null,
+    "confidence": "high",
+    "last_checked": "2026-03-24T18:56:09.554215Z"
+  },
+  {
+    "id": "for-cine-sao-luiz",
+    "name": "Cineteatro São Luiz",
+    "city": "Fortaleza",
+    "address": "Rua Major Facundo, 500, Centro, Fortaleza, CE, 60025-100, Brazil",
+    "latitude": -3.7273553,
+    "longitude": -38.5281144,
+    "sources": [],
+    "hours": null,
+    "cuisine": null,
+    "website": null,
+    "confidence": "none",
+    "last_checked": "2026-03-24T18:56:16.615278Z"
+  },
+  {
+    "id": "mao-amazon-theatre",
+    "name": "Amazon Theatre (Teatro Amazonas)",
+    "city": "Manaus",
+    "address": "Largo de São Sebastião, s/n, Centro, Manaus, AM, 69010-240, Brazil",
+    "latitude": -3.10194,
+    "longitude": -60.025,
+    "sources": [],
+    "hours": null,
+    "cuisine": null,
+    "website": null,
+    "confidence": "none",
+    "last_checked": "2026-03-24T18:56:24.101495Z"
+  },
+  {
+    "id": "poa-public-market",
+    "name": "Public Market of Porto Alegre",
+    "city": "Porto Alegre",
+    "address": "Largo Glênio Peres, s/n, Centro Histórico, Porto Alegre, RS, 90020-070, Brazil",
+    "latitude": -30.0280671,
+    "longitude": -51.2276134,
+    "sources": [
+      "osm"
+    ],
+    "hours": {
+      "monday": [
+        [
+          "11:00",
+          "23:30"
+        ]
+      ],
+      "tuesday": [
+        [
+          "11:00",
+          "23:30"
+        ]
+      ],
+      "wednesday": [
+        [
+          "11:00",
+          "23:30"
+        ]
+      ],
+      "thursday": [
+        [
+          "11:00",
+          "23:30"
+        ]
+      ],
+      "friday": [
+        [
+          "11:00",
+          "23:30"
+        ]
+      ],
+      "saturday": [
+        [
+          "11:00",
+          "23:30"
+        ]
+      ],
+      "sunday": [
+        [
+          "11:00",
+          "23:30"
+        ]
+      ]
+    },
+    "cuisine": [
+      "regional"
+    ],
+    "website": "https://chaledapracaxv.com.br/",
+    "confidence": "high",
+    "last_checked": "2026-03-24T18:56:28.000606Z"
+  },
+  {
+    "id": "poa-cais-embarcadero",
+    "name": "Cais Embarcadero",
+    "city": "Porto Alegre",
+    "address": "Avenida Mauá, 1050, Centro Histórico, Porto Alegre, RS, 90010-110, Brazil",
+    "latitude": -30.0270249,
+    "longitude": -51.2311512,
+    "sources": [],
+    "hours": null,
+    "cuisine": null,
+    "website": null,
+    "confidence": "none",
+    "last_checked": "2026-03-24T18:56:34.406456Z"
+  },
+  {
+    "id": "rec-capibaribe-building",
+    "name": "Capibaribe Building (Edifício Capibaribe)",
+    "city": "Recife",
+    "address": "Rua da Aurora, 137, Boa Vista, Recife, PE, 50050-000, Brazil",
+    "latitude": -8.0601398,
+    "longitude": -34.8804122,
+    "sources": [],
+    "hours": null,
+    "cuisine": null,
+    "website": null,
+    "confidence": "none",
+    "last_checked": "2026-03-24T18:56:40.531268Z"
+  },
+  {
+    "id": "the-barbican",
+    "name": "The Barbican Centre",
+    "city": "London",
+    "address": "Silk St, Barbican, London EC2Y 8DS, United Kingdom",
+    "latitude": 51.5207582,
+    "longitude": -0.092396,
+    "sources": [
+      "osm"
+    ],
+    "hours": {
+      "monday": [
+        [
+          "07:00",
+          "16:00"
+        ]
+      ],
+      "tuesday": [
+        [
+          "07:00",
+          "16:00"
+        ]
+      ],
+      "wednesday": [
+        [
+          "07:00",
+          "16:00"
+        ]
+      ],
+      "thursday": [
+        [
+          "07:00",
+          "16:00"
+        ]
+      ],
+      "friday": [
+        [
+          "08:00",
+          "16:00"
+        ]
+      ],
+      "saturday": [
+        [
+          "08:00",
+          "15:30"
+        ]
+      ],
+      "sunday": [
+        [
+          "08:30",
+          "15:30"
+        ]
+      ]
+    },
+    "cuisine": [
+      "sandwich"
+    ],
+    "website": null,
+    "confidence": "high",
+    "last_checked": "2026-03-24T18:56:42.542348Z"
+  },
+  {
+    "id": "palacio-barolo",
+    "name": "Palacio Barolo",
+    "city": "Buenos Aires",
+    "address": "Av. de Mayo 1370, C1085 CABA, Argentina",
+    "latitude": -34.6096625,
+    "longitude": -58.3857277,
+    "sources": [],
+    "hours": null,
+    "cuisine": null,
+    "website": null,
+    "confidence": "none",
+    "last_checked": "2026-03-24T18:56:49.581725Z"
+  },
+  {
+    "id": "teatro-colon",
+    "name": "Teatro Colón",
+    "city": "Buenos Aires",
+    "address": "Cerrito 628, C1010 CABA, Argentina",
+    "latitude": -34.6010855,
+    "longitude": -58.3831869,
+    "sources": [],
+    "hours": null,
+    "cuisine": null,
+    "website": null,
+    "confidence": "none",
+    "last_checked": "2026-03-24T18:56:57.025742Z"
+  },
+  {
+    "id": "br_national_museum",
+    "name": "National Museum of the Republic",
+    "city": "Brasília",
+    "address": "Setor Cultural Sul, Lote 2, Brasília - DF, 70070-150",
+    "latitude": 28.41667,
+    "longitude": 79.38333,
+    "sources": [],
+    "hours": null,
+    "cuisine": null,
+    "website": null,
+    "confidence": "none",
+    "last_checked": "2026-03-24T18:57:03.486495Z"
+  }
+]

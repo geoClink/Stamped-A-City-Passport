@@ -134,7 +134,7 @@ struct CityLocation: Hashable, Sendable {
     }
 
     public enum City: String, CaseIterable, Hashable, Sendable, Identifiable, Codable {
-        case boston = "Boston", chicago = "Chicago", denver = "Denver", detroit = "Detroit", minnesota = "Minnesota", stLouis = "St. Louis", austin = "Austin", cupertino = "Cupertino"
+        case boston = "Boston", chicago = "Chicago", denver = "Denver", detroit = "Detroit", minnesota = "Minnesota", stLouis = "St. Louis", austin = "Austin", cupertino = "Cupertino", asheville = "Asheville"
         case cleveland = "Cleveland", pittsburgh = "Pittsburgh", philadelphia = "Philadelphia"
         case miami = "Miami", seattle = "Seattle", portland = "Portland", orlando = "Orlando", honolulu = "Honolulu"
         case washingtonDC = "Washington D.C.", losangeles = "Los Angeles", dallas = "Dallas", nashville = "Nashville"
@@ -156,7 +156,7 @@ struct CityLocation: Hashable, Sendable {
 
         var country: Country {
             switch self {
-            case .detroit, .chicago, .houston, .boston, .sanFrancisco, .denver, .phoenix, .newYork, .cleveland, .pittsburgh, .philadelphia, .atlanta, .miami, .seattle, .portland, .washingtonDC, .losangeles, .newOrleans, .lasVegas, .orlando, .dallas, .nashville, .buffalo, .minnesota, .stLouis, .austin, .cupertino, .honolulu:
+            case .detroit, .chicago, .houston, .boston, .sanFrancisco, .denver, .phoenix, .newYork, .cleveland, .pittsburgh, .philadelphia, .atlanta, .miami, .seattle, .portland, .washingtonDC, .losangeles, .newOrleans, .lasVegas, .orlando, .dallas, .nashville, .buffalo, .minnesota, .stLouis, .austin, .cupertino, .honolulu, .asheville:
                 return .unitedStates
             case .montreal, .toronto, .vancouver,.victoria:
                 return .canada
