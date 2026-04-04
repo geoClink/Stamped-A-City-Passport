@@ -3,6 +3,11 @@
 //  Stamped! A City Passport
 //
 
+//
+//  CityItineraryView.swift
+//  Stamped! A City Passport
+//
+
 import SwiftUI
 
 // MARK: - Root View
@@ -16,10 +21,25 @@ struct CityItineraryView: View {
     var brandColor: Color { isHighContrast ? .primary : Color.adventureOrange }
 
     var body: some View {
-        if #available(iOS 26.0, *) {
-            CityItineraryIntelligenceView(city: city, service: service, brandColor: brandColor)
-        } else {
-            CityItineraryBasicView(city: city, service: service, brandColor: brandColor)
+        Group {
+            switch service.state {
+            case .idle, .loading:
+                ItineraryLoadingView(brandColor: brandColor)
+            case .error(let message):
+                ItineraryErrorView(message: message, brandColor: brandColor) {
+                    service.clearCache(for: city.rawValue)
+                    service.generateItinerary(for: city.rawValue)
+                }
+            case .loaded:
+                if #available(iOS 26.0, *) {
+                    CityItineraryIntelligenceView(city: city, service: service, brandColor: brandColor)
+                } else {
+                    CityItineraryBasicView(city: city, service: service, brandColor: brandColor)
+                }
+            }
+        }
+        .onAppear {
+            service.generateItinerary(for: city.rawValue)
         }
     }
 }
@@ -53,6 +73,10 @@ struct CityItineraryIntelligenceView: View {
                             .font(.caption2)
                             .foregroundColor(brandColor)
                     }
+                } else if narrativeService.generationFailed {
+                    Label("AI unavailable", systemImage: "exclamationmark.triangle.fill")
+                        .font(.caption2)
+                        .foregroundColor(.secondary)
                 }
             }
             .padding(.horizontal, 25)
@@ -76,16 +100,23 @@ struct CityItineraryIntelligenceView: View {
             .padding(.horizontal, 16)
         }
         .padding(.vertical, 16)
-        .onAppear {
-            service.generateItinerary(for: city.rawValue)
-        }
         .onChange(of: service.itinerary) { _, newItinerary in
             guard !newItinerary.isEmpty else { return }
-            guard !narrativeService.isGenerating else { return }
             Task {
                 await narrativeService.generateAll(
                     itinerary: newItinerary,
-                    buildings: service.buildings
+                    buildings: service.buildings,
+                    cityKey: city.rawValue
+                )
+            }
+        }
+        .onAppear {
+            guard !service.itinerary.isEmpty else { return }
+            Task {
+                await narrativeService.generateAll(
+                    itinerary: service.itinerary,
+                    buildings: service.buildings,
+                    cityKey: city.rawValue
                 )
             }
         }
@@ -126,9 +157,88 @@ struct CityItineraryBasicView: View {
             .padding(.horizontal, 16)
         }
         .padding(.vertical, 16)
-        .onAppear {
-            service.generateItinerary(for: city.rawValue)
+    }
+}
+
+// MARK: - Loading View
+
+struct ItineraryLoadingView: View {
+    let brandColor: Color
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            Text("ARCHITECTURAL ITINERARY")
+                .font(.system(.caption, design: .default))
+                .fontWeight(.semibold)
+                .foregroundColor(.secondary)
+                .kerning(1.2)
+                .padding(.horizontal, 25)
+                .padding(.bottom, 10)
+
+            VStack(spacing: 16) {
+                ProgressView()
+                    .scaleEffect(0.9)
+                Text("Planning your itinerary...")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 40)
+            .background(Color(UIColor.systemBackground))
+            .cornerRadius(16)
+            .padding(.horizontal, 16)
         }
+        .padding(.vertical, 16)
+    }
+}
+
+// MARK: - Error View
+
+struct ItineraryErrorView: View {
+    let message: String
+    let brandColor: Color
+    let onRetry: () -> Void
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            Text("ARCHITECTURAL ITINERARY")
+                .font(.system(.caption, design: .default))
+                .fontWeight(.semibold)
+                .foregroundColor(.secondary)
+                .kerning(1.2)
+                .padding(.horizontal, 25)
+                .padding(.bottom, 10)
+
+            VStack(spacing: 12) {
+                Image(systemName: "exclamationmark.triangle")
+                    .font(.system(size: 28))
+                    .foregroundColor(.secondary)
+                Text("Couldn't load itinerary")
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                Text(message)
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                    .multilineTextAlignment(.center)
+                Button(action: onRetry) {
+                    Text("Try Again")
+                        .font(.caption)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 8)
+                        .background(brandColor)
+                        .cornerRadius(20)
+                }
+                .padding(.top, 4)
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 40)
+            .background(Color(UIColor.systemBackground))
+            .cornerRadius(16)
+            .padding(.horizontal, 16)
+        }
+        .padding(.vertical, 16)
     }
 }
 
@@ -140,6 +250,17 @@ struct BasicDaySection: View {
     let service: ItineraryService
     let brandColor: Color
     let isLast: Bool
+
+    @State private var isExpanded: Bool
+
+    init(dayIndex: Int, stops: [PlannedStop], service: ItineraryService, brandColor: Color, isLast: Bool) {
+        self.dayIndex = dayIndex
+        self.stops = stops
+        self.service = service
+        self.brandColor = brandColor
+        self.isLast = isLast
+        _isExpanded = State(initialValue: dayIndex == 0)
+    }
 
     var buildings: [Building] {
         stops.compactMap { service.building(for: $0) }
@@ -194,90 +315,106 @@ struct BasicDaySection: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
 
-            // Day header
-            HStack(spacing: 14) {
-                ZStack {
-                    Circle()
-                        .fill(brandColor)
-                        .frame(width: 40, height: 40)
-                    Text("\(dayIndex + 1)")
-                        .font(.headline)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
+            // Day header — tappable to expand/collapse
+            Button {
+                withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) {
+                    isExpanded.toggle()
                 }
-                VStack(alignment: .leading, spacing: 3) {
-                    Text("Day \(dayIndex + 1)")
-                        .font(.headline)
-                        .fontWeight(.bold)
-                    HStack(spacing: 8) {
-                        Text("\(stops.count) stops")
-                            .font(.caption)
-                            .foregroundColor(.secondary)
-                        Text("·")
-                            .font(.caption)
-                            .foregroundColor(.secondary)
-                        Text("\(totalDayMins / 60)h \(totalDayMins % 60)m total")
-                            .font(.caption)
-                            .foregroundColor(.secondary)
-                        if !dominantEra.isEmpty {
+                HapticManager.shared.trigger(.selection)
+            } label: {
+                HStack(spacing: 14) {
+                    ZStack {
+                        Circle()
+                            .fill(isExpanded ? brandColor : brandColor.opacity(0.3))
+                            .frame(width: 40, height: 40)
+                        Text("\(dayIndex + 1)")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                    }
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text("Day \(dayIndex + 1)")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .foregroundColor(.primary)
+                        HStack(spacing: 8) {
+                            Text("\(stops.count) stops")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
                             Text("·")
                                 .font(.caption)
                                 .foregroundColor(.secondary)
-                            Text(dominantEra)
+                            Text("\(totalDayMins / 60)h \(totalDayMins % 60)m")
                                 .font(.caption)
-                                .fontWeight(.medium)
-                                .foregroundColor(brandColor)
+                                .foregroundColor(.secondary)
+                            if !dominantEra.isEmpty {
+                                Text("·")
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
+                                Text(dominantEra)
+                                    .font(.caption)
+                                    .fontWeight(.medium)
+                                    .foregroundColor(brandColor)
+                            }
                         }
                     }
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 12, weight: .semibold))
+                        .foregroundColor(.secondary)
+                        .rotationEffect(.degrees(isExpanded ? 90 : 0))
+                        .animation(.spring(response: 0.35, dampingFraction: 0.8), value: isExpanded)
                 }
-                Spacer()
-            }
-            .padding(.horizontal, 16)
-            .padding(.vertical, 14)
-
-            // Info pills row
-            HStack(spacing: 8) {
-                if let spotlight = architectSpotlight {
-                    InfoPill(icon: "pencil.and.ruler.fill", text: spotlight, brandColor: brandColor)
-                }
-                InfoPill(
-                    icon: "clock.fill",
-                    text: "Starts 9:00 AM",
-                    brandColor: brandColor
-                )
-            }
-            .padding(.horizontal, 16)
-            .padding(.bottom, 10)
-
-            // Timeline bar
-            TimelineBar(stops: stops, service: service, brandColor: brandColor)
                 .padding(.horizontal, 16)
-                .padding(.bottom, 12)
-
-            Divider().padding(.leading, 16)
-
-            // Stops
-            ForEach(stops, id: \.id) { stop in
-                if let building = service.building(for: stop) {
-                    let isLunchStop = building.id == lunchStop?.id
-                    BasicStopRow(
-                        stop: stop,
-                        building: building,
-                        arrivalTime: service.formattedArrivalTime(offsetMins: stop.arrivalOffsetMins),
-                        brandColor: brandColor,
-                        isLast: stop.id == stops.last?.id,
-                        isLunchStop: isLunchStop
-                    )
-                }
+                .padding(.vertical, 14)
             }
+            .buttonStyle(.plain)
 
-            // Food spots pulled from lunch stop
-            if let lunch = lunchStop, !lunch.foodSpots.isEmpty {
-                FoodSpotsRow(
-                    foodSpots: Array(lunch.foodSpots.prefix(3)),
-                    nearBuilding: lunch.name,
-                    brandColor: brandColor
-                )
+            if isExpanded {
+                // Info pills row
+                HStack(spacing: 8) {
+                    if let spotlight = architectSpotlight {
+                        InfoPill(icon: "pencil.and.ruler.fill", text: spotlight, brandColor: brandColor)
+                    }
+                    InfoPill(icon: "clock.fill", text: "Starts 9:00 AM", brandColor: brandColor)
+                }
+                .padding(.horizontal, 16)
+                .padding(.bottom, 10)
+                .transition(.opacity.combined(with: .move(edge: .top)))
+
+                // Timeline bar
+                TimelineBar(stops: stops, service: service, brandColor: brandColor)
+                    .padding(.horizontal, 16)
+                    .padding(.bottom, 12)
+                    .transition(.opacity.combined(with: .move(edge: .top)))
+
+                Divider().padding(.leading, 16)
+
+                // Stops
+                ForEach(stops, id: \.id) { stop in
+                    if let building = service.building(for: stop) {
+                        let isLunchStop = building.id == lunchStop?.id
+                        BasicStopRow(
+                            stop: stop,
+                            building: building,
+                            arrivalTime: service.formattedArrivalTime(offsetMins: stop.arrivalOffsetMins),
+                            brandColor: brandColor,
+                            isLast: stop.id == stops.last?.id,
+                            isLunchStop: isLunchStop
+                        )
+                        .transition(.opacity.combined(with: .move(edge: .top)))
+                    }
+                }
+
+                // Food spots
+                if let lunch = lunchStop, !lunch.foodSpots.isEmpty {
+                    FoodSpotsRow(
+                        foodSpots: Array(lunch.foodSpots.prefix(3)),
+                        nearBuilding: lunch.name,
+                        brandColor: brandColor
+                    )
+                    .transition(.opacity.combined(with: .move(edge: .top)))
+                }
             }
         }
 
@@ -542,6 +679,18 @@ struct ItineraryDaySection: View {
     let isLast: Bool
     let brandColor: Color
 
+    @State private var isExpanded: Bool
+
+    init(dayIndex: Int, stops: [PlannedStop], service: ItineraryService, narrativeService: ItineraryNarrativeService, isLast: Bool, brandColor: Color) {
+        self.dayIndex = dayIndex
+        self.stops = stops
+        self.service = service
+        self.narrativeService = narrativeService
+        self.isLast = isLast
+        self.brandColor = brandColor
+        _isExpanded = State(initialValue: dayIndex == 0)
+    }
+
     var architectSpotlight: String? {
         let buildings = stops.compactMap { service.building(for: $0) }
         var counts: [String: Int] = [:]
@@ -560,97 +709,119 @@ struct ItineraryDaySection: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
 
-            // Day header
-            HStack(spacing: 14) {
-                ZStack {
-                    Circle()
-                        .fill(brandColor)
-                        .frame(width: 36, height: 36)
-                    Text("\(dayIndex + 1)")
+            // Day header — tappable
+            Button {
+                withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) {
+                    isExpanded.toggle()
+                }
+                HapticManager.shared.trigger(.selection)
+            } label: {
+                HStack(spacing: 14) {
+                    ZStack {
+                        Circle()
+                            .fill(isExpanded ? brandColor : brandColor.opacity(0.3))
+                            .frame(width: 36, height: 36)
+                        Text("\(dayIndex + 1)")
+                            .font(.subheadline)
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                    }
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Day \(dayIndex + 1)")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .foregroundColor(.primary)
+                        Text("\(stops.count) stops")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 12, weight: .semibold))
+                        .foregroundColor(.secondary)
+                        .rotationEffect(.degrees(isExpanded ? 90 : 0))
+                        .animation(.spring(response: 0.35, dampingFraction: 0.8), value: isExpanded)
+                }
+                .padding(.horizontal, 16)
+                .padding(.vertical, 14)
+            }
+            .buttonStyle(.plain)
+
+            if isExpanded {
+                // AI narrative
+                if let narrative = narrativeService.dayNarratives[dayIndex + 1] {
+                    Text(narrative)
                         .font(.subheadline)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
+                        .foregroundColor(.primary.opacity(0.85))
+                        .padding(14)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(Color(UIColor.tertiarySystemBackground))
+                        .cornerRadius(12)
+                        .padding(.horizontal, 16)
+                        .padding(.bottom, 10)
+                        .transition(.opacity.combined(with: .move(edge: .top)))
+                } else if narrativeService.isGenerating {
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(Color(UIColor.tertiarySystemBackground))
+                        .frame(height: 60)
+                        .padding(.horizontal, 16)
+                        .padding(.bottom, 10)
+                        .shimmering()
+                        .transition(.opacity)
                 }
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("Day \(dayIndex + 1)")
-                        .font(.headline)
-                        .fontWeight(.bold)
-                    Text("\(stops.count) stops")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                }
-                Spacer()
-            }
-            .padding(.horizontal, 16)
-            .padding(.vertical, 14)
 
-            // AI narrative
-            if let narrative = narrativeService.dayNarratives[dayIndex + 1] {
-                Text(narrative)
-                    .font(.subheadline)
-                    .foregroundColor(.primary.opacity(0.85))
-                    .padding(14)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .background(Color(UIColor.tertiarySystemBackground))
-                    .cornerRadius(12)
+                // Architect spotlight
+                if let spotlight = architectSpotlight {
+                    HStack(spacing: 8) {
+                        Image(systemName: "pencil.and.ruler.fill")
+                            .font(.caption)
+                            .foregroundColor(brandColor)
+                        Text(spotlight)
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
                     .padding(.horizontal, 16)
                     .padding(.bottom, 10)
-            } else if narrativeService.isGenerating {
-                RoundedRectangle(cornerRadius: 12)
-                    .fill(Color(UIColor.tertiarySystemBackground))
-                    .frame(height: 60)
-                    .padding(.horizontal, 16)
-                    .padding(.bottom, 10)
-                    .shimmering()
-            }
-
-            // Architect spotlight
-            if let spotlight = architectSpotlight {
-                HStack(spacing: 8) {
-                    Image(systemName: "pencil.and.ruler.fill")
-                        .font(.caption)
-                        .foregroundColor(brandColor)
-                    Text(spotlight)
-                        .font(.caption)
-                        .foregroundColor(.secondary)
+                    .transition(.opacity.combined(with: .move(edge: .top)))
                 }
-                .padding(.horizontal, 16)
-                .padding(.bottom, 10)
-            }
 
-            // Timeline bar
-            TimelineBar(stops: stops, service: service, brandColor: brandColor)
-                .padding(.horizontal, 16)
-                .padding(.bottom, 12)
+                // Timeline bar
+                TimelineBar(stops: stops, service: service, brandColor: brandColor)
+                    .padding(.horizontal, 16)
+                    .padding(.bottom, 12)
+                    .transition(.opacity.combined(with: .move(edge: .top)))
 
-            Divider().padding(.leading, 66)
+                Divider().padding(.leading, 66)
 
-            // Stops
-            ForEach(stops, id: \.id) { stop in
-                if let building = service.building(for: stop) {
-                    ItineraryStopRow(
-                        stop: stop,
-                        building: building,
-                        arrivalTime: service.formattedArrivalTime(offsetMins: stop.arrivalOffsetMins),
-                        description: narrativeService.stopDescriptions[building.id],
-                        isGenerating: narrativeService.isGenerating,
-                        brandColor: brandColor,
-                        isLast: stop.id == stops.last?.id
+                // Stops
+                ForEach(stops, id: \.id) { stop in
+                    if let building = service.building(for: stop) {
+                        ItineraryStopRow(
+                            stop: stop,
+                            building: building,
+                            arrivalTime: service.formattedArrivalTime(offsetMins: stop.arrivalOffsetMins),
+                            description: narrativeService.stopDescriptions[building.id],
+                            isGenerating: narrativeService.isGenerating,
+                            brandColor: brandColor,
+                            isLast: stop.id == stops.last?.id
+                        )
+                        .transition(.opacity.combined(with: .move(edge: .top)))
+                    }
+                }
+
+                // Food spots
+                let dayBuildings = stops.compactMap { service.building(for: $0) }
+                let lunchBuilding = dayBuildings.min(by: {
+                    abs($0.yearBuilt - 1900) < abs($1.yearBuilt - 1900)
+                }) ?? dayBuildings.first
+                if let lunch = lunchBuilding, !lunch.foodSpots.isEmpty {
+                    FoodSpotsRow(
+                        foodSpots: Array(lunch.foodSpots.prefix(3)),
+                        nearBuilding: lunch.name,
+                        brandColor: brandColor
                     )
+                    .transition(.opacity.combined(with: .move(edge: .top)))
                 }
-            }
-
-            // Food spots
-            let dayBuildings = stops.compactMap { service.building(for: $0) }
-            let lunchBuilding = dayBuildings.min(by: {
-                abs($0.yearBuilt - 1900) < abs($1.yearBuilt - 1900)
-            }) ?? dayBuildings.first
-            if let lunch = lunchBuilding, !lunch.foodSpots.isEmpty {
-                FoodSpotsRow(
-                    foodSpots: Array(lunch.foodSpots.prefix(3)),
-                    nearBuilding: lunch.name,
-                    brandColor: brandColor
-                )
             }
         }
 
