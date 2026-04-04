@@ -15,8 +15,6 @@ struct CityListView: View {
     @ObservedObject var progressManager = GlobalProgressManager.shared
     
     @Environment(\.horizontalSizeClass) var sizeClass
-
-    
     @Environment(\.colorSchemeContrast) var systemContrast
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     
@@ -35,10 +33,8 @@ struct CityListView: View {
     var isIPad: Bool { UIDevice.current.userInterfaceIdiom == .pad }
     var brandColor: Color { isHighContrast ? .primary : Color.adventureOrange }
 
-
     var body: some View {
         NavigationSplitView(columnVisibility: $columnVisibility) {
-            // SIDEBAR
             List(selection: $selectedCity) {
                 if searchText.isEmpty {
                     headerSection
@@ -105,7 +101,6 @@ struct CityListView: View {
             .listStyle(.sidebar)
             .disabled(!hasSeenPassportHint)
             .blur(radius: hasSeenPassportHint ? 0 : (isHighContrast ? 0 : 3))
-            
             .safeAreaInset(edge: .bottom) {
                 if hasSeenPassportHint && searchText.isEmpty {
                     passportFloatingButton
@@ -117,7 +112,7 @@ struct CityListView: View {
                                     LinearGradient(
                                         stops: [
                                             .init(color: .clear, location: 0),
-                                            .init(color: .black, location: 0.2), // Quick fade in
+                                            .init(color: .black, location: 0.2),
                                             .init(color: .black, location: 1.0)
                                         ],
                                         startPoint: .top,
@@ -143,8 +138,8 @@ struct CityListView: View {
                                 .padding(.top, 10)
                                 .padding(.bottom, 25)
                                 .padding(.horizontal, 25)
-                            
-//                            CityItineraryView(city: city)
+
+                            CityItineraryView(city: city)
                         }
                     }
                     .id(city.id)
@@ -168,7 +163,7 @@ struct CityListView: View {
     }
 
     // MARK: - List Sections
-    
+
     @ViewBuilder
     private func continentSection(_ group: ContinentGroup) -> some View {
         let isExpanded = expandedContinents[group.id, default: false]
@@ -234,87 +229,5 @@ struct CityListView: View {
             }
         }
         .padding(.vertical, 4)
-    }
-}
-
-// MARK: - HELPER: ITINERARY SECTION (iOS 15/16+ COMPATIBLE)
-struct CityItinerarySection: View {
-    let city: CityLocation.City
-    let brandColor: Color
-    
-    var buildings: [Building] {
-        BuildingRegistry.data[city] ?? []
-    }
-    
-    var body: some View {
-        VStack(alignment: .leading, spacing: 25) {
-            VStack(alignment: .leading, spacing: 4) {
-                Text(city.country.localGreeting)
-                    .font(.subheadline)
-                    .fontWeight(.bold)
-                    .foregroundColor(brandColor)
-                
-                Text("Architectural Itinerary")
-                    .font(.title2)
-                    .fontWeight(.bold)
-            }
-            .padding(.horizontal)
-            
-            if buildings.isEmpty {
-                VStack(spacing: 12) {
-                    Image(systemName: "building.2")
-                        .font(.system(size: 40))
-                        .foregroundColor(.secondary)
-                    Text("No landmarks registered for this city yet.")
-                        .font(.callout)
-                        .foregroundColor(.secondary)
-                }
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 40)
-            } else {
-                VStack(alignment: .leading, spacing: 0) {
-                    ForEach(Array(buildings.sorted(by: { $0.yearBuilt < $1.yearBuilt }).enumerated()), id: \.offset) { index, building in
-                        HStack(alignment: .top, spacing: 20) {
-                            
-                            VStack(spacing: 0) {
-                                Circle()
-                                    .fill(city.country.continent.iconGradient)
-                                    .frame(width: 14, height: 14)
-                                
-                                if index != buildings.count - 1 {
-                                    Rectangle()
-                                        .fill(Color.secondary.opacity(0.2))
-                                        .frame(width: 2, height: 90)
-                                }
-                            }
-                            
-                            VStack(alignment: .leading, spacing: 6) {
-                                Text(building.name)
-                                    .font(.headline)
-                                
-                                Text("\(String(building.yearBuilt)) • \(building.architect)")
-                                    .font(.caption)
-                                    .foregroundColor(.secondary)
-                                
-                                Text(building.newUse.lowercased().contains("museum") ? "Visit the galleries." : "Admire the \(building.buildingStyle) style.")
-                                    .font(.subheadline)
-                                    .padding(.vertical, 4)
-                                    .padding(.horizontal, 8)
-                                    .background(brandColor.opacity(0.1))
-                                    .cornerRadius(6)
-                                
-                                if let food = building.foodSpots.first {
-                                    Label(food, systemImage: "fork.knife")
-                                        .font(.caption2)
-                                        .foregroundColor(.secondary)
-                                }
-                            }
-                            .padding(.bottom, 25)
-                        }
-                    }
-                }
-                .padding(.horizontal)
-            }
-        }
     }
 }

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Executive Summary - Stamped! for Michigan State University</title>
+    <style>
+        :root {
+            --green: #18453b;
+            --green-soft: #2d6a57;
+            --accent: #f3b43f;
+            --ink: #18211f;
+            --muted: #5f6c68;
+            --paper: #fbfaf7;
+            --line: #dbe3de;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #edf1ee;
+            color: var(--ink);
+            font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+            line-height: 1.55;
+        }
+
+        .page {
+            width: min(900px, calc(100vw - 48px));
+            margin: 32px auto;
+            background: var(--paper);
+            border: 1px solid rgba(24, 69, 59, 0.08);
+            box-shadow: 0 18px 40px rgba(24, 39, 34, 0.08);
+        }
+
+        .page-inner {
+            padding: 56px 60px;
+        }
+
+        .eyebrow {
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--green-soft);
+            margin-bottom: 14px;
+        }
+
+        h1, h2 {
+            margin: 0;
+            font-family: "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: 42px;
+            line-height: 1.02;
+            margin-bottom: 14px;
+            color: var(--green);
+        }
+
+        h2 {
+            font-size: 18px;
+            line-height: 1.2;
+            margin: 26px 0 10px;
+            color: var(--green);
+        }
+
+        p {
+            margin: 0 0 12px;
+            font-size: 15px;
+        }
+
+        .lead {
+            font-size: 18px;
+            color: var(--ink);
+        }
+
+        .summary-band {
+            margin: 22px 0 24px;
+            padding: 16px 18px;
+            background: linear-gradient(90deg, rgba(24, 69, 59, 0.08), rgba(243, 180, 63, 0.12));
+            border-left: 5px solid var(--accent);
+        }
+
+        ul {
+            margin: 8px 0 14px 20px;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        .card {
+            border: 1px solid var(--line);
+            background: #ffffff;
+            padding: 16px 18px;
+        }
+
+        .footer {
+            margin-top: 28px;
+            padding-top: 14px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        @media print {
+            @page {
+                size: letter;
+                margin: 0.55in;
+            }
+
+            body {
+                background: white;
+            }
+
+            .page {
+                width: auto;
+                margin: 0;
+                box-shadow: none;
+                border: 0;
+            }
+
+            .page-inner {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <div class="page-inner">
+            <div class="eyebrow">Executive Summary</div>
+            <h1>Stamped! for Michigan State University</h1>
+            <p class="lead">A campus exploration app concept designed to help new students learn where important places are, what they are for, and how to navigate campus with more confidence.</p>
+
+            <div class="summary-band">
+                <p><strong>Core idea:</strong> adapt the existing Stamped! discovery framework into a Michigan State campus experience that turns orientation into an interactive system of exploration, progress, and reward.</p>
+            </div>
+
+            <h2>The Opportunity</h2>
+            <p>New students often arrive on campus with limited familiarity with key locations such as dining halls, parking areas, academic buildings, residence halls, libraries, and student support services. While orientation materials provide useful information, they do not always create lasting spatial familiarity or repeated engagement with the physical campus.</p>
+
+            <h2>The Proposed Solution</h2>
+            <p>Stamped! for Michigan State University would provide a mobile-first, gamified campus experience that helps students explore and learn the university environment in a more engaging way. Students would browse important campus destinations, complete exploration challenges, answer short orientation quizzes, and unlock progress badges or stamps as they build familiarity with campus.</p>
+
+            <p>The platform could be organized around practical student needs, including:</p>
+            <ul>
+                <li>academic buildings</li>
+                <li>dining halls and cafeterias</li>
+                <li>parking lots and transportation access</li>
+                <li>residence halls</li>
+                <li>libraries and study spaces</li>
+                <li>student services</li>
+                <li>recreation and wellness spaces</li>
+                <li>campus landmarks and traditions</li>
+            </ul>
+
+            <div class="two-col">
+                <div class="card">
+                    <h2 style="margin-top:0;">Student Value</h2>
+                    <ul>
+                        <li>reduces early-semester navigation anxiety</li>
+                        <li>improves awareness of important campus resources</li>
+                        <li>creates a more engaging orientation experience</li>
+                        <li>encourages exploration beyond the classroom</li>
+                        <li>strengthens confidence and sense of belonging</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h2 style="margin-top:0;">Institutional Value</h2>
+                    <ul>
+                        <li>modernizes part of the orientation experience</li>
+                        <li>increases visibility of high-value campus services</li>
+                        <li>supports student transition and campus familiarity efforts</li>
+                        <li>provides a scalable digital engagement tool</li>
+                        <li>offers a pilot-friendly concept with limited initial scope</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Why Stamped! Is a Strong Fit</h2>
+            <p>The existing Stamped! framework already includes the core interaction model needed for this use case: discovery, progress tracking, quizzes, completion rewards, and mobile-first browsing. This makes the MSU concept more than an abstract idea. It is an adaptation of an existing product structure that can be tailored to the campus environment.</p>
+
+            <h2>Recommended Pilot</h2>
+            <p>A pilot version could focus on 20 to 40 high-value campus destinations and a small set of orientation tracks for first-year students. Initial categories could include dining, parking, academic support, student services, and key campus landmarks. This would allow the university to assess student engagement and usefulness before considering broader rollout.</p>
+
+            <h2>Next Step</h2>
+            <p>The immediate next step would be a conversation about whether Michigan State University would be interested in exploring a pilot or concept review for a campus-specific version of Stamped!.</p>
+
+            <div class="footer">
+                Concept proposal only. Not presented as an official Michigan State University partnership or approved branded product.
+            </div>
+        </div>
+    </main>
+</body>
+</html>

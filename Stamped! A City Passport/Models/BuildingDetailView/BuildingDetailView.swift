@@ -8,6 +8,7 @@
 import SwiftUI
 import PhotosUI
 import MapKit
+import CoreLocation
 
 struct BuildingDetailView: View {
     // MARK: - Properties
@@ -547,25 +548,65 @@ extension BuildingDetailView {
             let placemark = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon))
             let mapItem = MKMapItem(placemark: placemark)
             mapItem.name = building.name
-            let launchOptions: [String: Any] = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking]
-            await MainActor.run {
-                _ = mapItem.openInMaps(launchOptions: launchOptions)
+            // Dynamic mode: if we have a recent user location, choose walking for short trips (<= 1km), otherwise driving.
+            func haversineMeters(lat1: Double, lon1: Double, lat2: Double, lon2: Double) -> Double {
+                let toRad = Double.pi / 180.0
+                let dLat = (lat2 - lat1) * toRad
+                let dLon = (lon2 - lon1) * toRad
+                let a = sin(dLat/2) * sin(dLat/2) + cos(lat1 * toRad) * cos(lat2 * toRad) * sin(dLon/2) * sin(dLon/2)
+                let c = 2 * atan2(sqrt(a), sqrt(1-a))
+                let earthRadius = 6371000.0
+                return earthRadius * c
             }
-            return
-        }
 
-        if let coord = await GeocodingManager.shared.coordinate(for: trimmed) {
-             print("openInMaps: geocoded to \(coord.latitude),\(coord.longitude)")
-             let placemark = MKPlacemark(coordinate: coord)
-             let mapItem = MKMapItem(placemark: placemark)
-             mapItem.name = building.name
-             let launchOptions: [String: Any] = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking]
+            let userLocation = CLLocationManager().location
+            let modeValue: String
+            if let u = userLocation {
+                let meters = haversineMeters(lat1: u.coordinate.latitude, lon1: u.coordinate.longitude, lat2: lat, lon2: lon)
+                modeValue = (meters <= 1000.0) ? MKLaunchOptionsDirectionsModeWalking : MKLaunchOptionsDirectionsModeDriving
+            } else {
+                // No cached user location available (or no permission); default to driving
+                modeValue = MKLaunchOptionsDirectionsModeDriving
+            }
+            let launchOptions: [String: Any] = [MKLaunchOptionsDirectionsModeKey: modeValue]
              await MainActor.run {
-                 // openInMaps returns a Bool; explicitly ignore it to avoid unused-result warnings
                  _ = mapItem.openInMaps(launchOptions: launchOptions)
              }
              return
-         } else {
+         }
+
+         if let coord = await GeocodingManager.shared.coordinate(for: trimmed) {
+              print("openInMaps: geocoded to \(coord.latitude),\(coord.longitude)")
+              let placemark = MKPlacemark(coordinate: coord)
+              let mapItem = MKMapItem(placemark: placemark)
+              mapItem.name = building.name
+             // Determine mode dynamically from recent user location if possible
+             func haversineMeters(lat1: Double, lon1: Double, lat2: Double, lon2: Double) -> Double {
+                 let toRad = Double.pi / 180.0
+                 let dLat = (lat2 - lat1) * toRad
+                 let dLon = (lon2 - lon1) * toRad
+                 let a = sin(dLat/2) * sin(dLat/2) + cos(lat1 * toRad) * cos(lat2 * toRad) * sin(dLon/2) * sin(dLon/2)
+                 let c = 2 * atan2(sqrt(a), sqrt(1-a))
+                 let earthRadius = 6371000.0
+                 return earthRadius * c
+             }
+
+             let userLocation = CLLocationManager().location
+             let modeValue: String
+             if let u = userLocation {
+                 let meters = haversineMeters(lat1: u.coordinate.latitude, lon1: u.coordinate.longitude, lat2: coord.latitude, lon2: coord.longitude)
+                 modeValue = (meters <= 1000.0) ? MKLaunchOptionsDirectionsModeWalking : MKLaunchOptionsDirectionsModeDriving
+             } else {
+                 modeValue = MKLaunchOptionsDirectionsModeDriving
+             }
+
+             let launchOptions: [String: Any] = [MKLaunchOptionsDirectionsModeKey: modeValue]
+              await MainActor.run {
+                  // openInMaps returns a Bool; explicitly ignore it to avoid unused-result warnings
+                  _ = mapItem.openInMaps(launchOptions: launchOptions)
+              }
+              return
+          } else {
              // geocoding failed — fallback to search URL and show an alert to the user explaining it
              let urlStr = "http://maps.apple.com/?q=\(trimmed.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")"
              print("openInMaps: geocode failed, falling back to URL search: \(urlStr)")

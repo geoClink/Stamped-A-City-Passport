@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stamped! for Michigan State University</title>
+    <style>
+        :root {
+            --green: #18453b;
+            --green-deep: #102f28;
+            --green-soft: #2d6a57;
+            --accent: #f3b43f;
+            --ink: #16201d;
+            --muted: #5e6a67;
+            --paper: #f5f3ef;
+            --surface: #ffffff;
+            --line: #dde3df;
+            --warm: #f7ede1;
+            --shadow: 0 18px 40px rgba(22, 32, 29, 0.08);
+            --radius-xl: 30px;
+            --radius-lg: 22px;
+            --radius-md: 16px;
+            --page-width: 1100px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            background: #e8ece9;
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+            line-height: 1.55;
+            background:
+                radial-gradient(circle at top right, rgba(24, 69, 59, 0.12), transparent 24%),
+                linear-gradient(180deg, #eef2ef 0%, #e7ece8 100%);
+        }
+
+        .deck {
+            width: min(var(--page-width), calc(100vw - 48px));
+            margin: 32px auto 80px;
+        }
+
+        .slide {
+            background: var(--paper);
+            border-radius: 32px;
+            box-shadow: var(--shadow);
+            margin-bottom: 24px;
+            overflow: hidden;
+        }
+
+        .slide-inner {
+            padding: 56px;
+        }
+
+        h1, h2, h3, .serif {
+            margin: 0;
+            font-family: "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: 84px;
+            line-height: 0.94;
+        }
+
+        h2 {
+            font-size: 42px;
+            line-height: 1;
+            margin-bottom: 18px;
+        }
+
+        h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 0 0 14px;
+        }
+
+        .lead {
+            font-size: 22px;
+            max-width: 620px;
+            line-height: 1.42;
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        .eyebrow {
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--green-soft);
+            margin-bottom: 14px;
+        }
+
+        .cover {
+            min-height: 1320px;
+            color: #f8f8f4;
+            background:
+                linear-gradient(140deg, rgba(16, 47, 40, 0.95), rgba(24, 69, 59, 0.92)),
+                var(--green);
+            position: relative;
+        }
+
+        .cover::before,
+        .cover::after {
+            content: "";
+            position: absolute;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .cover::before {
+            width: 420px;
+            height: 420px;
+            top: 90px;
+            right: -90px;
+        }
+
+        .cover::after {
+            width: 220px;
+            height: 220px;
+            left: -50px;
+            bottom: 160px;
+        }
+
+        .cover-grid {
+            min-height: 1210px;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 40px;
+            align-items: end;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 10px 14px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            background: rgba(255, 255, 255, 0.08);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .meta-stack {
+            display: grid;
+            gap: 18px;
+            align-self: start;
+            padding-top: 28px;
+        }
+
+        .meta-card,
+        .panel,
+        .stat,
+        .card,
+        .mock {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            padding: 22px;
+        }
+
+        .cover .meta-card {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .meta-label {
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            opacity: 0.74;
+            margin-bottom: 10px;
+        }
+
+        .meta-value {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.16;
+        }
+
+        .section-head {
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+            align-items: end;
+            margin-bottom: 32px;
+        }
+
+        .section-head p {
+            max-width: 360px;
+            margin: 0;
+        }
+
+        .grid-2,
+        .grid-3,
+        .grid-4 {
+            display: grid;
+            gap: 18px;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .grid-4 {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .stat {
+            background: linear-gradient(180deg, #ffffff, #fafcfb);
+        }
+
+        .stat-number {
+            font-size: 44px;
+            font-weight: 800;
+            line-height: 1;
+            color: var(--green);
+            margin-bottom: 10px;
+        }
+
+        .pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .pill {
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: #edf4f1;
+            border: 1px solid rgba(24, 69, 59, 0.12);
+            color: var(--green);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow: hidden;
+            border-radius: 18px;
+            border: 1px solid var(--line);
+            background: var(--surface);
+        }
+
+        .table th,
+        .table td {
+            padding: 14px 16px;
+            text-align: left;
+            vertical-align: top;
+            border-bottom: 1px solid var(--line);
+            font-size: 14px;
+        }
+
+        .table th {
+            background: #edf4f1;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--green-soft);
+        }
+
+        .table tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .card ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .card li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .highlight {
+            border-left: 5px solid var(--accent);
+            background: linear-gradient(90deg, rgba(243, 180, 63, 0.12), transparent);
+        }
+
+        .mock-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .mock {
+            min-height: 360px;
+            background:
+                linear-gradient(180deg, rgba(24, 69, 59, 0.05), rgba(255, 255, 255, 0.95)),
+                var(--surface);
+            position: relative;
+        }
+
+        .phone {
+            border: 10px solid #24342f;
+            border-radius: 34px;
+            background: #ffffff;
+            height: 310px;
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .phone-bar {
+            height: 18px;
+            width: 110px;
+            border-radius: 999px;
+            background: #233631;
+            margin: 0 auto 10px;
+        }
+
+        .hero-box,
+        .line,
+        .chip {
+            border-radius: 12px;
+        }
+
+        .hero-box {
+            background: linear-gradient(135deg, var(--green), var(--green-soft));
+            color: white;
+            padding: 16px;
+            min-height: 90px;
+        }
+
+        .line {
+            background: #e9efec;
+            height: 14px;
+        }
+
+        .line.short {
+            width: 60%;
+        }
+
+        .chip {
+            background: #edf4f1;
+            color: var(--green);
+            display: inline-block;
+            padding: 8px 10px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .flow {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .flow-step {
+            border-radius: 20px;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            padding: 18px;
+            min-height: 180px;
+        }
+
+        .flow-step .num {
+            width: 34px;
+            height: 34px;
+            border-radius: 999px;
+            background: var(--green);
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .footer-note {
+            margin-top: 22px;
+            padding-top: 16px;
+            border-top: 1px solid var(--line);
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        @media print {
+            @page {
+                size: letter portrait;
+                margin: 0.5in;
+            }
+
+            html, body {
+                background: #ffffff;
+            }
+
+            .deck {
+                width: auto;
+                margin: 0;
+            }
+
+            .slide {
+                box-shadow: none;
+                border-radius: 0;
+                margin: 0;
+                page-break-after: always;
+                break-after: page;
+            }
+
+            .slide:last-child {
+                page-break-after: auto;
+                break-after: auto;
+            }
+
+            .slide-inner {
+                padding: 0.18in 0.16in;
+            }
+
+            .cover {
+                min-height: 10in;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="deck">
+        <section class="slide cover">
+            <div class="slide-inner cover-grid">
+                <div>
+                    <div class="tag">Concept Proposal</div>
+                    <h1>Stamped! for Michigan State University</h1>
+                    <p class="lead">A campus exploration app concept that turns freshman orientation, wayfinding, and resource literacy into a gamified discovery experience.</p>
+                </div>
+                <div class="meta-stack">
+                    <div class="meta-card">
+                        <div class="meta-label">Primary Use Case</div>
+                        <div class="meta-value">Help new students learn campus faster and with less friction</div>
+                    </div>
+                    <div class="meta-card">
+                        <div class="meta-label">Built From</div>
+                        <div class="meta-value">The existing Stamped! discovery, quiz, progress, and reward framework</div>
+                    </div>
+                    <div class="meta-card">
+                        <div class="meta-label">Proposal Type</div>
+                        <div class="meta-value">Pilot-ready student experience concept</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="slide-inner">
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow">Opportunity</div>
+                        <h2>The Problem</h2>
+                    </div>
+                    <p class="muted">Orientation materials explain campus, but they do not always create lasting familiarity with the places students actually need to use.</p>
+                </div>
+
+                <div class="grid-4">
+                    <div class="stat">
+                        <div class="stat-number">1</div>
+                        <p><strong>New students arrive with low spatial familiarity.</strong></p>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">2</div>
+                        <p><strong>Important services can stay invisible</strong> until a student urgently needs them.</p>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">3</div>
+                        <p><strong>Static maps are useful but passive.</strong></p>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">4</div>
+                        <p><strong>Confidence grows through repeated discovery,</strong> not just one-time explanation.</p>
+                    </div>
+                </div>
+
+                <div class="panel highlight" style="margin-top:22px;">
+                    <h3>Core Question</h3>
+                    <p>What if campus orientation worked less like a packet and more like an interactive exploration system that students actually wanted to complete?</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="slide-inner">
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow">Solution</div>
+                        <h2>The Product</h2>
+                    </div>
+                    <p class="muted">Stamped! can be adapted from city discovery to campus discovery without changing its strongest interaction model.</p>
+                </div>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Current App</th>
+                            <th>Campus Version</th>
+                            <th>Student Outcome</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cities</td>
+                            <td>Campus zones or categories</td>
+                            <td>Students understand the shape of campus</td>
+                        </tr>
+                        <tr>
+                            <td>Landmarks</td>
+                            <td>Buildings, dining halls, libraries, parking, student services</td>
+                            <td>Students learn where key places are and why they matter</td>
+                        </tr>
+                        <tr>
+                            <td>Passport stamps</td>
+                            <td>Campus badges or completion stamps</td>
+                            <td>Progress feels visible and motivating</td>
+                        </tr>
+                        <tr>
+                            <td>Quiz mode</td>
+                            <td>Orientation and campus literacy challenges</td>
+                            <td>Knowledge retention improves through repetition</td>
+                        </tr>
+                        <tr>
+                            <td>Travel info</td>
+                            <td>Student utility info</td>
+                            <td>Students get practical help in context</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pill-row" style="margin-top:20px;">
+                    <span class="pill">Academic buildings</span>
+                    <span class="pill">Dining halls</span>
+                    <span class="pill">Parking lots</span>
+                    <span class="pill">Residence halls</span>
+                    <span class="pill">Libraries</span>
+                    <span class="pill">Student services</span>
+                    <span class="pill">Safety resources</span>
+                    <span class="pill">Campus traditions</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="slide-inner">
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow">Use Cases</div>
+                        <h2>What Students Would Do</h2>
+                    </div>
+                    <p class="muted">The app supports both pre-arrival exploration and on-campus orientation during the first weeks of the semester.</p>
+                </div>
+
+                <div class="flow">
+                    <div class="flow-step">
+                        <div class="num">1</div>
+                        <h3>Browse</h3>
+                        <p>Explore key places by category, district, or student need.</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="num">2</div>
+                        <h3>Learn</h3>
+                        <p>Read short explanations of what each place is for and why students use it.</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="num">3</div>
+                        <h3>Visit</h3>
+                        <p>Complete discovery challenges tied to real campus destinations.</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="num">4</div>
+                        <h3>Quiz</h3>
+                        <p>Reinforce memory with short orientation and wayfinding questions.</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="num">5</div>
+                        <h3>Collect</h3>
+                        <p>Unlock badges or stamps for orientation tracks and campus milestones.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="slide-inner">
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow">Mock Experience</div>
+                        <h2>How The Adaptation Could Look</h2>
+                    </div>
+                    <p class="muted">These are concept directions, not final MSU-branded screens.</p>
+                </div>
+
+                <div class="mock-grid">
+                    <div class="mock">
+                        <div class="phone">
+                            <div class="phone-bar"></div>
+                            <div class="hero-box">
+                                <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; opacity:0.82;">Orientation Track</div>
+                                <div class="serif" style="font-size:28px; margin-top:6px;">First Week Essentials</div>
+                            </div>
+                            <span class="chip">Dining</span>
+                            <span class="chip">Parking</span>
+                            <div class="line"></div>
+                            <div class="line short"></div>
+                            <div class="line"></div>
+                        </div>
+                        <p style="margin-top:14px;"><strong>Campus Home</strong><br><span class="muted">Students start with practical tracks instead of a generic list.</span></p>
+                    </div>
+
+                    <div class="mock">
+                        <div class="phone">
+                            <div class="phone-bar"></div>
+                            <div class="hero-box">
+                                <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; opacity:0.82;">Student Service</div>
+                                <div class="serif" style="font-size:28px; margin-top:6px;">Academic Advising</div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="line short"></div>
+                            <span class="chip">Visit this place</span>
+                            <div class="line"></div>
+                            <div class="line short"></div>
+                        </div>
+                        <p style="margin-top:14px;"><strong>Location Detail</strong><br><span class="muted">Each page explains purpose, utility, and next action.</span></p>
+                    </div>
+
+                    <div class="mock">
+                        <div class="phone">
+                            <div class="phone-bar"></div>
+                            <div class="hero-box">
+                                <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; opacity:0.82;">Campus Passport</div>
+                                <div class="serif" style="font-size:28px; margin-top:6px;">Spartan Start</div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line short"></div>
+                            <span class="chip">3 / 5 completed</span>
+                        </div>
+                        <p style="margin-top:14px;"><strong>Progress and Reward</strong><br><span class="muted">Orientation becomes collectible and measurable.</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="slide-inner">
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow">Value</div>
+                        <h2>Why This Matters To MSU</h2>
+                    </div>
+                    <p class="muted">The concept supports both student experience goals and practical communication goals.</p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card">
+                        <h3>Student Benefits</h3>
+                        <ul>
+                            <li>Lower navigation anxiety during the first semester</li>
+                            <li>Faster familiarity with essential campus resources</li>
+                            <li>More engaging orientation experience</li>
+                            <li>Better awareness of support services and study spaces</li>
+                            <li>Stronger sense of progress and belonging</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Institutional Benefits</h3>
+                        <ul>
+                            <li>A more interactive orientation layer without requiring every touchpoint to be staff-led</li>
+                            <li>Better visibility for services students may otherwise overlook</li>
+                            <li>A reusable digital framework for onboarding, tours, and student engagement</li>
+                            <li>A concept that can start small and scale later</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="panel highlight" style="margin-top:20px;">
+                    <h3>Best Fit</h3>
+                    <p>This concept is strongest as a pilot for first-year orientation, transfer onboarding, or a guided “learn your campus” initiative.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="slide-inner">
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow">Pilot</div>
+                        <h2>Recommended First Version</h2>
+                    </div>
+                    <p class="muted">A pilot should prove usefulness quickly instead of trying to map every part of campus at once.</p>
+                </div>
+
+                <div class="grid-3">
+                    <div class="card">
+                        <h3>Scope</h3>
+                        <ul>
+                            <li>20 to 40 destinations</li>
+                            <li>5 to 8 campus categories</li>
+                            <li>Orientation quiz mode</li>
+                            <li>Badge or stamp tracking</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Content</h3>
+                        <ul>
+                            <li>Names and short descriptions</li>
+                            <li>Coordinates or map references</li>
+                            <li>Hours where relevant</li>
+                            <li>Accessibility notes</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Use Cases</h3>
+                        <ul>
+                            <li>Freshman orientation</li>
+                            <li>Transfer student onboarding</li>
+                            <li>Campus essentials challenge</li>
+                            <li>Resource awareness campaign</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <table class="table" style="margin-top:20px;">
+                    <thead>
+                        <tr>
+                            <th>Phase</th>
+                            <th>Goal</th>
+                            <th>Output</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Phase 1</td>
+                            <td>Define campus content set</td>
+                            <td>Approved destinations, descriptions, categories</td>
+                        </tr>
+                        <tr>
+                            <td>Phase 2</td>
+                            <td>Create campus-branded prototype</td>
+                            <td>MSU-specific mock screens and navigation flows</td>
+                        </tr>
+                        <tr>
+                            <td>Phase 3</td>
+                            <td>Launch a pilot</td>
+                            <td>Small student cohort test during orientation</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="slide-inner">
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow">Close</div>
+                        <h2>Pitch Positioning</h2>
+                    </div>
+                    <p class="muted">Lead with the student problem, then show that the product framework already exists and can be adapted.</p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card">
+                        <h3>Suggested Message</h3>
+                        <p><strong>Stamped! for Michigan State University</strong> is a campus exploration concept designed to help new students learn where things are, what they are for, and how to navigate campus with more confidence.</p>
+                        <p>Instead of a passive orientation tool, it creates a guided system of discovery, progress, and reward.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Important Note</h3>
+                        <p>This deck presents a concept proposal for MSU use. It should not be presented as an official partnership or approved branded product unless the university agrees to move forward.</p>
+                    </div>
+                </div>
+
+                <div class="panel highlight" style="margin-top:20px;">
+                    <h3>What Strengthens This Proposal</h3>
+                    <p>The core app structure already exists. This is not a pitch for an abstract idea; it is a pitch for adapting a working discovery framework to a high-value campus use case.</p>
+                </div>
+
+                <div class="footer-note">
+                    Supporting files: <code>DESIGN_STYLE_GUIDE.html</code>, <code>DESIGN_STYLE_GUIDE.md</code>, and <code>MSU_PRODUCT_CONCEPT.md</code>.
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

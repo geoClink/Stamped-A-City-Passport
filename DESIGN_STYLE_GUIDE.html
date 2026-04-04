@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stamped! Design Style Guide</title>
+    <style>
+        :root {
+            --brand: #f2743f;
+            --brand-soft: #ff8a57;
+            --ink: #1c1c1c;
+            --muted: #666666;
+            --line: #e7ddd7;
+            --paper: #fcf8f5;
+            --surface: #ffffff;
+            --surface-warm: #fff2eb;
+            --success: #2f9e44;
+            --error: #d94841;
+            --gold: #d9a621;
+            --shadow: 0 16px 40px rgba(28, 28, 28, 0.08);
+            --radius-lg: 28px;
+            --radius-md: 18px;
+            --radius-sm: 12px;
+            --page-width: 1080px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            background: #efe7e1;
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+            line-height: 1.55;
+            background:
+                radial-gradient(circle at top left, rgba(242, 116, 63, 0.16), transparent 26%),
+                linear-gradient(180deg, #f6efea 0%, #efe7e1 100%);
+        }
+
+        .document {
+            width: min(var(--page-width), calc(100vw - 48px));
+            margin: 32px auto 80px;
+        }
+
+        .page {
+            background: var(--paper);
+            border: 1px solid rgba(28, 28, 28, 0.06);
+            border-radius: 32px;
+            box-shadow: var(--shadow);
+            margin-bottom: 24px;
+            overflow: hidden;
+        }
+
+        .page-inner {
+            padding: 56px;
+        }
+
+        .cover {
+            min-height: 1320px;
+            position: relative;
+            background:
+                linear-gradient(135deg, rgba(242, 116, 63, 0.92), rgba(18, 18, 18, 0.96)),
+                var(--brand);
+            color: #fff9f5;
+        }
+
+        .cover::before,
+        .cover::after {
+            content: "";
+            position: absolute;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            pointer-events: none;
+        }
+
+        .cover::before {
+            width: 420px;
+            height: 420px;
+            top: 72px;
+            right: -80px;
+        }
+
+        .cover::after {
+            width: 240px;
+            height: 240px;
+            bottom: 140px;
+            left: -60px;
+        }
+
+        .kicker {
+            display: inline-block;
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        .cover-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: end;
+            min-height: 1200px;
+        }
+
+        h1, h2, h3, .serif {
+            font-family: "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+            letter-spacing: -0.02em;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 92px;
+            line-height: 0.92;
+            margin-top: 28px;
+            max-width: 620px;
+        }
+
+        h2 {
+            font-size: 44px;
+            line-height: 1;
+            margin-bottom: 18px;
+        }
+
+        h3 {
+            font-size: 24px;
+            margin-bottom: 14px;
+        }
+
+        p {
+            margin: 0 0 14px;
+            font-size: 16px;
+        }
+
+        .lead {
+            font-size: 22px;
+            line-height: 1.45;
+            max-width: 540px;
+            margin-top: 24px;
+            color: rgba(255, 249, 245, 0.9);
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        .cover-meta {
+            align-self: start;
+            display: grid;
+            gap: 18px;
+            padding-top: 32px;
+        }
+
+        .meta-card,
+        .panel,
+        .swatch,
+        .type-card,
+        .component-card,
+        .screen-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 24px;
+            padding: 20px;
+        }
+
+        .meta-label {
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            opacity: 0.72;
+            margin-bottom: 10px;
+        }
+
+        .meta-value {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.15;
+        }
+
+        .section-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+            align-items: end;
+            margin-bottom: 36px;
+        }
+
+        .section-top p {
+            max-width: 360px;
+            margin: 0;
+        }
+
+        .eyebrow {
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--brand);
+            margin-bottom: 14px;
+        }
+
+        .grid-2,
+        .grid-3 {
+            display: grid;
+            gap: 20px;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .panel {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            padding: 24px;
+        }
+
+        .pill-list,
+        .mini-list,
+        .rule-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .pill {
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: var(--surface-warm);
+            border: 1px solid rgba(242, 116, 63, 0.18);
+            color: #8b4a2c;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .rule-list {
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .rule {
+            padding: 14px 16px;
+            border-left: 4px solid var(--brand);
+            background: var(--surface);
+            border-radius: 0 12px 12px 0;
+            border: 1px solid var(--line);
+        }
+
+        .swatch-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .swatch {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            padding: 16px;
+        }
+
+        .swatch-chip {
+            height: 86px;
+            border-radius: 16px;
+            margin-bottom: 14px;
+            border: 1px solid rgba(28, 28, 28, 0.06);
+        }
+
+        .swatch h3 {
+            font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+
+        .swatch code {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .type-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 0.6fr;
+            gap: 18px;
+        }
+
+        .type-card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            padding: 24px;
+        }
+
+        .type-sample {
+            margin-bottom: 14px;
+        }
+
+        .type-meta {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .micro {
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        .table th,
+        .table td {
+            padding: 14px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--line);
+            vertical-align: top;
+            font-size: 14px;
+        }
+
+        .table th {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #8e5a42;
+            background: #fff5ef;
+        }
+
+        .table tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .component-grid,
+        .screen-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .component-card,
+        .screen-card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            padding: 22px;
+            border-radius: 22px;
+        }
+
+        .component-card ul,
+        .screen-card ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .component-card li,
+        .screen-card li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .passport-frame {
+            border: 2px dashed rgba(242, 116, 63, 0.7);
+            border-radius: 18px;
+            padding: 22px;
+            background:
+                linear-gradient(180deg, rgba(242, 116, 63, 0.05), rgba(255, 255, 255, 0.9));
+        }
+
+        .two-col-copy {
+            columns: 2;
+            column-gap: 28px;
+        }
+
+        .two-col-copy p,
+        .two-col-copy ul {
+            break-inside: avoid;
+        }
+
+        .footer-note {
+            margin-top: 24px;
+            padding-top: 18px;
+            border-top: 1px solid var(--line);
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        @media print {
+            @page {
+                size: letter portrait;
+                margin: 0.5in;
+            }
+
+            html, body {
+                background: #ffffff;
+            }
+
+            .document {
+                width: auto;
+                margin: 0;
+            }
+
+            .page {
+                box-shadow: none;
+                border: 0;
+                border-radius: 0;
+                margin: 0;
+                page-break-after: always;
+                break-after: page;
+            }
+
+            .page:last-child {
+                page-break-after: auto;
+                break-after: auto;
+            }
+
+            .page-inner {
+                padding: 0.2in 0.15in;
+            }
+
+            .cover {
+                min-height: 10in;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="document">
+        <section class="page cover">
+            <div class="page-inner cover-grid">
+                <div>
+                    <div class="kicker">Stamped! A City Passport</div>
+                    <h1>Design Style Guide</h1>
+                    <p class="lead">
+                        A visual system for an editorial, travel-inspired architecture app built around discovery,
+                        progress, stamps, and collected city memories.
+                    </p>
+                </div>
+                <div class="cover-meta">
+                    <div class="meta-card">
+                        <div class="meta-label">Design Intent</div>
+                        <div class="meta-value">Passport meets museum placard meets travel dossier</div>
+                    </div>
+                    <div class="meta-card">
+                        <div class="meta-label">Primary Accent</div>
+                        <div class="meta-value">Adventure Orange<br><span style="font-size:16px; opacity:0.72;">#F2743F</span></div>
+                    </div>
+                    <div class="meta-card">
+                        <div class="meta-label">Core Screens</div>
+                        <div class="meta-value">Onboarding, City List, City Detail, Building Detail, Quiz, Passport</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page">
+            <div class="page-inner">
+                <div class="section-top">
+                    <div>
+                        <div class="eyebrow">Foundation</div>
+                        <h2>Brand Direction</h2>
+                    </div>
+                    <p class="muted">The app should feel collected, warm, and worldly rather than generic or overly technical.</p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="panel">
+                        <h3>Brand Summary</h3>
+                        <p><strong>Stamped!</strong> should feel like a modern city passport with hints of museum signage, travel ephemera, and ceremonial achievement.</p>
+                        <div class="pill-list">
+                            <span class="pill">Curious</span>
+                            <span class="pill">Collected</span>
+                            <span class="pill">Worldly</span>
+                            <span class="pill">Tactile</span>
+                            <span class="pill">Reward-driven</span>
+                            <span class="pill">Archival</span>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <h3>Avoid</h3>
+                        <div class="rule-list">
+                            <div class="rule">Do not drift into generic tech-dashboard styling.</div>
+                            <div class="rule">Do not flood screens with accent color.</div>
+                            <div class="rule">Do not use playful cartoon illustration as the primary visual mode.</div>
+                            <div class="rule">Do not overanimate navigation and core reading screens.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel" style="margin-top:20px;">
+                    <h3>Design Principles</h3>
+                    <div class="grid-3">
+                        <div>
+                            <p class="micro">01</p>
+                            <p>Use one strong accent color consistently instead of several competing brand colors.</p>
+                        </div>
+                        <div>
+                            <p class="micro">02</p>
+                            <p>Let typography create hierarchy before decorative effects do.</p>
+                        </div>
+                        <div>
+                            <p class="micro">03</p>
+                            <p>Favor grouped surfaces and generous spacing to keep dense information readable.</p>
+                        </div>
+                        <div>
+                            <p class="micro">04</p>
+                            <p>Reward states should feel ceremonial: stamps, seals, progress, and completion marks.</p>
+                        </div>
+                        <div>
+                            <p class="micro">05</p>
+                            <p>Accessibility settings simplify contrast and motion without replacing the visual system.</p>
+                        </div>
+                        <div>
+                            <p class="micro">06</p>
+                            <p>Every screen should reinforce travel, place, and collected architectural memory.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page">
+            <div class="page-inner">
+                <div class="section-top">
+                    <div>
+                        <div class="eyebrow">Palette</div>
+                        <h2>Color System</h2>
+                    </div>
+                    <p class="muted">The app already centers on a single named brand color. The rest of the palette should stay disciplined and mostly semantic.</p>
+                </div>
+
+                <div class="swatch-grid">
+                    <div class="swatch">
+                        <div class="swatch-chip" style="background:#f2743f;"></div>
+                        <h3>Brand / Primary</h3>
+                        <code>#F2743F</code>
+                        <p>Primary accent for actions, progress indicators, stamp marks, and selected emphasis.</p>
+                    </div>
+                    <div class="swatch">
+                        <div class="swatch-chip" style="background:#ff8a57;"></div>
+                        <h3>Brand / Warm Gradient</h3>
+                        <code>#FF8A57</code>
+                        <p>Gradient extension for celebratory surfaces and branded transitions.</p>
+                    </div>
+                    <div class="swatch">
+                        <div class="swatch-chip" style="background:#fcf8f5;"></div>
+                        <h3>Paper / Base</h3>
+                        <code>systemGroupedBackground inspired</code>
+                        <p>Default page atmosphere, grouped shells, and neutral canvas behind content.</p>
+                    </div>
+                    <div class="swatch">
+                        <div class="swatch-chip" style="background:#ffffff;"></div>
+                        <h3>Surface / Card</h3>
+                        <code>systemBackground</code>
+                        <p>Primary card surfaces, form groups, and detail panels.</p>
+                    </div>
+                    <div class="swatch">
+                        <div class="swatch-chip" style="background:#2f9e44;"></div>
+                        <h3>Success</h3>
+                        <code>System Green</code>
+                        <p>Used only for visited, completed, or affirmed states.</p>
+                    </div>
+                    <div class="swatch">
+                        <div class="swatch-chip" style="background:#d94841;"></div>
+                        <h3>Error</h3>
+                        <code>System Red</code>
+                        <p>Reserved for destructive controls and incorrect-answer feedback.</p>
+                    </div>
+                </div>
+
+                <div style="margin-top:22px;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Rule</th>
+                                <th>Guidance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Accent discipline</td>
+                                <td>Orange is the thread tying together City List, City Detail, Quiz, Passport, and Building Detail.</td>
+                            </tr>
+                            <tr>
+                                <td>Semantic states</td>
+                                <td>Green means success only. Red means destructive or incorrect only. Gold is for mastery and trophy moments.</td>
+                            </tr>
+                            <tr>
+                                <td>High contrast mode</td>
+                                <td>Replace decorative color coding with strong primary text, visible outlines, and system semantic colors.</td>
+                            </tr>
+                            <tr>
+                                <td>Backgrounds</td>
+                                <td>Use semantic grouped/system backgrounds for most shells instead of flat brand fills.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="page">
+            <div class="page-inner">
+                <div class="section-top">
+                    <div>
+                        <div class="eyebrow">Type</div>
+                        <h2>Typography System</h2>
+                    </div>
+                    <p class="muted">The app’s character comes from mixing serif display moments with approachable system text and monospaced utility labels.</p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="type-grid">
+                        <div class="type-card">
+                            <div class="type-sample serif" style="font-size:52px; font-weight:700;">San Francisco</div>
+                            <div class="type-meta">Display Hero · Serif · 34-48 pt · Bold</div>
+                        </div>
+                        <div class="type-card">
+                            <div class="type-sample micro" style="color:var(--brand);">Journey Log</div>
+                            <div class="type-meta">Tracked Micro Label · 10-11 pt · Black</div>
+                        </div>
+                    </div>
+                    <div class="type-grid">
+                        <div class="type-card">
+                            <div class="type-sample" style="font-size:28px; font-weight:700;">Architectural Itinerary</div>
+                            <div class="type-meta">Section Title · 22-28 pt · Bold</div>
+                        </div>
+                        <div class="type-card">
+                            <div class="type-sample" style="font-family:Menlo, monospace; font-size:15px; font-weight:700;">LOG 03 OF 10</div>
+                            <div class="type-meta">Monospaced Metadata · 12-15 pt</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top:22px;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Token</th>
+                                <th>Spec</th>
+                                <th>Use</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hero XL</td>
+                                <td>40-48 pt · Bold/Black · Serif</td>
+                                <td>Country titles and passport spread headings</td>
+                            </tr>
+                            <tr>
+                                <td>Hero L</td>
+                                <td>34 pt · Bold · Serif</td>
+                                <td>City hero names</td>
+                            </tr>
+                            <tr>
+                                <td>Title 1</td>
+                                <td>28-32 pt · Bold · Rounded/System</td>
+                                <td>Onboarding and major modal headlines</td>
+                            </tr>
+                            <tr>
+                                <td>Title 2</td>
+                                <td>22-24 pt · Bold</td>
+                                <td>Section entry points and card groups</td>
+                            </tr>
+                            <tr>
+                                <td>Body</td>
+                                <td>16-17 pt · Regular</td>
+                                <td>Descriptions, education copy, UI prose</td>
+                            </tr>
+                            <tr>
+                                <td>Caption</td>
+                                <td>12-13 pt · Medium/Bold</td>
+                                <td>Metadata, support text, passive hints</td>
+                            </tr>
+                            <tr>
+                                <td>Micro Label</td>
+                                <td>10-11 pt · Black · Tracked</td>
+                                <td>Progress labels, dossier tags, stamp utilities</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="passport-frame" style="margin-top:22px;">
+                    <h3>Type Rules</h3>
+                    <p>Use serif only for destination identity and ceremonial moments. Keep body copy in sentence case. Use monospaced labels for progress, stats, and field-data moments. Dynamic Type should stack layout before aggressive text compression occurs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="page">
+            <div class="page-inner">
+                <div class="section-top">
+                    <div>
+                        <div class="eyebrow">Layout</div>
+                        <h2>Spacing, Shape, and Imagery</h2>
+                    </div>
+                    <p class="muted">Grouped surfaces, editorial breathing room, and framed photography keep the product coherent across dense information screens.</p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="panel">
+                        <h3>Spacing Scale</h3>
+                        <table class="table">
+                            <tbody>
+                                <tr><td>XS</td><td>4</td></tr>
+                                <tr><td>S</td><td>8</td></tr>
+                                <tr><td>M</td><td>12</td></tr>
+                                <tr><td>L</td><td>16</td></tr>
+                                <tr><td>XL</td><td>20</td></tr>
+                                <tr><td>2XL</td><td>24</td></tr>
+                                <tr><td>3XL</td><td>30-32</td></tr>
+                                <tr><td>4XL</td><td>40</td></tr>
+                                <tr><td>5XL</td><td>60</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="panel">
+                        <h3>Shape Language</h3>
+                        <div class="rule-list">
+                            <div class="rule">Major hero and grouped surfaces: 20-24 pt radius</div>
+                            <div class="rule">Passport and stamp cards: 15-20 pt radius</div>
+                            <div class="rule">Utility controls: 8-12 pt radius or capsule</div>
+                            <div class="rule">High contrast mode: reduce decorative softness, strengthen outlines</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2" style="margin-top:20px;">
+                    <div class="panel">
+                        <h3>Imagery Direction</h3>
+                        <ul>
+                            <li>Use real architecture and city photography rather than illustration.</li>
+                            <li>Favor crops that emphasize structure, material, silhouette, and scale.</li>
+                            <li>Avoid generic lifestyle stock images.</li>
+                            <li>Default image treatment should be immersive and edge-to-edge.</li>
+                            <li>When images are missing, fallback states should remain branded and instructional.</li>
+                        </ul>
+                    </div>
+                    <div class="panel">
+                        <h3>Current Asset Reality</h3>
+                        <p>The catalog is intentionally light. It currently includes the app icon set and the named color asset <strong>adventureOrange</strong>. Building images are referenced in code through <code>building.assetName</code>, so photography consistency matters more than asset-catalog ornament.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page">
+            <div class="page-inner">
+                <div class="section-top">
+                    <div>
+                        <div class="eyebrow">System</div>
+                        <h2>Components and Feedback</h2>
+                    </div>
+                    <p class="muted">The UI should feel like a set of collected artifacts rather than flat interchangeable cards.</p>
+                </div>
+
+                <div class="component-grid">
+                    <article class="component-card">
+                        <h3>Buttons</h3>
+                        <ul>
+                            <li>Primary CTA: filled brand orange, white label, bold weight, large control size.</li>
+                            <li>Secondary action: tinted orange background at low opacity with orange text.</li>
+                            <li>Destructive action: system red only in resets and irreversible flows.</li>
+                        </ul>
+                    </article>
+                    <article class="component-card">
+                        <h3>Cards</h3>
+                        <ul>
+                            <li>Use light semantic surfaces with 20-24 pt padding.</li>
+                            <li>Keep shadows soft in standard mode and replace them with borders in high contrast.</li>
+                            <li>Cards should feel dossier-like, grouped, and tactile.</li>
+                        </ul>
+                    </article>
+                    <article class="component-card">
+                        <h3>Progress</h3>
+                        <ul>
+                            <li>Tint with brand orange.</li>
+                            <li>Pair color with explicit text value.</li>
+                            <li>Increase thickness when the moment is meaningful.</li>
+                        </ul>
+                    </article>
+                    <article class="component-card">
+                        <h3>Stamp Motif</h3>
+                        <ul>
+                            <li>Dashed borders, commemorative copy, paper-like field.</li>
+                            <li>Slight rotation is allowed when motion settings permit it.</li>
+                            <li>Stamp visuals are the most distinct part of the product identity.</li>
+                        </ul>
+                    </article>
+                    <article class="component-card">
+                        <h3>Quiz Dossier</h3>
+                        <ul>
+                            <li>Structured metadata labels and serif prompt headline.</li>
+                            <li>Answer buttons must feel decisive, large, and high-contrast.</li>
+                            <li>Celebration overlays can be bolder than standard content surfaces.</li>
+                        </ul>
+                    </article>
+                    <article class="component-card">
+                        <h3>Motion and Feedback</h3>
+                        <ul>
+                            <li>Use spring for reveal, expansion, and tap response.</li>
+                            <li>Reserve scale and ceremonial transitions for success states.</li>
+                            <li>Respect Reduce Motion by swapping to opacity or no animation.</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="footer-note">
+                    Haptics should reinforce selection and milestones. Sound should be ceremonial and optional, especially around stamp completion.
+                </div>
+            </div>
+        </section>
+
+        <section class="page">
+            <div class="page-inner">
+                <div class="section-top">
+                    <div>
+                        <div class="eyebrow">Screens</div>
+                        <h2>App-Wide Application</h2>
+                    </div>
+                    <p class="muted">Each major screen family should express the same visual system through its own role.</p>
+                </div>
+
+                <div class="screen-grid">
+                    <article class="screen-card">
+                        <h3>Onboarding</h3>
+                        <ul>
+                            <li>Cinematic dark gradient with orange glow.</li>
+                            <li>Large welcoming type and symbolic iconography.</li>
+                            <li>Primary CTA remains obvious and warm.</li>
+                        </ul>
+                    </article>
+                    <article class="screen-card">
+                        <h3>City List</h3>
+                        <ul>
+                            <li>Should read like an organized atlas sidebar.</li>
+                            <li>Orange appears in active states, icons, and progress.</li>
+                            <li>Welcome placeholder remains spacious and icon-led.</li>
+                        </ul>
+                    </article>
+                    <article class="screen-card">
+                        <h3>City Detail</h3>
+                        <ul>
+                            <li>Editorial city dossier tone.</li>
+                            <li>Serif city title and ceremonial nickname label.</li>
+                            <li>Grouped cards and clear dividers between sections.</li>
+                        </ul>
+                    </article>
+                    <article class="screen-card">
+                        <h3>Building Detail</h3>
+                        <ul>
+                            <li>Hero photography leads the screen.</li>
+                            <li>User photo capture tools should feel integrated, not bolted on.</li>
+                            <li>Metadata should read like museum placard content.</li>
+                        </ul>
+                    </article>
+                    <article class="screen-card">
+                        <h3>Quiz</h3>
+                        <ul>
+                            <li>Field-investigation tone with dossier structure.</li>
+                            <li>Visible score and progress at all times.</li>
+                            <li>Correct and incorrect states stay semantically clean.</li>
+                        </ul>
+                    </article>
+                    <article class="screen-card">
+                        <h3>Passport</h3>
+                        <ul>
+                            <li>Most branded screen family in the app.</li>
+                            <li>Lean into archive, collection, and reward metaphors.</li>
+                            <li>Completed states should feel collectible and ceremonial.</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="passport-frame" style="margin-top:22px;">
+                    <h3>Accessibility Rules</h3>
+                    <div class="two-col-copy">
+                        <p>Minimum tap target is 44 by 44 points. Meaning should never rely on color alone. Dynamic Type must preserve hierarchy by stacking and expanding rather than clipping.</p>
+                        <p>High contrast mode should emphasize outlines, primary text, and simplified fills. Reduce Motion should remove tilt and large spring behaviors while preserving structure through opacity and timing.</p>
+                    </div>
+                </div>
+
+                <div class="footer-note">
+                    Best workflow: maintain the editable source in <code>DESIGN_STYLE_GUIDE.md</code>, refine presentation in this HTML file, and export this document to PDF when needed.
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
