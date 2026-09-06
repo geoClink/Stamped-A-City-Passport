@@ -280,98 +280,46 @@ class CityDetailViewModel: ObservableObject {
         let rates: [String: Double]
     }
     
-    // MARK: - API Configuration Helpers
-    private var apiBaseURLString: String? {
-        // Prefer environment variable (CI / local dev)
-        if let env = ProcessInfo.processInfo.environment["CURRENCY_API_BASE_URL"], !env.isEmpty {
-            return env
-        }
-        // Fall back to Info.plist entry (set per-target in Xcode; safe to commit without key)
-        if let info = Bundle.main.object(forInfoDictionaryKey: "CURRENCY_API_BASE_URL") as? String, !info.isEmpty {
-            return info
-        }
-        return nil
-    }
-
-    private var apiKeyString: String? {
-        // Prefer environment variable for secrets
-        if let env = ProcessInfo.processInfo.environment["CURRENCY_API_KEY"], !env.isEmpty {
-            return env
-        }
-        // Optionally allow a non-secret placeholder in Info.plist (not recommended for real secrets)
-        if let info = Bundle.main.object(forInfoDictionaryKey: "CURRENCY_API_KEY") as? String, !info.isEmpty {
-            return info
-        }
-        return nil
-    }
-
-    private func makeRatesURL() -> URL? {
-        // If a full base URL is provided, use it and append the apikey query item if needed
-        if let base = apiBaseURLString, var comps = URLComponents(string: base) {
-            // If API key is provided and not already present, add it as a query item named "apikey"
-            if let key = apiKeyString, !key.isEmpty {
-                var items = comps.queryItems ?? []
-                if !items.contains(where: { $0.name.lowercased() == "apikey" }) {
-                    items.append(URLQueryItem(name: "apikey", value: key))
-                    comps.queryItems = items
-                }
-            }
-            return comps.url
-        }
-        return nil
-    }
-    
-    private var providerHostFallback: String {
-        if let base = apiBaseURLString, !base.isEmpty {
-            return URL(string: base)?.host ?? base
-        }
-        // default provider host for fallback URL
-        return URL(string: "https://api.exchangerate-api.com/v4/latest/USD")?.host ?? "exchangerate-api.com"
-    }
+    // frankfurter.app — free, no API key, reliable
+    private let ratesURL = URL(string: "https://api.frankfurter.app/latest?from=USD")!
 
     private func fetchLiveRatesIfPossible() async {
-        // Prevent concurrent fetches
         guard !isFetchingRates else { return }
+
+        // Serve from cache if less than 1 hour old
+        if let cachedDate = UserDefaults.standard.object(forKey: "currency_rates_date") as? Date,
+           Date().timeIntervalSince(cachedDate) < 3600,
+           let cachedRates = loadCachedRates() {
+            self.currentRates = cachedRates
+            self.updateCurrencyStatusText(date: cachedDate, mode: "Cached")
+            return
+        }
+
+        guard pathMonitor.currentPath.status == .satisfied else {
+            useCachedOrOfflineRates(status: "Offline")
+            return
+        }
+
         isFetchingRates = true
-        // show immediate UI feedback
         DispatchQueue.main.async { self.currencyStatusText = NSLocalizedString("checking.rates", comment: "Short status shown while fetching currency rates") }
         defer { isFetchingRates = false }
 
-        // Build URL from config (env or Info.plist). If not present, fall back to the previous hardcoded URL.
-        guard let url = makeRatesURL() ?? URL(string: "https://api.exchangerate-api.com/v4/latest/USD?apikey=efb61aca709c384910bb01d3") else {
-            useCachedOrOfflineRates(status: "Offline")
-            return
-        }
-
-        // If the path monitor indicates no network, immediately fall back to offline/cached
-        if pathMonitor.currentPath.status != .satisfied {
-            useCachedOrOfflineRates(status: "Offline")
-            return
-        }
-
-        // Create a URLRequest that ignores local HTTP cache to avoid returning stale cached responses
-        var request = URLRequest(url: url)
+        var request = URLRequest(url: ratesURL)
         request.cachePolicy = .reloadIgnoringLocalCacheData
         request.timeoutInterval = 15
 
         do {
             let (data, _) = try await URLSession.shared.data(for: request)
-            let decoder = JSONDecoder()
-            let response = try decoder.decode(RatesResponse.self, from: data)
-
-            let missingCodes = Set(self.offlineRates.keys).subtracting(response.rates.keys)
-            if !missingCodes.isEmpty {
-                print("[Currency API] Warning: Missing codes in live rates:", missingCodes.sorted())
-            } else {
-                print("[Currency API] All offline currencies covered in live rates.")
-            }
-
-            // Update currentRates and save to UserDefaults
-            self.currentRates = response.rates
-            self.saveRatesToCache(rates: response.rates)
+            let response = try JSONDecoder().decode(RatesResponse.self, from: data)
+            // USD isn't in the response (it's the base), so add it manually
+            var rates = response.rates
+            rates["USD"] = 1.0
+            self.currentRates = rates
+            self.saveRatesToCache(rates: rates)
             self.updateCurrencyStatusText(date: Date(), mode: "Live")
+            print("[Currency] Live rates fetched from frankfurter.app")
         } catch {
-            print("[Currency API] Live fetch failed:", error.localizedDescription)
+            print("[Currency] Live fetch failed:", error.localizedDescription)
             useCachedOrOfflineRates(status: "Cached")
         }
     }
@@ -445,7 +393,6 @@ class CityDetailViewModel: ObservableObject {
         }
         // Update provider and timestamp for modal/details
         self.currencyUpdatedDate = date
-        // Prefer full host from makeRatesURL if configured, else use fallback host
-        self.currencyProvider = makeRatesURL()?.host ?? providerHostFallback
+        self.currencyProvider = ratesURL.host ?? "api.frankfurter.app"
     }
 }

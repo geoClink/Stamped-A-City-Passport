@@ -23,10 +23,11 @@ struct LandmarkSection: View {
             
             VStack(spacing: isHighContrast ? 12 : 1) {
                 ForEach(viewModel.city.buildings) { building in
+                    let isVisited = progressManager.visitedIDs.contains(building.id)
                     NavigationLink(destination: BuildingDetailView(building: building, viewModel: viewModel)) {
                         LandmarkRow(
                             building: building,
-                            isVisited: progressManager.visitedIDs.contains(building.id),
+                            isVisited: isVisited,
                             isHighContrast: isHighContrast
                         )
                     }
@@ -35,7 +36,35 @@ struct LandmarkSection: View {
                         HapticManager.shared.trigger(.selection)
                     })
                     .accessibilityIdentifier("LandmarkLink_\(building.name)")
-                    
+                    .contextMenu {
+                        Button {
+                            withAnimation(.spring()) {
+                                viewModel.toggleVisited(for: building)
+                            }
+                            HapticManager.shared.trigger(.success)
+                        } label: {
+                            Label(
+                                isVisited ? "Remove Stamp" : "Mark as Visited",
+                                systemImage: isVisited ? "checkmark.seal" : "checkmark.seal.fill"
+                            )
+                        }
+                        if let lat = building.latitude, let lon = building.longitude {
+                            let encoded = building.name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+                            if let url = URL(string: "maps://?ll=\(lat),\(lon)&q=\(encoded)") {
+                                Button {
+                                    UIApplication.shared.open(url)
+                                    HapticManager.shared.trigger(.selection)
+                                } label: {
+                                    Label("Open in Maps", systemImage: "map")
+                                }
+                            }
+                        }
+                    } preview: {
+                        WikiBuildingPhoto(building: building, height: 220)
+                            .frame(width: 300)
+                            .clipped()
+                    }
+
                     if !isHighContrast && building.id != viewModel.city.buildings.last?.id {
                         Divider().padding(.leading, 60)
                             .accessibilityHidden(true)

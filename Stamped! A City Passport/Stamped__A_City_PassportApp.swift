@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Foundation
+import CoreSpotlight
 
 
 // MARK: - ORIENTATION MANAGER
@@ -47,8 +48,14 @@ struct GlobalDiscoveryApp: App {
             }
             .animation(.spring(response: 0.7, dampingFraction: 0.85), value: hasSeenOnboarding)
             .task {
-                // Attempt to refresh the remote registry if configured in Info.plist
                 await BuildingRegistryUpdater.refreshIfNeeded()
+                ProximityManager.shared.requestPermissions()
+                SpotlightManager.indexAll(cities: CityLocation.City.allCases)
+            }
+            .onContinueUserActivity(CSSearchableItemActionType) { activity in
+                if let city = SpotlightManager.city(from: activity) {
+                    navManager.spotlightCity = city
+                }
             }
         }
     }

@@ -26,10 +26,7 @@ final class HapticManager {
     }
     
     func trigger(_ style: HapticStyle) {
-        let isActuallyEnabled = UserDefaults.standard.bool(forKey: HapticManager.settingsKey)
-        
-        guard isActuallyEnabled else {
-            print("DEBUG: Haptic blocked. Settings are OFF.")
+        guard hapticsEnabled else {
             return
         }
         

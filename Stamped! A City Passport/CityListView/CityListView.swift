@@ -13,6 +13,7 @@ struct CityListView: View {
     
     @StateObject var viewModel = CityViewModel()
     @ObservedObject var progressManager = GlobalProgressManager.shared
+    @EnvironmentObject var navManager: NavigationManager
     
     @Environment(\.horizontalSizeClass) var sizeClass
     @Environment(\.colorSchemeContrast) var systemContrast
@@ -25,6 +26,7 @@ struct CityListView: View {
     @State var expandedContinents: [CityLocation.Continent: Bool] = [:]
     @State var searchText = ""
     @State var showingSettings = false
+    @State var showingMyJourney = false
     @State var showingPassport = false
     @State var selectedCity: CityLocation.City?
     @State var columnVisibility = NavigationSplitViewVisibility.all
@@ -152,8 +154,14 @@ struct CityListView: View {
         }
         .accentColor(brandColor)
         .fullScreenCover(isPresented: $showingSettings) { SettingsView() }
+        .fullScreenCover(isPresented: $showingMyJourney) { MyJourneyView() }
         .fullScreenCover(isPresented: $showingPassport) {
             PassportGalleryView(cities: viewModel.allCities)
+        }
+        .onChange(of: navManager.spotlightCity) { _, city in
+            if let city {
+                selectedCity = city
+            }
         }
         .overlay {
             if !hasSeenPassportHint {

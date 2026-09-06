@@ -92,7 +92,7 @@ extension PassportView {
                 Spacer()
                 
                 if isDone {
-                    NavigationLink(destination: CityStampDetailView(city: city, date: "JAN 2026", namespace: stampAnimation)) {
+                    NavigationLink(destination: CityStampDetailView(city: city, date: UserDefaults.standard.string(forKey: "date_completed_\(city.name)") ?? "", namespace: stampAnimation)) {
                         Image(systemName: "checkmark.seal.fill")
                             .font(.system(size: 32))
                             .foregroundColor(brandColor)
@@ -146,7 +146,7 @@ extension PassportView {
     }
 
     func countVisited(in city: CityLocation.City) -> Int {
-        city.buildings.filter { UserDefaults.standard.bool(forKey: "visited_\($0.id)") }.count
+        city.buildings.filter { GlobalProgressManager.shared.visitedIDs.contains($0.id) }.count
     }
 }
 

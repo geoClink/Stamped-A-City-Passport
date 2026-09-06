@@ -63,44 +63,44 @@ final class ItineraryNarrativeService: ObservableObject {
         currentCityKey = ""
     }
  
-    // MARK: - Generate Day Narrative
+    // MARK: - Generate Day Narrative (streaming)
     private func generateDayNarrative(dayNumber: Int, buildings: [Building]) async {
         let session = LanguageModelSession(model: .default)
         let buildingNames = buildings.map { $0.name }.joined(separator: ", ")
         let styles = Set(buildings.map { $0.buildingStyle }).joined(separator: ", ")
- 
+
         let prompt = """
         Write 2 sentences introducing Day \(dayNumber) of an architectural tour.
         Stops: \(buildingNames). Styles: \(styles).
         Travel guide tone. No bullet points.
         """
- 
+
         do {
-            let response = try await session.respond(to: prompt)
-            let content = response.content
-            objectWillChange.send()
-            dayNarratives[dayNumber] = content
+            // Stream the response so text appears word-by-word in the UI
+            dayNarratives[dayNumber] = ""
+            for try await partial in session.streamResponse(to: prompt) {
+                dayNarratives[dayNumber] = partial.content
+            }
             print("✅ Day \(dayNumber) narrative ready")
         } catch {
             print("⚠️ Day \(dayNumber) narrative error: \(error)")
         }
     }
- 
-    // MARK: - Generate Stop Description
+
+    // MARK: - Generate Stop Description (streaming)
     private func generateStopDescription(building: Building) async {
         guard stopDescriptions[building.id] == nil else { return }
- 
+
         let session = LanguageModelSession(model: .default)
         let prompt = """
         One sentence, max 15 words. Why visit \(building.name)? Built \(building.yearBuilt), \(building.buildingStyle) style. Be specific.
         """
- 
+
         do {
-            let response = try await session.respond(to: prompt)
-            let content = response.content
-            let bid = building.id
-            objectWillChange.send()
-            stopDescriptions[bid] = content
+            stopDescriptions[building.id] = ""
+            for try await partial in session.streamResponse(to: prompt) {
+                stopDescriptions[building.id] = partial.content
+            }
         } catch {
             print("⚠️ Stop description error for \(building.name): \(error)")
         }

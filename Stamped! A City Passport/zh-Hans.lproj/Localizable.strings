@@ -1,0 +1,295 @@
+/* ============================================================
+   Stamped! A City Passport — Localizable.strings (English)
+   ============================================================ */
+
+// MARK: - Onboarding
+"onboarding.step1.title" = "探索世界";
+"onboarding.step1.description" = "穿越建筑之都，揭开隐藏的历史。";
+"onboarding.step2.title" = "追踪您的进度";
+"onboarding.step2.description" = "通过记录您访问的每个地标来建立您的旅行档案。";
+"onboarding.step3.title" = "领取奖励";
+"onboarding.step3.description" = "为您的个人护照解锁专属数字印章。";
+"onboarding.step4.title" = "证明你的精通";
+"onboarding.step4.description" = "通过完成城市特定的挑战成为建筑专家。";
+"onboarding.step5.title" = "智慧策展";
+"onboarding.step5.description" = "让 Apple Intelligence 为您的下一次冒险设计完美路线。";
+"onboarding.button.skip" = "跳过";
+"onboarding.button.next" = "下一个";
+"onboarding.button.getStarted" = "开始使用";
+"onboarding.accessibility.skip.label" = "跳过介绍";
+"onboarding.accessibility.skip.hint" = "直接进入应用程序主屏幕";
+
+// MARK: - City List
+"cityList.search.prompt" = "城市、地标或建筑师";
+"cityList.passport.button" = "护照";
+"cityList.welcome.title" = "准备好探索了吗？";
+"cityList.welcome.body" = "从侧边栏中选择一个目的地，开始您的建筑之旅并赢得您的第一枚印章。";
+"cityList.welcome.ipad.hint" = "如果侧边栏隐藏，则从左侧滑动";
+
+// MARK: - Continent Names
+"continent.africa" = "非洲";
+"continent.asia" = "亚洲";
+"continent.europe" = "欧洲";
+"continent.northAmerica" = "北美";
+"continent.southAmerica" = "南美洲";
+"continent.oceania" = "大洋洲";
+
+// MARK: - City Detail
+"cityDetail.explored" = "%d%% 已探索";
+"cityDetail.explorationProgress" = "勘探进展";
+"cityDetail.masteryLevel" = "掌握程度：%@";
+"cityDetail.toolbar.resetProgress" = "重置进度";
+"cityDetail.toolbar.resetQuiz" = "重置测验分数";
+"cityDetail.toolbar.resetStamps" = "重置图章";
+"cityDetail.toolbar.resetPhotos" = "重置照片";
+"cityDetail.toolbar.resetEverything" = "重置一切";
+"cityDetail.alert.confirmReset" = "确认重置";
+"cityDetail.alert.yesReset" = "是的，重置";
+"cityDetail.alert.cancel" = "取消";
+
+// MARK: - Mastery Tiers
+"mastery.tourist" = "游客";
+"mastery.explorer" = "探险家";
+"mastery.urbanInsider" = "城市内幕";
+"mastery.localLegend" = "当地传说";
+"mastery.masterCollector" = "收藏大师";
+
+// MARK: - Discovery Ranks (Passport)
+"rank.tourist" = "游客";
+"rank.urbanExplorer" = "城市探索者";
+"rank.architectureCritic" = "建筑评论家";
+"rank.cityHistorian" = "城市历史学家";
+"rank.grandMaster" = "大师";
+
+// MARK: - Landmarks
+"landmarks.header" = "地标";
+"landmarks.accessibility.sectionLabel" = "%@ 的地标";
+"landmarks.row.visited" = "已访问，%@";
+"landmarks.row.notVisited" = "未访问过，%@";
+"landmarks.row.architect" = "建筑师：%@";
+"landmarks.row.hint" = "双击可查看建筑详细信息和历史记录。";
+
+// MARK: - Quiz
+"quiz.title" = "建筑测验";
+"quiz.improveScore" = "提高你的分数";
+"quiz.mastered" = "城市掌握";
+"quiz.subtitle.start" = "测试你的知识。";
+"quiz.subtitle.improve" = "你能得到10/10吗？";
+"quiz.subtitle.mastered" = "满分！你是专家。";
+"quiz.accessibility.label" = "%@。 %@。高分 %d（满分 10 分）。";
+"quiz.accessibility.hint" = "双击即可开始测验。";
+
+// MARK: - Travel Info
+"travel.header" = "旅行档案";
+"travel.language" = "语言";
+"travel.airport" = "飞机场";
+"travel.transportation" = "运输";
+"travel.currency" = "货币";
+"travel.localTransit" = "当地交通";
+"travel.cityTransit" = "City Transit";
+"travel.mainAirport" = "Main Airport";
+"travel.greeting" = "Greeting: %@";
+"travel.home" = "家";
+"travel.local" = "Local";
+
+// MARK: - Currency Converter
+"currency.home.label" = "Home (%@)";
+"currency.local.label" = "Local (%@)";
+"currency.swap.homeToLocal" = "Home → Local";
+"currency.swap.localToHome" = "Local → Home";
+"currency.disclaimer" = "Rates are approximate. Always verify before travelling.";
+"currency.status.live" = "Live rates";
+"currency.status.cached" = "Cached rates";
+"currency.status.offline" = "离线费率";
+"currency.refresh.label" = "Refresh rates";
+"currency.refresh.hint" = "获取最新汇率";
+"currency.accessibility.statusIcon" = "货币汇率状态";
+"currency.modal.title" = "费率信息";
+"currency.modal.provider" = "提供者";
+"currency.modal.lastUpdated" = "最后更新";
+"currency.modal.never" = "绝不";
+"currency.modal.close" = "关闭";
+"currency.modal.header" = "汇率详情";
+"currency.modal.explain.live" = "使用从互联网获取的实时汇率。";
+"currency.modal.explain.cached" = "使用最近缓存的费率。连接到互联网进行刷新。";
+"currency.modal.explain.offline" = "没有互联网连接。使用内置的离线费率。";
+"checking.rates" = "检查费率...";
+"mode.live" = "居住";
+"mode.cached" = "缓存";
+"mode.offline" = "离线";
+"rates.updated" = "费率已更新%@ (%@)";
+"rates.disclaimer" = "价格仅供参考，可能会有所不同；与您的提供商核实确切的金额。";
+"modal.header" = "货币汇率";
+"modal.title" = "费率来源";
+"modal.provider" = "提供者";
+"modal.last_updated" = "最后更新";
+"modal.explain_live" = "实时费率是从提供商处获取的，反映了当前的市场费率。";
+"modal.explain_cached" = "缓存的费率来自之前成功的提取，可能稍微过时。";
+"modal.explain_offline" = "当网络访问不可用时，使用离线回退率；这些仅供参考。";
+"modal.close" = "完毕";
+"modal.never" = "绝不";
+"status.icon.accessibility" = "货币汇率状态，点击查看详细信息";
+"refresh.rates.accessibility" = "刷新货币汇率";
+"refresh.rates.hint" = "获取最新汇率";
+
+// MARK: - Passport Gallery
+"passport.title" = "你的护照";
+"passport.countries" = "国家";
+"passport.done" = "完毕";
+"passport.close" = "关闭";
+"passport.journeyLog" = "旅程日志";
+"passport.explorationProgress" = "勘探进展";
+"passport.citiesStamped" = "%d 个城市盖章";
+"passport.selectCountry" = "选择一个国家/地区来查看您的邮票";
+"passport.stats" = "统计数据";
+
+// MARK: - Passport Stamp
+"stamp.passportStamped" = "护照盖章";
+"stamp.completed" = "完全的： ％@";
+"stamp.didYouKnow" = "你可知道？";
+"stamp.accessibility.label" = "%@ 的官方护照印章";
+"stamp.accessibility.value" = "于 %@ 完成。你可知道？ %@";
+
+// MARK: - Stamp Celebration
+"celebration.cityExplored" = "城市探索！";
+"celebration.addToPassport" = "添加到护照";
+"celebration.accessibility" = "恭喜！您已经探索过%@。";
+
+// MARK: - Passport View
+"passportView.officialStatus" = "官方旅行者身份";
+"passportView.complete" = "完全的";
+"passportView.landmarksDiscovered" = "已发现 %d 个地标（共 %d 个）";
+"passportView.collected" = "%d / %d 已收集";
+"passportView.beginJourney" = "开始你的旅程";
+"passportView.beginJourney.body" = "参观城市指南中的建筑物，开始收集官方邮票。";
+"passportView.verifiedOn" = "已验证于%@";
+"passportView.shareAchievement" = "分享成果";
+"passportView.dismiss" = "解雇";
+"passportView.shareText" = "我刚刚解锁了%@ 建筑图章！ 🏛️";
+"passportView.masterOf" = "%@ 建筑学硕士";
+
+// MARK: - Itinerary
+"itinerary.header" = "建筑行程";
+"itinerary.day" = "第 %d 天";
+"itinerary.stops" = "%d 站";
+"itinerary.totalTime" = "总计 %dh %dm";
+"itinerary.walk" = "%d 分钟步行";
+"itinerary.transit" = "%d 分钟 · 建议转乘";
+"itinerary.startsAt" = "上午 9:00 开始";
+"itinerary.lunchStop" = "午餐站";
+"itinerary.nearBuilding" = "靠近 ％@";
+"itinerary.timeline" = "时间线";
+"itinerary.appleIntelligence" = "苹果情报";
+"itinerary.aiUnavailable" = "人工智能不可用";
+"itinerary.loading" = "计划您的行程...";
+"itinerary.error.title" = "无法加载行程";
+"itinerary.error.retry" = "再试一次";
+"itinerary.stopsByArchitect" = "%d 经停 %@";
+
+// MARK: - Era Names (Itinerary Timeline)
+"era.medieval" = "中世纪";
+"era.renaissance" = "复兴";
+"era.baroque" = "巴洛克风格";
+"era.neoclassical" = "新古典主义";
+"era.victorian" = "维多利亚时代";
+"era.artDeco" = "装饰艺术";
+"era.modernist" = "现代主义";
+"era.postmodern" = "后现代";
+"era.contemporary" = "当代的";
+
+// MARK: - General
+"general.close" = "关闭";
+"general.done" = "完毕";
+"general.cancel" = "取消";
+"general.retry" = "再试一次";
+
+// MARK: - Building Detail
+"building.capturePhoto" = "拍摄你自己的照片";
+"building.historicalSignificance" = "历史意义";
+"building.buildingInfo" = "建筑信息";
+"building.technicalSpecs" = "技术规格";
+"building.localFlavors" = "当地风味";
+"building.nearby" = "附近";
+"building.location" = "地点";
+"building.built" = "建成";
+"building.height" = "高度";
+"building.stories" = "故事";
+"building.designedBy" = "由%@设计";
+"building.markVisited" = "标记为已访问";
+"building.visited" = "访问过";
+"building.deletePhoto.title" = "删除照片？";
+"building.deletePhoto.message" = "这将删除您的自定义照片并恢复默认图像。";
+"building.deletePhoto.confirm" = "删除";
+"building.map.errorTitle" = "地图查找";
+"building.map.errorMessage" = "无法解析该地址的精确坐标；相反，打开了地图搜索。";
+"building.map.ok" = "好的";
+
+// MARK: - Settings
+"settings.title" = "设置";
+"settings.experience" = "经验";
+"settings.resetProgress" = "重置进度";
+"settings.maintenance" = "维护";
+"settings.back" = "后退";
+"settings.selectSetting" = "选择一个设置";
+"settings.appExperience" = "应用体验";
+"settings.measurementUnits" = "测量单位";
+"settings.unitSystem" = "Unit System";
+"settings.meters" = "Meters";
+"settings.feet" = "Feet";
+"settings.soundEffects" = "Sound Effects";
+"settings.haptics" = "Haptics";
+"settings.highContrast" = "High Contrast";
+"settings.reduceMotion" = "Reduce Motion";
+"settings.offlineReady" = "离线就绪";
+"settings.offlineReady.body" = "完整的图书馆和行程可离线使用。";
+"settings.preview" = "预览";
+"settings.testMotion" = "测试运动";
+"settings.testSound" = "测试声音";
+"settings.resetAllContent" = "重置所有内容";
+"settings.version" = "版本 1.0（构建 2026）";
+"settings.reset.firstAlert.title" = "重置所有进度？";
+"settings.reset.firstAlert.message" = "擦除参观过的建筑物、护照印章和测验分数。";
+"settings.reset.firstAlert.continue" = "继续";
+"settings.reset.finalAlert.title" = "最后警告";
+"settings.reset.finalAlert.message" = "此操作无法撤消。";
+"settings.reset.finalAlert.confirm" = "删除所有内容";
+"settings.reset.finalAlert.cancel" = "等等，停下来！";
+
+// MARK: - Quiz
+"quiz.navigation.title" = "％@ 专家";
+"quiz.exit" = "出口";
+"quiz.fieldInquiry" = "实地询问";
+"quiz.fieldData" = "现场数据";
+"quiz.log" = "%d 的日志";
+"quiz.score" = "得分：%d";
+"quiz.identificationRequired" = "需要身份证明";
+"quiz.label.style" = "风格";
+"quiz.label.year" = "年";
+"quiz.label.stories" = "故事";
+"quiz.label.architect" = "建筑师";
+"quiz.classified" = "机密";
+"quiz.returnToCity" = "返回城市";
+"quiz.requestHint" = "请求提示";
+"quiz.concealHint" = "隐藏提示";
+"quiz.voiceAnswer" = "通过语音回答";
+"quiz.listening" = "正在听...";
+"quiz.voicePrompt" = "说出建筑风格或建筑师的名字......";
+"quiz.streakRow" = "连续%d";
+"quiz.floors" = "%d 层楼";
+"quiz.correct" = "正确的！";
+"quiz.incorrect" = "不正确。答案是%@。";
+
+// MARK: - Question Prompts
+"question.name" = "根据数据，这是哪个地标？";
+"question.style" = "这座建筑的建筑风格是什么？";
+"question.year" = "这个结构是哪一年竣工的？";
+"question.architect" = "这座建筑是由哪位建筑师或公司设计的？";
+"question.stories" = "这个结构有多少层楼高？";
+
+// MARK: - Quiz Hints
+"hint.name" = "该地标位于 %@ 的中心，是 %@ 设计的典范。";
+"hint.architect" = "这座建筑的建筑师也因其 %@s 期间的作品而闻名。";
+"hint.year.prewar" = "这是%@ 设计的一个大型战前项目。";
+"hint.year.modernist" = "这是%@ 设计的一个大型现代主义项目。";
+"hint.style" = "查看年份 %d；这种风格是那个时代的主导建筑运动。";
+"hint.stories" = "尽管有%@的外观，这座建筑对于%@s来说还是相当高的。";

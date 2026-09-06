@@ -23,6 +23,7 @@ struct CityDetailView: View {
     @State private var showingQuiz = false
     @State private var showingFinalConfirmation = false
     @State private var showingCelebration = false
+    @State private var showingMap = false
     @State private var resetType: CityDetailViewModel.ResetType = .none
     
     var isHighContrast: Bool { systemContrast == .increased || appHighContrast }
@@ -67,11 +68,39 @@ struct CityDetailView: View {
                 
                 Divider()
 
-                
                 LandmarkSection(viewModel: viewModel, isHighContrast: isHighContrast)
-                
+
                 Divider()
-                
+
+                BuildingTimelineSection(
+                    buildings: viewModel.city.buildings,
+                    visitedIDs: GlobalProgressManager.shared.visitedIDs,
+                    isHighContrast: isHighContrast
+                )
+
+                // Weather — hidden when failed/empty so we don't advertise broken state
+                let weather = WeatherManager.shared
+                if weather.isLoading || !weather.temperature.isEmpty {
+                    Divider()
+                    WeatherSection(weather: weather, isHighContrast: isHighContrast)
+                }
+
+                // Events — shown before Top Eats since Ticketmaster is more reliable
+                let events = TicketmasterService.shared
+                if events.isLoading || !events.events.isEmpty {
+                    Divider()
+                    EventsSection(service: events, isHighContrast: isHighContrast)
+                }
+
+                // Top Eats — hidden when failed so we don't show "Couldn't load"
+                let eats = FoursquareService.shared
+                if eats.isLoading || !eats.venues.isEmpty {
+                    Divider()
+                    TopEatsSection(service: eats, isHighContrast: isHighContrast)
+                }
+
+                Divider()
+
                 TravelInfoSection(viewModel: viewModel, isHighContrast: isHighContrast)
                 
             }
@@ -82,13 +111,47 @@ struct CityDetailView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar { toolbarContent }
         .background(isHighContrast ? Color(UIColor.systemBackground) : Color(UIColor.systemGroupedBackground))
-        .onChange(of: viewModel.isCompleted) { newValue, _ in
-            if newValue {
-                HapticManager.shared.trigger(.success)
-                SoundManager.shared.playStampSound()
-                viewModel.handleCompletion()
-                showingCelebration = true
+        .refreshable {
+            async let w: () = WeatherManager.shared.fetchWeather(
+                cityName: viewModel.city.name,
+                buildings: viewModel.city.buildings
+            )
+            async let e: () = TicketmasterService.shared.fetchEvents(
+                cityName: viewModel.city.name,
+                buildings: viewModel.city.buildings
+            )
+            async let f: () = FoursquareService.shared.fetchTopEats(
+                cityName: viewModel.city.name,
+                buildings: viewModel.city.buildings
+            )
+            _ = await (w, e, f)
+        }
+        .onAppear {
+            ProximityManager.shared.startMonitoring(
+                buildings: viewModel.city.buildings,
+                visitedIDs: GlobalProgressManager.shared.visitedIDs
+            )
+            Task {
+                await WeatherManager.shared.fetchWeather(
+                    cityName: viewModel.city.name,
+                    buildings: viewModel.city.buildings
+                )
             }
+            Task {
+                await FoursquareService.shared.fetchTopEats(
+                    cityName: viewModel.city.name,
+                    buildings: viewModel.city.buildings
+                )
+            }
+            Task {
+                await TicketmasterService.shared.fetchEvents(
+                    cityName: viewModel.city.name,
+                    buildings: viewModel.city.buildings
+                )
+            }
+        }
+        .onDisappear {
+            ProximityManager.shared.stopMonitoring()
         }
         .onReceive(viewModel.$didJustComplete) { justCompleted in
             if justCompleted {
@@ -110,6 +173,15 @@ struct CityDetailView: View {
                 QuizView(buildings: viewModel.city.buildings, cityName: viewModel.city.name)
             }
         }
+        .sheet(isPresented: $showingMap) {
+            NavigationStack {
+                CityMapView(
+                    buildings: viewModel.city.buildings,
+                    visitedIDs: GlobalProgressManager.shared.visitedIDs,
+                    cityName: viewModel.city.name
+                )
+            }
+        }
         .alert("Confirm Reset", isPresented: $showingFinalConfirmation) {
             Button("Yes, Reset", role: .destructive) { executeResetAction() }
             Button("Cancel", role: .cancel) { resetType = .none }
@@ -122,6 +194,19 @@ struct CityDetailView: View {
     @ToolbarContentBuilder
     private var toolbarContent: some ToolbarContent {
         
+        ToolbarItem(placement: .navigationBarTrailing) {
+            Button {
+                showingMap = true
+            } label: {
+                Image(systemName: "map")
+                    .font(.system(size: 20))
+                    .fontWeight(isHighContrast ? .black : .regular)
+                    .foregroundColor(brandColor)
+            }
+            .accessibilityLabel("View \(viewModel.city.name) map")
+            .accessibilityHint("Shows all landmarks on a map")
+        }
+
         ToolbarItem(placement: .navigationBarTrailing) {
             Menu {
                 Section("Reset Progress") {
@@ -137,6 +222,7 @@ struct CityDetailView: View {
                     .foregroundColor(brandColor)
                     .contentShape(Circle())
             }
+            .accessibilityLabel("More options")
         }
     }
     

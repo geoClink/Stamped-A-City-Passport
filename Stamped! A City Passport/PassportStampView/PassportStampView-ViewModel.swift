@@ -168,8 +168,8 @@ extension StampCelebrationView {
         UIAccessibility.post(notification: .screenChanged, argument: "Congratulations! You've explored \(cityName).")
         
         let delay = reduceMotion ? 0.2 : 1.0
-        withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
-            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
                 showButton = true
             }
         }

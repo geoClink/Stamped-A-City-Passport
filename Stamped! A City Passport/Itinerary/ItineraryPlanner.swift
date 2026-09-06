@@ -32,11 +32,17 @@ final class ItineraryPlanner {
     static func planCity(
         buildings: [Building],
         days: Int = 3,
+        visitedIDs: Set<String> = [],
         walkingSpeedMetersPerMin: Double = 80.0
     ) -> [[PlannedStop]] {
         guard !buildings.isEmpty else { return [] }
 
-        let balanced = balanceByType(buildings: buildings, days: days)
+        // Skip already-visited buildings so the itinerary stays fresh.
+        // If the user has visited everything, show all buildings anyway.
+        let unvisited = buildings.filter { !visitedIDs.contains($0.id) }
+        let activeBuildings = unvisited.isEmpty ? buildings : unvisited
+
+        let balanced = balanceByType(buildings: activeBuildings, days: days)
         var result: [[PlannedStop]] = []
 
         for (dayIndex, dayBuildings) in balanced.enumerated() {

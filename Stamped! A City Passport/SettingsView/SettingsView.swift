@@ -11,7 +11,7 @@ struct SettingsView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @Environment(\.colorScheme) var colorScheme
-    
+
     @State private var moveRight = false
     @State private var showingFirstAlert = false
     @State private var showingFinalAlert = false
@@ -35,14 +35,15 @@ struct SettingsView: View {
 
 // MARK: - Layouts
 private extension SettingsView {
-    
+
     var iphoneLayout: some View {
         NavigationStack {
             List {
                 experienceSection
+                feedbackSection
                 dangerZoneSection
             }
-            .navigationTitle("Settings")
+            .navigationTitle(L.Settings.title)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -59,20 +60,20 @@ private extension SettingsView {
     var ipadLayout: some View {
         NavigationSplitView {
             List(selection: $selectedTab) {
-                Section("Settings") {
-                    Label("Experience", systemImage: "hand.tap").tag(SettingsTab.experience)
+                Section(L.Settings.title) {
+                    Label(L.Settings.experience, systemImage: "hand.tap").tag(SettingsTab.experience)
                 }
-                
-                Section("Maintenance") {
-                    Label("Reset Progress", systemImage: "trash")
+
+                Section(L.Settings.maintenance) {
+                    Label(L.Settings.resetProgress, systemImage: "trash")
                         .foregroundColor(viewModel.highContrast ? .primary : .red)
                         .tag(SettingsTab.danger)
                 }
             }
-            .navigationTitle("Settings")
+            .navigationTitle(L.Settings.title)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Back") { dismiss() }
+                    Button(L.Settings.back) { dismiss() }
                         .fontWeight(viewModel.highContrast ? .black : .bold)
                         .foregroundColor(viewModel.highContrast ? .primary : .accentColor)
                 }
@@ -88,37 +89,37 @@ private extension SettingsView {
             switch selectedTab {
             case .experience: experienceSection
             case .danger: dangerZoneSection
-            case .none: Text("Select a setting").foregroundColor(.secondary)
+            case .none: Text(L.Settings.selectSetting).foregroundColor(.secondary)
             }
         }
-        .navigationTitle(selectedTab == .danger ? "Reset Progress" : "Experience")
+        .navigationTitle(selectedTab == .danger ? L.Settings.resetProgress : L.Settings.experience)
     }
 }
 
 // MARK: - Sub-Sections
 private extension SettingsView {
-    
+
     var experienceSection: some View {
-        Section(header: Text("App Experience").fontWeight(viewModel.highContrast ? .bold : .regular)) {
-            
+        Section(header: Text(L.Settings.appExperience).fontWeight(viewModel.highContrast ? .bold : .regular)) {
+
             VStack(alignment: .leading, spacing: 8) {
-                Label("Measurement Units", systemImage: "ruler")
+                Label(L.Settings.measurementUnits, systemImage: "ruler")
                     .font(.subheadline)
                     .fontWeight(viewModel.highContrast ? .bold : .medium)
-                
-                Picker("Unit System", selection: $viewModel.useMetric) {
-                    Text("Meters").tag(true)
-                    Text("Feet").tag(false)
+
+                Picker(L.Settings.unitSystem, selection: $viewModel.useMetric) {
+                    Text(L.Settings.meters).tag(true)
+                    Text(L.Settings.feet).tag(false)
                 }
                 .pickerStyle(.segmented)
             }
             .padding(.vertical, 8)
 
             Group {
-                SettingsToggleRow(title: "Sound Effects", icon: "speaker.wave.2.fill", isOn: $viewModel.isSoundEnabled, isHighContrast: viewModel.highContrast)
-                SettingsToggleRow(title: "Haptics", icon: "iphone.radiowaves.left.and.right", isOn: $viewModel.hapticsEnabled, isHighContrast: viewModel.highContrast)
-                SettingsToggleRow(title: "High Contrast", icon: "circle.lefthalf.filled", isOn: $viewModel.highContrast, isHighContrast: viewModel.highContrast)
-                SettingsToggleRow(title: "Reduce Motion", icon: "slowmo", isOn: $viewModel.reduceMotion, isHighContrast: viewModel.highContrast)
+                SettingsToggleRow(title: L.Settings.soundEffects, icon: "speaker.wave.2.fill", isOn: $viewModel.isSoundEnabled, isHighContrast: viewModel.highContrast)
+                SettingsToggleRow(title: L.Settings.haptics, icon: "iphone.radiowaves.left.and.right", isOn: $viewModel.hapticsEnabled, isHighContrast: viewModel.highContrast)
+                SettingsToggleRow(title: L.Settings.highContrast, icon: "circle.lefthalf.filled", isOn: $viewModel.highContrast, isHighContrast: viewModel.highContrast)
+                SettingsToggleRow(title: L.Settings.reduceMotion, icon: "slowmo", isOn: $viewModel.reduceMotion, isHighContrast: viewModel.highContrast)
             }
 
             HStack(spacing: 15) {
@@ -126,11 +127,11 @@ private extension SettingsView {
                     .font(.title2)
                     .foregroundColor(viewModel.highContrast ? .primary : .green)
                     .frame(width: 30)
-                
+
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("Offline Ready")
+                    Text(L.Settings.offlineReady)
                         .font(.subheadline.bold())
-                    Text("Full Library & Itineraries available offline.")
+                    Text(L.Settings.offlineReadyBody)
                         .font(.caption)
                         .foregroundColor(.secondary)
                 }
@@ -139,31 +140,31 @@ private extension SettingsView {
 
             VStack(spacing: 16) {
                 VStack(alignment: .leading, spacing: 12) {
-                    Text("PREVIEW")
+                    Text(L.Settings.preview)
                         .font(.system(size: 10, weight: .black))
                         .foregroundColor(viewModel.highContrast ? .primary : .secondary)
-                    
+
                     ZStack(alignment: moveRight ? .trailing : .leading) {
                         Capsule()
                             .fill(viewModel.highContrast ? Color.primary.opacity(0.15) : Color.primary.opacity(0.05))
                             .frame(height: 36)
                             .overlay(Capsule().stroke(viewModel.highContrast ? Color.primary : Color.clear, lineWidth: 2))
-                        
+
                         Image(systemName: "airplane")
                             .foregroundColor(viewModel.highContrast ? .primary : .blue)
                             .padding(.horizontal, 12)
                     }
                 }
-                
+
                 HStack(spacing: 12) {
-                    Button("Test Motion") {
+                    Button(L.Settings.testMotion) {
                         withAnimation(viewModel.reduceMotion ? .none : .spring(response: 0.4, dampingFraction: 0.6)) {
                             moveRight.toggle()
                         }
                     }
                     .buttonStyle(PreviewButtonStyle(isHighContrast: viewModel.highContrast, color: .blue))
-                    
-                    Button("Test Sound") {
+
+                    Button(L.Settings.testSound) {
                         viewModel.playSoundPreview()
                     }
                     .buttonStyle(PreviewButtonStyle(isHighContrast: viewModel.highContrast, color: viewModel.brandColor))
@@ -174,18 +175,88 @@ private extension SettingsView {
         .tint(viewModel.highContrast ? .primary : viewModel.brandColor)
     }
 
+    var feedbackSection: some View {
+        Section(header: Text("Feedback & Support").fontWeight(viewModel.highContrast ? .bold : .regular)) {
+            feedbackLink(
+                title: "Report Incorrect Info",
+                subtitle: "Wrong building details, photos, or descriptions",
+                icon: "exclamationmark.bubble.fill",
+                iconColor: .orange,
+                subject: "Content Issue Report",
+                body: "Building name:\nCity:\nWhat's wrong:\n"
+            )
+            feedbackLink(
+                title: "Suggest a Building",
+                subtitle: "Know a landmark we're missing?",
+                icon: "plus.bubble.fill",
+                iconColor: .blue,
+                subject: "Building Suggestion",
+                body: "City:\nBuilding name:\nAddress:\nWhy it should be included:\n"
+            )
+            feedbackLink(
+                title: "General Feedback",
+                subtitle: "Ideas, bugs, or anything else",
+                icon: "envelope.fill",
+                iconColor: .green,
+                subject: "Stamped App Feedback",
+                body: ""
+            )
+        }
+    }
+
+    private func feedbackLink(title: String, subtitle: String, icon: String, iconColor: Color, subject: String, body: String) -> some View {
+        // Replace georgeclinkscalesdev@proton.me with your support email address
+        let email = "georgeclinkscalesdev@proton.me"
+        let encodedSubject = subject.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        let encodedBody = body.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        let urlString = "mailto:\(email)?subject=\(encodedSubject)&body=\(encodedBody)"
+
+        return Group {
+            if let url = URL(string: urlString) {
+                Link(destination: url) {
+                    feedbackRow(title: title, subtitle: subtitle, icon: icon, iconColor: iconColor)
+                }
+                .foregroundColor(.primary)
+            } else {
+                feedbackRow(title: title, subtitle: subtitle, icon: icon, iconColor: iconColor)
+            }
+        }
+    }
+
+    private func feedbackRow(title: String, subtitle: String, icon: String, iconColor: Color) -> some View {
+        HStack(spacing: 14) {
+            Image(systemName: icon)
+                .font(.title3)
+                .foregroundColor(viewModel.highContrast ? .primary : iconColor)
+                .frame(width: 28)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title)
+                    .font(.subheadline)
+                    .fontWeight(viewModel.highContrast ? .bold : .medium)
+                Text(subtitle)
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            }
+            Spacer()
+            Image(systemName: "chevron.right")
+                .font(.caption)
+                .foregroundColor(.secondary)
+        }
+        .padding(.vertical, 6)
+    }
+
     var dangerZoneSection: some View {
         Section {
             Button(role: .destructive) {
                 showingFirstAlert = true
             } label: {
-                Text("Reset All Content")
+                Text(L.Settings.resetAllContent)
                     .fontWeight(viewModel.highContrast ? .black : .bold)
                     .foregroundColor(viewModel.highContrast ? .primary : .red)
                     .frame(maxWidth: .infinity)
             }
         } footer: {
-            Text("Version 1.0 (Build 2026)")
+            Text(L.Settings.version)
                 .font(.caption2)
                 .foregroundColor(viewModel.highContrast ? .primary : .secondary)
         }
@@ -218,7 +289,7 @@ struct PreviewButtonStyle: ButtonStyle {
 
     func makeBody(configuration: Configuration) -> some View {
         let isDark = colorScheme == .dark
-        
+
         configuration.label
             .font(.caption.bold())
             .fontWeight(isHighContrast ? .black : .bold)
@@ -239,19 +310,19 @@ struct PreviewButtonStyle: ButtonStyle {
 extension View {
     func alertFlow(isFirstPresented: Binding<Bool>, isFinalPresented: Binding<Bool>, viewModel: SettingsViewModel) -> some View {
         self
-            .alert("Reset All Progress?", isPresented: isFirstPresented) {
-                Button("Cancel", role: .cancel) { }
-                Button("Continue") { isFinalPresented.wrappedValue = true }
+            .alert(L.Settings.resetFirstTitle, isPresented: isFirstPresented) {
+                Button(L.CityDetail.cancel, role: .cancel) { }
+                Button(L.Settings.resetFirstContinue) { isFinalPresented.wrappedValue = true }
             } message: {
-                Text("Wipe visited buildings, passport stamps, and quiz scores.")
+                Text(L.Settings.resetFirstMessage)
             }
-            .alert("Final Warning", isPresented: isFinalPresented) {
-                Button("Delete Everything", role: .destructive) {
+            .alert(L.Settings.resetFinalTitle, isPresented: isFinalPresented) {
+                Button(L.Settings.resetFinalConfirm, role: .destructive) {
                     viewModel.resetAllContent()
                 }
-                Button("Wait, Stop!", role: .cancel) { }
+                Button(L.Settings.resetFinalCancel, role: .cancel) { }
             } message: {
-                Text("This action cannot be undone.")
+                Text(L.Settings.resetFinalMessage)
             }
     }
 }

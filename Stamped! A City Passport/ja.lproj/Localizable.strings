@@ -1,0 +1,295 @@
+/* ============================================================
+   Stamped! A City Passport — Localizable.strings (English)
+   ============================================================ */
+
+// MARK: - Onboarding
+"onboarding.step1.title" = "世界を探検してみよう";
+"onboarding.step1.description" = "建築の首都を旅して、隠された歴史を明らかにしましょう。";
+"onboarding.step2.title" = "進捗状況を追跡する";
+"onboarding.step2.description" = "訪れたすべてのランドマークを記録して、旅行のプロフィールを作成します。";
+"onboarding.step3.title" = "報酬を受け取りましょう";
+"onboarding.step3.description" = "個人のパスポート用の限定デジタル スタンプをアンロックしましょう。";
+"onboarding.step4.title" = "あなたの熟練度を証明してください";
+"onboarding.step4.description" = "都市固有の課題を完了して建築の専門家になりましょう。";
+"onboarding.step5.title" = "インテリジェンスを活用してキュレートする";
+"onboarding.step5.description" = "Apple Intelligence に次の冒険のための完璧なルートをデザインしてもらいましょう。";
+"onboarding.button.skip" = "スキップ";
+"onboarding.button.next" = "次";
+"onboarding.button.getStarted" = "始めましょう";
+"onboarding.accessibility.skip.label" = "はじめにをスキップ";
+"onboarding.accessibility.skip.hint" = "アプリのメイン画面に直接移動します";
+
+// MARK: - City List
+"cityList.search.prompt" = "都市、ランドマーク、または建築物";
+"cityList.passport.button" = "パスポート";
+"cityList.welcome.title" = "探索する準備はできましたか?";
+"cityList.welcome.body" = "サイドバーから目的地を選択して建築の旅を開始し、最初のスタンプを獲得してください。";
+"cityList.welcome.ipad.hint" = "サイドバーが非表示の場合は左からスワイプします";
+
+// MARK: - Continent Names
+"continent.africa" = "アフリカ";
+"continent.asia" = "アジア";
+"continent.europe" = "ヨーロッパ";
+"continent.northAmerica" = "北米";
+"continent.southAmerica" = "南アメリカ";
+"continent.oceania" = "オセアニア";
+
+// MARK: - City Detail
+"cityDetail.explored" = "%d%% を探索しました";
+"cityDetail.explorationProgress" = "探査の進捗状況";
+"cityDetail.masteryLevel" = "マスタリーレベル: %@";
+"cityDetail.toolbar.resetProgress" = "進行状況をリセットする";
+"cityDetail.toolbar.resetQuiz" = "クイズのスコアをリセット";
+"cityDetail.toolbar.resetStamps" = "スタンプをリセットする";
+"cityDetail.toolbar.resetPhotos" = "写真をリセット";
+"cityDetail.toolbar.resetEverything" = "すべてをリセット";
+"cityDetail.alert.confirmReset" = "リセットの確認";
+"cityDetail.alert.yesReset" = "はい、リセットします";
+"cityDetail.alert.cancel" = "キャンセル";
+
+// MARK: - Mastery Tiers
+"mastery.tourist" = "観光客";
+"mastery.explorer" = "エクスプローラ";
+"mastery.urbanInsider" = "アーバンインサイダー";
+"mastery.localLegend" = "地元の伝説";
+"mastery.masterCollector" = "マスターコレクター";
+
+// MARK: - Discovery Ranks (Passport)
+"rank.tourist" = "観光客";
+"rank.urbanExplorer" = "アーバンエクスプローラー";
+"rank.architectureCritic" = "建築評論家";
+"rank.cityHistorian" = "都市史家";
+"rank.grandMaster" = "グランドマスター";
+
+// MARK: - Landmarks
+"landmarks.header" = "ランドマーク";
+"landmarks.accessibility.sectionLabel" = "%@ のランドマーク";
+"landmarks.row.visited" = "訪問しました、%@";
+"landmarks.row.notVisited" = "未訪問です、%@";
+"landmarks.row.architect" = "建築家： ％@";
+"landmarks.row.hint" = "ダブルタップして建物の詳細と履歴を表示します。";
+
+// MARK: - Quiz
+"quiz.title" = "建築クイズ";
+"quiz.improveScore" = "スコアを向上させる";
+"quiz.mastered" = "シティマスタード";
+"quiz.subtitle.start" = "知識をテストしてください。";
+"quiz.subtitle.improve" = "10/10を獲得できますか？";
+"quiz.subtitle.mastered" = "満点！あなたは専門家です。";
+"quiz.accessibility.label" = "%@。 %@。高スコアは 10 点中 %d です。";
+"quiz.accessibility.hint" = "ダブルタップしてクイズを開始します。";
+
+// MARK: - Travel Info
+"travel.header" = "旅行関係書類";
+"travel.language" = "言語";
+"travel.airport" = "空港";
+"travel.transportation" = "交通機関";
+"travel.currency" = "通貨";
+"travel.localTransit" = "地元の交通機関";
+"travel.cityTransit" = "市内交通機関";
+"travel.mainAirport" = "主要空港";
+"travel.greeting" = "挨拶: %@";
+"travel.home" = "家";
+"travel.local" = "地元";
+
+// MARK: - Currency Converter
+"currency.home.label" = "家 （％@）";
+"currency.local.label" = "地元 （％@）";
+"currency.swap.homeToLocal" = "ホーム → ローカル";
+"currency.swap.localToHome" = "ローカル→ホーム";
+"currency.disclaimer" = "料金は概算です。旅行前に必ず確認してください。";
+"currency.status.live" = "ライブ料金";
+"currency.status.cached" = "キャッシュされたレート";
+"currency.status.offline" = "オフライン料金";
+"currency.refresh.label" = "リフレッシュレート";
+"currency.refresh.hint" = "最新の為替レートを取得します";
+"currency.accessibility.statusIcon" = "為替レートの状況";
+"currency.modal.title" = "料金情報";
+"currency.modal.provider" = "プロバイダー";
+"currency.modal.lastUpdated" = "最終更新日";
+"currency.modal.never" = "一度もない";
+"currency.modal.close" = "近い";
+"currency.modal.header" = "為替レートの詳細";
+"currency.modal.explain.live" = "インターネットから取得したライブレートを使用します。";
+"currency.modal.explain.cached" = "最近キャッシュされたレートを使用します。インターネットに接続して更新してください。";
+"currency.modal.explain.offline" = "インターネット接続がありません。組み込みのオフライン料金を使用します。";
+"checking.rates" = "料金を確認中...";
+"mode.live" = "ライブ";
+"mode.cached" = "キャッシュされた";
+"mode.offline" = "オフライン";
+"rates.updated" = "料金が更新されました %@ (%@)";
+"rates.disclaimer" = "料金は参考値であり、異なる場合があります。正確な金額についてはプロバイダーに確認してください。";
+"modal.header" = "通貨レート";
+"modal.title" = "レートソース";
+"modal.provider" = "プロバイダー";
+"modal.last_updated" = "最終更新日";
+"modal.explain_live" = "ライブレートはプロバイダーから取得され、現在の市場レートを反映しています。";
+"modal.explain_cached" = "キャッシュされたレートは、以前に成功したフェッチからのものであり、若干古い場合があります。";
+"modal.explain_offline" = "ネットワーク アクセスが利用できない場合は、オフライン フォールバック レートが使用されます。これらは参考用です。";
+"modal.close" = "終わり";
+"modal.never" = "一度もない";
+"status.icon.accessibility" = "通貨レートのステータス、タップして詳細を表示";
+"refresh.rates.accessibility" = "通貨レートを更新する";
+"refresh.rates.hint" = "Fetch latest exchange rates";
+
+// MARK: - Passport Gallery
+"passport.title" = "あなたのパスポート";
+"passport.countries" = "国";
+"passport.done" = "Done";
+"passport.close" = "Close";
+"passport.journeyLog" = "JOURNEY LOG";
+"passport.explorationProgress" = "探査の進捗状況";
+"passport.citiesStamped" = "%d 都市がスタンプされました";
+"passport.selectCountry" = "スタンプを表示する国を選択してください";
+"passport.stats" = "統計";
+
+// MARK: - Passport Stamp
+"stamp.passportStamped" = "パスポートにスタンプが押されています";
+"stamp.completed" = "完了: %@";
+"stamp.didYouKnow" = "知っていましたか？";
+"stamp.accessibility.label" = "%@ の公式パスポートスタンプ";
+"stamp.accessibility.value" = "%@ に完了しました。知っていましたか？ %@";
+
+// MARK: - Stamp Celebration
+"celebration.cityExplored" = "街を探検しました！";
+"celebration.addToPassport" = "パスポートに追加";
+"celebration.accessibility" = "おめでとう！ %@ を探索しました。";
+
+// MARK: - Passport View
+"passportView.officialStatus" = "公式旅行者ステータス";
+"passportView.complete" = "完了";
+"passportView.landmarksDiscovered" = "%d/%d 個のランドマークが検出されました";
+"passportView.collected" = "%d / %d 個を収集しました";
+"passportView.beginJourney" = "旅を始めましょう";
+"passportView.beginJourney.body" = "シティガイドに掲載されている建物を巡り、公式スタンプを集めましょう。";
+"passportView.verifiedOn" = "%@ で確認済み";
+"passportView.shareAchievement" = "実績を共有する";
+"passportView.dismiss" = "却下する";
+"passportView.shareText" = "%@ 建築スタンプのロックを解除しました! 🏛️";
+"passportView.masterOf" = "%@ アーキテクチャのマスター";
+
+// MARK: - Itinerary
+"itinerary.header" = "建築の旅程";
+"itinerary.day" = "%d 日";
+"itinerary.stops" = "%d か所が停止します";
+"itinerary.totalTime" = "%dh %dm 合計";
+"itinerary.walk" = "徒歩 %d 分";
+"itinerary.transit" = "%d 分 · 交通機関の利用を推奨";
+"itinerary.startsAt" = "午前9時開始";
+"itinerary.lunchStop" = "ランチストップ";
+"itinerary.nearBuilding" = "近く ％@";
+"itinerary.timeline" = "タイムライン";
+"itinerary.appleIntelligence" = "アップルインテリジェンス";
+"itinerary.aiUnavailable" = "AIは利用不可";
+"itinerary.loading" = "旅程を計画中...";
+"itinerary.error.title" = "旅程を読み込めませんでした";
+"itinerary.error.retry" = "もう一度やり直してください";
+"itinerary.stopsByArchitect" = "%d は %@ で停止します";
+
+// MARK: - Era Names (Itinerary Timeline)
+"era.medieval" = "中世";
+"era.renaissance" = "ルネッサンス";
+"era.baroque" = "バロック";
+"era.neoclassical" = "新古典派";
+"era.victorian" = "ビクトリア朝";
+"era.artDeco" = "アールデコ調";
+"era.modernist" = "モダニスト";
+"era.postmodern" = "ポストモダン";
+"era.contemporary" = "コンテンポラリー";
+
+// MARK: - General
+"general.close" = "近い";
+"general.done" = "終わり";
+"general.cancel" = "キャンセル";
+"general.retry" = "もう一度やり直してください";
+
+// MARK: - Building Detail
+"building.capturePhoto" = "自分の写真を撮影する";
+"building.historicalSignificance" = "歴史的意義";
+"building.buildingInfo" = "建物情報";
+"building.technicalSpecs" = "技術仕様";
+"building.localFlavors" = "地元の味";
+"building.nearby" = "近く";
+"building.location" = "位置";
+"building.built" = "建てられた";
+"building.height" = "身長";
+"building.stories" = "ストーリー";
+"building.designedBy" = "%@ によって設計されました";
+"building.markVisited" = "訪問済みとしてマークする";
+"building.visited" = "訪問しました";
+"building.deletePhoto.title" = "写真を削除しますか?";
+"building.deletePhoto.message" = "これにより、カスタム写真が削除され、デフォルトの画像が復元されます。";
+"building.deletePhoto.confirm" = "消去";
+"building.map.errorTitle" = "地図検索";
+"building.map.errorMessage" = "この住所の正確な座標を解決できません。代わりにマップ検索を開いてください。";
+"building.map.ok" = "わかりました";
+
+// MARK: - Settings
+"settings.title" = "設定";
+"settings.experience" = "経験";
+"settings.resetProgress" = "進行状況をリセットする";
+"settings.maintenance" = "メンテナンス";
+"settings.back" = "戻る";
+"settings.selectSetting" = "設定を選択してください";
+"settings.appExperience" = "アプリのエクスペリエンス";
+"settings.measurementUnits" = "測定単位";
+"settings.unitSystem" = "単位系";
+"settings.meters" = "メートル";
+"settings.feet" = "足";
+"settings.soundEffects" = "効果音";
+"settings.haptics" = "ハプティクス";
+"settings.highContrast" = "ハイコントラスト";
+"settings.reduceMotion" = "動きを減らす";
+"settings.offlineReady" = "オフライン対応";
+"settings.offlineReady.body" = "完全なライブラリと旅程をオフラインで利用できます。";
+"settings.preview" = "プレビュー";
+"settings.testMotion" = "テストモーション";
+"settings.testSound" = "テストサウンド";
+"settings.resetAllContent" = "すべてのコンテンツをリセット";
+"settings.version" = "バージョン 1.0 (ビルド 2026)";
+"settings.reset.firstAlert.title" = "すべての進行状況をリセットしますか?";
+"settings.reset.firstAlert.message" = "訪問した建物、パスポートのスタンプ、クイズの得点を消去します。";
+"settings.reset.firstAlert.continue" = "続く";
+"settings.reset.finalAlert.title" = "最終警告";
+"settings.reset.finalAlert.message" = "この操作は元に戻すことができません。";
+"settings.reset.finalAlert.confirm" = "すべて削除";
+"settings.reset.finalAlert.cancel" = "待って、やめて！";
+
+// MARK: - Quiz
+"quiz.navigation.title" = "％@ 専門家";
+"quiz.exit" = "出口";
+"quiz.fieldInquiry" = "現地調査";
+"quiz.fieldData" = "フィールドデータ";
+"quiz.log" = "ログ %d OF %d";
+"quiz.score" = "スコア: %d";
+"quiz.identificationRequired" = "身分証明書が必要です";
+"quiz.label.style" = "スタイル";
+"quiz.label.year" = "年";
+"quiz.label.stories" = "ストーリー";
+"quiz.label.architect" = "建築家";
+"quiz.classified" = "機密扱い";
+"quiz.returnToCity" = "街に戻る";
+"quiz.requestHint" = "リクエストのヒント";
+"quiz.concealHint" = "ヒントを隠す";
+"quiz.voiceAnswer" = "音声で答える";
+"quiz.listening" = "リスニング...";
+"quiz.voicePrompt" = "建築様式または建築家の名前を話してください...";
+"quiz.streakRow" = "%d 個が連続しています";
+"quiz.floors" = "%d 階";
+"quiz.correct" = "正しい！";
+"quiz.incorrect" = "正しくない。答えは %@ でした。";
+
+// MARK: - Question Prompts
+"question.name" = "データに基づくと、これはどのランドマークですか?";
+"question.style" = "この建物の建築様式は何ですか?";
+"question.year" = "この建物は何年に完成しましたか?";
+"question.architect" = "この建物を設計したのはどの建築家または会社ですか?";
+"question.stories" = "この建物は何階建てですか?";
+
+// MARK: - Quiz Hints
+"hint.name" = "このランドマークは %@ の中心部に位置し、%@ デザインの代表的な例です。";
+"hint.architect" = "この建物の建築家は、%@s 中の仕事でも有名です。";
+"hint.year.prewar" = "これは %@ によって設計された戦前の主要なプロジェクトでした。";
+"hint.year.modernist" = "これは %@ によって設計された主要なモダニズム プロジェクトでした。";
+"hint.style" = "%d 年を見てください。このスタイルは、その時代の支配的な建築運動でした。";
+"hint.stories" = "%@ の外観にもかかわらず、この建物は %@s にとっては非常に高かったです。";

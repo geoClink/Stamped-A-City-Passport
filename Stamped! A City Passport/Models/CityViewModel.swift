@@ -42,12 +42,8 @@ class CityViewModel: ObservableObject {
     }
     
     func isCityCompleted(_ city: CityLocation.City) -> Bool {
-        let legacyComplete = UserDefaults.standard.bool(forKey: "completed_\(city.name)")
-        
         let visitedCount = city.buildings.filter { progressManager.isVisited($0.id) }.count
-        let isFullyVisited = visitedCount == city.buildings.count && !city.buildings.isEmpty
-        
-        return legacyComplete || isFullyVisited
+        return visitedCount == city.buildings.count && !city.buildings.isEmpty
     }
     
     // MARK: - Mastery Stats for Sidebar

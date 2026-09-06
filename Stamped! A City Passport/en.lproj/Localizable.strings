@@ -1,0 +1,295 @@
+/* ============================================================
+   Stamped! A City Passport — Localizable.strings (English)
+   ============================================================ */
+
+// MARK: - Onboarding
+"onboarding.step1.title" = "Explore the World";
+"onboarding.step1.description" = "Journey through architectural capitals to uncover hidden history.";
+"onboarding.step2.title" = "Track Your Progress";
+"onboarding.step2.description" = "Build your travel profile by documenting every landmark you visit.";
+"onboarding.step3.title" = "Claim Your Reward";
+"onboarding.step3.description" = "Unlock exclusive digital stamps for your personal Passport.";
+"onboarding.step4.title" = "Prove Your Mastery";
+"onboarding.step4.description" = "Become an architectural expert by completing city-specific challenges.";
+"onboarding.step5.title" = "Curate with Intelligence";
+"onboarding.step5.description" = "Let Apple Intelligence design the perfect route for your next adventure.";
+"onboarding.button.skip" = "Skip";
+"onboarding.button.next" = "Next";
+"onboarding.button.getStarted" = "Get Started";
+"onboarding.accessibility.skip.label" = "Skip introduction";
+"onboarding.accessibility.skip.hint" = "Goes directly to the main app screen";
+
+// MARK: - City List
+"cityList.search.prompt" = "Cities, Landmarks or Architects";
+"cityList.passport.button" = "Passport";
+"cityList.welcome.title" = "Ready to Explore?";
+"cityList.welcome.body" = "Select a destination from the sidebar to begin your architectural journey and earn your first stamp.";
+"cityList.welcome.ipad.hint" = "Swipe from the left if the sidebar is hidden";
+
+// MARK: - Continent Names
+"continent.africa" = "Africa";
+"continent.asia" = "Asia";
+"continent.europe" = "Europe";
+"continent.northAmerica" = "North America";
+"continent.southAmerica" = "South America";
+"continent.oceania" = "Oceania";
+
+// MARK: - City Detail
+"cityDetail.explored" = "%d%% Explored";
+"cityDetail.explorationProgress" = "Exploration Progress";
+"cityDetail.masteryLevel" = "Mastery level: %@";
+"cityDetail.toolbar.resetProgress" = "Reset Progress";
+"cityDetail.toolbar.resetQuiz" = "Reset Quiz Score";
+"cityDetail.toolbar.resetStamps" = "Reset Stamps";
+"cityDetail.toolbar.resetPhotos" = "Reset Photos";
+"cityDetail.toolbar.resetEverything" = "Reset Everything";
+"cityDetail.alert.confirmReset" = "Confirm Reset";
+"cityDetail.alert.yesReset" = "Yes, Reset";
+"cityDetail.alert.cancel" = "Cancel";
+
+// MARK: - Mastery Tiers
+"mastery.tourist" = "Tourist";
+"mastery.explorer" = "Explorer";
+"mastery.urbanInsider" = "Urban Insider";
+"mastery.localLegend" = "Local Legend";
+"mastery.masterCollector" = "Master Collector";
+
+// MARK: - Discovery Ranks (Passport)
+"rank.tourist" = "Tourist";
+"rank.urbanExplorer" = "Urban Explorer";
+"rank.architectureCritic" = "Architecture Critic";
+"rank.cityHistorian" = "City Historian";
+"rank.grandMaster" = "Grand Master";
+
+// MARK: - Landmarks
+"landmarks.header" = "LANDMARKS";
+"landmarks.accessibility.sectionLabel" = "Landmarks in %@";
+"landmarks.row.visited" = "Visited, %@";
+"landmarks.row.notVisited" = "Not visited, %@";
+"landmarks.row.architect" = "Architect: %@";
+"landmarks.row.hint" = "Double tap to view building details and history.";
+
+// MARK: - Quiz
+"quiz.title" = "Architecture Quiz";
+"quiz.improveScore" = "Improve Your Score";
+"quiz.mastered" = "City Mastered";
+"quiz.subtitle.start" = "Test your knowledge.";
+"quiz.subtitle.improve" = "Can you get 10/10?";
+"quiz.subtitle.mastered" = "Perfect score! You're an expert.";
+"quiz.accessibility.label" = "%@. %@. High score %d out of 10.";
+"quiz.accessibility.hint" = "Double tap to start the quiz.";
+
+// MARK: - Travel Info
+"travel.header" = "TRAVEL DOSSIER";
+"travel.language" = "Language";
+"travel.airport" = "Airport";
+"travel.transportation" = "Transportation";
+"travel.currency" = "Currency";
+"travel.localTransit" = "Local Transit";
+"travel.cityTransit" = "City Transit";
+"travel.mainAirport" = "Main Airport";
+"travel.greeting" = "Greeting: %@";
+"travel.home" = "Home";
+"travel.local" = "Local";
+
+// MARK: - Currency Converter
+"currency.home.label" = "Home (%@)";
+"currency.local.label" = "Local (%@)";
+"currency.swap.homeToLocal" = "Home → Local";
+"currency.swap.localToHome" = "Local → Home";
+"currency.disclaimer" = "Rates are approximate. Always verify before travelling.";
+"currency.status.live" = "Live rates";
+"currency.status.cached" = "Cached rates";
+"currency.status.offline" = "Offline rates";
+"currency.refresh.label" = "Refresh rates";
+"currency.refresh.hint" = "Fetches the latest exchange rates";
+"currency.accessibility.statusIcon" = "Currency rate status";
+"currency.modal.title" = "Rate Information";
+"currency.modal.provider" = "Provider";
+"currency.modal.lastUpdated" = "Last updated";
+"currency.modal.never" = "Never";
+"currency.modal.close" = "Close";
+"currency.modal.header" = "Exchange Rate Details";
+"currency.modal.explain.live" = "Using live rates fetched from the internet.";
+"currency.modal.explain.cached" = "Using recently cached rates. Connect to the internet to refresh.";
+"currency.modal.explain.offline" = "No internet connection. Using built-in offline rates.";
+"checking.rates" = "Checking rates...";
+"mode.live" = "Live";
+"mode.cached" = "Cached";
+"mode.offline" = "Offline";
+"rates.updated" = "Rates updated %@ (%@)";
+"rates.disclaimer" = "Rates are for reference only and may vary; verify with your provider for exact amounts.";
+"modal.header" = "Currency Rates";
+"modal.title" = "Rate Source";
+"modal.provider" = "Provider";
+"modal.last_updated" = "Last updated";
+"modal.explain_live" = "Live rates were fetched from the provider and reflect current market rates.";
+"modal.explain_cached" = "Cached rates are from a previously successful fetch and may be slightly out of date.";
+"modal.explain_offline" = "Offline fallback rates are used when network access is unavailable; these are for reference only.";
+"modal.close" = "Done";
+"modal.never" = "Never";
+"status.icon.accessibility" = "Currency rates status, tap for details";
+"refresh.rates.accessibility" = "Refresh currency rates";
+"refresh.rates.hint" = "Fetch latest exchange rates";
+
+// MARK: - Passport Gallery
+"passport.title" = "Your Passport";
+"passport.countries" = "Countries";
+"passport.done" = "Done";
+"passport.close" = "Close";
+"passport.journeyLog" = "JOURNEY LOG";
+"passport.explorationProgress" = "EXPLORATION PROGRESS";
+"passport.citiesStamped" = "%d Cities Stamped";
+"passport.selectCountry" = "Select a country to view your stamps";
+"passport.stats" = "Stats";
+
+// MARK: - Passport Stamp
+"stamp.passportStamped" = "PASSPORT STAMPED";
+"stamp.completed" = "COMPLETED: %@";
+"stamp.didYouKnow" = "DID YOU KNOW?";
+"stamp.accessibility.label" = "Official Passport Stamp for %@";
+"stamp.accessibility.value" = "Completed on %@. Did you know? %@";
+
+// MARK: - Stamp Celebration
+"celebration.cityExplored" = "City Explored!";
+"celebration.addToPassport" = "Add to Passport";
+"celebration.accessibility" = "Congratulations! You've explored %@.";
+
+// MARK: - Passport View
+"passportView.officialStatus" = "Official Traveler Status";
+"passportView.complete" = "COMPLETE";
+"passportView.landmarksDiscovered" = "%d of %d Landmarks Discovered";
+"passportView.collected" = "%d / %d Collected";
+"passportView.beginJourney" = "Begin Your Journey";
+"passportView.beginJourney.body" = "Visit buildings in the city guide to start collecting official stamps.";
+"passportView.verifiedOn" = "VERIFIED ON %@";
+"passportView.shareAchievement" = "Share Achievement";
+"passportView.dismiss" = "Dismiss";
+"passportView.shareText" = "I just unlocked the %@ Architecture Stamp! 🏛️";
+"passportView.masterOf" = "Master of %@ Architecture";
+
+// MARK: - Itinerary
+"itinerary.header" = "ARCHITECTURAL ITINERARY";
+"itinerary.day" = "Day %d";
+"itinerary.stops" = "%d stops";
+"itinerary.totalTime" = "%dh %dm total";
+"itinerary.walk" = "%d min walk";
+"itinerary.transit" = "%d min · transit recommended";
+"itinerary.startsAt" = "Starts 9:00 AM";
+"itinerary.lunchStop" = "Lunch Stop";
+"itinerary.nearBuilding" = "Near %@";
+"itinerary.timeline" = "TIMELINE";
+"itinerary.appleIntelligence" = "Apple Intelligence";
+"itinerary.aiUnavailable" = "AI unavailable";
+"itinerary.loading" = "Planning your itinerary...";
+"itinerary.error.title" = "Couldn't load itinerary";
+"itinerary.error.retry" = "Try Again";
+"itinerary.stopsByArchitect" = "%d stops by %@";
+
+// MARK: - Era Names (Itinerary Timeline)
+"era.medieval" = "Medieval";
+"era.renaissance" = "Renaissance";
+"era.baroque" = "Baroque";
+"era.neoclassical" = "Neoclassical";
+"era.victorian" = "Victorian";
+"era.artDeco" = "Art Deco";
+"era.modernist" = "Modernist";
+"era.postmodern" = "Postmodern";
+"era.contemporary" = "Contemporary";
+
+// MARK: - General
+"general.close" = "Close";
+"general.done" = "Done";
+"general.cancel" = "Cancel";
+"general.retry" = "Try Again";
+
+// MARK: - Building Detail
+"building.capturePhoto" = "Capture Your Own Photo";
+"building.historicalSignificance" = "Historical Significance";
+"building.buildingInfo" = "Building Info";
+"building.technicalSpecs" = "Technical Specs";
+"building.localFlavors" = "Local Flavors";
+"building.nearby" = "Nearby";
+"building.location" = "Location";
+"building.built" = "Built";
+"building.height" = "Height";
+"building.stories" = "Stories";
+"building.designedBy" = "Designed by %@";
+"building.markVisited" = "Mark as Visited";
+"building.visited" = "Visited";
+"building.deletePhoto.title" = "Delete Photo?";
+"building.deletePhoto.message" = "This will remove your custom photo and restore the default image.";
+"building.deletePhoto.confirm" = "Delete";
+"building.map.errorTitle" = "Map lookup";
+"building.map.errorMessage" = "Unable to resolve exact coordinates for this address; opened Maps search instead.";
+"building.map.ok" = "OK";
+
+// MARK: - Settings
+"settings.title" = "Settings";
+"settings.experience" = "Experience";
+"settings.resetProgress" = "Reset Progress";
+"settings.maintenance" = "Maintenance";
+"settings.back" = "Back";
+"settings.selectSetting" = "Select a setting";
+"settings.appExperience" = "App Experience";
+"settings.measurementUnits" = "Measurement Units";
+"settings.unitSystem" = "Unit System";
+"settings.meters" = "Meters";
+"settings.feet" = "Feet";
+"settings.soundEffects" = "Sound Effects";
+"settings.haptics" = "Haptics";
+"settings.highContrast" = "High Contrast";
+"settings.reduceMotion" = "Reduce Motion";
+"settings.offlineReady" = "Offline Ready";
+"settings.offlineReady.body" = "Full Library & Itineraries available offline.";
+"settings.preview" = "PREVIEW";
+"settings.testMotion" = "Test Motion";
+"settings.testSound" = "Test Sound";
+"settings.resetAllContent" = "Reset All Content";
+"settings.version" = "Version 1.0 (Build 2026)";
+"settings.reset.firstAlert.title" = "Reset All Progress?";
+"settings.reset.firstAlert.message" = "Wipe visited buildings, passport stamps, and quiz scores.";
+"settings.reset.firstAlert.continue" = "Continue";
+"settings.reset.finalAlert.title" = "Final Warning";
+"settings.reset.finalAlert.message" = "This action cannot be undone.";
+"settings.reset.finalAlert.confirm" = "Delete Everything";
+"settings.reset.finalAlert.cancel" = "Wait, Stop!";
+
+// MARK: - Quiz
+"quiz.navigation.title" = "%@ Expert";
+"quiz.exit" = "Exit";
+"quiz.fieldInquiry" = "FIELD INQUIRY";
+"quiz.fieldData" = "FIELD DATA";
+"quiz.log" = "LOG %d OF %d";
+"quiz.score" = "SCORE: %d";
+"quiz.identificationRequired" = "IDENTIFICATION REQUIRED";
+"quiz.label.style" = "STYLE";
+"quiz.label.year" = "YEAR";
+"quiz.label.stories" = "STORIES";
+"quiz.label.architect" = "ARCHITECT";
+"quiz.classified" = "CLASSIFIED";
+"quiz.returnToCity" = "RETURN TO CITY";
+"quiz.requestHint" = "Request Hint";
+"quiz.concealHint" = "Conceal Hint";
+"quiz.voiceAnswer" = "ANSWER VIA VOICE";
+"quiz.listening" = "LISTENING...";
+"quiz.voicePrompt" = "Speak the name of the building style or architect...";
+"quiz.streakRow" = "%d IN A ROW";
+"quiz.floors" = "%d floors";
+"quiz.correct" = "Correct!";
+"quiz.incorrect" = "Incorrect. The answer was %@.";
+
+// MARK: - Question Prompts
+"question.name" = "Based on the data, which landmark is this?";
+"question.style" = "What is the architectural style of this building?";
+"question.year" = "In what year was this structure completed?";
+"question.architect" = "Which architect or firm designed this building?";
+"question.stories" = "How many stories tall is this structure?";
+
+// MARK: - Quiz Hints
+"hint.name" = "This landmark is located in the heart of %@ and is a prime example of %@ design.";
+"hint.architect" = "The architect of this building is also famous for their work during the %@s.";
+"hint.year.prewar" = "This was a major pre-war project designed by %@.";
+"hint.year.modernist" = "This was a major modernist project designed by %@.";
+"hint.style" = "Look at the year %d; this style was the dominant architectural movement of that era.";
+"hint.stories" = "Despite its %@ appearance, this building was quite tall for the %@s.";

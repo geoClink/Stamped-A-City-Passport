@@ -1,0 +1,295 @@
+/* ============================================================
+   Stamped! A City Passport — Localizable.strings (English)
+   ============================================================ */
+
+// MARK: - Onboarding
+"onboarding.step1.title" = "Esplora il mondo";
+"onboarding.step1.description" = "Viaggio attraverso le capitali architettoniche per scoprire la storia nascosta.";
+"onboarding.step2.title" = "Tieni traccia dei tuoi progressi";
+"onboarding.step2.description" = "Costruisci il tuo profilo di viaggio documentando ogni punto di riferimento che visiti.";
+"onboarding.step3.title" = "Richiedi il tuo premio";
+"onboarding.step3.description" = "Sblocca timbri digitali esclusivi per il tuo passaporto personale.";
+"onboarding.step4.title" = "Dimostra la tua maestria";
+"onboarding.step4.description" = "Diventa un esperto di architettura completando le sfide specifiche della città.";
+"onboarding.step5.title" = "Curato con intelligenza";
+"onboarding.step5.description" = "Lascia che Apple Intelligence progetti il ​​percorso perfetto per la tua prossima avventura.";
+"onboarding.button.skip" = "Saltare";
+"onboarding.button.next" = "Prossimo";
+"onboarding.button.getStarted" = "Inizia";
+"onboarding.accessibility.skip.label" = "Salta l'introduzione";
+"onboarding.accessibility.skip.hint" = "Passa direttamente alla schermata principale dell'app";
+
+// MARK: - City List
+"cityList.search.prompt" = "Città, monumenti o architetti";
+"cityList.passport.button" = "Passaporto";
+"cityList.welcome.title" = "Pronto per esplorare?";
+"cityList.welcome.body" = "Seleziona una destinazione dalla barra laterale per iniziare il tuo viaggio architettonico e guadagnare il tuo primo francobollo.";
+"cityList.welcome.ipad.hint" = "Scorri da sinistra se la barra laterale è nascosta";
+
+// MARK: - Continent Names
+"continent.africa" = "Africa";
+"continent.asia" = "Asia";
+"continent.europe" = "Europa";
+"continent.northAmerica" = "America del Nord";
+"continent.southAmerica" = "Sud America";
+"continent.oceania" = "Oceania";
+
+// MARK: - City Detail
+"cityDetail.explored" = "%d%% esplorato";
+"cityDetail.explorationProgress" = "Progresso dell'esplorazione";
+"cityDetail.masteryLevel" = "Livello di padronanza: %@";
+"cityDetail.toolbar.resetProgress" = "Reimposta avanzamento";
+"cityDetail.toolbar.resetQuiz" = "Reimposta il punteggio del quiz";
+"cityDetail.toolbar.resetStamps" = "Reimposta timbri";
+"cityDetail.toolbar.resetPhotos" = "Reimposta foto";
+"cityDetail.toolbar.resetEverything" = "Ripristina tutto";
+"cityDetail.alert.confirmReset" = "Conferma reimpostazione";
+"cityDetail.alert.yesReset" = "Sì, ripristina";
+"cityDetail.alert.cancel" = "Cancellare";
+
+// MARK: - Mastery Tiers
+"mastery.tourist" = "Turista";
+"mastery.explorer" = "Esploratore";
+"mastery.urbanInsider" = "Insider urbano";
+"mastery.localLegend" = "Leggenda locale";
+"mastery.masterCollector" = "Maestro collezionista";
+
+// MARK: - Discovery Ranks (Passport)
+"rank.tourist" = "Turista";
+"rank.urbanExplorer" = "Esploratore urbano";
+"rank.architectureCritic" = "Critico di architettura";
+"rank.cityHistorian" = "Storico della città";
+"rank.grandMaster" = "Gran Maestro";
+
+// MARK: - Landmarks
+"landmarks.header" = "PUNTI DI RIFERIMENTO";
+"landmarks.accessibility.sectionLabel" = "Punti di riferimento in %@";
+"landmarks.row.visited" = "Visitato, %@";
+"landmarks.row.notVisited" = "Non visitato, %@";
+"landmarks.row.architect" = "Architetto: %@";
+"landmarks.row.hint" = "Tocca due volte per visualizzare i dettagli dell'edificio e la cronologia.";
+
+// MARK: - Quiz
+"quiz.title" = "Quiz sull'architettura";
+"quiz.improveScore" = "Migliora il tuo punteggio";
+"quiz.mastered" = "Padroneggiato in città";
+"quiz.subtitle.start" = "Metti alla prova le tue conoscenze.";
+"quiz.subtitle.improve" = "Puoi ottenere 10/10?";
+"quiz.subtitle.mastered" = "Punteggio perfetto! Sei un esperto.";
+"quiz.accessibility.label" = "%@. %@. Punteggio elevato %d su 10.";
+"quiz.accessibility.hint" = "Tocca due volte per avviare il quiz.";
+
+// MARK: - Travel Info
+"travel.header" = "DOSSIER DI VIAGGIO";
+"travel.language" = "Lingua";
+"travel.airport" = "Aeroporto";
+"travel.transportation" = "Trasporti";
+"travel.currency" = "Valuta";
+"travel.localTransit" = "Transito locale";
+"travel.cityTransit" = "Transito cittadino";
+"travel.mainAirport" = "Aeroporto principale";
+"travel.greeting" = "Saluto: %@";
+"travel.home" = "Casa";
+"travel.local" = "Locale";
+
+// MARK: - Currency Converter
+"currency.home.label" = "Casa (%@)";
+"currency.local.label" = "Locale (%@)";
+"currency.swap.homeToLocal" = "Inizio → Locale";
+"currency.swap.localToHome" = "Locale → Casa";
+"currency.disclaimer" = "Le tariffe sono approssimative. Verificare sempre prima del viaggio.";
+"currency.status.live" = "Tariffe in tempo reale";
+"currency.status.cached" = "Tariffe memorizzate nella cache";
+"currency.status.offline" = "Tariffe offline";
+"currency.refresh.label" = "Frequenze di aggiornamento";
+"currency.refresh.hint" = "Recupera gli ultimi tassi di cambio";
+"currency.accessibility.statusIcon" = "Stato del tasso di cambio";
+"currency.modal.title" = "Informazioni sulle tariffe";
+"currency.modal.provider" = "Fornitore";
+"currency.modal.lastUpdated" = "Ultimo aggiornamento";
+"currency.modal.never" = "Mai";
+"currency.modal.close" = "Vicino";
+"currency.modal.header" = "Dettagli sul tasso di cambio";
+"currency.modal.explain.live" = "Utilizzando le tariffe in tempo reale recuperate da Internet.";
+"currency.modal.explain.cached" = "Utilizzo delle tariffe memorizzate di recente nella cache. Connettiti a Internet per aggiornare.";
+"currency.modal.explain.offline" = "Nessuna connessione Internet. Utilizzo delle tariffe offline integrate.";
+"checking.rates" = "Controllo delle tariffe...";
+"mode.live" = "Vivere";
+"mode.cached" = "Memorizzato nella cache";
+"mode.offline" = "Non in linea";
+"rates.updated" = "Tariffe aggiornate %@ (%@)";
+"rates.disclaimer" = "Le tariffe sono solo di riferimento e possono variare; verificare con il proprio fornitore gli importi esatti.";
+"modal.header" = "Tassi di valuta";
+"modal.title" = "Origine tariffa";
+"modal.provider" = "Fornitore";
+"modal.last_updated" = "Ultimo aggiornamento";
+"modal.explain_live" = "Le tariffe in tempo reale sono state recuperate dal fornitore e riflettono le attuali tariffe di mercato.";
+"modal.explain_cached" = "Le tariffe memorizzate nella cache provengono da un recupero precedentemente riuscito e potrebbero essere leggermente obsolete.";
+"modal.explain_offline" = "Le tariffe di fallback offline vengono utilizzate quando l'accesso alla rete non è disponibile; questi sono solo di riferimento.";
+"modal.close" = "Fatto";
+"modal.never" = "Mai";
+"status.icon.accessibility" = "Stato dei tassi di cambio, tocca per i dettagli";
+"refresh.rates.accessibility" = "Aggiorna i tassi di cambio";
+"refresh.rates.hint" = "Recupera gli ultimi tassi di cambio";
+
+// MARK: - Passport Gallery
+"passport.title" = "Il tuo passaporto";
+"passport.countries" = "Paesi";
+"passport.done" = "Fatto";
+"passport.close" = "Vicino";
+"passport.journeyLog" = "REGISTRO DI VIAGGIO";
+"passport.explorationProgress" = "PROGRESSO DELL'ESPLORAZIONE";
+"passport.citiesStamped" = "%d città timbrate";
+"passport.selectCountry" = "Seleziona un paese per visualizzare i tuoi francobolli";
+"passport.stats" = "Statistiche";
+
+// MARK: - Passport Stamp
+"stamp.passportStamped" = "PASSAPORTO TIMBRATO";
+"stamp.completed" = "COMPLETATO: %@";
+"stamp.didYouKnow" = "LO SAPEVATE?";
+"stamp.accessibility.label" = "Timbro ufficiale del passaporto per %@";
+"stamp.accessibility.value" = "Completato il %@. Lo sapevate? %@";
+
+// MARK: - Stamp Celebration
+"celebration.cityExplored" = "Città esplorata!";
+"celebration.addToPassport" = "Aggiungi al passaporto";
+"celebration.accessibility" = "Congratulazioni! Hai esplorato %@.";
+
+// MARK: - Passport View
+"passportView.officialStatus" = "Status di viaggiatore ufficiale";
+"passportView.complete" = "COMPLETARE";
+"passportView.landmarksDiscovered" = "%d di %d punti di riferimento scoperti";
+"passportView.collected" = "%d / %d raccolti";
+"passportView.beginJourney" = "Inizia il tuo viaggio";
+"passportView.beginJourney.body" = "Visita gli edifici nella guida della città per iniziare a collezionare francobolli ufficiali.";
+"passportView.verifiedOn" = "VERIFICATO IL %@";
+"passportView.shareAchievement" = "Condividi il risultato";
+"passportView.dismiss" = "Congedare";
+"passportView.shareText" = "Ho appena sbloccato il %@ Timbro Architettura! 🏛️";
+"passportView.masterOf" = "Maestro di %@ Architettura";
+
+// MARK: - Itinerary
+"itinerary.header" = "ITINERARIO ARCHITETTONICO";
+"itinerary.day" = "Giorno %d";
+"itinerary.stops" = "%d si ferma";
+"itinerary.totalTime" = "%dh %dm totale";
+"itinerary.walk" = "%d minuti a piedi";
+"itinerary.transit" = "%d min · transito consigliato";
+"itinerary.startsAt" = "Inizia alle 9:00";
+"itinerary.lunchStop" = "Sosta pranzo";
+"itinerary.nearBuilding" = "Vicino %@";
+"itinerary.timeline" = "CRONOLOGIA";
+"itinerary.appleIntelligence" = "L'intelligenza di Apple";
+"itinerary.aiUnavailable" = "IA non disponibile";
+"itinerary.loading" = "Pianifica il tuo itinerario...";
+"itinerary.error.title" = "Impossibile caricare l'itinerario";
+"itinerary.error.retry" = "Riprova";
+"itinerary.stopsByArchitect" = "%d si ferma a %@";
+
+// MARK: - Era Names (Itinerary Timeline)
+"era.medieval" = "Medievale";
+"era.renaissance" = "Rinascimento";
+"era.baroque" = "Barocco";
+"era.neoclassical" = "Neoclassico";
+"era.victorian" = "vittoriano";
+"era.artDeco" = "Art Déco";
+"era.modernist" = "Modernista";
+"era.postmodern" = "Postmoderno";
+"era.contemporary" = "Contemporaneo";
+
+// MARK: - General
+"general.close" = "Vicino";
+"general.done" = "Fatto";
+"general.cancel" = "Cancellare";
+"general.retry" = "Riprova";
+
+// MARK: - Building Detail
+"building.capturePhoto" = "Cattura la tua foto";
+"building.historicalSignificance" = "Significato storico";
+"building.buildingInfo" = "Informazioni sull'edificio";
+"building.technicalSpecs" = "Specifiche tecniche";
+"building.localFlavors" = "Sapori locali";
+"building.nearby" = "Nelle vicinanze";
+"building.location" = "Posizione";
+"building.built" = "Costruito";
+"building.height" = "Altezza";
+"building.stories" = "Storie";
+"building.designedBy" = "Progettato da %@";
+"building.markVisited" = "Segna come visitato";
+"building.visited" = "Visitato";
+"building.deletePhoto.title" = "Eliminare foto?";
+"building.deletePhoto.message" = "Ciò rimuoverà la tua foto personalizzata e ripristinerà l'immagine predefinita.";
+"building.deletePhoto.confirm" = "Eliminare";
+"building.map.errorTitle" = "Ricerca sulla mappa";
+"building.map.errorMessage" = "Impossibile risolvere le coordinate esatte per questo indirizzo; ho invece aperto la ricerca su Maps.";
+"building.map.ok" = "OK";
+
+// MARK: - Settings
+"settings.title" = "Impostazioni";
+"settings.experience" = "Esperienza";
+"settings.resetProgress" = "Reimposta avanzamento";
+"settings.maintenance" = "Manutenzione";
+"settings.back" = "Indietro";
+"settings.selectSetting" = "Seleziona un'impostazione";
+"settings.appExperience" = "Esperienza con l'app";
+"settings.measurementUnits" = "Unità di misura";
+"settings.unitSystem" = "Sistema di unità";
+"settings.meters" = "Metri";
+"settings.feet" = "Piedi";
+"settings.soundEffects" = "Effetti sonori";
+"settings.haptics" = "Aptica";
+"settings.highContrast" = "Contrasto elevato";
+"settings.reduceMotion" = "Riduci il movimento";
+"settings.offlineReady" = "Pronto offline";
+"settings.offlineReady.body" = "Libreria completa e itinerari disponibili offline.";
+"settings.preview" = "ANTEPRIMA";
+"settings.testMotion" = "Prova movimento";
+"settings.testSound" = "Prova il suono";
+"settings.resetAllContent" = "Reimposta tutto il contenuto";
+"settings.version" = "Versione 1.0 (build 2026)";
+"settings.reset.firstAlert.title" = "Reimpostare tutti i progressi?";
+"settings.reset.firstAlert.message" = "Cancella gli edifici visitati, i timbri sui passaporti e i punteggi dei quiz.";
+"settings.reset.firstAlert.continue" = "Continuare";
+"settings.reset.finalAlert.title" = "Avvertimento finale";
+"settings.reset.finalAlert.message" = "Questa azione non può essere annullata.";
+"settings.reset.finalAlert.confirm" = "Elimina tutto";
+"settings.reset.finalAlert.cancel" = "Aspetta, fermati!";
+
+// MARK: - Quiz
+"quiz.navigation.title" = "%@ Esperto";
+"quiz.exit" = "Uscita";
+"quiz.fieldInquiry" = "INDAGINE SUL CAMPO";
+"quiz.fieldData" = "DATI DI CAMPO";
+"quiz.log" = "LOG %d DI %d";
+"quiz.score" = "PUNTEGGIO: %d";
+"quiz.identificationRequired" = "IDENTIFICAZIONE RICHIESTA";
+"quiz.label.style" = "STILE";
+"quiz.label.year" = "ANNO";
+"quiz.label.stories" = "STORIE";
+"quiz.label.architect" = "ARCHITETTO";
+"quiz.classified" = "CLASSIFICATO";
+"quiz.returnToCity" = "RITORNO IN CITTÀ";
+"quiz.requestHint" = "Richiedi suggerimento";
+"quiz.concealHint" = "Nascondi suggerimento";
+"quiz.voiceAnswer" = "RISPOSTA TRAMITE VOCE";
+"quiz.listening" = "ASCOLTO...";
+"quiz.voicePrompt" = "Pronuncia il nome dello stile dell'edificio o dell'architetto...";
+"quiz.streakRow" = "%d DI FILA";
+"quiz.floors" = "%d piani";
+"quiz.correct" = "Corretto!";
+"quiz.incorrect" = "Errato. La risposta è stata %@.";
+
+// MARK: - Question Prompts
+"question.name" = "Basandosi sui dati, di quale punto di riferimento si tratta?";
+"question.style" = "Qual è lo stile architettonico di questo edificio?";
+"question.year" = "In che anno è stata completata questa struttura?";
+"question.architect" = "Quale architetto o azienda ha progettato questo edificio?";
+"question.stories" = "Quanti piani è alta questa struttura?";
+
+// MARK: - Quiz Hints
+"hint.name" = "Questo punto di riferimento si trova nel cuore di %@ ed è un ottimo esempio di design %@.";
+"hint.architect" = "L'architetto di questo edificio è famoso anche per il suo lavoro durante il %@s.";
+"hint.year.prewar" = "Questo era un importante progetto prebellico ideato da %@.";
+"hint.year.modernist" = "Questo è stato un importante progetto modernista progettato da %@.";
+"hint.style" = "Guarda l'anno %d; questo stile era il movimento architettonico dominante di quell'epoca.";
+"hint.stories" = "Nonostante il suo aspetto %@, questo edificio era piuttosto alto per i %@.";

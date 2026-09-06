@@ -14,12 +14,12 @@ struct SkipButtonToolbar: ToolbarContent {
     var body: some ToolbarContent {
         ToolbarItem(placement: .topBarTrailing) {
             if viewModel.currentPage < viewModel.steps.count - 1 {
-                Button("Skip") {
+                Button(L.Onboarding.skip) {
                     viewModel.skip()
                     
                 }
-                .accessibilityLabel("Skip introduction")
-                .accessibilityHint("Goes directly to the main app screen")
+                .accessibilityLabel(L.Onboarding.skipAccessibilityLabel)
+                .accessibilityHint(L.Onboarding.skipAccessibilityHint)
                 .foregroundColor(Color.adventureOrange.opacity(isHighContrast ? 1.0 : 0.8))
                 .fontWeight(isHighContrast ? .bold : .regular)
             }

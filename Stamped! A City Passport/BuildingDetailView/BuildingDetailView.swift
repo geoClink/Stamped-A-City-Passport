@@ -9,7 +9,7 @@ import SwiftUI
 import PhotosUI
 import MapKit
 import CoreLocation
-
+ 
 struct BuildingDetailView: View {
     // MARK: - Properties
     let building: Building
@@ -24,6 +24,8 @@ struct BuildingDetailView: View {
     @AppStorage("high_contrast_mode") var appHighContrast = false
     @AppStorage("haptics_enabled") var hapticsEnabled = true
     @AppStorage("use_metric_units") var useMetric = true
+
+    @Environment(\.accessibilityReduceTransparency) var reduceTransparency
     
     // MARK: - State
     @State private var showCamera = false
@@ -31,7 +33,13 @@ struct BuildingDetailView: View {
     @State private var isEditingPhoto = false
     @State private var showGeocodeError = false
     @State private var geocodeErrorMessage: String = ""
-
+    @State private var showingReportMenu = false
+    @State private var noteText: String = ""
+    @State private var nearbyVenues: [(name: String, category: String)] = []
+    @State private var isLoadingVenues = false
+    @State private var lookAroundScene: MKLookAroundScene? = nil
+    @State private var showingLookAround = false
+ 
     // Manipulation State (Zoom/Pan)
     @State private var photoScale: CGFloat = 1.0
     @State private var lastScale: CGFloat = 1.0
@@ -67,16 +75,66 @@ struct BuildingDetailView: View {
         .fullScreenCover(isPresented: $showCamera) {
             CameraPicker(buildingID: building.id)
         }
-        .alert("Delete Photo?", isPresented: $showingDeleteConfirmation) {
-            Button("Delete", role: .destructive) {
+        .alert(L.Building.deletePhotoTitle, isPresented: $showingDeleteConfirmation) {
+            Button(L.Building.deletePhotoConfirm, role: .destructive) {
                 GlobalProgressManager.shared.deleteImage(for: building.id)
                 resetManipulation()
                 isEditingPhoto = false
             }
-            Button("Cancel", role: .cancel) { }
+            Button(L.CityDetail.cancel, role: .cancel) { }
         } message: {
-            Text("This will remove your custom photo and restore the default image.")
+            Text(L.Building.deletePhotoMessage)
         }
+        .sheet(isPresented: $showingLookAround) {
+            if let scene = lookAroundScene {
+                LookAroundSheet(scene: scene, buildingName: building.name)
+            }
+        }
+        .task(id: building.id) {
+            async let venues: () = fetchNearbyVenues()
+            async let lookAround: () = fetchLookAroundScene()
+            _ = await (venues, lookAround)
+        }
+    }
+
+    private func fetchLookAroundScene() async {
+        guard let lat = building.latitude, let lon = building.longitude else { return }
+        let request = MKLookAroundSceneRequest(
+            coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon)
+        )
+        lookAroundScene = try? await request.scene
+    }
+
+    private func fetchNearbyVenues() async {
+        guard let lat = building.latitude, let lon = building.longitude else { return }
+        isLoadingVenues = true
+        let request = MKLocalSearch.Request()
+        request.naturalLanguageQuery = "restaurant"
+        request.region = MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: lat, longitude: lon),
+            latitudinalMeters: 800,
+            longitudinalMeters: 800
+        )
+        request.resultTypes = .pointOfInterest
+        request.pointOfInterestFilter = MKPointOfInterestFilter(including: [
+            .restaurant, .cafe, .bakery, .brewery, .foodMarket, .nightlife
+        ])
+        if let response = try? await MKLocalSearch(request: request).start() {
+            nearbyVenues = response.mapItems.prefix(6).compactMap { item in
+                guard let name = item.name else { return nil }
+                let cat: String
+                switch item.pointOfInterestCategory {
+                case .cafe:       cat = "Café"
+                case .bakery:     cat = "Bakery"
+                case .brewery:    cat = "Brewery"
+                case .foodMarket: cat = "Market"
+                case .nightlife:  cat = "Bar"
+                default:          cat = "Restaurant"
+                }
+                return (name: name, category: cat)
+            }
+        }
+        isLoadingVenues = false
     }
     
     private func resetManipulation() {
@@ -86,7 +144,7 @@ struct BuildingDetailView: View {
         lastOffset = .zero
     }
 }
-
+ 
 // MARK: - UI Components Extension
 extension BuildingDetailView {
     
@@ -106,14 +164,9 @@ extension BuildingDetailView {
                         .frame(height: height)
                         .scaleEffect(photoScale)
                         .offset(photoOffset)
-                } else if let uiImage = UIImage(named: building.assetName) {
-                    Image(uiImage: uiImage)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                        .frame(height: height)
                 } else {
-                    placeholderHero
+                    // WikiBuildingPhoto tries Wikipedia first, falls back to asset catalog
+                    WikiBuildingPhoto(building: building, height: height)
                 }
             }
             .frame(maxWidth: .infinity)
@@ -121,6 +174,19 @@ extension BuildingDetailView {
             .clipped()
             .clipShape(RoundedRectangle(cornerRadius: sizeClass == .regular ? 32 : 0))
             .background(Color(.systemBackground))
+            .overlay(alignment: .bottom) {
+                // Subtle fade into the white card below — blends the image edge cleanly
+                LinearGradient(
+                    stops: [
+                        .init(color: .clear, location: 0.55),
+                        .init(color: Color(UIColor.systemBackground).opacity(0.45), location: 1.0)
+                    ],
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+                .frame(height: 100)
+                .allowsHitTesting(false)
+            }
             .overlay(
                 RoundedRectangle(cornerRadius: sizeClass == .regular ? 32 : 0)
                     .stroke(Color.primary, lineWidth: isHighContrast ? 3 : 0)
@@ -144,7 +210,7 @@ extension BuildingDetailView {
                 .shadow(color: .black.opacity(isHighContrast ? 0 : 0.2), radius: 10, x: 0, y: 5)
         }
     }
-
+ 
     // MARK: - iPad Layout
     private var iPadLayout: some View {
         GeometryReader { geo in
@@ -180,7 +246,7 @@ extension BuildingDetailView {
                         heroHeader(height: 400)
                             .padding(.horizontal, 40)
                             .padding(.top, 60)
-
+ 
                         unifiedToolbar
                             .padding(.horizontal, 40)
                         
@@ -203,7 +269,7 @@ extension BuildingDetailView {
                 .font(.system(size: 60))
                 .foregroundStyle(isHighContrast ? Color.primary.gradient : brandColor.gradient)
             
-            Text("Capture Your Own Photo")
+            Text(L.Building.capturePhoto)
                 .font(.system(.caption, design: .monospaced))
                 .fontWeight(.bold)
                 .foregroundColor(isHighContrast ? .primary : brandColor.opacity(0.8))
@@ -212,7 +278,7 @@ extension BuildingDetailView {
         .background(isHighContrast ? Color.clear : brandColor.opacity(0.05))
         .cornerRadius(sizeClass == .regular ? 32 : 0)
     }
-
+ 
     private var photoControls: some View {
         let userImage = GlobalProgressManager.shared.userImages[building.id]
         
@@ -228,6 +294,7 @@ extension BuildingDetailView {
                         .frame(width: 44, height: 44)
                         .foregroundColor(isEditingPhoto ? brandColor : .primary)
                 }
+                .accessibilityLabel(isEditingPhoto ? "Lock photo" : "Unlock photo for editing")
                 Divider().frame(height: 20)
             }
 
@@ -245,13 +312,15 @@ extension BuildingDetailView {
             }), matching: .images) {
                 Image(systemName: "photo.fill").frame(width: 44, height: 44)
             }
-            
+            .accessibilityLabel("Choose photo from library")
+
             Divider().frame(height: 20)
-            
+
             Button { showCamera = true } label: {
                 Image(systemName: "camera.fill").frame(width: 44, height: 44)
             }
-            
+            .accessibilityLabel("Take photo with camera")
+
             if isEditingPhoto {
                 if photoScale != 1.0 || photoOffset != .zero {
                     Divider().frame(height: 20)
@@ -264,8 +333,9 @@ extension BuildingDetailView {
                             .frame(width: 44, height: 44)
                             .foregroundColor(brandColor)
                     }
+                    .accessibilityLabel("Reset photo position")
                 }
-                
+
                 if userImage != nil {
                     Divider().frame(height: 20)
                     Button { showingDeleteConfirmation = true } label: {
@@ -273,31 +343,34 @@ extension BuildingDetailView {
                             .frame(width: 44, height: 44)
                             .foregroundColor(.red)
                     }
+                    .accessibilityLabel("Delete photo")
                 }
             }
         }
         .foregroundColor(.primary)
-        .background(.ultraThinMaterial)
+        .background(reduceTransparency ? AnyShapeStyle(Color(UIColor.systemBackground)) : AnyShapeStyle(.ultraThinMaterial))
         .clipShape(Capsule())
         .overlay(
             Capsule()
                 .stroke(isEditingPhoto ? brandColor : Color.primary, lineWidth: isHighContrast ? 2 : (isEditingPhoto ? 1 : 0))
         )
     }
-
+ 
     // MARK: - iPhone Layout
     private var iPhoneScrollView: some View {
         ScrollView {
             VStack(spacing: 0) {
-                heroHeader(height: 300)
+                heroHeader(height: 380)
                 VStack(alignment: .leading, spacing: 24) {
                     titleHeader
                     aboutSection
-                    sectionHeader("Building Info")
+                    sectionHeader(L.Building.buildingInfo)
                     technicalGrid
-                    if !building.foodSpots.isEmpty {
-                        foodSpotsSection(spots: building.foodSpots)
+                    if lookAroundScene != nil {
+                        lookAroundButton
                     }
+                    localFlavorsSection
+                    reportIssueButton
                 }
                 .padding(20)
                 .background(Color(.systemBackground))
@@ -320,22 +393,23 @@ extension BuildingDetailView {
                 .padding(.top, 12)
                 .padding(.bottom, 8)
         }
-        .background(.ultraThinMaterial)
+        .background(reduceTransparency ? AnyShapeStyle(Color(UIColor.systemBackground)) : AnyShapeStyle(.ultraThinMaterial))
     }
     
     private var iPadTextContent: some View {
         VStack(alignment: .leading, spacing: 40) {
             titleHeader
             aboutSection
-            sectionHeader("Technical Specs")
+            sectionHeader(L.Building.technicalSpecs)
             technicalGrid
             if !building.foodSpots.isEmpty {
                 foodSpotsSection(spots: building.foodSpots)
             }
             bottomActionButton
+            reportIssueButton
         }
     }
-
+ 
     // MARK: - Global Components
     private var unifiedToolbar: some View {
         let spacing: CGFloat = sizeClass == .regular ? 20 : 12
@@ -351,7 +425,7 @@ extension BuildingDetailView {
                     HStack(spacing: 8) {
                         Image(systemName: isVisited ? "checkmark.seal.fill" : "checkmark.seal")
                             .fontWeight(.bold)
-                        Text(isVisited ? "Visited" : "Mark Visited")
+                        Text(isVisited ? L.Building.visited : L.Building.markVisited)
                     }
                     .font(.headline)
                     .foregroundColor(isHighContrast ? .primary : color)
@@ -369,37 +443,140 @@ extension BuildingDetailView {
             }
         }
     }
-
+ 
     var titleHeader: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(building.name)
                 .font(.system(sizeClass == .regular ? .largeTitle : .title, design: .serif))
                 .fontWeight(.bold)
-            Text("Designed by \(building.architect)")
+            Text(L.Building.designedBy(building.architect))
                 .font(.subheadline.italic())
                 .foregroundColor(.secondary)
+            if isVisited, let date = GlobalProgressManager.shared.visitDates[building.id] {
+                Label("Stamped \(date.formatted(date: .abbreviated, time: .omitted))", systemImage: "checkmark.seal.fill")
+                    .font(.caption.bold())
+                    .foregroundColor(isHighContrast ? .primary : .adventureOrange)
+                BuildingNoteField(buildingID: building.id, noteText: $noteText)
+                    .padding(.top, 4)
+            }
+        }
+        .onAppear {
+            noteText = GlobalProgressManager.shared.buildingNotes[building.id] ?? ""
         }
     }
-
+ 
     var aboutSection: some View {
         VStack(alignment: .leading, spacing: 16) {
-            sectionHeader("Historical Significance")
+            sectionHeader(L.Building.historicalSignificance)
             Text(building.description).font(.body).lineSpacing(8)
+            WikiDescriptionCard(building: building)
+        }
+    }
+ 
+    var technicalGrid: some View {
+        VStack(spacing: 12) {
+            specCard(label: L.Building.location, value: building.address, icon: "mappin.and.ellipse")
+            specCard(label: L.Building.built, value: "\(building.yearBuilt)", icon: "calendar")
+            specCard(label: L.Building.height, value: formattedHeight, icon: "arrow.up.and.down")
+            specCard(label: L.Building.stories, value: "\(building.numberOfStories)", icon: "building.2")
+        }
+    }
+ 
+    @ViewBuilder
+    var localFlavorsSection: some View {
+        // Only show the section if the building has coordinates (so we can search)
+        // or if there are legacy hardcoded spots to fall back on.
+        if isLoadingVenues {
+            HStack(spacing: 8) {
+                ProgressView().scaleEffect(0.7)
+                Text("Finding nearby spots…")
+                    .font(.caption).foregroundColor(.secondary)
+            }
+        } else if !nearbyVenues.isEmpty {
+            VStack(alignment: .leading, spacing: 16) {
+                sectionHeader(L.Building.localFlavors)
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(alignment: .top, spacing: 14) {
+                        ForEach(nearbyVenues, id: \.name) { venue in
+                            localFlavorCard(name: venue.name, category: venue.category)
+                        }
+                    }
+                    .padding(.horizontal, 2)
+                }
+                Text("Dining data from Apple Maps. Stamped is not responsible for venue quality.")
+                    .font(.caption2).foregroundColor(.secondary)
+            }
+        } else if building.latitude == nil, !building.foodSpots.isEmpty {
+            // No coordinates — fall back to hardcoded spots
+            foodSpotsSection(spots: building.foodSpots)
         }
     }
 
-    var technicalGrid: some View {
-        VStack(spacing: 12) {
-            specCard(label: "Location", value: building.address, icon: "mappin.and.ellipse")
-            specCard(label: "Built", value: "\(building.yearBuilt)", icon: "calendar")
-            specCard(label: "Height", value: formattedHeight, icon: "arrow.up.and.down")
-            specCard(label: "Stories", value: "\(building.numberOfStories)", icon: "building.2")
+    private func localFlavorCard(name: String, category: String) -> some View {
+        let mapsURL: URL? = {
+            let encoded = name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+            if let lat = building.latitude, let lon = building.longitude {
+                return URL(string: "maps://?q=\(encoded)&near=\(lat),\(lon)")
+            }
+            return URL(string: "maps://?q=\(encoded)")
+        }()
+
+        let card = VStack(alignment: .leading, spacing: 10) {
+            ZStack {
+                Circle()
+                    .fill(isHighContrast ? Color.primary.opacity(0.1) : brandColor.opacity(0.15))
+                    .frame(width: 40, height: 40)
+                Image(systemName: "fork.knife")
+                    .font(.system(size: 16, weight: .bold))
+                    .foregroundColor(isHighContrast ? .primary : brandColor)
+            }
+
+            Text(name)
+                .font(.subheadline).fontWeight(.bold)
+                .lineLimit(nil)
+                .fixedSize(horizontal: false, vertical: true)
+                .foregroundColor(.primary)
+
+            Spacer(minLength: 4)
+
+            HStack(spacing: 4) {
+                Text(category)
+                    .font(.caption2).fontWeight(.semibold)
+                    .foregroundColor(.secondary)
+                    .textCase(.uppercase)
+                Spacer()
+                Image(systemName: "arrow.up.right")
+                    .font(.caption2)
+                    .foregroundColor(.secondary)
+            }
+        }
+        .padding(16)
+        .frame(width: 160)
+        .frame(minHeight: 160)
+        .background(isHighContrast ? Color.clear : Color.primary.opacity(0.05))
+        .cornerRadius(20)
+        .overlay(
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(Color.primary, lineWidth: isHighContrast ? 2 : 0)
+        )
+
+        return Group {
+            if let url = mapsURL {
+                Link(destination: url) { card }
+                    .simultaneousGesture(TapGesture().onEnded {
+                        HapticManager.shared.trigger(.selection)
+                    })
+                    .accessibilityLabel("\(name), \(category)")
+                    .accessibilityHint("Opens in Apple Maps")
+            } else {
+                card
+            }
         }
     }
 
     func foodSpotsSection(spots: [String]) -> some View {
         VStack(alignment: .leading, spacing: 16) {
-            sectionHeader("Local Flavors")
+            sectionHeader(L.Building.localFlavors)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: 14) {
                     ForEach(spots, id: \.self) { spot in
@@ -410,7 +587,7 @@ extension BuildingDetailView {
             }
         }
     }
-
+ 
     private func foodSpotCard(spot: String) -> some View {
         VStack(alignment: .leading, spacing: 10) {
             ZStack {
@@ -433,7 +610,7 @@ extension BuildingDetailView {
             
             Spacer(minLength: 4)
             
-            Text("Nearby")
+            Text(L.Building.nearby)
                 .font(.caption2)
                 .fontWeight(.semibold)
                 .foregroundColor(.secondary)
@@ -449,12 +626,12 @@ extension BuildingDetailView {
                 .stroke(Color.primary, lineWidth: isHighContrast ? 2 : 0)
         )
     }
-
+ 
     var bottomActionButton: some View {
         let activeColor = isVisited ? Color.green : brandColor
         
         return Button(action: handleActionTap) {
-            Label(isVisited ? "Visited" : "Mark as Visited", systemImage: isVisited ? "checkmark.seal.fill" : "checkmark.seal")
+            Label(isVisited ? L.Building.visited : L.Building.markVisited, systemImage: isVisited ? "checkmark.seal.fill" : "checkmark.seal")
                 .fontWeight(.bold)
                 .padding(.vertical, 16)
                 .frame(maxWidth: .infinity)
@@ -468,6 +645,7 @@ extension BuildingDetailView {
                         .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
                 )
         }
+        .accessibilityHint(isVisited ? "Tap to remove stamp from this building" : "Marks this building as visited and stamps your passport")
     }
     
     func sectionHeader(_ title: String) -> some View {
@@ -482,7 +660,7 @@ extension BuildingDetailView {
                 .cornerRadius(2)
         }
     }
-
+ 
     func specCard(label: String, value: String, icon: String) -> some View {
         HStack(spacing: 16) {
             Image(systemName: icon)
@@ -494,7 +672,7 @@ extension BuildingDetailView {
                 Text(label)
                     .font(.caption.bold())
                     .foregroundColor(.secondary)
-                if label == "Location" {
+                if label == L.Building.location {
                     // Make address tappable: open in Maps when tapped
                     Button(action: {
                         Task { await openInMaps(address: value) }
@@ -512,8 +690,8 @@ extension BuildingDetailView {
                         .frame(maxWidth: .infinity, alignment: .leading)
                     }
                     .buttonStyle(.plain)
-                    .alert("Map lookup", isPresented: $showGeocodeError, actions: {
-                        Button("OK", role: .cancel) { showGeocodeError = false }
+                    .alert(L.Building.mapErrorTitle, isPresented: $showGeocodeError, actions: {
+                        Button(L.Building.mapOK, role: .cancel) { showGeocodeError = false }
                     }, message: {
                         Text(geocodeErrorMessage)
                     })
@@ -533,12 +711,12 @@ extension BuildingDetailView {
                  .stroke(Color.primary, lineWidth: isHighContrast ? 2 : 0)
          )
      }
-
+ 
     // Open the provided address in Apple Maps. Prefer coordinate-based pin if geocoding succeeds.
     private func openInMaps(address: String) async {
         let trimmed = address.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmed.isEmpty else { return }
-
+ 
         // Try to geocode via our GeocodingManager
         // debug log start
         print("openInMaps: attempting geocode for: \(trimmed)")
@@ -548,59 +726,19 @@ extension BuildingDetailView {
             let placemark = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon))
             let mapItem = MKMapItem(placemark: placemark)
             mapItem.name = building.name
-            // Dynamic mode: if we have a recent user location, choose walking for short trips (<= 1km), otherwise driving.
-            func haversineMeters(lat1: Double, lon1: Double, lat2: Double, lon2: Double) -> Double {
-                let toRad = Double.pi / 180.0
-                let dLat = (lat2 - lat1) * toRad
-                let dLon = (lon2 - lon1) * toRad
-                let a = sin(dLat/2) * sin(dLat/2) + cos(lat1 * toRad) * cos(lat2 * toRad) * sin(dLon/2) * sin(dLon/2)
-                let c = 2 * atan2(sqrt(a), sqrt(1-a))
-                let earthRadius = 6371000.0
-                return earthRadius * c
-            }
-
-            let userLocation = CLLocationManager().location
-            let modeValue: String
-            if let u = userLocation {
-                let meters = haversineMeters(lat1: u.coordinate.latitude, lon1: u.coordinate.longitude, lat2: lat, lon2: lon)
-                modeValue = (meters <= 1000.0) ? MKLaunchOptionsDirectionsModeWalking : MKLaunchOptionsDirectionsModeDriving
-            } else {
-                // No cached user location available (or no permission); default to driving
-                modeValue = MKLaunchOptionsDirectionsModeDriving
-            }
-            let launchOptions: [String: Any] = [MKLaunchOptionsDirectionsModeKey: modeValue]
+            let launchOptions: [String: Any] = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
              await MainActor.run {
                  _ = mapItem.openInMaps(launchOptions: launchOptions)
              }
              return
          }
-
+ 
          if let coord = await GeocodingManager.shared.coordinate(for: trimmed) {
               print("openInMaps: geocoded to \(coord.latitude),\(coord.longitude)")
               let placemark = MKPlacemark(coordinate: coord)
               let mapItem = MKMapItem(placemark: placemark)
               mapItem.name = building.name
-             // Determine mode dynamically from recent user location if possible
-             func haversineMeters(lat1: Double, lon1: Double, lat2: Double, lon2: Double) -> Double {
-                 let toRad = Double.pi / 180.0
-                 let dLat = (lat2 - lat1) * toRad
-                 let dLon = (lon2 - lon1) * toRad
-                 let a = sin(dLat/2) * sin(dLat/2) + cos(lat1 * toRad) * cos(lat2 * toRad) * sin(dLon/2) * sin(dLon/2)
-                 let c = 2 * atan2(sqrt(a), sqrt(1-a))
-                 let earthRadius = 6371000.0
-                 return earthRadius * c
-             }
-
-             let userLocation = CLLocationManager().location
-             let modeValue: String
-             if let u = userLocation {
-                 let meters = haversineMeters(lat1: u.coordinate.latitude, lon1: u.coordinate.longitude, lat2: coord.latitude, lon2: coord.longitude)
-                 modeValue = (meters <= 1000.0) ? MKLaunchOptionsDirectionsModeWalking : MKLaunchOptionsDirectionsModeDriving
-             } else {
-                 modeValue = MKLaunchOptionsDirectionsModeDriving
-             }
-
-             let launchOptions: [String: Any] = [MKLaunchOptionsDirectionsModeKey: modeValue]
+              let launchOptions: [String: Any] = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
               await MainActor.run {
                   // openInMaps returns a Bool; explicitly ignore it to avoid unused-result warnings
                   _ = mapItem.openInMaps(launchOptions: launchOptions)
@@ -614,7 +752,7 @@ extension BuildingDetailView {
                  if let url = URL(string: urlStr) {
                      UIApplication.shared.open(url)
                  }
-                 geocodeErrorMessage = "Unable to resolve exact coordinates for this address; opened Maps search instead."
+                 geocodeErrorMessage = L.Building.mapErrorMessage
                  showGeocodeError = true
              }
          }
@@ -623,5 +761,152 @@ extension BuildingDetailView {
     func handleActionTap() {
         withAnimation(.spring()) { viewModel.toggleVisited(for: building) }
         if hapticsEnabled { HapticManager.shared.trigger(isVisited ? .success : .warning) }
+        // Seed noteText if this is the first stamp
+        if noteText.isEmpty {
+            noteText = GlobalProgressManager.shared.buildingNotes[building.id] ?? ""
+        }
+    }
+
+    // MARK: - Look Around button
+    var lookAroundButton: some View {
+        Button {
+            HapticManager.shared.trigger(.selection)
+            showingLookAround = true
+        } label: {
+            HStack(spacing: 10) {
+                Image(systemName: "binoculars.fill")
+                    .font(.system(size: 18))
+                    .foregroundStyle(isHighContrast ? Color.primary : Color.adventureOrange)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Look Around")
+                        .font(.subheadline).fontWeight(.semibold).foregroundColor(.primary)
+                    Text("Street-level view near this building")
+                        .font(.caption2).foregroundColor(.secondary)
+                }
+                Spacer()
+                Image(systemName: "chevron.right")
+                    .font(.caption).foregroundColor(.secondary)
+            }
+            .padding(14)
+            .background(Color(UIColor.secondarySystemBackground))
+            .cornerRadius(12)
+            .overlay(
+                RoundedRectangle(cornerRadius: 12)
+                    .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
+            )
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel("Look Around — street-level view near \(building.name)")
+        .accessibilityHint("Opens Apple Maps Look Around viewer")
+    }
+
+    // MARK: - Report Issue
+    var reportIssueButton: some View {
+
+        // Replace georgeclinkscalesdev@proton.me with your support email before shipping
+        let email = "georgeclinkscalesdev@proton.me"
+        let subject = "Content Issue: \(building.name)"
+        let body = "Building: \(building.name)\nCity: \(viewModel.city.name)\n\nWhat's wrong:\n"
+        let encodedSubject = subject.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        let encodedBody = body.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+
+        return Group {
+            if let url = URL(string: "mailto:\(email)?subject=\(encodedSubject)&body=\(encodedBody)") {
+                Link(destination: url) {
+                    HStack(spacing: 6) {
+                        Image(systemName: "flag")
+                            .font(.caption)
+                        Text("Report an issue with this building")
+                            .font(.caption)
+                    }
+                    .foregroundColor(.secondary)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .padding(.top, 8)
+                }
+                .accessibilityLabel("Report an issue with \(building.name)")
+                .accessibilityHint("Opens your email app")
+            }
+        }
+    }
+}
+
+// MARK: - Building Note Field
+
+private struct BuildingNoteField: View {
+    let buildingID: String
+    @Binding var noteText: String
+    @FocusState private var isFocused: Bool
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Label("My Note", systemImage: "note.text")
+                .font(.caption2.bold())
+                .foregroundColor(.secondary)
+                .textCase(.uppercase)
+
+            TextField("Add a personal memory…", text: $noteText, axis: .vertical)
+                .font(.caption)
+                .lineLimit(3, reservesSpace: false)
+                .focused($isFocused)
+                .padding(10)
+                .background(Color(UIColor.tertiarySystemBackground))
+                .cornerRadius(10)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(isFocused ? Color.adventureOrange : Color.primary.opacity(0.15), lineWidth: 1)
+                )
+                .onChange(of: isFocused) { _, focused in
+                    if !focused {
+                        GlobalProgressManager.shared.saveNote(noteText, for: buildingID)
+                    }
+                }
+        }
+    }
+}
+
+// MARK: - Look Around sheet + viewer
+
+private struct LookAroundSheet: View {
+    let scene: MKLookAroundScene
+    let buildingName: String
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        // GeometryReader reads the real safe area top so Done lines up with
+        // Apple's own Look Around badge, which sits at safeAreaInsets.top + ~12pt.
+        GeometryReader { geo in
+            ZStack(alignment: .topTrailing) {
+                LookAroundViewer(scene: scene)
+                    .ignoresSafeArea()
+
+                Button {
+                    dismiss()
+                } label: {
+                    Text("Done")
+                        .font(.body.weight(.semibold))
+                        .foregroundColor(.primary)
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 8)
+                        .background(.regularMaterial, in: Capsule())
+                }
+                .padding(.top, geo.safeAreaInsets.top + 12)
+                .padding(.trailing, 16)
+            }
+        }
+        .ignoresSafeArea()
+    }
+}
+
+private struct LookAroundViewer: UIViewControllerRepresentable {
+    var scene: MKLookAroundScene
+
+    func makeUIViewController(context: Context) -> MKLookAroundViewController {
+        let vc = MKLookAroundViewController(scene: scene)
+        vc.showsRoadLabels = true
+        return vc
+    }
+
+    func updateUIViewController(_ vc: MKLookAroundViewController, context: Context) {
+        vc.scene = scene
     }
 }

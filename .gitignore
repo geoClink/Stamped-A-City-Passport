@@ -28,3 +28,6 @@ node_modules/
 
 # Misc
 .env
+
+# API keys — never commit this file
+Stamped--A-City-Passport-Info.plist

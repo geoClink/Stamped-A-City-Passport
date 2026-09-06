@@ -4,6 +4,12 @@
 //
 //  Created by George Clinkscales on 1/27/26.
 //
+//
+//  SwiftUIView.swift
+//  Stamped!
+//
+//  Created by George Clinkscales on 1/27/26.
+//
 import SwiftUI
 
 struct OnboardingStep: View {
@@ -22,13 +28,13 @@ struct OnboardingStep: View {
                 .foregroundColor(.white)
                 .scaleEffect((isAnimating || manualReduceMotion || systemReduceMotion) ? 1.0 : 0.6)
                 .opacity(isAnimating ? 1.0 : 0.0)
-            
+
             VStack(spacing: 12) {
-                Text(data.title)
+                Text(LocalizedStringKey(data.title))
                     .font(.system(.largeTitle, design: .rounded).bold())
                     .foregroundColor(.white)
-                
-                Text(data.description)
+
+                Text(LocalizedStringKey(data.description))
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 40)
                     .font(.body)

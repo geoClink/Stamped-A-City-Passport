@@ -11,6 +11,7 @@ import Combine
 // MARK: - Navigation Manager
 class NavigationManager: ObservableObject {
     @Published var selectedTab: Int = 0
+    @Published var spotlightCity: CityLocation.City? = nil
 }
 
 

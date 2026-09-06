@@ -19,20 +19,45 @@ class GlobalProgressManager: ObservableObject {
     @Published var visitedIDs: Set<String> = [] {
         didSet { save() }
     }
-    
+
+    var visitDates: [String: Date] = [:]
+
     @Published var userImages: [String: UIImage] = [:]
-    
+
+    var buildingNotes: [String: String] = [:]
+
     private let saveKey = "GlobalVisitedBuildingsKey"
+    private let visitDatesKey = "GlobalVisitDatesKey"
+    private let buildingNotesKey = "BuildingNotesKey"
+    private let defaults = UserDefaults(suiteName: "group.stamped.passport") ?? .standard
 
     private init() {
-        if let savedData = UserDefaults.standard.array(forKey: saveKey) as? [String] {
+        if let savedData = defaults.array(forKey: saveKey) as? [String] {
             self.visitedIDs = Set(savedData)
         } else {
-            self.visitedIDs = [] // Blank slate for App Store version
+            self.visitedIDs = []
             save()
         }
-        
+
+        if let raw = defaults.dictionary(forKey: visitDatesKey) as? [String: Double] {
+            self.visitDates = raw.mapValues { Date(timeIntervalSince1970: $0) }
+        }
+
+        if let notes = defaults.dictionary(forKey: buildingNotesKey) as? [String: String] {
+            self.buildingNotes = notes
+        }
+
         loadImagesFromDisk()
+    }
+
+    func saveNote(_ text: String, for buildingID: String) {
+        objectWillChange.send()
+        if text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            buildingNotes.removeValue(forKey: buildingID)
+        } else {
+            buildingNotes[buildingID] = text
+        }
+        defaults.set(buildingNotes, forKey: buildingNotesKey)
     }
 
     // MARK: - Persistent Image Logic
@@ -99,7 +124,18 @@ class GlobalProgressManager: ObservableObject {
             visitedIDs.remove(buildingID)
         } else {
             visitedIDs.insert(buildingID)
+            // Record first-stamp date; preserve it if the user un-stamps and re-stamps later
+            if visitDates[buildingID] == nil {
+                objectWillChange.send()
+                visitDates[buildingID] = Date()
+                saveVisitDates()
+            }
         }
+    }
+
+    private func saveVisitDates() {
+        let raw = visitDates.mapValues { $0.timeIntervalSince1970 }
+        defaults.set(raw, forKey: visitDatesKey)
     }
 
     func getMastery(for buildings: [Building]) -> (tier: String, color: Color, progress: Double, count: Int) {
@@ -129,11 +165,16 @@ class GlobalProgressManager: ObservableObject {
     }
 
     private func save() {
-        UserDefaults.standard.set(Array(visitedIDs), forKey: saveKey)
+        defaults.set(Array(visitedIDs), forKey: saveKey)
     }
     
     func resetAllProgress() {
         visitedIDs.removeAll()
+        objectWillChange.send()
+        visitDates.removeAll()
+        defaults.removeObject(forKey: visitDatesKey)
+        buildingNotes.removeAll()
+        defaults.removeObject(forKey: buildingNotesKey)
         userImages.removeAll()
         
         let documents = getDocumentsDirectory()

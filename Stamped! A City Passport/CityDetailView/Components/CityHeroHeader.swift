@@ -12,19 +12,32 @@ struct CityHeroHeader: View {
     let progress: Double
     let isHighContrast: Bool
     let masteryTier: String
-    
+
+    @State private var cityBlurb: String? = nil
+
     var body: some View {
         VStack(spacing: 8) {
             Text(city.details.nickname.uppercased())
                 .font(Font.caption2.bold())
                 .tracking(2)
                 .foregroundColor(isHighContrast ? .primary : .adventureOrange)
-                .accessibilityHidden(true) 
-            
+                .accessibilityHidden(true)
+
             Text(city.name)
                 .font(.system(.largeTitle, design: .serif).bold())
                 .foregroundColor(.primary)
-            
+
+            if let blurb = cityBlurb {
+                Text(blurb)
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(3)
+                    .padding(.horizontal, 24)
+                    .padding(.top, 2)
+                    .transition(.opacity)
+            }
+
             VStack(spacing: 4) {
                 ProgressView(value: progress)
                     .tint(isHighContrast ? .primary : .adventureOrange)
@@ -60,5 +73,16 @@ struct CityHeroHeader: View {
         .padding(.horizontal)
         .accessibilityElement(children: .contain)
         .accessibilityLabel("\(city.name) Overview")
+        .task(id: city.id) {
+            let summary = await WikimediaService.shared.summary(for: city.name)
+            if let extract = summary.extract, !extract.isEmpty {
+                // Keep only the first two sentences for a tight blurb
+                let sentences = extract.components(separatedBy: ". ")
+                let blurb = sentences.prefix(2).joined(separator: ". ")
+                withAnimation(.easeIn(duration: 0.3)) {
+                    cityBlurb = blurb.hasSuffix(".") ? blurb : blurb + "."
+                }
+            }
+        }
     }
 }

@@ -42,12 +42,16 @@ class SpeechManager: ObservableObject {
         recognitionTask = speechRecognizer?.recognitionTask(with: recognitionRequest!) { result, error in
             if let result = result {
                 let bestString = result.bestTranscription.formattedString
-                self.transcribedText = bestString
-                completion(bestString) // Send the text back to the ViewModel
+                DispatchQueue.main.async { [weak self] in
+                    self?.transcribedText = bestString
+                    completion(bestString)
+                }
             }
-            
+
             if error != nil || result?.isFinal == true {
-                self.stopRecording()
+                DispatchQueue.main.async { [weak self] in
+                    self?.stopRecording()
+                }
             }
         }
     }

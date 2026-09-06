@@ -15,7 +15,7 @@ struct NavigationButton: View {
     let shouldReduceMotion: Bool
     
     var body: some View {
-        Button(viewModel.isLastPage ? "Get Started" : "Next") {
+        Button(viewModel.isLastPage ? L.Onboarding.getStarted : L.Onboarding.next) {
             viewModel.nextPage(reduceMotion: shouldReduceMotion)
         }
         .buttonStyle(.borderedProminent)
