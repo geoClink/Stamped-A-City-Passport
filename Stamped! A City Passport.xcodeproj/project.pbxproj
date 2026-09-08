@@ -769,7 +769,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "name.GeorgeClinkscales.Stamped--A-City-Passport";
 				PRODUCT_NAME = "Stamped!";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -817,7 +817,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "name.GeorgeClinkscales.Stamped--A-City-Passport";
 				PRODUCT_NAME = "Stamped!";
 				PROVISIONING_PROFILE_SPECIFIER = "";
