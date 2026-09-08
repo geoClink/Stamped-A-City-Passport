@@ -260,70 +260,49 @@ extension CityListView {
     // MARK: - Toolbars
     
     var sidebarToolbar: some ToolbarContent {
-        Group {
-            ToolbarItem(placement: .navigationBarLeading) {
+        ToolbarItemGroup(placement: .navigationBarLeading) {
+            ControlGroup {
                 Button {
                     HapticManager.shared.trigger(.selection)
                     showingSettings = true
                 } label: {
-                    Image(systemName: "gearshape.fill")
-                        .foregroundStyle(isHighContrast ? Color.primary : Color.adventureOrange)
+                    Label("Settings", systemImage: "gearshape.fill")
                 }
-                .accessibilityLabel("Settings")
-            }
 
-            ToolbarItem(placement: .navigationBarLeading) {
                 Button {
                     HapticManager.shared.trigger(.selection)
                     showingMyJourney = true
                 } label: {
-                    Image(systemName: "chart.bar.fill")
-                        .foregroundStyle(isHighContrast ? Color.primary : Color.adventureOrange)
+                    Label("My Journey", systemImage: "chart.bar.fill")
                 }
-                .accessibilityLabel("My Journey")
-                .accessibilityHint("Shows your overall stamp stats and progress")
-            }
 
-            ToolbarItem(placement: .navigationBarLeading) {
                 Button {
                     HapticManager.shared.trigger(.selection)
                     showingAchievements = true
                 } label: {
-                    Image(systemName: "trophy.fill")
-                        .foregroundStyle(isHighContrast ? Color.primary : Color.adventureOrange)
+                    Label("Achievements", systemImage: "trophy.fill")
                 }
-                .accessibilityLabel("Achievements")
-                .accessibilityHint("Shows your earned achievements and milestones")
-            }
 
-            ToolbarItem(placement: .navigationBarLeading) {
                 Button {
                     HapticManager.shared.trigger(.selection)
                     showingWorldMap = true
                 } label: {
-                    Image(systemName: "globe")
-                        .foregroundStyle(isHighContrast ? Color.primary : Color.adventureOrange)
+                    Label("World Map", systemImage: "globe")
                 }
-                .accessibilityLabel("World Map")
-                .accessibilityHint("Shows a world map of all cities you've visited")
-            }
 
-            ToolbarItemGroup(placement: .navigationBarTrailing) {
-                ControlGroup {
-                    Button(action: collapseAll) {
-                        Label("Collapse All", systemImage: "rectangle.stack.badge.minus")
-                    }
-                    
-                    Button {
-                        HapticManager.shared.trigger(.selection)
-                        withAnimation { hasSeenPassportHint = false }
-                    } label: {
-                        Label("Tutorial", systemImage: "questionmark.circle")
-                    }
+                Button(action: collapseAll) {
+                    Label("Collapse All", systemImage: "rectangle.stack.badge.minus")
                 }
-                .controlGroupStyle(.navigation) // iPad specific: provides a subtle button container
-                .foregroundStyle(isHighContrast ? Color.primary : Color.adventureOrange)
+
+                Button {
+                    HapticManager.shared.trigger(.selection)
+                    withAnimation { hasSeenPassportHint = false }
+                } label: {
+                    Label("Tutorial", systemImage: "questionmark.circle")
+                }
             }
+            .controlGroupStyle(.navigation)
+            .foregroundStyle(isHighContrast ? Color.primary : Color.adventureOrange)
         }
     }
     

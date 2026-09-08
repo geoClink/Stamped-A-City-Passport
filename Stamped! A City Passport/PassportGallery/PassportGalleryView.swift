@@ -21,6 +21,7 @@ struct PassportGalleryView: View {
     let cities: [CityLocation.City]
     @State private var selectedCity: CityLocation.City?
     @State private var selectedCountry: CityLocation.Country?
+    @State private var showingShareCard = false
     
     // MARK: - Platform Detection & Adaptive Colors
     private var isIPad: Bool { UIDevice.current.userInterfaceIdiom == .pad }
@@ -72,12 +73,22 @@ struct PassportGalleryView: View {
                     .navigationBarTitleDisplayMode(.inline)
                     .background(highContrast ? (colorScheme == .dark ? .black : .white) : Color.adventureOrange.opacity(0.02))
                     .toolbar {
+                        ToolbarItem(placement: .navigationBarLeading) {
+                            Button {
+                                showingShareCard = true
+                            } label: {
+                                Image(systemName: "square.and.arrow.up")
+                                    .foregroundStyle(brandColor)
+                            }
+                            .accessibilityLabel("Share Passport")
+                        }
                         ToolbarItem(placement: .confirmationAction) {
                             Button("Done") { dismiss() }
                                 .fontWeight(highContrast ? .black : .bold)
                                 .foregroundColor(brandColor)
                         }
                     }
+                    .sheet(isPresented: $showingShareCard) { PassportShareCardView() }
                 }
             }
         }

@@ -13,9 +13,9 @@ import Combine
 @MainActor
 class GlobalProgressManager: ObservableObject {
     static let shared = GlobalProgressManager()
-    
+
     // MARK: - Data Storage
-    
+
     @Published var visitedIDs: Set<String> = [] {
         didSet { save() }
     }
@@ -30,6 +30,7 @@ class GlobalProgressManager: ObservableObject {
     private let visitDatesKey = "GlobalVisitDatesKey"
     private let buildingNotesKey = "BuildingNotesKey"
     private let defaults = UserDefaults(suiteName: "group.stamped.passport") ?? .standard
+    private let iCloud = NSUbiquitousKeyValueStore.default
 
     private init() {
         if let savedData = defaults.array(forKey: saveKey) as? [String] {
@@ -48,6 +49,54 @@ class GlobalProgressManager: ObservableObject {
         }
 
         loadImagesFromDisk()
+
+        // Pull latest from iCloud then merge into local
+        iCloud.synchronize()
+        mergeFromICloud()
+
+        // React to changes pushed from another device
+        NotificationCenter.default.addObserver(
+            forName: NSUbiquitousKeyValueStore.didChangeExternallyNotification,
+            object: iCloud,
+            queue: .main
+        ) { [weak self] _ in
+            Task { @MainActor in self?.mergeFromICloud() }
+        }
+    }
+
+    // MARK: - iCloud Merge
+
+    private func mergeFromICloud() {
+        // visitedIDs: take the union — never remove stamps from a cloud merge
+        if let cloudIDs = iCloud.array(forKey: saveKey) as? [String] {
+            let merged = visitedIDs.union(Set(cloudIDs))
+            if merged != visitedIDs {
+                visitedIDs = merged  // triggers save() via didSet
+            }
+        }
+
+        // visitDates: keep the earliest stamp date for each building
+        if let raw = iCloud.dictionary(forKey: visitDatesKey) as? [String: Double] {
+            var updated = false
+            for (id, ts) in raw {
+                let cloudDate = Date(timeIntervalSince1970: ts)
+                if let local = visitDates[id] {
+                    if cloudDate < local { visitDates[id] = cloudDate; updated = true }
+                } else {
+                    visitDates[id] = cloudDate; updated = true
+                }
+            }
+            if updated { saveVisitDates() }
+        }
+
+        // buildingNotes: adopt cloud note only if there is no local note
+        if let cloudNotes = iCloud.dictionary(forKey: buildingNotesKey) as? [String: String] {
+            var updated = false
+            for (id, note) in cloudNotes where buildingNotes[id] == nil {
+                buildingNotes[id] = note; updated = true
+            }
+            if updated { defaults.set(buildingNotes, forKey: buildingNotesKey) }
+        }
     }
 
     func saveNote(_ text: String, for buildingID: String) {
@@ -58,6 +107,7 @@ class GlobalProgressManager: ObservableObject {
             buildingNotes[buildingID] = text
         }
         defaults.set(buildingNotes, forKey: buildingNotesKey)
+        iCloud.set(buildingNotes, forKey: buildingNotesKey)
     }
 
     // MARK: - Persistent Image Logic
@@ -136,6 +186,7 @@ class GlobalProgressManager: ObservableObject {
     private func saveVisitDates() {
         let raw = visitDates.mapValues { $0.timeIntervalSince1970 }
         defaults.set(raw, forKey: visitDatesKey)
+        iCloud.set(raw, forKey: visitDatesKey)
     }
 
     func getMastery(for buildings: [Building]) -> (tier: String, color: Color, progress: Double, count: Int) {
@@ -165,7 +216,9 @@ class GlobalProgressManager: ObservableObject {
     }
 
     private func save() {
-        defaults.set(Array(visitedIDs), forKey: saveKey)
+        let arr = Array(visitedIDs)
+        defaults.set(arr, forKey: saveKey)
+        iCloud.set(arr, forKey: saveKey)
     }
     
     func resetAllProgress() {
@@ -175,6 +228,9 @@ class GlobalProgressManager: ObservableObject {
         defaults.removeObject(forKey: visitDatesKey)
         buildingNotes.removeAll()
         defaults.removeObject(forKey: buildingNotesKey)
+        iCloud.removeObject(forKey: saveKey)
+        iCloud.removeObject(forKey: visitDatesKey)
+        iCloud.removeObject(forKey: buildingNotesKey)
         userImages.removeAll()
         
         let documents = getDocumentsDirectory()

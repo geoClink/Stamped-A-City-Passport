@@ -5,6 +5,7 @@ struct AchievementsView: View {
     @ObservedObject private var progress = GlobalProgressManager.shared
     @StateObject private var cityVM = CityViewModel()
 
+    @Environment(\.horizontalSizeClass) private var sizeClass
     @State private var selectedCategory: Achievement.Category = .all
 
     private var cities: [CityLocation.City] { cityVM.allCities }
@@ -19,7 +20,10 @@ struct AchievementsView: View {
         Achievement.allAchievements.filter { $0.isEarned(manager: progress, cities: cities) }.count
     }
 
-    private let columns = [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)]
+    private var columns: [GridItem] {
+        let count = sizeClass == .regular ? 4 : 2
+        return Array(repeating: GridItem(.flexible(), spacing: 12), count: count)
+    }
 
     var body: some View {
         NavigationStack {

@@ -154,9 +154,9 @@ struct WorldMapView: View {
 
             Spacer()
 
-            HStack(spacing: 8) {
-                pinLegend(color: .adventureOrange, label: "Visited")
-                pinLegend(color: Color(UIColor.systemGray3), label: "Not yet")
+            HStack(spacing: 12) {
+                pinLegend(visited: true, label: "Visited")
+                pinLegend(visited: false, label: "Not yet")
             }
         }
         .padding(.horizontal, 20)
@@ -165,11 +165,20 @@ struct WorldMapView: View {
         .safeAreaPadding(.bottom)
     }
 
-    private func pinLegend(color: Color, label: String) -> some View {
-        HStack(spacing: 4) {
-            Circle()
-                .fill(color)
-                .frame(width: 8, height: 8)
+    private func pinLegend(visited: Bool, label: String) -> some View {
+        HStack(spacing: 6) {
+            ZStack {
+                Circle()
+                    .fill(visited ? Color.adventureOrange : Color.white)
+                    .frame(width: 12, height: 12)
+                    .overlay(
+                        Circle().stroke(
+                            visited ? Color.white : Color(UIColor.systemGray2),
+                            lineWidth: visited ? 2 : 1.5
+                        )
+                    )
+                    .shadow(color: .black.opacity(0.2), radius: 1, x: 0, y: 1)
+            }
             Text(label)
                 .font(.caption)
                 .foregroundStyle(.secondary)
@@ -185,13 +194,31 @@ private struct CityMapPin: View {
 
     var body: some View {
         ZStack {
-            Circle()
-                .fill(visited ? Color.adventureOrange : Color(UIColor.systemGray4))
-                .frame(width: isSelected ? 14 : 8, height: isSelected ? 14 : 8)
+            if visited {
+                // Solid orange with white border — pops on any map background
+                Circle()
+                    .fill(Color.adventureOrange)
+                    .frame(width: isSelected ? 20 : 14, height: isSelected ? 20 : 14)
+                    .overlay(
+                        Circle().stroke(Color.white, lineWidth: 2.5)
+                    )
+                    .shadow(color: .black.opacity(0.3), radius: 2, x: 0, y: 1)
+            } else {
+                // Hollow white with gray outline — clearly "not yet"
+                Circle()
+                    .fill(Color.white)
+                    .frame(width: isSelected ? 16 : 10, height: isSelected ? 16 : 10)
+                    .overlay(
+                        Circle().stroke(Color(UIColor.systemGray2), lineWidth: 1.5)
+                    )
+                    .shadow(color: .black.opacity(0.2), radius: 1, x: 0, y: 1)
+            }
+
             if isSelected {
                 Circle()
-                    .stroke(visited ? Color.adventureOrange : Color.secondary, lineWidth: 2)
-                    .frame(width: 22, height: 22)
+                    .stroke(visited ? Color.adventureOrange : Color(UIColor.systemGray2), lineWidth: 2)
+                    .frame(width: visited ? 30 : 24, height: visited ? 30 : 24)
+                    .opacity(0.5)
             }
         }
         .animation(.spring(response: 0.3, dampingFraction: 0.7), value: isSelected)
