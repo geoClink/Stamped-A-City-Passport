@@ -28,8 +28,10 @@ extension CityViewModel {
         var results: [MixedSearchResult] = []
         
         for city in allCities {
-            // 1. Still check City Names
-            if city.name.lowercased().contains(lowerQuery) {
+            // 1. Match city name or country name
+            let cityMatch = city.name.lowercased().contains(lowerQuery)
+            let countryMatch = city.country.rawValue.lowercased().contains(lowerQuery)
+            if cityMatch || countryMatch {
                 results.append(MixedSearchResult(title: city.name, subtitle: city.details.nickname, city: city, isLandmark: false))
             }
             

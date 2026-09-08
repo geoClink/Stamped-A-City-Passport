@@ -293,3 +293,6 @@
 "hint.year.modernist" = "Dies war ein großes modernistisches Projekt, das von %@ entworfen wurde.";
 "hint.style" = "Schauen Sie sich das Jahr %d an; Dieser Stil war die dominierende Architekturbewegung dieser Zeit.";
 "hint.stories" = "Trotz seines %@ Aussehens war dieses Gebäude für die %@s ziemlich hoch.";
+
+// MARK: - Report City
+"cityDetail.menu.reportCityInfo" = "Stadtinfos melden";

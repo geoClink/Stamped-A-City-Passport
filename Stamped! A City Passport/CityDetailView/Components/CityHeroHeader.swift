@@ -14,6 +14,7 @@ struct CityHeroHeader: View {
     let masteryTier: String
 
     @State private var cityBlurb: String? = nil
+    @State private var isExpanded: Bool = false
 
     var body: some View {
         VStack(spacing: 8) {
@@ -28,14 +29,26 @@ struct CityHeroHeader: View {
                 .foregroundColor(.primary)
 
             if let blurb = cityBlurb {
-                Text(blurb)
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-                    .multilineTextAlignment(.center)
-                    .lineLimit(3)
-                    .padding(.horizontal, 24)
-                    .padding(.top, 2)
-                    .transition(.opacity)
+                VStack(spacing: 4) {
+                    Text(blurb)
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                        .multilineTextAlignment(.center)
+                        .lineLimit(isExpanded ? nil : 3)
+                        .padding(.horizontal, 24)
+                        .animation(.easeInOut(duration: 0.2), value: isExpanded)
+
+                    Button {
+                        withAnimation(.easeInOut(duration: 0.2)) { isExpanded.toggle() }
+                    } label: {
+                        Text(isExpanded ? "Show less" : "Read more")
+                            .font(.caption.bold())
+                            .foregroundColor(isHighContrast ? .primary : .adventureOrange)
+                    }
+                    .buttonStyle(.plain)
+                }
+                .padding(.top, 2)
+                .transition(.opacity)
             }
 
             VStack(spacing: 4) {
@@ -74,6 +87,7 @@ struct CityHeroHeader: View {
         .accessibilityElement(children: .contain)
         .accessibilityLabel("\(city.name) Overview")
         .task(id: city.id) {
+            isExpanded = false
             let summary = await WikimediaService.shared.summary(for: city.name)
             if let extract = summary.extract, !extract.isEmpty {
                 // Keep only the first two sentences for a tight blurb

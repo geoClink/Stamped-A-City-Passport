@@ -293,3 +293,6 @@
 "hint.year.modernist" = "これは %@ によって設計された主要なモダニズム プロジェクトでした。";
 "hint.style" = "%d 年を見てください。このスタイルは、その時代の支配的な建築運動でした。";
 "hint.stories" = "%@ の外観にもかかわらず、この建物は %@s にとっては非常に高かったです。";
+
+// MARK: - Report City
+"cityDetail.menu.reportCityInfo" = "都市情報を報告";

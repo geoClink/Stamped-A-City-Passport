@@ -293,3 +293,6 @@
 "hint.year.modernist" = "Questo è stato un importante progetto modernista progettato da %@.";
 "hint.style" = "Guarda l'anno %d; questo stile era il movimento architettonico dominante di quell'epoca.";
 "hint.stories" = "Nonostante il suo aspetto %@, questo edificio era piuttosto alto per i %@.";
+
+// MARK: - Report City
+"cityDetail.menu.reportCityInfo" = "Segnala info sulla città";

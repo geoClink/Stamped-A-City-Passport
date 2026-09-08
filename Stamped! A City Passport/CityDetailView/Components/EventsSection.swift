@@ -32,63 +32,82 @@ struct EventsSection: View {
                 .kerning(1.2)
                 .padding(.horizontal)
 
-            if service.isLoading {
-                HStack(spacing: 10) {
-                    ProgressView().scaleEffect(0.7)
-                    Text("Finding events…")
-                        .font(.caption).foregroundColor(.secondary)
-                }
-                .padding(.horizontal)
-            } else if service.events.isEmpty {
-                ContentUnavailableView(
-                    "No Upcoming Events",
-                    systemImage: "ticket.fill",
-                    description: Text("Ticketmaster coverage varies by city. Check back closer to your trip.")
-                )
-                .padding(.horizontal)
-            } else {
-                // Filter chips
-                if presentCategories.count > 1 {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 8) {
-                            FilterChip(
-                                label: "All",
-                                icon: nil,
-                                isSelected: selectedCategory == nil,
-                                color: brandColor
-                            ) { selectedCategory = nil }
-
-                            ForEach(presentCategories, id: \.rawValue) { cat in
-                                FilterChip(
-                                    label: cat.rawValue,
-                                    icon: cat.icon,
-                                    isSelected: selectedCategory == cat,
-                                    color: categoryColor(cat)
-                                ) { selectedCategory = (selectedCategory == cat) ? nil : cat }
-                            }
-                        }
-                        .padding(.horizontal)
+            // Unified card container
+            VStack(alignment: .leading, spacing: 0) {
+                if service.isLoading {
+                    HStack(spacing: 10) {
+                        ProgressView().scaleEffect(0.7)
+                        Text("Finding events…")
+                            .font(.caption).foregroundColor(.secondary)
                     }
-                }
-
-                let displayed = filteredEvents
-                if displayed.isEmpty {
-                    Text("No \(selectedCategory?.rawValue ?? "") events found")
-                        .font(.caption).foregroundColor(.secondary)
-                        .padding(.horizontal)
-                } else {
-                    // Horizontal card scroll — each event is a standalone card
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(alignment: .top, spacing: 12) {
-                            ForEach(displayed) { event in
-                                EventCard(event: event, brandColor: brandColor)
-                            }
+                    .padding(16)
+                } else if service.events.isEmpty {
+                    HStack(spacing: 12) {
+                        Image(systemName: "ticket.fill")
+                            .font(.title2)
+                            .foregroundColor(.secondary.opacity(0.5))
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("No Upcoming Events")
+                                .font(.subheadline).fontWeight(.semibold)
+                            Text("Ticketmaster coverage varies by city.")
+                                .font(.caption).foregroundColor(.secondary)
                         }
-                        .padding(.horizontal)
-                        .padding(.bottom, 4)
+                    }
+                    .padding(16)
+                } else {
+                    // Filter chips
+                    if presentCategories.count > 1 {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 8) {
+                                FilterChip(
+                                    label: "All",
+                                    icon: nil,
+                                    isSelected: selectedCategory == nil,
+                                    color: brandColor
+                                ) { selectedCategory = nil }
+
+                                ForEach(presentCategories, id: \.rawValue) { cat in
+                                    FilterChip(
+                                        label: cat.rawValue,
+                                        icon: cat.icon,
+                                        isSelected: selectedCategory == cat,
+                                        color: categoryColor(cat)
+                                    ) { selectedCategory = (selectedCategory == cat) ? nil : cat }
+                                }
+                            }
+                            .padding(.horizontal, 16)
+                        }
+                        .padding(.top, 14)
+
+                        Divider().padding(.horizontal, 16).padding(.top, 12)
+                    }
+
+                    let displayed = filteredEvents
+                    if displayed.isEmpty {
+                        Text("No \(selectedCategory?.rawValue ?? "") events found")
+                            .font(.caption).foregroundColor(.secondary)
+                            .padding(16)
+                    } else {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(alignment: .top, spacing: 12) {
+                                ForEach(displayed) { event in
+                                    EventCard(event: event, brandColor: brandColor)
+                                }
+                            }
+                            .padding(.horizontal, 16)
+                            .padding(.vertical, 14)
+                        }
                     }
                 }
             }
+            .background(Color(UIColor.secondarySystemBackground))
+            .cornerRadius(16)
+            .padding(.horizontal)
+
+            Text("Event data from Ticketmaster. Stamped is not responsible for event cancellations.")
+                .font(.caption2)
+                .foregroundColor(.secondary)
+                .padding(.horizontal)
         }
     }
 
@@ -195,6 +214,7 @@ private struct EventCard: View {
             Text(event.name)
                 .font(.subheadline).fontWeight(.semibold)
                 .foregroundColor(.primary)
+                .multilineTextAlignment(.leading)
                 .lineLimit(3)
                 .fixedSize(horizontal: false, vertical: true)
 

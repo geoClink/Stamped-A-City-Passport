@@ -293,3 +293,6 @@
 "hint.year.modernist" = "Este foi um grande projeto modernista desenhado por %@.";
 "hint.style" = "Veja o ano %d; este estilo foi o movimento arquitetônico dominante daquela época.";
 "hint.stories" = "Apesar da sua aparência %@, este edifício era bastante alto para os %@s.";
+
+// MARK: - Report City
+"cityDetail.menu.reportCityInfo" = "Reportar informações da cidade";

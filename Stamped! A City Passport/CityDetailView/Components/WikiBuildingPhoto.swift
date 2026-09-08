@@ -27,9 +27,6 @@ struct WikiBuildingPhoto: View {
                         image
                             .resizable()
                             .aspectRatio(contentMode: contentMode)
-                            .frame(maxWidth: .infinity)
-                            .frame(height: height)
-                            .clipped()
                             .accessibilityLabel("Photo of \(building.name)")
                     case .failure:
                         assetFallback
@@ -39,13 +36,19 @@ struct WikiBuildingPhoto: View {
                         assetFallback
                     }
                 }
+                // Frame on AsyncImage itself prevents layout shift when image loads
+                .frame(maxWidth: .infinity)
+                .frame(height: height)
+                .clipped()
             } else if loaded {
                 assetFallback
             } else {
                 shimmerPlaceholder
             }
         }
+        .frame(maxWidth: .infinity)
         .frame(height: height)
+        .clipped()
         .task {
             let summary = await WikimediaService.shared.summary(for: building.name)
             photoURL = summary.photoURL
@@ -85,11 +88,19 @@ struct WikiDescriptionCard: View {
     let building: Building
 
     @State private var extract: String? = nil
+    @State private var isLoading = true
     @State private var expanded = false
 
     var body: some View {
         Group {
-            if let text = extract {
+            if isLoading {
+                // Reserve space so the layout doesn't shift when content loads
+                Rectangle()
+                    .fill(Color(UIColor.secondarySystemBackground))
+                    .frame(height: 90)
+                    .cornerRadius(12)
+                    .shimmering()
+            } else if let text = extract {
                 VStack(alignment: .leading, spacing: 8) {
                     HStack(spacing: 6) {
                         Image(systemName: "w.circle.fill")
@@ -114,11 +125,15 @@ struct WikiDescriptionCard: View {
                 .padding(14)
                 .background(Color(UIColor.secondarySystemBackground))
                 .cornerRadius(12)
+                .transition(.opacity)
             }
+            // If loaded and no extract: render nothing (no reserved space needed)
         }
+        .animation(.easeIn(duration: 0.2), value: isLoading)
         .task {
             let summary = await WikimediaService.shared.summary(for: building.name)
             extract = summary.extract
+            isLoading = false
         }
     }
 }

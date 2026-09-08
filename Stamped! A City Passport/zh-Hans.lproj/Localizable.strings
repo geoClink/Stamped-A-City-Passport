@@ -293,3 +293,6 @@
 "hint.year.modernist" = "这是%@ 设计的一个大型现代主义项目。";
 "hint.style" = "查看年份 %d；这种风格是那个时代的主导建筑运动。";
 "hint.stories" = "尽管有%@的外观，这座建筑对于%@s来说还是相当高的。";
+
+// MARK: - Report City
+"cityDetail.menu.reportCityInfo" = "举报城市信息";

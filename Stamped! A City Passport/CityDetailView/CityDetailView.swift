@@ -209,6 +209,13 @@ struct CityDetailView: View {
 
         ToolbarItem(placement: .navigationBarTrailing) {
             Menu {
+                Section("Report") {
+                    if let url = reportCityURL() {
+                        Link(destination: url) {
+                            Label(LocalizedStringKey("cityDetail.menu.reportCityInfo"), systemImage: "flag")
+                        }
+                    }
+                }
                 Section("Reset Progress") {
                     Button(role: .destructive) { promptReset(.quiz) } label: { Label("Reset Quiz Score", systemImage: "arrow.counterclockwise") }
                     Button(role: .destructive) { promptReset(.passport) } label: { Label("Reset Stamps", systemImage: "person.badge.minus") }
@@ -238,5 +245,14 @@ struct CityDetailView: View {
             highScore = 0
         }
         resetType = .none
+    }
+
+    private func reportCityURL() -> URL? {
+        let email = "georgeclinkscalesdev@proton.me"
+        let subject = "Content Issue: \(viewModel.city.name)"
+        let body = "City: \(viewModel.city.name)\nCountry: \(viewModel.city.country.rawValue)\n\nWhat's wrong:\n"
+        let encodedSubject = subject.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? ""
+        let encodedBody = body.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? ""
+        return URL(string: "mailto:\(email)?subject=\(encodedSubject)&body=\(encodedBody)")
     }
 }
