@@ -49,7 +49,6 @@ struct GlobalDiscoveryApp: App {
             .animation(.spring(response: 0.7, dampingFraction: 0.85), value: hasSeenOnboarding)
             .task {
                 DebugDataSeeder.seedIfNeeded() // TEMP: remove before App Store submission
-                await BuildingRegistryUpdater.refreshIfNeeded()
                 ProximityManager.shared.requestPermissions()
                 SpotlightManager.indexAll(cities: CityLocation.City.allCases)
             }

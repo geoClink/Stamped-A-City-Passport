@@ -19,7 +19,7 @@ struct Building: Identifiable, Hashable, Codable {
     let newUse: String
     let buildingStyle: String
     let numberOfStories: Int
-    let height: Int
+    let height: Double
     let foodSpots: [String]
     let currency: String
     // Optional geographic coordinates — preferred if present in the registry JSON

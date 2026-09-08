@@ -26,7 +26,10 @@ struct WikiBuildingPhoto: View {
                     case .success(let image):
                         image
                             .resizable()
-                            .aspectRatio(contentMode: contentMode)
+                            .scaledToFill()
+                            .frame(maxWidth: .infinity)
+                            .frame(height: height)
+                            .clipped()
                             .accessibilityLabel("Photo of \(building.name)")
                     case .failure:
                         assetFallback

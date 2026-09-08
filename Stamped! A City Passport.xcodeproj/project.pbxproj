@@ -604,7 +604,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Stamped--A-City-Passport-Info.plist";
-				INFOPLIST_KEY_BuildingRegistryRemoteURL = "https://geoClink.github.io/Stamped-A-City-Passport/v1/registry.json";
 				INFOPLIST_KEY_CFBundleDisplayName = "Stamped!";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to the camera so you can take picture of the landmark you are visiting!";
@@ -650,7 +649,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Stamped--A-City-Passport-Info.plist";
-				INFOPLIST_KEY_BuildingRegistryRemoteURL = "https://geoClink.github.io/Stamped-A-City-Passport/v1/registry.json";
 				INFOPLIST_KEY_CFBundleDisplayName = "Stamped!";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to the camera so you can take picture of the landmark you are visiting!";
