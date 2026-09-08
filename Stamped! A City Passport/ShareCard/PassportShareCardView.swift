@@ -109,177 +109,149 @@ struct PassportCard: View {
     let countryCount: Int
     let visitedCities: [CityLocation.City]
 
-    static let gold = Color(red: 0.85, green: 0.65, blue: 0.13)
-    static let darkBg = Color(red: 0.11, green: 0.13, blue: 0.17)
+    static let orange = Color.adventureOrange
     static let cardWidth: CGFloat = 360
     static let cardHeight: CGFloat = 500
 
-    private var displayCities: [CityLocation.City] {
-        Array(visitedCities.prefix(14))
-    }
-
-    private var extraCount: Int {
-        max(0, visitedCities.count - 14)
-    }
+    private var displayCities: [CityLocation.City] { Array(visitedCities.prefix(14)) }
+    private var extraCount: Int { max(0, visitedCities.count - 14) }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            header
-            dividerLine
-            stampCountSection
-            statRow
-            if !visitedCities.isEmpty {
-                dividerLine
-                cityTagsSection
-            }
-            Spacer(minLength: 0)
-            footer
+        VStack(spacing: 0) {
+            topBand
+            bottomSection
         }
         .frame(width: Self.cardWidth, height: Self.cardHeight)
-        .background(Self.darkBg)
+        .background(Color.white)
+        .clipShape(RoundedRectangle(cornerRadius: 0))
     }
 
-    // MARK: Header
+    // MARK: - Orange top band
 
-    private var header: some View {
-        HStack(alignment: .center, spacing: 12) {
-            Image(systemName: "globe.europe.africa.fill")
-                .font(.system(size: 26, weight: .bold))
-                .foregroundStyle(Self.gold)
+    private var topBand: some View {
+        VStack(spacing: 0) {
+            // App bar
+            HStack {
+                HStack(spacing: 8) {
+                    Image(systemName: "globe.americas.fill")
+                        .font(.system(size: 20, weight: .bold))
+                        .foregroundStyle(.white)
+                    VStack(alignment: .leading, spacing: 0) {
+                        Text("STAMPED!")
+                            .font(.system(.headline, design: .rounded))
+                            .fontWeight(.black)
+                            .foregroundStyle(.white)
+                        Text("A CITY PASSPORT")
+                            .font(.system(size: 7, weight: .semibold))
+                            .foregroundStyle(.white.opacity(0.75))
+                            .tracking(2)
+                    }
+                }
+                Spacer()
+                Text(Date().formatted(.dateTime.month(.abbreviated).year()))
+                    .font(.system(size: 9, weight: .medium))
+                    .foregroundStyle(.white.opacity(0.7))
+            }
+            .padding(.horizontal, 22)
+            .padding(.top, 22)
+            .padding(.bottom, 18)
 
-            VStack(alignment: .leading, spacing: 1) {
-                Text("STAMPED!")
-                    .font(.system(.title3, design: .serif))
-                    .fontWeight(.bold)
-                    .foregroundStyle(Self.gold)
-                Text("A CITY PASSPORT")
-                    .font(.system(size: 8, design: .monospaced))
-                    .fontWeight(.semibold)
-                    .foregroundStyle(Self.gold.opacity(0.6))
+            // Big stamp count
+            VStack(spacing: 6) {
+                Text("\(stampCount)")
+                    .font(.system(size: 88, weight: .black, design: .rounded))
+                    .foregroundStyle(.white)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.4)
+
+                Text("STAMPS COLLECTED")
+                    .font(.system(size: 10, weight: .bold))
+                    .foregroundStyle(.white.opacity(0.85))
                     .tracking(3)
             }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 22)
 
-            Spacer()
-
-            Text("№ \(passportNumber)")
-                .font(.system(size: 8, design: .monospaced))
-                .foregroundStyle(Self.gold.opacity(0.4))
+            // Cities / countries row
+            HStack(spacing: 0) {
+                statBlock(value: cityCount, label: "CITIES")
+                Rectangle()
+                    .fill(.white.opacity(0.3))
+                    .frame(width: 1, height: 28)
+                statBlock(value: countryCount, label: "COUNTRIES")
+            }
+            .padding(.bottom, 22)
         }
-        .padding(.horizontal, 20)
-        .padding(.top, 20)
-        .padding(.bottom, 16)
+        .background(Self.orange)
     }
 
-    // MARK: Stamp Count
-
-    private var stampCountSection: some View {
-        VStack(spacing: 4) {
-            Text("\(stampCount)")
-                .font(.system(size: 76, design: .serif))
-                .fontWeight(.bold)
-                .foregroundStyle(.white)
-                .lineLimit(1)
-                .minimumScaleFactor(0.5)
-
-            Text("STAMPS COLLECTED")
-                .font(.system(size: 10, design: .monospaced))
-                .fontWeight(.semibold)
-                .foregroundStyle(Self.gold)
-                .tracking(4)
-        }
-        .frame(maxWidth: .infinity)
-        .padding(.vertical, 20)
-    }
-
-    // MARK: Stat Row
-
-    private var statRow: some View {
-        HStack(spacing: 0) {
-            statPill(value: cityCount, label: "CITIES")
-            Rectangle()
-                .fill(Self.gold.opacity(0.25))
-                .frame(width: 1, height: 28)
-            statPill(value: countryCount, label: "COUNTRIES")
-        }
-        .frame(maxWidth: .infinity)
-        .padding(.bottom, 16)
-    }
-
-    private func statPill(value: Int, label: String) -> some View {
+    private func statBlock(value: Int, label: String) -> some View {
         VStack(spacing: 2) {
             Text("\(value)")
-                .font(.system(.title2, design: .serif))
-                .fontWeight(.bold)
+                .font(.system(size: 28, weight: .black, design: .rounded))
                 .foregroundStyle(.white)
             Text(label)
-                .font(.system(size: 7, design: .monospaced))
-                .foregroundStyle(Self.gold.opacity(0.7))
+                .font(.system(size: 8, weight: .semibold))
+                .foregroundStyle(.white.opacity(0.75))
                 .tracking(2)
         }
         .frame(maxWidth: .infinity)
     }
 
-    // MARK: City Tags
+    // MARK: - White bottom section with city tags
 
-    private var cityTagsSection: some View {
-        LazyVGrid(
-            columns: [GridItem(.adaptive(minimum: 72, maximum: 120), spacing: 5)],
-            spacing: 5
-        ) {
-            ForEach(displayCities) { city in
-                Text(city.name)
-                    .font(.system(size: 8, design: .monospaced))
-                    .foregroundStyle(Self.gold)
-                    .padding(.horizontal, 7)
-                    .padding(.vertical, 4)
-                    .background(Self.gold.opacity(0.12))
-                    .cornerRadius(3)
-                    .lineLimit(1)
+    private var bottomSection: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            if !visitedCities.isEmpty {
+                Text("CITIES VISITED")
+                    .font(.system(size: 9, weight: .bold))
+                    .foregroundStyle(Self.orange)
+                    .tracking(3)
+                    .padding(.top, 16)
+                    .padding(.horizontal, 20)
+
+                LazyVGrid(
+                    columns: [GridItem(.adaptive(minimum: 74, maximum: 120), spacing: 6)],
+                    spacing: 6
+                ) {
+                    ForEach(displayCities) { city in
+                        Text(city.name)
+                            .font(.system(size: 9, weight: .semibold))
+                            .foregroundStyle(Self.orange)
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 5)
+                            .background(Self.orange.opacity(0.1))
+                            .cornerRadius(5)
+                            .lineLimit(1)
+                    }
+                    if extraCount > 0 {
+                        Text("+\(extraCount) more")
+                            .font(.system(size: 9, weight: .medium))
+                            .foregroundStyle(Self.orange.opacity(0.6))
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 5)
+                            .background(Self.orange.opacity(0.05))
+                            .cornerRadius(5)
+                    }
+                }
+                .padding(.horizontal, 20)
             }
-            if extraCount > 0 {
-                Text("+\(extraCount) more")
-                    .font(.system(size: 8, design: .monospaced))
-                    .foregroundStyle(Self.gold.opacity(0.5))
-                    .padding(.horizontal, 7)
-                    .padding(.vertical, 4)
-                    .background(Self.gold.opacity(0.06))
-                    .cornerRadius(3)
+
+            Spacer(minLength: 0)
+
+            // Footer
+            HStack {
+                Image(systemName: "checkmark.seal.fill")
+                    .font(.caption2)
+                    .foregroundStyle(Self.orange.opacity(0.4))
+                Text("stamped-app.com")
+                    .font(.system(size: 8, weight: .medium))
+                    .foregroundStyle(Self.orange.opacity(0.4))
+                    .tracking(1)
             }
-        }
-        .padding(.horizontal, 20)
-        .padding(.top, 14)
-        .padding(.bottom, 12)
-    }
-
-    // MARK: Footer
-
-    private var footer: some View {
-        HStack {
-            Text(Date().formatted(.dateTime.month(.wide).year()).uppercased())
-                .font(.system(size: 8, design: .monospaced))
-                .foregroundStyle(Self.gold.opacity(0.4))
-                .tracking(2)
-            Spacer()
-            Text("STAMPED! APP")
-                .font(.system(size: 8, design: .monospaced))
-                .foregroundStyle(Self.gold.opacity(0.4))
-                .tracking(2)
-        }
-        .padding(.horizontal, 20)
-        .padding(.bottom, 18)
-    }
-
-    // MARK: Helpers
-
-    private var dividerLine: some View {
-        Rectangle()
-            .fill(Self.gold.opacity(0.2))
-            .frame(height: 1)
             .padding(.horizontal, 20)
-    }
-
-    // Deterministic "passport number" from stamp count — purely decorative
-    private var passportNumber: String {
-        String(format: "%06d", (stampCount * 739 + 100001) % 999999)
+            .padding(.bottom, 16)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }

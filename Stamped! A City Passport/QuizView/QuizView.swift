@@ -209,6 +209,7 @@ private extension QuizView {
                 }
             }
         }
+        .modifier(ShakeEffect(animatableData: viewModel.shakeTrigger))
         .padding(.horizontal, (useSideBySide || !isIPad) ? 20 : 100)
     }
 
@@ -341,24 +342,69 @@ private extension QuizView {
     }
 
     var resultsView: some View {
-        VStack(spacing: 40) {
-            Spacer()
-            ZStack {
-                Circle().stroke(brandColor.opacity(0.2), lineWidth: 20).frame(width: 200, height: 200)
-                Image(systemName: viewModel.score == 10 ? "checkmark.seal.fill" : "medal.fill")
-                    .font(.system(size: 100))
-                    .foregroundColor(brandColor)
+        ScrollView {
+            VStack(spacing: 32) {
+                Spacer(minLength: 40)
+
+                // Stars
+                HStack(spacing: 10) {
+                    ForEach(0..<3, id: \.self) { i in
+                        let earned = i < viewModel.starCount
+                        StarShape()
+                            .fill(earned ? brandColor : Color.clear)
+                            .overlay(
+                                StarShape()
+                                    .stroke(earned ? Color.clear : Color(UIColor.systemGray4), lineWidth: 2)
+                            )
+                            .frame(width: 44, height: 44)
+                    }
+                }
+
+                // Score
+                VStack(spacing: 6) {
+                    Text("\(viewModel.score)/\(viewModel.maxQuestions)")
+                        .font(.system(size: 72, weight: .black, design: .rounded))
+                        .foregroundColor(brandColor)
+                    Text(viewModel.resultMessage)
+                        .font(.title3.bold())
+                        .foregroundColor(.secondary)
+                }
+
+                // Personal best badge or stats
+                if viewModel.brokeHighScore {
+                    Label("New Personal Best!", systemImage: "trophy.fill")
+                        .font(.headline.bold())
+                        .foregroundColor(.white)
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 10)
+                        .background(brandColor)
+                        .clipShape(Capsule())
+                } else {
+                    VStack(spacing: 4) {
+                        Text("Best: \(viewModel.highScore)/\(viewModel.maxQuestions)")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                        if viewModel.bestStreak > 1 {
+                            Text("Longest streak: \(viewModel.bestStreak)")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                        }
+                    }
+                }
+
+                Button { dismiss() } label: {
+                    Text("RETURN TO CITY")
+                        .font(.headline)
+                        .frame(maxWidth: 300)
+                        .padding(.vertical, 20)
+                        .background(brandColor)
+                        .foregroundColor(.white)
+                        .clipShape(Capsule())
+                }
+
+                Spacer(minLength: 40)
             }
-            Text("\(viewModel.score) / \(viewModel.maxQuestions)")
-                .font(.system(size: 80, weight: .black, design: .rounded))
-                .foregroundColor(brandColor)
-            
-            Button { dismiss() } label: {
-                Text("RETURN TO CITY")
-                    .font(.headline).frame(maxWidth: 300).padding(.vertical, 20)
-                    .background(brandColor).foregroundColor(.white).clipShape(Capsule())
-            }
-            Spacer()
+            .padding(.horizontal, 20)
         }
     }
 
@@ -405,7 +451,7 @@ private extension QuizView {
             }
             
             if viewModel.isListening {
-                Text("Speak the name of the building style or architect...")
+                Text(viewModel.currentQuestionType.voicePrompt)
                     .font(.caption2)
                     .foregroundColor(.secondary)
                     .transition(.opacity)

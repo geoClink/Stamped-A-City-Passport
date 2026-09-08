@@ -479,8 +479,12 @@ extension BuildingDetailView {
         VStack(spacing: 12) {
             specCard(label: L.Building.location, value: building.address, icon: "mappin.and.ellipse")
             specCard(label: L.Building.built, value: "\(building.yearBuilt)", icon: "calendar")
-            specCard(label: L.Building.height, value: formattedHeight, icon: "arrow.up.and.down")
-            specCard(label: L.Building.stories, value: "\(building.numberOfStories)", icon: "building.2")
+            if building.height > 0 {
+                specCard(label: L.Building.height, value: formattedHeight, icon: "arrow.up.and.down")
+            }
+            if building.numberOfStories > 0 {
+                specCard(label: L.Building.stories, value: "\(building.numberOfStories)", icon: "building.2")
+            }
         }
     }
  
@@ -675,21 +679,15 @@ extension BuildingDetailView {
                     .font(.caption.bold())
                     .foregroundColor(.secondary)
                 if label == L.Building.location {
-                    // Make address tappable: open in Maps when tapped
                     Button(action: {
                         Task { await openInMaps(address: value) }
                     }) {
-                        HStack(spacing: 6) {
-                            Text(value)
-                                .font(.callout.monospaced())
-                                .fontWeight(.bold)
-                                .foregroundColor(.primary)
-                                .multilineTextAlignment(.leading)
-                            Image(systemName: "arrow.up.right.square")
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                        }
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                        Text(value)
+                            .font(.callout.monospaced())
+                            .fontWeight(.bold)
+                            .foregroundColor(.primary)
+                            .multilineTextAlignment(.leading)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                     }
                     .buttonStyle(.plain)
                     .alert(L.Building.mapErrorTitle, isPresented: $showGeocodeError, actions: {
@@ -697,14 +695,19 @@ extension BuildingDetailView {
                     }, message: {
                         Text(geocodeErrorMessage)
                     })
-                 } else {
-                     Text(value)
-                         .font(.callout.monospaced())
-                         .fontWeight(.bold)
-                 }
-              }
-             Spacer()
-         }
+                } else {
+                    Text(value)
+                        .font(.callout.monospaced())
+                        .fontWeight(.bold)
+                }
+            }
+            Spacer()
+            if label == L.Building.location {
+                Image(systemName: "arrow.up.right.square")
+                    .font(.body)
+                    .foregroundColor(.secondary)
+            }
+        }
          .padding()
          .background(isHighContrast ? Color.clear : Color.primary.opacity(0.05))
          .cornerRadius(12)

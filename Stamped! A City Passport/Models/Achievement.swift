@@ -144,5 +144,96 @@ extension Achievement {
             Set(cities.filter { $0.buildings.contains { m.visitedIDs.contains($0.id) } }
                 .map { $0.country.continent }).count >= 4
         },
+        Achievement(id: "around_the_world", title: "Around The World",
+                    description: "Stamp landmarks on all 6 continents",
+                    icon: "globe.americas.fill", color: .indigo, category: .continents) { m, cities in
+            let visited = Set(cities.filter { $0.buildings.contains { m.visitedIDs.contains($0.id) } }
+                .map { $0.country.continent })
+            return CityLocation.Continent.allCases.allSatisfy { visited.contains($0) }
+        },
+        Achievement(id: "continent_conqueror", title: "Continent Conqueror",
+                    description: "Fully complete a city on every continent",
+                    icon: "flag.checkered.2.crossed", color: gold, category: .continents) { m, cities in
+            let completedContinents = Set(cities.filter { m.isCityComplete($0) }.map { $0.country.continent })
+            return CityLocation.Continent.allCases.allSatisfy { completedContinents.contains($0) }
+        },
+
+        // MARK: Landmarks — Extra
+        Achievement(id: "early_bird", title: "Early Bird",
+                    description: "Stamp a landmark before 8am",
+                    icon: "sunrise.fill", color: .yellow, category: .landmarks) { m, _ in
+            m.visitDates.values.contains { Calendar.current.component(.hour, from: $0) < 8 }
+        },
+        Achievement(id: "frequent_flyer", title: "Frequent Flyer",
+                    description: "Stamp 5 landmarks in a single day",
+                    icon: "airplane.departure", color: .cyan, category: .landmarks) { m, _ in
+            let grouped = Dictionary(grouping: m.visitDates.values) {
+                Calendar.current.startOfDay(for: $0)
+            }
+            return grouped.values.contains { $0.count >= 5 }
+        },
+        Achievement(id: "seasoned_traveler", title: "Seasoned Traveler",
+                    description: "Stamp landmarks across 3 different calendar months",
+                    icon: "calendar", color: .mint, category: .landmarks) { m, _ in
+            Set(m.visitDates.values.map { Calendar.current.component(.month, from: $0) }).count >= 3
+        },
+        Achievement(id: "new_year_stamp", title: "New Year's Stamp",
+                    description: "Stamp a landmark on January 1st",
+                    icon: "party.popper.fill", color: .pink, category: .landmarks) { m, _ in
+            m.visitDates.values.contains {
+                let cal = Calendar.current
+                return cal.component(.month, from: $0) == 1 && cal.component(.day, from: $0) == 1
+            }
+        },
+        Achievement(id: "birthday_stamp", title: "Birthday Stamp",
+                    description: "Stamp a landmark on your birthday",
+                    icon: "gift.fill", color: .pink, category: .landmarks) { m, _ in
+            let ts = UserDefaults.standard.double(forKey: "birthdayTimestamp")
+            guard ts > 0 else { return false }
+            let bday = Date(timeIntervalSince1970: ts)
+            let cal = Calendar.current
+            let bMonth = cal.component(.month, from: bday)
+            let bDay = cal.component(.day, from: bday)
+            return m.visitDates.values.contains {
+                cal.component(.month, from: $0) == bMonth && cal.component(.day, from: $0) == bDay
+            }
+        },
+
+        // MARK: Cities — Extra
+        Achievement(id: "home_turf", title: "Home Turf",
+                    description: "Fully complete any US city",
+                    icon: "house.fill", color: .blue, category: .cities) { m, cities in
+            cities.filter { $0.country == .unitedStates }.contains { m.isCityComplete($0) }
+        },
+        Achievement(id: "island_hopper", title: "Island Hopper",
+                    description: "Stamp landmarks in Honolulu, Bali, and Zanzibar",
+                    icon: "beach.umbrella.fill", color: .teal, category: .cities) { m, _ in
+            let islands: [CityLocation.City] = [.honolulu, .bali, .zanzibar]
+            return islands.allSatisfy { city in
+                city.buildings.contains { m.visitedIDs.contains($0.id) }
+            }
+        },
+
+        // MARK: Mastery — Extra
+        Achievement(id: "halfway_there", title: "Halfway There",
+                    description: "Reach 50% completion in any city",
+                    icon: "chart.pie.fill", color: .orange, category: .mastery) { m, cities in
+            cities.contains { city in
+                let total = city.buildings.count
+                guard total > 0 else { return false }
+                let visited = city.buildings.filter { m.visitedIDs.contains($0.id) }.count
+                return visited > 0 && Double(visited) / Double(total) >= 0.5
+            }
+        },
+        Achievement(id: "grand_slam", title: "Grand Slam",
+                    description: "Fully complete 25 cities",
+                    icon: "trophy.circle.fill", color: gold, category: .mastery) { m, cities in
+            cities.filter { m.isCityComplete($0) }.count >= 25
+        },
+        Achievement(id: "legend", title: "Legend",
+                    description: "Collect 500 total stamps",
+                    icon: "star.circle.fill", color: .purple, category: .mastery) { m, _ in
+            m.visitedIDs.count >= 500
+        },
     ]
 }

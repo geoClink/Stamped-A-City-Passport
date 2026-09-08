@@ -7,6 +7,7 @@ struct WorldMapView: View {
     @StateObject private var cityVM = CityViewModel()
 
     @State private var selectedCity: CityLocation.City?
+    @State private var cityDetailToShow: CityLocation.City?
     @State private var cameraPosition = MapCameraPosition.region(
         MKCoordinateRegion(
             center: CLLocationCoordinate2D(latitude: 20, longitude: 15),
@@ -52,6 +53,18 @@ struct WorldMapView: View {
                         .foregroundStyle(Color.adventureOrange)
                 }
             }
+            .sheet(item: $cityDetailToShow) { city in
+                NavigationStack {
+                    ScrollView {
+                        VStack(alignment: .leading, spacing: 0) {
+                            CityDetailView(city: city)
+                        }
+                    }
+                    .background(Color(UIColor.systemGroupedBackground))
+                    .navigationTitle(city.name)
+                    .navigationBarTitleDisplayMode(.inline)
+                }
+            }
         }
     }
 
@@ -95,38 +108,59 @@ struct WorldMapView: View {
         let stamped = visitedStampCount(city)
         let total = city.buildings.count
 
-        HStack(spacing: 16) {
-            ZStack {
-                Circle()
-                    .fill(visited ? Color.adventureOrange.opacity(0.15) : Color(UIColor.tertiarySystemFill))
-                    .frame(width: 44, height: 44)
-                Image(systemName: visited ? "checkmark.seal.fill" : "mappin.circle.fill")
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundStyle(visited ? Color.adventureOrange : Color.secondary)
+        VStack(spacing: 0) {
+            HStack(spacing: 16) {
+                ZStack {
+                    Circle()
+                        .fill(visited ? Color.adventureOrange.opacity(0.15) : Color(UIColor.tertiarySystemFill))
+                        .frame(width: 44, height: 44)
+                    Image(systemName: visited ? "checkmark.seal.fill" : "mappin.circle.fill")
+                        .font(.system(size: 20, weight: .semibold))
+                        .foregroundStyle(visited ? Color.adventureOrange : Color.secondary)
+                }
+
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(city.name)
+                        .font(.headline)
+                        .foregroundStyle(.primary)
+                    Text(city.country.rawValue)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+
+                Spacer()
+
+                VStack(alignment: .trailing, spacing: 2) {
+                    Text("\(stamped)/\(total)")
+                        .font(.title3.bold())
+                        .foregroundStyle(visited ? Color.adventureOrange : Color.secondary)
+                    Text("stamps")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                }
             }
+            .padding(.horizontal, 20)
+            .padding(.top, 14)
+            .padding(.bottom, 10)
 
-            VStack(alignment: .leading, spacing: 3) {
-                Text(city.name)
-                    .font(.headline)
-                    .foregroundStyle(.primary)
-                Text(city.country.rawValue)
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-            }
+            Divider().padding(.horizontal, 20)
 
-            Spacer()
-
-            VStack(alignment: .trailing, spacing: 2) {
-                Text("\(stamped)/\(total)")
-                    .font(.title3.bold())
-                    .foregroundStyle(visited ? Color.adventureOrange : Color.secondary)
-                Text("stamps")
-                    .font(.caption2)
-                    .foregroundStyle(.secondary)
+            Button {
+                HapticManager.shared.trigger(.selection)
+                cityDetailToShow = city
+            } label: {
+                HStack {
+                    Text("View City")
+                        .font(.subheadline.weight(.semibold))
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .font(.caption.weight(.semibold))
+                }
+                .foregroundStyle(Color.adventureOrange)
+                .padding(.horizontal, 20)
+                .padding(.vertical, 12)
             }
         }
-        .padding(.horizontal, 20)
-        .padding(.vertical, 14)
         .background(Color(UIColor.secondarySystemBackground))
         .cornerRadius(16)
         .shadow(color: .black.opacity(0.12), radius: 12, x: 0, y: 4)

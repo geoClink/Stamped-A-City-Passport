@@ -18,6 +18,13 @@ class SettingsViewModel: ObservableObject {
     @AppStorage("haptics_enabled") var hapticsEnabled = true
     @AppStorage("is_sound_enabled") var isSoundEnabled = true
     @AppStorage("use_metric_units") var useMetric = true
+    @AppStorage("birthdayTimestamp") var birthdayTimestamp: Double = 0
+
+    var birthday: Date {
+        get { birthdayTimestamp > 0 ? Date(timeIntervalSince1970: birthdayTimestamp) : Date() }
+        set { birthdayTimestamp = newValue.timeIntervalSince1970 }
+    }
+    var hasBirthday: Bool { birthdayTimestamp > 0 }
     
     // MARK: - Computed Properties
     var brandColor: Color {

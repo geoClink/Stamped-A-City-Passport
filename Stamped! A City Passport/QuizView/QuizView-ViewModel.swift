@@ -24,7 +24,8 @@ class QuizViewModel: ObservableObject {
     @Published var showingStreakCelebration = false
     @Published var streakMilestone = 0
     @Published var shakeTrigger: CGFloat = 0
-    
+    @Published var brokeHighScore = false
+
     @Published var isListening = false
     private let speechManager = SpeechManager()
     @Published var transcribedText: String = ""
@@ -33,7 +34,8 @@ class QuizViewModel: ObservableObject {
     let buildings: [Building]
     let cityName: String
     let maxQuestions = 10
-    
+    private var buildingQueue: [Building] = []
+
     @AppStorage("is_sound_enabled") var isSoundEnabled = true
 
     // MARK: - Init
@@ -42,22 +44,22 @@ class QuizViewModel: ObservableObject {
         self.cityName = cityName
         generateQuestion()
     }
-    
+
     // MARK: - Voice Input Logic
     func startVoiceInput(reduceMotion: Bool) {
         isListening = true
         transcribedText = "Listening..."
-        
+
         speechManager.startRecording { [weak self] text in
             Task { @MainActor in
                 guard let self = self else { return }
                 self.transcribedText = text
                 let spoken = text.lowercased()
-                
+
                 for option in self.options {
                     let cleanOption = option.lowercased()
                     var isMatch = spoken.contains(cleanOption)
-                    
+
                     if let digit = Int(cleanOption.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()) {
                         let wordVersion = self.numberToWord(digit)
                         if spoken.contains(wordVersion) {
@@ -85,32 +87,52 @@ class QuizViewModel: ObservableObject {
         speechManager.stopRecording()
         isListening = false
     }
-    
+
     // MARK: - Persistence
     var highScore: Int {
         get { UserDefaults.standard.integer(forKey: "high_score_\(cityName)") }
         set { UserDefaults.standard.set(newValue, forKey: "high_score_\(cityName)") }
     }
-    
+
     var bestStreak: Int {
         get { UserDefaults.standard.integer(forKey: "best_streak_\(cityName)") }
         set { UserDefaults.standard.set(newValue, forKey: "best_streak_\(cityName)") }
     }
-    
+
     var hasPerfectScore: Bool {
         get { UserDefaults.standard.bool(forKey: "perfect_\(cityName)") }
         set { UserDefaults.standard.set(newValue, forKey: "perfect_\(cityName)") }
     }
 
+    // MARK: - Question Type Filtering
+
+    private func validQuestionTypes(for building: Building) -> [QuestionType] {
+        var types: [QuestionType] = [.name, .style, .year]
+        let arch = building.architect.trimmingCharacters(in: .whitespaces)
+        if !arch.isEmpty && arch.lowercased() != "unknown" {
+            types.append(.architect)
+        }
+        if building.numberOfStories > 0 {
+            types.append(.stories)
+        }
+        return types
+    }
+
     // MARK: - Quiz Logic
+
     func generateQuestion() {
         showHint = false
         if questionCount >= maxQuestions {
             isGameOver = true
             return
         }
-        currentBuilding = buildings.randomElement()
-        currentQuestionType = QuestionType.allCases.randomElement() ?? .name
+        // Refill queue by shuffling — guarantees no immediate back-to-back repeats
+        if buildingQueue.isEmpty {
+            buildingQueue = buildings.shuffled()
+        }
+        let building = buildingQueue.removeFirst()
+        currentBuilding = building
+        currentQuestionType = validQuestionTypes(for: building).randomElement() ?? .name
         questionCount += 1
         setupOptions()
     }
@@ -128,7 +150,7 @@ class QuizViewModel: ObservableObject {
                 }
             }
             .filter { $0 != correct }
-        
+
         let distractors = Array(Set(allDistractors)).shuffled().prefix(3)
         var newOptions = Array(distractors)
         newOptions.append(correct)
@@ -149,19 +171,22 @@ class QuizViewModel: ObservableObject {
     func processAnswer(_ selected: String, reduceMotion: Bool) {
         selectedOption = selected
         let isCorrect = (selected == getCorrectAnswer())
-        
+
         UIAccessibility.post(notification: .announcement, argument: isCorrect ? "Correct!" : "Incorrect. The answer was \(getCorrectAnswer()).")
-        
+
         if isCorrect {
             score += 1
             currentStreak += 1
             if currentStreak > bestStreak { bestStreak = currentStreak }
-            if score > highScore { highScore = score }
+            if score > highScore {
+                highScore = score
+                brokeHighScore = true
+            }
             if score == 10 { hasPerfectScore = true }
-            
+
             HapticManager.shared.trigger(.success)
             playSound(named: 1057)
-            
+
             if currentStreak == 5 || currentStreak == 10 {
                 streakMilestone = currentStreak
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -172,16 +197,16 @@ class QuizViewModel: ObservableObject {
             }
         } else {
             currentStreak = 0
-            
+
             HapticManager.shared.trigger(.error)
-            
+
             if !reduceMotion {
                 withAnimation(.default) { shakeTrigger += 1 }
             }
         }
-        
+
         let waitTime = (currentStreak == 5 || currentStreak == 10) ? 2.5 : (reduceMotion ? 0.4 : 0.8)
-        
+
         DispatchQueue.main.asyncAfter(deadline: .now() + waitTime) {
             withAnimation(reduceMotion ? .none : .easeInOut) {
                 self.selectedOption = nil
@@ -192,19 +217,36 @@ class QuizViewModel: ObservableObject {
 
     func getHintText() -> String {
         guard let b = currentBuilding else { return "" }
-        
         switch currentQuestionType {
         case .name:
-            return "This landmark is located in the heart of \(cityName) and is a prime example of \(b.buildingStyle) design."
+            return "This landmark is in \(cityName) and is a prime example of \(b.buildingStyle) design."
         case .architect:
-            return "The architect of this building is also famous for their work during the \(b.yearBuilt / 10 * 10)s."
+            return "The architect is also known for work during the \(b.yearBuilt / 10 * 10)s."
         case .year:
             let era = b.yearBuilt < 1945 ? "pre-war" : "modernist"
             return "This was a major \(era) project designed by \(b.architect)."
         case .style:
-            return "Look at the year \(b.yearBuilt); this style was the dominant architectural movement of that era."
+            return "Year \(b.yearBuilt) — this style dominated architecture in that era."
         case .stories:
-            return "Despite its \(b.buildingStyle) appearance, this building was quite tall for the \(b.yearBuilt / 10 * 10)s."
+            return "With its \(b.buildingStyle) design, this building was considered tall for its time."
+        }
+    }
+
+    // MARK: - Results Helpers
+
+    var starCount: Int {
+        if score >= 9 { return 3 }
+        if score >= 6 { return 2 }
+        if score >= 3 { return 1 }
+        return 0
+    }
+
+    var resultMessage: String {
+        switch starCount {
+        case 3: return score == 10 ? "Perfect Score!" : "Outstanding!"
+        case 2: return "Well Done!"
+        case 1: return "Keep Practicing!"
+        default: return "Try Again!"
         }
     }
 

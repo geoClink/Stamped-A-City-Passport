@@ -123,6 +123,34 @@ private extension SettingsView {
             }
 
             HStack(spacing: 15) {
+                Image(systemName: "gift.fill")
+                    .font(.title2)
+                    .foregroundColor(viewModel.highContrast ? .primary : .pink)
+                    .frame(width: 30)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Birthday")
+                        .font(.subheadline.bold())
+                    Text("Used for the Birthday Stamp achievement")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
+                Spacer()
+                if viewModel.hasBirthday {
+                    DatePicker("", selection: Binding(
+                        get: { viewModel.birthday },
+                        set: { viewModel.birthday = $0 }
+                    ), displayedComponents: .date)
+                    .labelsHidden()
+                    .datePickerStyle(.compact)
+                } else {
+                    Button("Set") { viewModel.birthday = Date() }
+                        .foregroundStyle(viewModel.brandColor)
+                        .fontWeight(.semibold)
+                }
+            }
+            .padding(.vertical, 6)
+
+            HStack(spacing: 15) {
                 Image(systemName: "wifi.slash")
                     .font(.title2)
                     .foregroundColor(viewModel.highContrast ? .primary : .green)

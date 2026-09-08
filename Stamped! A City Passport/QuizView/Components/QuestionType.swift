@@ -28,4 +28,14 @@ enum QuestionType: CaseIterable {
             return "How many stories tall is this structure?"
         }
     }
+
+    var voicePrompt: String {
+        switch self {
+        case .name: return "Speak the name of the landmark..."
+        case .style: return "Speak the architectural style..."
+        case .year: return "Say the year it was completed..."
+        case .architect: return "Speak the architect or firm name..."
+        case .stories: return "Say the number of floors..."
+        }
+    }
 }

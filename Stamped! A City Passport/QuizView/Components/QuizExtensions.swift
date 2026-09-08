@@ -7,6 +7,28 @@
 
 import SwiftUI
 
+// MARK: - Custom Star Shape
+
+struct StarShape: Shape {
+    func path(in rect: CGRect) -> Path {
+        let center = CGPoint(x: rect.midX, y: rect.midY)
+        let outerR = min(rect.width, rect.height) / 2
+        let innerR = outerR * 0.42
+        var path = Path()
+        for i in 0..<10 {
+            let angle = (Double(i) * .pi / 5) - .pi / 2
+            let r = i.isMultiple(of: 2) ? outerR : innerR
+            let point = CGPoint(
+                x: center.x + CGFloat(cos(angle)) * CGFloat(r),
+                y: center.y + CGFloat(sin(angle)) * CGFloat(r)
+            )
+            i == 0 ? path.move(to: point) : path.addLine(to: point)
+        }
+        path.closeSubpath()
+        return path
+    }
+}
+
 // MARK: - Animation Effects
 struct ShakeEffect: GeometryEffect {
     var amount: CGFloat = 10

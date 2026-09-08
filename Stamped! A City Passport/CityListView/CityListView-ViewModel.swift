@@ -289,17 +289,6 @@ extension CityListView {
                 } label: {
                     Label("World Map", systemImage: "globe")
                 }
-
-                Button(action: collapseAll) {
-                    Label("Collapse All", systemImage: "rectangle.stack.badge.minus")
-                }
-
-                Button {
-                    HapticManager.shared.trigger(.selection)
-                    withAnimation { hasSeenPassportHint = false }
-                } label: {
-                    Label("Tutorial", systemImage: "questionmark.circle")
-                }
             }
             .controlGroupStyle(.navigation)
             .foregroundStyle(isHighContrast ? Color.primary : Color.adventureOrange)

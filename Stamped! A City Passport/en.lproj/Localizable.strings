@@ -227,7 +227,7 @@
 // MARK: - Settings
 "settings.title" = "Settings";
 "settings.experience" = "Experience";
-"settings.resetProgress" = "Reset Progress";
+"settings.resetProgress" = "Reset All City Data";
 "settings.maintenance" = "Maintenance";
 "settings.back" = "Back";
 "settings.selectSetting" = "Select a setting";
