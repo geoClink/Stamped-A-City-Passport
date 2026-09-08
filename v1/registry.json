@@ -28158,7 +28158,7 @@
       "newUse": "Active stadium / museum",
       "buildingStyle": "Classical Greek revival",
       "numberOfStories": 1,
-      "height": 0.0,
+      "height": 30,
       "foodSpots": [
         "Oikeio",
         "Spondi"
@@ -28222,7 +28222,7 @@
       "newUse": "Tourist attraction",
       "buildingStyle": "Neo-Romanesque",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 20,
       "foodSpots": [
         "Halászbástya Restaurant",
         "Ruszwurm Confectionery"
@@ -28243,7 +28243,7 @@
       "newUse": "National gallery / museum",
       "buildingStyle": "Baroque",
       "numberOfStories": 4,
-      "height": 0.0,
+      "height": 23,
       "foodSpots": [
         "Arany Kaviar",
         "21 Magyar Vendéglő"
@@ -28264,7 +28264,7 @@
       "newUse": "Thermal baths (still active)",
       "buildingStyle": "Neo-Baroque / Eclectic",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 12,
       "foodSpots": [
         "Gundel Restaurant",
         "Robinson Restaurant"
@@ -28350,7 +28350,7 @@
       "newUse": "Royal palace (active)",
       "buildingStyle": "Scottish Baroque",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 15,
       "foodSpots": [
         "The Doric",
         "Ondine Restaurant"
@@ -28413,7 +28413,7 @@
       "newUse": "Museum (active)",
       "buildingStyle": "Scottish Romanesque",
       "numberOfStories": 5,
-      "height": 0.0,
+      "height": 17,
       "foodSpots": [
         "Tower Restaurant",
         "Museum Brasserie"
@@ -28457,7 +28457,7 @@
       "newUse": "Art museum",
       "buildingStyle": "Mannerist",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 16,
       "foodSpots": [
         "Buca dell'Orafo",
         "Osteria dell'Enoteca"
@@ -28478,7 +28478,7 @@
       "newUse": "Bridge / jewelry shops",
       "buildingStyle": "Medieval",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 10,
       "foodSpots": [
         "Trattoria Sostanza",
         "Buca Mario"
@@ -28520,7 +28520,7 @@
       "newUse": "Church (active) / museum",
       "buildingStyle": "Gothic",
       "numberOfStories": 1,
-      "height": 0.0,
+      "height": 38,
       "foodSpots": [
         "Trattoria Cibrèo",
         "Osteria de' Benci"
@@ -28564,7 +28564,7 @@
       "newUse": "Museum",
       "buildingStyle": "Venetian Gothic",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 21,
       "foodSpots": [
         "Ristorante Quadri",
         "Osteria alle Testiere"
@@ -28627,7 +28627,7 @@
       "newUse": "Landmark / tourist site",
       "buildingStyle": "Baroque",
       "numberOfStories": 1,
-      "height": 0.0,
+      "height": 11,
       "foodSpots": [
         "Ristorante Quadri",
         "Caffè Florian"
@@ -28650,7 +28650,7 @@
       "newUse": "Art museum",
       "buildingStyle": "Neoclassical",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 17,
       "foodSpots": [
         "Restaurante Prado",
         "Café del Botánico"
@@ -28671,7 +28671,7 @@
       "newUse": "Royal palace / museum",
       "buildingStyle": "Spanish Baroque / Classicist",
       "numberOfStories": 4,
-      "height": 0.0,
+      "height": 34,
       "foodSpots": [
         "Restaurante Botin",
         "Casa Lucio"
@@ -28692,7 +28692,7 @@
       "newUse": "Modern art museum",
       "buildingStyle": "Neoclassical / Contemporary",
       "numberOfStories": 4,
-      "height": 0.0,
+      "height": 16,
       "foodSpots": [
         "El Brillante",
         "Taberna Tempranillo"
@@ -28757,7 +28757,7 @@
       "newUse": "University (active) / museum",
       "buildingStyle": "Collegiate Georgian",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 14,
       "foodSpots": [
         "The Buttery",
         "Fade Street Social"
@@ -28778,7 +28778,7 @@
       "newUse": "Government complex / museum",
       "buildingStyle": "Gothic / Georgian",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 21,
       "foodSpots": [
         "The Saddle Room",
         "Chapter One"
@@ -28820,7 +28820,7 @@
       "newUse": "Museum / visitor centre",
       "buildingStyle": "Industrial",
       "numberOfStories": 7,
-      "height": 0.0,
+      "height": 55,
       "foodSpots": [
         "Gravity Bar",
         "1837 Bar & Brasserie"
@@ -28841,7 +28841,7 @@
       "newUse": "Pedestrian bridge / landmark",
       "buildingStyle": "Cast iron",
       "numberOfStories": 1,
-      "height": 0.0,
+      "height": 6,
       "foodSpots": [
         "The Winding Stair",
         "Bar Italia Dublin"
@@ -28907,7 +28907,7 @@
       "newUse": "Aquarium",
       "buildingStyle": "Contemporary",
       "numberOfStories": 8,
-      "height": 0.0,
+      "height": 34,
       "foodSpots": [
         "Tempozan Market Place restaurants",
         "Naniwa Kuishinbo Yokocho"
@@ -28928,7 +28928,7 @@
       "newUse": "Shinto shrine (active)",
       "buildingStyle": "Sumiyoshi-zukuri (native Japanese)",
       "numberOfStories": 1,
-      "height": 0.0,
+      "height": 13,
       "foodSpots": [
         "Sumiyoshi Taisha area food stalls",
         "Abeno Harukas dining"
@@ -28973,7 +28973,7 @@
       "newUse": "Museum",
       "buildingStyle": "Contemporary",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 8,
       "foodSpots": [
         "Gold Reef City Theme Park restaurants",
         "Zoo Lake Bistro"
@@ -28994,7 +28994,7 @@
       "newUse": "Constitutional Court / museum",
       "buildingStyle": "Industrial / Contemporary",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 10,
       "foodSpots": [
         "Marble Restaurant",
         "Urbanologi"
@@ -29057,7 +29057,7 @@
       "newUse": "Theme park / casino",
       "buildingStyle": "Victorian / industrial",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 20,
       "foodSpots": [
         "Diggers Restaurant",
         "Palace of the Lost City buffet"
@@ -29102,7 +29102,7 @@
       "newUse": "Museum (active)",
       "buildingStyle": "Traditional Chinese palace",
       "numberOfStories": 4,
-      "height": 0.0,
+      "height": 25,
       "foodSpots": [
         "Silks Palace Restaurant",
         "NPM museum café"
@@ -29123,7 +29123,7 @@
       "newUse": "Memorial / museum",
       "buildingStyle": "Traditional Chinese",
       "numberOfStories": 5,
-      "height": 0.0,
+      "height": 70,
       "foodSpots": [
         "Yongkang Street restaurants",
         "Din Tai Fung (Yongkang)"
@@ -29144,7 +29144,7 @@
       "newUse": "Temple (active)",
       "buildingStyle": "Traditional Taiwanese Baroque",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 16,
       "foodSpots": [
         "Huaxi Street Night Market",
         "Guangzhou Street Night Market"
@@ -29296,7 +29296,7 @@
       "newUse": "Museum / historical site",
       "buildingStyle": "Modernist / Asian influenced",
       "numberOfStories": 4,
-      "height": 0.0,
+      "height": 26,
       "foodSpots": [
         "Nhà Hàng Ngon",
         "The Refinery Restaurant"
@@ -29317,7 +29317,7 @@
       "newUse": "Museum (active)",
       "buildingStyle": "Various / exhibition halls",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 10,
       "foodSpots": [
         "Quan An Ngon",
         "Banh Mi Huynh Hoa"
@@ -29445,7 +29445,7 @@
       "newUse": "Art museum (active)",
       "buildingStyle": "Neoclassical / Contemporary",
       "numberOfStories": 4,
-      "height": 0.0,
+      "height": 14,
       "foodSpots": [
         "Zunfthaus zur Waag",
         "Papiersaal"
@@ -29466,7 +29466,7 @@
       "newUse": "Museum (active)",
       "buildingStyle": "Historicist / Swiss castle",
       "numberOfStories": 4,
-      "height": 0.0,
+      "height": 18,
       "foodSpots": [
         "Restaurant Im Landesmuseum",
         "Viadukt market halls"
@@ -29511,7 +29511,7 @@
       "newUse": "Maritime museum",
       "buildingStyle": "Contemporary",
       "numberOfStories": 7,
-      "height": 0.0,
+      "height": 19,
       "foodSpots": [
         "Restaurang Vasa",
         "Djurgårdsbrunn restaurant"
@@ -29595,7 +29595,7 @@
       "newUse": "Royal palace / museum",
       "buildingStyle": "Swedish Baroque",
       "numberOfStories": 4,
-      "height": 0.0,
+      "height": 25,
       "foodSpots": [
         "Leijontornet restaurant",
         "Bistro Ruby"
@@ -29618,7 +29618,7 @@
       "newUse": "Museum (active)",
       "buildingStyle": "Contemporary",
       "numberOfStories": 4,
-      "height": 0.0,
+      "height": 12,
       "foodSpots": [
         "La Candelaria restaurants",
         "Café de la Peña"
@@ -29660,7 +29660,7 @@
       "newUse": "Art museum",
       "buildingStyle": "Colonial Spanish",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 10,
       "foodSpots": [
         "Quinua y Amaranto",
         "La Puerta Falsa"
@@ -29702,7 +29702,7 @@
       "newUse": "National museum",
       "buildingStyle": "Neoclassical / Panopticon",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 16,
       "foodSpots": [
         "Café del Museo",
         "Andrés D.C."
@@ -29788,7 +29788,7 @@
       "newUse": "Contemporary art museum",
       "buildingStyle": "Art Deco",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 8,
       "foodSpots": [
         "Café Maure",
         "Le Cabestan"
@@ -29833,7 +29833,7 @@
       "newUse": "Museum (active)",
       "buildingStyle": "Modernist",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 8,
       "foodSpots": [
         "Nok by Alara",
         "Yellow Chilli Restaurant"
@@ -29896,7 +29896,7 @@
       "newUse": "Art gallery (active)",
       "buildingStyle": "Contemporary",
       "numberOfStories": 5,
-      "height": 0.0,
+      "height": 6,
       "foodSpots": [
         "Circa restaurant",
         "The Place restaurant"
@@ -29961,7 +29961,7 @@
       "newUse": "Presidential palace / museum",
       "buildingStyle": "European colonial fortress",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 12,
       "foodSpots": [
         "Kiza Restaurant",
         "Santoku Restaurant"
@@ -29982,7 +29982,7 @@
       "newUse": "National monument",
       "buildingStyle": "Modernist / symbolic",
       "numberOfStories": 1,
-      "height": 0.0,
+      "height": 20,
       "foodSpots": [
         "Buka Restaurant",
         "Chic Bistro"
@@ -30003,7 +30003,7 @@
       "newUse": "Museum (active)",
       "buildingStyle": "Modernist",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 8,
       "foodSpots": [
         "Ryan's Irish Pub",
         "The Bistro"
@@ -30047,7 +30047,7 @@
       "newUse": "Cathedral (active) / burial site",
       "buildingStyle": "Ethiopian Baroque",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 18,
       "foodSpots": [
         "Yod Abyssinia restaurant",
         "Kategna restaurant"
@@ -30068,7 +30068,7 @@
       "newUse": "Museum (active)",
       "buildingStyle": "Colonial / modernist",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 10,
       "foodSpots": [
         "Addis Ababa Sheraton dining",
         "2000 Habesha restaurant"
@@ -30110,7 +30110,7 @@
       "newUse": "Memorial museum",
       "buildingStyle": "Contemporary",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 8,
       "foodSpots": [
         "Habesha 2000",
         "Yod Abyssinia"
@@ -30154,7 +30154,7 @@
       "newUse": "Museum",
       "buildingStyle": "Contemporary / Islamic geometric",
       "numberOfStories": 5,
-      "height": 0.0,
+      "height": 45,
       "foodSpots": [
         "IDAM by Alain Ducasse",
         "Café MIA"
@@ -30175,7 +30175,7 @@
       "newUse": "Market / restaurant hub",
       "buildingStyle": "Traditional Qatari",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 10,
       "foodSpots": [
         "Al Shurfa restaurant",
         "Damasca One",
@@ -30197,7 +30197,7 @@
       "newUse": "National museum",
       "buildingStyle": "Contemporary / parametric",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 40,
       "foodSpots": [
         "Jiwan restaurant",
         "Museum café"
@@ -30284,7 +30284,7 @@
       "newUse": "Active performance venue / museum",
       "buildingStyle": "Roman",
       "numberOfStories": 1,
-      "height": 0.0,
+      "height": 25,
       "foodSpots": [
         "Hashem Restaurant",
         "Al Quds Falafel"
@@ -30305,7 +30305,7 @@
       "newUse": "National museum",
       "buildingStyle": "Contemporary",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 12,
       "foodSpots": [
         "Tawaheen Al Hawa",
         "Fakhr El-Din"
@@ -30348,7 +30348,7 @@
       "newUse": "Mosque (active)",
       "buildingStyle": "Islamic / contemporary",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 35,
       "foodSpots": [
         "Sufra Restaurant",
         "Cosmo Restaurant"
@@ -30392,7 +30392,7 @@
       "newUse": "Market (active)",
       "buildingStyle": "Traditional Omani",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 8,
       "foodSpots": [
         "Bin Ateeq restaurant",
         "Al Boom restaurant"
@@ -30413,7 +30413,7 @@
       "newUse": "Opera house / performing arts",
       "buildingStyle": "Islamic / Renaissance fusion",
       "numberOfStories": 4,
-      "height": 0.0,
+      "height": 43,
       "foodSpots": [
         "Ristorante Buonavoglia",
         "Bait Al Luban"
@@ -30434,7 +30434,7 @@
       "newUse": "Private museum (royal guard use)",
       "buildingStyle": "Portuguese military / Omani",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 20,
       "foodSpots": [
         "Kargeen Caffe",
         "Al Angham restaurant"
@@ -30455,7 +30455,7 @@
       "newUse": "Heritage museum",
       "buildingStyle": "Traditional Omani",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 8,
       "foodSpots": [
         "Marjan Café",
         "The Jungle restaurant"
@@ -30520,7 +30520,7 @@
       "newUse": "Church (active) / museum",
       "buildingStyle": "Baroque",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 18,
       "foodSpots": [
         "Ilustrado Restaurant",
         "Barbara's Heritage Restaurant"
@@ -30541,7 +30541,7 @@
       "newUse": "Historical park / museum",
       "buildingStyle": "Spanish colonial fortress",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 15,
       "foodSpots": [
         "Ilustrado Restaurant",
         "Café Coquilla"
@@ -30562,7 +30562,7 @@
       "newUse": "Art museum",
       "buildingStyle": "Neoclassical",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 20,
       "foodSpots": [
         "Las Casas Filipinas de Acuzar",
         "Burgos Circle cafés"
@@ -30585,7 +30585,7 @@
       "newUse": "Opera house / performing arts",
       "buildingStyle": "Contemporary / Deconstructivist",
       "numberOfStories": 7,
-      "height": 0.0,
+      "height": 60,
       "foodSpots": [
         "Argent restaurant",
         "Vingen bar"
@@ -30627,7 +30627,7 @@
       "newUse": "Museum / fortress (active)",
       "buildingStyle": "Medieval / Renaissance",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 17,
       "foodSpots": [
         "Festningskroen",
         "Christiania restaurant"
@@ -30669,7 +30669,7 @@
       "newUse": "Royal palace (active)",
       "buildingStyle": "Neoclassical",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 24,
       "foodSpots": [
         "Theatercaféen",
         "Grand Café Oslo"
@@ -30692,7 +30692,7 @@
       "newUse": "Cathedral (active)",
       "buildingStyle": "Neoclassical / Empire",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 31,
       "foodSpots": [
         "Ravintola Nokka",
         "Sea Horse restaurant"
@@ -30713,7 +30713,7 @@
       "newUse": "Church (active) / concert hall",
       "buildingStyle": "Modernist / rock-cut",
       "numberOfStories": 1,
-      "height": 0.0,
+      "height": 13,
       "foodSpots": [
         "Café Strindberg",
         "Ravintola Lasipalatsi"
@@ -30776,7 +30776,7 @@
       "newUse": "Museum (active)",
       "buildingStyle": "National Romantic",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 16,
       "foodSpots": [
         "Ravintola Kuu",
         "Story restaurant"
@@ -30862,7 +30862,7 @@
       "newUse": "Royal palace (active, open summers)",
       "buildingStyle": "Neoclassical",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 15,
       "foodSpots": [
         "Brasserie de la Patrie",
         "La Buvette"
@@ -30883,7 +30883,7 @@
       "newUse": "Museums / park",
       "buildingStyle": "Beaux-Arts / Triumphal",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 74,
       "foodSpots": [
         "Brasserie des Sources",
         "Café Maison du Peuple"
@@ -30927,7 +30927,7 @@
       "newUse": "Museum",
       "buildingStyle": "Baroque / Classicist",
       "numberOfStories": 4,
-      "height": 0.0,
+      "height": 17,
       "foodSpots": [
         "Restauracja Pod Zamkiem",
         "Kompania Piwna"
@@ -30969,7 +30969,7 @@
       "newUse": "Museum",
       "buildingStyle": "Contemporary",
       "numberOfStories": 4,
-      "height": 0.0,
+      "height": 12,
       "foodSpots": [
         "Restauracja Polin",
         "Beirut hummus bar"
@@ -30990,7 +30990,7 @@
       "newUse": "Museum",
       "buildingStyle": "Industrial / contemporary",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 15,
       "foodSpots": [
         "Restauracja Biały Królik",
         "Charlotte Chleb i Wino"
@@ -31077,7 +31077,7 @@
       "newUse": "Museum / monument",
       "buildingStyle": "Spanish colonial military",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 34,
       "foodSpots": [
         "La Divina Pastora restaurant",
         "La Bodeguita del Medio"
@@ -31098,7 +31098,7 @@
       "newUse": "Museum",
       "buildingStyle": "Baroque Revival",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 18,
       "foodSpots": [
         "Café del Oriente",
         "El Floridita"
@@ -31142,7 +31142,7 @@
       "newUse": "Mosque (active)",
       "buildingStyle": "Early Islamic",
       "numberOfStories": 1,
-      "height": 0.0,
+      "height": 22,
       "foodSpots": [
         "Mafraj restaurant",
         "Al Shaibani restaurant"
@@ -31163,7 +31163,7 @@
       "newUse": "Historic monument",
       "buildingStyle": "Islamic fortification",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 10,
       "foodSpots": [
         "Local food stalls near the gate",
         "Harat Bayt restaurant"
@@ -31184,7 +31184,7 @@
       "newUse": "Museum",
       "buildingStyle": "Yemeni traditional / Islamic",
       "numberOfStories": 5,
-      "height": 0.0,
+      "height": 30,
       "foodSpots": [
         "Wadi Dhahr area restaurants",
         "Sana'a Old City cafés"
@@ -31362,7 +31362,7 @@
       "newUse": "UNESCO World Heritage Site & museum",
       "buildingStyle": "Rajput-Mughal",
       "numberOfStories": 4,
-      "height": 0.0,
+      "height": 30,
       "foodSpots": [
         "Copper Chimney, Amer",
         "1135 AD Restaurant, Amer Fort",
@@ -31384,7 +31384,7 @@
       "newUse": "Museum & royal residence",
       "buildingStyle": "Rajput-Mughal",
       "numberOfStories": 7,
-      "height": 0.0,
+      "height": 25,
       "foodSpots": [
         "Cafe Palladio, Jaipur",
         "Suvarna Mahal, Rambagh Palace",
@@ -31428,7 +31428,7 @@
       "newUse": "Heritage site & restaurant",
       "buildingStyle": "Rajput",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 18,
       "foodSpots": [
         "Padao Restaurant, Nahargarh Fort",
         "Nahargarh Biological Park cafe",
@@ -31630,7 +31630,7 @@
       "newUse": "Museum & heritage site",
       "buildingStyle": "Classical Chinese",
       "numberOfStories": 1,
-      "height": 0.0,
+      "height": 12,
       "foodSpots": [
         "Jinli Street restaurants",
         "Chen Mapo Tofu, Wuhou",
@@ -31854,7 +31854,7 @@
       "newUse": "Museum",
       "buildingStyle": "Spanish colonial Baroque",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 16,
       "foodSpots": [
         "El Balcon de Mila",
         "Restaurante 1621",
@@ -31876,7 +31876,7 @@
       "newUse": "Active convent & tourist viewpoint",
       "buildingStyle": "Spanish colonial",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 15,
       "foodSpots": [
         "La Vitrola restaurant",
         "Restaurant El Santisimo",
@@ -31900,7 +31900,7 @@
       "newUse": "Historic park & partial ruins",
       "buildingStyle": "Edo period Japanese castle",
       "numberOfStories": 1,
-      "height": 0.0,
+      "height": 15,
       "foodSpots": [
         "Shin Shin Ramen, Hakata",
         "Ippudo Ramen original, Hakata",
@@ -31922,7 +31922,7 @@
       "newUse": "Active Shinto shrine & cultural landmark",
       "buildingStyle": "Shinto",
       "numberOfStories": 1,
-      "height": 0.0,
+      "height": 10,
       "foodSpots": [
         "Hakata Issou Ramen",
         "Nakasu yatai food stalls",
@@ -31966,7 +31966,7 @@
       "newUse": "Active Shinto shrine & pilgrimage site",
       "buildingStyle": "Shinto",
       "numberOfStories": 1,
-      "height": 0.0,
+      "height": 12,
       "foodSpots": [
         "Unmei no Hashi no Chaya teahouse",
         "Umegae Mochi street stalls",
@@ -32012,7 +32012,7 @@
       "newUse": "Active Buddhist temple & pilgrimage site",
       "buildingStyle": "Lanna Buddhist",
       "numberOfStories": 1,
-      "height": 0.0,
+      "height": 24,
       "foodSpots": [
         "Cafe on Doi Suthep summit",
         "Street food on the steps",
@@ -32078,7 +32078,7 @@
       "newUse": "Cultural landmark",
       "buildingStyle": "Contemporary bronze sculpture",
       "numberOfStories": 1,
-      "height": 0.0,
+      "height": 5,
       "foodSpots": [
         "Huen Phen restaurant",
         "SP Chicken, old city",
@@ -32124,7 +32124,7 @@
       "newUse": "Museum & tourist attraction",
       "buildingStyle": "Medieval Romanesque castle",
       "numberOfStories": 4,
-      "height": 0.0,
+      "height": 27,
       "foodSpots": [
         "Stieglkeller beer garden",
         "Zum Eulenspiegel restaurant",
@@ -32168,7 +32168,7 @@
       "newUse": "Municipal offices & museum",
       "buildingStyle": "Baroque",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 14,
       "foodSpots": [
         "Cafe Bazaar, Salzburg",
         "Icebar Salzburg",
@@ -32190,7 +32190,7 @@
       "newUse": "Mozart museum",
       "buildingStyle": "Late Gothic / Baroque facade",
       "numberOfStories": 4,
-      "height": 0.0,
+      "height": 15,
       "foodSpots": [
         "Stiftsbackerei St. Peter (oldest bakery in Austria)",
         "Cafe Tomaselli",
@@ -32212,7 +32212,7 @@
       "newUse": "Museum & trick fountain attraction",
       "buildingStyle": "Mannerist",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 12,
       "foodSpots": [
         "Hellbrunn Schlossrestaurant",
         "Wirtshaus Zum Schloss",
@@ -32302,7 +32302,7 @@
       "newUse": "Art museum",
       "buildingStyle": "Genoese Baroque villa",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 10,
       "foodSpots": [
         "Les Viviers restaurant",
         "Cafe Lympia, Nice port",
@@ -32324,7 +32324,7 @@
       "newUse": "Museum of modern and contemporary art",
       "buildingStyle": "Contemporary",
       "numberOfStories": 4,
-      "height": 0.0,
+      "height": 14,
       "foodSpots": [
         "MAMAC rooftop restaurant (summer)",
         "Cafe L'Etincelle",
@@ -32370,7 +32370,7 @@
       "newUse": "UNESCO World Heritage Site & active royal residence",
       "buildingStyle": "Mudejar",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 12,
       "foodSpots": [
         "Egana Oriza restaurant",
         "Abantal restaurant",
@@ -32392,7 +32392,7 @@
       "newUse": "Government offices & public space",
       "buildingStyle": "Spanish Renaissance Revival / Mudejar Revival",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 74,
       "foodSpots": [
         "La Taberna del Alabardero",
         "Bodega Santa Cruz",
@@ -32482,7 +32482,7 @@
       "newUse": "UNESCO World Heritage Site & cultural center",
       "buildingStyle": "Neoclassical",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 18,
       "foodSpots": [
         "Xokol restaurant nearby",
         "La Fonda de la Noche",
@@ -32504,7 +32504,7 @@
       "newUse": "Active theatre",
       "buildingStyle": "Neoclassical",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 17,
       "foodSpots": [
         "La Fonda de la Noche",
         "Restaurante El Sacromonte",
@@ -32728,7 +32728,7 @@
       "newUse": "Major public art gallery",
       "buildingStyle": "Contemporary",
       "numberOfStories": 4,
-      "height": 0.0,
+      "height": 16,
       "foodSpots": [
         "GOMA cafe & restaurant",
         "Gauge restaurant, Cultural Centre",
@@ -32818,7 +32818,7 @@
       "newUse": "UNESCO World Heritage Site & active pilgrimage site",
       "buildingStyle": "Newari Buddhist",
       "numberOfStories": 1,
-      "height": 0.0,
+      "height": 30,
       "foodSpots": [
         "Summit Hotel rooftop restaurant",
         "Newari Kitchen",
@@ -32840,7 +32840,7 @@
       "newUse": "UNESCO World Heritage Site & active Hindu temple",
       "buildingStyle": "Pagoda / Newari",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 23,
       "foodSpots": [
         "Dwarika's Hotel restaurant",
         "Krishnarpan restaurant",
@@ -32930,7 +32930,7 @@
       "newUse": "Concert hall, opera & conference venue",
       "buildingStyle": "Contemporary parametric",
       "numberOfStories": 4,
-      "height": 0.0,
+      "height": 35,
       "foodSpots": [
         "Kolabrautin restaurant at Harpa",
         "Grillmarkadurinn restaurant",
@@ -32974,7 +32974,7 @@
       "newUse": "Museum & restaurant",
       "buildingStyle": "Contemporary modernist",
       "numberOfStories": 4,
-      "height": 0.0,
+      "height": 26,
       "foodSpots": [
         "Perlan Revolving Restaurant",
         "Cafe Perlan",
@@ -32996,7 +32996,7 @@
       "newUse": "National history museum",
       "buildingStyle": "Modernist",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 12,
       "foodSpots": [
         "Museum cafe at National Museum",
         "Cafe Paris, Reykjavik",
@@ -33020,7 +33020,7 @@
       "newUse": "Part of the Hermitage Museum",
       "buildingStyle": "Russian Baroque",
       "numberOfStories": 4,
-      "height": 0.0,
+      "height": 22,
       "foodSpots": [
         "State Hermitage Museum cafe",
         "Palace Square cafe terraces",
@@ -33064,7 +33064,7 @@
       "newUse": "Museum complex & historic site",
       "buildingStyle": "Baroque",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 122,
       "foodSpots": [
         "Trapeza restaurant, near fortress",
         "Erarta Museum cafe",
@@ -33086,7 +33086,7 @@
       "newUse": "Active opera and ballet theatre",
       "buildingStyle": "Eclectic (Italian Renaissance influence)",
       "numberOfStories": 5,
-      "height": 0.0,
+      "height": 26,
       "foodSpots": [
         "Mariinsky Theatre restaurant",
         "Restaurant Duo Gastrobar",
@@ -33108,7 +33108,7 @@
       "newUse": "UNESCO World Heritage Site & museum",
       "buildingStyle": "Russian Baroque",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 13,
       "foodSpots": [
         "Orangery Restaurant, Peterhof",
         "Cafe at the Grand Cascade",
@@ -33132,7 +33132,7 @@
       "newUse": "Heritage ruins & viewpoint",
       "buildingStyle": "Medieval fortification",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 20,
       "foodSpots": [
         "Keto & Kote restaurant, Old Tbilisi",
         "Machakhela restaurant",
@@ -33154,7 +33154,7 @@
       "newUse": "Active Georgian Orthodox church",
       "buildingStyle": "Medieval Georgian Orthodox",
       "numberOfStories": 1,
-      "height": 0.0,
+      "height": 15,
       "foodSpots": [
         "Old Tbilisi restaurant",
         "Funicular restaurant",
@@ -33176,7 +33176,7 @@
       "newUse": "National history museum",
       "buildingStyle": "Neoclassical",
       "numberOfStories": 3,
-      "height": 0.0,
+      "height": 12,
       "foodSpots": [
         "Cafe Gabriel, Rustaveli Avenue",
         "Culinarium Khasheria restaurant",
@@ -33244,7 +33244,7 @@
       "newUse": "Active Buddhist temple & museum",
       "buildingStyle": "Buddhist eclectic",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 15,
       "foodSpots": [
         "Ministry of Crab, Colombo",
         "Nuga Gama, Cinnamon Grand",
@@ -33266,7 +33266,7 @@
       "newUse": "National history museum",
       "buildingStyle": "Italianate colonial",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 16,
       "foodSpots": [
         "Gallery Cafe, Colombo",
         "Upali's by Nawaloka restaurant",
@@ -33288,7 +33288,7 @@
       "newUse": "National monument & ceremony venue",
       "buildingStyle": "Sri Lankan Kandyan",
       "numberOfStories": 1,
-      "height": 0.0,
+      "height": 24,
       "foodSpots": [
         "Park Street Mews cafes",
         "Seasonal Tastes, Hilton Colombo",
@@ -33378,7 +33378,7 @@
       "newUse": "UNESCO World Heritage Site & museum",
       "buildingStyle": "Dutch colonial",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 8,
       "foodSpots": [
         "Restaurant Chez Youga, Goree Island",
         "Chez Nago restaurant, Goree",
@@ -33422,7 +33422,7 @@
       "newUse": "African art museum",
       "buildingStyle": "French colonial",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 8,
       "foodSpots": [
         "Restaurant Lagon 1",
         "La Fourchette restaurant",
@@ -33490,7 +33490,7 @@
       "newUse": "Museum of Zanzibar history",
       "buildingStyle": "Arab-colonial with cast iron",
       "numberOfStories": 4,
-      "height": 0.0,
+      "height": 22,
       "foodSpots": [
         "Forodhani Night Market food stalls",
         "Serena Inn restaurant",
@@ -33512,7 +33512,7 @@
       "newUse": "Cultural venue & tourist site",
       "buildingStyle": "Omani Arab military",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 12,
       "foodSpots": [
         "Old Fort open-air restaurant",
         "Forodhani Night Market",
@@ -33534,7 +33534,7 @@
       "newUse": "Restaurant & heritage site",
       "buildingStyle": "Swahili colonial vernacular",
       "numberOfStories": 2,
-      "height": 0.0,
+      "height": 10,
       "foodSpots": [
         "Mercury's Restaurant & Bar",
         "Emerson Spice restaurant",
