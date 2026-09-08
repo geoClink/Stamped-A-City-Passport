@@ -361,7 +361,6 @@ extension BuildingDetailView {
         ScrollView {
             VStack(spacing: 0) {
                 heroHeader(height: 380)
-                    .frame(maxWidth: .infinity)
                 VStack(alignment: .leading, spacing: 24) {
                     titleHeader
                     aboutSection
@@ -373,13 +372,14 @@ extension BuildingDetailView {
                     localFlavorsSection
                     reportIssueButton
                 }
-                .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(20)
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .background(Color(.systemBackground))
                 .cornerRadius(25)
                 .offset(y: -25)
                 .padding(.bottom, 60)
             }
+            .containerRelativeFrame([.horizontal])
         }
         .ignoresSafeArea(edges: .top)
         .safeAreaInset(edge: .bottom) {

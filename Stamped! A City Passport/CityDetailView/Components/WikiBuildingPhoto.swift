@@ -117,6 +117,7 @@ struct WikiDescriptionCard: View {
                         .font(.subheadline)
                         .foregroundColor(.primary)
                         .lineLimit(expanded ? nil : 4)
+                        .fixedSize(horizontal: false, vertical: true)
                     if !expanded {
                         Button("Read more") { withAnimation(.easeInOut(duration: 0.2)) { expanded = true } }
                             .font(.caption.bold())
@@ -125,6 +126,7 @@ struct WikiDescriptionCard: View {
                             .accessibilityHint("Expands the full Wikipedia description")
                     }
                 }
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(14)
                 .background(Color(UIColor.secondarySystemBackground))
                 .cornerRadius(12)

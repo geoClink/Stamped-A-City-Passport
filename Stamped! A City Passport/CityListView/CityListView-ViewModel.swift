@@ -284,6 +284,30 @@ extension CityListView {
                 .accessibilityHint("Shows your overall stamp stats and progress")
             }
 
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    HapticManager.shared.trigger(.selection)
+                    showingAchievements = true
+                } label: {
+                    Image(systemName: "trophy.fill")
+                        .foregroundStyle(isHighContrast ? Color.primary : Color.adventureOrange)
+                }
+                .accessibilityLabel("Achievements")
+                .accessibilityHint("Shows your earned achievements and milestones")
+            }
+
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    HapticManager.shared.trigger(.selection)
+                    showingWorldMap = true
+                } label: {
+                    Image(systemName: "globe")
+                        .foregroundStyle(isHighContrast ? Color.primary : Color.adventureOrange)
+                }
+                .accessibilityLabel("World Map")
+                .accessibilityHint("Shows a world map of all cities you've visited")
+            }
+
             ToolbarItemGroup(placement: .navigationBarTrailing) {
                 ControlGroup {
                     Button(action: collapseAll) {

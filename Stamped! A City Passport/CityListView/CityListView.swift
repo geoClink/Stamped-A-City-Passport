@@ -28,6 +28,8 @@ struct CityListView: View {
     @State var showingSettings = false
     @State var showingMyJourney = false
     @State var showingPassport = false
+    @State var showingAchievements = false
+    @State var showingWorldMap = false
     @State var selectedCity: CityLocation.City?
     @State var columnVisibility = NavigationSplitViewVisibility.all
     
@@ -155,6 +157,8 @@ struct CityListView: View {
         .accentColor(brandColor)
         .fullScreenCover(isPresented: $showingSettings) { SettingsView() }
         .fullScreenCover(isPresented: $showingMyJourney) { MyJourneyView() }
+        .sheet(isPresented: $showingAchievements) { AchievementsView() }
+        .sheet(isPresented: $showingWorldMap) { WorldMapView() }
         .fullScreenCover(isPresented: $showingPassport) {
             PassportGalleryView(cities: viewModel.allCities)
         }
