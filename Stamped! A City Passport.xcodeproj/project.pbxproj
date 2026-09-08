@@ -14,6 +14,7 @@
 		DE2C6FCC304D070300F657DA /* ProgressAndDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C6FB7304D059900F657DA /* ProgressAndDetailsTests.swift */; };
 		DE2C6FCD304D070900F657DA /* RegistryDecodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C6FB8304D059900F657DA /* RegistryDecodeTests.swift */; };
 		DE2C6FE8304D222900F657DA /* WeatherKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2C6FE7304D222900F657DA /* WeatherKit.framework */; };
+		DEA370C33050AE24004BA2BB /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = DEA370C23050AE24004BA2BB /* RealityKitContent */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +31,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = DE4ECE2B2F4F65D600D107CF;
 			remoteInfo = "Stamped! A City Passport";
+		};
+		DEA370D03050AE53004BA2BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE4ECE242F4F65D600D107CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DEA370BD3050AE24004BA2BB;
+			remoteInfo = "Tally-AVP";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -58,6 +66,9 @@
 		DE2C6FC2304D06E700F657DA /* StampedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StampedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2C6FE7304D222900F657DA /* WeatherKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WeatherKit.framework; path = System/Library/Frameworks/WeatherKit.framework; sourceTree = SDKROOT; };
 		DE4ECE2C2F4F65D600D107CF /* Stamped!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stamped!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEA370BE3050AE24004BA2BB /* Tally-AVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tally-AVP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEA370C13050AE24004BA2BB /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = folder; path = RealityKitContent; sourceTree = "<group>"; };
+		DEA370CF3050AE53004BA2BB /* Tally-AVPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tally-AVPTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -67,6 +78,13 @@
 				Info.plist,
 			);
 			target = DE2C6F87304CB5AF00F657DA /* PassportWidgetExtension */;
+		};
+		DEA370D53050AE53004BA2BB /* Exceptions for "Tally-AVP" folder in "Tally-AVP" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = DEA370BD3050AE24004BA2BB /* Tally-AVP */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -87,6 +105,19 @@
 		DE4ECE2E2F4F65D600D107CF /* Stamped! A City Passport */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Stamped! A City Passport";
+			sourceTree = "<group>";
+		};
+		DEA370BF3050AE24004BA2BB /* Tally-AVP */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				DEA370D53050AE53004BA2BB /* Exceptions for "Tally-AVP" folder in "Tally-AVP" target */,
+			);
+			path = "Tally-AVP";
+			sourceTree = "<group>";
+		};
+		DEA370D23050AE53004BA2BB /* Tally-AVPTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Tally-AVPTests";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -113,6 +144,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE2C6FE8304D222900F657DA /* WeatherKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEA370BB3050AE24004BA2BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEA370C33050AE24004BA2BB /* RealityKitContent in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEA370CC3050AE53004BA2BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,7 +201,10 @@
 				DE4ECE2E2F4F65D600D107CF /* Stamped! A City Passport */,
 				DE2C6F8E304CB5AF00F657DA /* PassportWidget */,
 				DE2C6FC3304D06E700F657DA /* StampedTests */,
+				DEA370BF3050AE24004BA2BB /* Tally-AVP */,
+				DEA370D23050AE53004BA2BB /* Tally-AVPTests */,
 				DE2C6F89304CB5AF00F657DA /* Frameworks */,
+				DEA370C03050AE24004BA2BB /* Packages */,
 				DE4ECE2D2F4F65D600D107CF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -166,8 +215,18 @@
 				DE4ECE2C2F4F65D600D107CF /* Stamped!.app */,
 				DE2C6F88304CB5AF00F657DA /* PassportWidgetExtension.appex */,
 				DE2C6FC2304D06E700F657DA /* StampedTests.xctest */,
+				DEA370BE3050AE24004BA2BB /* Tally-AVP.app */,
+				DEA370CF3050AE53004BA2BB /* Tally-AVPTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DEA370C03050AE24004BA2BB /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				DEA370C13050AE24004BA2BB /* RealityKitContent */,
+			);
+			path = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +301,52 @@
 			productReference = DE4ECE2C2F4F65D600D107CF /* Stamped!.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DEA370BD3050AE24004BA2BB /* Tally-AVP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEA370D63050AE53004BA2BB /* Build configuration list for PBXNativeTarget "Tally-AVP" */;
+			buildPhases = (
+				DEA370BA3050AE24004BA2BB /* Sources */,
+				DEA370BB3050AE24004BA2BB /* Frameworks */,
+				DEA370BC3050AE24004BA2BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DEA370BF3050AE24004BA2BB /* Tally-AVP */,
+			);
+			name = "Tally-AVP";
+			packageProductDependencies = (
+				DEA370C23050AE24004BA2BB /* RealityKitContent */,
+			);
+			productName = "Tally-AVP";
+			productReference = DEA370BE3050AE24004BA2BB /* Tally-AVP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DEA370CE3050AE53004BA2BB /* Tally-AVPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEA370D93050AE53004BA2BB /* Build configuration list for PBXNativeTarget "Tally-AVPTests" */;
+			buildPhases = (
+				DEA370CB3050AE53004BA2BB /* Sources */,
+				DEA370CC3050AE53004BA2BB /* Frameworks */,
+				DEA370CD3050AE53004BA2BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEA370D13050AE53004BA2BB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DEA370D23050AE53004BA2BB /* Tally-AVPTests */,
+			);
+			name = "Tally-AVPTests";
+			packageProductDependencies = (
+			);
+			productName = "Tally-AVPTests";
+			productReference = DEA370CF3050AE53004BA2BB /* Tally-AVPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -249,7 +354,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2640;
+				LastSwiftUpdateCheck = 2660;
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					DE2C6F87304CB5AF00F657DA = {
@@ -261,6 +366,13 @@
 					};
 					DE4ECE2B2F4F65D600D107CF = {
 						CreatedOnToolsVersion = 26.2;
+					};
+					DEA370BD3050AE24004BA2BB = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					DEA370CE3050AE53004BA2BB = {
+						CreatedOnToolsVersion = 26.6;
+						TestTargetID = DEA370BD3050AE24004BA2BB;
 					};
 				};
 			};
@@ -289,6 +401,8 @@
 				DE4ECE2B2F4F65D600D107CF /* Stamped! A City Passport */,
 				DE2C6F87304CB5AF00F657DA /* PassportWidgetExtension */,
 				DE2C6FC1304D06E700F657DA /* StampedTests */,
+				DEA370BD3050AE24004BA2BB /* Tally-AVP */,
+				DEA370CE3050AE53004BA2BB /* Tally-AVPTests */,
 			);
 		};
 /* End PBXProject section */
@@ -309,6 +423,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DE4ECE2A2F4F65D600D107CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEA370BC3050AE24004BA2BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEA370CD3050AE53004BA2BB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -342,6 +470,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DEA370BA3050AE24004BA2BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEA370CB3050AE53004BA2BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -354,6 +496,11 @@
 			isa = PBXTargetDependency;
 			target = DE4ECE2B2F4F65D600D107CF /* Stamped! A City Passport */;
 			targetProxy = DE2C6FC6304D06E700F657DA /* PBXContainerItemProxy */;
+		};
+		DEA370D13050AE53004BA2BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DEA370BD3050AE24004BA2BB /* Tally-AVP */;
+			targetProxy = DEA370D03050AE53004BA2BB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -627,6 +774,9 @@
 				PRODUCT_NAME = "Stamped!";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -672,12 +822,125 @@
 				PRODUCT_NAME = "Stamped!";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DEA370D73050AE53004BA2BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S4RSN4KFD3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com-.georgeclinkscales.Tally-AVP";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
+				XROS_DEPLOYMENT_TARGET = 26.5;
+			};
+			name = Debug;
+		};
+		DEA370D83050AE53004BA2BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S4RSN4KFD3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com-.georgeclinkscales.Tally-AVP";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
+				XROS_DEPLOYMENT_TARGET = 26.5;
+			};
+			name = Release;
+		};
+		DEA370DA3050AE53004BA2BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S4RSN4KFD3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com-.georgeclinkscales.Tally-AVPTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tally-AVP.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tally-AVP";
+				XROS_DEPLOYMENT_TARGET = 26.5;
+			};
+			name = Debug;
+		};
+		DEA370DB3050AE53004BA2BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S4RSN4KFD3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com-.georgeclinkscales.Tally-AVPTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tally-AVP.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tally-AVP";
+				XROS_DEPLOYMENT_TARGET = 26.5;
 			};
 			name = Release;
 		};
@@ -720,7 +983,32 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		DEA370D63050AE53004BA2BB /* Build configuration list for PBXNativeTarget "Tally-AVP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEA370D73050AE53004BA2BB /* Debug */,
+				DEA370D83050AE53004BA2BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEA370D93050AE53004BA2BB /* Build configuration list for PBXNativeTarget "Tally-AVPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEA370DA3050AE53004BA2BB /* Debug */,
+				DEA370DB3050AE53004BA2BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DEA370C23050AE24004BA2BB /* RealityKitContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RealityKitContent;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DE4ECE242F4F65D600D107CF /* Project object */;
 }

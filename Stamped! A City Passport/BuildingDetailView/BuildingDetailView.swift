@@ -9,6 +9,7 @@ import SwiftUI
 import PhotosUI
 import MapKit
 import CoreLocation
+import CloudKit
  
 struct BuildingDetailView: View {
     // MARK: - Properties
@@ -39,6 +40,13 @@ struct BuildingDetailView: View {
     @State private var isLoadingVenues = false
     @State private var lookAroundScene: MKLookAroundScene? = nil
     @State private var showingLookAround = false
+    @State private var showingModelViewer = false
+    @State private var existingScanRecord: CKRecord? = nil
+    @State private var localModelURL: URL? = nil
+    @State private var isCheckingScan = false
+    #if os(iOS)
+    @State private var showingScan = false
+    #endif
  
     // Manipulation State (Zoom/Pan)
     @State private var photoScale: CGFloat = 1.0
@@ -90,11 +98,28 @@ struct BuildingDetailView: View {
                 LookAroundSheet(scene: scene, buildingName: building.name)
             }
         }
+        #if os(iOS)
+        .sheet(isPresented: $showingScan) {
+            ScanBuildingView(building: building, cityName: viewModel.city.name)
+        }
+        #endif
+        .sheet(isPresented: $showingModelViewer) {
+            if let url = localModelURL {
+                BuildingModelViewer(modelURL: url, buildingName: building.name)
+            }
+        }
         .task(id: building.id) {
             async let venues: () = fetchNearbyVenues()
             async let lookAround: () = fetchLookAroundScene()
-            _ = await (venues, lookAround)
+            async let scan: () = checkForExistingScan()
+            _ = await (venues, lookAround, scan)
         }
+    }
+
+    private func checkForExistingScan() async {
+        isCheckingScan = true
+        existingScanRecord = await BuildingScanService.shared.fetchLatestScan(buildingID: building.id)
+        isCheckingScan = false
     }
 
     private func fetchLookAroundScene() async {
@@ -369,6 +394,7 @@ extension BuildingDetailView {
                     if lookAroundScene != nil {
                         lookAroundButton
                     }
+                    threeDModelSection
                     localFlavorsSection
                     reportIssueButton
                 }
@@ -404,6 +430,7 @@ extension BuildingDetailView {
             aboutSection
             sectionHeader(L.Building.technicalSpecs)
             technicalGrid
+            threeDModelSection
             if !building.foodSpots.isEmpty {
                 foodSpotsSection(spots: building.foodSpots)
             }
@@ -769,6 +796,99 @@ extension BuildingDetailView {
         // Seed noteText if this is the first stamp
         if noteText.isEmpty {
             noteText = GlobalProgressManager.shared.buildingNotes[building.id] ?? ""
+        }
+    }
+
+    // MARK: - 3D Model Section
+
+    var threeDModelSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            sectionHeader("3D Model")
+
+            if isCheckingScan {
+                HStack(spacing: 8) {
+                    ProgressView().scaleEffect(0.8)
+                    Text("Checking for 3D model…")
+                        .font(.caption).foregroundStyle(.secondary)
+                }
+
+            } else if let record = existingScanRecord {
+                // A scan exists — show View button
+                Button {
+                    HapticManager.shared.trigger(.selection)
+                    Task {
+                        localModelURL = try? await BuildingScanService.shared.localModelURL(for: record)
+                        if localModelURL != nil { showingModelViewer = true }
+                    }
+                } label: {
+                    HStack(spacing: 10) {
+                        Image(systemName: "rotate.3d")
+                            .font(.system(size: 18))
+                            .foregroundStyle(isHighContrast ? Color.primary : Color.adventureOrange)
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("View in 3D")
+                                .font(.subheadline).fontWeight(.semibold).foregroundStyle(.primary)
+                            Text("Community scan available")
+                                .font(.caption2).foregroundStyle(.secondary)
+                        }
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                            .font(.caption).foregroundStyle(.secondary)
+                    }
+                    .padding(14)
+                    .background(Color(UIColor.secondarySystemBackground))
+                    .cornerRadius(12)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 12)
+                            .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
+                    )
+                }
+                .buttonStyle(.plain)
+
+                #if os(iOS)
+                Button {
+                    HapticManager.shared.trigger(.selection)
+                    showingScan = true
+                } label: {
+                    Label("Contribute a better scan", systemImage: "camera.viewfinder")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                }
+                #endif
+
+            } else {
+                #if os(iOS)
+                // No scan yet — invite them to be first
+                Button {
+                    HapticManager.shared.trigger(.selection)
+                    showingScan = true
+                } label: {
+                    HStack(spacing: 10) {
+                        Image(systemName: "camera.viewfinder")
+                            .font(.system(size: 18))
+                            .foregroundStyle(isHighContrast ? Color.primary : Color.adventureOrange)
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Scan This Building")
+                                .font(.subheadline).fontWeight(.semibold).foregroundStyle(.primary)
+                            Text("Be the first to add a 3D model")
+                                .font(.caption2).foregroundStyle(.secondary)
+                        }
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                            .font(.caption).foregroundStyle(.secondary)
+                    }
+                    .padding(14)
+                    .background(Color(UIColor.secondarySystemBackground))
+                    .cornerRadius(12)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 12)
+                            .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
+                    )
+                }
+                .buttonStyle(.plain)
+                #endif
+            }
         }
     }
 
