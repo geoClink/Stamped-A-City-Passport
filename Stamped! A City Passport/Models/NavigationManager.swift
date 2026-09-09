@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 class NavigationManager: ObservableObject {
     @Published var selectedTab: Int = 0
