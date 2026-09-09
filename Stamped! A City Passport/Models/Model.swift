@@ -38,6 +38,7 @@ struct CityLocation: Hashable, Sendable {
         case cuba = "Cuba"
         case nepal = "Nepal", iceland = "Iceland", russia = "Russia", georgia = "Georgia"
         case sriLanka = "Sri Lanka", senegal = "Senegal", tanzania = "Tanzania", queensland = "Queensland"
+        case bangladesh = "Bangladesh"
 
         var continent: Continent {
             switch self {
@@ -47,7 +48,7 @@ struct CityLocation: Hashable, Sendable {
                 return .southAmerica
             case .italy, .england, .france, .denmark, .germany, .netherlands, .spain, .ireland, .turkey, .czechRepublic, .austria, .portugal, .greece, .hungary, .scotland, .switzerland, .sweden, .norway, .finland, .belgium, .poland, .iceland, .russia, .georgia:
                 return .europe
-            case .singapore, .saudiArabia, .southkorea, .uae, .japan, .sar, .israel, .china, .thailand, .india, .indonesia, .yemen, .taiwan, .malaysia, .vietnam, .qatar, .jordan, .oman, .philippines, .nepal, .sriLanka:
+            case .singapore, .saudiArabia, .southkorea, .uae, .japan, .sar, .israel, .china, .thailand, .india, .indonesia, .yemen, .taiwan, .malaysia, .vietnam, .qatar, .jordan, .oman, .philippines, .nepal, .sriLanka, .bangladesh:
                 return .asia
             case .egypt, .southAfrica, .kenya, .morocco, .nigeria, .ghana, .ethiopia, .senegal, .tanzania:
                 return .africa
@@ -124,6 +125,8 @@ struct CityLocation: Hashable, Sendable {
                 return "Ayubowan! (ආයුබෝවන්)"
             case .tanzania:
                 return "Habari!"
+            case .bangladesh:
+                return "Assalamualaikum! (আস্সালামু আলাইকুম)"
             }
         }
 
@@ -199,6 +202,8 @@ struct CityLocation: Hashable, Sendable {
                 return "GAUMARJOS! (გაუმარჯოს)"
             case .sriLanka:
                 return "SUBA PATHANAWA! (සුභ පැතීමයි)"
+            case .bangladesh:
+                return "ABHINANDAN! (অভিনন্দন)"
             }
         }
     }
@@ -236,6 +241,7 @@ struct CityLocation: Hashable, Sendable {
         case quebecCity = "Quebec City", brisbane = "Brisbane"
         case kathmandu = "Kathmandu", reykjavik = "Reykjavik", stPetersburg = "St. Petersburg"
         case tbilisi = "Tbilisi", colombo = "Colombo", dakar = "Dakar", zanzibar = "Zanzibar"
+        case dhaka = "Dhaka"
 
         var id: String { self.rawValue }
         var name: String { self.rawValue }
@@ -329,6 +335,7 @@ struct CityLocation: Hashable, Sendable {
             case .colombo: return .sriLanka
             case .dakar: return .senegal
             case .zanzibar: return .tanzania
+            case .dhaka: return .bangladesh
             }
         }
     }

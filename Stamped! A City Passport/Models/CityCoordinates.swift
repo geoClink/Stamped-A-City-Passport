@@ -140,6 +140,7 @@ extension CityLocation.City {
         case .jaipur:           return (26.9124, 75.7873)
         case .kathmandu:        return (27.7172, 85.3240)
         case .colombo:          return (6.9271, 79.8612)
+        case .dhaka:            return (23.8103, 90.4125)
         // MARK: Africa
         case .cairo:            return (30.0444, 31.2357)
         case .capeTown:         return (-33.9249, 18.4241)

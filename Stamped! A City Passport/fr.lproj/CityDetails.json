@@ -545,6 +545,19 @@
     "transportation": "TER Train & Car Rapide",
     "transportationFact": "Dakar's transport has been transformed by the TER (Train Express Régional), which connects the airport to the city center in about 45 minutes and continues to the suburb of Diamniadio. The city's iconic car rapides — colorfully painted Renault minibuses covered in religious slogans and decorations — have served Dakar for decades and are a cultural symbol, though they are gradually being replaced by modern Dakar Dem Dikk buses. Traffic congestion in Dakar is extreme during peak hours."
   },
+  "Dhaka": {
+    "airportCode": "DAC",
+    "airportInfo": "Hazrat Shahjalal International Airport (DAC) is Bangladesh's largest and busiest airport, named after the 14th-century Sufi saint Hazrat Shahjalal who brought Islam to the Bengal region. Located in Kurmitola, north of central Dhaka, it serves as the main gateway to Bangladesh for international travel. A new third terminal is under construction to dramatically expand capacity and modernize operations for one of South Asia's fastest-growing aviation markets.",
+    "airportName": "Hazrat Shahjalal International Airport",
+    "currencyCode": "BDT",
+    "currencyInfo": "Taka bangladais (৳)",
+    "funFact": "Dhaka is one of the most densely populated cities on Earth, home to over 22 million people in its metropolitan area. Founded as a Mughal provincial capital in 1608, the city became world-famous for its muslin cloth so impossibly fine that Mughal emperors called it 'woven air.' The city's skyline is punctuated by thousands of mosques — Dhaka has an estimated 700+ mosques, earning its nickname 'The City of Mosques.' The National Parliament House, designed by American architect Louis I. Kahn and completed in 1982, is considered one of the greatest architectural achievements of the 20th century.",
+    "language": "Bengali (Bangla)",
+    "languageInfo": "Bengali (Bangla) is the national language of Bangladesh and is spoken by virtually the entire population. It is the seventh most spoken language in the world by number of native speakers, with around 230 million speakers globally. The Bengali Language Movement of 1952 — when students and activists were killed defending the right to use Bengali as the official language against Pakistani authorities — is commemorated internationally as International Mother Language Day on February 21.",
+    "nickname": "La Ville des Mosquées",
+    "transportation": "Rickshaws & auto-rickshaws GNC",
+    "transportationFact": "Dhaka is the rickshaw capital of the world, with an estimated 400,000 to 1 million cycle rickshaws — more than any other city on Earth. The human-powered rickshaw is a primary mode of transport for short distances, especially in the narrow lanes of Old Dhaka, and the ornately painted rickshaw has become an iconic symbol of Bangladeshi folk art. CNG-powered auto-rickshaws (three-wheelers running on compressed natural gas) serve as the main metered taxi alternative. The Dhaka Metro Rail, which opened its first line in 2022, is rapidly expanding to ease the city's legendary traffic congestion."
+  },
   "Dallas": {
     "airportCode": "DFW",
     "airportInfo": "DFW est si grand qu'il est physiquement plus grand que l'île de Manhattan et possède même son propre code postal et sa propre force de police. Il fonctionne comme un immense port intérieur et sert de principale plaque tournante mondiale pour American Airlines, avec cinq terminaux semi-circulaires.",
