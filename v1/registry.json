@@ -15158,6 +15158,118 @@
       "longitude": -122.4018137
     }
   ],
+  "Dhaka": [
+    {
+      "id": "bd_jatiya_sangsad",
+      "name": "Jatiya Sangsad Bhaban",
+      "assetName": "jatiyaSangsad",
+      "description": "The Jatiya Sangsad Bhaban (National Parliament House) is widely considered one of the greatest architectural masterpieces of the 20th century. Designed by American architect Louis I. Kahn and completed in 1982, the massive geometric complex uses raw concrete with marble insets and combines triangular, circular, and rectangular openings to create a monument that merges modernism with Mughal and local vernacular motifs. It sits at the heart of Sher-e-Bangla Nagar, Dhaka's planned civic quarter, surrounded by a reflecting lake.",
+      "architect": "Louis I. Kahn",
+      "yearBuilt": 1982,
+      "address": "Sher-e-Bangla Nagar, Dhaka 1207, Bangladesh",
+      "oldUse": "Designed as parliament building (construction began 1961)",
+      "newUse": "Bangladesh National Parliament",
+      "buildingStyle": "Late Modernist / Brutalist",
+      "numberOfStories": 9,
+      "height": 42,
+      "foodSpots": [
+        "Dhaka Sheraton Hotel restaurant",
+        "Shad Bhojan, Dhaka",
+        "Street-side tea stalls near Sangsad"
+      ],
+      "currency": "BDT",
+      "latitude": 23.7628,
+      "longitude": 90.3776
+    },
+    {
+      "id": "bd_lalbagh_fort",
+      "name": "Lalbagh Fort",
+      "assetName": "lalbaughFort",
+      "description": "Lalbagh Fort (Fort Aurangabad) is a 17th-century Mughal fort complex on the bank of the Buriganga River in Old Dhaka. Construction began in 1678 under Prince Azam Shah, son of Mughal Emperor Aurangzeb, but was never fully completed after the death of the prince's daughter Bibi Pari inside the fort, which was considered a bad omen. The complex includes Bibi Pari's Mausoleum, the Mosque of Qasim Khan, and a museum housing Mughal artifacts.",
+      "architect": "Prince Azam Shah / Mughal architects",
+      "yearBuilt": 1678,
+      "address": "Lalbagh, Old Dhaka, Bangladesh",
+      "oldUse": "Mughal military fortress",
+      "newUse": "Archaeological museum & public park",
+      "buildingStyle": "Mughal",
+      "numberOfStories": 2,
+      "height": 15,
+      "foodSpots": [
+        "Old Dhaka street food stalls",
+        "Haji Biryani, Old Dhaka",
+        "Nanna Biriyani, Nazimuddin Road"
+      ],
+      "currency": "BDT",
+      "latitude": 23.7191,
+      "longitude": 90.3878
+    },
+    {
+      "id": "bd_ahsan_manzil",
+      "name": "Ahsan Manzil",
+      "assetName": "ahsanManzil",
+      "description": "Ahsan Manzil, known as the Pink Palace, is a 19th-century Mughal-Renaissance palace that served as the official seat of the Nawabs of Dhaka. Built in 1872 by Nawab Abdul Ghani on the north bank of the Buriganga River, its distinctive coral-pink dome and French Second Empire cupola make it the most recognizable building in Old Dhaka. It now serves as the National Museum of the Nawabs, displaying the opulent furnishings and artifacts of the Dhaka Nawab family.",
+      "architect": "Unknown (commissioned by Nawab Abdul Ghani)",
+      "yearBuilt": 1872,
+      "address": "Kumartuli, Islampur, Dhaka, Bangladesh",
+      "oldUse": "Nawab's residential palace",
+      "newUse": "National Museum",
+      "buildingStyle": "Mughal-Renaissance / Indo-Saracenic",
+      "numberOfStories": 2,
+      "height": 27,
+      "foodSpots": [
+        "Haji Biryani, Old Dhaka",
+        "Nanna Biriyani, Nazimuddin Road",
+        "Star Hotel Bakarkhani"
+      ],
+      "currency": "BDT",
+      "latitude": 23.7095,
+      "longitude": 90.4004
+    },
+    {
+      "id": "bd_star_mosque",
+      "name": "Star Mosque",
+      "assetName": "starMosque",
+      "description": "The Tara Masjid (Star Mosque) in Armanitola, Old Dhaka, is one of the most visually dazzling mosques in Bangladesh. Originally built in the early 18th century, it was extensively renovated in 1926 with a spectacular exterior mosaic of thousands of blue and white Chinese porcelain shards arranged in star patterns — the tiles were sourced from broken Chinese porcelain dishes, creating a unique folk-revival aesthetic unlike any mosque in the subcontinent.",
+      "architect": "Unknown / folk craftsmen (renovation 1926)",
+      "yearBuilt": 1726,
+      "address": "Armanitola, Old Dhaka, Bangladesh",
+      "oldUse": "Mughal-era mosque",
+      "newUse": "Active mosque",
+      "buildingStyle": "Mughal / Folk-revival ceramic mosaic",
+      "numberOfStories": 1,
+      "height": 12,
+      "foodSpots": [
+        "Old Dhaka street food stalls",
+        "Nanna Biriyani, Nazimuddin Road",
+        "Local chai stalls near Sadarghat"
+      ],
+      "currency": "BDT",
+      "latitude": 23.7225,
+      "longitude": 90.4065
+    },
+    {
+      "id": "bd_shaheed_minar",
+      "name": "Shaheed Minar",
+      "assetName": "shaheedMinar",
+      "description": "The Shaheed Minar (Martyr's Monument) is Bangladesh's most important national monument, built to honor the language activists killed by Pakistani police on February 21, 1952, during the Bengali Language Movement. The original monument was demolished by Pakistani forces during the 1971 Liberation War; the current structure, designed by Hamidur Rahman, was rebuilt after independence. The movement it commemorates inspired UNESCO to designate February 21 as International Mother Language Day, observed worldwide.",
+      "architect": "Hamidur Rahman",
+      "yearBuilt": 1963,
+      "address": "University of Dhaka campus, Dhaka, Bangladesh",
+      "oldUse": "Language martyrs' memorial",
+      "newUse": "National monument & pilgrimage site",
+      "buildingStyle": "Modernist memorial",
+      "numberOfStories": 1,
+      "height": 14,
+      "foodSpots": [
+        "Dhaka University area tea stalls",
+        "TSC (Teacher-Student Centre) cafeteria",
+        "Madhur Canteen, Dhaka University"
+      ],
+      "currency": "BDT",
+      "latitude": 23.7326,
+      "longitude": 90.3944
+    }
+  ],
   "Dallas": [
     {
       "id": "dal_reunion_tower",
