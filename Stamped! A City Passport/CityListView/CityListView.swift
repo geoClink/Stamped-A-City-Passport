@@ -78,20 +78,7 @@ struct CityListView: View {
                     } else {
                         ForEach(results) { result in
                             NavigationLink(value: result.city) {
-                                HStack(spacing: 15) {
-                                    Image(systemName: result.isLandmark ? "mappin.and.ellipse" : "building.2.fill")
-                                        .foregroundColor(isHighContrast ? .primary : Color.adventureOrange)
-                                        .frame(width: 30)
-                                    
-                                    VStack(alignment: .leading) {
-                                        Text(result.title)
-                                            .fontWeight(isHighContrast ? .black : .semibold)
-                                            .foregroundColor(.primary)
-                                        Text(result.subtitle)
-                                            .font(.caption)
-                                            .foregroundColor(.secondary)
-                                    }
-                                }
+                                searchResultRow(result)
                             }
                             .tag(result.city)
                             .simultaneousGesture(TapGesture().onEnded {
@@ -176,43 +163,6 @@ struct CityListView: View {
 
     // MARK: - List Sections
 
-    @ViewBuilder
-    private func continentSection(_ group: ContinentGroup) -> some View {
-        let isExpanded = expandedContinents[group.id, default: false]
-        
-        Section {
-            DisclosureGroup(isExpanded: Binding(
-                get: { isExpanded },
-                set: { newValue in
-                    if newValue { HapticManager.shared.trigger(.selection) }
-                    withAnimation(.spring(response: 0.6, dampingFraction: 0.7)) {
-                        expandedContinents[group.id] = newValue
-                    }
-                }
-            )) {
-                ForEach(group.countries) { countryGroup in
-                    cityCountrySection(country: countryGroup.id, cities: countryGroup.cities)
-                }
-            } label: {
-                ContinentHeader(continent: group.id, isHighContrast: isHighContrast, isExpanded: isExpanded)
-            }
-        }
-    }
-
-    @ViewBuilder
-    private var searchSection: some View {
-        let results = viewModel.filteredResults(query: searchText)
-        if results.isEmpty {
-            emptySearchContent
-        } else {
-            ForEach(results) { result in
-                NavigationLink(value: result.city) {
-                    searchResultRow(result)
-                }
-            }
-        }
-    }
-    
     @ViewBuilder
     private func searchResultRow(_ result: MixedSearchResult) -> some View {
         HStack(spacing: 15) {

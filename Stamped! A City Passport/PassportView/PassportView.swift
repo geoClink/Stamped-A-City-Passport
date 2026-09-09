@@ -8,19 +8,11 @@
 import SwiftUI
 import Combine
 
-// MARK: - Navigation Manager
-class NavigationManager: ObservableObject {
-    @Published var selectedTab: Int = 0
-    @Published var spotlightCity: CityLocation.City? = nil
-}
-
-
 // MARK: - Main Passport View
 struct PassportView: View {
     @Namespace var stampAnimation
     @StateObject var progressManager = GlobalProgressManager.shared
-    @EnvironmentObject var navManager: NavigationManager
-    
+
     let columns = [
         GridItem(.adaptive(minimum: 300, maximum: 500), spacing: 20)
     ]

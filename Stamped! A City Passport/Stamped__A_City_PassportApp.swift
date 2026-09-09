@@ -26,7 +26,6 @@ struct GlobalDiscoveryApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     @AppStorage("hasSeenOnboarding") var hasSeenOnboarding: Bool = false
-    @StateObject private var progressManager = GlobalProgressManager.shared
     @StateObject private var navManager = NavigationManager()
     
     var body: some Scene {
@@ -34,7 +33,6 @@ struct GlobalDiscoveryApp: App {
             ZStack {
                 if hasSeenOnboarding {
                     CityListView()
-                        .environmentObject(progressManager)
                         .environmentObject(navManager)
                         .transition(.asymmetric(
                             insertion: .move(edge: .trailing).combined(with: .opacity),
