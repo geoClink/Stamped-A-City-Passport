@@ -8,6 +8,11 @@ struct BuildingModelViewer: View {
     let buildingName: String
     @Environment(\.dismiss) private var dismiss
 
+    // Accumulated Y-axis rotation driven by drag gesture
+    @State private var rotationY: Float = 0
+    // Tracks the previous drag translation so we can compute per-frame deltas
+    @State private var prevDragWidth: CGFloat = 0
+
     var body: some View {
         NavigationStack {
             RealityView { content in
@@ -28,7 +33,6 @@ struct BuildingModelViewer: View {
                         z: -1.5
                     )
 
-                    // Allow tap-to-rotate with input targeting
                     entity.components.set(InputTargetComponent())
                     entity.generateCollisionShapes(recursive: true)
 
@@ -38,8 +42,22 @@ struct BuildingModelViewer: View {
                 } catch {
                     print("BuildingModelViewer: failed to load model — \(error)")
                 }
+            } update: { content in
+                // Re-runs whenever rotationY changes — applies drag rotation to the model entity
+                guard let anchor = content.entities.first,
+                      let entity = anchor.children.first else { return }
+                entity.orientation = simd_quatf(angle: rotationY, axis: [0, 1, 0])
             }
             .ignoresSafeArea()
+            .gesture(
+                DragGesture()
+                    .onChanged { value in
+                        let delta = Float(value.translation.width - prevDragWidth) * 0.005
+                        rotationY += delta
+                        prevDragWidth = value.translation.width
+                    }
+                    .onEnded { _ in prevDragWidth = 0 }
+            )
             .navigationTitle(buildingName)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

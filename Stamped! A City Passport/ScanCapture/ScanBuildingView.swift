@@ -22,12 +22,13 @@ struct ScanBuildingView: View {
         NavigationStack {
             Group {
                 switch vm.phase {
-                case .intro:      introView
-                case .selected:   selectedView
-                case .processing: processingView
-                case .uploading:  uploadingView
-                case .done:       doneView
+                case .intro:         introView
+                case .selected:      selectedView
+                case .processing:    processingView
+                case .uploading:     uploadingView
+                case .done:          doneView
                 case .failed(let msg): failedView(msg)
+                case .unsupported:   unsupportedView
                 }
             }
             .animation(.easeInOut, value: vm.phase == .intro)
@@ -245,6 +246,38 @@ struct ScanBuildingView: View {
         }
     }
 
+    // MARK: - Unsupported Device
+
+    private var unsupportedView: some View {
+        VStack(spacing: 24) {
+            Spacer()
+
+            Image(systemName: "iphone.slash")
+                .font(.system(size: 64))
+                .foregroundStyle(.secondary)
+
+            VStack(spacing: 8) {
+                Text("LiDAR Required")
+                    .font(.title2.bold())
+                Text("3D scanning needs a LiDAR sensor. Try an iPhone 12 Pro or later Pro model, or an iPad Pro with LiDAR.")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 32)
+            }
+
+            Button("Close") { dismiss() }
+                .font(.headline.bold())
+                .foregroundStyle(.white)
+                .frame(maxWidth: 300)
+                .padding(.vertical, 16)
+                .background(Color.adventureOrange)
+                .clipShape(Capsule())
+
+            Spacer()
+        }
+    }
+
     // MARK: - Failed
 
     private func failedView(_ message: String) -> some View {
@@ -295,7 +328,7 @@ class ScanViewModel: ObservableObject {
     @Published var processingProgress: Float = 0
 
     enum Phase: Equatable {
-        case intro, selected, processing, uploading, done, failed(String)
+        case intro, selected, processing, uploading, done, failed(String), unsupported
     }
 
     private let imagesDir: URL
@@ -309,6 +342,9 @@ class ScanViewModel: ObservableObject {
         self.imagesDir = base.appendingPathComponent("images")
         self.outputURL = base.appendingPathComponent("output.usdz")
         try? FileManager.default.createDirectory(at: imagesDir, withIntermediateDirectories: true)
+        if #available(iOS 17.0, *), !PhotogrammetrySession.isSupported {
+            phase = .unsupported
+        }
     }
 
     func onPhotosSelected(_ items: [PhotosPickerItem]) {
@@ -340,6 +376,10 @@ class ScanViewModel: ObservableObject {
     private func reconstruct() async {
         guard #available(iOS 17.0, *) else {
             phase = .failed("iOS 17 or later is required.")
+            return
+        }
+        guard PhotogrammetrySession.isSupported else {
+            phase = .unsupported
             return
         }
         do {
