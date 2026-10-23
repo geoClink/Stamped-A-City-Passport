@@ -26,6 +26,8 @@ struct CityMapView: View {
     /// A place the user saved from Apple Maps search (only one card shows at a time).
     @State private var selectedPlace: CustomPlace?
     @State private var showingAddPlace = false
+    /// Website or ticket page shown inside the app.
+    @State private var browserLink: BrowserLink?
     /// The building page currently pushed onto the map's navigation stack.
     @State private var detailBuilding: Building?
     /// onAppear also fires when coming Back from a building page; only frame the city the first time.
@@ -198,6 +200,7 @@ struct CityMapView: View {
                         stopTour()
                         detailBuilding = building
                     },
+                    onOpenTickets: { browserLink = BrowserLink(url: $0) },
                     onClose: {
                         stopTour()
                         selectedBuilding = nil
@@ -212,6 +215,7 @@ struct CityMapView: View {
                     hasLookAround: lookAroundScene != nil,
                     reduceTransparency: reduceTransparency,
                     onLookAround: { showingLookAround = true },
+                    onOpenWebPage: { browserLink = BrowserLink(url: $0) },
                     onRemove: {
                         withAnimation { progress.removeCustomPlace(place.id) }
                         selectedPlace = nil
@@ -261,6 +265,10 @@ struct CityMapView: View {
                         .padding()
                 }
             }
+        }
+        .sheet(item: $browserLink) { link in
+            InAppBrowser(url: link.url)
+                .ignoresSafeArea()
         }
         .navigationDestination(item: $detailBuilding) { building in
             BuildingDetailView(building: building, viewModel: viewModel)
@@ -550,6 +558,7 @@ private struct MapLandmarkCard: View {
     let onPrevious: () -> Void
     let onNext: () -> Void
     let onViewDetails: () -> Void
+    let onOpenTickets: (URL) -> Void
     let onClose: () -> Void
 
     var body: some View {
@@ -622,6 +631,16 @@ private struct MapLandmarkCard: View {
                 .buttonStyle(.bordered)
                 .accessibilityLabel("Next landmark")
             }
+
+            // Stadiums, theatres, concert halls: show what's on there
+            if let lat = building.latitude, let lon = building.longitude {
+                PlaceEventsView(
+                    coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon),
+                    placeName: building.name,
+                    includeNearby: false,
+                    onOpenTickets: onOpenTickets
+                )
+            }
         }
         .tint(.adventureOrange)
         .padding(16)
@@ -688,6 +707,7 @@ private struct CustomPlaceCard: View {
     let hasLookAround: Bool
     let reduceTransparency: Bool
     let onLookAround: () -> Void
+    let onOpenWebPage: (URL) -> Void
     let onRemove: () -> Void
     let onClose: () -> Void
 
@@ -736,7 +756,7 @@ private struct CustomPlaceCard: View {
                     .disabled(!hasLookAround)
                     .opacity(hasLookAround ? 1 : 0.4)
                 if let website = place.websiteURL {
-                    QuickAction(title: "Website", systemImage: "safari", isOn: false) { openURL(website) }
+                    QuickAction(title: "Website", systemImage: "safari", isOn: false) { onOpenWebPage(website) }
                 }
                 if let phoneURL {
                     QuickAction(title: "Call", systemImage: "phone", isOn: false) { openURL(phoneURL) }
@@ -747,6 +767,9 @@ private struct CustomPlaceCard: View {
                     }
                 }
             }
+
+            PlaceEventsView(coordinate: place.coordinate, placeName: place.name,
+                            onOpenTickets: onOpenWebPage)
 
             Button(role: .destructive, action: onRemove) {
                 Label("Remove from Want to Visit", systemImage: "heart.slash")

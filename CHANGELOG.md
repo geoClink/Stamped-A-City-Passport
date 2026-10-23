@@ -18,6 +18,8 @@ How to use this file:
 - Guided city tour that flies between every landmark automatically.
 - Map filters (Not Visited, Stamped, Want to Visit, architectural style) and a pulsing pin on the nearest unvisited landmark.
 - Map and satellite toggle (remembered between launches).
+- Websites and ticket pages open inside the app.
+- Upcoming Ticketmaster events on map cards: events at a landmark venue, or nearby events for saved places, with ticket links.
 - Vision Pro app: every city on a photoreal 3D map, landmark cards, and stamps synced from iPhone. Shares the iPhone app's App Store listing.
 
 ### Fixed

@@ -14,6 +14,7 @@ struct LandmarkSection: View {
     
     @ObservedObject private var progressManager = GlobalProgressManager.shared
     @State private var showingAddPlace = false
+    @State private var browserLink: BrowserLink?
     @Environment(\.openURL) private var openURL
     
     private var wishlistBuildings: [Building] {
@@ -112,6 +113,9 @@ struct LandmarkSection: View {
         }
         .accessibilityElement(children: .contain)
         .accessibilityLabel("Landmarks in \(viewModel.city.name)")
+        .sheet(item: $browserLink) { link in
+            InAppBrowser(url: link.url).ignoresSafeArea()
+        }
         .sheet(isPresented: $showingAddPlace) {
             if let center = cityCenter {
                 AddPlaceSheet(cityName: viewModel.city.name, cityCenter: center)
@@ -151,7 +155,7 @@ struct LandmarkSection: View {
         .buttonStyle(.plain)
         .contextMenu {
             if let website = place.websiteURL {
-                Button { openURL(website) } label: { Label("Website", systemImage: "safari") }
+                Button { browserLink = BrowserLink(url: website) } label: { Label("Website", systemImage: "safari") }
             }
             Button(role: .destructive) {
                 withAnimation { progressManager.removeCustomPlace(place.id) }

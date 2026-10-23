@@ -142,17 +142,17 @@ actor WikimediaService {
 
 // MARK: - Decodable response shape
 
-private struct WikiAPIResponse: Decodable {
+nonisolated private struct WikiAPIResponse: Decodable {
     let thumbnail: WikiImage?
     let originalimage: WikiImage?
     let extract: String?
 }
 
-private struct WikiImage: Decodable {
+nonisolated private struct WikiImage: Decodable {
     let source: String?
 }
 
-private struct WikiMediaList: Decodable {
+nonisolated private struct WikiMediaList: Decodable {
     let items: [Item]
     struct Item: Decodable {
         let type: String?
