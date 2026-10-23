@@ -24,6 +24,7 @@ struct CityDetailView: View {
     @State private var showingFinalConfirmation = false
     @State private var showingCelebration = false
     @State private var showingMap = false
+    @State private var showingExplore = false
     @State private var resetType: CityDetailViewModel.ResetType = .none
     
     var isHighContrast: Bool { systemContrast == .increased || appHighContrast }
@@ -182,6 +183,15 @@ struct CityDetailView: View {
                 )
             }
         }
+        #if os(iOS)
+        .fullScreenCover(isPresented: $showingExplore) {
+            CityExploreView(
+                buildings: viewModel.city.buildings,
+                visitedIDs: GlobalProgressManager.shared.visitedIDs,
+                cityName: viewModel.city.name
+            )
+        }
+        #endif
         .alert("Confirm Reset", isPresented: $showingFinalConfirmation) {
             Button("Yes, Reset", role: .destructive) { executeResetAction() }
             Button("Cancel", role: .cancel) { resetType = .none }
@@ -194,6 +204,25 @@ struct CityDetailView: View {
     @ToolbarContentBuilder
     private var toolbarContent: some ToolbarContent {
         
+
+        #if os(iOS)
+        // Only show Explore for cities that have a bundled USDZ.
+        if Bundle.main.url(forResource: viewModel.city.name.lowercased(), withExtension: "usdz") != nil {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    showingExplore = true
+                } label: {
+                    Image(systemName: "globe")
+                        .font(.system(size: 20))
+                        .fontWeight(isHighContrast ? .black : .regular)
+                        .foregroundColor(brandColor)
+                }
+                .accessibilityLabel("Explore \(viewModel.city.name) in AR")
+                .accessibilityHint("Places a 3D city model in your space")
+            }
+        }
+        #endif
+
         ToolbarItem(placement: .navigationBarTrailing) {
             Button {
                 showingMap = true

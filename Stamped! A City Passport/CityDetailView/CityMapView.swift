@@ -30,14 +30,20 @@ struct CityMapView: View {
                 )
                 Annotation(building.name, coordinate: coord, anchor: .bottom) {
                     PinView(isVisited: isVisited)
-                        .onTapGesture { selectedBuilding = building }
+                        .onTapGesture { flyTo(building, at: coord) }
                         .accessibilityLabel(isVisited ? "\(building.name), stamped" : "\(building.name), not yet visited")
                         .accessibilityHint("Tap to see building details")
                         .accessibilityAddTraits(.isButton)
                 }
             }
         }
-        .mapStyle(.standard(elevation: .realistic))
+        // Satellite photos draped over Apple's 3D city scans (the same data as Flyover).
+        // Cities without 3D coverage fall back to flat satellite imagery automatically.
+        .mapStyle(.imagery(elevation: .realistic))
+        .mapControls {
+            MapCompass()
+            MapPitchToggle()
+        }
         .navigationTitle("\(cityName) Map")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear { fitCamera() }
@@ -81,11 +87,39 @@ struct CityMapView: View {
             latitude: (lats.max()! + lats.min()!) / 2,
             longitude: (lons.max()! + lons.min()!) / 2
         )
-        let span = MKCoordinateSpan(
-            latitudeDelta: max((lats.max()! - lats.min()!) * 1.4, 0.01),
-            longitudeDelta: max((lons.max()! - lons.min()!) * 1.4, 0.01)
+        // Convert the landmarks' spread from degrees to metres so we know how far back
+        // the camera has to sit. A degree of longitude shrinks the further you are from the equator.
+        let latSpanMeters = (lats.max()! - lats.min()!) * 111_000
+        let lonSpanMeters = (lons.max()! - lons.min()!) * 111_000 * cos(center.latitude * .pi / 180)
+        let distance = max(max(latSpanMeters, lonSpanMeters) * 3.5, 2_500)
+
+        // A tilted camera (pitch) is what makes the buildings stand up in 3D.
+        // Straight down (pitch 0) would look like a flat satellite photo.
+        position = .camera(MapCamera(
+            centerCoordinate: center,
+            distance: distance,
+            heading: 0,
+            pitch: 60
+        ))
+    }
+
+    /// Swoops the camera down to a landmark, then opens its info sheet.
+    private func flyTo(_ building: Building, at coordinate: CLLocationCoordinate2D) {
+        // The sheet covers the bottom half of the screen. Aiming the camera slightly
+        // south of the building pushes the building up into the visible top half.
+        let aimPoint = CLLocationCoordinate2D(
+            latitude: coordinate.latitude - 0.0015,
+            longitude: coordinate.longitude
         )
-        position = .region(MKCoordinateRegion(center: center, span: span))
+        withAnimation(.easeInOut(duration: 1.5)) {
+            position = .camera(MapCamera(
+                centerCoordinate: aimPoint,
+                distance: 700,
+                heading: 0,
+                pitch: 65
+            ))
+        }
+        selectedBuilding = building
     }
 }
 

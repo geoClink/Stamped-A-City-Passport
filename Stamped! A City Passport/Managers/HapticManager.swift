@@ -6,7 +6,9 @@
 //
 
 import SwiftUI
+#if !os(visionOS)
 import UIKit
+#endif
 
 enum HapticStyle: Sendable {
     case selection, impact, warning, success, error, heavy
@@ -16,7 +18,7 @@ enum HapticStyle: Sendable {
 final class HapticManager {
     static let shared = HapticManager()
     static let settingsKey = "haptics_enabled"
-    
+
     @AppStorage(HapticManager.settingsKey) var hapticsEnabled = true
 
     private init() {
@@ -24,12 +26,10 @@ final class HapticManager {
             HapticManager.settingsKey: true
         ])
     }
-    
+
     func trigger(_ style: HapticStyle) {
-        guard hapticsEnabled else {
-            return
-        }
-        
+        guard hapticsEnabled else { return }
+        #if !os(visionOS)
         switch style {
         case .selection: UISelectionFeedbackGenerator().selectionChanged()
         case .impact: UIImpactFeedbackGenerator(style: .medium).impactOccurred()
@@ -38,5 +38,6 @@ final class HapticManager {
         case .warning: UINotificationFeedbackGenerator().notificationOccurred(.warning)
         case .error: UINotificationFeedbackGenerator().notificationOccurred(.error)
         }
+        #endif
     }
 }

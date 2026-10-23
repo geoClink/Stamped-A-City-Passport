@@ -1,0 +1,10 @@
+shapely
+trimesh
+mapbox-earcut
+numpy
+requests
+usd-core
+Pillow
+overturemaps
+py3dep
+rioxarray

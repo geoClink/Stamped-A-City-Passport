@@ -38,15 +38,18 @@ final class ProximityManager: NSObject, ObservableObject {
     // MARK: - Permissions
 
     func requestPermissions() {
+        #if !os(visionOS)
         // Ask for "Always" so geofences fire in the background.
         // iOS requires WhenInUse to be granted first — it will prompt in sequence.
         locationManager.requestAlwaysAuthorization()
+        #endif
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { _, _ in }
     }
 
     // MARK: - Start monitoring a city's buildings
 
     func startMonitoring(buildings: [Building], visitedIDs: Set<String>, userLocation: CLLocation? = nil) {
+        #if !os(visionOS)
         // Clear any previously monitored regions
         for region in locationManager.monitoredRegions {
             locationManager.stopMonitoring(for: region)
@@ -86,12 +89,15 @@ final class ProximityManager: NSObject, ObservableObject {
         }
 
         print("[Proximity] Monitoring \(toMonitor.count) landmarks")
+        #endif
     }
 
     func stopMonitoring() {
+        #if !os(visionOS)
         for region in locationManager.monitoredRegions {
             locationManager.stopMonitoring(for: region)
         }
+        #endif
         monitoredBuildings.removeAll()
         nearbyBuilding = nil
     }
@@ -124,6 +130,7 @@ extension ProximityManager: CLLocationManagerDelegate {
         }
     }
 
+    #if !os(visionOS)
     nonisolated func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         Task { @MainActor in
             guard let building = self.monitoredBuildings[region.identifier] else { return }
@@ -144,4 +151,5 @@ extension ProximityManager: CLLocationManagerDelegate {
     nonisolated func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?, withError error: Error) {
         print("[Proximity] Monitoring failed for \(region?.identifier ?? "unknown"): \(error.localizedDescription)")
     }
+    #endif
 }

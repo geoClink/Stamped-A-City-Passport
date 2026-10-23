@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE008D3C305244CD0003C067 /* detroit.obj in Resources */ = {isa = PBXBuildFile; fileRef = DE008D39305244CD0003C067 /* detroit.obj */; };
 		DE2C6F8B304CB5AF00F657DA /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2C6F8A304CB5AF00F657DA /* WidgetKit.framework */; };
 		DE2C6F8D304CB5AF00F657DA /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2C6F8C304CB5AF00F657DA /* SwiftUI.framework */; };
 		DE2C6F9C304CB5B000F657DA /* PassportWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DE2C6F88304CB5AF00F657DA /* PassportWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -14,6 +15,8 @@
 		DE2C6FCC304D070300F657DA /* ProgressAndDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C6FB7304D059900F657DA /* ProgressAndDetailsTests.swift */; };
 		DE2C6FCD304D070900F657DA /* RegistryDecodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C6FB8304D059900F657DA /* RegistryDecodeTests.swift */; };
 		DE2C6FE8304D222900F657DA /* WeatherKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2C6FE7304D222900F657DA /* WeatherKit.framework */; };
+		DE57C156305351770036884C /* detroit.usdz in Resources */ = {isa = PBXBuildFile; fileRef = DE57C155305351770036884C /* detroit.usdz */; };
+		DE57C157305351770036884C /* detroit.usdz in Resources */ = {isa = PBXBuildFile; fileRef = DE57C155305351770036884C /* detroit.usdz */; };
 		DEA370C33050AE24004BA2BB /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = DEA370C23050AE24004BA2BB /* RealityKitContent */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DE008D39305244CD0003C067 /* detroit.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = detroit.obj; sourceTree = "<group>"; };
 		DE2C6F88304CB5AF00F657DA /* PassportWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PassportWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2C6F8A304CB5AF00F657DA /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		DE2C6F8C304CB5AF00F657DA /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -66,12 +70,30 @@
 		DE2C6FC2304D06E700F657DA /* StampedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StampedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2C6FE7304D222900F657DA /* WeatherKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WeatherKit.framework; path = System/Library/Frameworks/WeatherKit.framework; sourceTree = SDKROOT; };
 		DE4ECE2C2F4F65D600D107CF /* Stamped!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stamped!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE57C155305351770036884C /* detroit.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = detroit.usdz; sourceTree = "<group>"; };
 		DEA370BE3050AE24004BA2BB /* Tally-AVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tally-AVP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA370C13050AE24004BA2BB /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = folder; path = RealityKitContent; sourceTree = "<group>"; };
 		DEA370CF3050AE53004BA2BB /* Tally-AVPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tally-AVPTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		DE008D56305262410003C067 /* Exceptions for "Stamped! A City Passport" folder in "Tally-AVP" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CityExplore/CitySceneConfig.swift,
+				Models/Building.swift,
+				Models/CityAudioManager.swift,
+				Models/SoundCreditsView.swift,
+				Resources/AudioCredits.json,
+				Resources/baseball_crowd.m4a,
+				Resources/BuildingRegistry.json,
+				Resources/city_ambience.m4a,
+				Resources/football_crowd.m4a,
+				Resources/night_crickets.m4a,
+				Resources/rain_loop.m4a,
+			);
+			target = DEA370BD3050AE24004BA2BB /* Tally-AVP */;
+		};
 		DE2C6FA0304CB5B000F657DA /* Exceptions for "PassportWidget" folder in "PassportWidgetExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -104,6 +126,9 @@
 		};
 		DE4ECE2E2F4F65D600D107CF /* Stamped! A City Passport */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				DE008D56305262410003C067 /* Exceptions for "Stamped! A City Passport" folder in "Tally-AVP" target */,
+			);
 			path = "Stamped! A City Passport";
 			sourceTree = "<group>";
 		};
@@ -165,6 +190,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE008D3B305244CD0003C067 /* output */ = {
+			isa = PBXGroup;
+			children = (
+				DE57C155305351770036884C /* detroit.usdz */,
+				DE008D39305244CD0003C067 /* detroit.obj */,
+			);
+			path = output;
+			sourceTree = "<group>";
+		};
 		DE2C6F89304CB5AF00F657DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +258,7 @@
 		DEA370C03050AE24004BA2BB /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				DE008D3B305244CD0003C067 /* output */,
 				DEA370C13050AE24004BA2BB /* RealityKitContent */,
 			);
 			path = Packages;
@@ -426,6 +461,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE57C156305351770036884C /* detroit.usdz in Resources */,
+				DE008D3C305244CD0003C067 /* detroit.obj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +470,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE57C157305351770036884C /* detroit.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,7 +784,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Stamped! A City Passport/Stamped! A City Passport.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -769,12 +807,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "name.GeorgeClinkscales.Stamped--A-City-Passport";
 				PRODUCT_NAME = "Stamped!";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -782,7 +820,8 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 26.4;
 			};
 			name = Debug;
 		};
@@ -794,7 +833,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Stamped! A City Passport/Stamped! A City Passport.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -817,12 +856,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "name.GeorgeClinkscales.Stamped--A-City-Passport";
 				PRODUCT_NAME = "Stamped!";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -830,7 +869,8 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 26.4;
 			};
 			name = Release;
 		};

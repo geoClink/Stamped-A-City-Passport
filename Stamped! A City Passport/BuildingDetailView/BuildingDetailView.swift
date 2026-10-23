@@ -46,6 +46,7 @@ struct BuildingDetailView: View {
     @State private var isCheckingScan = false
     #if os(iOS)
     @State private var showingScan = false
+    @State private var showingScanNudge = false
     #endif
  
     // Manipulation State (Zoom/Pan)
@@ -80,9 +81,11 @@ struct BuildingDetailView: View {
         .background(Color(.systemBackground))
         .toolbarBackground(.hidden, for: .navigationBar)
         .ignoresSafeArea(edges: .top)
+        #if !os(visionOS)
         .fullScreenCover(isPresented: $showCamera) {
             CameraPicker(buildingID: building.id)
         }
+        #endif
         .alert(L.Building.deletePhotoTitle, isPresented: $showingDeleteConfirmation) {
             Button(L.Building.deletePhotoConfirm, role: .destructive) {
                 GlobalProgressManager.shared.deleteImage(for: building.id)
@@ -101,6 +104,12 @@ struct BuildingDetailView: View {
         #if os(iOS)
         .sheet(isPresented: $showingScan) {
             ScanBuildingView(building: building, cityName: viewModel.city.name)
+        }
+        .sheet(isPresented: $showingScanNudge) {
+            ScanNudgeSheet(building: building, cityName: viewModel.city.name) {
+                showingScanNudge = false
+                showingScan = true
+            }
         }
         #endif
         .sheet(isPresented: $showingModelViewer) {
@@ -341,10 +350,12 @@ extension BuildingDetailView {
 
             Divider().frame(height: 20)
 
+            #if !os(visionOS)
             Button { showCamera = true } label: {
                 Image(systemName: "camera.fill").frame(width: 44, height: 44)
             }
             .accessibilityLabel("Take photo with camera")
+            #endif
 
             if isEditingPhoto {
                 if photoScale != 1.0 || photoOffset != .zero {
@@ -791,12 +802,22 @@ extension BuildingDetailView {
      }
     
     func handleActionTap() {
+        let wasUnvisited = !isVisited
         withAnimation(.spring()) { viewModel.toggleVisited(for: building) }
         if hapticsEnabled { HapticManager.shared.trigger(isVisited ? .success : .warning) }
-        // Seed noteText if this is the first stamp
         if noteText.isEmpty {
             noteText = GlobalProgressManager.shared.buildingNotes[building.id] ?? ""
         }
+        #if os(iOS)
+        // Show scan nudge after the stamp animation plays, but only when:
+        // - user just stamped (wasn't visited before)
+        // - no community scan exists yet
+        if wasUnvisited && existingScanRecord == nil && !isCheckingScan {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
+                showingScanNudge = true
+            }
+        }
+        #endif
     }
 
     // MARK: - 3D Model Section

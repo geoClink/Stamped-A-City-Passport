@@ -30,40 +30,41 @@ struct LandmarkSection: View {
                             isVisited: isVisited,
                             isHighContrast: isHighContrast
                         )
-                    }
-                    .buttonStyle(.plain)
-                    .simultaneousGesture(TapGesture().onEnded {
-                        HapticManager.shared.trigger(.selection)
-                    })
-                    .accessibilityIdentifier("LandmarkLink_\(building.name)")
-                    .contextMenu {
-                        Button {
-                            withAnimation(.spring()) {
-                                viewModel.toggleVisited(for: building)
+                        // contextMenu on the inner content keeps NavigationLink's tap gesture
+                        // unambiguous — the system no longer waits for a long-press threshold.
+                        .contextMenu {
+                            Button {
+                                withAnimation(.spring()) {
+                                    viewModel.toggleVisited(for: building)
+                                }
+                                HapticManager.shared.trigger(.success)
+                            } label: {
+                                Label(
+                                    isVisited ? "Remove Stamp" : "Mark as Visited",
+                                    systemImage: isVisited ? "checkmark.seal" : "checkmark.seal.fill"
+                                )
                             }
-                            HapticManager.shared.trigger(.success)
-                        } label: {
-                            Label(
-                                isVisited ? "Remove Stamp" : "Mark as Visited",
-                                systemImage: isVisited ? "checkmark.seal" : "checkmark.seal.fill"
-                            )
-                        }
-                        if let lat = building.latitude, let lon = building.longitude {
-                            let encoded = building.name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-                            if let url = URL(string: "maps://?ll=\(lat),\(lon)&q=\(encoded)") {
-                                Button {
-                                    UIApplication.shared.open(url)
-                                    HapticManager.shared.trigger(.selection)
-                                } label: {
-                                    Label("Open in Maps", systemImage: "map")
+                            if let lat = building.latitude, let lon = building.longitude {
+                                let encoded = building.name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+                                if let url = URL(string: "maps://?ll=\(lat),\(lon)&q=\(encoded)") {
+                                    Button {
+                                        UIApplication.shared.open(url)
+                                        HapticManager.shared.trigger(.selection)
+                                    } label: {
+                                        Label("Open in Maps", systemImage: "map")
+                                    }
                                 }
                             }
+                        } preview: {
+                            WikiBuildingPhoto(building: building, height: 220)
+                                .frame(width: 300)
+                                .clipped()
                         }
-                    } preview: {
-                        WikiBuildingPhoto(building: building, height: 220)
-                            .frame(width: 300)
-                            .clipped()
                     }
+                    .buttonStyle(.plain)
+                    .hoverEffect(.highlight)
+                    .contentShape(Rectangle())
+                    .accessibilityIdentifier("LandmarkLink_\(building.name)")
 
                     if !isHighContrast && building.id != viewModel.city.buildings.last?.id {
                         Divider().padding(.leading, 60)

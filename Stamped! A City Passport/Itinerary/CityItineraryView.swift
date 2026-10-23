@@ -946,14 +946,18 @@ struct ShimmerModifier: ViewModifier {
 
     func body(content: Content) -> some View {
         content
-            .overlay(
+            // Trailing-closure overlay only accepts views, so Swift knows which
+            // blendMode to use (LinearGradient is both a View and a ShapeStyle).
+            .overlay {
                 LinearGradient(
                     gradient: Gradient(colors: [.clear, .white.opacity(0.4), .clear]),
                     startPoint: .init(x: phase - 0.3, y: 0),
                     endPoint: .init(x: phase, y: 0)
                 )
+                #if !os(visionOS)
                 .blendMode(.screen)
-            )
+                #endif
+            }
             .onAppear {
                 withAnimation(.linear(duration: 1.4).repeatForever(autoreverses: false)) { phase = 1.3 }
             }

@@ -94,7 +94,11 @@ struct PassportShareCardView: View {
             visitedCities: visitedCities
         )
         let renderer = ImageRenderer(content: card)
+        #if os(visionOS)
+        renderer.scale = 2.0
+        #else
         renderer.scale = UIScreen.main.scale
+        #endif
         if let uiImage = renderer.uiImage {
             renderedImage = Image(uiImage: uiImage)
         }
