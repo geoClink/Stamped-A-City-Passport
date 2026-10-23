@@ -26,6 +26,13 @@ struct Tally_AVPApp: App {
         .windowStyle(.volumetric)
         .defaultSize(width: 0.6, height: 0.45, depth: 0.6, in: .meters)
 
+        // ── Globe of every city: opened from the city list's toolbar ──────────
+        WindowGroup(id: "globe") {
+            GlobeVolumeView()
+        }
+        .windowStyle(.volumetric)
+        .defaultSize(width: 0.6, height: 0.7, depth: 0.6, in: .meters)
+
         // ── Immersive walk-through: city at room scale ────────────────────────
         // City name is stored in AppStorage before opening so no value-passing needed.
         ImmersiveSpace(id: "city-immersive") {

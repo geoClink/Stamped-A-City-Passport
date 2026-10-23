@@ -13,6 +13,11 @@ struct CityListVisionView: View {
     private let store = VisionStore.shared
     @State private var selectedCity: String?
     @State private var searchText = ""
+    @Environment(\.openWindow) private var openWindow
+    /// Set by the globe's "Show in Main Window" button (see GlobeVolumeView).
+    @AppStorage("globeRequestedCity") private var globeRequestedCity = ""
+    /// Read by the globe, which highlights the city selected here.
+    @AppStorage("globeHighlightedCity") private var globeHighlightedCity = ""
 
     private var filteredCities: [String] {
         guard !searchText.isEmpty else { return store.cityNames }
@@ -30,6 +35,13 @@ struct CityListVisionView: View {
             }
             .navigationTitle("Stamped!")
             .searchable(text: $searchText, prompt: "Search cities")
+            .toolbar {
+                ToolbarItem {
+                    Button("Globe", systemImage: "globe.americas.fill") {
+                        openWindow(id: "globe")
+                    }
+                }
+            }
         } detail: {
             if let city = selectedCity {
                 CityMapVisionView(cityName: city)
@@ -44,6 +56,15 @@ struct CityListVisionView: View {
         }
         .onAppear {
             if selectedCity == nil { selectedCity = store.cityNames.contains("New York") ? "New York" : store.cityNames.first }
+        }
+        .onChange(of: globeRequestedCity) { _, city in
+            guard !city.isEmpty else { return }
+            searchText = ""            // make sure the city isn't hidden by a search
+            selectedCity = city
+            globeRequestedCity = ""    // reset, so picking the same city again still works
+        }
+        .onChange(of: selectedCity) { _, city in
+            globeHighlightedCity = city ?? ""
         }
     }
 }
