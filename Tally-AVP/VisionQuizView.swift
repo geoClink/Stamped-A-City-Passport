@@ -71,7 +71,9 @@ struct VisionQuizView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .glassBackgroundEffect(in: RoundedRectangle(cornerRadius: 24))
 
-            Text(quiz.type.prompt)
+            // `prompt` is a plain String from the shared QuestionType, so wrap it in
+            // LocalizedStringKey to look it up in Localizable.xcstrings.
+            Text(LocalizedStringKey(quiz.type.prompt))
                 .font(.title.bold())
 
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
@@ -113,7 +115,7 @@ struct VisionQuizView: View {
                 .foregroundStyle(.orange)
             Text("\(quiz.score) out of \(QuizRound.length)")
                 .font(.extraLargeTitle)
-            Text(quiz.score == QuizRound.length ? "Perfect score!" : quiz.score >= 6 ? "Well done!" : "Keep exploring and try again.")
+            Text(resultMessage)
                 .font(.title2)
                 .foregroundStyle(.secondary)
             Button("Play Again") { quiz = QuizRound(buildings: buildings) }
@@ -121,6 +123,14 @@ struct VisionQuizView: View {
                 .tint(.orange)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+
+    /// Typed as LocalizedStringKey so these get translated. (A `? "a" : "b"`
+    /// of plain literals would be a String, which Text shows untranslated.)
+    private var resultMessage: LocalizedStringKey {
+        if quiz.score == QuizRound.length { return "Perfect score!" }
+        if quiz.score >= 6 { return "Well done!" }
+        return "Keep exploring and try again."
     }
 }
 
@@ -187,7 +197,7 @@ struct QuizRound {
         case .style: building.buildingStyle
         case .year: String(building.yearBuilt)
         case .architect: building.architect
-        case .stories: "\(building.numberOfStories) floors"
+        case .stories: String(localized: "\(building.numberOfStories) floors")
         }
     }
 }

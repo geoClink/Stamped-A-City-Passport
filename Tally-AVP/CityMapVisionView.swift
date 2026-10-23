@@ -255,8 +255,9 @@ private struct LandmarkCard: View {
                 }
                 Spacer()
                 Button(action: onWishlist) {
-                    Label(isWishlisted ? "Saved" : "Want to Go",
-                          systemImage: isWishlisted ? "heart.fill" : "heart")
+                    // Typed as LocalizedStringKey so both titles get translated
+                    let title: LocalizedStringKey = isWishlisted ? "Saved" : "Want to Go"
+                    Label(title, systemImage: isWishlisted ? "heart.fill" : "heart")
                 }
                 .tint(.pink)
             }
