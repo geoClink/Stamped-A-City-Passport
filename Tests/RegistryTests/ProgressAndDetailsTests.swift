@@ -1,5 +1,5 @@
 import XCTest
-@testable import GlobalDiscoveryApp
+@testable import Stamped_
 
 // MARK: - CityDetails Tests
 
@@ -48,6 +48,33 @@ final class CityDetailsTests: XCTestCase {
 // MARK: - GlobalProgressManager Tests
 
 final class GlobalProgressManagerTests: XCTestCase {
+
+    // Tapping the heart once saves a landmark; tapping again removes it
+    @MainActor func testWishlistToggle() {
+        let saved = GlobalProgressManager.shared.wishlistIDs
+        defer { GlobalProgressManager.shared.wishlistIDs = saved }
+
+        GlobalProgressManager.shared.wishlistIDs = []
+        GlobalProgressManager.shared.toggleWishlist("test-wish")
+        XCTAssertTrue(GlobalProgressManager.shared.isWishlisted("test-wish"))
+
+        GlobalProgressManager.shared.toggleWishlist("test-wish")
+        XCTAssertFalse(GlobalProgressManager.shared.isWishlisted("test-wish"))
+    }
+
+    // Saving a landmark for later must not stamp it as visited
+    @MainActor func testWishlistDoesNotStamp() {
+        let savedWishlist = GlobalProgressManager.shared.wishlistIDs
+        let savedVisits = GlobalProgressManager.shared.visitedIDs
+        defer {
+            GlobalProgressManager.shared.wishlistIDs = savedWishlist
+            GlobalProgressManager.shared.visitedIDs = savedVisits
+        }
+
+        GlobalProgressManager.shared.visitedIDs = []
+        GlobalProgressManager.shared.toggleWishlist("test-wish")
+        XCTAssertFalse(GlobalProgressManager.shared.isVisited("test-wish"))
+    }
 
     // Mastery for zero buildings should always be Tourist at 0% progress
     @MainActor func testEmptyBuildingsMastery() {

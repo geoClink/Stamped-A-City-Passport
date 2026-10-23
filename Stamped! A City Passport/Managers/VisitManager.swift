@@ -26,7 +26,13 @@ class GlobalProgressManager: ObservableObject {
 
     var buildingNotes: [String: String] = [:]
 
+    /// Landmarks the user wants to visit on a future trip.
+    @Published var wishlistIDs: Set<String> = [] {
+        didSet { saveWishlist() }
+    }
+
     private let saveKey = "GlobalVisitedBuildingsKey"
+    private let wishlistKey = "GlobalWishlistKey"
     private let visitDatesKey = "GlobalVisitDatesKey"
     private let buildingNotesKey = "BuildingNotesKey"
     private let defaults = UserDefaults(suiteName: "group.stamped.passport") ?? .standard
@@ -46,6 +52,10 @@ class GlobalProgressManager: ObservableObject {
 
         if let notes = defaults.dictionary(forKey: buildingNotesKey) as? [String: String] {
             self.buildingNotes = notes
+        }
+
+        if let wishlist = defaults.array(forKey: wishlistKey) as? [String] {
+            self.wishlistIDs = Set(wishlist)
         }
 
         loadImagesFromDisk()
@@ -87,6 +97,13 @@ class GlobalProgressManager: ObservableObject {
                 }
             }
             if updated { saveVisitDates() }
+        }
+
+        // wishlist: people remove places as well as add them, so the latest saved
+        // list wins (unlike stamps, where a union keeps every stamp ever earned)
+        if let cloudWishlist = iCloud.array(forKey: wishlistKey) as? [String],
+           Set(cloudWishlist) != wishlistIDs {
+            wishlistIDs = Set(cloudWishlist)
         }
 
         // buildingNotes: adopt cloud note only if there is no local note
@@ -215,6 +232,26 @@ class GlobalProgressManager: ObservableObject {
         visitedIDs.contains(id)
     }
 
+    // MARK: - Wishlist
+
+    func isWishlisted(_ id: String) -> Bool {
+        wishlistIDs.contains(id)
+    }
+
+    func toggleWishlist(_ id: String) {
+        if wishlistIDs.contains(id) {
+            wishlistIDs.remove(id)
+        } else {
+            wishlistIDs.insert(id)
+        }
+    }
+
+    private func saveWishlist() {
+        let arr = Array(wishlistIDs)
+        defaults.set(arr, forKey: wishlistKey)
+        iCloud.set(arr, forKey: wishlistKey)
+    }
+
     private func save() {
         let arr = Array(visitedIDs)
         defaults.set(arr, forKey: saveKey)
@@ -231,6 +268,8 @@ class GlobalProgressManager: ObservableObject {
         iCloud.removeObject(forKey: saveKey)
         iCloud.removeObject(forKey: visitDatesKey)
         iCloud.removeObject(forKey: buildingNotesKey)
+        wishlistIDs.removeAll()
+        iCloud.removeObject(forKey: wishlistKey)
         userImages.removeAll()
         
         let documents = getDocumentsDirectory()

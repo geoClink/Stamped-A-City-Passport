@@ -215,7 +215,7 @@ struct CityVolumeView: View {
                 Text(building.name)
                     .font(.headline)
             }
-            Text("\(building.yearBuilt) · \(building.buildingStyle)")
+            Text("\(String(building.yearBuilt)) · \(building.buildingStyle)")
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
             Text(building.address)

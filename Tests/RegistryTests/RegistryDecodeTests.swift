@@ -1,5 +1,5 @@
 import XCTest
-@testable import GlobalDiscoveryApp
+@testable import Stamped_
 
 final class RegistryDecodeTests: XCTestCase {
     func testDecodeBundleRegistry() throws {

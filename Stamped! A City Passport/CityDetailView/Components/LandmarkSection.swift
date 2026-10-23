@@ -13,8 +13,16 @@ struct LandmarkSection: View {
     
     @ObservedObject private var progressManager = GlobalProgressManager.shared
     
+    private var wishlistBuildings: [Building] {
+        viewModel.city.buildings.filter { progressManager.isWishlisted($0.id) }
+    }
+
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
+            if !wishlistBuildings.isEmpty {
+                wishlistSection
+            }
+
             Text("LANDMARKS")
                 .font(.caption.bold())
                 .foregroundColor(isHighContrast ? .primary : .secondary)
@@ -43,6 +51,14 @@ struct LandmarkSection: View {
                                     isVisited ? "Remove Stamp" : "Mark as Visited",
                                     systemImage: isVisited ? "checkmark.seal" : "checkmark.seal.fill"
                                 )
+                            }
+                            Button {
+                                withAnimation(.spring()) { progressManager.toggleWishlist(building.id) }
+                                HapticManager.shared.trigger(.selection)
+                            } label: {
+                                let isSaved = progressManager.isWishlisted(building.id)
+                                Label(isSaved ? "Remove from Want to Visit" : "Want to Visit",
+                                      systemImage: isSaved ? "heart.slash" : "heart")
                             }
                             if let lat = building.latitude, let lon = building.longitude {
                                 let encoded = building.name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
@@ -82,5 +98,45 @@ struct LandmarkSection: View {
         }
         .accessibilityElement(children: .contain)
         .accessibilityLabel("Landmarks in \(viewModel.city.name)")
+    }
+
+    // MARK: - Want to Visit
+
+    /// Landmarks saved for a future trip, shown above the full list.
+    private var wishlistSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Label("WANT TO VISIT", systemImage: "heart.fill")
+                .font(.caption.bold())
+                .foregroundColor(isHighContrast ? .primary : .pink)
+                .padding(.horizontal)
+                .accessibilityAddTraits(.isHeader)
+
+            VStack(spacing: isHighContrast ? 12 : 1) {
+                ForEach(wishlistBuildings) { building in
+                    NavigationLink(destination: BuildingDetailView(building: building, viewModel: viewModel)) {
+                        LandmarkRow(
+                            building: building,
+                            isVisited: progressManager.isVisited(building.id),
+                            isHighContrast: isHighContrast
+                        )
+                    }
+                    .buttonStyle(.plain)
+                    .contentShape(Rectangle())
+
+                    if !isHighContrast && building.id != wishlistBuildings.last?.id {
+                        Divider().padding(.leading, 60)
+                            .accessibilityHidden(true)
+                    }
+                }
+            }
+            .background(isHighContrast ? Color.clear : Color(.secondarySystemGroupedBackground))
+            .cornerRadius(16)
+            .overlay(
+                RoundedRectangle(cornerRadius: 16)
+                    .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 3)
+            )
+            .padding(.horizontal)
+            .padding(.bottom, 12)
+        }
     }
 }

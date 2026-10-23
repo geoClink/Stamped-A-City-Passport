@@ -178,8 +178,8 @@ struct CityDetailView: View {
             NavigationStack {
                 CityMapView(
                     buildings: viewModel.city.buildings,
-                    visitedIDs: GlobalProgressManager.shared.visitedIDs,
-                    cityName: viewModel.city.name
+                    cityName: viewModel.city.name,
+                    viewModel: viewModel
                 )
             }
         }

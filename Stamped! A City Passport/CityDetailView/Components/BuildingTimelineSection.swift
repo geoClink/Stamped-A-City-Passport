@@ -98,6 +98,6 @@ private struct TimelineCell: View {
                 .stroke(isVisited ? accent.opacity(0.3) : Color.clear, lineWidth: 1)
         )
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("\(building.yearBuilt), \(building.name), \(isVisited ? "stamped" : "not yet visited")")
+        .accessibilityLabel("\(String(building.yearBuilt)), \(building.name), \(isVisited ? "stamped" : "not yet visited")")
     }
 }

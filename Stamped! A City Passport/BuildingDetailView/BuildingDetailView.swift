@@ -15,7 +15,9 @@ struct BuildingDetailView: View {
     // MARK: - Properties
     let building: Building
     @ObservedObject var viewModel: CityDetailViewModel
-    
+    // Watched so the wishlist heart updates when tapped
+    @ObservedObject private var progressManager = GlobalProgressManager.shared
+
     // MARK: - Environment & Settings
     @Environment(\.horizontalSizeClass) var sizeClass
     @Environment(\.dismiss) var dismiss
@@ -427,10 +429,13 @@ extension BuildingDetailView {
     private var stickyBottomBar: some View {
         VStack(spacing: 0) {
             Divider()
-            bottomActionButton
-                .padding(.horizontal, 20)
-                .padding(.top, 12)
-                .padding(.bottom, 8)
+            HStack(spacing: 12) {
+                bottomActionButton
+                wishlistButton
+            }
+            .padding(.horizontal, 20)
+            .padding(.top, 12)
+            .padding(.bottom, 8)
         }
         .background(reduceTransparency ? AnyShapeStyle(Color(UIColor.systemBackground)) : AnyShapeStyle(.ultraThinMaterial))
     }
@@ -671,6 +676,30 @@ extension BuildingDetailView {
         )
     }
  
+    /// Saves the landmark to the user's "Want to Visit" list for a future trip.
+    var wishlistButton: some View {
+        let isSaved = progressManager.isWishlisted(building.id)
+        return Button {
+            withAnimation(.spring()) { progressManager.toggleWishlist(building.id) }
+            if hapticsEnabled { HapticManager.shared.trigger(.selection) }
+        } label: {
+            Image(systemName: isSaved ? "heart.fill" : "heart")
+                .font(.title3.bold())
+                .contentTransition(.symbolEffect(.replace))
+                .foregroundColor(isHighContrast ? .primary : .pink)
+                .frame(width: 56, height: 54)
+                .background(
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(isHighContrast ? Color.clear : Color.pink.opacity(0.1))
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
+                )
+        }
+        .accessibilityLabel(isSaved ? "Remove from Want to Visit" : "Add to Want to Visit")
+    }
+
     var bottomActionButton: some View {
         let activeColor = isVisited ? Color.green : brandColor
         
