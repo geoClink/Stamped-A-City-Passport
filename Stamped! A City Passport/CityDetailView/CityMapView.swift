@@ -7,6 +7,8 @@
 //  • ◀ ▶ on the card steps through landmarks in walking order.
 //  • Tour flies between every landmark automatically.
 //  • Filter by visited / stamped / want to visit / architectural style.
+//  • Chips (Landmarks · Food · Coffee · Culture) show Apple Maps places; tap one
+//    for Apple's place card and a Want to Visit button.
 //
 
 import SwiftUI
@@ -35,6 +37,13 @@ struct CityMapView: View {
 
     @State private var filter: MapFilter = .all
     @State private var styleFilter: String?
+    /// Which Apple Maps places to show alongside the landmarks (the chips at the top).
+    @State private var category: MapCategory = .landmarks
+
+    /// An Apple Maps place (restaurant, café, museum…) the user tapped on the map.
+    @State private var selectedFeature: MapFeature?
+    /// Its full details, once loaded; showing this opens Apple's place card.
+    @State private var tappedApplePlace: TappedApplePlace?
 
     @State private var lookAroundScene: MKLookAroundScene?
     @State private var showingLookAround = false
@@ -133,7 +142,9 @@ struct CityMapView: View {
     // MARK: - Body
 
     var body: some View {
-        Map(position: $position) {
+        // `selection` lets the user tap Apple's own places. Our landmark pins
+        // handle their own taps, so they're unaffected.
+        Map(position: $position, selection: $selectedFeature) {
             ForEach(filteredBuildings) { building in
                 let isVisited = progress.isVisited(building.id)
                 Annotation(building.name, coordinate: coordinate(of: building), anchor: .bottom) {
@@ -169,7 +180,8 @@ struct CityMapView: View {
         }
         // Satellite photos draped over Apple's 3D city scans (the same data as Flyover).
         // Cities without 3D coverage fall back to flat satellite imagery automatically.
-        .mapStyle(useSatellite ? .imagery(elevation: .realistic) : .standard(elevation: .realistic))
+        // Each category chip decides which Apple Maps places are drawn (see MapCategory).
+        .mapStyle(category.mapStyle(satellite: useSatellite))
         .mapControls {
             MapCompass()
             MapPitchToggle()
@@ -190,7 +202,7 @@ struct CityMapView: View {
                     building: building,
                     isVisited: progress.isVisited(building.id),
                     isWishlisted: progress.isWishlisted(building.id),
-                    hasLookAround: lookAroundScene != nil,
+                    lookAroundScene: lookAroundScene,
                     stopLabel: stopLabel(for: building),
                     reduceTransparency: reduceTransparency,
                     onStamp: { stamp(building) },
@@ -234,13 +246,17 @@ struct CityMapView: View {
             }
         }
         .overlay(alignment: .top) {
-            if filteredBuildings.isEmpty {
+            if filteredBuildings.isEmpty && category == .landmarks {
                 Text("No landmarks match this filter")
                     .font(.subheadline.bold())
                     .padding(.horizontal, 16).padding(.vertical, 10)
                     .background(.regularMaterial, in: Capsule())
                     .padding(.top, 12)
             }
+        }
+        // Category chips sit above the map, like Apple Maps; the compass moves down to make room
+        .safeAreaInset(edge: .top, spacing: 0) {
+            MapCategoryChips(selection: $category)
         }
         .animation(.spring(duration: 0.35), value: selectionKey)
         // Fetch street-level imagery for the selected landmark or place, if Apple has it
@@ -249,6 +265,21 @@ struct CityMapView: View {
             guard let target = selectionCoordinate else { return }
             let request = MKLookAroundSceneRequest(coordinate: target)
             lookAroundScene = try? await request.scene
+        }
+        // Tapped an Apple Maps place: close any Stamped card and load the place's details
+        .task(id: selectedFeature) {
+            guard let feature = selectedFeature else { return }
+            stopTour()
+            selectedBuilding = nil
+            selectedPlace = nil
+            guard let mapItem = try? await MKMapItemRequest(feature: feature).mapItem else {
+                selectedFeature = nil
+                return
+            }
+            tappedApplePlace = TappedApplePlace(mapItem: mapItem)
+        }
+        .sheet(item: $tappedApplePlace, onDismiss: { selectedFeature = nil }) { place in
+            ApplePlaceSheet(mapItem: place.mapItem, cityName: cityName)
         }
         .sheet(isPresented: $showingAddPlace) {
             if let center = cityCenter {
@@ -560,7 +591,8 @@ private struct MapLandmarkCard: View {
     let building: Building
     let isVisited: Bool
     let isWishlisted: Bool
-    let hasLookAround: Bool
+    /// Street-level imagery for this landmark, if Apple has it.
+    let lookAroundScene: MKLookAroundScene?
     let stopLabel: String?
     let reduceTransparency: Bool
     let onStamp: () -> Void
@@ -607,6 +639,16 @@ private struct MapLandmarkCard: View {
                 .accessibilityLabel("Close")
             }
 
+            // Small street-level preview. Tapping it opens Look Around full screen.
+            if let lookAroundScene {
+                LookAroundPreview(initialScene: lookAroundScene, badgePosition: .bottomTrailing)
+                    .frame(height: 110)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                    // A fresh preview per landmark, so it doesn't keep the previous street
+                    .id(building.id)
+                    .accessibilityLabel("Look Around preview of \(building.name)")
+            }
+
             // Quick actions
             HStack(spacing: 8) {
                 QuickAction(title: isVisited ? "Stamped" : "Stamp",
@@ -617,8 +659,8 @@ private struct MapLandmarkCard: View {
                             isOn: isWishlisted, action: onWishlist)
                 QuickAction(title: "Look Around", systemImage: "binoculars",
                             isOn: false, action: onLookAround)
-                    .disabled(!hasLookAround)
-                    .opacity(hasLookAround ? 1 : 0.4)
+                    .disabled(lookAroundScene == nil)
+                    .opacity(lookAroundScene == nil ? 0.4 : 1)
             }
 
             HStack(spacing: 8) {

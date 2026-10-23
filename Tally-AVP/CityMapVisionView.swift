@@ -4,6 +4,8 @@
 //
 //  Photoreal 3D map of one city with a pin for every landmark — the same Apple
 //  3D city data as the iPhone app's map. Tap a pin to fly to it and see its story.
+//  Turn on Places to see Apple Maps' restaurants, cafés and museums; tap one
+//  for Apple's place card.
 //
 
 import SwiftUI
@@ -19,6 +21,10 @@ struct CityMapVisionView: View {
     @State private var selectedBuilding: Building?
     @State private var showingQuiz = false
     @State private var showingWishlist = false
+    /// Show Apple Maps' own places (restaurants, cafés, museums…) on the map.
+    @State private var showsPlaces = false
+    /// The Apple Maps place the user tapped; MapKit shows its place card.
+    @State private var selectedFeature: MapFeature?
 
     private var mappableBuildings: [Building] {
         store.buildings(for: cityName).filter { $0.latitude != nil && $0.longitude != nil }
@@ -30,7 +36,9 @@ struct CityMapVisionView: View {
     }
 
     var body: some View {
-        Map(position: $position) {
+        // `selection` lets the user tap Apple's own places. Our landmark pins
+        // handle their own taps, so they're unaffected.
+        Map(position: $position, selection: $selectedFeature) {
             ForEach(mappableBuildings) { building in
                 let coordinate = CLLocationCoordinate2D(latitude: building.latitude!, longitude: building.longitude!)
                 Annotation(building.name, coordinate: coordinate, anchor: .bottom) {
@@ -60,13 +68,22 @@ struct CityMapVisionView: View {
         }
         // Satellite photos draped over Apple's 3D city scans. Cities without
         // 3D coverage fall back to flat satellite imagery automatically.
-        .mapStyle(.imagery(elevation: .realistic))
+        // Places on: .hybrid adds Apple's labels and place icons on top of the same photos.
+        .mapStyle(showsPlaces ? .hybrid(elevation: .realistic) : .imagery(elevation: .realistic))
+        // Apple's place card pops up next to a tapped place
+        .mapFeatureSelectionAccessory(.callout)
         .mapControls {
             MapCompass()
             MapPitchToggle()
         }
         .navigationTitle(cityName)
         .toolbar {
+            ToolbarItem {
+                Toggle(isOn: $showsPlaces) {
+                    Label("Places", systemImage: "mappin.and.ellipse")
+                }
+                .help("Show restaurants, cafés, museums and more from Apple Maps")
+            }
             ToolbarItem {
                 Button {
                     showingWishlist = true
@@ -106,6 +123,10 @@ struct CityMapVisionView: View {
         }
         .animation(.spring(duration: 0.35), value: selectedBuilding?.id)
         .onAppear { fitCamera() }
+        // Turning Places off also closes any open place card
+        .onChange(of: showsPlaces) { _, isOn in
+            if !isOn { selectedFeature = nil }
+        }
         .sheet(isPresented: $showingQuiz) {
             VisionQuizView(cityName: cityName, buildings: store.buildings(for: cityName))
         }
@@ -129,6 +150,7 @@ struct CityMapVisionView: View {
     /// Camera swoop for a saved place (no card, since it isn't a built-in landmark).
     private func flyTo(_ coordinate: CLLocationCoordinate2D) {
         selectedBuilding = nil
+        selectedFeature = nil
         withAnimation(.easeInOut(duration: 1.5)) {
             position = .camera(MapCamera(centerCoordinate: coordinate, distance: 700, heading: 0, pitch: 65))
         }
@@ -161,6 +183,7 @@ struct CityMapVisionView: View {
 
     /// Swoops the camera down to a landmark and shows its card.
     private func flyTo(_ building: Building, at coordinate: CLLocationCoordinate2D) {
+        selectedFeature = nil
         withAnimation(.easeInOut(duration: 1.5)) {
             position = .camera(MapCamera(centerCoordinate: coordinate, distance: 700, heading: 0, pitch: 65))
         }
