@@ -12,12 +12,11 @@ struct Tally_AVPApp: App {
 
     var body: some Scene {
 
-        // ── Main window: city selector ────────────────────────────────────────
+        // ── Main window: city list + photoreal 3D map ─────────────────────────
         WindowGroup {
             CityListVisionView()
         }
-        .windowStyle(.plain)
-        .defaultSize(width: 720, height: 480)
+        .defaultSize(width: 1400, height: 900)
 
         // ── Volumetric city model: opens when user selects a city ─────────────
         // Receives the city name as a String value.

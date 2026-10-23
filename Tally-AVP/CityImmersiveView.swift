@@ -42,9 +42,7 @@ struct CityImmersiveView: View {
     private let dayTimer = Timer.publish(every: 1.0 / 30.0, on: .main, in: .common).autoconnect()
 
     private var buildings: [Building] { loadBuildings(for: cityName) }
-    private var visitedIDs: Set<String> {
-        Set(UserDefaults.standard.stringArray(forKey: "GlobalVisitedBuildingsKey") ?? [])
-    }
+    private var visitedIDs: Set<String> { VisionStore.shared.visitedIDs }
 
     var body: some View {
         RealityView { content, attachments in
@@ -195,7 +193,7 @@ struct CityImmersiveView: View {
             named: "baseball_crowd",
             configuration: .init(shouldLoop: true, shouldRandomizeStartTime: true)
         ) {
-            let e = Entity()WAAWAWD
+            let e = Entity()
             e.position = worldPos(lat: 42.3390, lon: -83.0485)
             e.components.set(spatialCfg)
             baseballCtrl = e.playAudio(resource)

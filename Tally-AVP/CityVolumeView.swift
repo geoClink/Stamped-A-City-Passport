@@ -36,7 +36,7 @@ struct CityVolumeView: View {
     @State private var prevMag:      CGFloat = 1
 
     private var buildings: [Building]   { loadBuildings(for: cityName) }
-    private var visitedIDs: Set<String> { visionVisitedIDs() }
+    private var visitedIDs: Set<String> { VisionStore.shared.visitedIDs }
 
     var body: some View {
         ZStack {
@@ -237,12 +237,6 @@ struct CityVolumeView: View {
 }
 
 // MARK: - Helpers
-
-private func visionVisitedIDs() -> Set<String> {
-    // Read from the same UserDefaults key the iOS app writes to.
-    let saved = UserDefaults.standard.stringArray(forKey: "GlobalVisitedBuildingsKey") ?? []
-    return Set(saved)
-}
 
 private extension Comparable {
     func clamped(to range: ClosedRange<Self>) -> Self {
