@@ -23,6 +23,9 @@ struct CityMapView: View {
 
     @State private var position: MapCameraPosition = .automatic
     @State private var selectedBuilding: Building?
+    /// A place the user saved from Apple Maps search (only one card shows at a time).
+    @State private var selectedPlace: CustomPlace?
+    @State private var showingAddPlace = false
     /// The building page currently pushed onto the map's navigation stack.
     @State private var detailBuilding: Building?
     /// onAppear also fires when coming Back from a building page; only frame the city the first time.
@@ -60,6 +63,23 @@ struct CityMapView: View {
             }
             return passesFilter && (styleFilter == nil || building.buildingStyle == styleFilter)
         }
+    }
+
+    /// The user's own saved places in this city. They're wishlist items, so they
+    /// only show for "All" and "Want to Visit", and not while a style is chosen.
+    private var visibleCustomPlaces: [CustomPlace] {
+        guard styleFilter == nil, filter == .all || filter == .wishlist else { return [] }
+        return progress.customPlaces(in: cityName)
+    }
+
+    /// Changes whenever a different landmark or place is selected (drives Look Around loading).
+    private var selectionKey: String? {
+        selectedBuilding?.id ?? selectedPlace?.id
+    }
+
+    private var selectionCoordinate: CLLocationCoordinate2D? {
+        if let building = selectedBuilding { return coordinate(of: building) }
+        return selectedPlace?.coordinate
     }
 
     private var styles: [String] {
@@ -128,6 +148,17 @@ struct CityMapView: View {
                     .accessibilityAddTraits(.isButton)
                 }
             }
+            ForEach(visibleCustomPlaces) { place in
+                Annotation(place.name, coordinate: place.coordinate, anchor: .bottom) {
+                    CustomPlacePin(category: place.category, isSelected: place.id == selectedPlace?.id)
+                        .onTapGesture {
+                            stopTour()
+                            flyTo(place)
+                        }
+                        .accessibilityLabel("\(place.name), your saved place")
+                        .accessibilityAddTraits(.isButton)
+                }
+            }
             if userLocationInCity != nil {
                 UserAnnotation()
             }
@@ -175,6 +206,21 @@ struct CityMapView: View {
                 .padding(.horizontal, 12)
                 .padding(.bottom, 8)
                 .transition(.move(edge: .bottom).combined(with: .opacity))
+            } else if let place = selectedPlace {
+                CustomPlaceCard(
+                    place: place,
+                    hasLookAround: lookAroundScene != nil,
+                    reduceTransparency: reduceTransparency,
+                    onLookAround: { showingLookAround = true },
+                    onRemove: {
+                        withAnimation { progress.removeCustomPlace(place.id) }
+                        selectedPlace = nil
+                    },
+                    onClose: { selectedPlace = nil }
+                )
+                .padding(.horizontal, 12)
+                .padding(.bottom, 8)
+                .transition(.move(edge: .bottom).combined(with: .opacity))
             } else {
                 legend
                     .frame(maxWidth: .infinity, alignment: .trailing)
@@ -190,13 +236,18 @@ struct CityMapView: View {
                     .padding(.top, 12)
             }
         }
-        .animation(.spring(duration: 0.35), value: selectedBuilding?.id)
-        // Fetch street-level imagery for the selected landmark, if Apple has it
-        .task(id: selectedBuilding?.id) {
+        .animation(.spring(duration: 0.35), value: selectionKey)
+        // Fetch street-level imagery for the selected landmark or place, if Apple has it
+        .task(id: selectionKey) {
             lookAroundScene = nil
-            guard let building = selectedBuilding else { return }
-            let request = MKLookAroundSceneRequest(coordinate: coordinate(of: building))
+            guard let target = selectionCoordinate else { return }
+            let request = MKLookAroundSceneRequest(coordinate: target)
             lookAroundScene = try? await request.scene
+        }
+        .sheet(isPresented: $showingAddPlace) {
+            if let center = cityCenter {
+                AddPlaceSheet(cityName: cityName, cityCenter: center)
+            }
         }
         .sheet(isPresented: $showingLookAround) {
             if let scene = lookAroundScene {
@@ -243,6 +294,15 @@ struct CityMapView: View {
             }
             .accessibilityLabel("Filter landmarks")
         }
+        ToolbarItem(placement: .topBarLeading) {
+            Button {
+                stopTour()
+                showingAddPlace = true
+            } label: {
+                Image(systemName: "plus")
+            }
+            .accessibilityLabel("Add a place to Want to Visit")
+        }
         ToolbarItem(placement: .topBarTrailing) {
             Button {
                 useSatellite.toggle()
@@ -271,6 +331,9 @@ struct CityMapView: View {
             LegendRow(color: .secondary, label: "Not yet visited")
             if upNext != nil {
                 LegendRow(color: .adventureOrange, label: "Up next (pulsing)", isRing: true)
+            }
+            if !visibleCustomPlaces.isEmpty {
+                LegendRow(color: .pink, label: "Your places")
             }
         }
         .padding(10)
@@ -357,7 +420,18 @@ struct CityMapView: View {
         withAnimation(.easeInOut(duration: duration)) {
             position = .camera(MapCamera(centerCoordinate: aimPoint, distance: 700, heading: 0, pitch: 65))
         }
+        selectedPlace = nil
         selectedBuilding = building
+    }
+
+    /// Same swoop for a place the user saved themselves.
+    private func flyTo(_ place: CustomPlace) {
+        let aimPoint = CLLocationCoordinate2D(latitude: place.latitude - 0.0015, longitude: place.longitude)
+        withAnimation(.easeInOut(duration: 1.5)) {
+            position = .camera(MapCamera(centerCoordinate: aimPoint, distance: 700, heading: 0, pitch: 65))
+        }
+        selectedBuilding = nil
+        selectedPlace = place
     }
 
     // MARK: - Geometry helpers
@@ -585,6 +659,111 @@ private struct QuickAction: View {
         .buttonStyle(.bordered)
         .foregroundStyle(isOn ? Color.white : Color.adventureOrange)
         .background(isOn ? Color.adventureOrange : Color.clear, in: RoundedRectangle(cornerRadius: 12))
+    }
+}
+
+// MARK: - Custom place pin and card
+
+private struct CustomPlacePin: View {
+    let category: String?
+    let isSelected: Bool
+    @ScaledMetric(relativeTo: .callout) private var pinSize: CGFloat = 32
+    @ScaledMetric(relativeTo: .caption) private var pinIconSize: CGFloat = 13
+
+    var body: some View {
+        Image(systemName: CustomPlace.icon(forCategory: category))
+            .font(.system(size: pinIconSize, weight: .bold))
+            .foregroundStyle(.white)
+            .frame(width: pinSize, height: pinSize)
+            .background(Color.pink, in: Circle())
+            .overlay(Circle().stroke(.white, lineWidth: 2))
+            .shadow(radius: 3)
+            .scaleEffect(isSelected ? 1.3 : 1)
+            .animation(.spring(duration: 0.3), value: isSelected)
+    }
+}
+
+private struct CustomPlaceCard: View {
+    let place: CustomPlace
+    let hasLookAround: Bool
+    let reduceTransparency: Bool
+    let onLookAround: () -> Void
+    let onRemove: () -> Void
+    let onClose: () -> Void
+
+    @Environment(\.openURL) private var openURL
+
+    private var mapsURL: URL? {
+        let name = place.name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        return URL(string: "maps://?ll=\(place.latitude),\(place.longitude)&q=\(name)")
+    }
+
+    private var phoneURL: URL? {
+        guard let phone = place.phoneNumber else { return nil }
+        let digits = phone.filter { $0.isNumber || $0 == "+" }
+        return digits.isEmpty ? nil : URL(string: "tel:\(digits)")
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(alignment: .top, spacing: 12) {
+                Image(systemName: CustomPlace.icon(forCategory: place.category))
+                    .font(.title2)
+                    .foregroundStyle(.white)
+                    .frame(width: 52, height: 52)
+                    .background(Color.pink, in: RoundedRectangle(cornerRadius: 12))
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(place.name).font(.headline).lineLimit(2)
+                    if let address = place.address {
+                        Text(address).font(.subheadline).foregroundStyle(.secondary).lineLimit(2)
+                    }
+                    Label("Your place", systemImage: "heart.fill")
+                        .font(.caption)
+                        .foregroundStyle(.pink)
+                }
+                Spacer(minLength: 0)
+                Button(action: onClose) {
+                    Image(systemName: "xmark.circle.fill")
+                        .font(.title2)
+                        .symbolRenderingMode(.hierarchical)
+                        .foregroundStyle(.secondary)
+                }
+                .accessibilityLabel("Close")
+            }
+
+            HStack(spacing: 8) {
+                QuickAction(title: "Look Around", systemImage: "binoculars", isOn: false, action: onLookAround)
+                    .disabled(!hasLookAround)
+                    .opacity(hasLookAround ? 1 : 0.4)
+                if let website = place.websiteURL {
+                    QuickAction(title: "Website", systemImage: "safari", isOn: false) { openURL(website) }
+                }
+                if let phoneURL {
+                    QuickAction(title: "Call", systemImage: "phone", isOn: false) { openURL(phoneURL) }
+                }
+                if let mapsURL {
+                    QuickAction(title: "Directions", systemImage: "arrow.triangle.turn.up.right.diamond", isOn: false) {
+                        openURL(mapsURL)
+                    }
+                }
+            }
+
+            Button(role: .destructive, action: onRemove) {
+                Label("Remove from Want to Visit", systemImage: "heart.slash")
+                    .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.bordered)
+        }
+        .tint(.adventureOrange)
+        .padding(16)
+        .frame(maxWidth: 520)
+        .background {
+            RoundedRectangle(cornerRadius: 24)
+                .fill(reduceTransparency
+                    ? AnyShapeStyle(Color(UIColor.secondarySystemBackground))
+                    : AnyShapeStyle(.regularMaterial))
+                .shadow(color: .black.opacity(0.15), radius: 12, y: 4)
+        }
     }
 }
 

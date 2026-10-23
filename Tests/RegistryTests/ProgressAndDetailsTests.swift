@@ -62,6 +62,25 @@ final class GlobalProgressManagerTests: XCTestCase {
         XCTAssertFalse(GlobalProgressManager.shared.isWishlisted("test-wish"))
     }
 
+    // Saving the same place twice keeps one copy; removing deletes it
+    @MainActor func testCustomPlaceAddDedupeRemove() {
+        let saved = GlobalProgressManager.shared.customPlaces
+        defer { GlobalProgressManager.shared.customPlaces = saved }
+        GlobalProgressManager.shared.customPlaces = []
+
+        let pizza = CustomPlace(id: "p1", name: "Joe's Pizza", address: nil,
+                                latitude: 40.7306, longitude: -73.9891, cityName: "New York")
+        let sameSpot = CustomPlace(id: "p2", name: "Joe's Pizza", address: nil,
+                                   latitude: 40.7307, longitude: -73.9890, cityName: "New York")
+        GlobalProgressManager.shared.addCustomPlace(pizza)
+        GlobalProgressManager.shared.addCustomPlace(sameSpot)
+        XCTAssertEqual(GlobalProgressManager.shared.customPlaces(in: "New York").count, 1)
+        XCTAssertTrue(GlobalProgressManager.shared.customPlaces(in: "Chicago").isEmpty)
+
+        GlobalProgressManager.shared.removeCustomPlace("p1")
+        XCTAssertTrue(GlobalProgressManager.shared.customPlaces.isEmpty)
+    }
+
     // Saving a landmark for later must not stamp it as visited
     @MainActor func testWishlistDoesNotStamp() {
         let savedWishlist = GlobalProgressManager.shared.wishlistIDs
