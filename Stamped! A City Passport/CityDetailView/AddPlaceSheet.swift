@@ -150,22 +150,3 @@ struct AddPlaceSheet: View {
         CustomPlace.icon(forCategory: item.pointOfInterestCategory?.rawValue)
     }
 }
-
-extension CustomPlace {
-    /// SF Symbol for an Apple Maps point-of-interest category.
-    static func icon(forCategory category: String?) -> String {
-        switch category.map(MKPointOfInterestCategory.init(rawValue:)) {
-        case .restaurant?, .foodMarket?: "fork.knife"
-        case .cafe?, .bakery?: "cup.and.saucer.fill"
-        case .nightlife?, .brewery?, .winery?: "wineglass.fill"
-        case .museum?: "building.columns.fill"
-        case .park?, .nationalPark?: "tree.fill"
-        case .theater?, .movieTheater?: "theatermasks.fill"
-        case .stadium?: "sportscourt.fill"
-        case .store?: "bag.fill"
-        case .hotel?: "bed.double.fill"
-        case .beach?: "beach.umbrella.fill"
-        default: "heart.fill"
-        }
-    }
-}

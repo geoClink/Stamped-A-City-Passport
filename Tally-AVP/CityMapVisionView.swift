@@ -17,6 +17,8 @@ struct CityMapVisionView: View {
     private let store = VisionStore.shared
     @State private var position: MapCameraPosition = .automatic
     @State private var selectedBuilding: Building?
+    @State private var showingQuiz = false
+    @State private var showingWishlist = false
 
     private var mappableBuildings: [Building] {
         store.buildings(for: cityName).filter { $0.latitude != nil && $0.longitude != nil }
@@ -33,11 +35,26 @@ struct CityMapVisionView: View {
                 let coordinate = CLLocationCoordinate2D(latitude: building.latitude!, longitude: building.longitude!)
                 Annotation(building.name, coordinate: coordinate, anchor: .bottom) {
                     LandmarkPin(isVisited: store.visitedIDs.contains(building.id),
+                                isWishlisted: store.isWishlisted(building.id),
                                 isSelected: selectedBuilding?.id == building.id)
                         .onTapGesture { flyTo(building, at: coordinate) }
                         .hoverEffect()
                         .accessibilityLabel(building.name)
                         .accessibilityAddTraits(.isButton)
+                }
+            }
+            // Places saved from Apple Maps search on iPhone
+            ForEach(store.customPlaces(in: cityName)) { place in
+                Annotation(place.name, coordinate: place.coordinate, anchor: .bottom) {
+                    Image(systemName: CustomPlace.icon(forCategory: place.category))
+                        .font(.system(size: 14, weight: .bold))
+                        .foregroundStyle(.white)
+                        .frame(width: 34, height: 34)
+                        .background(Color.pink, in: Circle())
+                        .shadow(radius: 4)
+                        .onTapGesture { flyTo(place.coordinate) }
+                        .hoverEffect()
+                        .accessibilityLabel("\(place.name), your saved place")
                 }
             }
         }
@@ -50,6 +67,21 @@ struct CityMapVisionView: View {
         }
         .navigationTitle(cityName)
         .toolbar {
+            ToolbarItem {
+                Button {
+                    showingWishlist = true
+                } label: {
+                    Label("Want to Visit", systemImage: "heart")
+                }
+            }
+            ToolbarItem {
+                Button {
+                    showingQuiz = true
+                } label: {
+                    Label("Quiz", systemImage: "questionmark.bubble")
+                }
+                .disabled(mappableBuildings.count < 4)
+            }
             if hasCityModel {
                 ToolbarItem {
                     Button {
@@ -63,7 +95,9 @@ struct CityMapVisionView: View {
         .overlay(alignment: .bottomLeading) {
             if let building = selectedBuilding {
                 LandmarkCard(building: building,
-                             isVisited: store.visitedIDs.contains(building.id)) {
+                             isVisited: store.visitedIDs.contains(building.id),
+                             isWishlisted: store.isWishlisted(building.id),
+                             onWishlist: { store.toggleWishlist(building.id) }) {
                     selectedBuilding = nil
                 }
                 .padding(24)
@@ -72,6 +106,32 @@ struct CityMapVisionView: View {
         }
         .animation(.spring(duration: 0.35), value: selectedBuilding?.id)
         .onAppear { fitCamera() }
+        .sheet(isPresented: $showingQuiz) {
+            VisionQuizView(cityName: cityName, buildings: store.buildings(for: cityName))
+        }
+        .sheet(isPresented: $showingWishlist) {
+            WantToVisitList(
+                cityName: cityName,
+                onSelectBuilding: { building in
+                    showingWishlist = false
+                    if let lat = building.latitude, let lon = building.longitude {
+                        flyTo(building, at: CLLocationCoordinate2D(latitude: lat, longitude: lon))
+                    }
+                },
+                onSelectPlace: { place in
+                    showingWishlist = false
+                    flyTo(place.coordinate)
+                }
+            )
+        }
+    }
+
+    /// Camera swoop for a saved place (no card, since it isn't a built-in landmark).
+    private func flyTo(_ coordinate: CLLocationCoordinate2D) {
+        selectedBuilding = nil
+        withAnimation(.easeInOut(duration: 1.5)) {
+            position = .camera(MapCamera(centerCoordinate: coordinate, distance: 700, heading: 0, pitch: 65))
+        }
     }
 
     // MARK: - Camera
@@ -112,6 +172,7 @@ struct CityMapVisionView: View {
 
 private struct LandmarkPin: View {
     let isVisited: Bool
+    var isWishlisted = false
     let isSelected: Bool
 
     var body: some View {
@@ -124,6 +185,16 @@ private struct LandmarkPin: View {
                 .font(.system(size: isSelected ? 18 : 14, weight: .bold))
                 .foregroundStyle(.white)
         }
+        .overlay(alignment: .topTrailing) {
+            if isWishlisted {
+                Image(systemName: "heart.fill")
+                    .font(.system(size: 10))
+                    .foregroundStyle(.white)
+                    .padding(4)
+                    .background(Color.pink, in: Circle())
+                    .offset(x: 6, y: -6)
+            }
+        }
     }
 }
 
@@ -132,6 +203,8 @@ private struct LandmarkPin: View {
 private struct LandmarkCard: View {
     let building: Building
     let isVisited: Bool
+    let isWishlisted: Bool
+    let onWishlist: () -> Void
     let onClose: () -> Void
 
     var body: some View {
@@ -151,10 +224,18 @@ private struct LandmarkCard: View {
                 .accessibilityLabel("Close")
             }
 
-            if isVisited {
-                Label("Stamped", systemImage: "checkmark.seal.fill")
-                    .font(.callout.bold())
-                    .foregroundStyle(.orange)
+            HStack {
+                if isVisited {
+                    Label("Stamped", systemImage: "checkmark.seal.fill")
+                        .font(.callout.bold())
+                        .foregroundStyle(.orange)
+                }
+                Spacer()
+                Button(action: onWishlist) {
+                    Label(isWishlisted ? "Saved" : "Want to Go",
+                          systemImage: isWishlisted ? "heart.fill" : "heart")
+                }
+                .tint(.pink)
             }
 
             ScrollView {
@@ -173,5 +254,69 @@ private struct LandmarkCard: View {
         .padding(24)
         .frame(width: 420)
         .glassBackgroundEffect(in: RoundedRectangle(cornerRadius: 28))
+    }
+}
+
+// MARK: - Want to Visit list
+
+/// Landmarks and saved places the user wants to visit in this city (shared with iPhone).
+private struct WantToVisitList: View {
+    let cityName: String
+    let onSelectBuilding: (Building) -> Void
+    let onSelectPlace: (CustomPlace) -> Void
+
+    @Environment(\.dismiss) private var dismiss
+    private let store = VisionStore.shared
+
+    var body: some View {
+        NavigationStack {
+            List {
+                let landmarks = store.wishlistBuildings(in: cityName)
+                let places = store.customPlaces(in: cityName)
+                if landmarks.isEmpty && places.isEmpty {
+                    ContentUnavailableView(
+                        "Nothing Saved Yet",
+                        systemImage: "heart",
+                        description: Text("Tap Want to Go on a landmark, or add places in Stamped on your iPhone.")
+                    )
+                }
+                if !landmarks.isEmpty {
+                    Section("Landmarks") {
+                        ForEach(landmarks) { building in
+                            Button { onSelectBuilding(building) } label: {
+                                Label(building.name, systemImage: "building.columns.fill")
+                            }
+                        }
+                        .onDelete { offsets in
+                            for index in offsets { store.toggleWishlist(landmarks[index].id) }
+                        }
+                    }
+                }
+                if !places.isEmpty {
+                    Section("Your Places") {
+                        ForEach(places) { place in
+                            Button { onSelectPlace(place) } label: {
+                                VStack(alignment: .leading) {
+                                    Label(place.name, systemImage: CustomPlace.icon(forCategory: place.category))
+                                    if let address = place.address {
+                                        Text(address).font(.caption).foregroundStyle(.secondary)
+                                    }
+                                }
+                            }
+                        }
+                        .onDelete { offsets in
+                            for index in offsets { store.removeCustomPlace(places[index].id) }
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Want to Visit · \(cityName)")
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Done") { dismiss() }
+                }
+            }
+        }
+        .frame(minWidth: 520, minHeight: 500)
     }
 }

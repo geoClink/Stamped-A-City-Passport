@@ -21,6 +21,7 @@ How to use this file:
 - Websites and ticket pages open inside the app.
 - Upcoming Ticketmaster events on map cards: events at a landmark venue, or nearby events for saved places, with ticket links.
 - Vision Pro app: every city on a photoreal 3D map, landmark cards, and stamps synced from iPhone. Shares the iPhone app's App Store listing.
+- Vision Pro: layered app icon, a 10-question architecture quiz per city, and the Want to Visit list (landmarks and saved places synced with iPhone). Download size cut from 355 MB to about 24 MB by leaving out the Detroit 3D model.
 
 ### Fixed
 - Years showing as "1,913" in the itinerary and other screens.

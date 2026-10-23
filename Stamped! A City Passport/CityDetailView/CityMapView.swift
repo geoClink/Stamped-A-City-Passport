@@ -46,6 +46,8 @@ struct CityMapView: View {
     /// Satellite photos (default) or the regular drawn map; remembered between launches.
     @AppStorage("map_uses_satellite") private var useSatellite = true
     @Environment(\.accessibilityReduceTransparency) private var reduceTransparency
+    @Environment(\.horizontalSizeClass) private var sizeClass
+    @Environment(\.dismiss) private var dismiss
 
     // MARK: - Derived data
 
@@ -279,6 +281,15 @@ struct CityMapView: View {
 
     @ToolbarContentBuilder
     private var toolbarContent: some ToolbarContent {
+        // On iPad the map is full screen (no swipe-down), so it needs a way out
+        if sizeClass == .regular {
+            ToolbarItem(placement: .cancellationAction) {
+                Button("Done") {
+                    stopTour()
+                    dismiss()
+                }
+            }
+        }
         ToolbarItem(placement: .topBarLeading) {
             Menu {
                 Picker("Show", selection: $filter) {

@@ -35,6 +35,24 @@ struct CityDetailView: View {
         self._highScore = AppStorage(wrappedValue: 0, "high_score_\(city.name)")
     }
     
+    private var cityMap: some View {
+        NavigationStack {
+            CityMapView(
+                buildings: viewModel.city.buildings,
+                cityName: viewModel.city.name,
+                viewModel: viewModel
+            )
+        }
+    }
+
+    /// One `showingMap` flag drives two presentations; each only "sees" it on its own size class.
+    private func mapPresented(fullScreen: Bool) -> Binding<Bool> {
+        Binding(
+            get: { showingMap && (sizeClass == .regular) == fullScreen },
+            set: { showingMap = $0 }
+        )
+    }
+
     var body: some View {
         ScrollView {
             VStack(spacing: isHighContrast ? 32 : 24) {
@@ -174,15 +192,9 @@ struct CityDetailView: View {
                 QuizView(buildings: viewModel.city.buildings, cityName: viewModel.city.name)
             }
         }
-        .sheet(isPresented: $showingMap) {
-            NavigationStack {
-                CityMapView(
-                    buildings: viewModel.city.buildings,
-                    cityName: viewModel.city.name,
-                    viewModel: viewModel
-                )
-            }
-        }
+        // iPhone: swipe-down sheet. iPad: full screen, since an iPad sheet is a small centered window.
+        .sheet(isPresented: mapPresented(fullScreen: false)) { cityMap }
+        .fullScreenCover(isPresented: mapPresented(fullScreen: true)) { cityMap }
         #if os(iOS)
         .fullScreenCover(isPresented: $showingExplore) {
             CityExploreView(

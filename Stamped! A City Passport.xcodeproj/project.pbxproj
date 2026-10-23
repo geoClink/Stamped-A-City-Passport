@@ -16,7 +16,6 @@
 		DE2C6FCD304D070900F657DA /* RegistryDecodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C6FB8304D059900F657DA /* RegistryDecodeTests.swift */; };
 		DE2C6FE8304D222900F657DA /* WeatherKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2C6FE7304D222900F657DA /* WeatherKit.framework */; };
 		DE57C156305351770036884C /* detroit.usdz in Resources */ = {isa = PBXBuildFile; fileRef = DE57C155305351770036884C /* detroit.usdz */; };
-		DE57C157305351770036884C /* detroit.usdz in Resources */ = {isa = PBXBuildFile; fileRef = DE57C155305351770036884C /* detroit.usdz */; };
 		DEA370C33050AE24004BA2BB /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = DEA370C23050AE24004BA2BB /* RealityKitContent */; };
 /* End PBXBuildFile section */
 
@@ -83,7 +82,9 @@
 				CityExplore/CitySceneConfig.swift,
 				Models/Building.swift,
 				Models/CityAudioManager.swift,
+				Models/CustomPlace.swift,
 				Models/SoundCreditsView.swift,
+				QuizView/Components/QuestionType.swift,
 				Resources/AudioCredits.json,
 				Resources/baseball_crowd.m4a,
 				Resources/BuildingRegistry.json,
@@ -470,7 +471,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE57C157305351770036884C /* detroit.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
