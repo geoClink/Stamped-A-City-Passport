@@ -25,6 +25,7 @@ struct CityDetailView: View {
     @State private var showingCelebration = false
     @State private var showingMap = false
     @State private var showingExplore = false
+    @State private var showingTripPlanner = false
     @State private var resetType: CityDetailViewModel.ResetType = .none
     
     var isHighContrast: Bool { systemContrast == .increased || appHighContrast }
@@ -53,6 +54,14 @@ struct CityDetailView: View {
         )
     }
 
+    /// Same iPhone-sheet / iPad-full-screen split as the map.
+    private func tripPlannerPresented(fullScreen: Bool) -> Binding<Bool> {
+        Binding(
+            get: { showingTripPlanner && (sizeClass == .regular) == fullScreen },
+            set: { showingTripPlanner = $0 }
+        )
+    }
+
     var body: some View {
         ScrollView {
             VStack(spacing: isHighContrast ? 32 : 24) {
@@ -69,6 +78,17 @@ struct CityDetailView: View {
                     onTap: {
                         HapticManager.shared.trigger(.selection)
                         showingQuiz = true
+                    }
+                )
+                .padding(.horizontal)
+                .hoverEffect(.lift)
+
+                PlanTripCard(
+                    cityName: viewModel.city.name,
+                    isHighContrast: isHighContrast,
+                    onTap: {
+                        HapticManager.shared.trigger(.selection)
+                        showingTripPlanner = true
                     }
                 )
                 .padding(.horizontal)
@@ -195,6 +215,8 @@ struct CityDetailView: View {
         // iPhone: swipe-down sheet. iPad: full screen, since an iPad sheet is a small centered window.
         .sheet(isPresented: mapPresented(fullScreen: false)) { cityMap }
         .fullScreenCover(isPresented: mapPresented(fullScreen: true)) { cityMap }
+        .sheet(isPresented: tripPlannerPresented(fullScreen: false)) { TripPlannerView(city: viewModel.city) }
+        .fullScreenCover(isPresented: tripPlannerPresented(fullScreen: true)) { TripPlannerView(city: viewModel.city) }
         #if os(iOS)
         .fullScreenCover(isPresented: $showingExplore) {
             CityExploreView(
