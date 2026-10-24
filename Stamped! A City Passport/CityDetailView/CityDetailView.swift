@@ -24,6 +24,8 @@ struct CityDetailView: View {
     @State private var showingFinalConfirmation = false
     @State private var showingCelebration = false
     @State private var showingMap = false
+    @State private var showingExplore = false
+    @State private var showingTripPlanner = false
     @State private var resetType: CityDetailViewModel.ResetType = .none
     
     var isHighContrast: Bool { systemContrast == .increased || appHighContrast }
@@ -34,6 +36,32 @@ struct CityDetailView: View {
         self._highScore = AppStorage(wrappedValue: 0, "high_score_\(city.name)")
     }
     
+    private var cityMap: some View {
+        NavigationStack {
+            CityMapView(
+                buildings: viewModel.city.buildings,
+                cityName: viewModel.city.name,
+                viewModel: viewModel
+            )
+        }
+    }
+
+    /// One `showingMap` flag drives two presentations; each only "sees" it on its own size class.
+    private func mapPresented(fullScreen: Bool) -> Binding<Bool> {
+        Binding(
+            get: { showingMap && (sizeClass == .regular) == fullScreen },
+            set: { showingMap = $0 }
+        )
+    }
+
+    /// Same iPhone-sheet / iPad-full-screen split as the map.
+    private func tripPlannerPresented(fullScreen: Bool) -> Binding<Bool> {
+        Binding(
+            get: { showingTripPlanner && (sizeClass == .regular) == fullScreen },
+            set: { showingTripPlanner = $0 }
+        )
+    }
+
     var body: some View {
         ScrollView {
             VStack(spacing: isHighContrast ? 32 : 24) {
@@ -50,6 +78,17 @@ struct CityDetailView: View {
                     onTap: {
                         HapticManager.shared.trigger(.selection)
                         showingQuiz = true
+                    }
+                )
+                .padding(.horizontal)
+                .hoverEffect(.lift)
+
+                PlanTripCard(
+                    cityName: viewModel.city.name,
+                    isHighContrast: isHighContrast,
+                    onTap: {
+                        HapticManager.shared.trigger(.selection)
+                        showingTripPlanner = true
                     }
                 )
                 .padding(.horizontal)
@@ -173,15 +212,20 @@ struct CityDetailView: View {
                 QuizView(buildings: viewModel.city.buildings, cityName: viewModel.city.name)
             }
         }
-        .sheet(isPresented: $showingMap) {
-            NavigationStack {
-                CityMapView(
-                    buildings: viewModel.city.buildings,
-                    visitedIDs: GlobalProgressManager.shared.visitedIDs,
-                    cityName: viewModel.city.name
-                )
-            }
+        // iPhone: swipe-down sheet. iPad: full screen, since an iPad sheet is a small centered window.
+        .sheet(isPresented: mapPresented(fullScreen: false)) { cityMap }
+        .fullScreenCover(isPresented: mapPresented(fullScreen: true)) { cityMap }
+        .sheet(isPresented: tripPlannerPresented(fullScreen: false)) { TripPlannerView(viewModel: viewModel) }
+        .fullScreenCover(isPresented: tripPlannerPresented(fullScreen: true)) { TripPlannerView(viewModel: viewModel) }
+        #if os(iOS)
+        .fullScreenCover(isPresented: $showingExplore) {
+            CityExploreView(
+                buildings: viewModel.city.buildings,
+                visitedIDs: GlobalProgressManager.shared.visitedIDs,
+                cityName: viewModel.city.name
+            )
         }
+        #endif
         .alert("Confirm Reset", isPresented: $showingFinalConfirmation) {
             Button("Yes, Reset", role: .destructive) { executeResetAction() }
             Button("Cancel", role: .cancel) { resetType = .none }
@@ -194,6 +238,25 @@ struct CityDetailView: View {
     @ToolbarContentBuilder
     private var toolbarContent: some ToolbarContent {
         
+
+        #if os(iOS)
+        // Only show Explore for cities that have a bundled USDZ.
+        if Bundle.main.url(forResource: viewModel.city.name.lowercased(), withExtension: "usdz") != nil {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    showingExplore = true
+                } label: {
+                    Image(systemName: "globe")
+                        .font(.system(size: 20))
+                        .fontWeight(isHighContrast ? .black : .regular)
+                        .foregroundColor(brandColor)
+                }
+                .accessibilityLabel("Explore \(viewModel.city.name) in AR")
+                .accessibilityHint("Places a 3D city model in your space")
+            }
+        }
+        #endif
+
         ToolbarItem(placement: .navigationBarTrailing) {
             Button {
                 showingMap = true

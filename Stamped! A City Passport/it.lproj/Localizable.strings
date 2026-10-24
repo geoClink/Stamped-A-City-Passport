@@ -296,3 +296,6 @@
 
 // MARK: - Report City
 "cityDetail.menu.reportCityInfo" = "Segnala info sulla città";
+
+// MARK: - Campus Architecture
+"CAMPUS ARCHITECTURE" = "ARCHITETTURA DEI CAMPUS";

@@ -15,7 +15,9 @@ struct BuildingDetailView: View {
     // MARK: - Properties
     let building: Building
     @ObservedObject var viewModel: CityDetailViewModel
-    
+    // Watched so the wishlist heart updates when tapped
+    @ObservedObject private var progressManager = GlobalProgressManager.shared
+
     // MARK: - Environment & Settings
     @Environment(\.horizontalSizeClass) var sizeClass
     @Environment(\.dismiss) var dismiss
@@ -46,6 +48,7 @@ struct BuildingDetailView: View {
     @State private var isCheckingScan = false
     #if os(iOS)
     @State private var showingScan = false
+    @State private var showingScanNudge = false
     #endif
  
     // Manipulation State (Zoom/Pan)
@@ -80,9 +83,11 @@ struct BuildingDetailView: View {
         .background(Color(.systemBackground))
         .toolbarBackground(.hidden, for: .navigationBar)
         .ignoresSafeArea(edges: .top)
+        #if !os(visionOS)
         .fullScreenCover(isPresented: $showCamera) {
             CameraPicker(buildingID: building.id)
         }
+        #endif
         .alert(L.Building.deletePhotoTitle, isPresented: $showingDeleteConfirmation) {
             Button(L.Building.deletePhotoConfirm, role: .destructive) {
                 GlobalProgressManager.shared.deleteImage(for: building.id)
@@ -101,6 +106,12 @@ struct BuildingDetailView: View {
         #if os(iOS)
         .sheet(isPresented: $showingScan) {
             ScanBuildingView(building: building, cityName: viewModel.city.name)
+        }
+        .sheet(isPresented: $showingScanNudge) {
+            ScanNudgeSheet(building: building, cityName: viewModel.city.name) {
+                showingScanNudge = false
+                showingScan = true
+            }
         }
         #endif
         .sheet(isPresented: $showingModelViewer) {
@@ -341,10 +352,12 @@ extension BuildingDetailView {
 
             Divider().frame(height: 20)
 
+            #if !os(visionOS)
             Button { showCamera = true } label: {
                 Image(systemName: "camera.fill").frame(width: 44, height: 44)
             }
             .accessibilityLabel("Take photo with camera")
+            #endif
 
             if isEditingPhoto {
                 if photoScale != 1.0 || photoOffset != .zero {
@@ -416,10 +429,13 @@ extension BuildingDetailView {
     private var stickyBottomBar: some View {
         VStack(spacing: 0) {
             Divider()
-            bottomActionButton
-                .padding(.horizontal, 20)
-                .padding(.top, 12)
-                .padding(.bottom, 8)
+            HStack(spacing: 12) {
+                bottomActionButton
+                wishlistButton
+            }
+            .padding(.horizontal, 20)
+            .padding(.top, 12)
+            .padding(.bottom, 8)
         }
         .background(reduceTransparency ? AnyShapeStyle(Color(UIColor.systemBackground)) : AnyShapeStyle(.ultraThinMaterial))
     }
@@ -662,6 +678,30 @@ extension BuildingDetailView {
         )
     }
  
+    /// Saves the landmark to the user's "Want to Visit" list for a future trip.
+    var wishlistButton: some View {
+        let isSaved = progressManager.isWishlisted(building.id)
+        return Button {
+            withAnimation(.spring()) { progressManager.toggleWishlist(building.id) }
+            if hapticsEnabled { HapticManager.shared.trigger(.selection) }
+        } label: {
+            Image(systemName: isSaved ? "heart.fill" : "heart")
+                .font(.title3.bold())
+                .contentTransition(.symbolEffect(.replace))
+                .foregroundColor(isHighContrast ? .primary : .pink)
+                .frame(width: 56, height: 54)
+                .background(
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(isHighContrast ? Color.clear : Color.pink.opacity(0.1))
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
+                )
+        }
+        .accessibilityLabel(isSaved ? "Remove from Want to Visit" : "Add to Want to Visit")
+    }
+
     var bottomActionButton: some View {
         let activeColor = isVisited ? Color.green : brandColor
         
@@ -793,12 +833,22 @@ extension BuildingDetailView {
      }
     
     func handleActionTap() {
+        let wasUnvisited = !isVisited
         withAnimation(.spring()) { viewModel.toggleVisited(for: building) }
         if hapticsEnabled { HapticManager.shared.trigger(isVisited ? .success : .warning) }
-        // Seed noteText if this is the first stamp
         if noteText.isEmpty {
             noteText = GlobalProgressManager.shared.buildingNotes[building.id] ?? ""
         }
+        #if os(iOS)
+        // Show scan nudge after the stamp animation plays, but only when:
+        // - user just stamped (wasn't visited before)
+        // - no community scan exists yet
+        if wasUnvisited && existingScanRecord == nil && !isCheckingScan {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
+                showingScanNudge = true
+            }
+        }
+        #endif
     }
 
     // MARK: - 3D Model Section

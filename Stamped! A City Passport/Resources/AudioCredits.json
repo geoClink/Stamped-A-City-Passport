@@ -1,0 +1,57 @@
+[
+  {
+    "id": "city_ambience",
+    "localFile": "city_ambience.m4a",
+    "freesoundId": 705049,
+    "title": "Small City Ambience with Traffic, Motors, Horn, Siren, Slight Passerby Hubbub",
+    "author": "felix.blume",
+    "license": "CC BY 4.0",
+    "attributionRequired": true,
+    "sourceURL": "https://freesound.org/people/felix.blume/sounds/705049/",
+    "attributionText": "\"City Ambience\" by felix.blume — freesound.org/people/felix.blume/sounds/705049 — CC BY 4.0"
+  },
+  {
+    "id": "baseball_crowd",
+    "localFile": "baseball_crowd.m4a",
+    "freesoundId": 691975,
+    "title": "Crowd and Field Noise Before and During Homerun Hit at MLB Baseball Stadium",
+    "author": "bmadore",
+    "license": "CC0",
+    "attributionRequired": false,
+    "sourceURL": "https://freesound.org/s/691975",
+    "attributionText": "No attribution required (CC0 Public Domain)"
+  },
+  {
+    "id": "football_crowd",
+    "localFile": "football_crowd.m4a",
+    "freesoundId": 654083,
+    "title": "Football Match Crowd Cheer Ambience",
+    "author": "Dan_AudioFile",
+    "license": "CC BY 4.0",
+    "attributionRequired": true,
+    "sourceURL": "https://freesound.org/people/Dan_AudioFile/sounds/654083/",
+    "attributionText": "\"Football Crowd\" by Dan_AudioFile — freesound.org/people/Dan_AudioFile/sounds/654083 — CC BY 4.0"
+  },
+  {
+    "id": "rain_loop",
+    "localFile": "rain_loop.m4a",
+    "freesoundId": 212580,
+    "title": "Rain Loop",
+    "author": "qubodup",
+    "license": "CC BY 4.0",
+    "attributionRequired": true,
+    "sourceURL": "https://freesound.org/people/qubodup/sounds/212580/",
+    "attributionText": "\"Rain Loop\" by qubodup — freesound.org/people/qubodup/sounds/212580 — CC BY 4.0"
+  },
+  {
+    "id": "night_crickets",
+    "localFile": "night_crickets.m4a",
+    "freesoundId": 320145,
+    "title": "Night Crickets Ambience on Rural Property",
+    "author": "OwlStorm",
+    "license": "CC0",
+    "attributionRequired": false,
+    "sourceURL": "https://freesound.org/people/OwlStorm/sounds/320145/",
+    "attributionText": "No attribution required (CC0 Public Domain)"
+  }
+]

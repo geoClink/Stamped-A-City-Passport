@@ -88,7 +88,7 @@ struct CityHeroHeader: View {
         .accessibilityLabel("\(city.name) Overview")
         .task(id: city.id) {
             isExpanded = false
-            let summary = await WikimediaService.shared.summary(for: city.name)
+            let summary = await WikimediaService.shared.citySummary(for: city.name)
             if let extract = summary.extract, !extract.isEmpty {
                 // Keep only the first two sentences for a tight blurb
                 let sentences = extract.components(separatedBy: ". ")

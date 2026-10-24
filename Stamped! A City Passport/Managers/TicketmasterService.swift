@@ -137,54 +137,7 @@ final class TicketmasterService: ObservableObject {
             let decoded = try JSONDecoder().decode(TMResponse.self, from: data)
             let rawEvents = decoded._embedded?.events ?? []
 
-            events = rawEvents.compactMap { raw in
-                guard let name = raw.name else { return nil }
-
-                // Date formatting
-                let localDate = raw.dates?.start?.localDate ?? ""
-                let localTime = raw.dates?.start?.localTime ?? ""
-                let formattedDate = formatDate(localDate)
-                let formattedTime = formatTime(localTime)
-
-                let venue = raw._embedded?.venues?.first?.name ?? ""
-                let segment = raw.classifications?.first?.segment?.name
-                let category = TicketmasterEvent.EventCategory.from(segment)
-
-                // Price range
-                var priceStr: String? = nil
-                if let min = raw.priceRanges?.first?.min,
-                   let max = raw.priceRanges?.first?.max {
-                    if max == 0 {
-                        priceStr = "Free"
-                    } else if Int(min) == Int(max) {
-                        priceStr = "$\(Int(min))"
-                    } else {
-                        priceStr = "$\(Int(min)) – $\(Int(max))"
-                    }
-                }
-
-                // Best image: prefer 16:9 ratio at ~640px wide
-                let imageURL = raw.images?
-                    .filter { $0.ratio == "16_9" }
-                    .sorted { ($0.width ?? 0) > ($1.width ?? 0) }
-                    .first
-                    .flatMap { URL(string: $0.url ?? "") }
-                    ?? raw.images?.first.flatMap { URL(string: $0.url ?? "") }
-
-                let ticketURL = raw.url.flatMap { URL(string: $0) }
-
-                return TicketmasterEvent(
-                    id: raw.id ?? UUID().uuidString,
-                    name: name,
-                    date: formattedDate,
-                    time: formattedTime,
-                    venueName: venue,
-                    category: category,
-                    priceRange: priceStr,
-                    ticketURL: ticketURL,
-                    imageURL: imageURL
-                )
-            }
+            events = rawEvents.compactMap(makeEvent)
 
             cachedCityName = cityName
             cacheTimestamp = Date()
@@ -197,7 +150,96 @@ final class TicketmasterService: ObservableObject {
         isLoading = false
     }
 
+    // MARK: - Events at one place
+
+    /// Upcoming events at (or right around) one place, for its map card.
+    /// Events whose venue name matches the place come first; if none match, the
+    /// closest events within about 1 km are returned and `isAtVenue` is false.
+    func events(near coordinate: CLLocationCoordinate2D, placeName: String) async -> (events: [TicketmasterEvent], isAtVenue: Bool) {
+        guard let key = apiKey, !key.isEmpty else { return ([], false) }
+
+        let now = Date()
+        let future = Calendar.current.date(byAdding: .day, value: 90, to: now) ?? now
+        let iso = ISO8601DateFormatter()
+        iso.formatOptions = [.withInternetDateTime]
+
+        var comps = URLComponents(string: "https://app.ticketmaster.com/discovery/v2/events.json")!
+        comps.queryItems = [
+            URLQueryItem(name: "apikey", value: key),
+            URLQueryItem(name: "latlong", value: "\(coordinate.latitude),\(coordinate.longitude)"),
+            URLQueryItem(name: "radius", value: "1"),
+            URLQueryItem(name: "unit", value: "km"),
+            URLQueryItem(name: "size", value: "20"),
+            URLQueryItem(name: "sort", value: "date,asc"),
+            URLQueryItem(name: "startDateTime", value: iso.string(from: now)),
+            URLQueryItem(name: "endDateTime", value: iso.string(from: future)),
+        ]
+        guard let url = comps.url,
+              let (data, response) = try? await URLSession.shared.data(from: url),
+              (response as? HTTPURLResponse)?.statusCode == 200,
+              let decoded = try? JSONDecoder().decode(TMResponse.self, from: data)
+        else { return ([], false) }
+
+        let all = (decoded._embedded?.events ?? []).compactMap(makeEvent)
+        let place = placeName.lowercased()
+        let atVenue = all.filter { event in
+            let venue = event.venueName.lowercased()
+            return !venue.isEmpty && (venue.contains(place) || place.contains(venue))
+        }
+        return atVenue.isEmpty ? (Array(all.prefix(3)), false) : (Array(atVenue.prefix(5)), true)
+    }
+
     // MARK: - Helpers
+
+    /// Turns one raw API event into the app's event model.
+    private func makeEvent(_ raw: TMEvent) -> TicketmasterEvent? {
+            guard let name = raw.name else { return nil }
+
+            // Date formatting
+            let localDate = raw.dates?.start?.localDate ?? ""
+            let localTime = raw.dates?.start?.localTime ?? ""
+            let formattedDate = formatDate(localDate)
+            let formattedTime = formatTime(localTime)
+
+            let venue = raw._embedded?.venues?.first?.name ?? ""
+            let segment = raw.classifications?.first?.segment?.name
+            let category = TicketmasterEvent.EventCategory.from(segment)
+
+            // Price range
+            var priceStr: String? = nil
+            if let min = raw.priceRanges?.first?.min,
+               let max = raw.priceRanges?.first?.max {
+                if max == 0 {
+                    priceStr = "Free"
+                } else if Int(min) == Int(max) {
+                    priceStr = "$\(Int(min))"
+                } else {
+                    priceStr = "$\(Int(min)) – $\(Int(max))"
+                }
+            }
+
+            // Best image: prefer 16:9 ratio at ~640px wide
+            let imageURL = raw.images?
+                .filter { $0.ratio == "16_9" }
+                .sorted { ($0.width ?? 0) > ($1.width ?? 0) }
+                .first
+                .flatMap { URL(string: $0.url ?? "") }
+                ?? raw.images?.first.flatMap { URL(string: $0.url ?? "") }
+
+            let ticketURL = raw.url.flatMap { URL(string: $0) }
+
+            return TicketmasterEvent(
+                id: raw.id ?? UUID().uuidString,
+                name: name,
+                date: formattedDate,
+                time: formattedTime,
+                venueName: venue,
+                category: category,
+                priceRange: priceStr,
+                ticketURL: ticketURL,
+                imageURL: imageURL
+            )
+    }
 
     private func formatDate(_ iso: String) -> String {
         guard !iso.isEmpty else { return "" }

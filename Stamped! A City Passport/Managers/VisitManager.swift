@@ -26,7 +26,19 @@ class GlobalProgressManager: ObservableObject {
 
     var buildingNotes: [String: String] = [:]
 
+    /// Landmarks the user wants to visit on a future trip.
+    @Published var wishlistIDs: Set<String> = [] {
+        didSet { saveWishlist() }
+    }
+
+    /// Places saved from Apple Maps search that aren't built-in landmarks.
+    @Published var customPlaces: [CustomPlace] = [] {
+        didSet { saveCustomPlaces() }
+    }
+
     private let saveKey = "GlobalVisitedBuildingsKey"
+    private let wishlistKey = "GlobalWishlistKey"
+    private let customPlacesKey = "GlobalCustomPlacesKey"
     private let visitDatesKey = "GlobalVisitDatesKey"
     private let buildingNotesKey = "BuildingNotesKey"
     private let defaults = UserDefaults(suiteName: "group.stamped.passport") ?? .standard
@@ -46,6 +58,16 @@ class GlobalProgressManager: ObservableObject {
 
         if let notes = defaults.dictionary(forKey: buildingNotesKey) as? [String: String] {
             self.buildingNotes = notes
+        }
+
+        if let wishlist = defaults.array(forKey: wishlistKey) as? [String] {
+            self.wishlistIDs = Set(wishlist)
+        }
+
+        // Saved as JSON data, since UserDefaults and iCloud can't store custom structs directly
+        if let data = defaults.data(forKey: customPlacesKey),
+           let places = try? JSONDecoder().decode([CustomPlace].self, from: data) {
+            self.customPlaces = places
         }
 
         loadImagesFromDisk()
@@ -87,6 +109,20 @@ class GlobalProgressManager: ObservableObject {
                 }
             }
             if updated { saveVisitDates() }
+        }
+
+        // wishlist: people remove places as well as add them, so the latest saved
+        // list wins (unlike stamps, where a union keeps every stamp ever earned)
+        if let cloudWishlist = iCloud.array(forKey: wishlistKey) as? [String],
+           Set(cloudWishlist) != wishlistIDs {
+            wishlistIDs = Set(cloudWishlist)
+        }
+
+        // custom places: same rule as the wishlist — the latest saved list wins
+        if let data = iCloud.data(forKey: customPlacesKey),
+           let cloudPlaces = try? JSONDecoder().decode([CustomPlace].self, from: data),
+           cloudPlaces != customPlaces {
+            customPlaces = cloudPlaces
         }
 
         // buildingNotes: adopt cloud note only if there is no local note
@@ -215,6 +251,52 @@ class GlobalProgressManager: ObservableObject {
         visitedIDs.contains(id)
     }
 
+    // MARK: - Wishlist
+
+    func isWishlisted(_ id: String) -> Bool {
+        wishlistIDs.contains(id)
+    }
+
+    func toggleWishlist(_ id: String) {
+        if wishlistIDs.contains(id) {
+            wishlistIDs.remove(id)
+        } else {
+            wishlistIDs.insert(id)
+        }
+    }
+
+    // MARK: - Custom places
+
+    func customPlaces(in cityName: String) -> [CustomPlace] {
+        customPlaces.filter { $0.cityName == cityName }
+    }
+
+    func hasCustomPlace(name: String, latitude: Double, longitude: Double) -> Bool {
+        customPlaces.contains { $0.isSamePlace(name: name, latitude: latitude, longitude: longitude) }
+    }
+
+    /// Saves a place unless the same one is already on the list.
+    func addCustomPlace(_ place: CustomPlace) {
+        guard !hasCustomPlace(name: place.name, latitude: place.latitude, longitude: place.longitude) else { return }
+        customPlaces.append(place)
+    }
+
+    func removeCustomPlace(_ id: String) {
+        customPlaces.removeAll { $0.id == id }
+    }
+
+    private func saveCustomPlaces() {
+        guard let data = try? JSONEncoder().encode(customPlaces) else { return }
+        defaults.set(data, forKey: customPlacesKey)
+        iCloud.set(data, forKey: customPlacesKey)
+    }
+
+    private func saveWishlist() {
+        let arr = Array(wishlistIDs)
+        defaults.set(arr, forKey: wishlistKey)
+        iCloud.set(arr, forKey: wishlistKey)
+    }
+
     private func save() {
         let arr = Array(visitedIDs)
         defaults.set(arr, forKey: saveKey)
@@ -231,6 +313,10 @@ class GlobalProgressManager: ObservableObject {
         iCloud.removeObject(forKey: saveKey)
         iCloud.removeObject(forKey: visitDatesKey)
         iCloud.removeObject(forKey: buildingNotesKey)
+        wishlistIDs.removeAll()
+        iCloud.removeObject(forKey: wishlistKey)
+        customPlaces.removeAll()
+        iCloud.removeObject(forKey: customPlacesKey)
         userImages.removeAll()
         
         let documents = getDocumentsDirectory()

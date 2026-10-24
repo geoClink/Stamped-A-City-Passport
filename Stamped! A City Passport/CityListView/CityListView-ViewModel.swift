@@ -87,8 +87,10 @@ extension CityListView {
         .listRowBackground(Color.clear)
     }
     
-    func cityCountrySection(country: CityLocation.Country, cities: [CityLocation.City]) -> some View {
-        let isMastered = viewModel.isCountryMastered(country)
+    /// `isCampusSection` is true for the country groups inside "Campus Architecture": they
+    /// open and close separately from the same country's cities.
+    func cityCountrySection(country: CityLocation.Country, cities: [CityLocation.City], isCampusSection: Bool = false) -> some View {
+        let isMastered = isCampusSection ? viewModel.isCampusCountryMastered(country) : viewModel.isCountryMastered(country)
         
         return Group {
             if isIPad {
@@ -102,10 +104,14 @@ extension CityListView {
                 }
             } else {
                 let isExpanded = Binding {
-                    expandedCountries[country, default: false]
+                    isCampusSection ? expandedCampusCountries[country, default: false] : expandedCountries[country, default: false]
                 } set: { newValue in
                     if newValue { HapticManager.shared.trigger(.selection) }
-                    expandedCountries[country] = newValue
+                    if isCampusSection {
+                        expandedCampusCountries[country] = newValue
+                    } else {
+                        expandedCountries[country] = newValue
+                    }
                 }
 
                 Section {
@@ -271,6 +277,8 @@ extension CityListView {
         withAnimation(.spring(response: 0.4, dampingFraction: 0.8)) {
             for key in expandedContinents.keys { expandedContinents[key] = false }
             for key in expandedCountries.keys { expandedCountries[key] = false }
+            for key in expandedCampusCountries.keys { expandedCampusCountries[key] = false }
+            isCampusSectionExpanded = false
         }
     }
 }

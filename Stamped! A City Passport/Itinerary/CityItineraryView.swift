@@ -601,7 +601,7 @@ struct TimelineBar: View {
                         .buttonStyle(.plain)
                         .offset(x: x - (isSelected ? 6 : 4), y: isSelected ? -4 : -2)
                         .animation(.spring(response: 0.25, dampingFraction: 0.7), value: isSelected)
-                        .accessibilityLabel("\(building.yearBuilt), \(building.name)")
+                        .accessibilityLabel("\(String(building.yearBuilt)), \(building.name)")
                         .accessibilityAddTraits(isSelected ? [.isButton, .isSelected] : .isButton)
                     }
                 }
@@ -638,7 +638,7 @@ struct TimelineBar: View {
                     // Building info
                     HStack(spacing: 6) {
                         Circle().fill(brandColor).frame(width: 6, height: 6)
-                        Text("\(building.yearBuilt) · \(building.name)")
+                        Text("\(String(building.yearBuilt)) · \(building.name)")
                             .font(.caption2).fontWeight(.semibold)
                             .foregroundColor(.primary)
                             .lineLimit(1)

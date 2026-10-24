@@ -1,0 +1,3 @@
+# Local HTTP cache and machine-readable reports (rebuilt by the scripts)
+cache/
+reports/*.json

@@ -1,0 +1,381 @@
+# Landmark photos: manual review
+
+OK photos: 838 before, 1037 after (of 1392 landmarks).
+
+## 1. No usable photo (160)
+
+No Wikipedia article (or only a "may refer to" page) could be matched safely. Options: find the
+article by hand and add it to `titleOverrides`, or add a photo to the asset catalog.
+
+- [ ] **Bath** / Milsom Place `uk_milsom_place` - no_article
+- [ ] **Detroit** / The Z Garage `detroit_the_z` - no_article
+- [ ] **New Orleans** / The Sazerac House `nola_the_sazerac_house` - no_article
+- [ ] **New Orleans** / The Cornstalk Hotel `nola_cornstalk_hotel` - no_article
+- [ ] **Orlando** / EA Orlando (Creative Village) `orl_creative_village_ea` - no_photo (lands on: EA Orlando)
+- [ ] **Orlando** / Truist Plaza (SunTrust Center) `orl_suntrust_center` - skipped
+- [ ] **Dubai** / The Opus `dxb_opus` - no_photo (lands on: The Opus)
+- [ ] **Singapore** / The Hive (Learning Hub North) `sg_the_hive` - disambiguation (lands on: Hive)
+- [ ] **Portland** / PAE Living Building `pdx_pae_living` - no_photo (lands on: PAE Living Building)
+- [ ] **Miami** / The Carlyle `mia-03` - skipped
+- [ ] **Bengaluru** / IIM Bangalore Campus `blr-04` - no_article
+- [ ] **Denver** / One River North `den-08` - no_article
+- [ ] **Pittsburgh** / Smithfield United Church `pit-05` - no_article
+- [ ] **Cleveland** / Old Federal Building & Post Office `cle-14` - no_article
+- [ ] **Victoria** / Mayfair Shopping Centre `vic-10` - skipped
+- [ ] **Victoria** / The Janion Building `vic-13` - no_article
+- [ ] **Amsterdam** / The Rock (Zuidas) `ams_black_diamond` - disambiguation (lands on: Rock)
+- [ ] **Amsterdam** / Silodam `ams_silodam` - no_photo (lands on: Silodam)
+- [ ] **Beijing** / New Poly Plaza `pek_poly_victory` - no_article
+- [ ] **Beijing** / Chaoyang Park Plaza `pek_white_mountain` - no_article
+- [ ] **Abu Dhabi** / Aldar Headquarters `auh_aldar_hq` - no_article
+- [ ] **Abu Dhabi** / Siemens Middle East HQ (Masdar City) `auh_masdar_hq` - no_article
+- [ ] **Mumbai** / Kanchanjunga Apartments `bom_kanchanjunga` - no_article
+- [ ] **Mumbai** / BMC Headquarters `bom_municipal` - no_article
+- [ ] **Mumbai** / Metro Inox Cinema `bom_metro_inox` - no_article
+- [ ] **Mumbai** / ISKCON Temple (Hare Krishna Land) `bom_isckon` - disambiguation (lands on: ISKCON Temple)
+- [ ] **Milan** / Ca' Brütta `mil_ca_brutta` - no_article
+- [ ] **Copenhagen** / Axel Towers `cph_axeltowers` - no_article
+- [ ] **Tel Aviv** / Crazy House `tlv_crazy_house` - disambiguation (lands on: Crazy House)
+- [ ] **Tel Aviv** / Rubinsky House `tlv_rubinsky` - no_article
+- [ ] **Tel Aviv** / Sourasky Central Library `tlv_sourasky_library` - no_article
+- [ ] **Rome** / La Nuvola (The Cloud) `rom_la_nuvola` - no_article
+- [ ] **Cupertino** / Fujitsu Planetarium `cup_fujitsu_planetarium` - no_article
+- [ ] **Cupertino** / Cupertino City Hall `cup_city_hall` - no_article
+- [ ] **Cupertino** / Cupertino Library `cup_cupertino_library` - no_article
+- [ ] **Cupertino** / Quinlan Community Center `cup_quinlan_center` - no_article
+- [ ] **Cupertino** / Main Street Parking Structure `cup_main_street_garage` - no_article
+- [ ] **Cupertino** / The Hills at Vallco (Phase 1) `cup_vallco_redevelopment` - no_article
+- [ ] **Cupertino** / Visual & Performing Arts Center (VPAC) `cup_vpac_de_anza` - no_article
+- [ ] **Cupertino** / St. Jude the Apostle Church `cup_st_jude` - no_article
+- [ ] **Cupertino** / Cupertino Memorial Park Amphitheater `cup_memorial_park_amphitheater` - no_article
+- [ ] **Shanghai** / InterContinental Shanghai Wonderland `sha_intercontinental` - no_photo (lands on: InterContinental Shanghai Wonderland)
+- [ ] **Shanghai** / China Art Museum `sha_china_art` - disambiguation (lands on: China Art Museum)
+- [ ] **Shanghai** / 1,000 Trees `sha_1000_trees` - no_article
+- [ ] **Bangkok** / G Tower `bkk_g_tower` - no_article
+- [ ] **Buffalo** / Statler City `buf_statler_city` - no_article
+- [ ] **Buffalo** / Gardner's Cottage (Martin House Complex) `buf_darwin_martin_gardners` - no_article
+- [ ] **Mexico City** / Camino Real Polanco `mex_camino_real` - no_article
+- [ ] **Mexico City** / Museo Casa Estudio Diego Rivera y Frida Kahlo `mex_casas_estudio` - no_article
+- [ ] **San Francisco** / Mira Tower `sf_mira_tower` - no_article
+- [ ] **Nashville** / U.S. Customs House `nsh_customs_house` - disambiguation (lands on: U.S. Customhouse)
+- [ ] **Austin** / Austin Central Library `atx-06` - no_article
+- [ ] **Austin** / Austin City Hall `atx-08` - disambiguation (lands on: Austin City Hall)
+- [ ] **Austin** / COTA Observation Tower `atx-13` - no_article
+- [ ] **Cork** / Nano Nagle Place `crk-12` - no_article
+- [ ] **St. Louis** / Anheuser-Busch Brew House `stl-06` - no_article
+- [ ] **St. Louis** / Soldiers Memorial Military Museum `stl-09` - no_article
+- [ ] **Naples** / Stazione Marittima di Napoli `nap-12` - no_article
+- [ ] **Bali** / The Green School (Heart of School) `bali-green-school` - no_article
+- [ ] **Bali** / Potato Head Studios (Desa Potato Head) `bali-potato-head` - no_article
+- [ ] **Bali** / Sharma Springs `bali-sharma-springs` - no_article
+- [ ] **Bali** / Imaginaria (Digimap Flagship) `retail_bali_imaginaria` - no_article
+- [ ] **Batam** / Batam Marriott Hotel Harbour Bay `batam-marriott-hotel` - no_article
+- [ ] **Batam** / Great Mosque of Batam (Masjid Raya) `batam-great-mosque` - no_article
+- [ ] **Batam** / Nagoya Hill Mall `batam-nagoya-hill` - no_article
+- [ ] **Batam** / Maha Vihara Duta Maitreya Monastery `batam-maitreya-monastery` - no_article
+- [ ] **Batam** / Masjid Tanwirun Naja (Tanjak Mosque) `batam-tanjak-mosque` - no_article
+- [ ] **Batam** / One Residence Batam `batam-one-residence` - no_article
+- [ ] **Batam** / Galang Refugee Hospital (Historical Site) `batam-galang-hospital` - no_article
+- [ ] **Batam** / Vihara Budhi Bhakti (Tua Pek Kong) `batam-vihara-budhi-bhakti` - no_article
+- [ ] **Batam** / Kantor Walikota Batam (City Hall) `batam-city-hall` - no_article
+- [ ] **Central Jakarta** / Indosat Building (Gedung Indosat) `jakarta-marathon-building` - no_article
+- [ ] **Central Jakarta** / The Hermitage (Gedung Telepon) `jakarta-dharmapala` - disambiguation (lands on: Hermitage)
+- [ ] **Central Jakarta** / Pos Bloc (Gedung Filateli) `jakarta-pos-bloc` - no_article
+- [ ] **Surabaya** / Monkasel (Submarine Monument) `sub-monkasel` - no_article
+- [ ] **Surabaya** / Kya-Kya Kembang Jepun `sub-kyad-kyad` - no_article
+- [ ] **Surabaya** / Pakuwon Tower `sub-pakuwon-tower` - no_article
+- [ ] **Tangerang** / The Breeze BSD `tng-the-breeze` - no_article
+- [ ] **Tangerang** / Scientia Square Park (SQP) & SDC `tng-scientia-square` - no_article
+- [ ] **Tangerang** / Boen Tek Bio Chinese Temple `tng-boen-tek-bio` - no_article
+- [ ] **Tangerang** / QBig BSD City `tng-qbig-bsd` - no_article
+- [ ] **Tangerang** / Green Office Park 9 (GOP 9) `tng-gop-office` - no_article
+- [ ] **Tangerang** / IKEA Alam Sutera `tng-ikea-alam-sutera` - no_article
+- [ ] **Tangerang** / Traveloka Campus (Knowledge Hub) `tng-knowledge-hub` - no_article
+- [ ] **Campinas** / Mercado Municipal `cpq-mercado-municipal` - no_article
+- [ ] **Campinas** / Torre do Castelo `cpq-torre-do-castelo` - no_article
+- [ ] **Campinas** / Catedral Metropolitana `cpq-metropolitan-cathedral` - disambiguation (lands on: Catedral Metropolitana)
+- [ ] **Campinas** / Estação Cultura `cpq-estacao-cultura` - no_article
+- [ ] **Campinas** / Biblioteca Central Unicamp `cpq-unicamp-library` - no_article
+- [ ] **Campinas** / Jockey Club Campineiro `cpq-jockey-club` - no_article
+- [ ] **Campinas** / Palácio dos Jequitibás `cpq-palacio-dos-jequitibas` - no_article
+- [ ] **Campinas** / Teatro Castro Mendes `cpq-teatro-castro-mendes` - no_article
+- [ ] **Campinas** / Mata de Santa Genebra Gatehouse `cpq-fazenda-santa-genebra` - no_article
+- [ ] **Campinas** / Galleria Shopping Campinas `cpq-galleria-shopping` - no_article
+- [ ] **Curitiba** / University of the Environment (Unilivre) `cwb-unilivre` - no_article
+- [ ] **Curitiba** / Panoramic Tower (Torre das Mercês) `cwb-panoramic-tower` - no_article
+- [ ] **Curitiba** / Paço da Liberdade `cwb-paco-da-liberdade` - no_article
+- [ ] **Curitiba** / Ukrainian Memorial `cwb-memorial-ucraniano` - no_article
+- [ ] **Curitiba** / Castelo do Batel `cwb-castelo-batel` - no_article
+- [ ] **Curitiba** / Mercado Municipal de Curitiba `cwb-municipal-market` - no_article
+- [ ] **Fortaleza** / Metropolitan Cathedral of Fortaleza `for-cathedral` - no_article
+- [ ] **Fortaleza** / Fortress of Nossa Senhora da Assunção `for-fortress-assuncao` - no_article
+- [ ] **Fortaleza** / One Residencial `for-one-residencial` - no_article
+- [ ] **Fortaleza** / Estoril `for-estoril` - skipped
+- [ ] **Fortaleza** / Mucuripe Lighthouse `for-mucuripe-lighthouse` - no_article
+- [ ] **Fortaleza** / Museum of Image and Sound (MIS) `for-mis` - disambiguation (lands on: Museum of Image and Sound)
+- [ ] **Fortaleza** / Cineteatro São Luiz `for-cine-sao-luiz` - no_article
+- [ ] **Fortaleza** / BS Design Corporate `for-escritorio-nasser-hissa` - no_article
+- [ ] **Fortaleza** / Mercado Central de Fortaleza `for-mercado-central` - no_article
+- [ ] **Fortaleza** / Casa de José de Alencar `for-casa-jose-alencar` - no_article
+- [ ] **Manaus** / Mercado Municipal Adolpho Lisboa `mao-adolpho-lisboa` - no_article
+- [ ] **Manaus** / Custom House (Alfandega de Manaus) `mao-custom-house` - disambiguation (lands on: Custom House)
+- [ ] **Manaus** / Amazonas Sustainable Foundation (FAS) `mao-fas` - no_article
+- [ ] **Manaus** / Palacete Provincial `mao-palacete-provincial` - no_article
+- [ ] **Manaus** / Ponte Rio Negro `mao-rio-negro-bridge` - no_article
+- [ ] **Manaus** / Palace of Justice `mao-justice-palace` - disambiguation (lands on: Palace of Justice)
+- [ ] **Manaus** / MUSA Observation Tower `mao-musa-tower` - no_article
+- [ ] **Manaus** / Manaus Floating Harbor (Roadway) `mao-floating-harbor` - no_article
+- [ ] **Manaus** / CIGS Jungle Warfare Center `mao-cigs-center` - no_article
+- [ ] **Porto Alegre** / Public Market of Porto Alegre `poa-public-market` - no_article
+- [ ] **Porto Alegre** / Metropolitan Cathedral of Porto Alegre `poa-cathedral` - no_article
+- [ ] **Porto Alegre** / MARGS (Museum of Art of RS) `poa-margs` - no_article
+- [ ] **Porto Alegre** / Cais Embarcadero `poa-cais-embarcadero` - no_article
+- [ ] **Recife** / Paço do Frevo `rec-paco-frevo` - no_article
+- [ ] **Recife** / Capibaribe Building (Edifício Capibaribe) `rec-capibaribe-building` - no_article
+- [ ] **Recife** / Brennand Sculpture Park `rec-brennand-sculpture` - no_article
+- [ ] **Recife** / Mirante da Aurora `rec-mirante-da-aurora` - no_article
+- [ ] **Recife** / Paço Alfândega `rec-paco-alfandega` - no_article
+- [ ] **Recife** / Recife House of Culture `rec-casa-cultura` - no_article
+- [ ] **Recife** / Officina Francisco Brennand `rec-officina-brennand` - no_article
+- [ ] **Recife** / Cais do Sertão Museum `rec-cais-do-sertao` - no_article
+- [ ] **Pohang** / Yeongildae Maritime Pavilion `pohang-02` - no_article
+- [ ] **Pohang** / POSCO Global Center `pohang-03` - no_article
+- [ ] **Pohang** / Guryongpo Japanese Houses Street `pohang-04` - no_article
+- [ ] **Pohang** / Pohang Museum of Steel Art (POMA) `pohang-05` - no_article
+- [ ] **Pohang** / POSTECH Chanel Hall `pohang-07` - no_article
+- [ ] **Pohang** / Oeosa Temple `pohang-08` - no_article
+- [ ] **Pohang** / Park 1538 `pohang-09` - no_article
+- [ ] **Pohang** / Pohang Canal Pavilion `pohang-10` - no_article
+- [ ] **Tokyo** / Prada Aoyama `prada-aoyama` - no_article
+- [ ] **Tokyo** / Fuji TV Building `fuji-tv-building` - no_article
+- [ ] **Nairobi** / All Saints' Cathedral `all-saints-cathedral` - disambiguation (lands on: All Saints Cathedral)
+- [ ] **Nairobi** / CBK Pension Tower `cbk-pension-tower` - no_article
+- [ ] **Marrakech** / Royal Mansour Marrakech `royal-mansour` - no_article
+- [ ] **Brasília** / National Museum of the Republic `br_national_museum` - no_article
+- [ ] **Brasília** / Sanctuary of Don Bosco `br_sanctuary_dom_bosco` - no_article
+- [ ] **Brasília** / Pontão do Lago Sul `br_pontao_lago_sul` - no_article
+- [ ] **São Paulo** / Saint Benedict Monastery `br_mosteiro_sao_bento` - disambiguation (lands on: Monastery of St. Benedict)
+- [ ] **São Paulo** / Japan House São Paulo `br_japan_house` - no_article
+- [ ] **Casablanca** / Old Medina of Casablanca `casablanca-old-medina` - no_article
+- [ ] **Casablanca** / Villa des Arts de Casablanca `casablanca-villa-des-arts` - no_article
+- [ ] **Muscat** / Mutrah Souq `muscat-mutrah-souq` - no_article
+- [ ] **Chengdu** / Wuhou Shrine `cn_wuhou_shrine` - no_article
+- [ ] **Medellín** / Pueblito Paisa `co_pueblito_paisa` - no_article
+- [ ] **Medellín** / Parque de las Luces `co_parque_de_las_luces` - no_article
+- [ ] **Cartagena** / Las Murallas de Cartagena `co_murallas_cartagena` - no_article
+- [ ] **Nice** / Castle Hill, Nice `fr_castle_hill_nice` - no_article
+- [ ] **Nice** / Musée d'Art Moderne et d'Art Contemporain de Nice `fr_mamac_nice` - no_article
+- [ ] **Guadalajara** / Barranca de Huentítán `mx_barranca_huentitan` - no_article
+- [ ] **Zanzibar** / Freddie Mercury's Birthplace `tz_freddie_mercury_birthplace` - no_article
+
+## 2. Apple Stores (74)
+
+Individual stores have no Wikipedia articles. These need an asset-catalog photo, or an
+override pointing at the mall or street the store is on, if that's acceptable.
+
+- [ ] **Detroit** / Apple Downtown Detroit `usa_apple_downtown_detroit` - no_article
+- [ ] **Los Angeles** / Apple The Grove `la_apple_the_grove` - no_article
+- [ ] **New Orleans** / Apple Lakeside Shopping Center `nola_apple_lakeside` - no_article
+- [ ] **Las Vegas** / Apple The Forum Shops `lv_apple_forum_shops` - no_article
+- [ ] **Orlando** / Apple Millenia `orl_apple_millenia` - no_article
+- [ ] **Singapore** / Apple Marina Bay Sands `sg-apple-mbs` - no_article
+- [ ] **Singapore** / Apple Ang Mo Kio Campus `sg-apple-amk` - no_article
+- [ ] **Seattle** / Apple University Village `sea_apple_u_village` - no_article
+- [ ] **Miami** / Apple Aventura `mia_apple_aventura` - no_article
+- [ ] **Atlanta** / Apple Lenox Square `atl_apple_lenox` - no_article
+- [ ] **Boston** / Apple Boylston Street `bos-11` - no_article
+- [ ] **Denver** / Apple Cherry Creek `den-11` - no_article
+- [ ] **Pittsburgh** / Apple Shadyside `pit-11` - no_article
+- [ ] **Philadelphia** / Apple Walnut Street `phi-11` - no_article
+- [ ] **Cleveland** / Apple Crocker Park `cle-11` - no_article
+- [ ] **Hong Kong** / Apple IFC Mall `hk_apple_ifc` - no_article
+- [ ] **Berlin** / Apple Rosenthaler Straße `ber_apple_rosenthaler` - no_article
+- [ ] **Amsterdam** / Apple Haarlemmerstraat (Leidseplein) `ams_apple_hirsch` - no_article
+- [ ] **Beijing** / Apple Sanlitun `glbl_apple_sanlitun` - no_article
+- [ ] **Abu Dhabi** / Apple Al Maryah Island `glbl_apple_al_maryah` - no_article
+- [ ] **Mumbai** / Apple BKC `bom_apple_bkc` - no_article
+- [ ] **Milan** / Apple Piazza Liberty `mil_apple_liberty` - no_article
+- [ ] **Copenhagen** / Apple Kongens Nytorv `cph_apple_kongens` - no_article
+- [ ] **Tel Aviv** / Apple Azrieli Sarona `tlv_apple_sarona` - no_article
+- [ ] **Rome** / Apple Via del Corso `rom_apple_corso` - no_article
+- [ ] **Barcelona** / Apple Passeig de Gràcia `bcn_apple_gracia` - no_article
+- [ ] **Cupertino** / Apple Results Way `cup_apple_results_way` - no_article
+- [ ] **Shanghai** / Apple Shanghai Campus `sha_apple_campus` - no_article
+- [ ] **Shanghai** / Apple Jing’an `sha_apple_jingan` - no_article
+- [ ] **Bangkok** / Apple Central World `bkk_apple_central_world` - no_article
+- [ ] **Bangkok** / Apple Iconsiam `bkk_apple_iconsiam` - no_article
+- [ ] **Buffalo** / Apple Walden Galleria `buf_apple_walden_galleria` - no_article
+- [ ] **Sydney** / Apple Tower House `syd_apple_tower_house` - no_article
+- [ ] **Mexico City** / Apple Antara `mex_apple_antara` - no_article
+- [ ] **Houston** / Apple Houston Galleria `usa_apple_houston_galleria` - no_article
+- [ ] **New York** / Apple Upper East Side `us_apple_upper_east_side` - no_article
+- [ ] **New York** / Apple SoHo `nyc_apple_soho` - no_article
+- [ ] **San Francisco** / Apple Union Square `us_apple_union_square` - no_article
+- [ ] **Dallas** / Apple NorthPark Center `dal_apple_northpark` - no_article
+- [ ] **Dallas** / Apple Knox Street `dal_apple_knox_street` - no_article
+- [ ] **Nashville** / Apple Green Hills `us_apple_green_hills` - no_article
+- [ ] **Riyadh** / Apple ROSHN Front `ruh-apple-roshn` - no_article
+- [ ] **Austin** / Apple NW Austin Campus (Capstone) `atx-04` - no_article
+- [ ] **Austin** / Apple Domain NORTHSIDE `atx-apple-domain` - no_article
+- [ ] **Cork** / Apple European Headquarters `crk-02` - no_article
+- [ ] **Cork** / Apple Opera Lane `crk-apple-opera` - no_article
+- [ ] **St. Louis** / Apple Saint Louis Galleria `stl-apple-galleria` - no_article
+- [ ] **Naples** / Apple Via Toledo `nap-apple-toledo` - no_article
+- [ ] **Batam** / Apple Premium Partner (Grand Batam Mall) `batam-apple-grand` - no_article
+- [ ] **Central Jakarta** / iBox Apple Premium Partner (Plaza Indonesia) `jakarta-apple-plaza-indo` - no_article
+- [ ] **Surabaya** / Digimap Apple Premium Partner (Tunjungan Plaza 3) `sub-apple-tunjungan-plaza` - no_article
+- [ ] **Tangerang** / Digimap Apple Premium Partner (SMS) `tng-apple-summarecon` - no_article
+- [ ] **Campinas** / iPlace Apple Premium Partner (Iguatemi) `cpq-apple-iguatemi` - no_article
+- [ ] **Curitiba** / iPlace Apple Premium Partner (ParkShoppingBarigui) `cwb-apple-barigui` - no_article
+- [ ] **Fortaleza** / iPlace Apple Premium Partner (Iguatemi Bosque) `for-apple-iguatemi` - no_article
+- [ ] **Manaus** / iPlace Apple Premium Partner (Manauara Shopping) `mao-apple-manauara` - no_article
+- [ ] **Porto Alegre** / iPlace Apple Premium Partner (Iguatemi POA) `poa-apple-iguatemi` - no_article
+- [ ] **Recife** / iPlace Apple Premium Partner (Shopping Recife) `rec-apple-shopping-recife` - no_article
+- [ ] **Rio de Janeiro** / Apple VillageMall `rio-apple-villagemall` - no_article
+- [ ] **Pohang** / Apple Developer Academy (POSTECH C5) `pohang-apple-academy` - no_article
+- [ ] **Montreal** / Apple Sainte-Catherine `montreal_apple_sainte_catherine` - no_article
+- [ ] **London** / Apple London Headquarters `apple-battersea` - no_article
+- [ ] **London** / Apple Regent Street `apple-regent-street` - no_article
+- [ ] **Istanbul** / Apple Bağdat Caddesi `ist_apple_bagdat` - no_article
+- [ ] **Istanbul** / Apple Zorlu Center `ist_apple_zorlu` - no_article
+- [ ] **Kyoto** / Apple Kyoto `kyo_apple_kyoto` - no_article
+- [ ] **Tokyo** / Apple Marunouchi `glbl_apple_marunouchi` - no_article
+- [ ] **Tokyo** / Apple Japan Headquarters (Roppongi Hills Mori Tower) `apple-japan-hq` - no_article
+- [ ] **Tokyo** / Apple Ginza `glbl_apple_ginza` - no_article
+- [ ] **Seoul** / Apple Myeongdong `glbl_apple_myeongdong` - no_article
+- [ ] **Seoul** / Apple Gangnam `glbl_apple_gangnam` - no_article
+- [ ] **Nairobi** / iStore Westgate (Apple Premium) `apple_premium_nairobi` - no_article
+- [ ] **Lima** / iSpace Jockey Plaza (Apple Premium) `ispace_jockey_plaza` - no_article
+- [ ] **Melbourne** / Apple Chadstone `apple-chadstone` - no_article
+
+## 3. Article is far from the registry coordinates (119)
+
+Most of these are the right article and the *registry* coordinates are wrong (which also
+misplaces the map pin). Check the lat/lon in BuildingRegistry.json first.
+
+- [ ] 12264.7 km - **Dubai** / The Index `dxb_index_tower` -> The Index (Dubai)
+- [ ] 9522.2 km - **Brasília** / Palácio da Alvorada `br_alvorada_palace` -> Palácio da Alvorada
+- [ ] 8991.6 km - **Brasília** / Cláudio Santoro National Theater `br_national_theater` -> Cláudio Santoro National Theater
+- [ ] 494.9 km - **Mexico City** / Palacio de Correos de México `mex_postal_palace` -> Palacio de Correos de México
+- [ ] 494.9 km - **Mexico City** / Palacio de Bellas Artes `mex_bellas_artes` -> Palacio de Bellas Artes
+- [ ] 359.7 km - **Cairo** / Museum of Egyptian Antiquities (The Red Museum) `cai_egyptian_museum_tahrir` -> Egyptian Museum
+- [ ] 359.5 km - **Cairo** / Abdeen Palace `cai_abdeen_palace` -> Abdeen Palace
+- [ ] 359.2 km - **Cairo** / The Mogamma `cai_mogamma` -> The Mogamma
+- [ ] 359.2 km - **Cairo** / Cairo Tower `cai_tower` -> Cairo Tower
+- [ ] 358.8 km - **Cairo** / Cairo Opera House `cai_opera_house` -> Cairo Opera House
+- [ ] 358.8 km - **Cairo** / Mosque-Madrasa of Sultan Hassan `cai_mosque_madrasa_sultan_hassan` -> Mosque-Madrasa of Sultan Hasan
+- [ ] 358.5 km - **Cairo** / Mosque of Muhammad Ali `cai_muhammad_ali` -> Muhammad Ali Mosque
+- [ ] 355.1 km - **Cairo** / The Hanging Church `cai_st_virgin_mary` -> Hanging Church
+- [ ] 217.2 km - **Riyadh** / Kingdom Centre `ruh-01` -> Kingdom Centre
+- [ ] 215.8 km - **Riyadh** / Al Faisaliah Center `ruh-03` -> Al Faisaliah Tower
+- [ ] 213.8 km - **São Paulo** / Farol Santander (Altino Arantes Building) `br_altino_arantes` -> Altino Arantes Building
+- [ ] 213.3 km - **São Paulo** / Theatro Municipal de São Paulo `br_theatre_municipal` -> Theatro Municipal (São Paulo)
+- [ ] 139.2 km - **Marrakech** / Koutoubia Mosque `koutoubia-mosque` -> Kutubiyya Mosque
+- [ ] 129.7 km - **São Paulo** / Edifício Copan `br_copan` -> Edifício Copan
+- [ ] 105.2 km - **Abu Dhabi** / Guggenheim Abu Dhabi (Upcoming) `auh_guggenheim` -> Guggenheim Abu Dhabi
+- [ ] 104.6 km - **Abu Dhabi** / Abrahamic Family House `auh_abrahamic_family_house` -> Abrahamic Family House
+- [ ] 104.5 km - **Abu Dhabi** / Louvre Abu Dhabi `auh_louvre_abudhabi` -> Louvre Abu Dhabi
+- [ ] 94.1 km - **Abu Dhabi** / Emirates Palace `auh_emirates_palace` -> Emirates Palace Mandarin Oriental, Abu Dhabi
+- [ ] 75.8 km - **São Paulo** / São Paulo Cathedral (Catedral da Sé) `br_cathedral_se` -> São Paulo Cathedral
+- [ ] 65.3 km - **Bali** / Tirta Gangga Water Palace `bali-tirta-gangga` -> Tirta Gangga
+- [ ] 44.3 km - **Sydney** / St Mary's Cathedral `syd_st_marys` -> St Mary's Cathedral, Sydney
+- [ ] 39.1 km - **Bali** / Garuda Wisnu Kencana (GWK Statue) `bali-gwk-statue` -> Garuda Wisnu Kencana Cultural Park
+- [ ] 37.8 km - **Bali** / Pura Luhur Uluwatu `bali-uluwatu` -> Uluwatu Temple
+- [ ] 36.8 km - **São Paulo** / Municipal Market of São Paulo `br_mercadao` -> Municipal Market of São Paulo
+- [ ] 35.1 km - **Mumbai** / Chhatrapati Shivaji Terminus `bom_cst` -> Chhatrapati Shivaji Terminus
+- [ ] 31.0 km - **Bali** / Pura Ulun Danu Beratan `bali-ulun-danu` -> Pura Ulun Danu Bratan
+- [ ] 28.9 km - **Bali** / Ubud Royal Palace (Puri Saren Agung) `bali-ubud-palace` -> Ubud Palace
+- [ ] 24.4 km - **Beijing** / Beijing Daxing International `pek_daxing_airport` -> Beijing Daxing International Airport
+- [ ] 22.9 km - **Dubai** / The Dubai Frame `dxb_dubai_frame` -> Dubai Frame
+- [ ] 21.9 km - **Cork** / Cork Opera House `crk-10` -> Cork Opera House
+- [ ] 21.8 km - **Cleveland** / Rock & Roll Hall of Fame `cle-01` -> Rock and Roll Hall of Fame
+- [ ] 20.9 km - **Muscat** / Sultan Qaboos Grand Mosque `muscat-sultan-qaboos-mosque` -> Sultan Qaboos Grand Mosque
+- [ ] 20.5 km - **Cleveland** / Terminal Tower `cle-02` -> Terminal Tower
+- [ ] 20.3 km - **Dubai** / Etihad Museum `dxb_etihad_museum` -> Etihad Museum
+- [ ] 20.3 km - **Dubai** / Jumeirah Emirates Towers `dxb_jumeirah_emirates` -> Emirates Towers
+- [ ] 19.9 km - **Victoria** / Hatley Castle `vic-08` -> Hatley Park National Historic Site
+- [ ] 19.1 km - **Auckland** / Auckland War Memorial Museum `auckland-museum` -> Auckland War Memorial Museum
+- [ ] 19.0 km - **Sana'a** / Old Sana'a `sanaa-old-city` -> Old City of Sanaa
+- [ ] 16.5 km - **Bali** / Pura Tanah Lot `bali-tanah-lot` -> Tanah Lot
+- [ ] 14.0 km - **Cleveland** / Key Tower `cle-09` -> Key Tower
+- [ ] 13.4 km - **Milan** / Villa Necchi Campiglio `mil_villa_necchi` -> Villa Necchi Campiglio
+- [ ] 12.9 km - **Riyadh** / King Khalid International Airport (Terminal 5) `ruh-13` -> King Khalid International Airport
+- [ ] 12.7 km - **Sydney** / Sydney Opera House `syd_opera_house` -> Sydney Opera House
+- [ ] 11.8 km - **Bali** / Pura Besakih (Mother Temple) `bali-besakih` -> Besakih Temple
+- [ ] 11.6 km - **Ho Chi Minh City** / Cu Chi tunnels `hcmc-cu-chi-tunnels` -> Củ Chi tunnels
+- [ ] 11.3 km - **Batam** / Barelang Bridge (Tengku Fisabilillah) `batam-barelang-bridge` -> Barelang Bridge
+- [ ] 10.5 km - **Surabaya** / Masjid Nasional Al-Akbar `sub-al-akbar-mosque` -> Al-Akbar Mosque
+- [ ] 10.3 km - **Mumbai** / NGMA (Sir Cowasji Jehangir Hall) `bom_national_gallery` -> National Gallery of Modern Art, Mumbai
+- [ ] 10.1 km - **Barcelona** / Barcelona Cathedral `bcn_catedral` -> Barcelona Cathedral
+- [ ] 9.4 km - **Montreal** / Notre-Dame Basilica `notre-dame-basilica` -> Notre-Dame Basilica (Montreal)
+- [ ] 9.0 km - **Recife** / Ricardo Brennand Institute `rec-brennand-institute` -> Ricardo Brennand Institute
+- [ ] 8.1 km - **Rio de Janeiro** / Christ the Redeemer `rio-christ-redeemer` -> Christ the Redeemer (statue)
+- [ ] 8.1 km - **Tangerang** / Indonesia Convention Exhibition (ICE) `tng-ice-bsd` -> Indonesia Convention Exhibition
+- [ ] 8.0 km - **Cairo** / Great Pyramid of Giza `cai_great_pyramid` -> Great Pyramid of Giza
+- [ ] 7.9 km - **Surabaya** / Suramadu Bridge `sub-suramadu-bridge` -> Suramadu Bridge
+- [ ] 7.1 km - **Brasília** / Itamaraty Palace `br_itamaraty_palace` -> Itamaraty Palace
+- [ ] 7.0 km - **Mumbai** / World One `bom_world_one` -> World One
+- [ ] 6.7 km - **Montreal** / Montreal City Hall `montreal-city-hall` -> Montreal City Hall
+- [ ] 6.5 km - **Tangerang** / Soekarno-Hatta Terminal 3 `tng-soekarno-hatta-t3` -> Soekarno–Hatta International Airport
+- [ ] 6.2 km - **Brasília** / Cathedral of Brasília `br_cathedral_brasilia` -> Cathedral of Brasília
+- [ ] 6.0 km - **Beijing** / CITIC Tower (China Zun) `pek_citic_tower` -> China Zun
+- [ ] 5.7 km - **Mumbai** / Global Vipassana Pagoda `bom_global_vipassana` -> Global Vipassana Pagoda
+- [ ] 5.4 km - **Sana'a** / Al-Saleh Mosque `sanaa-al-saleh-mosque` -> Al-Saleh Mosque
+- [ ] 5.3 km - **Bangkok** / Nai Lert Park Heritage Home `bkk_nailert_park` -> Nai Lert Park Heritage Home
+- [ ] 5.2 km - **Central Jakarta** / Istiqlal Mosque `jakarta-istiqlal` -> Istiqlal Mosque, Jakarta
+- [ ] 5.2 km - **Riyadh** / King Abdulaziz Center for World Culture (Ithra) `ruh-04` -> King Abdulaziz Center for World Culture
+- [ ] 5.2 km - **Central Jakarta** / Jakarta Cathedral `jakarta-cathedral` -> Jakarta Cathedral
+- [ ] 5.2 km - **Nashville** / Tennessee State Capitol `nsh_state_capitol` -> Tennessee State Capitol
+- [ ] 4.9 km - **Addis Ababa** / Mount Entoto `addis-entoto-mountain` -> Mount Entoto
+- [ ] 4.9 km - **Beijing** / Leeza SOHO `pek_leeza_soho` -> Leeza SOHO
+- [ ] 4.5 km - **Shanghai** / Shanghai World Financial Center `sha_world_financial` -> Shanghai World Financial Center
+- [ ] 4.5 km - **Rio de Janeiro** / Ilha Fiscal `rio-ilha-fiscal` -> Ilha Fiscal
+- [ ] 4.4 km - **Shanghai** / Jin Mao Tower `sha_jin_mao` -> Jin Mao Tower
+- [ ] 4.3 km - **Shanghai** / Shanghai Tower `sha_shanghai_tower` -> Shanghai Tower
+- [ ] 4.3 km - **Las Vegas** / Bellagio Las Vegas `lv_bellagio` -> Bellagio (resort)
+- [ ] 4.1 km - **Shanghai** / Oriental Pearl Tower `sha_oriental_pearl` -> Oriental Pearl Tower
+- [ ] 4.0 km - **Bangkok** / Jim Thompson House `bkk_jim_thompson` -> Jim Thompson House
+- [ ] 4.0 km - **Pittsburgh** / Fallingwater `pit-04` -> Fallingwater
+- [ ] 3.9 km - **Batam** / Meisterstadt (Pollux Habibie Towers) `batam-pollux-habibie` -> Meisterstadt
+- [ ] 3.8 km - **Las Vegas** / Caesars Palace `lv_caesars` -> Caesars Palace
+- [ ] 3.8 km - **Riyadh** / KAPSARC `ruh-07` -> King Abdullah Petroleum Studies and Research Center
+- [ ] 3.8 km - **Tangerang** / Universitas Pelita Harapan (UPH) Tower `tng-uph-tower` -> Pelita Harapan University
+- [ ] 3.7 km - **Vancouver** / Bloedel Conservatory `yvr-08` -> Bloedel Conservatory
+- [ ] 3.5 km - **Beijing** / Great Hall of the People `pek_great_hall` -> Great Hall of the People
+- [ ] 3.4 km - **Beijing** / National Centre for the Performing Arts `pek_national_theatre` -> National Centre for the Performing Arts (China)
+- [ ] 3.4 km - **Dakar** / Grande Mosquée de Dakar `sn_grande_mosquee_dakar` -> Grand Mosque of Dakar
+- [ ] 3.3 km - **Abu Dhabi** / Sheikh Zayed Grand Mosque `auh_sheikh_zayed_mosque` -> Sheikh Zayed Grand Mosque
+- [ ] 3.2 km - **Manaus** / Amazon Theatre (Teatro Amazonas) `mao-amazon-theatre` -> Amazon Theatre
+- [ ] 3.1 km - **Asheville** / Biltmore Estate `nc_biltmore_estate` -> Biltmore Estate
+- [ ] 3.0 km - **Sana'a** / Dar al-Hajar `sanaa-dar-al-hajar` -> Dar al-Hajar
+- [ ] 3.0 km - **Central Jakarta** / Autograph Tower (Thamrin Nine) `jakarta-autograph-tower` -> Thamrin Nine
+- [ ] 3.0 km - **Beijing** / Forbidden City (Hall of Supreme Harmony) `pek_forbidden_city` -> Forbidden City
+- [ ] 3.0 km - **Brasília** / Brasília TV Tower `br_tv_tower` -> Brasília TV Tower
+- [ ] 2.9 km - **Addis Ababa** / African Union headquarters building `addis-african-union` -> African Union Conference Center and Office Complex
+- [ ] 2.8 km - **Rio de Janeiro** / Museum of Modern Art (MAM Rio) `rio-mam` -> Museum of Modern Art, Rio de Janeiro
+- [ ] 2.8 km - **Istanbul** / Dolmabahçe Palace `ist_dolmabahce_palace` -> Dolmabahçe Palace
+- [ ] 2.8 km - **Phoenix** / Tovrea Castle `phx-11` -> Tovrea Castle
+- [ ] 2.7 km - **Surabaya** / House of Sampoerna `sub-house-of-sampoerna` -> House of Sampoerna
+- [ ] 2.7 km - **Dubai** / Atlantis The Royal `dxb_atlantis_royal` -> Atlantis The Royal, Dubai
+- [ ] 2.7 km - **Guadalajara** / Tlaquepaque `mx_tlaquepaque` -> Tlaquepaque
+- [ ] 2.5 km - **Las Vegas** / Encore at Wynn Las Vegas `lv_encore` -> Encore Las Vegas
+- [ ] 2.4 km - **Riyadh** / Al Rajhi Grand Mosque `ruh-10` -> Al Rajhi Grand Mosque
+- [ ] 2.4 km - **Seoul** / Some Sevit (Floating Islands) `some-sevit` -> Sebitseom
+- [ ] 2.3 km - **Bengaluru** / World Trade Center Bengaluru `blr-05` -> World Trade Center Bengaluru
+- [ ] 2.3 km - **Abu Dhabi** / Capital Gate `auh_capital_gate` -> Capital Gate
+- [ ] 2.2 km - **Johannesburg** / Walter Sisulu National Botanical Garden `johannesburg-walter-sisulu-garden` -> Walter Sisulu National Botanical Garden
+- [ ] 2.2 km - **Bengaluru** / UB Tower `blr-03` -> UB City
+- [ ] 2.2 km - **Barcelona** / Barcelona Pavilion `bcn_pabellon` -> Barcelona Pavilion
+- [ ] 2.1 km - **Abu Dhabi** / W Abu Dhabi - Yas Island `auh_yas_viceroy` -> W Abu Dhabi – Yas Island
+- [ ] 2.1 km - **Cartagena** / Convento de la Popa `co_convento_popa` -> Convento de la Popa
+- [ ] 2.0 km - **Washington D.C.** / The United States Capitol `dc-01` -> United States Capitol
+- [ ] 2.0 km - **Mumbai** / Chhatrapati Shivaji Maharaj T2 `bom_t2_terminal` -> Chhatrapati Shivaji Maharaj International Airport
+- [ ] 2.0 km - **Tel Aviv** / Shalom Meir Tower `tlv_shalom_meir` -> Shalom Meir Tower
+- [ ] 2.0 km - **New York** / TWA Flight Center `nyc_twa_flight_center` -> TWA Flight Center
+
+## 4. Flagged as logo-like, but fine (2)
+
+Real photos whose file name happens to mention a flag. No action needed.
+
+- **Minnesota** / Minnesota State Capitol
+- **Seville** / Torre del Oro
