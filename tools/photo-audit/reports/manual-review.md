@@ -2,7 +2,7 @@
 
 OK photos: 838 before, 1037 after (of 1392 landmarks).
 
-## 1. No usable photo (156)
+## 1. No usable photo (160)
 
 No Wikipedia article (or only a "may refer to" page) could be matched safely. Options: find the
 article by hand and add it to `titleOverrides`, or add a photo to the asset catalog.
@@ -12,13 +12,16 @@ article by hand and add it to `titleOverrides`, or add a photo to the asset cata
 - [ ] **New Orleans** / The Sazerac House `nola_the_sazerac_house` - no_article
 - [ ] **New Orleans** / The Cornstalk Hotel `nola_cornstalk_hotel` - no_article
 - [ ] **Orlando** / EA Orlando (Creative Village) `orl_creative_village_ea` - no_photo (lands on: EA Orlando)
+- [ ] **Orlando** / Truist Plaza (SunTrust Center) `orl_suntrust_center` - skipped
 - [ ] **Dubai** / The Opus `dxb_opus` - no_photo (lands on: The Opus)
 - [ ] **Singapore** / The Hive (Learning Hub North) `sg_the_hive` - disambiguation (lands on: Hive)
 - [ ] **Portland** / PAE Living Building `pdx_pae_living` - no_photo (lands on: PAE Living Building)
+- [ ] **Miami** / The Carlyle `mia-03` - skipped
 - [ ] **Bengaluru** / IIM Bangalore Campus `blr-04` - no_article
 - [ ] **Denver** / One River North `den-08` - no_article
 - [ ] **Pittsburgh** / Smithfield United Church `pit-05` - no_article
 - [ ] **Cleveland** / Old Federal Building & Post Office `cle-14` - no_article
+- [ ] **Victoria** / Mayfair Shopping Centre `vic-10` - skipped
 - [ ] **Victoria** / The Janion Building `vic-13` - no_article
 - [ ] **Amsterdam** / The Rock (Zuidas) `ams_black_diamond` - disambiguation (lands on: Rock)
 - [ ] **Amsterdam** / Silodam `ams_silodam` - no_photo (lands on: Silodam)
@@ -107,6 +110,7 @@ article by hand and add it to `titleOverrides`, or add a photo to the asset cata
 - [ ] **Fortaleza** / Metropolitan Cathedral of Fortaleza `for-cathedral` - no_article
 - [ ] **Fortaleza** / Fortress of Nossa Senhora da Assunção `for-fortress-assuncao` - no_article
 - [ ] **Fortaleza** / One Residencial `for-one-residencial` - no_article
+- [ ] **Fortaleza** / Estoril `for-estoril` - skipped
 - [ ] **Fortaleza** / Mucuripe Lighthouse `for-mucuripe-lighthouse` - no_article
 - [ ] **Fortaleza** / Museum of Image and Sound (MIS) `for-mis` - disambiguation (lands on: Museum of Image and Sound)
 - [ ] **Fortaleza** / Cineteatro São Luiz `for-cine-sao-luiz` - no_article
@@ -244,7 +248,7 @@ override pointing at the mall or street the store is on, if that's acceptable.
 - [ ] **Lima** / iSpace Jockey Plaza (Apple Premium) `ispace_jockey_plaza` - no_article
 - [ ] **Melbourne** / Apple Chadstone `apple-chadstone` - no_article
 
-## 3. Article is far from the registry coordinates (123)
+## 3. Article is far from the registry coordinates (119)
 
 Most of these are the right article and the *registry* coordinates are wrong (which also
 misplaces the map pin). Check the lat/lon in BuildingRegistry.json first.
@@ -252,9 +256,6 @@ misplaces the map pin). Check the lat/lon in BuildingRegistry.json first.
 - [ ] 12264.7 km - **Dubai** / The Index `dxb_index_tower` -> The Index (Dubai)
 - [ ] 9522.2 km - **Brasília** / Palácio da Alvorada `br_alvorada_palace` -> Palácio da Alvorada
 - [ ] 8991.6 km - **Brasília** / Cláudio Santoro National Theater `br_national_theater` -> Cláudio Santoro National Theater
-- [ ] 5584.9 km - **Fortaleza** / Estoril `for-estoril` -> Estoril
-- [ ] 2437.0 km - **Miami** / The Carlyle `mia-03` -> The Carlyle
-- [ ] 647.4 km - **Orlando** / Truist Plaza (SunTrust Center) `orl_suntrust_center` -> Truist Plaza
 - [ ] 494.9 km - **Mexico City** / Palacio de Correos de México `mex_postal_palace` -> Palacio de Correos de México
 - [ ] 494.9 km - **Mexico City** / Palacio de Bellas Artes `mex_bellas_artes` -> Palacio de Bellas Artes
 - [ ] 359.7 km - **Cairo** / Museum of Egyptian Antiquities (The Red Museum) `cai_egyptian_museum_tahrir` -> Egyptian Museum
@@ -367,7 +368,6 @@ misplaces the map pin). Check the lat/lon in BuildingRegistry.json first.
 - [ ] 2.2 km - **Barcelona** / Barcelona Pavilion `bcn_pabellon` -> Barcelona Pavilion
 - [ ] 2.1 km - **Abu Dhabi** / W Abu Dhabi - Yas Island `auh_yas_viceroy` -> W Abu Dhabi – Yas Island
 - [ ] 2.1 km - **Cartagena** / Convento de la Popa `co_convento_popa` -> Convento de la Popa
-- [ ] 2.1 km - **Victoria** / Mayfair Shopping Centre `vic-10` -> Victoria, British Columbia
 - [ ] 2.0 km - **Washington D.C.** / The United States Capitol `dc-01` -> United States Capitol
 - [ ] 2.0 km - **Mumbai** / Chhatrapati Shivaji Maharaj T2 `bom_t2_terminal` -> Chhatrapati Shivaji Maharaj International Airport
 - [ ] 2.0 km - **Tel Aviv** / Shalom Meir Tower `tlv_shalom_meir` -> Shalom Meir Tower

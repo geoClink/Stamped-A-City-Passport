@@ -8,7 +8,8 @@
 | disambiguation | 14 |
 | no_photo | 5 |
 | logo_like | 2 |
-| far_away | 123 |
+| far_away | 119 |
+| skipped | 4 |
 | ok | 1037 |
 
 ## no_article (211)
@@ -255,19 +256,17 @@
 - **Minnesota** / Minnesota State Capitol (article: Minnesota State Capitol, 8.0 km away, photo: `3840px-state_capitol_with_new_minnesota_state_flag_11.jpg`)
 - **Seville** / Torre del Oro (article: Torre del Oro, 0.1 km away, photo: `torre_del_oro_flag_seville_spain.jpg`)
 
-## far_away (123)
+## far_away (119)
 
 - **Las Vegas** / Bellagio Las Vegas (article: Bellagio (resort), 4.3 km away, photo: `1280px-night_mode_2_bellagio.jpg`)
 - **Las Vegas** / Caesars Palace (article: Caesars Palace, 3.8 km away, photo: `1280px-caesars_palace_-_south_east_-_2010-12-12.jpg`)
 - **Las Vegas** / Encore at Wynn Las Vegas (article: Encore Las Vegas, 2.5 km away, photo: `encore_hotel_-_panoramio.jpg`)
-- **Orlando** / Truist Plaza (SunTrust Center) (article: Truist Plaza, 647.4 km away, photo: `3840px-truist_plaza_atlanta.jpg`)
 - **Dubai** / Atlantis The Royal (article: Atlantis The Royal, Dubai, 2.7 km away, photo: `3840px-atlantis_the_royal,_dubai_1.jpg`)
 - **Dubai** / The Dubai Frame (article: Dubai Frame, 22.9 km away, photo: `1280px-the_dubai_frame.jpg`)
 - **Dubai** / Jumeirah Emirates Towers (article: Emirates Towers, 20.3 km away, photo: `1920px-emirates_towers_1.jpg`)
 - **Dubai** / The Index (article: The Index (Dubai), 12264.7 km away, photo: `the_index_dubai_20241101.jpg`)
 - **Dubai** / Etihad Museum (article: Etihad Museum, 20.3 km away, photo: `1280px-etihad_museum,_dubai,_uae.jpg`)
 - **Washington D.C.** / The United States Capitol (article: United States Capitol, 2.0 km away, photo: `3840px-us_capitol_east_side.jpg`)
-- **Miami** / The Carlyle (article: The Carlyle, 2437.0 km away, photo: `the_carlyle_minneapolis_1.jpg`)
 - **Bengaluru** / UB Tower (article: UB City, 2.2 km away, photo: `ubtowers.jpg`)
 - **Bengaluru** / World Trade Center Bengaluru (article: World Trade Center Bengaluru, 2.3 km away, photo: `world_trade_center,_bangalore_(2025)_27.jpg`)
 - **Pittsburgh** / Fallingwater (article: Fallingwater, 4.0 km away, photo: `fallingwater3.jpg`)
@@ -276,7 +275,6 @@
 - **Cleveland** / Terminal Tower (article: Terminal Tower, 20.5 km away, photo: `terminal_tower_from_cuyahoga_river_cropped.jpg`)
 - **Cleveland** / Key Tower (article: Key Tower, 14.0 km away, photo: `key_tower_2022.png`)
 - **Victoria** / Hatley Castle (article: Hatley Park National Historic Site, 19.9 km away, photo: `hatley_castle.jpg`)
-- **Victoria** / Mayfair Shopping Centre (article: Victoria, British Columbia, 2.1 km away, photo: `victoria_bc,_canada_(johnson_street)_-_panoramio.jpg`)
 - **Beijing** / Forbidden City (Hall of Supreme Harmony) (article: Forbidden City, 3.0 km away, photo: `3840px-the_forbidden_city_-_view_from_coal_hill.jpg`)
 - **Beijing** / Great Hall of the People (article: Great Hall of the People, 3.5 km away, photo: `3840px-china_senate_house.jpg`)
 - **Beijing** / CITIC Tower (China Zun) (article: China Zun, 6.0 km away, photo: `china_zun_in_2020_(cropped).jpg`)
@@ -346,7 +344,6 @@
 - **Tangerang** / Indonesia Convention Exhibition (ICE) (article: Indonesia Convention Exhibition, 8.1 km away, photo: `3840px-indonesia_convention_exhibition,_bsd_city_(cropped).jpg`)
 - **Tangerang** / Universitas Pelita Harapan (UPH) Tower (article: Pelita Harapan University, 3.8 km away, photo: `universitas_pelita_harapan_2016_bennylin_01.jpg`)
 - **Tangerang** / Soekarno-Hatta Terminal 3 (article: Soekarno–Hatta International Airport, 6.5 km away, photo: `soekarno-hatta_airport_aerial_view.jpg`)
-- **Fortaleza** / Estoril (article: Estoril, 5584.9 km away, photo: `3840px-linha_de_cascais_dsc_0241_(17296423451).jpg`)
 - **Manaus** / Amazon Theatre (Teatro Amazonas) (article: Amazon Theatre, 3.2 km away, photo: `noite_no_teatro_amazonas_(cropped).jpg`)
 - **Recife** / Ricardo Brennand Institute (article: Ricardo Brennand Institute, 9.0 km away, photo: `instituto_ricardo_brennand.jpg`)
 - **Rio de Janeiro** / Christ the Redeemer (article: Christ the Redeemer (statue), 8.1 km away, photo: `christ_the_redeemer_-_cristo_redentor.jpg`)
@@ -380,3 +377,10 @@
 - **Cartagena** / Convento de la Popa (article: Convento de la Popa, 2.1 km away, photo: `convento_de_la_popa.jpg`)
 - **Guadalajara** / Tlaquepaque (article: Tlaquepaque, 2.7 km away, photo: `3840px-santuario_de_la_soledad_02.jpg`)
 - **Dakar** / Grande Mosquée de Dakar (article: Grand Mosque of Dakar, 3.4 km away, photo: `3840px-grand_mosque_of_dakar_dsc07363-2.jpg`)
+
+## skipped (4)
+
+- **Orlando** / Truist Plaza (SunTrust Center) (no article)
+- **Miami** / The Carlyle (no article)
+- **Victoria** / Mayfair Shopping Centre (no article)
+- **Fortaleza** / Estoril (no article)

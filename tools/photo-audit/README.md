@@ -35,6 +35,7 @@ seconds. Delete that file to re-check against live Wikipedia.
 | `no_photo` | Article found, but no usable photo in it |
 | `logo_like` | File name looks like a logo/map/seal/flag/diagram |
 | `far_away` | Article is more than 2 km from the registry coordinates |
+| `skipped` | In `skipWikipedia`: Wikipedia only has a different place, so the app shows its placeholder |
 
 `far_away` usually means the registry coordinates are wrong, not the article.
 

@@ -90,6 +90,15 @@ def swift_title_overrides() -> dict[str, str]:
     return {key.replace('\\"', '"'): value.replace('\\"', '"') for key, value in pairs}
 
 
+def swift_skip_wikipedia() -> set[str]:
+    """Parse the `skipWikipedia` set (building ids the app never looks up) out of WikimediaService.swift."""
+    source = SWIFT_SERVICE.read_text()
+    block = re.search(r"skipWikipedia: Set<String> = \[(.*?)\n    \]", source, re.DOTALL)
+    if block is None:
+        return set()
+    return set(re.findall(r'^\s*"([^"]+)",', block.group(1), re.MULTILINE))
+
+
 def swift_logo_patterns() -> list[str]:
     """Parse the substrings `isLogoOrDiagram` checks for, e.g. [".svg", "logo", "map"]."""
     source = SWIFT_SERVICE.read_text()

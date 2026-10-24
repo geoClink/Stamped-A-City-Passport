@@ -10,6 +10,7 @@ Each landmark lands in one category:
     no_photo        the article exists but has no usable photo
     logo_like       the photo looks like a logo, map, seal, flag or diagram
     far_away        the article's coordinates are more than 2 km from the landmark (likely the wrong place)
+    skipped         listed in skipWikipedia: the app shows its placeholder on purpose
     ok              a real photo of (as far as we can tell) the right place
 """
 
@@ -28,11 +29,12 @@ from wiki import (
     distance_km,
     load_landmarks,
     swift_logo_patterns,
+    swift_skip_wikipedia,
     swift_title_overrides,
 )
 
 REPORTS_DIR = TOOL_DIR / "reports"
-CATEGORIES = ["no_article", "disambiguation", "no_photo", "logo_like", "far_away", "ok"]
+CATEGORIES = ["no_article", "disambiguation", "no_photo", "logo_like", "far_away", "skipped", "ok"]
 
 # Stricter than the app: anything matching these in the *file name* gets flagged.
 # If the audit finds a new pattern worth filtering, add it to isLogoOrDiagram in Swift too.
@@ -94,14 +96,20 @@ def main() -> None:
     client = WikiClient()
     overrides = swift_title_overrides()
     logo_patterns = swift_logo_patterns()
-    print(f"{len(overrides)} title overrides, app logo patterns: {logo_patterns}")
+    skipped_ids = swift_skip_wikipedia()
+    print(f"{len(overrides)} title overrides, {len(skipped_ids)} skipped, app logo patterns: {logo_patterns}")
 
     rows: list[dict[str, object]] = []
     counts: Counter[str] = Counter()
     landmarks = load_landmarks()
     for index, landmark in enumerate(landmarks, start=1):
-        result = app_photo(client, landmark.name, overrides.get(landmark.id), logo_patterns)
-        category, distance = categorize(landmark, result)
+        if landmark.id in skipped_ids:
+            # The app returns an empty summary for these without asking Wikipedia
+            result = PhotoResult(None, None, None, None, None, None)
+            category, distance = "skipped", None
+        else:
+            result = app_photo(client, landmark.name, overrides.get(landmark.id), logo_patterns)
+            category, distance = categorize(landmark, result)
         counts[category] += 1
         rows.append(
             {

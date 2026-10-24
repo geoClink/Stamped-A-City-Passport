@@ -21,7 +21,7 @@ def main() -> None:
     after: list[dict[str, Any]] = json.loads((REPORTS_DIR / "audit-after.json").read_text())
     flagged = [row for row in after if row["category"] != "ok"]
 
-    no_photo = [r for r in flagged if r["category"] in ("no_article", "disambiguation", "no_photo") and not is_apple_store(r["name"])]
+    no_photo = [r for r in flagged if r["category"] in ("no_article", "disambiguation", "no_photo", "skipped") and not is_apple_store(r["name"])]
     apple = [r for r in flagged if is_apple_store(r["name"])]
     far_away = sorted((r for r in flagged if r["category"] == "far_away" and not is_apple_store(r["name"])), key=lambda r: -r["distance_km"])
     logo_like = [r for r in flagged if r["category"] == "logo_like"]
