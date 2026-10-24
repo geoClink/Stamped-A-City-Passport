@@ -1,0 +1,905 @@
+{
+  "Aalto University": [
+    60.18611111,
+    24.82861111
+  ],
+  "Aalto University Library": null,
+  "Aalto University Undergraduate Center": [
+    60.1862761,
+    24.8262565
+  ],
+  "Academic libraries in Leuven": [
+    50.87805556,
+    4.7075
+  ],
+  "Alexander Hall (Princeton University)": [
+    40.34833333,
+    -74.66058333
+  ],
+  "Alumni Hall (University of Notre Dame)": [
+    41.6995,
+    -86.2393
+  ],
+  "Anatomical Theatre of Padua": [
+    45.40713889,
+    11.87716667
+  ],
+  "Andrew Dickson White House": [
+    42.44827222,
+    -76.482425
+  ],
+  "Andrew Melville Hall": [
+    56.34055556,
+    -2.8175
+  ],
+  "Arts Building (McGill University)": [
+    45.505,
+    -73.5775
+  ],
+  "Bailey Hall (Ithaca, New York)": [
+    42.44902778,
+    -76.48013889
+  ],
+  "Baillieu Library": [
+    -37.798503,
+    144.959575
+  ],
+  "Baker-Berry Library": [
+    43.705,
+    -72.28916667
+  ],
+  "Basilica of the Sacred Heart (Notre Dame)": [
+    41.7026,
+    -86.2397
+  ],
+  "Battle Hall": [
+    30.28527778,
+    -97.74027778
+  ],
+  "Beinecke Rare Book and Manuscript Library": [
+    41.31161,
+    -72.92722
+  ],
+  "Bing Concert Hall": [
+    37.43194444,
+    -122.16611111
+  ],
+  "Bridge of Sighs, Cambridge": [
+    52.208425,
+    0.11576667
+  ],
+  "Bridge of Sighs, Oxford": [
+    51.75447,
+    -1.25389
+  ],
+  "Brock Commons Tallwood House": [
+    49.26944444,
+    -123.25111111
+  ],
+  "Brown University": [
+    41.826,
+    -71.403
+  ],
+  "Burton Memorial Tower": null,
+  "Butler Library": [
+    40.80638889,
+    -73.96333333
+  ],
+  "C. K. Choi Building": null,
+  "Cambridge University Library": [
+    52.20516667,
+    0.10805556
+  ],
+  "Campanile (Trinity College Dublin)": null,
+  "Carolina Rediviva": [
+    59.85498333,
+    17.631125
+  ],
+  "Carpenter Center for the Visual Arts": [
+    42.37361111,
+    -71.11430556
+  ],
+  "Carr Memorial Chapel": [
+    41.83627,
+    -87.62438
+  ],
+  "Carr's Hill": [
+    38.03805556,
+    -78.50416667
+  ],
+  "Casa Italiana": [
+    40.8075,
+    -73.96027778
+  ],
+  "Central Library (UNAM)": [
+    19.33361111,
+    -99.18722222
+  ],
+  "Chan Centre for the Performing Arts": [
+    49.26944444,
+    -123.255
+  ],
+  "Chapel of King's College London": [
+    51.51187,
+    -0.11506
+  ],
+  "Charles E. Young Research Library": [
+    34.07492,
+    -118.441539
+  ],
+  "Charles Perkins Centre": [
+    -33.8875,
+    151.1835
+  ],
+  "Chau Chak Wing Museum": [
+    -33.8853,
+    151.1905
+  ],
+  "Chemistry Building, University of Melbourne": [
+    -37.79805556,
+    144.96194444
+  ],
+  "Child of the Sun": [
+    28.03142,
+    -81.94797
+  ],
+  "Château of Arenberg": [
+    50.86333333,
+    4.68305556
+  ],
+  "Ciudad Universitaria, Mexico City": [
+    19.33309,
+    -99.18526
+  ],
+  "Clarendon Building": [
+    51.7546,
+    -1.2546
+  ],
+  "Clark Hall (University of Virginia)": [
+    38.03305556,
+    -78.50777778
+  ],
+  "College Hall (University of Pennsylvania)": [
+    39.95127778,
+    -75.19375
+  ],
+  "Columbia University": [
+    40.8075,
+    -73.96194444
+  ],
+  "Convocation Hall": [
+    43.6608,
+    -79.3954
+  ],
+  "Cornell University": [
+    42.4492,
+    -76.4839
+  ],
+  "Cosin's Library": [
+    54.7747,
+    -1.5762
+  ],
+  "Cruciform Building": [
+    51.523989,
+    -0.135278
+  ],
+  "Dartmouth College": [
+    43.70333333,
+    -72.28833333
+  ],
+  "Denny Hall": [
+    47.6585,
+    -122.3086
+  ],
+  "Detroit Observatory": [
+    42.28166667,
+    -83.73166667
+  ],
+  "Dipoli": [
+    60.185,
+    24.8325
+  ],
+  "Divinity School, Oxford": [
+    51.7541,
+    -1.2549
+  ],
+  "Doe Memorial Library": [
+    37.8721,
+    -122.2594
+  ],
+  "Dunelm House": [
+    54.77333333,
+    -1.57166667
+  ],
+  "Durham Castle": null,
+  "Durham University": [
+    54.775,
+    -1.575
+  ],
+  "Edinburgh University Library": [
+    55.9428,
+    -3.189
+  ],
+  "Estadio Olímpico Universitario": [
+    19.33194444,
+    -99.19222222
+  ],
+  "Fisher Fine Arts Library": [
+    39.95138889,
+    -75.1925
+  ],
+  "Florida Southern College": [
+    28.03138,
+    -81.94745
+  ],
+  "Franklin D. Murphy Sculpture Garden": [
+    34.07508333,
+    -118.44006667
+  ],
+  "Garrison Hall": [
+    30.2852,
+    -97.7385
+  ],
+  "Georgetown University": [
+    38.90722222,
+    -77.07277778
+  ],
+  "Georgetown University Astronomical Observatory": [
+    38.90833333,
+    -77.07722222
+  ],
+  "Gerberding Hall": [
+    47.65527778,
+    -122.30944444
+  ],
+  "Glasgow University Library": [
+    55.8733,
+    -4.289
+  ],
+  "Glasgow University Union": [
+    55.8724,
+    -4.285
+  ],
+  "Great Beguinage, Leuven": [
+    50.871,
+    4.69619444
+  ],
+  "Great Hall of the University of Sydney": [
+    -33.8854,
+    151.189
+  ],
+  "Green Building (MIT)": [
+    42.3603,
+    -71.0893
+  ],
+  "Gustavianum": [
+    59.85794444,
+    17.63169444
+  ],
+  "Hanna–Honeycomb House": [
+    37.41601389,
+    -122.16355278
+  ],
+  "Harkness Tower": [
+    41.3093,
+    -72.9294
+  ],
+  "Hart House (University of Toronto)": [
+    43.66392374,
+    -79.39448524
+  ],
+  "Harvard University": [
+    42.37444444,
+    -71.11694444
+  ],
+  "Healy Hall": [
+    38.90727778,
+    -77.07272222
+  ],
+  "Hearst Greek Theatre": [
+    37.87369444,
+    -122.25419444
+  ],
+  "Hearst Gymnasium for Women": [
+    37.8694,
+    -122.2568
+  ],
+  "Hearst Memorial Mining Building": [
+    37.8742,
+    -122.2571
+  ],
+  "Henry Art Gallery": null,
+  "Hesburgh Library": [
+    41.7025,
+    -86.23416667
+  ],
+  "Hood Museum of Art": [
+    43.70222222,
+    -72.28805556
+  ],
+  "Hoover Tower": [
+    37.4276,
+    -122.1669
+  ],
+  "Hopkins Center for the Arts": [
+    43.70166667,
+    -72.28861111
+  ],
+  "Houston Hall (University of Pennsylvania)": [
+    39.95092,
+    -75.19386
+  ],
+  "Ida Noyes Hall": [
+    41.787949,
+    -87.595598
+  ],
+  "Illinois Institute of Technology": [
+    41.835,
+    -87.6275
+  ],
+  "Ingalls Rink": [
+    41.316552,
+    -72.925039
+  ],
+  "Institute for the Study of Ancient Cultures": [
+    41.78944444,
+    -87.59777778
+  ],
+  "Institute of Education building": [
+    51.5232,
+    -0.1281
+  ],
+  "Joe and Rika Mansueto Library": [
+    41.7919,
+    -87.6009
+  ],
+  "John D. Rockefeller Jr. Library": [
+    41.825725,
+    -71.40508889
+  ],
+  "John Hay Library": [
+    41.82643333,
+    -71.40494722
+  ],
+  "John Medley Building": [
+    -37.799234,
+    144.960433
+  ],
+  "KU Leuven": null,
+  "King's Building, London": [
+    51.51138889,
+    -0.11611111
+  ],
+  "King's College Chapel, Cambridge": [
+    52.2048,
+    0.1165
+  ],
+  "King's College London": [
+    51.51194444,
+    -0.11611111
+  ],
+  "Kingsgate Bridge": null,
+  "Kresge Auditorium": [
+    42.35812,
+    -71.09507
+  ],
+  "La Specola, Padua": [
+    45.401879,
+    11.868568
+  ],
+  "Lauinger Library": [
+    38.90638889,
+    -77.07222222
+  ],
+  "Linnaean Garden": [
+    59.86222222,
+    17.63388889
+  ],
+  "Lion and Unicorn Staircase": [
+    55.8714,
+    -4.2899
+  ],
+  "Littlefield House": [
+    30.28805556,
+    -97.74055556
+  ],
+  "Low Memorial Library": [
+    40.80833333,
+    -73.96194444
+  ],
+  "MIT Chapel": [
+    42.35833333,
+    -71.09416667
+  ],
+  "Macdonald-Harrington Building": [
+    45.505268,
+    -73.575804
+  ],
+  "Magdalen Tower": [
+    51.75165,
+    -1.24683
+  ],
+  "Main Building (University of Notre Dame)": [
+    41.7031,
+    -86.2389
+  ],
+  "Main Building (University of Texas at Austin)": [
+    30.2861,
+    -97.7393
+  ],
+  "Main Quad (Stanford University)": [
+    37.4275,
+    -122.17027778
+  ],
+  "Martha Cook Building": [
+    42.27474,
+    -83.73796
+  ],
+  "Massachusetts Hall (Harvard University)": [
+    42.37443889,
+    -71.11828333
+  ],
+  "Massachusetts Institute of Technology": [
+    42.3597,
+    -71.0919
+  ],
+  "Mathematical Bridge": [
+    52.20222222,
+    0.11505556
+  ],
+  "Maughan Library": [
+    51.5153,
+    -0.1106
+  ],
+  "McCormick Tribune Campus Center": [
+    41.83566,
+    -87.62584
+  ],
+  "McEwan Hall": [
+    55.94537,
+    -3.189479
+  ],
+  "McGill University": [
+    45.505,
+    -73.5775
+  ],
+  "McLennan Library Building": [
+    45.5033,
+    -73.576
+  ],
+  "Memorial Hall (Harvard University)": [
+    42.37588889,
+    -71.11491667
+  ],
+  "Morrill Hall (Cornell University)": [
+    42.44861111,
+    -76.48527778
+  ],
+  "Museo Universitario Arte Contemporáneo": null,
+  "Museum Building (Trinity College Dublin)": null,
+  "Museum of Anthropology at UBC": null,
+  "Nassau Hall": [
+    40.34873889,
+    -74.65935
+  ],
+  "National Autonomous University of Mexico": [
+    19.32888889,
+    -99.18722222
+  ],
+  "New College, Edinburgh": [
+    55.9498,
+    -3.1952
+  ],
+  "Newman College, Melbourne": [
+    -37.795,
+    144.9636
+  ],
+  "Nitobe Memorial Garden": [
+    49.26666667,
+    -123.25972222
+  ],
+  "Odegaard Undergraduate Library": [
+    47.65666667,
+    -122.31027778
+  ],
+  "Old College, University of Edinburgh": [
+    55.9474,
+    -3.1873
+  ],
+  "Old North Building": [
+    38.90755556,
+    -77.07325
+  ],
+  "Old Pathology Building Melbourne University": [
+    -37.7975,
+    144.96333333
+  ],
+  "Orto botanico di Padova": [
+    45.39911111,
+    11.88066667
+  ],
+  "Oxford University Museum of Natural History": [
+    51.7586,
+    -1.2557
+  ],
+  "Palazzo Maldura": [
+    45.4131,
+    11.8728
+  ],
+  "Penn Museum": [
+    39.949,
+    -75.1911
+  ],
+  "Philosophy Hall": [
+    40.80611111,
+    -73.9625
+  ],
+  "Powell Library": [
+    34.0717,
+    -118.44218
+  ],
+  "Princeton University": [
+    40.34527778,
+    -74.65611111
+  ],
+  "Princeton University Chapel": [
+    40.34888889,
+    -74.65688889
+  ],
+  "Princeton University Library": [
+    40.34941667,
+    -74.65747222
+  ],
+  "Prospect House (Princeton, New Jersey)": [
+    40.34693056,
+    -74.65676944
+  ],
+  "Provost's House, Trinity College Dublin": [
+    53.34333333,
+    -6.25861111
+  ],
+  "Radcliffe Camera": [
+    51.7534,
+    -1.2539
+  ],
+  "Rauner Special Collections Library": [
+    43.70439,
+    -72.28819
+  ],
+  "Redpath Hall": [
+    45.503757,
+    -73.576952
+  ],
+  "Redpath Museum": [
+    45.5044,
+    -73.5776
+  ],
+  "Regenstein Library": [
+    41.7922,
+    -87.5998
+  ],
+  "Richards Medical Research Laboratories": [
+    39.94972222,
+    -75.19805556
+  ],
+  "Robarts Library": [
+    43.66444444,
+    -79.39944444
+  ],
+  "Robie House": [
+    41.78983333,
+    -87.59591667
+  ],
+  "Rockefeller Chapel": [
+    41.78858,
+    -87.59704
+  ],
+  "Royce Hall": [
+    34.07277778,
+    -118.44194444
+  ],
+  "Rudolph Hall": [
+    41.3087,
+    -72.9319
+  ],
+  "S. R. Crown Hall": [
+    41.8332,
+    -87.6272
+  ],
+  "Sainte-Geneviève Library": [
+    48.84708333,
+    2.34583333
+  ],
+  "Sather Gate": [
+    37.870218,
+    -122.25948083
+  ],
+  "Sather Tower": [
+    37.87194444,
+    -122.25777778
+  ],
+  "Sayles Memorial Hall": [
+    41.82625,
+    -71.40258
+  ],
+  "Senate House, Cambridge": [
+    52.205586,
+    0.117378
+  ],
+  "Senate House, London": [
+    51.521,
+    -0.1287
+  ],
+  "Sever Hall": [
+    42.37436111,
+    -71.11547222
+  ],
+  "Sharp Family Tourism and Education Center": [
+    28.03326,
+    -81.949855
+  ],
+  "Sheldonian Theatre": [
+    51.7543,
+    -1.255
+  ],
+  "Soldiers' Tower": [
+    43.66347222,
+    -79.39513889
+  ],
+  "Somerset House": [
+    51.5111,
+    -0.1178
+  ],
+  "Sorbonne (building)": [
+    48.8485,
+    2.3432
+  ],
+  "Sorbonne Chapel": [
+    48.84843,
+    2.34318
+  ],
+  "Sorin Hall (University of Notre Dame)": [
+    41.701804,
+    -86.239882
+  ],
+  "St Cecilia's Hall": [
+    55.94903,
+    -3.18649
+  ],
+  "St Mary's College, St Andrews": [
+    56.3391,
+    -2.7945
+  ],
+  "St Salvator's Chapel": [
+    56.341377,
+    -2.794368
+  ],
+  "St. Paul's Chapel (Columbia University)": null,
+  "Stanford Memorial Church": [
+    37.4268,
+    -122.1705
+  ],
+  "Stanford University": [
+    37.4275,
+    -122.17027778
+  ],
+  "Stata Center": [
+    42.36164,
+    -71.090255
+  ],
+  "State Street Village": [
+    41.83372222,
+    -87.62616667
+  ],
+  "Sterling Memorial Library": [
+    41.3113,
+    -72.9291
+  ],
+  "Suzzallo Library": [
+    47.6557,
+    -122.3084
+  ],
+  "Teviot Row House": [
+    55.94505,
+    -3.18898056
+  ],
+  "Texas Science and Natural History Museum": [
+    30.287,
+    -97.7324
+  ],
+  "The Lawn": [
+    38.03472222,
+    -78.50416667
+  ],
+  "The Old Library, Trinity College Dublin": [
+    53.3439436,
+    -6.2575176
+  ],
+  "The Printing House": [
+    53.3448227,
+    -6.2559456
+  ],
+  "The Rotunda (University of Virginia)": null,
+  "Tom Tower": [
+    51.75,
+    -1.25666667
+  ],
+  "Trinity College Dublin": [
+    53.3444,
+    -6.2577
+  ],
+  "UCL Main Building": [
+    51.5247,
+    -0.1336
+  ],
+  "University College London": [
+    51.52472222,
+    -0.13361111
+  ],
+  "University College, Toronto": [
+    43.66277778,
+    -79.39555556
+  ],
+  "University Hall (Harvard University)": [
+    42.37444444,
+    -71.11705556
+  ],
+  "University Hall (Uppsala University)": [
+    59.857558,
+    17.629444
+  ],
+  "University Hall, Brown University": [
+    41.82611111,
+    -71.40388889
+  ],
+  "University Hall, Leuven": [
+    50.8779,
+    4.7005
+  ],
+  "University of British Columbia": [
+    49.2647,
+    -123.2528
+  ],
+  "University of California, Berkeley": [
+    37.8719,
+    -122.2583
+  ],
+  "University of California, Los Angeles": [
+    34.0722,
+    -118.4427
+  ],
+  "University of Cambridge": [
+    52.20527778,
+    0.11722222
+  ],
+  "University of Chicago": [
+    41.78972222,
+    -87.59972222
+  ],
+  "University of Edinburgh": [
+    55.95,
+    -3.18333333
+  ],
+  "University of Glasgow": [
+    55.87194444,
+    -4.2875
+  ],
+  "University of Glasgow Memorial Chapel": [
+    55.87157,
+    -4.28971
+  ],
+  "University of Melbourne": [
+    -37.7963,
+    144.9614
+  ],
+  "University of Michigan": [
+    42.27694444,
+    -83.73805556
+  ],
+  "University of Michigan Museum of Art": [
+    42.27539889,
+    -83.739735
+  ],
+  "University of Notre Dame": [
+    41.7,
+    -86.23888889
+  ],
+  "University of Oxford": [
+    51.755,
+    -1.255
+  ],
+  "University of Padua": [
+    45.40666667,
+    11.8775
+  ],
+  "University of Paris": null,
+  "University of Paris Faculty of Law": [
+    48.8469,
+    2.3447
+  ],
+  "University of Pennsylvania": [
+    39.95194444,
+    -75.19361111
+  ],
+  "University of St Andrews": null,
+  "University of Sydney": [
+    -33.8875,
+    151.19
+  ],
+  "University of Sydney Quadrangle": [
+    -33.8859,
+    151.1888
+  ],
+  "University of Texas at Austin": [
+    30.285,
+    -97.735
+  ],
+  "University of Toronto": [
+    43.66166667,
+    -79.395
+  ],
+  "University of Virginia": [
+    38.03555556,
+    -78.50333333
+  ],
+  "University of Washington": [
+    47.6542,
+    -122.3081
+  ],
+  "University of Washington Quad": [
+    47.657263,
+    -122.307198
+  ],
+  "Uppsala University": [
+    59.8575,
+    17.62888889
+  ],
+  "Uris Library": [
+    42.44777778,
+    -76.48527778
+  ],
+  "Väre (building)": [
+    60.18528056,
+    24.82496111
+  ],
+  "Walsh Family Hall of Architecture": [
+    41.695,
+    -86.235
+  ],
+  "Widener Library": [
+    42.37344444,
+    -71.1165
+  ],
+  "Willard Straight Hall": [
+    42.4465,
+    -76.4855
+  ],
+  "William L. Clements Library": [
+    42.2755,
+    -83.7379
+  ],
+  "Wren Library": [
+    52.2071,
+    0.1149
+  ],
+  "Yale Center for British Art": [
+    41.30790806,
+    -72.93090611
+  ],
+  "Yale University": [
+    41.31638889,
+    -72.92222222
+  ],
+  "Yale University Art Gallery": [
+    41.308459,
+    -72.930985
+  ],
+  "Younger Hall": [
+    56.3412414,
+    -2.7938917
+  ],
+  "École de Médecine (building)": [
+    48.8516,
+    2.3409
+  ]
+}

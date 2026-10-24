@@ -20,11 +20,13 @@ class CityViewModel: ObservableObject {
     // MARK: - Private Properties
     private var cancellables = Set<AnyCancellable>()
     let allCities = CityLocation.City.allCases
+    // City counts and the continent sections leave campuses out (they have their own section)
+    let cityCases = CityLocation.City.cityCases
     
     private let progressManager = GlobalProgressManager.shared
     
     init() {
-        self.totalCities = allCities.count
+        self.totalCities = cityCases.count
         refreshData()
         
         progressManager.$visitedIDs
@@ -38,7 +40,7 @@ class CityViewModel: ObservableObject {
     // MARK: - Data Logic
     
     func refreshData() {
-        self.masteredCount = allCities.filter { isCityCompleted($0) }.count
+        self.masteredCount = cityCases.filter { isCityCompleted($0) }.count
     }
     
     func isCityCompleted(_ city: CityLocation.City) -> Bool {
@@ -72,7 +74,7 @@ class CityViewModel: ObservableObject {
     }
     
     func isCountryMastered(_ country: CityLocation.Country) -> Bool {
-        let citiesInCountry = allCities.filter { $0.country == country }
+        let citiesInCountry = cityCases.filter { $0.country == country }
         guard !citiesInCountry.isEmpty else { return false }
         return citiesInCountry.allSatisfy { isCityCompleted($0) }
     }
@@ -96,7 +98,7 @@ struct CountryGroup: Identifiable {
 
 extension CityViewModel {
     var groupedByContinent: [ContinentGroup] {
-        let filtered = allCities.filter { city in
+        let filtered = cityCases.filter { city in
             searchText.isEmpty || city.name.localizedCaseInsensitiveContains(searchText)
         }
         
@@ -113,5 +115,18 @@ extension CityViewModel {
             
             return ContinentGroup(id: continent, countries: countryGroups)
         }.sorted { $0.id.rawValue < $1.id.rawValue }
+    }
+
+    /// Campuses for the "Campus Architecture" section, grouped by country.
+    var campusesByCountry: [CountryGroup] {
+        let campusDict = Dictionary(grouping: CityLocation.City.campusCases) { $0.country }
+        return campusDict.map { (country, campuses) in
+            CountryGroup(id: country, cities: campuses.sorted { $0.name < $1.name })
+        }.sorted { $0.id.rawValue < $1.id.rawValue }
+    }
+
+    func isCampusCountryMastered(_ country: CityLocation.Country) -> Bool {
+        let campuses = CityLocation.City.campusCases.filter { $0.country == country }
+        return !campuses.isEmpty && campuses.allSatisfy { isCityCompleted($0) }
     }
 }
