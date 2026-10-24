@@ -74,6 +74,23 @@ final class CampusDataTests: XCTestCase {
         }
     }
 
+    // Every language's own CityDetails.json (de.lproj, ja.lproj...) has every campus,
+    // otherwise campus pages show placeholder details in that language
+    func testEveryLanguageHasCampusDetails() throws {
+        let languages = Bundle.main.localizations.filter { $0 != "Base" && $0 != "en" }
+        XCTAssertFalse(languages.isEmpty, "No app languages found")
+        for language in languages {
+            guard let url = Bundle.main.url(forResource: "CityDetails", withExtension: "json",
+                                            subdirectory: nil, localization: language) else { continue }
+            let details = try JSONDecoder().decode(
+                [String: CityLocation.City.CityDetails].self, from: Data(contentsOf: url)
+            )
+            for campus in CityLocation.City.campusCases {
+                XCTAssertNotNil(details[campus.rawValue], "\(language): \(campus.rawValue) is missing from CityDetails.json")
+            }
+        }
+    }
+
     // The city list and city counts leave campuses out
     func testCityCasesExcludeCampuses() {
         XCTAssertFalse(CityLocation.City.cityCases.contains { $0.isCampus })

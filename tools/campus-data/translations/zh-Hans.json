@@ -1,0 +1,412 @@
+{
+  "University of Melbourne": {
+    "nickname": "Postera Crescam Laude",
+    "airportInfo": "位于 Tullamarine 的墨尔本机场在 Parkville 校区西北约 20 公里处。SkyBus 机场巴士开往市区的 Southern Cross 车站，从那里乘有轨电车很快就能到大学。",
+    "funFact": "在校园里走一圈，就能看遍一个世纪的澳大利亚建筑：19 世纪 80 年代的维多利亚哥特式实验楼、Walter Burley Griffin 设计的 Newman College、澳大利亚第一座专门建造的大学图书馆，以及 Roy Grounds 设计的粗野主义风格 John Medley Building。",
+    "language": "英语",
+    "languageInfo": "大学的拉丁文校训 Postera crescam laude 意为“我将在后人的赞誉中成长”。",
+    "currencyInfo": "澳元 ($)",
+    "transportation": "步行 / Swanston Street 有轨电车",
+    "transportationFact": "有轨电车沿 Swanston Street 从市中心直达大学门口。Parkville 校区本身很紧凑，步行游览十分方便。"
+  },
+  "University of Sydney": {
+    "nickname": "Sidere Mens Eadem Mutato",
+    "airportInfo": "悉尼金斯福德·史密斯机场位于 Camperdown 校区以南约 10 公里处。从机场乘火车可到 Redfern 车站，步行不远即到大学。",
+    "funFact": "Edmund Blacket 设计的砂岩主四方院始建于 1854 年，Anthony Trollope 称其大礼堂（Great Hall）为“殖民地最好的大厅”。四方院直到 1966 年西塔（West Tower）建成才最终完工。",
+    "language": "英语",
+    "languageInfo": "拉丁文校训 Sidere mens eadem mutato 被大学译为“星辰变换，心智如一”。校友 Clive James 曾打趣说，这句话暗示悉尼其实是被挪到 12,000 英里外的牛津或剑桥。",
+    "currencyInfo": "澳元 ($)",
+    "transportation": "步行 / 火车至 Redfern / 公交",
+    "transportationFact": "Redfern 车站离校园步行不远，公交车从市中心沿 Parramatta Road 和 City Road 开来。"
+  },
+  "University of Texas at Austin": {
+    "nickname": "长角牛之家",
+    "airportInfo": "奥斯汀–伯格斯特罗姆机场位于奥斯汀市中心东南。校园就在市中心北边，从机场开车或乘公交都不远。",
+    "funFact": "Cass Gilbert 设计的 Battle Hall 奠定了整个校园的风格：西班牙红瓦屋顶、深远的出檐和石灰岩墙面塑造了 Paul Cret 1933 年的总体规划，新建筑至今仍须遵循这一规划。",
+    "language": "英语",
+    "languageInfo": "校园有自己的简称：主楼（Main Building）就叫“the Tower”，夜里亮起橙色灯光时，就是在庆祝学校的胜利。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / CapMetro 公交",
+    "transportationFact": "主楼和 South Mall 周围的历史核心区很紧凑，最适合步行游览。奥斯汀的 CapMetro 公交沿校园西侧的 Guadalupe Street 行驶。"
+  },
+  "University College London": {
+    "nickname": "伦敦第一所大学",
+    "airportInfo": "希思罗机场位于伦敦市中心以西。皮卡迪利线（Piccadilly line）从机场直达 Russell Square，步行不远就是 UCL 的 Bloomsbury 校区。",
+    "funFact": "UCL 主楼花了 158 年才建成：William Wilkins 于 1827 年开工，1829 年资金耗尽时只完成了门廊和穹顶，完整的 U 形平面直到 1985 年才完工。",
+    "language": "英语",
+    "languageInfo": "UCL 于 1826 年成立，是英格兰第一所向任何宗教信仰的学生开放的大学，至今仍被国王学院的学生调侃为 Gower Street 上那所“无神”学院。",
+    "currencyInfo": "英镑 (£)",
+    "transportation": "步行 / 伦敦地铁",
+    "transportationFact": "Bloomsbury 校区很紧凑，步行游览很方便。Euston Square、Warren Street 和 Goodge Street 地铁站都近在咫尺。"
+  },
+  "King's College London": {
+    "nickname": "Sancte et Sapienter（以圣洁与智慧）",
+    "airportInfo": "希思罗机场位于伦敦市中心以西。皮卡迪利线（Piccadilly line）从机场开往 Holborn，步行不远就是 Strand 校区。",
+    "funFact": "国王学院创立时，白金汉宫的建筑师 John Nash 主动提出免费设计第一座教学楼。学院婉拒了他，转而聘请了 Sir Robert Smirke，因为 Smirke 已经是隔壁萨默塞特宫的建筑师。",
+    "language": "英语",
+    "languageInfo": "留意学生会的吉祥物狮子 Reggie：一座纸浆制作的 Reggie 就立在 King's Building 门厅的楼梯上。",
+    "currencyInfo": "英镑 (£)",
+    "transportation": "步行 / 伦敦地铁",
+    "transportationFact": "Strand 校区位于 Strand 街和泰晤士河之间，沿河不远就是 Temple 地铁站。位于 Chancery Lane 的 Maughan Library 步行即可轻松到达。"
+  },
+  "University of Paris (Sorbonne)": {
+    "nickname": "La Sorbonne（索邦）",
+    "airportInfo": "戴高乐机场是进入巴黎的主要国际门户。RER B 线从机场开进市区，在 Luxembourg 站停靠，步行不远即到索邦。",
+    "funFact": "索邦得名于约 1253 年由 Robert de Sorbon 创办的索邦学院。如今的建筑是 19 世纪末重建的，但黎塞留枢机主教建于 17 世纪的穹顶礼拜堂仍矗立在庭院中。",
+    "language": "法语",
+    "languageInfo": "授课和日常生活都使用法语。拉丁区（Quartier Latin）的名字来源于大学中世纪学者曾经使用的拉丁语。",
+    "currencyInfo": "欧元 (€)",
+    "transportation": "步行 / 地铁 / RER",
+    "transportationFact": "拉丁区面积不大，步行很方便。Cluny–La Sorbonne 地铁站和 Luxembourg RER 站距索邦都只有几分钟路程。"
+  },
+  "University of Padua": {
+    "nickname": "世界首座永久性解剖剧场的所在地",
+    "airportInfo": "威尼斯马可·波罗机场是最近的大型机场。从那里经威尼斯梅斯特雷（Venezia Mestre）换乘巴士或火车即可到达帕多瓦。",
+    "funFact": "帕多瓦大学自 1493 年起就以 Palazzo del Bo 为校址，楼内有世界上第一座永久性解剖剧场，这一模式后来被欧洲各地的大学效仿。",
+    "language": "意大利语",
+    "languageInfo": "意大利语是这座城市的语言，也是大学大部分课程的授课语言。",
+    "currencyInfo": "欧元 (€)",
+    "transportation": "步行 / 有轨电车 / 公交",
+    "transportationFact": "大学的历史建筑分布在帕多瓦老城各处，步行是参观它们最方便的方式。较远的路程可以乘有轨电车和公交。"
+  },
+  "KU Leuven": {
+    "nickname": "Sapientia aedificavit sibi domum",
+    "airportInfo": "布鲁塞尔机场是最近的大型机场。从机场火车站有直达鲁汶的火车。",
+    "funFact": "鲁汶大学于 1962 年买下整个大贝居安会院，并花了 25 年进行修复，如今这片近 100 栋房屋的历史街区既是大学宿舍，也是联合国教科文组织世界遗产。",
+    "language": "荷兰语",
+    "languageInfo": "鲁汶位于弗拉芒地区，当地语言是荷兰语，不过许多硕士课程用英语授课。大学礼堂（University Hall）门上的校训是拉丁文：“智慧为自己建造了房屋”。",
+    "currencyInfo": "欧元 (€)",
+    "transportation": "步行 / 自行车 / 公交",
+    "transportationFact": "鲁汶市中心不大，大学遍布其中，因此步行或骑自行车是常态。"
+  },
+  "Aalto University": {
+    "nickname": "阿尔瓦·阿尔托的 Otaniemi 校区",
+    "airportInfo": "赫尔辛基机场是芬兰的主要国际机场。从赫尔辛基市中心乘地铁向西即可到达 Otaniemi 的 Aalto University 站。",
+    "funFact": "阿尔瓦·阿尔托设计了 Otaniemi 校区的主要建筑，包括主楼和图书馆，整个校区被列为芬兰国家文化遗产。",
+    "language": "芬兰语",
+    "languageInfo": "埃斯波是官方双语城市，因此标识同时使用芬兰语和瑞典语（Otaniemi 的瑞典语名称是 Otnäs）。大学的很多课程用英语授课。",
+    "currencyInfo": "欧元 (€)",
+    "transportation": "地铁 / 步行",
+    "transportationFact": "Aalto University 地铁站就在校园正中，与 Väre 大楼相连。15 号轻轨线也在 Korkeakouluaukio 广场设站。"
+  },
+  "Uppsala University": {
+    "nickname": "林奈的大学",
+    "airportInfo": "斯德哥尔摩的主要机场阿兰达机场位于斯德哥尔摩和乌普萨拉之间。从机场有火车向北开往乌普萨拉中央车站。",
+    "funFact": "卡尔·林奈从 1741 年起掌管大学的第一座植物园，并按自己的设计重新布置；如今植物园已恢复成 18 世纪时的样貌。",
+    "language": "瑞典语",
+    "languageInfo": "当地语言是瑞典语，许多课程用英语授课。学生生活围绕着“同乡会”（nations）展开，这些学生社团以瑞典各地区命名。",
+    "currencyInfo": "瑞典克朗 (kr)",
+    "transportation": "步行 / 自行车",
+    "transportationFact": "大学的历史建筑集中在大教堂和大学公园（University Park）周围，彼此步行几分钟即到。乌普萨拉也是出了名的自行车友好城市。"
+  },
+  "Florida Southern College": {
+    "nickname": "太阳之子",
+    "airportInfo": "莱克兰位于坦帕和奥兰多之间的 4 号州际公路上，通常从西边的坦帕国际机场前往。莱克兰市内也有 Lakeland Linder 国际机场。",
+    "funFact": "1938 年，校长 Ludd Spivey 聘请了弗兰克·劳埃德·赖特，二十年间赖特为校园画了 18 份设计。由于资金一直紧张，许多建筑是靠学生亲手建造的，最终这里成为全球单一地点赖特建筑最多的地方。",
+    "language": "英语",
+    "languageInfo": "校园的昵称来自赖特本人，他说他的建筑将“从大地升起，迈向光明，成为太阳之子”。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / 廊道（Esplanades）",
+    "transportationFact": "赖特设计的有顶廊道建于 1940 年至 1958 年间，连接了他在校园里的所有建筑，只有 Danforth Chapel 除外，它就紧挨着 Pfeiffer Chapel。廊道低矮的顶棚之间的间距，就像这里曾经种植的橘树一样。"
+  },
+  "University of Oxford": {
+    "nickname": "梦幻尖塔之城",
+    "airportInfo": "希思罗机场是国际游客前往牛津的常用门户。从机场有直达牛津市中心的长途巴士，车程约一个半小时。",
+    "funFact": "牛津没有统一的校园：各个学院和大学建筑交织在中世纪的市中心，因此拉德克利夫图书馆（Radcliffe Camera）、谢尔登剧院（Sheldonian）和神学院（Divinity School）彼此步行只需几分钟。",
+    "language": "英语",
+    "languageInfo": "牛津有自己的一套词汇：学期分别叫 Michaelmas、Hilary 和 Trinity，而 Radcliffe Camera 就简称“Rad Cam”。",
+    "currencyInfo": "英镑 (£)",
+    "transportation": "步行 / 公交 / 自行车",
+    "transportationFact": "历史中心很紧凑，最适合步行游览。自行车随处可见，市内公交连接市中心、火车站和较远的学院。"
+  },
+  "University of Cambridge": {
+    "nickname": "The Other Place（“另一个地方”）",
+    "airportInfo": "斯坦斯特德机场是离剑桥最近的大型机场，有直达剑桥站的火车。许多国际游客也会从希思罗或盖特威克机场入境，经伦敦北上。",
+    "funFact": "数学桥（Mathematical Bridge）看起来是拱形，其实完全由笔直的木梁搭成；而大学图书馆的塔楼比国王学院礼拜堂的最高点还要高。",
+    "language": "英语",
+    "languageInfo": "剑桥学生常说“the Backs”（沿河的学院草坪）、“supervisions”（小组教学），并把大学图书馆叫作“the UL”。",
+    "currencyInfo": "英镑 (£)",
+    "transportation": "步行 / 自行车 / 撑篙船",
+    "transportationFact": "剑桥市中心小而平坦，大多数人步行或骑车出行。乘撑篙船沿剑河经过 the Backs，是从水上欣赏各学院的经典方式。"
+  },
+  "University of St Andrews": {
+    "nickname": "苏格兰第一所大学",
+    "airportInfo": "爱丁堡机场是前往圣安德鲁斯的主要门户，开车约一个半小时。乘火车的话，最近的车站是 Leuchars，从那里乘公交或出租车很快就能到镇上。",
+    "funFact": "圣安德鲁斯创建于 1413 年，在一座海滨小镇里汇集了六个世纪的建筑，从晚期哥特式的 St Salvator's Chapel，到 James Stirling 设计、外形如驶过船只的粗野主义建筑 Andrew Melville Hall。",
+    "language": "英语",
+    "languageInfo": "这里通用英语；大学的苏格兰语名称是 University o St Andras，盖尔语名称是 Oilthigh Chill Rìmhinn。",
+    "currencyInfo": "英镑 (£)",
+    "transportation": "步行 / 公交",
+    "transportationFact": "圣安德鲁斯是个小镇，大学建筑分布在古老的街道上，步行是最方便的出行方式。当地公交连接小镇和 Leuchars 车站。"
+  },
+  "University of Glasgow": {
+    "nickname": "Gilmorehill",
+    "airportInfo": "格拉斯哥机场就在城市西边，开车到 West End 校区约 20 分钟。机场快线巴士连接机场和市中心。",
+    "funFact": "1870 年，大学离开 High Street 的旧址，迁往 Gilmorehill 上由 Sir George Gilbert Scott 设计的哥特复兴式新校园，并把 17 世纪的狮子与独角兽阶梯（Lion and Unicorn Staircase）一起搬了过来。",
+    "language": "英语",
+    "languageInfo": "这里处处说英语，常带有浓重的格拉斯哥口音和苏格兰词汇；山顶上的主校区就简称 Gilmorehill。",
+    "currencyInfo": "英镑 (£)",
+    "transportation": "步行 / 地铁",
+    "transportationFact": "校园位于 West End，俯瞰 Kelvingrove 公园。格拉斯哥地铁的 Hillhead 站步行不远即到。"
+  },
+  "University of Edinburgh": {
+    "nickname": "北方的雅典",
+    "airportInfo": "爱丁堡机场位于城市西边，爱丁堡有轨电车从航站楼直达市中心。",
+    "funFact": "大学的建筑串起了爱丁堡的建筑史：Robert Adam 和 William Playfair 设计的新古典主义 Old College、Playfair 在 the Mound 上设计的新哥特式 New College、苏格兰第一座专门建造的音乐厅，以及 Basil Spence 事务所设计的粗野主义图书馆。",
+    "language": "英语",
+    "languageInfo": "爱丁堡学生把 Teviot Row House 简称为“Teviot”。大学的盖尔语名称是 Oilthigh Dhùn Èideann。",
+    "currencyInfo": "英镑 (£)",
+    "transportation": "步行 / 公交 / 有轨电车",
+    "transportationFact": "大多数大学建筑都在老城步行可达的范围内。Lothian Buses 公交和有轨电车连接全城，不过这里坡多，走起来也是不错的锻炼。"
+  },
+  "Durham University": {
+    "nickname": "英格兰第三古老的大学",
+    "airportInfo": "纽卡斯尔机场是离杜伦最近的大型机场，开车约半小时。杜伦也位于东海岸干线（East Coast Main Line）上，有从伦敦和爱丁堡直达的火车。",
+    "funFact": "大学学院（University College）的学生住在杜伦城堡里。这座诺曼要塞始建于 1072 年，与隔壁的大教堂共同构成世界遗产。城堡下方，Ove Arup 设计的 Kingsgate Bridge 分成两半建造，再旋转到河面上合拢。",
+    "language": "英语",
+    "languageInfo": "杜伦的学生都隶属于各个学院，其中最古老的大学学院（University College）被大家简称为“Castle”。",
+    "currencyInfo": "英镑 (£)",
+    "transportation": "步行",
+    "transportationFact": "杜伦的历史半岛小而多坡，被威尔河（River Wear）环绕。Kingsgate 等人行桥将它与河对岸的学院和院系连接起来。"
+  },
+  "Trinity College Dublin": {
+    "nickname": "爱尔兰最古老的大学",
+    "airportInfo": "都柏林机场位于城市北部，机场快线巴士从航站楼开往市中心，停靠站离三一学院正门很近。",
+    "funFact": "三一学院的老图书馆收藏着 8 世纪的《凯尔经》（Book of Kells），其筒形拱顶的长厅（Long Room）是世界上最著名的图书馆内景之一。",
+    "language": "英语和爱尔兰语",
+    "languageInfo": "校园日常使用英语，而爱尔兰语是爱尔兰的第一官方语言，也出现在各种标识上；三一学院的爱尔兰语名称是 Coláiste na Tríonóide。",
+    "currencyInfo": "欧元 (€)",
+    "transportation": "步行 / Luas 有轨电车 / 公交",
+    "transportationFact": "三一学院就在都柏林市中心，步行即可轻松到达。Luas 有轨电车和许多市内公交线路都在校园周边设站。"
+  },
+  "Yale University": {
+    "nickname": "斗牛犬之家",
+    "airportInfo": "哈特福德附近的布拉德利机场在纽黑文以北约一小时车程处。许多游客也会飞到纽约，再乘 Metro-North 的 New Haven Line 直达 Union Station。",
+    "funFact": "耶鲁的中心校园是美国最出色的学院哥特式建筑群：大部分由 James Gamble Rogers 在 20 世纪 20 至 30 年代设计，人们还在石头上泼酸、故意打裂窗户，让新建筑看起来像有几百年历史。",
+    "language": "英语",
+    "languageInfo": "校园生活有自己的词汇：本科生分属十四个住宿学院之一，大家约在其下碰头的钟楼就简称“Harkness”。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Yale Shuttle",
+    "transportationFact": "中心校园很紧凑，最适合步行参观。免费的 Yale Shuttle 在各学院、Science Hill 和医学院校区之间循环运行。"
+  },
+  "Harvard University": {
+    "nickname": "Veritas",
+    "airportInfo": "洛根机场隔着海港，距哈佛广场约 8 公里。MBTA 的银线（Silver Line）和红线（Red Line）连接机场与 Harvard 站。",
+    "funFact": "从哈佛园（Harvard Yard）步行几分钟，就能看到学院现存最古老的建筑——建于 1720 年的乔治亚风格 Massachusetts Hall，以及美国唯一一座主要由勒·柯布西耶设计的建筑。",
+    "language": "英语",
+    "languageInfo": "学生把哈佛园简称为“the Yard”，这里绿树成荫，是校园的中心，最古老的楼宇都在这里。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / MBTA 红线",
+    "transportationFact": "哈佛园及周边最适合步行游览。红线的 Harvard 站出口就在哈佛广场，离波士顿市中心只有几站路。"
+  },
+  "Massachusetts Institute of Technology": {
+    "nickname": "Mens et Manus",
+    "airportInfo": "洛根机场隔着查尔斯河，距 MIT 约 7 公里。MBTA 连接机场与红线的 Kendall/MIT 站。",
+    "funFact": "MIT 几乎所有建筑都用数字命名，所以大穹顶（Great Dome）是 10 号楼，弗兰克·盖里设计的 Stata Center 是 32 号楼，它所在的位置原本是传奇的 20 号楼，二战时期辐射实验室（Radiation Laboratory）就设在那里。",
+    "language": "英语",
+    "languageInfo": "在 MIT 问路要报数字：房间号写成“W16-100”这样，先是楼号，再是房间号。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / MBTA 红线",
+    "transportationFact": "校园沿查尔斯河展开，从一头走到另一头都很轻松。红线的 Kendall/MIT 站位于校园东端。"
+  },
+  "Princeton University": {
+    "nickname": "老虎之家",
+    "airportInfo": "纽瓦克机场在北边约一小时车程处。NJ Transit 火车从机场站开往 Princeton Junction，再换乘被称为 Dinky 的短途接驳火车即可到校园。",
+    "funFact": "拿骚楼（Nassau Hall）1756 年落成时是北美殖民地最大的学术建筑，1783 年还曾作为美国国会所在地使用了四个月。",
+    "language": "英语",
+    "languageInfo": "拿骚楼被亲切地称为“Old Nassau”，这也是大学校歌的名字。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / NJ Transit Dinky",
+    "transportationFact": "校园紧凑又绿意盎然，最适合步行参观。Dinky 接驳火车连接 Princeton 站与纽约–费城干线上的 Princeton Junction。"
+  },
+  "Cornell University": {
+    "nickname": "Far Above Cayuga's Waters（高踞卡尤加湖之上）",
+    "airportInfo": "伊萨卡的小机场在校园以北几英里处。许多游客则会飞到锡拉丘兹，再向南开车约一小时。",
+    "funFact": "McGraw Tower 于 1891 年作为 Uris Library 的一部分建成，里面安放着康奈尔钟乐（Cornell Chimes），这是美国大学校园里第一组安装并演奏的钟乐。学期期间它们至今每天仍演奏三次。",
+    "language": "英语",
+    "languageInfo": "学生把 Uris Library 俯瞰的那片山坡叫作“Libe Slope”。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / TCAT 公交",
+    "transportationFact": "康奈尔的山顶校园面积大，有些地方很陡，最好穿双舒适的鞋。TCAT 公交连接校园和伊萨卡市中心。"
+  },
+  "Columbia University": {
+    "nickname": "狮子之家",
+    "airportInfo": "拉瓜迪亚机场距晨边高地（Morningside Heights）约 25 分钟车程。肯尼迪机场和纽瓦克机场较远，但都有地铁和火车通往曼哈顿。",
+    "funFact": "哥伦比亚大学的晨边高地校园由 McKim, Mead & White 在 19 世纪 90 年代围绕带穹顶的 Low Memorial Library 规划，图书馆台阶上立着 Daniel Chester French 创作的《母校》（Alma Mater）雕像。",
+    "language": "英语",
+    "languageInfo": "学生把 Low Memorial Library 简称为“Low”。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / 纽约地铁（1 号线）",
+    "transportationFact": "校园由一个个方院组成，布局紧凑，步行很方便。1 号线的 116 Street–Columbia University 站就在百老汇大街上的校门口。"
+  },
+  "University of Pennsylvania": {
+    "nickname": "贵格人之家",
+    "airportInfo": "费城国际机场（PHL）距校园约 15 分钟车程。SEPTA 的 Airport Line 火车开往紧邻校园的 University City 站。",
+    "funFact": "宾大校园跨越多个时代：Frank Furness 设计的火红色维多利亚风格图书馆、美国大学校园里的第一座学生活动中心，以及 Louis Kahn 的开创性作品 Richards Laboratories，彼此步行都不远。",
+    "language": "英语",
+    "languageInfo": "这所大学简称“Penn”或“UPenn”。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / SEPTA",
+    "transportationFact": "大学城（University City）地势平坦，步行很方便。SEPTA 的有轨电车、公交和 Market–Frankford Line 连接校园与费城市中心（Center City）。"
+  },
+  "Brown University": {
+    "nickname": "熊之家",
+    "airportInfo": "T. F. Green 机场位于沃威克，在 College Hill 以南约 20 分钟处。波士顿洛根机场开车或乘火车约一个半小时。",
+    "funFact": "建于 1770 年的 University Hall 是美国仅存的七座建于美国独立战争之前的大学建筑之一。",
+    "language": "英语",
+    "languageInfo": "学生把 John Hay Library 简称为“the Hay”。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / RIPTA 公交",
+    "transportationFact": "布朗大学位于普罗维登斯市中心上方陡峭的 College Hill 上，最方便步行游览。RIPTA 公交连接山上与市中心和火车站。"
+  },
+  "Dartmouth College": {
+    "nickname": "The Big Green（大绿）",
+    "airportInfo": "汉诺威南边的黎巴嫩小机场有少量支线航班。大多数游客会飞到波士顿洛根机场，再向北开车约两小时。",
+    "funFact": "Baker Library 高 200 英尺的塔楼仿照费城独立厅建造，是学院的象征；地下室里有 José Clemente Orozco 的壁画《美洲文明史诗》（The Epic of American Civilization），属于美国国家历史地标。",
+    "language": "英语",
+    "languageInfo": "学生把 Hopkins Center for the Arts 叫作“the Hop”。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Advance Transit",
+    "transportationFact": "达特茅斯的建筑环绕着汉诺威中心的 the Green，步行几分钟就能到任何地方。免费的 Advance Transit 公交连接汉诺威与附近城镇。"
+  },
+  "Georgetown University": {
+    "nickname": "Hoyas 之家",
+    "airportInfo": "里根国家机场隔着波托马克河，距校园约 15 分钟车程。杜勒斯国际机场较远，约 45 分钟车程。",
+    "funFact": "Healy Hall 是隔着波托马克河就能望见的尖塔地标，由 Paul Pelz 和 John Smithmeyer 设计，二人也是美国国会图书馆托马斯·杰斐逊大楼的设计者。",
+    "language": "英语",
+    "languageInfo": "学生把 Lauinger Library 叫作“Lau”。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / GUTS 接驳车",
+    "transportationFact": "乔治城没有自己的地铁站，因此大学的免费 GUTS 接驳巴士连接校园和附近的地铁站。山顶校园本身步行很方便。"
+  },
+  "University of Chicago": {
+    "nickname": "Maroons 之家",
+    "airportInfo": "中途机场（Midway）是芝加哥两个机场中离城市南区海德公园更近的一个。奥黑尔国际机场（ORD）的远程航班多得多，但要横穿城市，路程更远。",
+    "funFact": "校园融合了两种理念：哥特式方院和美国一些最大胆的现代建筑，从弗兰克·劳埃德·赖特的罗比之家（Robie House）到 Helmut Jahn 设计的玻璃穹顶 Mansueto Library。",
+    "language": "英语",
+    "languageInfo": "校园有自己的简称：Regenstein Library 就叫“the Reg”，而 Institute for the Study of Ancient Cultures 在一个世纪里都被称为东方研究所（Oriental Institute）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / UChicago 接驳车 / Metra",
+    "transportationFact": "主方院很紧凑，步行即可。Metra Electric 火车往返海德公园与芝加哥市中心，大学接驳车在社区内循环运行。"
+  },
+  "University of Notre Dame": {
+    "nickname": "Fighting Irish 之家",
+    "airportInfo": "南本德国际机场距校园车程很短。South Shore Line 通勤火车从机场开往芝加哥市中心。",
+    "funFact": "顶端立着圣母玛利亚像的金色穹顶（Golden Dome）高耸于校园之上。校园约有 170 座建筑，环绕着两座湖和七个方院，常被评为世界上最美的校园之一。",
+    "language": "英语",
+    "languageInfo": "校园有自己的词汇：主方院（Main Quad）叫“God Quad”，Hesburgh Library 上的壁画《生命之道》（Word of Life）更出名的叫法是“达阵耶稣”（Touchdown Jesus）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行",
+    "transportationFact": "主方院和 South Quad 周围的历史核心区最适合步行游览，圣殿（Basilica）、金色穹顶和圣母洞（Grotto）彼此只有几分钟路程。"
+  },
+  "University of Michigan": {
+    "nickname": "金刚狼之家",
+    "airportInfo": "底特律都会机场在安娜堡以东约半小时车程处，是该地区的主要机场。",
+    "funFact": "底特律建筑师 Albert Kahn 塑造了密歇根大学的中央校区，设计了 Hill Auditorium、Angell Hall、Clements Library 和 Burton Memorial Tower。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是玉米黄和蓝色（maize and blue），运动队叫 Wolverines（金刚狼）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / U-M Blue Buses",
+    "transportationFact": "中央校区步行即可游览。大学免费的蓝色巴士（Blue Buses）连接中央校区、北校区和医学校区。"
+  },
+  "Illinois Institute of Technology": {
+    "nickname": "Illinois Tech",
+    "airportInfo": "位于芝加哥南区的中途机场（Midway）是该市两个机场中较近的一个。奥黑尔国际机场（ORD）的远程航班多得多，但要横穿城市，路程更远。",
+    "funFact": "路德维希·密斯·凡·德·罗执掌 IIT 建筑学院长达二十年，并设计了校园的大部分建筑，使这里成为世界上他的建筑最集中的地方之一。",
+    "language": "英语",
+    "languageInfo": "密斯设计的 Carr Memorial Chapel 外形是朴素的砖盒子，学生因此叫它“God Box”（上帝的盒子）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / CTA 绿线和红线",
+    "transportationFact": "CTA 绿线直穿校园，经过 Campus Center 上方的一段包裹在不锈钢管道中；红线则在校园西侧不远处设站。"
+  },
+  "University of Virginia": {
+    "nickname": "骑士之家",
+    "airportInfo": "夏洛茨维尔的小型地区机场在大学以北，开车很快就到。里士满和华盛顿特区的大机场开车需要两到三个小时。",
+    "funFact": "托马斯·杰斐逊规划“学术村”（Academical Village）时，以一座图书馆——圆形大厅（Rotunda）——而不是教堂为中心。它与杰斐逊的故居蒙蒂塞洛一起被列为联合国教科文组织世界遗产。",
+    "language": "英语",
+    "languageInfo": "在 UVA，校园被称为“the Grounds”，运动队叫 Cavaliers（骑士），也叫 Wahoos。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / University Transit Service",
+    "transportationFact": "the Lawn 周围的中央校园（Central Grounds）步行很方便。免费的 University Transit Service 巴士连接校园其他区域。"
+  },
+  "Stanford University": {
+    "nickname": "The Farm（农场）",
+    "airportInfo": "旧金山国际机场（SFO）在校园以北约半小时车程处。圣何塞的 Mineta 机场（SJC）在南边，距离差不多。",
+    "funFact": "斯坦福的主方院（Main Quad）由 Henry Hobson Richardson 的继任者 Shepley, Rutan and Coolidge 设计。他们把 Richardson 的圆拱罗马式风格与加州传教会风格相融合，用当地的黄色砂岩建造，再盖上红瓦屋顶。",
+    "language": "英语",
+    "languageInfo": "学生把校园叫作“The Farm”，因为这里曾是 Leland Stanford 的养马场；纪念教堂（Memorial Church）则简称“MemChu”。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Marguerite 接驳车",
+    "transportationFact": "主方院周围的校园核心区步行很方便。免费的 Marguerite 接驳车连接校园与 Palo Alto 的 Caltrain 车站。"
+  },
+  "University of California, Berkeley": {
+    "nickname": "Cal",
+    "airportInfo": "奥克兰机场离校园最近。BART 列车把奥克兰机场和旧金山国际机场都与 Downtown Berkeley 站连接起来，从那里步行不远就是萨瑟门（Sather Gate）。",
+    "funFact": "John Galen Howard 以布扎（Beaux-Arts）规划塑造了校园的核心。他设计了希腊剧场（Greek Theatre）、Hearst Mining Building、萨瑟门和钟楼（Campanile），后者是世界上最高的钟塔之一。",
+    "language": "英语",
+    "languageInfo": "当地人把这所大学简称为“Cal”，萨瑟塔（Sather Tower）则被所有人叫作“the Campanile”。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / BART",
+    "transportationFact": "Downtown Berkeley BART 站在校园以西几个街区处。在校园里，从萨瑟门到希腊剧场，处处步行可达。"
+  },
+  "University of California, Los Angeles": {
+    "nickname": "棕熊之家",
+    "airportInfo": "洛杉矶国际机场（LAX）是离 Westwood 最近的大型机场，沿圣地亚哥高速公路（San Diego Freeway）向北开车通常不远，视交通状况而定。",
+    "funFact": "Royce Hall 和 Powell Library 是 Westwood 校园最初的四座建筑中的两座，隔着主方院相对而立。两者都是砖砌的罗马复兴式建筑，以米兰的圣安布罗斯大教堂（Sant'Ambrogio）为原型。",
+    "language": "英语",
+    "languageInfo": "学生们被称为 Bruins（棕熊），Royce Hall 的双塔是几乎每本宣传册上都能看到的 UCLA 形象。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Metro 公交",
+    "transportationFact": "中央校园很紧凑，步行游览即可。许多洛杉矶 Metro 公交线路都在 Westwood 校园周边设站。"
+  },
+  "University of Washington": {
+    "nickname": "U-Dub",
+    "airportInfo": "西雅图–塔科马国际机场（Sea-Tac）在西雅图以南。Link 轻轨从机场直达 Husky Stadium 旁的 University of Washington 站。",
+    "funFact": "建筑师 Carl Gould 于 1915 年规划了文理学院方院（Liberal Arts Quadrangle），学院哥特式楼宇旁种着三十棵染井吉野樱，每年三月中旬到四月初开花。",
+    "language": "英语",
+    "languageInfo": "几乎所有人都把这所大学叫作“U-Dub”，红砖铺成的中央广场（Central Plaza）则总被称为红场（Red Square）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Link 轻轨",
+    "transportationFact": "Link 轻轨在 Husky Stadium 旁的 University of Washington 站停靠。从那里步行到中央校园、从红场到 the Quad，都很轻松。"
+  },
+  "McGill University": {
+    "nickname": "蒙特利尔的山坡校园",
+    "airportInfo": "特鲁多机场位于市中心西边的多瓦尔（Dorval）。747 路机场快线巴士从机场开往市中心，下车后步行不远就是 Roddick Gates。",
+    "funFact": "麦吉尔最古老的建筑 Arts Building 始建于 1839 年，由 John Ostell 按古典复兴风格设计。它周围还有一座维多利亚时代的希腊复兴式博物馆、一座理查森罗马式图书馆大厅和一座 20 世纪 60 年代的粗野主义图书馆。",
+    "language": "英语和法语",
+    "languageInfo": "麦吉尔是一所位于法语城市蒙特利尔的英语大学，因此在校园各处和周边街道上都能听到两种语言。",
+    "currencyInfo": "加元 ($)",
+    "transportation": "步行 / 蒙特利尔地铁",
+    "transportationFact": "市中心校园从 Sherbrooke Street 沿皇家山（Mount Royal）山坡向上延伸。地铁绿线的 McGill 站在正门以南几个街区处。"
+  },
+  "University of Toronto": {
+    "nickname": "U of T",
+    "airportInfo": "皮尔逊机场在市中心西北。UP Express 列车从机场开往 Union Station，再乘地铁向北即可到校园。",
+    "funFact": "St. George 校区跨越多个时代：大学学院（University College）的罗马复兴式主楼是国家历史遗址，Hart House 和士兵塔（Soldiers' Tower）是哥特式建筑，而 Robarts Library 则是一座绰号“书堡”（Fort Book）的粗野主义巨型建筑。",
+    "language": "英语",
+    "languageInfo": "大家都把这所大学叫作“U of T”，学生分属 University College、Trinity 和 Victoria 等学院。",
+    "currencyInfo": "加元 ($)",
+    "transportation": "步行 / TTC 地铁",
+    "transportationFact": "校园位于多伦多市中心，紧邻女王公园（Queen's Park）。Queen's Park、Museum 和 St. George 地铁站都在校园边缘。"
+  },
+  "University of British Columbia": {
+    "nickname": "Point Grey 校园",
+    "airportInfo": "温哥华国际机场（YVR）位于校园南边列治文的海岛（Sea Island）上。乘 Canada Line 到温哥华，再换乘公交向西到 UBC Exchange。",
+    "funFact": "UBC 的 Brock Commons Tallwood House 在 2017 年启用时是世界上最高的重型木结构建筑，而 Arthur Erickson 设计的人类学博物馆则用混凝土重现了西北海岸原住民（First Nations）的梁柱式房屋。",
+    "language": "英语",
+    "languageInfo": "校园位于 Point Grey，严格来说并不属于温哥华市，尽管大家都把它当作温哥华。",
+    "currencyInfo": "加元 ($)",
+    "transportation": "公交 / 步行",
+    "transportationFact": "从温哥华市中心和 Canada Line 有频繁的公交开往校园中心的 UBC Exchange。从那里沿 Main Mall 步行可到大多数建筑。"
+  },
+  "National Autonomous University of Mexico": {
+    "nickname": "C.U.",
+    "airportInfo": "贝尼托·华雷斯国际机场位于墨西哥城东侧。校园在南边的科约阿坎（Coyoacán），所以要做好乘出租车或地铁长途横穿城市的准备。",
+    "funFact": "大学城（Ciudad Universitaria）建于 20 世纪 50 年代，坐落在约公元 100 年 Xitle 火山喷发留下的熔岩床上。2007 年，联合国教科文组织将其中央校区列为世界遗产，因为它将现代建筑与墨西哥艺术家的壁画融为一体。",
+    "language": "西班牙语",
+    "languageInfo": "课程和校园生活都使用西班牙语。学生把主校区简称为“C.U.”（读作 se-u）。",
+    "currencyInfo": "墨西哥比索 ($)",
+    "transportation": "Pumabús / 地铁",
+    "transportationFact": "大学在偌大的校园里开设了自己的免费 Pumabús 线路。地铁 3 号线的 Universidad 站和 Copilco 站服务于校园。"
+  }
+}

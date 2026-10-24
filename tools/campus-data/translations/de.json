@@ -1,0 +1,412 @@
+{
+  "University of Melbourne": {
+    "nickname": "Postera Crescam Laude",
+    "airportInfo": "Der Flughafen Melbourne in Tullamarine liegt etwa 20 km nordwestlich des Campus Parkville. Der SkyBus fährt zur Southern Cross Station in der Innenstadt, von dort ist es nur eine kurze Straßenbahnfahrt bis zur Universität.",
+    "funFact": "Ein einziger Campusspaziergang umfasst ein Jahrhundert australischer Architektur: viktorianisch-gotische Labore aus den 1880er Jahren, Walter Burley Griffins Newman College, Australiens erste eigens gebaute Universitätsbibliothek und Roy Grounds' brutalistisches John Medley Building.",
+    "language": "Englisch",
+    "languageInfo": "Das lateinische Motto der Universität, Postera crescam laude, bedeutet „Ich werde in der Wertschätzung künftiger Generationen wachsen“.",
+    "currencyInfo": "Australischer Dollar ($)",
+    "transportation": "Zu Fuß / Straßenbahnen der Swanston Street",
+    "transportationFact": "Straßenbahnen fahren die Swanston Street hinauf vom Stadtzentrum bis direkt vor die Tür der Universität. Der Campus Parkville selbst ist kompakt und lässt sich bequem zu Fuß erkunden."
+  },
+  "University of Sydney": {
+    "nickname": "Sidere Mens Eadem Mutato",
+    "airportInfo": "Der Flughafen Sydney Kingsford Smith liegt etwa 10 km südlich des Campus Camperdown. Züge vom Flughafen fahren zur Redfern Station, von dort ist es nur ein kurzer Fußweg zur Universität.",
+    "funFact": "Mit dem Bau von Edmund Blackets Main Quadrangle aus Sandstein wurde 1854 begonnen, und Anthony Trollope nannte die Great Hall „den schönsten Saal der Kolonien“. Fertiggestellt wurde das Quadrangle erst 1966 mit dem West Tower.",
+    "language": "Englisch",
+    "languageInfo": "Das lateinische Motto Sidere mens eadem mutato übersetzt die Universität mit „Die Sterne wechseln, der Geist bleibt derselbe“. Der Absolvent Clive James scherzte, es deute an, dass Sydney eigentlich ein um 12.000 Meilen versetztes Oxford oder Cambridge sei.",
+    "currencyInfo": "Australischer Dollar ($)",
+    "transportation": "Zu Fuß / Zug nach Redfern / Bus",
+    "transportationFact": "Die Redfern Station ist nur einen kurzen Fußweg vom Campus entfernt, und Busse fahren vom Stadtzentrum über die Parramatta Road und die City Road."
+  },
+  "University of Texas at Austin": {
+    "nickname": "Heimat der Longhorns",
+    "airportInfo": "Austin–Bergstrom liegt südöstlich der Innenstadt von Austin. Der Campus befindet sich direkt nördlich der Innenstadt, nur eine kurze Auto- oder Busfahrt vom Flughafen entfernt.",
+    "funFact": "Cass Gilberts Battle Hall prägte das Erscheinungsbild des gesamten Campus: Ihr spanisches rotes Ziegeldach, die weit überstehenden Traufen und die Kalksteinmauern bestimmten Paul Crets Masterplan von 1933, an den sich neue Gebäude bis heute halten müssen.",
+    "language": "Englisch",
+    "languageInfo": "Auf dem Campus gibt es eigene Kurzbezeichnungen: Das Main Building heißt einfach „the Tower“, und wenn es nachts orange leuchtet, feiert es einen Sieg der Universität.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß / CapMetro-Bus",
+    "transportationFact": "Der historische Kern rund um das Main Building und die South Mall ist kompakt und am besten zu Fuß zu erkunden. Die CapMetro-Busse von Austin fahren über die Guadalupe Street am Westrand des Campus."
+  },
+  "University College London": {
+    "nickname": "Londons erste Universität",
+    "airportInfo": "Heathrow liegt westlich der Londoner Innenstadt. Die Piccadilly Line fährt direkt vom Flughafen zum Russell Square, nur einen kurzen Fußweg vom UCL-Campus in Bloomsbury entfernt.",
+    "funFact": "Die Fertigstellung des Hauptgebäudes des UCL dauerte 158 Jahre: William Wilkins begann es 1827, 1829 ging das Geld aus, als nur der Portikus und die Kuppel fertig waren, und der vollständige U-förmige Grundriss wurde erst 1985 vollendet.",
+    "language": "Englisch",
+    "languageInfo": "Das UCL wurde 1826 als erste Universität Englands gegründet, die Studierenden jeder Religion offenstand, und wird von Studierenden des King's College bis heute als das „gottlose“ College der Gower Street geneckt.",
+    "currencyInfo": "Pfund Sterling (£)",
+    "transportation": "Zu Fuß / London Underground",
+    "transportationFact": "Der Campus in Bloomsbury ist kompakt und lässt sich bequem zu Fuß erkunden. Die U-Bahn-Stationen Euston Square, Warren Street und Goodge Street liegen alle direkt vor der Tür."
+  },
+  "King's College London": {
+    "nickname": "Sancte et Sapienter (Mit Heiligkeit und Weisheit)",
+    "airportInfo": "Heathrow liegt westlich der Londoner Innenstadt. Die Piccadilly Line fährt vom Flughafen nach Holborn, nur einen kurzen Fußweg vom Strand Campus entfernt.",
+    "funFact": "Als das King's College gegründet wurde, bot John Nash, der Architekt des Buckingham Palace, an, das erste Gebäude kostenlos zu entwerfen. Das College lehnte ab und beauftragte stattdessen Sir Robert Smirke, weil Smirke bereits der Architekt des benachbarten Somerset House war.",
+    "language": "Englisch",
+    "languageInfo": "Halten Sie Ausschau nach Reggie the Lion, dem Maskottchen der Studierendenvertretung: Ein Reggie aus Pappmaché steht auf der Treppe im Foyer des King's Building.",
+    "currencyInfo": "Pfund Sterling (£)",
+    "transportation": "Zu Fuß / London Underground",
+    "transportationFact": "Der Strand Campus liegt zwischen dem Strand und der Themse, die U-Bahn-Station Temple liegt nur ein Stück am Fluss entlang. Die Maughan Library in der Chancery Lane ist bequem zu Fuß erreichbar."
+  },
+  "University of Paris (Sorbonne)": {
+    "nickname": "Die Sorbonne",
+    "airportInfo": "Charles de Gaulle ist das wichtigste internationale Tor nach Paris. Die RER-Linie B fährt vom Flughafen in die Stadt und hält an der Station Luxembourg, nur einen kurzen Fußweg von der Sorbonne entfernt.",
+    "funFact": "Die Sorbonne verdankt ihren Namen dem Collège de Sorbonne, das um 1253 von Robert de Sorbon gegründet wurde. Das heutige Gebäude ist ein Wiederaufbau aus dem späten 19. Jahrhundert, doch die Kuppelkapelle von Kardinal Richelieu aus dem 17. Jahrhundert steht noch immer im Innenhof.",
+    "language": "Französisch",
+    "languageInfo": "Französisch ist die Sprache der Vorlesungen und des Alltags. Das Quartier Latin verdankt seinen Namen dem Latein, das einst die mittelalterlichen Gelehrten der Universität sprachen.",
+    "currencyInfo": "Euro (€)",
+    "transportation": "Zu Fuß / Metro / RER",
+    "transportationFact": "Das Quartier Latin ist kompakt und gut zu Fuß zu erkunden. Die Metrostation Cluny–La Sorbonne und die RER-Station Luxembourg liegen beide nur wenige Minuten von der Sorbonne entfernt."
+  },
+  "University of Padua": {
+    "nickname": "Heimat des ersten festen anatomischen Theaters",
+    "airportInfo": "Venedig Marco Polo ist der nächstgelegene große Flughafen. Von dort erreicht man Padua mit Bussen und Zügen über Venezia Mestre.",
+    "funFact": "Die Universität Padua hat ihren Sitz seit 1493 im Palazzo del Bo, und darin befindet sich das erste feste anatomische Theater der Welt, ein Vorbild, das Universitäten in ganz Europa nachahmten.",
+    "language": "Italienisch",
+    "languageInfo": "Italienisch ist die Sprache der Stadt und des größten Teils der Lehre an der Universität.",
+    "currencyInfo": "Euro (€)",
+    "transportation": "Zu Fuß / Straßenbahn / Bus",
+    "transportationFact": "Die historischen Gebäude der Universität verteilen sich über die Altstadt von Padua, daher sind sie am einfachsten zu Fuß zu erkunden. Straßenbahnen und Busse decken die längeren Strecken ab."
+  },
+  "KU Leuven": {
+    "nickname": "Sapientia aedificavit sibi domum",
+    "airportInfo": "Der Flughafen Brüssel ist der nächstgelegene große Flughafen. Vom Flughafenbahnhof fahren direkte Züge nach Löwen.",
+    "funFact": "Die KU Leuven kaufte 1962 den gesamten Großen Beginenhof und restaurierte ihn 25 Jahre lang, sodass ein historisches Viertel mit fast 100 Häusern heute als Universitätswohnraum dient und UNESCO-Welterbe ist.",
+    "language": "Niederländisch",
+    "languageInfo": "Löwen liegt in Flandern, daher ist Niederländisch die Landessprache, wobei viele Masterstudiengänge auf Englisch unterrichtet werden. Das Motto über der Tür der Universitätshalle ist lateinisch: „Die Weisheit hat sich ein Haus gebaut“.",
+    "currencyInfo": "Euro (€)",
+    "transportation": "Zu Fuß / Fahrrad / Bus",
+    "transportationFact": "Das Zentrum von Löwen ist klein und die Universität ist überall darin präsent, daher sind Gehen und Radfahren die Regel."
+  },
+  "Aalto University": {
+    "nickname": "Alvar Aaltos Campus Otaniemi",
+    "airportInfo": "Der Flughafen Helsinki ist Finnlands wichtigster internationaler Flughafen. Vom Zentrum Helsinkis fährt die Metro westwärts zur Station Aalto University in Otaniemi.",
+    "funFact": "Alvar Aalto entwarf die wichtigsten Gebäude des Campus Otaniemi, darunter das Hauptgebäude und die Bibliothek, und der Campus steht als nationales Kulturerbe Finnlands unter Schutz.",
+    "language": "Finnisch",
+    "languageInfo": "Espoo ist offiziell zweisprachig, daher sind die Schilder auf Finnisch und Schwedisch (Otaniemi heißt auf Schwedisch Otnäs). Ein großer Teil der Lehre an der Universität findet auf Englisch statt.",
+    "currencyInfo": "Euro (€)",
+    "transportation": "Metro / Zu Fuß",
+    "transportationFact": "Die Metrostation Aalto University liegt mitten auf dem Campus und ist mit dem Väre-Gebäude verbunden. Auch die Stadtbahnlinie 15 hält am Platz Korkeakouluaukio."
+  },
+  "Uppsala University": {
+    "nickname": "Die Universität Linnés",
+    "airportInfo": "Arlanda, der wichtigste Flughafen Stockholms, liegt zwischen Stockholm und Uppsala. Züge fahren vom Flughafen nordwärts zum Hauptbahnhof Uppsala.",
+    "funFact": "Carl von Linné besaß ab 1741 den ersten botanischen Garten der Universität und gestaltete ihn nach seinem eigenen Plan um; er wurde so restauriert, dass er wieder wie im 18. Jahrhundert aussieht.",
+    "language": "Schwedisch",
+    "languageInfo": "Schwedisch ist die Landessprache, und viele Studiengänge werden auf Englisch unterrichtet. Das Studentenleben dreht sich um die „Nationen“, studentische Vereinigungen, die nach Regionen Schwedens benannt sind.",
+    "currencyInfo": "Schwedische Krone (kr)",
+    "transportation": "Zu Fuß / Fahrrad",
+    "transportationFact": "Die historischen Universitätsgebäude gruppieren sich um den Dom und den Universitätspark, alle nur wenige Gehminuten voneinander entfernt. Uppsala ist außerdem eine ausgesprochen fahrradfreundliche Stadt."
+  },
+  "Florida Southern College": {
+    "nickname": "Kind der Sonne",
+    "airportInfo": "Lakeland liegt an der Interstate 4 zwischen Tampa und Orlando, und meist reist man über Tampa International im Westen an. Der Lakeland Linder International Airport befindet sich in der Stadt selbst.",
+    "funFact": "College-Präsident Ludd Spivey beauftragte 1938 Frank Lloyd Wright, und über zwei Jahrzehnte zeichnete Wright 18 Entwürfe für den Campus. Das Geld war stets knapp, daher wurden viele Gebäude von Studierenden selbst errichtet – das Ergebnis ist die größte Sammlung von Wright-Bauten an einem einzigen Ort.",
+    "language": "Englisch",
+    "languageInfo": "Der Spitzname des Campus stammt von Wright selbst, der sagte, seine Gebäude würden „aus dem Boden ins Licht wachsen, ein Kind der Sonne“.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß / Esplanaden",
+    "transportationFact": "Wrights überdachte Esplanaden, zwischen 1940 und 1958 gebaut, verbinden alle seine Campusgebäude außer der Danforth Chapel, die direkt neben der Pfeiffer Chapel steht. Ihre niedrigen Dächer sind in den Abständen der Orangenbäume angeordnet, die hier einst wuchsen."
+  },
+  "University of Oxford": {
+    "nickname": "Stadt der träumenden Türme",
+    "airportInfo": "Heathrow ist für internationale Besucher das übliche Tor nach Oxford. Direkte Reisebusse fahren in etwa anderthalb Stunden vom Flughafen ins Stadtzentrum von Oxford.",
+    "funFact": "Oxford hat keinen einzelnen Campus: Die Colleges und Universitätsgebäude sind in die mittelalterliche Innenstadt eingewoben, sodass die Radcliffe Camera, das Sheldonian und die Divinity School nur wenige Gehminuten voneinander entfernt liegen.",
+    "language": "Englisch",
+    "languageInfo": "Oxford hat ein eigenes Vokabular: Die Trimester heißen Michaelmas, Hilary und Trinity, und die Radcliffe Camera ist einfach die „Rad Cam“.",
+    "currencyInfo": "Pfund Sterling (£)",
+    "transportation": "Zu Fuß / Bus / Fahrrad",
+    "transportationFact": "Das historische Zentrum ist kompakt und am besten zu Fuß zu erkunden. Fahrräder sind allgegenwärtig, und Stadtbusse verbinden das Zentrum mit dem Bahnhof und den weiter außerhalb gelegenen Colleges."
+  },
+  "University of Cambridge": {
+    "nickname": "Der andere Ort",
+    "airportInfo": "Stansted ist der nächstgelegene große Flughafen von Cambridge, mit direkten Zügen zum Bahnhof Cambridge. Viele internationale Besucher kommen auch über Heathrow oder Gatwick an und fahren über London hinauf.",
+    "funFact": "Die Mathematical Bridge sieht aus wie ein Bogen, besteht aber ausschließlich aus geraden Holzbalken, und der Turm der University Library ist höher als die Spitze der King's College Chapel.",
+    "language": "Englisch",
+    "languageInfo": "Studierende in Cambridge sprechen von „the Backs“ (den College-Rasenflächen am Fluss), „supervisions“ (Unterricht in kleinen Gruppen) und „the UL“ für die University Library.",
+    "currencyInfo": "Pfund Sterling (£)",
+    "transportation": "Zu Fuß / Fahrrad / Stechkahn",
+    "transportationFact": "Das Zentrum von Cambridge ist klein und flach, daher gehen die meisten zu Fuß oder fahren Rad. Eine Stechkahnfahrt auf dem River Cam an den Backs entlang ist die klassische Art, die Colleges vom Wasser aus zu sehen."
+  },
+  "University of St Andrews": {
+    "nickname": "Schottlands erste Universität",
+    "airportInfo": "Der Flughafen Edinburgh ist das wichtigste Tor nach St Andrews, etwa anderthalb Stunden entfernt auf der Straße. Der nächstgelegene Bahnhof ist Leuchars, eine kurze Bus- oder Taxifahrt von der Stadt entfernt.",
+    "funFact": "St Andrews wurde 1413 gegründet und vereint sechs Jahrhunderte Architektur in einer kleinen Küstenstadt, von der spätgotischen St Salvator's Chapel bis zu James Stirlings brutalistischer Andrew Melville Hall, die vorbeifahrenden Schiffen ähneln soll.",
+    "language": "Englisch",
+    "languageInfo": "Überall wird Englisch gesprochen; der schottische Name der Universität lautet University o St Andras, ihr gälischer Name Oilthigh Chill Rìmhinn.",
+    "currencyInfo": "Pfund Sterling (£)",
+    "transportation": "Zu Fuß / Bus",
+    "transportationFact": "St Andrews ist eine kleine Stadt, und die Universitätsgebäude verteilen sich über ihre alten Straßen, daher kommt man am einfachsten zu Fuß herum. Lokale Busse verbinden die Stadt mit dem Bahnhof Leuchars."
+  },
+  "University of Glasgow": {
+    "nickname": "Gilmorehill",
+    "airportInfo": "Der Flughafen Glasgow liegt direkt westlich der Stadt, etwa 20 Autominuten vom Campus im West End entfernt. Expressbusse verbinden ihn mit dem Stadtzentrum.",
+    "funFact": "1870 verließ die Universität ihren alten Sitz in der High Street für einen neuen neugotischen Campus auf dem Gilmorehill, entworfen von Sir George Gilbert Scott, und nahm ihre Lion and Unicorn Staircase aus dem 17. Jahrhundert mit.",
+    "language": "Englisch",
+    "languageInfo": "Überall wird Englisch gesprochen, oft mit starkem Glasgower Akzent und schottischen Wörtern; der Hauptcampus auf dem Hügel heißt einfach Gilmorehill.",
+    "currencyInfo": "Pfund Sterling (£)",
+    "transportation": "Zu Fuß / U-Bahn",
+    "transportationFact": "Der Campus liegt im West End oberhalb des Kelvingrove Park. Die Station Hillhead der Glasgow Subway ist nur einen kurzen Fußweg entfernt."
+  },
+  "University of Edinburgh": {
+    "nickname": "Athen des Nordens",
+    "airportInfo": "Der Flughafen Edinburgh liegt westlich der Stadt, und die Linie der Edinburgh Trams fährt vom Terminal direkt ins Stadtzentrum.",
+    "funFact": "Die Gebäude der Universität erzählen Edinburghs Architekturgeschichte: das klassizistische Old College von Robert Adam und William Playfair, Playfairs neugotisches New College auf dem Mound, Schottlands erster eigens gebauter Konzertsaal und eine brutalistische Bibliothek aus dem Büro von Basil Spence.",
+    "language": "Englisch",
+    "languageInfo": "Studierende in Edinburgh nennen das Teviot Row House einfach „Teviot“. Der gälische Name der Universität lautet Oilthigh Dhùn Èideann.",
+    "currencyInfo": "Pfund Sterling (£)",
+    "transportation": "Zu Fuß / Bus / Straßenbahn",
+    "transportationFact": "Die meisten Universitätsgebäude liegen in Gehweite der Altstadt. Lothian Buses und die Straßenbahn verbinden die Stadt, wobei die Hügel für gute Bewegung sorgen."
+  },
+  "Durham University": {
+    "nickname": "Englands drittälteste Universität",
+    "airportInfo": "Der Flughafen Newcastle ist der nächstgelegene große Flughafen von Durham, etwa eine halbe Stunde entfernt auf der Straße. Durham liegt außerdem an der East Coast Main Line, mit direkten Zügen aus London und Edinburgh.",
+    "funFact": "Studierende des University College wohnen im Durham Castle, einer 1072 begonnenen normannischen Festung, die zusammen mit der benachbarten Kathedrale eine Welterbestätte bildet. Unterhalb davon wurde Ove Arups Kingsgate Bridge in zwei Hälften gebaut, die über den Fluss geschwenkt wurden, bis sie sich trafen.",
+    "language": "Englisch",
+    "languageInfo": "Studierende in Durham gehören Colleges an, und das älteste, das University College, ist bei allen einfach als „Castle“ bekannt.",
+    "currencyInfo": "Pfund Sterling (£)",
+    "transportation": "Zu Fuß",
+    "transportationFact": "Die historische Halbinsel von Durham ist klein und hügelig und wird von einer Schleife des River Wear umschlossen. Fußgängerbrücken wie die Kingsgate Bridge verbinden sie mit den Colleges und Instituten auf der anderen Flussseite."
+  },
+  "Trinity College Dublin": {
+    "nickname": "Irlands älteste Universität",
+    "airportInfo": "Der Flughafen Dublin liegt nördlich der Stadt, und Expressbusse fahren von den Terminals ins Stadtzentrum und halten nahe dem Haupttor des Trinity College.",
+    "funFact": "Die Old Library des Trinity College beherbergt das Book of Kells aus dem 8. Jahrhundert, und ihr tonnengewölbter Long Room ist eines der berühmtesten Bibliotheksinterieurs der Welt.",
+    "language": "Englisch und Irisch",
+    "languageInfo": "Englisch ist die Alltagssprache auf dem Campus, während Irisch die erste Amtssprache Irlands ist und auf Schildern erscheint; der irische Name des Trinity College lautet Coláiste na Tríonóide.",
+    "currencyInfo": "Euro (€)",
+    "transportation": "Zu Fuß / Luas / Bus",
+    "transportationFact": "Das Trinity College liegt mitten im Zentrum Dublins, sodass der Campus bequem zu Fuß erreichbar ist. Luas-Straßenbahnen und viele Stadtbuslinien halten rund um das Gelände."
+  },
+  "Yale University": {
+    "nickname": "Heimat der Bulldogs",
+    "airportInfo": "Bradley bei Hartford liegt etwa eine Autostunde nördlich von New Haven. Viele Besucher fliegen auch nach New York und fahren mit der New Haven Line von Metro-North direkt zur Union Station.",
+    "funFact": "Yales zentraler Campus ist die schönste Sammlung von Collegiate Gothic in Amerika: Der größte Teil wurde in den 1920er und 1930er Jahren von James Gamble Rogers entworfen, wobei Säure über den Stein gegossen und Fenster absichtlich zerbrochen wurden, damit die neuen Gebäude jahrhundertealt aussehen.",
+    "language": "Englisch",
+    "languageInfo": "Das Campusleben hat ein eigenes Vokabular: Studierende im Grundstudium gehören einem von vierzehn Residential Colleges an, und der Glockenturm, unter dem sich alle treffen, heißt einfach „Harkness“.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß / Yale Shuttle",
+    "transportationFact": "Der zentrale Campus ist kompakt und am besten zu Fuß zu entdecken. Der kostenlose Yale Shuttle verkehrt zwischen den Colleges, dem Science Hill und dem medizinischen Campus."
+  },
+  "Harvard University": {
+    "nickname": "Veritas",
+    "airportInfo": "Logan liegt etwa 8 km vom Harvard Square entfernt auf der anderen Seite des Hafens. Die Silver Line und die Red Line der MBTA verbinden den Flughafen mit der Haltestelle Harvard.",
+    "funFact": "Nur wenige Gehminuten vom Harvard Yard entfernt sehen Sie das älteste erhaltene Gebäude des College, die georgianische Massachusetts Hall von 1720, und das einzige Gebäude in den Vereinigten Staaten, das hauptsächlich von Le Corbusier entworfen wurde.",
+    "language": "Englisch",
+    "languageInfo": "Studierende sagen einfach „the Yard“ zum Harvard Yard, dem grünen Herzen des Campus, wo die ältesten Gebäude stehen.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß / MBTA Red Line",
+    "transportationFact": "Der Harvard Yard und seine Umgebung lassen sich am besten zu Fuß erkunden. Die Station Harvard der Red Line öffnet sich direkt auf den Harvard Square, eine kurze Fahrt von der Innenstadt Bostons entfernt."
+  },
+  "Massachusetts Institute of Technology": {
+    "nickname": "Mens et Manus",
+    "airportInfo": "Logan liegt etwa 7 km vom MIT entfernt auf der anderen Seite des Charles River. Die MBTA verbindet den Flughafen mit der Station Kendall/MIT an der Red Line.",
+    "funFact": "Das MIT bezeichnet fast alle seine Gebäude mit Nummern, so ist der Great Dome Building 10 und Frank Gehrys Stata Center Building 32, das auf dem Gelände des legendären Building 20 steht, in dem während des Krieges das Radiation Laboratory untergebracht war.",
+    "language": "Englisch",
+    "languageInfo": "Am MIT fragt man per Nummer nach dem Weg: Räume werden wie „W16-100“ geschrieben, erst das Gebäude, dann der Raum.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß / MBTA Red Line",
+    "transportationFact": "Der Campus erstreckt sich am Charles River entlang und lässt sich bequem von einem Ende zum anderen zu Fuß erkunden. Die Station Kendall/MIT der Red Line liegt an seinem Ostrand."
+  },
+  "Princeton University": {
+    "nickname": "Heimat der Tigers",
+    "airportInfo": "Newark liegt etwa eine Autostunde nördlich. Züge von NJ Transit fahren vom Flughafenbahnhof nach Princeton Junction, von wo der kurze Pendelzug, bekannt als Dinky, weiter zum Campus fährt.",
+    "funFact": "Die Nassau Hall war bei ihrer Eröffnung 1756 das größte akademische Gebäude in den amerikanischen Kolonien, und 1783 diente sie vier Monate lang als Kapitol der Vereinigten Staaten.",
+    "language": "Englisch",
+    "languageInfo": "Die Nassau Hall wird liebevoll „Old Nassau“ genannt, ein Name, den auch die Hymne der Universität trägt.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß / NJ Transit Dinky",
+    "transportationFact": "Der Campus ist kompakt und grün und am besten zu Fuß zu entdecken. Der Pendelzug Dinky verbindet den Bahnhof Princeton mit Princeton Junction an der Hauptstrecke New York–Philadelphia."
+  },
+  "Cornell University": {
+    "nickname": "Hoch über den Wassern des Cayuga",
+    "airportInfo": "Der kleine Flughafen von Ithaca liegt einige Meilen nördlich des Campus. Viele Besucher fliegen stattdessen nach Syracuse und fahren etwa eine Stunde Richtung Süden.",
+    "funFact": "Der McGraw Tower, 1891 als Teil der Uris Library erbaut, beherbergt die Cornell Chimes, das erste Glockenspiel, das auf einem amerikanischen College-Campus untergebracht und geläutet wurde. Während des Semesters erklingt es noch immer dreimal täglich.",
+    "language": "Englisch",
+    "languageInfo": "Studierende sagen „Libe Slope“ zu dem Hang, auf den die Uris Library hinabblickt.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß / TCAT-Busse",
+    "transportationFact": "Cornells Campus auf dem Hügel ist weitläufig und stellenweise steil, bequeme Schuhe sind also hilfreich. TCAT-Busse verbinden den Campus mit der Innenstadt von Ithaca."
+  },
+  "Columbia University": {
+    "nickname": "Heimat der Lions",
+    "airportInfo": "LaGuardia ist etwa 25 Autominuten von Morningside Heights entfernt. JFK und Newark liegen weiter außerhalb, sind aber per U-Bahn und Zug mit Manhattan verbunden.",
+    "funFact": "Columbias Campus in Morningside Heights wurde in den 1890er Jahren von McKim, Mead & White rund um die Low Memorial Library mit ihrer Kuppel angelegt, auf deren Stufen Daniel Chester Frenchs Statue Alma Mater steht.",
+    "language": "Englisch",
+    "languageInfo": "Die Low Memorial Library heißt bei Studierenden einfach „Low“.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß / New Yorker U-Bahn (Linie 1)",
+    "transportationFact": "Der Campus ist ein kompaktes Raster aus Innenhöfen, das sich leicht zu Fuß erkunden lässt. Die Station 116 Street–Columbia University der Linie 1 liegt direkt an den Haupttoren am Broadway."
+  },
+  "University of Pennsylvania": {
+    "nickname": "Heimat der Quakers",
+    "airportInfo": "PHL ist etwa 15 Autominuten vom Campus entfernt. Der Zug der Airport Line von SEPTA fährt zur Station University City direkt neben dem Campus.",
+    "funFact": "Penns Campus umspannt mehrere Epochen: Frank Furness' feuerrote viktorianische Bibliothek, das erste Studierendenhaus auf einem amerikanischen Campus und Louis Kahns bahnbrechende Richards Laboratories liegen alle nur wenige Gehminuten voneinander entfernt.",
+    "language": "Englisch",
+    "languageInfo": "Die Universität wird kurz „Penn“ oder „UPenn“ genannt.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß / SEPTA",
+    "transportationFact": "University City ist flach und gut zu Fuß zu erkunden. SEPTA-Straßenbahnen, Busse und die Market–Frankford Line verbinden den Campus mit Center City Philadelphia."
+  },
+  "Brown University": {
+    "nickname": "Heimat der Bears",
+    "airportInfo": "T. F. Green liegt in Warwick, etwa 20 Minuten südlich des College Hill. Boston Logan ist mit Auto oder Zug rund anderthalb Stunden entfernt.",
+    "funFact": "Die 1770 erbaute University Hall ist eines von nur sieben College-Gebäuden in den Vereinigten Staaten, die noch aus der Zeit vor der Amerikanischen Revolution stehen.",
+    "language": "Englisch",
+    "languageInfo": "Studierende nennen die John Hay Library einfach „the Hay“.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß / RIPTA-Busse",
+    "transportationFact": "Brown liegt auf dem steilen College Hill oberhalb der Innenstadt von Providence und lässt sich am einfachsten zu Fuß erkunden. RIPTA-Busse verbinden den Hügel mit der Innenstadt und dem Bahnhof."
+  },
+  "Dartmouth College": {
+    "nickname": "Das große Grün",
+    "airportInfo": "Der kleine Flughafen von Lebanon, direkt südlich von Hanover, bietet einige Pendlerflüge. Die meisten Besucher fliegen nach Boston Logan und fahren etwa zwei Stunden Richtung Norden.",
+    "funFact": "Der 200 Fuß hohe Turm der Baker Library, nach dem Vorbild der Independence Hall in Philadelphia gestaltet, ist das Wahrzeichen des College, und im Untergeschoss befindet sich José Clemente Orozcos Fresko The Epic of American Civilization, ein National Historic Landmark.",
+    "language": "Englisch",
+    "languageInfo": "Studierende nennen das Hopkins Center for the Arts „the Hop“.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß / Advance Transit",
+    "transportationFact": "Die Gebäude von Dartmouth umgeben das Green mitten in Hanover, sodass alles nur einen kurzen Fußweg entfernt ist. Kostenlose Busse von Advance Transit verbinden Hanover mit den umliegenden Orten."
+  },
+  "Georgetown University": {
+    "nickname": "Heimat der Hoyas",
+    "airportInfo": "Reagan National ist etwa 15 Autominuten vom Campus entfernt auf der anderen Seite des Potomac. Dulles International liegt weiter außerhalb, rund 45 Minuten entfernt.",
+    "funFact": "Die Healy Hall, das von Türmen gekrönte Wahrzeichen, das man vom anderen Ufer des Potomac sieht, wurde von Paul Pelz und John Smithmeyer entworfen, demselben Duo, das auch das Thomas Jefferson Building der Library of Congress entwarf.",
+    "language": "Englisch",
+    "languageInfo": "Studierende nennen die Lauinger Library „Lau“.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß / GUTS-Shuttle",
+    "transportationFact": "Georgetown hat keine eigene Metrostation, daher verbinden die kostenlosen GUTS-Shuttlebusse der Universität den Campus mit nahegelegenen Metrohaltestellen. Der Campus auf dem Hügel selbst ist gut zu Fuß zu erkunden."
+  },
+  "University of Chicago": {
+    "nickname": "Heimat der Maroons",
+    "airportInfo": "Midway ist der näher an Hyde Park gelegene der beiden Flughäfen Chicagos, auf der South Side der Stadt. O'Hare International (ORD) wickelt weit mehr Langstreckenflüge ab, erfordert aber eine längere Fahrt quer durch die Stadt.",
+    "funFact": "Der Campus vereint zwei große Ideen: gotische Innenhöfe und einige der kühnsten modernen Gebäude Amerikas, von Frank Lloyd Wrights Robie House bis zu Helmut Jahns Mansueto Library mit ihrer Glaskuppel.",
+    "language": "Englisch",
+    "languageInfo": "Auf dem Campus gibt es eigene Kurzbezeichnungen: Die Regenstein Library ist einfach „the Reg“, und das Institute for the Study of Ancient Cultures war ein Jahrhundert lang als Oriental Institute bekannt.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß / UChicago Shuttles / Metra",
+    "transportationFact": "Die Haupt-Innenhöfe sind kompakt genug, um sie zu Fuß zu erkunden. Züge der Metra Electric verkehren zwischen Hyde Park und der Innenstadt von Chicago, und Universitäts-Shuttles fahren Rundkurse durch das Viertel."
+  },
+  "University of Notre Dame": {
+    "nickname": "Heimat der Fighting Irish",
+    "airportInfo": "South Bend International ist nur eine kurze Autofahrt vom Campus entfernt. Der Pendlerzug der South Shore Line fährt vom Flughafen in die Innenstadt von Chicago.",
+    "funFact": "Der Golden Dome, gekrönt von einer Marienstatue, erhebt sich über einem Campus mit rund 170 Gebäuden rund um zwei Seen und sieben Innenhöfe, der oft zu den schönsten der Welt gezählt wird.",
+    "language": "Englisch",
+    "languageInfo": "Der Campus hat ein eigenes Vokabular: Der Main Quad ist der „God Quad“, und das Wandbild Word of Life an der Hesburgh Library ist besser bekannt als „Touchdown Jesus“.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß",
+    "transportationFact": "Der historische Kern rund um den Main Quad und den South Quad lässt sich am besten zu Fuß erkunden; die Basilika, die Kuppel und die Grotte liegen nur wenige Minuten voneinander entfernt."
+  },
+  "University of Michigan": {
+    "nickname": "Heimat der Wolverines",
+    "airportInfo": "Detroit Metro liegt etwa eine halbe Autostunde östlich von Ann Arbor und ist der wichtigste Flughafen der Region.",
+    "funFact": "Der Detroiter Architekt Albert Kahn prägte den Central Campus von Michigan und entwarf das Hill Auditorium, die Angell Hall, die Clements Library und den Burton Memorial Tower.",
+    "language": "Englisch",
+    "languageInfo": "Die Farben der Universität sind Maisgelb und Blau, und die Sportteams heißen Wolverines.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß / U-M Blue Buses",
+    "transportationFact": "Der Central Campus ist gut zu Fuß erreichbar. Die kostenlosen Blue Buses der Universität verbinden den Central Campus, den North Campus und den medizinischen Campus."
+  },
+  "Illinois Institute of Technology": {
+    "nickname": "Illinois Tech",
+    "airportInfo": "Midway, auf der South Side von Chicago, ist der nähere der beiden Flughäfen der Stadt. O'Hare International (ORD) bietet weit mehr Langstreckenflüge, erfordert aber eine längere Fahrt quer durch die Stadt.",
+    "funFact": "Ludwig Mies van der Rohe leitete zwei Jahrzehnte lang die Architekturschule des IIT und entwarf einen Großteil des Campus, der damit eine der größten Sammlungen seiner Bauten überhaupt ist.",
+    "language": "Englisch",
+    "languageInfo": "Studierende nennen die von Mies entworfene Carr Memorial Chapel wegen ihrer schlichten Backsteinform die „God Box“.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß / CTA Green Line und Red Line",
+    "transportationFact": "Die CTA Green Line führt mitten durch den Campus und ist dort, wo sie über das Campus Center verläuft, von einer Röhre aus Edelstahl umhüllt; die Red Line hält direkt westlich des Campus."
+  },
+  "University of Virginia": {
+    "nickname": "Heimat der Cavaliers",
+    "airportInfo": "Der kleine Regionalflughafen von Charlottesville liegt eine kurze Autofahrt nördlich der Universität. Größere Flughäfen in Richmond und Washington, D.C. sind zwei bis drei Autostunden entfernt.",
+    "funFact": "Thomas Jefferson plante sein Academical Village nicht um eine Kirche, sondern um eine Bibliothek herum, die Rotunda. Zusammen mit seinem Wohnsitz Monticello ist es UNESCO-Welterbe.",
+    "language": "Englisch",
+    "languageInfo": "An der UVA heißt der Campus „the Grounds“, und die Sportteams sind die Cavaliers, auch bekannt als die Wahoos.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß / University Transit Service",
+    "transportationFact": "Die Central Grounds rund um den Lawn sind gut zu Fuß zu erkunden. Kostenlose Busse des University Transit Service verbinden die übrigen Grounds."
+  },
+  "Stanford University": {
+    "nickname": "Die Farm",
+    "airportInfo": "SFO liegt etwa eine halbe Autostunde nördlich des Campus. Der Mineta-Flughafen von San José (SJC) ist ähnlich weit im Süden entfernt.",
+    "funFact": "Stanfords Main Quad wurde von Shepley, Rutan and Coolidge entworfen, den Nachfolgern von Henry Hobson Richardson. Sie verbanden seinen romanischen Rundbogenstil mit einem kalifornischen Missionsthema und bauten mit lokalem gelbem Sandstein unter roten Ziegeldächern.",
+    "language": "Englisch",
+    "languageInfo": "Studierende nennen den Campus „The Farm“, nach Leland Stanfords Pferdefarm, die hier einst stand, und die Memorial Church ist einfach „MemChu“.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß / Marguerite Shuttle",
+    "transportationFact": "Der Kern des Campus rund um den Main Quad ist gut zu Fuß zu erkunden. Der kostenlose Marguerite Shuttle verbindet den Campus mit dem Caltrain-Bahnhof Palo Alto."
+  },
+  "University of California, Berkeley": {
+    "nickname": "Cal",
+    "airportInfo": "Der Flughafen Oakland liegt dem Campus am nächsten. BART-Züge verbinden sowohl Oakland als auch San Francisco International mit der Station Downtown Berkeley, nur einen kurzen Fußweg vom Sather Gate entfernt.",
+    "funFact": "John Galen Howard gestaltete das Herz des Campus mit einem Beaux-Arts-Plan. Er entwarf das Greek Theatre, das Hearst Mining Building, das Sather Gate und den Campanile, einen der höchsten Glocken- und Uhrtürme der Welt.",
+    "language": "Englisch",
+    "languageInfo": "Einheimische nennen die Universität einfach „Cal“, und der Sather Tower ist bei allen als „the Campanile“ bekannt.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß / BART",
+    "transportationFact": "Die BART-Station Downtown Berkeley liegt wenige Blocks westlich des Campus. Auf dem Campus selbst ist alles vom Sather Gate bis zum Greek Theatre zu Fuß erreichbar."
+  },
+  "University of California, Los Angeles": {
+    "nickname": "Heimat der Bruins",
+    "airportInfo": "LAX ist der nächstgelegene große Flughafen von Westwood, je nach Verkehr meist eine kurze Fahrt nordwärts über den San Diego Freeway.",
+    "funFact": "Royce Hall und Powell Library, zwei der vier ursprünglichen Gebäude auf dem Campus in Westwood, stehen sich am Haupt-Innenhof gegenüber. Beide sind neuromanische Backsteinbauten nach dem Vorbild der Basilika Sant'Ambrogio in Mailand.",
+    "language": "Englisch",
+    "languageInfo": "Studierende sind Bruins, und die Zwillingstürme der Royce Hall sind das Bild der UCLA, das Sie auf fast jeder Broschüre sehen werden.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß / Metro-Bus",
+    "transportationFact": "Der zentrale Campus ist kompakt genug, um ihn zu Fuß zu erkunden. Viele Buslinien der Los Angeles Metro halten am Rand des Campus in Westwood."
+  },
+  "University of Washington": {
+    "nickname": "U-Dub",
+    "airportInfo": "Sea-Tac liegt südlich von Seattle. Die Stadtbahn Link fährt vom Flughafen direkt zur Station University of Washington neben dem Husky Stadium.",
+    "funFact": "Der Architekt Carl Gould legte 1915 das Liberal Arts Quadrangle an, und seine Collegiate-Gothic-Gebäude sind von dreißig Yoshino-Kirschbäumen gesäumt, die zwischen Mitte März und Anfang April blühen.",
+    "language": "Englisch",
+    "languageInfo": "Die Universität ist für fast alle „U-Dub“, und die Central Plaza aus rotem Backstein heißt immer nur Red Square.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß / Link-Stadtbahn",
+    "transportationFact": "Die Link-Stadtbahn hält an der Station University of Washington beim Husky Stadium. Von dort ist der zentrale Campus, vom Red Square bis zum Quad, bequem zu Fuß erreichbar."
+  },
+  "McGill University": {
+    "nickname": "Montreals Campus am Berghang",
+    "airportInfo": "Der Flughafen Trudeau liegt in Dorval, westlich der Innenstadt. Der Expressbus 747 fährt vom Flughafen ins Stadtzentrum, nur einen kurzen Fußweg von den Roddick Gates entfernt.",
+    "funFact": "McGills ältestes Gebäude, das Arts Building, wurde 1839 nach einem klassizistischen Entwurf von John Ostell begonnen. Rundherum stehen ein viktorianisches Museum im Stil des Greek Revival, ein Bibliotheksbau im Stil der Richardsonian Romanesque und eine brutalistische Bibliothek aus den 1960er Jahren.",
+    "language": "Englisch und Französisch",
+    "languageInfo": "McGill ist eine englischsprachige Universität im französischsprachigen Montreal, daher hört man auf dem ganzen Campus und in den umliegenden Straßen beide Sprachen.",
+    "currencyInfo": "Kanadischer Dollar ($)",
+    "transportation": "Zu Fuß / Metro Montreal",
+    "transportationFact": "Der Innenstadtcampus zieht sich von der Sherbrooke Street den Hang des Mont Royal hinauf. Die Metrostation McGill an der Grünen Linie liegt wenige Blocks südlich der Haupttore."
+  },
+  "University of Toronto": {
+    "nickname": "U of T",
+    "airportInfo": "Pearson liegt nordwestlich der Innenstadt. Der UP Express fährt vom Flughafen zur Union Station, von wo die U-Bahn nordwärts zum Campus fährt.",
+    "funFact": "Der Campus St. George umspannt mehrere Epochen: Das neuromanische Hauptgebäude des University College ist eine National Historic Site, Hart House und Soldiers' Tower sind gotisch, und die Robarts Library ist ein brutalistischer Riese mit dem Spitznamen „Fort Book“.",
+    "language": "Englisch",
+    "languageInfo": "Alle nennen die Universität „U of T“, und ihre Studierenden gehören Colleges wie dem University College, Trinity und Victoria an.",
+    "currencyInfo": "Kanadischer Dollar ($)",
+    "transportation": "Zu Fuß / TTC-U-Bahn",
+    "transportationFact": "Der Campus liegt in der Innenstadt von Toronto neben dem Queen's Park. Die U-Bahn-Stationen Queen's Park, Museum und St. George liegen alle an seinen Rändern."
+  },
+  "University of British Columbia": {
+    "nickname": "Campus Point Grey",
+    "airportInfo": "YVR liegt auf Sea Island in Richmond, südlich des Campus. Die Canada Line bringt Sie nach Vancouver, von wo Busse westwärts zum UBC Exchange weiterfahren.",
+    "funFact": "Das Brock Commons Tallwood House der UBC war bei seiner Eröffnung 2017 das höchste Massivholzgebäude der Welt, und Arthur Ericksons Museum of Anthropology bildet die Pfosten-Riegel-Häuser der First Nations der Nordwestküste in Beton nach.",
+    "language": "Englisch",
+    "languageInfo": "Der Campus liegt auf Point Grey und gehört offiziell nicht zur Stadt Vancouver, auch wenn ihn alle als Teil von Vancouver betrachten.",
+    "currencyInfo": "Kanadischer Dollar ($)",
+    "transportation": "Bus / Zu Fuß",
+    "transportationFact": "Häufig verkehrende Busse fahren von der Innenstadt Vancouvers und der Canada Line zum UBC Exchange in der Mitte des Campus. Von dort führt die Main Mall zu Fuß zu den meisten Gebäuden."
+  },
+  "National Autonomous University of Mexico": {
+    "nickname": "C.U.",
+    "airportInfo": "Der internationale Flughafen Benito Juárez liegt im Osten von Mexiko-Stadt. Der Campus befindet sich in Coyoacán im Süden, planen Sie also eine lange Taxi- oder Metrofahrt quer durch die Stadt ein.",
+    "funFact": "Die Ciudad Universitaria wurde in den 1950er Jahren auf einem Lavafeld errichtet, das der Vulkan Xitle um 100 n. Chr. hinterlassen hatte. Die UNESCO erklärte ihren zentralen Campus 2007 zum Welterbe, weil er moderne Architektur mit Wandgemälden mexikanischer Künstler verbindet.",
+    "language": "Spanisch",
+    "languageInfo": "Lehrveranstaltungen und Campusleben finden auf Spanisch statt. Der Hauptcampus heißt bei Studierenden einfach „C.U.“ (gesprochen „Se-U“).",
+    "currencyInfo": "Mexikanischer Peso ($)",
+    "transportation": "Pumabús / Metro",
+    "transportationFact": "Die Universität betreibt eigene kostenlose Pumabús-Linien auf dem riesigen Campus. Die Metrostationen Universidad und Copilco der Linie 3 bedienen den Campus."
+  }
+}

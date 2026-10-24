@@ -296,3 +296,6 @@
 
 // MARK: - Report City
 "cityDetail.menu.reportCityInfo" = "举报城市信息";
+
+// MARK: - Campus Architecture
+"CAMPUS ARCHITECTURE" = "校园建筑";
