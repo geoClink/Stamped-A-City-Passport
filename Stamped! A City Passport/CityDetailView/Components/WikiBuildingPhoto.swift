@@ -53,7 +53,7 @@ struct WikiBuildingPhoto: View {
         .frame(height: height)
         .clipped()
         .task {
-            let summary = await WikimediaService.shared.summary(for: building.name)
+            let summary = await WikimediaService.shared.summary(for: building.name, buildingID: building.id)
             photoURL = summary.photoURL
             loaded = true
         }
@@ -136,7 +136,7 @@ struct WikiDescriptionCard: View {
         }
         .animation(.easeIn(duration: 0.2), value: isLoading)
         .task {
-            let summary = await WikimediaService.shared.summary(for: building.name)
+            let summary = await WikimediaService.shared.summary(for: building.name, buildingID: building.id)
             extract = summary.extract
             isLoading = false
         }
