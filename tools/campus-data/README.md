@@ -51,6 +51,14 @@ The script itself only uses the Python standard library; `requirements.txt` is f
 | Country not in `CityLocation.Country` | Add the country to the app first |
 | Empty text, odd year | Missing or placeholder data |
 
+## Translations
+
+Each app language has its own `CityDetails.json` (e.g. `de.lproj/CityDetails.json`). The script also
+appends campus details to each of those, using `translations/<language>.json` (campus name → the 8
+translated fields: nickname, airportInfo, funFact, language, languageInfo, currencyInfo, transportation,
+transportationFact). A campus or field that isn't translated yet uses the English text, and
+`--check` warns about it. When you add a campus, add its translations too.
+
 `wiki_coordinates.json` caches the Wikipedia lookups so later runs are fast and repeatable.
 
 ## Tests
