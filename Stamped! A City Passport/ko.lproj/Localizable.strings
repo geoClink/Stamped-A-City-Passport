@@ -108,7 +108,7 @@
 "currency.modal.provider" = "공급자";
 "currency.modal.lastUpdated" = "마지막 업데이트";
 "currency.modal.never" = "절대";
-"currency.modal.close" = "닫다";
+"currency.modal.close" = "닫기";
 "currency.modal.header" = "환율 세부정보";
 "currency.modal.explain.live" = "인터넷에서 가져온 실시간 요금을 사용합니다.";
 "currency.modal.explain.cached" = "최근에 캐시된 요금을 사용합니다. 새로고침하려면 인터넷에 연결하세요.";
@@ -136,7 +136,7 @@
 "passport.title" = "귀하의 여권";
 "passport.countries" = "국가";
 "passport.done" = "완료";
-"passport.close" = "닫다";
+"passport.close" = "닫기";
 "passport.journeyLog" = "여행 로그";
 "passport.explorationProgress" = "탐사 진행";
 "passport.citiesStamped" = "스탬프가 찍힌 %d개의 도시";
@@ -198,9 +198,9 @@
 "era.contemporary" = "현대의";
 
 // MARK: - General
-"general.close" = "닫다";
+"general.close" = "닫기";
 "general.done" = "완료";
-"general.cancel" = "Cancel";
+"general.cancel" = "취소";
 "general.retry" = "Try Again";
 
 // MARK: - Building Detail
@@ -257,7 +257,7 @@
 
 // MARK: - Quiz
 "quiz.navigation.title" = "%@ 전문가";
-"quiz.exit" = "출구";
+"quiz.exit" = "나가기";
 "quiz.fieldInquiry" = "현장문의";
 "quiz.fieldData" = "현장 데이터";
 "quiz.log" = "로그 %d/%d";

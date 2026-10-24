@@ -108,7 +108,7 @@
 "currency.modal.provider" = "Proveedor";
 "currency.modal.lastUpdated" = "Última actualización";
 "currency.modal.never" = "Nunca";
-"currency.modal.close" = "Cerca";
+"currency.modal.close" = "Cerrar";
 "currency.modal.header" = "Detalles del tipo de cambio";
 "currency.modal.explain.live" = "Utilizando tarifas en vivo extraídas de Internet.";
 "currency.modal.explain.cached" = "Usando tarifas recientemente almacenadas en caché. Conéctese a Internet para actualizar.";
@@ -126,7 +126,7 @@
 "modal.explain_live" = "Las tarifas en vivo se obtuvieron del proveedor y reflejan las tarifas actuales del mercado.";
 "modal.explain_cached" = "Las tarifas almacenadas en caché provienen de una recuperación exitosa anterior y pueden estar ligeramente desactualizadas.";
 "modal.explain_offline" = "Las tarifas de reserva sin conexión se utilizan cuando el acceso a la red no está disponible; Estos son solo para referencia.";
-"modal.close" = "Hecho";
+"modal.close" = "OK";
 "modal.never" = "Nunca";
 "status.icon.accessibility" = "Estado de los tipos de cambio, toque para obtener más detalles";
 "refresh.rates.accessibility" = "Actualizar tipos de cambio";
@@ -135,8 +135,8 @@
 // MARK: - Passport Gallery
 "passport.title" = "Tu pasaporte";
 "passport.countries" = "Países";
-"passport.done" = "Hecho";
-"passport.close" = "Cerca";
+"passport.done" = "OK";
+"passport.close" = "Cerrar";
 "passport.journeyLog" = "REGISTRO DE VIAJE";
 "passport.explorationProgress" = "PROGRESO DE EXPLORACIÓN";
 "passport.citiesStamped" = "%d ciudades estampadas";
@@ -198,8 +198,8 @@
 "era.contemporary" = "Contemporáneo";
 
 // MARK: - General
-"general.close" = "Cerca";
-"general.done" = "Hecho";
+"general.close" = "Cerrar";
+"general.done" = "OK";
 "general.cancel" = "Cancelar";
 "general.retry" = "Intentar otra vez";
 
@@ -257,7 +257,7 @@
 
 // MARK: - Quiz
 "quiz.navigation.title" = "%@ Experto";
-"quiz.exit" = "Salida";
+"quiz.exit" = "Salir";
 "quiz.fieldInquiry" = "CONSULTA DE CAMPO";
 "quiz.fieldData" = "DATOS DE CAMPO";
 "quiz.log" = "REGISTRO %d DE %d";
@@ -280,11 +280,11 @@
 "quiz.incorrect" = "Incorrecto. La respuesta fue %@.";
 
 // MARK: - Question Prompts
-"question.name" = "Based on the data, which landmark is this?";
-"question.style" = "What is the architectural style of this building?";
-"question.year" = "In what year was this structure completed?";
-"question.architect" = "Which architect or firm designed this building?";
-"question.stories" = "How many stories tall is this structure?";
+"question.name" = "Según los datos, ¿qué monumento es este?";
+"question.style" = "¿Cuál es el estilo arquitectónico de este edificio?";
+"question.year" = "¿En qué año se terminó esta construcción?";
+"question.architect" = "¿Qué arquitecto o estudio diseñó este edificio?";
+"question.stories" = "¿Cuántos pisos tiene esta construcción?";
 
 // MARK: - Quiz Hints
 "hint.name" = "Este hito está ubicado en el corazón de %@ y es un excelente ejemplo de diseño %@.";
