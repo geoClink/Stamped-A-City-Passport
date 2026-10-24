@@ -24,7 +24,6 @@ final class RegistryDecodeTests: XCTestCase {
         "den-06",                 // US Air Force Academy Chapel, Colorado Springs (~80 km from Denver)
         "pit-04",                 // Fallingwater, Mill Run PA (~75 km from Pittsburgh)
         "cn_leshan_giant_buddha", // Leshan (~125 km from Chengdu)
-        "ruh-04",                 // Ithra is in Dhahran, not Riyadh — left for George to decide
     ]
     private let maxKilometersFromCity: Double = 60
 
