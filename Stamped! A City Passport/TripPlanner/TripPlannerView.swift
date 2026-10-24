@@ -116,13 +116,24 @@ struct TripPlannerView: View {
 }
 
 /// One trip in the list: name, day count and stop count.
-private struct TripSummaryRow: View {
+/// Also used by My Trips, where anywhere trips show their area too.
+struct TripSummaryRow: View {
     let trip: Trip
+    var showsPlace = false
 
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(trip.name)
                 .font(.headline)
+            if showsPlace {
+                // HStack rather than Label: in a List row, Label leaves a wide gap after the icon
+                HStack(spacing: 4) {
+                    Image(systemName: "mappin.and.ellipse")
+                    Text(trip.area?.name ?? trip.cityName)
+                }
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+            }
             HStack(spacing: 8) {
                 Text(trip.days.count == 1 ? "1 day" : "\(trip.days.count) days")
                 Text("·")

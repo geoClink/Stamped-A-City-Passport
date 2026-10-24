@@ -7,15 +7,21 @@
 //  Drag to reorder, swipe to delete, and "Optimize route" to sort a day
 //  by nearest stop.
 //
+//  Also shows anywhere trips (2.5). Those have no city page behind them, so
+//  `viewModel` is nil: no landmarks, no 3D tour, and stops come from Apple Maps.
+//
 
 import SwiftUI
+import MapKit
 
 struct TripDetailView: View {
     let tripID: String
     /// Passed on to the map when this trip's Tour opens it.
-    let viewModel: CityDetailViewModel
+    /// nil for an anywhere trip, which isn't in a Stamped city.
+    let viewModel: CityDetailViewModel?
 
-    private var city: CityLocation.City { viewModel.city }
+    /// The city's landmarks, or none for an anywhere trip.
+    private var buildings: [Building] { viewModel?.city.buildings ?? [] }
 
     @ObservedObject private var store = TripStore.shared
     @ObservedObject private var progress = GlobalProgressManager.shared
@@ -42,9 +48,12 @@ struct TripDetailView: View {
     private var trip: Trip? { store.trip(withID: tripID) }
 
     /// The 3D map, flying through this trip. Opened by "Tour This Trip".
+    @ViewBuilder
     private var tourMap: some View {
-        NavigationStack {
-            CityMapView(buildings: city.buildings, cityName: city.name, viewModel: viewModel, tripToTour: tripID)
+        if let viewModel {
+            NavigationStack {
+                CityMapView(buildings: viewModel.city.buildings, cityName: viewModel.city.name, viewModel: viewModel, tripToTour: tripID)
+            }
         }
     }
 
@@ -59,6 +68,7 @@ struct TripDetailView: View {
     var body: some View {
         if let trip {
             tripList(trip)
+                .task(id: trip.id) { await repairAreaIfNeeded(trip) }
         } else {
             // The trip was deleted (here or on another device)
             ContentUnavailableView("Trip Not Found", systemImage: "suitcase")
@@ -111,7 +121,11 @@ struct TripDetailView: View {
         .sheet(isPresented: tourPresented(fullScreen: false)) { tourMap }
         .fullScreenCover(isPresented: tourPresented(fullScreen: true)) { tourMap }
         .sheet(item: $addingToDay) { day in
-            AddTripStopSheet(city: city, tripID: trip.id, dayID: day.id)
+            if let viewModel {
+                AddTripStopSheet(city: viewModel.city, tripID: trip.id, dayID: day.id)
+            } else {
+                AnywhereStopSheet(trip: trip, dayID: day.id)
+            }
         }
         .confirmationDialog(
             "Move \(movingStop?.name ?? "stop") to…",
@@ -141,10 +155,10 @@ struct TripDetailView: View {
     private func routeMapSection(_ trip: Trip) -> some View {
         // Fall back to the first day if the chosen day was removed
         let day = trip.days.first { $0.id == mapDayID } ?? trip.days[0]
-        let stops = ResolvedTripStop.resolve(day, buildings: city.buildings, customPlaces: progress.customPlaces)
+        let stops = ResolvedTripStop.resolve(day, buildings: buildings, customPlaces: progress.customPlaces)
 
         return Section {
-            TripRouteMap(stops: stops, cityCenter: TripRouteMap.center(of: city.buildings))
+            TripRouteMap(stops: stops, cityCenter: mapCenter(for: trip))
                 // A taller map on iPad, where there's room for it
                 .frame(height: sizeClass == .regular ? 340 : 220)
                 .listRowInsets(EdgeInsets())
@@ -161,23 +175,54 @@ struct TripDetailView: View {
                 }
             }
 
-            Button {
-                showingTour = true
-            } label: {
-                // HStack rather than Label: inside a List row, Label can drop its icon
-                HStack(spacing: 8) {
-                    Image(systemName: "play.fill")
-                    Text("Tour This Trip in 3D")
-                }
-                .font(.headline)
-                .frame(maxWidth: .infinity)
+            // The 3D tour needs a Stamped city's map, so anywhere trips skip it for now
+            if viewModel != nil {
+                tourButton(trip)
             }
-            .buttonStyle(.borderedProminent)
-            .tint(Color.adventureOrange)
-            // Needs at least one stop with a location to fly to
-            .disabled(TripTour.steps(for: trip, buildings: city.buildings, customPlaces: progress.customPlaces).isEmpty)
-            .accessibilityHint("Opens the 3D map and flies through each day's stops in order")
         }
+    }
+
+    private func tourButton(_ trip: Trip) -> some View {
+        Button {
+            showingTour = true
+        } label: {
+            // HStack rather than Label: inside a List row, Label can drop its icon
+            HStack(spacing: 8) {
+                Image(systemName: "play.fill")
+                Text("Tour This Trip in 3D")
+            }
+            .font(.headline)
+            .frame(maxWidth: .infinity)
+        }
+        .buttonStyle(.borderedProminent)
+        .tint(Color.adventureOrange)
+        // Needs at least one stop with a location to fly to
+        .disabled(TripTour.steps(for: trip, buildings: buildings, customPlaces: progress.customPlaces).isEmpty)
+        .accessibilityHint("Opens the 3D map and flies through each day's stops in order")
+    }
+
+    /// Where the map starts before any stops are added: the middle of the
+    /// city's landmarks, or the searched area for an anywhere trip.
+    private func mapCenter(for trip: Trip) -> CLLocationCoordinate2D? {
+        if viewModel != nil {
+            return TripRouteMap.center(of: buildings)
+        }
+        return trip.area?.coordinate
+    }
+
+    /// An anywhere trip should always have an area. If an older app version
+    /// re-saved the trip it drops the "area" key, so look the name up again.
+    private func repairAreaIfNeeded(_ trip: Trip) async {
+        guard trip.listedCity == nil, trip.area == nil else { return }
+        let request = MKLocalSearch.Request()
+        request.naturalLanguageQuery = trip.cityName
+        request.resultTypes = .address
+        guard let item = try? await MKLocalSearch(request: request).start().mapItems.first else { return }
+        let coordinate = item.displayCoordinate
+        store.setArea(
+            TripArea(name: item.name ?? trip.cityName, latitude: coordinate.latitude, longitude: coordinate.longitude),
+            for: trip.id
+        )
     }
 
     private func dayPicker(_ trip: Trip, selection: Binding<String>) -> some View {
@@ -215,7 +260,7 @@ struct TripDetailView: View {
     // MARK: - Day section
 
     private func daySection(_ day: TripDay, index: Int, in trip: Trip) -> some View {
-        let stops = ResolvedTripStop.resolve(day, buildings: city.buildings, customPlaces: progress.customPlaces)
+        let stops = ResolvedTripStop.resolve(day, buildings: buildings, customPlaces: progress.customPlaces)
         let walkTimes = ResolvedTripStop.walkingMinutesToNext(stops)
 
         return Section {

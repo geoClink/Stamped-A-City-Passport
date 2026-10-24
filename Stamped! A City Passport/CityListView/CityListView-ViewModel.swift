@@ -208,12 +208,28 @@ extension CityListView {
                 } label: {
                     Label("World Map", systemImage: "globe")
                 }
+
+                Button {
+                    HapticManager.shared.trigger(.selection)
+                    showingMyTrips = true
+                } label: {
+                    Label("My Trips", systemImage: "suitcase.fill")
+                }
+                .accessibilityHint("Your trips, including New Trip Anywhere")
             }
             .controlGroupStyle(.navigation)
             .foregroundStyle(isHighContrast ? Color.primary : Color.adventureOrange)
         }
     }
     
+    /// Picks sheet or full screen for My Trips, so only one of them is ever shown.
+    func myTripsPresented(fullScreen: Bool) -> Binding<Bool> {
+        Binding(
+            get: { showingMyTrips && isIPad == fullScreen },
+            set: { showingMyTrips = $0 }
+        )
+    }
+
     var detailToolbar: some ToolbarContent {
         ToolbarItem(placement: .navigationBarLeading) {
             if isIPad && columnVisibility == .detailOnly {
