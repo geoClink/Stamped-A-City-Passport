@@ -946,14 +946,17 @@ struct ShimmerModifier: ViewModifier {
 
     func body(content: Content) -> some View {
         content
-            .overlay(
+            // Closure form: LinearGradient is both a View and a ShapeStyle, and
+            // both have .blendMode, so .overlay(...) can't tell which is meant.
+            // The @ViewBuilder closure only accepts Views, which settles it.
+            .overlay {
                 LinearGradient(
                     gradient: Gradient(colors: [.clear, .white.opacity(0.4), .clear]),
                     startPoint: .init(x: phase - 0.3, y: 0),
                     endPoint: .init(x: phase, y: 0)
                 )
                 .blendMode(.screen)
-            )
+            }
             .onAppear {
                 withAnimation(.linear(duration: 1.4).repeatForever(autoreverses: false)) { phase = 1.3 }
             }
