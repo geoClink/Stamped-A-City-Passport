@@ -39,3 +39,33 @@ struct ContinentHeader: View {
         }
     }
 }
+
+/// Header for the "Campus Architecture" section, styled like a continent header.
+struct CampusSectionHeader: View {
+    let isHighContrast: Bool
+    let isExpanded: Bool
+
+    var body: some View {
+        HStack(spacing: 12) {
+            Image(systemName: "graduationcap.fill")
+                .symbolRenderingMode(.hierarchical)
+                .font(.title3)
+                .foregroundStyle(isHighContrast ? AnyShapeStyle(Color.primary) : AnyShapeStyle(gradient))
+                .rotationEffect(.degrees(isExpanded ? 360 : 0))
+                .animation(.interpolatingSpring(stiffness: 100, damping: 10), value: isExpanded)
+                .accessibilityHidden(true)
+
+            Text("CAMPUS ARCHITECTURE")
+                .font(.system(.subheadline, design: .rounded))
+                .fontWeight(.bold)
+                .tracking(2.0)
+                .foregroundColor(isHighContrast ? .primary : .adventureOrange)
+        }
+        .padding(.vertical, 8)
+        .accessibilityAddTraits(.isHeader)
+    }
+
+    private var gradient: LinearGradient {
+        LinearGradient(colors: [.purple, .indigo], startPoint: .topLeading, endPoint: .bottomTrailing)
+    }
+}

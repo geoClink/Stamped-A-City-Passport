@@ -313,7 +313,10 @@ private extension QuizView {
                     if building.hasKnownYear {
                         dossierRow(label: "YEAR", value: "\(building.yearBuilt)", icon: "calendar", hide: viewModel.currentQuestionType == .year)
                     }
-                    dossierRow(label: "STORIES", value: "\(building.numberOfStories) Stories", icon: "building.2", hide: viewModel.currentQuestionType == .stories)
+                    // 0 means the story count isn't known (common for campus buildings)
+                    if building.numberOfStories > 0 {
+                        dossierRow(label: "STORIES", value: "\(building.numberOfStories) Stories", icon: "building.2", hide: viewModel.currentQuestionType == .stories)
+                    }
                     dossierRow(label: "ARCHITECT", value: building.architect, icon: "person.text.rectangle", hide: viewModel.currentQuestionType == .architect)
                 }
             }
