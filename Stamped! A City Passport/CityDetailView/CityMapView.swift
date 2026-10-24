@@ -128,7 +128,9 @@ struct BuildingMapCallout: View {
                     VStack(alignment: .leading, spacing: 4) {
                         Text(building.name)
                             .font(.headline)
-                        Text("\(building.buildingStyle) · Built \(String(building.yearBuilt))")
+                        Text(building.hasKnownYear
+                             ? "\(building.buildingStyle) · Built \(String(building.yearBuilt))"
+                             : building.buildingStyle)
                             .font(.subheadline)
                             .foregroundStyle(.secondary)
                     }

@@ -107,7 +107,11 @@ class QuizViewModel: ObservableObject {
     // MARK: - Question Type Filtering
 
     private func validQuestionTypes(for building: Building) -> [QuestionType] {
-        var types: [QuestionType] = [.name, .style, .year]
+        var types: [QuestionType] = [.name, .style]
+        // "When was this lake built?" has no answer, so skip year questions there.
+        if building.hasKnownYear {
+            types.append(.year)
+        }
         let arch = building.architect.trimmingCharacters(in: .whitespaces)
         if !arch.isEmpty && arch.lowercased() != "unknown" {
             types.append(.architect)
@@ -140,6 +144,8 @@ class QuizViewModel: ObservableObject {
     func setupOptions() {
         let correct = getCorrectAnswer()
         let allDistractors = buildings
+            // Keep "0" from showing up as a wrong answer in year questions.
+            .filter { currentQuestionType != .year || $0.hasKnownYear }
             .map { b in
                 switch currentQuestionType {
                 case .name: return b.name
@@ -221,11 +227,18 @@ class QuizViewModel: ObservableObject {
         case .name:
             return "This landmark is in \(cityName) and is a prime example of \(b.buildingStyle) design."
         case .architect:
+            // Without a year the decade hint would read "the 0s".
+            guard b.hasKnownYear else {
+                return "This landmark is a prime example of \(b.buildingStyle) design."
+            }
             return "The architect is also known for work during the \(b.yearBuilt / 10 * 10)s."
         case .year:
             let era = b.yearBuilt < 1945 ? "pre-war" : "modernist"
             return "This was a major \(era) project designed by \(b.architect)."
         case .style:
+            guard b.hasKnownYear else {
+                return "This landmark is one of \(cityName)'s best-known sights."
+            }
             return "Year \(b.yearBuilt) — this style dominated architecture in that era."
         case .stories:
             return "With its \(b.buildingStyle) design, this building was considered tall for its time."

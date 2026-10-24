@@ -87,12 +87,39 @@ final class GlobalProgressManagerTests: XCTestCase {
     }
 }
 
+// MARK: - Quiz Tests
+
+final class QuizYearTests: XCTestCase {
+    // Checks the quiz never asks for the build year of a place that has none (yearBuilt 0), and never offers "0" as an answer.
+    @MainActor func testNoYearQuestionsForUnknownYear() {
+        let buildings = [
+            makeBuilding(id: "lake", yearBuilt: 0),
+            makeBuilding(id: "old", yearBuilt: 1890),
+            makeBuilding(id: "mid", yearBuilt: 1950),
+            makeBuilding(id: "new", yearBuilt: 2010),
+        ]
+        let quiz = QuizViewModel(buildings: buildings, cityName: "Test City")
+
+        // The question type is picked at random, so ask many questions.
+        for _ in 0..<200 {
+            quiz.questionCount = 0 // stop the quiz from ending after 10 questions
+            quiz.generateQuestion()
+            if quiz.currentBuilding?.id == "lake" {
+                XCTAssertNotEqual(quiz.currentQuestionType, .year)
+            }
+            if quiz.currentQuestionType == .year {
+                XCTAssertFalse(quiz.options.contains("0"), "0 was offered as a year answer")
+            }
+        }
+    }
+}
+
 // MARK: - Helpers
 
-private func makeBuilding(id: String) -> Building {
+private func makeBuilding(id: String, yearBuilt: Int = 2000) -> Building {
     Building(
-        id: id, name: "Test Building", assetName: "", description: "",
-        architect: "Unknown", yearBuilt: 2000, address: "", oldUse: "",
+        id: id, name: "Test Building \(id)", assetName: "", description: "",
+        architect: "Unknown", yearBuilt: yearBuilt, address: "", oldUse: "",
         newUse: "", buildingStyle: "", numberOfStories: 1, height: 10,
         foodSpots: [], currency: "USD", latitude: nil, longitude: nil
     )

@@ -310,7 +310,9 @@ private extension QuizView {
                 
                 VStack(alignment: .leading, spacing: 14) {
                     dossierRow(label: "STYLE", value: building.buildingStyle, icon: "fossil.shell", hide: viewModel.currentQuestionType == .style)
-                    dossierRow(label: "YEAR", value: "\(building.yearBuilt)", icon: "calendar", hide: viewModel.currentQuestionType == .year)
+                    if building.hasKnownYear {
+                        dossierRow(label: "YEAR", value: "\(building.yearBuilt)", icon: "calendar", hide: viewModel.currentQuestionType == .year)
+                    }
                     dossierRow(label: "STORIES", value: "\(building.numberOfStories) Stories", icon: "building.2", hide: viewModel.currentQuestionType == .stories)
                     dossierRow(label: "ARCHITECT", value: building.architect, icon: "person.text.rectangle", hide: viewModel.currentQuestionType == .architect)
                 }
