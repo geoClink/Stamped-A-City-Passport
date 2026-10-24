@@ -33,9 +33,9 @@ Built (see CHANGELOG 2.4):
 Still to do:
 - [ ] Each day's route in its own colour (all days are orange today)
 - [ ] "Suggest a day" with Apple Intelligence (reuse the existing itinerary engine)
-- [ ] Translate the trip planner and campus screens (English only today)
+- [ ] Translate the trip planner screens (English only today; campus screens are translated)
 - [ ] TestFlight build and real-device testing (pins in 3D photo mode, iCloud sync, AR, events)
-- [ ] App Store screenshots: iPhone 6.9", **iPad 13"** (missing today)
+- [x] App Store screenshots: iPhone 6.9" and iPad 13" (in `screenshots/final/`)
 - [ ] Fix screenshot 4's Apple Intelligence claim (show real AI text or change the headline)
 
 ## 2.5: Around the landmark + Vision Pro
