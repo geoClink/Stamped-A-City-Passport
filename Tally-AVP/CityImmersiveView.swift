@@ -302,8 +302,9 @@ struct CityImmersiveView: View {
                     Divider().frame(height: 20)
 
                     Button { toggleStreetMode() } label: {
-                        Label(streetMode ? "City View" : "Street View",
-                              systemImage: streetMode ? "building.2" : "figure.walk")
+                        // Typed as LocalizedStringKey so both titles get translated
+                        let title: LocalizedStringKey = streetMode ? "City View" : "Street View"
+                        Label(title, systemImage: streetMode ? "building.2" : "figure.walk")
                     }
                     .buttonStyle(.bordered)
                     .tint(streetMode ? .purple : .green)
@@ -334,8 +335,9 @@ struct CityImmersiveView: View {
                             isNight.toggle()
                         }
                     } label: {
+                        let title: LocalizedStringKey = dayNightLocked ? (isNight ? "Night" : "Day") : "Auto"
                         Label(
-                            dayNightLocked ? (isNight ? "Night" : "Day") : "Auto",
+                            title,
                             systemImage: dayNightLocked
                                 ? (isNight ? "moon.stars.fill" : "sun.max.fill")
                                 : (cycleTime > 0.25 && cycleTime < 0.75 ? "sun.max.fill" : "moon.stars.fill")
@@ -354,8 +356,8 @@ struct CityImmersiveView: View {
 
                     // Weather
                     Button { isRaining.toggle() } label: {
-                        Label(isRaining ? "Raining" : "Clear",
-                              systemImage: isRaining ? "cloud.rain.fill" : "sun.max.fill")
+                        let title: LocalizedStringKey = isRaining ? "Raining" : "Clear"
+                        Label(title, systemImage: isRaining ? "cloud.rain.fill" : "sun.max.fill")
                     }
                     .buttonStyle(.bordered)
                     .tint(isRaining ? .blue : .yellow)
