@@ -10,6 +10,12 @@ How to use this file:
 
 ## [Unreleased]
 
+### Added
+- Vision Pro app: every city on a photoreal 3D map, landmark cards, and stamps synced from iPhone. Shares the iPhone app's App Store listing.
+- Vision Pro: layered app icon, a 10-question architecture quiz per city, and the Want to Visit list (landmarks and saved places synced with iPhone). Download size cut from 355 MB to about 24 MB by leaving out the Detroit 3D model.
+- Vision Pro: a 3D globe of every city with live stamp pins; drag to spin and tilt, tap to turn a city toward you.
+- Vision Pro: available in all 9 of the app's languages.
+
 ## [2.4] (build 9) – 2026-10-23
 
 ### Added
@@ -29,10 +35,6 @@ How to use this file:
 - Map and satellite toggle (remembered between launches).
 - Websites and ticket pages open inside the app.
 - Upcoming Ticketmaster events on map cards: events at a landmark venue, or nearby events for saved places, with ticket links.
-- Vision Pro app: every city on a photoreal 3D map, landmark cards, and stamps synced from iPhone. Shares the iPhone app's App Store listing.
-- Vision Pro: layered app icon, a 10-question architecture quiz per city, and the Want to Visit list (landmarks and saved places synced with iPhone). Download size cut from 355 MB to about 24 MB by leaving out the Detroit 3D model.
-- Vision Pro: a 3D globe of every city with live stamp pins; drag to spin and tilt, tap to turn a city toward you.
-- Vision Pro: available in all 9 of the app's languages.
 
 ### Changed
 - Riyadh: the King Abdulaziz Center for World Culture (Ithra), which is in Dhahran, is replaced by the King Fahad National Library.
