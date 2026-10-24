@@ -96,7 +96,7 @@ struct ApplePlaceSheet: View {
         if hapticsEnabled { HapticManager.shared.trigger(.success) }
     }
 
-    /// Adds this place to Want to Visit and returns it.
+    /// Adds this place to Want to Visit and returns the saved copy.
     @discardableResult
     private func save() -> CustomPlace {
         let coordinate = coordinate(of: mapItem)
@@ -112,7 +112,9 @@ struct ApplePlaceSheet: View {
             category: mapItem.pointOfInterestCategory?.rawValue
         )
         withAnimation { progress.addCustomPlace(place) }
-        return place
+        // addCustomPlace skips a place already saved under any city, so hand back
+        // whichever copy is really stored; a trip stop must point at a real id
+        return progress.customPlaces.first { $0.isSamePlace(name: place.name, latitude: place.latitude, longitude: place.longitude) } ?? place
     }
 
     // MARK: - Helpers
