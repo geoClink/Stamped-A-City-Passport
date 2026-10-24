@@ -1,0 +1,186 @@
+[
+  {
+    "name": "Florida Southern College",
+    "enumCase": "floridaSouthern",
+    "country": "unitedStates",
+    "wiki": "Florida Southern College",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Child of the Sun",
+      "airportName": "Tampa International Airport",
+      "airportCode": "TPA",
+      "airportInfo": "Lakeland sits on Interstate 4 between Tampa and Orlando, and Tampa International to the west is the usual way in. Lakeland Linder International Airport is in the city itself.",
+      "funFact": "College president Ludd Spivey hired Frank Lloyd Wright in 1938, and over two decades Wright drew 18 designs for the campus. Money was always short, so many of the buildings went up with student labor, and the result is the largest collection of Wright buildings at a single site.",
+      "language": "English",
+      "languageInfo": "The campus nickname comes from Wright himself, who said his buildings would rise 'out of the ground and into the light, a child of the sun'.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Esplanades",
+      "transportationFact": "Wright's covered esplanades, built between 1940 and 1958, link every one of his campus buildings except Danforth Chapel, which sits right beside Pfeiffer Chapel. Their low canopies are spaced like the orange trees that once grew here."
+    },
+    "buildings": [
+      {
+        "id": "campus_flsouthern_pfeiffer_chapel",
+        "wiki": "Child of the Sun",
+        "name": "Annie Pfeiffer Chapel",
+        "description": "Wright's first religious building since Unity Temple, a hexagonal chapel clad in about 6,000 textile blocks set with some 50,000 glass cubes. Its steel-braced tower, nicknamed \"God's bicycle rack\" by students, was rebuilt after a 1944 hurricane.",
+        "architect": "Frank Lloyd Wright",
+        "yearBuilt": 1941,
+        "address": "111 Lake Hollingsworth Drive, Lakeland, FL 33801",
+        "oldUse": "Chapel",
+        "newUse": "Chapel",
+        "buildingStyle": "Organic architecture",
+        "numberOfStories": 2,
+        "height": 20,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          28.0308809,
+          -81.9486536
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/128697663"
+      },
+      {
+        "id": "campus_flsouthern_danforth_chapel",
+        "wiki": "Child of the Sun",
+        "name": "William H. Danforth Chapel",
+        "description": "A small chapel beside Pfeiffer Chapel with a pointed roof that juts out like a ship's prow over a wall of leaded stained glass, the only leaded glass on campus. Its original cypress doors, Wright-designed benches and fireplace are still in place.",
+        "architect": "Frank Lloyd Wright",
+        "yearBuilt": 1955,
+        "address": "Johnson Avenue, Florida Southern College, Lakeland, FL 33801",
+        "oldUse": "Chapel",
+        "newUse": "Chapel",
+        "buildingStyle": "Organic architecture",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          28.0306032,
+          -81.9487793
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/128697686"
+      },
+      {
+        "id": "campus_flsouthern_buckner_building",
+        "wiki": "Child of the Sun",
+        "name": "Thad Buckner Building",
+        "description": "Built as the first Roux Library, it pairs a circular reading room with a hexagonal stack wing, Wright's first circular floor plan. Clerestory windows light the reading room's stepped terraces, which now hold exhibits and a visitor center.",
+        "architect": "Frank Lloyd Wright",
+        "yearBuilt": 1948,
+        "address": "Johnson Avenue, Florida Southern College, Lakeland, FL 33801",
+        "oldUse": "College library (E. T. Roux Library)",
+        "newUse": "Offices and exhibit space",
+        "buildingStyle": "Organic architecture",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          28.0313422,
+          -81.9492555
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/224042304"
+      },
+      {
+        "id": "campus_flsouthern_administration_buildings",
+        "wiki": "Child of the Sun",
+        "name": "Watson and Fine Administration Buildings",
+        "description": "Two connected textile-block buildings flanking the widest arm of the esplanade, with cantilevered roofs and diamond-shaped piers. They still hold the college's offices, from the president and deans to the registrar.",
+        "architect": "Frank Lloyd Wright",
+        "yearBuilt": 1948,
+        "address": "Johnson Avenue, Florida Southern College, Lakeland, FL 33801",
+        "oldUse": "College administration",
+        "newUse": "College administration",
+        "buildingStyle": "Organic architecture",
+        "numberOfStories": 2,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          28.0321179,
+          -81.9494322
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/128697671"
+      },
+      {
+        "id": "campus_flsouthern_water_dome",
+        "wiki": "Child of the Sun",
+        "name": "Water Dome",
+        "description": "Wright meant this 160-foot pool to sit under a dome of water from ringed fountain jets, but 1940s technology couldn't do it. Rebuilt in 2007, the J. Edgar Wall Water Dome now sends up dozens of jets several times a day.",
+        "architect": "Frank Lloyd Wright",
+        "yearBuilt": 1948,
+        "address": "Johnson Avenue, Florida Southern College, Lakeland, FL 33801",
+        "oldUse": "Fountain",
+        "newUse": "Fountain",
+        "buildingStyle": "Organic architecture",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          28.0319909,
+          -81.9488967
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/128697676"
+      },
+      {
+        "id": "campus_flsouthern_raulerson_building",
+        "wiki": "Child of the Sun",
+        "name": "L. A. Raulerson Building",
+        "description": "Wright's three seminar buildings, opened in 1941 as separate 36-foot textile-block squares, lit mostly by glass cubes set into the walls. Their courtyards were enclosed in 1958 and 1959, joining them into one building.",
+        "architect": "Frank Lloyd Wright",
+        "yearBuilt": 1941,
+        "address": "Frank Lloyd Wright Way, Florida Southern College, Lakeland, FL 33803",
+        "oldUse": "Seminar classrooms",
+        "newUse": "Classrooms and offices",
+        "buildingStyle": "Organic architecture",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          28.0320812,
+          -81.948389
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/227244582"
+      },
+      {
+        "id": "campus_flsouthern_ordway_building",
+        "wiki": "Child of the Sun",
+        "name": "Ordway Industrial Arts Building",
+        "description": "Wright considered this U-shaped arts building his finest design, \"strong and adapted to its purpose.\" Its roof slopes inward at 30 degrees to light the classrooms, and a central wing ends in a small domed theater now used as a black box.",
+        "architect": "Frank Lloyd Wright",
+        "yearBuilt": 1952,
+        "address": "Frank Lloyd Wright Way, Florida Southern College, Lakeland, FL 33803",
+        "oldUse": "Industrial arts, fine arts and home economics building",
+        "newUse": "Classrooms, offices and black box theater",
+        "buildingStyle": "Organic architecture",
+        "numberOfStories": 1,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          28.0326187,
+          -81.9469356
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/128697679"
+      },
+      {
+        "id": "campus_flsouthern_usonian_house",
+        "wiki": "Sharp Family Tourism and Education Center",
+        "name": "Sharp Family Tourism and Education Center",
+        "description": "A Usonian faculty house Wright designed in 1939, finally built in 2013 as the campus visitor center. The 1,700-square-foot house uses textile blocks with colored glass inserts and is furnished with Wright designs.",
+        "architect": "Frank Lloyd Wright",
+        "yearBuilt": 2013,
+        "address": "Florida Southern College, Lakeland, FL",
+        "oldUse": "Usonian faculty house (unbuilt design)",
+        "newUse": "Visitor center and museum house",
+        "buildingStyle": "Usonian",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  }
+]

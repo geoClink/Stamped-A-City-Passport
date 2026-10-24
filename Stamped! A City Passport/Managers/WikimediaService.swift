@@ -35,7 +35,7 @@ actor WikimediaService {
         if let cached = cache[cacheKey] { return cached }
 
         // Try the most specific title first, then looser versions of the name
-        let override = buildingID.flatMap { Self.titleOverrides[$0] }
+        let override = buildingID.flatMap { Self.titleOverrides[$0] ?? Self.campusTitleOverrides[$0] }
         var candidates = [override ?? buildingName]
         candidates.append(simplify(buildingName))
         candidates.append(simplify(removingParenthetical(buildingName)))

@@ -16,6 +16,7 @@ struct Achievement: Identifiable {
         case cities = "Cities"
         case mastery = "Mastery"
         case continents = "Continents"
+        case campuses = "Campuses"
         var id: String { rawValue }
         var systemIcon: String {
             switch self {
@@ -24,6 +25,7 @@ struct Achievement: Identifiable {
             case .cities: return "map"
             case .mastery: return "checkmark.seal"
             case .continents: return "globe"
+            case .campuses: return "graduationcap"
             }
         }
     }
@@ -39,8 +41,12 @@ struct Achievement: Identifiable {
         self._check = check
     }
 
+    /// Campus achievements only see campuses; every other achievement only sees real cities,
+    /// so "Fully complete 10 cities" can't be earned with campuses.
+    /// (Landmark achievements count every stamp, campus buildings included.)
     func isEarned(manager: GlobalProgressManager, cities: [CityLocation.City]) -> Bool {
-        _check(manager, cities)
+        let relevant = cities.filter { category == .campuses ? $0.isCampus : !$0.isCampus }
+        return _check(manager, relevant)
     }
 }
 
@@ -234,6 +240,28 @@ extension Achievement {
                     description: "Collect 500 total stamps",
                     icon: "star.circle.fill", color: .purple, category: .mastery) { m, _ in
             m.visitedIDs.count >= 500
+        },
+
+        // MARK: Campuses
+        Achievement(id: "campus_tour", title: "Campus Tour",
+                    description: "Stamp a building on any campus",
+                    icon: "graduationcap.fill", color: .indigo, category: .campuses) { m, campuses in
+            campuses.contains { $0.buildings.contains { m.visitedIDs.contains($0.id) } }
+        },
+        Achievement(id: "campus_hopper", title: "Campus Hopper",
+                    description: "Stamp buildings on 5 different campuses",
+                    icon: "books.vertical.fill", color: .teal, category: .campuses) { m, campuses in
+            campuses.filter { $0.buildings.contains { m.visitedIDs.contains($0.id) } }.count >= 5
+        },
+        Achievement(id: "valedictorian", title: "Valedictorian",
+                    description: "Fully complete any campus",
+                    icon: "scroll.fill", color: gold, category: .campuses) { m, campuses in
+            campuses.contains { m.isCityComplete($0) }
+        },
+        Achievement(id: "honor_roll", title: "Honor Roll",
+                    description: "Fully complete 5 campuses",
+                    icon: "rosette", color: .purple, category: .campuses) { m, campuses in
+            campuses.filter { m.isCityComplete($0) }.count >= 5
         },
     ]
 }

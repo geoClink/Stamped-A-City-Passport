@@ -24,6 +24,8 @@ struct CityListView: View {
     
     @State var expandedCountries: [CityLocation.Country: Bool] = [:]
     @State var expandedContinents: [CityLocation.Continent: Bool] = [:]
+    @State var expandedCampusCountries: [CityLocation.Country: Bool] = [:]
+    @State var isCampusSectionExpanded = false
     @State var searchText = ""
     @State var showingSettings = false
     @State var showingMyJourney = false
@@ -70,6 +72,8 @@ struct CityListView: View {
                             }
                         }
                     }
+
+                    campusSection
                 } else {
                     let results = viewModel.filteredResults(query: searchText)
                     
@@ -162,6 +166,31 @@ struct CityListView: View {
     }
 
     // MARK: - List Sections
+
+    /// "Campus Architecture": every campus, grouped by country, below the continents.
+    @ViewBuilder
+    private var campusSection: some View {
+        let campusGroups = viewModel.campusesByCountry
+        if !campusGroups.isEmpty {
+            Section {
+                DisclosureGroup(isExpanded: Binding(
+                    get: { isCampusSectionExpanded },
+                    set: { newValue in
+                        if newValue { HapticManager.shared.trigger(.selection) }
+                        withAnimation(.spring(response: 0.6, dampingFraction: 0.7)) {
+                            isCampusSectionExpanded = newValue
+                        }
+                    }
+                )) {
+                    ForEach(campusGroups) { countryGroup in
+                        cityCountrySection(country: countryGroup.id, cities: countryGroup.cities, isCampusSection: true)
+                    }
+                } label: {
+                    CampusSectionHeader(isHighContrast: isHighContrast, isExpanded: isCampusSectionExpanded)
+                }
+            }
+        }
+    }
 
     @ViewBuilder
     private func searchResultRow(_ result: MixedSearchResult) -> some View {
