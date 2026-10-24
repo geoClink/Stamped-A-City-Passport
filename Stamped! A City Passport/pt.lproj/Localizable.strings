@@ -126,7 +126,7 @@
 "modal.explain_live" = "As taxas ao vivo foram obtidas do provedor e refletem as taxas atuais do mercado.";
 "modal.explain_cached" = "As taxas armazenadas em cache são de uma busca anterior bem-sucedida e podem estar um pouco desatualizadas.";
 "modal.explain_offline" = "As taxas de fallback off-line são usadas quando o acesso à rede não está disponível; estes são apenas para referência.";
-"modal.close" = "Feito";
+"modal.close" = "OK";
 "modal.never" = "Nunca";
 "status.icon.accessibility" = "Status das taxas de câmbio, toque para obter detalhes";
 "refresh.rates.accessibility" = "Atualizar taxas de câmbio";
@@ -135,7 +135,7 @@
 // MARK: - Passport Gallery
 "passport.title" = "Seu passaporte";
 "passport.countries" = "Países";
-"passport.done" = "Feito";
+"passport.done" = "OK";
 "passport.close" = "Fechar";
 "passport.journeyLog" = "REGISTRO DE VIAGEM";
 "passport.explorationProgress" = "PROGRESSO DE EXPLORAÇÃO";
@@ -199,7 +199,7 @@
 
 // MARK: - General
 "general.close" = "Fechar";
-"general.done" = "Feito";
+"general.done" = "OK";
 "general.cancel" = "Cancelar";
 "general.retry" = "Tente novamente";
 
@@ -257,7 +257,7 @@
 
 // MARK: - Quiz
 "quiz.navigation.title" = "%@ Especialista";
-"quiz.exit" = "Saída";
+"quiz.exit" = "Sair";
 "quiz.fieldInquiry" = "CONSULTA DE CAMPO";
 "quiz.fieldData" = "DADOS DE CAMPO";
 "quiz.log" = "REGISTRO %d DE %d";

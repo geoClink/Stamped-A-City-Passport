@@ -12,8 +12,11 @@ struct BuildingTimelineSection: View {
     let visitedIDs: Set<String>
     let isHighContrast: Bool
 
+    // Places with no build year (lakes, mountains) can't go on a timeline.
     private var sorted: [Building] {
-        buildings.sorted { $0.yearBuilt < $1.yearBuilt }
+        buildings
+            .filter(\.hasKnownYear)
+            .sorted { $0.yearBuilt < $1.yearBuilt }
     }
 
     var body: some View {

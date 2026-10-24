@@ -108,7 +108,7 @@
 "currency.modal.provider" = "プロバイダー";
 "currency.modal.lastUpdated" = "最終更新日";
 "currency.modal.never" = "一度もない";
-"currency.modal.close" = "近い";
+"currency.modal.close" = "閉じる";
 "currency.modal.header" = "為替レートの詳細";
 "currency.modal.explain.live" = "インターネットから取得したライブレートを使用します。";
 "currency.modal.explain.cached" = "最近キャッシュされたレートを使用します。インターネットに接続して更新してください。";
@@ -126,7 +126,7 @@
 "modal.explain_live" = "ライブレートはプロバイダーから取得され、現在の市場レートを反映しています。";
 "modal.explain_cached" = "キャッシュされたレートは、以前に成功したフェッチからのものであり、若干古い場合があります。";
 "modal.explain_offline" = "ネットワーク アクセスが利用できない場合は、オフライン フォールバック レートが使用されます。これらは参考用です。";
-"modal.close" = "終わり";
+"modal.close" = "完了";
 "modal.never" = "一度もない";
 "status.icon.accessibility" = "通貨レートのステータス、タップして詳細を表示";
 "refresh.rates.accessibility" = "通貨レートを更新する";
@@ -135,8 +135,8 @@
 // MARK: - Passport Gallery
 "passport.title" = "あなたのパスポート";
 "passport.countries" = "国";
-"passport.done" = "Done";
-"passport.close" = "Close";
+"passport.done" = "完了";
+"passport.close" = "閉じる";
 "passport.journeyLog" = "JOURNEY LOG";
 "passport.explorationProgress" = "探査の進捗状況";
 "passport.citiesStamped" = "%d 都市がスタンプされました";
@@ -198,8 +198,8 @@
 "era.contemporary" = "コンテンポラリー";
 
 // MARK: - General
-"general.close" = "近い";
-"general.done" = "終わり";
+"general.close" = "閉じる";
+"general.done" = "完了";
 "general.cancel" = "キャンセル";
 "general.retry" = "もう一度やり直してください";
 
@@ -257,7 +257,7 @@
 
 // MARK: - Quiz
 "quiz.navigation.title" = "％@ 専門家";
-"quiz.exit" = "出口";
+"quiz.exit" = "終了";
 "quiz.fieldInquiry" = "現地調査";
 "quiz.fieldData" = "フィールドデータ";
 "quiz.log" = "ログ %d OF %d";

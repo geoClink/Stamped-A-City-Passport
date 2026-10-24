@@ -126,7 +126,7 @@
 "modal.explain_live" = "实时费率是从提供商处获取的，反映了当前的市场费率。";
 "modal.explain_cached" = "缓存的费率来自之前成功的提取，可能稍微过时。";
 "modal.explain_offline" = "当网络访问不可用时，使用离线回退率；这些仅供参考。";
-"modal.close" = "完毕";
+"modal.close" = "完成";
 "modal.never" = "绝不";
 "status.icon.accessibility" = "货币汇率状态，点击查看详细信息";
 "refresh.rates.accessibility" = "刷新货币汇率";
@@ -135,7 +135,7 @@
 // MARK: - Passport Gallery
 "passport.title" = "你的护照";
 "passport.countries" = "国家";
-"passport.done" = "完毕";
+"passport.done" = "完成";
 "passport.close" = "关闭";
 "passport.journeyLog" = "旅程日志";
 "passport.explorationProgress" = "勘探进展";
@@ -199,7 +199,7 @@
 
 // MARK: - General
 "general.close" = "关闭";
-"general.done" = "完毕";
+"general.done" = "完成";
 "general.cancel" = "取消";
 "general.retry" = "再试一次";
 
@@ -257,7 +257,7 @@
 
 // MARK: - Quiz
 "quiz.navigation.title" = "％@ 专家";
-"quiz.exit" = "出口";
+"quiz.exit" = "退出";
 "quiz.fieldInquiry" = "实地询问";
 "quiz.fieldData" = "现场数据";
 "quiz.log" = "%d 的日志";

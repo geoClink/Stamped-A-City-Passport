@@ -521,7 +521,9 @@ extension BuildingDetailView {
     var technicalGrid: some View {
         VStack(spacing: 12) {
             specCard(label: L.Building.location, value: building.address, icon: "mappin.and.ellipse")
-            specCard(label: L.Building.built, value: "\(building.yearBuilt)", icon: "calendar")
+            if building.hasKnownYear {
+                specCard(label: L.Building.built, value: "\(building.yearBuilt)", icon: "calendar")
+            }
             if building.height > 0 {
                 specCard(label: L.Building.height, value: formattedHeight, icon: "arrow.up.and.down")
             }

@@ -790,7 +790,9 @@ private struct MapLandmarkCard: View {
                         .font(.headline)
                         .lineLimit(2)
                         .minimumScaleFactor(0.85)
-                    Text("\(building.buildingStyle) · Built \(String(building.yearBuilt))")
+                    Text(building.hasKnownYear
+                         ? "\(building.buildingStyle) · Built \(String(building.yearBuilt))"
+                         : building.buildingStyle)
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                         .lineLimit(2)

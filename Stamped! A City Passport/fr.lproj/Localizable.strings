@@ -126,7 +126,7 @@
 "modal.explain_live" = "Les tarifs en direct ont été récupérés auprès du fournisseur et reflètent les tarifs actuels du marché.";
 "modal.explain_cached" = "Les tarifs mis en cache proviennent d'une récupération précédemment réussie et peuvent être légèrement obsolètes.";
 "modal.explain_offline" = "Les taux de repli hors ligne sont utilisés lorsque l'accès au réseau n'est pas disponible ; ceux-ci sont à titre de référence seulement.";
-"modal.close" = "Fait";
+"modal.close" = "OK";
 "modal.never" = "Jamais";
 "status.icon.accessibility" = "Statut des taux de change, appuyez pour plus de détails";
 "refresh.rates.accessibility" = "Actualiser les taux de change";
@@ -135,7 +135,7 @@
 // MARK: - Passport Gallery
 "passport.title" = "Votre passeport";
 "passport.countries" = "Pays";
-"passport.done" = "Fait";
+"passport.done" = "OK";
 "passport.close" = "Fermer";
 "passport.journeyLog" = "JOURNAL DE VOYAGE";
 "passport.explorationProgress" = "PROGRÈS DE L'EXPLORATION";
@@ -199,7 +199,7 @@
 
 // MARK: - General
 "general.close" = "Fermer";
-"general.done" = "Fait";
+"general.done" = "OK";
 "general.cancel" = "Annuler";
 "general.retry" = "Essayer à nouveau";
 
@@ -257,7 +257,7 @@
 
 // MARK: - Quiz
 "quiz.navigation.title" = "%@ Expert";
-"quiz.exit" = "Sortie";
+"quiz.exit" = "Quitter";
 "quiz.fieldInquiry" = "FIELD INQUIRY";
 "quiz.fieldData" = "FIELD DATA";
 "quiz.log" = "LOG %d OF %d";
@@ -280,7 +280,7 @@
 "quiz.incorrect" = "Incorrect. La réponse était %@.";
 
 // MARK: - Question Prompts
-"question.name" = "D'après les données, de quel point de repère s'agit-il ?";
+"question.name" = "D'après les données, de quel monument s'agit-il ?";
 "question.style" = "Quel est le style architectural de ce bâtiment ?";
 "question.year" = "En quelle année cette structure a-t-elle été achevée ?";
 "question.architect" = "Quel architecte ou cabinet a conçu ce bâtiment ?";

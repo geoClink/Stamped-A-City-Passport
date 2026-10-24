@@ -12,7 +12,7 @@
 "onboarding.step4.title" = "Dimostra la tua maestria";
 "onboarding.step4.description" = "Diventa un esperto di architettura completando le sfide specifiche della città.";
 "onboarding.step5.title" = "Curato con intelligenza";
-"onboarding.step5.description" = "Lascia che Apple Intelligence progetti il ​​percorso perfetto per la tua prossima avventura.";
+"onboarding.step5.description" = "Lascia che Apple Intelligence progetti il percorso perfetto per la tua prossima avventura.";
 "onboarding.button.skip" = "Saltare";
 "onboarding.button.next" = "Prossimo";
 "onboarding.button.getStarted" = "Inizia";
@@ -45,7 +45,7 @@
 "cityDetail.toolbar.resetEverything" = "Ripristina tutto";
 "cityDetail.alert.confirmReset" = "Conferma reimpostazione";
 "cityDetail.alert.yesReset" = "Sì, ripristina";
-"cityDetail.alert.cancel" = "Cancellare";
+"cityDetail.alert.cancel" = "Annulla";
 
 // MARK: - Mastery Tiers
 "mastery.tourist" = "Turista";
@@ -108,7 +108,7 @@
 "currency.modal.provider" = "Fornitore";
 "currency.modal.lastUpdated" = "Ultimo aggiornamento";
 "currency.modal.never" = "Mai";
-"currency.modal.close" = "Vicino";
+"currency.modal.close" = "Chiudi";
 "currency.modal.header" = "Dettagli sul tasso di cambio";
 "currency.modal.explain.live" = "Utilizzando le tariffe in tempo reale recuperate da Internet.";
 "currency.modal.explain.cached" = "Utilizzo delle tariffe memorizzate di recente nella cache. Connettiti a Internet per aggiornare.";
@@ -126,7 +126,7 @@
 "modal.explain_live" = "Le tariffe in tempo reale sono state recuperate dal fornitore e riflettono le attuali tariffe di mercato.";
 "modal.explain_cached" = "Le tariffe memorizzate nella cache provengono da un recupero precedentemente riuscito e potrebbero essere leggermente obsolete.";
 "modal.explain_offline" = "Le tariffe di fallback offline vengono utilizzate quando l'accesso alla rete non è disponibile; questi sono solo di riferimento.";
-"modal.close" = "Fatto";
+"modal.close" = "Fine";
 "modal.never" = "Mai";
 "status.icon.accessibility" = "Stato dei tassi di cambio, tocca per i dettagli";
 "refresh.rates.accessibility" = "Aggiorna i tassi di cambio";
@@ -135,8 +135,8 @@
 // MARK: - Passport Gallery
 "passport.title" = "Il tuo passaporto";
 "passport.countries" = "Paesi";
-"passport.done" = "Fatto";
-"passport.close" = "Vicino";
+"passport.done" = "Fine";
+"passport.close" = "Chiudi";
 "passport.journeyLog" = "REGISTRO DI VIAGGIO";
 "passport.explorationProgress" = "PROGRESSO DELL'ESPLORAZIONE";
 "passport.citiesStamped" = "%d città timbrate";
@@ -198,9 +198,9 @@
 "era.contemporary" = "Contemporaneo";
 
 // MARK: - General
-"general.close" = "Vicino";
-"general.done" = "Fatto";
-"general.cancel" = "Cancellare";
+"general.close" = "Chiudi";
+"general.done" = "Fine";
+"general.cancel" = "Annulla";
 "general.retry" = "Riprova";
 
 // MARK: - Building Detail
@@ -257,7 +257,7 @@
 
 // MARK: - Quiz
 "quiz.navigation.title" = "%@ Esperto";
-"quiz.exit" = "Uscita";
+"quiz.exit" = "Esci";
 "quiz.fieldInquiry" = "INDAGINE SUL CAMPO";
 "quiz.fieldData" = "DATI DI CAMPO";
 "quiz.log" = "LOG %d DI %d";
@@ -280,7 +280,7 @@
 "quiz.incorrect" = "Errato. La risposta è stata %@.";
 
 // MARK: - Question Prompts
-"question.name" = "Basandosi sui dati, di quale punto di riferimento si tratta?";
+"question.name" = "In base ai dati, di quale monumento si tratta?";
 "question.style" = "Qual è lo stile architettonico di questo edificio?";
 "question.year" = "In che anno è stata completata questa struttura?";
 "question.architect" = "Quale architetto o azienda ha progettato questo edificio?";

@@ -320,7 +320,8 @@ struct BasicDaySection: View {
     }
 
     var dominantEra: String {
-        let years = buildings.map { $0.yearBuilt }
+        // A 0 (no build year) would drag the average back to "Medieval".
+        let years = buildings.filter(\.hasKnownYear).map { $0.yearBuilt }
         guard !years.isEmpty, let avg = Optional(years.reduce(0, +) / years.count) else { return "" }
         switch avg {
         case ..<1400: return "Medieval"
@@ -464,6 +465,8 @@ struct BasicStopRow: View {
 
     var shortDescription: String {
         let use = building.newUse.isEmpty ? building.oldUse : building.newUse
+        // Without this, a lake or mountain (year 0) would be labelled "Ancient".
+        if !building.hasKnownYear { return use }
         if building.yearBuilt < 100 { return "\(use) · Ancient" }
         if building.yearBuilt < 1000 { return "\(use) · \(building.yearBuilt) AD" }
         return "\(use) · \(building.yearBuilt)"
@@ -539,9 +542,11 @@ struct TimelineBar: View {
     let service: ItineraryService
     let brandColor: Color
 
-    // Sorted chronologically — same order as the arrow navigation
+    // Sorted chronologically — same order as the arrow navigation.
+    // Stops with no build year are left off the timeline.
     private var sorted: [Building] {
         stops.compactMap { service.building(for: $0) }
+             .filter(\.hasKnownYear)
              .sorted { $0.yearBuilt < $1.yearBuilt }
     }
 
@@ -946,17 +951,16 @@ struct ShimmerModifier: ViewModifier {
 
     func body(content: Content) -> some View {
         content
-            // Trailing-closure overlay only accepts views, so Swift knows which
-            // blendMode to use (LinearGradient is both a View and a ShapeStyle).
+            // Closure form: LinearGradient is both a View and a ShapeStyle, and
+            // both have .blendMode, so .overlay(...) can't tell which is meant.
+            // The @ViewBuilder closure only accepts Views, which settles it.
             .overlay {
                 LinearGradient(
                     gradient: Gradient(colors: [.clear, .white.opacity(0.4), .clear]),
                     startPoint: .init(x: phase - 0.3, y: 0),
                     endPoint: .init(x: phase, y: 0)
                 )
-                #if !os(visionOS)
                 .blendMode(.screen)
-                #endif
             }
             .onAppear {
                 withAnimation(.linear(duration: 1.4).repeatForever(autoreverses: false)) { phase = 1.3 }
