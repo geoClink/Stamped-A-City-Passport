@@ -46,6 +46,10 @@ How to use this file:
 - Years showing as "1,913" in the itinerary and other screens.
 - Missing or wrong landmark photos for over 200 landmarks (including Rockefeller Center, The Vessel, One World Trade Center).
 - iPhone mistranslations of Close, Done, Cancel and Exit, Spanish quiz prompts, and landmark wording.
+- Trip tour: the map card's arrows now step through the trip's stops and keep the tour going.
+- iPad: the map card shows a plain Look Around preview without the full-screen buttons.
+- City introductions no longer show a Wikipedia disambiguation page for cities with common names.
+- Apple SoHo now has a photo.
 - City maps opening too zoomed out when one landmark is far from the centre (New York and JFK).
 - Map losing your place after returning from a building page.
 - Unit tests compile and run again.
