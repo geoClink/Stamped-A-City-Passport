@@ -28,6 +28,8 @@ struct CityMapView: View {
     /// A place the user saved from Apple Maps search (only one card shows at a time).
     @State private var selectedPlace: CustomPlace?
     @State private var showingAddPlace = false
+    /// The landmark or saved place being added to a trip, if the picker is open.
+    @State private var addToTrip: AddToTripRequest?
     /// Website or ticket page shown inside the app.
     @State private var browserLink: BrowserLink?
     /// The building page currently pushed onto the map's navigation stack.
@@ -215,6 +217,10 @@ struct CityMapView: View {
                         detailBuilding = building
                     },
                     onOpenTickets: { browserLink = BrowserLink(url: $0) },
+                    onAddToTrip: {
+                        stopTour()
+                        addToTrip = AddToTripRequest(stop: .landmark(buildingID: building.id), name: building.name)
+                    },
                     onClose: {
                         stopTour()
                         selectedBuilding = nil
@@ -230,6 +236,9 @@ struct CityMapView: View {
                     reduceTransparency: reduceTransparency,
                     onLookAround: { showingLookAround = true },
                     onOpenWebPage: { browserLink = BrowserLink(url: $0) },
+                    onAddToTrip: {
+                        addToTrip = AddToTripRequest(stop: .place(placeID: place.id), name: place.name)
+                    },
                     onRemove: {
                         withAnimation { progress.removeCustomPlace(place.id) }
                         selectedPlace = nil
@@ -298,6 +307,9 @@ struct CityMapView: View {
                         .padding()
                 }
             }
+        }
+        .sheet(item: $addToTrip) { request in
+            AddToTripSheet(cityName: cityName, stop: request.stop, stopName: request.name)
         }
         .sheet(item: $browserLink) { link in
             InAppBrowser(url: link.url)
@@ -602,6 +614,7 @@ private struct MapLandmarkCard: View {
     let onNext: () -> Void
     let onViewDetails: () -> Void
     let onOpenTickets: (URL) -> Void
+    let onAddToTrip: () -> Void
     let onClose: () -> Void
 
     var body: some View {
@@ -657,6 +670,8 @@ private struct MapLandmarkCard: View {
                 QuickAction(title: isWishlisted ? "Saved" : "Want to Go",
                             systemImage: isWishlisted ? "heart.fill" : "heart",
                             isOn: isWishlisted, action: onWishlist)
+                QuickAction(title: "Add to Trip", systemImage: "suitcase.rolling",
+                            isOn: false, action: onAddToTrip)
                 QuickAction(title: "Look Around", systemImage: "binoculars",
                             isOn: false, action: onLookAround)
                     .disabled(lookAroundScene == nil)
@@ -761,6 +776,7 @@ private struct CustomPlaceCard: View {
     let reduceTransparency: Bool
     let onLookAround: () -> Void
     let onOpenWebPage: (URL) -> Void
+    let onAddToTrip: () -> Void
     let onRemove: () -> Void
     let onClose: () -> Void
 
@@ -824,11 +840,19 @@ private struct CustomPlaceCard: View {
             PlaceEventsView(coordinate: place.coordinate, placeName: place.name,
                             onOpenTickets: onOpenWebPage)
 
-            Button(role: .destructive, action: onRemove) {
-                Label("Remove from Want to Visit", systemImage: "heart.slash")
-                    .frame(maxWidth: .infinity)
+            HStack(spacing: 8) {
+                Button(action: onAddToTrip) {
+                    Label("Add to Trip", systemImage: "suitcase.rolling")
+                        .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.borderedProminent)
+
+                Button(role: .destructive, action: onRemove) {
+                    Image(systemName: "heart.slash")
+                }
+                .buttonStyle(.bordered)
+                .accessibilityLabel("Remove from Want to Visit")
             }
-            .buttonStyle(.bordered)
         }
         .tint(.adventureOrange)
         .padding(16)

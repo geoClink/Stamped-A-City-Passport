@@ -25,6 +25,7 @@ struct ApplePlaceSheet: View {
     @Environment(\.dismiss) private var dismiss
     @ObservedObject private var progress = GlobalProgressManager.shared
     @AppStorage("haptics_enabled") private var hapticsEnabled = true
+    @State private var addToTrip: AddToTripRequest?
 
     private var name: String { mapItem.name ?? "Unnamed place" }
 
@@ -38,14 +39,39 @@ struct ApplePlaceSheet: View {
 
     var body: some View {
         MapItemDetailView(mapItem: mapItem) { dismiss() }
-            .safeAreaInset(edge: .bottom) { wantToVisitButton }
+            .safeAreaInset(edge: .bottom) { actionBar }
             .presentationDetents([.medium, .large])
+            .sheet(item: $addToTrip) { request in
+                AddToTripSheet(cityName: cityName, stop: request.stop, stopName: request.name)
+            }
+    }
+
+    /// Want to Visit + Add to Trip, pinned under Apple's card.
+    private var actionBar: some View {
+        HStack(spacing: 10) {
+            wantToVisitButton
+            Button {
+                // A trip stop points at a saved place, so save it first if needed
+                let place = savedPlace ?? save()
+                addToTrip = AddToTripRequest(stop: .place(placeID: place.id), name: place.name)
+            } label: {
+                Label("Add to Trip", systemImage: "suitcase.rolling")
+                    .font(.headline)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 6)
+            }
+            .buttonStyle(.bordered)
+            .tint(.adventureOrange)
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 10)
+        .background(.bar)
     }
 
     private var wantToVisitButton: some View {
         let isSaved = savedPlace != nil
         return Button(action: toggleSaved) {
-            Label(isSaved ? "Saved to Want to Visit" : "Want to Visit",
+            Label(isSaved ? "Saved" : "Want to Visit",
                   systemImage: isSaved ? "heart.fill" : "heart")
                 .font(.headline)
                 .contentTransition(.symbolEffect(.replace))
@@ -54,9 +80,6 @@ struct ApplePlaceSheet: View {
         }
         .buttonStyle(.borderedProminent)
         .tint(.pink)
-        .padding(.horizontal, 16)
-        .padding(.vertical, 10)
-        .background(.bar)
         .accessibilityHint(isSaved ? "Removes \(name) from Want to Visit" : "Adds \(name) to your map and Want to Visit list")
     }
 
@@ -69,6 +92,13 @@ struct ApplePlaceSheet: View {
             if hapticsEnabled { HapticManager.shared.trigger(.selection) }
             return
         }
+        save()
+        if hapticsEnabled { HapticManager.shared.trigger(.success) }
+    }
+
+    /// Adds this place to Want to Visit and returns it.
+    @discardableResult
+    private func save() -> CustomPlace {
         let coordinate = coordinate(of: mapItem)
         let place = CustomPlace(
             id: UUID().uuidString,
@@ -82,7 +112,7 @@ struct ApplePlaceSheet: View {
             category: mapItem.pointOfInterestCategory?.rawValue
         )
         withAnimation { progress.addCustomPlace(place) }
-        if hapticsEnabled { HapticManager.shared.trigger(.success) }
+        return place
     }
 
     // MARK: - Helpers
