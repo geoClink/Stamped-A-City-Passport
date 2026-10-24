@@ -34,6 +34,11 @@ actor WikimediaService {
         let cacheKey = buildingID ?? buildingName
         if let cached = cache[cacheKey] { return cached }
 
+        // Wikipedia only has a different place with this name: show nothing rather than the wrong photo
+        if let buildingID, Self.skipWikipedia.contains(buildingID) {
+            return WikiSummary(photoURL: nil, extract: nil)
+        }
+
         // Try the most specific title first, then looser versions of the name
         let override = buildingID.flatMap { Self.titleOverrides[$0] }
         var candidates = [override ?? buildingName]
@@ -573,6 +578,15 @@ extension WikimediaService {
         // Zanzibar
         "tz_old_fort_zanzibar": "Old Fort of Zanzibar",              // Old Fort, Zanzibar
         "tz_stone_town": "Stone Town",                               // Stone Town, Zanzibar City
+    ]
+
+    /// Building IDs whose name only matches a *different* place on Wikipedia, and that
+    /// have no article of their own. The app shows its placeholder instead of the wrong photo.
+    nonisolated static let skipWikipedia: Set<String> = [
+        "for-estoril",          // Fortaleza / Estoril: Wikipedia has Estoril, Portugal
+        "mia-03",               // Miami / The Carlyle: Wikipedia has the New York hotel
+        "orl_suntrust_center",  // Orlando / Truist Plaza (SunTrust Center): Wikipedia has Atlanta's
+        "vic-10",               // Victoria / Mayfair Shopping Centre: falls back to the city article
     ]
 }
 
