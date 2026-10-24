@@ -39,6 +39,13 @@ actor WikimediaService {
             return WikiSummary(photoURL: nil, extract: nil)
         }
 
+        // No Wikipedia article, but Wikimedia Commons has a free photo of it
+        if let buildingID, let photo = Self.commonsPhotos[buildingID] {
+            let result = WikiSummary(photoURL: URL(string: photo), extract: nil)
+            cache[cacheKey] = result
+            return result
+        }
+
         // Try the most specific title first, then looser versions of the name
         let override = buildingID.flatMap { Self.titleOverrides[$0] ?? Self.campusTitleOverrides[$0] }
         var candidates = [override ?? buildingName]
@@ -59,6 +66,12 @@ actor WikimediaService {
         return result
     }
 
+    /// The opening of a city's Wikipedia article. Many city names ("New York",
+    /// "Portland") lead to a "may refer to" list, so those use their full title.
+    func citySummary(for cityName: String) async -> WikiSummary {
+        await summary(for: Self.cityTitleOverrides[cityName] ?? cityName)
+    }
+
     // MARK: - Private
 
     private func fetch(title: String) async -> WikiSummary? {
@@ -72,6 +85,8 @@ actor WikimediaService {
             guard (response as? HTTPURLResponse)?.statusCode == 200 else { return nil }
 
             let decoded = try JSONDecoder().decode(WikiAPIResponse.self, from: data)
+            // A "may refer to" list of other articles, not the place itself: try the next title
+            if decoded.type == "disambiguation" { return nil }
 
             // Prefer originalimage (higher resolution), fall back to thumbnail
             var photoURL = decoded.originalimage?.source.flatMap(URL.init)
@@ -147,6 +162,30 @@ actor WikimediaService {
 // MARK: - Title overrides
 
 extension WikimediaService {
+    /// City name → Wikipedia article title, for cities whose plain name is a
+    /// disambiguation page. Checked against the registry's landmarks (Portland is
+    /// the one in Oregon, Victoria the one in British Columbia, and so on).
+    nonisolated static let cityTitleOverrides: [String: String] = [
+        "Austin": "Austin, Texas",
+        "Bath": "Bath, Somerset",
+        "Buffalo": "Buffalo, New York",
+        "Cartagena": "Cartagena, Colombia",
+        "Cork": "Cork (city)",
+        "New York": "New York City",
+        "Orlando": "Orlando, Florida",
+        "Phoenix": "Phoenix, Arizona",
+        "Portland": "Portland, Oregon",
+        "Queenstown": "Queenstown, New Zealand",
+        "Victoria": "Victoria, British Columbia",
+    ]
+
+    /// Building ID → photo on Wikimedia Commons, for landmarks with no Wikipedia
+    /// article of their own. Each is a free-licence photo of the building itself.
+    nonisolated static let commonsPhotos: [String: String] = [
+        // "Prince Street Post Office" by Eden, Janine and Jim, CC BY 2.0
+        "nyc_apple_soho": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Prince_Street_Post_Office_%287652826064%29.jpg",
+    ]
+
     /// Building ID → Wikipedia article title, for landmarks whose app name doesn't
     /// lead to the right article (or to one with a photo). Sorted by city.
     /// Found and checked with tools/photo-audit: every title gives a real photo of
@@ -593,6 +632,8 @@ extension WikimediaService {
 // MARK: - Decodable response shape
 
 nonisolated private struct WikiAPIResponse: Decodable {
+    /// "standard" for a normal article, "disambiguation" for a "may refer to" list
+    let type: String?
     let thumbnail: WikiImage?
     let originalimage: WikiImage?
     let extract: String?

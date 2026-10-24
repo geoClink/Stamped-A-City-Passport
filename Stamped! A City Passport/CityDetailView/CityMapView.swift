@@ -4,7 +4,8 @@
 //
 //  Photoreal 3D map of a city's landmarks.
 //  • Tap a pin to fly to it; a floating card shows quick actions and View Details.
-//  • ◀ ▶ on the card steps through landmarks in walking order.
+//  • ◀ ▶ on the card steps through landmarks in walking order
+//    (or through the trip's stops while touring a trip).
 //  • Tour flies between every landmark automatically, or through one of your
 //    trips day by day (each day's route first, then its stops in order).
 //  • Filter by visited / stamped / want to visit / architectural style.
@@ -59,6 +60,8 @@ struct CityMapView: View {
     @State private var touringTrip: Trip?
     /// "Day 2 · Stop 3 of 5" on the card while touring a trip.
     @State private var tripTourLabel: String?
+    /// Which of the trip tour's steps the card is showing, so ◀ ▶ can move from it.
+    @State private var tripTourStepIndex: Int?
     /// "Day 2 · Sat, Oct 24", shown at the top between days of a trip tour.
     @State private var tripTourDayBanner: String?
     /// The current day's walking route, drawn as a dashed line while touring a trip.
@@ -488,7 +491,16 @@ struct CityMapView: View {
     }
 
     /// Moves the card to the previous/next landmark in walking order.
+    /// While touring a trip, it moves to the trip's previous/next stop instead
+    /// and the tour carries on from there.
     private func step(by offset: Int) {
+        if let trip = touringTrip, let currentIndex = tripTourStepIndex {
+            let steps = tourSteps(for: trip)
+            guard currentIndex < steps.count else { return }
+            let nextIndex = (currentIndex + offset + steps.count) % steps.count
+            startTour(of: trip, from: nextIndex, currentDay: steps[currentIndex].dayNumber)
+            return
+        }
         stopTour()
         let stops = route
         guard !stops.isEmpty else { return }
@@ -531,17 +543,19 @@ struct CityMapView: View {
 
     /// Flies through a trip day by day: first an overview of the day's route with a
     /// "Day N" banner, then each stop in order, pausing so its card can be read.
-    private func startTour(of trip: Trip) {
+    /// `startIndex` and `currentDay` let ◀ ▶ restart the tour part-way through;
+    /// the day overview only shows again when the new stop is on a different day.
+    private func startTour(of trip: Trip, from startIndex: Int = 0, currentDay startDay: Int = 0) {
         let steps = tourSteps(for: trip)
-        guard !steps.isEmpty else { return }
+        guard steps.indices.contains(startIndex) else { return }
         stopTour()
         // Show every pin, so no stop on the trip is hidden by a filter
         filter = .all
         styleFilter = nil
         touringTrip = trip
         tourTask = Task { @MainActor in
-            var currentDay = 0
-            for step in steps {
+            var currentDay = startDay
+            for (index, step) in steps.enumerated().dropFirst(startIndex) {
                 if Task.isCancelled { break }
                 if step.dayNumber != currentDay {
                     currentDay = step.dayNumber
@@ -551,6 +565,7 @@ struct CityMapView: View {
                     if Task.isCancelled { break }
                     withAnimation { tripTourDayBanner = nil }
                 }
+                tripTourStepIndex = index
                 tripTourLabel = "Day \(step.dayNumber) · Stop \(step.stopNumber) of \(step.stopsInDay)"
                 switch step.target {
                 case .landmark(let building): flyTo(building, duration: 2.5)
@@ -570,6 +585,7 @@ struct CityMapView: View {
 
     /// Pulls the camera back to show a whole day's route, with its dashed line and banner.
     private func showDayOverview(dayNumber: Int, route dayRoute: [CLLocationCoordinate2D]) {
+        tripTourStepIndex = nil
         selectedBuilding = nil
         selectedPlace = nil
         var banner = "Day \(dayNumber)"
@@ -610,6 +626,7 @@ struct CityMapView: View {
     private func endTripTour() {
         touringTrip = nil
         tripTourLabel = nil
+        tripTourStepIndex = nil
         withAnimation {
             tripTourDayBanner = nil
             tripTourLine = []
@@ -814,12 +831,15 @@ private struct MapLandmarkCard: View {
 
             // Small street-level preview. Tapping it opens Look Around full screen.
             if let lookAroundScene {
-                LookAroundPreview(initialScene: lookAroundScene, badgePosition: .bottomTrailing)
+                CardLookAroundPreview(scene: lookAroundScene)
                     .frame(height: 110)
                     .clipShape(RoundedRectangle(cornerRadius: 12))
+                    .contentShape(RoundedRectangle(cornerRadius: 12))
+                    .onTapGesture(perform: onLookAround)
                     // A fresh preview per landmark, so it doesn't keep the previous street
                     .id(building.id)
                     .accessibilityLabel("Look Around preview of \(building.name)")
+                    .accessibilityAddTraits(.isButton)
             }
 
             // Quick actions
@@ -906,6 +926,29 @@ private struct QuickAction: View {
         .buttonStyle(.bordered)
         .foregroundStyle(isOn ? Color.white : Color.adventureOrange)
         .background(isOn ? Color.adventureOrange : Color.clear, in: RoundedRectangle(cornerRadius: 12))
+    }
+}
+
+// MARK: - Look Around preview
+
+/// The card's small street-level picture. SwiftUI's LookAroundPreview shows
+/// full-screen Look Around's close button, compass and street name on iPad,
+/// because the iPad is a "regular width" screen. Wrapping Apple's view controller
+/// lets us tell it the space is compact (like iPhone) so it stays a plain picture.
+private struct CardLookAroundPreview: UIViewControllerRepresentable {
+    let scene: MKLookAroundScene
+
+    func makeUIViewController(context: Context) -> MKLookAroundViewController {
+        let controller = MKLookAroundViewController(scene: scene)
+        controller.badgePosition = .bottomTrailing
+        // Taps open the full-screen Look Around instead of moving around in the small preview
+        controller.isNavigationEnabled = false
+        controller.traitOverrides.horizontalSizeClass = .compact
+        return controller
+    }
+
+    func updateUIViewController(_ controller: MKLookAroundViewController, context: Context) {
+        controller.scene = scene
     }
 }
 
