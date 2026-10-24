@@ -10,7 +10,11 @@
 import SwiftUI
 
 struct TripPlannerView: View {
-    let city: CityLocation.City
+    /// The city page's view model, passed through so a trip's Tour can open the
+    /// map (it needs it to stamp landmarks, like the city page's own map does).
+    let viewModel: CityDetailViewModel
+
+    private var city: CityLocation.City { viewModel.city }
 
     @ObservedObject private var store = TripStore.shared
     @Environment(\.dismiss) private var dismiss
@@ -27,7 +31,7 @@ struct TripPlannerView: View {
             tripList
         } detail: {
             if let selectedTripID {
-                TripDetailView(tripID: selectedTripID, city: city)
+                TripDetailView(tripID: selectedTripID, viewModel: viewModel)
                     // A fresh view per trip, so edit mode and sheets don't carry over
                     .id(selectedTripID)
             } else {
@@ -136,5 +140,5 @@ private struct TripSummaryRow: View {
 }
 
 #Preview {
-    TripPlannerView(city: .boston)
+    TripPlannerView(viewModel: CityDetailViewModel(city: .boston))
 }

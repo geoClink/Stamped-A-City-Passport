@@ -12,7 +12,10 @@ import SwiftUI
 
 struct TripDetailView: View {
     let tripID: String
-    let city: CityLocation.City
+    /// Passed on to the map when this trip's Tour opens it.
+    let viewModel: CityDetailViewModel
+
+    private var city: CityLocation.City { viewModel.city }
 
     @ObservedObject private var store = TripStore.shared
     @ObservedObject private var progress = GlobalProgressManager.shared
@@ -20,6 +23,7 @@ struct TripDetailView: View {
 
     /// The day shown on the route map. nil means the first day.
     @State private var mapDayID: String?
+    @State private var showingTour = false
 
     /// The day the "Add Stop" picker is adding to.
     @State private var addingToDay: TripDay?
@@ -36,6 +40,21 @@ struct TripDetailView: View {
     }
 
     private var trip: Trip? { store.trip(withID: tripID) }
+
+    /// The 3D map, flying through this trip. Opened by "Tour This Trip".
+    private var tourMap: some View {
+        NavigationStack {
+            CityMapView(buildings: city.buildings, cityName: city.name, viewModel: viewModel, tripToTour: tripID)
+        }
+    }
+
+    /// Same as the city page's map: a sheet on iPhone, full screen on iPad.
+    private func tourPresented(fullScreen: Bool) -> Binding<Bool> {
+        Binding(
+            get: { showingTour && (sizeClass == .regular) == fullScreen },
+            set: { showingTour = $0 }
+        )
+    }
 
     var body: some View {
         if let trip {
@@ -89,6 +108,8 @@ struct TripDetailView: View {
                 }
             }
         }
+        .sheet(isPresented: tourPresented(fullScreen: false)) { tourMap }
+        .fullScreenCover(isPresented: tourPresented(fullScreen: true)) { tourMap }
         .sheet(item: $addingToDay) { day in
             AddTripStopSheet(city: city, tripID: trip.id, dayID: day.id)
         }
@@ -139,6 +160,23 @@ struct TripDetailView: View {
                         .pickerStyle(.menu)
                 }
             }
+
+            Button {
+                showingTour = true
+            } label: {
+                // HStack rather than Label: inside a List row, Label can drop its icon
+                HStack(spacing: 8) {
+                    Image(systemName: "play.fill")
+                    Text("Tour This Trip in 3D")
+                }
+                .font(.headline)
+                .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.borderedProminent)
+            .tint(Color.adventureOrange)
+            // Needs at least one stop with a location to fly to
+            .disabled(TripTour.steps(for: trip, buildings: city.buildings, customPlaces: progress.customPlaces).isEmpty)
+            .accessibilityHint("Opens the 3D map and flies through each day's stops in order")
         }
     }
 

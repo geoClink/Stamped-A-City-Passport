@@ -5,7 +5,8 @@
 //  Photoreal 3D map of a city's landmarks.
 //  • Tap a pin to fly to it; a floating card shows quick actions and View Details.
 //  • ◀ ▶ on the card steps through landmarks in walking order.
-//  • Tour flies between every landmark automatically.
+//  • Tour flies between every landmark automatically, or through one of your
+//    trips day by day (each day's route first, then its stops in order).
 //  • Filter by visited / stamped / want to visit / architectural style.
 //  • Chips (Landmarks · Food · Coffee · Culture) show Apple Maps places; tap one
 //    for Apple's place card and a Want to Visit button.
@@ -19,9 +20,12 @@ struct CityMapView: View {
     let cityName: String
     /// Needed to stamp landmarks and open BuildingDetailView, like the landmark list does.
     @ObservedObject var viewModel: CityDetailViewModel
+    /// Set when the map is opened from a trip's "Tour" button: that trip's tour starts on open.
+    var tripToTour: String? = nil
 
     // Watched live so pins and the card update the moment something is stamped or saved
     @ObservedObject private var progress = GlobalProgressManager.shared
+    @ObservedObject private var tripStore = TripStore.shared
 
     @State private var position: MapCameraPosition = .automatic
     @State private var selectedBuilding: Building?
@@ -51,6 +55,14 @@ struct CityMapView: View {
     @State private var showingLookAround = false
 
     @State private var tourTask: Task<Void, Never>?
+    /// The trip being toured, when the Tour follows a trip instead of every landmark.
+    @State private var touringTrip: Trip?
+    /// "Day 2 · Stop 3 of 5" on the card while touring a trip.
+    @State private var tripTourLabel: String?
+    /// "Day 2 · Sat, Oct 24", shown at the top between days of a trip tour.
+    @State private var tripTourDayBanner: String?
+    /// The current day's walking route, drawn as a dashed line while touring a trip.
+    @State private var tripTourLine: [CLLocationCoordinate2D] = []
     @State private var userLocation: CLLocation?
 
     @AppStorage("haptics_enabled") private var hapticsEnabled = true
@@ -141,12 +153,18 @@ struct CityMapView: View {
 
     private var isTouring: Bool { tourTask != nil }
 
+    private var cityTrips: [Trip] { tripStore.trips(in: cityName) }
+
     // MARK: - Body
 
     var body: some View {
         // `selection` lets the user tap Apple's own places. Our landmark pins
         // handle their own taps, so they're unaffected.
         Map(position: $position, selection: $selectedFeature) {
+            if tripTourLine.count > 1 {
+                MapPolyline(coordinates: tripTourLine)
+                    .stroke(Color.adventureOrange, style: StrokeStyle(lineWidth: 4, lineCap: .round, dash: [8, 6]))
+            }
             ForEach(filteredBuildings) { building in
                 let isVisited = progress.isVisited(building.id)
                 Annotation(building.name, coordinate: coordinate(of: building), anchor: .bottom) {
@@ -196,6 +214,13 @@ struct CityMapView: View {
             hasFramedCity = true
             userLocation = currentLocationIfAllowed()
             fitCamera()
+            // Opened from a trip's Tour button: give the city a moment to appear, then start
+            if let tripID = tripToTour, let trip = tripStore.trip(withID: tripID) {
+                Task {
+                    try? await Task.sleep(for: .seconds(1))
+                    startTour(of: trip)
+                }
+            }
         }
         .onDisappear { stopTour() }
         .overlay(alignment: .bottom) {
@@ -261,6 +286,23 @@ struct CityMapView: View {
                     .padding(.horizontal, 16).padding(.vertical, 10)
                     .background(.regularMaterial, in: Capsule())
                     .padding(.top, 12)
+            }
+        }
+        .overlay(alignment: .top) {
+            if let banner = tripTourDayBanner {
+                VStack(spacing: 2) {
+                    Text(touringTrip?.name ?? "")
+                        .font(.caption.weight(.semibold))
+                        .foregroundStyle(.secondary)
+                    Text(banner)
+                        .font(.title3.bold())
+                }
+                .padding(.horizontal, 22)
+                .padding(.vertical, 10)
+                .background(.regularMaterial, in: Capsule())
+                .padding(.top, 12)
+                .transition(.move(edge: .top).combined(with: .opacity))
+                .accessibilityElement(children: .combine)
             }
         }
         // Category chips sit above the map, like Apple Maps; the compass moves down to make room
@@ -374,14 +416,40 @@ struct CityMapView: View {
             .accessibilityLabel(useSatellite ? "Show map view" : "Show satellite view")
         }
         ToolbarItem(placement: .topBarTrailing) {
-            Button {
-                isTouring ? stopTour() : startTour()
-            } label: {
-                Label(isTouring ? "Stop" : "Tour", systemImage: isTouring ? "stop.fill" : "play.fill")
-                    .labelStyle(.titleAndIcon)
+            if isTouring {
+                Button {
+                    stopTour()
+                } label: {
+                    Label("Stop", systemImage: "stop.fill")
+                        .labelStyle(.titleAndIcon)
+                }
+                .accessibilityHint("Stops the guided tour")
+            } else if cityTrips.isEmpty {
+                Button {
+                    startTour()
+                } label: {
+                    Label("Tour", systemImage: "play.fill")
+                        .labelStyle(.titleAndIcon)
+                }
+                .disabled(route.isEmpty)
+                .accessibilityHint("Flies between every landmark automatically")
+            } else {
+                // With trips planned, Tour asks what to fly through
+                Menu {
+                    Button("All Landmarks", systemImage: "building.2") { startTour() }
+                        .disabled(route.isEmpty)
+                    Section("Your Trips") {
+                        ForEach(cityTrips) { trip in
+                            Button(trip.name, systemImage: "suitcase.rolling") { startTour(of: trip) }
+                                .disabled(tourSteps(for: trip).isEmpty)
+                        }
+                    }
+                } label: {
+                    Label("Tour", systemImage: "play.fill")
+                        .labelStyle(.titleAndIcon)
+                }
+                .accessibilityHint("Choose every landmark or one of your trips to tour")
             }
-            .disabled(route.isEmpty)
-            .accessibilityHint(isTouring ? "Stops the guided tour" : "Flies between every landmark automatically")
         }
     }
 
@@ -430,6 +498,8 @@ struct CityMapView: View {
     }
 
     private func stopLabel(for building: Building) -> String? {
+        // While touring a trip, the card shows the trip's numbering instead
+        if let tripTourLabel { return tripTourLabel }
         let stops = route
         guard let index = stops.firstIndex(where: { $0.id == building.id }) else { return nil }
         return "Stop \(index + 1) of \(stops.count)"
@@ -445,17 +515,105 @@ struct CityMapView: View {
                 flyTo(building, duration: 2.5)
                 try? await Task.sleep(for: .seconds(7))
             }
+            // A cancelled tour was already cleaned up by stopTour(). Clearing tourTask
+            // here too could wipe out a new tour that started in the meantime.
             if !Task.isCancelled {
                 selectedBuilding = nil
                 withAnimation(.easeInOut(duration: 3)) { fitCamera() }
+                tourTask = nil
             }
-            tourTask = nil
+        }
+    }
+
+    private func tourSteps(for trip: Trip) -> [TripTourStep] {
+        TripTour.steps(for: trip, buildings: buildings, customPlaces: progress.customPlaces)
+    }
+
+    /// Flies through a trip day by day: first an overview of the day's route with a
+    /// "Day N" banner, then each stop in order, pausing so its card can be read.
+    private func startTour(of trip: Trip) {
+        let steps = tourSteps(for: trip)
+        guard !steps.isEmpty else { return }
+        stopTour()
+        // Show every pin, so no stop on the trip is hidden by a filter
+        filter = .all
+        styleFilter = nil
+        touringTrip = trip
+        tourTask = Task { @MainActor in
+            var currentDay = 0
+            for step in steps {
+                if Task.isCancelled { break }
+                if step.dayNumber != currentDay {
+                    currentDay = step.dayNumber
+                    let dayRoute = steps.filter { $0.dayNumber == currentDay }.map(\.coordinate)
+                    showDayOverview(dayNumber: currentDay, route: dayRoute)
+                    try? await Task.sleep(for: .seconds(3.5))
+                    if Task.isCancelled { break }
+                    withAnimation { tripTourDayBanner = nil }
+                }
+                tripTourLabel = "Day \(step.dayNumber) · Stop \(step.stopNumber) of \(step.stopsInDay)"
+                switch step.target {
+                case .landmark(let building): flyTo(building, duration: 2.5)
+                case .place(let place): flyTo(place, duration: 2.5)
+                }
+                try? await Task.sleep(for: .seconds(7))
+            }
+            if !Task.isCancelled {
+                selectedBuilding = nil
+                selectedPlace = nil
+                endTripTour()
+                withAnimation(.easeInOut(duration: 3)) { fitCamera() }
+                tourTask = nil
+            }
+        }
+    }
+
+    /// Pulls the camera back to show a whole day's route, with its dashed line and banner.
+    private func showDayOverview(dayNumber: Int, route dayRoute: [CLLocationCoordinate2D]) {
+        selectedBuilding = nil
+        selectedPlace = nil
+        var banner = "Day \(dayNumber)"
+        if let date = touringTrip?.date(ofDayAt: dayNumber - 1) {
+            banner += " · \(date.formatted(.dateTime.weekday(.abbreviated).month(.abbreviated).day()))"
+        }
+        withAnimation {
+            tripTourLine = dayRoute
+            tripTourDayBanner = banner
+        }
+
+        guard !dayRoute.isEmpty else { return }
+        // Let MapKit fit the day's stops to the screen. Picking a camera distance by
+        // hand cut the route off on narrow phone screens. The fit is seen from
+        // above; each stop's swoop afterwards is tilted 3D again.
+        let points = dayRoute.map(MKMapPoint.init)
+        let xs = points.map(\.x)
+        let ys = points.map(\.y)
+        var box = MKMapRect(x: xs.min()!, y: ys.min()!, width: xs.max()! - xs.min()!, height: ys.max()! - ys.min()!)
+        // Room around the stops for their names, the day banner and the chips.
+        // At least 500 m, so a one-stop day shows its neighbourhood, not one rooftop.
+        // (Map points aren't metres; MapKit converts for this latitude.)
+        let minimumMargin = 500 * MKMapPointsPerMeterAtLatitude(dayRoute[0].latitude)
+        let margin = max(max(box.width, box.height) * 0.35, minimumMargin)
+        box = box.insetBy(dx: -margin, dy: -margin)
+        withAnimation(.easeInOut(duration: 2.5)) {
+            position = .rect(box)
         }
     }
 
     private func stopTour() {
         tourTask?.cancel()
         tourTask = nil
+        endTripTour()
+    }
+
+    /// Clears the trip tour's banner, card numbering and route line.
+    private func endTripTour() {
+        touringTrip = nil
+        tripTourLabel = nil
+        withAnimation {
+            tripTourDayBanner = nil
+            tripTourLine = []
+        }
     }
 
     // MARK: - Camera
@@ -487,9 +645,9 @@ struct CityMapView: View {
     }
 
     /// Same swoop for a place the user saved themselves.
-    private func flyTo(_ place: CustomPlace) {
+    private func flyTo(_ place: CustomPlace, duration: Double = 1.5) {
         let aimPoint = CLLocationCoordinate2D(latitude: place.latitude - 0.0015, longitude: place.longitude)
-        withAnimation(.easeInOut(duration: 1.5)) {
+        withAnimation(.easeInOut(duration: duration)) {
             position = .camera(MapCamera(centerCoordinate: aimPoint, distance: 700, heading: 0, pitch: 65))
         }
         selectedBuilding = nil

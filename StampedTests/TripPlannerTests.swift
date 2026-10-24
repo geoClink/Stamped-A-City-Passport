@@ -189,3 +189,61 @@ final class WalkingRouteTests: XCTestCase {
         XCTAssertEqual(ResolvedTripStop.optimizedStopIDs(resolved), ["s-start", "s-near", "s-far", "s-missing"])
     }
 }
+
+// MARK: - Trip tour
+
+@MainActor
+final class TripTourTests: XCTestCase {
+    /// A landmark with only the fields the tour cares about filled in.
+    private func building(_ id: String, latitude: Double? = 42.36, longitude: Double? = -71.06) -> Building {
+        Building(
+            id: id, name: id, assetName: "", description: "", architect: "", yearBuilt: 1900,
+            address: "", oldUse: "", newUse: "", buildingStyle: "", numberOfStories: 1, height: 10,
+            foodSpots: [], currency: "USD", latitude: latitude, longitude: longitude
+        )
+    }
+
+    private let cafe = CustomPlace(id: "cafe", name: "Cafe", address: nil, latitude: 42.35, longitude: -71.05, cityName: "Boston")
+
+    // Checks the tour goes through Day 1's stops in order, then Day 2's, numbering stops within each day
+    func testStepsFollowDaysInOrder() {
+        let trip = Trip(name: "Test", cityName: "Boston", days: [
+            TripDay(stops: [TripStop(kind: .landmark(buildingID: "a")), TripStop(kind: .place(placeID: "cafe"))]),
+            TripDay(stops: [TripStop(kind: .landmark(buildingID: "b"))]),
+        ])
+        let steps = TripTour.steps(for: trip, buildings: [building("a"), building("b")], customPlaces: [cafe])
+
+        XCTAssertEqual(steps.map(\.name), ["a", "Cafe", "b"])
+        XCTAssertEqual(steps.map(\.dayNumber), [1, 1, 2])
+        XCTAssertEqual(steps.map(\.stopNumber), [1, 2, 1])
+        XCTAssertEqual(steps.map(\.stopsInDay), [2, 2, 1])
+    }
+
+    // Checks stops with nowhere to fly (no coordinates, deleted place) are skipped and the numbering closes the gap
+    func testStepsSkipStopsWithoutALocation() {
+        let trip = Trip(name: "Test", cityName: "Boston", days: [
+            TripDay(stops: [
+                TripStop(kind: .landmark(buildingID: "noCoords")),
+                TripStop(kind: .place(placeID: "deleted")),
+                TripStop(kind: .landmark(buildingID: "a")),
+            ]),
+        ])
+        let buildings = [building("noCoords", latitude: nil, longitude: nil), building("a")]
+        let steps = TripTour.steps(for: trip, buildings: buildings, customPlaces: [])
+
+        XCTAssertEqual(steps.map(\.name), ["a"])
+        XCTAssertEqual(steps.first?.stopNumber, 1)
+        XCTAssertEqual(steps.first?.stopsInDay, 1)
+    }
+
+    // Checks an empty day is skipped without throwing off the next day's number
+    func testEmptyDayKeepsLaterDayNumbers() {
+        let trip = Trip(name: "Test", cityName: "Boston", days: [
+            TripDay(stops: []),
+            TripDay(stops: [TripStop(kind: .landmark(buildingID: "a"))]),
+        ])
+        let steps = TripTour.steps(for: trip, buildings: [building("a")], customPlaces: [])
+
+        XCTAssertEqual(steps.map(\.dayNumber), [2])
+    }
+}

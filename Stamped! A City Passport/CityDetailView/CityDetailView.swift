@@ -215,8 +215,8 @@ struct CityDetailView: View {
         // iPhone: swipe-down sheet. iPad: full screen, since an iPad sheet is a small centered window.
         .sheet(isPresented: mapPresented(fullScreen: false)) { cityMap }
         .fullScreenCover(isPresented: mapPresented(fullScreen: true)) { cityMap }
-        .sheet(isPresented: tripPlannerPresented(fullScreen: false)) { TripPlannerView(city: viewModel.city) }
-        .fullScreenCover(isPresented: tripPlannerPresented(fullScreen: true)) { TripPlannerView(city: viewModel.city) }
+        .sheet(isPresented: tripPlannerPresented(fullScreen: false)) { TripPlannerView(viewModel: viewModel) }
+        .fullScreenCover(isPresented: tripPlannerPresented(fullScreen: true)) { TripPlannerView(viewModel: viewModel) }
         #if os(iOS)
         .fullScreenCover(isPresented: $showingExplore) {
             CityExploreView(
