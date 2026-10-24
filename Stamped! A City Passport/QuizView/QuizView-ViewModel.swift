@@ -152,7 +152,7 @@ class QuizViewModel: ObservableObject {
                 case .architect: return b.architect
                 case .year: return "\(b.yearBuilt)"
                 case .style: return b.buildingStyle
-                case .stories: return "\(b.numberOfStories) floors"
+                case .stories: return L.QuizExtra.floors(b.numberOfStories)
                 }
             }
             .filter { $0 != correct }
@@ -170,7 +170,7 @@ class QuizViewModel: ObservableObject {
         case .architect: return b.architect
         case .year: return "\(b.yearBuilt)"
         case .style: return b.buildingStyle
-        case .stories: return "\(b.numberOfStories) floors"
+        case .stories: return L.QuizExtra.floors(b.numberOfStories)
         }
     }
 

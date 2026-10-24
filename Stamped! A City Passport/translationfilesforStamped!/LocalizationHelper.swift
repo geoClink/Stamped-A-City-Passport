@@ -434,8 +434,9 @@ extension L {
         static func streakRow(_ n: Int) -> String {
             String(format: String(localized: "quiz.streakRow"), n)
         }
+        /// Uses Localizable.stringsdict, so 1 reads "1 floor" and 2 reads "2 floors".
         static func floors(_ n: Int) -> String {
-            String(format: String(localized: "quiz.floors"), n)
+            String.localizedStringWithFormat(NSLocalizedString("quiz.floors", comment: ""), n)
         }
         static let correct = String(localized: "quiz.correct")
         static func incorrect(_ answer: String) -> String {
