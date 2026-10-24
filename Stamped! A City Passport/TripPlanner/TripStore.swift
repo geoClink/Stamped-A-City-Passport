@@ -84,6 +84,11 @@ final class TripStore: ObservableObject {
         trips.filter { $0.cityName == cityName }
     }
 
+    /// Trips planned outside the Stamped cities (2.5's "New Trip Anywhere").
+    var anywhereTrips: [Trip] {
+        trips.filter { $0.listedCity == nil }
+    }
+
     func trip(withID tripID: String) -> Trip? {
         trips.first { $0.id == tripID }
     }
@@ -91,13 +96,15 @@ final class TripStore: ObservableObject {
     // MARK: - Trips
 
     /// Creates a trip with one empty day and returns it.
+    /// Pass an `area` for an anywhere trip; leave it nil for a Stamped city.
     @discardableResult
-    func createTrip(name: String, cityName: String, startDate: Date? = nil) -> Trip {
+    func createTrip(name: String, cityName: String, area: TripArea? = nil, startDate: Date? = nil) -> Trip {
         let trimmed = name.trimmingCharacters(in: .whitespacesAndNewlines)
         let trip = Trip(
             name: trimmed.isEmpty ? "\(cityName) Trip" : trimmed,
             cityName: cityName,
-            startDate: startDate
+            startDate: startDate,
+            area: area
         )
         trips.append(trip)
         return trip
@@ -115,6 +122,12 @@ final class TripStore: ObservableObject {
 
     func setStartDate(_ date: Date?, for tripID: String) {
         updateTrip(tripID) { $0.startDate = date }
+    }
+
+    /// Sets where an anywhere trip's map centres (also used to repair a trip
+    /// whose area was dropped by an older app version re-saving it).
+    func setArea(_ area: TripArea?, for tripID: String) {
+        updateTrip(tripID) { $0.area = area }
     }
 
     // MARK: - Days

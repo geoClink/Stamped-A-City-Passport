@@ -41,6 +41,9 @@ Still to do:
 ## 2.5: Around the landmark + Vision Pro
 
 iPhone/iPad (Apple data only, no partners needed):
+- [x] Plan a trip anywhere: "My Trips" on the home screen, "New Trip Anywhere" searches Apple Maps for an area, stops are Apple Maps places (no stamps or quiz). Old 2.4 trips and places still load (unit-tested). Branch `feature/trip-anywhere`
+- [ ] 3D "Tour This Trip" for anywhere trips (hidden today: the 3D map needs a Stamped city)
+- [ ] Test anywhere trips on a real device, including iCloud sync with a 2.4 device
 - [ ] "Stay" chip: hotels from Apple Maps alongside Food and Coffee
 - [ ] Transit and walking times between trip stops (`MKDirections`)
 - [ ] "Directions for this day" hands the ordered stops to Apple Maps

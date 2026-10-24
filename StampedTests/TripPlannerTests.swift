@@ -8,6 +8,7 @@
 //
 
 import XCTest
+import CoreLocation
 @testable import Stamped_
 
 // MARK: - TripStore
@@ -245,5 +246,126 @@ final class TripTourTests: XCTestCase {
         let steps = TripTour.steps(for: trip, buildings: [building("a")], customPlaces: [])
 
         XCTAssertEqual(steps.map(\.dayNumber), [2])
+    }
+}
+
+// MARK: - Trips anywhere (2.5)
+
+@MainActor
+final class TripAnywhereTests: XCTestCase {
+    /// A trip exactly as the 2.4 app saves it: no "area" key. Dates are seconds
+    /// since 2001 and enum cases are keyed by name, which is Codable's default.
+    private let oldTripJSON = """
+    [{"id":"t1","name":"Boston Weekend","cityName":"Boston","startDate":782870400,
+      "days":[{"id":"d1","stops":[
+        {"id":"s1","kind":{"landmark":{"buildingID":"boston-1"}}},
+        {"id":"s2","kind":{"place":{"placeID":"p1"}}}
+      ]}]}]
+    """
+
+    /// The 2.4 Trip struct, so we can check the old app can still read new data.
+    private struct OldTrip: Decodable {
+        let id: String
+        let name: String
+        let cityName: String
+        let startDate: Date?
+        let days: [TripDay]
+    }
+
+    // Checks a trip saved by 2.4 (no "area") still decodes, as a Boston trip with its stops
+    func testDecodesOldFormatTrip() throws {
+        let trips = try JSONDecoder().decode([Trip].self, from: Data(oldTripJSON.utf8))
+
+        XCTAssertEqual(trips.count, 1)
+        XCTAssertNil(trips[0].area)
+        XCTAssertEqual(trips[0].listedCity, .boston)
+        XCTAssertEqual(trips[0].days[0].stops.map(\.kind), [
+            .landmark(buildingID: "boston-1"),
+            .place(placeID: "p1"),
+        ])
+    }
+
+    // Checks an old trip comes back in a store that loads it from UserDefaults
+    func testStoreLoadsOldFormatTrip() {
+        let suiteName = "TripAnywhereTests"
+        let defaults = UserDefaults(suiteName: suiteName)!
+        defaults.removePersistentDomain(forName: suiteName)
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+        defaults.set(Data(oldTripJSON.utf8), forKey: "GlobalTripsKey")
+
+        let store = TripStore(defaults: defaults, iCloud: nil)
+
+        XCTAssertEqual(store.trips(in: "Boston").map(\.name), ["Boston Weekend"])
+        XCTAssertTrue(store.anywhereTrips.isEmpty)
+    }
+
+    // Checks a place saved by 2.4 (with its extra Apple Maps details) still decodes
+    func testDecodesOldFormatCustomPlace() throws {
+        let json = """
+        [{"id":"p1","name":"Joe's Pizza","address":"7 Carmine St","latitude":40.73,"longitude":-74.0,
+          "cityName":"New York","websiteURL":"https://joespizzanyc.com","category":"MKPOICategoryRestaurant"}]
+        """
+        let places = try JSONDecoder().decode([CustomPlace].self, from: Data(json.utf8))
+
+        XCTAssertEqual(places.first?.cityName, "New York")
+        XCTAssertNil(places.first?.phoneNumber)
+    }
+
+    // Checks the 2.4 app can still read trips saved by 2.5, including anywhere trips
+    func testOldAppCanReadNewTrips() throws {
+        let krakow = Trip(name: "Kraków Trip", cityName: "Kraków",
+                          area: TripArea(name: "Kraków", latitude: 50.06, longitude: 19.94))
+        let data = try JSONEncoder().encode([krakow, Trip(name: "Boston Trip", cityName: "Boston")])
+
+        let oldTrips = try JSONDecoder().decode([OldTrip].self, from: data)
+
+        XCTAssertEqual(oldTrips.map(\.cityName), ["Kraków", "Boston"])
+    }
+
+    // Checks an anywhere trip keeps its area through saving and loading
+    func testAnywhereTripRoundTrip() throws {
+        let trip = Trip(name: "Kraków Trip", cityName: "Kraków",
+                        area: TripArea(name: "Kraków", latitude: 50.06, longitude: 19.94))
+        let decoded = try JSONDecoder().decode(Trip.self, from: JSONEncoder().encode(trip))
+
+        XCTAssertEqual(decoded, trip)
+        XCTAssertEqual(decoded.area?.name, "Kraków")
+    }
+
+    // Checks anywhere trips stay out of a Stamped city's planner and show in anywhereTrips
+    func testAnywhereTripsAreSeparateFromCityTrips() {
+        let suiteName = "TripAnywhereStoreTests"
+        let defaults = UserDefaults(suiteName: suiteName)!
+        defaults.removePersistentDomain(forName: suiteName)
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+        let store = TripStore(defaults: defaults, iCloud: nil)
+        store.createTrip(name: "Boston Trip", cityName: "Boston")
+        store.createTrip(name: "Kraków Trip", cityName: "Kraków",
+                         area: TripArea(name: "Kraków", latitude: 50.06, longitude: 19.94))
+
+        XCTAssertEqual(store.trips(in: "Boston").map(\.name), ["Boston Trip"])
+        XCTAssertEqual(store.anywhereTrips.map(\.name), ["Kraków Trip"])
+    }
+
+    // Checks listedCity finds Stamped cities by name and is nil for anywhere else
+    func testListedCity() {
+        XCTAssertEqual(Trip(name: "A", cityName: "Boston").listedCity, .boston)
+        XCTAssertNil(Trip(name: "B", cityName: "Kraków").listedCity)
+    }
+
+    // Checks an area named like a Stamped city (Paris, Texas) gets a different cityName
+    func testAnywhereCityNameAvoidsListedNames() {
+        XCTAssertEqual(Trip.anywhereCityName(for: "Kraków", context: "Kraków, Poland"), "Kraków")
+        XCTAssertEqual(Trip.anywhereCityName(for: "Paris", context: "Paris, TX"), "Paris, TX")
+        XCTAssertEqual(Trip.anywhereCityName(for: "Paris", context: nil), "Paris (Anywhere)")
+        XCTAssertEqual(Trip.anywhereCityName(for: "Paris", context: "Paris"), "Paris (Anywhere)")
+    }
+
+    // Checks a search result near a Stamped city is spotted (the city, not a nearby campus like UCL), and one far away isn't
+    func testListedCityNearCoordinate() {
+        // About 2 km from central London
+        XCTAssertEqual(CityLocation.City.listed(near: CLLocationCoordinate2D(latitude: 51.52, longitude: -0.10)), .london)
+        // Kraków: hundreds of km from any Stamped city
+        XCTAssertNil(CityLocation.City.listed(near: CLLocationCoordinate2D(latitude: 50.06, longitude: 19.94)))
     }
 }
