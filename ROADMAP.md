@@ -11,25 +11,29 @@ Shipped versions and their exact contents are in `CHANGELOG.md`, with matching g
 | Version | Theme | Status |
 |---|---|---|
 | 2.3 | Photoreal 3D city map, fly-to pins | Waiting for App Store review |
-| 2.4 | "Plan a trip on a 3D map" | In progress |
+| 2.4 | "Plan a trip on a 3D map" | Ready to upload (branch `release/2.4`) |
 | 2.5 | Around the landmark + Vision Pro launch | Planned |
 | 2.6 | Tours and hotels (affiliate links) | Planned, waiting on partner approval |
 
 ## 2.4: Plan a trip on a 3D map
 
-Built (on `feature/vision-pro-app`, see CHANGELOG "Unreleased"):
+Built (see CHANGELOG 2.4):
 - [x] Wishlist ("Want to Visit") and custom places from Apple Maps search, synced with iCloud
 - [x] Map card quick actions, filters, guided tour, map/satellite toggle
 - [x] Websites and ticket pages in-app; Ticketmaster events on cards
 - [x] Tap any Apple Maps place, category chips, Look Around preview in the card
 - [x] iPad: map opens full screen
-- [ ] Trip planner: trips, days, stops, reorder, optimize route (session in progress)
+- [x] Trip planner: trips, days, stops, reorder, optimize route
+- [x] "Add to Trip" from map cards and tapped Apple places
+- [x] Route lines between a day's stops, with walk times
+- [x] Tour flies through a trip day by day
+- [x] Campus Architecture collection (41 campuses, 202 buildings)
+- [x] Landmark data audit: 181 map pins corrected, Queenstown quiz fixed, "Built 0" hidden
 
 Still to do:
-- [ ] "Add to Trip" from map cards and tapped Apple places
-- [ ] Route lines between a day's stops, each day its own colour, walk times
-- [ ] Tour flies through a trip day by day
+- [ ] Each day's route in its own colour (all days are orange today)
 - [ ] "Suggest a day" with Apple Intelligence (reuse the existing itinerary engine)
+- [ ] Translate the trip planner and campus screens (English only today)
 - [ ] TestFlight build and real-device testing (pins in 3D photo mode, iCloud sync, AR, events)
 - [ ] App Store screenshots: iPhone 6.9", **iPad 13"** (missing today)
 - [ ] Fix screenshot 4's Apple Intelligence claim (show real AI text or change the headline)
@@ -47,7 +51,7 @@ Vision Pro (shares the iPhone listing; separate review):
 - [x] 3D globe of stamped cities (volume window)
 - [ ] Tap-any-place and trip plans in the big window
 - [ ] Test on a real Vision Pro (or thoroughly in the simulator by hand)
-- [ ] Localization (iPhone app has 9 languages; Vision Pro is English only)
+- [x] Localization into the iPhone app's 9 languages
 - [ ] Vision Pro App Store screenshots
 - [ ] Add the visionOS platform in App Store Connect and submit
 

@@ -10,7 +10,16 @@ How to use this file:
 
 ## [Unreleased]
 
+## [2.4] (build 9) – 2026-10-23
+
 ### Added
+- Trip planner: plan a trip over several days with landmarks and saved places, reorder stops, see walking times, optimize the route, and view each day on a route map. Synced with iCloud.
+- Add to Trip from the map's landmark card, saved-place card, or any Apple Maps place.
+- Trip tour: fly through a trip on the 3D map, day by day.
+- Campus Architecture collection: 41 university campuses and 202 buildings, with their own section in the city list and new achievements.
+- Tap any Apple Maps place on the city map, with category chips and a Look Around preview in the card.
+- Queenstown: three new landmarks (TSS Earnslaw, Kawarau Gorge Suspension Bridge, Queenstown Gardens), so its quiz now works.
+- iPad: the city map opens full screen with a Done button.
 - Custom "Want to Visit" places: search Apple Maps for any restaurant, shop or venue and save it. Saved places get their own map pins and a card with Look Around, Website, Call and Directions. Synced with iCloud.
 - Wishlist: heart any landmark from the map card, the building page or a long-press, with a "Want to Visit" section on each city page.
 - Map card quick actions: Stamp, Want to Go, Look Around, and arrows to step through landmarks in walking order.
@@ -22,10 +31,19 @@ How to use this file:
 - Upcoming Ticketmaster events on map cards: events at a landmark venue, or nearby events for saved places, with ticket links.
 - Vision Pro app: every city on a photoreal 3D map, landmark cards, and stamps synced from iPhone. Shares the iPhone app's App Store listing.
 - Vision Pro: layered app icon, a 10-question architecture quiz per city, and the Want to Visit list (landmarks and saved places synced with iPhone). Download size cut from 355 MB to about 24 MB by leaving out the Detroit 3D model.
+- Vision Pro: a 3D globe of every city with live stamp pins; drag to spin and tilt, tap to turn a city toward you.
+- Vision Pro: available in all 9 of the app's languages.
+
+### Changed
+- Riyadh: the King Abdulaziz Center for World Culture (Ithra), which is in Dhahran, is replaced by the King Fahad National Library.
 
 ### Fixed
+- Map pins for 181 landmarks moved to their real locations; some were in the wrong city or even the wrong country.
+- Natural places with no build date (lakes, mountains, villages) no longer show "Built 0", and the quiz no longer asks for their build year.
+- Heights that were really a mountain's elevation (Monserrate, Mount Entoto, Amman Citadel, Elephant Mountain) are no longer shown.
 - Years showing as "1,913" in the itinerary and other screens.
-- Missing or wrong landmark photos (Rockefeller Center, The Vessel, One World Trade Center).
+- Missing or wrong landmark photos for over 200 landmarks (including Rockefeller Center, The Vessel, One World Trade Center).
+- iPhone mistranslations of Close, Done, Cancel and Exit, Spanish quiz prompts, and landmark wording.
 - City maps opening too zoomed out when one landmark is far from the centre (New York and JFK).
 - Map losing your place after returning from a building page.
 - Unit tests compile and run again.
