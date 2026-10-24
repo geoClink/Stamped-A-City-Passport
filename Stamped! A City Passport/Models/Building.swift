@@ -25,4 +25,8 @@ struct Building: Identifiable, Hashable, Codable {
     // Optional geographic coordinates — preferred if present in the registry JSON
     let latitude: Double?
     let longitude: Double?
+
+    // Natural places (lakes, mountains, villages) have no build date, so the
+    // registry stores 0 for them. Screens use this to hide the year.
+    var hasKnownYear: Bool { yearBuilt != 0 }
 }

@@ -92,8 +92,10 @@ final class ItineraryNarrativeService: ObservableObject {
         guard stopDescriptions[building.id] == nil else { return }
 
         let session = LanguageModelSession(model: .default)
+        // Don't tell the model "Built 0" for natural places; it would repeat it.
+        let builtText = building.hasKnownYear ? "Built \(building.yearBuilt), " : ""
         let prompt = """
-        One sentence, max 15 words. Why visit \(building.name)? Built \(building.yearBuilt), \(building.buildingStyle) style. Be specific.
+        One sentence, max 15 words. Why visit \(building.name)? \(builtText)\(building.buildingStyle) style. Be specific.
         """
 
         do {

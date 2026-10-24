@@ -1711,8 +1711,8 @@
         "The Buffet at Bellagio"
       ],
       "currency": "USD ($)",
-      "latitude": 36.1473441,
-      "longitude": -115.1548642
+      "latitude": 36.113056,
+      "longitude": -115.176389
     },
     {
       "id": "lv_sphere",
@@ -1755,8 +1755,8 @@
         "Nobu"
       ],
       "currency": "USD ($)",
-      "latitude": 36.1480207,
-      "longitude": -115.1543981
+      "latitude": 36.117778,
+      "longitude": -115.175
     },
     {
       "id": "lv_lou_ruvo",
@@ -1865,8 +1865,8 @@
         "Wazuzu"
       ],
       "currency": "USD ($)",
-      "latitude": 36.1480207,
-      "longitude": -115.1543981
+      "latitude": 36.1274,
+      "longitude": -115.166211
     },
     {
       "id": "lv_apple_forum_shops",
@@ -2199,8 +2199,8 @@
         "La Mar"
       ],
       "currency": "AED (د.إ)",
-      "latitude": 25.130764,
-      "longitude": 55.1536375
+      "latitude": 25.138136,
+      "longitude": 55.127789
     },
     {
       "id": "dxb_cayan_tower",
@@ -2243,8 +2243,8 @@
         "Al Fanar Seafood"
       ],
       "currency": "AED (د.إ)",
-      "latitude": 25.0657,
-      "longitude": 55.17128,
+      "latitude": 25.23548,
+      "longitude": 55.30034,
       "_geocoded_by": "opencage-second-pass",
       "_geocode_query": "Dubai Frame, Zabeel Park, Dubai, UAE",
       "_geocode_ts": "20260324-134456"
@@ -2268,8 +2268,8 @@
         "Flow"
       ],
       "currency": "AED (د.إ)",
-      "latitude": 25.0657,
-      "longitude": 55.17128
+      "latitude": 25.217222,
+      "longitude": 55.283056
     },
     {
       "id": "dxb_opus",
@@ -2312,8 +2312,8 @@
         "LPM Restaurant"
       ],
       "currency": "AED (د.إ)",
-      "latitude": 34.31815,
-      "longitude": -86.49582
+      "latitude": 25.206914,
+      "longitude": 55.277894
     },
     {
       "id": "dxb_etihad_museum",
@@ -2334,8 +2334,8 @@
         "Al Machabous"
       ],
       "currency": "AED (د.إ)",
-      "latitude": 25.0657,
-      "longitude": 55.17128
+      "latitude": 25.23,
+      "longitude": 55.26
     }
   ],
   "Singapore": [
@@ -3086,8 +3086,8 @@
         "We, The Pizza"
       ],
       "currency": "USD ($)",
-      "latitude": 38.8716043,
-      "longitude": -77.0057659
+      "latitude": 38.889722,
+      "longitude": -77.008889
     },
     {
       "id": "glbl_apple_carnegie_library",
@@ -3640,8 +3640,8 @@
         "Badmaash"
       ],
       "currency": "INR (₹)",
-      "latitude": 12.9914,
-      "longitude": 77.5944
+      "latitude": 12.97175,
+      "longitude": 77.595833
     },
     {
       "id": "blr-04",
@@ -3684,8 +3684,8 @@
         "Orion Mall Food Court"
       ],
       "currency": "INR (₹)",
-      "latitude": 13.0323,
-      "longitude": 77.5609
+      "latitude": 13.0123,
+      "longitude": 77.5562
     }
   ],
   "Atlanta": [
@@ -5271,8 +5271,8 @@
         "Oakhurst Tea Room"
       ],
       "currency": "USD ($)",
-      "latitude": 39.9382383,
-      "longitude": -79.4473901
+      "latitude": 39.90626,
+      "longitude": -79.46783
     },
     {
       "id": "pit-05",
@@ -6023,8 +6023,8 @@
         "Main Street Brewing"
       ],
       "currency": "CAD ($)",
-      "latitude": 49.2748815,
-      "longitude": -123.1192317
+      "latitude": 49.2421,
+      "longitude": -123.1138
     },
     {
       "id": "yvr-09",
@@ -6201,8 +6201,8 @@
         "Vibe Garden"
       ],
       "currency": "USD ($)",
-      "latitude": 41.449505,
-      "longitude": -81.944711
+      "latitude": 41.508611,
+      "longitude": -81.695556
     },
     {
       "id": "cle-02",
@@ -6223,8 +6223,8 @@
         "Hofbräuhaus"
       ],
       "currency": "USD ($)",
-      "latitude": 41.320694,
-      "longitude": -81.6281165
+      "latitude": 41.498333,
+      "longitude": -81.693889
     },
     {
       "id": "cle-03",
@@ -6377,8 +6377,8 @@
         "The Burnham"
       ],
       "currency": "USD ($)",
-      "latitude": 41.3816057,
-      "longitude": -81.6409781
+      "latitude": 41.501111,
+      "longitude": -81.693611
     },
     {
       "id": "cle-10",
@@ -6687,8 +6687,8 @@
         "Six Mile Pub"
       ],
       "currency": "CAD ($)",
-      "latitude": 48.5759851,
-      "longitude": -123.6378831
+      "latitude": 48.4343,
+      "longitude": -123.4724
     },
     {
       "id": "vic-09",
@@ -6717,7 +6717,7 @@
       "name": "Mayfair Shopping Centre",
       "assetName": "appleVIC",
       "description": "This retail hub represents Victoria's modern shift toward minimalist glass and steel architecture. While the city lacks a standalone flagship 'Glass Cube,' this center features many stores with that aesthetic. The storefronts utilize floor-to-ceiling glass and open-concept interiors to create a contemporary shopping experience. It serves as the primary fashion and technology destination for the Greater Victoria region. Recent expansions have emphasized natural light and clean lines to reflect modern retail design trends.",
-      "architect": "N/A",
+      "architect": "Unknown",
       "yearBuilt": 2018,
       "address": "3147 Douglas St, Victoria, BC V8Z 6E3",
       "oldUse": "N/A",
@@ -7860,8 +7860,8 @@
         "Jing Yaa Tang"
       ],
       "currency": "CNY (¥)",
-      "latitude": 39.93264,
-      "longitude": 116.41834
+      "latitude": 39.915833,
+      "longitude": 116.390833
     },
     {
       "id": "pek_birds_nest",
@@ -7992,8 +7992,8 @@
         "Black Sesame Kitchen"
       ],
       "currency": "CNY (¥)",
-      "latitude": 39.93317,
-      "longitude": 116.37337
+      "latitude": 39.903333,
+      "longitude": 116.3875
     },
     {
       "id": "pek_citic_tower",
@@ -8014,8 +8014,8 @@
         "Jing Yaa Tang"
       ],
       "currency": "CNY (¥)",
-      "latitude": 39.95462,
-      "longitude": 116.5029
+      "latitude": 39.911389,
+      "longitude": 116.460278
     },
     {
       "id": "pek_national_theatre",
@@ -8036,8 +8036,8 @@
         "Hulu"
       ],
       "currency": "CNY (¥)",
-      "latitude": 39.93317,
-      "longitude": 116.37337
+      "latitude": 39.903333,
+      "longitude": 116.383611
     },
     {
       "id": "pek_daxing_airport",
@@ -8058,8 +8058,8 @@
         "Costa Coffee"
       ],
       "currency": "CNY (¥)",
-      "latitude": 39.50972,
-      "longitude": 116.69472
+      "latitude": 39.509167,
+      "longitude": 116.410556
     },
     {
       "id": "glbl_apple_sanlitun",
@@ -8123,8 +8123,8 @@
         "Element Fresh"
       ],
       "currency": "CNY (¥)",
-      "latitude": 39.84757,
-      "longitude": 116.27227
+      "latitude": 39.865556,
+      "longitude": 116.324167
     },
     {
       "id": "pek_poly_victory",
@@ -8234,8 +8234,8 @@
         "Saffron"
       ],
       "currency": "AED (د.إ)",
-      "latitude": 24.4132249,
-      "longitude": 54.5065238
+      "latitude": 24.412,
+      "longitude": 54.474
     },
     {
       "id": "auh_louvre_abudhabi",
@@ -8255,8 +8255,8 @@
         "Museum Café"
       ],
       "currency": "AED (د.إ)",
-      "latitude": 23.66667,
-      "longitude": 54.0
+      "latitude": 24.533,
+      "longitude": 54.40001
     },
     {
       "id": "auh_capital_gate",
@@ -8276,8 +8276,8 @@
         "18 Degrees"
       ],
       "currency": "AED (د.إ)",
-      "latitude": 24.4241579,
-      "longitude": 54.4130775
+      "latitude": 24.418637,
+      "longitude": 54.434692
     },
     {
       "id": "auh_aldar_hq",
@@ -8319,8 +8319,8 @@
         "Cascades"
       ],
       "currency": "AED (د.إ)",
-      "latitude": 23.66667,
-      "longitude": 54.0,
+      "latitude": 24.4619,
+      "longitude": 54.3167,
       "_geocoded_by": "opencage-second-pass",
       "_geocode_query": "Emirates Palace, Corniche Rd, Abu Dhabi, UAE",
       "_geocode_ts": "20260324-134501"
@@ -8366,8 +8366,8 @@
         "Amici"
       ],
       "currency": "AED (د.إ)",
-      "latitude": 24.486404,
-      "longitude": 54.6090712
+      "latitude": 24.467402,
+      "longitude": 54.606059
     },
     {
       "id": "auh_al_bahr_towers",
@@ -8434,8 +8434,8 @@
         "Larte"
       ],
       "currency": "AED (د.إ)",
-      "latitude": 23.66667,
-      "longitude": 54.0
+      "latitude": 24.530933,
+      "longitude": 54.406101
     },
     {
       "id": "auh_masdar_hq",
@@ -8500,8 +8500,8 @@
         "The Beach House"
       ],
       "currency": "AED (د.إ)",
-      "latitude": 23.66667,
-      "longitude": 54.0
+      "latitude": 24.539514,
+      "longitude": 54.398958
     },
     {
       "id": "auh_warner_bros",
@@ -8546,8 +8546,8 @@
         "Britannia & Co."
       ],
       "currency": "INR (₹)",
-      "latitude": 18.6291,
-      "longitude": 72.8919
+      "latitude": 18.93985,
+      "longitude": 72.83544
     },
     {
       "id": "bom_gateway",
@@ -8612,8 +8612,8 @@
         "Gaylord"
       ],
       "currency": "INR (₹)",
-      "latitude": 19.0167,
-      "longitude": 72.85
+      "latitude": 18.929666,
+      "longitude": 72.830036
     },
     {
       "id": "bom_antilia",
@@ -8678,8 +8678,8 @@
         "KOKO"
       ],
       "currency": "INR (₹)",
-      "latitude": 18.9448,
-      "longitude": 72.8524
+      "latitude": 19.0023,
+      "longitude": 72.8265
     },
     {
       "id": "bom_municipal",
@@ -8700,8 +8700,8 @@
         "Trishna"
       ],
       "currency": "INR (₹)",
-      "latitude": 18.6291,
-      "longitude": 72.8919
+      "latitude": 18.94,
+      "longitude": 72.8353
     },
     {
       "id": "bom_elphinstone",
@@ -8766,8 +8766,8 @@
         "Motodo Pizzeria"
       ],
       "currency": "INR (₹)",
-      "latitude": 19.07283,
-      "longitude": 72.88261,
+      "latitude": 19.0535,
+      "longitude": 72.8506,
       "_geocoded_by": "manual-suggested-replacement",
       "_geocode_ts": "20260324-140810"
     },
@@ -8790,8 +8790,8 @@
         "Irani Cafe"
       ],
       "currency": "INR (₹)",
-      "latitude": 19.1064114,
-      "longitude": 72.8635833
+      "latitude": 19.088611,
+      "longitude": 72.868056
     },
     {
       "id": "bom_isckon",
@@ -8833,8 +8833,8 @@
         "Dara's Dhaba"
       ],
       "currency": "INR (₹)",
-      "latitude": 19.235,
-      "longitude": 72.8598
+      "latitude": 19.228056,
+      "longitude": 72.806053
     },
     {
       "id": "bom_national_gallery",
@@ -8855,8 +8855,8 @@
         "145 Kala Ghoda"
       ],
       "currency": "INR (₹)",
-      "latitude": 19.0167,
-      "longitude": 72.85
+      "latitude": 18.9258,
+      "longitude": 72.8313
     }
   ],
   "Milan": [
@@ -9077,8 +9077,8 @@
         "Il Salumaio"
       ],
       "currency": "EUR (€)",
-      "latitude": 45.4159579,
-      "longitude": 9.0475197
+      "latitude": 45.4683,
+      "longitude": 9.2018
     },
     {
       "id": "mil_apple_liberty",
@@ -9587,8 +9587,8 @@
         "Ouzeria"
       ],
       "currency": "ILS (₪)",
-      "latitude": 32.08088,
-      "longitude": 34.78057
+      "latitude": 32.0775,
+      "longitude": 34.786667
     },
     {
       "id": "tlv_azrieli",
@@ -9653,8 +9653,8 @@
         "Santa Katarina"
       ],
       "currency": "ILS (₪)",
-      "latitude": 32.0460065,
-      "longitude": 34.7685921
+      "latitude": 32.064019,
+      "longitude": 34.769772
     },
     {
       "id": "tlv_pagoda",
@@ -9895,8 +9895,8 @@
         "Taizu"
       ],
       "currency": "ILS (₪)",
-      "latitude": 32.08088,
-      "longitude": 34.78057
+      "latitude": 32.114314,
+      "longitude": 34.804353
     },
     {
       "id": "tlv_independence_hall",
@@ -10445,8 +10445,8 @@
         "Xemei"
       ],
       "currency": "EUR (€)",
-      "latitude": 41.3888,
-      "longitude": 2.159
+      "latitude": 41.370556,
+      "longitude": 2.15
     },
     {
       "id": "bcn_palau_musica",
@@ -10472,8 +10472,8 @@
         "Ziryab Fusió"
       ],
       "currency": "EUR (€)",
-      "latitude": 41.3888,
-      "longitude": 2.159
+      "latitude": 41.3875,
+      "longitude": 2.175556
     },
     {
       "id": "bcn_agbar",
@@ -10661,8 +10661,8 @@
         "Cafè de l'Acadèmia"
       ],
       "currency": "EUR (€)",
-      "latitude": 41.4548563,
-      "longitude": 2.2519763
+      "latitude": 41.383889,
+      "longitude": 2.176389
     },
     {
       "id": "bcn_hotel_arts",
@@ -11203,8 +11203,8 @@
         "Starbucks Reserve Roastery (Nearby)"
       ],
       "currency": "CNY (¥)",
-      "latitude": 31.22222,
-      "longitude": 121.45806
+      "latitude": 31.2355,
+      "longitude": 121.501
     },
     {
       "id": "sha_apple_campus",
@@ -11282,8 +11282,8 @@
         "Godiva Cafe"
       ],
       "currency": "CNY (¥)",
-      "latitude": 31.22222,
-      "longitude": 121.45806
+      "latitude": 31.241669,
+      "longitude": 121.494717
     },
     {
       "id": "sha_jin_mao",
@@ -11308,8 +11308,8 @@
         "Cloud 9"
       ],
       "currency": "CNY (¥)",
-      "latitude": 31.22222,
-      "longitude": 121.45806
+      "latitude": 31.237222,
+      "longitude": 121.501389
     },
     {
       "id": "sha_world_financial",
@@ -11334,8 +11334,8 @@
         "Ginto Sushi"
       ],
       "currency": "CNY (¥)",
-      "latitude": 31.22222,
-      "longitude": 121.45806
+      "latitude": 31.236667,
+      "longitude": 121.502778
     },
     {
       "id": "sha_customs_house",
@@ -11490,8 +11490,8 @@
         "Haidilao Hot Pot"
       ],
       "currency": "CNY (¥)",
-      "latitude": 31.22222,
-      "longitude": 121.45806
+      "latitude": 31.186389,
+      "longitude": 121.49
     },
     {
       "id": "sha_peace_hotel",
@@ -11592,8 +11592,8 @@
         "Scena Italian Restaurant"
       ],
       "currency": "CNY (¥)",
-      "latitude": 31.22222,
-      "longitude": 121.45806
+      "latitude": 31.222107,
+      "longitude": 121.534338
     },
     {
       "id": "sha_1933_old_millfun",
@@ -11673,8 +11673,8 @@
         "Phed Phed Hey"
       ],
       "currency": "THB (฿)",
-      "latitude": 13.7333,
-      "longitude": 100.5333
+      "latitude": 13.723611,
+      "longitude": 100.528333
     },
     {
       "id": "bkk_wat_arun",
@@ -11916,8 +11916,8 @@
         "Haidilao"
       ],
       "currency": "THB (฿)",
-      "latitude": 13.7833,
-      "longitude": 100.5167
+      "latitude": 13.746944,
+      "longitude": 100.539722
     },
     {
       "id": "bkk_apple_iconsiam",
@@ -11995,8 +11995,8 @@
         "La Monita Taqueria"
       ],
       "currency": "THB (฿)",
-      "latitude": 13.7833,
-      "longitude": 100.5167
+      "latitude": 13.749167,
+      "longitude": 100.528333
     },
     {
       "id": "bkk_nailert_park",
@@ -12022,8 +12022,8 @@
         "Gaa"
       ],
       "currency": "THB (฿)",
-      "latitude": 13.7833,
-      "longitude": 100.5167
+      "latitude": 13.74622,
+      "longitude": 100.54711
     }
   ],
   "Buffalo": [
@@ -12458,8 +12458,8 @@
         "Old Sphinx Coffee Shop"
       ],
       "currency": "EGP (ج.م)",
-      "latitude": 30.0120843,
-      "longitude": 31.2075108
+      "latitude": 29.979167,
+      "longitude": 31.134167
     },
     {
       "id": "cai_tower",
@@ -12486,8 +12486,8 @@
         "O's Pasta"
       ],
       "currency": "EGP (ج.م)",
-      "latitude": 27.0,
-      "longitude": 30.0
+      "latitude": 30.045833,
+      "longitude": 31.224444
     },
     {
       "id": "cai_muhammad_ali",
@@ -12513,8 +12513,8 @@
         "Fishawy’s"
       ],
       "currency": "EGP (ج.م)",
-      "latitude": 27.0,
-      "longitude": 30.0
+      "latitude": 30.028611,
+      "longitude": 31.259722
     },
     {
       "id": "cai_baron_empain",
@@ -12624,8 +12624,8 @@
         "Groppi"
       ],
       "currency": "EGP (ج.م)",
-      "latitude": 27.0,
-      "longitude": 30.0
+      "latitude": 30.043105,
+      "longitude": 31.234994
     },
     {
       "id": "cai_bab_zuwayla",
@@ -12678,8 +12678,8 @@
         "Zamalek Rooftop"
       ],
       "currency": "EGP (ج.م)",
-      "latitude": 27.0,
-      "longitude": 30.0
+      "latitude": 30.0054,
+      "longitude": 31.2301
     },
     {
       "id": "cai_opera_house",
@@ -12705,8 +12705,8 @@
         "Marriott Garden Promenade"
       ],
       "currency": "EGP (ج.م)",
-      "latitude": 27.0,
-      "longitude": 30.0
+      "latitude": 30.04245,
+      "longitude": 31.22353
     },
     {
       "id": "cai_iconic_tower",
@@ -12759,8 +12759,8 @@
         "Enab Beirut"
       ],
       "currency": "EGP (ج.م)",
-      "latitude": 27.0,
-      "longitude": 30.0
+      "latitude": 30.027025,
+      "longitude": 31.4118
     },
     {
       "id": "cai_abdeen_palace",
@@ -12786,8 +12786,8 @@
         "After Eight"
       ],
       "currency": "EGP (ج.م)",
-      "latitude": 27.0,
-      "longitude": 30.0
+      "latitude": 30.041667,
+      "longitude": 31.248333
     },
     {
       "id": "cai_mosque_madrasa_sultan_hassan",
@@ -12813,8 +12813,8 @@
         "Kebdet El Prince"
       ],
       "currency": "EGP (ج.م)",
-      "latitude": 27.0,
-      "longitude": 30.0
+      "latitude": 30.0319,
+      "longitude": 31.2567
     },
     {
       "id": "cai_egyptian_museum_tahrir",
@@ -12840,8 +12840,8 @@
         "Culina"
       ],
       "currency": "EGP (ج.م)",
-      "latitude": 27.0,
-      "longitude": 30.0
+      "latitude": 30.047778,
+      "longitude": 31.233333
     }
   ],
   "Sydney": [
@@ -12869,8 +12869,8 @@
         "The Gidley"
       ],
       "currency": "AUD ($)",
-      "latitude": -33.8274348,
-      "longitude": 151.0818508
+      "latitude": -33.85681,
+      "longitude": 151.21514
     },
     {
       "id": "syd_harbour_bridge",
@@ -13057,8 +13057,8 @@
         "Love, Tilly Devine"
       ],
       "currency": "AUD ($)",
-      "latitude": -33.6911442,
-      "longitude": 150.7860695
+      "latitude": -33.871111,
+      "longitude": 151.213333
     },
     {
       "id": "syd_customs_house",
@@ -13329,8 +13329,8 @@
         "Balcón del Zócalo"
       ],
       "currency": "MXN ($)",
-      "latitude": 23.0,
-      "longitude": -102.0
+      "latitude": 19.4353,
+      "longitude": -99.1414
     },
     {
       "id": "mex_soumaya",
@@ -13632,8 +13632,8 @@
         "Zéfiro"
       ],
       "currency": "MXN ($)",
-      "latitude": 23.0,
-      "longitude": -102.0
+      "latitude": 19.435686,
+      "longitude": -99.1404
     },
     {
       "id": "mex_casa_barragan",
@@ -14420,8 +14420,8 @@
         "The Antico Bar"
       ],
       "currency": "USD ($)",
-      "latitude": 40.655246,
-      "longitude": -73.797769
+      "latitude": 40.645833,
+      "longitude": -73.7775
     },
     {
       "id": "nyc_oculus",
@@ -15665,6 +15665,72 @@
       "currency": "NZD ($)",
       "latitude": -45.0315233,
       "longitude": 168.6588795
+    },
+    {
+      "id": "zqn_tss_earnslaw",
+      "name": "TSS Earnslaw",
+      "assetName": "tss_earnslaw",
+      "description": "Launched in 1912, this Edwardian twin-screw steamer is the only remaining coal-fired passenger steamship still in commercial service in the Southern Hemisphere. Designed by naval architect Hugh McRae, she was built by John McGregor and Company in Dunedin, then taken apart with every steel hull plate numbered, carried by train to Kingston at the foot of Lake Wakatipu, and reassembled on the shore. At 51.2 metres she was the largest steamship ever built in New Zealand. More than a century later she is still one of Central Otago's oldest tourist attractions, carrying passengers across the lake from Queenstown.",
+      "architect": "Hugh McRae (naval architect) / John McGregor & Co.",
+      "yearBuilt": 1912,
+      "address": "Steamer Wharf, Beach Street, Queenstown 9300, New Zealand",
+      "oldUse": "Lake Cargo & Passenger Steamer",
+      "newUse": "Heritage Cruise Ship",
+      "buildingStyle": "Edwardian Steamship",
+      "numberOfStories": 1,
+      "height": 0,
+      "foodSpots": [
+        "Fergburger",
+        "Patagonia Chocolates",
+        "Cookie Time Bar"
+      ],
+      "currency": "NZD ($)",
+      "latitude": -45.0332545,
+      "longitude": 168.6577993
+    },
+    {
+      "id": "zqn_kawarau_bridge",
+      "name": "Kawarau Gorge Suspension Bridge",
+      "assetName": "kawarau_bridge",
+      "description": "Completed in 1880 to carry traffic to the Central Otago goldfields, this suspension bridge designed by Harry Higginson hangs 43 metres above the turquoise Kawarau River. After road traffic moved to a new highway bridge on State Highway 6, the old crossing found a second life as the world's first commercial bungy jumping site. Today it also carries walkers, runners and cyclists on the Queenstown Trail across the rugged Kawarau Gorge.",
+      "architect": "Harry Higginson",
+      "yearBuilt": 1880,
+      "address": "State Highway 6, Kawarau Gorge, Gibbston, New Zealand",
+      "oldUse": "Road Bridge",
+      "newUse": "Bungy Site / Walking & Cycling Trail",
+      "buildingStyle": "Victorian Suspension Bridge",
+      "numberOfStories": 1,
+      "height": 43,
+      "foodSpots": [
+        "Fergburger",
+        "Patagonia Chocolates",
+        "Botswana Butchery"
+      ],
+      "currency": "NZD ($)",
+      "latitude": -45.009,
+      "longitude": 168.899
+    },
+    {
+      "id": "zqn_queenstown_gardens",
+      "name": "Queenstown Gardens",
+      "assetName": "queenstown_gardens",
+      "description": "Beside Lake Wakatipu, these gardens began in 1866 when the town's first mayor planted two English oaks to mark the founding of the borough, and they officially opened a year later. Early residents planted exotic trees wherever they pleased, and the towering Douglas firs they left behind now shelter the whole headland. Paths loop past a rose garden, a pond and an 1891 band rotunda (rebuilt in 1999), with views of Lake Wakatipu, the Frankton Arm and the surrounding mountains. Every winter the gardens host the LUMA Southern Lights festival.",
+      "architect": "Borough of Queenstown (community planting)",
+      "yearBuilt": 1867,
+      "address": "Park Street, Queenstown 9300, New Zealand",
+      "oldUse": "Public Reserve",
+      "newUse": "Botanical Garden / Park",
+      "buildingStyle": "Victorian Botanical Garden",
+      "numberOfStories": 1,
+      "height": 0,
+      "foodSpots": [
+        "Fergburger",
+        "Patagonia Chocolates",
+        "The Bunker"
+      ],
+      "currency": "NZD ($)",
+      "latitude": -45.037704,
+      "longitude": 168.659836
     }
   ],
   "Nashville": [
@@ -15800,8 +15866,8 @@
         "Drug Store Coffee"
       ],
       "currency": "USD ($)",
-      "latitude": 36.201815,
-      "longitude": -86.747012
+      "latitude": 36.165833,
+      "longitude": -86.784167
     },
     {
       "id": "nsh_country_music_hof",
@@ -16315,8 +16381,8 @@
         "The Pork Shop"
       ],
       "currency": "USD ($)",
-      "latitude": 33.4512713,
-      "longitude": -112.0031042
+      "latitude": 33.4509,
+      "longitude": -111.9732
     },
     {
       "id": "phx-12",
@@ -16398,8 +16464,8 @@
         "Signor Sassi"
       ],
       "currency": "SAR (SR)",
-      "latitude": 23.05,
-      "longitude": 45.55
+      "latitude": 24.7113,
+      "longitude": 46.6744
     },
     {
       "id": "ruh-02",
@@ -16452,35 +16518,31 @@
         "Il Baretto"
       ],
       "currency": "SAR (SR)",
-      "latitude": 23.05,
-      "longitude": 45.55
+      "latitude": 24.690278,
+      "longitude": 46.685278
     },
     {
-      "id": "ruh-04",
-      "name": "King Abdulaziz Center for World Culture (Ithra)",
-      "assetName": "ithra",
-      "description": "Though located in the Eastern Province, it is a landmark of Saudi architecture that perfectly mirrors Riyadh's futuristic vision. The building consists of several 'pebbles' wrapped in 350 kilometers of stainless steel tubes for a seamless metallic look. It symbolizes the historical layers of the earth and the future of innovation, standing on the site where oil was first discovered. The interior contains a massive library, a theater, and several museum galleries focused on culture and science. It has become a global destination for creative exchange and a centerpiece of the Kingdom's cultural renaissance.",
-      "architect": "Snøhetta",
-      "yearBuilt": 2017,
-      "address": "8386 Ring Rd, Gharb Al Dhahran, Dhahran 34461, Saudi Arabia",
-      "oldUse": "N/A",
-      "newUse": "Cultural Hub / Museum / Library",
-      "buildingStyle": "Neo-Futurism",
-      "numberOfStories": 18,
-      "height": 90,
+      "id": "ruh-14",
+      "name": "King Fahad National Library",
+      "assetName": "kingFahadLibrary",
+      "description": "Saudi Arabia's national library is a building wrapped around another building. Rather than demolish the original 1980s library, with its cross-shaped plan and small central dome, the Dortmund firm Gerber Architekten enclosed it inside a new five-storey square block measuring 140 metres on each side. The new facade is shaded by white textile sails that cut the desert glare while recalling Bedouin tents and the lightweight tensile structures Frei Otto pioneered in the Kingdom. It stands on King Fahd Road, one of Riyadh's main avenues, right beside the Al Faisaliah tower.",
+      "architect": "Gerber Architekten",
+      "yearBuilt": 2015,
+      "address": "King Fahd Rd, Al Olaya, Riyadh, Saudi Arabia",
+      "oldUse": "National Library (1990 building)",
+      "newUse": "National Library",
+      "buildingStyle": "Contemporary / Tensile Facade",
+      "numberOfStories": 5,
+      "height": 0,
       "foodSpots": [
-        "Ithra Café",
-        "Entrecôte Café de Paris",
-        "Takya",
-        "Pure",
-        "L’Antica Pizza da Michele",
-        "Section-B",
-        "Salt",
-        "Operation: Falafel"
+        "The Globe",
+        "LPM Riyadh",
+        "Yauatcha",
+        "Entrecôte Café de Paris"
       ],
       "currency": "SAR (SR)",
-      "latitude": 26.28864,
-      "longitude": 50.11396
+      "latitude": 24.686355,
+      "longitude": 46.683314
     },
     {
       "id": "ruh-05",
@@ -16560,8 +16622,8 @@
         "Yo! Sushi"
       ],
       "currency": "SAR (SR)",
-      "latitude": 24.8460149,
-      "longitude": 46.7317529
+      "latitude": 24.87924,
+      "longitude": 46.722068
     },
     {
       "id": "ruh-08",
@@ -16587,8 +16649,8 @@
         "Angelina Paris"
       ],
       "currency": "SAR (SR)",
-      "latitude": 25.0,
-      "longitude": 45.0
+      "latitude": 24.733333,
+      "longitude": 46.575556
     },
     {
       "id": "ruh-09",
@@ -16641,8 +16703,8 @@
         "Shawarma House"
       ],
       "currency": "SAR (SR)",
-      "latitude": 24.66434,
-      "longitude": 46.79827
+      "latitude": 24.677222,
+      "longitude": 46.778889
     },
     {
       "id": "ruh-11",
@@ -16722,8 +16784,8 @@
         "Subway"
       ],
       "currency": "SAR (SR)",
-      "latitude": 24.8460149,
-      "longitude": 46.7317529
+      "latitude": 24.957778,
+      "longitude": 46.698889
     },
     {
       "id": "ruh-apple-roshn",
@@ -16749,8 +16811,8 @@
         "P.F. Chang's"
       ],
       "currency": "SAR (SR)",
-      "latitude": 23.05,
-      "longitude": 45.55
+      "latitude": 24.84143,
+      "longitude": 46.733354
     }
   ],
   "Austin": [
@@ -17185,8 +17247,8 @@
         "The Weir Rooms"
       ],
       "currency": "EUR (€)",
-      "latitude": 51.89797,
-      "longitude": -8.47061
+      "latitude": 51.8944,
+      "longitude": -8.4806
     },
     {
       "id": "crk-02",
@@ -17428,8 +17490,8 @@
         "Cask"
       ],
       "currency": "EUR (€)",
-      "latitude": 51.7056254,
-      "longitude": -8.5223155
+      "latitude": 51.9003,
+      "longitude": -8.4726
     },
     {
       "id": "crk-11",
@@ -17536,8 +17598,8 @@
         "Wagamama"
       ],
       "currency": "EUR (€)",
-      "latitude": 51.89797,
-      "longitude": -8.47061
+      "latitude": 51.899045,
+      "longitude": -8.472567
     }
   ],
   "St. Louis": [
@@ -18619,8 +18681,8 @@
         "Tanah Lot Restaurant"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -8.5,
-      "longitude": 115.0
+      "latitude": -8.62107,
+      "longitude": 115.08716
     },
     {
       "id": "bali-besakih",
@@ -18643,8 +18705,8 @@
         "Warung Damar"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -8.4689294,
-      "longitude": 115.4030734
+      "latitude": -8.374368,
+      "longitude": 115.450936
     },
     {
       "id": "bali-tirta-gangga",
@@ -18668,8 +18730,8 @@
         "Warung Rijasa"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -8.5,
-      "longitude": 115.0
+      "latitude": -8.411944,
+      "longitude": 115.5875
     },
     {
       "id": "bali-green-school",
@@ -18718,8 +18780,8 @@
         "Mak Jo Ambiance"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -8.5,
-      "longitude": 115.0
+      "latitude": -8.813951,
+      "longitude": 115.166882
     },
     {
       "id": "bali-ulun-danu",
@@ -18742,8 +18804,8 @@
         "Strawberry Hill"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -8.5,
-      "longitude": 115.0
+      "latitude": -8.275278,
+      "longitude": 115.166389
     },
     {
       "id": "bali-uluwatu",
@@ -18768,8 +18830,8 @@
         "Drifter Cafe"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -8.5,
-      "longitude": 115.0
+      "latitude": -8.828889,
+      "longitude": 115.085278
     },
     {
       "id": "bali-ubud-palace",
@@ -18794,8 +18856,8 @@
         "The Sayan House"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -8.5,
-      "longitude": 115.0
+      "latitude": -8.5068,
+      "longitude": 115.2626
     },
     {
       "id": "bali-potato-head",
@@ -18821,8 +18883,8 @@
         "Sisterfields"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -8.5,
-      "longitude": 115.0,
+      "latitude": -8.678889,
+      "longitude": 115.150278,
       "_geocoded_by": "manual-suggested-replacement",
       "_geocode_ts": "20260324-140810"
     },
@@ -18900,8 +18962,8 @@
         "Citra Utama Seafood"
       ],
       "currency": "IDR (Rp)",
-      "latitude": 1.08333,
-      "longitude": 104.05
+      "latitude": 0.981667,
+      "longitude": 104.041667
     },
     {
       "id": "batam-marriott-hotel",
@@ -18953,8 +19015,8 @@
         "RM Yong Kee Seafood"
       ],
       "currency": "IDR (Rp)",
-      "latitude": 1.08333,
-      "longitude": 104.05
+      "latitude": 1.126452,
+      "longitude": 104.053489
     },
     {
       "id": "batam-nagoya-hill",
@@ -19004,8 +19066,8 @@
         "Kantin Vihara"
       ],
       "currency": "IDR (Rp)",
-      "latitude": 1.08333,
-      "longitude": 104.05
+      "latitude": 1.129439,
+      "longitude": 104.034725
     },
     {
       "id": "batam-tanjak-mosque",
@@ -19029,8 +19091,8 @@
         "Warung Coffee Batam"
       ],
       "currency": "IDR (Rp)",
-      "latitude": 1.08333,
-      "longitude": 104.05
+      "latitude": 1.124242,
+      "longitude": 104.112414
     },
     {
       "id": "batam-one-residence",
@@ -19077,8 +19139,8 @@
         "Kedai Kopi Pulau"
       ],
       "currency": "IDR (Rp)",
-      "latitude": 1.08333,
-      "longitude": 104.05
+      "latitude": 0.769378,
+      "longitude": 104.191261
     },
     {
       "id": "batam-pollux-habibie",
@@ -19102,8 +19164,8 @@
         "Pepper Lunch"
       ],
       "currency": "IDR (Rp)",
-      "latitude": 1.08333,
-      "longitude": 104.05
+      "latitude": 1.119844,
+      "longitude": 104.04541
     },
     {
       "id": "batam-vihara-budhi-bhakti",
@@ -19126,8 +19188,8 @@
         "Aceng Kedai Kopi"
       ],
       "currency": "IDR (Rp)",
-      "latitude": 1.08333,
-      "longitude": 104.05
+      "latitude": 1.140301,
+      "longitude": 104.010853
     },
     {
       "id": "batam-hang-nadim-t2",
@@ -19178,8 +19240,8 @@
         "Warung Tekko"
       ],
       "currency": "IDR (Rp)",
-      "latitude": 1.08333,
-      "longitude": 104.05,
+      "latitude": 1.127943,
+      "longitude": 104.055197,
       "_geocoded_by": "opencage-second-pass",
       "_geocode_query": "Batam City Hall, Engku Putri, Batam, Indonesia",
       "_geocode_ts": "20260324-134534"
@@ -19259,8 +19321,8 @@
         "Rumah Makan Ampera"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -6.21462,
-      "longitude": 106.84513,
+      "latitude": -6.169804,
+      "longitude": 106.830921,
       "_geocoded_by": "manual-suggested-replacement",
       "_geocode_ts": "20260324-140810"
     },
@@ -19344,8 +19406,8 @@
         "Ippudo"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -6.21462,
-      "longitude": 106.84513,
+      "latitude": -6.19914,
+      "longitude": 106.82263,
       "_geocoded_by": "opencage-second-pass",
       "_geocode_query": "Autograph Tower, Thamrin, Jakarta",
       "_geocode_ts": "20260324-134602"
@@ -19372,8 +19434,8 @@
         "Solaria"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -6.21462,
-      "longitude": 106.84513
+      "latitude": -6.178526,
+      "longitude": 106.832776
     },
     {
       "id": "jakarta-cathedral",
@@ -19397,8 +19459,8 @@
         "Sate Padang H. Ajo Manalagi"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -6.21462,
-      "longitude": 106.84513
+      "latitude": -6.169257,
+      "longitude": 106.833069
     },
     {
       "id": "jakarta-national-museum",
@@ -19422,8 +19484,8 @@
         "Kantin Museum"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -6.21462,
-      "longitude": 106.84513
+      "latitude": -6.1761,
+      "longitude": 106.8217
     },
     {
       "id": "jakarta-marathon-building",
@@ -19500,8 +19562,8 @@
         "Starbucks"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -6.21462,
-      "longitude": 106.84513
+      "latitude": -6.181761,
+      "longitude": 106.826957
     },
     {
       "id": "jakarta-pos-bloc",
@@ -19525,8 +19587,8 @@
         "Tropic Ice Cream"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -6.21462,
-      "longitude": 106.84513
+      "latitude": -6.167187,
+      "longitude": 106.833855
     },
     {
       "id": "jakarta-apple-plaza-indo",
@@ -19844,8 +19906,8 @@
         "Bebek Rizky"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -7.24917,
-      "longitude": 112.75083
+      "latitude": -7.184167,
+      "longitude": 112.780278
     },
     {
       "id": "sub-hotel-majapahit",
@@ -19870,8 +19932,8 @@
         "Rawon Setan"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -7.24917,
-      "longitude": 112.75083
+      "latitude": -7.259722,
+      "longitude": 112.739722
     },
     {
       "id": "sub-monkasel",
@@ -19896,8 +19958,8 @@
         "Warkop Kalimas"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -7.24917,
-      "longitude": 112.75083
+      "latitude": -7.26552,
+      "longitude": 112.75027
     },
     {
       "id": "sub-heroes-monument",
@@ -19922,8 +19984,8 @@
         "Bubur Madura"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -7.24917,
-      "longitude": 112.75083
+      "latitude": -7.246111,
+      "longitude": 112.7375
     },
     {
       "id": "sub-al-akbar-mosque",
@@ -19948,8 +20010,8 @@
         "Tahu Tek"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -7.24917,
-      "longitude": 112.75083
+      "latitude": -7.336543,
+      "longitude": 112.715243
     },
     {
       "id": "sub-house-of-sampoerna",
@@ -19974,8 +20036,8 @@
         "Es Teler 77"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -7.24917,
-      "longitude": 112.75083
+      "latitude": -7.230813,
+      "longitude": 112.734247
     },
     {
       "id": "sub-tunjungan-plaza",
@@ -20000,8 +20062,8 @@
         "Starbucks Reserve"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -7.24917,
-      "longitude": 112.75083
+      "latitude": -7.262778,
+      "longitude": 112.739167
     },
     {
       "id": "sub-cheng-hoo-mosque",
@@ -20026,8 +20088,8 @@
         "Es Campur"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -7.24917,
-      "longitude": 112.75083
+      "latitude": -7.251944,
+      "longitude": 112.746667
     },
     {
       "id": "sub-de-javasche-bank",
@@ -20052,8 +20114,8 @@
         "Depot Anda"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -7.24917,
-      "longitude": 112.75083
+      "latitude": -7.235333,
+      "longitude": 112.736806
     },
     {
       "id": "sub-kyad-kyad",
@@ -20104,8 +20166,8 @@
         "Bakso Atom"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -7.24917,
-      "longitude": 112.75083
+      "latitude": -7.2657,
+      "longitude": 112.7455
     },
     {
       "id": "sub-pakuwon-tower",
@@ -20185,8 +20247,8 @@
         "Gold Dragon"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -6.25,
-      "longitude": 106.58333
+      "latitude": -6.301265,
+      "longitude": 106.65437
     },
     {
       "id": "tng-ice-bsd",
@@ -20211,8 +20273,8 @@
         "Starbucks ICE"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -6.25,
-      "longitude": 106.58333
+      "latitude": -6.300258,
+      "longitude": 106.636604
     },
     {
       "id": "tng-scientia-square",
@@ -20238,8 +20300,8 @@
         "Turning Point Coffee"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -6.25,
-      "longitude": 106.58333
+      "latitude": -6.257685,
+      "longitude": 106.615193
     },
     {
       "id": "tng-uph-tower",
@@ -20264,8 +20326,8 @@
         "Kantin Benton Junction"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -6.25,
-      "longitude": 106.58333
+      "latitude": -6.2292,
+      "longitude": 106.6108
     },
     {
       "id": "tng-boen-tek-bio",
@@ -20317,8 +20379,8 @@
         "Ramen Ya!"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -6.25,
-      "longitude": 106.58333
+      "latitude": -6.283743,
+      "longitude": 106.63622
     },
     {
       "id": "tng-benteng-heritage",
@@ -20370,8 +20432,8 @@
         "Delico"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -6.17806,
-      "longitude": 106.63
+      "latitude": -6.125556,
+      "longitude": 106.655833
     },
     {
       "id": "tng-gop-office",
@@ -20395,8 +20457,8 @@
         "Say Something Coffee"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -6.25,
-      "longitude": 106.58333
+      "latitude": -6.302252,
+      "longitude": 106.652292
     },
     {
       "id": "tng-al-adzhom",
@@ -20474,8 +20536,8 @@
         "Subway"
       ],
       "currency": "IDR (Rp)",
-      "latitude": -6.25,
-      "longitude": 106.58333
+      "latitude": -6.301631,
+      "longitude": 106.649891
     },
     {
       "id": "tng-apple-summarecon",
@@ -20529,8 +20591,8 @@
         "Bamboo Restaurante"
       ],
       "currency": "BRL (R$)",
-      "latitude": -22.90556,
-      "longitude": -47.06083
+      "latitude": -22.807778,
+      "longitude": -47.0525
     },
     {
       "id": "cpq-mercado-municipal",
@@ -20555,8 +20617,8 @@
         "Point do Pastel"
       ],
       "currency": "BRL (R$)",
-      "latitude": -23.0489602,
-      "longitude": -47.8380255
+      "latitude": -22.903558,
+      "longitude": -47.063853
     },
     {
       "id": "cpq-torre-do-castelo",
@@ -20581,8 +20643,8 @@
         "Lanchonete Torre"
       ],
       "currency": "BRL (R$)",
-      "latitude": -22.90556,
-      "longitude": -47.06083
+      "latitude": -22.890066,
+      "longitude": -47.076873
     },
     {
       "id": "cpq-metropolitan-cathedral",
@@ -20607,8 +20669,8 @@
         "Ponto 1"
       ],
       "currency": "BRL (R$)",
-      "latitude": -22.9568718,
-      "longitude": -46.5415867
+      "latitude": -22.90597,
+      "longitude": -47.060371
     },
     {
       "id": "cpq-estacao-cultura",
@@ -20633,8 +20695,8 @@
         "Pastelaria do Centro"
       ],
       "currency": "BRL (R$)",
-      "latitude": -22.90556,
-      "longitude": -47.06083
+      "latitude": -22.908612,
+      "longitude": -47.067431
     },
     {
       "id": "cpq-unicamp-library",
@@ -20659,8 +20721,8 @@
         "Lanchonete da Geologia"
       ],
       "currency": "BRL (R$)",
-      "latitude": -22.90556,
-      "longitude": -47.06083
+      "latitude": -22.816336,
+      "longitude": -47.071528
     },
     {
       "id": "cpq-jockey-club",
@@ -20763,8 +20825,8 @@
         "Café do Teatro"
       ],
       "currency": "BRL (R$)",
-      "latitude": -22.90556,
-      "longitude": -47.06083
+      "latitude": -22.910975,
+      "longitude": -47.065292
     },
     {
       "id": "cpq-fazenda-santa-genebra",
@@ -20789,8 +20851,8 @@
         "Lanchonete Barão"
       ],
       "currency": "BRL (R$)",
-      "latitude": -22.90556,
-      "longitude": -47.06083
+      "latitude": -22.822222,
+      "longitude": -47.111111
     },
     {
       "id": "cpq-galleria-shopping",
@@ -20816,8 +20878,8 @@
         "Bacio di Latte"
       ],
       "currency": "BRL (R$)",
-      "latitude": -22.90556,
-      "longitude": -47.06083
+      "latitude": -22.863372,
+      "longitude": -47.023258
     },
     {
       "id": "cpq-apple-iguatemi",
@@ -21027,8 +21089,8 @@
         "Kiosque do Tingui"
       ],
       "currency": "BRL (R$)",
-      "latitude": -25.42778,
-      "longitude": -49.27306
+      "latitude": -25.40222,
+      "longitude": -49.30472
     },
     {
       "id": "cwb-tube-station",
@@ -21242,8 +21304,8 @@
         "Pizzaria do Zé"
       ],
       "currency": "BRL (R$)",
-      "latitude": -3.71722,
-      "longitude": -38.54306
+      "latitude": -3.724771,
+      "longitude": -38.524488
     },
     {
       "id": "for-jose-de-alencar",
@@ -21534,8 +21596,8 @@
         "Madero Container"
       ],
       "currency": "BRL (R$)",
-      "latitude": -3.71722,
-      "longitude": -38.54306
+      "latitude": -3.75543,
+      "longitude": -38.488766
     }
   ],
   "Manaus": [
@@ -21563,8 +21625,8 @@
         "Sorveteria Glacial"
       ],
       "currency": "BRL (R$)",
-      "latitude": -3.10194,
-      "longitude": -60.025
+      "latitude": -3.130278,
+      "longitude": -60.023333
     },
     {
       "id": "mao-rio-negro-palace",
@@ -21692,8 +21754,8 @@
         "Pastelaria do Parque"
       ],
       "currency": "BRL (R$)",
-      "latitude": -3.10194,
-      "longitude": -60.025
+      "latitude": -3.135554,
+      "longitude": -60.021043
     },
     {
       "id": "mao-rio-negro-bridge",
@@ -21717,8 +21779,8 @@
         "Peixaria Urubui"
       ],
       "currency": "BRL (R$)",
-      "latitude": -3.10194,
-      "longitude": -60.025
+      "latitude": -3.121944,
+      "longitude": -60.079444
     },
     {
       "id": "mao-arena-amazonia",
@@ -22260,8 +22322,8 @@
         "Sabor da Casa"
       ],
       "currency": "BRL (R$)",
-      "latitude": -8.0558165,
-      "longitude": -34.9592619
+      "latitude": -8.068747,
+      "longitude": -34.878844
     },
     {
       "id": "rec-santa-isabel",
@@ -22335,8 +22397,8 @@
         "Boteco do Porto"
       ],
       "currency": "BRL (R$)",
-      "latitude": -8.05389,
-      "longitude": -34.88111
+      "latitude": -8.0608,
+      "longitude": -34.8708
     },
     {
       "id": "rec-capibaribe-building",
@@ -22385,8 +22447,8 @@
         "Apolo 11"
       ],
       "currency": "BRL (R$)",
-      "latitude": -8.05389,
-      "longitude": -34.88111
+      "latitude": -8.063943,
+      "longitude": -34.869131
     },
     {
       "id": "rec-mirante-da-aurora",
@@ -22483,8 +22545,8 @@
         "Sabor Regional"
       ],
       "currency": "BRL (R$)",
-      "latitude": -8.05389,
-      "longitude": -34.88111
+      "latitude": -8.0516,
+      "longitude": -34.9735
     },
     {
       "id": "rec-cais-do-sertao",
@@ -22563,8 +22625,8 @@
         "Real Gabinete"
       ],
       "currency": "BRL (R$)",
-      "latitude": -22.9625137,
-      "longitude": -43.2891205
+      "latitude": -22.951944,
+      "longitude": -43.210556
     },
     {
       "id": "rio-museum-tomorrow",
@@ -22850,8 +22912,8 @@
         "Ancoramar"
       ],
       "currency": "BRL (R$)",
-      "latitude": -22.88899,
-      "longitude": -43.12314
+      "latitude": -22.896944,
+      "longitude": -43.166389
     },
     {
       "id": "rio-apple-villagemall",
@@ -22910,8 +22972,8 @@
         "Hyperreal"
       ],
       "currency": "KRW (₩)",
-      "latitude": 36.08333,
-      "longitude": 129.36667
+      "latitude": 36.065109,
+      "longitude": 129.39044
     },
     {
       "id": "pohang-02",
@@ -23170,8 +23232,8 @@
         "Hyggelig"
       ],
       "currency": "KRW (₩)",
-      "latitude": 36.08333,
-      "longitude": 129.36667
+      "latitude": 36.010883,
+      "longitude": 129.322669
     }
   ],
   "Montreal": [
@@ -23227,8 +23289,8 @@
         "Garde Manger"
       ],
       "currency": "CAD ($)",
-      "latitude": 45.4452815,
-      "longitude": -73.6415724
+      "latitude": 45.504444,
+      "longitude": -73.556111
     },
     {
       "id": "montreal_schwartzs_deli",
@@ -23389,8 +23451,8 @@
         "Kyo Bar Japonais"
       ],
       "currency": "CAD ($)",
-      "latitude": 45.568015,
-      "longitude": -73.566748
+      "latitude": 45.5086,
+      "longitude": -73.5539
     },
     {
       "id": "the-biosphere",
@@ -24287,8 +24349,8 @@
         "Mangerie"
       ],
       "currency": "TRY (₺)",
-      "latitude": 41.0641,
-      "longitude": 28.9941
+      "latitude": 41.039444,
+      "longitude": 29.001667
     },
     {
       "id": "ist_maidens_tower",
@@ -25238,8 +25300,8 @@
         "Barbacoa Roppongi"
       ],
       "currency": "JPY (¥)",
-      "latitude": 35.65,
-      "longitude": 139.73333
+      "latitude": 35.660556,
+      "longitude": 139.729167
     },
     {
       "id": "yoyogi-gymnasium",
@@ -25616,8 +25678,8 @@
         "Gulaes"
       ],
       "currency": "KRW (₩)",
-      "latitude": 37.49447,
-      "longitude": 127.01088
+      "latitude": 37.512222,
+      "longitude": 126.99525
     },
     {
       "id": "leeum-museum",
@@ -26027,8 +26089,8 @@
         "The Yard"
       ],
       "currency": "ZAR (R)",
-      "latitude": -33.9258,
-      "longitude": 18.4232
+      "latitude": -33.9084,
+      "longitude": 18.423
     },
     {
       "id": "cape-town-city-hall",
@@ -26218,8 +26280,8 @@
         "Alpha"
       ],
       "currency": "NZD ($)",
-      "latitude": -36.8052,
-      "longitude": 174.9811
+      "latitude": -36.860278,
+      "longitude": 174.777778
     },
     {
       "id": "pwc-tower-commercial-bay",
@@ -26605,8 +26667,8 @@
         "Vegan's Prague"
       ],
       "currency": "CZK (Kč)",
-      "latitude": 50.08804,
-      "longitude": 14.42076
+      "latitude": 50.090833,
+      "longitude": 14.400556
     },
     {
       "id": "charles-bridge",
@@ -26874,8 +26936,8 @@
         "Botanical Garden Picnic Spot"
       ],
       "currency": "KES (KSh)",
-      "latitude": -1.28333,
-      "longitude": 36.81667
+      "latitude": -1.273889,
+      "longitude": 36.815
     },
     {
       "id": "cbk-pension-tower",
@@ -26930,8 +26992,8 @@
         "L'mida"
       ],
       "currency": "MAD (DH)",
-      "latitude": 32.3105396,
-      "longitude": -9.2273703
+      "latitude": 31.624124,
+      "longitude": -7.993541
     },
     {
       "id": "yves-saint-laurent-museum",
@@ -27119,8 +27181,8 @@
         "Jardins dar mimoun"
       ],
       "currency": "MAD (DH)",
-      "latitude": 31.63416,
-      "longitude": -7.99994
+      "latitude": 31.623333,
+      "longitude": -7.983806
     }
   ],
   "Lima": [
@@ -27470,8 +27532,8 @@
         "L’Alcofa"
       ],
       "currency": "BRL (R$)",
-      "latitude": -15.77972,
-      "longitude": -47.92972
+      "latitude": -15.798333,
+      "longitude": -47.875556
     },
     {
       "id": "br_national_congress",
@@ -27512,8 +27574,8 @@
         "Coco Bambu"
       ],
       "currency": "BRL (R$)",
-      "latitude": -15.77972,
-      "longitude": -47.92972
+      "latitude": -15.800556,
+      "longitude": -47.867222
     },
     {
       "id": "br_jk_bridge",
@@ -27554,8 +27616,8 @@
         "The Falls"
       ],
       "currency": "BRL (R$)",
-      "latitude": 48.19811,
-      "longitude": 16.39482
+      "latitude": -15.792772,
+      "longitude": -47.822175
     },
     {
       "id": "br_tv_tower",
@@ -27575,8 +27637,8 @@
         "Feira da Torre"
       ],
       "currency": "BRL (R$)",
-      "latitude": -15.7831095,
-      "longitude": -47.9198723
+      "latitude": -15.790499,
+      "longitude": -47.892977
     },
     {
       "id": "br_national_museum",
@@ -27596,8 +27658,8 @@
         "Deboche! Bar"
       ],
       "currency": "BRL (R$)",
-      "latitude": 28.41667,
-      "longitude": 79.38333
+      "latitude": -15.797152,
+      "longitude": -47.878679
     },
     {
       "id": "br_jk_memorial",
@@ -27638,8 +27700,8 @@
         "Ticiana Werner"
       ],
       "currency": "BRL (R$)",
-      "latitude": 59.97718,
-      "longitude": 23.43633
+      "latitude": -15.80056,
+      "longitude": -47.89472
     },
     {
       "id": "br_national_theater",
@@ -27659,8 +27721,8 @@
         "Norton Grill"
       ],
       "currency": "BRL (R$)",
-      "latitude": 47.41323,
-      "longitude": 8.64592
+      "latitude": -15.7922,
+      "longitude": -47.8802
     },
     {
       "id": "br_pontao_lago_sul",
@@ -27681,8 +27743,8 @@
         "Izzi Wine Garden"
       ],
       "currency": "BRL (R$)",
-      "latitude": 62.9833,
-      "longitude": 27.1
+      "latitude": -15.825531,
+      "longitude": -47.871535
     },
     {
       "id": "br_planalto_palace",
@@ -27744,8 +27806,8 @@
         "Vasto Restaurante"
       ],
       "currency": "BRL (R$)",
-      "latitude": 28.41667,
-      "longitude": 79.38333
+      "latitude": -15.79674,
+      "longitude": -47.88017
     },
     {
       "id": "br_pantheon_liberty",
@@ -27809,8 +27871,8 @@
         "Cuia Café"
       ],
       "currency": "BRL (R$)",
-      "latitude": -23.802029,
-      "longitude": -45.4014943
+      "latitude": -23.546617,
+      "longitude": -46.644375
     },
     {
       "id": "br_altino_arantes",
@@ -27830,8 +27892,8 @@
         "Boteco do 28"
       ],
       "currency": "BRL (R$)",
-      "latitude": -23.38193,
-      "longitude": -48.72265
+      "latitude": -23.545833,
+      "longitude": -46.633889
     },
     {
       "id": "br_estaiada_bridge",
@@ -27872,8 +27934,8 @@
         "Sertó"
       ],
       "currency": "BRL (R$)",
-      "latitude": -23.38193,
-      "longitude": -48.72265
+      "latitude": -23.545278,
+      "longitude": -46.638611
     },
     {
       "id": "br_pinacoteca",
@@ -27935,8 +27997,8 @@
         "Casa Mathilde"
       ],
       "currency": "BRL (R$)",
-      "latitude": -23.2575961,
-      "longitude": -47.3053126
+      "latitude": -23.551168,
+      "longitude": -46.63434
     },
     {
       "id": "br_sesc_pompeia",
@@ -27998,8 +28060,8 @@
         "Salve Jorge"
       ],
       "currency": "BRL (R$)",
-      "latitude": -23.445188,
-      "longitude": -46.916441
+      "latitude": -23.54361,
+      "longitude": -46.63389
     },
     {
       "id": "br_mercadao",
@@ -28019,8 +28081,8 @@
         "Hocca Bar"
       ],
       "currency": "BRL (R$)",
-      "latitude": -23.3913677,
-      "longitude": -46.3078695
+      "latitude": -23.5417,
+      "longitude": -46.62917
     },
     {
       "id": "br_ibirapuera_auditorium",
@@ -28107,8 +28169,8 @@
         "Cedric's Tavern"
       ],
       "currency": "USD ($)",
-      "latitude": 35.567214,
-      "longitude": -82.543585
+      "latitude": 35.54,
+      "longitude": -82.551944
     },
     {
       "id": "nc_basilica_st_lawrence",
@@ -29133,8 +29195,8 @@
         "Clearwater Mall restaurants"
       ],
       "currency": "ZAR",
-      "latitude": -26.1064,
-      "longitude": 27.8554
+      "latitude": -26.088889,
+      "longitude": 27.844722
     },
     {
       "id": "johannesburg-vilakazi-street",
@@ -29277,7 +29339,7 @@
       "newUse": "Hiking trail / viewpoint",
       "buildingStyle": "Natural",
       "numberOfStories": 1,
-      "height": 183.0,
+      "height": 0,
       "foodSpots": [
         "Xinyi District restaurants",
         "Tonghua Night Market"
@@ -29498,8 +29560,8 @@
         "Cu Chi district local restaurants"
       ],
       "currency": "VND",
-      "latitude": 11.1428,
-      "longitude": 106.463
+      "latitude": 11.060833,
+      "longitude": 106.528611
     }
   ],
   "Zurich": [
@@ -29751,7 +29813,7 @@
       "newUse": "Shrine / viewpoint",
       "buildingStyle": "Colonial / natural landmark",
       "numberOfStories": 1,
-      "height": 3152.0,
+      "height": 0,
       "foodSpots": [
         "Casa Santa Clara restaurant",
         "La Casa de Monserrate"
@@ -30008,7 +30070,7 @@
       "newUse": "Art gallery (active)",
       "buildingStyle": "Contemporary",
       "numberOfStories": 5,
-      "height": 6,
+      "height": 0,
       "foodSpots": [
         "Circa restaurant",
         "The Place restaurant"
@@ -30243,14 +30305,14 @@
       "newUse": "Nature park / viewpoint",
       "buildingStyle": "Natural / Ethiopian Orthodox churches",
       "numberOfStories": 1,
-      "height": 3200.0,
+      "height": 0,
       "foodSpots": [
         "Entoto Park restaurant",
         "Tomoca Coffee"
       ],
       "currency": "ETB",
-      "latitude": 9.0725,
-      "longitude": 38.7636
+      "latitude": 9.115556,
+      "longitude": 38.772222
     }
   ],
   "Doha": [
@@ -30375,7 +30437,7 @@
       "newUse": "Archaeological site / museum",
       "buildingStyle": "Roman / Umayyad / Byzantine",
       "numberOfStories": 1,
-      "height": 850.0,
+      "height": 0,
       "foodSpots": [
         "Sufra Restaurant",
         "Hashem Restaurant"
@@ -30489,8 +30551,8 @@
         "Kargeen Caffe"
       ],
       "currency": "OMR",
-      "latitude": 23.6113,
-      "longitude": 58.5921
+      "latitude": 23.583889,
+      "longitude": 58.389167
     },
     {
       "id": "muscat-mutrah-souq",
@@ -31302,8 +31364,8 @@
         "Sana'a Old City cafés"
       ],
       "currency": "YER",
-      "latitude": 15.4187,
-      "longitude": 44.1415
+      "latitude": 15.44108,
+      "longitude": 44.12513
     },
     {
       "id": "sanaa-al-saleh-mosque",
@@ -31323,8 +31385,8 @@
         "Harat Bayt restaurant"
       ],
       "currency": "YER",
-      "latitude": 15.3701,
-      "longitude": 44.1878
+      "latitude": 15.3258,
+      "longitude": 44.2077
     }
   ],
   "New Delhi": [
@@ -31995,8 +32057,8 @@
         "Cevicheria near La Popa"
       ],
       "currency": "COP",
-      "latitude": 10.4379,
-      "longitude": -75.5243
+      "latitude": 10.4192,
+      "longitude": -75.5255
     }
   ],
   "Fukuoka": [
@@ -33519,8 +33581,8 @@
         "Chez Loutcha restaurant"
       ],
       "currency": "XOF",
-      "latitude": 14.7006,
-      "longitude": -17.4625
+      "latitude": 14.677778,
+      "longitude": -17.442222
     },
     {
       "id": "sn_ifan_museum",
