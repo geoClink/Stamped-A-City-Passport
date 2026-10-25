@@ -73,3 +73,9 @@ def test_marketing_url_is_added_only_when_given() -> None:
     with_url = upload_metadata.wanted_version_attributes(texts, "https://example.com")
     assert "marketingUrl" not in without_url
     assert with_url["marketingUrl"] == "https://example.com"
+
+
+def test_support_url_is_copied_to_every_language() -> None:
+    # Apple rejects a language with no Support URL, so the English one is reused
+    attributes = upload_metadata.wanted_version_attributes(make_locale_text(), None, "https://example.com/support")
+    assert attributes["supportUrl"] == "https://example.com/support"
