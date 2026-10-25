@@ -366,10 +366,6 @@ extension CityListView {
                     .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
             )
         }
-        #if os(macOS)
-        // Without this the Mac draws its gray push-button bezel around the orange capsule
-        .buttonStyle(.plain)
-        #endif
         .frame(maxWidth: .infinity)
         .fixedSize(horizontal: false, vertical: true)
     }

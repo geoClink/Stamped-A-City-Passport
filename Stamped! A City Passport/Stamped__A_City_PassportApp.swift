@@ -60,6 +60,9 @@ struct GlobalDiscoveryApp: App {
             }
             #if os(macOS)
             .frame(minWidth: 960, minHeight: 640)
+            // The app's buttons draw their own circles, capsules and cards (designed for iOS);
+            // without this the Mac adds its gray push-button bezel around every one of them
+            .buttonStyle(.borderless)
             #endif
         }
         #if os(macOS)
