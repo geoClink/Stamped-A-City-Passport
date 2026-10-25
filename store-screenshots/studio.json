@@ -1,0 +1,73 @@
+{
+  "source": "/private/tmp/claude-504/-Users-georgeclinkscales-Documents-Stamped-A-City-Passport-Stamped--A-City-Passport/ab9f353d-0249-4504-a131-0911bd27c2c5/scratchpad/raw25",
+  "src": {
+    "w": 1320,
+    "h": 2868
+  },
+  "screens": [
+    {
+      "file": "01-home.png",
+      "slug": "01-home",
+      "w": 1320,
+      "h": 2868,
+      "statusbarCleaned": true
+    },
+    {
+      "file": "02-college-list.png",
+      "slug": "02-college-list",
+      "w": 1320,
+      "h": 2868,
+      "statusbarCleaned": true
+    },
+    {
+      "file": "03-campus.png",
+      "slug": "03-campus",
+      "w": 1320,
+      "h": 2868,
+      "statusbarCleaned": true
+    },
+    {
+      "file": "04-traditions.png",
+      "slug": "04-traditions",
+      "w": 1320,
+      "h": 2868,
+      "statusbarCleaned": true
+    },
+    {
+      "file": "05-map3d.png",
+      "slug": "05-map3d",
+      "w": 1320,
+      "h": 2868,
+      "statusbarCleaned": true
+    },
+    {
+      "file": "06-passport.png",
+      "slug": "06-passport",
+      "w": 1320,
+      "h": 2868,
+      "statusbarCleaned": true
+    },
+    {
+      "file": "07-road-trip.png",
+      "slug": "07-road-trip",
+      "w": 1320,
+      "h": 2868,
+      "statusbarCleaned": true
+    },
+    {
+      "file": "08-trip.png",
+      "slug": "08-trip",
+      "w": 1320,
+      "h": 2868,
+      "statusbarCleaned": true
+    },
+    {
+      "file": "09-celebration.png",
+      "slug": "09-celebration",
+      "w": 1320,
+      "h": 2868,
+      "statusbarCleaned": true
+    }
+  ],
+  "created": "2026-10-25T01:34:42.451Z"
+}

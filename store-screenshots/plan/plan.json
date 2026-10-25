@@ -1,0 +1,14 @@
+{
+  "app": "Stamped! A City Passport",
+  "audience": "High school students and parents touring colleges, plus travelers who love architecture",
+  "slides": [
+    { "screen": "09-celebration", "job": "promise", "headline": "Stamp every *campus.*", "sub": "101 universities, from the Big Ten to Oxford." },
+    { "screen": "03-campus", "job": "show the product", "headline": "Know the campus *before* you go.", "sub": "Landmark photos, history and school colors." },
+    { "screen": "02-college-list", "job": "college list", "headline": "Your college list, *in one place.*", "sub": "Save schools and track every visit." },
+    { "screen": "08-trip", "job": "road trip", "headline": "Five campuses. *One trip.*", "sub": "Day by day routes planned for you." },
+    { "screen": "04-traditions", "job": "traditions", "headline": "Do what students *really* do.", "sub": "Check off each school's traditions." },
+    { "screen": "05-map3d", "job": "3D map", "headline": "Explore campus in *3D.*", "sub": "Tap any building for its story." },
+    { "screen": "06-passport", "job": "collection", "headline": "Collect them *all.*", "sub": "Every school stamped in its own colors." }
+  ],
+  "alternates": ["07-road-trip", "01-home"]
+}
