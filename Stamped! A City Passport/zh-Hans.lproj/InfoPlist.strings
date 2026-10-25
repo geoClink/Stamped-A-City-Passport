@@ -1,0 +1,5 @@
+/* Permission prompts (the English text is set in the target's build settings) */
+"NSLocationWhenInUseUsageDescription" = "Stamped! 会在你探索时显示附近的地标。";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "即使在后台，Stamped! 也会在你靠近地标时提醒你。";
+"NSCameraUsageDescription" = "允许访问相机，以便拍摄你正在参观的地标。";
+"NSPhotoLibraryUsageDescription" = "允许访问照片，以便为你的护照保存和选择地标照片。";

@@ -18,7 +18,11 @@ struct AnywhereStopSheet: View {
     @ObservedObject private var store = TripStore.shared
     @ObservedObject private var progress = GlobalProgressManager.shared
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+    /// Keeps the icons in one column, scaled with the text
+    @ScaledMetric(relativeTo: .body) private var iconWidth: CGFloat = 28
 
+    @AppStorage("high_contrast_mode") private var isHighContrast = false
     @State private var query = ""
     @State private var results: [MKMapItem] = []
     @State private var isSearching = false
@@ -51,7 +55,7 @@ struct AnywhereStopSheet: View {
         NavigationStack {
             List {
                 if !savedHere.isEmpty {
-                    Section("Saved in \(areaName)") {
+                    Section {
                         ForEach(savedHere) { place in
                             pickerRow(
                                 name: place.name,
@@ -62,11 +66,13 @@ struct AnywhereStopSheet: View {
                                 store.addStop(.place(placeID: place.id), toDay: dayID, in: trip.id)
                             }
                         }
+                    } header: {
+                        DSSectionHeader("Saved in \(areaName)", systemImage: "mappin.and.ellipse", isHighContrast: isHighContrast)
                     }
                 }
 
                 if !newResults.isEmpty {
-                    Section("Apple Maps") {
+                    Section {
                         ForEach(newResults, id: \.self) { item in
                             pickerRow(
                                 name: item.name ?? "Unnamed place",
@@ -77,6 +83,8 @@ struct AnywhereStopSheet: View {
                                 add(item)
                             }
                         }
+                    } header: {
+                        DSSectionHeader("Apple Maps", systemImage: "map", isHighContrast: isHighContrast)
                     }
                 }
             }
@@ -106,7 +114,7 @@ struct AnywhereStopSheet: View {
                 await search()
             }
         }
-        .tint(Color.adventureOrange)
+        .tint(DS.Palette.accent)
     }
 
     // MARK: - Row
@@ -116,23 +124,24 @@ struct AnywhereStopSheet: View {
             add()
             HapticManager.shared.trigger(.selection)
         } label: {
-            HStack(spacing: 12) {
+            HStack(spacing: DS.Space.m) {
                 Image(systemName: systemImage)
-                    .foregroundStyle(Color.pink)
-                    .frame(width: 28)
-                VStack(alignment: .leading, spacing: 2) {
+                    // Pink like saved places' pins on the city map: every stop here becomes one
+                    .foregroundStyle(DS.Palette.wishlist)
+                    .frame(width: iconWidth)
+                VStack(alignment: .leading, spacing: DS.Space.xs) {
                     Text(name)
                         .foregroundStyle(.primary)
                     if let detail, !detail.isEmpty {
                         Text(detail)
                             .font(.caption)
                             .foregroundStyle(.secondary)
-                            .lineLimit(1)
+                            .lineLimit(dynamicTypeSize.isAccessibilitySize ? 3 : 1)
                     }
                 }
                 Spacer()
                 Image(systemName: isAdded ? "checkmark.circle.fill" : "plus.circle")
-                    .foregroundStyle(isAdded ? Color.green : Color.adventureOrange)
+                    .foregroundStyle(isAdded ? Color.green : DS.Palette.accent)
                     .font(.title3)
             }
         }

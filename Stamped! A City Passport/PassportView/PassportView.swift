@@ -14,7 +14,7 @@ struct PassportView: View {
     @StateObject var progressManager = GlobalProgressManager.shared
 
     let columns = [
-        GridItem(.adaptive(minimum: 300, maximum: 500), spacing: 20)
+        GridItem(.adaptive(minimum: 300, maximum: 500), spacing: DS.Space.l)
     ]
     
     @State var showingProgressDetails = false
@@ -24,19 +24,20 @@ struct PassportView: View {
     @Environment(\.dynamicTypeSize) var dynamicTypeSize
     @AppStorage("high_contrast_mode") var manualHighContrast = false
     @AppStorage("reduce_motion") var manualReduceMotion = false
+    @ScaledMetric(relativeTo: .largeTitle) var emptyIconSize: CGFloat = 80
     
     var isHighContrast: Bool { manualHighContrast || systemContrast == .increased }
     var reduceMotion: Bool { manualReduceMotion || systemReduceMotion }
-    var brandColor: Color { isHighContrast ? .primary : .orange }
+    var brandColor: Color { isHighContrast ? .primary : DS.Palette.accent }
     
     var body: some View {
         NavigationStack {
             ZStack {
-                Color(UIColor.systemGroupedBackground).ignoresSafeArea()
+                DS.Palette.pageBackground.ignoresSafeArea()
                 
                 ScrollView {
-                    VStack(spacing: 24) {
-                        VStack(spacing: 16) {
+                    VStack(spacing: DS.Space.xl) {
+                        VStack(spacing: DS.Space.l) {
                             discoveryRankHeader
                             
                             if showingProgressDetails {
@@ -44,17 +45,17 @@ struct PassportView: View {
                                     .transition(.move(edge: .top).combined(with: .opacity))
                             }
                         }
-                        .padding(.horizontal)
+                        .dsPageMargin()
                         
-                        LazyVGrid(columns: columns, spacing: 20) {
+                        LazyVGrid(columns: columns, spacing: DS.Space.l) {
                             ForEach(CityLocation.City.allCases) { city in
                                 let visitedCount = countVisited(in: city)
                                 passportSection(for: city, visitedCount: visitedCount)
                             }
                         }
-                        .padding(.horizontal)
+                        .dsPageMargin()
                     }
-                    .padding(.vertical)
+                    .padding(.vertical, DS.Space.l)
                 }
                 .opacity(isEmptyState ? 0 : 1)
                 

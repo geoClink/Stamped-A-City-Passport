@@ -1,0 +1,1937 @@
+[
+  {
+    "name": "University of Illinois Urbana-Champaign",
+    "enumCase": "uIllinois",
+    "country": "unitedStates",
+    "conference": "bigTen",
+    "aliases": [
+      "UIUC",
+      "Illinois",
+      "U of I",
+      "Illini",
+      "Fighting Illini",
+      "Urbana-Champaign"
+    ],
+    "colors": [
+      "#FF5F05",
+      "#13294B"
+    ],
+    "traditions": [
+      {
+        "id": "trad_illinois_alma_mater",
+        "name": "Alma Mater Statue",
+        "description": "Lorado Taft's 1929 bronze of a robed woman with outstretched arms stands by Altgeld Hall to welcome students. Stop for a photo with her, a classic Illinois picture.",
+        "coordinates": [
+          40.1099161,
+          -88.2283981
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/634161668",
+        "source": "https://en.wikipedia.org/wiki/Alma_Mater_(Illinois_sculpture)"
+      },
+      {
+        "id": "trad_illinois_altgeld_chimes",
+        "name": "Altgeld Chimes",
+        "description": "The chime of 15 bells in Altgeld Hall's tower has rung since 1920, marking the hours and playing short concerts. Listen near the tower for \"Hail to the Orange,\" played at every concert.",
+        "coordinates": [
+          40.1093282,
+          -88.2283277
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/220347991",
+        "source": "https://en.wikipedia.org/wiki/Altgeld_Chimes"
+      },
+      {
+        "id": "trad_illinois_morrow_plots",
+        "name": "Morrow Plots",
+        "description": "Planted in 1876, these small fields are the oldest agricultural experiment fields in the United States and a National Historic Landmark. Walk past them beside the Undergraduate Library.",
+        "coordinates": [
+          40.1046383,
+          -88.2261332
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/12906059",
+        "source": "https://en.wikipedia.org/wiki/Morrow_Plots"
+      }
+    ],
+    "wiki": "University of Illinois Urbana-Champaign",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Home of the Fighting Illini",
+      "airportName": "University of Illinois Willard Airport",
+      "airportCode": "CMI",
+      "airportInfo": "Willard Airport, in Savoy just south of campus, has daily flights to Chicago O'Hare and Dallas/Fort Worth. Many visitors fly into Chicago instead.",
+      "funFact": "Architect Charles A. Platt designed the Main Library, one of several Georgian Revival buildings he designed for the campus.",
+      "language": "English",
+      "languageInfo": "The school colors are orange and blue, and the teams are the Fighting Illini.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / MTD buses",
+      "transportationFact": "The Champaign-Urbana Mass Transit District runs frequent buses across campus, and students ride with their i-card."
+    },
+    "buildings": [
+      {
+        "id": "campus_illinois_altgeld_hall",
+        "wiki": "Altgeld Hall",
+        "name": "Altgeld Hall",
+        "description": "Built in 1896–97 as the University Library, this Richardsonian Romanesque hall was designed by Nathan Ricker and James M. White of the university's architecture department. Its bell tower holds the University Chime, which marks the hours.",
+        "architect": "Nathan Ricker and James M. White",
+        "yearBuilt": 1897,
+        "address": "1409 W Green St, Urbana, IL 61801",
+        "oldUse": "University Library",
+        "newUse": "Mathematics Department",
+        "buildingStyle": "Richardsonian Romanesque",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_illinois_foellinger_auditorium",
+        "wiki": "Foellinger Auditorium",
+        "name": "Foellinger Auditorium",
+        "description": "Clarence H. Blackall's Beaux-Arts auditorium closes the south end of the Main Quad. The round hall, 120 feet across, is crowned by a copper dome and is the university's largest lecture hall.",
+        "architect": "Clarence H. Blackall",
+        "yearBuilt": 1907,
+        "address": "709 S Mathews Ave, Urbana, IL 61801",
+        "oldUse": "Auditorium",
+        "newUse": "Concert and Lecture Hall",
+        "buildingStyle": "Beaux-Arts",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_illinois_main_library",
+        "wiki": "Main Library (University of Illinois Urbana-Champaign)",
+        "name": "Main Library",
+        "description": "Charles A. Platt designed this Georgian Revival library, begun in 1924 to replace Altgeld Hall when the collections outgrew it. It holds the University Archives and the Rare Book and Manuscript Library.",
+        "architect": "Charles A. Platt",
+        "yearBuilt": 1924,
+        "address": "1408 W Gregory Dr, Urbana, IL 61801",
+        "oldUse": "University Library",
+        "newUse": "University Library",
+        "buildingStyle": "Georgian Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_illinois_smith_memorial_hall",
+        "wiki": "Tina Weedon Smith Memorial Hall",
+        "name": "Smith Memorial Hall",
+        "description": "Built in 1917–20 just east of Foellinger Auditorium, this Beaux-Arts music hall was the first building on campus paid for entirely by a private gift. Captain Thomas J. Smith dedicated it to his wife, Tina Weedon Smith.",
+        "architect": "James M. White and George E. Wright",
+        "yearBuilt": 1920,
+        "address": "805 S Mathews Ave, Urbana, IL 61801",
+        "oldUse": "Music Hall",
+        "newUse": "Music Classes and Recital Hall",
+        "buildingStyle": "Beaux-Arts",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_illinois_krannert_center",
+        "wiki": "Krannert Center for the Performing Arts",
+        "name": "Krannert Center for the Performing Arts",
+        "description": "Illinois alumnus Max Abramovitz designed this performing arts complex, which opened in 1969 with four indoor venues seating about 4,000 in all. Its main lobby is floored with teak from Thailand.",
+        "architect": "Max Abramovitz",
+        "yearBuilt": 1969,
+        "address": "500 S Goodwin Ave, Urbana, IL 61801",
+        "oldUse": "Performing Arts Center",
+        "newUse": "Performing Arts Center",
+        "buildingStyle": "Modern Movement",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Indiana University Bloomington",
+    "enumCase": "uIndiana",
+    "country": "unitedStates",
+    "conference": "bigTen",
+    "aliases": [
+      "IU",
+      "Indiana",
+      "IU Bloomington",
+      "Hoosiers"
+    ],
+    "colors": [
+      "#990000",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_indiana_rose_well_house",
+        "name": "Rose Well House",
+        "description": "Campus legend says a kiss under the Rose Well House at midnight brings lasting romance. The little pavilion near Dunn Woods is also a favorite spot for proposals.",
+        "coordinates": [
+          39.1665052,
+          -86.5244091
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/4491460846",
+        "source": "https://idsnews.com/article/2022/10/learn-iu-campus-lore-traditions-bloomington"
+      },
+      {
+        "id": "trad_indiana_sample_gates",
+        "name": "Sample Gates",
+        "description": "The limestone Sample Gates mark the entrance to the Old Crescent from Kirkwood Avenue. Walk through them and take a photo, as many new graduates do.",
+        "coordinates": [
+          39.1665576,
+          -86.526601
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/5443271052",
+        "source": "https://admissions.indiana.edu/life/traditions.html"
+      },
+      {
+        "id": "trad_indiana_wells_statue",
+        "name": "Herman B Wells Statue",
+        "description": "A bronze of the beloved former president sits on a bench with his hand held out. Shake it: the story goes that a student whose family shakes his hand will graduate on time.",
+        "coordinates": [
+          39.1666617,
+          -86.5241231
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/2716373772",
+        "source": "https://www.visitbloomington.com/blog/stories/post/indiana-university-campus-statues/"
+      },
+      {
+        "id": "trad_indiana_showalter_fountain",
+        "name": "Showalter Fountain",
+        "description": "The fountain in the Fine Arts Plaza shows the birth of Venus surrounded by bronze fish. Count the fish and look for the one that replaced a fish taken after the 1987 basketball title.",
+        "coordinates": [
+          39.1684746,
+          -86.5189728
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/797330948",
+        "source": "https://idsnews.com/article/2013/06/landmarks-on-campus"
+      }
+    ],
+    "wiki": "Indiana University Bloomington",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Home of the Hoosiers",
+      "airportName": "Indianapolis International Airport",
+      "airportCode": "IND",
+      "airportInfo": "Indianapolis International, north of Bloomington, is the nearest airport with airline service.",
+      "funFact": "Many of the campus buildings are built of Indiana limestone, the local stone the state is known for.",
+      "language": "English",
+      "languageInfo": "The school colors are cream and crimson, and the teams are the Hoosiers.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / IU Campus Bus",
+      "transportationFact": "IU Campus Bus routes loop around the campus, and Bloomington Transit buses connect it with the rest of the city."
+    },
+    "buildings": [
+      {
+        "id": "campus_indiana_memorial_union",
+        "wiki": "Indiana Memorial Union",
+        "name": "Indiana Memorial Union",
+        "description": "Granger and Bollenbacher designed this Collegiate Gothic student union, dedicated in 1932. At nearly 500,000 square feet it is one of the largest student unions in the world and includes a hotel.",
+        "architect": "Granger and Bollenbacher",
+        "yearBuilt": 1932,
+        "address": "Indiana University, Bloomington, IN 47405",
+        "oldUse": "Student Union",
+        "newUse": "Student Union and Hotel",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_indiana_lilly_library",
+        "wiki": "Lilly Library",
+        "name": "Lilly Library",
+        "description": "Eggers & Higgins designed this limestone rare book and manuscript library, dedicated in 1960 on the Fine Arts Plaza. It began with the collection of Josiah K. Lilly Jr. and now holds millions of manuscripts.",
+        "architect": "Eggers & Higgins",
+        "yearBuilt": 1960,
+        "address": "Fine Arts Plaza, Indiana University, Bloomington, IN 47405",
+        "oldUse": "Rare Book Library",
+        "newUse": "Rare Book Library",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_indiana_eskenazi_museum",
+        "wiki": "Eskenazi Museum of Art",
+        "name": "Eskenazi Museum of Art",
+        "description": "I. M. Pei and Partners designed the museum's building, completed in 1982 as a play on sharp angles. It was renovated and reopened in 2019 and holds about 45,000 objects.",
+        "architect": "I. M. Pei and Partners",
+        "yearBuilt": 1982,
+        "address": "1133 E 7th St, Bloomington, IN 47405",
+        "oldUse": "Art Museum",
+        "newUse": "Art Museum",
+        "buildingStyle": "Modernist",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "coordinates": [
+          39.1691052,
+          -86.5197587
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/154762561"
+      },
+      {
+        "id": "campus_indiana_mies_building",
+        "wiki": "Mies Building for the Eskenazi School of Art, Architecture + Design",
+        "name": "Mies Building",
+        "description": "Ludwig Mies van der Rohe drew these plans in 1952 for a fraternity house that was never built. Rediscovered in 2013, they were finally built for the art and design school, with glass walls and white steel like his Farnsworth House.",
+        "architect": "Ludwig Mies van der Rohe",
+        "yearBuilt": 2021,
+        "address": "321 N Eagleson Ave, Bloomington, IN 47405",
+        "oldUse": "Unbuilt Fraternity House Design",
+        "newUse": "Art, Architecture and Design School",
+        "buildingStyle": "Modernist",
+        "numberOfStories": 2,
+        "height": 0,
+        "foodSpots": [],
+        "coordinates": [
+          39.1691824,
+          -86.5166433
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/1084168115"
+      },
+      {
+        "id": "campus_indiana_wylie_house",
+        "wiki": "Wylie House",
+        "name": "Wylie House",
+        "description": "Built in 1835, this brick house was the home of Andrew Wylie, the first president of Indiana University. Its blend of Georgian and Federal styles was old-fashioned for its time, and the university runs it as a house museum.",
+        "architect": "Unknown",
+        "yearBuilt": 1835,
+        "address": "307 E 2nd St, Bloomington, IN 47401",
+        "oldUse": "President's House",
+        "newUse": "Historic House Museum",
+        "buildingStyle": "Georgian / Federal",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of Iowa",
+    "enumCase": "uIowa",
+    "country": "unitedStates",
+    "conference": "bigTen",
+    "aliases": [
+      "Iowa",
+      "UIowa",
+      "Hawkeyes"
+    ],
+    "colors": [
+      "#FFCD00",
+      "#000000"
+    ],
+    "traditions": [
+      {
+        "id": "trad_uiowa_old_capitol_photo",
+        "name": "Old Capitol Photo",
+        "description": "Graduates like to pose in front of the Old Capitol, by its columns and the doorway with \"Iowa\" above it. Take your own photo on the steps at the heart of the Pentacrest.",
+        "coordinates": [
+          41.661311,
+          -91.5361648
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/102239320",
+        "source": "https://foriowa.org/gradguide/spring"
+      },
+      {
+        "id": "trad_uiowa_kinnick_wave",
+        "name": "Kinnick Wave",
+        "description": "At home football games, after the first quarter the whole crowd turns and waves to the patients watching from the children's hospital above the east stands. If you go to a game, join in.",
+        "coordinates": [
+          41.6586246,
+          -91.5511915
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/31137127",
+        "source": "https://en.wikipedia.org/wiki/Kinnick_Stadium"
+      }
+    ],
+    "wiki": "University of Iowa",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Home of the Hawkeyes",
+      "airportName": "The Eastern Iowa Airport",
+      "airportCode": "CID",
+      "airportInfo": "The Eastern Iowa Airport, near Cedar Rapids to the north of Iowa City, is the nearest airport with airline service.",
+      "funFact": "The Greek Revival Old Capitol, Iowa's first state capitol building, stands at the center of the Pentacrest, ringed by four Beaux-Arts halls.",
+      "language": "English",
+      "languageInfo": "The school colors are black and gold, and the teams are the Hawkeyes.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Cambus",
+      "transportationFact": "The university's free Cambus service runs routes across campus and to the hospitals."
+    },
+    "buildings": [
+      {
+        "id": "campus_uiowa_old_capitol",
+        "wiki": "Iowa Old Capitol Building",
+        "name": "Old Capitol",
+        "description": "John F. Rague designed this Greek Revival building, begun in 1842 as the main government building of the state of Iowa. It is now the central landmark of the campus and a National Historic Landmark.",
+        "architect": "John F. Rague",
+        "yearBuilt": 1842,
+        "address": "Pentacrest, University of Iowa, Iowa City, IA 52242",
+        "oldUse": "State Capitol",
+        "newUse": "Museum",
+        "buildingStyle": "Greek Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uiowa_macbride_hall",
+        "wiki": "University of Iowa Museum of Natural History",
+        "name": "Macbride Hall",
+        "description": "Proudfoot & Bird designed this Beaux-Arts hall, completed in 1908 as the Natural Sciences Building on the Pentacrest. It houses the university's Museum of Natural History.",
+        "architect": "Proudfoot & Bird",
+        "yearBuilt": 1908,
+        "address": "17 N Clinton St, Iowa City, IA 52242",
+        "oldUse": "Natural Sciences Building",
+        "newUse": "Museum of Natural History",
+        "buildingStyle": "Beaux-Arts",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uiowa_stanley_museum",
+        "wiki": "University of Iowa Stanley Museum of Art",
+        "name": "Stanley Museum of Art",
+        "description": "BNIM Iowa, led by Rod Kruse, designed this brick museum, opened in 2022 to replace the building lost to the 2008 flood. It sits above the flood plain and holds Jackson Pollock's Mural.",
+        "architect": "BNIM Iowa (Rod Kruse)",
+        "yearBuilt": 2022,
+        "address": "Gibson Square, University of Iowa, Iowa City, IA 52242",
+        "oldUse": "Art Museum",
+        "newUse": "Art Museum",
+        "buildingStyle": "Rectilinear Brick",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uiowa_voxman",
+        "wiki": "Voxman Music Building",
+        "name": "Voxman Music Building",
+        "description": "LMN Architects and Neumann Monson designed this six-story music school, opened in October 2016. It replaced the original Voxman building on the Iowa River, destroyed in the 2008 flood.",
+        "architect": "LMN Architects and Neumann Monson",
+        "yearBuilt": 2016,
+        "address": "93 E Burlington St, Iowa City, IA 52242",
+        "oldUse": "School of Music",
+        "newUse": "School of Music and Concert Hall",
+        "buildingStyle": "Terra Cotta and Glass",
+        "numberOfStories": 6,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of Maryland, College Park",
+    "enumCase": "uMaryland",
+    "country": "unitedStates",
+    "conference": "bigTen",
+    "aliases": [
+      "UMD",
+      "Maryland",
+      "Terps",
+      "Terrapins"
+    ],
+    "colors": [
+      "#E21833",
+      "#FFD200"
+    ],
+    "traditions": [
+      {
+        "id": "trad_umd_testudo",
+        "name": "Rub Testudo's Nose",
+        "description": "Students rub the nose of the bronze terrapin Testudo outside McKeldin Library for luck, and leave small offerings during finals. Give his nose a rub as you pass.",
+        "coordinates": [
+          38.9859711,
+          -76.9445694
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/259042342",
+        "source": "https://alumni.umd.edu/news/terp-traditions-luck-testudo"
+      }
+    ],
+    "wiki": "University of Maryland, College Park",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Fear the Turtle",
+      "airportName": "Ronald Reagan Washington National Airport",
+      "airportCode": "DCA",
+      "airportInfo": "Reagan National, across the Potomac in Arlington, Virginia, is the closest major airport. BWI and Dulles also serve the region.",
+      "funFact": "Morrill Hall, finished in 1898, was the only academic building left untouched by the Great Fire of 1912 that swept the campus.",
+      "language": "English",
+      "languageInfo": "The school colors are red, white, black and gold, and the teams are the Terrapins.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Shuttle-UM / Metro",
+      "transportationFact": "The university's Shuttle-UM buses serve campus and nearby neighborhoods, and the College Park–University of Maryland Metro station links to Washington."
+    },
+    "buildings": [
+      {
+        "id": "campus_umd_memorial_chapel",
+        "wiki": "Memorial Chapel (University of Maryland)",
+        "name": "Memorial Chapel",
+        "description": "Henry Powell Hopkins designed this Georgian chapel, completed in 1952 to honor members of the university who died in military service. Its steeple is the highest point on campus.",
+        "architect": "Henry Powell Hopkins",
+        "yearBuilt": 1952,
+        "address": "7744 Regents Dr, College Park, MD 20742",
+        "oldUse": "Chapel",
+        "newUse": "Non-denominational Chapel",
+        "buildingStyle": "Georgian",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_umd_rossborough_inn",
+        "wiki": "The Rossborough Inn",
+        "name": "Rossborough Inn",
+        "description": "Finished in 1803, this Federal-style inn on the old Washington and Baltimore Turnpike is the oldest building on campus, older than the university itself. Its lower wings were added in 1938.",
+        "architect": "Unknown",
+        "yearBuilt": 1803,
+        "address": "Baltimore Ave, University of Maryland, College Park, MD 20742",
+        "oldUse": "Inn",
+        "newUse": "University Offices",
+        "buildingStyle": "Federal",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_umd_morrill_hall",
+        "wiki": "Morrill Hall (University of Maryland)",
+        "name": "Morrill Hall",
+        "description": "Built in 1898 as Science Hall in the Second Empire style, this is the oldest academic building on campus still in use. It was renamed for Senator Justin Morrill, author of the Land-Grant Colleges Act.",
+        "architect": "Henry B. McDonnell",
+        "yearBuilt": 1898,
+        "address": "Morrill Quad, University of Maryland, College Park, MD 20742",
+        "oldUse": "Science Hall",
+        "newUse": "Offices",
+        "buildingStyle": "Second Empire",
+        "numberOfStories": 3,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_umd_iribe_center",
+        "wiki": "Iribe Center",
+        "name": "Iribe Center",
+        "description": "A team from HDR led by Brian Kowalchuk designed this computer science building, completed in 2019 at a cost of $152 million. It holds research floors and a large auditorium.",
+        "architect": "HDR",
+        "yearBuilt": 2019,
+        "address": "8125 Paint Branch Dr, College Park, MD 20742",
+        "oldUse": "Computer Science Building",
+        "newUse": "Computer Science Building",
+        "buildingStyle": "Modern",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_umd_clarice_smith_center",
+        "wiki": "Clarice Smith Performing Arts Center",
+        "name": "Clarice Smith Performing Arts Center",
+        "description": "Moore Ruble Yudell designed this 318,000-square-foot arts center as an \"academic village\" of courtyards and halls, opened in 2001 with six performance venues. It was the largest single building ever built by the State of Maryland.",
+        "architect": "Moore Ruble Yudell",
+        "yearBuilt": 2001,
+        "address": "University of Maryland, College Park, MD 20742",
+        "oldUse": "Performing Arts Center",
+        "newUse": "Performing Arts Center",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Michigan State University",
+    "enumCase": "michiganState",
+    "country": "unitedStates",
+    "conference": "bigTen",
+    "aliases": [
+      "MSU",
+      "Michigan State",
+      "Spartans"
+    ],
+    "colors": [
+      "#18453B",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_michstate_the_rock",
+        "name": "The Rock",
+        "description": "Given by the Class of 1873, the Rock beside the Red Cedar River is painted over again and again with new messages. Stop to see what it says today.",
+        "coordinates": [
+          42.7281002,
+          -84.4775643
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/285617568",
+        "source": "https://spartan.msu.edu/spartan-story-hub/news/2021/01/msu-traditions-the-rock"
+      },
+      {
+        "id": "trad_michstate_spartan_statue",
+        "name": "The Spartan Statue",
+        "description": "The nearly 10-foot bronze Spartan is a favorite photo backdrop, especially at graduation. Take a selfie with it.",
+        "coordinates": [
+          42.731083,
+          -84.4875188
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/280887439",
+        "source": "https://msutoday.msu.edu/news/2025/09/must-do-spartan-experiences"
+      },
+      {
+        "id": "trad_michstate_beaumont_tower",
+        "name": "Beaumont Tower Open Tower",
+        "description": "Beaumont Tower opens to visitors on the first Wednesday of each month and at graduation. Go up to see the carillon and the view over campus.",
+        "coordinates": [
+          42.7319499,
+          -84.482282
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/26095337",
+        "source": "https://msutoday.msu.edu/news/2025/09/must-do-spartan-experiences"
+      }
+    ],
+    "wiki": "Michigan State University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Spartans Will",
+      "airportName": "Capital Region International Airport",
+      "airportCode": "LAN",
+      "airportInfo": "Capital Region International Airport in Lansing is the nearest airport with airline service.",
+      "funFact": "Beaumont Tower stands on the site of College Hall, the first building in America erected for teaching scientific agriculture.",
+      "language": "English",
+      "languageInfo": "The school colors are green and white, and the teams are the Spartans.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / CATA buses",
+      "transportationFact": "CATA buses run routes through campus and connect it with East Lansing and Lansing."
+    },
+    "buildings": [
+      {
+        "id": "campus_michstate_beaumont_tower",
+        "wiki": "Beaumont Tower",
+        "name": "Beaumont Tower",
+        "description": "Donaldson and Meier designed this Collegiate Gothic tower, completed in 1928 on the site of College Hall, the first building on campus. It was given by alumnus John W. Beaumont as a monument to teaching.",
+        "architect": "Donaldson and Meier",
+        "yearBuilt": 1928,
+        "address": "Michigan State University, East Lansing, MI 48824",
+        "oldUse": "Memorial Tower",
+        "newUse": "Carillon Tower",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 32,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_michstate_broad_art_museum",
+        "wiki": "Eli and Edythe Broad Art Museum",
+        "name": "Eli and Edythe Broad Art Museum",
+        "description": "Zaha Hadid designed this contemporary art museum, opened in 2012. Its steel and concrete frame is wrapped in pleated stainless steel and glass.",
+        "architect": "Zaha Hadid",
+        "yearBuilt": 2012,
+        "address": "547 E Circle Dr, East Lansing, MI 48824",
+        "oldUse": "Art Museum",
+        "newUse": "Art Museum",
+        "buildingStyle": "Pleated Steel and Glass",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "coordinates": [
+          42.7327425,
+          -84.4767569
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/224318338"
+      },
+      {
+        "id": "campus_michstate_cowles_house",
+        "wiki": "Cowles House (East Lansing, Michigan)",
+        "name": "Cowles House",
+        "description": "Built in 1857 to house faculty, this is the oldest surviving building on campus, though only its foundation and two outer walls are original. It has been the official president's residence since 1941.",
+        "architect": "J. J. Scott (1857); Calder (1950)",
+        "yearBuilt": 1857,
+        "address": "W Circle Dr, East Lansing, MI 48824",
+        "oldUse": "Faculty Residence",
+        "newUse": "President's House",
+        "buildingStyle": "Eclectic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_michstate_union",
+        "wiki": "MSU Union",
+        "name": "MSU Union",
+        "description": "Chicago firm Pond and Pond designed this Collegiate Gothic student union, built from 1923 to 1925. It has arched openings, gables and tall windows.",
+        "architect": "Pond and Pond",
+        "yearBuilt": 1925,
+        "address": "Michigan State University, East Lansing, MI 48824",
+        "oldUse": "Student Union",
+        "newUse": "Student Union",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of Minnesota Twin Cities",
+    "enumCase": "uMinnesota",
+    "country": "unitedStates",
+    "conference": "bigTen",
+    "aliases": [
+      "UMN",
+      "Minnesota",
+      "Gophers",
+      "Golden Gophers"
+    ],
+    "colors": [
+      "#7A0019",
+      "#FFCC33"
+    ],
+    "traditions": [
+      {
+        "id": "trad_umn_goldy_statue",
+        "name": "Goldy Gopher Statue",
+        "description": "A bronze Goldy Gopher stands beside a granite M outside Coffman Memorial Union, a gathering spot and a symbol of school spirit. Stop by for a photo.",
+        "coordinates": [
+          44.9730805,
+          -93.2348397
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/11867787762",
+        "source": "https://sua-history.umn.edu/collections/goldy-statue"
+      }
+    ],
+    "wiki": "University of Minnesota",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Ski-U-Mah",
+      "airportName": "Minneapolis–Saint Paul International Airport",
+      "airportCode": "MSP",
+      "airportInfo": "MSP is south of the Twin Cities. From campus, take the Green Line light rail downtown and change to the Blue Line.",
+      "funFact": "Frank Gehry's stainless steel Weisman Art Museum, finished in 1993, sits on the bluff above the Mississippi River.",
+      "language": "English",
+      "languageInfo": "The school colors are maroon and gold, and the teams are the Golden Gophers.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Campus Connector / Green Line",
+      "transportationFact": "The free Campus Connector bus links the East Bank, West Bank and St. Paul campuses, and the Metro Green Line light rail runs through campus."
+    },
+    "buildings": [
+      {
+        "id": "campus_umn_northrop",
+        "wiki": "Northrop Auditorium",
+        "name": "Northrop Auditorium",
+        "description": "Clarence H. Johnston designed this Classical Revival auditorium, built in 1928–29 at the north end of Northrop Mall. It was rebuilt inside by HGA and reopened in 2014.",
+        "architect": "Clarence H. Johnston Sr.; HGA (2014)",
+        "yearBuilt": 1929,
+        "address": "84 Church St SE, Minneapolis, MN 55455",
+        "oldUse": "Auditorium",
+        "newUse": "Performing Arts Venue",
+        "buildingStyle": "Classical Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "coordinates": [
+          44.9764788,
+          -93.2353693
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/255808964"
+      },
+      {
+        "id": "campus_umn_weisman",
+        "wiki": "Weisman Art Museum",
+        "name": "Weisman Art Museum",
+        "description": "Frank Gehry designed this museum of folded stainless steel, completed in 1993 on the bank of the Mississippi. Gehry also designed its 2011 addition.",
+        "architect": "Frank Gehry",
+        "yearBuilt": 1993,
+        "address": "333 E River Rd, Minneapolis, MN 55455",
+        "oldUse": "Art Museum",
+        "newUse": "Art Museum",
+        "buildingStyle": "Cubist-like Stainless Steel",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_umn_walter_library",
+        "wiki": "Walter Library",
+        "name": "Walter Library",
+        "description": "State Architect Clarence H. Johnston designed this Beaux-Arts library, built between 1922 and 1924 on Northrop Mall. It now houses the science and engineering library.",
+        "architect": "Clarence H. Johnston",
+        "yearBuilt": 1924,
+        "address": "117 Pleasant St SE, Minneapolis, MN 55455",
+        "oldUse": "University Library",
+        "newUse": "Science and Engineering Library",
+        "buildingStyle": "Beaux-Arts",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_umn_coffman_union",
+        "wiki": "Coffman Memorial Union",
+        "name": "Coffman Memorial Union",
+        "description": "Opened in 1940 at the south end of Northrop Mall, this seven-story student union has a stripped classical exterior and Streamline Moderne interiors.",
+        "architect": "Clarence H. Johnston Jr.",
+        "yearBuilt": 1940,
+        "address": "300 Washington Ave SE, Minneapolis, MN 55455",
+        "oldUse": "Student Union",
+        "newUse": "Student Union",
+        "buildingStyle": "Stripped Classical",
+        "numberOfStories": 7,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of Nebraska–Lincoln",
+    "enumCase": "uNebraska",
+    "country": "unitedStates",
+    "conference": "bigTen",
+    "aliases": [
+      "UNL",
+      "Nebraska",
+      "Huskers",
+      "Cornhuskers"
+    ],
+    "colors": [
+      "#D00000",
+      "#F5F1E7"
+    ],
+    "traditions": [
+      {
+        "id": "trad_unl_archie",
+        "name": "Archie the Mammoth",
+        "description": "Students rub the foot of Archie, the bronze mammoth outside Morrill Hall, for luck before tests and projects. Give his foot a rub or a high-five.",
+        "coordinates": [
+          40.8199558,
+          -96.7018544
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/70870954",
+        "source": "https://news.unl.edu/article/campus-tour-at-dusk-provides-backdrop-for-fun-friendship"
+      }
+    ],
+    "wiki": "University of Nebraska–Lincoln",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "There Is No Place Like Nebraska",
+      "airportName": "Lincoln Airport",
+      "airportCode": "LNK",
+      "airportInfo": "Lincoln Airport, northwest of downtown, is the nearest airport. Omaha's Eppley Airfield has more flights.",
+      "funFact": "Philip Johnson's Sheldon Museum of Art, opened in 1963, is built of Italian travertine around a grand hall and central staircase.",
+      "language": "English",
+      "languageInfo": "The school colors are scarlet and cream, and the teams are the Cornhuskers.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / StarTran",
+      "transportationFact": "StarTran buses link City, East and Innovation campuses, and students get a bus pass through their transit fee."
+    },
+    "buildings": [
+      {
+        "id": "campus_unl_sheldon_museum",
+        "wiki": "Sheldon Museum of Art",
+        "name": "Sheldon Museum of Art",
+        "description": "Philip Johnson designed this modern museum of Italian travertine, opened in 1963. Its grand hall and central staircase lead to collections of American art.",
+        "architect": "Philip Johnson",
+        "yearBuilt": 1963,
+        "address": "451 N 12th St, Lincoln, NE 68588",
+        "oldUse": "Art Museum",
+        "newUse": "Art Museum",
+        "buildingStyle": "Modern",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_unl_old_university_library",
+        "wiki": "Old University Library",
+        "name": "Architecture Hall",
+        "description": "Mendelssohn, Fisher and Lawrie designed this Richardsonian Romanesque library, built in 1895. It is the oldest building on campus and now houses the College of Architecture.",
+        "architect": "Mendelssohn, Fisher and Lawrie",
+        "yearBuilt": 1895,
+        "address": "11th and R Streets, Lincoln, NE 68588",
+        "oldUse": "University Library",
+        "newUse": "College of Architecture",
+        "buildingStyle": "Richardsonian Romanesque",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_unl_mueller_tower",
+        "wiki": "Mueller Tower",
+        "name": "Mueller Tower",
+        "description": "This stone carillon tower, built in 1949, was named for alumnus and donor Ralph S. Mueller. A restoration begun in 2025 scanned and catalogued each of its 1,700 stones.",
+        "architect": "George Kuska Jr. (Meginnis and Schaumberg)",
+        "yearBuilt": 1949,
+        "address": "City Campus, University of Nebraska–Lincoln, Lincoln, NE 68588",
+        "oldUse": "Carillon Tower",
+        "newUse": "Carillon Tower",
+        "buildingStyle": "Art Deco",
+        "numberOfStories": 0,
+        "height": 26,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_unl_memorial_stadium",
+        "wiki": "Memorial Stadium (Lincoln)",
+        "name": "Memorial Stadium",
+        "description": "Opened in 1923, the stadium honors Nebraskans who served in the nation's wars. Its architects, John Latenser Sr. and Ellery L. Davis, worked without pay.",
+        "architect": "John Latenser Sr. and Ellery L. Davis",
+        "yearBuilt": 1923,
+        "address": "600 Stadium Dr, Lincoln, NE 68588",
+        "oldUse": "Football Stadium",
+        "newUse": "Football Stadium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Northwestern University",
+    "enumCase": "northwestern",
+    "country": "unitedStates",
+    "conference": "bigTen",
+    "aliases": [
+      "Northwestern"
+    ],
+    "colors": [
+      "#4E2A84",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_northwestern_the_rock",
+        "name": "The Rock",
+        "description": "Students have painted the Rock since the 1940s, often guarding it for a day before painting it overnight. Stop by to see the latest message.",
+        "coordinates": [
+          42.0515656,
+          -87.6759271
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/534040847",
+        "source": "https://dailynorthwestern.com/2020/11/11/audio/nu-declassified-a-brief-history-of-the-rock/"
+      },
+      {
+        "id": "trad_northwestern_weber_arch",
+        "name": "Weber Arch",
+        "description": "New students march in through Weber Arch at the start of their time at Northwestern, and seniors march out through it near the end. Walk through the arch from Sheridan Road onto campus.",
+        "coordinates": [
+          42.0512624,
+          -87.6770488
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/534000450",
+        "source": "https://dailynorthwestern.com/2018/08/21/orientation-2018/go-cats-show-your-purple-pride-with-these-traditions/"
+      },
+      {
+        "id": "trad_northwestern_shakespeare_garden",
+        "name": "Shakespeare Garden",
+        "description": "This quiet garden on the north side of campus is one of the stops on the admissions campus tour map. Visit it on a walk through campus.",
+        "coordinates": [
+          42.0568141,
+          -87.6759774
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/42703456",
+        "source": "https://admissions.northwestern.edu/visit/visit-map-text.html"
+      }
+    ],
+    "wiki": "Northwestern University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Whatsoever Things Are True",
+      "airportName": "Chicago O'Hare International Airport",
+      "airportCode": "ORD",
+      "airportInfo": "O'Hare, west of Evanston, is the region's main airport. Chicago Midway also serves the city.",
+      "funFact": "University Hall, finished in 1869, is the oldest original building on campus, and its old clockworks are now at the Smithsonian.",
+      "language": "English",
+      "languageInfo": "The school colors are purple and white, and the teams are the Wildcats.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / CTA Purple Line / Metra",
+      "transportationFact": "CTA Purple Line and Metra trains stop near campus, and the university's Intercampus shuttle links Evanston with the Chicago campus."
+    },
+    "buildings": [
+      {
+        "id": "campus_northwestern_university_hall",
+        "wiki": "University Hall (Northwestern University)",
+        "name": "University Hall",
+        "description": "Gurdon P. Randall designed this Victorian Gothic hall, begun in 1868 and finished in 1869. It is the oldest original building on campus and now houses the English department.",
+        "architect": "Gurdon P. Randall",
+        "yearBuilt": 1869,
+        "address": "Northwestern University, Evanston, IL 60208",
+        "oldUse": "Classrooms, Library and Chapel",
+        "newUse": "English Department",
+        "buildingStyle": "Victorian Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_northwestern_deering_library",
+        "wiki": "Charles Deering Memorial Library",
+        "name": "Deering Library",
+        "description": "James Gamble Rogers designed this Collegiate Gothic library, which opened in 1933 and served as the main library until 1970. It houses the University Archives and the Music Library.",
+        "architect": "James Gamble Rogers",
+        "yearBuilt": 1933,
+        "address": "Northwestern University, Evanston, IL 60208",
+        "oldUse": "Main Library",
+        "newUse": "Archives, Music and Special Collections",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_northwestern_pick_staiger",
+        "wiki": "Pick-Staiger Concert Hall",
+        "name": "Pick-Staiger Concert Hall",
+        "description": "Edward D. Dart designed this concert hall of precast concrete and glass, completed in 1975. All 1,003 seats have a clear view of the stage.",
+        "architect": "Edward D. Dart",
+        "yearBuilt": 1975,
+        "address": "50 Arts Circle Dr, Evanston, IL 60208",
+        "oldUse": "Concert Hall",
+        "newUse": "Concert Hall",
+        "buildingStyle": "Mid-Century Modern",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_northwestern_dearborn_observatory",
+        "wiki": "Dearborn Observatory",
+        "name": "Dearborn Observatory",
+        "description": "Cobb and Frost designed this limestone observatory in the Richardsonian Romanesque style, built in 1888–89. It was moved in 1939 to make room for the Technological Institute.",
+        "architect": "Cobb and Frost",
+        "yearBuilt": 1889,
+        "address": "Northwestern University, Evanston, IL 60208",
+        "oldUse": "Observatory",
+        "newUse": "Observatory",
+        "buildingStyle": "Richardsonian Romanesque",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Ohio State University",
+    "enumCase": "ohioState",
+    "country": "unitedStates",
+    "conference": "bigTen",
+    "aliases": [
+      "Ohio State",
+      "OSU",
+      "Buckeyes"
+    ],
+    "colors": [
+      "#BA0C2F",
+      "#A7B1B7"
+    ],
+    "traditions": [
+      {
+        "id": "trad_ohiostate_long_walk",
+        "name": "The Long Walk",
+        "description": "The Long Walk crosses the Oval toward University Hall; first-year students were once forbidden to use it. Walk its length across the heart of campus.",
+        "coordinates": [
+          39.9994828,
+          -83.012759
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/552383147",
+        "source": "https://library.osu.edu/site/archives/2014/11/25/the-ovals-long-walk-has-paved-the-way-for-students-for-a-century"
+      },
+      {
+        "id": "trad_ohiostate_buckeye_grove",
+        "name": "Buckeye Grove",
+        "description": "A buckeye tree is planted beside Ohio Stadium for each of Ohio State's first-team All-Americans, each with a plaque. Look for the names of famous players among the trees.",
+        "coordinates": [
+          39.9998852,
+          -83.0210669
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/241573599",
+        "source": "https://ohiostatebuckeyes.com/football-traditions"
+      },
+      {
+        "id": "trad_ohiostate_victory_bell",
+        "name": "Victory Bell",
+        "description": "The Victory Bell in Ohio Stadium's southeast tower is rung after every Ohio State win. Listen for it after a home game.",
+        "coordinates": [
+          40.0016458,
+          -83.0197374
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/119153498",
+        "source": "https://ohiostatebuckeyes.com/football-traditions"
+      }
+    ],
+    "wiki": "Ohio State University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Home of the Buckeyes",
+      "airportName": "John Glenn Columbus International Airport",
+      "airportCode": "CMH",
+      "airportInfo": "John Glenn Columbus International, east of downtown Columbus, is the main airport for the region.",
+      "funFact": "Ohio Stadium's horseshoe has an upper deck that hangs over the lower one, and its north rotunda was modeled on the dome of the Pantheon in Rome.",
+      "language": "English",
+      "languageInfo": "The school colors are scarlet and gray, and the teams are the Buckeyes.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / CABS buses",
+      "transportationFact": "The free Campus Area Bus Service runs routes around campus, and COTA buses serve the rest of Columbus."
+    },
+    "buildings": [
+      {
+        "id": "campus_ohiostate_thompson_library",
+        "wiki": "William Oxley Thompson Memorial Library",
+        "name": "Thompson Library",
+        "description": "Boston firm Allen & Collens designed the main library in the Italian Renaissance Revival style, completed in 1912 on the Oval. A 2009 renovation restored its original east front.",
+        "architect": "Allen & Collens",
+        "yearBuilt": 1912,
+        "address": "The Oval, Ohio State University, Columbus, OH 43210",
+        "oldUse": "Main Library",
+        "newUse": "Main Library",
+        "buildingStyle": "Italian Renaissance Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ohiostate_ohio_stadium",
+        "wiki": "Ohio Stadium",
+        "name": "Ohio Stadium",
+        "description": "Howard Dwight Smith designed this horseshoe-shaped stadium, opened in 1922 and listed on the National Register of Historic Places. Its north rotunda was modeled on the dome of the Pantheon in Rome.",
+        "architect": "Howard Dwight Smith",
+        "yearBuilt": 1922,
+        "address": "411 Woody Hayes Dr, Columbus, OH 43210",
+        "oldUse": "Football Stadium",
+        "newUse": "Football Stadium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ohiostate_wexner_center",
+        "wiki": "Wexner Center for the Arts",
+        "name": "Wexner Center for the Arts",
+        "description": "Peter Eisenman and Richard Trott designed this arts center, opened in 1989. Its white metal grid suggests scaffolding, and the building follows two street grids that differ by 12.25 degrees.",
+        "architect": "Peter Eisenman and Richard Trott",
+        "yearBuilt": 1989,
+        "address": "1871 N High St, Columbus, OH 43210",
+        "oldUse": "Arts Center",
+        "newUse": "Arts Center",
+        "buildingStyle": "Deconstructivist",
+        "numberOfStories": 3,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ohiostate_university_hall",
+        "wiki": "University Hall (Ohio State University)",
+        "name": "University Hall",
+        "description": "The first University Hall, a High Victorian Gothic design by Jacob Snyder from 1873, was torn down in 1971. The present building, completed in 1976, copies the original's architecture.",
+        "architect": "Jacob Snyder (1873 original)",
+        "yearBuilt": 1976,
+        "address": "230 N Oval Mall, Columbus, OH 43210",
+        "oldUse": "Classrooms and Offices",
+        "newUse": "Classrooms and Offices",
+        "buildingStyle": "High Victorian Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ohiostate_knowlton_hall",
+        "wiki": "Knowlton Hall",
+        "name": "Knowlton Hall",
+        "description": "Mack Scogin Merrill Elam designed this home for the architecture school, completed in 2004. Its post-tensioned concrete frame is wrapped in shingles of white Georgia marble.",
+        "architect": "Mack Scogin Merrill Elam",
+        "yearBuilt": 2004,
+        "address": "275 W Woodruff Ave, Columbus, OH 43210",
+        "oldUse": "School of Architecture",
+        "newUse": "School of Architecture",
+        "buildingStyle": "Contemporary",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "coordinates": [
+          40.0035981,
+          -83.0165904
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/8663659"
+      }
+    ]
+  },
+  {
+    "name": "Pennsylvania State University",
+    "enumCase": "pennState",
+    "country": "unitedStates",
+    "conference": "bigTen",
+    "aliases": [
+      "Penn State",
+      "PSU",
+      "Nittany Lions"
+    ],
+    "colors": [
+      "#001E44",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_pennstate_lion_shrine",
+        "name": "Nittany Lion Shrine",
+        "description": "Heinz Warneke's limestone lion, dedicated in 1942, is the most photographed spot on campus. Many students take a photo here on their first day and again before graduation.",
+        "coordinates": [
+          40.7968202,
+          -77.8690661
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/2667525196",
+        "source": "https://gopsusports.com/news/2018/08/08/penn-state-traditions-1"
+      },
+      {
+        "id": "trad_pennstate_berkey_creamery",
+        "name": "Berkey Creamery",
+        "description": "The university's creamery, whose ice cream short course dates back to 1892, sells its own ice cream in the Food Science Building. Stop in for a cone.",
+        "coordinates": [
+          40.8037114,
+          -77.8624095
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/593899120",
+        "source": "https://en.wikipedia.org/wiki/Penn_State_Berkey_Creamery"
+      }
+    ],
+    "wiki": "Pennsylvania State University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "We Are... Penn State",
+      "airportName": "State College Regional Airport",
+      "airportCode": "SCE",
+      "airportInfo": "State College Regional Airport, called University Park Airport until 2023, is the nearest airport.",
+      "funFact": "Charles Klauder designed both Rec Hall, which opened in 1929, and the rebuilt Old Main, finished in 1930.",
+      "language": "English",
+      "languageInfo": "The school colors are blue and white, and the teams are the Nittany Lions.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / CATA buses",
+      "transportationFact": "CATA runs the fare-free Blue Loop, White Loop and Red Link on campus, and community routes to the rest of State College."
+    },
+    "buildings": [
+      {
+        "id": "campus_pennstate_old_main",
+        "wiki": "Old Main (Pennsylvania State University)",
+        "name": "Old Main",
+        "description": "The first Main Building was completed in 1863. Charles Klauder's Federal Revival rebuilding, with its clock tower, was finished in 1930 and holds the president's office.",
+        "architect": "Charles Klauder",
+        "yearBuilt": 1930,
+        "address": "Penn State University Park, PA 16802",
+        "oldUse": "Main Building",
+        "newUse": "Administration Building",
+        "buildingStyle": "Federal Revival",
+        "numberOfStories": 4,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_pennstate_rec_hall",
+        "wiki": "Recreation Building",
+        "name": "Rec Hall",
+        "description": "Charles Klauder, who also designed the Palestra in Philadelphia, chose a Georgian design for this field house, opened in 1929. The gymnastics, volleyball and wrestling teams still compete here.",
+        "architect": "Charles Klauder",
+        "yearBuilt": 1929,
+        "address": "Curtin Rd, University Park, PA 16802",
+        "oldUse": "Field House",
+        "newUse": "Field House",
+        "buildingStyle": "Georgian",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_pennstate_palmer_museum",
+        "wiki": "Palmer Museum of Art",
+        "name": "Palmer Museum of Art",
+        "description": "Allied Works designed the museum's new home in the Arboretum, opened in 2024. Its linked pavilions are clad in regional sandstone with perforated stainless steel sunscreens.",
+        "architect": "Allied Works",
+        "yearBuilt": 2024,
+        "address": "650 Bigler Rd, University Park, PA 16802",
+        "oldUse": "Art Museum",
+        "newUse": "Art Museum",
+        "buildingStyle": "Modern",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "coordinates": [
+          40.8067474,
+          -77.8680854
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/1269141793"
+      },
+      {
+        "id": "campus_pennstate_eisenhower_auditorium",
+        "wiki": "Eisenhower Auditorium",
+        "name": "Eisenhower Auditorium",
+        "description": "Built from 1971 to 1973 to a plan by consultants Sanders & Bicksler and Bolt Beranek and Newman, this Brutalist-inspired hall opened in 1974. It was first named University Auditorium.",
+        "architect": "Sanders & Bicksler (plan)",
+        "yearBuilt": 1974,
+        "address": "Penn State University Park, PA 16802",
+        "oldUse": "Auditorium",
+        "newUse": "Performing Arts Venue",
+        "buildingStyle": "Brutalist",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Purdue University",
+    "enumCase": "purdue",
+    "country": "unitedStates",
+    "conference": "bigTen",
+    "aliases": [
+      "Purdue",
+      "Boilermakers",
+      "Boilers"
+    ],
+    "colors": [
+      "#CFB991",
+      "#000000"
+    ],
+    "traditions": [
+      {
+        "id": "trad_purdue_bell_tower",
+        "name": "Bell Tower Kiss",
+        "description": "Legend says a couple who kiss under the Bell Tower and then walk past the nearby Stone Lion Fountain will one day marry. Visit the tower at the center of campus.",
+        "coordinates": [
+          40.4272802,
+          -86.9140682
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/301837711",
+        "source": "https://en.wikipedia.org/wiki/Purdue_Bell_Tower"
+      },
+      {
+        "id": "trad_purdue_hello_walk",
+        "name": "Hello Walk",
+        "description": "The Hello Walk began as the path to University Hall and now covers the walks across Memorial Mall. Smile and say hello to everyone you pass.",
+        "coordinates": [
+          40.4249217,
+          -86.9143278
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/74154179",
+        "source": "https://www.purdue.edu/home/about/traditions/"
+      }
+    ],
+    "wiki": "Purdue University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Boiler Up!",
+      "airportName": "Indianapolis International Airport",
+      "airportCode": "IND",
+      "airportInfo": "Indianapolis International, southeast of West Lafayette, is the nearest major airport.",
+      "funFact": "The Purdue Bell Tower, finished in 1995, carries the bells of the old Heavilon Hall tower, which came down in 1956.",
+      "language": "English",
+      "languageInfo": "The school colors are old gold and black, and the teams are the Boilermakers.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Purdue Campus Transit / CityBus",
+      "transportationFact": "Free Purdue Campus Transit loops circle the campus, and CityBus routes connect West Lafayette with Lafayette."
+    },
+    "buildings": [
+      {
+        "id": "campus_purdue_bell_tower",
+        "wiki": "Purdue Bell Tower",
+        "name": "Purdue Bell Tower",
+        "description": "This 160-foot brick tower, a gift of the class of 1948, was completed in 1995 at the heart of campus. It is a modern take on the old Heavilon Hall tower and has a clock on each face.",
+        "architect": "Unknown",
+        "yearBuilt": 1995,
+        "address": "Purdue University, West Lafayette, IN 47907",
+        "oldUse": "Bell Tower",
+        "newUse": "Bell Tower",
+        "buildingStyle": "Modern",
+        "numberOfStories": 0,
+        "height": 49,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_purdue_elliott_hall",
+        "wiki": "Elliott Hall of Music",
+        "name": "Elliott Hall of Music",
+        "description": "Walter Scholer designed this 6,005-seat theater, completed in 1940, with J. André Fouilhoux, one of the architects of Radio City Music Hall, as consultant. It is one of the largest proscenium theaters in the world.",
+        "architect": "Walter Scholer; J. André Fouilhoux (consulting)",
+        "yearBuilt": 1940,
+        "address": "712 3rd St, West Lafayette, IN 47907",
+        "oldUse": "Theater",
+        "newUse": "Theater",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_purdue_memorial_union",
+        "wiki": "Purdue Memorial Union",
+        "name": "Purdue Memorial Union",
+        "description": "Chicago firm Pond and Pond designed this student union, opened in 1924 as a memorial to Purdue students who fought in World War I. It holds restaurants, lounges, a bowling alley and a hotel.",
+        "architect": "Pond and Pond",
+        "yearBuilt": 1924,
+        "address": "101 N Grant St, West Lafayette, IN 47907",
+        "oldUse": "Student Union",
+        "newUse": "Student Union and Hotel",
+        "buildingStyle": "Gothic Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_purdue_engineering_fountain",
+        "wiki": "Engineering Fountain",
+        "name": "Engineering Fountain",
+        "description": "Sculptor Robert Youngman designed this 38-foot water sculpture of 228 tons of concrete, a gift of the class of 1939. It was dedicated in 1989.",
+        "architect": "Robert Youngman",
+        "yearBuilt": 1989,
+        "address": "Purdue University, West Lafayette, IN 47907",
+        "oldUse": "Fountain",
+        "newUse": "Fountain",
+        "buildingStyle": "Concrete Sculpture",
+        "numberOfStories": 0,
+        "height": 12,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Rutgers University–New Brunswick",
+    "enumCase": "rutgers",
+    "country": "unitedStates",
+    "conference": "bigTen",
+    "aliases": [
+      "Rutgers",
+      "RU",
+      "Scarlet Knights"
+    ],
+    "colors": [
+      "#CC0033",
+      "#5F6A72"
+    ],
+    "traditions": [
+      {
+        "id": "trad_rutgers_willie_the_silent",
+        "name": "Willie the Silent",
+        "description": "The 1928 bronze of William the Silent, Prince of Orange, known to students as Willie the Silent, is one of the best-loved statues on campus. Find him on Voorhees Mall.",
+        "coordinates": [
+          40.5012053,
+          -74.447713
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/4424423640",
+        "source": "https://www.rutgers.edu/news/new-digs-willie-silent"
+      },
+      {
+        "id": "trad_rutgers_old_queens_bell",
+        "name": "Old Queens Bell",
+        "description": "The bell in the cupola of Old Queens rings for convocation, commencement and other great occasions, and inspired the song \"The Bells Must Ring.\" Look up at the cupola from the Queens Campus.",
+        "coordinates": [
+          40.4987592,
+          -74.4462652
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/251382204",
+        "source": "https://rutgers.edu/about/traditional-songs"
+      }
+    ],
+    "wiki": "Rutgers University–New Brunswick",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "The Birthplace of College Football",
+      "airportName": "Newark Liberty International Airport",
+      "airportCode": "EWR",
+      "airportInfo": "Newark Liberty, northeast of New Brunswick, is reached by NJ Transit trains on the Northeast Corridor Line.",
+      "funFact": "Old Queens, begun in 1809, was designed by John McComb Jr., who also designed New York City Hall.",
+      "language": "English",
+      "languageInfo": "The school color is scarlet, and the teams are the Scarlet Knights.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Rutgers buses / NJ Transit",
+      "transportationFact": "Free Rutgers buses link the College Avenue, Busch, Livingston and Cook/Douglass campuses, and NJ Transit trains stop at New Brunswick station."
+    },
+    "buildings": [
+      {
+        "id": "campus_rutgers_old_queens",
+        "wiki": "Old Queens",
+        "name": "Old Queens",
+        "description": "John McComb Jr. designed this brownstone Federal building, begun in 1809 and finished in 1825. It is the oldest building at Rutgers and a National Historic Landmark.",
+        "architect": "John McComb Jr.",
+        "yearBuilt": 1825,
+        "address": "83 Somerset St, New Brunswick, NJ 08901",
+        "oldUse": "College Building",
+        "newUse": "Administration Building",
+        "buildingStyle": "Federal",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "coordinates": [
+          40.4987592,
+          -74.4462652
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/251382204"
+      },
+      {
+        "id": "campus_rutgers_kirkpatrick_chapel",
+        "wiki": "Kirkpatrick Chapel",
+        "name": "Kirkpatrick Chapel",
+        "description": "Henry Janeway Hardenbergh designed this Gothic Revival chapel early in his career, and it was completed in 1873. It is one of six buildings on the historic Queens Campus.",
+        "architect": "Henry Janeway Hardenbergh",
+        "yearBuilt": 1873,
+        "address": "Queens Campus, Rutgers University, New Brunswick, NJ 08901",
+        "oldUse": "Chapel",
+        "newUse": "Chapel",
+        "buildingStyle": "Gothic Revival",
+        "numberOfStories": 0,
+        "height": 17,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_rutgers_geology_hall",
+        "wiki": "Geology Hall, New Brunswick, New Jersey",
+        "name": "Geology Hall",
+        "description": "Henry Janeway Hardenbergh designed this stone hall, built in 1871–72 to house science classes and the Rutgers Geology Museum. The museum now fills the whole building.",
+        "architect": "Henry Janeway Hardenbergh",
+        "yearBuilt": 1872,
+        "address": "Queens Campus, Rutgers University, New Brunswick, NJ 08901",
+        "oldUse": "Science Classrooms and Museum",
+        "newUse": "Geology Museum",
+        "buildingStyle": "Gothic and Classical",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_rutgers_winants_hall",
+        "wiki": "Winants Hall",
+        "name": "Winants Hall",
+        "description": "Van Campen Taylor designed this hall, completed in 1890 as the first dormitory at Rutgers College. A renovation restored its Roman brick fireplaces and four-story oak staircase.",
+        "architect": "Van Campen Taylor",
+        "yearBuilt": 1890,
+        "address": "7 College Ave, New Brunswick, NJ 08901",
+        "oldUse": "Dormitory",
+        "newUse": "Offices",
+        "buildingStyle": "Eclectic",
+        "numberOfStories": 4,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of Wisconsin–Madison",
+    "enumCase": "uWisconsin",
+    "country": "unitedStates",
+    "conference": "bigTen",
+    "aliases": [
+      "UW–Madison",
+      "UW Madison",
+      "Wisconsin",
+      "Badgers"
+    ],
+    "colors": [
+      "#C5050C",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_wisc_abe_lincoln",
+        "name": "Abe Lincoln on Bascom Hill",
+        "description": "The seated Abraham Lincoln statue in front of Bascom Hall is a highlight of commencement weekend photos. Take your picture beside him at the top of the hill.",
+        "coordinates": [
+          43.0753179,
+          -89.4036901
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/461492091",
+        "source": "https://onwisconsin.uwalumni.com/badger-basics/"
+      },
+      {
+        "id": "trad_wisc_terrace_chairs",
+        "name": "Terrace Sunburst Chairs",
+        "description": "The sunburst chairs on the Memorial Union Terrace are one of the university's best-known symbols. Sit in one by Lake Mendota.",
+        "coordinates": [
+          43.0767342,
+          -89.3996524
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/18940001",
+        "source": "https://onwisconsin.uwalumni.com/badger-basics/"
+      },
+      {
+        "id": "trad_wisc_babcock_ice_cream",
+        "name": "Babcock Hall Ice Cream",
+        "description": "Ice cream made by the university's dairy at Babcock Hall is a student staple and a visitor favorite. Try a scoop.",
+        "coordinates": [
+          43.0747917,
+          -89.4136733
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/38856035",
+        "source": "https://onwisconsin.uwalumni.com/badger-basics/"
+      }
+    ],
+    "wiki": "University of Wisconsin–Madison",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "On, Wisconsin!",
+      "airportName": "Dane County Regional Airport",
+      "airportCode": "MSN",
+      "airportInfo": "Dane County Regional Airport, northeast of downtown Madison, is the city's airport.",
+      "funFact": "North Hall, built in 1851 to a design by John F. Rague, was the university's first building and still stands on Bascom Hill.",
+      "language": "English",
+      "languageInfo": "The school colors are cardinal and white, and the teams are the Badgers.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Madison Metro",
+      "transportationFact": "Madison Metro buses cross campus, and students ride with a university bus pass."
+    },
+    "buildings": [
+      {
+        "id": "campus_wisc_science_hall",
+        "wiki": "University of Wisconsin Science Hall",
+        "name": "Science Hall",
+        "description": "Henry C. Koch and Allan Conover designed this Romanesque hall, built in 1888 with sixteen corbelled brick chimneys. It is a National Historic Landmark.",
+        "architect": "Henry C. Koch and Allan Conover",
+        "yearBuilt": 1888,
+        "address": "550 N Park St, Madison, WI 53706",
+        "oldUse": "Science Hall",
+        "newUse": "Classrooms and Offices",
+        "buildingStyle": "Romanesque",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_wisc_red_gym",
+        "wiki": "University of Wisconsin Armory and Gymnasium",
+        "name": "Red Gym",
+        "description": "Allan Conover and Lew F. Porter designed this Romanesque Revival armory and gymnasium, built in 1894. It looks like a red brick castle on the shore of Lake Mendota.",
+        "architect": "Allan Conover and Lew F. Porter",
+        "yearBuilt": 1894,
+        "address": "716 Langdon St, Madison, WI 53706",
+        "oldUse": "Armory and Gymnasium",
+        "newUse": "Student Services Offices",
+        "buildingStyle": "Romanesque Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_wisc_memorial_union",
+        "wiki": "Memorial Union (University of Wisconsin–Madison)",
+        "name": "Memorial Union",
+        "description": "Arthur Peabody designed this Italian Renaissance Revival union, built in 1926–28 on Lake Mendota. Its Terrace by the water is a popular gathering place.",
+        "architect": "Arthur Peabody",
+        "yearBuilt": 1928,
+        "address": "800 Langdon St, Madison, WI 53706",
+        "oldUse": "Student Union",
+        "newUse": "Student Union",
+        "buildingStyle": "Neo-Renaissance",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_wisc_washburn_observatory",
+        "wiki": "Washburn Observatory",
+        "name": "Washburn Observatory",
+        "description": "David R. Jones designed this Italianate observatory, completed in 1881. It was a major research center for about 50 years, and its telescope is still used by students and the public.",
+        "architect": "David R. Jones",
+        "yearBuilt": 1881,
+        "address": "1401 Observatory Dr, Madison, WI 53706",
+        "oldUse": "Observatory",
+        "newUse": "Honors Program and Observatory",
+        "buildingStyle": "Italianate",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_wisc_north_hall",
+        "wiki": "North Hall (University of Wisconsin)",
+        "name": "North Hall",
+        "description": "John F. Rague designed this Greek Revival hall, built in 1851 as the university's first building. It now houses the Department of Political Science.",
+        "architect": "John F. Rague",
+        "yearBuilt": 1851,
+        "address": "Bascom Hill, University of Wisconsin–Madison, Madison, WI 53706",
+        "oldUse": "Dormitory and Classrooms",
+        "newUse": "Political Science Department",
+        "buildingStyle": "Greek Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of Oregon",
+    "enumCase": "uOregon",
+    "country": "unitedStates",
+    "conference": "bigTen",
+    "aliases": [
+      "UO",
+      "Oregon",
+      "Ducks"
+    ],
+    "colors": [
+      "#007030",
+      "#FEE11A"
+    ],
+    "traditions": [
+      {
+        "id": "trad_uoregon_yell_o",
+        "name": "Yell-O Duck Statue",
+        "description": "A 1,000-pound bronze of the Duck throwing the \"O\" stands between Matthew Knight Arena and the Ford Alumni Center. Throw the O beside it for a photo.",
+        "coordinates": [
+          44.0451181,
+          -123.067633
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/155181217",
+        "source": "https://news.uoregon.edu/content/saturday-crowd-welcomes-new-big-duck-campus"
+      },
+      {
+        "id": "trad_uoregon_bowerman_statue",
+        "name": "Bill Bowerman Statue",
+        "description": "A 2000 bronze of coach and Nike co-founder Bill Bowerman stands at the corner of Hayward Field. Visit it on a walk around the track stadium.",
+        "coordinates": [
+          44.0422171,
+          -123.070799
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/838296179",
+        "source": "https://en.wikipedia.org/wiki/Statue_of_Bill_Bowerman"
+      }
+    ],
+    "wiki": "University of Oregon",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Go Ducks",
+      "airportName": "Eugene Airport",
+      "airportCode": "EUG",
+      "airportInfo": "Eugene Airport, northwest of the city, is the nearest airport.",
+      "funFact": "Ellis F. Lawrence, dean of the university's architecture school, designed both the Knight Library and the art museum.",
+      "language": "English",
+      "languageInfo": "The school colors are green and yellow, and the teams are the Ducks.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / LTD EmX",
+      "transportationFact": "Lane Transit District's EmX bus rapid transit stops along the edge of campus, and students ride LTD buses with their ID."
+    },
+    "buildings": [
+      {
+        "id": "campus_uoregon_university_hall",
+        "wiki": "University Hall (University of Oregon)",
+        "name": "University Hall",
+        "description": "W. W. Piper designed this Italianate hall, built from 1873 to 1876 as the university's first building. Known for most of its history as Deady Hall, it is a National Historic Landmark with Villard Hall.",
+        "architect": "W. W. Piper",
+        "yearBuilt": 1876,
+        "address": "University of Oregon, Eugene, OR 97403",
+        "oldUse": "Classrooms",
+        "newUse": "Classrooms and Offices",
+        "buildingStyle": "Italianate",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uoregon_villard_hall",
+        "wiki": "Villard Hall",
+        "name": "Villard Hall",
+        "description": "Completed in 1886, this Second Empire hall is the second-oldest building on campus. It was named for railroad magnate Henry Villard, the university's first benefactor.",
+        "architect": "Warren Heywood Williams",
+        "yearBuilt": 1886,
+        "address": "University of Oregon, Eugene, OR 97403",
+        "oldUse": "Classrooms",
+        "newUse": "Classrooms and Theater",
+        "buildingStyle": "Second Empire",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uoregon_knight_library",
+        "wiki": "Knight Library",
+        "name": "Knight Library",
+        "description": "Ellis F. Lawrence designed the main library, built in 1937, mixing Lombardic Romanesque and Art Deco. It holds more than 3 million volumes.",
+        "architect": "Ellis F. Lawrence",
+        "yearBuilt": 1937,
+        "address": "University of Oregon, Eugene, OR 97403",
+        "oldUse": "Main Library",
+        "newUse": "Main Library",
+        "buildingStyle": "Lombardic Romanesque / Art Deco",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uoregon_jsma",
+        "wiki": "Jordan Schnitzer Museum of Art",
+        "name": "Jordan Schnitzer Museum of Art",
+        "description": "Ellis F. Lawrence designed this brick and cast stone museum, which opened in 1933 to house Gertrude Bass Warner's collection of Asian art. Its style mixes Romanesque and other influences.",
+        "architect": "Ellis F. Lawrence",
+        "yearBuilt": 1930,
+        "address": "1430 Johnson Ln, Eugene, OR 97403",
+        "oldUse": "Art Museum",
+        "newUse": "Art Museum",
+        "buildingStyle": "Romanesque / Eclectic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uoregon_johnson_hall",
+        "wiki": "Johnson Hall (Eugene, Oregon)",
+        "name": "Johnson Hall",
+        "description": "State Architect William C. Knighton designed this American Renaissance hall, built in 1914–15. It is the main administration building of the university.",
+        "architect": "William C. Knighton",
+        "yearBuilt": 1915,
+        "address": "University of Oregon, Eugene, OR 97403",
+        "oldUse": "Administration Building",
+        "newUse": "Administration Building",
+        "buildingStyle": "American Renaissance",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of Southern California",
+    "enumCase": "uSouthernCalifornia",
+    "country": "unitedStates",
+    "conference": "bigTen",
+    "aliases": [
+      "USC",
+      "Southern Cal",
+      "Trojans"
+    ],
+    "colors": [
+      "#990000",
+      "#FFCC00"
+    ],
+    "traditions": [
+      {
+        "id": "trad_southerncal_tommy_trojan",
+        "name": "Tommy Trojan",
+        "description": "The bronze Trojan warrior in Hahn Plaza is the campus's favorite meeting place. Before the UCLA game it is wrapped in duct tape and guarded around the clock by the Trojan Knights.",
+        "coordinates": [
+          34.0205678,
+          -118.2854346
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/2305853438",
+        "source": "https://www.trojans360.com/alumni-archive/best-flicks-guarding-uscs-icons"
+      },
+      {
+        "id": "trad_southerncal_hecuba",
+        "name": "Hecuba Statue",
+        "description": "The statue of Hecuba, queen of Troy, was unveiled in 2017 in the central plaza of USC Village as a counterpart to Tommy Trojan. Visit her in the plaza.",
+        "coordinates": [
+          34.025089,
+          -118.2847258
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/5237417648",
+        "source": "https://en.wikipedia.org/wiki/Hecuba_(statue)"
+      }
+    ],
+    "wiki": "University of Southern California",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Fight On!",
+      "airportName": "Los Angeles International Airport",
+      "airportCode": "LAX",
+      "airportInfo": "LAX, southwest of campus, is the main airport for Los Angeles.",
+      "funFact": "Widney Alumni House, dedicated in 1880, is the oldest university building in Southern California.",
+      "language": "English",
+      "languageInfo": "The school colors are cardinal and gold, and the teams are the Trojans.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Metro E Line",
+      "transportationFact": "The Metro E Line has stations next to campus along Exposition Park, and USC runs its own campus shuttles."
+    },
+    "buildings": [
+      {
+        "id": "campus_southerncal_doheny_library",
+        "wiki": "Doheny Library",
+        "name": "Doheny Library",
+        "description": "Ralph Adams Cram designed the exterior and Samuel Lunden the interiors of this 1932 library, built in a Northern Italian Romanesque style of rounded arches, pale brick and limestone.",
+        "architect": "Ralph Adams Cram and Samuel Lunden",
+        "yearBuilt": 1932,
+        "address": "University Park Campus, Los Angeles, CA 90089",
+        "oldUse": "University Library",
+        "newUse": "University Library",
+        "buildingStyle": "Italian Romanesque",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_southerncal_widney_alumni_house",
+        "wiki": "Widney Alumni House",
+        "name": "Widney Alumni House",
+        "description": "Dedicated in 1880, this was the university's original building and is the oldest university building in Southern California. It is a California Historical Landmark.",
+        "architect": "Kysor & Morgan",
+        "yearBuilt": 1880,
+        "address": "650 Childs Way, Los Angeles, CA 90089",
+        "oldUse": "University Building",
+        "newUse": "Alumni House",
+        "buildingStyle": "Georgian-Victorian",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_southerncal_zumberge_hall",
+        "wiki": "Zumberge Hall of Science",
+        "name": "Zumberge Hall of Science",
+        "description": "John and Donald Parkinson designed this Romanesque Revival science hall, completed in 1928.",
+        "architect": "John and Donald Parkinson",
+        "yearBuilt": 1928,
+        "address": "University Park Campus, Los Angeles, CA 90089",
+        "oldUse": "Science Hall",
+        "newUse": "Earth Sciences Department",
+        "buildingStyle": "Romanesque Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "coordinates": [
+          34.0193197,
+          -118.286337
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/6095466"
+      },
+      {
+        "id": "campus_southerncal_leavey_library",
+        "wiki": "Thomas and Dorothy Leavey Library",
+        "name": "Leavey Library",
+        "description": "Completed in 1994, this undergraduate library returned to the Romanesque Revival look of the older campus buildings. It is named for Thomas E. Leavey, founder of Farmers Insurance.",
+        "architect": "Unknown",
+        "yearBuilt": 1994,
+        "address": "University Park Campus, Los Angeles, CA 90089",
+        "oldUse": "University Library",
+        "newUse": "Undergraduate Library",
+        "buildingStyle": "Romanesque Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_southerncal_wallis_annenberg_hall",
+        "wiki": "Wallis Annenberg Hall",
+        "name": "Wallis Annenberg Hall",
+        "description": "Harley Ellis Devereaux designed this $150 million building for the Annenberg School, built of concrete and steel with brick veneer in the Collegiate Gothic style. It opened in 2014.",
+        "architect": "Harley Ellis Devereaux",
+        "yearBuilt": 2014,
+        "address": "University Park Campus, Los Angeles, CA 90089",
+        "oldUse": "School of Communication and Journalism",
+        "newUse": "School of Communication and Journalism",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  }
+]

@@ -3,6 +3,50 @@
     "name": "Yale University",
     "enumCase": "yale",
     "country": "unitedStates",
+    "conference": "ivyLeague",
+    "aliases": [
+      "Yale",
+      "Bulldogs"
+    ],
+    "colors": [
+      "#00356B",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_yale_woolsey_foot",
+        "name": "Rub Woolsey's Foot",
+        "description": "Generations of students have rubbed the protruding foot of the bronze statue of President Theodore Dwight Woolsey on Old Campus for good luck. Visitors can give the shiny foot a rub too.",
+        "coordinates": [
+          41.308785,
+          -72.928905
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/2217015443",
+        "source": "https://visitorcenter.yale.edu/tours/public-art-yale"
+      },
+      {
+        "id": "trad_yale_harkness_carillon",
+        "name": "Hear the Harkness Carillon",
+        "description": "Students in the Yale Guild of Carillonneurs play the carillon in Harkness Tower twice a day during the school year, at 12:30 and 5:30 p.m., plus Friday concerts in summer. Visitors can listen from the streets and courtyards nearby.",
+        "coordinates": [
+          41.30941,
+          -72.929484
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/800042604",
+        "source": "https://en.wikipedia.org/wiki/Harkness_Tower"
+      },
+      {
+        "id": "trad_yale_womens_table",
+        "name": "Visit the Women's Table",
+        "description": "Maya Lin's 1993 Women's Table in front of Sterling Memorial Library is carved with a spiral of numbers showing how many women studied at Yale each year since 1701. Visitors can walk up and read the spiral.",
+        "coordinates": [
+          41.310797,
+          -72.928162
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/1531670736",
+        "source": "https://visitorcenter.yale.edu/tours/public-art-yale"
+      }
+    ],
     "wiki": "Yale University",
     "currency": "USD ($)",
     "details": {
@@ -130,6 +174,50 @@
     "name": "Harvard University",
     "enumCase": "harvard",
     "country": "unitedStates",
+    "conference": "ivyLeague",
+    "aliases": [
+      "Harvard",
+      "Crimson"
+    ],
+    "colors": [
+      "#A51C30",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_harvard_john_harvard_foot",
+        "name": "Touch John Harvard's Left Foot",
+        "description": "Touching the left foot of the John Harvard statue in Harvard Yard is said to bring good luck, and it has been polished to a golden shine. Guides call it the 'statue of three lies', and visitors often pose for a photo with it.",
+        "coordinates": [
+          42.374464,
+          -71.117198
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/358277010",
+        "source": "https://news.harvard.edu/gazette/story/2019/09/iconic-john-harvard-statue-is-the-star-of-the-yard/"
+      },
+      {
+        "id": "trad_harvard_dexter_gate",
+        "name": "Read Both Sides of Dexter Gate",
+        "description": "Dexter Gate on Massachusetts Avenue reads 'Enter to grow in wisdom' on the outside and 'Depart to serve better thy country and thy kind' on the inside. Visitors can walk through and read both inscriptions.",
+        "coordinates": [
+          42.372775,
+          -71.116278
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/8709790587",
+        "source": "https://news.harvard.edu/gazette/story/2005/12/enter-to-grow-in-wisdom/"
+      },
+      {
+        "id": "trad_harvard_johnston_gate_sheriffs",
+        "name": "Sheriffs at Johnston Gate",
+        "description": "For centuries, the sheriffs of Middlesex and Suffolk Counties have ridden into Harvard Yard on horseback on Commencement Day, traditionally through Johnston Gate. Visitors can see the 1889 gate, the Yard's main entrance, at any time.",
+        "coordinates": [
+          42.374679,
+          -71.11849
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/8699773897",
+        "source": "https://en.wikipedia.org/wiki/Gates_of_Harvard_Yard"
+      }
+    ],
     "wiki": "Harvard University",
     "currency": "USD ($)",
     "details": {
@@ -242,6 +330,37 @@
     "name": "Massachusetts Institute of Technology",
     "enumCase": "mit",
     "country": "unitedStates",
+    "aliases": [
+      "MIT"
+    ],
+    "colors": [
+      "#750014",
+      "#8B959E"
+    ],
+    "traditions": [
+      {
+        "id": "trad_mit_mithenge",
+        "name": "MIThenge",
+        "description": "On a few days around mid-November and late January, the setting sun lines up with the Infinite Corridor and shines down its whole length. Crowds gather in the corridor to watch the light pour through.",
+        "coordinates": [
+          42.359585,
+          -71.091981
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/84473998",
+        "source": "https://en.wikipedia.org/wiki/MIThenge"
+      },
+      {
+        "id": "trad_mit_smoot_markers",
+        "name": "Smoot markers on the Harvard Bridge",
+        "description": "The Harvard Bridge sidewalk is painted with marks measuring its length in 'smoots', the height of 1958 pledge Oliver Smoot. Walk the bridge to find the 'Halfway to Hell' mark and the final '364.4 smoots plus or minus one ear'.",
+        "coordinates": [
+          42.354547,
+          -71.091302
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/470823564",
+        "source": "https://en.wikipedia.org/wiki/Smoot"
+      }
+    ],
     "wiki": "Massachusetts Institute of Technology",
     "currency": "USD ($)",
     "details": {
@@ -324,6 +443,50 @@
     "name": "Princeton University",
     "enumCase": "princeton",
     "country": "unitedStates",
+    "conference": "ivyLeague",
+    "aliases": [
+      "Princeton",
+      "Tigers"
+    ],
+    "colors": [
+      "#FF6000",
+      "#000000"
+    ],
+    "traditions": [
+      {
+        "id": "trad_princeton_fitzrandolph_gate",
+        "name": "FitzRandolph Gate superstition",
+        "description": "Campus legend says students who walk out through FitzRandolph Gate before graduation will not finish their degree, so undergraduates avoid it until Commencement. Visitors can see the gate on Nassau Street and decide for themselves which way to walk.",
+        "coordinates": [
+          40.349546,
+          -74.659695
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/367681977",
+        "source": "https://en.wikipedia.org/wiki/FitzRandolph_Gate"
+      },
+      {
+        "id": "trad_princeton_blair_arch_sings",
+        "name": "Arch sings at Blair Arch",
+        "description": "Blair Arch, the largest arch on campus, is where many of Princeton's a cappella 'arch sings' take place. Stop under the arch to hear its echo, or catch a free evening concert.",
+        "coordinates": [
+          40.347435,
+          -74.661457
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/40719672",
+        "source": "https://en.wikipedia.org/wiki/Mathey_College"
+      },
+      {
+        "id": "trad_princeton_big_cannon",
+        "name": "Big Cannon on Cannon Green",
+        "description": "A Revolutionary-era cannon has been buried muzzle-down on Cannon Green behind Nassau Hall since 1840, and it is slowly sinking. Visitors can see the exposed end; the green is also where the bonfire is lit when Princeton beats both Harvard and Yale in football.",
+        "coordinates": [
+          40.3482,
+          -74.659096
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/27341277",
+        "source": "https://en.wikipedia.org/wiki/Rutgers%E2%80%93Princeton_Cannon_War"
+      }
+    ],
     "wiki": "Princeton University",
     "currency": "USD ($)",
     "details": {
@@ -421,6 +584,50 @@
     "name": "Cornell University",
     "enumCase": "cornell",
     "country": "unitedStates",
+    "conference": "ivyLeague",
+    "aliases": [
+      "Cornell",
+      "Big Red"
+    ],
+    "colors": [
+      "#B31B1B",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_cornell_founders_footprints",
+        "name": "Founders' statues and footprints",
+        "description": "Legend says the statues of Ezra Cornell and Andrew Dickson White will walk off their pedestals and shake hands on the Arts Quad under certain impossible conditions, and painted footprints between them mark the legend. Look for the footprints and pose between the two founders.",
+        "coordinates": [
+          42.44934,
+          -76.484463
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/311207406",
+        "source": "https://en.wikipedia.org/wiki/Cornelliana"
+      },
+      {
+        "id": "trad_cornell_cornell_chimes",
+        "name": "Cornell Chimes in McGraw Tower",
+        "description": "Student chimesmasters play the 21-bell Cornell Chimes in McGraw Tower in three concerts a day during the academic year, and visitors are welcome at all of them. Listen from Ho Plaza or the Arts Quad.",
+        "coordinates": [
+          42.44757,
+          -76.485043
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/310881323",
+        "source": "https://en.wikipedia.org/wiki/Cornell_Chimes"
+      },
+      {
+        "id": "trad_cornell_dragon_day",
+        "name": "Dragon Day",
+        "description": "On the Friday before spring break, first-year architecture students parade a huge handmade dragon past Sibley Hall toward the Arts Quad. Visitors can line the route and watch it go by.",
+        "coordinates": [
+          42.450923,
+          -76.484099
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/155288339",
+        "source": "https://en.wikipedia.org/wiki/Dragon_Day"
+      }
+    ],
     "wiki": "Cornell University",
     "currency": "USD ($)",
     "details": {
@@ -518,6 +725,60 @@
     "name": "Columbia University",
     "enumCase": "columbia",
     "country": "unitedStates",
+    "conference": "ivyLeague",
+    "aliases": [
+      "Columbia"
+    ],
+    "colors": [
+      "#B9D9EB",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_columbia_alma_mater_owl",
+        "name": "Find the owl on Alma Mater",
+        "description": "An owl, a symbol of wisdom, is hidden in the folds of Alma Mater's robe near her leg, and superstition says the first new student to find it becomes valedictorian. Visitors can hunt for the owl on the statue in front of Low Library.",
+        "coordinates": [
+          40.807826,
+          -73.962133
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/3835410688",
+        "source": "https://en.wikipedia.org/wiki/Low_Memorial_Library"
+      },
+      {
+        "id": "trad_columbia_low_steps",
+        "name": "Low Steps",
+        "description": "The wide steps of Low Memorial Library, nicknamed 'Low Beach', are Columbia's favourite meeting spot. Sit on the steps and take in the view down to Butler Library.",
+        "coordinates": [
+          40.807941,
+          -73.962053
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/726177750",
+        "source": "https://en.wikipedia.org/wiki/Low_Memorial_Library"
+      },
+      {
+        "id": "trad_columbia_sundial",
+        "name": "The Sundial",
+        "description": "The 1914 Class of 1885 Sundial at the centre of College Walk lost its granite ball in 1946, but its platform remains a classic gathering place and free-speech corner. It is also where the winter tree lighting and Yule Log ceremonies begin.",
+        "coordinates": [
+          40.807283,
+          -73.962531
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/6831699315",
+        "source": "https://en.wikipedia.org/wiki/Columbia_University_sundial"
+      },
+      {
+        "id": "trad_columbia_tree_lighting",
+        "name": "College Walk tree lighting",
+        "description": "Each early December, the trees along College Walk are lit in a ceremony with a cappella music and hot chocolate, and the lights stay on until the end of February. Walk College Walk after dark in winter to see them.",
+        "coordinates": [
+          40.807411,
+          -73.962433
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/49688928",
+        "source": "https://en.wikipedia.org/wiki/Columbia_University"
+      }
+    ],
     "wiki": "Columbia University",
     "currency": "USD ($)",
     "details": {
@@ -620,6 +881,51 @@
     "name": "University of Pennsylvania",
     "enumCase": "upenn",
     "country": "unitedStates",
+    "conference": "ivyLeague",
+    "aliases": [
+      "Penn",
+      "UPenn",
+      "Quakers"
+    ],
+    "colors": [
+      "#011F5B",
+      "#990000"
+    ],
+    "traditions": [
+      {
+        "id": "trad_penn_the_button",
+        "name": "The Button",
+        "description": "Claes Oldenburg's Split Button sits on College Green, and student lore says it is the button that popped off Benjamin Franklin's vest, rolled down Locust Walk and split in two. It is a central campus landmark and a popular photo stop.",
+        "coordinates": [
+          39.952215,
+          -75.193692
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/6652012667",
+        "source": "https://en.wikipedia.org/wiki/The_Button_(sculpture)"
+      },
+      {
+        "id": "trad_penn_ivy_stones",
+        "name": "Ivy Day stones on College Hall",
+        "description": "Since 1873 each graduating class has set an engraved Ivy Stone into a campus building, and there are now nearly 200 around campus. Start at College Hall and look for the class-year stones in the walls.",
+        "coordinates": [
+          39.95146,
+          -75.193815
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/51367353",
+        "source": "https://osa.universitylife.upenn.edu/ivydaystones/"
+      },
+      {
+        "id": "trad_penn_hey_day",
+        "name": "Hey Day on Locust Walk",
+        "description": "Each spring, juniors in straw-style hats march down Locust Walk to College Hall to be declared seniors, a tradition dating back to Class Day in 1865. Visitors can watch the procession pass along the walk.",
+        "coordinates": [
+          39.952162,
+          -75.196335
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/32108143",
+        "source": "https://en.wikipedia.org/wiki/University_of_Pennsylvania"
+      }
+    ],
     "wiki": "University of Pennsylvania",
     "currency": "USD ($)",
     "details": {
@@ -717,6 +1023,38 @@
     "name": "Brown University",
     "enumCase": "brown",
     "country": "unitedStates",
+    "conference": "ivyLeague",
+    "aliases": [
+      "Brown"
+    ],
+    "colors": [
+      "#4E3629",
+      "#C00404"
+    ],
+    "traditions": [
+      {
+        "id": "trad_brown_van_wickle_gates",
+        "name": "Van Wickle Gates",
+        "description": "The centre Van Wickle Gates open only for Convocation and Commencement, and superstition says a student who passes through them more than twice will not graduate. Visitors can see the 1901 wrought-iron gates on Prospect Street and walk through the side gates instead.",
+        "coordinates": [
+          41.826135,
+          -71.404472
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/1422757084",
+        "source": "https://en.wikipedia.org/wiki/Van_Wickle_Gates"
+      },
+      {
+        "id": "trad_brown_bronze_bruno",
+        "name": "Bronze Bruno",
+        "description": "A seven-foot bronze of Bruno, Brown's bear mascot, stands on the College Green on a pedestal holding a slate rock said to be one Roger Williams stepped on in 1636. Stop by for a photo with the mascot.",
+        "coordinates": [
+          41.826682,
+          -71.402826
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/1314004497",
+        "source": "https://en.wikipedia.org/wiki/List_of_Brown_University_statues"
+      }
+    ],
     "wiki": "Brown University",
     "currency": "USD ($)",
     "details": {
@@ -799,6 +1137,61 @@
     "name": "Dartmouth College",
     "enumCase": "dartmouth",
     "country": "unitedStates",
+    "conference": "ivyLeague",
+    "aliases": [
+      "Dartmouth",
+      "Big Green"
+    ],
+    "colors": [
+      "#00693E",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_dartmouth_bonfire",
+        "name": "Dartmouth Night Bonfire",
+        "description": "Each Homecoming weekend a large bonfire is built on the Green and first-year students run laps around it, one for each year of their class number. Visitors can watch the parade and the lit bonfire from around the Green.",
+        "coordinates": [
+          43.703326,
+          -72.288594
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/372920426",
+        "source": "https://en.wikipedia.org/wiki/Dartmouth_College_traditions"
+      },
+      {
+        "id": "trad_dartmouth_snow_sculpture",
+        "name": "Winter Carnival Snow Sculpture",
+        "description": "Every February for Winter Carnival, students build a large themed snow sculpture on the Green. Visitors can stop by to see and photograph it.",
+        "coordinates": [
+          43.703326,
+          -72.288594
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/372920426",
+        "source": "https://en.wikipedia.org/wiki/Dartmouth_College_traditions"
+      },
+      {
+        "id": "trad_dartmouth_bentley_nose",
+        "name": "Warner Bentley's Nose",
+        "description": "Students rub the nose of the statue of Warner Bentley in the Hopkins Center for the Arts for good luck, which has left it discoloured. Visitors to the Hop can find the statue and give it a rub.",
+        "coordinates": [
+          43.701639,
+          -72.288158
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/262924499",
+        "source": "https://en.wikipedia.org/wiki/Dartmouth_College_traditions"
+      },
+      {
+        "id": "trad_dartmouth_bema_old_pine",
+        "name": "The Bema and the Old Pine",
+        "description": "On Class Day seniors gather at the Bema, a natural amphitheatre in College Park, then walk up the hill to the stump of the Old Pine for a farewell ceremony that dates to the 1830s. Visitors can walk through College Park to see both spots.",
+        "coordinates": [
+          43.705207,
+          -72.284455
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/293468296",
+        "source": "https://en.wikipedia.org/wiki/Dartmouth_College_traditions"
+      }
+    ],
     "wiki": "Dartmouth College",
     "currency": "USD ($)",
     "details": {
@@ -881,6 +1274,38 @@
     "name": "Georgetown University",
     "enumCase": "georgetown",
     "country": "unitedStates",
+    "aliases": [
+      "Georgetown",
+      "Hoyas"
+    ],
+    "colors": [
+      "#041E42",
+      "#63666A"
+    ],
+    "traditions": [
+      {
+        "id": "trad_georgetown_healy_seal",
+        "name": "Healy Hall Seal",
+        "description": "A mosaic Georgetown seal is set into the ground at the central entrance to Healy Hall, and students walk around it because legend says stepping on it means you won't graduate. Visitors can see the seal and watch students sidestep it.",
+        "coordinates": [
+          38.907259,
+          -77.072759
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/444583709",
+        "source": "https://web.archive.org/web/2024/https://georgetownvoice.com/2015/07/31/traditions-at-georgetown/"
+      },
+      {
+        "id": "trad_georgetown_exorcist_steps",
+        "name": "The Exorcist Steps",
+        "description": "The steep stone staircase from Prospect Street down to M Street appears in the final scene of The Exorcist, written by alumnus William Peter Blatty, and Hoyas make a point of running up them. Visitors can climb the public steps and take a photo.",
+        "coordinates": [
+          38.905519,
+          -77.070156
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/250470751",
+        "source": "https://web.archive.org/web/2024/https://georgetownvoice.com/2015/07/31/traditions-at-georgetown/"
+      }
+    ],
     "wiki": "Georgetown University",
     "currency": "USD ($)",
     "details": {

@@ -309,7 +309,9 @@ private extension QuizView {
                 Divider().background(brandColor.opacity(0.3))
                 
                 VStack(alignment: .leading, spacing: 14) {
-                    dossierRow(label: "STYLE", value: building.buildingStyle, icon: "fossil.shell", hide: viewModel.currentQuestionType == .style)
+                    if let style = building.knownStyle {
+                        dossierRow(label: "STYLE", value: style, icon: "fossil.shell", hide: viewModel.currentQuestionType == .style)
+                    }
                     if building.hasKnownYear {
                         dossierRow(label: "YEAR", value: "\(building.yearBuilt)", icon: "calendar", hide: viewModel.currentQuestionType == .year)
                     }
@@ -317,7 +319,9 @@ private extension QuizView {
                     if building.numberOfStories > 0 {
                         dossierRow(label: "STORIES", value: "\(building.numberOfStories) Stories", icon: "building.2", hide: viewModel.currentQuestionType == .stories)
                     }
-                    dossierRow(label: "ARCHITECT", value: building.architect, icon: "person.text.rectangle", hide: viewModel.currentQuestionType == .architect)
+                    if let architect = building.knownArchitect {
+                        dossierRow(label: "ARCHITECT", value: architect, icon: "person.text.rectangle", hide: viewModel.currentQuestionType == .architect)
+                    }
                 }
             }
         .padding(isIPad ? 32 : 24)

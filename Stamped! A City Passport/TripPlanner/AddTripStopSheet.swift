@@ -17,6 +17,10 @@ struct AddTripStopSheet: View {
     @ObservedObject private var store = TripStore.shared
     @ObservedObject private var progress = GlobalProgressManager.shared
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+    /// Keeps the icons in one column, scaled with the text
+    @ScaledMetric(relativeTo: .body) private var iconWidth: CGFloat = 28
+    @AppStorage("high_contrast_mode") private var isHighContrast = false
     @State private var searchText = ""
 
     /// What's already on this day, read live from the store so checkmarks update as you tap.
@@ -41,7 +45,7 @@ struct AddTripStopSheet: View {
         NavigationStack {
             List {
                 if !savedPlaces.isEmpty {
-                    Section("Saved Places") {
+                    Section {
                         ForEach(savedPlaces) { place in
                             pickerRow(
                                 name: place.name,
@@ -50,21 +54,27 @@ struct AddTripStopSheet: View {
                                 kind: .place(placeID: place.id)
                             )
                         }
+                    } header: {
+                        DSSectionHeader("Saved Places", systemImage: "mappin.and.ellipse", isHighContrast: isHighContrast)
                     }
                 }
 
                 if !wishlistLandmarks.isEmpty {
-                    Section("Want to Visit") {
+                    Section {
                         ForEach(wishlistLandmarks) { building in
                             landmarkRow(building)
                         }
+                    } header: {
+                        DSSectionHeader("Want to Visit", systemImage: "heart", isHighContrast: isHighContrast)
                     }
                 }
 
-                Section("All Landmarks") {
+                Section {
                     ForEach(allLandmarks) { building in
                         landmarkRow(building)
                     }
+                } header: {
+                    DSSectionHeader("All Landmarks", systemImage: "building.columns", isHighContrast: isHighContrast)
                 }
             }
             .searchable(text: $searchText, prompt: "Search \(city.name)")
@@ -76,13 +86,13 @@ struct AddTripStopSheet: View {
                 }
             }
         }
-        .tint(Color.adventureOrange)
+        .tint(DS.Palette.accent)
     }
 
     private func landmarkRow(_ building: Building) -> some View {
         pickerRow(
             name: building.name,
-            detail: building.buildingStyle,
+            detail: building.knownStyle ?? "",
             systemImage: "building.columns.fill",
             kind: .landmark(buildingID: building.id)
         )
@@ -94,23 +104,23 @@ struct AddTripStopSheet: View {
             store.addStop(kind, toDay: dayID, in: tripID)
             HapticManager.shared.trigger(.selection)
         } label: {
-            HStack(spacing: 12) {
+            HStack(spacing: DS.Space.m) {
                 Image(systemName: systemImage)
-                    .foregroundStyle(Color.adventureOrange)
-                    .frame(width: 28)
-                VStack(alignment: .leading, spacing: 2) {
+                    .foregroundStyle(DS.Palette.accent)
+                    .frame(width: iconWidth)
+                VStack(alignment: .leading, spacing: DS.Space.xs) {
                     Text(name)
                         .foregroundStyle(.primary)
                     if let detail, !detail.isEmpty {
                         Text(detail)
                             .font(.caption)
                             .foregroundStyle(.secondary)
-                            .lineLimit(1)
+                            .lineLimit(dynamicTypeSize.isAccessibilitySize ? 3 : 1)
                     }
                 }
                 Spacer()
                 Image(systemName: isAdded ? "checkmark.circle.fill" : "plus.circle")
-                    .foregroundStyle(isAdded ? Color.green : Color.adventureOrange)
+                    .foregroundStyle(isAdded ? Color.green : DS.Palette.accent)
                     .font(.title3)
             }
         }

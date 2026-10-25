@@ -408,5 +408,605 @@
     "currencyInfo": "Peso mexicain ($)",
     "transportation": "Pumabús / Métro",
     "transportationFact": "L'université exploite ses propres lignes gratuites de Pumabús sur son immense campus. Les stations de métro Universidad et Copilco de la ligne 3 desservent le campus."
+  },
+  "Boston College": {
+    "nickname": "Ever to Excel",
+    "airportInfo": "Logan International, à East Boston, est le principal aéroport de la région.",
+    "funFact": "La Gasson Tower, achevée en 1913, a servi de modèle aux hautes tours gothiques construites ensuite à Princeton, Yale et Duke.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le bordeaux et l'or, et ses équipes sont les Eagles.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / MBTA Green Line",
+    "transportationFact": "Le campus principal se parcourt à pied. La branche B de la Green Line s'arrête à la station Boston College, sur Commonwealth Avenue, avec des trains directs vers le centre de Boston."
+  },
+  "Clemson University": {
+    "nickname": "Le fief des Tigers",
+    "airportInfo": "Greenville-Spartanburg International, à l'est de Clemson par l'Interstate 85, est l'aéroport commercial le plus proche.",
+    "funFact": "Le campus s'est développé autour de Fort Hill, la maison de plantation de John C. Calhoun, toujours debout sur le campus et devenue musée.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont l'orange et le regalia (violet), et ses équipes sont les Tigers.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / CATbus",
+    "transportationFact": "Le campus central se parcourt à pied. Le CATbus de Clemson Area Transit est gratuit et dessert le campus et la ville de Clemson."
+  },
+  "Duke University": {
+    "nickname": "Le fief des Blue Devils",
+    "airportInfo": "Raleigh-Durham International, à l'est de Durham, est le principal aéroport du Research Triangle.",
+    "funFact": "Julian Abele, architecte afro-américain réputé et dessinateur en chef du cabinet de Horace Trumbauer, a conçu la Duke Chapel et une grande partie du West Campus.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le bleu Duke et le blanc, et ses équipes sont les Blue Devils.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Duke Transit",
+    "transportationFact": "Chaque campus se parcourt à pied. Les bus gratuits de Duke, dont la ligne C1 East-West, relient les campus East et West."
+  },
+  "Florida State University": {
+    "nickname": "Vires, Artes, Mores",
+    "airportInfo": "Tallahassee International, au sud-ouest de la ville, est l'aéroport commercial le plus proche.",
+    "funFact": "L'architecte William Augustus Edwards a conçu les premiers bâtiments de style gothique universitaire, comme le Westcott Building et Dodd Hall, et des bâtiments plus récents comme Legacy Hall et la Student Union perpétuent ce style.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le grenat et l'or, et ses équipes sont les Seminoles.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Seminole Express",
+    "transportationFact": "Le campus se parcourt à pied. Les bus Seminole Express, exploités avec StarMetro, desservent le campus et les quartiers voisins, et les étudiants voyagent gratuitement avec leur FSUCard."
+  },
+  "Georgia Institute of Technology": {
+    "nickname": "The Ramblin' Wreck",
+    "airportInfo": "Hartsfield-Jackson, au sud de la ville, est accessible depuis Midtown par les lignes rouge et or du MARTA.",
+    "funFact": "Les enseignes lumineuses TECH sur les quatre faces de la tour de sept étages de Tech Tower signalent le campus depuis l'ouverture du bâtiment en 1888.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le vieil or et le blanc, et ses équipes sont les Yellow Jackets.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / bus Stinger / MARTA",
+    "transportationFact": "Le campus se parcourt à pied. Les bus Stinger de Georgia Tech font le tour du campus et le relient à Tech Square et à la station MARTA Midtown."
+  },
+  "University of Louisville": {
+    "nickname": "Le fief des Cardinals",
+    "airportInfo": "L'aéroport international Louisville Muhammad Ali se trouve à peu de distance en voiture au sud du Belknap Campus.",
+    "funFact": "Grawemeyer Hall, le principal bâtiment administratif, a été construit sur le modèle de la Rotunda de Thomas Jefferson à l'université de Virginie.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le rouge et le noir, et ses équipes sont les Cardinals.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / bus TARC",
+    "transportationFact": "Le Belknap Campus se parcourt à pied. Étudiants et personnel prennent gratuitement les bus TARC avec leur carte UofL, dont la ligne 28 vers le Health Sciences Center."
+  },
+  "University of Miami": {
+    "nickname": "The U",
+    "airportInfo": "Miami International, au nord de Coral Gables, est le principal aéroport de la zone.",
+    "funFact": "Le Ring Theatre, achevé en 1953, possède une coupole en béton maintenue par une ceinture d'acier et a été construit pour résister aux vents des ouragans.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont l'orange, le vert et le blanc, et ses équipes sont les Hurricanes.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Metrorail / navette Hurry 'Canes",
+    "transportationFact": "Le campus se parcourt à pied. La navette gratuite Hurry 'Canes relie le campus à la station University du Metrorail."
+  },
+  "North Carolina State University": {
+    "nickname": "Think and Do",
+    "airportInfo": "Raleigh-Durham International, au nord-ouest de Raleigh, est le principal aéroport du Research Triangle.",
+    "funFact": "Le Memorial Belltower, mémorial de la Première Guerre mondiale, est construit avec 1 400 tonnes de granit extrait à Mount Airy, en Caroline du Nord.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le rouge et le blanc, et ses équipes sont le Wolfpack.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Wolfline",
+    "transportationFact": "Le North Campus se parcourt à pied. Les bus gratuits Wolfline relient les campus Main et Centennial."
+  },
+  "University of North Carolina at Chapel Hill": {
+    "nickname": "Lux libertas",
+    "airportInfo": "Raleigh-Durham International, à l'est de Chapel Hill, est le principal aéroport du Research Triangle.",
+    "funFact": "Old East, commencé en 1793, est le plus ancien bâtiment d'une université publique aux États-Unis.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le bleu Caroline et le blanc, et ses équipes sont les Tar Heels.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Chapel Hill Transit",
+    "transportationFact": "Le campus se parcourt à pied. Chapel Hill Transit propose des bus gratuits sur le campus et dans Chapel Hill et Carrboro."
+  },
+  "University of Pittsburgh": {
+    "nickname": "Veritas et Virtus",
+    "airportInfo": "Pittsburgh International, à l'ouest de la ville, est le principal aéroport de la région.",
+    "funFact": "La Cathedral of Learning, haute de 42 étages, est le plus haut bâtiment d'enseignement de l'hémisphère occidental et abrite 31 Nationality Rooms conçues par les communautés ethniques de Pittsburgh.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le bleu et l'or, et ses équipes sont les Panthers.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / navettes de Pitt",
+    "transportationFact": "Le campus d'Oakland se parcourt à pied. Pitt exploite ses propres navettes dans Oakland, et les étudiants prennent gratuitement les bus, le métro léger et les funiculaires de Pittsburgh Regional Transit avec leur carte Pitt."
+  },
+  "Southern Methodist University": {
+    "nickname": "The Hilltop",
+    "airportInfo": "Dallas Love Field, à quelques kilomètres à l'ouest du campus, est l'aéroport le plus proche. DFW International est plus éloigné.",
+    "funFact": "Le premier président de SMU a choisi une architecture géorgienne en brique rouge d'après l'université de Virginie de Thomas Jefferson, et la coupole de Dallas Hall s'inspire du Panthéon.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le rouge et le bleu, et ses équipes sont les Mustangs.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / navettes SMU Express / DART",
+    "transportationFact": "Le campus se parcourt à pied. Les navettes gratuites SMU Express relient le campus à la station SMU/Mockingbird du DART, sur les lignes rouge, bleue et orange."
+  },
+  "Syracuse University": {
+    "nickname": "The Orange",
+    "airportInfo": "Syracuse Hancock International, au nord de la ville, est l'aéroport commercial le plus proche.",
+    "funFact": "Le Hall of Languages, de style Second Empire et achevé en 1873, fut le premier bâtiment du campus et abrita d'abord toute l'université.",
+    "language": "Anglais",
+    "languageInfo": "La couleur de l'université est l'orange, et ses équipes sont les Orange.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / bus Centro",
+    "transportationFact": "Le Main Campus se parcourt à pied. Centro exploite les lignes de bus du campus de Syracuse University ainsi que des bus urbains vers le centre de Syracuse."
+  },
+  "Virginia Tech": {
+    "nickname": "Ut Prosim (Afin que je serve)",
+    "airportInfo": "Roanoke-Blacksburg Regional, à Roanoke à l'est de Blacksburg, est l'aéroport commercial le plus proche.",
+    "funFact": "La plupart des bâtiments du campus sont revêtus de Hokie Stone, un calcaire local tiré d'une carrière exploitée par l'université depuis les années 1950.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le bordeaux Chicago et l'orange brûlé, et ses équipes sont les Hokies.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Blacksburg Transit",
+    "transportationFact": "Le campus autour du Drillfield se parcourt à pied. Les bus de Blacksburg Transit sont gratuits pour tous sur le campus et en ville."
+  },
+  "Wake Forest University": {
+    "nickname": "Pro Humanitate",
+    "airportInfo": "Piedmont Triad International, à l'est de Winston-Salem, est le grand aéroport commercial le plus proche.",
+    "funFact": "La plupart des bâtiments du Reynolda Campus sont de style géorgien modifié, en brique Old Virginia ornée de granit et de calcaire, conçus par Jens Fredrick Larson pour le déménagement de l'université depuis la ville de Wake Forest en 1956.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le vieil or et le noir, et ses équipes sont les Demon Deacons.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / navettes de l'université",
+    "transportationFact": "Le Reynolda Campus se parcourt à pied. Les navettes de l'université partent d'un Shuttle Hub sur le campus, dont une ligne en semaine vers Wake Downtown."
+  },
+  "University of Arizona": {
+    "nickname": "Bear Down",
+    "airportInfo": "L'aéroport international de Tucson, au sud du centre-ville, est le principal aéroport du sud de l'Arizona.",
+    "funFact": "La brique rouge se retrouve dans presque tous les bâtiments de l'University of Arizona. L'architecte du campus Roy Place a prolongé ce style dans les années 1920 et 1930 avec le Centennial Hall, le Bear Down Gym et le bâtiment sud de l'Arizona State Museum.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le rouge cardinal et le bleu marine, et ses équipes sont les Wildcats.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Sun Link Streetcar",
+    "transportationFact": "Le cœur du campus se parcourt à pied. Le tramway Sun Link relie le campus à Main Gate Square, à la Fourth Avenue et au centre de Tucson."
+  },
+  "Arizona State University": {
+    "nickname": "Le fief des Sun Devils",
+    "airportInfo": "Sky Harbor se trouve à l'ouest du campus de Tempe, et le PHX Sky Train le relie au métro léger Valley Metro.",
+    "funFact": "ASU Gammage est l'une des dernières commandes publiques de Frank Lloyd Wright. Wright a repris pour sa forme ronde le projet d'un opéra qu'il avait conçu pour Bagdad.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le bordeaux et l'or, et ses équipes sont les Sun Devils.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Valley Metro Rail",
+    "transportationFact": "Le métro léger Valley Metro s'arrête en bordure du campus de Tempe. Les bus de quartier gratuits Orbit de Tempe et le Tempe Streetcar desservent aussi le secteur."
+  },
+  "Brigham Young University": {
+    "nickname": "Enter to Learn; Go Forth to Serve (Entrer pour apprendre, partir pour servir)",
+    "airportInfo": "L'aéroport international de Salt Lake City, au nord de Provo, est le principal aéroport de l'Utah.",
+    "funFact": "L'Eyring Science Center de 1950 a été le premier bâtiment de BYU à rompre avec l'architecture classique, inaugurant la brique beige doré qu'on voit sur une grande partie du campus.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le bleu marine et le blanc, et ses équipes sont les Cougars.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / UTA UVX",
+    "transportationFact": "Le campus se parcourt à pied. La ligne de bus rapide UVX de l'UTA a quatre arrêts à BYU et la relie à l'Utah Valley University et aux gares FrontRunner de Provo et d'Orem."
+  },
+  "University of Houston": {
+    "nickname": "Go Coogs",
+    "airportInfo": "L'aéroport Hobby, au sud-est du campus, est le plus proche. George Bush Intercontinental (IAH), au nord de la ville, assure la plupart des vols internationaux.",
+    "funFact": "Le Roy G. Cullen Building, achevé en 1939, est le plus ancien bâtiment du campus ; on pense qu'il fut le premier bâtiment d'un campus universitaire américain doté de la climatisation.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le rouge écarlate et le blanc, et ses équipes sont les Cougars.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / METRORail Purple Line",
+    "transportationFact": "La Purple Line du METRORail a plusieurs arrêts le long du campus et rejoint le centre de Houston."
+  },
+  "Iowa State University": {
+    "nickname": "Science with Practice (La science par la pratique)",
+    "airportInfo": "L'aéroport international de Des Moines, au sud d'Ames, est le principal aéroport du centre de l'Iowa.",
+    "funFact": "Le Campanile, construit en 1897 et 1898, abrite le Stanton Memorial Carillon. Il figure sur la bague officielle et la masse de cérémonie de l'université et donne son sujet à l'hymne « The Bells of Iowa State ».",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le cardinal et l'or, et ses équipes sont les Cyclones.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / CyRide",
+    "transportationFact": "Le Central Campus se parcourt à pied. Les bus CyRide, gérés par la ville, l'université et l'association étudiante, desservent le campus et tout Ames."
+  },
+  "University of Kansas": {
+    "nickname": "Rock Chalk, Jayhawk",
+    "airportInfo": "L'aéroport international de Kansas City, à l'est de Lawrence, est le principal aéroport de la région.",
+    "funFact": "Beaucoup des premiers bâtiments de KU sur le Mount Oread, comme le Spooner Hall, sont en calcaire gris brut d'Oread, extrait tout près de la colline.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le cramoisi et le bleu, et ses équipes sont les Jayhawks.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / KU on Wheels",
+    "transportationFact": "Le campus perché sur la colline se parcourt à pied. KU on Wheels et Lawrence Transit forment un réseau coordonné, et étudiants et personnel de KU voyagent avec leur KU Card."
+  },
+  "Kansas State University": {
+    "nickname": "Every Man a Wildcat (Tous des Wildcats)",
+    "airportInfo": "Depuis le Manhattan Regional Airport, American Eagle dessert Dallas/Fort Worth et Chicago O'Hare.",
+    "funFact": "Le Nichols Hall ressemble à un château crénelé. Un incendie a détruit son intérieur en 1968, et le bâtiment a été reconstruit dans ses anciens murs de pierre en 1985.",
+    "language": "Anglais",
+    "languageInfo": "La couleur de l'université est le pourpre royal, et ses équipes sont les Wildcats.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / aTa Bus",
+    "transportationFact": "Le campus se parcourt à pied. Grâce à un partenariat avec l'aTa Bus, étudiants et personnel de K-State voyagent gratuitement sur les lignes du campus et de Manhattan avec leur carte."
+  },
+  "Oklahoma State University": {
+    "nickname": "Le fief des Cowboys",
+    "airportInfo": "Le Stillwater Regional Airport dessert la ville. Tulsa International (TUL) et Will Rogers à Oklahoma City (OKC) sont les grands aéroports les plus proches.",
+    "funFact": "La plus grande partie du campus suit le style « Modified Georgian » fixé par le plan du président Henry G. Bennett à la fin des années 1920. L'Edmon Low Library et la Student Union en sont deux emblèmes.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont l'orange et le noir, et ses équipes sont les Cowboys.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / The Bus",
+    "transportationFact": "Le campus se parcourt à pied. The Bus (OSU-Stillwater Community Transit) est géré par l'université et ouvert à tous ; étudiants et personnel d'OSU voyagent gratuitement avec leur carte."
+  },
+  "Texas Tech University": {
+    "nickname": "Guns Up",
+    "airportInfo": "Lubbock Preston Smith International est le principal aéroport de la région de Lubbock.",
+    "funFact": "L'Administration Building, l'un des premiers bâtiments du campus, s'inspire de l'université d'Alcalá de Henares, en Espagne, avec deux clochers et une cour intérieure.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont l'écarlate et le noir, et ses équipes sont les Red Raiders.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Citibus",
+    "transportationFact": "Citibus assure des boucles gratuites autour du campus, comme les lignes Red Raider et Double T, et les étudiants de Texas Tech empruntent gratuitement les autres lignes Citibus avec leur carte."
+  },
+  "West Virginia University": {
+    "nickname": "Let's Go Mountaineers",
+    "airportInfo": "Depuis le Morgantown Municipal Airport, United Express dessert Washington Dulles et Chicago O'Hare. Pittsburgh International (PIT) est le grand aéroport le plus proche.",
+    "funFact": "La tour centrale du Woodburn Hall abrite une horloge Seth Thomas depuis 1910. Elle se trouvait d'abord dans la coupole du Martin Hall, le plus ancien bâtiment de l'université, sur la même place.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le vieil or et le bleu, et ses équipes sont les Mountaineers.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Personal Rapid Transit (PRT)",
+    "transportationFact": "Le Personal Rapid Transit de WVU fait circuler de petites cabines sans conducteur sur une voie dédiée reliant le centre de Morgantown, le campus d'Evansdale et le campus des sciences de la santé."
+  },
+  "Baylor University": {
+    "nickname": "Sic 'em Bears",
+    "airportInfo": "Le Waco Regional Airport dessert la ville. Dallas/Fort Worth International (DFW) est le grand aéroport le plus proche.",
+    "funFact": "L'Armstrong Browning Library possède les plus grandes collections d'œuvres des poètes Robert et Elizabeth Barrett Browning, et abriterait la plus grande collection de vitraux profanes au monde.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le vert et l'or, et ses équipes sont les Bears.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Baylor University Shuttle",
+    "transportationFact": "Le campus se parcourt à pied. Waco Transit exploite la navette gratuite Baylor University Shuttle (BUS), qui relie le campus aux logements et quartiers voisins."
+  },
+  "University of Cincinnati": {
+    "nickname": "Le fief des Bearcats",
+    "airportInfo": "L'aéroport CVG se trouve de l'autre côté de l'Ohio, dans le nord du Kentucky ; c'est le principal aéroport de Cincinnati.",
+    "funFact": "UC a confié de nombreux bâtiments à des architectes réputés, dont Michael Graves, Peter Eisenman, Henry Cobb, Frank Gehry, Gwathmey Siegel, Moore Ruble Yudell, Morphosis de Thom Mayne et Bernard Tschumi.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le rouge et le noir, et ses équipes sont les Bearcats.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Bearcats Shuttle",
+    "transportationFact": "Le campus principal se parcourt à pied. Les lignes du Bearcats Shuttle partent et arrivent à Transit Row et relient le campus d'Uptown aux quartiers voisins ; les bus Metro desservent aussi Uptown."
+  },
+  "University of Colorado Boulder": {
+    "nickname": "Sko Buffs",
+    "airportInfo": "L'aéroport international de Denver, au sud-est de Boulder, est le principal aéroport de la région. La ligne de bus AB du RTD relie l'aéroport à Boulder.",
+    "funFact": "Le style de CU Boulder, appelé Tuscan Vernacular Revival, vient de l'architecte Charles Klauder : murs de grès local brut, toits de tuiles rouges et encadrements en calcaire.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont l'argent, l'or et le noir, et ses équipes sont les Buffaloes.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Bus RTD",
+    "transportationFact": "Le campus principal se parcourt à pied. Les bus RTD, dont la navette circulaire HOP, relient le campus au centre de Boulder, et des bus régionaux vont à Denver."
+  },
+  "Texas Christian University": {
+    "nickname": "Go Frogs",
+    "airportInfo": "L'aéroport DFW, au nord-est de Fort Worth, est le principal aéroport de la région.",
+    "funFact": "La plupart des bâtiments de TCU sont en brique dorée appelée « TCU buff », avec des toits de tuiles rouges. La Robert Carr Chapel a dérogé à la règle avec une brique couleur saumon, et les anciens élèves ont protesté à son ouverture.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le violet et le blanc, et ses équipes sont les Horned Frogs.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Trinity Metro",
+    "transportationFact": "Le campus est compact et se parcourt à pied. Trinity Metro exploite les bus et trains publics de Fort Worth."
+  },
+  "University of Central Florida": {
+    "nickname": "Charge On",
+    "airportInfo": "L'aéroport international d'Orlando, au sud-ouest du campus, est le principal aéroport de la région.",
+    "funFact": "Le campus principal d'UCF est organisé en anneaux : Gemini Boulevard, puis Apollo, Mercury et Pegasus Circle. C'est l'un des deux seuls campus américains à plan en cercles concentriques, avec UC Irvine.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le noir et l'or, et ses équipes sont les Knights.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Navettes UCF",
+    "transportationFact": "Le cœur circulaire se parcourt à pied. Les navettes d'UCF relient le campus principal à plus de 20 résidences voisines, et les étudiants prennent gratuitement les bus LYNX avec leur carte."
+  },
+  "University of Utah": {
+    "nickname": "Go Utes",
+    "airportInfo": "L'aéroport international de Salt Lake City est à l'ouest du centre-ville. Le métro léger TRAX va de l'aéroport au centre, où l'on prend la Red Line pour le campus.",
+    "funFact": "À l'ouverture du Huntsman Center en 1969, sa coupole en bois de 364 pieds (111 m) de diamètre était la plus grande coupole en bois sans appui intermédiaire du monde.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le cramoisi et le blanc, et ses équipes sont les Utes.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / TRAX Red Line",
+    "transportationFact": "La TRAX Red Line de l'UTA entre sur le campus, avec des arrêts au stade, au campus sud et au centre médical."
+  },
+  "University of Illinois Urbana-Champaign": {
+    "nickname": "Le fief des Fighting Illini",
+    "airportInfo": "Le Willard Airport, à Savoy juste au sud du campus, propose des vols quotidiens vers Chicago O'Hare et Dallas/Fort Worth. Beaucoup de visiteurs passent plutôt par Chicago.",
+    "funFact": "L'architecte Charles A. Platt a conçu la Main Library, l'un des nombreux bâtiments de style Georgian Revival qu'il a dessinés pour le campus.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont l'orange et le bleu, et ses équipes sont les Fighting Illini.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / bus MTD",
+    "transportationFact": "Les bus du Champaign-Urbana Mass Transit District traversent souvent le campus, et les étudiants voyagent avec leur i-card."
+  },
+  "Indiana University Bloomington": {
+    "nickname": "Le fief des Hoosiers",
+    "airportInfo": "L'aéroport international d'Indianapolis, au nord de Bloomington, est l'aéroport desservi par des lignes régulières le plus proche.",
+    "funFact": "De nombreux bâtiments du campus sont construits en calcaire de l'Indiana, la pierre locale qui a fait la réputation de l'État.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le crème et le cramoisi, et ses équipes sont les Hoosiers.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / IU Campus Bus",
+    "transportationFact": "Les lignes de l'IU Campus Bus font le tour du campus, et les bus de Bloomington Transit le relient au reste de la ville."
+  },
+  "University of Iowa": {
+    "nickname": "Le fief des Hawkeyes",
+    "airportInfo": "L'Eastern Iowa Airport, près de Cedar Rapids au nord d'Iowa City, est l'aéroport desservi par des lignes régulières le plus proche.",
+    "funFact": "L'Old Capitol de style Greek Revival, premier capitole de l'État de l'Iowa, se dresse au centre du Pentacrest, entouré de quatre bâtiments Beaux-Arts.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le noir et l'or, et ses équipes sont les Hawkeyes.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Cambus",
+    "transportationFact": "Le Cambus gratuit de l'université dessert le campus et les hôpitaux."
+  },
+  "University of Maryland, College Park": {
+    "nickname": "Fear the Turtle",
+    "airportInfo": "L'aéroport Reagan National, de l'autre côté du Potomac à Arlington (Virginie), est le grand aéroport le plus proche. BWI et Dulles desservent aussi la région.",
+    "funFact": "Morrill Hall, achevé en 1898, est le seul bâtiment d'enseignement épargné par le grand incendie de 1912 qui ravagea le campus.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le rouge, le blanc, le noir et l'or, et ses équipes sont les Terrapins.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Shuttle-UM / Metro",
+    "transportationFact": "Les bus Shuttle-UM de l'université desservent le campus et les quartiers voisins, et la station de métro College Park–University of Maryland mène à Washington."
+  },
+  "Michigan State University": {
+    "nickname": "Spartans Will",
+    "airportInfo": "Le Capital Region International Airport de Lansing est l'aéroport desservi par des lignes régulières le plus proche.",
+    "funFact": "La Beaumont Tower s'élève à l'emplacement de College Hall, le premier bâtiment d'Amérique construit pour enseigner l'agriculture scientifique.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le vert et le blanc, et ses équipes sont les Spartans.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / bus CATA",
+    "transportationFact": "Les bus CATA traversent le campus et le relient à East Lansing et Lansing."
+  },
+  "University of Minnesota Twin Cities": {
+    "nickname": "Ski-U-Mah",
+    "airportInfo": "L'aéroport MSP se trouve au sud des Twin Cities. Depuis le campus, prenez le tramway Green Line jusqu'au centre-ville, puis la Blue Line.",
+    "funFact": "Le Weisman Art Museum en acier inoxydable de Frank Gehry, achevé en 1993, domine le Mississippi du haut de la falaise.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le bordeaux et l'or, et ses équipes sont les Golden Gophers.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Campus Connector / Green Line",
+    "transportationFact": "Le bus gratuit Campus Connector relie East Bank, West Bank et le campus de St. Paul, et le tramway Metro Green Line traverse le campus."
+  },
+  "University of Nebraska–Lincoln": {
+    "nickname": "There Is No Place Like Nebraska",
+    "airportInfo": "Le Lincoln Airport, au nord-ouest du centre-ville, est l'aéroport le plus proche. L'Eppley Airfield d'Omaha propose davantage de vols.",
+    "funFact": "Le Sheldon Museum of Art de Philip Johnson, ouvert en 1963, est bâti en travertin italien autour d'un grand hall et d'un escalier central.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont l'écarlate et le crème, et ses équipes sont les Cornhuskers.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / StarTran",
+    "transportationFact": "Les bus StarTran relient les campus City, East et Innovation, et les étudiants reçoivent un pass de bus grâce à leurs frais de transport."
+  },
+  "Northwestern University": {
+    "nickname": "Tout ce qui est vrai",
+    "airportInfo": "O'Hare, à l'ouest d'Evanston, est le principal aéroport de la région. Chicago Midway dessert aussi la ville.",
+    "funFact": "University Hall, achevé en 1869, est le plus ancien bâtiment d'origine du campus ; son ancien mécanisme d'horloge est aujourd'hui au Smithsonian.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le violet et le blanc, et ses équipes sont les Wildcats.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / CTA Purple Line / Metra",
+    "transportationFact": "Les trains de la CTA Purple Line et de Metra s'arrêtent près du campus, et la navette Intercampus de l'université relie Evanston au campus de Chicago."
+  },
+  "Ohio State University": {
+    "nickname": "Le fief des Buckeyes",
+    "airportInfo": "Le John Glenn Columbus International Airport, à l'est du centre de Columbus, est le principal aéroport de la région.",
+    "funFact": "Le fer à cheval de l'Ohio Stadium a une tribune supérieure qui surplombe la tribune inférieure, et sa rotonde nord s'inspire de la coupole du Panthéon de Rome.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont l'écarlate et le gris, et ses équipes sont les Buckeyes.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / bus CABS",
+    "transportationFact": "Le Campus Area Bus Service gratuit dessert le campus, et les bus COTA le reste de Columbus."
+  },
+  "Pennsylvania State University": {
+    "nickname": "We Are... Penn State",
+    "airportInfo": "Le State College Regional Airport, appelé University Park Airport jusqu'en 2023, est l'aéroport le plus proche.",
+    "funFact": "Charles Klauder a conçu à la fois Rec Hall, ouvert en 1929, et le nouvel Old Main, achevé en 1930.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le bleu et le blanc, et ses équipes sont les Nittany Lions.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / bus CATA",
+    "transportationFact": "CATA exploite sur le campus les lignes gratuites Blue Loop, White Loop et Red Link, ainsi que des lignes urbaines vers le reste de State College."
+  },
+  "Purdue University": {
+    "nickname": "Boiler Up!",
+    "airportInfo": "L'aéroport international d'Indianapolis, au sud-est de West Lafayette, est le grand aéroport le plus proche.",
+    "funFact": "La Purdue Bell Tower, achevée en 1995, porte les cloches de l'ancienne tour de Heavilon Hall, démolie en 1956.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le vieil or et le noir, et ses équipes sont les Boilermakers.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Purdue Campus Transit / CityBus",
+    "transportationFact": "Les lignes circulaires gratuites de Purdue Campus Transit font le tour du campus, et les lignes CityBus relient West Lafayette à Lafayette."
+  },
+  "Rutgers University–New Brunswick": {
+    "nickname": "Le berceau du football universitaire",
+    "airportInfo": "Newark Liberty, au nord-est de New Brunswick, est accessible par les trains NJ Transit de la Northeast Corridor Line.",
+    "funFact": "Old Queens, commencé en 1809, a été conçu par John McComb Jr., également architecte de l'hôtel de ville de New York.",
+    "language": "Anglais",
+    "languageInfo": "La couleur de l'université est l'écarlate, et ses équipes sont les Scarlet Knights.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / bus Rutgers / NJ Transit",
+    "transportationFact": "Les bus gratuits de Rutgers relient les campus College Avenue, Busch, Livingston et Cook/Douglass, et les trains NJ Transit s'arrêtent à la gare de New Brunswick."
+  },
+  "University of Wisconsin–Madison": {
+    "nickname": "On, Wisconsin!",
+    "airportInfo": "Le Dane County Regional Airport, au nord-est du centre de Madison, est l'aéroport de la ville.",
+    "funFact": "North Hall, construit en 1851 sur les plans de John F. Rague, fut le premier bâtiment de l'université et se dresse toujours sur Bascom Hill.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le rouge cardinal et le blanc, et ses équipes sont les Badgers.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Madison Metro",
+    "transportationFact": "Les bus Madison Metro traversent le campus, et les étudiants voyagent avec un pass de l'université."
+  },
+  "University of Oregon": {
+    "nickname": "Go Ducks",
+    "airportInfo": "L'Eugene Airport, au nord-ouest de la ville, est l'aéroport le plus proche.",
+    "funFact": "Ellis F. Lawrence, doyen de l'école d'architecture de l'université, a conçu la Knight Library comme le musée d'art.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le vert et le jaune, et ses équipes sont les Ducks.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / LTD EmX",
+    "transportationFact": "Le bus à haut niveau de service EmX du Lane Transit District s'arrête en bordure du campus, et les étudiants prennent les bus LTD avec leur carte."
+  },
+  "University of Southern California": {
+    "nickname": "Fight On!",
+    "airportInfo": "LAX, au sud-ouest du campus, est le principal aéroport de Los Angeles.",
+    "funFact": "Widney Alumni House, inaugurée en 1880, est le plus ancien bâtiment universitaire du sud de la Californie.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le rouge cardinal et l'or, et ses équipes sont les Trojans.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Metro E Line",
+    "transportationFact": "La Metro E Line a des stations au bord du campus le long d'Exposition Park, et l'USC exploite ses propres navettes."
+  },
+  "University of Alabama": {
+    "nickname": "Roll Tide",
+    "airportInfo": "Le Birmingham–Shuttlesworth International Airport, au nord-est de Tuscaloosa, est l'aéroport le plus proche avec des vols réguliers.",
+    "funFact": "La President's Mansion et l'ancien observatoire, aujourd'hui Maxwell Hall, comptent parmi les rares bâtiments du campus à avoir survécu à la guerre de Sécession.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le cramoisi et le blanc, et ses équipes sont les Crimson Tide.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Bus CrimsonRide",
+    "transportationFact": "Le Quad se trouve au cœur d'un campus qui se parcourt à pied. Les bus gratuits CrimsonRide de l'université desservent le campus et les résidences."
+  },
+  "University of Arkansas": {
+    "nickname": "Woo Pig Sooie",
+    "airportInfo": "Le Northwest Arkansas National Airport, au nord de Fayetteville, est le principal aéroport de la région.",
+    "funFact": "Old Main, le plus ancien bâtiment du campus, a été construit en briques faites d'argile extraite sur le campus et cuites dans des fours à l'ouest du bâtiment.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le rouge cardinal et le blanc, et ses équipes sont les Razorbacks.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Razorback Transit",
+    "transportationFact": "Le campus sur la colline se parcourt à pied. Razorback Transit propose des bus gratuits sur le campus et dans Fayetteville."
+  },
+  "Auburn University": {
+    "nickname": "War Eagle",
+    "airportInfo": "Le Columbus Airport, en Géorgie, au sud-est d'Auburn, propose des vols Delta vers Atlanta, siège du bien plus grand aéroport Hartsfield–Jackson.",
+    "funFact": "Langdon Hall a été construit en 1846 comme chapelle de l'Auburn Female College, puis démonté et remonté sur le campus du collège en 1883.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont l'orange brûlé et le bleu marine, et ses équipes sont les Tigers.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Tiger Transit",
+    "transportationFact": "Le cœur historique autour de Samford Hall se parcourt à pied. Les bus Tiger Transit desservent étudiants et personnel en semaine pendant le semestre."
+  },
+  "University of Florida": {
+    "nickname": "Go Gators",
+    "airportInfo": "Le Gainesville Regional Airport, au nord-est du campus, propose des vols vers les grands hubs.",
+    "funFact": "William Augustus Edwards a conçu presque tout le campus d'origine en style gothique universitaire, et la Century Tower reprend les proportions de la Bell Harry Tower de la cathédrale de Canterbury.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont l'orange et le bleu, et ses équipes sont les Gators.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Bus RTS",
+    "transportationFact": "Le quartier historique se parcourt à pied. Les bus RTS de Gainesville traversent souvent le campus."
+  },
+  "University of Georgia": {
+    "nickname": "Go Dawgs",
+    "airportInfo": "Athens n'a pas de vols réguliers ; la plupart des visiteurs arrivent par l'aéroport Hartsfield–Jackson d'Atlanta, au sud-ouest de la ville.",
+    "funFact": "Les plus anciens bâtiments de l'UGA sont de style fédéral. Demosthenian Hall, construit en 1824, conserve un médaillon de plafond en plâtre orné, d'après un modèle d'Asher Benjamin.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le rouge et le noir, et ses équipes sont les Bulldogs.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / UGA Campus Transit",
+    "transportationFact": "Le North Campus se parcourt à pied. Les bus d'UGA Campus Transit desservent tout le campus."
+  },
+  "Louisiana State University": {
+    "nickname": "Geaux Tigers",
+    "airportInfo": "Le Baton Rouge Metropolitan Airport, au nord du centre-ville, dessert la ville.",
+    "funFact": "Le campus inauguré en 1926 a été bâti dans le style de la Renaissance italienne, et le Tiger Stadium abritait autrefois des dortoirs d'étudiants sous ses tribunes.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le violet et l'or, et ses équipes sont les Tigers.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Bus Tiger Trails",
+    "transportationFact": "Le campus central autour du Quad se parcourt à pied. Les bus gratuits Tiger Trails de la LSU relient le campus aux résidences voisines."
+  },
+  "University of Mississippi": {
+    "nickname": "Hotty Toddy",
+    "airportInfo": "Le Tupelo Regional Airport, à l'est d'Oxford, propose quelques vols quotidiens. Le Memphis International Airport, au nord, est le grand aéroport le plus proche.",
+    "funFact": "William Nichols s'est inspiré d'un temple ionique près d'Athènes pour le Lyceum de 1848, et le Barnard Observatory a été conçu d'après l'observatoire de Poulkovo, en Russie.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le rouge cardinal et le bleu marine, et ses équipes sont les Rebels.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Oxford-University Transit",
+    "transportationFact": "The Circle et The Grove sont au centre d'un campus qui se parcourt à pied. Les bus d'Oxford-University Transit relient le campus à la ville."
+  },
+  "University of Missouri": {
+    "nickname": "Mizzou",
+    "airportInfo": "Le Columbia Regional Airport, au sud-est de la ville, propose des vols réguliers vers les grands hubs.",
+    "funFact": "Les six colonnes du Francis Quadrangle sont tout ce qui reste d'Academic Hall, détruit par un incendie en 1892. Son successeur, Jesse Hall, s'est élevé derrière elles en 1895.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le noir et l'or, et ses équipes sont les Tigers.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Navettes Tiger Line",
+    "transportationFact": "Le campus autour du Francis Quadrangle se parcourt à pied. Les navettes gratuites Tiger Line de la MU, gérées avec la ville de Columbia, desservent le campus, et les bus municipaux Go COMO sont aussi gratuits."
+  },
+  "University of Oklahoma": {
+    "nickname": "Boomer Sooner",
+    "airportInfo": "Le Will Rogers International Airport d'Oklahoma City, au nord de Norman, est le grand aéroport le plus proche.",
+    "funFact": "Frank Lloyd Wright a inventé le terme Cherokee Gothic pour la version en brique et pierre claire du gothique universitaire de l'OU, et les nouveaux bâtiments sont conçus pour s'y accorder.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le cramoisi et le crème, et ses équipes sont les Sooners.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Bus CART",
+    "transportationFact": "Le campus central autour du South Oval se parcourt à pied. Les bus CART de l'OU desservent le campus et les résidences voisines, et EMBARK Norman gère les lignes de la ville."
+  },
+  "University of South Carolina": {
+    "nickname": "Emollit Mores Nec Sinit Esse Feros",
+    "airportInfo": "Le Columbia Metropolitan Airport se trouve au sud-ouest du centre-ville.",
+    "funFact": "Le premier bâtiment du Horseshoe, Rutledge, a été achevé en 1805, et la South Caroliniana Library, sur le Horseshoe, est la plus ancienne bibliothèque universitaire indépendante des États-Unis.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le grenat et le noir, et ses équipes sont les Gamecocks.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Carolina Shuttle",
+    "transportationFact": "Le Horseshoe et le campus central se parcourent à pied. Le Carolina Shuttle, exploité par The COMET, est gratuit pour les étudiants et le personnel."
+  },
+  "Vanderbilt University": {
+    "nickname": "Anchor Down",
+    "airportInfo": "Le Nashville International Airport se trouve au sud-est du centre de Nashville.",
+    "funFact": "Kirkland Hall a été construit en 1874 en style gothique victorien, puis rebâti en style italianisant après un incendie en 1905, tandis que le campus de Peabody s'inspire de l'université de Virginie de Jefferson.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le noir et l'or, et ses équipes sont les Commodores.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / VandyRide",
+    "transportationFact": "Le campus se parcourt à pied. Les navettes VandyRide circulent sur le campus, et les bus municipaux WeGo passent sur West End Avenue."
+  },
+  "University of Kentucky": {
+    "nickname": "Go Big Blue",
+    "airportInfo": "Le Blue Grass Airport se trouve juste à l'ouest de Lexington.",
+    "funFact": "La William T. Young Library, ouverte en 1998, a un plan octogonal avec des arcades de brique et de pierre sur deux étages à chaque façade, et le hall de Memorial Hall abrite une fresque de 1934 d'Ann Rice O'Hanlon.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le bleu et le blanc, et ses équipes sont les Wildcats.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Bus Lextran",
+    "transportationFact": "Le campus central se parcourt à pied. Les lignes de bus du campus de l'UK, exploitées avec Lextran, sont gratuites, et étudiants et personnel prennent gratuitement les bus Lextran en ville avec leur carte UK."
+  },
+  "Mississippi State University": {
+    "nickname": "Hail State",
+    "airportInfo": "Le Golden Triangle Regional Airport, à l'est de Starkville, dessert la région.",
+    "funFact": "Le Drill Field, autrefois utilisé par le corps des cadets, est fermé au nord et au sud par deux bâtiments symétriques, Lee Hall et Swalm Hall.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le bordeaux et le blanc, et ses équipes sont les Bulldogs.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Bus SMART",
+    "transportationFact": "Le campus autour du Drill Field se parcourt à pied. Starkville–MSU Area Rapid Transit propose des bus gratuits sur le campus et en ville."
+  },
+  "University of Tennessee": {
+    "nickname": "Go Vols",
+    "airportInfo": "Le McGhee Tyson Airport, à Alcoa, au sud de Knoxville, est l'aéroport le plus proche.",
+    "funFact": "La restauration d'Ayres Hall, de 2008 à 2011, a ajouté des cadrans d'horloge et des sols en terrazzo prévus dans le projet de 1921 mais jamais réalisés faute d'argent.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont l'orange et le blanc, et ses équipes sont les Volunteers.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Bus T",
+    "transportationFact": "Les bus gratuits T de l'UT suivent des lignes fixes sur le campus, et les étudiants prennent gratuitement les bus de Knoxville Area Transit avec leur VolCard."
+  },
+  "Texas A&M University": {
+    "nickname": "Gig 'em",
+    "airportInfo": "L'Easterwood Airport, à l'ouest de College Station près du campus, propose des vols American Eagle.",
+    "funFact": "L'architecte du campus F. E. Giesecke connaissait mal le béton armé ; il a donc doublé l'acier de l'Academic Building de 1914. Plus tard, les ouvriers ont dû utiliser des chalumeaux pour poser des conduites d'eau.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le bordeaux et le blanc, et ses équipes sont les Aggies.",
+    "currencyInfo": "Dollar américain ($)",
+    "transportation": "À pied / Bus de Texas A&M",
+    "transportationFact": "Le Main Campus se parcourt à pied. Texas A&M exploite des lignes de bus sur le campus pendant le semestre."
   }
 }

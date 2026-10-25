@@ -1,0 +1,1996 @@
+{
+  "University of Melbourne": [
+    {
+      "id": "trad_unimelbourne_old_quad_stonemasons",
+      "name": "Old Quad und der Achtstundentag",
+      "description": "Das Old Quad war das erste Gebäude der Universität. 1856 legten die Steinmetze, die es errichteten, die Arbeit nieder und schlossen sich den Protestmärschen an, die den Achtstundentag durchsetzten. Besucher können durch das Old Quad spazieren, das historische Herz des Campus.",
+      "latitude": -37.797558,
+      "longitude": 144.960985
+    },
+    {
+      "id": "trad_unimelbourne_old_arts_clock",
+      "name": "Die Besonderheit der Old-Arts-Uhr entdecken",
+      "description": "Studierende und Besucher sind eingeladen, die römischen Ziffern an der Uhr des Old Arts Building genau anzusehen und herauszufinden, was daran seltsam ist.",
+      "latitude": -37.797805,
+      "longitude": 144.960124
+    },
+    {
+      "id": "trad_unimelbourne_original_fence",
+      "name": "Das letzte Stück des alten Zauns",
+      "description": "Vor dem Medical Building ist ein einziges Segment des schmiedeeisernen Zauns erhalten, der einst den ganzen Campus umgab. Das Gelände wurde für die Öffentlichkeit geöffnet – im Gegenzug lieferte die Stadt Melbourne kostenlos Gasbeleuchtung. Besucher können das verbliebene Zaunstück suchen.",
+      "latitude": -37.799283,
+      "longitude": 144.958945
+    }
+  ],
+  "University of Sydney": [
+    {
+      "id": "trad_unisydney_jacaranda",
+      "name": "Der Jacaranda-Baum im Quadrangle",
+      "description": "Laut Campus-Folklore fällt durch die Prüfungen, wer nicht mit dem Lernen begonnen hat, bevor der Jacaranda im Quadrangle blüht. Besucher können den Baum (einen Klon des Originals von 1928) im späten Frühling violett blühen sehen – eine beliebte Fotokulisse.",
+      "latitude": -33.886191,
+      "longitude": 151.188992
+    },
+    {
+      "id": "trad_unisydney_carillon",
+      "name": "Konzerte am War Memorial Carillon",
+      "description": "Im Uhrturm hängt das War Memorial Carillon, 1928 geweiht und eines von nur drei Glockenspielen dieser Art in Australien. Besucher können mittags Live-Konzerte hören (außer in Prüfungszeiten und an Feiertagen).",
+      "latitude": -33.885963,
+      "longitude": 151.188435
+    },
+    {
+      "id": "trad_unisydney_kangaroo_gargoyle",
+      "name": "Den Känguru-Wasserspeier finden",
+      "description": "Unter den vielen Wasserspeiern des Quadrangle sind auch australische Tiere, darunter ein Känguru am Uhrturm und Kookaburras über dem nördlichen Foyereingang. Besucher können rund um die Sandsteingebäude nach ihnen suchen.",
+      "latitude": -33.885963,
+      "longitude": 151.188435
+    },
+    {
+      "id": "trad_unisydney_graffiti_tunnel",
+      "name": "Graffiti Tunnel",
+      "description": "Der Graffiti Tunnel entstand als studentischer Protest gegen den Vietnamkrieg und ist heute ein sich ständig wandelndes, lebendiges Kunstwerk. Besucher können hindurchgehen und die neuesten Schichten studentischer Kunst ansehen.",
+      "latitude": -33.885814,
+      "longitude": 151.187482
+    }
+  ],
+  "University of Texas at Austin": [
+    {
+      "id": "trad_ut_austin_tower_lighting",
+      "name": "Beleuchtung des Towers",
+      "description": "Seit 1937 wird der UT Tower angestrahlt, um Erfolge der Longhorns zu feiern: eine orangefarbene Spitze für Football-Siege, ganz in Orange für große Meilensteine und Orange mit einer Nr. 1 für nationale Meisterschaften. Besucher können abends auf den Tower schauen und sehen, was gerade gefeiert wird.",
+      "latitude": 30.286273,
+      "longitude": -97.739366
+    },
+    {
+      "id": "trad_ut_austin_kniker_carillon",
+      "name": "Kniker Carillon",
+      "description": "Das Kniker Carillon mit 56 Glocken oben im Tower, das größte in Texas, wird von der studentischen Guild of Carillonneurs gespielt, und jedes Konzert endet mit „The Eyes of Texas“. Besucher auf der Main Mall können zuhören, wenn die Glocken erklingen.",
+      "latitude": 30.286273,
+      "longitude": -97.739366
+    },
+    {
+      "id": "trad_ut_austin_turtle_pond",
+      "name": "Turtle Pond",
+      "description": "Der 1939 als biologischer Forschungsteich angelegte Turtle Pond beherbergt mindestens 100 Schildkröten, vor allem Rotwangen-Schmuckschildkröten, und ist ein beliebter Halt auf dem Campus. Besucher können vorbeischauen und die Schildkröten beobachten, die bei warmem Wetter am aktivsten sind.",
+      "latitude": 30.28689,
+      "longitude": -97.73944
+    },
+    {
+      "id": "trad_ut_austin_littlefield_tower_photo",
+      "name": "Tower-Foto vom Littlefield Fountain",
+      "description": "Der Blick auf den Tower mit dem Littlefield Fountain im Vordergrund, von der Ecke 21st Street und University Avenue aus, gehört zu den meistfotografierten Motiven des Campus. Besucher können das klassische Foto von der South Mall aus machen.",
+      "latitude": 30.283921,
+      "longitude": -97.739626
+    }
+  ],
+  "University College London": [
+    {
+      "id": "trad_ucl_bentham_auto_icon",
+      "name": "Jeremy Benthams Auto-Icon",
+      "description": "Das präparierte Skelett des Philosophen Jeremy Bentham, des „geistigen Gründers“ des UCL, sitzt in seiner eigenen Kleidung (mit einem Wachskopf) in einer Glasvitrine am Eingang des Student Centre; 2013 wurde es sogar zu einer Sitzung des UCL-Rats gebracht. Besucher können es öffentlich ausgestellt sehen.",
+      "latitude": 51.524736,
+      "longitude": -0.13238
+    },
+    {
+      "id": "trad_ucl_portico_photo",
+      "name": "Foto am Portico",
+      "description": "Der Portico des Wilkins Building im Main Quad ist der meistfotografierte und bekannteste Ort des UCL. Besucher können vom Quad aus das klassische Foto der Säulen und der Kuppel machen.",
+      "latitude": 51.524721,
+      "longitude": -0.133582
+    },
+    {
+      "id": "trad_ucl_flaxman_gallery",
+      "name": "Flaxman Gallery unter der Kuppel",
+      "description": "Unter der Octagon-Kuppel beherbergt die Flaxman Gallery die größte zusammenhängende Sammlung von Werken des Bildhauers John Flaxman, darunter das lebensgroße „St Michael Overcoming Satan“. Sie war auch in Christopher Nolans Film „Inception“ zu sehen. Besucher können die Skulpturen besichtigen.",
+      "latitude": 51.524738,
+      "longitude": -0.133509
+    }
+  ],
+  "King's College London": [
+    {
+      "id": "trad_kcl_reggie_the_lion",
+      "name": "Reggie the Lion",
+      "description": "Reggie der Löwe ist das Maskottchen des King's College und wurde früher bei Sportspielen vorgeführt. Nachdem er jahrelang immer wieder von rivalisierenden Studierenden „entführt“ wurde, steht das Original heute in einer Glasvitrine auf dem Strand-Campus. Besucher können Reggie dort sehen.",
+      "latitude": 51.511252,
+      "longitude": -0.115318
+    },
+    {
+      "id": "trad_kcl_chapel_evensong",
+      "name": "Choral Evensong in der College Chapel",
+      "description": "In der denkmalgeschützten College Chapel (Grade I), 1864 von Sir George Gilbert Scott umgestaltet, wird während des Semesters dienstags um 17:30 Uhr der Choral Evensong gesungen. Besucher können am Gottesdienst teilnehmen.",
+      "latitude": 51.511483,
+      "longitude": -0.116018
+    },
+    {
+      "id": "trad_kcl_bush_house_inscription",
+      "name": "Freundschaftsinschrift am Bush House",
+      "description": "Bush House, früher Sitz des BBC World Service und heute Teil des Strand-Campus, trägt über zwei 1925 enthüllten Statuen die Inschrift „To the friendship of English speaking peoples“ (Der Freundschaft der englischsprachigen Völker). Besucher können sie vom Kingsway aus sehen und fotografieren.",
+      "latitude": 51.512746,
+      "longitude": -0.117173
+    }
+  ],
+  "University of Paris (Sorbonne)": [
+    {
+      "id": "trad_sorbonne_montaigne_foot",
+      "name": "Montaignes Schuh berühren",
+      "description": "Gegenüber der Sorbonne auf der anderen Seite der Rue des Écoles berühren Studierende vor Prüfungen den Fuß von Paul Landowskis sitzender Montaigne-Statue – das soll Glück bringen. Besucher können an der Statue vorbeischauen und den Schuh sehen, den Generationen von Händen blank poliert haben.",
+      "latitude": 48.849933,
+      "longitude": 2.343997
+    },
+    {
+      "id": "trad_sorbonne_cardinal_hat",
+      "name": "Richelieus Kardinalshut",
+      "description": "In der Kapelle der Sorbonne hängt, wie es die Tradition verlangt, ein Kardinalshut über dem Marmorgrab von Kardinal Richelieu. Besucher können ihn sehen, wenn die Kapelle für Führungen und zu den Tagen des offenen Denkmals geöffnet ist.",
+      "latitude": 48.848418,
+      "longitude": 2.343195
+    },
+    {
+      "id": "trad_sorbonne_heritage_days",
+      "name": "Tage des offenen Denkmals an der Sorbonne",
+      "description": "Jedes Jahr im September öffnet die Sorbonne während der Europäischen Tage des Denkmals ihre Empfangssäle und das Grand Amphithéâtre kostenlos für die Öffentlichkeit. Besucher können die Bühne des Amphitheaters betreten und Räume besichtigen, die sonst geschlossen sind.",
+      "latitude": 48.848636,
+      "longitude": 2.343603
+    }
+  ],
+  "University of Padua": [
+    {
+      "id": "trad_padua_galileo_lectern",
+      "name": "Galileis Katheder",
+      "description": "Das hölzerne Katheder, von dem aus Galilei gelehrt haben soll – der Überlieferung nach von seinen eigenen Studenten für ihn gebaut –, steht am Eingang der Sala dei Quaranta im Palazzo Bo. Besucher können es bei einer Führung durch den Palast sehen.",
+      "latitude": 45.406738,
+      "longitude": 11.877394
+    },
+    {
+      "id": "trad_padua_bo_chain",
+      "name": "Nicht über die Kette springen",
+      "description": "Ein örtlicher Aberglaube besagt, dass Studierende niemals über die Kette vor dem Palazzo Bo springen sollten, sonst leidet ihr Studium. Besucher können die Kette ansehen und um sie herumgehen.",
+      "latitude": 45.406738,
+      "longitude": 11.877394
+    },
+    {
+      "id": "trad_padua_pedrocchi",
+      "name": "Caffè Pedrocchi",
+      "description": "Das historische Café neben dem Palazzo Bo ist seit 1831 ein Treffpunkt für Studierende und Professoren, und Studierende dürfen im grünen Saal sitzen, ohne etwas zu bestellen. Besucher können auf einen Minzkaffee einkehren und im weißen Saal nach dem Einschussloch vom Studentenaufstand 1848 suchen.",
+      "latitude": 45.407692,
+      "longitude": 11.877095
+    }
+  ],
+  "KU Leuven": [
+    {
+      "id": "trad_kuleuven_fonske",
+      "name": "Fonske",
+      "description": "Fons Sapientiae („Quelle der Weisheit“) ist eine Statue eines Studenten, der sich beim Lesen Weisheit in den Kopf gießt; die Universität schenkte sie der Stadt 1975 zu ihrem 550-jährigen Bestehen. Studentenverbindungen verkleiden die Figur zu besonderen Anlässen, und Besucher können am Rector De Somerplein ein Foto machen.",
+      "latitude": 50.8793,
+      "longitude": 4.702301
+    },
+    {
+      "id": "trad_kuleuven_carillon",
+      "name": "Glockenspiel der Universitätsbibliothek",
+      "description": "Im Turm der Universitätsbibliothek hängt eines der größten Glockenspiele Europas, ein Gedenkgeschenk amerikanischer Ingenieure, und seine Hauptglocke schlägt jede Stunde. Bei Turmbesichtigungen nimmt der Carillonneur die Besucher mit nach oben, wo sie ein Live-Konzert aus der ersten Reihe hören.",
+      "latitude": 50.877998,
+      "longitude": 4.70732
+    },
+    {
+      "id": "trad_kuleuven_totem",
+      "name": "Totem auf dem Ladeuzeplein",
+      "description": "Zu ihrem 575-jährigen Bestehen 2004 schenkte die Universität der Stadt Jan Fabres „Totem“, einen riesigen Prachtkäfer, aufgespießt auf eine 23 m hohe Stahlnadel vor der Universitätsbibliothek. Besucher können ihn auf dem Ladeuzeplein fotografieren.",
+      "latitude": 50.878598,
+      "longitude": 4.706349
+    }
+  ],
+  "Aalto University": [
+    {
+      "id": "trad_aalto_student_museum",
+      "name": "Museum des Studentenlebens",
+      "description": "In einem Keller im Studentendorf Otaniemi zeigt das Museum der Studentenschaft (früher Polyteekkarimuseo) Traditionen der Teekkari und anderer Aalto-Studierender, von Mützen und Overalls bis zu berühmten Streichen. Ehrenamtliche Führer öffnen es während des Semesters sonntagnachmittags für Besucher.",
+      "latitude": 60.187366,
+      "longitude": 24.836496
+    },
+    {
+      "id": "trad_aalto_chapel_cross",
+      "name": "Waldblick in der Kapelle von Otaniemi",
+      "description": "Die Campuskapelle von Heikki und Kaija Siren aus dem Jahr 1956 hat hinter dem Altar eine Glaswand mit Blick in den Wald, und draußen steht ein in den Fels gesetztes Kreuz. Die Universität zählt diesen Ausblick zu den beliebtesten Sehenswürdigkeiten in Otaniemi.",
+      "latitude": 60.189364,
+      "longitude": 24.837247
+    }
+  ],
+  "Uppsala University": [
+    {
+      "id": "trad_uppsala_cap_raising",
+      "name": "Mützenaufsetzen an Walpurgis",
+      "description": "Am 30. April um 15 Uhr setzen die Studierenden am Hang unterhalb der Bibliothek Carolina Rediviva gemeinsam ihre weißen Studentenmützen auf, während der Rektor vom Bibliotheksbalkon mit seiner Mütze winkt. Jeder kann sich zum Zuschauen unter die Menge auf dem Hügel mischen.",
+      "latitude": 59.855015,
+      "longitude": 17.631109
+    },
+    {
+      "id": "trad_uppsala_gunilla_bell",
+      "name": "Frühlingslied an der Gunillaklockan",
+      "description": "Am Abend des 30. April versammeln sich die Studierenden an der Gunilla-Glocke neben dem Schloss Uppsala zum Frühlingslied und zur Frühlingsrede. Besucher können sich zur Menge stellen und zuhören.",
+      "latitude": 59.854218,
+      "longitude": 17.634057
+    },
+    {
+      "id": "trad_uppsala_anatomical_theatre",
+      "name": "Anatomisches Theater im Gustavianum",
+      "description": "Unter der Kupferkuppel des Gustavianum bewahrt das Universitätsmuseum das anatomische Theater, das Olof Rudbeck der Ältere in den 1660er-Jahren erbaute. Besucher können es im Rahmen eines Museumsbesuchs betreten.",
+      "latitude": 59.857943,
+      "longitude": 17.631724
+    }
+  ],
+  "Florida Southern College": [
+    {
+      "id": "trad_flsouthern_pfeiffer_chapel",
+      "name": "Annie Pfeiffer Chapel",
+      "description": "Das College nennt Frank Lloyd Wrights Kapelle das emporstrebende Herz des Campus; gekrönt wird sie von einem Glockenturm aus Beton und farbigem Glas. Besucher können sie bei einer geführten Wright-Tour sehen, die am Sharp Family Tourism and Education Center beginnt.",
+      "latitude": 28.030881,
+      "longitude": -81.948654
+    },
+    {
+      "id": "trad_flsouthern_water_dome",
+      "name": "Brunnen des Water Dome",
+      "description": "Wrights größte Wasseranlage wurde 2007 endlich vollständig nach seinem Entwurf gebaut, und ihre Fontänen laufen tagsüber zu festen Zeiten. Besucher können sie jederzeit von den umliegenden Promenaden aus betrachten.",
+      "latitude": 28.031997,
+      "longitude": -81.948897
+    }
+  ],
+  "Boston College": [
+    {
+      "id": "trad_bc_golden_eagle",
+      "name": "Statue des Goldenen Adlers",
+      "description": "Ein vergoldeter Adler auf einer 9 Meter hohen Säule steht vor der Gasson Hall, eine Nachbildung der Statue, die das College 1954 erhielt. Besucher fotografieren den Adler mit dem Gasson Tower im Hintergrund.",
+      "latitude": 42.3356283,
+      "longitude": -71.1704848
+    },
+    {
+      "id": "trad_bc_flutie_statue",
+      "name": "Doug-Flutie-Statue",
+      "description": "Eine Statue vor dem Alumni Stadium stellt den Hail-Mary-Pass nach, der Quarterback Doug Flutie berühmt machte. Fans halten auf dem Weg ins Stadion für ein Foto an.",
+      "latitude": 42.3350993,
+      "longitude": -71.1663078
+    }
+  ],
+  "Clemson University": [
+    {
+      "id": "trad_clemson_howards_rock",
+      "name": "Howard's Rock",
+      "description": "Dieser Quarzitbrocken liegt auf einem Sockel oben auf The Hill im Memorial Stadium; die Spieler reiben ihn, bevor sie bei Heimspielen aufs Feld hinunterlaufen. Besucher sehen ihn am Ostende des Stadions.",
+      "latitude": 34.6789551,
+      "longitude": -82.8422007
+    },
+    {
+      "id": "trad_clemson_lovers_lane",
+      "name": "Lover's Lane im President's Park",
+      "description": "Der Campuslegende nach heiraten Paare, die Hand in Hand durch den President's Park gehen. Besucher spazieren durch den Park am Rand des Campus.",
+      "latitude": 34.6790936,
+      "longitude": -82.8327753
+    },
+    {
+      "id": "trad_clemson_bowman_field",
+      "name": "Bowman Field",
+      "description": "Das Bowman Field, die Rasenfläche vor der Tillman Hall, war der Paradeplatz der Kadetten von Clemson. Besucher genießen vom Feld aus den Blick auf den Uhrturm der Tillman Hall.",
+      "latitude": 34.680875,
+      "longitude": -82.8366232
+    }
+  ],
+  "Duke University": [
+    {
+      "id": "trad_duke_chapel_carillon",
+      "name": "Glockenspiel der Duke Chapel",
+      "description": "Das Carillon mit 50 Glocken im Turm der Duke Chapel wird an jedem Werktag um 17 Uhr gespielt, freitags erklingt die Alma Mater. Besucher versammeln sich in der Nähe der Kapelle, um zuzuhören.",
+      "latitude": 36.0018682,
+      "longitude": -78.9402861
+    },
+    {
+      "id": "trad_duke_krzyzewskiville",
+      "name": "Krzyzewskiville",
+      "description": "Vor den wichtigsten Basketballspielen der Männer zelten Studierende in einer Zeltstadt namens Krzyzewskiville auf dem Rasen neben dem Cameron Indoor Stadium. Besucher können im Winter an den Zelten vorbeigehen.",
+      "latitude": 35.9974496,
+      "longitude": -78.9422669
+    }
+  ],
+  "Florida State University": [
+    {
+      "id": "trad_fsu_unconquered",
+      "name": "Unconquered-Statue",
+      "description": "Diese Bronzestatue vor dem Doak Campbell Stadium zeigt einen Seminole-Reiter auf einem sich aufbäumenden Pferd. Vor Heimspielen wird ihr Speer bei Sonnenuntergang entzündet, und Fans versammeln sich zum Zuschauen.",
+      "latitude": 30.4369314,
+      "longitude": -84.3029864
+    },
+    {
+      "id": "trad_fsu_legacy_walk",
+      "name": "Legacy Walk",
+      "description": "Medaillons und granatrote Banner markieren einen Rundgang durch die Geschichte des Campus, der am Landis Green beginnt. Besucher folgen ihm vorbei an historischen Gebäuden, Statuen und Denkmälern.",
+      "latitude": 30.4417312,
+      "longitude": -84.2949907
+    }
+  ],
+  "Georgia Institute of Technology": [
+    {
+      "id": "trad_gatech_tech_tower",
+      "name": "Tech Tower",
+      "description": "Die beleuchteten TECH-Buchstaben an allen vier Seiten von Tech Tower sind das bekannteste Symbol des Instituts. Besucher fotografieren sie vom Rasen darunter; das Entwenden der Buchstaben ist verboten.",
+      "latitude": 33.7724961,
+      "longitude": -84.3946737
+    },
+    {
+      "id": "trad_gatech_campanile",
+      "name": "Kessler Campanile",
+      "description": "Dieser 24 Meter hohe Glockenturm aus Edelstahl vor dem Studentenzentrum wurde für die Olympischen Spiele 1996 gebaut, und seine Spitzen erinnern an Tech Tower. Besucher treffen sich an seinem Fuß und machen Fotos.",
+      "latitude": 33.7743044,
+      "longitude": -84.3981828
+    }
+  ],
+  "University of Louisville": [
+    {
+      "id": "trad_uofl_thinker",
+      "name": "Der Denker",
+      "description": "Ein großer Bronzeguss von Rodins Denker steht seit 1949 vor der Grawemeyer Hall. Ein Foto mit ihm gehört zu jedem klassischen Campusbesuch.",
+      "latitude": 38.2150774,
+      "longitude": -85.7604332
+    }
+  ],
+  "University of Miami": [
+    {
+      "id": "trad_umiami_u_statue",
+      "name": "U-Statue am Rock",
+      "description": "Die U-Statue auf der Rock Plaza neben dem Shalala Student Center ist das klassische Fotomotiv des Campus. Besucher lassen sich davor fotografieren.",
+      "latitude": 25.7194982,
+      "longitude": -80.279084
+    },
+    {
+      "id": "trad_umiami_boat_burning",
+      "name": "Bootsverbrennung zum Homecoming",
+      "description": "Seit 1956 wird zum Homecoming auf dem Lake Osceola ein Boot verbrannt. Der Legende nach gewinnen die Hurricanes das Spiel am nächsten Tag, wenn der Mast fällt, bevor das Boot sinkt.",
+      "latitude": 25.7183486,
+      "longitude": -80.2792068
+    },
+    {
+      "id": "trad_umiami_bronze_ibis",
+      "name": "Bronze-Ibis",
+      "description": "Eine Bronzestatue von Sebastian dem Ibis, dem Maskottchen der Universität, steht vor dem Newman Alumni Center. Besucher halten für ein Foto an.",
+      "latitude": 25.7114558,
+      "longitude": -80.283673
+    }
+  ],
+  "North Carolina State University": [
+    {
+      "id": "trad_ncstate_belltower_red",
+      "name": "Belltower in Rot",
+      "description": "Wenn NC State einen großen Sportwettkampf gewinnt, wird der Memorial Belltower rot beleuchtet. Fans versammeln sich an seinem Fuß, rufen Sprechchöre und zeigen das Wolfpack-Handzeichen.",
+      "latitude": 35.7861408,
+      "longitude": -78.6635001
+    },
+    {
+      "id": "trad_ncstate_free_expression_tunnel",
+      "name": "Free Expression Tunnel",
+      "description": "Jeder darf Wände, Decke und Boden dieses Fußgängertunnels unter der Bahnlinie zwischen North und Central Campus bemalen. Besucher gehen hindurch, um die neuesten Botschaften zu sehen.",
+      "latitude": 35.7856548,
+      "longitude": -78.6716159
+    }
+  ],
+  "University of North Carolina at Chapel Hill": [
+    {
+      "id": "trad_unc_old_well",
+      "name": "Ein Schluck aus dem Old Well",
+      "description": "Der Campustradition nach bringt ein Schluck aus dem Brunnen am Old Well am ersten Vorlesungstag Glück. Besucher können an jedem Tag daraus trinken.",
+      "latitude": 35.9120628,
+      "longitude": -79.0512347
+    },
+    {
+      "id": "trad_unc_davie_poplar",
+      "name": "Davie Poplar",
+      "description": "Der Legende nach blüht die Universität, solange dieser jahrhundertealte Tulpenbaum in McCorkle Place steht. Besucher halten an, um den Baum zu sehen.",
+      "latitude": 35.9128488,
+      "longitude": -79.0516791
+    },
+    {
+      "id": "trad_unc_bell_tower",
+      "name": "Glockenturm in Carolina-Blau",
+      "description": "Der Morehead-Patterson Bell Tower wird nach Football-Siegen der Tar Heels in Carolina-Blau beleuchtet. Besucher sehen den 52 Meter hohen Turm im Süden des Campus.",
+      "latitude": 35.908607,
+      "longitude": -79.0492161
+    }
+  ],
+  "University of Pittsburgh": [
+    {
+      "id": "trad_pitt_victory_lights",
+      "name": "Victory Lights",
+      "description": "Die Spitze der Cathedral of Learning leuchtet nach Football-Siegen und anderen Meisterschaften von Pitt golden, seit 2018 ergänzt durch einen blauen Lichtstrahl. Besucher sehen sie in ganz Oakland.",
+      "latitude": 40.4442951,
+      "longitude": -79.953191
+    },
+    {
+      "id": "trad_pitt_panther_nose",
+      "name": "Panther-Statue",
+      "description": "Die Nase der Panther-Statue an der William Pitt Union ist abgegriffen, weil Studierende sie seit Jahren für Glück reiben. Besucher reiben sie auch.",
+      "latitude": 40.4433871,
+      "longitude": -79.9548392
+    },
+    {
+      "id": "trad_pitt_heinz_chapel_steps",
+      "name": "Stufen der Heinz Chapel",
+      "description": "Die Stufen vor der Heinz Memorial Chapel gelten als Glücksbringer für junge Paare. Besucher machen dort ein Foto.",
+      "latitude": 40.4452589,
+      "longitude": -79.95186
+    }
+  ],
+  "Southern Methodist University": [
+    {
+      "id": "trad_smu_dallas_hall_seal",
+      "name": "SMU-Siegel in der Dallas Hall",
+      "description": "Das SMU-Siegel ist in den Boden der Rotunde der Dallas Hall eingelassen. Erstsemester gehen bei der Rotunda Passage um es herum und bei der Abschlussfeier darüber; Besucher können es in der Rotunde sehen.",
+      "latitude": 32.8452642,
+      "longitude": -96.7849058
+    },
+    {
+      "id": "trad_smu_celebration_of_lights",
+      "name": "Celebration of Lights",
+      "description": "Bei der festlichen Celebration of Lights wird die Dallas Hall mit Tausenden Lichtern geschmückt. Gäste versammeln sich auf dem Rasen bei Kakao und Keksen, und der Abend endet mit Stille Nacht.",
+      "latitude": 32.84524,
+      "longitude": -96.78485
+    }
+  ],
+  "Syracuse University": [
+    {
+      "id": "trad_syracuse_kissing_bench",
+      "name": "Kissing Bench",
+      "description": "Diese Granitbank zwischen Tolley Hall und Hall of Languages war ein Geschenk des Abschlussjahrgangs 1912. Der Legende nach heiratet ein Paar, das sich auf ihr küsst, und wer allein dort sitzt, bleibt ledig.",
+      "latitude": 43.0385705,
+      "longitude": -76.1345205
+    },
+    {
+      "id": "trad_syracuse_crouse_chimes",
+      "name": "Crouse Chimes",
+      "description": "Das Glockenspiel im Turm des Crouse College erklingt seit 1889 zweimal am Tag und zu besonderen Anlässen. Besucher hören vom Quad darunter zu.",
+      "latitude": 43.0384505,
+      "longitude": -76.1368611
+    }
+  ],
+  "Virginia Tech": [
+    {
+      "id": "trad_vt_corps_retreat",
+      "name": "Retreat des Corps of Cadets",
+      "description": "Das Corps of Cadets hält seine abendliche Retreat-Zeremonie vor der Lane Hall ab, der alten Barracks No. 1. Besucher können vom Upper Quad aus zusehen.",
+      "latitude": 37.2309218,
+      "longitude": -80.4197604
+    }
+  ],
+  "Wake Forest University": [
+    {
+      "id": "trad_wfu_wait_chapel",
+      "name": "Glockenspiel der Wait Chapel",
+      "description": "Im Turm der Wait Chapel hängt ein 12 Tonnen schweres Carillon mit 48 Bronzeglocken, und die Kapelle war Schauplatz von Präsidentschaftsdebatten. Besucher sehen sie am Kopf des Quad.",
+      "latitude": 36.1352187,
+      "longitude": -80.2789962
+    },
+    {
+      "id": "trad_wfu_stone_arch",
+      "name": "Steinbogen",
+      "description": "Dieser Bogen auf dem Quad ist eine Nachbildung des Bogens auf dem Old Campus in Wake Forest, North Carolina, und jeder Abschlussjahrgang schreitet bei der Abschlussfeier hindurch. Auch Besucher können hindurchgehen.",
+      "latitude": 36.1343948,
+      "longitude": -80.2781606
+    },
+    {
+      "id": "trad_wfu_magnolias",
+      "name": "Die Magnolien",
+      "description": "Die Magnolien auf der Manchester Plaza wuchsen aus Samen, die 1947 auf dem Old Campus gesammelt wurden. Besucher spazieren zwischen ihnen auf dem unteren Quad.",
+      "latitude": 36.132692,
+      "longitude": -80.2766807
+    }
+  ],
+  "University of Arizona": [
+    {
+      "id": "trad_uarizona_bear_down",
+      "name": "Bear Down Gym",
+      "description": "„Bear Down“, der Schlachtruf der Universität, geht auf eine Botschaft zurück, die der sterbende Studentenpräsident John „Button“ Salmon 1926 an sein Team schickte; das Bear Down Gym, die alte Männersporthalle, trägt den Namen. Schauen Sie an der Halle vorbei, in der der Spruch weiterlebt.",
+      "latitude": 32.2311572,
+      "longitude": -110.9501043
+    }
+  ],
+  "Arizona State University": [
+    {
+      "id": "trad_asu_palm_walk",
+      "name": "Palm Walk",
+      "description": "Der Palm Walk verbindet das Nord- und Südende des Campus in Tempe und ist sein beliebtester Weg, gesäumt von über 20 Meter hohen Palmen. Gehen Sie ihn entlang und machen Sie ein Foto unter den Palmen.",
+      "latitude": 33.4220414,
+      "longitude": -111.9327327
+    },
+    {
+      "id": "trad_asu_pitchfork",
+      "name": "Bronze-Dreizack",
+      "description": "Ein 1,90 Meter hoher Dreizack aus Bronze steht am Südosteingang des Footballstadions. Stellen Sie sich daneben und zeigen Sie das „Fork 'em“-Handzeichen.",
+      "latitude": 33.4264044,
+      "longitude": -111.9325879
+    }
+  ],
+  "Brigham Young University": [
+    {
+      "id": "trad_byu_brigham_young_statue",
+      "name": "Brigham-Young-Statue",
+      "description": "Eine Statue von Brigham Young, geschaffen von seinem Enkel, dem Bildhauer Mahonri Young, steht vor dem Abraham O. Smoot Administration Building. Besuchen Sie die Statue des Namensgebers der Universität.",
+      "latitude": 40.2505239,
+      "longitude": -111.6492863
+    },
+    {
+      "id": "trad_byu_cougar_statue",
+      "name": "Puma-Statue am Stadion",
+      "description": "Ein in Italien gegossener Bronze-Puma, ein Geschenk der Jahrgänge 1965 und 1969, bewacht das LaVell Edwards Stadium im Nordosten des Campus. Machen Sie ein Foto mit ihm.",
+      "latitude": 40.2573194,
+      "longitude": -111.6545784
+    },
+    {
+      "id": "trad_byu_carillon",
+      "name": "Stündliche Glockenspielmelodie",
+      "description": "Zu jeder vollen Stunde spielt das Centennial Carillon die ersten Zeilen einer Melodie nach dem Kirchenlied „Come, Come, Ye Saints“. Stellen Sie sich zur vollen Stunde in die Nähe des Turms.",
+      "latitude": 40.2527714,
+      "longitude": -111.6476271
+    }
+  ],
+  "University of Houston": [
+    {
+      "id": "trad_uhouston_rub_the_paw",
+      "name": "Rub the Paw",
+      "description": "Vor großen Spielen reiben Fans für Glück an den Pfoten der beiden Bronze-Pumas auf der Cullen Family Plaza vor dem E. Cullen Building. Manche Studierende tun es auch vor den Abschlussprüfungen.",
+      "latitude": 29.7207927,
+      "longitude": -95.3445305
+    },
+    {
+      "id": "trad_uhouston_gate_2_cougar",
+      "name": "Puma an Tor 2",
+      "description": "An Spieltagen reiben Fans auch die Pfote der Puma-Statue an Tor 2 des Footballstadions. Reiben auch Sie sie für Glück.",
+      "latitude": 29.7219969,
+      "longitude": -95.3491839
+    }
+  ],
+  "Iowa State University": [
+    {
+      "id": "trad_iastate_zodiac",
+      "name": "Nicht auf den Tierkreis treten",
+      "description": "Im Boden der Gold Star Hall im Memorial Union ist ein Tierkreis aus Bronze eingelassen. Wer darauf tritt, fällt laut Legende in der nächsten Prüfung durch – gehen Sie also wie Generationen von Studierenden darum herum.",
+      "latitude": 42.0236772,
+      "longitude": -93.6458587
+    },
+    {
+      "id": "trad_iastate_campaniling",
+      "name": "Campaniling",
+      "description": "Der Überlieferung nach wird man ein echter Iowa Stater, wenn man um Mitternacht unter dem Campanile geküsst wird; beim Homecoming versammeln sich Hunderte zum „Mass Campaniling“. Besuchen Sie den Campanile und lauschen Sie seinen Glocken.",
+      "latitude": 42.025428,
+      "longitude": -93.6460367
+    },
+    {
+      "id": "trad_iastate_lake_laverne",
+      "name": "Lake LaVerne",
+      "description": "1935 kamen die ersten Schwäne auf den Lake LaVerne und erhielten die Namen Lancelot und Elaine. Laut Legende gehören Paare zusammen, die den See dreimal schweigend umrunden.",
+      "latitude": 42.0235616,
+      "longitude": -93.6489068
+    }
+  ],
+  "University of Kansas": [
+    {
+      "id": "trad_ku_campanile",
+      "name": "Memorial Campanile",
+      "description": "Absolventen gehen bei der Abschlussfeier durch den World War II Memorial Campanile und dann den Hügel hinunter. Laut Legende schließt nicht ab, wer vorher hindurchgeht – bewundern Sie ihn also von außen.",
+      "latitude": 38.9600053,
+      "longitude": -95.2469287
+    },
+    {
+      "id": "trad_ku_jayhawk_statue",
+      "name": "Jayhawk an der Strong Hall",
+      "description": "Der Bronze-Jayhawk vor der Strong Hall war ein Geschenk des Jahrgangs 1956. Halten Sie für ein Foto mit ihm an.",
+      "latitude": 38.958435,
+      "longitude": -95.2474873
+    }
+  ],
+  "Kansas State University": [
+    {
+      "id": "trad_kstate_call_hall_ice_cream",
+      "name": "Eis aus der Call Hall",
+      "description": "Die eigene Molkerei der K-State stellt mehr als 40 Eissorten her, darunter „Purple Pride“, die in der Call Hall verkauft werden. Holen Sie sich eine Kugel.",
+      "latitude": 39.1960718,
+      "longitude": -96.5812726
+    }
+  ],
+  "Oklahoma State University": [
+    {
+      "id": "trad_okstate_library_lawn",
+      "name": "Foto vor der Edmon Low Library",
+      "description": "Neue Studierende machen am ersten Tag ein Foto auf dem Rasen vor der Edmon Low Library. Machen Sie Ihr eigenes Foto vor der Bibliothek.",
+      "latitude": 36.1230647,
+      "longitude": -97.0697025
+    },
+    {
+      "id": "trad_okstate_old_central_bell",
+      "name": "Glocke von Old Central",
+      "description": "Als 1917 die Nachricht von einem Footballsieg Stillwater erreichte, läutete die Glocke von Old Central stundenlang und begründete die Bedlam-Glockentradition. Besuchen Sie das erste feste Gebäude des Campus.",
+      "latitude": 36.120811,
+      "longitude": -97.0665862
+    },
+    {
+      "id": "trad_okstate_theta_pond",
+      "name": "Theta Pond",
+      "description": "Der Theta Pond entstand 1895 als Wasserspeicher und ist heute einer der schönsten Orte des Campus. Machen Sie einen Spaziergang um ihn herum.",
+      "latitude": 36.120018,
+      "longitude": -97.0708324
+    }
+  ],
+  "Texas Tech University": [
+    {
+      "id": "trad_ttu_victory_bells",
+      "name": "Victory Bells",
+      "description": "Die Victory Bells im Ostturm des Administration Building läuten nach jedem Sieg eines Texas-Tech-Teams und bei Abschlussfeiern. Hören Sie nach einem Sieg hin.",
+      "latitude": 33.5831752,
+      "longitude": -101.8743018
+    },
+    {
+      "id": "trad_ttu_carol_of_lights",
+      "name": "Carol of Lights",
+      "description": "Seit 1959 schmückt Texas Tech jeden Dezember das Administration Building und benachbarte Gebäude mit Lichterketten. Besuchen Sie die Lichter zu Beginn der Saison.",
+      "latitude": 33.5831752,
+      "longitude": -101.8743018
+    },
+    {
+      "id": "trad_ttu_masked_rider_statue",
+      "name": "Masked-Rider-Statue",
+      "description": "Eine überlebensgroße Skulptur von Grant Speed zu Ehren des Maskottchens Masked Rider steht vor dem Frazier Alumni Pavilion. Machen Sie ein Foto mit ihr.",
+      "latitude": 33.5896496,
+      "longitude": -101.8747022
+    }
+  ],
+  "West Virginia University": [
+    {
+      "id": "trad_wvu_woodburn_lighting",
+      "name": "Weihnachtsbeleuchtung der Woodburn Hall",
+      "description": "Die WVU beleuchtet die Woodburn Hall zu den Feiertagen, eine Campus-Tradition, die 2025 wiederbelebt wurde. Kommen Sie im Dezember, um sie leuchten zu sehen.",
+      "latitude": 39.6360104,
+      "longitude": -79.9553417
+    },
+    {
+      "id": "trad_wvu_mountaineer_statue",
+      "name": "Mountaineer-Statue",
+      "description": "Die Bronzestatue des Mountaineer von Bildhauer Donald De Lue aus dem Jahr 1971 steht am Studentenzentrum Mountainlair. Suchen Sie sie und machen Sie ein Foto.",
+      "latitude": 39.6348483,
+      "longitude": -79.9535717
+    }
+  ],
+  "Baylor University": [
+    {
+      "id": "trad_baylor_judge_baylor",
+      "name": "Statue von Judge Baylor",
+      "description": "Eine Bronzestatue von Judge R.E.B. Baylor auf der Founders Mall blickt auf die Waco Hall und ist ein beliebtes Fotomotiv. Machen Sie ein Foto mit dem Namensgeber der Universität.",
+      "latitude": 31.5448581,
+      "longitude": -97.1205593
+    },
+    {
+      "id": "trad_baylor_mclane_carillon",
+      "name": "McLane Carillon",
+      "description": "Das McLane Carillon mit 48 Glocken an der Pat Neff Hall, 1988 ein Geschenk der Familie McLane, erfüllt den Campus mit Musik. Hören Sie es in der Nähe der Pat Neff Hall.",
+      "latitude": 31.5457472,
+      "longitude": -97.1213019
+    }
+  ],
+  "University of Cincinnati": [
+    {
+      "id": "trad_ucincy_bearcat_statue",
+      "name": "Bearcat-Statue",
+      "description": "Der 4,5 Meter hohe Bronze-Bearcat von Jon Hair, 2010 ein Geschenk der Ehrenverbindung Sigma Sigma, ist ein beliebtes Fotomotiv bei Campusführungen und für Absolventen. Er steht am Commons Way vor der Marian Spencer Hall.",
+      "latitude": 39.1331179,
+      "longitude": -84.5125066
+    }
+  ],
+  "University of Colorado Boulder": [
+    {
+      "id": "trad_cuboulder_norlin_inscriptions",
+      "name": "Inschriften der Norlin Library",
+      "description": "Zwei Inschriften von Präsident George Norlin zieren die Westfassade der Bibliothek über dem Norlin Quadrangle: „Who knows only his own generation remains always a child“ und über der Tür „Enter here the timeless fellowship of the human spirit“. Lesen Sie sie vom Hof aus.",
+      "latitude": 40.0087071,
+      "longitude": -105.2707683
+    },
+    {
+      "id": "trad_cuboulder_heritage_center",
+      "name": "CU Heritage Center im Old Main",
+      "description": "Im Old Main, dem ersten Gebäude des Campus, befindet sich das CU Heritage Center, dessen Galerien die Geschichte der Universität erzählen. Besuchen Sie es und entdecken Sie die Vergangenheit der CU.",
+      "latitude": 40.0092235,
+      "longitude": -105.2733574
+    }
+  ],
+  "Texas Christian University": [
+    {
+      "id": "trad_tcu_lucky_frog",
+      "name": "Glücksbringer-Hornfrosch",
+      "description": "Studierende reiben vor Prüfungen für Glück die Nase der geschweißten Hornfrosch-Statue von Seppo Aarnos, die 1984 zwischen Sadler Hall und Reed Hall aufgestellt wurde. Reiben auch Sie sie.",
+      "latitude": 32.7088833,
+      "longitude": -97.3615399
+    },
+    {
+      "id": "trad_tcu_frog_fountain",
+      "name": "Frog Fountain",
+      "description": "Absolventen und ihre Familien machen an der Frog Fountain Fotos in Talar und Hut, und bei Heimspielen erleuchtet nach jedem Touchdown ein Feuerwerk den Himmel über ihr. Machen Sie ein Foto am Brunnen.",
+      "latitude": 32.709619,
+      "longitude": -97.3624259
+    },
+    {
+      "id": "trad_tcu_carols_by_candlelight",
+      "name": "Carols by Candlelight",
+      "description": "Seit mehr als 40 Jahren findet jeden Dezember in der Robert Carr Chapel „Carols by Candlelight“ statt. Besuchen Sie die Kapelle in der Weihnachtszeit.",
+      "latitude": 32.7101446,
+      "longitude": -97.3598222
+    }
+  ],
+  "University of Central Florida": [
+    {
+      "id": "trad_ucf_pegasus_seal",
+      "name": "Nicht auf das Siegel treten",
+      "description": "Laut Legende schließt nicht ab, wer im Student Union über das Pegasus-Siegel geht; Absolventen dürfen es mit dem Diplom in der Hand überqueren. Suchen Sie das Siegel und gehen Sie darum herum.",
+      "latitude": 28.6020387,
+      "longitude": -81.2004879
+    }
+  ],
+  "University of Utah": [
+    {
+      "id": "trad_uutah_block_u",
+      "name": "Block U",
+      "description": "Das 1907 erstmals errichtete Block U am Hang über dem Campus leuchtet bei Heimspielen und blinkt nach Heimsiegen im Football, Basketball und Turnen rot. Schauen Sie nach einem Sieg zum Hügel hinauf.",
+      "latitude": 40.7793672,
+      "longitude": -111.8400323
+    }
+  ],
+  "University of Illinois Urbana-Champaign": [
+    {
+      "id": "trad_illinois_alma_mater",
+      "name": "Alma-Mater-Statue",
+      "description": "Lorado Tafts Bronzefigur von 1929, eine Frau im Talar mit ausgebreiteten Armen, begrüßt neben der Altgeld Hall die Studierenden. Ein Foto mit ihr ist ein klassisches Illinois-Bild.",
+      "latitude": 40.1099161,
+      "longitude": -88.2283981
+    },
+    {
+      "id": "trad_illinois_altgeld_chimes",
+      "name": "Altgeld Chimes",
+      "description": "Das Glockenspiel aus 15 Glocken im Turm der Altgeld Hall läutet seit 1920 die Stunden und spielt kurze Konzerte. Am Turm hört man bei jedem Konzert „Hail to the Orange“.",
+      "latitude": 40.1093282,
+      "longitude": -88.2283277
+    },
+    {
+      "id": "trad_illinois_morrow_plots",
+      "name": "Morrow Plots",
+      "description": "Diese 1876 angelegten kleinen Felder sind die ältesten landwirtschaftlichen Versuchsfelder der USA und ein National Historic Landmark. Spazieren Sie neben der Undergraduate Library daran vorbei.",
+      "latitude": 40.1046383,
+      "longitude": -88.2261332
+    }
+  ],
+  "Indiana University Bloomington": [
+    {
+      "id": "trad_indiana_rose_well_house",
+      "name": "Rose Well House",
+      "description": "Der Campuslegende nach bringt ein Kuss um Mitternacht im Rose Well House dauerhafte Liebe. Der kleine Pavillon bei den Dunn Woods ist auch ein beliebter Ort für Heiratsanträge.",
+      "latitude": 39.1665052,
+      "longitude": -86.5244091
+    },
+    {
+      "id": "trad_indiana_sample_gates",
+      "name": "Sample Gates",
+      "description": "Die Kalksteintore der Sample Gates markieren den Eingang zum Old Crescent von der Kirkwood Avenue. Gehen Sie hindurch und machen Sie ein Foto, wie viele frischgebackene Absolventen.",
+      "latitude": 39.1665576,
+      "longitude": -86.526601
+    },
+    {
+      "id": "trad_indiana_wells_statue",
+      "name": "Herman-B-Wells-Statue",
+      "description": "Eine Bronzefigur des beliebten früheren Präsidenten sitzt auf einer Bank und streckt die Hand aus. Schütteln Sie sie: Es heißt, wessen Familie ihm die Hand gibt, schließt pünktlich ab.",
+      "latitude": 39.1666617,
+      "longitude": -86.5241231
+    },
+    {
+      "id": "trad_indiana_showalter_fountain",
+      "name": "Showalter Fountain",
+      "description": "Der Brunnen auf der Fine Arts Plaza zeigt die Geburt der Venus, umgeben von Bronzefischen. Zählen Sie die Fische und suchen Sie den, der einen nach dem Basketballtitel 1987 entwendeten ersetzt.",
+      "latitude": 39.1684746,
+      "longitude": -86.5189728
+    }
+  ],
+  "University of Iowa": [
+    {
+      "id": "trad_uiowa_old_capitol_photo",
+      "name": "Foto am Old Capitol",
+      "description": "Absolventen posieren gern vor dem Old Capitol, an den Säulen und an der Tür mit der Inschrift „Iowa“. Machen Sie Ihr eigenes Foto auf den Stufen im Herzen des Pentacrest.",
+      "latitude": 41.661311,
+      "longitude": -91.5361648
+    },
+    {
+      "id": "trad_uiowa_kinnick_wave",
+      "name": "Kinnick Wave",
+      "description": "Bei Heimspielen dreht sich nach dem ersten Viertel das ganze Stadion um und winkt den Patienten im Kinderkrankenhaus über der Osttribüne. Wenn Sie ein Spiel besuchen, winken Sie mit.",
+      "latitude": 41.6586246,
+      "longitude": -91.5511915
+    }
+  ],
+  "University of Maryland, College Park": [
+    {
+      "id": "trad_umd_testudo",
+      "name": "Testudos Nase reiben",
+      "description": "Studierende reiben für Glück die Nase der bronzenen Schildkröte Testudo vor der McKeldin Library und legen in der Prüfungszeit kleine Gaben ab. Reiben Sie im Vorbeigehen seine Nase.",
+      "latitude": 38.9859711,
+      "longitude": -76.9445694
+    }
+  ],
+  "Michigan State University": [
+    {
+      "id": "trad_michstate_the_rock",
+      "name": "The Rock",
+      "description": "Der vom Jahrgang 1873 geschenkte Felsen am Red Cedar River wird immer wieder mit neuen Botschaften bemalt. Schauen Sie, was heute darauf steht.",
+      "latitude": 42.7281002,
+      "longitude": -84.4775643
+    },
+    {
+      "id": "trad_michstate_spartan_statue",
+      "name": "Spartan-Statue",
+      "description": "Der fast drei Meter hohe bronzene Spartaner ist ein beliebter Fotohintergrund, besonders zum Abschluss. Machen Sie ein Selfie mit ihm.",
+      "latitude": 42.731083,
+      "longitude": -84.4875188
+    },
+    {
+      "id": "trad_michstate_beaumont_tower",
+      "name": "Beaumont Tower: offener Turm",
+      "description": "Der Beaumont Tower ist am ersten Mittwoch jedes Monats und zum Abschluss für Besucher geöffnet. Gehen Sie hinauf zum Glockenspiel und genießen Sie den Blick über den Campus.",
+      "latitude": 42.7319499,
+      "longitude": -84.482282
+    }
+  ],
+  "University of Minnesota Twin Cities": [
+    {
+      "id": "trad_umn_goldy_statue",
+      "name": "Goldy-Gopher-Statue",
+      "description": "Ein bronzener Goldy Gopher steht neben einem Granit-M vor der Coffman Memorial Union, ein Treffpunkt und Symbol des Schulgeists. Kommen Sie für ein Foto vorbei.",
+      "latitude": 44.9730805,
+      "longitude": -93.2348397
+    }
+  ],
+  "University of Nebraska–Lincoln": [
+    {
+      "id": "trad_unl_archie",
+      "name": "Archie das Mammut",
+      "description": "Studierende reiben vor Prüfungen und Projekten für Glück den Fuß von Archie, dem Bronzemammut vor der Morrill Hall. Reiben Sie seinen Fuß oder geben Sie ihm ein High Five.",
+      "latitude": 40.8199558,
+      "longitude": -96.7018544
+    }
+  ],
+  "Northwestern University": [
+    {
+      "id": "trad_northwestern_the_rock",
+      "name": "The Rock",
+      "description": "Studierende bemalen den Felsen seit den 1940er-Jahren und bewachen ihn oft einen Tag lang, bevor sie ihn nachts bemalen. Schauen Sie sich die neueste Botschaft an.",
+      "latitude": 42.0515656,
+      "longitude": -87.6759271
+    },
+    {
+      "id": "trad_northwestern_weber_arch",
+      "name": "Weber Arch",
+      "description": "Neue Studierende ziehen zu Beginn durch den Weber Arch ein, und Absolventen ziehen kurz vor dem Ende hindurch wieder aus. Gehen Sie von der Sheridan Road durch den Bogen auf den Campus.",
+      "latitude": 42.0512624,
+      "longitude": -87.6770488
+    },
+    {
+      "id": "trad_northwestern_shakespeare_garden",
+      "name": "Shakespeare Garden",
+      "description": "Dieser ruhige Garten im Norden des Campus ist eine Station auf dem Campusplan für Besucher. Besuchen Sie ihn bei einem Spaziergang.",
+      "latitude": 42.0568141,
+      "longitude": -87.6759774
+    }
+  ],
+  "Ohio State University": [
+    {
+      "id": "trad_ohiostate_long_walk",
+      "name": "The Long Walk",
+      "description": "Der Long Walk führt über das Oval zur University Hall; Erstsemestern war er früher verboten. Gehen Sie ihn quer durch das Herz des Campus.",
+      "latitude": 39.9994828,
+      "longitude": -83.012759
+    },
+    {
+      "id": "trad_ohiostate_buckeye_grove",
+      "name": "Buckeye Grove",
+      "description": "Neben dem Ohio Stadium wird für jeden First-Team-All-American von Ohio State ein Rosskastanienbaum mit Plakette gepflanzt. Suchen Sie unter den Bäumen nach berühmten Namen.",
+      "latitude": 39.9998852,
+      "longitude": -83.0210669
+    },
+    {
+      "id": "trad_ohiostate_victory_bell",
+      "name": "Victory Bell",
+      "description": "Die Victory Bell im Südostturm des Ohio Stadium wird nach jedem Sieg von Ohio State geläutet. Hören Sie nach einem Heimspiel hin.",
+      "latitude": 40.0016458,
+      "longitude": -83.0197374
+    }
+  ],
+  "Pennsylvania State University": [
+    {
+      "id": "trad_pennstate_lion_shrine",
+      "name": "Nittany Lion Shrine",
+      "description": "Heinz Warnekes Kalksteinlöwe von 1942 ist der meistfotografierte Ort des Campus. Viele Studierende machen am ersten Tag und vor dem Abschluss ein Foto hier.",
+      "latitude": 40.7968202,
+      "longitude": -77.8690661
+    },
+    {
+      "id": "trad_pennstate_berkey_creamery",
+      "name": "Berkey Creamery",
+      "description": "Die Molkerei der Universität, deren Speiseeis-Kurs bis 1892 zurückreicht, verkauft ihr eigenes Eis im Food Science Building. Holen Sie sich eine Waffel.",
+      "latitude": 40.8037114,
+      "longitude": -77.8624095
+    }
+  ],
+  "Purdue University": [
+    {
+      "id": "trad_purdue_bell_tower",
+      "name": "Kuss unter dem Bell Tower",
+      "description": "Der Legende nach heiratet ein Paar, das sich unter dem Bell Tower küsst und dann am Stone Lion Fountain vorbeigeht, eines Tages. Besuchen Sie den Turm in der Mitte des Campus.",
+      "latitude": 40.4272802,
+      "longitude": -86.9140682
+    },
+    {
+      "id": "trad_purdue_hello_walk",
+      "name": "Hello Walk",
+      "description": "Der Hello Walk begann als Weg zur University Hall und umfasst heute die Wege über die Memorial Mall. Lächeln Sie und grüßen Sie alle, denen Sie begegnen.",
+      "latitude": 40.4249217,
+      "longitude": -86.9143278
+    }
+  ],
+  "Rutgers University–New Brunswick": [
+    {
+      "id": "trad_rutgers_willie_the_silent",
+      "name": "Willie the Silent",
+      "description": "Die Bronzestatue von Wilhelm dem Schweiger, Prinz von Oranien, aus dem Jahr 1928, bei Studierenden Willie the Silent genannt, ist eine der beliebtesten des Campus. Sie finden ihn auf der Voorhees Mall.",
+      "latitude": 40.5012053,
+      "longitude": -74.447713
+    },
+    {
+      "id": "trad_rutgers_old_queens_bell",
+      "name": "Glocke von Old Queens",
+      "description": "Die Glocke in der Kuppel von Old Queens läutet zur Eröffnung des Studienjahrs, zum Abschluss und zu anderen großen Anlässen und inspirierte das Lied „The Bells Must Ring“. Schauen Sie vom Queens Campus zur Kuppel hinauf.",
+      "latitude": 40.4987592,
+      "longitude": -74.4462652
+    }
+  ],
+  "University of Wisconsin–Madison": [
+    {
+      "id": "trad_wisc_abe_lincoln",
+      "name": "Abe Lincoln auf dem Bascom Hill",
+      "description": "Die sitzende Lincoln-Statue vor der Bascom Hall ist ein Höhepunkt der Fotos am Abschlusswochenende. Machen Sie oben auf dem Hügel ein Foto neben ihm.",
+      "latitude": 43.0753179,
+      "longitude": -89.4036901
+    },
+    {
+      "id": "trad_wisc_terrace_chairs",
+      "name": "Sonnenstühle der Terrasse",
+      "description": "Die Sunburst-Stühle auf der Terrasse der Memorial Union gehören zu den bekanntesten Symbolen der Universität. Setzen Sie sich in einen am Lake Mendota.",
+      "latitude": 43.0767342,
+      "longitude": -89.3996524
+    },
+    {
+      "id": "trad_wisc_babcock_ice_cream",
+      "name": "Eis aus der Babcock Hall",
+      "description": "Das Eis aus der Universitätsmolkerei in der Babcock Hall ist bei Studierenden beliebt und eine Touristenattraktion. Probieren Sie eine Kugel.",
+      "latitude": 43.0747917,
+      "longitude": -89.4136733
+    }
+  ],
+  "University of Oregon": [
+    {
+      "id": "trad_uoregon_yell_o",
+      "name": "Yell-O-Duck-Statue",
+      "description": "Eine 450 Kilo schwere Bronzefigur der Duck, die das „O“ zeigt, steht zwischen der Matthew Knight Arena und dem Ford Alumni Center. Zeigen Sie für ein Foto daneben das O.",
+      "latitude": 44.0451181,
+      "longitude": -123.067633
+    },
+    {
+      "id": "trad_uoregon_bowerman_statue",
+      "name": "Bill-Bowerman-Statue",
+      "description": "Eine Bronzefigur von Trainer und Nike-Mitgründer Bill Bowerman aus dem Jahr 2000 steht an einer Ecke des Hayward Field. Besuchen Sie sie bei einem Rundgang um das Stadion.",
+      "latitude": 44.0422171,
+      "longitude": -123.070799
+    }
+  ],
+  "University of Southern California": [
+    {
+      "id": "trad_southerncal_tommy_trojan",
+      "name": "Tommy Trojan",
+      "description": "Der bronzene trojanische Krieger auf der Hahn Plaza ist der beliebteste Treffpunkt des Campus. Vor dem Spiel gegen UCLA wird er mit Klebeband umwickelt und rund um die Uhr von den Trojan Knights bewacht.",
+      "latitude": 34.0205678,
+      "longitude": -118.2854346
+    },
+    {
+      "id": "trad_southerncal_hecuba",
+      "name": "Hecuba-Statue",
+      "description": "Die Statue der Hekabe, Königin von Troja, wurde 2017 auf dem zentralen Platz des USC Village als Gegenstück zu Tommy Trojan enthüllt. Besuchen Sie sie auf dem Platz.",
+      "latitude": 34.025089,
+      "longitude": -118.2847258
+    }
+  ],
+  "University of Alabama": [
+    {
+      "id": "trad_ua_walk_of_fame",
+      "name": "Walk of Fame an den Denny Chimes",
+      "description": "Seit 1948 drücken die Kapitäne des Footballteams ihre Hand- und Fußabdrücke in den Beton rund um den Sockel der Denny Chimes. Gehen Sie um den Turm, um die Namen zu finden, und lauschen Sie alle 15 Minuten dem Westminster-Glockenspiel.",
+      "latitude": 33.2099035,
+      "longitude": -87.5463171
+    },
+    {
+      "id": "trad_ua_walk_of_champions",
+      "name": "Walk of Champions",
+      "description": "Vor dem Bryant–Denny Stadium verzeichnen Granitplatten die nationalen Meistertitel der Crimson Tide neben Statuen der Meistertrainer. An Spieltagen säumen Fans den Weg und jubeln dem ankommenden Team zu.",
+      "latitude": 33.2095313,
+      "longitude": -87.5503283
+    }
+  ],
+  "University of Arkansas": [
+    {
+      "id": "trad_uark_senior_walk",
+      "name": "Senior Walk",
+      "description": "In die Gehwege des Campus sind die Namen der Absolventen eingraviert, Jahrgang für Jahrgang bis zurück ins Jahr 1876. Beginnen Sie bei Old Main und schauen Sie nach unten, um die Namen zu lesen.",
+      "latitude": 36.0686953,
+      "longitude": -94.1716272
+    },
+    {
+      "id": "trad_uark_spoofers_stone",
+      "name": "Spoofer's Stone",
+      "description": "Dieser Kalkstein bei Old Main stammt aus einer Zeit, in der Studentinnen und Studenten sich nicht treffen durften und Liebesbriefe in seinen Spalten hinterließen. Heute ist er ein beliebter Ort für Heiratsanträge.",
+      "latitude": 36.0686953,
+      "longitude": -94.1716272
+    }
+  ],
+  "Auburn University": [
+    {
+      "id": "trad_auburn_toomers_corner",
+      "name": "Toomer's Corner",
+      "description": "An der Ecke College Street und Magnolia Avenue feiern Fans Siege von Auburn, indem sie die Eichen mit Toilettenpapier bewerfen – ein Brauch, den die Universität unterstützt. Besuchen Sie die Ecke und die neu gepflanzten Toomer's Oaks oder kommen Sie nach einem Sieg zum Zuschauen.",
+      "latitude": 32.6063055,
+      "longitude": -85.4818803
+    },
+    {
+      "id": "trad_auburn_tiger_walk",
+      "name": "Tiger Walk",
+      "description": "Vor Heimspielen säumen Fans den Donahue Drive und jubeln dem Team zu, das zum Jordan-Hare Stadium geht. Auburn nennt ihn eine der meistkopierten Traditionen im College-Football.",
+      "latitude": 32.6021616,
+      "longitude": -85.4891613
+    }
+  ],
+  "University of Florida": [
+    {
+      "id": "trad_uf_century_tower",
+      "name": "Glockenspiel im Century Tower",
+      "description": "Das Glockenspiel mit 61 Glocken im Century Tower, 2003 in seiner heutigen Form vollendet, erklingt über der Mitte des Campus. Stellen Sie sich auf den Rasen darunter und hören Sie zu.",
+      "latitude": 29.6488138,
+      "longitude": -82.3433213
+    }
+  ],
+  "University of Georgia": [
+    {
+      "id": "trad_uga_arch",
+      "name": "The Arch",
+      "description": "Der Arch ist das Tor zwischen dem North Campus und der Innenstadt von Athens. Der Legende nach gehen Studierende erst nach ihrem Abschluss darunter hindurch, daher gehen viele Besucher außen herum und machen stattdessen ein Foto.",
+      "latitude": 33.9575243,
+      "longitude": -83.3752855
+    },
+    {
+      "id": "trad_uga_chapel_bell",
+      "name": "Chapel Bell",
+      "description": "Die Glocke neben der Chapel wird seit 1894 zur Feier von Footballsiegen geläutet. Die Universität ermutigt dazu, sie bei sportlichen Siegen und anderen besonderen Anlässen zu läuten.",
+      "latitude": 33.956616,
+      "longitude": -83.375418
+    }
+  ],
+  "Louisiana State University": [
+    {
+      "id": "trad_lsu_mike_habitat",
+      "name": "Gehege von Mike the Tiger",
+      "description": "Die LSU hält seit 1936 einen lebenden Tiger auf dem Campus. Besuchen Sie Mike in seinem Gehege zwischen dem Tiger Stadium und dem Pete Maravich Assembly Center, das das ganze Jahr für Besucher geöffnet ist.",
+      "latitude": 30.4134234,
+      "longitude": -91.1850659
+    },
+    {
+      "id": "trad_lsu_victory_hill",
+      "name": "Marsch über den Victory Hill",
+      "description": "Vor Heimspielen säumen Fans den Victory Hill und sehen zu, wie Team, Trainer und die Golden Band vom Greek Theatre zum Tiger Stadium marschieren.",
+      "latitude": 30.4161043,
+      "longitude": -91.1803752
+    }
+  ],
+  "University of Mississippi": [
+    {
+      "id": "trad_olemiss_walk_of_champions",
+      "name": "Walk of Champions",
+      "description": "Vor jedem Heimspiel am Samstag geht das Team vom Bogen des Walk of Champions durch The Grove – ein Geschenk des ungeschlagenen Teams von 1962 aus dem Jahr 1998. Fans säumen den Weg und feuern es an.",
+      "latitude": 34.3657509,
+      "longitude": -89.5327617
+    },
+    {
+      "id": "trad_olemiss_meredith_monument",
+      "name": "Bürgerrechtsdenkmal",
+      "description": "Zwischen dem Lyceum und der Bibliothek steht eine lebensgroße Statue von James Meredith, dem ersten an der Universität aufgenommenen schwarzen Studenten, mit einem Portal aus Kalkstein, in das die Worte Courage, Knowledge, Perseverance und Opportunity gemeißelt sind.",
+      "latitude": 34.3652987,
+      "longitude": -89.5365903
+    },
+    {
+      "id": "trad_olemiss_grove",
+      "name": "The Grove",
+      "description": "Dieser 4 Hektar große, von Eichen beschattete Park liegt mitten auf dem Campus. Spazieren Sie hindurch und hören Sie an Spieltagen die Pride of the South ihr Vorprogramm auf der Bühne im Grove spielen.",
+      "latitude": 34.3658088,
+      "longitude": -89.5327448
+    }
+  ],
+  "University of Missouri": [
+    {
+      "id": "trad_mizzou_columns",
+      "name": "Durch die Columns gehen",
+      "description": "Jeden August sprinten die neuen Studierenden durch die Columns auf die Jesse Hall zu, und im Mai gehen die Absolventen den Weg in umgekehrter Richtung. Besucher können dieselbe Strecke über den Francis Quadrangle gehen.",
+      "latitude": 38.946276,
+      "longitude": -92.328778
+    },
+    {
+      "id": "trad_mizzou_francis_nose",
+      "name": "Die Nase von David R. Francis",
+      "description": "Der Legende nach bringt es eine Eins in der nächsten Prüfung, wenn man die Nase am Bronzerelief von David R. Francis nahe dem Nordosteingang der Jesse Hall reibt. Francis gilt als derjenige, der die Universität nach dem Brand von 1892 in Columbia hielt.",
+      "latitude": 38.9452339,
+      "longitude": -92.3286872
+    },
+    {
+      "id": "trad_mizzou_jefferson_tombstone",
+      "name": "Grabstein von Thomas Jefferson",
+      "description": "Der ursprüngliche Grabstein von Thomas Jeffersons Grab in Monticello steht an der Ostseite des Francis Quadrangle. Seine Erben schenkten ihn 1883 Mizzou als erster Universität, die im Gebiet des Louisiana Purchase gegründet wurde.",
+      "latitude": 38.9463586,
+      "longitude": -92.3287867
+    }
+  ],
+  "University of Oklahoma": [
+    {
+      "id": "trad_ou_seed_sower",
+      "name": "The Seed Sower",
+      "description": "Ein 3,7 Meter hoher Sämann aus Bronze von Paul Moore steht am South Oval, nach der Figur im Siegel der Universität und einem Gleichnis des ersten Präsidenten David Ross Boyd. Er wird geschmückt, wenn das Team sein Bowl-Ziel erfährt.",
+      "latitude": 35.2050658,
+      "longitude": -97.4457142
+    },
+    {
+      "id": "trad_ou_heisman_park",
+      "name": "Heisman Park",
+      "description": "An der Ostseite des Footballstadions ehren Bronzestatuen die Heisman-Trophy-Gewinner von Oklahoma. Der Ort ist beliebt für Fotos.",
+      "latitude": 35.2052402,
+      "longitude": -97.4408049
+    }
+  ],
+  "University of South Carolina": [
+    {
+      "id": "trad_uofsc_maxcy_monument",
+      "name": "Maxcy Monument",
+      "description": "Mitten auf dem Horseshoe steht das Denkmal für Jonathan Maxcy, den ersten Präsidenten, entworfen von Robert Mills und 1827 eingeweiht. Lesen Sie die lateinischen Inschriften und die englischen Übersetzungen daneben.",
+      "latitude": 33.9982602,
+      "longitude": -81.0285542
+    },
+    {
+      "id": "trad_uofsc_cocky_statue",
+      "name": "Statue von Cocky",
+      "description": "Eine Statue des Gamecock-Maskottchens steht an der Greene Street nahe dem Russell House, und Besucher sind eingeladen, ein Foto mit ihr zu machen.",
+      "latitude": 33.9975701,
+      "longitude": -81.0262322
+    }
+  ],
+  "Vanderbilt University": [
+    {
+      "id": "trad_vandy_commodore_statue",
+      "name": "Statue von Commodore Vanderbilt",
+      "description": "Die Statue von Cornelius Vanderbilt, dessen Spende die Universität gründete, steht am Nordende der Esplanade mit Blick auf die West End Avenue. Sie ist Schauplatz der Feiern zum Founder's Day um den 17. März, den Gründungstag.",
+      "latitude": 36.148246,
+      "longitude": -86.8027544
+    }
+  ],
+  "University of Kentucky": [
+    {
+      "id": "trad_uky_bowman",
+      "name": "Bowman, die Wildkatze",
+      "description": "Die bronzene Wildkatzenstatue auf der Wildcat Alumni Plaza wurde 2012 per Abstimmung der Studierenden Bowman getauft. Besucher tätscheln ihren Kopf und reiben ihr Nase und Pfoten, um Glück zu haben.",
+      "latitude": 38.0282667,
+      "longitude": -84.5086422
+    }
+  ],
+  "Mississippi State University": [
+    {
+      "id": "trad_msstate_cowbells",
+      "name": "Kuhglocken im Davis Wade Stadium",
+      "description": "Fans läuten bei Spielen von Mississippi State Kuhglocken, das berühmteste Symbol des Schulgeistes. Bringen Sie eine Kuhglocke zu einem Heimspiel mit oder hören Sie sie bei der Cowbell-Yell-Kundgebung im Stadion.",
+      "latitude": 33.4564527,
+      "longitude": -88.7934036
+    },
+    {
+      "id": "trad_msstate_drill_field",
+      "name": "Der Drill Field",
+      "description": "Der zentrale Platz ist nach seiner Nutzung durch das Kadettenkorps benannt. Studierende entspannen sich hier zwischen den Vorlesungen, und in der ersten Vorlesungswoche findet hier die Kundgebung The Drill statt.",
+      "latitude": 33.4538086,
+      "longitude": -88.7893773
+    }
+  ],
+  "University of Tennessee": [
+    {
+      "id": "trad_utk_torchbearer",
+      "name": "Der Torchbearer",
+      "description": "Die Torchbearer-Statue im Circle Park trägt auf ihrer Tafel das Volunteer Creed. Lesen Sie das Credo, Ursprung der Torch-Night-Zeremonie der Universität.",
+      "latitude": 35.953354,
+      "longitude": -83.9273555
+    },
+    {
+      "id": "trad_utk_the_rock",
+      "name": "The Rock",
+      "description": "Dieser große Kalksteinfelsen wird von Studierenden immer wieder neu bemalt, mit Botschaften von Geburtstagsgrüßen bis zu Heiratsanträgen. Schauen Sie vorbei und sehen Sie, was heute darauf steht.",
+      "latitude": 35.95138889,
+      "longitude": -83.93083333
+    },
+    {
+      "id": "trad_utk_vol_walk",
+      "name": "Vol Walk",
+      "description": "Vor Heimspielen säumen Fans den Weg, wenn das Team, angeführt von der Band, vom Torchbearer zum Neyland Stadium geht. Die Tradition reicht bis 1990 zurück.",
+      "latitude": 35.9550206,
+      "longitude": -83.9241185
+    }
+  ],
+  "Texas A&M University": [
+    {
+      "id": "trad_tamu_pennies_on_sully",
+      "name": "Pennys für Sully",
+      "description": "Studierende legen vor Prüfungen für Glück Pennys an den Sockel der Statue von Lawrence Sullivan Ross, in Erinnerung an seine Antwort „a penny for your thoughts“. Die Münzen werden jedes Semester gespendet.",
+      "latitude": 30.6157404,
+      "longitude": -96.3407842
+    },
+    {
+      "id": "trad_tamu_century_tree",
+      "name": "Century Tree",
+      "description": "Diese Lebenseiche, einer der ersten auf dem Campus gepflanzten Bäume, ist weit über 100 Jahre alt. Der Legende nach heiratet ein Paar, das gemeinsam unter ihr hindurchgeht.",
+      "latitude": 30.6158806,
+      "longitude": -96.3413475
+    }
+  ],
+  "University of Oxford": [
+    {
+      "id": "trad_oxford_great_tom",
+      "name": "Die 101 Schläge von Great Tom",
+      "description": "Jeden Abend um 21:05 Uhr (21 Uhr nach alter „Oxford-Zeit“) läutet die Glocke Great Tom im Tom Tower von Christ Church 101-mal – einmal für jeden der ursprünglich 100 Stipendiaten des Colleges plus einen, der 1663 hinzukam. Auf der St Aldate's ist sie gut zu hören.",
+      "latitude": 51.750203,
+      "longitude": -1.256554
+    },
+    {
+      "id": "trad_oxford_may_morning",
+      "name": "May Morning am Magdalen Tower",
+      "description": "Am 1. Mai um 6 Uhr morgens singt der Chor des Magdalen College vom Great Tower herab den Hymnus Eucharisticus – eine Zeremonie, die rund 500 Jahre zurückreicht. Unten auf der High Street und der Magdalen Bridge versammeln sich die Menschen, um zuzuhören.",
+      "latitude": 51.751719,
+      "longitude": -1.246859
+    },
+    {
+      "id": "trad_oxford_bridge_of_sighs",
+      "name": "Seufzerbrücke",
+      "description": "Die Hertford Bridge, nach der venezianischen Brücke, der sie ähneln soll, „Seufzerbrücke“ genannt, verbindet über die New College Lane hinweg zwei Teile des Hertford College. Bleiben Sie in der Gasse stehen, um dieses Wahrzeichen der Stadt zu sehen und zu fotografieren.",
+      "latitude": 51.754502,
+      "longitude": -1.253781
+    }
+  ],
+  "University of Cambridge": [
+    {
+      "id": "trad_cambridge_nine_lessons",
+      "name": "Nine Lessons and Carols am King's College",
+      "description": "An Heiligabend singt der Chor des King's College in der King's College Chapel das Festival of Nine Lessons and Carols. Die Karten werden öffentlich verlost, und für Bewerber gibt es eine Warteschlange für Restplätze.",
+      "latitude": 52.20478,
+      "longitude": 0.116544
+    },
+    {
+      "id": "trad_cambridge_corpus_clock",
+      "name": "Corpus Clock",
+      "description": "Die Corpus Clock, auch Chronophage genannt, ist eine vergoldete Uhr ohne Zeiger auf Straßenhöhe an der Taylor Library des Corpus Christi College, Ecke Bene't Street und Trumpington Street. Bleiben Sie stehen und beobachten Sie die heuschreckenartige Figur, während die Uhr läuft.",
+      "latitude": 52.203759,
+      "longitude": 0.117688
+    },
+    {
+      "id": "trad_cambridge_mathematical_bridge",
+      "name": "Der Mythos der Mathematical Bridge",
+      "description": "Eine beliebte Legende besagt, Isaac Newton habe die Mathematical Bridge des Queens' College ganz ohne Muttern und Bolzen gebaut, und nachdem man sie zerlegt hatte, habe niemand sie wieder zusammensetzen können. Betrachten Sie die Brücke vom Fluss oder von der Silver Street aus und urteilen Sie selbst.",
+      "latitude": 52.202214,
+      "longitude": 0.115049
+    },
+    {
+      "id": "trad_cambridge_newton_apple_tree",
+      "name": "Newtons Apfelbaum",
+      "description": "Vor dem Great Gate des Trinity College, unterhalb der Räume, in denen Newton wohnte, wächst ein 1954 gepflanzter Apfelbaum, ein Abkömmling des Baums von Woolsthorpe Manor, der mit seiner Geschichte von der Schwerkraft verbunden ist. Besucher bleiben auf der Trinity Street stehen, um ihn zu sehen.",
+      "latitude": 52.207305,
+      "longitude": 0.117735
+    },
+    {
+      "id": "trad_cambridge_henry_chair_leg",
+      "name": "Heinrichs VIII. Stuhlbein",
+      "description": "Die Statue Heinrichs VIII. am Great Gate des Trinity College ist berühmt, weil Studenten im 19. Jahrhundert sein Zepter gegen ein Stuhlbein austauschten. Schauen Sie von der Trinity Street hinauf und sehen Sie, was er in der Hand hält.",
+      "latitude": 52.207137,
+      "longitude": 0.117586
+    }
+  ],
+  "University of St Andrews": [
+    {
+      "id": "trad_st_andrews_ph_initials",
+      "name": "Patrick Hamiltons PH",
+      "description": "Die Buchstaben PH im Kopfsteinpflaster vor dem St Salvator's Quad markieren die Stelle, an der Patrick Hamilton 1528 auf dem Scheiterhaufen verbrannt wurde. Der Überlieferung nach fällt jeder Studierende, der darauf tritt, durch sein Studium – deshalb gehen auch Besucher um die Buchstaben herum.",
+      "latitude": 56.341258,
+      "longitude": -2.794631
+    },
+    {
+      "id": "trad_st_andrews_pier_walk",
+      "name": "Pier Walk",
+      "description": "Jede Woche gehen Studierende in roten Talaren nach dem Gottesdienst die ganze Länge des historischen Hafenpiers entlang; am vollsten ist es am Ende der Freshers' Week. Besucher können die Prozession beobachten oder selbst über den Pier spazieren.",
+      "latitude": 56.339596,
+      "longitude": -2.781318
+    }
+  ],
+  "University of Glasgow": [
+    {
+      "id": "trad_glasgow_unicorn",
+      "name": "Das Horn des Einhorns reiben",
+      "description": "Die 1690 gemeißelte Lion and Unicorn Staircase wurde Stein für Stein vom Old College an der High Street hierher versetzt. Das Einhorn zu tätscheln oder sein Horn zu reiben soll Glück bringen, besonders vor Prüfungen.",
+      "latitude": 55.871353,
+      "longitude": -4.289906
+    },
+    {
+      "id": "trad_glasgow_quad_grass",
+      "name": "Den Rasen im Quad nicht betreten",
+      "description": "Es gilt als Unglück, wenn Studierende vor ihrem Abschluss den Rasen der Innenhöfe betreten. Besucher können den East und West Quad von den Wegen aus bewundern, wo die von einem Dudelsackspieler angeführten Abschlussprozessionen stattfinden.",
+      "latitude": 55.871366,
+      "longitude": -4.287898
+    },
+    {
+      "id": "trad_glasgow_cloisters",
+      "name": "Die Cloisters",
+      "description": "Die gewölbten Cloisters (das Undercroft) zwischen East und West Quadrangle waren in Filmen und Serien wie „Outlander“ und „Cloud Atlas“ zu sehen. Gehen Sie hindurch und machen Sie ein Foto unter den kannelierten Säulen.",
+      "latitude": 55.871446,
+      "longitude": -4.288488
+    }
+  ],
+  "University of Edinburgh": [
+    {
+      "id": "trad_edinburgh_hume_toe",
+      "name": "David Humes Zeh reiben",
+      "description": "An der Statue des ehemaligen Edinburgher Studenten David Hume an der Royal Mile ist ein Zeh blank poliert, weil Studierende, Touristen und Passanten ihn für Glück reiben. Besucher können es auch tun – obwohl Hume selbst ein berühmter Kritiker des Aberglaubens war.",
+      "latitude": 55.949552,
+      "longitude": -3.192443
+    },
+    {
+      "id": "trad_edinburgh_old_college_youth",
+      "name": "Die vergoldete Jugend auf dem Old College entdecken",
+      "description": "Die 1887 hinzugefügte Kuppel des Old College wird von John Hutchisons vergoldeter Statue der Jugend gekrönt. Besucher können von der South Bridge zu ihr hinaufschauen oder den Innenhof betreten, in dem auch Abschlussfeiern und Festivalveranstaltungen stattfinden.",
+      "latitude": 55.947424,
+      "longitude": -3.186515
+    }
+  ],
+  "Durham University": [
+    {
+      "id": "trad_durham_sanctuary_knocker",
+      "name": "Den Asyl-Türklopfer ansehen",
+      "description": "Im Mittelalter konnte jeder, der ein schweres Vergehen begangen hatte, den Ring an der Nordtür der Kathedrale von Durham ergreifen und 37 Tage Asyl beanspruchen. Besucher können die Nachbildung des Rings an der Nordtür sehen; das Original aus dem 12. Jahrhundert befindet sich im Kathedralmuseum.",
+      "latitude": 54.773262,
+      "longitude": -1.576333
+    },
+    {
+      "id": "trad_durham_castle_college",
+      "name": "Das Burg-College besichtigen",
+      "description": "Im Durham Castle am Palace Green ist das University College untergebracht: Hier wohnen etwa 150 Studierende, und in der mittelalterlichen Great Hall finden noch immer festliche Abendessen statt. Besucher können das Innere bei einer Führung sehen, die außerhalb des Semesters täglich angeboten wird.",
+      "latitude": 54.775509,
+      "longitude": -1.576891
+    },
+    {
+      "id": "trad_durham_dun_cow",
+      "name": "Die Dun Cow finden",
+      "description": "Einer örtlichen Legende nach folgten Mönche mit dem Leichnam des heiligen Cuthbert einem Milchmädchen, das seine verlorene graubraune Kuh (dun cow) suchte, bis zu dem Hügel, auf dem heute die Kathedrale steht. Die Dun Cow Lane neben der Kathedrale ist nach einer Darstellung dieser Geschichte an der Kathedrale benannt, nach der Besucher Ausschau halten können.",
+      "latitude": 54.773834,
+      "longitude": -1.575284
+    }
+  ],
+  "Trinity College Dublin": [
+    {
+      "id": "trad_tcd_campanile",
+      "name": "Nicht unter dem Campanile hindurchgehen",
+      "description": "Ein studentischer Aberglaube besagt, dass jeder, der unter dem Campanile am Front Square hindurchgeht, während seine Glocke läutet, durch die Prüfungen fällt – deshalb stellen sich Studierende selbst bei Regen kaum darunter. Besucher können beobachten, wie die Studierenden um ihn herum statt hindurch gehen.",
+      "latitude": 53.344404,
+      "longitude": -6.257315
+    },
+    {
+      "id": "trad_tcd_book_of_kells",
+      "name": "Das Book of Kells und den Long Room sehen",
+      "description": "Die Old Library bewahrt das Book of Kells seit 1661 auf, und ihr Long Room zieht jährlich über 900.000 Besucher an. Mit einem Ticket können Besucher die Handschrift sehen und durch den Long Room gehen.",
+      "latitude": 53.34393,
+      "longitude": -6.256801
+    }
+  ],
+  "Yale University": [
+    {
+      "id": "trad_yale_woolsey_foot",
+      "name": "Woolseys Fuß reiben",
+      "description": "Generationen von Studierenden haben für Glück den vorstehenden Fuß der Bronzestatue von Präsident Theodore Dwight Woolsey auf dem Old Campus gerieben. Auch Besucher können den glänzenden Fuß reiben.",
+      "latitude": 41.308785,
+      "longitude": -72.928905
+    },
+    {
+      "id": "trad_yale_harkness_carillon",
+      "name": "Das Harkness Carillon hören",
+      "description": "Studierende der Yale Guild of Carillonneurs spielen das Glockenspiel im Harkness Tower während des Studienjahres zweimal täglich, um 12:30 und 17:30 Uhr, im Sommer zusätzlich freitags bei Konzerten. Besucher können von den umliegenden Straßen und Höfen aus zuhören.",
+      "latitude": 41.30941,
+      "longitude": -72.929484
+    },
+    {
+      "id": "trad_yale_womens_table",
+      "name": "Den Women's Table besuchen",
+      "description": "In Maya Lins Women's Table von 1993 vor der Sterling Memorial Library ist eine Spirale aus Zahlen eingraviert, die zeigt, wie viele Frauen seit 1701 jedes Jahr in Yale studiert haben. Besucher können herantreten und die Spirale lesen.",
+      "latitude": 41.310797,
+      "longitude": -72.928162
+    }
+  ],
+  "Harvard University": [
+    {
+      "id": "trad_harvard_john_harvard_foot",
+      "name": "John Harvards linken Fuß berühren",
+      "description": "Den linken Fuß der John-Harvard-Statue im Harvard Yard zu berühren soll Glück bringen, und er ist inzwischen goldglänzend poliert. Stadtführer nennen sie die „Statue der drei Lügen“, und Besucher posieren oft für ein Foto mit ihr.",
+      "latitude": 42.374464,
+      "longitude": -71.117198
+    },
+    {
+      "id": "trad_harvard_dexter_gate",
+      "name": "Beide Seiten des Dexter Gate lesen",
+      "description": "Auf dem Dexter Gate an der Massachusetts Avenue steht außen „Enter to grow in wisdom“ (Tritt ein, um an Weisheit zu wachsen) und innen „Depart to serve better thy country and thy kind“ (Geh hinaus, um deinem Land und deinesgleichen besser zu dienen). Besucher können hindurchgehen und beide Inschriften lesen.",
+      "latitude": 42.372775,
+      "longitude": -71.116278
+    },
+    {
+      "id": "trad_harvard_johnston_gate_sheriffs",
+      "name": "Sheriffs am Johnston Gate",
+      "description": "Seit Jahrhunderten reiten die Sheriffs der Countys Middlesex und Suffolk am Commencement Day zu Pferd in den Harvard Yard ein, traditionell durch das Johnston Gate. Besucher können das Tor von 1889, den Haupteingang des Yard, jederzeit sehen.",
+      "latitude": 42.374679,
+      "longitude": -71.11849
+    }
+  ],
+  "Massachusetts Institute of Technology": [
+    {
+      "id": "trad_mit_mithenge",
+      "name": "MIThenge",
+      "description": "An einigen Tagen um Mitte November und Ende Januar steht die untergehende Sonne genau in der Achse des Infinite Corridor und scheint durch seine ganze Länge. Viele Menschen versammeln sich im Korridor, um das hereinströmende Licht zu sehen.",
+      "latitude": 42.359585,
+      "longitude": -71.091981
+    },
+    {
+      "id": "trad_mit_smoot_markers",
+      "name": "Smoot-Markierungen auf der Harvard Bridge",
+      "description": "Auf dem Gehweg der Harvard Bridge sind Markierungen aufgemalt, die ihre Länge in „Smoots“ messen – nach der Körpergröße von Oliver Smoot, der 1958 als Verbindungsanwärter vermessen wurde. Gehen Sie über die Brücke und suchen Sie die Markierung „Halfway to Hell“ und die letzte: „364.4 smoots plus or minus one ear“ (364,4 Smoots plus/minus ein Ohr).",
+      "latitude": 42.354547,
+      "longitude": -71.091302
+    }
+  ],
+  "Princeton University": [
+    {
+      "id": "trad_princeton_fitzrandolph_gate",
+      "name": "Der Aberglaube um das FitzRandolph Gate",
+      "description": "Laut Campuslegende schließen Studierende, die vor ihrem Abschluss durch das FitzRandolph Gate hinausgehen, ihr Studium nicht ab – deshalb meiden Undergraduates es bis zum Commencement. Besucher können das Tor an der Nassau Street sehen und selbst entscheiden, in welche Richtung sie gehen.",
+      "latitude": 40.349546,
+      "longitude": -74.659695
+    },
+    {
+      "id": "trad_princeton_blair_arch_sings",
+      "name": "Arch Sings unter dem Blair Arch",
+      "description": "Unter dem Blair Arch, dem größten Torbogen des Campus, finden viele der A-cappella-„Arch Sings“ von Princeton statt. Bleiben Sie unter dem Bogen stehen, um das Echo zu hören, oder besuchen Sie ein kostenloses Abendkonzert.",
+      "latitude": 40.347435,
+      "longitude": -74.661457
+    },
+    {
+      "id": "trad_princeton_big_cannon",
+      "name": "Die Big Cannon auf dem Cannon Green",
+      "description": "Eine Kanone aus der Zeit der Amerikanischen Revolution ist seit 1840 mit der Mündung nach unten auf dem Cannon Green hinter der Nassau Hall vergraben und sinkt langsam immer tiefer. Besucher können das herausragende Ende sehen; auf dem Rasen wird auch das Freudenfeuer entzündet, wenn Princeton im Football sowohl Harvard als auch Yale schlägt.",
+      "latitude": 40.3482,
+      "longitude": -74.659096
+    }
+  ],
+  "Cornell University": [
+    {
+      "id": "trad_cornell_founders_footprints",
+      "name": "Gründerstatuen und Fußspuren",
+      "description": "Der Legende nach steigen die Statuen von Ezra Cornell und Andrew Dickson White unter bestimmten unmöglichen Bedingungen von ihren Sockeln und reichen sich auf dem Arts Quad die Hand; aufgemalte Fußspuren zwischen ihnen erinnern an die Legende. Suchen Sie die Fußspuren und posieren Sie zwischen den beiden Gründern.",
+      "latitude": 42.44934,
+      "longitude": -76.484463
+    },
+    {
+      "id": "trad_cornell_cornell_chimes",
+      "name": "Cornell Chimes im McGraw Tower",
+      "description": "Studentische Chimesmasters spielen die 21 Glocken der Cornell Chimes im McGraw Tower während des Studienjahres in drei Konzerten täglich, und Besucher sind bei allen willkommen. Zuhören kann man von der Ho Plaza oder vom Arts Quad aus.",
+      "latitude": 42.44757,
+      "longitude": -76.485043
+    },
+    {
+      "id": "trad_cornell_dragon_day",
+      "name": "Dragon Day",
+      "description": "Am Freitag vor den Frühlingsferien ziehen Architekturstudierende im ersten Jahr einen riesigen handgemachten Drachen an der Sibley Hall vorbei zum Arts Quad. Besucher können sich an den Straßenrand stellen und den Umzug ansehen.",
+      "latitude": 42.450923,
+      "longitude": -76.484099
+    }
+  ],
+  "Columbia University": [
+    {
+      "id": "trad_columbia_alma_mater_owl",
+      "name": "Die Eule an der Alma Mater finden",
+      "description": "In den Falten des Gewands der Alma Mater, nahe ihrem Bein, ist eine Eule als Symbol der Weisheit versteckt; der Aberglaube sagt, wer sie als erster neuer Studierender findet, wird Jahrgangsbester. Besucher können an der Statue vor der Low Library nach der Eule suchen.",
+      "latitude": 40.807826,
+      "longitude": -73.962133
+    },
+    {
+      "id": "trad_columbia_low_steps",
+      "name": "Low Steps",
+      "description": "Die breiten Stufen der Low Memorial Library, „Low Beach“ genannt, sind Columbias beliebtester Treffpunkt. Setzen Sie sich auf die Stufen und genießen Sie den Blick hinunter zur Butler Library.",
+      "latitude": 40.807941,
+      "longitude": -73.962053
+    },
+    {
+      "id": "trad_columbia_sundial",
+      "name": "Die Sonnenuhr",
+      "description": "Die Sonnenuhr des Jahrgangs 1885 aus dem Jahr 1914 in der Mitte des College Walk verlor 1946 ihre Granitkugel, doch ihr Sockel ist bis heute ein klassischer Treffpunkt und eine Ecke der freien Rede. Hier beginnen auch die winterliche Baumbeleuchtung und die Yule-Log-Zeremonie.",
+      "latitude": 40.807283,
+      "longitude": -73.962531
+    },
+    {
+      "id": "trad_columbia_tree_lighting",
+      "name": "Baumbeleuchtung am College Walk",
+      "description": "Jedes Jahr Anfang Dezember werden die Bäume entlang des College Walk bei einer Zeremonie mit A-cappella-Musik und heißer Schokolade beleuchtet, und die Lichter bleiben bis Ende Februar an. Gehen Sie im Winter nach Einbruch der Dunkelheit den College Walk entlang, um sie zu sehen.",
+      "latitude": 40.807411,
+      "longitude": -73.962433
+    }
+  ],
+  "University of Pennsylvania": [
+    {
+      "id": "trad_penn_the_button",
+      "name": "The Button",
+      "description": "Claes Oldenburgs „Split Button“ liegt auf dem College Green, und laut studentischer Überlieferung ist es der Knopf, der von Benjamin Franklins Weste absprang, den Locust Walk hinunterrollte und in zwei Teile zerbrach. Er ist ein zentrales Wahrzeichen des Campus und ein beliebtes Fotomotiv.",
+      "latitude": 39.952215,
+      "longitude": -75.193692
+    },
+    {
+      "id": "trad_penn_ivy_stones",
+      "name": "Ivy-Day-Steine an der College Hall",
+      "description": "Seit 1873 setzt jeder Abschlussjahrgang einen gravierten Ivy Stone in ein Campusgebäude ein; inzwischen gibt es fast 200 davon auf dem Campus. Beginnen Sie an der College Hall und suchen Sie in den Mauern nach den Steinen mit den Jahrgangszahlen.",
+      "latitude": 39.95146,
+      "longitude": -75.193815
+    },
+    {
+      "id": "trad_penn_hey_day",
+      "name": "Hey Day am Locust Walk",
+      "description": "Jedes Frühjahr ziehen Studierende im dritten Jahr mit Hüten im Strohhut-Stil den Locust Walk hinunter zur College Hall, um zu Seniors erklärt zu werden – eine Tradition, die auf den Class Day von 1865 zurückgeht. Besucher können die Prozession entlang des Wegs beobachten.",
+      "latitude": 39.952162,
+      "longitude": -75.196335
+    }
+  ],
+  "Brown University": [
+    {
+      "id": "trad_brown_van_wickle_gates",
+      "name": "Van Wickle Gates",
+      "description": "Das mittlere Tor der Van Wickle Gates öffnet sich nur zur Convocation und zum Commencement, und der Aberglaube sagt, dass ein Studierender, der mehr als zweimal hindurchgeht, keinen Abschluss macht. Besucher können die schmiedeeisernen Tore von 1901 an der Prospect Street sehen und stattdessen durch die Seitentore gehen.",
+      "latitude": 41.826135,
+      "longitude": -71.404472
+    },
+    {
+      "id": "trad_brown_bronze_bruno",
+      "name": "Bronze Bruno",
+      "description": "Eine gut zwei Meter (sieben Fuß) hohe Bronzefigur von Bruno, dem Bären-Maskottchen der Brown University, steht auf dem College Green auf einem Sockel mit einem Schieferstein, auf den Roger Williams 1636 getreten sein soll. Schauen Sie für ein Foto mit dem Maskottchen vorbei.",
+      "latitude": 41.826682,
+      "longitude": -71.402826
+    }
+  ],
+  "Dartmouth College": [
+    {
+      "id": "trad_dartmouth_bonfire",
+      "name": "Freudenfeuer der Dartmouth Night",
+      "description": "An jedem Homecoming-Wochenende wird auf dem Green ein großes Freudenfeuer aufgeschichtet, und die Erstsemester laufen Runden darum – eine für jedes Jahr ihrer Jahrgangszahl. Besucher können den Umzug und das brennende Feuer rund um das Green verfolgen.",
+      "latitude": 43.703326,
+      "longitude": -72.288594
+    },
+    {
+      "id": "trad_dartmouth_snow_sculpture",
+      "name": "Schneeskulptur zum Winter Carnival",
+      "description": "Jeden Februar bauen Studierende zum Winter Carnival eine große Schneeskulptur zu einem bestimmten Thema auf dem Green. Besucher können vorbeikommen, um sie anzusehen und zu fotografieren.",
+      "latitude": 43.703326,
+      "longitude": -72.288594
+    },
+    {
+      "id": "trad_dartmouth_bentley_nose",
+      "name": "Warner Bentleys Nase",
+      "description": "Studierende reiben für Glück die Nase der Statue von Warner Bentley im Hopkins Center for the Arts, die dadurch schon verfärbt ist. Besucher des „Hop“ können die Statue suchen und ihr ebenfalls die Nase reiben.",
+      "latitude": 43.701639,
+      "longitude": -72.288158
+    },
+    {
+      "id": "trad_dartmouth_bema_old_pine",
+      "name": "Die Bema und die Old Pine",
+      "description": "Am Class Day versammeln sich die Seniors an der Bema, einem natürlichen Amphitheater im College Park, und gehen dann den Hügel hinauf zum Stumpf der Old Pine zu einer Abschiedszeremonie, die bis in die 1830er-Jahre zurückreicht. Besucher können durch den College Park spazieren und beide Orte sehen.",
+      "latitude": 43.705207,
+      "longitude": -72.284455
+    }
+  ],
+  "Georgetown University": [
+    {
+      "id": "trad_georgetown_healy_seal",
+      "name": "Siegel der Healy Hall",
+      "description": "Am Haupteingang der Healy Hall ist ein Mosaik des Georgetown-Siegels in den Boden eingelassen, und Studierende gehen darum herum, denn der Legende nach macht keinen Abschluss, wer darauf tritt. Besucher können das Siegel sehen und beobachten, wie Studierende ihm ausweichen.",
+      "latitude": 38.907259,
+      "longitude": -77.072759
+    },
+    {
+      "id": "trad_georgetown_exorcist_steps",
+      "name": "Die Exorzist-Treppe",
+      "description": "Die steile Steintreppe von der Prospect Street hinunter zur M Street ist in der Schlussszene von „Der Exorzist“ zu sehen, geschrieben vom Absolventen William Peter Blatty, und die Hoyas laufen sie mit Vorliebe hinauf. Besucher können die öffentliche Treppe hinaufsteigen und ein Foto machen.",
+      "latitude": 38.905519,
+      "longitude": -77.070156
+    }
+  ],
+  "University of Chicago": [
+    {
+      "id": "trad_uchicago_reynolds_seal",
+      "name": "Siegel im Reynolds Club",
+      "description": "Der Legende nach schafft ein Studierender, der in der Lobby des Reynolds Club auf das Universitätssiegel tritt, seinen Abschluss nicht in vier Jahren. Besucher können das Siegel in der Lobby des Studentenhauses sehen und entscheiden, ob sie den Mythos auf die Probe stellen.",
+      "latitude": 41.791091,
+      "longitude": -87.598377
+    },
+    {
+      "id": "trad_uchicago_cobb_gate",
+      "name": "Die Fratzen am Cobb Gate",
+      "description": "Laut Campusüberlieferung stehen die Grotesken am Cobb Gate für die Zulassungsbeamten und den Aufstieg der Studierenden vom ersten bis zum vierten Jahr, mit dem Viertjährigen ganz oben. Besucher können durch das Tor gehen und nach oben schauen, um jede Figur zu entdecken.",
+      "latitude": 41.791227,
+      "longitude": -87.599677
+    },
+    {
+      "id": "trad_uchicago_botany_pond",
+      "name": "Botany Pond",
+      "description": "Der Botany Pond im Hull Court ist ein beliebter Ort auf dem Campus, an den Besucher kommen, um Entenküken und Schildkröten zu sehen. Schauen Sie am Teich vorbei und genießen Sie in Ruhe Tiere und Gärten.",
+      "latitude": 41.79088,
+      "longitude": -87.599439
+    },
+    {
+      "id": "trad_uchicago_carillon",
+      "name": "Carillon der Rockefeller Chapel",
+      "description": "Das Carillon mit 72 Glocken oben in der Rockefeller Chapel erklingt täglich in einem Konzert, und Mitglieder der studentischen Gilde geben wöchentliche Konzerte, vor denen Interessierte an einer Führung durch den Glockenturm teilnehmen können. Besucher können vom Quad aus zuhören oder sich einer Führung anschließen.",
+      "latitude": 41.788534,
+      "longitude": -87.597042
+    }
+  ],
+  "University of Notre Dame": [
+    {
+      "id": "trad_notre_dame_main_steps",
+      "name": "Die Vordertreppe des Main Building",
+      "description": "Undergraduates meiden die Vordertreppe des Main Building, denn der Legende nach macht keinen Abschluss, wer sie benutzt; die Seniors steigen sie erst bei ihrer Abschlussfeier hinauf. Besucher dürfen die Treppe gern benutzen und ein Foto unter dem Golden Dome machen.",
+      "latitude": 41.702996,
+      "longitude": -86.238988
+    },
+    {
+      "id": "trad_notre_dame_grotto_candle",
+      "name": "Eine Kerze in der Grotte anzünden",
+      "description": "Studierende, Ehemalige und Besucher zünden in der Grotte Unserer Lieben Frau von Lourdes Kerzen an und sprechen ein Gebet; das Notre Dame Magazine scherzt, man solle das Doppelte der empfohlenen Spende geben, „nur um sicherzugehen“. Besucher können eine Kerze anzünden und dort Tom Dooleys Brief an Father Hesburgh lesen.",
+      "latitude": 41.703025,
+      "longitude": -86.240397
+    },
+    {
+      "id": "trad_notre_dame_touchdown_jesus",
+      "name": "Touchdown Jesus",
+      "description": "Das Wandbild „Word of Life“ an der Fassade der Hesburgh Library, besser bekannt als Touchdown Jesus, gehört zu den Wahrzeichen des Campus, vor denen sich Familien für Fotos anstellen. Besucher können sich am Spiegelbecken davor fotografieren lassen.",
+      "latitude": 41.702193,
+      "longitude": -86.234114
+    },
+    {
+      "id": "trad_notre_dame_fair_catch_corby",
+      "name": "Fair Catch Corby",
+      "description": "Die Statue von Father William Corby mit erhobenem Arm, „Fair-Catch Corby“ genannt, steht vor der Corby Hall und ist ein klassisches Fotomotiv auf dem Campus. Besucher können sich daneben fotografieren lassen.",
+      "latitude": 41.702518,
+      "longitude": -86.240619
+    },
+    {
+      "id": "trad_notre_dame_lyons_arch",
+      "name": "Der Bogen der Lyons Hall",
+      "description": "Ein Campus-Aberglaube besagt, dass ein Paar, das sich unter dem Torbogen der Lyons Hall küsst, sich vielleicht noch vor dem Abschluss verlobt. Besucher können durch den Bogen gehen und ihn sich selbst ansehen.",
+      "latitude": 41.700682,
+      "longitude": -86.243319
+    }
+  ],
+  "University of Michigan": [
+    {
+      "id": "trad_umich_diag_m",
+      "name": "Das Block M auf dem Diag",
+      "description": "Der Aberglaube sagt, wer vor seiner ersten Prüfung auf das bronzene M im Diag tritt, fällt durch – deshalb gehen Studierende darum herum. Besucher finden das M in der Mitte des Diag und können daneben ein Foto machen.",
+      "latitude": 42.276944,
+      "longitude": -83.738212
+    },
+    {
+      "id": "trad_umich_engineering_arch",
+      "name": "Engineering Arch",
+      "description": "Der Legende nach heiratet ein Paar, das sich um Mitternacht unter dem Engineering Arch der West Hall küsst, irgendwann. Besucher können an der Südostecke des Diag durch den Bogen gehen.",
+      "latitude": 42.275934,
+      "longitude": -83.736429
+    },
+    {
+      "id": "trad_umich_cube",
+      "name": "The Cube",
+      "description": "„Endover“, ein 4,5 Meter (15 Fuß) großer Stahlwürfel, der auf einer Ecke auf der Regents' Plaza balanciert, ist so gelagert, dass er sich mit einem Schubs dreht. Besucher können ihn in Drehung versetzen.",
+      "latitude": 42.275903,
+      "longitude": -83.74189
+    },
+    {
+      "id": "trad_umich_rock",
+      "name": "The Rock",
+      "description": "Ein großer Findling an der Ecke Hill Street und Washtenaw Avenue wird seit den 1950er-Jahren von Studierenden und Anwohnern immer wieder neu bemalt. Besucher können vorbeischauen und sich den neuesten Anstrich ansehen.",
+      "latitude": 42.272565,
+      "longitude": -83.728492
+    }
+  ],
+  "Illinois Institute of Technology": [
+    {
+      "id": "trad_iit_pumpkin_launch",
+      "name": "Kürbisweitwurf",
+      "description": "Jeden Oktober am Familienwochenende bauen Studententeams Katapulte und Triböcke und treten auf dem Ed Glancy Field gegeneinander an, um Kürbisse möglichst weit und genau zu schleudern. Die Veranstaltung lockt Zuschauer aus ganz Chicago an.",
+      "latitude": 41.839174,
+      "longitude": -87.624252
+    },
+    {
+      "id": "trad_iit_crown_hall",
+      "name": "S. R. Crown Hall",
+      "description": "Die Crown Hall, Sitz des College of Architecture, gilt weithin als das beste Werk von Mies van der Rohe und scheint auf ihren Travertinstufen über dem Rasen zu schweben. Besucher können dieses Wahrzeichen der modernen Architektur aus der Nähe sehen.",
+      "latitude": 41.833199,
+      "longitude": -87.627273
+    },
+    {
+      "id": "trad_iit_mtcc_tube",
+      "name": "Die Röhre über dem Campus Center",
+      "description": "Über das Dach von Rem Koolhaas' McCormick Tribune Campus Center verläuft eine Edelstahlröhre, durch die die Züge der CTA Green Line fahren. Besucher können beobachten, wie die Züge über ihnen durch die Röhre rauschen.",
+      "latitude": 41.835678,
+      "longitude": -87.625834
+    }
+  ],
+  "University of Virginia": [
+    {
+      "id": "trad_uva_poe_room",
+      "name": "Edgar Allan Poes Zimmer",
+      "description": "Poes Studentenzimmer in 13 West Range ist wie ein Studentenzimmer von 1826 eingerichtet. Besucher schauen durch eine Glastür hinein und können per Knopfdruck eine Aufnahme über Poes Zeit an der UVA hören.",
+      "latitude": 38.035141,
+      "longitude": -78.50516
+    },
+    {
+      "id": "trad_uva_beta_bridge",
+      "name": "Die bemalte Beta Bridge",
+      "description": "Seit der zweiten Hälfte des 20. Jahrhunderts bemalen Studierende die Brücke an der Rugby Road mit Botschaften – von Vereinsveranstaltungen bis zu Geburtstagen und Gedenken. Schauen Sie vorbei und sehen Sie, was diese Woche darauf steht.",
+      "latitude": 38.039569,
+      "longitude": -78.501819
+    },
+    {
+      "id": "trad_uva_lighting_of_the_lawn",
+      "name": "Lighting of the Lawn",
+      "description": "Jeden Dezember enden A-cappella-Auftritte auf dem Lawn mit einer Lichtshow an der Rotunda. Danach leuchten die Lichter rund um das Academical Village jede Nacht bis Anfang Januar.",
+      "latitude": 38.035646,
+      "longitude": -78.503383
+    },
+    {
+      "id": "trad_uva_lawn_trick_or_treat",
+      "name": "Süßes oder Saures auf dem Lawn",
+      "description": "An Halloween verteilen die Studierenden, die in den Zimmern am Lawn wohnen, seit den 1980er-Jahren Süßigkeiten an Kinder aus der Umgebung. Familien stellen sich entlang der 54 Lawn-Zimmer an.",
+      "latitude": 38.034259,
+      "longitude": -78.504132
+    }
+  ],
+  "Stanford University": [
+    {
+      "id": "trad_stanford_class_plaques",
+      "name": "Jahrgangsplaketten im Inner Quad",
+      "description": "Jeder Abschlussjahrgang vergräbt eine Zeitkapsel und markiert sie mit einer Bronzeplakette im Gehweg rund um den Inner Quad, beginnend mit 1896 vor der Memorial Church. Gehen Sie die Arkaden entlang und suchen Sie nach einem Jahrgang.",
+      "latitude": 37.427487,
+      "longitude": -122.170473
+    },
+    {
+      "id": "trad_stanford_hoover_tower",
+      "name": "Aussichtsplattform des Hoover Tower",
+      "description": "Eine Aussichtsplattform in rund 76 Metern (250 Fuß) Höhe bietet einen weiten Blick über den Campus und an klaren Tagen bis zur Skyline von San Francisco. Im Turm hängt außerdem ein Glockenspiel, ein Geschenk der Belgian American Educational Foundation.",
+      "latitude": 37.427615,
+      "longitude": -122.166995
+    },
+    {
+      "id": "trad_stanford_memorial_church_cherubs",
+      "name": "Die Putten der Memorial Church",
+      "description": "Einer örtlichen Legende nach standen für die steinernen Putten über den Chornischen und an den Säulenkapitellen Kinder Modell, die während des Kirchenbaus auf dem Campus lebten. Schauen Sie in der Kirche nach oben und suchen Sie sie.",
+      "latitude": 37.426916,
+      "longitude": -122.170505
+    }
+  ],
+  "University of California, Berkeley": [
+    {
+      "id": "trad_berkeley_campanile",
+      "name": "Der Campanile",
+      "description": "Fahren Sie mit dem Aufzug zur Aussichtsplattform des Sather Tower und genießen Sie den Blick über den Campus und die Bucht. Das Glockenspiel gibt täglich kurze Konzerte, und am letzten Vorlesungstag spielt es „They're Hanging Danny Deever in the Morning“, bevor es während der Abschlussprüfungen verstummt.",
+      "latitude": 37.87206,
+      "longitude": -122.257832
+    },
+    {
+      "id": "trad_berkeley_four_point_oh_ball",
+      "name": "Der 4.0 Ball",
+      "description": "Studierende reiben oder küssen die Steinkugel vor dem Campanile für Glück, vor allem, nachdem sie auf ein Universitätssiegel getreten sind. Berühren Sie sie im Vorbeigehen.",
+      "latitude": 37.87206,
+      "longitude": -122.257832
+    },
+    {
+      "id": "trad_berkeley_athena_doe",
+      "name": "Athene an der Doe Library",
+      "description": "Der Legende nach erlangt Weisheit, wer am Eingang der Doe Library unter der Athene-Statue hindurchgeht – wer unter ihr wieder hinausgeht, verliert sie jedoch. Studierende verlassen das Gebäude deshalb durch die Hintertüren, um sie zu behalten.",
+      "latitude": 37.872192,
+      "longitude": -122.259498
+    },
+    {
+      "id": "trad_berkeley_big_c",
+      "name": "Wanderung zum Big C",
+      "description": "Ein Weg nahe dem Foothill-Parkplatz führt hinauf zum Big C am Hang oberhalb des Campus – eine Wanderung, die fast jeder Cal-Studierende macht. Genießen Sie den Blick zurück über den Campus und die Bucht.",
+      "latitude": 37.874579,
+      "longitude": -122.249617
+    }
+  ],
+  "University of California, Los Angeles": [
+    {
+      "id": "trad_ucla_bruin_bear_paw",
+      "name": "Die Pfote des Bruin Bear reiben",
+      "description": "Studierende reiben in der Prüfungswoche für Glück die Pfote der Bruin-Bear-Statue auf der Bruin Plaza. Besucher halten für ein Foto und ein Pfotenreiben an.",
+      "latitude": 34.070942,
+      "longitude": -118.445013
+    },
+    {
+      "id": "trad_ucla_janss_sixth_step",
+      "name": "Die sechste Stufe überspringen",
+      "description": "Der Legende nach hat jeder, der auf die sechste Stufe der Janss Steps tritt, Pech und macht seinen Abschluss ein Quartal später. Viele Studierende springen auf dem Weg nach oben darüber.",
+      "latitude": 34.072196,
+      "longitude": -118.443108
+    },
+    {
+      "id": "trad_ucla_inverted_fountain",
+      "name": "Inverted Fountain",
+      "description": "Neue Studierende werden an diesem Brunnen von 1968, dessen Wasser in einen Schacht hinabfällt, statt nach oben zu sprudeln, „gebruintisiert“. Der Tradition nach berühren sie das Wasser danach bis zum Abschluss nicht mehr – deshalb schauen Besucher nur und fassen nicht an.",
+      "latitude": 34.070082,
+      "longitude": -118.440779
+    }
+  ],
+  "University of Washington": [
+    {
+      "id": "trad_uw_quad_cherry_blossoms",
+      "name": "Kirschblüte im Quad",
+      "description": "Die Yoshino-Kirschbäume im Quad zu besuchen, wenn sie jedes Frühjahr blühen, ist eine UW-Tradition, die man nicht verpassen sollte. Zur Hauptblüte ist mit vielen Studierenden und Besuchern zu rechnen, die Fotos machen.",
+      "latitude": 47.657285,
+      "longitude": -122.307213
+    },
+    {
+      "id": "trad_uw_rainier_vista",
+      "name": "Rainier Vista",
+      "description": "Der Blick die Rainier Vista hinunter am Drumheller Fountain vorbei ist geschützt, damit nichts die Sicht vom Red Square auf den Mount Rainier versperrt. Stellen Sie sich an einem klaren Tag oben hin – hier ist der beste Ausblick des Campus.",
+      "latitude": 47.652842,
+      "longitude": -122.307129
+    },
+    {
+      "id": "trad_uw_sylvan_grove_columns",
+      "name": "Die Säulen im Sylvan Grove",
+      "description": "Vier Zedernholzsäulen aus dem ersten Gebäude der UW in der Innenstadt stehen im Sylvan Grove und stehen für Loyalität, Fleiß, Glaube und Effizienz. Neue Studierende berühren bei ihrer Ankunft eine davon und noch einmal beim Abschluss; Besucher können sie im Hain sehen.",
+      "latitude": 47.652795,
+      "longitude": -122.306194
+    },
+    {
+      "id": "trad_uw_the_wave",
+      "name": "Die La-Ola-Welle im Husky Stadium",
+      "description": "Laut UW entstand die berühmte Stadionwelle 1981 bei einem Footballspiel im Husky Stadium. Machen Sie mit, wenn sie am Spieltag durch die Ränge rollt.",
+      "latitude": 47.650374,
+      "longitude": -122.301976
+    }
+  ],
+  "McGill University": [
+    {
+      "id": "trad_mcgill_roddick_gates_chimes",
+      "name": "Das Glockenspiel der Roddick Gates",
+      "description": "Die Roddick Gates, McGills offizieller Eingang an der Sherbrooke Street, tragen vier Uhren, deren Glocken den Westminsterschlag spielen. Gehen Sie durch die Tore auf den Campus und lauschen Sie dem Geläut.",
+      "latitude": 45.503849,
+      "longitude": -73.574925
+    },
+    {
+      "id": "trad_mcgill_founders_tomb",
+      "name": "James McGills Grab",
+      "description": "Die sterblichen Überreste des Gründers James McGill ruhen in einem Monument vor dem Arts Building; sie wurden von einem Friedhof in Montreal hierher überführt und 1875 eingesegnet. Besucher können am Grab des Gründers auf dem unteren Campus vorbeischauen.",
+      "latitude": 45.505281,
+      "longitude": -73.577692
+    },
+    {
+      "id": "trad_mcgill_three_bares_photo",
+      "name": "Foto am Three Bares",
+      "description": "Der Brunnen Three Bares, enthüllt bei der Spring Convocation 1931 in einer baumgesäumten Senke nahe dem Redpath Museum, ist auf unzähligen Abschlussfotos zu sehen. Besucher können an diesem bekannten Wahrzeichen des Campus ihr eigenes Foto machen.",
+      "latitude": 45.50473,
+      "longitude": -73.577009
+    }
+  ],
+  "University of Toronto": [
+    {
+      "id": "trad_uoft_reznikoff_gargoyles",
+      "name": "Reznikoffs Wasserspeier",
+      "description": "Die bekannteste Geistergeschichte des University College erzählt, dass der Steinmetz Ivan Reznikoff in den 1850er-Jahren während des Baus von einem Rivalen getötet wurde. Besucher können nahe der Südwestecke des UC nach den zwei Wasserspeiern suchen, die die Gesichter der Rivalen zeigen sollen; dort soll auch eine Tür eine Axtspur tragen.",
+      "latitude": 43.662834,
+      "longitude": -79.395169
+    },
+    {
+      "id": "trad_uoft_hart_house_stone_face",
+      "name": "Das weinende Steingesicht",
+      "description": "Zu den Geistergeschichten des Campus gehört ein gemeißeltes Steingesicht am Hart House, aus dessen einem Auge Wasser getropft sein soll. Besucher des Hart House können zwischen den gotischen Steinmetzarbeiten nach dem Gesicht suchen.",
+      "latitude": 43.663917,
+      "longitude": -79.393968
+    },
+    {
+      "id": "trad_uoft_soldiers_tower_carillon",
+      "name": "Carillon im Soldiers' Tower",
+      "description": "Die 51 Glocken des Carillons im Soldiers' Tower erinnern an die Universitätsangehörigen, die in den Weltkriegen gefallen sind, und erklingen bei kostenlosen öffentlichen Konzerten und rund um die Abschlussfeiern. Zuhören kann man vom Rasen am Hart House Circle oder vom Innenhof des University College aus.",
+      "latitude": 43.66355,
+      "longitude": -79.395224
+    }
+  ],
+  "University of British Columbia": [
+    {
+      "id": "trad_ubc_great_trek_cairn",
+      "name": "Der Great Trek Cairn",
+      "description": "Dieser Steinhügel an der Main Mall erinnert an den Great Trek von 1922, als Studierende nach Point Grey marschierten, um die Regierung zur Fertigstellung des Campus zu drängen; er wurde aus vor Ort gesammelten Steinen errichtet. Jeden September findet dort während des Homecoming eine Zeremonie statt, und Besucher können die Inschrift jederzeit lesen.",
+      "latitude": 49.265734,
+      "longitude": -123.25357
+    },
+    {
+      "id": "trad_ubc_engineers_cairn",
+      "name": "Der bemalte Engineering Cairn",
+      "description": "Ingenieurstudierende kümmern sich um ein Betondenkmal an der Main Mall, das für gute Zwecke, Jubiläen und Campusveranstaltungen immer wieder neu bemalt wird. Besucher können vorbeischauen und den neuesten Anstrich ansehen.",
+      "latitude": 49.262204,
+      "longitude": -123.250679
+    },
+    {
+      "id": "trad_ubc_ladner_carillon",
+      "name": "Glockenspiel des Ladner Clock Tower",
+      "description": "Der Ladner Clock Tower vor der Hauptbibliothek schlägt zu jeder vollen Stunde, und sein Carillon spielt tagsüber und zu besonderen Anlässen wie Abschlussfeiern kurze Stücke. Besucher können vom Library Garden aus zuhören.",
+      "latitude": 49.26735,
+      "longitude": -123.253675
+    }
+  ],
+  "National Autonomous University of Mexico": [
+    {
+      "id": "trad_unam_megaofrenda",
+      "name": "Megaofrenda zum Tag der Toten",
+      "description": "Jedes Jahr um den Tag der Toten bauen Fakultäten und Einrichtungen der UNAM eine riesige gemeinsame Opfergabe aus Altären auf, lange Zeit in Las Islas, der zentralen Rasenfläche der Ciudad Universitaria. Besucher können Anfang November kostenlos zwischen den Altären umhergehen.",
+      "latitude": 19.333068,
+      "longitude": -99.185196
+    },
+    {
+      "id": "trad_unam_central_library_mural",
+      "name": "Mosaik der Zentralbibliothek",
+      "description": "Juan O'Gormans Steinmosaik bedeckt alle vier Seiten der Zentralbibliothek, und jede Seite zeigt eine andere Epoche der mexikanischen Geschichte. Gehen Sie um das Gebäude herum, um jede Seite zu sehen, und fotografieren Sie dieses Wahrzeichen des Campus.",
+      "latitude": 19.3334,
+      "longitude": -99.187331
+    },
+    {
+      "id": "trad_unam_rectoria_murals",
+      "name": "Wandbilder am Rektoratsturm",
+      "description": "Der Rektoratsturm trägt drei Wandbilder von David Alfaro Siqueiros und ganz oben das Universitätswappen mit dem Motto „Por mi raza hablará el espíritu“ (Durch mein Volk wird der Geist sprechen). Besucher können die Wandbilder und das Wappen von der Esplanade aus betrachten.",
+      "latitude": 19.33238,
+      "longitude": -99.188072
+    },
+    {
+      "id": "trad_unam_stadium_rivera_relief",
+      "name": "Diego-Rivera-Relief am Olympiastadion",
+      "description": "Am Haupteingang des Estadio Olímpico Universitario befindet sich ein Relief von Diego Rivera aus natürlich gefärbten Steinen, und das Stadion besitzt noch immer seine olympische Feuerschale von 1968. Besucher können das Relief von außerhalb des Stadions sehen.",
+      "latitude": 19.331688,
+      "longitude": -99.192286
+    }
+  ]
+}

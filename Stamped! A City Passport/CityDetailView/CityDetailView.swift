@@ -26,6 +26,8 @@ struct CityDetailView: View {
     @State private var showingMap = false
     @State private var showingExplore = false
     @State private var showingTripPlanner = false
+    /// The trip the planner opens on, set by "Plan a Campus Visit". nil opens the trip list.
+    @State private var tripPlannerTripID: String?
     @State private var resetType: CityDetailViewModel.ResetType = .none
     
     var isHighContrast: Bool { systemContrast == .increased || appHighContrast }
@@ -64,7 +66,8 @@ struct CityDetailView: View {
 
     var body: some View {
         ScrollView {
-            VStack(spacing: isHighContrast ? 32 : 24) {
+            // Sections are separated by space, not divider lines (DS.Space.section)
+            VStack(spacing: DS.Space.section) {
                 CityHeroHeader(
                     city: viewModel.city,
                     progress: viewModel.progress,
@@ -72,27 +75,8 @@ struct CityDetailView: View {
                     masteryTier: viewModel.getMastery(isHighContrast: isHighContrast).tier
                 )
                 
-                QuizInteractionCard(
-                    highScore: highScore,
-                    isHighContrast: isHighContrast,
-                    onTap: {
-                        HapticManager.shared.trigger(.selection)
-                        showingQuiz = true
-                    }
-                )
-                .padding(.horizontal)
-                .hoverEffect(.lift)
-
-                PlanTripCard(
-                    cityName: viewModel.city.name,
-                    isHighContrast: isHighContrast,
-                    onTap: {
-                        HapticManager.shared.trigger(.selection)
-                        showingTripPlanner = true
-                    }
-                )
-                .padding(.horizontal)
-                .hoverEffect(.lift)
+                CityActionTiles(tiles: actionTiles, isHighContrast: isHighContrast)
+                    .dsPageMargin()
                 
                 if viewModel.isCompleted {
                     PassportStampView(
@@ -105,11 +89,14 @@ struct CityDetailView: View {
                     .transition(reduceMotion ? .opacity : .asymmetric(insertion: .scale.combined(with: .opacity), removal: .opacity))
                 }
                 
-                Divider()
+                // Campuses only: the traditions scavenger hunt
+                if !viewModel.city.traditions.isEmpty {
+                    CampusTraditionsSection(campus: viewModel.city, isHighContrast: isHighContrast)
+                }
+
 
                 LandmarkSection(viewModel: viewModel, isHighContrast: isHighContrast)
 
-                Divider()
 
                 BuildingTimelineSection(
                     buildings: viewModel.city.buildings,
@@ -120,30 +107,27 @@ struct CityDetailView: View {
                 // Weather — hidden when failed/empty so we don't advertise broken state
                 let weather = WeatherManager.shared
                 if weather.isLoading || !weather.temperature.isEmpty {
-                    Divider()
                     WeatherSection(weather: weather, isHighContrast: isHighContrast)
                 }
 
                 // Events — shown before Top Eats since Ticketmaster is more reliable
                 let events = TicketmasterService.shared
                 if events.isLoading || !events.events.isEmpty {
-                    Divider()
                     EventsSection(service: events, isHighContrast: isHighContrast)
                 }
 
                 // Top Eats — hidden when failed so we don't show "Couldn't load"
                 let eats = FoursquareService.shared
                 if eats.isLoading || !eats.venues.isEmpty {
-                    Divider()
                     TopEatsSection(service: eats, isHighContrast: isHighContrast)
                 }
 
-                Divider()
 
                 TravelInfoSection(viewModel: viewModel, isHighContrast: isHighContrast)
                 
             }
-            .padding(.bottom)
+            .padding(.top, DS.Space.s)
+            .padding(.bottom, DS.Space.section)
             .frame(maxWidth: 800)
             .frame(maxWidth: .infinity)
         }
@@ -215,8 +199,8 @@ struct CityDetailView: View {
         // iPhone: swipe-down sheet. iPad: full screen, since an iPad sheet is a small centered window.
         .sheet(isPresented: mapPresented(fullScreen: false)) { cityMap }
         .fullScreenCover(isPresented: mapPresented(fullScreen: true)) { cityMap }
-        .sheet(isPresented: tripPlannerPresented(fullScreen: false)) { TripPlannerView(viewModel: viewModel) }
-        .fullScreenCover(isPresented: tripPlannerPresented(fullScreen: true)) { TripPlannerView(viewModel: viewModel) }
+        .sheet(isPresented: tripPlannerPresented(fullScreen: false)) { TripPlannerView(viewModel: viewModel, initialTripID: tripPlannerTripID) }
+        .fullScreenCover(isPresented: tripPlannerPresented(fullScreen: true)) { TripPlannerView(viewModel: viewModel, initialTripID: tripPlannerTripID) }
         #if os(iOS)
         .fullScreenCover(isPresented: $showingExplore) {
             CityExploreView(
@@ -235,6 +219,54 @@ struct CityDetailView: View {
     }
     
     // MARK: - Toolbar
+    /// Quiz, Plan a Trip and (campuses) Campus Visit, shown as one row of tiles.
+    private var actionTiles: [CityActionTile] {
+        var tiles = [
+            CityActionTile(
+                id: "quiz",
+                title: highScore == 10
+                    ? NSLocalizedString("Quiz Mastered", comment: "City page tile: quiz with a perfect score")
+                    : NSLocalizedString("Architecture Quiz", comment: "City page tile: start the quiz"),
+                detail: highScore > 0
+                    ? String(format: NSLocalizedString("Best %d/10", comment: "City page tile: best quiz score, e.g. Best 7/10"), highScore)
+                    : NSLocalizedString("10 questions", comment: "City page tile: quiz length"),
+                systemImage: highScore == 10 ? "medal.fill" : "doc.text.magnifyingglass",
+                iconColor: highScore == 10 ? .yellow : .adventureOrange,
+                accessibilityHint: NSLocalizedString("Double tap to start the quiz.", comment: "City page tile: VoiceOver hint"),
+                action: { showingQuiz = true }
+            ),
+            CityActionTile(
+                id: "trip",
+                title: NSLocalizedString("Plan a Trip", comment: "City page tile: open the trip planner"),
+                detail: NSLocalizedString("Day by day", comment: "City page tile: what the trip planner does"),
+                systemImage: "suitcase.rolling.fill",
+                accessibilityHint: NSLocalizedString("Plan your days, stop by stop.", comment: "City page tile: VoiceOver hint for Plan a Trip"),
+                action: {
+                    tripPlannerTripID = nil
+                    showingTripPlanner = true
+                }
+            ),
+        ]
+        // Campuses only: a ready-made one-day walk of every landmark
+        if viewModel.city.isCampus {
+            let hasVisit = TripStore.shared.existingCampusVisit(for: viewModel.city) != nil
+            tiles.append(CityActionTile(
+                id: "visit",
+                title: NSLocalizedString("Campus Visit", comment: "Campus page tile: the one-day walking tour of the campus"),
+                detail: hasVisit
+                    ? NSLocalizedString("Open your visit", comment: "Campus page tile: the campus visit trip already exists")
+                    : String(format: NSLocalizedString("%d stops, 1 day", comment: "Campus page tile: e.g. 5 stops, 1 day"), viewModel.city.buildings.count),
+                systemImage: "graduationcap.fill",
+                accessibilityHint: NSLocalizedString("Opens a one-day walking trip of every landmark on campus.", comment: "Campus page: VoiceOver hint for the Plan a Campus Visit card"),
+                action: {
+                    tripPlannerTripID = TripStore.shared.campusVisitTrip(for: viewModel.city).id
+                    showingTripPlanner = true
+                }
+            ))
+        }
+        return tiles
+    }
+
     @ToolbarContentBuilder
     private var toolbarContent: some ToolbarContent {
         
@@ -256,6 +288,13 @@ struct CityDetailView: View {
             }
         }
         #endif
+
+        // Campuses only: add the school to My College List
+        if viewModel.city.isCampus {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                CollegeListButton(campus: viewModel.city)
+            }
+        }
 
         ToolbarItem(placement: .navigationBarTrailing) {
             Button {

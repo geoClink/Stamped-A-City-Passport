@@ -126,3 +126,43 @@ final class CampusAchievementTests: XCTestCase {
         XCTAssertTrue(try achievement("first_stamp").isEarned(manager: manager, cities: allCities))
     }
 }
+
+// MARK: - Conference groups
+
+@MainActor
+final class CampusGroupTests: XCTestCase {
+
+    // Every campus shows up exactly once, US campuses only under a conference
+    func testEveryCampusIsInExactlyOneGroup() {
+        let groups = CityViewModel().campusGroups
+        let listed = groups.flatMap(\.campuses)
+        XCTAssertEqual(listed.count, CityLocation.City.campusCases.count)
+        XCTAssertEqual(Set(listed), Set(CityLocation.City.campusCases))
+        for group in groups {
+            if case .country(let name) = group.kind {
+                XCTAssertNotEqual(name, CityLocation.Country.unitedStates.rawValue, "US campuses belong in a conference group")
+                XCTAssertNotEqual(name, CityLocation.Country.victoria.rawValue, "Australian states share one Australia group")
+            }
+        }
+    }
+
+    func testConferencesComeFirstInOrder() {
+        let kinds = CityViewModel().campusGroups.prefix(CampusConference.allCases.count).map(\.kind)
+        XCTAssertEqual(kinds, CampusConference.allCases.map { .conference($0) })
+    }
+
+    func testSortNameDropsUniversityOf() {
+        XCTAssertEqual(CityLocation.City.uGeorgia.campusSortName, "Georgia")
+        XCTAssertEqual(CityLocation.City.michiganState.campusSortName, "Michigan State University")
+        XCTAssertEqual(CityLocation.City.michiganState.conference, .bigTen)
+        XCTAssertEqual(CityLocation.City.mit.conference, .other)
+        XCTAssertNil(CityLocation.City.oxford.conference)
+    }
+
+    func testAliasesAndConferenceAchievements() {
+        XCTAssertTrue(CityLocation.City.uMichigan.searchAliases.contains("UMich"))
+        let ids = Set(Achievement.conferenceAchievements.map(\.id))
+        XCTAssertEqual(ids, ["conference_bigTen", "conference_sec", "conference_acc", "conference_big12", "conference_ivyLeague"])
+        XCTAssertTrue(Achievement.allAchievements.contains { $0.id == "conference_bigTen" })
+    }
+}

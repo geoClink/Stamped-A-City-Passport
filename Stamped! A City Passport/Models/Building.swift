@@ -29,4 +29,15 @@ struct Building: Identifiable, Hashable, Codable {
     // Natural places (lakes, mountains, villages) have no build date, so the
     // registry stores 0 for them. Screens use this to hide the year.
     var hasKnownYear: Bool { yearBuilt != 0 }
+
+    // Some campus buildings have no documented architect or style; the registry stores
+    // "Unknown" for them. Screens show nothing instead of the word "Unknown".
+    // ("Unknown (Norman builders)" says something, so it counts as known.)
+    var knownArchitect: String? { Self.known(architect) }
+    var knownStyle: String? { Self.known(buildingStyle) }
+
+    private static func known(_ value: String) -> String? {
+        let trimmed = value.trimmingCharacters(in: .whitespaces)
+        return trimmed.isEmpty || trimmed.lowercased() == "unknown" ? nil : trimmed
+    }
 }

@@ -408,5 +408,605 @@
     "currencyInfo": "멕시코 페소($)",
     "transportation": "Pumabús / 메트로",
     "transportationFact": "대학은 넓은 캠퍼스 곳곳에 자체 무료 Pumabús 노선을 운행합니다. 메트로 3호선의 우니베르시다드역과 코필코역이 캠퍼스와 연결됩니다."
+  },
+  "Boston College": {
+    "nickname": "Ever to Excel(언제나 탁월하게)",
+    "airportInfo": "이스트 보스턴에 있는 로건 국제공항이 이 지역의 주요 공항입니다.",
+    "funFact": "1913년에 완공된 개슨 타워는 이후 프린스턴, 예일, 듀크에 세워진 높은 고딕 탑들의 본보기가 되었습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 적갈색과 금색이고, 팀 이름은 이글스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / MBTA Green Line",
+    "transportationFact": "메인 캠퍼스는 걸어서 다닐 수 있습니다. 그린 라인 B 지선은 커먼웰스 애비뉴의 보스턴 칼리지역이 종점이며, 보스턴 도심까지 바로 갑니다."
+  },
+  "Clemson University": {
+    "nickname": "타이거스의 본거지",
+    "airportInfo": "클렘슨 동쪽, 주간고속도로 85번 변에 있는 그린빌-스파턴버그 국제공항이 가장 가까운 상업 공항입니다.",
+    "funFact": "캠퍼스는 존 C. 캘훈의 농장 저택인 포트힐을 중심으로 자라났으며, 이 저택은 지금도 캠퍼스에 박물관으로 남아 있습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 오렌지와 리걸리아(보라)이고, 팀 이름은 타이거스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / CATbus",
+    "transportationFact": "중앙 캠퍼스는 걸어서 다닐 수 있습니다. 클렘슨 에어리어 트랜싯의 CATbus는 무료이며 캠퍼스와 클렘슨 시내를 운행합니다."
+  },
+  "Duke University": {
+    "nickname": "블루데빌스의 본거지",
+    "airportInfo": "더럼 동쪽에 있는 롤리-더럼 국제공항이 리서치 트라이앵글 지역의 주요 공항입니다.",
+    "funFact": "저명한 아프리카계 미국인 건축가이자 호러스 트럼바워 사무소의 수석 설계자였던 줄리언 아벨이 듀크 채플과 웨스트 캠퍼스의 대부분을 설계했습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 듀크 블루와 흰색이고, 팀 이름은 블루데빌스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Duke Transit",
+    "transportationFact": "각 캠퍼스는 걸어서 다닐 수 있습니다. C1 이스트-웨스트 노선을 비롯한 듀크의 무료 캠퍼스 버스가 이스트와 웨스트 캠퍼스를 연결합니다."
+  },
+  "Florida State University": {
+    "nickname": "Vires, Artes, Mores(힘, 기예, 덕)",
+    "airportInfo": "시 남서쪽에 있는 탤러해시 국제공항이 가장 가까운 상업 공항입니다.",
+    "funFact": "건축가 윌리엄 오거스터스 에드워즈가 웨스트콧 빌딩과 도드 홀 같은 초기 칼리지에이트 고딕 건물을 설계했고, 레거시 홀과 스튜던트 유니언 같은 새 건물도 그 양식을 이어갑니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 가넷과 금색이고, 팀 이름은 세미놀스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Seminole Express",
+    "transportationFact": "캠퍼스는 걸어서 다닐 수 있습니다. 스타메트로와 함께 운행하는 세미놀 익스프레스 버스가 캠퍼스와 주변 동네를 다니며, 학생은 FSUCard로 무료로 탑니다."
+  },
+  "Georgia Institute of Technology": {
+    "nickname": "램블린 렉",
+    "airportInfo": "시 남쪽의 하츠필드-잭슨 공항은 미드타운에서 MARTA 레드 라인과 골드 라인으로 갈 수 있습니다.",
+    "funFact": "테크 타워의 7층 탑 네 면에 걸린 TECH 조명 글자는 1888년 건물이 문을 연 이래 캠퍼스의 상징이 되었습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 올드 골드와 흰색이고, 팀 이름은 옐로재키츠입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Stinger 버스 / MARTA",
+    "transportationFact": "캠퍼스는 걸어서 다닐 수 있습니다. 조지아공대의 스팅어 버스가 캠퍼스를 돌며 테크 스퀘어와 MARTA 미드타운역을 연결합니다."
+  },
+  "University of Louisville": {
+    "nickname": "카디널스의 본거지",
+    "airportInfo": "루이빌 무하마드 알리 국제공항은 벨냅 캠퍼스에서 남쪽으로 차로 금방입니다.",
+    "funFact": "본부 건물인 그로메이어 홀은 토머스 제퍼슨이 설계한 버지니아 대학교의 로툰다를 본떠 지었습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 빨강과 검정이고, 팀 이름은 카디널스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / TARC 버스",
+    "transportationFact": "벨냅 캠퍼스는 걸어서 다닐 수 있습니다. 학생과 교직원은 UofL 신분증으로 TARC 버스를 무료로 타며, 보건과학센터로 가는 28번 노선도 있습니다."
+  },
+  "University of Miami": {
+    "nickname": "더 유",
+    "airportInfo": "코럴게이블스 북쪽에 있는 마이애미 국제공항이 이 지역의 주요 공항입니다.",
+    "funFact": "1953년에 완공된 링 시어터는 강철 띠로 고정한 콘크리트 돔을 갖추었으며 허리케인의 강풍에 견디도록 지어졌습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 오렌지, 초록, 흰색이고, 팀 이름은 허리케인스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Metrorail / Hurry 'Canes 셔틀",
+    "transportationFact": "캠퍼스는 걸어서 다닐 수 있습니다. 무료 허리 케인스 셔틀이 캠퍼스와 메트로레일 유니버시티역을 연결합니다."
+  },
+  "North Carolina State University": {
+    "nickname": "Think and Do(생각하고 실천하라)",
+    "airportInfo": "롤리 북서쪽에 있는 롤리-더럼 국제공항이 리서치 트라이앵글 지역의 주요 공항입니다.",
+    "funFact": "제1차 세계대전 기념물인 메모리얼 벨타워는 노스캐롤라이나주 마운트에어리에서 캔 화강암 1,400톤으로 지어졌습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 빨강과 흰색이고, 팀 이름은 울프팩입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Wolfline",
+    "transportationFact": "노스 캠퍼스는 걸어서 다닐 수 있습니다. 무료 울프라인 버스가 메인 캠퍼스와 센테니얼 캠퍼스를 연결합니다."
+  },
+  "University of North Carolina at Chapel Hill": {
+    "nickname": "Lux libertas(빛과 자유)",
+    "airportInfo": "채플힐 동쪽에 있는 롤리-더럼 국제공항이 리서치 트라이앵글 지역의 주요 공항입니다.",
+    "funFact": "1793년에 착공한 올드 이스트는 미국 주립대학교에서 가장 오래된 건물입니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 캐롤라이나 블루와 흰색이고, 팀 이름은 타힐스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Chapel Hill Transit",
+    "transportationFact": "캠퍼스는 걸어서 다닐 수 있습니다. 채플힐 트랜싯이 캠퍼스와 채플힐, 캐버러 시내에서 무료 버스를 운행합니다."
+  },
+  "University of Pittsburgh": {
+    "nickname": "Veritas et Virtus(진리와 덕)",
+    "airportInfo": "시 서쪽에 있는 피츠버그 국제공항이 이 지역의 주요 공항입니다.",
+    "funFact": "42층 높이의 캐시드럴 오브 러닝은 서반구에서 가장 높은 교육용 건물이며, 피츠버그의 여러 민족 공동체가 꾸민 31개의 내셔널리티 룸이 있습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 파랑과 금색이고, 팀 이름은 팬서스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Pitt 셔틀",
+    "transportationFact": "오클랜드 캠퍼스는 걸어서 다닐 수 있습니다. 피트는 오클랜드 일대에서 자체 셔틀을 운행하며, 학생은 피트 신분증으로 피츠버그 리저널 트랜싯의 버스, 경전철, 인클라인을 무료로 탑니다."
+  },
+  "Southern Methodist University": {
+    "nickname": "더 힐톱",
+    "airportInfo": "캠퍼스에서 서쪽으로 몇 킬로미터 떨어진 댈러스 러브 필드가 가장 가까운 공항입니다. DFW 국제공항은 더 멉니다.",
+    "funFact": "SMU의 초대 총장은 토머스 제퍼슨의 버지니아 대학교를 본떠 붉은 벽돌의 조지언 양식을 택했고, 댈러스 홀의 돔은 판테온에서 영감을 받았습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 빨강과 파랑이고, 팀 이름은 머스탱스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / SMU Express 셔틀 / DART",
+    "transportationFact": "캠퍼스는 걸어서 다닐 수 있습니다. 무료 SMU 익스프레스 셔틀이 캠퍼스와 DART 레드, 블루, 오렌지 라인이 지나는 SMU/모킹버드역을 연결합니다."
+  },
+  "Syracuse University": {
+    "nickname": "디 오렌지",
+    "airportInfo": "시 북쪽에 있는 시러큐스 핸콕 국제공항이 가장 가까운 상업 공항입니다.",
+    "funFact": "1873년에 완공된 제2제정 양식의 홀 오브 랭귀지스는 캠퍼스의 첫 건물로, 처음에는 대학 전체가 이곳에 있었습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 오렌지이고, 팀 이름도 오렌지입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Centro 버스",
+    "transportationFact": "메인 캠퍼스는 걸어서 다닐 수 있습니다. 센트로가 시러큐스 대학교의 캠퍼스 버스 노선과 시러큐스 도심으로 가는 시내버스를 운행합니다."
+  },
+  "Virginia Tech": {
+    "nickname": "Ut Prosim(내가 봉사하기 위하여)",
+    "airportInfo": "블랙스버그 동쪽 로어노크에 있는 로어노크-블랙스버그 지역공항이 가장 가까운 상업 공항입니다.",
+    "funFact": "캠퍼스 건물 대부분은 대학이 1950년대부터 운영해 온 채석장에서 캔 지역 석회암 '호키 스톤'으로 덮여 있습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 시카고 마룬과 번트 오렌지이고, 팀 이름은 호키스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Blacksburg Transit",
+    "transportationFact": "드릴필드 주변 캠퍼스는 걸어서 다닐 수 있습니다. 블랙스버그 트랜싯 버스는 캠퍼스와 시내에서 누구나 무료로 탈 수 있습니다."
+  },
+  "Wake Forest University": {
+    "nickname": "Pro Humanitate(인류를 위하여)",
+    "airportInfo": "윈스턴세일럼 동쪽에 있는 피드몬트 트라이어드 국제공항이 가장 가까운 주요 상업 공항입니다.",
+    "funFact": "레이놀다 캠퍼스의 건물 대부분은 화강암과 석회암으로 장식한 올드 버지니아 벽돌의 변형 조지언 양식이며, 1956년 대학이 웨이크포리스트 타운에서 옮겨 올 때 옌스 프레드릭 라슨이 계획했습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 올드 골드와 검정이고, 팀 이름은 데몬 디컨스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / 대학 셔틀",
+    "transportationFact": "레이놀다 캠퍼스는 걸어서 다닐 수 있습니다. 대학 셔틀은 캠퍼스의 셔틀 허브에서 출발하며, 평일에는 웨이크 다운타운행 노선도 있습니다."
+  },
+  "University of Arizona": {
+    "nickname": "베어 다운(Bear Down)",
+    "airportInfo": "도심 남쪽의 투손 국제공항은 애리조나 남부의 주요 공항입니다.",
+    "funFact": "애리조나 대학교의 거의 모든 건물에는 붉은 벽돌이 쓰였습니다. 캠퍼스 건축가 로이 플레이스는 1920~30년대에 센테니얼 홀, 베어 다운 체육관, 애리조나 주립 박물관 남관에서 이 모습을 이어 갔습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 카디널 레드와 네이비 블루이고, 팀 이름은 와일드캐츠입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Sun Link Streetcar",
+    "transportationFact": "캠퍼스 중심부는 걸어서 다닐 수 있습니다. 노면전차 선링크가 캠퍼스와 메인 게이트 스퀘어, 포스 애비뉴, 투손 도심을 연결합니다."
+  },
+  "Arizona State University": {
+    "nickname": "선 데블스의 본거지",
+    "airportInfo": "스카이 하버 공항은 템피 캠퍼스 서쪽에 있으며, PHX 스카이 트레인으로 밸리 메트로 경전철에 연결됩니다.",
+    "funFact": "ASU 개미지는 프랭크 로이드 라이트의 마지막 공공 작품 중 하나입니다. 라이트는 바그다드를 위해 구상했던 오페라 하우스를 바탕으로 이 원형 디자인을 만들었습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 마룬과 골드이고, 팀 이름은 선 데블스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Valley Metro Rail",
+    "transportationFact": "밸리 메트로 경전철이 템피 캠퍼스 가장자리에 정차합니다. 템피의 무료 동네 버스 오빗과 템피 스트리트카도 이 지역을 운행합니다."
+  },
+  "Brigham Young University": {
+    "nickname": "Enter to Learn; Go Forth to Serve (배우러 들어와 섬기러 나가라)",
+    "airportInfo": "프로보 북쪽의 솔트레이크시티 국제공항은 유타주의 주요 공항입니다.",
+    "funFact": "1950년에 지은 아이링 과학관은 BYU에서 처음으로 고전 양식에서 벗어난 건물로, 캠퍼스 곳곳에 보이는 금빛 버프색 벽돌의 시작이 되었습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 네이비 블루와 화이트이고, 팀 이름은 쿠거스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / UTA UVX",
+    "transportationFact": "캠퍼스는 걸어서 다닐 수 있습니다. UTA의 간선급행버스 UVX는 BYU에 정류장이 네 곳 있으며 유타 밸리 대학교, 프로보와 오렘의 프런트러너역과 연결됩니다."
+  },
+  "University of Houston": {
+    "nickname": "고 쿠그스(Go Coogs)",
+    "airportInfo": "캠퍼스 남동쪽의 호비 공항이 가장 가깝습니다. 국제선 대부분은 도시 북쪽의 조지 부시 인터콘티넨털 공항(IAH)에서 운항합니다.",
+    "funFact": "1939년에 완공된 로이 G. 컬렌 빌딩은 캠퍼스에서 가장 오래된 건물이며, 미국 대학 캠퍼스에서 처음으로 냉방 시설을 갖춘 건물로 알려져 있습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 스칼렛 레드와 화이트이고, 팀 이름은 쿠거스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / METRORail Purple Line",
+    "transportationFact": "METRORail 퍼플 라인은 캠퍼스를 따라 정류장이 있으며 휴스턴 도심까지 운행합니다."
+  },
+  "Iowa State University": {
+    "nickname": "Science with Practice (실천하는 과학)",
+    "airportInfo": "에임스 남쪽의 디모인 국제공항은 아이오와 중부의 주요 공항입니다.",
+    "funFact": "1897~1898년에 지은 캄파닐레(종탑)에는 스탠턴 기념 카리용이 있습니다. 대학의 공식 반지와 의장봉에 새겨져 있고, 교가 「The Bells of Iowa State」의 주제이기도 합니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 카디널과 골드이고, 팀 이름은 사이클론스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / CyRide",
+    "transportationFact": "센트럴 캠퍼스는 걸어서 다닐 수 있습니다. 시와 대학, 학생회가 함께 운영하는 CyRide 버스가 캠퍼스와 에임스 전역을 운행합니다."
+  },
+  "University of Kansas": {
+    "nickname": "록 초크, 제이호크(Rock Chalk, Jayhawk)",
+    "airportInfo": "로렌스 동쪽의 캔자스시티 국제공항은 지역의 주요 공항입니다.",
+    "funFact": "마운트 오레드에 있는 KU의 초기 건물 상당수는 스푸너 홀처럼 언덕 바로 옆에서 캐낸 거친 회색 오레드 석회암으로 지어졌습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 크림슨과 블루이고, 팀 이름은 제이호크스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / KU on Wheels",
+    "transportationFact": "언덕 위 캠퍼스는 걸어서 다닐 수 있습니다. KU 온 휠스와 로렌스 트랜짓은 하나의 연계 시스템으로 운영되며, KU 학생과 교직원은 KU 카드로 탑승합니다."
+  },
+  "Kansas State University": {
+    "nickname": "Every Man a Wildcat (모두가 와일드캣)",
+    "airportInfo": "맨해튼 지역 공항에서 아메리칸 이글이 댈러스·포트워스와 시카고 오헤어로 운항합니다.",
+    "funFact": "니컬스 홀은 성가퀴가 있는 성처럼 보입니다. 1968년 화재로 내부가 모두 타 버렸고, 1985년에 옛 돌벽 안쪽을 새로 지어 재건되었습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 로열 퍼플이고, 팀 이름은 와일드캐츠입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / aTa Bus",
+    "transportationFact": "캠퍼스는 걸어서 다닐 수 있습니다. aTa 버스와의 제휴로 K-State 학생과 교직원은 학생증으로 캠퍼스와 맨해튼 시내 노선을 무료로 이용합니다."
+  },
+  "Oklahoma State University": {
+    "nickname": "카우보이스의 본거지",
+    "airportInfo": "스틸워터 지역 공항이 도시를 연결합니다. 가장 가까운 대형 공항은 털사 국제공항(TUL)과 오클라호마시티의 윌 로저스 공항(OKC)입니다.",
+    "funFact": "캠퍼스 대부분은 1920년대 후반 헨리 G. 베넷 총장의 계획에서 정한 '모디파이드 조지언' 양식을 따릅니다. 에드먼 로 도서관과 학생회관이 대표적인 건물입니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 오렌지와 블랙이고, 팀 이름은 카우보이스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / The Bus",
+    "transportationFact": "캠퍼스는 걸어서 다닐 수 있습니다. The Bus(OSU-스틸워터 커뮤니티 트랜짓)는 대학이 운영하며 누구나 탈 수 있고, OSU 학생과 교직원은 신분증으로 무료입니다."
+  },
+  "Texas Tech University": {
+    "nickname": "건스 업(Guns Up)",
+    "airportInfo": "러벅 프레스턴 스미스 국제공항은 러벅 지역의 주요 공항입니다.",
+    "funFact": "캠퍼스 초창기 건물인 본관은 스페인의 알칼라 데 에나레스 대학교를 본떠 지었으며, 쌍둥이 종탑과 안뜰이 있습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 스칼렛과 블랙이고, 팀 이름은 레드 레이더스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Citibus",
+    "transportationFact": "시티버스가 레드 레이더, 더블 T 노선 등 캠퍼스를 도는 무료 순환버스를 운행하며, 텍사스 공과대학교 학생은 학생증으로 다른 시티버스 노선도 무료로 탑니다."
+  },
+  "West Virginia University": {
+    "nickname": "렛츠 고 마운티니어스(Let's Go Mountaineers)",
+    "airportInfo": "모건타운 시립공항에서 유나이티드 익스프레스가 워싱턴 덜레스와 시카고 오헤어로 운항합니다. 가장 가까운 대형 공항은 피츠버그 국제공항(PIT)입니다.",
+    "funFact": "우드번 홀의 중앙 탑에는 1910년부터 세스 토머스 시계가 걸려 있습니다. 이 시계는 원래 같은 광장에 있는 대학에서 가장 오래된 건물, 마틴 홀의 둥근 지붕탑에 있었습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 올드 골드와 블루이고, 팀 이름은 마운티니어스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Personal Rapid Transit (PRT)",
+    "transportationFact": "WVU의 퍼스널 래피드 트랜싯은 무인 소형 차량이 전용 궤도를 달리며 모건타운 도심, 에번스데일 캠퍼스, 보건과학 캠퍼스를 연결합니다."
+  },
+  "Baylor University": {
+    "nickname": "식 엠 베어스(Sic 'em Bears)",
+    "airportInfo": "웨이코 지역 공항이 도시를 연결합니다. 가장 가까운 대형 공항은 댈러스·포트워스 국제공항(DFW)입니다.",
+    "funFact": "암스트롱 브라우닝 도서관은 시인 로버트 브라우닝과 엘리자베스 배럿 브라우닝의 작품을 가장 많이 소장하고 있으며, 세계 최대의 비종교 스테인드글라스 컬렉션을 갖춘 곳으로 여겨집니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 그린과 골드이고, 팀 이름은 베어스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Baylor University Shuttle",
+    "transportationFact": "캠퍼스는 걸어서 다닐 수 있습니다. 웨이코 트랜짓이 운영하는 무료 베일러 대학교 셔틀(BUS)이 캠퍼스와 인근 아파트, 주택가를 연결합니다."
+  },
+  "University of Cincinnati": {
+    "nickname": "베어캐츠의 본거지",
+    "airportInfo": "CVG 공항은 오하이오강 건너 켄터키주 북부에 있으며 신시내티의 주요 공항입니다.",
+    "funFact": "신시내티 대학교는 많은 캠퍼스 건물을 유명 건축가에게 맡겼습니다. 마이클 그레이브스, 피터 아이젠먼, 헨리 코브, 프랭크 게리, 과스미 시겔, 무어 루블 유델, 톰 메인의 모포시스, 베르나르 추미 등이 있습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 레드와 블랙이고, 팀 이름은 베어캐츠입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Bearcats Shuttle",
+    "transportationFact": "메인 캠퍼스는 걸어서 다닐 수 있습니다. 베어캐츠 셔틀은 트랜짓 로를 기점으로 업타운 캠퍼스와 인근 동네를 연결하며, 메트로 버스도 업타운을 운행합니다."
+  },
+  "University of Colorado Boulder": {
+    "nickname": "스코 버프스(Sko Buffs)",
+    "airportInfo": "볼더 남동쪽의 덴버 국제공항은 지역의 주요 공항입니다. RTD의 AB 버스가 공항과 볼더를 오갑니다.",
+    "funFact": "CU 볼더 특유의 모습은 '토스카나 버내큘러 리바이벌'이라 불리며 건축가 찰스 클로더가 만들었습니다. 거친 지역 사암 벽, 붉은 기와지붕, 석회암 장식이 특징입니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 실버, 골드, 블랙이고, 팀 이름은 버펄로스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / RTD 버스",
+    "transportationFact": "메인 캠퍼스는 걸어서 다닐 수 있습니다. 순환버스 HOP을 비롯한 RTD 버스가 캠퍼스와 볼더 도심을 연결하고, 덴버행 광역버스도 있습니다."
+  },
+  "Texas Christian University": {
+    "nickname": "고 프로그스(Go Frogs)",
+    "airportInfo": "포트워스 북동쪽의 DFW 공항은 지역의 주요 공항입니다.",
+    "funFact": "TCU 건물 대부분은 'TCU 버프'라는 금빛 벽돌과 붉은 기와지붕으로 지어졌습니다. 로버트 카 예배당은 연어색 벽돌로 이 규칙을 깼고, 개관 때 동문들이 항의했습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 퍼플과 화이트이고, 팀 이름은 혼드 프로그스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Trinity Metro",
+    "transportationFact": "캠퍼스는 아담해서 걸어서 다닐 수 있습니다. 트리니티 메트로가 포트워스의 대중 버스와 열차를 운영합니다."
+  },
+  "University of Central Florida": {
+    "nickname": "차지 온(Charge On)",
+    "airportInfo": "캠퍼스 남서쪽의 올랜도 국제공항은 지역의 주요 공항입니다.",
+    "funFact": "UCF 메인 캠퍼스는 제미니 대로, 아폴로·머큐리·페가수스 서클로 이어지는 고리 모양으로 배치되어 있습니다. UC 어바인과 함께 미국에서 단 두 곳뿐인 동심원 구조 캠퍼스입니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 블랙과 골드이고, 팀 이름은 나이츠입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / UCF 셔틀",
+    "transportationFact": "원형의 중심부는 걸어서 다닐 수 있습니다. UCF 셔틀이 메인 캠퍼스와 인근 20여 개 학생 아파트 단지를 연결하고, 학생은 학생증으로 LYNX 버스를 무료로 탑니다."
+  },
+  "University of Utah": {
+    "nickname": "고 유츠(Go Utes)",
+    "airportInfo": "솔트레이크시티 국제공항은 도심 서쪽에 있습니다. TRAX 경전철로 공항에서 도심까지 간 뒤 레드 라인으로 갈아타면 캠퍼스에 도착합니다.",
+    "funFact": "1969년 헌츠먼 센터가 문을 열었을 때, 지름 364피트(111m)의 목조 돔은 기둥 없는 목조 돔으로는 세계에서 가장 컸습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 크림슨과 화이트이고, 팀 이름은 유츠입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / TRAX Red Line",
+    "transportationFact": "UTA의 TRAX 레드 라인이 캠퍼스 안까지 들어오며 경기장, 남부 캠퍼스, 의료센터에 정류장이 있습니다."
+  },
+  "University of Illinois Urbana-Champaign": {
+    "nickname": "파이팅 일라이나이의 본거지",
+    "airportInfo": "캠퍼스 바로 남쪽 세이보이에 있는 윌러드 공항에서 시카고 오헤어와 댈러스/포트워스로 가는 항공편이 매일 있습니다. 시카고로 오는 방문객도 많습니다.",
+    "funFact": "건축가 찰스 A. 플랫은 캠퍼스를 위해 설계한 여러 조지언 리바이벌 양식 건물 가운데 하나로 메인 도서관을 설계했습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 오렌지와 블루이고, 팀 이름은 파이팅 일라이나이입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / MTD 버스",
+    "transportationFact": "샴페인-어바나 대중교통국(MTD) 버스가 캠퍼스를 자주 다니며, 학생은 i-card로 탑승합니다."
+  },
+  "Indiana University Bloomington": {
+    "nickname": "후지어스의 본거지",
+    "airportInfo": "블루밍턴 북쪽의 인디애나폴리스 국제공항이 정기 항공편이 있는 가장 가까운 공항입니다.",
+    "funFact": "캠퍼스의 많은 건물은 이 주의 특산인 인디애나 석회암으로 지어졌습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 크림과 크림슨이고, 팀 이름은 후지어스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / IU Campus Bus",
+    "transportationFact": "IU 캠퍼스 버스가 캠퍼스를 순환하고, 블루밍턴 트랜짓 버스가 시내 각지와 연결합니다."
+  },
+  "University of Iowa": {
+    "nickname": "호크아이스의 본거지",
+    "airportInfo": "아이오와시티 북쪽, 시더래피즈 근처의 이스턴 아이오와 공항이 정기 항공편이 있는 가장 가까운 공항입니다.",
+    "funFact": "아이오와주 최초의 주 의사당인 그리스 복고 양식의 올드 캐피털이 네 채의 보자르 양식 건물로 둘러싸인 펜타크레스트 한가운데에 서 있습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 블랙과 골드이고, 팀 이름은 호크아이스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Cambus",
+    "transportationFact": "대학의 무료 버스 Cambus가 캠퍼스 곳곳과 병원을 연결합니다."
+  },
+  "University of Maryland, College Park": {
+    "nickname": "Fear the Turtle",
+    "airportInfo": "포토맥강 건너편 버지니아주 알링턴에 있는 레이건 내셔널 공항이 가장 가까운 큰 공항입니다. BWI와 덜레스 공항도 이 지역을 연결합니다.",
+    "funFact": "1898년에 완공된 모릴 홀은 1912년 캠퍼스를 휩쓴 대화재에서 유일하게 피해를 입지 않은 강의동이었습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 레드, 화이트, 블랙, 골드이고, 팀 이름은 테라핀스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Shuttle-UM / 메트로",
+    "transportationFact": "대학의 Shuttle-UM 버스가 캠퍼스와 인근 동네를 다니며, 메트로 칼리지파크–유니버시티 오브 메릴랜드 역에서 워싱턴으로 갈 수 있습니다."
+  },
+  "Michigan State University": {
+    "nickname": "Spartans Will",
+    "airportInfo": "랜싱의 캐피털 리전 국제공항이 정기 항공편이 있는 가장 가까운 공항입니다.",
+    "funFact": "보몬트 타워는 미국 최초로 과학적 농업 교육을 위해 지어진 칼리지 홀이 있던 자리에 서 있습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 그린과 화이트이고, 팀 이름은 스파르탄스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / CATA 버스",
+    "transportationFact": "CATA 버스가 캠퍼스를 지나 이스트랜싱과 랜싱을 연결합니다."
+  },
+  "University of Minnesota Twin Cities": {
+    "nickname": "Ski-U-Mah",
+    "airportInfo": "MSP 공항은 트윈시티 남쪽에 있습니다. 캠퍼스에서 경전철 그린라인을 타고 시내로 가서 블루라인으로 갈아탑니다.",
+    "funFact": "1993년에 완공된 프랭크 게리의 스테인리스강 와이즈먼 미술관은 미시시피강 위 절벽에 서 있습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 머룬과 골드이고, 팀 이름은 골든 고퍼스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Campus Connector / Green Line",
+    "transportationFact": "무료 Campus Connector 버스가 이스트뱅크, 웨스트뱅크, 세인트폴 캠퍼스를 연결하고, 경전철 메트로 그린라인이 캠퍼스를 지나갑니다."
+  },
+  "University of Nebraska–Lincoln": {
+    "nickname": "There Is No Place Like Nebraska",
+    "airportInfo": "시내 북서쪽의 링컨 공항이 가장 가까운 공항입니다. 오마하의 에플리 비행장에는 항공편이 더 많습니다.",
+    "funFact": "1963년에 문을 연 필립 존슨의 셸던 미술관은 이탈리아산 트래버틴으로 지어졌으며, 큰 홀과 중앙 계단을 중심으로 합니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 스칼렛과 크림이고, 팀 이름은 콘허스커스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / StarTran",
+    "transportationFact": "StarTran 버스가 시티, 이스트, 이노베이션 캠퍼스를 연결하며, 학생은 교통비를 통해 버스 패스를 받습니다."
+  },
+  "Northwestern University": {
+    "nickname": "무엇이든 참된 것",
+    "airportInfo": "에번스턴 서쪽의 오헤어 공항이 이 지역의 주요 공항입니다. 시카고 미드웨이 공항도 이용할 수 있습니다.",
+    "funFact": "1869년에 완공된 유니버시티 홀은 캠퍼스에 남아 있는 가장 오래된 원래 건물이며, 옛 시계 장치는 지금 스미소니언에 있습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 퍼플과 화이트이고, 팀 이름은 와일드캐츠입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / CTA 퍼플라인 / Metra",
+    "transportationFact": "CTA 퍼플라인과 Metra 열차가 캠퍼스 근처에 정차하고, 대학의 인터캠퍼스 셔틀이 에번스턴과 시카고 캠퍼스를 연결합니다."
+  },
+  "Ohio State University": {
+    "nickname": "벅아이스의 본거지",
+    "airportInfo": "콜럼버스 시내 동쪽의 존 글렌 콜럼버스 국제공항이 이 지역의 주요 공항입니다.",
+    "funFact": "말발굽 모양의 오하이오 스타디움은 위층 관중석이 아래층 위로 돌출되어 있으며, 북쪽 로툰다는 로마 판테온의 돔을 본떴습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 스칼렛과 그레이이고, 팀 이름은 벅아이스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / CABS 버스",
+    "transportationFact": "무료 캠퍼스 에어리어 버스 서비스(CABS)가 캠퍼스를 순환하고, COTA 버스가 콜럼버스 시내를 다닙니다."
+  },
+  "Pennsylvania State University": {
+    "nickname": "We Are... Penn State",
+    "airportInfo": "2023년까지 유니버시티 파크 공항으로 불리던 스테이트 칼리지 지역 공항이 가장 가까운 공항입니다.",
+    "funFact": "찰스 클로더는 1929년에 문을 연 렉 홀과 1930년에 완공된 새 올드 메인을 모두 설계했습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 블루와 화이트이고, 팀 이름은 니타니 라이언스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / CATA 버스",
+    "transportationFact": "CATA가 캠퍼스에서 무료 블루 루프, 화이트 루프, 레드 링크를 운행하고, 스테이트 칼리지 시내로 가는 노선도 있습니다."
+  },
+  "Purdue University": {
+    "nickname": "Boiler Up!",
+    "airportInfo": "웨스트라피엣 남동쪽의 인디애나폴리스 국제공항이 가장 가까운 큰 공항입니다.",
+    "funFact": "1995년에 완공된 퍼듀 벨 타워에는 1956년에 철거된 헤빌런 홀 옛 탑의 종이 걸려 있습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 올드 골드와 블랙이고, 팀 이름은 보일러메이커스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Purdue Campus Transit / CityBus",
+    "transportationFact": "무료 Purdue Campus Transit 순환선이 캠퍼스를 돌고, CityBus 노선이 웨스트라피엣과 라피엣을 연결합니다."
+  },
+  "Rutgers University–New Brunswick": {
+    "nickname": "대학 미식축구의 발상지",
+    "airportInfo": "뉴브런즈윅 북동쪽의 뉴어크 리버티 공항은 NJ 트랜짓 노스이스트 코리더 선 열차로 갈 수 있습니다.",
+    "funFact": "1809년에 착공한 올드 퀸스는 뉴욕 시청을 설계한 존 매콤 주니어의 작품입니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 스칼렛이고, 팀 이름은 스칼렛 나이츠입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / 럿거스 버스 / NJ 트랜짓",
+    "transportationFact": "럿거스의 무료 버스가 칼리지 애비뉴, 부시, 리빙스턴, 쿡/더글러스 캠퍼스를 연결하고, NJ 트랜짓 열차가 뉴브런즈윅역에 정차합니다."
+  },
+  "University of Wisconsin–Madison": {
+    "nickname": "On, Wisconsin!",
+    "airportInfo": "매디슨 시내 북동쪽의 데인 카운티 지역 공항이 이 도시의 공항입니다.",
+    "funFact": "1851년에 존 F. 레이그의 설계로 지어진 노스 홀은 대학 최초의 건물이며, 지금도 배스컴 힐에 서 있습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 카디널과 화이트이고, 팀 이름은 배저스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / 매디슨 메트로",
+    "transportationFact": "매디슨 메트로 버스가 캠퍼스를 지나며, 학생은 대학 버스 패스로 탑승합니다."
+  },
+  "University of Oregon": {
+    "nickname": "Go Ducks",
+    "airportInfo": "도시 북서쪽의 유진 공항이 가장 가까운 공항입니다.",
+    "funFact": "대학 건축학부 학장이던 엘리스 F. 로런스가 나이트 도서관과 미술관을 모두 설계했습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 그린과 옐로이고, 팀 이름은 덕스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / LTD EmX",
+    "transportationFact": "레인 교통국의 간선급행버스 EmX가 캠퍼스 가장자리에 정차하며, 학생은 학생증으로 LTD 버스를 탑니다."
+  },
+  "University of Southern California": {
+    "nickname": "Fight On!",
+    "airportInfo": "캠퍼스 남서쪽의 LAX가 로스앤젤레스의 주요 공항입니다.",
+    "funFact": "1880년에 문을 연 위드니 동문회관은 남부 캘리포니아에서 가장 오래된 대학 건물입니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 카디널과 골드이고, 팀 이름은 트로전스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / 메트로 E 라인",
+    "transportationFact": "메트로 E 라인은 엑스포지션 파크를 따라 캠퍼스 옆에 역이 있으며, USC는 자체 캠퍼스 셔틀도 운행합니다."
+  },
+  "University of Alabama": {
+    "nickname": "Roll Tide",
+    "airportInfo": "터스컬루사 북동쪽의 버밍엄-셔틀스워스 국제공항이 정기편이 있는 가장 가까운 공항입니다.",
+    "funFact": "총장 관저와 옛 천문대(현재의 맥스웰 홀)는 남북전쟁에서 살아남은 몇 안 되는 캠퍼스 건물입니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 크림슨과 화이트이고, 팀 이름은 크림슨 타이드입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / CrimsonRide 버스",
+    "transportationFact": "쿼드는 걸어서 둘러볼 수 있는 캠퍼스의 중심에 있습니다. 대학의 무료 CrimsonRide 버스가 캠퍼스와 아파트 노선을 운행합니다."
+  },
+  "University of Arkansas": {
+    "nickname": "Woo Pig Sooie",
+    "airportInfo": "페이엇빌 북쪽의 노스웨스트 아칸소 국립공항이 지역의 주요 공항입니다.",
+    "funFact": "캠퍼스에서 가장 오래된 건물인 올드 메인은 캠퍼스에서 파낸 점토를 건물 서쪽 가마에서 구운 벽돌로 지어졌습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 카디널 레드와 화이트이고, 팀 이름은 레이저백스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Razorback Transit",
+    "transportationFact": "언덕 위의 캠퍼스는 걸어서 둘러볼 수 있습니다. Razorback Transit이 캠퍼스와 페이엇빌 시내에서 무료 버스를 운행합니다."
+  },
+  "Auburn University": {
+    "nickname": "War Eagle",
+    "airportInfo": "오번 남동쪽, 조지아주의 콜럼버스 공항에서는 훨씬 큰 하츠필드-잭슨 공항이 있는 애틀랜타행 델타 항공편이 운항합니다.",
+    "funFact": "랭던 홀은 1846년 오번 여자대학의 예배당으로 지어졌고, 1883년에 해체되어 대학 캠퍼스에 다시 세워졌습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 번트 오렌지와 네이비 블루이고, 팀 이름은 타이거스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Tiger Transit",
+    "transportationFact": "샘퍼드 홀 주변의 역사 지구는 걸어서 둘러볼 수 있습니다. Tiger Transit 버스는 학기 중 평일에 학생과 교직원을 위해 운행합니다."
+  },
+  "University of Florida": {
+    "nickname": "Go Gators",
+    "airportInfo": "캠퍼스 북동쪽의 게인즈빌 리저널 공항에는 주요 허브 공항으로 가는 항공편이 있습니다.",
+    "funFact": "윌리엄 오거스터스 에드워즈가 초기 캠퍼스 대부분을 칼리지 고딕 양식으로 계획했으며, 센추리 타워는 캔터베리 대성당 벨 해리 타워의 비례를 따릅니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 오렌지와 블루이고, 팀 이름은 게이터스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / RTS 버스",
+    "transportationFact": "역사 지구는 걸어서 둘러볼 수 있습니다. 게인즈빌의 RTS 버스가 캠퍼스를 자주 지나갑니다."
+  },
+  "University of Georgia": {
+    "nickname": "Go Dawgs",
+    "airportInfo": "애선스에는 정기 항공편이 없어 대부분의 방문객은 도시 남서쪽에 있는 애틀랜타 하츠필드-잭슨 공항을 이용합니다.",
+    "funFact": "UGA에서 가장 오래된 건물들은 페더럴 양식입니다. 1824년에 지은 데모스테니안 홀에는 애셔 벤저민의 도안을 바탕으로 한 화려한 석고 천장 메달리온이 남아 있습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 레드와 블랙이고, 팀 이름은 불독스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / UGA Campus Transit",
+    "transportationFact": "노스 캠퍼스는 걸어서 둘러볼 수 있습니다. UGA Campus Transit 버스가 캠퍼스 곳곳을 운행합니다."
+  },
+  "Louisiana State University": {
+    "nickname": "Geaux Tigers",
+    "airportInfo": "시내 북쪽의 배턴루지 메트로폴리탄 공항이 도시의 관문입니다.",
+    "funFact": "1926년에 문을 연 캠퍼스는 이탈리아 르네상스 양식으로 지어졌고, 타이거 스타디움에는 한때 관람석 아래에 학생 기숙사가 있었습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 퍼플과 골드이고, 팀 이름은 타이거스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Tiger Trails 버스",
+    "transportationFact": "쿼드 주변 중심 캠퍼스는 걸어서 둘러볼 수 있습니다. LSU의 무료 Tiger Trails 버스가 캠퍼스와 인근 아파트를 연결합니다."
+  },
+  "University of Mississippi": {
+    "nickname": "Hotty Toddy",
+    "airportInfo": "옥스퍼드 동쪽의 투펄로 리저널 공항에는 하루 몇 편의 항공편이 있습니다. 북쪽의 멤피스 국제공항이 가장 가까운 대형 공항입니다.",
+    "funFact": "윌리엄 니컬스는 1848년 라이시엄을 아테네 근처의 이오니아식 신전을 본떠 설계했고, 바너드 천문대는 러시아의 풀코보 천문대를 모델로 삼았습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 카디널 레드와 네이비 블루이고, 팀 이름은 레벨스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Oxford-University Transit",
+    "transportationFact": "서클과 그로브는 걸어서 둘러볼 수 있는 캠퍼스의 중심에 있습니다. Oxford-University Transit 버스가 캠퍼스와 시내를 연결합니다."
+  },
+  "University of Missouri": {
+    "nickname": "Mizzou",
+    "airportInfo": "시 남동쪽의 컬럼비아 리저널 공항에는 주요 허브 공항으로 가는 정기편이 있습니다.",
+    "funFact": "프랜시스 쿼드랭글의 기둥 여섯 개는 1892년에 불탄 아카데믹 홀의 유일한 흔적입니다. 그 뒤를 이은 제시 홀이 1895년 기둥 뒤에 세워졌습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 블랙과 골드이고, 팀 이름은 타이거스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Tiger Line 셔틀",
+    "transportationFact": "프랜시스 쿼드랭글 주변 캠퍼스는 걸어서 둘러볼 수 있습니다. 컬럼비아시와 함께 운영하는 MU의 무료 Tiger Line 셔틀이 캠퍼스를 운행하며, Go COMO 시내버스도 무료입니다."
+  },
+  "University of Oklahoma": {
+    "nickname": "Boomer Sooner",
+    "airportInfo": "노먼 북쪽, 오클라호마시티의 윌 로저스 국제공항이 가장 가까운 대형 공항입니다.",
+    "funFact": "프랭크 로이드 라이트는 벽돌과 밝은 석재로 된 OU식 칼리지 고딕을 '체로키 고딕'이라 불렀고, 새 건물들도 이에 맞춰 설계됩니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 크림슨과 크림이고, 팀 이름은 수너스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / CART 버스",
+    "transportationFact": "사우스 오벌 주변 중심 캠퍼스는 걸어서 둘러볼 수 있습니다. OU의 CART 버스가 캠퍼스와 인근 아파트를 운행하고, 시내 노선은 EMBARK Norman이 운행합니다."
+  },
+  "University of South Carolina": {
+    "nickname": "Emollit Mores Nec Sinit Esse Feros",
+    "airportInfo": "컬럼비아 메트로폴리탄 공항은 시내 중심부 남서쪽에 있습니다.",
+    "funFact": "호스슈의 첫 건물 러틀리지는 1805년에 완공되었고, 호스슈에 있는 사우스 캐롤라이니아나 도서관은 미국에서 가장 오래된 독립 건물 대학 도서관입니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 가닛과 블랙이고, 팀 이름은 게임콕스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Carolina Shuttle",
+    "transportationFact": "호스슈와 중심 캠퍼스는 걸어서 둘러볼 수 있습니다. The COMET이 운영하는 Carolina Shuttle은 학생과 교직원에게 무료입니다."
+  },
+  "Vanderbilt University": {
+    "nickname": "Anchor Down",
+    "airportInfo": "내슈빌 국제공항은 내슈빌 시내 남동쪽에 있습니다.",
+    "funFact": "커클랜드 홀은 1874년 빅토리안 고딕 양식으로 지어졌다가 1905년 화재 후 이탈리아풍 양식으로 재건되었고, 피바디 캠퍼스는 제퍼슨의 버지니아 대학교를 본떴습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 블랙과 골드이고, 팀 이름은 코모도어스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / VandyRide",
+    "transportationFact": "캠퍼스는 걸어서 둘러볼 수 있습니다. VandyRide 셔틀이 캠퍼스를 돌고, WeGo 시내버스가 웨스트 엔드 애비뉴를 지나갑니다."
+  },
+  "University of Kentucky": {
+    "nickname": "Go Big Blue",
+    "airportInfo": "블루그래스 공항은 렉싱턴 바로 서쪽에 있습니다.",
+    "funFact": "1998년에 문을 연 윌리엄 T. 영 도서관은 팔각형 평면에 각 파사드마다 2층 높이의 벽돌·석재 아케이드가 있고, 메모리얼 홀 로비에는 앤 라이스 오핸런의 1934년 프레스코화가 있습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 블루와 화이트이고, 팀 이름은 와일드캐츠입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Lextran 버스",
+    "transportationFact": "중심 캠퍼스는 걸어서 둘러볼 수 있습니다. Lextran과 함께 운영하는 UK 캠퍼스 버스는 무료이며, 학생과 교직원은 UK 신분증으로 Lextran 시내버스도 무료로 탈 수 있습니다."
+  },
+  "Mississippi State University": {
+    "nickname": "Hail State",
+    "airportInfo": "스타크빌 동쪽의 골든 트라이앵글 지역공항이 이 지역을 담당합니다.",
+    "funFact": "예전에 사관생도단이 쓰던 드릴 필드는 북쪽과 남쪽 끝을 서로 거울처럼 닮은 두 건물, 리 홀과 스왐 홀이 막고 있습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 머룬과 화이트이고, 팀 이름은 불독스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / SMART 버스",
+    "transportationFact": "드릴 필드 주변 캠퍼스는 걸어서 둘러볼 수 있습니다. Starkville–MSU Area Rapid Transit이 캠퍼스와 시내에서 무료 버스를 운행합니다."
+  },
+  "University of Tennessee": {
+    "nickname": "Go Vols",
+    "airportInfo": "녹스빌 남쪽, 앨코아의 맥기 타이슨 공항이 가장 가까운 공항입니다.",
+    "funFact": "2008~2011년 에어스 홀 복원 때, 1921년 설계에 있었지만 비용 때문에 만들지 못했던 시계 문자판과 테라조 바닥이 더해졌습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 오렌지와 화이트이고, 팀 이름은 볼런티어스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / T 버스",
+    "transportationFact": "UT의 무료 T 버스가 캠퍼스 고정 노선을 운행하며, 학생은 VolCard로 Knoxville Area Transit 버스를 무료로 탈 수 있습니다."
+  },
+  "Texas A&M University": {
+    "nickname": "Gig 'em",
+    "airportInfo": "칼리지스테이션 서쪽 끝, 캠퍼스 근처의 이스터우드 공항에는 아메리칸 이글 항공편이 있습니다.",
+    "funFact": "캠퍼스 건축가 F. E. 기세케는 철근 콘크리트를 잘 몰라 1914년 아카데믹 빌딩의 철근을 두 배로 넣었습니다. 훗날 수도관을 설치할 때 인부들은 토치를 써야 했습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 머룬과 화이트이고, 팀 이름은 애기스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Texas A&M 버스",
+    "transportationFact": "메인 캠퍼스는 걸어서 둘러볼 수 있습니다. Texas A&M은 학기 중 캠퍼스 버스 노선을 운행합니다."
   }
 }

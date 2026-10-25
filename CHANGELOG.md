@@ -15,6 +15,13 @@ How to use this file:
 - Vision Pro: layered app icon, a 10-question architecture quiz per city, and the Want to Visit list (landmarks and saved places synced with iPhone). Download size cut from 355 MB to about 24 MB by leaving out the Detroit 3D model.
 - Vision Pro: a 3D globe of every city with live stamp pins; drag to spin and tilt, tap to turn a city toward you.
 - Vision Pro: available in all 9 of the app's languages.
+- Campus Architecture: 60 more campuses (every Big Ten, SEC, ACC and Big 12 school), now 101 campuses and over 450 buildings, translated into all 9 languages.
+- US campuses are grouped by conference (Big Ten, SEC, ACC, Big 12, Ivy League, Other) and sorted by short name; Australian campuses share one Australia group.
+- Search finds campuses by short names and nicknames, such as "UGA", "Ole Miss" or "Tar Heels".
+- Conference achievements: stamp a building on every campus in a conference.
+
+### Changed
+- Buildings with no known architect or style no longer show "Unknown"; the quiz skips those questions.
 
 ## [2.4] (build 9) – 2026-10-23
 

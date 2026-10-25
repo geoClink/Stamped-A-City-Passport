@@ -11,6 +11,7 @@ struct SettingsView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @Environment(\.colorScheme) var colorScheme
+    @Environment(\.dynamicTypeSize) var dynamicTypeSize
 
     @State private var moveRight = false
     @State private var showingFirstAlert = false
@@ -50,7 +51,7 @@ private extension SettingsView {
                     Button { dismiss() } label: {
                         Image(systemName: "chevron.left")
                             .fontWeight(viewModel.highContrast ? .black : .medium)
-                            .foregroundColor(viewModel.highContrast ? .primary : .accentColor)
+                            .foregroundColor(viewModel.highContrast ? .primary : DS.Palette.accent)
                     }
                 }
             }
@@ -75,7 +76,7 @@ private extension SettingsView {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(L.Settings.back) { dismiss() }
                         .fontWeight(viewModel.highContrast ? .black : .bold)
-                        .foregroundColor(viewModel.highContrast ? .primary : .accentColor)
+                        .foregroundColor(viewModel.highContrast ? .primary : DS.Palette.accent)
                 }
             }
         } detail: {
@@ -102,10 +103,13 @@ private extension SettingsView {
     var experienceSection: some View {
         Section(header: Text(L.Settings.appExperience).fontWeight(viewModel.highContrast ? .bold : .regular)) {
 
-            VStack(alignment: .leading, spacing: 8) {
-                Label(L.Settings.measurementUnits, systemImage: "ruler")
-                    .font(.subheadline)
-                    .fontWeight(viewModel.highContrast ? .bold : .medium)
+            VStack(alignment: .leading, spacing: DS.Space.s) {
+                Label {
+                    Text(L.Settings.measurementUnits)
+                        .fontWeight(viewModel.highContrast ? .bold : .medium)
+                } icon: {
+                    rowIcon("ruler")
+                }
 
                 Picker(L.Settings.unitSystem, selection: $viewModel.useMetric) {
                     Text(L.Settings.meters).tag(true)
@@ -113,7 +117,7 @@ private extension SettingsView {
                 }
                 .pickerStyle(.segmented)
             }
-            .padding(.vertical, 8)
+            .padding(.vertical, DS.Space.s)
 
             Group {
                 SettingsToggleRow(title: L.Settings.soundEffects, icon: "speaker.wave.2.fill", isOn: $viewModel.isSoundEnabled, isHighContrast: viewModel.highContrast)
@@ -122,19 +126,14 @@ private extension SettingsView {
                 SettingsToggleRow(title: L.Settings.reduceMotion, icon: "slowmo", isOn: $viewModel.reduceMotion, isHighContrast: viewModel.highContrast)
             }
 
-            HStack(spacing: 15) {
-                Image(systemName: "gift.fill")
-                    .font(.title2)
-                    .foregroundColor(viewModel.highContrast ? .primary : .pink)
-                    .frame(width: 30)
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("Birthday")
-                        .font(.subheadline.bold())
-                    Text("Used for the Birthday Stamp achievement")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
+            // The date picker drops below the label at accessibility sizes
+            rowLayout {
+                Label {
+                    rowText(title: Text("Birthday"), subtitle: Text("Used for the Birthday Stamp achievement"))
+                } icon: {
+                    rowIcon("gift.fill")
                 }
-                Spacer()
+                Spacer(minLength: 0)
                 if viewModel.hasBirthday {
                     DatePicker("", selection: Binding(
                         get: { viewModel.birthday },
@@ -148,28 +147,19 @@ private extension SettingsView {
                         .fontWeight(.semibold)
                 }
             }
-            .padding(.vertical, 6)
+            .padding(.vertical, DS.Space.xs)
 
-            HStack(spacing: 15) {
-                Image(systemName: "wifi.slash")
-                    .font(.title2)
-                    .foregroundColor(viewModel.highContrast ? .primary : .green)
-                    .frame(width: 30)
-
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(L.Settings.offlineReady)
-                        .font(.subheadline.bold())
-                    Text(L.Settings.offlineReadyBody)
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                }
+            Label {
+                rowText(title: Text(L.Settings.offlineReady), subtitle: Text(L.Settings.offlineReadyBody))
+            } icon: {
+                rowIcon("wifi.slash")
             }
-            .padding(.vertical, 8)
+            .padding(.vertical, DS.Space.xs)
 
-            VStack(spacing: 16) {
-                VStack(alignment: .leading, spacing: 12) {
+            VStack(spacing: DS.Space.l) {
+                VStack(alignment: .leading, spacing: DS.Space.m) {
                     Text(L.Settings.preview)
-                        .font(.system(size: 10, weight: .black))
+                        .font(.caption2.weight(.black))
                         .foregroundColor(viewModel.highContrast ? .primary : .secondary)
 
                     ZStack(alignment: moveRight ? .trailing : .leading) {
@@ -179,18 +169,22 @@ private extension SettingsView {
                             .overlay(Capsule().stroke(viewModel.highContrast ? Color.primary : Color.clear, lineWidth: 2))
 
                         Image(systemName: "airplane")
-                            .foregroundColor(viewModel.highContrast ? .primary : .blue)
-                            .padding(.horizontal, 12)
+                            .foregroundColor(viewModel.highContrast ? .primary : DS.Palette.accent)
+                            .padding(.horizontal, DS.Space.m)
                     }
                 }
 
-                HStack(spacing: 12) {
+                // Side by side normally, stacked at accessibility sizes
+                let buttonLayout = dynamicTypeSize.isAccessibilitySize
+                    ? AnyLayout(VStackLayout(spacing: DS.Space.m))
+                    : AnyLayout(HStackLayout(spacing: DS.Space.m))
+                buttonLayout {
                     Button(L.Settings.testMotion) {
                         withAnimation(viewModel.reduceMotion ? .none : .spring(response: 0.4, dampingFraction: 0.6)) {
                             moveRight.toggle()
                         }
                     }
-                    .buttonStyle(PreviewButtonStyle(isHighContrast: viewModel.highContrast, color: .blue))
+                    .buttonStyle(PreviewButtonStyle(isHighContrast: viewModel.highContrast, color: viewModel.brandColor))
 
                     Button(L.Settings.testSound) {
                         viewModel.playSoundPreview()
@@ -198,18 +192,20 @@ private extension SettingsView {
                     .buttonStyle(PreviewButtonStyle(isHighContrast: viewModel.highContrast, color: viewModel.brandColor))
                 }
             }
-            .padding(.vertical, 12)
+            .padding(.vertical, DS.Space.m)
         }
         .tint(viewModel.highContrast ? .primary : viewModel.brandColor)
     }
 
     var feedbackSection: some View {
-        Section(header: Text("Feedback & Support").fontWeight(viewModel.highContrast ? .bold : .regular)) {
+        Section(
+            header: Text("Feedback & Support").fontWeight(viewModel.highContrast ? .bold : .regular),
+            footer: Text(CampusDisclaimer.text)
+        ) {
             feedbackLink(
                 title: "Report Incorrect Info",
                 subtitle: "Wrong building details, photos, or descriptions",
                 icon: "exclamationmark.bubble.fill",
-                iconColor: .orange,
                 subject: "Content Issue Report",
                 body: "Building name:\nCity:\nWhat's wrong:\n"
             )
@@ -217,7 +213,6 @@ private extension SettingsView {
                 title: "Suggest a Building",
                 subtitle: "Know a landmark we're missing?",
                 icon: "plus.bubble.fill",
-                iconColor: .blue,
                 subject: "Building Suggestion",
                 body: "City:\nBuilding name:\nAddress:\nWhy it should be included:\n"
             )
@@ -225,14 +220,13 @@ private extension SettingsView {
                 title: "General Feedback",
                 subtitle: "Ideas, bugs, or anything else",
                 icon: "envelope.fill",
-                iconColor: .green,
                 subject: "Stamped App Feedback",
                 body: ""
             )
         }
     }
 
-    private func feedbackLink(title: String, subtitle: String, icon: String, iconColor: Color, subject: String, body: String) -> some View {
+    private func feedbackLink(title: LocalizedStringKey, subtitle: LocalizedStringKey, icon: String, subject: String, body: String) -> some View {
         // Replace georgeclinkscalesdev@proton.me with your support email address
         let email = "georgeclinkscalesdev@proton.me"
         let encodedSubject = subject.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
@@ -242,35 +236,54 @@ private extension SettingsView {
         return Group {
             if let url = URL(string: urlString) {
                 Link(destination: url) {
-                    feedbackRow(title: title, subtitle: subtitle, icon: icon, iconColor: iconColor)
+                    feedbackRow(title: title, subtitle: subtitle, icon: icon)
                 }
                 .foregroundColor(.primary)
             } else {
-                feedbackRow(title: title, subtitle: subtitle, icon: icon, iconColor: iconColor)
+                feedbackRow(title: title, subtitle: subtitle, icon: icon)
             }
         }
     }
 
-    private func feedbackRow(title: String, subtitle: String, icon: String, iconColor: Color) -> some View {
-        HStack(spacing: 14) {
-            Image(systemName: icon)
-                .font(.title3)
-                .foregroundColor(viewModel.highContrast ? .primary : iconColor)
-                .frame(width: 28)
-            VStack(alignment: .leading, spacing: 2) {
-                Text(title)
-                    .font(.subheadline)
-                    .fontWeight(viewModel.highContrast ? .bold : .medium)
-                Text(subtitle)
-                    .font(.caption)
-                    .foregroundColor(.secondary)
+    private func feedbackRow(title: LocalizedStringKey, subtitle: LocalizedStringKey, icon: String) -> some View {
+        HStack(spacing: DS.Space.m) {
+            Label {
+                rowText(title: Text(title), subtitle: Text(subtitle))
+            } icon: {
+                rowIcon(icon)
             }
-            Spacer()
+            Spacer(minLength: 0)
             Image(systemName: "chevron.right")
                 .font(.caption)
                 .foregroundColor(.secondary)
         }
-        .padding(.vertical, 6)
+        .padding(.vertical, DS.Space.xs)
+    }
+
+    // MARK: Row pieces
+
+    /// Row icons share the Label icon column and the accent color, like the toggle rows
+    func rowIcon(_ systemName: String) -> some View {
+        Image(systemName: systemName)
+            .foregroundColor(viewModel.highContrast ? .primary : DS.Palette.accent)
+    }
+
+    func rowText(title: Text, subtitle: Text) -> some View {
+        VStack(alignment: .leading, spacing: 2) {
+            title
+                .fontWeight(viewModel.highContrast ? .bold : .medium)
+            subtitle
+                .font(.caption)
+                .foregroundColor(.secondary)
+        }
+    }
+
+    /// A row that puts its trailing control under the label at accessibility sizes
+    func rowLayout<Content: View>(@ViewBuilder _ content: () -> Content) -> some View {
+        let layout = dynamicTypeSize.isAccessibilitySize
+            ? AnyLayout(VStackLayout(alignment: .leading, spacing: DS.Space.s))
+            : AnyLayout(HStackLayout(spacing: DS.Space.m))
+        return layout { content() }
     }
 
     var dangerZoneSection: some View {
@@ -304,7 +317,7 @@ struct SettingsToggleRow: View {
                 Text(title).fontWeight(isHighContrast ? .bold : .medium)
             } icon: {
                 Image(systemName: icon)
-                    .foregroundColor(isHighContrast ? .primary : .accentColor)
+                    .foregroundColor(isHighContrast ? .primary : DS.Palette.accent)
             }
         }
     }
@@ -322,12 +335,16 @@ struct PreviewButtonStyle: ButtonStyle {
             .font(.caption.bold())
             .fontWeight(isHighContrast ? .black : .bold)
             .frame(maxWidth: .infinity)
-            .padding(.vertical, 12)
+            .lineLimit(2)
+            .minimumScaleFactor(0.8)
+            .multilineTextAlignment(.center)
+            .padding(.vertical, DS.Space.m)
+            .padding(.horizontal, DS.Space.s)
             .background(isHighContrast ? (isDark ? Color.white : Color.black) : color.opacity(0.12))
             .foregroundColor(isHighContrast ? (isDark ? Color.black : Color.white) : color)
-            .cornerRadius(8)
+            .clipShape(RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous))
             .overlay(
-                RoundedRectangle(cornerRadius: 8)
+                RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
                     .stroke(isHighContrast ? (isDark ? Color.white : Color.black) : Color.clear, lineWidth: 2)
             )
             .scaleEffect(configuration.isPressed ? 0.96 : 1.0)

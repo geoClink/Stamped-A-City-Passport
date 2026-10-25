@@ -36,8 +36,14 @@ class GlobalProgressManager: ObservableObject {
         didSet { saveCustomPlaces() }
     }
 
+    /// Campus traditions the user has done ("Rub John Harvard's foot"), by tradition id.
+    @Published var completedTraditionIDs: Set<String> = [] {
+        didSet { saveTraditions() }
+    }
+
     private let saveKey = "GlobalVisitedBuildingsKey"
     private let wishlistKey = "GlobalWishlistKey"
+    private let traditionsKey = "GlobalCompletedTraditionsKey"
     private let customPlacesKey = "GlobalCustomPlacesKey"
     private let visitDatesKey = "GlobalVisitDatesKey"
     private let buildingNotesKey = "BuildingNotesKey"
@@ -62,6 +68,10 @@ class GlobalProgressManager: ObservableObject {
 
         if let wishlist = defaults.array(forKey: wishlistKey) as? [String] {
             self.wishlistIDs = Set(wishlist)
+        }
+
+        if let traditions = defaults.array(forKey: traditionsKey) as? [String] {
+            self.completedTraditionIDs = Set(traditions)
         }
 
         // Saved as JSON data, since UserDefaults and iCloud can't store custom structs directly
@@ -109,6 +119,14 @@ class GlobalProgressManager: ObservableObject {
                 }
             }
             if updated { saveVisitDates() }
+        }
+
+        // traditions: like stamps, take the union so a completed tradition is never lost
+        if let cloudTraditions = iCloud.array(forKey: traditionsKey) as? [String] {
+            let merged = completedTraditionIDs.union(Set(cloudTraditions))
+            if merged != completedTraditionIDs {
+                completedTraditionIDs = merged
+            }
         }
 
         // wishlist: people remove places as well as add them, so the latest saved
@@ -265,6 +283,26 @@ class GlobalProgressManager: ObservableObject {
         }
     }
 
+    // MARK: - Campus traditions
+
+    func isTraditionDone(_ id: String) -> Bool {
+        completedTraditionIDs.contains(id)
+    }
+
+    func toggleTradition(_ id: String) {
+        if completedTraditionIDs.contains(id) {
+            completedTraditionIDs.remove(id)
+        } else {
+            completedTraditionIDs.insert(id)
+        }
+    }
+
+    private func saveTraditions() {
+        let arr = Array(completedTraditionIDs)
+        defaults.set(arr, forKey: traditionsKey)
+        iCloud.set(arr, forKey: traditionsKey)
+    }
+
     // MARK: - Custom places
 
     func customPlaces(in cityName: String) -> [CustomPlace] {
@@ -315,6 +353,8 @@ class GlobalProgressManager: ObservableObject {
         iCloud.removeObject(forKey: buildingNotesKey)
         wishlistIDs.removeAll()
         iCloud.removeObject(forKey: wishlistKey)
+        completedTraditionIDs.removeAll()
+        iCloud.removeObject(forKey: traditionsKey)
         customPlaces.removeAll()
         iCloud.removeObject(forKey: customPlacesKey)
         userImages.removeAll()

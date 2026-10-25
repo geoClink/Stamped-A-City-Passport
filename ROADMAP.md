@@ -48,6 +48,11 @@ iPhone/iPad (Apple data only, no partners needed):
 - [ ] Transit and walking times between trip stops (`MKDirections`)
 - [ ] "Directions for this day" hands the ordered stops to Apple Maps
 
+- [x] Power 4 campuses: 60 more (101 total), grouped by conference, nickname search, conference achievements. Branch `feature/p4-campuses`
+- [ ] "Plan a Campus Visit": one-day trip of a campus's buildings in walking order
+- [ ] Update the App Store text and screenshots for 101 campuses (2.4 text says 41)
+  - Add to the description in every language: "Stamped! is not affiliated with or endorsed by any university. School names and colors are used only to identify them." (same text as Settings, already translated in Localizable.strings)
+
 Vision Pro (shares the iPhone listing; separate review):
 - [x] All 140 cities on a photoreal 3D map, landmark cards, iCloud stamps
 - [x] Layered app icon, quiz, Want to Visit list, 24 MB download

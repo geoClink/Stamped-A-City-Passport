@@ -299,3 +299,304 @@
 
 // MARK: - Campus Architecture
 "CAMPUS ARCHITECTURE" = "キャンパス建築";
+"OTHER U.S. CAMPUSES" = "その他の米国キャンパス";
+"CONFERENCE MASTER" = "カンファレンス制覇";
+
+// MARK: - Campus Visit
+"Plan a Campus Visit" = "キャンパス訪問を計画";
+"%d landmarks, one walking day" = "%d か所のランドマーク、徒歩で1日";
+"Open your campus visit" = "キャンパス訪問を開く";
+"Opens a one-day walking trip of every landmark on campus." = "キャンパス内のすべてのランドマークを巡る1日の徒歩旅行を開きます。";
+"%@ Campus Visit" = "%@ キャンパス訪問";
+
+// MARK: - Campus Traditions
+"CAMPUS TRADITIONS" = "キャンパスの伝統";
+"%d of %d traditions done" = "%d / %d の伝統を達成";
+"Traditions Keeper" = "伝統の守り手";
+"Done" = "完了";
+"Not done" = "未完了";
+"Double tap to check this tradition off." = "ダブルタップでこの伝統をチェックします。";
+"Show %@ in Maps" = "%@ をマップで表示";
+
+// MARK: - College List & Road Trip
+"My College List" = "マイ大学リスト";
+"Add to My College List" = "マイ大学リストに追加";
+"Remove from My College List" = "マイ大学リストから削除";
+"On your list" = "リストに追加済み";
+"Plan a College Road Trip" = "大学めぐりの旅を計画";
+"Tap the heart on any campus page to add it here." = "キャンパスのページでハートをタップすると、ここに追加されます。";
+"1 school" = "1校";
+"%d schools" = "%d校";
+"No Schools Yet" = "まだ大学がありません";
+"Open any campus in Campus Architecture and tap the heart to add it to your list. Then plan a road trip that visits them all, one campus a day." = "キャンパス建築からキャンパスを開き、ハートをタップしてリストに追加しましょう。そのあと、1日1キャンパスですべてを巡る旅を計画できます。";
+"Makes one trip with a day at each school, in a short driving order." = "各大学に1日ずつ、移動が短くなる順番で1つの旅行を作成します。";
+"%1$d of %2$d landmarks stamped" = "%2$d か所中 %1$d か所のランドマークにスタンプ済み";
+"College Road Trip" = "大学めぐりの旅";
+"College Road Trips" = "大学めぐりの旅";
+"Schools to Visit" = "訪れる大学";
+"One day per school, each a walking tour of its landmarks." = "1校につき1日、それぞれのランドマークを徒歩で巡ります。";
+"Driving Order" = "移動の順番";
+"Starts at %@, then always drives to the closest school left. Distances are straight-line." = "%@から出発し、残りの中で最も近い大学へ順に移動します。距離は直線距離です。";
+"Cancel" = "キャンセル";
+"Open" = "開く";
+"Create" = "作成";
+"%d landmarks" = "%d か所のランドマーク";
+"Day %1$d: %2$@" = "%1$d日目：%2$@";
+"%1$@ from %2$@" = "%2$@から%1$@";
+"%@ Road Trip" = "%@めぐりの旅";
+"%d-Campus Road Trip" = "%dキャンパスめぐりの旅";
+"Tour %@ in 3D" = "%@を3Dで巡る";
+
+// MARK: - Campus disclaimer
+"Stamped! is not affiliated with or endorsed by any university. School names and colors are used only to identify them." = "Stamped! はいずれの大学とも提携しておらず、承認も受けていません。大学名とスクールカラーは識別のためにのみ使用しています。";
+
+// MARK: - Hotels & map chips
+"Landmarks" = "ランドマーク";
+"Food" = "グルメ";
+"Coffee" = "カフェ";
+"Culture" = "文化";
+"Stay" = "宿泊";
+"Find Hotels" = "ホテルを探す";
+"Find hotels in %1$@ on %2$@" = "%2$@で%1$@のホテルを探す";
+"Opens the hotel website. Stamped! doesn't handle bookings or payments." = "ホテルのウェブサイトを開きます。Stamped!は予約や支払いを扱いません。";
+"Stamped! may earn a commission." = "Stamped!は手数料を受け取る場合があります。";
+"Check Prices" = "料金を確認";
+"Check prices for %1$@ on %2$@" = "%2$@で%1$@の料金を確認";
+"Hotels near %@" = "%@周辺のホテル";
+
+// MARK: - City page tiles & home shortcuts
+"Quiz Mastered" = "クイズ制覇";
+"Architecture Quiz" = "建築クイズ";
+"Best %d/10" = "最高 %d/10";
+"10 questions" = "10問";
+"Double tap to start the quiz." = "ダブルタップでクイズを開始します。";
+"Plan a Trip" = "旅行を計画";
+"Day by day" = "1日ずつ";
+"Plan your days, stop by stop." = "1日ずつ、立ち寄り先ごとに計画します。";
+"Campus Visit" = "キャンパス訪問";
+"Open your visit" = "訪問を開く";
+"%d stops, 1 day" = "%d か所、1日";
+"My Journey" = "マイジャーニー";
+"Achievements" = "実績";
+"World Map" = "世界地図";
+"My Trips" = "マイトリップ";
+
+// MARK: - Home banner & world map
+"Pick a city or campus below, then stamp every landmark." = "下から都市かキャンパスを選び、すべてのランドマークにスタンプを押しましょう。";
+"campuses visited" = "訪れたキャンパス";
+"Double tap to read more." = "ダブルタップで続きを読む。";
+
+// MARK: - City map
+"Add a Place" = "場所を追加";
+"Add to Trip" = "旅行に追加";
+"All Landmarks" = "すべてのランドマーク";
+"All Styles" = "すべての様式";
+"Choose every landmark or one of your trips to tour" = "すべてのランドマークか、巡る旅行を選びます";
+"Close" = "閉じる";
+"Filter landmarks, switch to satellite view or add a place" = "ランドマークの絞り込み、航空写真への切り替え、場所の追加";
+"Flies between every landmark automatically" = "すべてのランドマークを自動で巡ります";
+"Map key" = "地図の凡例";
+"Map options" = "マップのオプション";
+"Next landmark" = "次のランドマーク";
+"No landmarks match this filter" = "この条件に合うランドマークはありません";
+"Previous landmark" = "前のランドマーク";
+"Remove from Want to Visit" = "行きたい場所から削除";
+"Show" = "表示";
+"Shows this landmark's card" = "このランドマークのカードを表示";
+"Stop" = "停止";
+"Stops the guided tour" = "ガイドツアーを停止します";
+"Style" = "様式";
+"Tour" = "ツアー";
+"View Details" = "詳細を見る";
+"Your Trips" = "あなたの旅行";
+"Your place" = "あなたの場所";
+"Your places" = "あなたの場所";
+"Stamped" = "スタンプ済み";
+"Not yet visited" = "未訪問";
+"Not Visited" = "未訪問";
+"Up next (pulsing)" = "次の目的地（点滅）";
+"Want to Visit" = "行きたい場所";
+"Saved" = "保存済み";
+"Show Map View" = "地図表示にする";
+"Show Satellite View" = "航空写真にする";
+
+// MARK: - Passport campuses
+"%d Cities Stamped" = "%d 都市にスタンプ";
+"%d of %d campuses" = "%d / %d キャンパス";
+"CAMPUSES" = "キャンパス";
+"Stamp every landmark on a campus to add its stamp here, in school colors." = "キャンパスのすべてのランドマークにスタンプを押すと、スクールカラーのスタンプがここに加わります。";
+"+ %d campuses" = "+ %d キャンパス";
+"+ 1 campus" = "+ 1 キャンパス";
+"Optimize route" = "ルートを最適化";
+"Reorders this day's stops so each one is the closest to the last" = "各立ち寄り先が直前の場所に最も近くなるよう並べ替えます";
+"Campus Explored!" = "キャンパス制覇！";
+"City Explored!" = "都市制覇！";
+"Save the schools you're considering, then plan a road trip to visit them." = "気になる大学を保存して、巡る旅を計画しましょう。";
+"+%d more" = "ほか%d校";
+
+// MARK: - City page sections
+"Weather" = "天気";
+"Chronology" = "年表";
+"Upcoming Events" = "今後のイベント";
+"Nearby Dining" = "近くの飲食店";
+"Travel Dossier" = "旅のガイド";
+"%d of %d landmarks stamped" = "%d / %d か所にスタンプ";
+"Read more" = "続きを読む";
+"Show less" = "閉じる";
+
+/* Map place card events */
+"Upcoming Events Here" = "ここで開催予定のイベント";
+"Happening Nearby" = "近くで開催中";
+
+/* Design system section headers */
+"ARCHITECTURAL ITINERARY" = "建築めぐりプラン";
+"Saved Places" = "保存した場所";
+"Anywhere" = "どこでも";
+
+/* My Journey section headers */
+"FAVOURITE ARCHITECT" = "お気に入りの建築家";
+"MILESTONES" = "マイルストーン";
+
+/* Settings */
+"Birthday" = "誕生日";
+"Used for the Birthday Stamp achievement" = "「誕生日スタンプ」実績に使用されます";
+"Set" = "設定";
+"Feedback & Support" = "フィードバックとサポート";
+"Report Incorrect Info" = "誤った情報を報告";
+"Wrong building details, photos, or descriptions" = "建物の情報・写真・説明の誤り";
+"Suggest a Building" = "建物を提案";
+"Know a landmark we're missing?" = "掲載されていない名所をご存じですか？";
+"General Feedback" = "ご意見・ご感想";
+"Ideas, bugs, or anything else" = "アイデア、不具合、その他なんでも";
+
+/* My Journey and Achievements */
+"stamps" = "スタンプ";
+"%lld%% of the world explored" = "世界の%lld%%を探検済み";
+"%lld buildings left to discover" = "未発見の建物はあと%lld件";
+"%lld stamps, %lld percent of the world explored" = "スタンプ%lld個、世界の%lldパーセントを探検済み";
+"Cities Visited" = "訪れた都市";
+"Cities Mastered" = "制覇した都市";
+"Countries" = "国";
+"Days Active" = "アクティブな日数";
+"1 building stamped" = "1件の建物にスタンプ";
+"%lld buildings stamped" = "%lld件の建物にスタンプ";
+"Total Stamps" = "スタンプ合計";
+"%lld of %lld" = "%lld / %lld";
+"achievements" = "実績";
+"All" = "すべて";
+"Cities" = "都市";
+"Mastery" = "制覇";
+"Continents" = "大陸";
+"Campuses" = "キャンパス";
+"First Stamp" = "はじめてのスタンプ";
+"Visit your very first landmark" = "最初の名所を訪れる";
+"On The Move" = "旅の途中";
+"Visit 10 landmarks" = "名所を10か所訪れる";
+"Passport Regular" = "パスポートの常連";
+"Visit 50 landmarks" = "名所を50か所訪れる";
+"Century Club" = "センチュリークラブ";
+"Visit 100 landmarks" = "名所を100か所訪れる";
+"Night Stamper" = "夜のスタンプ";
+"Stamp a landmark between midnight and 5am" = "深夜0時から午前5時の間に名所にスタンプ";
+"Weekend Wanderer" = "週末の旅人";
+"Stamp a landmark on a Saturday or Sunday" = "土曜か日曜に名所にスタンプ";
+"First Destination" = "最初の目的地";
+"Stamp a landmark in any city" = "どこかの都市で名所にスタンプ";
+"Multi-City" = "マルチシティ";
+"Stamp landmarks in 5 different cities" = "5つの都市で名所にスタンプ";
+"Jet Setter" = "ジェットセッター";
+"Stamp landmarks in 15 different cities" = "15の都市で名所にスタンプ";
+"World Traveler" = "世界の旅人";
+"Stamp landmarks in 30 different cities" = "30の都市で名所にスタンプ";
+"Completionist" = "コンプリート";
+"Collect every stamp in a single city" = "1つの都市のスタンプをすべて集める";
+"Triple Crown" = "三冠";
+"Fully complete 3 cities" = "3つの都市を制覇";
+"City Master" = "都市マスター";
+"Fully complete 10 cities" = "10の都市を制覇";
+"Bi-Continental" = "2大陸制覇";
+"Stamp landmarks on 2 different continents" = "2つの大陸で名所にスタンプ";
+"Old World" = "旧世界";
+"Stamp landmarks in both Europe and Asia" = "ヨーロッパとアジアの両方で名所にスタンプ";
+"World Citizen" = "世界市民";
+"Stamp landmarks on 4 different continents" = "4つの大陸で名所にスタンプ";
+"Around The World" = "世界一周";
+"Stamp landmarks on all 6 continents" = "6大陸すべてで名所にスタンプ";
+"Continent Conqueror" = "大陸の覇者";
+"Fully complete a city on every continent" = "すべての大陸で都市を1つずつ制覇";
+"Early Bird" = "早起き";
+"Stamp a landmark before 8am" = "午前8時前に名所にスタンプ";
+"Frequent Flyer" = "常連トラベラー";
+"Stamp 5 landmarks in a single day" = "1日で名所を5か所スタンプ";
+"Seasoned Traveler" = "ベテラントラベラー";
+"Stamp landmarks across 3 different calendar months" = "3つの異なる月に名所にスタンプ";
+"New Year's Stamp" = "元日のスタンプ";
+"Stamp a landmark on January 1st" = "1月1日に名所にスタンプ";
+"Birthday Stamp" = "誕生日スタンプ";
+"Stamp a landmark on your birthday" = "誕生日に名所にスタンプ";
+"Home Turf" = "ホームグラウンド";
+"Fully complete any US city" = "アメリカの都市を1つ制覇";
+"Island Hopper" = "アイランドホッパー";
+"Stamp landmarks in Honolulu, Bali, and Zanzibar" = "ホノルル、バリ、ザンジバルで名所にスタンプ";
+"Halfway There" = "折り返し地点";
+"Reach 50% completion in any city" = "どこかの都市で達成率50%に到達";
+"Grand Slam" = "グランドスラム";
+"Fully complete 25 cities" = "25の都市を制覇";
+"Legend" = "レジェンド";
+"Collect 500 total stamps" = "スタンプを合計500個集める";
+"Campus Tour" = "キャンパスツアー";
+"Stamp a building on any campus" = "どこかのキャンパスで建物にスタンプ";
+"Campus Hopper" = "キャンパスめぐり";
+"Stamp buildings on 5 different campuses" = "5つのキャンパスで建物にスタンプ";
+"Valedictorian" = "首席卒業生";
+"Fully complete any campus" = "キャンパスを1つ制覇";
+"Honor Roll" = "成績優秀者";
+"Fully complete 5 campuses" = "5つのキャンパスを制覇";
+"New Tradition" = "新しい伝統";
+"Do your first campus tradition" = "初めてのキャンパスの伝統に挑戦";
+"Do every tradition on one campus" = "1つのキャンパスの伝統をすべて達成";
+"Tradition Collector" = "伝統コレクター";
+"Do 25 campus traditions" = "キャンパスの伝統を25個達成";
+"Stamp a building on every %@ campus" = "%@のすべてのキャンパスで建物にスタンプ";
+
+/* Home and first-launch card */
+"Cities, Landmarks or Architects" = "都市、名所、建築家";
+"My Passport" = "マイパスポート";
+"YOUR ODYSSEY AWAITS" = "冒険があなたを待っている";
+"Unlock your first badge" = "最初のバッジを獲得しよう";
+"Unlock Your Collection" = "コレクションを解放しよう";
+"Every city mastered is a stamp earned." = "都市を制覇するたびにスタンプを獲得。";
+"PASSPORT STAMPED" = "パスポートにスタンプ";
+"DATE: %@" = "日付：%@";
+"DID YOU KNOW?" = "ご存じですか？";
+"While originally intended only as a protective sealant, the bridge’s signature ‘International Orange’ was made permanent when the architect realized its vibrant hue served as a perfect, high-contrast beacon against the San Francisco fog." = "もともとは防錆用の下塗りにすぎなかった橋の「インターナショナル・オレンジ」は、その鮮やかな色がサンフランシスコの霧の中でよく映えると建築家が気づいたことで、正式な色になりました。";
+"Visit Landmarks" = "名所を訪れる";
+"Mark buildings as discovered to reach 100% completion." = "建物を発見済みにして達成率100%を目指そう。";
+"Capture the View" = "景色を撮ろう";
+"Add personal photos to create a custom gallery." = "自分の写真を追加してギャラリーを作ろう。";
+"Collect the Stamp" = "スタンプを集めよう";
+"Complete a city to earn its official Passport seal." = "都市を制覇して公式パスポートの印を手に入れよう。";
+"Ace the Quiz" = "クイズで満点を";
+"Score perfectly on the architecture test to show your expertise." = "建築クイズで満点を取って知識を証明しよう。";
+"Generate Itinerary" = "旅程を作成";
+"Instantly create a smart travel plan for any city." = "どの都市でもすぐにスマートな旅程を作成。";
+"Convert Currency" = "通貨を換算";
+"Check exchange rates instantly within the Travel Dossier." = "旅行ドシエで為替レートをすぐに確認。";
+"Unlock My First Stamp" = "最初のスタンプを解放";
+
+/* Regions that aren't countries (countries come from iOS) */
+"England" = "イングランド";
+"Scotland" = "スコットランド";
+"New South Wales" = "ニューサウスウェールズ";
+"Victoria" = "ビクトリア";
+"Queensland" = "クイーンズランド";
+
+/* Passport */
+"Your Passport" = "あなたのパスポート";
+"EXPLORATION PROGRESS" = "探検の進み具合";
+
+/* World Map */
+"cities visited" = "都市を訪問";
+"Visited" = "訪問済み";
+"Not yet" = "未訪問";
+"View City" = "都市を見る";

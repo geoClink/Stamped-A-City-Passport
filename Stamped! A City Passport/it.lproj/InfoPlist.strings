@@ -1,0 +1,5 @@
+/* Permission prompts (the English text is set in the target's build settings) */
+"NSLocationWhenInUseUsageDescription" = "Stamped! ti mostra i monumenti vicini mentre esplori.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Stamped! ti avvisa quando sei vicino a un monumento, anche in background.";
+"NSCameraUsageDescription" = "Consenti l’accesso alla fotocamera per fotografare il monumento che stai visitando.";
+"NSPhotoLibraryUsageDescription" = "Consenti l’accesso alle foto per salvare e scegliere le foto dei monumenti per il tuo passaporto.";

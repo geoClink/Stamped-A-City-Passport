@@ -13,7 +13,7 @@ extension PassportView {
     
     var discoveryRankHeader: some View {
         Button(action: { showingProgressDetails.toggle() }) {
-            HStack(spacing: 15) {
+            HStack(spacing: DS.Space.m) {
                 ZStack {
                     Circle()
                         .fill(brandColor.opacity(0.1))
@@ -26,12 +26,14 @@ extension PassportView {
                     Text(discoveryRank.uppercased())
                         .font(.system(.subheadline, design: .monospaced))
                         .fontWeight(.black)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.7)
                     Text("Official Traveler Status")
                         .font(.caption)
                         .foregroundColor(.secondary)
                 }
                 
-                Spacer()
+                Spacer(minLength: DS.Space.s)
                 
                 Image(systemName: "chevron.down")
                     .font(.caption.bold())
@@ -47,7 +49,7 @@ extension PassportView {
     var globalProgressHeader: some View {
         let percentage = totalBuildingsInApp > 0 ? Double(totalVisitedInApp) / Double(totalBuildingsInApp) : 0
         
-        return VStack(spacing: 20) {
+        return VStack(spacing: DS.Space.xl) {
             ZStack {
                 Circle()
                     .stroke(brandColor.opacity(0.1), lineWidth: 12)
@@ -58,7 +60,9 @@ extension PassportView {
                 
                 VStack {
                     Text("\(Int(percentage * 100))%")
-                        .font(.system(size: dynamicTypeSize.isAccessibilitySize ? 30 : 40, weight: .black, design: .rounded))
+                        .font(.system(.largeTitle, design: .rounded).weight(.black))
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
                     Text("COMPLETE")
                         .font(.caption2.bold())
                         .foregroundColor(.secondary)
@@ -68,11 +72,14 @@ extension PassportView {
             
             Text("\(totalVisitedInApp) of \(totalBuildingsInApp) Landmarks Discovered")
                 .font(.headline)
+                .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity)
-        .padding(30)
-        .background(brandColor.opacity(0.05))
-        .cornerRadius(20)
+        .padding(DS.Space.section)
+        .background(
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .fill(brandColor.opacity(0.05))
+        )
     }
 
     func passportSection(for city: CityLocation.City, visitedCount: Int) -> some View {
@@ -80,11 +87,13 @@ extension PassportView {
         let isDone = visitedCount == total
         let progress = total > 0 ? Double(visitedCount) / Double(total) : 0
         
-        return VStack(alignment: .leading, spacing: 15) {
+        return VStack(alignment: .leading, spacing: DS.Space.m) {
             HStack {
-                VStack(alignment: .leading, spacing: 4) {
+                VStack(alignment: .leading, spacing: DS.Space.xs) {
                     Text(city.name)
-                        .font(.title3.bold())
+                        .font(.system(.title3, design: .serif).bold())
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.7)
                     Text("\(visitedCount) / \(total) Collected")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
@@ -94,7 +103,7 @@ extension PassportView {
                 if isDone {
                     NavigationLink(destination: CityStampDetailView(city: city, date: UserDefaults.standard.string(forKey: "date_completed_\(city.name)") ?? "", namespace: stampAnimation)) {
                         Image(systemName: "checkmark.seal.fill")
-                            .font(.system(size: 32))
+                            .font(.largeTitle)
                             .foregroundColor(brandColor)
                             .matchedGeometryEffect(id: city.id, in: stampAnimation)
                     }
@@ -114,16 +123,16 @@ extension PassportView {
     }
     
     var customEmptyState: some View {
-        VStack(spacing: 20) {
+        VStack(spacing: DS.Space.xl) {
             Image(systemName: "passport")
-                .font(.system(size: 80))
+                .font(.system(size: emptyIconSize))
                 .foregroundColor(.secondary.opacity(0.3))
             Text("Begin Your Journey")
                 .font(.title.bold())
             Text("Visit buildings in the city guide to start collecting official stamps.")
                 .multilineTextAlignment(.center)
                 .foregroundColor(.secondary)
-                .padding(.horizontal, 40)
+                .padding(.horizontal, DS.Space.section)
         }
     }
 }
@@ -157,16 +166,15 @@ struct PassportCardStyle: ViewModifier {
     
     func body(content: Content) -> some View {
         content
-            .padding()
+            .padding(DS.Space.l)
             .background(
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(isHighContrast ? Color.primary.opacity(0.1) : Color(UIColor.secondarySystemGroupedBackground))
+                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                    .fill(isHighContrast ? Color.primary.opacity(0.1) : DS.Palette.cardBackground)
             )
             .overlay(
-                RoundedRectangle(cornerRadius: 16)
+                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
                     .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
             )
-            .shadow(color: Color.black.opacity(isHighContrast ? 0 : 0.05), radius: 10, y: 4)
     }
 }
 

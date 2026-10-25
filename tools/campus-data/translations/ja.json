@@ -408,5 +408,605 @@
     "currencyInfo": "メキシコペソ ($)",
     "transportation": "Pumabús / メトロ",
     "transportationFact": "大学は広大なキャンパス内で独自の無料 Pumabús を運行しています。メトロ 3 号線のウニベルシダー駅とコピルコ駅がキャンパスの最寄り駅です。"
+  },
+  "Boston College": {
+    "nickname": "Ever to Excel(卓越をめざして)",
+    "airportInfo": "イーストボストンにあるローガン国際空港が、この地域の主要空港です。",
+    "funFact": "1913 年に完成したギャソン・タワーは、のちにプリンストン、イェール、デュークに建てられた高いゴシック様式の塔の手本となりました。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはマルーンとゴールドで、チームの名前はイーグルスです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / MBTA Green Line",
+    "transportationFact": "メインキャンパスは歩いて回れます。グリーンラインの B 支線はコモンウェルス・アベニューのボストン・カレッジ駅が終点で、ボストン中心部へ直通しています。"
+  },
+  "Clemson University": {
+    "nickname": "タイガースの本拠地",
+    "airportInfo": "クレムソンの東、州間高速道路 85 号線沿いにあるグリーンビル・スパータンバーグ国際空港が最寄りの商業空港です。",
+    "funFact": "キャンパスはジョン・C・カルフーンのプランテーション邸宅フォートヒルを中心に広がりました。この邸宅は今も博物館としてキャンパスに残っています。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはオレンジとリガリア(紫)で、チームの名前はタイガースです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / CATbus",
+    "transportationFact": "中心部のキャンパスは歩いて回れます。クレムソン・エリア・トランジットの CATbus は無料で、キャンパス内とクレムソン市内を走っています。"
+  },
+  "Duke University": {
+    "nickname": "ブルーデビルズの本拠地",
+    "airportInfo": "ダーラムの東にあるローリー・ダーラム国際空港が、リサーチ・トライアングル地域の主要空港です。",
+    "funFact": "著名なアフリカ系アメリカ人建築家で、ホレス・トランバウアー事務所の主任設計者だったジュリアン・アベルが、デューク・チャペルとウエスト・キャンパスの大部分を設計しました。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはデューク・ブルーと白で、チームの名前はブルーデビルズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Duke Transit",
+    "transportationFact": "各キャンパスは歩いて回れます。C1 イースト・ウエスト線をはじめとするデュークの無料キャンパスバスが、イースト・キャンパスとウエスト・キャンパスを結んでいます。"
+  },
+  "Florida State University": {
+    "nickname": "Vires, Artes, Mores(力・技・徳)",
+    "airportInfo": "市の南西にあるタラハシー国際空港が最寄りの商業空港です。",
+    "funFact": "建築家ウィリアム・オーガスタス・エドワーズがウェストコット・ビルやドッド・ホールなど初期のカレッジエイト・ゴシック様式の建物を設計し、レガシー・ホールやスチューデント・ユニオンなどの新しい建物もその様式を受け継いでいます。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはガーネットとゴールドで、チームの名前はセミノールズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Seminole Express",
+    "transportationFact": "キャンパスは歩いて回れます。スターメトロと運行するセミノール・エクスプレスのバスがキャンパスと周辺地区を結び、学生は FSUCard で無料で乗れます。"
+  },
+  "Georgia Institute of Technology": {
+    "nickname": "ランブリン・レック",
+    "airportInfo": "市の南にあるハーツフィールド・ジャクソン空港へは、ミッドタウンから MARTA のレッドラインとゴールドラインで行けます。",
+    "funFact": "テック・タワーの 7 階建ての塔の四面に掲げられた TECH の電飾文字は、1888 年の開館以来キャンパスの目印となっています。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはオールドゴールドと白で、チームの名前はイエロージャケッツです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Stinger バス / MARTA",
+    "transportationFact": "キャンパスは歩いて回れます。ジョージア工科大学のスティンガー・バスがキャンパスを巡回し、テック・スクエアや MARTA のミッドタウン駅と結んでいます。"
+  },
+  "University of Louisville": {
+    "nickname": "カーディナルスの本拠地",
+    "airportInfo": "ルイビル・モハメド・アリ国際空港は、ベルナップ・キャンパスから南へ車ですぐです。",
+    "funFact": "本部棟のグラウェマイヤー・ホールは、トーマス・ジェファーソンが設計したバージニア大学のロタンダを手本に建てられました。",
+    "language": "英語",
+    "languageInfo": "スクールカラーは赤と黒で、チームの名前はカーディナルスです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / TARC バス",
+    "transportationFact": "ベルナップ・キャンパスは歩いて回れます。学生と職員は UofL の ID で TARC のバスに無料で乗れ、ヘルスサイエンス・センター行きの 28 番系統もあります。"
+  },
+  "University of Miami": {
+    "nickname": "ザ・ユー",
+    "airportInfo": "コーラルゲーブルズの北にあるマイアミ国際空港が、この地域の主要空港です。",
+    "funFact": "1953 年に完成したリング・シアターは、鋼の帯で支えられたコンクリートのドームを持ち、ハリケーンの強風に耐えるよう造られました。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはオレンジ、グリーン、白で、チームの名前はハリケーンズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Metrorail / Hurry 'Canes シャトル",
+    "transportationFact": "キャンパスは歩いて回れます。無料のハリー・ケーンズ・シャトルが、キャンパスとメトロレールのユニバーシティ駅を結んでいます。"
+  },
+  "North Carolina State University": {
+    "nickname": "Think and Do(考え、行動せよ)",
+    "airportInfo": "ローリーの北西にあるローリー・ダーラム国際空港が、リサーチ・トライアングル地域の主要空港です。",
+    "funFact": "第一次世界大戦の記念碑であるメモリアル・ベルタワーは、ノースカロライナ州マウントエアリーで切り出された 1,400 トンの花崗岩でできています。",
+    "language": "英語",
+    "languageInfo": "スクールカラーは赤と白で、チームの名前はウルフパックです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Wolfline",
+    "transportationFact": "ノース・キャンパスは歩いて回れます。無料のウルフライン・バスが、メイン・キャンパスとセンテニアル・キャンパスを結んでいます。"
+  },
+  "University of North Carolina at Chapel Hill": {
+    "nickname": "Lux libertas(光と自由)",
+    "airportInfo": "チャペルヒルの東にあるローリー・ダーラム国際空港が、リサーチ・トライアングル地域の主要空港です。",
+    "funFact": "1793 年に着工したオールド・イーストは、アメリカの州立大学で最も古い建物です。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはカロライナ・ブルーと白で、チームの名前はターヒールズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Chapel Hill Transit",
+    "transportationFact": "キャンパスは歩いて回れます。チャペルヒル・トランジットが、キャンパス内とチャペルヒル、カーボロの町を無料バスで結んでいます。"
+  },
+  "University of Pittsburgh": {
+    "nickname": "Veritas et Virtus(真理と美徳)",
+    "airportInfo": "市の西にあるピッツバーグ国際空港が、この地域の主要空港です。",
+    "funFact": "42 階建てのカテドラル・オブ・ラーニングは西半球で最も高い教育施設で、ピッツバーグの各民族コミュニティが設計した 31 のナショナリティ・ルームがあります。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはブルーとゴールドで、チームの名前はパンサーズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Pitt シャトル",
+    "transportationFact": "オークランドのキャンパスは歩いて回れます。ピットはオークランド地区で独自のシャトルを運行し、学生は Pitt の ID でピッツバーグ・リージョナル・トランジットのバス、ライトレール、インクラインに無料で乗れます。"
+  },
+  "Southern Methodist University": {
+    "nickname": "ザ・ヒルトップ",
+    "airportInfo": "キャンパスの西数キロにあるダラス・ラブフィールド空港が最寄りの空港です。DFW 国際空港はもっと遠くにあります。",
+    "funFact": "SMU の初代学長はトーマス・ジェファーソンのバージニア大学にならって赤レンガのジョージアン様式を選び、ダラス・ホールのドームはパンテオンに着想を得ています。",
+    "language": "英語",
+    "languageInfo": "スクールカラーは赤と青で、チームの名前はマスタングスです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / SMU Express シャトル / DART",
+    "transportationFact": "キャンパスは歩いて回れます。無料の SMU エクスプレス・シャトルが、キャンパスと DART のレッド、ブルー、オレンジ各線が通る SMU/モッキンバード駅を結んでいます。"
+  },
+  "Syracuse University": {
+    "nickname": "ジ・オレンジ",
+    "airportInfo": "市の北にあるシラキュース・ハンコック国際空港が最寄りの商業空港です。",
+    "funFact": "1873 年に完成した第二帝政様式のホール・オブ・ランゲージズはキャンパス最初の建物で、当初は大学全体がここに入っていました。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはオレンジで、チームの名前もオレンジです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Centro バス",
+    "transportationFact": "メイン・キャンパスは歩いて回れます。セントロがシラキュース大学のキャンパス内バス路線と、シラキュース中心部への市バスを運行しています。"
+  },
+  "Virginia Tech": {
+    "nickname": "Ut Prosim(われ奉仕せんがために)",
+    "airportInfo": "ブラックスバーグの東、ロアノークにあるロアノーク・ブラックスバーグ地域空港が最寄りの商業空港です。",
+    "funFact": "キャンパスの建物の多くは、大学が 1950 年代から運営する採石場で切り出された地元の石灰岩「ホーキー・ストーン」で覆われています。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはシカゴ・マルーンとバーントオレンジで、チームの名前はホーキーズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Blacksburg Transit",
+    "transportationFact": "ドリルフィールド周辺のキャンパスは歩いて回れます。ブラックスバーグ・トランジットのバスは、キャンパス内でも町なかでも誰でも無料で乗れます。"
+  },
+  "Wake Forest University": {
+    "nickname": "Pro Humanitate(人類のために)",
+    "airportInfo": "ウィンストン・セーラムの東にあるピードモント・トライアド国際空港が、最寄りの主要商業空港です。",
+    "funFact": "レイノルダ・キャンパスの建物の多くは、花崗岩と石灰岩で縁取ったオールド・バージニア・レンガの変形ジョージアン様式で、1956 年に大学がウェイクフォレストの町から移転する際にイェンス・フレドリック・ラーソンが計画しました。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはオールドゴールドと黒で、チームの名前はデーモン・ディーコンズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / 大学のシャトル",
+    "transportationFact": "レイノルダ・キャンパスは歩いて回れます。大学のシャトルはキャンパス内のシャトル・ハブから発着し、平日にはウェイク・ダウンタウン行きの路線もあります。"
+  },
+  "University of Arizona": {
+    "nickname": "ベアダウン(Bear Down)",
+    "airportInfo": "市中心部の南にあるツーソン国際空港は、アリゾナ州南部の主要空港です。",
+    "funFact": "アリゾナ大学のほぼすべての建物に赤レンガが使われています。キャンパス建築家ロイ・プレイスは1920〜30年代、センテニアル・ホール、ベアダウン・ジム、アリゾナ州立博物館南館でこの外観を受け継ぎました。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはカーディナルレッドとネイビーブルーで、チームの名前はワイルドキャッツです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Sun Link Streetcar",
+    "transportationFact": "キャンパスの中心部は歩いて回れます。路面電車サンリンクが、キャンパスとメインゲート・スクエア、フォースアベニュー、ツーソンのダウンタウンを結んでいます。"
+  },
+  "Arizona State University": {
+    "nickname": "サンデビルズの本拠地",
+    "airportInfo": "スカイハーバー空港はテンピ・キャンパスの西にあり、PHXスカイトレインでバレーメトロのライトレールに乗り継げます。",
+    "funFact": "ASUギャメージはフランク・ロイド・ライトの最後期の公共建築のひとつです。ライトはバグダッドのために構想したオペラハウスを基に、この円形のデザインを作りました。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはマルーンとゴールドで、チームの名前はサンデビルズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Valley Metro Rail",
+    "transportationFact": "バレーメトロのライトレールがテンピ・キャンパスの端に停車します。テンピ市の無料循環バス「オービット」とテンピ・ストリートカーも周辺を走っています。"
+  },
+  "Brigham Young University": {
+    "nickname": "Enter to Learn; Go Forth to Serve(学ぶために入り、仕えるために出でよ)",
+    "airportInfo": "プロボの北にあるソルトレイクシティ国際空港は、ユタ州の主要空港です。",
+    "funFact": "1950年のアイリング・サイエンスセンターは、BYUで初めて古典様式から離れた建物で、キャンパスの多くに見られる金色がかったバフ色のレンガの始まりとなりました。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはネイビーブルーとホワイトで、チームの名前はクーガーズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / UTA UVX",
+    "transportationFact": "キャンパスは歩いて回れます。UTAのバス高速輸送UVXはBYUに4つの停留所があり、ユタバレー大学やプロボとオレムのフロントランナー駅と結んでいます。"
+  },
+  "University of Houston": {
+    "nickname": "ゴー・クーグス(Go Coogs)",
+    "airportInfo": "キャンパスの南東にあるホビー空港が最寄りです。国際線の多くは市の北にあるジョージ・ブッシュ・インターコンチネンタル空港(IAH)が担っています。",
+    "funFact": "1939年に完成したロイ・G・カレン・ビルはキャンパスで最も古い建物で、全米の大学キャンパスで初めて冷房を備えた建物とされています。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはスカーレットレッドとホワイトで、チームの名前はクーガーズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / METRORail Purple Line",
+    "transportationFact": "METRORailのパープルラインはキャンパス沿いに駅があり、ヒューストンのダウンタウンまで走っています。"
+  },
+  "Iowa State University": {
+    "nickname": "Science with Practice(実践を伴う科学)",
+    "airportInfo": "エイムズの南にあるデモイン国際空港は、アイオワ州中部の主要空港です。",
+    "funFact": "1897〜98年に建てられたカンパニーレ(鐘楼)には、スタントン記念カリヨンが収められています。大学の公式リングや職杖に描かれ、校歌「The Bells of Iowa State」にも歌われています。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはカーディナルとゴールドで、チームの名前はサイクロンズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / CyRide",
+    "transportationFact": "セントラル・キャンパスは歩いて回れます。市・大学・学生自治会が運営するCyRideのバスが、キャンパスとエイムズ全域を走っています。"
+  },
+  "University of Kansas": {
+    "nickname": "ロック・チョーク・ジェイホーク(Rock Chalk, Jayhawk)",
+    "airportInfo": "ローレンスの東にあるカンザスシティ国際空港は、地域の主要空港です。",
+    "funFact": "マウント・オレッドに建つKUの初期の建物の多くは、スプーナー・ホールのように、丘のすぐそばで切り出された粗い灰色のオレッド石灰岩で造られています。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはクリムゾンとブルーで、チームの名前はジェイホークスです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / KU on Wheels",
+    "transportationFact": "丘の上のキャンパスは歩いて回れます。KUオン・ホイールズとローレンス・トランジットは一体的に運行されており、KUの学生と教職員はKUカードで乗車できます。"
+  },
+  "Kansas State University": {
+    "nickname": "Every Man a Wildcat(誰もがワイルドキャット)",
+    "airportInfo": "マンハッタン地域空港からは、アメリカン・イーグルがダラス・フォートワースとシカゴ・オヘアへ飛んでいます。",
+    "funFact": "ニコルズ・ホールは胸壁のある城のような建物です。1968年の火災で内部が焼失し、1985年に古い石の壁の内側を造り直して再建されました。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはロイヤルパープルで、チームの名前はワイルドキャッツです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / aTa Bus",
+    "transportationFact": "キャンパスは歩いて回れます。aTaバスとの提携により、K-Stateの学生と教職員はIDでキャンパスとマンハッタン市内の路線に無料で乗れます。"
+  },
+  "Oklahoma State University": {
+    "nickname": "カウボーイズの本拠地",
+    "airportInfo": "スティルウォーター地域空港が市内にあります。最寄りの大きな空港はタルサ国際空港(TUL)とオクラホマシティのウィル・ロジャース空港(OKC)です。",
+    "funFact": "キャンパスの大部分は、1920年代後半のヘンリー・G・ベネット学長の計画で定められた「モディファイド・ジョージアン」様式に沿っています。エドモン・ロウ図書館と学生会館はその代表です。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはオレンジとブラックで、チームの名前はカウボーイズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / The Bus",
+    "transportationFact": "キャンパスは歩いて回れます。The Bus(OSUスティルウォーター・コミュニティ・トランジット)は大学が運営し、誰でも利用できます。OSUの学生と教職員はIDで無料です。"
+  },
+  "Texas Tech University": {
+    "nickname": "ガンズ・アップ(Guns Up)",
+    "airportInfo": "ラボック・プレストン・スミス国際空港は、ラボック地域の主要空港です。",
+    "funFact": "創設時からの建物である本部棟は、スペインのアルカラ・デ・エナーレス大学をモデルにしており、2つの鐘楼と中庭があります。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはスカーレットとブラックで、チームの名前はレッドレイダーズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Citibus",
+    "transportationFact": "シティバスがレッドレイダー・ルートやダブルT・ルートなど、キャンパスを回る無料の循環バスを運行しています。テキサス工科大学の学生はIDで市内の路線にも無料で乗れます。"
+  },
+  "West Virginia University": {
+    "nickname": "レッツゴー・マウンテニアーズ(Let's Go Mountaineers)",
+    "airportInfo": "モーガンタウン市営空港からは、ユナイテッド・エクスプレスがワシントン・ダレスとシカゴ・オヘアへ飛んでいます。最寄りの大きな空港はピッツバーグ国際空港(PIT)です。",
+    "funFact": "ウッドバーン・ホールの中央塔には1910年からセス・トーマス社の時計があります。この時計は元々、同じ広場に建つ大学最古の建物マーティン・ホールの頂塔にありました。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはオールドゴールドとブルーで、チームの名前はマウンテニアーズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Personal Rapid Transit (PRT)",
+    "transportationFact": "WVUのパーソナル・ラピッド・トランジットは、無人運転の小型車両が専用軌道を走り、モーガンタウンのダウンタウン、エバンズデール・キャンパス、健康科学キャンパスを結んでいます。"
+  },
+  "Baylor University": {
+    "nickname": "シック・エム・ベアーズ(Sic 'em Bears)",
+    "airportInfo": "ウェーコ地域空港が市内にあります。最寄りの大きな空港はダラス・フォートワース国際空港(DFW)です。",
+    "funFact": "アームストロング・ブラウニング図書館は、詩人ロバート・ブラウニングとエリザベス・バレット・ブラウニングの作品の世界最大のコレクションを持ち、宗教的でないステンドグラスのコレクションとしても世界最大とされています。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはグリーンとゴールドで、チームの名前はベアーズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Baylor University Shuttle",
+    "transportationFact": "キャンパスは歩いて回れます。ウェーコ・トランジットが運行する無料のベイラー大学シャトル(BUS)が、キャンパスと近くのアパートや住宅地を結んでいます。"
+  },
+  "University of Cincinnati": {
+    "nickname": "ベアキャッツの本拠地",
+    "airportInfo": "CVG空港はオハイオ川を渡ったケンタッキー州北部にあり、シンシナティの主要空港です。",
+    "funFact": "シンシナティ大学は多くの建物を著名な建築家に依頼してきました。マイケル・グレイヴス、ピーター・アイゼンマン、ヘンリー・コッブ、フランク・ゲーリー、グワスミー・シーゲル、ムーア・ルーブル・ユーデル、トム・メイン率いるモーフォシス、ベルナール・チュミなどです。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはレッドとブラックで、チームの名前はベアキャッツです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Bearcats Shuttle",
+    "transportationFact": "メインキャンパスは歩いて回れます。ベアキャッツ・シャトルはトランジット・ロウを起終点に、アップタウン・キャンパスと周辺地区を結んでいます。メトロのバスもアップタウンを走っています。"
+  },
+  "University of Colorado Boulder": {
+    "nickname": "スコー・バフス(Sko Buffs)",
+    "airportInfo": "ボルダーの南東にあるデンバー国際空港は、地域の主要空港です。RTDのABバスが空港とボルダーを結んでいます。",
+    "funFact": "CUボルダーの外観は「トスカーナ・ヴァナキュラー・リバイバル」と呼ばれ、建築家チャールズ・クローダーが生み出しました。地元産の粗い砂岩の壁、赤い瓦屋根、石灰岩の縁取りが特徴です。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはシルバー、ゴールド、ブラックで、チームの名前はバッファローズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / RTDバス",
+    "transportationFact": "メインキャンパスは歩いて回れます。循環バスHOPを含むRTDのバスがキャンパスとボルダー中心部を結び、デンバー行きの広域バスもあります。"
+  },
+  "Texas Christian University": {
+    "nickname": "ゴー・フロッグス(Go Frogs)",
+    "airportInfo": "フォートワースの北東にあるDFW空港は、地域の主要空港です。",
+    "funFact": "TCUの建物の多くは「TCUバフ」と呼ばれる金色のレンガと赤い瓦屋根で造られています。ロバート・カー礼拝堂はサーモン色のレンガでこの決まりを破り、開館時には卒業生が抗議しました。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはパープルとホワイトで、チームの名前はホーンドフロッグスです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Trinity Metro",
+    "transportationFact": "キャンパスはコンパクトで歩いて回れます。トリニティ・メトロがフォートワースの公共バスと鉄道を運行しています。"
+  },
+  "University of Central Florida": {
+    "nickname": "チャージ・オン(Charge On)",
+    "airportInfo": "キャンパスの南西にあるオーランド国際空港は、地域の主要空港です。",
+    "funFact": "UCFのメインキャンパスは、ジェミニ通り、アポロ、マーキュリー、ペガサスの各サークルという同心円状に配置されています。同心円型のキャンパスは全米でUCアーバインとここの2校だけです。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはブラックとゴールドで、チームの名前はナイツです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / UCFシャトル",
+    "transportationFact": "円形の中心部は歩いて回れます。UCFのシャトルがメインキャンパスと近くの20以上の学生向けアパートを結び、学生はIDでLYNXのバスに無料で乗れます。"
+  },
+  "University of Utah": {
+    "nickname": "ゴー・ユーツ(Go Utes)",
+    "airportInfo": "ソルトレイクシティ国際空港はダウンタウンの西にあります。ライトレールTRAXで空港からダウンタウンへ行き、レッドラインに乗り換えるとキャンパスに着きます。",
+    "funFact": "1969年にハンツマン・センターが開館したとき、直径364フィート(111m)の木造ドームは、柱のない木造ドームとして世界最大でした。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはクリムゾンとホワイトで、チームの名前はユーツです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / TRAX Red Line",
+    "transportationFact": "UTAのTRAXレッドラインはキャンパス内に乗り入れ、スタジアム、サウスキャンパス、医療センターに駅があります。"
+  },
+  "University of Illinois Urbana-Champaign": {
+    "nickname": "ファイティング・イライナイの本拠地",
+    "airportInfo": "キャンパスのすぐ南、サヴォイにあるウィラード空港から、シカゴ・オヘアとダラス・フォートワースへの便が毎日出ています。シカゴから来る人も多くいます。",
+    "funFact": "建築家チャールズ・A・プラットは、キャンパスのために手がけたジョージアン・リバイバル様式の建物のひとつとして、メイン図書館を設計しました。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはオレンジとブルーで、チームの名前はファイティング・イライナイです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / MTD バス",
+    "transportationFact": "シャンペーン・アーバナ交通局 (MTD) のバスがキャンパスを頻繁に走り、学生は i-card で乗車できます。"
+  },
+  "Indiana University Bloomington": {
+    "nickname": "フージャーズの本拠地",
+    "airportInfo": "ブルーミントンの北にあるインディアナポリス国際空港が、定期便のある最寄りの空港です。",
+    "funFact": "キャンパスの多くの建物は、この州の名産である地元のインディアナ石灰岩で建てられています。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはクリームとクリムゾンで、チームの名前はフージャーズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / IU Campus Bus",
+    "transportationFact": "IU キャンパスバスがキャンパスを巡回し、ブルーミントン・トランジットのバスが市内各地と結んでいます。"
+  },
+  "University of Iowa": {
+    "nickname": "ホークアイズの本拠地",
+    "airportInfo": "アイオワシティの北、シーダーラピッズ近くにあるイースタン・アイオワ空港が、定期便のある最寄りの空港です。",
+    "funFact": "アイオワ州最初の州議事堂であるギリシャ復興様式のオールド・キャピトルが、4 棟のボザール様式の建物に囲まれたペンタクレストの中央に立っています。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはブラックとゴールドで、チームの名前はホークアイズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Cambus",
+    "transportationFact": "大学の無料バス Cambus が、キャンパス内と病院を結んでいます。"
+  },
+  "University of Maryland, College Park": {
+    "nickname": "Fear the Turtle",
+    "airportInfo": "ポトマック川の対岸、バージニア州アーリントンにあるレーガン・ナショナル空港が最寄りの大きな空港です。BWI とダレスもこの地域の空港です。",
+    "funFact": "1898 年完成のモリル・ホールは、1912 年にキャンパスを襲った大火で無傷のまま残った唯一の教育棟でした。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはレッド、ホワイト、ブラック、ゴールドで、チームの名前はテラピンズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Shuttle-UM / メトロ",
+    "transportationFact": "大学の Shuttle-UM バスがキャンパスと周辺地域を結び、メトロのカレッジパーク–ユニバーシティ・オブ・メリーランド駅からワシントンへ行けます。"
+  },
+  "Michigan State University": {
+    "nickname": "Spartans Will",
+    "airportInfo": "ランシングのキャピタル・リージョン国際空港が、定期便のある最寄りの空港です。",
+    "funFact": "ボーモント・タワーは、アメリカで初めて科学的農業の教育のために建てられたカレッジ・ホールの跡地に立っています。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはグリーンとホワイトで、チームの名前はスパルタンズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / CATA バス",
+    "transportationFact": "CATA のバスがキャンパスを通り、イーストランシングやランシングと結んでいます。"
+  },
+  "University of Minnesota Twin Cities": {
+    "nickname": "Ski-U-Mah",
+    "airportInfo": "MSP 空港はツインシティーズの南にあります。キャンパスからライトレールのグリーンラインで中心部へ行き、ブルーラインに乗り換えます。",
+    "funFact": "1993 年完成のフランク・ゲーリーによるステンレスのワイズマン美術館は、ミシシッピ川を見下ろす崖の上に立っています。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはマルーンとゴールドで、チームの名前はゴールデン・ゴーファーズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Campus Connector / Green Line",
+    "transportationFact": "無料の Campus Connector バスがイーストバンク、ウエストバンク、セントポールの各キャンパスを結び、ライトレールのメトロ・グリーンラインがキャンパスを通っています。"
+  },
+  "University of Nebraska–Lincoln": {
+    "nickname": "There Is No Place Like Nebraska",
+    "airportInfo": "中心部の北西にあるリンカーン空港が最寄りの空港です。オマハのエプリー飛行場の方が便数は多くなっています。",
+    "funFact": "1963 年開館のフィリップ・ジョンソンによるシェルドン美術館は、イタリア産トラバーチンで造られ、大ホールと中央階段を中心にしています。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはスカーレットとクリームで、チームの名前はコーンハスカーズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / StarTran",
+    "transportationFact": "StarTran のバスがシティ、イースト、イノベーションの各キャンパスを結び、学生は交通費の中でバスパスを受け取ります。"
+  },
+  "Northwestern University": {
+    "nickname": "すべて真実なること",
+    "airportInfo": "エバンストンの西にあるオヘア空港がこの地域の主要空港です。シカゴ・ミッドウェー空港も利用できます。",
+    "funFact": "1869 年完成のユニバーシティ・ホールはキャンパスに現存する最古の建物で、かつての時計の機械は現在スミソニアンにあります。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはパープルとホワイトで、チームの名前はワイルドキャッツです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / CTA パープルライン / Metra",
+    "transportationFact": "CTA パープルラインと Metra の列車がキャンパス近くに停まり、大学のインターキャンパス・シャトルがエバンストンとシカゴ・キャンパスを結んでいます。"
+  },
+  "Ohio State University": {
+    "nickname": "バックアイズの本拠地",
+    "airportInfo": "コロンバス中心部の東にあるジョン・グレン・コロンバス国際空港が、この地域の主要空港です。",
+    "funFact": "馬蹄形のオハイオ・スタジアムは上段スタンドが下段の上に張り出し、北側のロタンダはローマのパンテオンのドームを手本にしています。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはスカーレットとグレーで、チームの名前はバックアイズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / CABS バス",
+    "transportationFact": "無料のキャンパス・エリア・バス・サービス (CABS) がキャンパスを巡回し、COTA のバスがコロンバス市内を走っています。"
+  },
+  "Pennsylvania State University": {
+    "nickname": "We Are... Penn State",
+    "airportInfo": "2023 年までユニバーシティパーク空港と呼ばれていたステート・カレッジ地域空港が最寄りの空港です。",
+    "funFact": "チャールズ・クローダーは、1929 年開館のレック・ホールと 1930 年完成の新しいオールド・メインの両方を設計しました。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはブルーとホワイトで、チームの名前はニタニー・ライオンズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / CATA バス",
+    "transportationFact": "CATA がキャンパス内で無料のブルー・ループ、ホワイト・ループ、レッド・リンクを運行し、ステート・カレッジ市内への路線もあります。"
+  },
+  "Purdue University": {
+    "nickname": "Boiler Up!",
+    "airportInfo": "ウェストラファイエットの南東にあるインディアナポリス国際空港が最寄りの大きな空港です。",
+    "funFact": "1995 年完成のパデュー・ベル・タワーには、1956 年に取り壊されたヘヴィロン・ホールの古い塔の鐘が吊られています。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはオールドゴールドとブラックで、チームの名前はボイラーメーカーズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Purdue Campus Transit / CityBus",
+    "transportationFact": "無料の Purdue Campus Transit の循環線がキャンパスを回り、CityBus の路線がウェストラファイエットとラファイエットを結んでいます。"
+  },
+  "Rutgers University–New Brunswick": {
+    "nickname": "大学アメリカンフットボール発祥の地",
+    "airportInfo": "ニューブランズウィックの北東にあるニューアーク・リバティー空港へは、NJ トランジットのノースイースト・コリドー線で行けます。",
+    "funFact": "1809 年に着工したオールド・クイーンズは、ニューヨーク市庁舎も手がけたジョン・マッコーム・ジュニアの設計です。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはスカーレットで、チームの名前はスカーレット・ナイツです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / ラトガースのバス / NJ トランジット",
+    "transportationFact": "ラトガースの無料バスがカレッジ・アベニュー、ブッシュ、リビングストン、クック/ダグラスの各キャンパスを結び、NJ トランジットの列車がニューブランズウィック駅に停まります。"
+  },
+  "University of Wisconsin–Madison": {
+    "nickname": "On, Wisconsin!",
+    "airportInfo": "マディソン中心部の北東にあるデーン郡地域空港が市の空港です。",
+    "funFact": "1851 年にジョン・F・レイグの設計で建てられたノース・ホールは大学最初の建物で、今もバスコム・ヒルに立っています。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはカーディナルとホワイトで、チームの名前はバジャーズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / マディソン・メトロ",
+    "transportationFact": "マディソン・メトロのバスがキャンパスを通り、学生は大学のバスパスで乗車できます。"
+  },
+  "University of Oregon": {
+    "nickname": "Go Ducks",
+    "airportInfo": "市の北西にあるユージーン空港が最寄りの空港です。",
+    "funFact": "大学の建築学部長だったエリス・F・ローレンスが、ナイト図書館と美術館の両方を設計しました。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはグリーンとイエローで、チームの名前はダックスです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / LTD EmX",
+    "transportationFact": "レーン交通局の高速バス EmX がキャンパスの端に停まり、学生は学生証で LTD のバスに乗れます。"
+  },
+  "University of Southern California": {
+    "nickname": "Fight On!",
+    "airportInfo": "キャンパスの南西にある LAX が、ロサンゼルスの主要空港です。",
+    "funFact": "1880 年に開校したウィドニー・アラムナイ・ハウスは、南カリフォルニアで最も古い大学の建物です。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはカーディナルとゴールドで、チームの名前はトロージャンズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / メトロ E ライン",
+    "transportationFact": "メトロ E ラインにはエクスポジション・パーク沿いのキャンパス隣に駅があり、USC は独自のキャンパス・シャトルも運行しています。"
+  },
+  "University of Alabama": {
+    "nickname": "Roll Tide",
+    "airportInfo": "タスカルーサの北東にあるバーミングハム・シャトルズワース国際空港が、定期便のある最寄りの空港です。",
+    "funFact": "学長公邸と旧天文台(現在のマクスウェル・ホール)は、南北戦争を生き延びた数少ないキャンパスの建物です。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはクリムゾンとホワイトで、チームの名前はクリムゾン・タイドです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / CrimsonRide バス",
+    "transportationFact": "クアッドは歩いて回れるキャンパスの中心にあります。大学の無料CrimsonRideバスがキャンパス内とアパートへの路線を走っています。"
+  },
+  "University of Arkansas": {
+    "nickname": "Woo Pig Sooie",
+    "airportInfo": "フェイエットビルの北にあるノースウェスト・アーカンソー・ナショナル空港が、この地域の主要空港です。",
+    "funFact": "キャンパス最古の建物オールド・メインは、キャンパスで掘った粘土を建物の西側の窯で焼いたレンガで建てられました。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはカーディナルレッドとホワイトで、チームの名前はレイザーバックスです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Razorback Transit",
+    "transportationFact": "丘の上のキャンパスは歩いて回れます。Razorback Transitがキャンパスとフェイエットビル市内で無料バスを運行しています。"
+  },
+  "Auburn University": {
+    "nickname": "War Eagle",
+    "airportInfo": "オーバーンの南東、ジョージア州のコロンバス空港からは、はるかに大きなハーツフィールド・ジャクソン空港のあるアトランタへデルタ航空の便が出ています。",
+    "funFact": "ラングドン・ホールは1846年にオーバーン女子大学の礼拝堂として建てられ、1883年に解体されて大学のキャンパスに建て直されました。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはバーントオレンジとネイビーブルーで、チームの名前はタイガースです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Tiger Transit",
+    "transportationFact": "サムフォード・ホール周辺の歴史地区は歩いて回れます。Tiger Transitのバスは学期中の平日、学生と教職員向けに運行しています。"
+  },
+  "University of Florida": {
+    "nickname": "Go Gators",
+    "airportInfo": "キャンパスの北東にあるゲインズビル・リージョナル空港には、主要ハブ空港への便があります。",
+    "funFact": "ウィリアム・オーガスタス・エドワーズが初期のキャンパスのほぼすべてをカレッジ・ゴシック様式で計画し、センチュリー・タワーはカンタベリー大聖堂のベル・ハリー・タワーのプロポーションを受け継いでいます。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはオレンジとブルーで、チームの名前はゲイターズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / RTS バス",
+    "transportationFact": "歴史地区は歩いて回れます。ゲインズビルのRTSバスが頻繁にキャンパスを通ります。"
+  },
+  "University of Georgia": {
+    "nickname": "Go Dawgs",
+    "airportInfo": "アセンズには定期便がないため、多くの訪問者は町の南西にあるアトランタのハーツフィールド・ジャクソン空港を利用します。",
+    "funFact": "UGAの最も古い建物はフェデラル様式です。1824年建造のデモステニアン・ホールには、アッシャー・ベンジャミンの図案に基づく華やかな漆喰の天井メダリオンが残っています。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはレッドとブラックで、チームの名前はブルドッグスです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / UGA Campus Transit",
+    "transportationFact": "ノース・キャンパスは歩いて回れます。UGA Campus Transitのバスがキャンパス中を走っています。"
+  },
+  "Louisiana State University": {
+    "nickname": "Geaux Tigers",
+    "airportInfo": "ダウンタウンの北にあるバトンルージュ・メトロポリタン空港が市の空の玄関です。",
+    "funFact": "1926年に開かれたキャンパスはイタリア・ルネサンス様式で建てられ、タイガー・スタジアムにはかつて観客席の下に学生寮がありました。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはパープルとゴールドで、チームの名前はタイガースです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Tiger Trails バス",
+    "transportationFact": "クアッド周辺の中心部は歩いて回れます。LSUの無料Tiger Trailsバスがキャンパスと近くのアパートを結んでいます。"
+  },
+  "University of Mississippi": {
+    "nickname": "Hotty Toddy",
+    "airportInfo": "オックスフォードの東にあるテューペロ・リージョナル空港には1日数便があります。北にあるメンフィス国際空港が最寄りの大きな空港です。",
+    "funFact": "ウィリアム・ニコルズは1848年のライシーアムをアテネ近郊のイオニア式神殿を手本に設計し、バーナード天文台はロシアのプルコヴォ天文台をモデルにしています。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはカーディナルレッドとネイビーブルーで、チームの名前はレベルズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Oxford-University Transit",
+    "transportationFact": "サークルとグローブは歩いて回れるキャンパスの中心にあります。Oxford-University Transitのバスがキャンパスと町を結んでいます。"
+  },
+  "University of Missouri": {
+    "nickname": "Mizzou",
+    "airportInfo": "市の南東にあるコロンビア・リージョナル空港には、主要ハブ空港への定期便があります。",
+    "funFact": "フランシス・クアドラングルに立つ6本の柱は、1892年に焼失したアカデミック・ホールの唯一の名残です。その後継のジェシー・ホールが1895年に柱の背後に建ちました。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはブラックとゴールドで、チームの名前はタイガースです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Tiger Line シャトル",
+    "transportationFact": "フランシス・クアドラングル周辺は歩いて回れます。コロンビア市と共同運行するMUの無料Tiger Lineシャトルがキャンパスを走り、Go COMOの市バスも無料です。"
+  },
+  "University of Oklahoma": {
+    "nickname": "Boomer Sooner",
+    "airportInfo": "ノーマンの北、オクラホマシティにあるウィル・ロジャース国際空港が最寄りの大きな空港です。",
+    "funFact": "フランク・ロイド・ライトは、レンガと明るい石を使ったOU流のカレッジ・ゴシックを「チェロキー・ゴシック」と名付けました。新しい建物もこれに合わせて設計されています。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはクリムゾンとクリームで、チームの名前はスーナーズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / CART バス",
+    "transportationFact": "サウス・オーバル周辺の中心部は歩いて回れます。OUのCARTバスがキャンパスと近くのアパートを結び、市内路線はEMBARK Normanが運行しています。"
+  },
+  "University of South Carolina": {
+    "nickname": "Emollit Mores Nec Sinit Esse Feros",
+    "airportInfo": "コロンビア・メトロポリタン空港は市の中心部の南西にあります。",
+    "funFact": "ホースシューで最初の建物ラトレッジは1805年に完成しました。ホースシューにあるサウス・カロライニアナ図書館は、アメリカで最も古い独立した大学図書館です。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはガーネットとブラックで、チームの名前はゲームコックスです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Carolina Shuttle",
+    "transportationFact": "ホースシューと中心部は歩いて回れます。The COMETが運行するCarolina Shuttleは学生と教職員なら無料です。"
+  },
+  "Vanderbilt University": {
+    "nickname": "Anchor Down",
+    "airportInfo": "ナッシュビル国際空港はナッシュビルのダウンタウンの南東にあります。",
+    "funFact": "カークランド・ホールは1874年にヴィクトリアン・ゴシック様式で建てられ、1905年の火災後にイタリア風様式で再建されました。一方、ピーボディ・キャンパスはジェファーソンのバージニア大学を手本にしています。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはブラックとゴールドで、チームの名前はコモドアーズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / VandyRide",
+    "transportationFact": "キャンパスは歩いて回れます。VandyRideのシャトルが構内を走り、WeGoの市バスがウェストエンド・アベニューを通ります。"
+  },
+  "University of Kentucky": {
+    "nickname": "Go Big Blue",
+    "airportInfo": "ブルーグラス空港はレキシントンのすぐ西にあります。",
+    "funFact": "1998年開館のウィリアム・T・ヤング図書館は八角形の平面で、各ファサードにレンガと石の2層のアーケードがあります。メモリアル・ホールのロビーにはアン・ライス・オハンロンによる1934年のフレスコ画があります。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはブルーとホワイトで、チームの名前はワイルドキャッツです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Lextran バス",
+    "transportationFact": "中心部は歩いて回れます。Lextranと共同運行するUKの学内バスは無料で、学生と教職員はUKのIDでLextranの市バスにも無料で乗れます。"
+  },
+  "Mississippi State University": {
+    "nickname": "Hail State",
+    "airportInfo": "スタークビルの東にあるゴールデン・トライアングル地域空港がこの地域の空港です。",
+    "funFact": "かつて士官候補生隊が使ったドリル・フィールドは、北と南の端を鏡写しの2棟、リー・ホールとスワーム・ホールが閉じています。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはマルーンとホワイトで、チームの名前はブルドッグスです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / SMART バス",
+    "transportationFact": "ドリル・フィールド周辺は歩いて回れます。Starkville–MSU Area Rapid Transitがキャンパスと町で無料バスを運行しています。"
+  },
+  "University of Tennessee": {
+    "nickname": "Go Vols",
+    "airportInfo": "ノックスビルの南、アルコアにあるマギー・タイソン空港が最寄りの空港です。",
+    "funFact": "2008年から2011年のエアーズ・ホール修復では、1921年の設計にありながら費用のため作られなかった時計の文字盤とテラゾーの床が加えられました。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはオレンジとホワイトで、チームの名前はボランティアーズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / T バス",
+    "transportationFact": "UTの無料Tバスが学内の決まった路線を走り、学生はVolCardでKnoxville Area Transitのバスに無料で乗れます。"
+  },
+  "Texas A&M University": {
+    "nickname": "Gig 'em",
+    "airportInfo": "カレッジステーションの西端、キャンパス近くにあるイースターウッド空港には、アメリカン・イーグルの便があります。",
+    "funFact": "キャンパス建築家F・E・ギーゼッケは鉄筋コンクリートに詳しくなかったため、1914年のアカデミック・ビルディングの鉄筋を2倍にしました。後に水道管を通す際、作業員はバーナーを使う必要がありました。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはマルーンとホワイトで、チームの名前はアギーズです。",
+    "currencyInfo": "米ドル ($)",
+    "transportation": "徒歩 / Texas A&M のバス",
+    "transportationFact": "メイン・キャンパスは歩いて回れます。Texas A&Mは学期中、学内バスを運行しています。"
   }
 }

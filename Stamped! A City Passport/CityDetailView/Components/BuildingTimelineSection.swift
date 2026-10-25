@@ -20,13 +20,9 @@ struct BuildingTimelineSection: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Label("CHRONOLOGY", systemImage: "clock.arrow.circlepath")
-                .font(.system(.caption, design: .default))
-                .fontWeight(.semibold)
-                .foregroundColor(.secondary)
-                .kerning(1.2)
-                .padding(.horizontal)
+        VStack(alignment: .leading, spacing: DS.Space.m) {
+            DSSectionHeader("Chronology", systemImage: "clock.arrow.circlepath", isHighContrast: isHighContrast)
+                .dsPageMargin()
 
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 0) {
@@ -47,9 +43,11 @@ struct BuildingTimelineSection: View {
                         }
                     }
                 }
-                .padding(.horizontal)
-                .padding(.bottom, 4)
+                .padding(DS.Space.l)
             }
+            // The strip scrolls edge to edge inside the card
+            .dsCard(padding: 0, isHighContrast: isHighContrast)
+            .dsPageMargin()
         }
     }
 }
@@ -61,10 +59,13 @@ private struct TimelineCell: View {
     let isVisited: Bool
     let isHighContrast: Bool
 
-    private var accent: Color { isHighContrast ? .primary : .adventureOrange }
+    private var accent: Color { isHighContrast ? .primary : DS.Palette.accent }
+
+    /// Fixed so the strip lines up, but scaled so two-line names still fit at large text sizes
+    @ScaledMetric(relativeTo: .caption2) private var cellWidth: CGFloat = 100
 
     var body: some View {
-        VStack(spacing: 6) {
+        VStack(spacing: DS.Space.s) {
             Text(String(building.yearBuilt))
                 .font(.system(.caption2, design: .monospaced))
                 .fontWeight(.bold)
@@ -85,19 +86,20 @@ private struct TimelineCell: View {
                 .foregroundColor(isVisited ? .primary : .secondary)
                 .multilineTextAlignment(.center)
                 .lineLimit(2)
-                .frame(width: 88)
+                .minimumScaleFactor(0.85)
+                .frame(width: cellWidth - DS.Space.m)
         }
-        .frame(width: 100)
-        .padding(.vertical, 10)
-        .padding(.horizontal, 4)
+        .frame(width: cellWidth)
+        .padding(.vertical, DS.Space.m)
+        .padding(.horizontal, DS.Space.xs)
         .background(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
                 .fill(isVisited
-                    ? (isHighContrast ? Color.primary.opacity(0.08) : Color.adventureOrange.opacity(0.07))
-                    : Color(UIColor.secondarySystemBackground))
+                    ? (isHighContrast ? Color.primary.opacity(0.08) : DS.Palette.accent.opacity(0.07))
+                    : Color(UIColor.tertiarySystemGroupedBackground))
         )
         .overlay(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
                 .stroke(isVisited ? accent.opacity(0.3) : Color.clear, lineWidth: 1)
         )
         .accessibilityElement(children: .combine)

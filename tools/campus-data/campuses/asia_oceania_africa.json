@@ -3,6 +3,49 @@
     "name": "University of Melbourne",
     "enumCase": "uniMelbourne",
     "country": "victoria",
+    "aliases": [
+      "Melbourne Uni",
+      "UniMelb"
+    ],
+    "colors": [
+      "#000F46",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_unimelbourne_old_quad_stonemasons",
+        "name": "Old Quad and the Eight-Hour Day",
+        "description": "The Old Quad was the university's first building, and in 1856 the stonemasons building it downed tools and joined the marches that won the eight-hour working day. Visitors can walk through the Old Quad, the campus's historic heart.",
+        "coordinates": [
+          -37.797558,
+          144.960985
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/459734246",
+        "source": "https://umsu.unimelb.edu.au/news/article/7797/2015-02-28-so-you-think-you-can-campus-a-tour-of-parkville"
+      },
+      {
+        "id": "trad_unimelbourne_old_arts_clock",
+        "name": "Spot the Old Arts clock oddity",
+        "description": "Students and visitors are invited to study the Roman numerals on the Old Arts Building clock tower and spot what is odd about them.",
+        "coordinates": [
+          -37.797805,
+          144.960124
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/22952361",
+        "source": "https://umsu.unimelb.edu.au/news/article/7797/2015-02-28-so-you-think-you-can-campus-a-tour-of-parkville"
+      },
+      {
+        "id": "trad_unimelbourne_original_fence",
+        "name": "The last piece of the original fence",
+        "description": "A single segment of the wrought-iron fence that once encircled the whole campus survives outside the Medical Building. The grounds were opened to the public in exchange for free gas lighting from the City of Melbourne; visitors can find the remaining fence section.",
+        "coordinates": [
+          -37.799283,
+          144.958945
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/449298995",
+        "source": "https://umsu.unimelb.edu.au/news/article/7797/2015-02-28-so-you-think-you-can-campus-a-tour-of-parkville"
+      }
+    ],
     "wiki": "University of Melbourne",
     "currency": "AUD ($)",
     "details": {
@@ -100,6 +143,60 @@
     "name": "University of Sydney",
     "enumCase": "uniSydney",
     "country": "newSouthWales",
+    "aliases": [
+      "Sydney Uni",
+      "USyd"
+    ],
+    "colors": [
+      "#E64626",
+      "#424242"
+    ],
+    "traditions": [
+      {
+        "id": "trad_unisydney_jacaranda",
+        "name": "The Quadrangle jacaranda",
+        "description": "Campus folklore says any student who has not started studying before the Quadrangle's jacaranda flowers will fail their exams. Visitors can see the tree (a clone of the 1928 original) bloom purple in late spring, a favourite photo backdrop.",
+        "coordinates": [
+          -33.886191,
+          151.188992
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/6904637721",
+        "source": "https://sydney.edu.au/news-opinion/news/2016/11/11/university-to-replant-jacaranda-along-with-native-tree.html"
+      },
+      {
+        "id": "trad_unisydney_carillon",
+        "name": "War Memorial Carillon recitals",
+        "description": "The clock tower holds the War Memorial Carillon, dedicated in 1928 and one of only three carillons in Australia. Visitors can hear live recitals at lunchtime (outside exam periods and public holidays).",
+        "coordinates": [
+          -33.885963,
+          151.188435
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/46503235",
+        "source": "https://www.sydney.edu.au/engage/visit/places-of-interest.html"
+      },
+      {
+        "id": "trad_unisydney_kangaroo_gargoyle",
+        "name": "Spot the kangaroo gargoyle",
+        "description": "Among the Quadrangle's many gargoyles are Australian animals, including a kangaroo on the clock tower and kookaburras above the northern foyer entrance. Visitors can look for them around the sandstone buildings.",
+        "coordinates": [
+          -33.885963,
+          151.188435
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/46503235",
+        "source": "https://en.wikipedia.org/wiki/University_of_Sydney_Quadrangle"
+      },
+      {
+        "id": "trad_unisydney_graffiti_tunnel",
+        "name": "Graffiti Tunnel",
+        "description": "The Graffiti Tunnel began as a student protest against the Vietnam War and is now a constantly changing living artwork. Visitors can walk through and see the latest layers of student art.",
+        "coordinates": [
+          -33.885814,
+          151.187482
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/11494259295",
+        "source": "https://www.sydney.edu.au/engage/visit/places-of-interest.html"
+      }
+    ],
     "wiki": "University of Sydney",
     "currency": "AUD ($)",
     "details": {

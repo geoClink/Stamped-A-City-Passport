@@ -19,15 +19,14 @@ struct PlaceEventsView: View {
 
     @State private var events: [TicketmasterEvent] = []
     @State private var isAtVenue = false
+    @ScaledMetric(relativeTo: .callout) private var iconColumnWidth: CGFloat = 28
 
     var body: some View {
         Group {
             if !events.isEmpty {
-                VStack(alignment: .leading, spacing: 8) {
-                    Label(isAtVenue ? "Upcoming Events Here" : "Happening Nearby",
-                          systemImage: "ticket.fill")
-                        .font(.caption.bold())
-                        .foregroundStyle(.secondary)
+                VStack(alignment: .leading, spacing: DS.Space.s) {
+                    DSSectionHeader(isAtVenue ? "Upcoming Events Here" : "Happening Nearby",
+                                    systemImage: "ticket.fill")
                     ForEach(events.prefix(3)) { event in
                         eventRow(event)
                     }
@@ -50,11 +49,11 @@ struct PlaceEventsView: View {
         Button {
             if let url = event.ticketURL { onOpenTickets(url) }
         } label: {
-            HStack(spacing: 10) {
+            HStack(spacing: DS.Space.s) {
                 Image(systemName: event.category.icon)
                     .font(.callout)
-                    .foregroundStyle(Color.adventureOrange)
-                    .frame(width: 28)
+                    .foregroundStyle(DS.Palette.accent)
+                    .frame(width: iconColumnWidth)
                 VStack(alignment: .leading, spacing: 2) {
                     Text(event.name)
                         .font(.subheadline.weight(.semibold))
@@ -66,11 +65,11 @@ struct PlaceEventsView: View {
                         .foregroundStyle(.secondary)
                         .lineLimit(1)
                 }
-                Spacer(minLength: 4)
+                Spacer(minLength: DS.Space.xs)
                 if event.ticketURL != nil {
                     Text("Tickets")
                         .font(.caption.bold())
-                        .foregroundStyle(Color.adventureOrange)
+                        .foregroundStyle(DS.Palette.accent)
                 }
             }
         }

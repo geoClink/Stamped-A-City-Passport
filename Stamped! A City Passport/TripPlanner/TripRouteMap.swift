@@ -28,7 +28,7 @@ struct TripRouteMap: View {
         Map(initialPosition: startPosition) {
             if numberedStops.count > 1 {
                 MapPolyline(coordinates: numberedStops.map(\.coordinate))
-                    .stroke(Color.adventureOrange, style: StrokeStyle(lineWidth: 3, lineCap: .round, dash: [6, 5]))
+                    .stroke(DS.Palette.accent, style: StrokeStyle(lineWidth: 3, lineCap: .round, dash: [6, 5]))
             }
             ForEach(numberedStops, id: \.stop.id) { item in
                 Annotation(item.stop.name, coordinate: item.coordinate) {
@@ -38,7 +38,7 @@ struct TripRouteMap: View {
         }
         .mapStyle(.standard(pointsOfInterest: .excludingAll))
         // Keeps pins and their names from sitting right on the map's edges
-        .safeAreaPadding(24)
+        .safeAreaPadding(DS.Space.xl)
         // Rebuild the map when the stops change (another day, a reorder, an
         // optimize). Map doesn't reliably redraw its line otherwise, and a
         // fresh map also re-frames itself around the new stops.
@@ -47,8 +47,8 @@ struct TripRouteMap: View {
             if numberedStops.isEmpty {
                 Text("Add stops to see your route")
                     .font(.subheadline.weight(.medium))
-                    .padding(.horizontal, 14)
-                    .padding(.vertical, 8)
+                    .padding(.horizontal, DS.Space.l)
+                    .padding(.vertical, DS.Space.s)
                     .background(.regularMaterial, in: Capsule())
             }
         }
@@ -80,13 +80,20 @@ struct StopNumberBadge: View {
     let number: Int
     let isLandmark: Bool
 
+    /// Scales with the caption text so two-digit numbers still fit at large sizes
+    @ScaledMetric(relativeTo: .caption) private var size: CGFloat = 26
+
     var body: some View {
         Text("\(number)")
             .font(.caption.weight(.bold))
+            .monospacedDigit()
+            .minimumScaleFactor(0.7)
             .foregroundStyle(.white)
-            .frame(width: 26, height: 26)
-            .background(isLandmark ? Color.adventureOrange : Color.pink, in: Circle())
+            .frame(width: size, height: size)
+            // Pink like saved places' pins on the city map
+            .background(isLandmark ? DS.Palette.accent : DS.Palette.wishlist, in: Circle())
             .overlay(Circle().stroke(.white, lineWidth: 2))
+            // The shadow lifts the pin off the map behind it
             .shadow(radius: 2)
     }
 }

@@ -107,13 +107,15 @@ class QuizViewModel: ObservableObject {
     // MARK: - Question Type Filtering
 
     private func validQuestionTypes(for building: Building) -> [QuestionType] {
-        var types: [QuestionType] = [.name, .style]
+        var types: [QuestionType] = [.name]
+        if building.knownStyle != nil {
+            types.append(.style)
+        }
         // "When was this lake built?" has no answer, so skip year questions there.
         if building.hasKnownYear {
             types.append(.year)
         }
-        let arch = building.architect.trimmingCharacters(in: .whitespaces)
-        if !arch.isEmpty && arch.lowercased() != "unknown" {
+        if building.knownArchitect != nil {
             types.append(.architect)
         }
         if building.numberOfStories > 0 {
@@ -146,6 +148,9 @@ class QuizViewModel: ObservableObject {
         let allDistractors = buildings
             // Keep "0" from showing up as a wrong answer in year questions.
             .filter { currentQuestionType != .year || $0.hasKnownYear }
+            // "Unknown" is never offered as a wrong answer either
+            .filter { currentQuestionType != .style || $0.knownStyle != nil }
+            .filter { currentQuestionType != .architect || $0.knownArchitect != nil }
             .map { b in
                 switch currentQuestionType {
                 case .name: return b.name

@@ -21,7 +21,7 @@ struct ContinentHeader: View {
                 .animation(.interpolatingSpring(stiffness: 100, damping: 10), value: isExpanded)
                 .accessibilityHidden(true) // The text says it all
             
-            Text(continent.rawValue.uppercased())
+            Text(continent.localizedName.localizedUppercase)
                 .font(.system(.subheadline, design: .rounded))
                 .fontWeight(.bold)
                 .tracking(2.0)
@@ -35,7 +35,7 @@ struct ContinentHeader: View {
         if isHighContrast {
             return AnyShapeStyle(Color.primary)
         } else {
-            return AnyShapeStyle(continent.iconGradient)
+            return AnyShapeStyle(LinearGradient.sectionIcon)
         }
     }
 }
@@ -50,7 +50,7 @@ struct CampusSectionHeader: View {
             Image(systemName: "graduationcap.fill")
                 .symbolRenderingMode(.hierarchical)
                 .font(.title3)
-                .foregroundStyle(isHighContrast ? AnyShapeStyle(Color.primary) : AnyShapeStyle(gradient))
+                .foregroundStyle(isHighContrast ? AnyShapeStyle(Color.primary) : AnyShapeStyle(LinearGradient.sectionIcon))
                 .rotationEffect(.degrees(isExpanded ? 360 : 0))
                 .animation(.interpolatingSpring(stiffness: 100, damping: 10), value: isExpanded)
                 .accessibilityHidden(true)
@@ -64,8 +64,13 @@ struct CampusSectionHeader: View {
         .padding(.vertical, 8)
         .accessibilityAddTraits(.isHeader)
     }
+}
 
-    private var gradient: LinearGradient {
-        LinearGradient(colors: [.purple, .indigo], startPoint: .topLeading, endPoint: .bottomTrailing)
-    }
+extension LinearGradient {
+    /// One brand gradient for every section icon in the city list (continents and campuses),
+    /// instead of a different color per continent; the style guide keeps one accent color.
+    static let sectionIcon = LinearGradient(
+        colors: [Color(red: 0xFF / 255, green: 0x8A / 255, blue: 0x57 / 255), .adventureOrange],
+        startPoint: .topLeading, endPoint: .bottomTrailing
+    )
 }

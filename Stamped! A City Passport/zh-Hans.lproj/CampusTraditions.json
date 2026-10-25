@@ -1,0 +1,1996 @@
+{
+  "University of Melbourne": [
+    {
+      "id": "trad_unimelbourne_old_quad_stonemasons",
+      "name": "老四方院与八小时工作制",
+      "description": "老四方院是大学的第一座建筑。1856年，正在建造它的石匠们放下工具，加入了争取八小时工作制并最终获胜的游行。游客可以漫步老四方院，这里是校园的历史中心。",
+      "latitude": -37.797558,
+      "longitude": 144.960985
+    },
+    {
+      "id": "trad_unimelbourne_old_arts_clock",
+      "name": "找找老艺术楼时钟的怪异之处",
+      "description": "欢迎学生和游客仔细观察老艺术楼钟楼上的罗马数字，看看能否发现其中的古怪之处。",
+      "latitude": -37.797805,
+      "longitude": 144.960124
+    },
+    {
+      "id": "trad_unimelbourne_original_fence",
+      "name": "原始围栏的最后一段",
+      "description": "曾经环绕整个校园的锻铁围栏，如今只剩一段保留在医学楼外。当年校园向公众开放，换取墨尔本市提供的免费煤气照明；游客可以去找找这段留存的围栏。",
+      "latitude": -37.799283,
+      "longitude": 144.958945
+    }
+  ],
+  "University of Sydney": [
+    {
+      "id": "trad_unisydney_jacaranda",
+      "name": "四方院的蓝花楹",
+      "description": "校园传说称，如果在四方院的蓝花楹开花前还没开始复习，考试就会不及格。晚春时节，这棵树（1928年原树的克隆）会开满紫色花朵，是深受喜爱的拍照背景。",
+      "latitude": -33.886191,
+      "longitude": 151.188992
+    },
+    {
+      "id": "trad_unisydney_carillon",
+      "name": "战争纪念钟琴演奏",
+      "description": "钟楼内设有1928年落成的战争纪念钟琴，是澳大利亚仅有的三座钟琴之一。游客可以在午餐时间聆听现场演奏（考试期间和公众假期除外）。",
+      "latitude": -33.885963,
+      "longitude": 151.188435
+    },
+    {
+      "id": "trad_unisydney_kangaroo_gargoyle",
+      "name": "寻找袋鼠滴水兽",
+      "description": "四方院众多的滴水兽中有不少澳大利亚动物，包括钟楼上的一只袋鼠，以及北门厅入口上方的笑翠鸟。游客可以在砂岩建筑周围找找它们。",
+      "latitude": -33.885963,
+      "longitude": 151.188435
+    },
+    {
+      "id": "trad_unisydney_graffiti_tunnel",
+      "name": "涂鸦隧道",
+      "description": "涂鸦隧道起源于学生反对越南战争的抗议活动，如今已成为不断变化的“活”艺术作品。游客可以穿行其间，欣赏最新一层的学生作品。",
+      "latitude": -33.885814,
+      "longitude": 151.187482
+    }
+  ],
+  "University of Texas at Austin": [
+    {
+      "id": "trad_ut_austin_tower_lighting",
+      "name": "主塔灯光",
+      "description": "自1937年起，UT主塔会亮灯庆祝长角牛队的成就：橄榄球赛获胜时塔顶亮橙色，重大里程碑时全塔亮橙色，夺得全国冠军时则亮起橙色并显示“No. 1”。游客可以在夜里看看主塔，了解正在庆祝什么。",
+      "latitude": 30.286273,
+      "longitude": -97.739366
+    },
+    {
+      "id": "trad_ut_austin_kniker_carillon",
+      "name": "尼克钟琴",
+      "description": "位于主塔顶部的尼克钟琴共有56口钟，是得克萨斯州最大的钟琴，由学生钟琴师协会演奏，每场演奏都以《The Eyes of Texas》收尾。钟声响起时，游客可以在主林荫道上聆听。",
+      "latitude": 30.286273,
+      "longitude": -97.739366
+    },
+    {
+      "id": "trad_ut_austin_turtle_pond",
+      "name": "乌龟池",
+      "description": "乌龟池建于1939年，原本是生物学研究用池，如今至少住着100只乌龟，大多是红耳龟，是校园里人气很高的打卡点。游客可以顺路来看看，天气暖和时乌龟最活跃。",
+      "latitude": 30.28689,
+      "longitude": -97.73944
+    },
+    {
+      "id": "trad_ut_austin_littlefield_tower_photo",
+      "name": "从利特尔菲尔德喷泉拍主塔",
+      "description": "从第21街和大学大道交口望去，以利特尔菲尔德喷泉为前景的主塔，是校园里被拍得最多的景色之一。游客可以在南林荫道拍下这张经典照片。",
+      "latitude": 30.283921,
+      "longitude": -97.739626
+    }
+  ],
+  "University College London": [
+    {
+      "id": "trad_ucl_bentham_auto_icon",
+      "name": "杰里米·边沁的“自体圣像”",
+      "description": "UCL的“精神创始人”、哲学家杰里米·边沁的遗骨经过保存，穿着他本人的衣服（头部为蜡像），坐在学生中心入口处的玻璃柜里；2013年它甚至被带去参加了UCL的理事会会议。它向公众展出，游客可以前往参观。",
+      "latitude": 51.524736,
+      "longitude": -0.13238
+    },
+    {
+      "id": "trad_ucl_portico_photo",
+      "name": "在柱廊前拍照",
+      "description": "主四方院中威尔金斯楼的柱廊，是UCL被拍得最多、最具标志性的地方。游客可以在四方院拍下柱子与穹顶的经典照片。",
+      "latitude": 51.524721,
+      "longitude": -0.133582
+    },
+    {
+      "id": "trad_ucl_flaxman_gallery",
+      "name": "穹顶下的弗拉克斯曼画廊",
+      "description": "八角穹顶下的弗拉克斯曼画廊收藏着雕塑家约翰·弗拉克斯曼作品中规模最大的单一系列，包括真实尺寸的《圣米迦勒战胜撒旦》，还曾出现在克里斯托弗·诺兰的电影《盗梦空间》中。游客可以前往观赏这些雕塑。",
+      "latitude": 51.524738,
+      "longitude": -0.133509
+    }
+  ],
+  "King's College London": [
+    {
+      "id": "trad_kcl_reggie_the_lion",
+      "name": "雷吉狮子",
+      "description": "雷吉狮子是国王学院的吉祥物，曾在体育比赛中被抬着巡游；在多年来屡遭对手学校学生“绑架”之后，原件如今陈列在斯特兰德校区的玻璃柜中。游客可以去看看展出的雷吉。",
+      "latitude": 51.511252,
+      "longitude": -0.115318
+    },
+    {
+      "id": "trad_kcl_chapel_evensong",
+      "name": "学院礼拜堂的合唱晚祷",
+      "description": "学期期间每周二下午5:30，合唱晚祷会在学院礼拜堂举行。这座礼拜堂是一级登录建筑，1864年由乔治·吉尔伯特·斯科特爵士重新设计。游客可以参加礼拜。",
+      "latitude": 51.511483,
+      "longitude": -0.116018
+    },
+    {
+      "id": "trad_kcl_bush_house_inscription",
+      "name": "布什大厦的友谊铭文",
+      "description": "布什大厦曾是BBC国际频道的总部，如今是斯特兰德校区的一部分。大厦上方两尊1925年揭幕的雕像之上刻着铭文“To the friendship of English speaking peoples”（献给英语民族之间的友谊）。游客可以在金斯威大街上观赏并拍照。",
+      "latitude": 51.512746,
+      "longitude": -0.117173
+    }
+  ],
+  "University of Paris (Sorbonne)": [
+    {
+      "id": "trad_sorbonne_montaigne_foot",
+      "name": "摸摸蒙田的鞋",
+      "description": "在索邦大学对面、学院街的另一侧，学生们会在考前摸一摸保罗·朗多夫斯基所作蒙田坐像的脚，祈求好运。游客可以去看看这尊雕像，那只鞋已被一代代人的手摸得锃亮。",
+      "latitude": 48.849933,
+      "longitude": 2.343997
+    },
+    {
+      "id": "trad_sorbonne_cardinal_hat",
+      "name": "黎塞留的枢机主教帽",
+      "description": "索邦礼拜堂里，按照传统，一顶枢机主教帽悬挂在黎塞留枢机主教的大理石墓上方。礼拜堂在导览参观和文化遗产日开放时，游客可以看到它。",
+      "latitude": 48.848418,
+      "longitude": 2.343195
+    },
+    {
+      "id": "trad_sorbonne_heritage_days",
+      "name": "索邦大学的文化遗产日",
+      "description": "每年9月欧洲文化遗产日期间，索邦大学会向公众免费开放接待厅和大阶梯教室。游客可以走上阶梯教室的讲台，参观平时不开放的房间。",
+      "latitude": 48.848636,
+      "longitude": 2.343603
+    }
+  ],
+  "University of Padua": [
+    {
+      "id": "trad_padua_galileo_lectern",
+      "name": "伽利略的讲台",
+      "description": "相传伽利略曾在这座木制讲台上授课，按照传统说法，它是他的学生亲手为他打造的。讲台如今立在博宫（Palazzo Bo）“四十人厅”（Sala dei Quaranta）的入口处，游客可以在博宫导览中看到它。",
+      "latitude": 45.406738,
+      "longitude": 11.877394
+    },
+    {
+      "id": "trad_padua_bo_chain",
+      "name": "别跳过铁链",
+      "description": "当地迷信认为，学生千万不能跳过博宫前的铁链，否则学业会受影响。游客可以看看这条铁链，然后绕着走过去。",
+      "latitude": 45.406738,
+      "longitude": 11.877394
+    },
+    {
+      "id": "trad_padua_pedrocchi",
+      "name": "佩德罗基咖啡馆",
+      "description": "这家位于博宫旁的历史咖啡馆自1831年以来就是师生聚会的地方，学生可以不消费就坐在绿厅里。游客可以来尝尝这里的薄荷咖啡，并在白厅找找1848年学生起义留下的弹孔。",
+      "latitude": 45.407692,
+      "longitude": 11.877095
+    }
+  ],
+  "KU Leuven": [
+    {
+      "id": "trad_kuleuven_fonske",
+      "name": "丰斯克",
+      "description": "“智慧之泉”（Fons Sapientiae）是一尊学生边读书边把智慧倒进自己脑袋的雕像，是大学在1975年建校550周年时赠给城市的礼物。学生社团会在特别的日子给它换装，游客可以在雷克托·德·索默广场拍张照。",
+      "latitude": 50.8793,
+      "longitude": 4.702301
+    },
+    {
+      "id": "trad_kuleuven_carillon",
+      "name": "大学图书馆钟琴",
+      "description": "大学图书馆的塔楼里有欧洲最大的钟琴之一，是美国工程师赠送的纪念礼物，主钟每小时鸣响一次。参加塔楼参观时，钟琴师会带游客登上塔楼，在“第一排”欣赏现场演奏。",
+      "latitude": 50.877998,
+      "longitude": 4.70732
+    },
+    {
+      "id": "trad_kuleuven_totem",
+      "name": "拉多伊兹广场的《图腾》",
+      "description": "2004年建校575周年之际，大学向城市赠送了扬·法布尔的作品《图腾》：一只巨大的吉丁虫被插在大学图书馆前一根23米高的钢针上。游客可以在拉多伊兹广场给它拍照。",
+      "latitude": 50.878598,
+      "longitude": 4.706349
+    }
+  ],
+  "Aalto University": [
+    {
+      "id": "trad_aalto_student_museum",
+      "name": "学生生活博物馆",
+      "description": "在奥塔涅米学生村的一个地下室里，学生会博物馆（原名“理工学生博物馆”）展示着阿尔托大学的“teekkari”（理工学生）等学生传统，从学生帽、工装到著名的恶作剧都有。学期内的周日下午，志愿者讲解员会向游客开放。",
+      "latitude": 60.187366,
+      "longitude": 24.836496
+    },
+    {
+      "id": "trad_aalto_chapel_cross",
+      "name": "奥塔涅米礼拜堂的森林景观",
+      "description": "这座由海基·西伦和凯亚·西伦于1956年设计的校园礼拜堂，祭坛后方是一面望向森林的玻璃墙，室外的基岩上立着一座十字架。大学将这一景观列为奥塔涅米最受欢迎的景点之一。",
+      "latitude": 60.189364,
+      "longitude": 24.837247
+    }
+  ],
+  "Uppsala University": [
+    {
+      "id": "trad_uppsala_cap_raising",
+      "name": "瓦尔普吉斯之夜戴帽仪式",
+      "description": "4月30日下午3点，聚集在卡罗琳娜·雷迪维瓦图书馆下方山坡上的学生们，会在校长于图书馆阳台上挥动帽子时一起戴上白色学生帽。任何人都可以加入山坡上的人群观看。",
+      "latitude": 59.855015,
+      "longitude": 17.631109
+    },
+    {
+      "id": "trad_uppsala_gunilla_bell",
+      "name": "在古尼拉钟前唱春之歌",
+      "description": "4月30日傍晚，学生们聚集在乌普萨拉城堡旁的古尼拉钟（Gunillaklockan）前，唱春之歌并聆听春季演讲。游客可以站在人群中一起聆听。",
+      "latitude": 59.854218,
+      "longitude": 17.634057
+    },
+    {
+      "id": "trad_uppsala_anatomical_theatre",
+      "name": "古斯塔维阿努姆解剖剧场",
+      "description": "在古斯塔维阿努姆的铜质穹顶之下，大学博物馆保存着老奥洛夫·鲁德贝克于17世纪60年代建造的解剖剧场。参观博物馆时，游客可以走进去看看。",
+      "latitude": 59.857943,
+      "longitude": 17.631724
+    }
+  ],
+  "Florida Southern College": [
+    {
+      "id": "trad_flsouthern_pfeiffer_chapel",
+      "name": "安妮·法伊弗礼拜堂",
+      "description": "学院称这座由弗兰克·劳埃德·赖特设计的礼拜堂为校园高耸的心脏，顶部是一座由混凝土和彩色玻璃建成的钟塔。游客可以参加从夏普家族旅游与教育中心出发的赖特导览来参观。",
+      "latitude": 28.030881,
+      "longitude": -81.948654
+    },
+    {
+      "id": "trad_flsouthern_water_dome",
+      "name": "水穹喷泉",
+      "description": "这是赖特设计的最大水景，直到2007年才按照他的完整设计建成，喷泉在白天的固定时间开放。游客可以随时在周围的步道上观赏。",
+      "latitude": 28.031997,
+      "longitude": -81.948897
+    }
+  ],
+  "Boston College": [
+    {
+      "id": "trad_bc_golden_eagle",
+      "name": "金鹰雕像",
+      "description": "Gasson Hall 前一根约 9 米高的立柱上立着一只镀金的鹰，是学校 1954 年获赠雕像的复制品。游客以 Gasson Tower 为背景为金鹰拍照。",
+      "latitude": 42.3356283,
+      "longitude": -71.1704848
+    },
+    {
+      "id": "trad_bc_flutie_statue",
+      "name": "Doug Flutie 雕像",
+      "description": "Alumni Stadium 外的一座雕像再现了让四分卫 Doug Flutie 成名的「万福玛利亚」长传。球迷去球场的路上会停下来合影。",
+      "latitude": 42.3350993,
+      "longitude": -71.1663078
+    }
+  ],
+  "Clemson University": [
+    {
+      "id": "trad_clemson_howards_rock",
+      "name": "Howard's Rock",
+      "description": "这块石英岩放在 Memorial Stadium 的「The Hill」顶端的底座上，球员在主场比赛冲下山坡进场前都会摸一摸它。游客可在球场东端看到它。",
+      "latitude": 34.6789551,
+      "longitude": -82.8422007
+    },
+    {
+      "id": "trad_clemson_lovers_lane",
+      "name": "President's Park 的情人小径",
+      "description": "校园传说称，手牵手走过 President's Park 的情侣将会结婚。游客可在校园边缘的这座公园里散步。",
+      "latitude": 34.6790936,
+      "longitude": -82.8327753
+    },
+    {
+      "id": "trad_clemson_bowman_field",
+      "name": "Bowman Field",
+      "description": "Tillman Hall 前的草坪 Bowman Field 曾是克莱姆森军校学员的阅兵场。游客可在这里欣赏 Tillman Hall 的钟楼。",
+      "latitude": 34.680875,
+      "longitude": -82.8366232
+    }
+  ],
+  "Duke University": [
+    {
+      "id": "trad_duke_chapel_carillon",
+      "name": "Duke Chapel 钟琴",
+      "description": "Duke Chapel 钟楼里有 50 口钟的钟琴，每个工作日下午 5 点演奏，周五会奏响校歌。游客聚在礼拜堂附近聆听。",
+      "latitude": 36.0018682,
+      "longitude": -78.9402861
+    },
+    {
+      "id": "trad_duke_krzyzewskiville",
+      "name": "Krzyzewskiville",
+      "description": "在最重要的男篮比赛前，学生们在 Cameron Indoor Stadium 旁的草坪上搭起名为 Krzyzewskiville 的帐篷村露营排队。冬天来访的游客可以从帐篷旁走过。",
+      "latitude": 35.9974496,
+      "longitude": -78.9422669
+    }
+  ],
+  "Florida State University": [
+    {
+      "id": "trad_fsu_unconquered",
+      "name": "Unconquered 雕像",
+      "description": "Doak Campbell Stadium 外的这座铜像描绘了一位骑着扬蹄骏马的塞米诺尔骑士。主场橄榄球赛前的日落时分，雕像的长矛会被点燃，球迷聚集观看。",
+      "latitude": 30.4369314,
+      "longitude": -84.3029864
+    },
+    {
+      "id": "trad_fsu_legacy_walk",
+      "name": "Legacy Walk",
+      "description": "徽章和石榴红旗帜标出一条从 Landis Green 出发的校史步道。游客沿着它走过历史建筑、雕像和纪念碑。",
+      "latitude": 30.4417312,
+      "longitude": -84.2949907
+    }
+  ],
+  "Georgia Institute of Technology": [
+    {
+      "id": "trad_gatech_tech_tower",
+      "name": "Tech Tower",
+      "description": "Tech Tower 四面亮起的 TECH 字母是学校最著名的标志。游客在楼下的草坪上拍照；拿走字母是被禁止的。",
+      "latitude": 33.7724961,
+      "longitude": -84.3946737
+    },
+    {
+      "id": "trad_gatech_campanile",
+      "name": "Kessler Campanile",
+      "description": "这座位于学生中心前、高 24 米的不锈钢钟塔为 1996 年奥运会而建，塔尖呼应 Tech Tower。游客常在塔下碰面拍照。",
+      "latitude": 33.7743044,
+      "longitude": -84.3981828
+    }
+  ],
+  "University of Louisville": [
+    {
+      "id": "trad_uofl_thinker",
+      "name": "思想者",
+      "description": "自 1949 年起，一座大型罗丹《思想者》铜像就坐落在 Grawemeyer Hall 前。与它合影是参观校园的经典一站。",
+      "latitude": 38.2150774,
+      "longitude": -85.7604332
+    }
+  ],
+  "University of Miami": [
+    {
+      "id": "trad_umiami_u_statue",
+      "name": "The Rock 的 U 雕像",
+      "description": "Shalala Student Center 旁 Rock Plaza 上的 U 雕像是校园的经典拍照点。游客会在它前面拍照留念。",
+      "latitude": 25.7194982,
+      "longitude": -80.279084
+    },
+    {
+      "id": "trad_umiami_boat_burning",
+      "name": "返校节烧船",
+      "description": "自 1956 年起，每逢返校节都会在 Osceola 湖上焚烧一艘船。传说如果桅杆在船沉之前倒下，Hurricanes 就会赢得第二天的比赛。",
+      "latitude": 25.7183486,
+      "longitude": -80.2792068
+    },
+    {
+      "id": "trad_umiami_bronze_ibis",
+      "name": "铜鹮",
+      "description": "学校吉祥物朱鹮 Sebastian 的铜像立在 Newman Alumni Center 前。游客会停下来合影。",
+      "latitude": 25.7114558,
+      "longitude": -80.283673
+    }
+  ],
+  "North Carolina State University": [
+    {
+      "id": "trad_ncstate_belltower_red",
+      "name": "红色的钟楼",
+      "description": "每当 NC State 赢得重大体育赛事，Memorial Belltower 就会亮起红灯。球迷聚在塔下呼喊口号，比出狼群手势。",
+      "latitude": 35.7861408,
+      "longitude": -78.6635001
+    },
+    {
+      "id": "trad_ncstate_free_expression_tunnel",
+      "name": "Free Expression Tunnel",
+      "description": "这条位于铁路下方、连接北校区和中央校区的人行隧道，墙壁、顶棚和地面任何人都可以涂画。游客穿行其间欣赏最新的留言。",
+      "latitude": 35.7856548,
+      "longitude": -78.6716159
+    }
+  ],
+  "University of North Carolina at Chapel Hill": [
+    {
+      "id": "trad_unc_old_well",
+      "name": "喝一口 Old Well 的水",
+      "description": "校园传统说，开学第一天在 Old Well 的饮水泉喝一口水会带来好运。游客任何一天都可以去喝。",
+      "latitude": 35.9120628,
+      "longitude": -79.0512347
+    },
+    {
+      "id": "trad_unc_davie_poplar",
+      "name": "Davie Poplar",
+      "description": "传说只要 McCorkle Place 这棵数百年的北美鹅掌楸屹立不倒，大学就会兴旺。游客会驻足观赏这棵树。",
+      "latitude": 35.9128488,
+      "longitude": -79.0516791
+    },
+    {
+      "id": "trad_unc_bell_tower",
+      "name": "卡罗来纳蓝的钟楼",
+      "description": "Tar Heels 橄榄球赛获胜后，Morehead-Patterson Bell Tower 会亮起卡罗来纳蓝。游客可以看到校园南部这座 52 米高的钟楼。",
+      "latitude": 35.908607,
+      "longitude": -79.0492161
+    }
+  ],
+  "University of Pittsburgh": [
+    {
+      "id": "trad_pitt_victory_lights",
+      "name": "Victory Lights",
+      "description": "Pitt 橄榄球赛获胜或赢得其他冠军后，Cathedral of Learning 的顶部会亮起金色，2018 年又加了一道蓝色光柱。在奥克兰区各处都能看到。",
+      "latitude": 40.4442951,
+      "longitude": -79.953191
+    },
+    {
+      "id": "trad_pitt_panther_nose",
+      "name": "黑豹雕像",
+      "description": "William Pitt Union 的黑豹雕像因学生多年来摸它祈求好运，鼻子已被磨得发亮。游客也会摸一摸。",
+      "latitude": 40.4433871,
+      "longitude": -79.9548392
+    },
+    {
+      "id": "trad_pitt_heinz_chapel_steps",
+      "name": "Heinz Chapel 台阶",
+      "description": "据说 Heinz Memorial Chapel 前的台阶能为年轻情侣带来好运。游客会在台阶上拍照。",
+      "latitude": 40.4452589,
+      "longitude": -79.95186
+    }
+  ],
+  "Southern Methodist University": [
+    {
+      "id": "trad_smu_dallas_hall_seal",
+      "name": "Dallas Hall 的 SMU 校徽",
+      "description": "SMU 校徽镶嵌在 Dallas Hall 圆厅的地板上。新生在 Rotunda Passage 仪式中绕行校徽，毕业时从上面走过；游客可在圆厅里看到它。",
+      "latitude": 32.8452642,
+      "longitude": -96.7849058
+    },
+    {
+      "id": "trad_smu_celebration_of_lights",
+      "name": "Celebration of Lights",
+      "description": "节日期间的 Celebration of Lights 上，Dallas Hall 挂满成千上万盏灯。来宾聚在草坪上享用热可可和饼干，晚会以《平安夜》结束。",
+      "latitude": 32.84524,
+      "longitude": -96.78485
+    }
+  ],
+  "Syracuse University": [
+    {
+      "id": "trad_syracuse_kissing_bench",
+      "name": "Kissing Bench",
+      "description": "这张位于 Tolley Hall 和 Hall of Languages 之间的花岗岩长椅是 1912 届毕业生的礼物。传说在长椅上接吻的情侣会结婚，独自坐在上面的人则会一直单身。",
+      "latitude": 43.0385705,
+      "longitude": -76.1345205
+    },
+    {
+      "id": "trad_syracuse_crouse_chimes",
+      "name": "Crouse Chimes",
+      "description": "Crouse College 钟楼里的编钟自 1889 年起每天敲响两次，特殊场合也会演奏。游客可在下方的 Quad 聆听。",
+      "latitude": 43.0384505,
+      "longitude": -76.1368611
+    }
+  ],
+  "Virginia Tech": [
+    {
+      "id": "trad_vt_corps_retreat",
+      "name": "学员团降旗仪式",
+      "description": "学员团（Corps of Cadets）每天晚上在旧一号营房 Lane Hall 前举行降旗仪式。游客可在 Upper Quad 观看。",
+      "latitude": 37.2309218,
+      "longitude": -80.4197604
+    }
+  ],
+  "Wake Forest University": [
+    {
+      "id": "trad_wfu_wait_chapel",
+      "name": "Wait Chapel 钟琴",
+      "description": "Wait Chapel 钟楼里有一座重 12 吨、由 48 口青铜钟组成的钟琴，礼拜堂还举办过总统候选人辩论。游客可在 Quad 尽头看到它。",
+      "latitude": 36.1352187,
+      "longitude": -80.2789962
+    },
+    {
+      "id": "trad_wfu_stone_arch",
+      "name": "石拱门",
+      "description": "Quad 上的这座拱门复制自北卡罗来纳州维克森林老校区的石拱，每届毕业生在毕业典礼上都会从它下面走过。游客也可以穿过它。",
+      "latitude": 36.1343948,
+      "longitude": -80.2781606
+    },
+    {
+      "id": "trad_wfu_magnolias",
+      "name": "木兰树",
+      "description": "Manchester Plaza 上的木兰树由 1947 年在老校区采集的种子培育而来。游客可在下方的广场上漫步其间。",
+      "latitude": 36.132692,
+      "longitude": -80.2766807
+    }
+  ],
+  "University of Arizona": [
+    {
+      "id": "trad_uarizona_bear_down",
+      "name": "Bear Down 体育馆",
+      "description": "学校的口号“Bear Down”源自 1926 年学生会主席约翰·“巴顿”·萨蒙临终前给球队的嘱托，旧男子体育馆 Bear Down 体育馆沿用了这个名字。去看看这句口号延续至今的地方。",
+      "latitude": 32.2311572,
+      "longitude": -110.9501043
+    }
+  ],
+  "Arizona State University": [
+    {
+      "id": "trad_asu_palm_walk",
+      "name": "棕榈步道",
+      "description": "棕榈步道连接坦佩校区的南北两端，是校园里最热闹的通道，两旁的棕榈树高逾 20 米。走完全程，在棕榈树下拍张照。",
+      "latitude": 33.4220414,
+      "longitude": -111.9327327
+    },
+    {
+      "id": "trad_asu_pitchfork",
+      "name": "青铜三叉戟",
+      "description": "一把高约 1.9 米的青铜三叉戟立在橄榄球场东南入口。站在旁边，比出“Fork 'em”手势。",
+      "latitude": 33.4264044,
+      "longitude": -111.9325879
+    }
+  ],
+  "Brigham Young University": [
+    {
+      "id": "trad_byu_brigham_young_statue",
+      "name": "杨百翰雕像",
+      "description": "由杨百翰的孙子、雕塑家马洪里·杨创作的杨百翰雕像，立在亚伯拉罕·O·斯穆特行政楼前。去看看学校名字来源人物的雕像。",
+      "latitude": 40.2505239,
+      "longitude": -111.6492863
+    },
+    {
+      "id": "trad_byu_cougar_statue",
+      "name": "体育场美洲狮雕像",
+      "description": "一尊在意大利铸造、由 1965 届和 1969 届校友捐赠的青铜美洲狮，守护着校园东北角的拉维尔·爱德华兹体育场。和它合个影吧。",
+      "latitude": 40.2573194,
+      "longitude": -111.6545784
+    },
+    {
+      "id": "trad_byu_carillon",
+      "name": "整点排钟曲",
+      "description": "每到整点，百年纪念排钟会奏出一段根据圣诗《Come, Come, Ye Saints》改编的旋律开头。整点时站在钟楼附近聆听。",
+      "latitude": 40.2527714,
+      "longitude": -111.6476271
+    }
+  ],
+  "University of Houston": [
+    {
+      "id": "trad_uhouston_rub_the_paw",
+      "name": "摸爪子（Rub the Paw）",
+      "description": "大赛前，球迷会摸摸 E. 卡伦楼前卡伦家族广场上两尊青铜美洲狮雕像的爪子祈求好运。也有学生在期末考试前去摸。",
+      "latitude": 29.7207927,
+      "longitude": -95.3445305
+    },
+    {
+      "id": "trad_uhouston_gate_2_cougar",
+      "name": "2 号门美洲狮",
+      "description": "比赛日，球迷还会摸橄榄球场 2 号门美洲狮雕像的爪子。摸一摸，讨个好运。",
+      "latitude": 29.7219969,
+      "longitude": -95.3491839
+    }
+  ],
+  "Iowa State University": [
+    {
+      "id": "trad_iastate_zodiac",
+      "name": "别踩黄道带",
+      "description": "纪念学生会金星厅的地板上嵌着一个青铜黄道带。传说踩到它下次考试就会挂科，所以像一代代学生那样绕着走吧。",
+      "latitude": 42.0236772,
+      "longitude": -93.6458587
+    },
+    {
+      "id": "trad_iastate_campaniling",
+      "name": "钟楼之吻",
+      "description": "传说午夜时分在钟楼下被亲吻，才算真正的爱荷华州立大学人；返校节时会有数百人参加“集体钟楼之吻”。去看看钟楼，听听钟声。",
+      "latitude": 42.025428,
+      "longitude": -93.6460367
+    },
+    {
+      "id": "trad_iastate_lake_laverne",
+      "name": "拉弗恩湖",
+      "description": "1935 年天鹅首次来到拉弗恩湖，被命名为兰斯洛特和伊莱恩。传说情侣默默绕湖走三圈，就注定会在一起。",
+      "latitude": 42.0235616,
+      "longitude": -93.6489068
+    }
+  ],
+  "University of Kansas": [
+    {
+      "id": "trad_ku_campanile",
+      "name": "纪念钟楼",
+      "description": "毕业典礼上，毕业生会穿过二战纪念钟楼再走下山坡。传说毕业前穿过它就毕不了业，所以在外面欣赏就好。",
+      "latitude": 38.9600053,
+      "longitude": -95.2469287
+    },
+    {
+      "id": "trad_ku_jayhawk_statue",
+      "name": "斯特朗楼的松鸦鹰",
+      "description": "斯特朗楼外的青铜松鸦鹰是 1956 届毕业生的礼物。停下来和它合个影。",
+      "latitude": 38.958435,
+      "longitude": -95.2474873
+    }
+  ],
+  "Kansas State University": [
+    {
+      "id": "trad_kstate_call_hall_ice_cream",
+      "name": "卡尔楼冰淇淋",
+      "description": "K-State 自己的乳品厂生产 40 多种口味的冰淇淋，包括“Purple Pride”，在卡尔楼出售。进去来一球吧。",
+      "latitude": 39.1960718,
+      "longitude": -96.5812726
+    }
+  ],
+  "Oklahoma State University": [
+    {
+      "id": "trad_okstate_library_lawn",
+      "name": "埃德蒙·洛图书馆草坪合影",
+      "description": "新生入学第一天会在埃德蒙·洛图书馆前的草坪上拍照。也在图书馆前留张影吧。",
+      "latitude": 36.1230647,
+      "longitude": -97.0697025
+    },
+    {
+      "id": "trad_okstate_old_central_bell",
+      "name": "老中央楼之钟",
+      "description": "1917 年橄榄球获胜的消息传到斯蒂尔沃特时，老中央楼的钟响了好几个小时，由此开始了 Bedlam 钟的传统。去看看校园里第一栋永久建筑。",
+      "latitude": 36.120811,
+      "longitude": -97.0665862
+    },
+    {
+      "id": "trad_okstate_theta_pond",
+      "name": "西塔池塘",
+      "description": "西塔池塘 1895 年作为蓄水池建成，如今是校园里最美的地方之一。绕着它散散步吧。",
+      "latitude": 36.120018,
+      "longitude": -97.0708324
+    }
+  ],
+  "Texas Tech University": [
+    {
+      "id": "trad_ttu_victory_bells",
+      "name": "胜利之钟",
+      "description": "行政楼东塔的胜利之钟在德州理工每次体育比赛获胜后和毕业典礼上都会敲响。比赛获胜后留心聆听。",
+      "latitude": 33.5831752,
+      "longitude": -101.8743018
+    },
+    {
+      "id": "trad_ttu_carol_of_lights",
+      "name": "灯光颂歌节",
+      "description": "自 1959 年起，德州理工每年 12 月都会用节日灯饰装点行政楼和周边建筑。季初来看看灯光吧。",
+      "latitude": 33.5831752,
+      "longitude": -101.8743018
+    },
+    {
+      "id": "trad_ttu_masked_rider_statue",
+      "name": "蒙面骑士雕像",
+      "description": "为纪念吉祥物蒙面骑士，格兰特·斯皮德创作的超真人大小雕像立在弗雷泽校友馆外。和它合个影吧。",
+      "latitude": 33.5896496,
+      "longitude": -101.8747022
+    }
+  ],
+  "West Virginia University": [
+    {
+      "id": "trad_wvu_woodburn_lighting",
+      "name": "伍德本楼节日灯光",
+      "description": "WVU 在节日期间点亮伍德本楼，这项校园传统于 2025 年恢复。12 月来看看它亮灯的样子。",
+      "latitude": 39.6360104,
+      "longitude": -79.9553417
+    },
+    {
+      "id": "trad_wvu_mountaineer_statue",
+      "name": "登山者雕像",
+      "description": "雕塑家唐纳德·德卢 1971 年创作的青铜登山者雕像立在学生会大楼 Mountainlair。找到它拍张照吧。",
+      "latitude": 39.6348483,
+      "longitude": -79.9535717
+    }
+  ],
+  "Baylor University": [
+    {
+      "id": "trad_baylor_judge_baylor",
+      "name": "贝勒法官雕像",
+      "description": "创始人广场上的 R.E.B. 贝勒法官青铜雕像面向韦科楼，是校园热门拍照点。和学校名字的来源人物合个影吧。",
+      "latitude": 31.5448581,
+      "longitude": -97.1205593
+    },
+    {
+      "id": "trad_baylor_mclane_carillon",
+      "name": "麦克莱恩排钟",
+      "description": "帕特·内夫楼的麦克莱恩排钟有 48 口钟，1988 年由麦克莱恩家族捐赠，让整个校园充满乐声。到帕特·内夫楼附近听一听。",
+      "latitude": 31.5457472,
+      "longitude": -97.1213019
+    }
+  ],
+  "University of Cincinnati": [
+    {
+      "id": "trad_ucincy_bearcat_statue",
+      "name": "熊狸雕像",
+      "description": "约翰·海尔创作的 4.5 米高青铜熊狸由荣誉社团 Sigma Sigma 于 2010 年捐赠，是参观和毕业拍照的热门背景。它位于玛丽安·斯宾塞楼外的 Commons Way。",
+      "latitude": 39.1331179,
+      "longitude": -84.5125066
+    }
+  ],
+  "University of Colorado Boulder": [
+    {
+      "id": "trad_cuboulder_norlin_inscriptions",
+      "name": "诺林图书馆铭文",
+      "description": "图书馆西立面、俯瞰诺林方庭的位置刻着两段由乔治·诺林校长撰写的铭文：“Who knows only his own generation remains always a child”，以及门上方的“Enter here the timeless fellowship of the human spirit”。从方庭里读一读。",
+      "latitude": 40.0087071,
+      "longitude": -105.2707683
+    },
+    {
+      "id": "trad_cuboulder_heritage_center",
+      "name": "老主楼里的 CU 遗产中心",
+      "description": "校园第一栋建筑老主楼里设有 CU 遗产中心，展厅讲述大学的历史。去了解 CU 的过去吧。",
+      "latitude": 40.0092235,
+      "longitude": -105.2733574
+    }
+  ],
+  "Texas Christian University": [
+    {
+      "id": "trad_tcu_lucky_frog",
+      "name": "幸运角蛙雕像",
+      "description": "学生会在考试前摸摸塞波·阿尔诺斯创作的焊接角蛙雕像的鼻子祈求好运，这尊雕像 1984 年立于萨德勒楼和里德楼之间。你也摸一摸吧。",
+      "latitude": 32.7088833,
+      "longitude": -97.3615399
+    },
+    {
+      "id": "trad_tcu_frog_fountain",
+      "name": "角蛙喷泉",
+      "description": "毕业生和家人会在角蛙喷泉前拍学位服照，主场比赛 Frogs 得分时，喷泉上空会燃放烟花。在喷泉前拍张照吧。",
+      "latitude": 32.709619,
+      "longitude": -97.3624259
+    },
+    {
+      "id": "trad_tcu_carols_by_candlelight",
+      "name": "烛光颂歌会",
+      "description": "40 多年来，每年 12 月罗伯特·卡尔礼拜堂都会举办“Carols by Candlelight”烛光颂歌会。节日期间去礼拜堂看看。",
+      "latitude": 32.7101446,
+      "longitude": -97.3598222
+    }
+  ],
+  "University of Central Florida": [
+    {
+      "id": "trad_ucf_pegasus_seal",
+      "name": "别踩校徽",
+      "description": "传说踩过学生会里的飞马校徽就毕不了业，不过拿到毕业证书后就可以走过去庆祝。找到校徽，绕着走吧。",
+      "latitude": 28.6020387,
+      "longitude": -81.2004879
+    }
+  ],
+  "University of Utah": [
+    {
+      "id": "trad_uutah_block_u",
+      "name": "Block U",
+      "description": "山坡上俯瞰校园的 Block U 始建于 1907 年，主场比赛时会亮灯，橄榄球、篮球和体操主场获胜后会闪红光。赛后抬头看看山坡。",
+      "latitude": 40.7793672,
+      "longitude": -111.8400323
+    }
+  ],
+  "University of Illinois Urbana-Champaign": [
+    {
+      "id": "trad_illinois_alma_mater",
+      "name": "Alma Mater 雕像",
+      "description": "Lorado Taft 于 1929 年创作的铜像，一位身穿学袍、张开双臂的女性，立在 Altgeld Hall 旁迎接学生。与她合影是伊利诺伊的经典照片。",
+      "latitude": 40.1099161,
+      "longitude": -88.2283981
+    },
+    {
+      "id": "trad_illinois_altgeld_chimes",
+      "name": "Altgeld 钟乐",
+      "description": "Altgeld Hall 塔楼里的 15 口钟自 1920 年起报时并演奏短小的音乐会。在塔楼附近可以听到每场必奏的《Hail to the Orange》。",
+      "latitude": 40.1093282,
+      "longitude": -88.2283277
+    },
+    {
+      "id": "trad_illinois_morrow_plots",
+      "name": "Morrow Plots",
+      "description": "这些小块田地于 1876 年开辟，是美国最古老的农业试验田，也是国家历史地标。在本科生图书馆旁走过去看看。",
+      "latitude": 40.1046383,
+      "longitude": -88.2261332
+    }
+  ],
+  "Indiana University Bloomington": [
+    {
+      "id": "trad_indiana_rose_well_house",
+      "name": "Rose Well House",
+      "description": "校园传说在午夜于 Rose Well House 下接吻会带来长久的爱情。这座位于 Dunn Woods 附近的小亭也是求婚胜地。",
+      "latitude": 39.1665052,
+      "longitude": -86.5244091
+    },
+    {
+      "id": "trad_indiana_sample_gates",
+      "name": "Sample Gates",
+      "description": "石灰岩砌成的 Sample Gates 是从 Kirkwood Avenue 进入 Old Crescent 的入口。像许多毕业生一样穿过大门拍张照吧。",
+      "latitude": 39.1665576,
+      "longitude": -86.526601
+    },
+    {
+      "id": "trad_indiana_wells_statue",
+      "name": "Herman B Wells 雕像",
+      "description": "这位深受爱戴的前校长的铜像坐在长椅上，伸出一只手。和他握握手：据说家人与他握手的学生会按时毕业。",
+      "latitude": 39.1666617,
+      "longitude": -86.5241231
+    },
+    {
+      "id": "trad_indiana_showalter_fountain",
+      "name": "Showalter 喷泉",
+      "description": "Fine Arts Plaza 的喷泉表现维纳斯的诞生，四周环绕着青铜鱼。数数鱼，找找那条替补的鱼，原来那条在 1987 年篮球夺冠后被人拿走了。",
+      "latitude": 39.1684746,
+      "longitude": -86.5189728
+    }
+  ],
+  "University of Iowa": [
+    {
+      "id": "trad_uiowa_old_capitol_photo",
+      "name": "Old Capitol 合影",
+      "description": "毕业生喜欢在 Old Capitol 前、柱子旁和刻着“Iowa”的门口拍照。在 Pentacrest 中心的台阶上拍一张你自己的照片吧。",
+      "latitude": 41.661311,
+      "longitude": -91.5361648
+    },
+    {
+      "id": "trad_uiowa_kinnick_wave",
+      "name": "Kinnick Wave",
+      "description": "主场比赛第一节结束后，全场观众转身向东看台上方儿童医院里观赛的小病人挥手。去看比赛时一起挥手吧。",
+      "latitude": 41.6586246,
+      "longitude": -91.5511915
+    }
+  ],
+  "University of Maryland, College Park": [
+    {
+      "id": "trad_umd_testudo",
+      "name": "摸 Testudo 的鼻子",
+      "description": "学生们会摸 McKeldin 图书馆前青铜水龟 Testudo 的鼻子求好运，期末时还会留下小供品。路过时摸摸它的鼻子吧。",
+      "latitude": 38.9859711,
+      "longitude": -76.9445694
+    }
+  ],
+  "Michigan State University": [
+    {
+      "id": "trad_michstate_the_rock",
+      "name": "The Rock",
+      "description": "这块由 1873 届学生捐赠、位于 Red Cedar 河边的岩石不断被涂上新的留言。去看看它今天写了什么。",
+      "latitude": 42.7281002,
+      "longitude": -84.4775643
+    },
+    {
+      "id": "trad_michstate_spartan_statue",
+      "name": "斯巴达勇士像",
+      "description": "近三米高的青铜斯巴达勇士像是很受欢迎的拍照背景，毕业时尤其如此。和它来张自拍吧。",
+      "latitude": 42.731083,
+      "longitude": -84.4875188
+    },
+    {
+      "id": "trad_michstate_beaumont_tower",
+      "name": "Beaumont Tower 开放日",
+      "description": "Beaumont Tower 每月第一个星期三和毕业典礼时对访客开放。上去看看钟琴，俯瞰校园。",
+      "latitude": 42.7319499,
+      "longitude": -84.482282
+    }
+  ],
+  "University of Minnesota Twin Cities": [
+    {
+      "id": "trad_umn_goldy_statue",
+      "name": "Goldy Gopher 雕像",
+      "description": "Coffman Memorial Union 前，一座青铜 Goldy Gopher 立在花岗岩 M 字旁，是聚会地点，也是学校精神的象征。顺路去拍张照吧。",
+      "latitude": 44.9730805,
+      "longitude": -93.2348397
+    }
+  ],
+  "University of Nebraska–Lincoln": [
+    {
+      "id": "trad_unl_archie",
+      "name": "猛犸象 Archie",
+      "description": "学生们会在考试和项目前摸 Morrill Hall 前青铜猛犸象 Archie 的脚求好运。摸摸它的脚或和它击个掌吧。",
+      "latitude": 40.8199558,
+      "longitude": -96.7018544
+    }
+  ],
+  "Northwestern University": [
+    {
+      "id": "trad_northwestern_the_rock",
+      "name": "The Rock",
+      "description": "学生们从 1940 年代起就在这块岩石上涂画，常常先守护它一整天，再在夜里涂上新内容。去看看最新的留言。",
+      "latitude": 42.0515656,
+      "longitude": -87.6759271
+    },
+    {
+      "id": "trad_northwestern_weber_arch",
+      "name": "Weber Arch",
+      "description": "新生入学时列队穿过 Weber Arch 进入校园，毕业生在离校前反方向走出。从 Sheridan Road 穿过拱门走进校园吧。",
+      "latitude": 42.0512624,
+      "longitude": -87.6770488
+    },
+    {
+      "id": "trad_northwestern_shakespeare_garden",
+      "name": "Shakespeare Garden",
+      "description": "这座安静的花园位于校园北部，是校园参观地图上的一站。散步时去看看。",
+      "latitude": 42.0568141,
+      "longitude": -87.6759774
+    }
+  ],
+  "Ohio State University": [
+    {
+      "id": "trad_ohiostate_long_walk",
+      "name": "The Long Walk",
+      "description": "Long Walk 穿过 Oval 通往 University Hall，过去新生不许走这条路。沿着它走过校园的中心。",
+      "latitude": 39.9994828,
+      "longitude": -83.012759
+    },
+    {
+      "id": "trad_ohiostate_buckeye_grove",
+      "name": "Buckeye Grove",
+      "description": "Ohio Stadium 旁为俄亥俄州立大学每一位一队全美最佳球员种下一棵七叶树，并配有铭牌。在树间找找著名球员的名字。",
+      "latitude": 39.9998852,
+      "longitude": -83.0210669
+    },
+    {
+      "id": "trad_ohiostate_victory_bell",
+      "name": "胜利钟",
+      "description": "Ohio Stadium 东南塔楼里的胜利钟会在俄亥俄州立大学每次获胜后敲响。主场比赛后留心听听。",
+      "latitude": 40.0016458,
+      "longitude": -83.0197374
+    }
+  ],
+  "Pennsylvania State University": [
+    {
+      "id": "trad_pennstate_lion_shrine",
+      "name": "Nittany Lion Shrine",
+      "description": "Heinz Warneke 雕刻的石灰岩狮子于 1942 年落成，是校园里被拍得最多的地方。许多学生在入学第一天和毕业前都会在这里拍照。",
+      "latitude": 40.7968202,
+      "longitude": -77.8690661
+    },
+    {
+      "id": "trad_pennstate_berkey_creamery",
+      "name": "Berkey Creamery",
+      "description": "这家大学乳品店的冰淇淋短期课程始于 1892 年，在 Food Science Building 出售自制冰淇淋。进去买个甜筒吧。",
+      "latitude": 40.8037114,
+      "longitude": -77.8624095
+    }
+  ],
+  "Purdue University": [
+    {
+      "id": "trad_purdue_bell_tower",
+      "name": "钟楼下的吻",
+      "description": "传说情侣在 Bell Tower 下接吻，再走过附近的 Stone Lion Fountain，终有一天会结婚。去看看校园中央的钟楼。",
+      "latitude": 40.4272802,
+      "longitude": -86.9140682
+    },
+    {
+      "id": "trad_purdue_hello_walk",
+      "name": "Hello Walk",
+      "description": "Hello Walk 最初是通往 University Hall 的小路，如今涵盖 Memorial Mall 上的所有步道。对遇到的每个人微笑问好吧。",
+      "latitude": 40.4249217,
+      "longitude": -86.9143278
+    }
+  ],
+  "Rutgers University–New Brunswick": [
+    {
+      "id": "trad_rutgers_willie_the_silent",
+      "name": "Willie the Silent",
+      "description": "这座 1928 年的奥兰治亲王“沉默者威廉”铜像被学生称为 Willie the Silent，是校园里最受喜爱的雕像之一。在 Voorhees Mall 找到他。",
+      "latitude": 40.5012053,
+      "longitude": -74.447713
+    },
+    {
+      "id": "trad_rutgers_old_queens_bell",
+      "name": "Old Queens 的钟",
+      "description": "Old Queens 圆顶上的钟会在开学典礼、毕业典礼等重大场合敲响，还启发了歌曲《The Bells Must Ring》。从 Queens Campus 抬头看看圆顶。",
+      "latitude": 40.4987592,
+      "longitude": -74.4462652
+    }
+  ],
+  "University of Wisconsin–Madison": [
+    {
+      "id": "trad_wisc_abe_lincoln",
+      "name": "Bascom Hill 的林肯像",
+      "description": "Bascom Hall 前的林肯坐像是毕业周末合影的亮点。在山顶站在他身旁拍张照吧。",
+      "latitude": 43.0753179,
+      "longitude": -89.4036901
+    },
+    {
+      "id": "trad_wisc_terrace_chairs",
+      "name": "露台的太阳椅",
+      "description": "Memorial Union 露台上的太阳图案椅子是这所大学最知名的标志之一。在 Mendota 湖边坐一坐。",
+      "latitude": 43.0767342,
+      "longitude": -89.3996524
+    },
+    {
+      "id": "trad_wisc_babcock_ice_cream",
+      "name": "Babcock Hall 冰淇淋",
+      "description": "Babcock Hall 大学乳品厂做的冰淇淋是学生的必吃美食，也是游客景点。尝一球吧。",
+      "latitude": 43.0747917,
+      "longitude": -89.4136733
+    }
+  ],
+  "University of Oregon": [
+    {
+      "id": "trad_uoregon_yell_o",
+      "name": "Yell-O 鸭子雕像",
+      "description": "一座重约 450 公斤、比出“O”手势的鸭子铜像立在 Matthew Knight Arena 和 Ford Alumni Center 之间。在旁边比个 O 拍照吧。",
+      "latitude": 44.0451181,
+      "longitude": -123.067633
+    },
+    {
+      "id": "trad_uoregon_bowerman_statue",
+      "name": "Bill Bowerman 雕像",
+      "description": "教练兼耐克联合创始人 Bill Bowerman 的 2000 年铜像立在 Hayward Field 的一角。绕体育场散步时去看看。",
+      "latitude": 44.0422171,
+      "longitude": -123.070799
+    }
+  ],
+  "University of Southern California": [
+    {
+      "id": "trad_southerncal_tommy_trojan",
+      "name": "Tommy Trojan",
+      "description": "Hahn Plaza 上的青铜特洛伊战士像是校园里最受欢迎的碰头地点。对阵 UCLA 前，它会被胶带包起来，由 Trojan Knights 日夜守护。",
+      "latitude": 34.0205678,
+      "longitude": -118.2854346
+    },
+    {
+      "id": "trad_southerncal_hecuba",
+      "name": "赫卡柏雕像",
+      "description": "特洛伊王后赫卡柏的雕像于 2017 年在 USC Village 中央广场揭幕，与 Tommy Trojan 相对应。去广场看看她。",
+      "latitude": 34.025089,
+      "longitude": -118.2847258
+    }
+  ],
+  "University of Alabama": [
+    {
+      "id": "trad_ua_walk_of_fame",
+      "name": "丹尼钟楼名人步道",
+      "description": "自1948年起，橄榄球队的队长们都会在丹尼钟楼底部周围的混凝土上留下手印和脚印。绕着钟楼走一圈寻找他们的名字，每15分钟还能听到威斯敏斯特钟声。",
+      "latitude": 33.2099035,
+      "longitude": -87.5463171
+    },
+    {
+      "id": "trad_ua_walk_of_champions",
+      "name": "冠军步道",
+      "description": "布莱恩特-丹尼体育场外，花岗岩石板记录着深红浪潮队的全国冠军，旁边立着夺冠教练的雕像。比赛日，球迷们会在步道两旁为抵达的球队欢呼。",
+      "latitude": 33.2095313,
+      "longitude": -87.5503283
+    }
+  ],
+  "University of Arkansas": [
+    {
+      "id": "trad_uark_senior_walk",
+      "name": "毕业生步道",
+      "description": "校园人行道上按届刻着自1876年以来所有毕业生的名字。从 Old Main 附近出发，低头就能读到这些名字。",
+      "latitude": 36.0686953,
+      "longitude": -94.1716272
+    },
+    {
+      "id": "trad_uark_spoofers_stone",
+      "name": "Spoofer's Stone",
+      "description": "Old Main 旁的这块石灰岩来自男女学生不许交往的年代，那时他们把情书塞进石缝里。如今这里是求婚的热门地点。",
+      "latitude": 36.0686953,
+      "longitude": -94.1716272
+    }
+  ],
+  "Auburn University": [
+    {
+      "id": "trad_auburn_toomers_corner",
+      "name": "图默角",
+      "description": "在学院街与木兰大道交会处，球迷们用卫生纸抛挂橡树来庆祝奥本的胜利，这是学校认可的庆祝方式。可以来看看路口和重新种下的图默橡树，或在胜利后来围观。",
+      "latitude": 32.6063055,
+      "longitude": -85.4818803
+    },
+    {
+      "id": "trad_auburn_tiger_walk",
+      "name": "老虎之行",
+      "description": "主场比赛前，球迷们在多纳休大道两旁为步行进入乔丹-黑尔体育场的球队加油。奥本称其为大学橄榄球中被模仿最多的传统之一。",
+      "latitude": 32.6021616,
+      "longitude": -85.4891613
+    }
+  ],
+  "University of Florida": [
+    {
+      "id": "trad_uf_century_tower",
+      "name": "世纪塔钟琴",
+      "description": "世纪塔的61钟钟琴于2003年形成现在的规模，琴声回荡在校园中心。站在塔下的草坪上聆听吧。",
+      "latitude": 29.6488138,
+      "longitude": -82.3433213
+    }
+  ],
+  "University of Georgia": [
+    {
+      "id": "trad_uga_arch",
+      "name": "拱门",
+      "description": "拱门是北校区与雅典镇中心之间的门户。据传学生在毕业前不会从拱门下走过，所以许多游客会绕过去，在旁边拍照。",
+      "latitude": 33.9575243,
+      "longitude": -83.3752855
+    },
+    {
+      "id": "trad_uga_chapel_bell",
+      "name": "礼拜堂钟",
+      "description": "自1894年起，礼拜堂旁的这口钟就被敲响来庆祝橄榄球胜利。学校鼓励在体育胜利和其他特别时刻敲响它。",
+      "latitude": 33.956616,
+      "longitude": -83.375418
+    }
+  ],
+  "Louisiana State University": [
+    {
+      "id": "trad_lsu_mike_habitat",
+      "name": "迈克老虎栖息地",
+      "description": "自1936年起，LSU 校园里就养着一只活老虎。去老虎体育场和皮特·马拉维奇集会中心之间的栖息地看看迈克吧，全年对游客开放。",
+      "latitude": 30.4134234,
+      "longitude": -91.1850659
+    },
+    {
+      "id": "trad_lsu_victory_hill",
+      "name": "胜利山游行",
+      "description": "主场比赛前，球迷们在胜利山两旁，看着球队、教练和金色乐队从希腊剧场行进到老虎体育场。",
+      "latitude": 30.4161043,
+      "longitude": -91.1803752
+    }
+  ],
+  "University of Mississippi": [
+    {
+      "id": "trad_olemiss_walk_of_champions",
+      "name": "冠军步道",
+      "description": "每个周六主场比赛前，球队都会从冠军步道拱门出发穿过 The Grove。这座拱门是1962年不败之师于1998年捐赠的。球迷们在路旁为他们加油。",
+      "latitude": 34.3657509,
+      "longitude": -89.5327617
+    },
+    {
+      "id": "trad_olemiss_meredith_monument",
+      "name": "民权纪念碑",
+      "description": "在 Lyceum 和图书馆之间，立着该校首位黑人学生詹姆斯·梅雷迪斯的真人大小雕像，旁边的石灰岩门上刻着 Courage、Knowledge、Perseverance 和 Opportunity。",
+      "latitude": 34.3652987,
+      "longitude": -89.5365903
+    },
+    {
+      "id": "trad_olemiss_grove",
+      "name": "The Grove",
+      "description": "这片约4公顷、橡树成荫的公园位于校园中心。可以在里面散步，比赛日还能听到南方之傲乐队在 Grove 舞台上的赛前演出。",
+      "latitude": 34.3658088,
+      "longitude": -89.5327448
+    }
+  ],
+  "University of Missouri": [
+    {
+      "id": "trad_mizzou_columns",
+      "name": "穿过石柱",
+      "description": "每年八月，新生们穿过石柱奔向杰西楼；五月，毕业生们则沿反方向走回。游客也可以在弗朗西斯方院走同样的路线。",
+      "latitude": 38.946276,
+      "longitude": -92.328778
+    },
+    {
+      "id": "trad_mizzou_francis_nose",
+      "name": "戴维·R·弗朗西斯的鼻子",
+      "description": "据说摸一摸杰西楼东北入口附近戴维·R·弗朗西斯青铜浮雕的鼻子，下次考试就能拿 A。人们认为是弗朗西斯在1892年大火后把大学留在了哥伦比亚。",
+      "latitude": 38.9452339,
+      "longitude": -92.3286872
+    },
+    {
+      "id": "trad_mizzou_jefferson_tombstone",
+      "name": "托马斯·杰斐逊的墓碑",
+      "description": "托马斯·杰斐逊在蒙蒂塞洛墓地的原始墓碑立在弗朗西斯方院东侧。因为密苏里大学是路易斯安那购地范围内创办的第一所大学，他的后人于1883年将墓碑赠给了学校。",
+      "latitude": 38.9463586,
+      "longitude": -92.3287867
+    }
+  ],
+  "University of Oklahoma": [
+    {
+      "id": "trad_ou_seed_sower",
+      "name": "播种者",
+      "description": "南椭圆草坪旁立着保罗·摩尔创作的3.7米高青铜播种者像，取材于校徽上的人物和首任校长戴维·罗斯·博伊德讲过的寓言。每当球队得知碗赛去向，雕像就会被装扮起来。",
+      "latitude": 35.2050658,
+      "longitude": -97.4457142
+    },
+    {
+      "id": "trad_ou_heisman_park",
+      "name": "海斯曼公园",
+      "description": "橄榄球体育场东侧，青铜雕像纪念俄克拉何马大学的海斯曼奖得主，是热门拍照地点。",
+      "latitude": 35.2052402,
+      "longitude": -97.4408049
+    }
+  ],
+  "University of South Carolina": [
+    {
+      "id": "trad_uofsc_maxcy_monument",
+      "name": "马克西纪念碑",
+      "description": "马蹄形广场中央立着纪念首任校长乔纳森·马克西的纪念碑，由罗伯特·米尔斯设计，1827年落成。可以读读拉丁文碑文和旁边的英文译文。",
+      "latitude": 33.9982602,
+      "longitude": -81.0285542
+    },
+    {
+      "id": "trad_uofsc_cocky_statue",
+      "name": "Cocky 雕像",
+      "description": "吉祥物斗鸡的雕像位于罗素楼附近的格林街旁，欢迎游客与它合影。",
+      "latitude": 33.9975701,
+      "longitude": -81.0262322
+    }
+  ],
+  "Vanderbilt University": [
+    {
+      "id": "trad_vandy_commodore_statue",
+      "name": "范德比尔特准将雕像",
+      "description": "以捐款创办这所大学的科尼利厄斯·范德比尔特，他的雕像立在大草坪北端，面朝西区大道。每年3月17日建校纪念日前后，这里都会举行创始人日仪式。",
+      "latitude": 36.148246,
+      "longitude": -86.8027544
+    }
+  ],
+  "University of Kentucky": [
+    {
+      "id": "trad_uky_bowman",
+      "name": "野猫鲍曼",
+      "description": "野猫校友广场上的青铜野猫雕像于2012年经学生投票命名为鲍曼。游客们会拍拍它的头，摸摸它的鼻子和爪子来祈求好运。",
+      "latitude": 38.0282667,
+      "longitude": -84.5086422
+    }
+  ],
+  "Mississippi State University": [
+    {
+      "id": "trad_msstate_cowbells",
+      "name": "戴维斯·韦德体育场的牛铃",
+      "description": "密西西比州立大学比赛时，球迷们会摇响牛铃，这是学校精神最著名的象征。带一只牛铃去看主场比赛，或在体育场的牛铃呐喊集会上听听吧。",
+      "latitude": 33.4564527,
+      "longitude": -88.7934036
+    },
+    {
+      "id": "trad_msstate_drill_field",
+      "name": "操练场",
+      "description": "这片中央草坪因学员团曾在此操练而得名。学生们课间在这里休息，开学第一周还会在这里举行名为 The Drill 的集会。",
+      "latitude": 33.4538086,
+      "longitude": -88.7893773
+    }
+  ],
+  "University of Tennessee": [
+    {
+      "id": "trad_utk_torchbearer",
+      "name": "火炬手",
+      "description": "Circle Park 的火炬手雕像铭牌上刻着志愿者信条。读一读这段信条，它是学校火炬之夜仪式的由来。",
+      "latitude": 35.953354,
+      "longitude": -83.9273555
+    },
+    {
+      "id": "trad_utk_the_rock",
+      "name": "The Rock",
+      "description": "这块巨大的石灰岩被学生们一遍遍重新涂画，内容从生日祝福到求婚都有。来看看它今天写了什么吧。",
+      "latitude": 35.95138889,
+      "longitude": -83.93083333
+    },
+    {
+      "id": "trad_utk_vol_walk",
+      "name": "志愿者之行",
+      "description": "主场比赛前，球队在乐队带领下从火炬手雕像走到内兰德体育场，球迷们在沿途列队。这一传统始于1990年。",
+      "latitude": 35.9550206,
+      "longitude": -83.9241185
+    }
+  ],
+  "Texas A&M University": [
+    {
+      "id": "trad_tamu_pennies_on_sully",
+      "name": "给 Sully 的硬币",
+      "description": "考试前，学生们会在劳伦斯·沙利文·罗斯雕像的底座放上一美分硬币祈求好运，源自他那句“a penny for your thoughts”。硬币每学期都会捐给慈善机构。",
+      "latitude": 30.6157404,
+      "longitude": -96.3407842
+    },
+    {
+      "id": "trad_tamu_century_tree",
+      "name": "世纪树",
+      "description": "这棵弗吉尼亚栎是校园最早种下的树之一，树龄远超100年。据说一起从树下走过的情侣将会结婚。",
+      "latitude": 30.6158806,
+      "longitude": -96.3413475
+    }
+  ],
+  "University of Oxford": [
+    {
+      "id": "trad_oxford_great_tom",
+      "name": "大汤姆钟的101响",
+      "description": "每晚9:05（旧“牛津时间”的9点），基督教堂学院汤姆塔里的大汤姆钟会敲响101下，代表学院最初的100名学者，再加上1663年增加的1名。站在圣奥尔代茨街上就能听到。",
+      "latitude": 51.750203,
+      "longitude": -1.256554
+    },
+    {
+      "id": "trad_oxford_may_morning",
+      "name": "莫德林塔的五月晨曲",
+      "description": "5月1日早上6点，莫德林学院合唱团会在大塔顶上演唱《Hymnus Eucharisticus》，这一仪式已有约500年历史。人们聚集在下方的高街和莫德林桥上聆听。",
+      "latitude": 51.751719,
+      "longitude": -1.246859
+    },
+    {
+      "id": "trad_oxford_bridge_of_sighs",
+      "name": "叹息桥",
+      "description": "赫特福德桥因据说酷似威尼斯的叹息桥而得名“叹息桥”，它跨越新学院巷，连接赫特福德学院的两部分。在巷子里停下脚步，观赏并拍下这座城市地标。",
+      "latitude": 51.754502,
+      "longitude": -1.253781
+    }
+  ],
+  "University of Cambridge": [
+    {
+      "id": "trad_cambridge_nine_lessons",
+      "name": "国王学院的九篇读经与颂歌",
+      "description": "平安夜，国王学院合唱团会在国王学院礼拜堂演唱“九篇读经与颂歌节”。门票通过公开抽签发放，申请过的人还可以排候补队。",
+      "latitude": 52.20478,
+      "longitude": 0.116544
+    },
+    {
+      "id": "trad_cambridge_corpus_clock",
+      "name": "圣体钟",
+      "description": "圣体钟又名“时间吞噬者”（Chronophage），是一座没有指针的镀金时钟，位于本尼特街和特兰平顿街转角处、圣体学院泰勒图书馆的临街位置。驻足观看那个像蚱蜢一样的造型随着时钟运转。",
+      "latitude": 52.203759,
+      "longitude": 0.117688
+    },
+    {
+      "id": "trad_cambridge_mathematical_bridge",
+      "name": "数学桥的传说",
+      "description": "一个流传甚广的说法是：艾萨克·牛顿不用一颗螺母或螺栓就建成了王后学院的数学桥，而桥被拆开后再也没人能把它装回去。不妨从河上或银街观赏这座桥，自己判断这个故事的真假。",
+      "latitude": 52.202214,
+      "longitude": 0.115049
+    },
+    {
+      "id": "trad_cambridge_newton_apple_tree",
+      "name": "牛顿的苹果树",
+      "description": "在三一学院大门外、牛顿曾经居住的房间下方，长着一棵1954年种下的苹果树，它是与牛顿万有引力故事相关的伍尔斯索普庄园那棵树的后代。游客会在三一街停下来看看它。",
+      "latitude": 52.207305,
+      "longitude": 0.117735
+    },
+    {
+      "id": "trad_cambridge_henry_chair_leg",
+      "name": "亨利八世的椅子腿",
+      "description": "三一学院大门上的亨利八世雕像之所以出名，是因为19世纪的学生把他手中的权杖换成了一根椅子腿。从三一街抬头看看他拿着什么吧。",
+      "latitude": 52.207137,
+      "longitude": 0.117586
+    }
+  ],
+  "University of St Andrews": [
+    {
+      "id": "trad_st_andrews_ph_initials",
+      "name": "帕特里克·汉密尔顿的PH",
+      "description": "圣萨尔瓦托四方院外的鹅卵石路面上嵌着字母PH，标记着帕特里克·汉密尔顿于1528年被处以火刑的地方。传统说法是，踩到它的学生会拿不到学位，所以游客也会绕着走。",
+      "latitude": 56.341258,
+      "longitude": -2.794631
+    },
+    {
+      "id": "trad_st_andrews_pier_walk",
+      "name": "码头漫步",
+      "description": "每周礼拜结束后，身穿红袍的学生会走完历史悠久的港口码头全程，新生周结束时的那次最为热闹。游客可以观看队伍，也可以亲自走一走码头。",
+      "latitude": 56.339596,
+      "longitude": -2.781318
+    }
+  ],
+  "University of Glasgow": [
+    {
+      "id": "trad_glasgow_unicorn",
+      "name": "摸摸独角兽的角",
+      "description": "狮子与独角兽阶梯雕刻于1690年，是从高街的老学院一块石头一块石头地搬过来的。据说拍拍独角兽或摸摸它的角会带来好运，考试前尤其灵验。",
+      "latitude": 55.871353,
+      "longitude": -4.289906
+    },
+    {
+      "id": "trad_glasgow_quad_grass",
+      "name": "别踩四方院的草坪",
+      "description": "人们认为，学生在毕业前踩四方院的草坪会带来厄运。游客可以从小路上欣赏东、西四方院，由风笛手领队的毕业游行也在这里举行。",
+      "latitude": 55.871366,
+      "longitude": -4.287898
+    },
+    {
+      "id": "trad_glasgow_cloisters",
+      "name": "回廊",
+      "description": "位于东、西四方院之间的拱顶回廊（地下拱廊）曾出现在《古战场传奇》《云图》等电影和电视剧中。不妨穿过回廊，在带凹槽的柱子下拍张照。",
+      "latitude": 55.871446,
+      "longitude": -4.288488
+    }
+  ],
+  "University of Edinburgh": [
+    {
+      "id": "trad_edinburgh_hume_toe",
+      "name": "摸摸大卫·休谟的脚趾",
+      "description": "曾就读于爱丁堡大学的大卫·休谟，其位于皇家英里大道的雕像有一只脚趾被学生、游客和路人摸得锃亮，大家都是为了求好运。游客也可以摸一摸，尽管休谟本人是出了名的迷信批评者。",
+      "latitude": 55.949552,
+      "longitude": -3.192443
+    },
+    {
+      "id": "trad_edinburgh_old_college_youth",
+      "name": "寻找老学院上的镀金青年像",
+      "description": "老学院的穹顶于1887年加建，顶上立着约翰·哈奇森所作的镀金“青年”雕像。游客可以从南桥街抬头仰望，或走进四方院，这里也会举办毕业典礼和艺术节活动。",
+      "latitude": 55.947424,
+      "longitude": -3.186515
+    }
+  ],
+  "Durham University": [
+    {
+      "id": "trad_durham_sanctuary_knocker",
+      "name": "看看庇护门环",
+      "description": "中世纪时，即使犯下重罪的人，只要抓住达勒姆大教堂北门上的门环，就能获得37天的庇护。游客可以在北门上看到门环的复制品，12世纪的原件则收藏在大教堂博物馆中。",
+      "latitude": 54.773262,
+      "longitude": -1.576333
+    },
+    {
+      "id": "trad_durham_castle_college",
+      "name": "参观城堡里的学院",
+      "description": "宫廷绿地上的达勒姆城堡是大学学院的所在地，约有150名学生住在这里，正式晚宴至今仍在中世纪的大厅举行。游客可以参加导览进入内部参观，导览在非学期期间每天开放。",
+      "latitude": 54.775509,
+      "longitude": -1.576891
+    },
+    {
+      "id": "trad_durham_dun_cow",
+      "name": "寻找“棕色母牛”",
+      "description": "当地传说称，抬着圣卡斯伯特遗体的修士们跟随一位寻找走失棕色母牛（Dun Cow）的挤奶姑娘，来到了如今大教堂所在的山丘。大教堂旁的“棕色母牛巷”（Dun Cow Lane）得名于大教堂上描绘这个故事的雕刻，游客可以去找找它。",
+      "latitude": 54.773834,
+      "longitude": -1.575284
+    }
+  ],
+  "Trinity College Dublin": [
+    {
+      "id": "trad_tcd_campanile",
+      "name": "别从钟楼下走过",
+      "description": "学生迷信说，前广场钟楼的钟声响起时，任何从钟楼下走过的人都会考试不及格，所以就算下雨，学生也很少到钟楼下避雨。游客可以看看学生们怎样绕开它而不是从下面穿过。",
+      "latitude": 53.344404,
+      "longitude": -6.257315
+    },
+    {
+      "id": "trad_tcd_book_of_kells",
+      "name": "参观《凯尔经》和长厅",
+      "description": "老图书馆自1661年起收藏《凯尔经》，其长厅每年接待超过90万名游客。游客可以购票观赏这部手抄本，并漫步长厅。",
+      "latitude": 53.34393,
+      "longitude": -6.256801
+    }
+  ],
+  "Yale University": [
+    {
+      "id": "trad_yale_woolsey_foot",
+      "name": "摸摸伍尔西的脚",
+      "description": "一代代学生都会摸一摸老校园里西奥多·德怀特·伍尔西校长铜像那只伸出的脚，祈求好运。游客也可以摸一摸这只闪亮的脚。",
+      "latitude": 41.308785,
+      "longitude": -72.928905
+    },
+    {
+      "id": "trad_yale_harkness_carillon",
+      "name": "聆听哈克尼斯钟琴",
+      "description": "学年期间，耶鲁钟琴师协会的学生每天两次在哈克尼斯塔演奏钟琴，时间是中午12:30和下午5:30，夏季还有周五音乐会。游客可以在附近的街道和庭院里聆听。",
+      "latitude": 41.30941,
+      "longitude": -72.929484
+    },
+    {
+      "id": "trad_yale_womens_table",
+      "name": "参观“女性之桌”",
+      "description": "斯特林纪念图书馆前，林璎（Maya Lin）1993年的作品“女性之桌”上刻着一圈螺旋状的数字，显示自1701年以来每年在耶鲁求学的女性人数。游客可以走近读一读这些数字。",
+      "latitude": 41.310797,
+      "longitude": -72.928162
+    }
+  ],
+  "Harvard University": [
+    {
+      "id": "trad_harvard_john_harvard_foot",
+      "name": "摸摸约翰·哈佛的左脚",
+      "description": "据说摸一摸哈佛园里约翰·哈佛雕像的左脚会带来好运，它已被摸得金光闪闪。导游们称它为“三个谎言的雕像”，游客也常常与它合影。",
+      "latitude": 42.374464,
+      "longitude": -71.117198
+    },
+    {
+      "id": "trad_harvard_dexter_gate",
+      "name": "读读德克斯特门的两面",
+      "description": "马萨诸塞大道上的德克斯特门，外侧写着“Enter to grow in wisdom”（入此门，增长智慧），内侧写着“Depart to serve better thy country and thy kind”（出此门，更好地服务国家与同胞）。游客可以穿过大门，读一读两面的铭文。",
+      "latitude": 42.372775,
+      "longitude": -71.116278
+    },
+    {
+      "id": "trad_harvard_johnston_gate_sheriffs",
+      "name": "约翰斯顿门的警长",
+      "description": "几个世纪以来，米德尔塞克斯县和萨福克县的警长都会在毕业典礼当天骑马进入哈佛园，传统上是从约翰斯顿门进入。这座1889年建成的大门是哈佛园的正门，游客随时都可以参观。",
+      "latitude": 42.374679,
+      "longitude": -71.11849
+    }
+  ],
+  "Massachusetts Institute of Technology": [
+    {
+      "id": "trad_mit_mithenge",
+      "name": "MIT巨石阵",
+      "description": "每年11月中旬和1月下旬前后的几天里，落日会与“无限长廊”连成一线，光线洒满整条长廊。人们会聚集在长廊里观看阳光倾泻而入。",
+      "latitude": 42.359585,
+      "longitude": -71.091981
+    },
+    {
+      "id": "trad_mit_smoot_markers",
+      "name": "哈佛桥上的“斯穆特”标记",
+      "description": "哈佛桥的人行道上漆着以“斯穆特”为单位测量桥长的标记，一斯穆特就是1958年入会新生奥利弗·斯穆特的身高。走过大桥，找找“Halfway to Hell”（地狱半途）标记，以及最后的“364.4斯穆特，误差正负一只耳朵”。",
+      "latitude": 42.354547,
+      "longitude": -71.091302
+    }
+  ],
+  "Princeton University": [
+    {
+      "id": "trad_princeton_fitzrandolph_gate",
+      "name": "菲茨伦道夫门的迷信",
+      "description": "校园传说称，毕业前从菲茨伦道夫门走出去的学生将无法完成学业，所以本科生在毕业典礼前都会避开它。游客可以在拿骚街看看这座门，自己决定往哪个方向走。",
+      "latitude": 40.349546,
+      "longitude": -74.659695
+    },
+    {
+      "id": "trad_princeton_blair_arch_sings",
+      "name": "布莱尔拱门的“拱门歌会”",
+      "description": "布莱尔拱门是校园里最大的拱门，普林斯顿的许多阿卡贝拉“拱门歌会”都在这里举行。在拱门下停一停，听听回声，或者赶上一场免费的晚间音乐会。",
+      "latitude": 40.347435,
+      "longitude": -74.661457
+    },
+    {
+      "id": "trad_princeton_big_cannon",
+      "name": "大炮绿地上的大炮",
+      "description": "一门独立战争时期的大炮自1840年起就炮口朝下埋在拿骚楼后面的大炮绿地上，并且正在慢慢下沉。游客可以看到露出地面的一端；每当普林斯顿在橄榄球赛中同时击败哈佛和耶鲁，这片绿地上也会点燃篝火。",
+      "latitude": 40.3482,
+      "longitude": -74.659096
+    }
+  ],
+  "Cornell University": [
+    {
+      "id": "trad_cornell_founders_footprints",
+      "name": "创始人雕像与脚印",
+      "description": "传说在某种不可能实现的条件下，埃兹拉·康奈尔和安德鲁·迪克森·怀特的雕像会走下底座，在艺术四方院中握手，两座雕像之间漆着的脚印就标记着这个传说。找找这些脚印，站在两位创始人中间摆个姿势吧。",
+      "latitude": 42.44934,
+      "longitude": -76.484463
+    },
+    {
+      "id": "trad_cornell_cornell_chimes",
+      "name": "麦格劳塔的康奈尔钟乐",
+      "description": "学年期间，学生鸣钟师每天在麦格劳塔演奏三场由21口钟组成的康奈尔钟乐，每一场都欢迎游客到场。可以在霍广场或艺术四方院聆听。",
+      "latitude": 42.44757,
+      "longitude": -76.485043
+    },
+    {
+      "id": "trad_cornell_dragon_day",
+      "name": "龙日（Dragon Day）",
+      "description": "春假前的星期五，建筑系一年级学生会抬着一条巨大的手工龙，经过西布利楼游行到艺术四方院。游客可以站在路边观看巨龙经过。",
+      "latitude": 42.450923,
+      "longitude": -76.484099
+    }
+  ],
+  "Columbia University": [
+    {
+      "id": "trad_columbia_alma_mater_owl",
+      "name": "在“母校”雕像上找猫头鹰",
+      "description": "代表智慧的猫头鹰藏在“母校”雕像腿边的长袍褶皱里，迷信说第一个找到它的新生会成为毕业生代表。游客可以在洛氏图书馆前的雕像上找找这只猫头鹰。",
+      "latitude": 40.807826,
+      "longitude": -73.962133
+    },
+    {
+      "id": "trad_columbia_low_steps",
+      "name": "洛氏台阶",
+      "description": "洛氏纪念图书馆前宽阔的台阶被戏称为“洛氏海滩”（Low Beach），是哥大人最喜欢的碰头地点。坐在台阶上，欣赏一路延伸到巴特勒图书馆的景色。",
+      "latitude": 40.807941,
+      "longitude": -73.962053
+    },
+    {
+      "id": "trad_columbia_sundial",
+      "name": "日晷",
+      "description": "位于学院步道中央的1885届日晷建于1914年，它的花岗岩球在1946年就不见了，但底座至今仍是经典的聚会地点和自由演讲角。冬季点灯仪式和圣诞柴（Yule Log）仪式也从这里开始。",
+      "latitude": 40.807283,
+      "longitude": -73.962531
+    },
+    {
+      "id": "trad_columbia_tree_lighting",
+      "name": "学院步道点灯仪式",
+      "description": "每年12月初，学院步道两旁的树木会在阿卡贝拉音乐和热巧克力相伴的仪式中亮灯，灯光会一直亮到2月底。冬天天黑后去学院步道走走，欣赏灯景。",
+      "latitude": 40.807411,
+      "longitude": -73.962433
+    }
+  ],
+  "University of Pennsylvania": [
+    {
+      "id": "trad_penn_the_button",
+      "name": "大纽扣",
+      "description": "克拉斯·奥尔登堡的《裂开的纽扣》摆放在学院绿地上，学生间流传的说法是：这是从本杰明·富兰克林背心上崩掉的纽扣，它滚下洛克斯特步道，裂成了两半。这里是校园的核心地标，也是热门拍照点。",
+      "latitude": 39.952215,
+      "longitude": -75.193692
+    },
+    {
+      "id": "trad_penn_ivy_stones",
+      "name": "学院楼上的常春藤日石碑",
+      "description": "自1873年起，每届毕业生都会在校园建筑上镶嵌一块刻字的常春藤石碑，如今校园里已有近200块。从学院楼开始，在墙上找找各届的年份石碑吧。",
+      "latitude": 39.95146,
+      "longitude": -75.193815
+    },
+    {
+      "id": "trad_penn_hey_day",
+      "name": "洛克斯特步道上的“嘿日”",
+      "description": "每年春天，戴着草帽式帽子的大三学生沿洛克斯特步道游行到学院楼，被宣布升为大四学生，这一传统可追溯到1865年的毕业班日。游客可以观看游行队伍沿步道经过。",
+      "latitude": 39.952162,
+      "longitude": -75.196335
+    }
+  ],
+  "Brown University": [
+    {
+      "id": "trad_brown_van_wickle_gates",
+      "name": "范威克尔门",
+      "description": "范威克尔门的中门只在开学典礼和毕业典礼时打开，迷信说穿过它超过两次的学生将无法毕业。游客可以在展望街看看这座1901年的锻铁大门，改从侧门进出。",
+      "latitude": 41.826135,
+      "longitude": -71.404472
+    },
+    {
+      "id": "trad_brown_bronze_bruno",
+      "name": "铜像布鲁诺",
+      "description": "布朗大学的熊吉祥物布鲁诺的七英尺（约2.1米）铜像立在学院绿地上，底座上嵌着一块板岩，据说是罗杰·威廉斯在1636年踩过的。顺路来和吉祥物合张影吧。",
+      "latitude": 41.826682,
+      "longitude": -71.402826
+    }
+  ],
+  "Dartmouth College": [
+    {
+      "id": "trad_dartmouth_bonfire",
+      "name": "达特茅斯之夜篝火",
+      "description": "每年返校周末，绿地上都会堆起一座大篝火，一年级学生绕着它跑圈，圈数等于他们届别年份的数字。游客可以在绿地周围观看游行和熊熊燃烧的篝火。",
+      "latitude": 43.703326,
+      "longitude": -72.288594
+    },
+    {
+      "id": "trad_dartmouth_snow_sculpture",
+      "name": "冬季嘉年华雪雕",
+      "description": "每年2月的冬季嘉年华，学生们都会在绿地上堆一座有主题的大型雪雕。游客可以顺路来观赏并拍照。",
+      "latitude": 43.703326,
+      "longitude": -72.288594
+    },
+    {
+      "id": "trad_dartmouth_bentley_nose",
+      "name": "华纳·本特利的鼻子",
+      "description": "学生们会摸一摸霍普金斯艺术中心里华纳·本特利雕像的鼻子来求好运，鼻子都被摸得变了色。来“霍普”（Hop）的游客可以找到这尊雕像，也摸一摸。",
+      "latitude": 43.701639,
+      "longitude": -72.288158
+    },
+    {
+      "id": "trad_dartmouth_bema_old_pine",
+      "name": "贝马剧场与老松树",
+      "description": "毕业班日这天，大四学生会先聚集在学院公园里的天然露天剧场“贝马”（Bema），然后走上山坡，在老松树的树桩前举行可追溯至19世纪30年代的告别仪式。游客可以漫步学院公园，看看这两个地方。",
+      "latitude": 43.705207,
+      "longitude": -72.284455
+    }
+  ],
+  "Georgetown University": [
+    {
+      "id": "trad_georgetown_healy_seal",
+      "name": "希利楼校徽",
+      "description": "希利楼中央入口的地面上镶着一枚马赛克乔治城校徽，传说踩到它就无法毕业，所以学生们都会绕着走。游客可以看看这枚校徽，观察学生们怎样绕开它。",
+      "latitude": 38.907259,
+      "longitude": -77.072759
+    },
+    {
+      "id": "trad_georgetown_exorcist_steps",
+      "name": "驱魔人台阶",
+      "description": "从展望街通往M街的陡峭石阶出现在校友威廉·彼得·布拉蒂所著《驱魔人》的最后一幕中，“霍亚”（乔治城学生）们都会特意跑上这段台阶。游客可以登上这段公共台阶并拍照。",
+      "latitude": 38.905519,
+      "longitude": -77.070156
+    }
+  ],
+  "University of Chicago": [
+    {
+      "id": "trad_uchicago_reynolds_seal",
+      "name": "雷诺兹俱乐部校徽",
+      "description": "传说踩到雷诺兹俱乐部大厅里大学校徽的学生，将无法在四年内毕业。游客可以在学生活动中心大厅看看这枚校徽，决定要不要试试这个传说。",
+      "latitude": 41.791091,
+      "longitude": -87.598377
+    },
+    {
+      "id": "trad_uchicago_cobb_gate",
+      "name": "科布门的怪兽雕像",
+      "description": "按照校园传说，科布门上的怪兽雕像代表招生官，以及从一年级攀登到四年级的学生，四年级学生位于最高处。游客可以穿过大门，抬头找出每个形象。",
+      "latitude": 41.791227,
+      "longitude": -87.599677
+    },
+    {
+      "id": "trad_uchicago_botany_pond",
+      "name": "植物园池塘",
+      "description": "赫尔庭院中的植物园池塘是深受喜爱的校园角落，游客会专程来看小鸭子和乌龟。在池畔停下来，静静欣赏这里的野生动物和花园吧。",
+      "latitude": 41.79088,
+      "longitude": -87.599439
+    },
+    {
+      "id": "trad_uchicago_carillon",
+      "name": "洛克菲勒教堂钟琴",
+      "description": "洛克菲勒教堂顶部共有72口钟的钟琴每天都有演奏，学生协会成员每周还会举办音乐会，演出前为感兴趣的人提供钟楼参观。游客可以在四方院聆听，也可以参加参观。",
+      "latitude": 41.788534,
+      "longitude": -87.597042
+    }
+  ],
+  "University of Notre Dame": [
+    {
+      "id": "trad_notre_dame_main_steps",
+      "name": "主楼正门台阶",
+      "description": "传说走主楼正门台阶就无法毕业，所以本科生都会避开它们，大四学生要到毕业时才第一次走上这些台阶。游客则可以随意使用台阶，并在金顶下拍照。",
+      "latitude": 41.702996,
+      "longitude": -86.238988
+    },
+    {
+      "id": "trad_notre_dame_grotto_candle",
+      "name": "在圣母洞点一支蜡烛",
+      "description": "学生、校友和游客都会在露德圣母洞点燃蜡烛并祈祷；《圣母大学杂志》还开玩笑说，奉献金最好给建议金额的两倍，“只是为了保险起见”。游客可以点一支蜡烛，并读一读那里展示的汤姆·杜利写给赫斯伯格神父的信。",
+      "latitude": 41.703025,
+      "longitude": -86.240397
+    },
+    {
+      "id": "trad_notre_dame_touchdown_jesus",
+      "name": "“达阵耶稣”",
+      "description": "赫斯伯格图书馆正面的壁画《生命之道》更广为人知的名字是“达阵耶稣”，是来访家庭排队拍照的校园地标之一。游客可以在倒影池旁以它为背景拍照。",
+      "latitude": 41.702193,
+      "longitude": -86.234114
+    },
+    {
+      "id": "trad_notre_dame_fair_catch_corby",
+      "name": "“示意接球”科比",
+      "description": "威廉·科比神父举起手臂的雕像被戏称为“示意接球的科比”（Fair-Catch Corby），它立在科比楼外，是经典的校园拍照点。游客可以站在它旁边合影。",
+      "latitude": 41.702518,
+      "longitude": -86.240619
+    },
+    {
+      "id": "trad_notre_dame_lyons_arch",
+      "name": "莱昂斯楼拱门",
+      "description": "校园迷信认为，在莱昂斯楼拱门下接吻的情侣，可能会在毕业前订婚。游客可以穿过拱门，亲自看一看。",
+      "latitude": 41.700682,
+      "longitude": -86.243319
+    }
+  ],
+  "University of Michigan": [
+    {
+      "id": "trad_umich_diag_m",
+      "name": "对角广场上的“M”",
+      "description": "迷信说，在第一场考试前踩到对角广场（Diag）上的铜制“M”，那场考试就会挂科，所以学生们都会绕着走。游客可以在对角广场中央找到这个“M”，在旁边拍张照。",
+      "latitude": 42.276944,
+      "longitude": -83.738212
+    },
+    {
+      "id": "trad_umich_engineering_arch",
+      "name": "工程拱门",
+      "description": "传说午夜时分在西楼工程拱门下接吻的情侣，最终会结为夫妻。游客可以穿过位于对角广场东南角的这座拱门。",
+      "latitude": 42.275934,
+      "longitude": -83.736429
+    },
+    {
+      "id": "trad_umich_cube",
+      "name": "立方体",
+      "description": "董事广场上的《Endover》是一个以一角着地的15英尺（约4.6米）钢制立方体，经过特殊安装，推一下就会旋转。游客可以试着转一转。",
+      "latitude": 42.275903,
+      "longitude": -83.74189
+    },
+    {
+      "id": "trad_umich_rock",
+      "name": "大石头",
+      "description": "希尔街与沃什特诺大道交口的一块大石头，自20世纪50年代以来被学生和市民一遍又一遍地涂刷。游客可以顺路看看它最新的“妆容”。",
+      "latitude": 42.272565,
+      "longitude": -83.728492
+    }
+  ],
+  "Illinois Institute of Technology": [
+    {
+      "id": "trad_iit_pumpkin_launch",
+      "name": "南瓜发射大赛",
+      "description": "每年10月的家庭周末，学生团队会自制投石机和配重投石机，在埃德·格兰西球场比赛把南瓜抛得更远、更准。这项活动吸引了来自芝加哥各地的观众。",
+      "latitude": 41.839174,
+      "longitude": -87.624252
+    },
+    {
+      "id": "trad_iit_crown_hall",
+      "name": "S. R. 克朗楼",
+      "description": "克朗楼是建筑学院的所在地，被普遍认为是密斯·凡·德·罗的最佳作品，它立在石灰华台阶上，仿佛漂浮在草坪之上。游客可以近距离欣赏这座现代建筑的地标。",
+      "latitude": 41.833199,
+      "longitude": -87.627273
+    },
+    {
+      "id": "trad_iit_mtcc_tube",
+      "name": "校园中心上方的“管道”",
+      "description": "雷姆·库哈斯设计的麦考密克论坛校园中心顶上有一条不锈钢管道，芝加哥交通局（CTA）绿线列车就从屋顶正上方穿过。游客可以看着列车从头顶的管道里驶过。",
+      "latitude": 41.835678,
+      "longitude": -87.625834
+    }
+  ],
+  "University of Virginia": [
+    {
+      "id": "trad_uva_poe_room",
+      "name": "埃德加·爱伦·坡的房间",
+      "description": "坡在西排房13号的学生宿舍按照1826年学生房间的样子布置。游客可以透过玻璃门向里看，还可以按下按钮，收听一段关于坡在UVA求学时光的录音。",
+      "latitude": 38.035141,
+      "longitude": -78.50516
+    },
+    {
+      "id": "trad_uva_beta_bridge",
+      "name": "涂鸦的贝塔桥",
+      "description": "从20世纪下半叶开始，学生们就在拉格比路的桥上涂写各种信息，从社团活动到生日祝福和悼念。顺路来看看这周桥上画了什么吧。",
+      "latitude": 38.039569,
+      "longitude": -78.501819
+    },
+    {
+      "id": "trad_uva_lighting_of_the_lawn",
+      "name": "草坪点灯仪式",
+      "description": "每年12月，草坪上的阿卡贝拉表演最后会以圆厅大楼（Rotunda）上的灯光秀收尾。之后，学术村周围的灯光每晚都会亮起，一直持续到1月初。",
+      "latitude": 38.035646,
+      "longitude": -78.503383
+    },
+    {
+      "id": "trad_uva_lawn_trick_or_treat",
+      "name": "在草坪上“不给糖就捣蛋”",
+      "description": "万圣节时，住在草坪房间里的学生会给当地孩子发糖果，这项传统始于20世纪80年代。一家家人会沿着54间草坪房间排起长队。",
+      "latitude": 38.034259,
+      "longitude": -78.504132
+    }
+  ],
+  "Stanford University": [
+    {
+      "id": "trad_stanford_class_plaques",
+      "name": "内四方院的届别铭牌",
+      "description": "每届毕业生都会埋下一个时间胶囊，并在内四方院周围的步道上用一块铜牌作标记，第一块是纪念教堂前的1896届铭牌。漫步拱廊，找找某个届别的年份吧。",
+      "latitude": 37.427487,
+      "longitude": -122.170473
+    },
+    {
+      "id": "trad_stanford_hoover_tower",
+      "name": "胡佛塔观景台",
+      "description": "250英尺（约76米）高的观景台可以俯瞰整个校园，天气晴朗时还能望见旧金山的天际线。塔内还有一座由比利时美国教育基金会赠送的钟琴。",
+      "latitude": 37.427615,
+      "longitude": -122.166995
+    },
+    {
+      "id": "trad_stanford_memorial_church_cherubs",
+      "name": "纪念教堂的小天使",
+      "description": "当地传说称，圣坛壁龛上方和柱头上雕刻的石头小天使，是以教堂建造期间住在校园里的孩子们为原型的。进入教堂抬头找找它们吧。",
+      "latitude": 37.426916,
+      "longitude": -122.170505
+    }
+  ],
+  "University of California, Berkeley": [
+    {
+      "id": "trad_berkeley_campanile",
+      "name": "钟楼",
+      "description": "乘电梯登上萨瑟塔的观景台，可以欣赏校园和海湾的景色。钟琴每天都有简短的演奏，上课最后一天会演奏《They're Hanging Danny Deever in the Morning》，随后在期末考试期间保持安静。",
+      "latitude": 37.87206,
+      "longitude": -122.257832
+    },
+    {
+      "id": "trad_berkeley_four_point_oh_ball",
+      "name": "4.0球",
+      "description": "学生们会摸摸或亲吻钟楼前的石球来求好运，尤其是在踩到大学校徽之后。路过时也去摸一下吧。",
+      "latitude": 37.87206,
+      "longitude": -122.257832
+    },
+    {
+      "id": "trad_berkeley_athena_doe",
+      "name": "多伊图书馆的雅典娜",
+      "description": "传说从多伊图书馆入口的雅典娜雕像下走进去会获得智慧，但再从她下方走出来，智慧就会被收回。所以学生们会从后门离开，把智慧留住。",
+      "latitude": 37.872192,
+      "longitude": -122.259498
+    },
+    {
+      "id": "trad_berkeley_big_c",
+      "name": "徒步去“大C”",
+      "description": "从山麓停车场附近出发，沿步道可以走到校园上方山坡上的“大C”，几乎每个伯克利学生都走过这条路。回望校园和海湾，享受美景吧。",
+      "latitude": 37.874579,
+      "longitude": -122.249617
+    }
+  ],
+  "University of California, Los Angeles": [
+    {
+      "id": "trad_ucla_bruin_bear_paw",
+      "name": "摸摸棕熊的爪子",
+      "description": "期末周期间，学生们会摸摸棕熊广场上棕熊雕像的爪子来求好运。游客也会停下来拍张照，摸一摸熊爪。",
+      "latitude": 34.070942,
+      "longitude": -118.445013
+    },
+    {
+      "id": "trad_ucla_janss_sixth_step",
+      "name": "跳过第六级台阶",
+      "description": "传说踩到詹斯台阶第六级的人会走霉运，还会晚一个学期毕业。许多学生往上走时都会跳过这一级。",
+      "latitude": 34.072196,
+      "longitude": -118.443108
+    },
+    {
+      "id": "trad_ucla_inverted_fountain",
+      "name": "倒流喷泉",
+      "description": "新生会在这座1968年建成的喷泉接受“棕熊洗礼”，喷泉的水不是向上喷，而是落入一口井中。按照传统，此后直到毕业他们都不会碰这里的水，所以游客也只看不摸。",
+      "latitude": 34.070082,
+      "longitude": -118.440779
+    }
+  ],
+  "University of Washington": [
+    {
+      "id": "trad_uw_quad_cherry_blossoms",
+      "name": "四方院的樱花",
+      "description": "每年春天樱花盛开时去四方院看染井吉野樱，是华盛顿大学必不可少的传统。盛花期会有大批学生和游客在此拍照。",
+      "latitude": 47.657285,
+      "longitude": -122.307213
+    },
+    {
+      "id": "trad_uw_rainier_vista",
+      "name": "雷尼尔远景",
+      "description": "从红场经过德拉姆赫勒喷泉望向雷尼尔远景的视野受到保护，任何建筑都不能遮挡雷尼尔山。天气晴朗时，站在最高处可以欣赏校园里最美的风景。",
+      "latitude": 47.652842,
+      "longitude": -122.307129
+    },
+    {
+      "id": "trad_uw_sylvan_grove_columns",
+      "name": "西尔万林的立柱",
+      "description": "四根来自华盛顿大学最早的市中心校舍的雪松立柱矗立在西尔万林中，分别代表忠诚、勤奋、信念和效率。新生入学时和毕业时都会摸一摸其中一根；游客可以在林中看到它们。",
+      "latitude": 47.652795,
+      "longitude": -122.306194
+    },
+    {
+      "id": "trad_uw_the_wave",
+      "name": "哈士奇体育场的人浪",
+      "description": "华盛顿大学表示，著名的体育场人浪起源于1981年在哈士奇体育场举行的一场橄榄球赛。比赛日人浪绕看台涌来时，一起加入吧。",
+      "latitude": 47.650374,
+      "longitude": -122.301976
+    }
+  ],
+  "McGill University": [
+    {
+      "id": "trad_mcgill_roddick_gates_chimes",
+      "name": "罗迪克门的钟声",
+      "description": "罗迪克门是麦吉尔大学位于舍布鲁克街的正门，门上有四面时钟，钟声敲响的是威斯敏斯特钟声。穿过大门走进校园，留心听听钟声。",
+      "latitude": 45.503849,
+      "longitude": -73.574925
+    },
+    {
+      "id": "trad_mcgill_founders_tomb",
+      "name": "詹姆斯·麦吉尔之墓",
+      "description": "创始人詹姆斯·麦吉尔的遗骸从蒙特利尔的一处墓地迁来，安放在艺术楼前的纪念碑中，并于1875年举行了祝圣仪式。游客可以在下校区顺路拜访创始人之墓。",
+      "latitude": 45.505281,
+      "longitude": -73.577692
+    },
+    {
+      "id": "trad_mcgill_three_bares_photo",
+      "name": "在“三裸像”前拍照",
+      "description": "“三裸像”喷泉于1931年春季毕业典礼上揭幕，位于雷德帕斯博物馆附近一处绿树成荫的小谷地中，出现在无数毕业照里。游客可以在这处知名的校园地标前拍一张自己的照片。",
+      "latitude": 45.50473,
+      "longitude": -73.577009
+    }
+  ],
+  "University of Toronto": [
+    {
+      "id": "trad_uoft_reznikoff_gargoyles",
+      "name": "雷兹尼科夫的滴水兽",
+      "description": "大学学院最有名的鬼故事说，石匠伊万·雷兹尼科夫在19世纪50年代大楼建造期间被情敌杀害。游客可以在大学学院西南角附近找找据说刻着两名对手面孔的两只滴水兽，那里还有一扇据说留有斧痕的门。",
+      "latitude": 43.662834,
+      "longitude": -79.395169
+    },
+    {
+      "id": "trad_uoft_hart_house_stone_face",
+      "name": "哭泣的石脸",
+      "description": "校园鬼故事中有这样一张哈特楼的石雕面孔，据说曾从一只眼睛里流出水来。来到哈特楼的游客可以在哥特式石雕中找找这张脸。",
+      "latitude": 43.663917,
+      "longitude": -79.393968
+    },
+    {
+      "id": "trad_uoft_soldiers_tower_carillon",
+      "name": "士兵塔钟琴",
+      "description": "士兵塔钟琴的51口钟用以纪念在两次世界大战中牺牲的大学成员，在免费公开演奏和毕业典礼前后都会鸣响。可以在哈特楼环形草坪或大学学院四方院聆听。",
+      "latitude": 43.66355,
+      "longitude": -79.395224
+    }
+  ],
+  "University of British Columbia": [
+    {
+      "id": "trad_ubc_great_trek_cairn",
+      "name": "“大跋涉”石冢",
+      "description": "主林荫道上的这座石冢纪念1922年的“大跋涉”：当年学生们游行到格雷角，敦促政府完成校园建设，石冢就是用在当地收集的石头砌成的。每年9月返校节期间都会在这里举行仪式，游客随时可以阅读上面的铭文。",
+      "latitude": 49.265734,
+      "longitude": -123.25357
+    },
+    {
+      "id": "trad_ubc_engineers_cairn",
+      "name": "彩绘工程石冢",
+      "description": "工程系学生负责照看主林荫道上的一座混凝土纪念碑，它会因各种公益事业、纪念日和校园活动被重新涂刷。游客可以顺路看看它最新的涂装。",
+      "latitude": 49.262204,
+      "longitude": -123.250679
+    },
+    {
+      "id": "trad_ubc_ladner_carillon",
+      "name": "拉德纳钟楼的钟声",
+      "description": "主图书馆前的拉德纳钟楼每到整点都会报时，钟琴会在白天以及毕业典礼等特殊场合演奏简短的曲目。游客可以在图书馆花园聆听。",
+      "latitude": 49.26735,
+      "longitude": -123.253675
+    }
+  ],
+  "National Autonomous University of Mexico": [
+    {
+      "id": "trad_unam_megaofrenda",
+      "name": "亡灵节“超级祭坛”",
+      "description": "每年亡灵节前后，UNAM的各学院和部门都会共同搭建一座由众多祭坛组成的巨型集体供奉（Megaofrenda），长期以来都在大学城的中央草坪“群岛”（Las Islas）举行。11月初，游客可以免费在祭坛间漫步。",
+      "latitude": 19.333068,
+      "longitude": -99.185196
+    },
+    {
+      "id": "trad_unam_central_library_mural",
+      "name": "中央图书馆马赛克",
+      "description": "胡安·奥戈尔曼的石头马赛克覆盖了中央图书馆的四面外墙，每一面都展现墨西哥历史的不同时代。绕着大楼走一圈，看遍每一面，并为这座校园标志拍张照吧。",
+      "latitude": 19.3334,
+      "longitude": -99.187331
+    },
+    {
+      "id": "trad_unam_rectoria_murals",
+      "name": "校长楼壁画",
+      "description": "校长楼上有大卫·阿尔法罗·西凯罗斯创作的三幅壁画，顶部还有大学校徽及校训“Por mi raza hablará el espíritu”（精神将通过我的民族发声）。游客可以在广场上欣赏壁画和校徽。",
+      "latitude": 19.33238,
+      "longitude": -99.188072
+    },
+    {
+      "id": "trad_unam_stadium_rivera_relief",
+      "name": "奥林匹克体育场的迭戈·里维拉浮雕",
+      "description": "大学奥林匹克体育场（Estadio Olímpico Universitario）的正门饰有迭戈·里维拉用天然彩色石块创作的浮雕，体育场至今仍保留着1968年奥运会的圣火台。游客可以在体育场外观赏浮雕。",
+      "latitude": 19.331688,
+      "longitude": -99.192286
+    }
+  ]
+}

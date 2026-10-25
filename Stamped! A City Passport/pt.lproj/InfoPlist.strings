@@ -1,0 +1,5 @@
+/* Permission prompts (the English text is set in the target's build settings) */
+"NSLocationWhenInUseUsageDescription" = "O Stamped! mostra marcos próximos enquanto você explora.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "O Stamped! avisa quando você está perto de um marco, mesmo em segundo plano.";
+"NSCameraUsageDescription" = "Permita o acesso à câmera para fotografar o marco que você está visitando.";
+"NSPhotoLibraryUsageDescription" = "Permita o acesso às fotos para salvar e escolher fotos de marcos para seu passaporte.";

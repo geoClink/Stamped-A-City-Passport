@@ -14,10 +14,12 @@ struct CityItineraryView: View {
     @AppStorage("high_contrast_mode") var manualHighContrast = false
     @Environment(\.colorSchemeContrast) var systemContrast
     var isHighContrast: Bool { manualHighContrast || systemContrast == .increased }
-    var brandColor: Color { isHighContrast ? .primary : Color.adventureOrange }
+    var brandColor: Color { isHighContrast ? .primary : DS.Palette.accent }
 
     var body: some View {
-        VStack(spacing: 0) {
+        VStack(alignment: .leading, spacing: DS.Space.m) {
+            DSSectionHeader("ARCHITECTURAL ITINERARY", systemImage: "map", isHighContrast: isHighContrast)
+                .dsPageMargin()
             dayPicker
             Group {
                 switch service.state {
@@ -37,6 +39,7 @@ struct CityItineraryView: View {
                 }
             }
         }
+        .padding(.bottom, DS.Space.section)
         .onAppear {
             service.generateItinerary(for: city.rawValue, days: dayCount)
         }
@@ -47,7 +50,7 @@ struct CityItineraryView: View {
     }
 
     private var dayPicker: some View {
-        HStack(spacing: 10) {
+        HStack(spacing: DS.Space.m) {
             Text("Days")
                 .font(.caption)
                 .fontWeight(.medium)
@@ -57,8 +60,7 @@ struct CityItineraryView: View {
             }
             .pickerStyle(.segmented)
         }
-        .padding(.horizontal, 16)
-        .padding(.vertical, 10)
+        .dsPageMargin()
     }
 }
 
@@ -74,15 +76,9 @@ struct CityItineraryIntelligenceView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            HStack {
-                Text("ARCHITECTURAL ITINERARY")
-                    .font(.system(.caption, design: .default))
-                    .fontWeight(.semibold)
-                    .foregroundColor(.secondary)
-                    .kerning(1.2)
-                Spacer()
+            Group {
                 if narrativeService.isGenerating {
-                    HStack(spacing: 5) {
+                    HStack(spacing: DS.Space.xs) {
                         ProgressView().scaleEffect(0.6)
                         Text("Apple Intelligence")
                             .font(.caption2)
@@ -94,8 +90,8 @@ struct CityItineraryIntelligenceView: View {
                         .foregroundColor(.secondary)
                 }
             }
-            .padding(.horizontal, 25)
-            .padding(.bottom, 10)
+            .dsPageMargin()
+            .padding(.bottom, DS.Space.s)
 
             VStack(alignment: .leading, spacing: 0) {
                 ForEach(Array(service.itinerary.enumerated()), id: \.offset) { dayIndex, stops in
@@ -110,11 +106,10 @@ struct CityItineraryIntelligenceView: View {
                     )
                 }
             }
-            .background(Color(UIColor.systemBackground))
-            .cornerRadius(16)
-            .padding(.horizontal, 16)
+            .background(DS.Palette.cardBackground)
+            .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+            .dsPageMargin()
         }
-        .padding(.vertical, 16)
         .onChange(of: service.itinerary) { _, newItinerary in
             guard !newItinerary.isEmpty else { return }
             Task {
@@ -158,14 +153,6 @@ struct CityItineraryBasicView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Text("ARCHITECTURAL ITINERARY")
-                .font(.system(.caption, design: .default))
-                .fontWeight(.semibold)
-                .foregroundColor(.secondary)
-                .kerning(1.2)
-                .padding(.horizontal, 25)
-                .padding(.bottom, 10)
-
             VStack(alignment: .leading, spacing: 0) {
                 ForEach(Array(service.itinerary.enumerated()), id: \.offset) { dayIndex, stops in
                     BasicDaySection(
@@ -178,11 +165,10 @@ struct CityItineraryBasicView: View {
                     )
                 }
             }
-            .background(Color(UIColor.systemBackground))
-            .cornerRadius(16)
-            .padding(.horizontal, 16)
+            .background(DS.Palette.cardBackground)
+            .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+            .dsPageMargin()
         }
-        .padding(.vertical, 16)
         .onAppear {
             guard !service.itinerary.isEmpty else { return }
             Task {
@@ -213,14 +199,6 @@ struct ItineraryLoadingView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Text("ARCHITECTURAL ITINERARY")
-                .font(.system(.caption, design: .default))
-                .fontWeight(.semibold)
-                .foregroundColor(.secondary)
-                .kerning(1.2)
-                .padding(.horizontal, 25)
-                .padding(.bottom, 10)
-
             VStack(spacing: 16) {
                 ProgressView().scaleEffect(0.9)
                 Text("Planning your itinerary...")
@@ -229,11 +207,10 @@ struct ItineraryLoadingView: View {
             }
             .frame(maxWidth: .infinity)
             .padding(.vertical, 40)
-            .background(Color(UIColor.systemBackground))
-            .cornerRadius(16)
-            .padding(.horizontal, 16)
+            .background(DS.Palette.cardBackground)
+            .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+            .dsPageMargin()
         }
-        .padding(.vertical, 16)
     }
 }
 
@@ -246,14 +223,6 @@ struct ItineraryErrorView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Text("ARCHITECTURAL ITINERARY")
-                .font(.system(.caption, design: .default))
-                .fontWeight(.semibold)
-                .foregroundColor(.secondary)
-                .kerning(1.2)
-                .padding(.horizontal, 25)
-                .padding(.bottom, 10)
-
             VStack(spacing: 12) {
                 Image(systemName: "exclamationmark.triangle")
                     .font(.system(size: 28))
@@ -272,11 +241,10 @@ struct ItineraryErrorView: View {
             }
             .frame(maxWidth: .infinity)
             .padding(.vertical, 40)
-            .background(Color(UIColor.systemBackground))
-            .cornerRadius(16)
-            .padding(.horizontal, 16)
+            .background(DS.Palette.cardBackground)
+            .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+            .dsPageMargin()
         }
-        .padding(.vertical, 16)
     }
 }
 
@@ -307,7 +275,7 @@ struct BasicDaySection: View {
     var architectSpotlight: String? {
         var counts: [String: Int] = [:]
         for b in buildings {
-            let architects = b.architect
+            let architects = (b.knownArchitect ?? "")
                 .components(separatedBy: CharacterSet(charactersIn: "/&"))
                 .map { $0.trimmingCharacters(in: .whitespaces) }
                 .filter { !$0.isEmpty && $0.count > 3 }
@@ -505,7 +473,9 @@ struct BasicStopRow: View {
                         }
                     }
                     Text(shortDescription).font(.caption).foregroundColor(.secondary)
-                    Text(building.buildingStyle).font(.caption2).foregroundColor(.secondary.opacity(0.7)).italic()
+                    if let style = building.knownStyle {
+                        Text(style).font(.caption2).foregroundColor(.secondary.opacity(0.7)).italic()
+                    }
                     if stop.travelMinsFromPrev > 0 {
                         Label(
                             stop.requiresTransit ? "\(stop.travelMinsFromPrev) min · transit recommended" : "\(stop.travelMinsFromPrev) min walk",
@@ -776,7 +746,7 @@ struct ItineraryDaySection: View {
         let buildings = stops.compactMap { service.building(for: $0) }
         var counts: [String: Int] = [:]
         for b in buildings {
-            let architects = b.architect.components(separatedBy: "/").map { $0.trimmingCharacters(in: .whitespaces) }
+            let architects = (b.knownArchitect ?? "").components(separatedBy: "/").map { $0.trimmingCharacters(in: .whitespaces) }
             for a in architects { if !a.isEmpty { counts[a, default: 0] += 1 } }
         }
         if let top = counts.max(by: { $0.value < $1.value }), top.value >= 2 {

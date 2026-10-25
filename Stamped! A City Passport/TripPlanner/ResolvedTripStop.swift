@@ -25,7 +25,7 @@ struct ResolvedTripStop: Identifiable, Hashable {
         case .landmark(let buildingID):
             let building = buildings.first { $0.id == buildingID }
             name = building?.name ?? "Unknown landmark"
-            subtitle = building?.buildingStyle
+            subtitle = building?.knownStyle
             systemImage = "building.columns.fill"
             isLandmark = true
             if let latitude = building?.latitude, let longitude = building?.longitude {

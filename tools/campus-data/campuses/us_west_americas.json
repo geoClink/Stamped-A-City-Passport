@@ -3,6 +3,50 @@
     "name": "Stanford University",
     "enumCase": "stanford",
     "country": "unitedStates",
+    "conference": "acc",
+    "aliases": [
+      "Stanford",
+      "Cardinal"
+    ],
+    "colors": [
+      "#8C1515",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_stanford_class_plaques",
+        "name": "Class Plaques of the Inner Quad",
+        "description": "Each graduating class buries a time capsule and marks it with a bronze plaque in the walkway around the Inner Quad, starting with 1896 in front of Memorial Church. Walk the arcade and look for a class year.",
+        "coordinates": [
+          37.427487,
+          -122.170473
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/9701233",
+        "source": "https://en.wikipedia.org/wiki/Main_Quad_(Stanford_University)"
+      },
+      {
+        "id": "trad_stanford_hoover_tower",
+        "name": "Hoover Tower Observation Deck",
+        "description": "An observation deck 250 feet up gives wide views of campus, and on clear days the San Francisco skyline. The tower also holds a carillon given by the Belgian American Educational Foundation.",
+        "coordinates": [
+          37.427615,
+          -122.166995
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/232805688",
+        "source": "https://en.wikipedia.org/wiki/Hoover_Tower"
+      },
+      {
+        "id": "trad_stanford_memorial_church_cherubs",
+        "name": "Memorial Church Cherubs",
+        "description": "Local legend says the stone cherubs carved above the chancel niches and on the pillar capitals were modelled on children living on campus while the church was built. Look up and find them inside the church.",
+        "coordinates": [
+          37.426916,
+          -122.170505
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/836474103",
+        "source": "https://en.wikipedia.org/wiki/Stanford_Memorial_Church"
+      }
+    ],
     "wiki": "Stanford University",
     "currency": "USD ($)",
     "details": {
@@ -100,6 +144,63 @@
     "name": "University of California, Berkeley",
     "enumCase": "berkeley",
     "country": "unitedStates",
+    "conference": "acc",
+    "aliases": [
+      "UC Berkeley",
+      "Berkeley",
+      "Cal",
+      "Golden Bears"
+    ],
+    "colors": [
+      "#002676",
+      "#FDB515"
+    ],
+    "traditions": [
+      {
+        "id": "trad_berkeley_campanile",
+        "name": "The Campanile",
+        "description": "Ride the elevator to the observation deck of Sather Tower for views of campus and the Bay. The carillon plays short daily concerts, and on the last day of classes it plays \"They're Hanging Danny Deever in the Morning\" before going silent for finals.",
+        "coordinates": [
+          37.87206,
+          -122.257832
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/24024507",
+        "source": "https://en.wikipedia.org/wiki/Sather_Tower"
+      },
+      {
+        "id": "trad_berkeley_four_point_oh_ball",
+        "name": "The 4.0 Ball",
+        "description": "Students rub or kiss the stone ball in front of the Campanile for good luck, especially after stepping on a University seal. Give it a touch on your way past.",
+        "coordinates": [
+          37.87206,
+          -122.257832
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/24024507",
+        "source": "https://life.berkeley.edu/traditions-superstitions"
+      },
+      {
+        "id": "trad_berkeley_athena_doe",
+        "name": "Athena at Doe Library",
+        "description": "Legend says walking under the statue of Athena at the Doe Library entrance gives you wisdom, but walking back out under her takes it away. Students leave by the back doors to keep it.",
+        "coordinates": [
+          37.872192,
+          -122.259498
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/21101411",
+        "source": "https://life.berkeley.edu/traditions-superstitions"
+      },
+      {
+        "id": "trad_berkeley_big_c",
+        "name": "Hike to the Big C",
+        "description": "A walk from near the Foothill parking area leads up to the Big C on the hillside above campus, a hike almost every Cal student makes. Enjoy the view back over campus and the Bay.",
+        "coordinates": [
+          37.874579,
+          -122.249617
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/2582763312",
+        "source": "https://life.berkeley.edu/traditions-superstitions"
+      }
+    ],
     "wiki": "University of California, Berkeley",
     "currency": "USD ($)",
     "details": {
@@ -212,6 +313,50 @@
     "name": "University of California, Los Angeles",
     "enumCase": "ucla",
     "country": "unitedStates",
+    "conference": "bigTen",
+    "aliases": [
+      "UCLA",
+      "Bruins"
+    ],
+    "colors": [
+      "#2774AE",
+      "#FFD100"
+    ],
+    "traditions": [
+      {
+        "id": "trad_ucla_bruin_bear_paw",
+        "name": "Rub the Bruin Bear's Paw",
+        "description": "Students rub the paw of the Bruin Bear statue in Bruin Plaza for good luck during finals week. Visitors stop for a photo and a paw rub.",
+        "coordinates": [
+          34.070942,
+          -118.445013
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/566579946",
+        "source": "https://www.asucla.ucla.edu/ucla/ucla-traditions"
+      },
+      {
+        "id": "trad_ucla_janss_sixth_step",
+        "name": "Skip the Sixth Step",
+        "description": "Legend says anyone who steps on the sixth step of Janss Steps will have bad luck and graduate a quarter late. Many students hop over it on the way up.",
+        "coordinates": [
+          34.072196,
+          -118.443108
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/1528954543",
+        "source": "https://www.asucla.ucla.edu/ucla/the-cursed-steps-of-edwin-janss"
+      },
+      {
+        "id": "trad_ucla_inverted_fountain",
+        "name": "Inverted Fountain",
+        "description": "New students are \"Bruintized\" at this 1968 fountain, whose water drops into a well instead of spraying up. Tradition says they then avoid touching the water until graduation, so visitors look but do not touch.",
+        "coordinates": [
+          34.070082,
+          -118.440779
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/521857915",
+        "source": "https://asucla.ucla.edu/ucla/ucla-fountain"
+      }
+    ],
     "wiki": "University of California, Los Angeles",
     "currency": "USD ($)",
     "details": {
@@ -294,6 +439,62 @@
     "name": "University of Washington",
     "enumCase": "uWashington",
     "country": "unitedStates",
+    "conference": "bigTen",
+    "aliases": [
+      "UW",
+      "Washington",
+      "Huskies"
+    ],
+    "colors": [
+      "#32006E",
+      "#B7A57A"
+    ],
+    "traditions": [
+      {
+        "id": "trad_uw_quad_cherry_blossoms",
+        "name": "Cherry Blossoms in the Quad",
+        "description": "Visiting the Yoshino cherry trees in the Quad when they bloom each spring is a must-do UW tradition. Expect crowds of students and visitors taking photos at peak bloom.",
+        "coordinates": [
+          47.657285,
+          -122.307213
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/253552729",
+        "source": "https://nstp.uw.edu/connect-through-academics/shared-content-programs/traditions/"
+      },
+      {
+        "id": "trad_uw_rainier_vista",
+        "name": "Rainier Vista",
+        "description": "The view down Rainier Vista past Drumheller Fountain is protected so nothing can block Mount Rainier from Red Square. On a clear day, stand at the top for the best view on campus.",
+        "coordinates": [
+          47.652842,
+          -122.307129
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/6461651",
+        "source": "https://nstp.uw.edu/connect-through-academics/shared-content-programs/traditions/"
+      },
+      {
+        "id": "trad_uw_sylvan_grove_columns",
+        "name": "Sylvan Grove Columns",
+        "description": "Four cedar columns from the UW's first downtown building stand in Sylvan Grove and represent loyalty, industry, faith and efficiency. New students touch one when they arrive and again at graduation; visitors can see them in the grove.",
+        "coordinates": [
+          47.652795,
+          -122.306194
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/272676285",
+        "source": "https://nstp.uw.edu/connect-through-academics/shared-content-programs/traditions/"
+      },
+      {
+        "id": "trad_uw_the_wave",
+        "name": "The Wave at Husky Stadium",
+        "description": "UW says the famous stadium wave began at Husky Stadium during a 1981 football game. Join in when it rolls around the stands on game day.",
+        "coordinates": [
+          47.650374,
+          -122.301976
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/5636648",
+        "source": "https://nstp.uw.edu/connect-through-academics/shared-content-programs/traditions/"
+      }
+    ],
     "wiki": "University of Washington",
     "currency": "USD ($)",
     "details": {
@@ -411,6 +612,48 @@
     "name": "McGill University",
     "enumCase": "mcgill",
     "country": "canada",
+    "aliases": [
+      "McGill"
+    ],
+    "colors": [
+      "#ED1B2F",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_mcgill_roddick_gates_chimes",
+        "name": "Chimes of the Roddick Gates",
+        "description": "The Roddick Gates, McGill's formal entrance on Sherbrooke Street, carry four clocks whose bells strike the Westminster Quarters. Walk through the gates onto campus and listen for the chimes.",
+        "coordinates": [
+          45.503849,
+          -73.574925
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/143798969",
+        "source": "https://en.wikipedia.org/wiki/Roddick_Gates"
+      },
+      {
+        "id": "trad_mcgill_founders_tomb",
+        "name": "James McGill's Tomb",
+        "description": "The remains of founder James McGill rest in a monument in front of the Arts Building, moved there from a Montreal cemetery and consecrated in 1875. Visitors can stop by the founder's tomb on the lower campus.",
+        "coordinates": [
+          45.505281,
+          -73.577692
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/21340756",
+        "source": "https://mcgillnews-archives.mcgill.ca/news-archives/2003/fall/upclose/two/index.html"
+      },
+      {
+        "id": "trad_mcgill_three_bares_photo",
+        "name": "Photo at the Three Bares",
+        "description": "The Three Bares fountain, unveiled at Spring Convocation in 1931 in a tree-lined dell near the Redpath Museum, appears in countless convocation photographs. Visitors can take their own photo at this well-known campus landmark.",
+        "coordinates": [
+          45.50473,
+          -73.577009
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/143868597",
+        "source": "https://reporter.mcgill.ca/the-three-bares-mcgills-cheeky-fountain-of-goodwill/"
+      }
+    ],
     "wiki": "McGill University",
     "currency": "CAD ($)",
     "details": {
@@ -508,6 +751,50 @@
     "name": "University of Toronto",
     "enumCase": "uToronto",
     "country": "canada",
+    "aliases": [
+      "U of T",
+      "UofT",
+      "Toronto"
+    ],
+    "colors": [
+      "#1E3765",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_uoft_reznikoff_gargoyles",
+        "name": "Reznikoff's Gargoyles",
+        "description": "University College's best-known ghost story says stonemason Ivan Reznikoff was killed by a rival while the building was going up in the 1850s. Visitors can look for the two gargoyles said to show the rivals' faces near UC's southwest corner, where a door is said to bear an axe mark.",
+        "coordinates": [
+          43.662834,
+          -79.395169
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/8032167",
+        "source": "https://magazine.utoronto.ca/?p=1298"
+      },
+      {
+        "id": "trad_uoft_hart_house_stone_face",
+        "name": "The Weeping Stone Face",
+        "description": "Campus ghost lore includes a carved stone face at Hart House that is said to have wept water from one eye. Visitors to Hart House can look for the face among its Gothic stonework.",
+        "coordinates": [
+          43.663917,
+          -79.393968
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/1989",
+        "source": "https://magazine.utoronto.ca/?p=1298"
+      },
+      {
+        "id": "trad_uoft_soldiers_tower_carillon",
+        "name": "Soldiers' Tower Carillon",
+        "description": "The 51 bells of the Soldiers' Tower carillon honour university members who died in the World Wars, and they ring out for free public recitals and around convocation. Listen from the Hart House Circle lawn or the University College quadrangle.",
+        "coordinates": [
+          43.66355,
+          -79.395224
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/28822997",
+        "source": "https://alumni.utoronto.ca/node/598"
+      }
+    ],
     "wiki": "University of Toronto",
     "currency": "CAD ($)",
     "details": {
@@ -605,6 +892,48 @@
     "name": "University of British Columbia",
     "enumCase": "ubc",
     "country": "canada",
+    "aliases": [
+      "UBC"
+    ],
+    "colors": [
+      "#002145",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_ubc_great_trek_cairn",
+        "name": "The Great Trek Cairn",
+        "description": "This stone cairn on Main Mall marks the 1922 Great Trek, when students marched to Point Grey to push the government to finish the campus, and it was built from stones gathered on site. A ceremony is held there each September during Homecoming, and visitors can read its inscription any time.",
+        "coordinates": [
+          49.265734,
+          -123.25357
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/5973753602",
+        "source": "https://magazine.alumni.ubc.ca/node/1460"
+      },
+      {
+        "id": "trad_ubc_engineers_cairn",
+        "name": "The Painted Engineering Cairn",
+        "description": "Engineering students look after a concrete monument on Main Mall that is repainted for causes, anniversaries and campus events. Visitors can stop by to see its latest paint job.",
+        "coordinates": [
+          49.262204,
+          -123.250679
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/5953001142",
+        "source": "https://ubyssey.ca/guide/2020/ubc/ubc-traditions/"
+      },
+      {
+        "id": "trad_ubc_ladner_carillon",
+        "name": "Ladner Clock Tower Chimes",
+        "description": "The Ladner Clock Tower in front of the Main Library chimes on the hour, and its carillon plays short sets during the day and on special occasions such as convocation. Visitors can listen from the Library Garden.",
+        "coordinates": [
+          49.26735,
+          -123.253675
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/385362501",
+        "source": "https://archive.news.ubc.ca/ubcreports/1998/98may21/bells.html"
+      }
+    ],
     "wiki": "University of British Columbia",
     "currency": "CAD ($)",
     "details": {
@@ -712,6 +1041,59 @@
     "name": "National Autonomous University of Mexico",
     "enumCase": "unam",
     "country": "mexico",
+    "aliases": [
+      "UNAM"
+    ],
+    "colors": [
+      "#013B75",
+      "#D9A500"
+    ],
+    "traditions": [
+      {
+        "id": "trad_unam_megaofrenda",
+        "name": "Day of the Dead Megaofrenda",
+        "description": "Each year around Day of the Dead, UNAM schools and offices build a giant collective offering of altars, long held at Las Islas, the central lawn of Ciudad Universitaria. Visitors can walk among the altars for free in early November.",
+        "coordinates": [
+          19.333068,
+          -99.185196
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/241420162",
+        "source": "https://forbes.com.mx/?p=1158772"
+      },
+      {
+        "id": "trad_unam_central_library_mural",
+        "name": "Central Library Mosaic",
+        "description": "Juan O'Gorman's stone mosaic covers all four sides of the Central Library, each side showing a different era of Mexican history. Walk around the building to see every side and take a photo of this campus icon.",
+        "coordinates": [
+          19.3334,
+          -99.187331
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/437171951",
+        "source": "https://mexicocity.cdmx.gob.mx/venues/biblioteca-central/"
+      },
+      {
+        "id": "trad_unam_rectoria_murals",
+        "name": "Rectory Tower Murals",
+        "description": "The Rectory Tower carries three murals by David Alfaro Siqueiros and, at the top, the university coat of arms with the motto 'Por mi raza hablará el espíritu'. Visitors can view the murals and the shield from the esplanade.",
+        "coordinates": [
+          19.33238,
+          -99.188072
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/73147253",
+        "source": "https://www.chilango.com/cultura/11-datos-que-tal-vez-no-sabias-de-la-torre-de-rectoria/"
+      },
+      {
+        "id": "trad_unam_stadium_rivera_relief",
+        "name": "Diego Rivera Relief at the Olympic Stadium",
+        "description": "The main entrance of the Estadio Olímpico Universitario features a relief by Diego Rivera made of naturally coloured stones, and the stadium still has its 1968 Olympic cauldron. Visitors can see the relief from outside the stadium.",
+        "coordinates": [
+          19.331688,
+          -99.192286
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/14549034",
+        "source": "https://en.wikipedia.org/wiki/Estadio_Ol%C3%ADmpico_Universitario"
+      }
+    ],
     "wiki": "National Autonomous University of Mexico",
     "currency": "MXN ($)",
     "details": {

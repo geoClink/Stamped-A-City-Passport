@@ -21,39 +21,76 @@ struct MixedSearchResult: Identifiable {
 
 // MARK: - VIEW MODEL EXTENSION
 
+/// Everything search can find, lowercased once. Searching used to lowercase (and re-sort)
+/// all 1,800+ landmarks on every keystroke, which made typing lag.
+private struct SearchIndex {
+    struct Place {
+        let city: CityLocation.City
+        let subtitle: String
+        let names: [String]        // name, country and nicknames, lowercased
+        let exactNames: Set<String> // name and nicknames: an exact match goes first
+    }
+    struct Landmark {
+        let city: CityLocation.City
+        let title: String
+        let subtitle: String
+        let text: [String]          // name and architect, lowercased
+    }
+
+    let places: [Place]
+    let landmarks: [Landmark]
+
+    static let shared: SearchIndex = {
+        var places: [Place] = []
+        var landmarks: [Landmark] = []
+        for city in CityLocation.City.allCases {
+            let ownNames = ([city.name] + city.searchAliases).map { $0.lowercased() }
+            places.append(Place(
+                city: city,
+                subtitle: city.details.nickname,
+                // The country in English and in the app's language, so "Deutschland" finds Berlin too
+                names: ownNames + [city.country.rawValue.lowercased(), city.country.localizedName.lowercased()],
+                exactNames: Set(ownNames)
+            ))
+            for building in city.buildings {
+                landmarks.append(Landmark(
+                    city: city,
+                    title: building.name,
+                    subtitle: building.knownArchitect.map { "Designed by \($0)" } ?? city.name,
+                    text: [building.name.lowercased()] + (building.knownArchitect.map { [$0.lowercased()] } ?? [])
+                ))
+            }
+        }
+        return SearchIndex(places: places, landmarks: landmarks)
+    }()
+}
+
 extension CityViewModel {
     func filteredResults(query: String) -> [MixedSearchResult] {
-        guard !query.isEmpty else { return [] }
-        let lowerQuery = query.lowercased()
-        var results: [MixedSearchResult] = []
-        
-        for city in allCities {
-            // 1. Match city name or country name
-            let cityMatch = city.name.lowercased().contains(lowerQuery)
-            let countryMatch = city.country.rawValue.lowercased().contains(lowerQuery)
-            if cityMatch || countryMatch {
-                results.append(MixedSearchResult(title: city.name, subtitle: city.details.nickname, city: city, isLandmark: false))
-            }
-            
-            for building in city.buildings {
-                let architectMatch = building.architect.lowercased().contains(lowerQuery)
-                let buildingMatch = building.name.lowercased().contains(lowerQuery)
-                
-                if buildingMatch || architectMatch {
-                    results.append(MixedSearchResult(
-                        title: building.name,
-                        subtitle: "Designed by \(building.architect)",
-                        city: city,
-                        isLandmark: true
-                    ))
-                }
+        let lowerQuery = query.trimmingCharacters(in: .whitespaces).lowercased()
+        guard !lowerQuery.isEmpty else { return [] }
+        let index = SearchIndex.shared
+
+        var exact: [MixedSearchResult] = []
+        var others: [MixedSearchResult] = []
+        var seenTitles: Set<String> = []
+
+        // Cities and campuses: an exact name or nickname ("UGA", "Ole Miss") goes first,
+        // ahead of results that only contain the letters ("Portugal" for "uga")
+        for place in index.places where place.names.contains(where: { $0.contains(lowerQuery) }) {
+            guard seenTitles.insert(place.city.name).inserted else { continue }
+            let result = MixedSearchResult(title: place.city.name, subtitle: place.subtitle, city: place.city, isLandmark: false)
+            if place.exactNames.contains(lowerQuery) {
+                exact.append(result)
+            } else {
+                others.append(result)
             }
         }
-        return results.reduce(into: [MixedSearchResult]()) { current, next in
-            if !current.contains(where: { $0.title == next.title }) {
-                current.append(next)
-            }
+        for landmark in index.landmarks where landmark.text.contains(where: { $0.contains(lowerQuery) }) {
+            guard seenTitles.insert(landmark.title).inserted else { continue }
+            others.append(MixedSearchResult(title: landmark.title, subtitle: landmark.subtitle, city: landmark.city, isLandmark: true))
         }
+        return exact + others
     }
 }
 
@@ -87,40 +124,62 @@ extension CityListView {
         .listRowBackground(Color.clear)
     }
     
-    /// `isCampusSection` is true for the country groups inside "Campus Architecture": they
-    /// open and close separately from the same country's cities.
-    func cityCountrySection(country: CityLocation.Country, cities: [CityLocation.City], isCampusSection: Bool = false) -> some View {
-        let isMastered = isCampusSection ? viewModel.isCampusCountryMastered(country) : viewModel.isCountryMastered(country)
-        
-        return Group {
+    func cityCountrySection(country: CityLocation.Country, cities: [CityLocation.City]) -> some View {
+        let isExpanded = Binding {
+            expandedCountries[country, default: false]
+        } set: { newValue in
+            if newValue { HapticManager.shared.trigger(.selection) }
+            expandedCountries[country] = newValue
+        }
+        return citySection(
+            cities: cities,
+            isExpanded: isExpanded,
+            header: CountryHeaderLabel(country: country, isMastered: viewModel.isCountryMastered(country), isHighContrast: isHighContrast)
+        )
+    }
+
+    /// A conference or country group inside "Campus Architecture": it opens and closes
+    /// separately from the same country's cities.
+    func campusGroupSection(_ group: CampusGroup) -> some View {
+        let isExpanded = Binding {
+            expandedCampusGroups[group.id, default: false]
+        } set: { newValue in
+            if newValue { HapticManager.shared.trigger(.selection) }
+            expandedCampusGroups[group.id] = newValue
+        }
+        let isMastered = viewModel.isCampusGroupMastered(group)
+        let header: CountryHeaderLabel
+        switch group.kind {
+        case .country:
+            header = CountryHeaderLabel(title: group.title,
+                                        congratsMessage: group.campuses.first?.country.congratsMessage ?? "CONGRATULATIONS!",
+                                        masterBadge: "COUNTRY MASTER", isMastered: isMastered, isHighContrast: isHighContrast)
+        case .conference:
+            header = CountryHeaderLabel(title: group.title, congratsMessage: "CONGRATULATIONS!", masterBadge: "CONFERENCE MASTER",
+                                        isMastered: isMastered, isHighContrast: isHighContrast)
+        }
+        return citySection(cities: group.campuses, isExpanded: isExpanded, header: header)
+    }
+
+    /// On iPad every group is shown open with a section header; on iPhone it is a disclosure group.
+    private func citySection(cities: [CityLocation.City], isExpanded: Binding<Bool>, header: CountryHeaderLabel) -> some View {
+        Group {
             if isIPad {
                 Section {
                     ForEach(cities) { city in
                         cityRowWrapper(city: city)
                     }
                 } header: {
-                    CountryHeaderLabel(country: country, isMastered: isMastered, isHighContrast: isHighContrast)
-                        .padding(.vertical, 8)
+                    header.padding(.vertical, 8)
                 }
             } else {
-                let isExpanded = Binding {
-                    isCampusSection ? expandedCampusCountries[country, default: false] : expandedCountries[country, default: false]
-                } set: { newValue in
-                    if newValue { HapticManager.shared.trigger(.selection) }
-                    if isCampusSection {
-                        expandedCampusCountries[country] = newValue
-                    } else {
-                        expandedCountries[country] = newValue
-                    }
-                }
-
                 Section {
                     DisclosureGroup(isExpanded: isExpanded) {
                         ForEach(cities) { city in
                             cityRowWrapper(city: city)
                         }
                     } label: {
-                        CountryHeaderLabel(country: country, isMastered: isMastered, isHighContrast: isHighContrast)
+                        header
                     }
                 }
             }
@@ -141,8 +200,12 @@ extension CityListView {
     }
 
     var headerSection: some View {
-        Group {
-            if viewModel.masteredCount == 0 {
+        // One gap everywhere on home: between these blocks and between the list sections
+        VStack(spacing: DS.Space.m) {
+            quickActions
+            collegeListCard
+            // The welcome banner stays until the first stamp of any kind, city or campus
+            if viewModel.masteredCount + viewModel.masteredCampusCount == 0 {
                 ZeroProgressHeader(isHighContrast: isHighContrast)
             } else {
                 ProgressHeaderView(viewModel: viewModel, isHighContrast: isHighContrast) {
@@ -151,6 +214,67 @@ extension CityListView {
                 }
             }
         }
+    }
+
+    /// My Journey, Achievements, World Map and My Trips, each with its name under the icon.
+    /// (They used to be four unlabeled icons in the top bar.)
+    private var quickActions: some View {
+        // Four across, or two by two at the largest text sizes so the labels aren't cut off.
+        // A plain Grid: a lazy grid inside a List row keeps its old column widths when text size changes.
+        let tiles: [AnyView] = [
+            AnyView(quickAction("My Journey", systemImage: "chart.bar.fill") { showingMyJourney = true }),
+            AnyView(quickAction("Achievements", systemImage: "trophy.fill") { showingAchievements = true }),
+            AnyView(quickAction("World Map", systemImage: "globe") { showingWorldMap = true }),
+            AnyView(quickAction("My Trips", systemImage: "suitcase.fill", hint: "Your trips, including New Trip Anywhere") { showingMyTrips = true }),
+        ]
+        let perRow = dynamicTypeSize.isAccessibilitySize ? 2 : 4
+        return Grid(horizontalSpacing: DS.Space.m, verticalSpacing: DS.Space.m) {
+            ForEach(Array(stride(from: 0, to: tiles.count, by: perRow)), id: \.self) { start in
+                GridRow {
+                    ForEach(start..<min(start + perRow, tiles.count), id: \.self) { index in
+                        tiles[index]
+                    }
+                }
+            }
+        }
+    }
+
+    private func quickAction(_ title: LocalizedStringKey, systemImage: String, hint: LocalizedStringKey? = nil,
+                             action: @escaping () -> Void) -> some View {
+        // Not a Button: inside a List row, every Button in the row fires on any tap,
+        // so tapping World Map opened all four screens. A tap gesture on each tile doesn't.
+        VStack(spacing: 6) {
+            Image(systemName: systemImage)
+                .font(.title3)
+                .foregroundStyle(brandColor)
+            Text(title)
+                .font(.caption.weight(.semibold))
+                .foregroundStyle(.primary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
+        }
+        .padding(.horizontal, 4)
+        .frame(maxWidth: .infinity, minHeight: 64)
+        .padding(.vertical, 8)
+        .background(
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .fill(isHighContrast ? Color(UIColor.systemBackground) : Color(UIColor.secondarySystemGroupedBackground))
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
+        )
+        .contentShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+        .onTapGesture {
+            HapticManager.shared.trigger(.selection)
+            action()
+        }
+        .accessibilityElement(children: .combine)
+        .accessibilityAddTraits(.isButton)
+        .accessibilityAction { action() }
+        .accessibilityHint(hint.map { Text($0) } ?? Text(""))
+        // Four across stops fitting at the largest text sizes, so these stop growing at XXXL
+        .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
     }
 
     var welcomePlaceholder: some View {
@@ -178,46 +302,15 @@ extension CityListView {
 
     // MARK: - Toolbars
     
+    /// Only Settings stays up here; the other screens are labeled tiles at the top of the list.
     var sidebarToolbar: some ToolbarContent {
-        ToolbarItemGroup(placement: .navigationBarLeading) {
-            ControlGroup {
-                Button {
-                    HapticManager.shared.trigger(.selection)
-                    showingSettings = true
-                } label: {
-                    Label("Settings", systemImage: "gearshape.fill")
-                }
-
-                Button {
-                    HapticManager.shared.trigger(.selection)
-                    showingMyJourney = true
-                } label: {
-                    Label("My Journey", systemImage: "chart.bar.fill")
-                }
-
-                Button {
-                    HapticManager.shared.trigger(.selection)
-                    showingAchievements = true
-                } label: {
-                    Label("Achievements", systemImage: "trophy.fill")
-                }
-
-                Button {
-                    HapticManager.shared.trigger(.selection)
-                    showingWorldMap = true
-                } label: {
-                    Label("World Map", systemImage: "globe")
-                }
-
-                Button {
-                    HapticManager.shared.trigger(.selection)
-                    showingMyTrips = true
-                } label: {
-                    Label("My Trips", systemImage: "suitcase.fill")
-                }
-                .accessibilityHint("Your trips, including New Trip Anywhere")
+        ToolbarItem(placement: .navigationBarLeading) {
+            Button {
+                HapticManager.shared.trigger(.selection)
+                showingSettings = true
+            } label: {
+                Label("Settings", systemImage: "gearshape.fill")
             }
-            .controlGroupStyle(.navigation)
             .foregroundStyle(isHighContrast ? Color.primary : Color.adventureOrange)
         }
     }
@@ -245,15 +338,18 @@ extension CityListView {
 
     // MARK: - Buttons & Overlays
 
+    /// Every stamp in the passport: completed cities plus completed campuses
+    private var passportStampCount: Int { viewModel.masteredCount + viewModel.masteredCampusCount }
+
     var passportFloatingButton: some View {
         Button(action: {
             HapticManager.shared.trigger(.selection)
             showingPassport = true
         }) {
             HStack(spacing: 12) {
-                Image(systemName: viewModel.masteredCount > 0 ? "book.pages.fill" : "book.closed.fill")
+                Image(systemName: passportStampCount > 0 ? "book.pages.fill" : "book.closed.fill")
                 Text("My Passport").fontWeight(.bold)
-                Text("\(viewModel.masteredCount)")
+                Text("\(passportStampCount)")
                     .font(.caption2.bold())
                     .padding(6)
                     .background(isHighContrast ? Color(UIColor.systemBackground) : .white.opacity(0.2))
@@ -293,7 +389,7 @@ extension CityListView {
         withAnimation(.spring(response: 0.4, dampingFraction: 0.8)) {
             for key in expandedContinents.keys { expandedContinents[key] = false }
             for key in expandedCountries.keys { expandedCountries[key] = false }
-            for key in expandedCampusCountries.keys { expandedCampusCountries[key] = false }
+            for key in expandedCampusGroups.keys { expandedCampusGroups[key] = false }
             isCampusSectionExpanded = false
         }
     }
@@ -302,22 +398,38 @@ extension CityListView {
 // MARK: - SUPPORTING VIEWS
 
 struct CountryHeaderLabel: View {
-    let country: CityLocation.Country
+    let title: String
+    let congratsMessage: String
+    let masterBadge: LocalizedStringKey
     let isMastered: Bool
     let isHighContrast: Bool
     @Environment(\.colorScheme) var colorScheme
-    
+
+    init(country: CityLocation.Country, isMastered: Bool, isHighContrast: Bool) {
+        self.init(title: country.localizedName.localizedUppercase, congratsMessage: country.congratsMessage,
+                  masterBadge: "COUNTRY MASTER", isMastered: isMastered, isHighContrast: isHighContrast)
+    }
+
+    /// Also used for the conference groups inside "Campus Architecture".
+    init(title: String, congratsMessage: String, masterBadge: LocalizedStringKey, isMastered: Bool, isHighContrast: Bool) {
+        self.title = title
+        self.congratsMessage = congratsMessage
+        self.masterBadge = masterBadge
+        self.isMastered = isMastered
+        self.isHighContrast = isHighContrast
+    }
+
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             if isMastered {
-                Text(country.congratsMessage)
+                Text(congratsMessage)
                     .font(.system(size: 10, weight: .black, design: .rounded))
                     .foregroundColor(isHighContrast ? .primary : .adventureOrange)
                     .tracking(1)
             }
             
             HStack(alignment: .center, spacing: 8) {
-                Text(country.rawValue.uppercased())
+                Text(title)
                     .font(.subheadline)
                     .fontWeight(isHighContrast ? .black : .bold)
                     .foregroundColor(headerColor)
@@ -330,7 +442,7 @@ struct CountryHeaderLabel: View {
             }
             
             if isMastered {
-                Text("COUNTRY MASTER")
+                Text(masterBadge)
                     .font(.system(size: 10, weight: .black))
                     .padding(.horizontal, 8)
                     .padding(.vertical, 4)
@@ -376,59 +488,48 @@ struct ZeroProgressHeader: View {
         return Color.primary.opacity(0.95)
     }
 
+    /// A slim banner, not a full card: new users should see the cities and campuses
+    /// right away, not a screen-sized welcome message.
     var body: some View {
-        VStack(spacing: 20) {
-            // MARK: - Iconic Seal
+        HStack(spacing: 14) {
             ZStack {
                 Circle()
                     .fill(accent.opacity(isHighContrast ? 0 : 0.1))
-                    .frame(width: 80, height: 80)
-                
-                Circle()
-                    .strokeBorder(accent.opacity(0.2), lineWidth: 2)
-                    .frame(width: 68, height: 68)
-                
+                    .frame(width: 48, height: 48)
                 Image(systemName: "building.columns.fill")
-                    .font(.system(size: 32))
+                    .font(.title3)
                     .foregroundColor(accent)
             }
-            .padding(.top, 4)
+            .accessibilityHidden(true)
 
-            // MARK: - Text Content
-            VStack(spacing: 8) {
+            VStack(alignment: .leading, spacing: 3) {
                 Text("YOUR ODYSSEY AWAITS")
-                    .font(.system(.caption, design: .monospaced))
+                    .font(.system(.caption2, design: .monospaced))
                     .fontWeight(.bold)
-                    .tracking(3)
+                    .tracking(2)
                     .foregroundColor(accessibleSecondary)
-                
                 Text("Unlock your first badge")
-                    .font(.title2.bold())
-                    .multilineTextAlignment(.center)
+                    .font(.headline)
                     .foregroundColor(.primary)
+                Text("Pick a city or campus below, then stamp every landmark.")
+                    .font(.footnote)
+                    .foregroundColor(accessibleSecondary)
+                    .fixedSize(horizontal: false, vertical: true)
             }
-
-            // MARK: - Body Text
-            Text("Master a city by visiting all of its landmarks to earn your first official ink-pressed stamp.")
-                .font(.subheadline)
-                .foregroundColor(accessibleSecondary)
-                .multilineTextAlignment(.center)
-                .lineSpacing(4)
-                .padding(.horizontal, 10)
+            Spacer(minLength: 0)
         }
-        .padding(.vertical, 32)
-        .padding(.horizontal, 24)
-        .frame(maxWidth: .infinity)
+        .padding(14)
+        .frame(maxWidth: .infinity, alignment: .leading)
         .background(cardBG)
-        .cornerRadius(28)
+        .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
         .overlay(
-            RoundedRectangle(cornerRadius: 28)
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
                 .strokeBorder(
                     accent.opacity(isHighContrast ? 1 : 0.4),
-                    style: StrokeStyle(lineWidth: 2, dash: [8, 6])
+                    style: StrokeStyle(lineWidth: 1.5, dash: [6, 5])
                 )
         )
-        .shadow(color: Color.black.opacity(isHighContrast ? 0 : 0.06), radius: 20, y: 10)
+        .accessibilityElement(children: .combine)
     }
 }
 
@@ -495,6 +596,14 @@ struct ProgressHeaderView: View {
                             Text("Only: \(viewModel.totalCities - viewModel.masteredCount) more cities")
                                 .font(.caption2)
                                 .foregroundColor(.secondary)
+                            // Campus stamps count in the passport too, so say so here
+                            if viewModel.masteredCampusCount > 0 {
+                                Text(viewModel.masteredCampusCount == 1
+                                     ? NSLocalizedString("+ 1 campus", comment: "Home progress card: one completed campus next to the city count")
+                                     : String(format: NSLocalizedString("+ %d campuses", comment: "Home progress card: completed campuses next to the city count"), viewModel.masteredCampusCount))
+                                    .font(.caption2.bold())
+                                    .foregroundColor(isHighContrast ? .primary : .adventureOrange)
+                            }
                             Spacer()
                             Image(systemName: "flag.checkered")
                                 .font(.caption2)
@@ -507,15 +616,14 @@ struct ProgressHeaderView: View {
                     }
                 }
             }
-            .padding(24)
+            .padding(DS.Space.l)
             .background {
-                RoundedRectangle(cornerRadius: 24, style: .continuous)
+                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
                     .fill(isHighContrast ? Color(UIColor.systemBackground) : Color(UIColor.secondarySystemGroupedBackground))
-                    .shadow(color: .black.opacity(0.05), radius: 10, y: 5)
             }
             .overlay {
                 if isHighContrast {
-                    RoundedRectangle(cornerRadius: 24, style: .continuous)
+                    RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
                         .strokeBorder(.primary, lineWidth: 2)
                 }
             }
@@ -738,7 +846,7 @@ struct PassportHintOverlayView: View {
         return formatter.string(from: Date()).uppercased()
     }
 
-    private func milestoneRow(icon: String, title: String, detail: String) -> some View {
+    private func milestoneRow(icon: String, title: LocalizedStringKey, detail: LocalizedStringKey) -> some View {
         HStack(alignment: .top, spacing: 20) {
             ZStack {
                 Circle().fill(isHighContrast ? Color.primary : Color.adventureOrange.opacity(0.1)).frame(width: 48, height: 48)
