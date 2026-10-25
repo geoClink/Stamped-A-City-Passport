@@ -87,9 +87,21 @@ struct BuildingDetailView: View {
         }
         .background(DS.Palette.pageBackground)
         .toolbarBackground(.hidden, for: .navigationBar)
-        #if !os(visionOS)
+        #if os(iOS)
         .fullScreenCover(isPresented: $showCamera) {
             CameraPicker(buildingID: building.id)
+        }
+        #elseif os(macOS)
+        // A Mac has no camera picker: the same button imports an image file instead.
+        .fileImporter(isPresented: $showCamera, allowedContentTypes: [.image]) { result in
+            guard let url = try? result.get() else { return }
+            let didAccess = url.startAccessingSecurityScopedResource()
+            defer { if didAccess { url.stopAccessingSecurityScopedResource() } }
+            if let img = UIImage(contentsOf: url) {
+                GlobalProgressManager.shared.saveImage(img, for: building.id)
+                resetManipulation()
+                isEditingPhoto = true
+            }
         }
         #endif
         .alert(L.Building.deletePhotoTitle, isPresented: $showingDeleteConfirmation) {
@@ -327,11 +339,16 @@ extension BuildingDetailView {
 
             Divider().frame(height: 20)
 
-            #if !os(visionOS)
+            #if os(iOS)
             Button { showCamera = true } label: {
                 Image(systemName: "camera.fill").frame(width: 44, height: 44)
             }
             .accessibilityLabel("Take photo with camera")
+            #elseif os(macOS)
+            Button { showCamera = true } label: {
+                Image(systemName: "folder.fill").frame(width: 44, height: 44)
+            }
+            .accessibilityLabel("Choose image file")
             #endif
 
             if isEditingPhoto {

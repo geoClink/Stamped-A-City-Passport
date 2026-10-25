@@ -30,7 +30,7 @@ struct PassportGalleryView: View {
     @ScaledMetric(relativeTo: .largeTitle) private var emptyIconSize: CGFloat = 80
     
     // MARK: - Platform Detection & Adaptive Colors
-    private var isIPad: Bool { UIDevice.current.userInterfaceIdiom == .pad }
+    private var isIPad: Bool { DeviceInfo.isLargeScreen }
     
     private var brandColor: Color {
         if highContrast {

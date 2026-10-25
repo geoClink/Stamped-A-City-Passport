@@ -31,7 +31,7 @@ struct CityListView: View {
     @State private var searchResults: [MixedSearchResult] = []
     @State private var searchedText = ""
     /// True while the search field is active, even before anything is typed
-    @State private var isSearchActive = false
+    @State var isSearchActive = false
     @State var showingSettings = false
     @State var showingMyJourney = false
     @State var showingPassport = false
@@ -44,7 +44,7 @@ struct CityListView: View {
     @State var columnVisibility = NavigationSplitViewVisibility.all
     
     var isHighContrast: Bool { manualHighContrast || systemContrast == .increased }
-    var isIPad: Bool { UIDevice.current.userInterfaceIdiom == .pad }
+    var isIPad: Bool { DeviceInfo.isLargeScreen }
     var brandColor: Color { isHighContrast ? .primary : Color.adventureOrange }
 
     var body: some View {
@@ -133,7 +133,7 @@ struct CityListView: View {
                         }
                 }
             }
-            .searchable(text: $searchText, isPresented: $isSearchActive, placement: .navigationBarDrawer(displayMode: .always), prompt: "Cities, Landmarks or Architects")
+            .searchable(text: $searchText, isPresented: $isSearchActive, placement: .sidebarSearch, prompt: "Cities, Landmarks or Architects")
             // Search runs once typing pauses, not on every letter, so the keyboard keeps up
             .task(id: searchText) {
                 if !searchText.isEmpty {
@@ -144,11 +144,19 @@ struct CityListView: View {
                 searchedText = searchText
             }
             .toolbar { sidebarToolbar }
+            #if os(macOS)
+            .navigationSplitViewColumnWidth(min: 280, ideal: 340, max: 460)
+            #endif
             .animation(.spring(response: 0.35, dampingFraction: 0.8), value: searchText.isEmpty)
 
         } detail: {
             NavigationStack {
                 if let city = selectedCity {
+                    #if os(macOS)
+                    // Mac: the 3D map fills the window, the city's details sit in an inspector
+                    MacCityWorkspace(city: city)
+                        .id(city.id)
+                    #else
                     ScrollView {
                         VStack(alignment: .leading, spacing: 0) {
                             CityDetailView(city: city)
@@ -158,6 +166,7 @@ struct CityListView: View {
                     .id(city.id)
                     .background(Color(UIColor.systemGroupedBackground))
                     .navigationBarBackButtonHidden(horizontalSizeClass == .regular)
+                    #endif
                 } else {
                     welcomePlaceholder
                 }
@@ -180,6 +189,13 @@ struct CityListView: View {
         .fullScreenCover(isPresented: $showingPassport) {
             PassportGalleryView(cities: viewModel.allCities)
         }
+        #if os(macOS)
+        .onChange(of: navManager.menuCommand) { _, command in
+            guard let command else { return }
+            navManager.menuCommand = nil
+            handleMenuCommand(command)
+        }
+        #endif
         .onChange(of: navManager.spotlightCity) { _, city in
             if let city {
                 selectedCity = city
@@ -334,3 +350,23 @@ struct CityListView: View {
         .padding(.vertical, 4)
     }
 }
+
+#if os(macOS)
+// MARK: - Mac menu bar commands
+extension CityListView {
+    func handleMenuCommand(_ command: MenuCommand) {
+        switch command {
+        case .search:
+            columnVisibility = .all
+            isSearchActive = true
+        case .passport: showingPassport = true
+        case .myJourney: showingMyJourney = true
+        case .myTrips: showingMyTrips = true
+        case .worldMap: showingWorldMap = true
+        case .achievements: showingAchievements = true
+        case .collegeList: showingCollegeList = true
+        case .settings: showingSettings = true
+        }
+    }
+}
+#endif

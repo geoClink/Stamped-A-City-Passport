@@ -23,6 +23,8 @@ struct CityMapView: View {
     @ObservedObject var viewModel: CityDetailViewModel
     /// Set when the map is opened from a trip's "Tour" button: that trip's tour starts on open.
     var tripToTour: String? = nil
+    /// False when the map is the Mac window's main view rather than a sheet, so there is nothing to close.
+    var showsDoneButton = true
 
     // Watched live so pins and the card update the moment something is stamped or saved
     @ObservedObject private var progress = GlobalProgressManager.shared
@@ -164,54 +166,7 @@ struct CityMapView: View {
     // MARK: - Body
 
     var body: some View {
-        // `selection` lets the user tap Apple's own places. Our landmark pins
-        // handle their own taps, so they're unaffected.
-        Map(position: $position, selection: $selectedFeature) {
-            if tripTourLine.count > 1 {
-                MapPolyline(coordinates: tripTourLine)
-                    .stroke(Color.adventureOrange, style: StrokeStyle(lineWidth: 4, lineCap: .round, dash: [8, 6]))
-            }
-            ForEach(filteredBuildings) { building in
-                let isVisited = progress.isVisited(building.id)
-                Annotation(building.name, coordinate: coordinate(of: building), anchor: .bottom) {
-                    PinView(
-                        isVisited: isVisited,
-                        isWishlisted: progress.isWishlisted(building.id),
-                        isUpNext: building.id == upNext?.id,
-                        isSelected: building.id == selectedBuilding?.id
-                    )
-                    .onTapGesture {
-                        stopTour()
-                        flyTo(building)
-                    }
-                    .accessibilityLabel(isVisited ? "\(building.name), stamped" : "\(building.name), not yet visited")
-                    .accessibilityHint("Shows this landmark's card")
-                    .accessibilityAddTraits(.isButton)
-                }
-            }
-            ForEach(visibleCustomPlaces) { place in
-                Annotation(place.name, coordinate: place.coordinate, anchor: .bottom) {
-                    CustomPlacePin(category: place.category, isSelected: place.id == selectedPlace?.id)
-                        .onTapGesture {
-                            stopTour()
-                            flyTo(place)
-                        }
-                        .accessibilityLabel("\(place.name), your saved place")
-                        .accessibilityAddTraits(.isButton)
-                }
-            }
-            if userLocationInCity != nil {
-                UserAnnotation()
-            }
-        }
-        // Satellite photos draped over Apple's 3D city scans (the same data as Flyover).
-        // Cities without 3D coverage fall back to flat satellite imagery automatically.
-        // Each category chip decides which Apple Maps places are drawn (see MapCategory).
-        .mapStyle(category.mapStyle(satellite: useSatellite))
-        .mapControls {
-            MapCompass()
-            MapPitchToggle()
-        }
+        map
         // Orange, not system blue, for Apple's own map controls (the 2D/3D toggle, the compass)
         .tint(.adventureOrange)
         .navigationTitle(mapTitle)
@@ -326,6 +281,7 @@ struct CityMapView: View {
             lookAroundScene = try? await request.scene
         }
         // Tapped an Apple Maps place: close any Stamped card and load the place's details
+        #if os(iOS)
         .task(id: selectedFeature) {
             guard let feature = selectedFeature else { return }
             stopTour()
@@ -337,6 +293,7 @@ struct CityMapView: View {
             }
             tappedApplePlace = TappedApplePlace(mapItem: mapItem)
         }
+        #endif
         .sheet(item: $tappedApplePlace, onDismiss: { selectedFeature = nil }) { place in
             ApplePlaceSheet(mapItem: place.mapItem, cityName: cityName)
         }
@@ -361,12 +318,76 @@ struct CityMapView: View {
         .sheet(item: $addToTrip) { request in
             AddToTripSheet(cityName: cityName, stop: request.stop, stopName: request.name)
         }
-        .sheet(item: $browserLink) { link in
-            InAppBrowser(url: link.url)
-                .ignoresSafeArea()
-        }
+        .inAppBrowser(item: $browserLink)
         .navigationDestination(item: $detailBuilding) { building in
             BuildingDetailView(building: building, viewModel: viewModel)
+        }
+    }
+
+    // MARK: - Map
+
+    private var map: some View {
+        mapBase
+        // Satellite photos draped over Apple's 3D city scans (the same data as Flyover).
+        // Cities without 3D coverage fall back to flat satellite imagery automatically.
+        // Each category chip decides which Apple Maps places are drawn (see MapCategory).
+        .mapStyle(category.mapStyle(satellite: useSatellite))
+        .mapControls {
+            MapCompass()
+            MapPitchToggle()
+        }
+    }
+
+    @ViewBuilder
+    private var mapBase: some View {
+        #if os(macOS)
+        // MapKit can't select Apple's own places on the Mac (MapFeature isn't Hashable there),
+        // so only our own pins and saved places are tappable.
+        Map(position: $position) { mapContent }
+        #else
+        // `selection` lets the user tap Apple's own places. Our landmark pins
+        // handle their own taps, so they're unaffected.
+        Map(position: $position, selection: $selectedFeature) { mapContent }
+        #endif
+    }
+
+    @MapContentBuilder
+    private var mapContent: some MapContent {
+        if tripTourLine.count > 1 {
+            MapPolyline(coordinates: tripTourLine)
+                .stroke(Color.adventureOrange, style: StrokeStyle(lineWidth: 4, lineCap: .round, dash: [8, 6]))
+        }
+        ForEach(filteredBuildings) { building in
+            let isVisited = progress.isVisited(building.id)
+            Annotation(building.name, coordinate: coordinate(of: building), anchor: .bottom) {
+                PinView(
+                    isVisited: isVisited,
+                    isWishlisted: progress.isWishlisted(building.id),
+                    isUpNext: building.id == upNext?.id,
+                    isSelected: building.id == selectedBuilding?.id
+                )
+                .onTapGesture {
+                    stopTour()
+                    flyTo(building)
+                }
+                .accessibilityLabel(isVisited ? "\(building.name), stamped" : "\(building.name), not yet visited")
+                .accessibilityHint("Shows this landmark's card")
+                .accessibilityAddTraits(.isButton)
+            }
+        }
+        ForEach(visibleCustomPlaces) { place in
+            Annotation(place.name, coordinate: place.coordinate, anchor: .bottom) {
+                CustomPlacePin(category: place.category, isSelected: place.id == selectedPlace?.id)
+                    .onTapGesture {
+                        stopTour()
+                        flyTo(place)
+                    }
+                    .accessibilityLabel("\(place.name), your saved place")
+                    .accessibilityAddTraits(.isButton)
+            }
+        }
+        if userLocationInCity != nil {
+            UserAnnotation()
         }
     }
 
@@ -381,10 +402,12 @@ struct CityMapView: View {
     @ToolbarContentBuilder
     private var toolbarContent: some ToolbarContent {
         // Swiping down pans the map instead of closing it, so every device gets a Done button
-        ToolbarItem(placement: .cancellationAction) {
-            Button("Done") {
-                stopTour()
-                dismiss()
+        if showsDoneButton {
+            ToolbarItem(placement: .cancellationAction) {
+                Button("Done") {
+                    stopTour()
+                    dismiss()
+                }
             }
         }
         // Filters, Add a Place and the satellite switch share one menu, so the title has room
@@ -984,7 +1007,9 @@ private struct CardLookAroundPreview: UIViewControllerRepresentable {
         controller.badgePosition = .bottomTrailing
         // Taps open the full-screen Look Around instead of moving around in the small preview
         controller.isNavigationEnabled = false
+        #if os(iOS)
         controller.traitOverrides.horizontalSizeClass = .compact
+        #endif
         return controller
     }
 

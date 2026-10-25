@@ -21,7 +21,7 @@ struct QuizView: View {
     private var isHighContrast: Bool { manualHighContrast || systemContrast == .increased }
     private var reduceMotion: Bool { manualReduceMotion || systemReduceMotion }
     private var brandColor: Color { isHighContrast ? .primary : Color.adventureOrange }
-    private var isIPad: Bool { UIDevice.current.userInterfaceIdiom == .pad }
+    private var isIPad: Bool { DeviceInfo.isLargeScreen }
 
     init(buildings: [Building], cityName: String) {
         _viewModel = StateObject(wrappedValue: QuizViewModel(buildings: buildings, cityName: cityName))

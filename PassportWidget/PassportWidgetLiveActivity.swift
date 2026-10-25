@@ -5,6 +5,7 @@
 //  Created by George Clinkscales on 9/5/26.
 //
 
+#if os(iOS)
 import ActivityKit
 import WidgetKit
 import SwiftUI
@@ -78,3 +79,4 @@ extension PassportWidgetAttributes.ContentState {
     PassportWidgetAttributes.ContentState.smiley
     PassportWidgetAttributes.ContentState.starEyes
 }
+#endif

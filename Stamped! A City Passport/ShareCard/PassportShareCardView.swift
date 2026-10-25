@@ -99,6 +99,8 @@ struct PassportShareCardView: View {
         let renderer = ImageRenderer(content: card)
         #if os(visionOS)
         renderer.scale = 2.0
+        #elseif os(macOS)
+        renderer.scale = NSScreen.main?.backingScaleFactor ?? 2.0
         #else
         renderer.scale = UIScreen.main.scale
         #endif

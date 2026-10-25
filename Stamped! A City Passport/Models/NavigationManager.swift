@@ -12,4 +12,6 @@ import Combine
 class NavigationManager: ObservableObject {
     @Published var selectedTab: Int = 0
     @Published var spotlightCity: CityLocation.City? = nil
+    /// Mac menu bar command waiting for the main window to act on it
+    @Published var menuCommand: MenuCommand? = nil
 }

@@ -11,6 +11,7 @@ import CoreSpotlight
 
 
 // MARK: - ORIENTATION MANAGER
+#if os(iOS)
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .pad {
@@ -20,10 +21,13 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         }
     }
 }
+#endif
 
 @main
 struct GlobalDiscoveryApp: App {
+    #if os(iOS)
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    #endif
     
     @AppStorage("hasSeenOnboarding") var hasSeenOnboarding: Bool = false
     @StateObject private var navManager = NavigationManager()
@@ -54,6 +58,18 @@ struct GlobalDiscoveryApp: App {
                     navManager.spotlightCity = city
                 }
             }
+            #if os(macOS)
+            .frame(minWidth: 960, minHeight: 640)
+            #endif
         }
+        #if os(macOS)
+        .defaultSize(width: 1440, height: 900)
+        .windowToolbarStyle(.unified)
+        .commands {
+            SidebarCommands()
+            InspectorCommands()
+            StampedCommands(navManager: navManager)
+        }
+        #endif
     }
 }
