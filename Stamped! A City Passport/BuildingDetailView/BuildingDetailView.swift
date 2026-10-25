@@ -102,7 +102,7 @@ struct BuildingDetailView: View {
         } message: {
             Text(L.Building.deletePhotoMessage)
         }
-        .sheet(isPresented: $showingLookAround) {
+        .fullScreenCover(isPresented: $showingLookAround) {
             if let scene = lookAroundScene {
                 LookAroundSheet(scene: scene, buildingName: building.name)
             }
@@ -1020,28 +1020,25 @@ private struct LookAroundSheet: View {
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {
-        // GeometryReader reads the real safe area top so Done lines up with
-        // Apple's own Look Around badge, which sits at safeAreaInsets.top + ~12pt.
-        GeometryReader { geo in
-            ZStack(alignment: .topTrailing) {
-                LookAroundViewer(scene: scene)
-                    .ignoresSafeArea()
+        // Look Around fills the screen; Done stays inside the safe area so the
+        // status bar doesn't swallow taps on it when this is full screen.
+        ZStack(alignment: .topTrailing) {
+            LookAroundViewer(scene: scene)
+                .ignoresSafeArea()
 
-                Button {
-                    dismiss()
-                } label: {
-                    Text("Done")
-                        .font(.body.weight(.semibold))
-                        .foregroundColor(.primary)
-                        .padding(.horizontal, DS.Space.l)
-                        .padding(.vertical, DS.Space.s)
-                        .background(.regularMaterial, in: Capsule())
-                }
-                .padding(.top, geo.safeAreaInsets.top + DS.Space.m)
-                .padding(.trailing, DS.Space.l)
+            Button {
+                dismiss()
+            } label: {
+                Text("Done")
+                    .font(.body.weight(.semibold))
+                    .foregroundColor(.primary)
+                    .padding(.horizontal, DS.Space.l)
+                    .padding(.vertical, DS.Space.s)
+                    .background(.regularMaterial, in: Capsule())
             }
+            .padding(.top, DS.Space.m)
+            .padding(.trailing, DS.Space.l)
         }
-        .ignoresSafeArea()
     }
 }
 

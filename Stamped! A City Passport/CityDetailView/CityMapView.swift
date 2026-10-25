@@ -345,7 +345,7 @@ struct CityMapView: View {
                 AddPlaceSheet(cityName: cityName, cityCenter: center)
             }
         }
-        .sheet(isPresented: $showingLookAround) {
+        .fullScreenCover(isPresented: $showingLookAround) {
             if let scene = lookAroundScene {
                 ZStack(alignment: .topTrailing) {
                     LookAroundPreviewWrapper(scene: scene)

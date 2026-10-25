@@ -4,6 +4,7 @@
 //
 
 import SwiftUI
+import WeatherKit
 
 // MARK: - Weather Section
 
@@ -27,6 +28,14 @@ struct WeatherSection: View {
                         Text("Fetching weather…")
                             .font(.caption).foregroundColor(.secondary)
                     }
+                    .padding(DS.Space.l)
+                } else if weather.showsSetupError {
+                    // Debug builds only — a missing WeatherKit capability is the usual cause
+                    ContentUnavailableView(
+                        "WeatherKit Not Authorized",
+                        systemImage: "key.slash",
+                        description: Text("Enable WeatherKit under Capabilities and App Services for \(Bundle.main.bundleIdentifier ?? "this app ID") in Certificates, Identifiers & Profiles. It can take about 30 minutes to start working.")
+                    )
                     .padding(DS.Space.l)
                 } else if weather.failed || weather.temperature.isEmpty {
                     ContentUnavailableView(
@@ -77,11 +86,49 @@ struct WeatherSection: View {
             .dsPageMargin()
 
             if !weather.isLoading && !weather.failed && !weather.temperature.isEmpty {
-                Text("Weather data from Open-Meteo. Stamped is not responsible for forecast inaccuracies.")
-                    .font(.caption2)
-                    .foregroundColor(isHighContrast ? .primary : .secondary)
+                WeatherAttributionView(attribution: weather.attribution, isHighContrast: isHighContrast)
                     .dsPageMargin()
             }
+        }
+    }
+}
+
+// MARK: - Apple Weather Attribution
+
+/// The Apple Weather mark and legal attribution link that WeatherKit requires wherever its data is shown.
+private struct WeatherAttributionView: View {
+    let attribution: WeatherAttribution?
+    let isHighContrast: Bool
+
+    @Environment(\.colorScheme) private var colorScheme
+    @ScaledMetric(relativeTo: .caption2) private var markHeight: CGFloat = 12
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: DS.Space.xs) {
+            if let attribution {
+                HStack(spacing: DS.Space.s) {
+                    AsyncImage(url: colorScheme == .dark ? attribution.combinedMarkDarkURL : attribution.combinedMarkLightURL) { image in
+                        image.resizable().scaledToFit()
+                    } placeholder: {
+                        Text(attribution.serviceName).font(.caption2).fontWeight(.semibold)
+                    }
+                    .frame(height: markHeight)
+                    .accessibilityLabel(attribution.serviceName)
+
+                    Link("Data Sources", destination: attribution.legalPageURL)
+                        .font(.caption2)
+                }
+            } else {
+                // Attribution request failed — the credit is still required, so fall back to text
+                HStack(spacing: DS.Space.s) {
+                    Text("\u{F8FF} Weather").font(.caption2).fontWeight(.semibold)
+                    Link("Data Sources", destination: URL(string: "https://weatherkit.apple.com/legal-attribution.html")!)
+                        .font(.caption2)
+                }
+            }
+            Text("Stamped is not responsible for forecast inaccuracies.")
+                .font(.caption2)
+                .foregroundColor(isHighContrast ? .primary : .secondary)
         }
     }
 }

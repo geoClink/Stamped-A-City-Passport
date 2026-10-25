@@ -106,7 +106,7 @@ struct CityDetailView: View {
 
                 // Weather — hidden when failed/empty so we don't advertise broken state
                 let weather = WeatherManager.shared
-                if weather.isLoading || !weather.temperature.isEmpty {
+                if weather.isLoading || !weather.temperature.isEmpty || weather.showsSetupError {
                     WeatherSection(weather: weather, isHighContrast: isHighContrast)
                 }
 
