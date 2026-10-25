@@ -600,3 +600,12 @@
 "Visited" = "Visitato";
 "Not yet" = "Non ancora";
 "View City" = "Vedi città";
+
+/* Mac menu bar and toolbar */
+"Settings…" = "Impostazioni…";
+"Search Cities and Landmarks" = "Cerca città e monumenti";
+"Hide City Details" = "Nascondi dettagli della città";
+"Show City Details" = "Mostra dettagli della città";
+"City Details" = "Dettagli della città";
+"Show or hide the city's details" = "Mostra o nascondi i dettagli della città";
+"Choose image file" = "Scegli file immagine";

@@ -600,3 +600,12 @@
 "Visited" = "방문함";
 "Not yet" = "아직";
 "View City" = "도시 보기";
+
+/* Mac menu bar and toolbar */
+"Settings…" = "설정…";
+"Search Cities and Landmarks" = "도시 및 랜드마크 검색";
+"Hide City Details" = "도시 정보 숨기기";
+"Show City Details" = "도시 정보 표시";
+"City Details" = "도시 정보";
+"Show or hide the city's details" = "도시 정보를 표시하거나 숨깁니다";
+"Choose image file" = "이미지 파일 선택";

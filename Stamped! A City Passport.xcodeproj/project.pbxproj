@@ -800,6 +800,7 @@
 				INFOPLIST_FILE = "Stamped--A-City-Passport-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Stamped!";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 George Clinkscales";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to the camera so you can take picture of the landmark you are visiting!";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Stamped! alerts you when you're near a landmark, even in the background.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Stamped! shows nearby landmarks while you explore.";
@@ -863,6 +864,7 @@
 				INFOPLIST_FILE = "Stamped--A-City-Passport-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Stamped!";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 George Clinkscales";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to the camera so you can take picture of the landmark you are visiting!";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Stamped! alerts you when you're near a landmark, even in the background.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Stamped! shows nearby landmarks while you explore.";
