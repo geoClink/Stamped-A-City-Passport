@@ -145,8 +145,8 @@ class AppStoreConnect:
         )["data"]
         return {record["attributes"]["locale"]: record for record in records}
 
-    def editable_app_info_localizations(self, app_id: str) -> dict[str, dict]:
-        """Return {locale: record} from the App Information that's still editable, or {} if none is."""
+    def editable_app_info(self, app_id: str) -> tuple[str | None, dict[str, dict]]:
+        """Return (App Information id, {locale: record}) for the one that's still editable, or (None, {})."""
         app_infos = self.request("GET", f"/apps/{app_id}/appInfos")["data"]
         for app_info in app_infos:
             attributes = app_info["attributes"]
@@ -154,8 +154,19 @@ class AppStoreConnect:
             state = attributes.get("state") or attributes.get("appStoreState")
             if state not in LOCKED_APP_INFO_STATES:
                 records = self.request("GET", f"/appInfos/{app_info['id']}/appInfoLocalizations")["data"]
-                return {record["attributes"]["locale"]: record for record in records}
-        return {}
+                return app_info["id"], {record["attributes"]["locale"]: record for record in records}
+        return None, {}
+
+    def add_app_info_language(self, app_info_id: str, locale: str, attributes: dict) -> dict:
+        """Add a language under App Information (Apple needs this before the version page can use it)."""
+        body = {
+            "data": {
+                "type": "appInfoLocalizations",
+                "attributes": {"locale": locale, **attributes},
+                "relationships": {"appInfo": {"data": {"type": "appInfos", "id": app_info_id}}},
+            }
+        }
+        return self.request("POST", "/appInfoLocalizations", json=body)["data"]
 
 
 # ---------- Working out what changes ----------
@@ -169,6 +180,16 @@ def wanted_version_attributes(contents: dict, marketing_url: str | None) -> dict
     attributes = {api_name: contents[json_field] for json_field, (api_name, _) in VERSION_FIELDS.items()}
     if marketing_url:
         attributes["marketingUrl"] = marketing_url
+    return attributes
+
+
+def new_app_info_attributes(english_attributes: dict, subtitle: str | None) -> dict:
+    """App Information for a new language: the English app name and privacy URL, plus the translated subtitle."""
+    attributes = {"name": english_attributes["name"]}
+    if english_attributes.get("privacyPolicyUrl"):
+        attributes["privacyPolicyUrl"] = english_attributes["privacyPolicyUrl"]
+    if subtitle:
+        attributes["subtitle"] = subtitle
     return attributes
 
 
@@ -230,9 +251,11 @@ def main() -> int:
         print(f"Created version {args.version}")
 
     existing_version_records = api.version_localizations(version_id)
-    existing_subtitle_records = {} if args.skip_subtitle else api.editable_app_info_localizations(app_id)
-    if not args.skip_subtitle and not existing_subtitle_records:
-        print("Note: App Information isn't editable right now, so subtitles will be skipped.")
+    app_info_id, existing_app_info_records = api.editable_app_info(app_id)
+    if app_info_id is None:
+        print("Note: App Information isn't editable right now, so subtitles and new languages there will be skipped.")
+    # New languages copy the app name and privacy policy URL from English
+    source_app_info = existing_app_info_records.get("en-US") or next(iter(existing_app_info_records.values()), None)
 
     mode = "Sending" if args.apply else "Dry run (nothing is sent; add --apply to send)"
     print(f"\n{mode}\n")
@@ -242,7 +265,28 @@ def main() -> int:
 
     for locale, contents in locale_texts.items():
         print(f"── {locale}")
+        subtitle = None if args.skip_subtitle else contents.get("subtitle")
         try:
+            # App Information first: Apple needs the language there before the version page can use it
+            app_info_record = existing_app_info_records.get(locale)
+            if app_info_record is None and app_info_id and source_app_info:
+                new_attributes = new_app_info_attributes(source_app_info["attributes"], subtitle)
+                print(f"   + add language to App Information ({', '.join(new_attributes)})")
+                change_count += 1
+                if args.apply:
+                    api.add_app_info_language(app_info_id, locale, new_attributes)
+                    # Apple creates an empty version page for the new language on its own,
+                    # so re-read them and update that page instead of adding a second one
+                    existing_version_records = api.version_localizations(version_id)
+            elif app_info_record and subtitle:
+                subtitle_changes = changed_attributes(app_info_record["attributes"], {"subtitle": subtitle})
+                if subtitle_changes:
+                    print(f"   ~ subtitle: {subtitle}")
+                    change_count += 1
+                    if args.apply:
+                        body = {"data": {"type": "appInfoLocalizations", "id": app_info_record["id"], "attributes": subtitle_changes}}
+                        api.request("PATCH", f"/appInfoLocalizations/{app_info_record['id']}", json=body)
+
             # Version page text
             wanted = wanted_version_attributes(contents, args.marketing_url)
             record = existing_version_records.get(locale)
@@ -269,20 +313,6 @@ def main() -> int:
                 if changes and args.apply:
                     body = {"data": {"type": "appStoreVersionLocalizations", "id": record["id"], "attributes": changes}}
                     api.request("PATCH", f"/appStoreVersionLocalizations/{record['id']}", json=body)
-
-            # Subtitle (App Information page)
-            subtitle_record = existing_subtitle_records.get(locale)
-            subtitle = contents.get("subtitle")
-            if subtitle and subtitle_record:
-                subtitle_changes = changed_attributes(subtitle_record["attributes"], {"subtitle": subtitle})
-                if subtitle_changes:
-                    print(f"   ~ subtitle: {subtitle}")
-                    change_count += 1
-                    if args.apply:
-                        body = {"data": {"type": "appInfoLocalizations", "id": subtitle_record["id"], "attributes": subtitle_changes}}
-                        api.request("PATCH", f"/appInfoLocalizations/{subtitle_record['id']}", json=body)
-            elif subtitle and existing_subtitle_records:
-                print("   ! subtitle skipped: add this language under App Information first")
         except RuntimeError as error:
             # Keep going with the other languages, then report
             print(f"   ✗ {error}")

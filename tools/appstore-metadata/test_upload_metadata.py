@@ -55,6 +55,18 @@ def test_only_changed_text_is_sent() -> None:
     }
 
 
+def test_new_language_copies_english_name_and_privacy_url() -> None:
+    # A new language under App Information reuses the English app name and privacy URL,
+    # but gets its own translated subtitle
+    english = {"name": "Stamped! A City Passport", "privacyPolicyUrl": "https://example.com/privacy", "subtitle": "English"}
+    attributes = upload_metadata.new_app_info_attributes(english, "Campus und Architektur")
+    assert attributes == {
+        "name": "Stamped! A City Passport",
+        "privacyPolicyUrl": "https://example.com/privacy",
+        "subtitle": "Campus und Architektur",
+    }
+
+
 def test_marketing_url_is_added_only_when_given() -> None:
     texts = make_locale_text()
     without_url = upload_metadata.wanted_version_attributes(texts, None)
