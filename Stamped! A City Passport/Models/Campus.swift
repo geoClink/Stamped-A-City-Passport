@@ -21,4 +21,48 @@ extension CityLocation.City {
 
     /// Every campus in the Campus Architecture collection.
     static var campusCases: [CityLocation.City] { allCases.filter { $0.isCampus } }
+
+    /// The athletic conference a US campus is listed under, or nil for campuses outside the US.
+    var conference: CampusConference? {
+        guard isCampus, country == .unitedStates else { return nil }
+        return Self.campusConferences[self] ?? .other
+    }
+
+    /// Short names and abbreviations a campus is also found by in search ("UGA", "Ole Miss").
+    var searchAliases: [String] { Self.campusSearchAliases[self] ?? [] }
+
+    /// The name campuses are sorted by: "University of Georgia" sorts as "Georgia",
+    /// so the list isn't one long run of "University of…".
+    var campusSortName: String {
+        var sortName = name
+        for prefix in ["The ", "University of "] where sortName.hasPrefix(prefix) {
+            sortName.removeFirst(prefix.count)
+        }
+        return sortName
+    }
+}
+
+/// US campuses are grouped by athletic conference in the city list; there are too many for one list.
+enum CampusConference: String, CaseIterable, Identifiable {
+    case bigTen, sec, acc, big12, ivyLeague, other
+
+    var id: String { rawValue }
+
+    /// The conference's own name, used in achievement titles ("Big Ten Road Trip").
+    var name: String {
+        switch self {
+        case .bigTen: return "Big Ten"
+        case .sec: return "SEC"
+        case .acc: return "ACC"
+        case .big12: return "Big 12"
+        case .ivyLeague: return "Ivy League"
+        case .other: return "Other"
+        }
+    }
+
+    var title: String {
+        self == .other
+            ? NSLocalizedString("OTHER U.S. CAMPUSES", comment: "City list: US campuses outside the listed athletic conferences")
+            : name.uppercased()
+    }
 }

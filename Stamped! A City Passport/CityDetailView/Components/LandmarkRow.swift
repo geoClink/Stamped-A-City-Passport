@@ -14,43 +14,35 @@ struct LandmarkRow: View {
     
     @Environment(\.dynamicTypeSize) var dynamicTypeSize
     
-    @State private var isPulsing = false
 
     var body: some View {
         let layout = dynamicTypeSize.isAccessibilitySize ?
-                     AnyLayout(VStackLayout(alignment: .leading, spacing: 12)) :
-                     AnyLayout(HStackLayout(spacing: 16))
+                     AnyLayout(VStackLayout(alignment: .leading, spacing: DS.Space.m)) :
+                     AnyLayout(HStackLayout(spacing: DS.Space.l))
 
         layout {
+            // Orange once stamped, gray until then: the same two colors as the map's pins.
+            // (Unvisited pins used to be blue and all pulse at once.)
             Image(systemName: isVisited ? "checkmark.seal.fill" : "mappin.circle.fill")
                 .font(.title)
                 .foregroundColor(
-                    isHighContrast ? .primary : (isVisited ? .adventureOrange : .blue)
+                    isHighContrast ? .primary : (isVisited ? DS.Palette.accent : Color(UIColor.systemGray3))
                 )
-                // Remove decorative blue shadow in high-contrast mode to avoid introducing color-only cues
-                .shadow(color: isHighContrast ? Color.clear : (!isVisited ? .blue.opacity(isPulsing ? 0.8 : 0.3) : .clear), radius: isPulsing ? 15 : 5)
-                .scaleEffect(!isVisited && isPulsing ? 1.3 : 1.0)
-                .hueRotation(.degrees(isPulsing ? 10 : 0))
-                .onAppear {
-                    if !isVisited {
-                        withAnimation(.easeInOut(duration: 0.8).repeatForever(autoreverses: true)) {
-                            isPulsing = true
-                        }
-                    }
-                }
                 .accessibilityHidden(true)
                 .accessibilityLabel(isVisited ? "Visited, \(building.name)" : "Next goal: \(building.name)")
             
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: DS.Space.xs) {
                 Text(building.name)
                     .font(isHighContrast ? .headline.bold() : .headline)
                     .foregroundColor(.primary)
                     .fixedSize(horizontal: false, vertical: true)
                 
-                Text(building.architect)
-                    .font(.caption)
-                    .foregroundColor(isHighContrast ? .primary : .secondary)
-                    .fixedSize(horizontal: false, vertical: true)
+                if let architect = building.knownArchitect {
+                    Text(architect)
+                        .font(.caption)
+                        .foregroundColor(isHighContrast ? .primary : .secondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
             }
             
             if !dynamicTypeSize.isAccessibilitySize {
@@ -62,17 +54,20 @@ struct LandmarkRow: View {
                     .accessibilityHidden(true)
             }
         }
-        .padding()
+        .padding(DS.Space.l)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(isHighContrast ? Color(.systemBackground) : Color.clear)
+        .background(
+            RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
+                .fill(isHighContrast ? Color(.systemBackground) : Color.clear)
+        )
         .contentShape(Rectangle())
         .overlay(
-            RoundedRectangle(cornerRadius: 12)
+            RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
                 .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
         )
         .accessibilityElement(children: .combine)
         .accessibilityLabel(isVisited ? "Visited, \(building.name)" : "Not visited, \(building.name)")
-        .accessibilityValue("Architect: \(building.architect)")
+        .accessibilityValue(building.knownArchitect.map { "Architect: \($0)" } ?? "")
         .accessibilityAddTraits(.isButton)
         .accessibilityHint("Double tap to view building details and history.")
     }

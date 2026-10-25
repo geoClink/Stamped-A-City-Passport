@@ -56,6 +56,11 @@ struct BuildingDetailView: View {
     @State private var lastScale: CGFloat = 1.0
     @State private var photoOffset: CGSize = .zero
     @State private var lastOffset: CGSize = .zero
+
+    // Food cards and their icon grow with the text size so names don't clip
+    @ScaledMetric(relativeTo: .subheadline) var flavorCardWidth: CGFloat = 160
+    @ScaledMetric(relativeTo: .subheadline) var flavorIconSize: CGFloat = 40
+    @ScaledMetric(relativeTo: .largeTitle) var placeholderIconSize: CGFloat = 60
     
     // MARK: - Computed States
     var isVisited: Bool { GlobalProgressManager.shared.isVisited(building.id) }
@@ -80,9 +85,8 @@ struct BuildingDetailView: View {
                 iPhoneScrollView
             }
         }
-        .background(Color(.systemBackground))
+        .background(DS.Palette.pageBackground)
         .toolbarBackground(.hidden, for: .navigationBar)
-        .ignoresSafeArea(edges: .top)
         #if !os(visionOS)
         .fullScreenCover(isPresented: $showCamera) {
             CameraPicker(buildingID: building.id)
@@ -184,65 +188,54 @@ struct BuildingDetailView: View {
 // MARK: - UI Components Extension
 extension BuildingDetailView {
     
-    private var brandColor: Color { Color.adventureOrange }
+    private var brandColor: Color { DS.Palette.accent }
+    /// Keeps the iPad portrait column at a readable line length
+    private var readableWidth: CGFloat { 720 }
     
     // MARK: - Hero Header
     func heroHeader(height: CGFloat) -> some View {
-        ZStack(alignment: .bottomTrailing) {
-            let userImage = GlobalProgressManager.shared.userImages[building.id]
-            
-            ZStack {
-                if let uiImage = userImage {
-                    Image(uiImage: uiImage)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                        .frame(height: height)
-                        .scaleEffect(photoScale)
-                        .offset(photoOffset)
-                } else {
-                    // WikiBuildingPhoto tries Wikipedia first, falls back to asset catalog
-                    WikiBuildingPhoto(building: building, height: height)
+        let userImage = GlobalProgressManager.shared.userImages[building.id]
+
+        return ZStack(alignment: .bottomTrailing) {
+            // The size comes from this clear frame; the photo is laid over it, so a wide
+            // photo can't push the page wider than the screen (same as the city hero)
+            Color.clear
+                .frame(maxWidth: .infinity)
+                .frame(height: height)
+                .overlay {
+                    if let uiImage = userImage {
+                        Image(uiImage: uiImage)
+                            .resizable()
+                            .scaledToFill()
+                            .scaleEffect(photoScale)
+                            .offset(photoOffset)
+                    } else {
+                        // WikiBuildingPhoto tries Wikipedia first, falls back to asset catalog
+                        WikiBuildingPhoto(building: building, height: height)
+                    }
                 }
-            }
-            .frame(maxWidth: .infinity)
-            .frame(height: height)
-            .clipped()
-            .clipShape(RoundedRectangle(cornerRadius: sizeClass == .regular ? 32 : 0))
-            .background(Color(.systemBackground))
-            .overlay(alignment: .bottom) {
-                // Subtle fade into the white card below — blends the image edge cleanly
-                LinearGradient(
-                    stops: [
-                        .init(color: .clear, location: 0.55),
-                        .init(color: Color(UIColor.systemBackground).opacity(0.45), location: 1.0)
-                    ],
-                    startPoint: .top,
-                    endPoint: .bottom
+                .clipShape(RoundedRectangle(cornerRadius: DS.Radius.large, style: .continuous))
+                .overlay(
+                    RoundedRectangle(cornerRadius: DS.Radius.large, style: .continuous)
+                        .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
                 )
-                .frame(height: 100)
-                .allowsHitTesting(false)
-            }
-            .overlay(
-                RoundedRectangle(cornerRadius: sizeClass == .regular ? 32 : 0)
-                    .stroke(Color.primary, lineWidth: isHighContrast ? 3 : 0)
-            )
-            .gesture(userImage != nil && isEditingPhoto ?
-                AnyGesture(
-                    SimultaneousGesture(
-                        MagnificationGesture()
-                            .onChanged { photoScale = lastScale * $0 }
-                            .onEnded { _ in lastScale = photoScale },
-                        DragGesture()
-                            .onChanged { photoOffset = CGSize(width: lastOffset.width + $0.translation.width, height: lastOffset.height + $0.translation.height) }
-                            .onEnded { _ in lastOffset = photoOffset }
-                    )
-                ) : nil
-            )
+                .contentShape(Rectangle())
+                .gesture(userImage != nil && isEditingPhoto ?
+                    AnyGesture(
+                        SimultaneousGesture(
+                            MagnificationGesture()
+                                .onChanged { photoScale = lastScale * $0 }
+                                .onEnded { _ in lastScale = photoScale },
+                            DragGesture()
+                                .onChanged { photoOffset = CGSize(width: lastOffset.width + $0.translation.width, height: lastOffset.height + $0.translation.height) }
+                                .onEnded { _ in lastOffset = photoOffset }
+                        )
+                    ) : nil
+                )
             
+            // Floating over the photo, so this one keeps its shadow
             photoControls
-                .padding(.trailing, 20)
-                .padding(.bottom, sizeClass == .regular ? 20 : 40)
+                .padding(DS.Space.m)
                 .shadow(color: .black.opacity(isHighContrast ? 0 : 0.2), radius: 10, x: 0, y: 5)
         }
     }
@@ -253,56 +246,38 @@ extension BuildingDetailView {
             let isLandscape = geo.size.width > geo.size.height
             
             if isLandscape {
-                HStack(spacing: 0) {
-                    VStack {
-                        heroHeader(height: 750)
-                            .frame(width: geo.size.width * 0.50)
-                        Spacer()
-                    }
-                    .padding(.leading, 40)
-                    .padding(.vertical, 40)
+                HStack(alignment: .top, spacing: DS.Space.section) {
+                    heroHeader(height: max(0, geo.size.height - DS.Space.l * 2))
+                        .frame(width: geo.size.width * 0.50)
+                        .padding(.vertical, DS.Space.l)
                     
-                    VStack(alignment: .leading, spacing: 0) {
-                        unifiedToolbar
-                            .padding(.top, 10)
-                            .padding(.bottom, 34)
-                            .padding(.horizontal, 40)
-                        
-                        ScrollView(showsIndicators: false) {
-                            iPadTextContent
-                                .padding(.horizontal, 40)
-                                .padding(.bottom, 60)
-                        }
+                    ScrollView(showsIndicators: false) {
+                        detailContent
+                            .padding(.vertical, DS.Space.l)
+                            .padding(.bottom, DS.Space.section)
                     }
-                    .padding(.top, 40)
                 }
+                .dsPageMargin()
             } else {
                 ScrollView {
-                    VStack(alignment: .leading, spacing: 30) {
+                    VStack(alignment: .leading, spacing: DS.Space.xl) {
                         heroHeader(height: 400)
-                            .padding(.horizontal, 40)
-                            .padding(.top, 60)
- 
-                        unifiedToolbar
-                            .padding(.horizontal, 40)
-                        
-                        Divider()
-                            .padding(.horizontal, 40)
-                            .opacity(isHighContrast ? 1 : 0.5)
-                        
-                        iPadTextContent
-                            .padding(.horizontal, 40)
-                            .padding(.bottom, 60)
+                        detailContent
                     }
+                    .frame(maxWidth: readableWidth)
+                    .dsPageMargin()
+                    .padding(.top, DS.Space.l)
+                    .padding(.bottom, DS.Space.section)
+                    .frame(maxWidth: .infinity)
                 }
             }
         }
     }
     
     private var placeholderHero: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DS.Space.m) {
             Image(systemName: "camera.badge.ellipsis")
-                .font(.system(size: 60))
+                .font(.system(size: placeholderIconSize))
                 .foregroundStyle(isHighContrast ? Color.primary.gradient : brandColor.gradient)
             
             Text(L.Building.capturePhoto)
@@ -312,7 +287,7 @@ extension BuildingDetailView {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(isHighContrast ? Color.clear : brandColor.opacity(0.05))
-        .cornerRadius(sizeClass == .regular ? 32 : 0)
+        .clipShape(RoundedRectangle(cornerRadius: DS.Radius.large, style: .continuous))
     }
  
     private var photoControls: some View {
@@ -397,139 +372,121 @@ extension BuildingDetailView {
     // MARK: - iPhone Layout
     private var iPhoneScrollView: some View {
         ScrollView {
-            VStack(spacing: 0) {
-                heroHeader(height: 380)
-                VStack(alignment: .leading, spacing: 24) {
-                    titleHeader
-                    aboutSection
-                    sectionHeader(L.Building.buildingInfo)
-                    technicalGrid
-                    if lookAroundScene != nil {
-                        lookAroundButton
-                    }
-                    threeDModelSection
-                    localFlavorsSection
-                    reportIssueButton
-                }
-                .padding(20)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .background(Color(.systemBackground))
-                .cornerRadius(25)
-                .offset(y: -25)
-                .padding(.bottom, 60)
+            VStack(alignment: .leading, spacing: DS.Space.xl) {
+                heroHeader(height: 340)
+                detailContent
             }
+            .dsPageMargin()
+            .padding(.top, DS.Space.s)
+            .padding(.bottom, DS.Space.section)
             .containerRelativeFrame([.horizontal])
         }
-        .ignoresSafeArea(edges: .top)
-        .safeAreaInset(edge: .bottom) {
-            stickyBottomBar
-        }
     }
     
-    private var stickyBottomBar: some View {
-        VStack(spacing: 0) {
-            Divider()
-            HStack(spacing: 12) {
-                bottomActionButton
-                wishlistButton
+    /// Everything under the photo, shared by iPhone and iPad: name and facts, the
+    /// stamp button, then the reading sections.
+    private var detailContent: some View {
+        VStack(alignment: .leading, spacing: DS.Space.section) {
+            VStack(alignment: .leading, spacing: DS.Space.l) {
+                titleHeader
+                factChips
+                actionButtons
             }
-            .padding(.horizontal, 20)
-            .padding(.top, 12)
-            .padding(.bottom, 8)
-        }
-        .background(reduceTransparency ? AnyShapeStyle(Color(UIColor.systemBackground)) : AnyShapeStyle(.ultraThinMaterial))
-    }
-    
-    private var iPadTextContent: some View {
-        VStack(alignment: .leading, spacing: 40) {
-            titleHeader
+            if isVisited {
+                BuildingNoteField(buildingID: building.id, noteText: $noteText, isHighContrast: isHighContrast)
+            }
             aboutSection
-            sectionHeader(L.Building.technicalSpecs)
-            technicalGrid
+            infoSection
             threeDModelSection
-            if !building.foodSpots.isEmpty {
-                foodSpotsSection(spots: building.foodSpots)
-            }
-            bottomActionButton
+            localFlavorsSection
             reportIssueButton
         }
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
  
     // MARK: - Global Components
-    private var unifiedToolbar: some View {
-        let spacing: CGFloat = sizeClass == .regular ? 20 : 12
-        let layout = shouldStack ? AnyLayout(VStackLayout(alignment: .leading, spacing: spacing)) : AnyLayout(HStackLayout(alignment: .center, spacing: spacing))
-        
-        return layout {
-            if sizeClass == .regular {
-                Spacer()
-                
-                Button(action: handleActionTap) {
-                    let color = isVisited ? Color.green : Color.adventureOrange
-                    
-                    HStack(spacing: 8) {
-                        Image(systemName: isVisited ? "checkmark.seal.fill" : "checkmark.seal")
-                            .fontWeight(.bold)
-                        Text(isVisited ? L.Building.visited : L.Building.markVisited)
-                    }
-                    .font(.headline)
-                    .foregroundColor(isHighContrast ? .primary : color)
-                    .padding(.vertical, 12)
-                    .padding(.horizontal, 18)
-                    .background(
-                        RoundedRectangle(cornerRadius: 12)
-                            .fill(isHighContrast ? Color.clear : color.opacity(0.15))
-                    )
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
-                    )
-                }
-            }
-        }
-    }
- 
     var titleHeader: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DS.Space.s) {
             Text(building.name)
                 .font(.system(sizeClass == .regular ? .largeTitle : .title, design: .serif))
                 .fontWeight(.bold)
-            Text(L.Building.designedBy(building.architect))
-                .font(.subheadline.italic())
-                .foregroundColor(.secondary)
+                .fixedSize(horizontal: false, vertical: true)
+                .accessibilityAddTraits(.isHeader)
+            if let architect = building.knownArchitect {
+                Text(L.Building.designedBy(architect))
+                    .font(.subheadline.italic())
+                    .foregroundColor(isHighContrast ? .primary : .secondary)
+            }
             if isVisited, let date = GlobalProgressManager.shared.visitDates[building.id] {
                 Label("Stamped \(date.formatted(date: .abbreviated, time: .omitted))", systemImage: "checkmark.seal.fill")
                     .font(.caption.bold())
-                    .foregroundColor(isHighContrast ? .primary : .adventureOrange)
-                BuildingNoteField(buildingID: building.id, noteText: $noteText)
-                    .padding(.top, 4)
+                    .foregroundColor(isHighContrast ? .primary : brandColor)
             }
         }
         .onAppear {
             noteText = GlobalProgressManager.shared.buildingNotes[building.id] ?? ""
         }
     }
- 
-    var aboutSection: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            sectionHeader(L.Building.historicalSignificance)
-            Text(building.description).font(.body).lineSpacing(8)
-            WikiDescriptionCard(building: building)
+
+    /// Year, style, height and stories as a wrapping row of chips. Each is left out when
+    /// the registry doesn't know it.
+    @ViewBuilder
+    var factChips: some View {
+        let tint: Color = isHighContrast ? .primary : .secondary
+        let hasFacts = building.hasKnownYear || building.knownStyle != nil || building.height > 0 || building.numberOfStories > 0
+        if hasFacts {
+            ChipFlowLayout(spacing: DS.Space.s) {
+                if building.hasKnownYear {
+                    DSChip(text: "\(L.Building.built) \(building.yearBuilt)", systemImage: "calendar", tint: tint)
+                }
+                if let style = building.knownStyle {
+                    DSChip(text: style, systemImage: "building.columns", tint: tint)
+                }
+                if building.height > 0 {
+                    DSChip(text: "\(L.Building.height) \(formattedHeight)", systemImage: "arrow.up.and.down", tint: tint)
+                }
+                if building.numberOfStories > 0 {
+                    DSChip(text: "\(L.Building.stories) \(building.numberOfStories)", systemImage: "building.2", tint: tint)
+                }
+            }
+        }
+    }
+
+    /// The Stamp button on its own line, then Want to Visit and Look Around side by side
+    /// (stacked at accessibility text sizes).
+    var actionButtons: some View {
+        let layout = shouldStack
+            ? AnyLayout(VStackLayout(spacing: DS.Space.m))
+            : AnyLayout(HStackLayout(alignment: .top, spacing: DS.Space.m))
+
+        return VStack(spacing: DS.Space.m) {
+            bottomActionButton
+            layout {
+                wishlistButton
+                if lookAroundScene != nil {
+                    lookAroundButton
+                }
+            }
         }
     }
  
-    var technicalGrid: some View {
-        VStack(spacing: 12) {
+    var aboutSection: some View {
+        VStack(alignment: .leading, spacing: DS.Space.m) {
+            DSSectionHeader("building.historicalSignificance", systemImage: "book.closed", isHighContrast: isHighContrast)
+            Text(building.description)
+                .font(.body)
+                .lineSpacing(DS.Space.xs)
+                .fixedSize(horizontal: false, vertical: true)
+            WikiDescriptionCard(building: building, isHighContrast: isHighContrast)
+        }
+    }
+
+    /// The address (taps through to Maps); the other specs are the chips under the name.
+    var infoSection: some View {
+        VStack(alignment: .leading, spacing: DS.Space.m) {
+            DSSectionHeader(sizeClass == .regular ? LocalizedStringKey("building.technicalSpecs") : LocalizedStringKey("building.buildingInfo"),
+                            systemImage: "info.circle", isHighContrast: isHighContrast)
             specCard(label: L.Building.location, value: building.address, icon: "mappin.and.ellipse")
-            if building.hasKnownYear {
-                specCard(label: L.Building.built, value: "\(building.yearBuilt)", icon: "calendar")
-            }
-            if building.height > 0 {
-                specCard(label: L.Building.height, value: formattedHeight, icon: "arrow.up.and.down")
-            }
-            if building.numberOfStories > 0 {
-                specCard(label: L.Building.stories, value: "\(building.numberOfStories)", icon: "building.2")
-            }
         }
     }
  
@@ -538,16 +495,16 @@ extension BuildingDetailView {
         // Only show the section if the building has coordinates (so we can search)
         // or if there are legacy hardcoded spots to fall back on.
         if isLoadingVenues {
-            HStack(spacing: 8) {
+            HStack(spacing: DS.Space.s) {
                 ProgressView().scaleEffect(0.7)
                 Text("Finding nearby spots…")
                     .font(.caption).foregroundColor(.secondary)
             }
         } else if !nearbyVenues.isEmpty {
-            VStack(alignment: .leading, spacing: 16) {
-                sectionHeader(L.Building.localFlavors)
+            VStack(alignment: .leading, spacing: DS.Space.m) {
+                DSSectionHeader("building.localFlavors", systemImage: "fork.knife", isHighContrast: isHighContrast)
                 ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(alignment: .top, spacing: 14) {
+                    HStack(alignment: .top, spacing: DS.Space.m) {
                         ForEach(nearbyVenues, id: \.name) { venue in
                             localFlavorCard(name: venue.name, category: venue.category)
                         }
@@ -555,12 +512,40 @@ extension BuildingDetailView {
                     .padding(.horizontal, 2)
                 }
                 Text("Dining data from Apple Maps. Stamped is not responsible for venue quality.")
-                    .font(.caption2).foregroundColor(.secondary)
+                    .font(.caption2).foregroundColor(isHighContrast ? .primary : .secondary)
             }
         } else if building.latitude == nil, !building.foodSpots.isEmpty {
             // No coordinates — fall back to hardcoded spots
             foodSpotsSection(spots: building.foodSpots)
         }
+    }
+
+    /// The round fork-and-knife badge at the top of each food card.
+    private var flavorIcon: some View {
+        ZStack {
+            Circle()
+                .fill(isHighContrast ? Color.primary.opacity(0.1) : brandColor.opacity(0.15))
+                .frame(width: flavorIconSize, height: flavorIconSize)
+            Image(systemName: "fork.knife")
+                .font(.subheadline.bold())
+                .foregroundColor(isHighContrast ? .primary : brandColor)
+        }
+    }
+
+    /// Food cards: the grouped card surface, a fixed width that grows with the text size.
+    private func flavorCardStyle<Content: View>(_ content: Content) -> some View {
+        content
+            .padding(DS.Space.l)
+            .frame(width: flavorCardWidth, alignment: .leading)
+            .frame(minHeight: flavorCardWidth, alignment: .top)
+            .background(
+                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                    .fill(isHighContrast ? Color.clear : DS.Palette.cardBackground)
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                    .stroke(Color.primary, lineWidth: isHighContrast ? 2 : 0)
+            )
     }
 
     private func localFlavorCard(name: String, category: String) -> some View {
@@ -572,15 +557,8 @@ extension BuildingDetailView {
             return URL(string: "maps://?q=\(encoded)")
         }()
 
-        let card = VStack(alignment: .leading, spacing: 10) {
-            ZStack {
-                Circle()
-                    .fill(isHighContrast ? Color.primary.opacity(0.1) : brandColor.opacity(0.15))
-                    .frame(width: 40, height: 40)
-                Image(systemName: "fork.knife")
-                    .font(.system(size: 16, weight: .bold))
-                    .foregroundColor(isHighContrast ? .primary : brandColor)
-            }
+        let card = flavorCardStyle(VStack(alignment: .leading, spacing: DS.Space.s) {
+            flavorIcon
 
             Text(name)
                 .font(.subheadline).fontWeight(.bold)
@@ -588,28 +566,21 @@ extension BuildingDetailView {
                 .fixedSize(horizontal: false, vertical: true)
                 .foregroundColor(.primary)
 
-            Spacer(minLength: 4)
+            Spacer(minLength: DS.Space.xs)
 
-            HStack(spacing: 4) {
+            HStack(spacing: DS.Space.xs) {
                 Text(category)
-                    .font(.caption2).fontWeight(.semibold)
-                    .foregroundColor(.secondary)
+                    .font(.caption2.monospaced()).fontWeight(.semibold)
+                    .foregroundColor(isHighContrast ? .primary : .secondary)
                     .textCase(.uppercase)
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.8)
                 Spacer()
                 Image(systemName: "arrow.up.right")
                     .font(.caption2)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(isHighContrast ? .primary : .secondary)
             }
-        }
-        .padding(16)
-        .frame(width: 160)
-        .frame(minHeight: 160)
-        .background(isHighContrast ? Color.clear : Color.primary.opacity(0.05))
-        .cornerRadius(20)
-        .overlay(
-            RoundedRectangle(cornerRadius: 20)
-                .stroke(Color.primary, lineWidth: isHighContrast ? 2 : 0)
-        )
+        })
 
         return Group {
             if let url = mapsURL {
@@ -626,10 +597,10 @@ extension BuildingDetailView {
     }
 
     func foodSpotsSection(spots: [String]) -> some View {
-        VStack(alignment: .leading, spacing: 16) {
-            sectionHeader(L.Building.localFlavors)
+        VStack(alignment: .leading, spacing: DS.Space.m) {
+            DSSectionHeader("building.localFlavors", systemImage: "fork.knife", isHighContrast: isHighContrast)
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(alignment: .top, spacing: 14) {
+                HStack(alignment: .top, spacing: DS.Space.m) {
                     ForEach(spots, id: \.self) { spot in
                         foodSpotCard(spot: spot)
                     }
@@ -640,16 +611,8 @@ extension BuildingDetailView {
     }
  
     private func foodSpotCard(spot: String) -> some View {
-        VStack(alignment: .leading, spacing: 10) {
-            ZStack {
-                Circle()
-                    .fill(isHighContrast ? Color.primary.opacity(0.1) : brandColor.opacity(0.15))
-                    .frame(width: 40, height: 40)
-                
-                Image(systemName: "fork.knife")
-                    .font(.system(size: 16, weight: .bold))
-                    .foregroundColor(isHighContrast ? .primary : brandColor)
-            }
+        flavorCardStyle(VStack(alignment: .leading, spacing: DS.Space.s) {
+            flavorIcon
             
             Text(spot)
                 .font(.subheadline)
@@ -659,23 +622,35 @@ extension BuildingDetailView {
                 .multilineTextAlignment(.leading)
                 .foregroundColor(.primary)
             
-            Spacer(minLength: 4)
+            Spacer(minLength: DS.Space.xs)
             
             Text(L.Building.nearby)
-                .font(.caption2)
+                .font(.caption2.monospaced())
                 .fontWeight(.semibold)
-                .foregroundColor(.secondary)
+                .foregroundColor(isHighContrast ? .primary : .secondary)
                 .textCase(.uppercase)
-        }
-        .padding(16)
-        .frame(width: 160)
-        .frame(minHeight: 160)
-        .background(isHighContrast ? Color.clear : Color.primary.opacity(0.05))
-        .cornerRadius(20)
-        .overlay(
-            RoundedRectangle(cornerRadius: 20)
-                .stroke(Color.primary, lineWidth: isHighContrast ? 2 : 0)
-        )
+        })
+    }
+
+    /// Fill and outline shared by the secondary buttons under Stamp.
+    private func secondaryButtonStyle<Content: View>(_ content: Content, tint: Color) -> some View {
+        content
+            .font(.subheadline.weight(.semibold))
+            .lineLimit(2)
+            .minimumScaleFactor(0.8)
+            .multilineTextAlignment(.center)
+            .foregroundColor(isHighContrast ? .primary : tint)
+            .padding(.vertical, DS.Space.m)
+            .padding(.horizontal, DS.Space.s)
+            .frame(maxWidth: .infinity, minHeight: 44)
+            .background(
+                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                    .fill(isHighContrast ? Color.clear : tint.opacity(0.12))
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                    .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
+            )
     }
  
     /// Saves the landmark to the user's "Want to Visit" list for a future trip.
@@ -685,75 +660,65 @@ extension BuildingDetailView {
             withAnimation(.spring()) { progressManager.toggleWishlist(building.id) }
             if hapticsEnabled { HapticManager.shared.trigger(.selection) }
         } label: {
-            Image(systemName: isSaved ? "heart.fill" : "heart")
-                .font(.title3.bold())
-                .contentTransition(.symbolEffect(.replace))
-                .foregroundColor(isHighContrast ? .primary : .pink)
-                .frame(width: 56, height: 54)
-                .background(
-                    RoundedRectangle(cornerRadius: 12)
-                        .fill(isHighContrast ? Color.clear : Color.pink.opacity(0.1))
-                )
-                .overlay(
-                    RoundedRectangle(cornerRadius: 12)
-                        .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
-                )
+            secondaryButtonStyle(
+                Label {
+                    Text(isSaved ? LocalizedStringKey("Saved") : LocalizedStringKey("Want to Visit"))
+                } icon: {
+                    Image(systemName: isSaved ? "heart.fill" : "heart")
+                        .contentTransition(.symbolEffect(.replace))
+                },
+                tint: DS.Palette.wishlist
+            )
         }
+        .buttonStyle(.plain)
         .accessibilityLabel(isSaved ? "Remove from Want to Visit" : "Add to Want to Visit")
     }
 
+    /// The page's one primary action: filled orange until stamped, then a green "Visited" state.
     var bottomActionButton: some View {
-        let activeColor = isVisited ? Color.green : brandColor
+        let fill: Color = isVisited ? Color.green.opacity(0.15) : brandColor
+        let textColor: Color = isVisited ? .green : .white
         
         return Button(action: handleActionTap) {
             Label(isVisited ? L.Building.visited : L.Building.markVisited, systemImage: isVisited ? "checkmark.seal.fill" : "checkmark.seal")
-                .fontWeight(.bold)
-                .padding(.vertical, 16)
+                .font(.headline)
+                .lineLimit(2)
+                .minimumScaleFactor(0.8)
+                .padding(.vertical, DS.Space.l)
+                .padding(.horizontal, DS.Space.m)
                 .frame(maxWidth: .infinity)
-                .foregroundColor(isHighContrast ? .primary : activeColor)
+                .foregroundColor(isHighContrast ? .primary : textColor)
                 .background(
-                    RoundedRectangle(cornerRadius: 12)
-                        .fill(isHighContrast ? Color.clear : activeColor.opacity(0.1))
+                    RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                        .fill(isHighContrast ? Color.clear : fill)
                 )
                 .overlay(
-                    RoundedRectangle(cornerRadius: 12)
+                    RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
                         .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
                 )
         }
+        .buttonStyle(.plain)
         .accessibilityHint(isVisited ? "Tap to remove stamp from this building" : "Marks this building as visited and stamps your passport")
-    }
-    
-    func sectionHeader(_ title: String) -> some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text(title)
-                .font(.system(.title3, design: .serif))
-                .fontWeight(.bold)
-            
-            Rectangle()
-                .fill(isHighContrast ? Color.primary : brandColor.opacity(0.3))
-                .frame(width: 40, height: 4)
-                .cornerRadius(2)
-        }
     }
  
     func specCard(label: String, value: String, icon: String) -> some View {
-        HStack(spacing: 16) {
+        HStack(spacing: DS.Space.l) {
             Image(systemName: icon)
                 .foregroundColor(isHighContrast ? .primary : brandColor)
-                .font(.system(size: 18, weight: isHighContrast ? .bold : .regular))
-                .frame(width: 30)
+                .font(.body.weight(isHighContrast ? .bold : .regular))
             
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 2) {
                 Text(label)
-                    .font(.caption.bold())
-                    .foregroundColor(.secondary)
+                    .font(.caption.monospaced().bold())
+                    .textCase(.uppercase)
+                    .foregroundColor(isHighContrast ? .primary : .secondary)
                 if label == L.Building.location {
                     Button(action: {
                         Task { await openInMaps(address: value) }
                     }) {
                         Text(value)
-                            .font(.callout.monospaced())
-                            .fontWeight(.bold)
+                            .font(.callout)
+                            .fontWeight(.semibold)
                             .foregroundColor(.primary)
                             .multilineTextAlignment(.leading)
                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -766,25 +731,19 @@ extension BuildingDetailView {
                     })
                 } else {
                     Text(value)
-                        .font(.callout.monospaced())
-                        .fontWeight(.bold)
+                        .font(.callout)
+                        .fontWeight(.semibold)
                 }
             }
-            Spacer()
+            Spacer(minLength: 0)
             if label == L.Building.location {
                 Image(systemName: "arrow.up.right.square")
                     .font(.body)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(isHighContrast ? .primary : .secondary)
             }
         }
-         .padding()
-         .background(isHighContrast ? Color.clear : Color.primary.opacity(0.05))
-         .cornerRadius(12)
-         .overlay(
-             RoundedRectangle(cornerRadius: 12)
-                 .stroke(Color.primary, lineWidth: isHighContrast ? 2 : 0)
-         )
-     }
+        .dsCard(isHighContrast: isHighContrast)
+    }
  
     // Open the provided address in Apple Maps. Prefer coordinate-based pin if geocoding succeeds.
     private func openInMaps(address: String) async {
@@ -853,12 +812,32 @@ extension BuildingDetailView {
 
     // MARK: - 3D Model Section
 
+    /// One tappable row in the 3D Model card: icon, title, subtitle and a chevron.
+    private func modelRow(icon: String, title: LocalizedStringKey, subtitle: LocalizedStringKey) -> some View {
+        HStack(spacing: DS.Space.m) {
+            Image(systemName: icon)
+                .font(.title3)
+                .foregroundStyle(isHighContrast ? Color.primary : brandColor)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title)
+                    .font(.subheadline).fontWeight(.semibold).foregroundStyle(.primary)
+                Text(subtitle)
+                    .font(.caption2).foregroundStyle(isHighContrast ? Color.primary : Color.secondary)
+            }
+            Spacer(minLength: 0)
+            Image(systemName: "chevron.right")
+                .font(.caption).foregroundStyle(isHighContrast ? Color.primary : Color.secondary)
+        }
+        .dsCard(isHighContrast: isHighContrast)
+        .contentShape(Rectangle())
+    }
+
     var threeDModelSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            sectionHeader("3D Model")
+        VStack(alignment: .leading, spacing: DS.Space.m) {
+            DSSectionHeader("3D Model", systemImage: "rotate.3d", isHighContrast: isHighContrast)
 
             if isCheckingScan {
-                HStack(spacing: 8) {
+                HStack(spacing: DS.Space.s) {
                     ProgressView().scaleEffect(0.8)
                     Text("Checking for 3D model…")
                         .font(.caption).foregroundStyle(.secondary)
@@ -873,27 +852,7 @@ extension BuildingDetailView {
                         if localModelURL != nil { showingModelViewer = true }
                     }
                 } label: {
-                    HStack(spacing: 10) {
-                        Image(systemName: "rotate.3d")
-                            .font(.system(size: 18))
-                            .foregroundStyle(isHighContrast ? Color.primary : Color.adventureOrange)
-                        VStack(alignment: .leading, spacing: 2) {
-                            Text("View in 3D")
-                                .font(.subheadline).fontWeight(.semibold).foregroundStyle(.primary)
-                            Text("Community scan available")
-                                .font(.caption2).foregroundStyle(.secondary)
-                        }
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .font(.caption).foregroundStyle(.secondary)
-                    }
-                    .padding(14)
-                    .background(Color(UIColor.secondarySystemBackground))
-                    .cornerRadius(12)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
-                    )
+                    modelRow(icon: "rotate.3d", title: "View in 3D", subtitle: "Community scan available")
                 }
                 .buttonStyle(.plain)
 
@@ -904,7 +863,7 @@ extension BuildingDetailView {
                 } label: {
                     Label("Contribute a better scan", systemImage: "camera.viewfinder")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(isHighContrast ? Color.primary : Color.secondary)
                         .frame(maxWidth: .infinity, alignment: .center)
                 }
                 #endif
@@ -916,27 +875,7 @@ extension BuildingDetailView {
                     HapticManager.shared.trigger(.selection)
                     showingScan = true
                 } label: {
-                    HStack(spacing: 10) {
-                        Image(systemName: "camera.viewfinder")
-                            .font(.system(size: 18))
-                            .foregroundStyle(isHighContrast ? Color.primary : Color.adventureOrange)
-                        VStack(alignment: .leading, spacing: 2) {
-                            Text("Scan This Building")
-                                .font(.subheadline).fontWeight(.semibold).foregroundStyle(.primary)
-                            Text("Be the first to add a 3D model")
-                                .font(.caption2).foregroundStyle(.secondary)
-                        }
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .font(.caption).foregroundStyle(.secondary)
-                    }
-                    .padding(14)
-                    .background(Color(UIColor.secondarySystemBackground))
-                    .cornerRadius(12)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
-                    )
+                    modelRow(icon: "camera.viewfinder", title: "Scan This Building", subtitle: "Be the first to add a 3D model")
                 }
                 .buttonStyle(.plain)
                 #endif
@@ -950,26 +889,9 @@ extension BuildingDetailView {
             HapticManager.shared.trigger(.selection)
             showingLookAround = true
         } label: {
-            HStack(spacing: 10) {
-                Image(systemName: "binoculars.fill")
-                    .font(.system(size: 18))
-                    .foregroundStyle(isHighContrast ? Color.primary : Color.adventureOrange)
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("Look Around")
-                        .font(.subheadline).fontWeight(.semibold).foregroundColor(.primary)
-                    Text("Street-level view near this building")
-                        .font(.caption2).foregroundColor(.secondary)
-                }
-                Spacer()
-                Image(systemName: "chevron.right")
-                    .font(.caption).foregroundColor(.secondary)
-            }
-            .padding(14)
-            .background(Color(UIColor.secondarySystemBackground))
-            .cornerRadius(12)
-            .overlay(
-                RoundedRectangle(cornerRadius: 12)
-                    .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
+            secondaryButtonStyle(
+                Label("Look Around", systemImage: "binoculars.fill"),
+                tint: brandColor
             )
         }
         .buttonStyle(.plain)
@@ -990,15 +912,15 @@ extension BuildingDetailView {
         return Group {
             if let url = URL(string: "mailto:\(email)?subject=\(encodedSubject)&body=\(encodedBody)") {
                 Link(destination: url) {
-                    HStack(spacing: 6) {
+                    HStack(spacing: DS.Space.xs) {
                         Image(systemName: "flag")
                             .font(.caption)
                         Text("Report an issue with this building")
                             .font(.caption)
                     }
-                    .foregroundColor(.secondary)
+                    .foregroundColor(isHighContrast ? .primary : .secondary)
                     .frame(maxWidth: .infinity, alignment: .center)
-                    .padding(.top, 8)
+                    .padding(.top, DS.Space.s)
                 }
                 .accessibilityLabel("Report an issue with \(building.name)")
                 .accessibilityHint("Opens your email app")
@@ -1007,30 +929,79 @@ extension BuildingDetailView {
     }
 }
 
+// MARK: - Fact chip layout
+
+/// Lays chips out left to right and wraps to a new line when the next one doesn't fit.
+/// A chip wider than the whole row is offered the row's width, so it truncates instead
+/// of pushing the page wider.
+private struct ChipFlowLayout: Layout {
+    var spacing: CGFloat = DS.Space.s
+
+    func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
+        arrange(subviews, maxWidth: proposal.width ?? .infinity).size
+    }
+
+    func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
+        let result = arrange(subviews, maxWidth: bounds.width)
+        for (index, subview) in subviews.enumerated() {
+            let frame = result.frames[index]
+            subview.place(at: CGPoint(x: bounds.minX + frame.minX, y: bounds.minY + frame.minY),
+                          proposal: ProposedViewSize(frame.size))
+        }
+    }
+
+    private func arrange(_ subviews: Subviews, maxWidth: CGFloat) -> (frames: [CGRect], size: CGSize) {
+        var frames: [CGRect] = []
+        var x: CGFloat = 0
+        var y: CGFloat = 0
+        var rowHeight: CGFloat = 0
+        var widest: CGFloat = 0
+
+        for subview in subviews {
+            var size = subview.sizeThatFits(.unspecified)
+            if size.width > maxWidth {
+                size = subview.sizeThatFits(ProposedViewSize(width: maxWidth, height: nil))
+            }
+            if x > 0, x + size.width > maxWidth {
+                x = 0
+                y += rowHeight + spacing
+                rowHeight = 0
+            }
+            frames.append(CGRect(origin: CGPoint(x: x, y: y), size: size))
+            x += size.width + spacing
+            rowHeight = max(rowHeight, size.height)
+            widest = max(widest, x - spacing)
+        }
+        return (frames, CGSize(width: widest, height: y + rowHeight))
+    }
+}
+
 // MARK: - Building Note Field
 
 private struct BuildingNoteField: View {
     let buildingID: String
     @Binding var noteText: String
+    var isHighContrast = false
     @FocusState private var isFocused: Bool
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 6) {
-            Label("My Note", systemImage: "note.text")
-                .font(.caption2.bold())
-                .foregroundColor(.secondary)
-                .textCase(.uppercase)
+        VStack(alignment: .leading, spacing: DS.Space.m) {
+            DSSectionHeader("My Note", systemImage: "note.text", isHighContrast: isHighContrast)
 
             TextField("Add a personal memory…", text: $noteText, axis: .vertical)
-                .font(.caption)
+                .font(.subheadline)
                 .lineLimit(3, reservesSpace: false)
                 .focused($isFocused)
-                .padding(10)
-                .background(Color(UIColor.tertiarySystemBackground))
-                .cornerRadius(10)
+                .padding(DS.Space.m)
+                .background(
+                    RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
+                        .fill(isHighContrast ? Color.clear : DS.Palette.cardBackground)
+                )
                 .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(isFocused ? Color.adventureOrange : Color.primary.opacity(0.15), lineWidth: 1)
+                    RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
+                        .stroke(isFocused ? (isHighContrast ? Color.primary : DS.Palette.accent)
+                                          : Color.primary.opacity(isHighContrast ? 1 : 0.15),
+                                lineWidth: isHighContrast ? 2 : 1)
                 )
                 .onChange(of: isFocused) { _, focused in
                     if !focused {
@@ -1062,12 +1033,12 @@ private struct LookAroundSheet: View {
                     Text("Done")
                         .font(.body.weight(.semibold))
                         .foregroundColor(.primary)
-                        .padding(.horizontal, 16)
-                        .padding(.vertical, 8)
+                        .padding(.horizontal, DS.Space.l)
+                        .padding(.vertical, DS.Space.s)
                         .background(.regularMaterial, in: Capsule())
                 }
-                .padding(.top, geo.safeAreaInsets.top + 12)
-                .padding(.trailing, 16)
+                .padding(.top, geo.safeAreaInsets.top + DS.Space.m)
+                .padding(.trailing, DS.Space.l)
             }
         }
         .ignoresSafeArea()

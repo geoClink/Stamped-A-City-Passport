@@ -3,6 +3,38 @@
     "name": "Florida Southern College",
     "enumCase": "floridaSouthern",
     "country": "unitedStates",
+    "aliases": [
+      "Florida Southern",
+      "FSC"
+    ],
+    "colors": [
+      "#C1002A",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_flsouthern_pfeiffer_chapel",
+        "name": "Annie Pfeiffer Chapel",
+        "description": "The college calls Frank Lloyd Wright's chapel the soaring heart of the campus; it is crowned by a bell tower of concrete and colored glass. Visitors can see it on a guided Wright tour that starts at the Sharp Family Tourism and Education Center.",
+        "coordinates": [
+          28.030881,
+          -81.948654
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/128697663",
+        "source": "https://flsouthern.edu/fllw"
+      },
+      {
+        "id": "trad_flsouthern_water_dome",
+        "name": "Water Dome Fountains",
+        "description": "Wright's largest water feature was finally built to his full design in 2007, and its fountains run at set times during the day. Visitors can view it at any time from the surrounding esplanades.",
+        "coordinates": [
+          28.031997,
+          -81.948897
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/128697676",
+        "source": "https://flsouthern.edu/fllw"
+      }
+    ],
     "wiki": "Florida Southern College",
     "currency": "USD ($)",
     "details": {

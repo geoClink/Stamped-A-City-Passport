@@ -4,7 +4,8 @@
 //
 //  Apple's own place card (photos, hours, ratings, Call, Website…) for any
 //  restaurant, café, shop or museum tapped on the city map, with Stamped's
-//  "Want to Visit" button pinned underneath.
+//  "Want to Visit" button pinned underneath. Hotels also get "Check Prices",
+//  which opens the hotel site's search for that hotel (see Hotels/HotelLinks.swift).
 //
 
 import SwiftUI
@@ -25,6 +26,7 @@ struct ApplePlaceSheet: View {
     @Environment(\.dismiss) private var dismiss
     @ObservedObject private var progress = GlobalProgressManager.shared
     @AppStorage("haptics_enabled") private var hapticsEnabled = true
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @State private var addToTrip: AddToTripRequest?
 
     private var name: String { mapItem.name ?? "Unnamed place" }
@@ -40,46 +42,94 @@ struct ApplePlaceSheet: View {
     var body: some View {
         MapItemDetailView(mapItem: mapItem) { dismiss() }
             .safeAreaInset(edge: .bottom) { actionBar }
-            .presentationDetents([.medium, .large])
+            // With large text a half-height card cuts the place's name in half, so it opens full height
+            .presentationDetents(dynamicTypeSize.isAccessibilitySize ? [.large] : [.medium, .large])
             .sheet(item: $addToTrip) { request in
                 AddToTripSheet(cityName: cityName, stop: request.stop, stopName: request.name)
             }
     }
 
-    /// Want to Visit + Add to Trip, pinned under Apple's card.
+    /// True for a hotel, which gets a Check Prices button.
+    private var isHotel: Bool {
+        mapItem.pointOfInterestCategory == .hotel
+    }
+
+    /// Searches the hotel site for this hotel: its name plus its town as the label,
+    /// centred on its location so the hotel shows near the top of the results.
+    private var hotelSearch: HotelSearch {
+        let townName = town(of: mapItem) ?? cityName
+        let destination = townName.isEmpty || name.localizedCaseInsensitiveContains(townName) ? name : "\(name), \(townName)"
+        return HotelSearch(destination: destination, coordinate: coordinate(of: mapItem))
+    }
+
+    /// Want to Visit + Add to Trip (and Check Prices for a hotel), pinned under Apple's card.
     private var actionBar: some View {
-        HStack(spacing: 10) {
-            wantToVisitButton
-            Button {
-                // A trip stop points at a saved place, so save it first if needed
-                let place = savedPlace ?? save()
-                addToTrip = AddToTripRequest(stop: .place(placeID: place.id), name: place.name)
-            } label: {
-                Label("Add to Trip", systemImage: "suitcase.rolling")
-                    .font(.headline)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 6)
+        VStack(spacing: 8) {
+            if isHotel {
+                FindHotelsButton(
+                    search: hotelSearch,
+                    title: NSLocalizedString("Check Prices", comment: "Map place card: button on a hotel that opens a hotel site's prices for it"),
+                    accessibilityText: String(
+                        format: NSLocalizedString("Check prices for %1$@ on %2$@", comment: "Map place card, VoiceOver: e.g. \"Check prices for Hotel Indigo on Booking.com\""),
+                        name, HotelPartner.provider.displayName
+                    ),
+                    fillsWidth: true
+                )
+                .font(.headline)
+                // For a hotel, prices are the main action; the other two step back
+                .buttonStyle(.borderedProminent)
+                .tint(.adventureOrange)
             }
-            .buttonStyle(.bordered)
-            .tint(.adventureOrange)
+            // Side by side when they fit; stacked with large text instead of wrapping inside the buttons
+            ViewThatFits(in: .horizontal) {
+                HStack(spacing: 10) { primaryActions }
+                VStack(spacing: 8) { primaryActions }
+            }
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 10)
         .background(.bar)
     }
 
+    @ViewBuilder
+    private var primaryActions: some View {
+        wantToVisitButton
+        Button {
+            // A trip stop points at a saved place, so save it first if needed
+            let place = savedPlace ?? save()
+            addToTrip = AddToTripRequest(stop: .place(placeID: place.id), name: place.name)
+        } label: {
+            Label("Add to Trip", systemImage: "suitcase.rolling")
+                .font(.headline)
+                .lineLimit(1)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 6)
+        }
+        .buttonStyle(.bordered)
+        .tint(.adventureOrange)
+    }
+
+    @ViewBuilder
     private var wantToVisitButton: some View {
         let isSaved = savedPlace != nil
-        return Button(action: toggleSaved) {
+        let button = Button(action: toggleSaved) {
             Label(isSaved ? "Saved" : "Want to Visit",
                   systemImage: isSaved ? "heart.fill" : "heart")
                 .font(.headline)
+                .lineLimit(1)
                 .contentTransition(.symbolEffect(.replace))
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 6)
         }
-        .buttonStyle(.borderedProminent)
-        .tint(.pink)
+        // Only one filled button per card: Check Prices on a hotel, Want to Visit everywhere else
+        Group {
+            if isHotel {
+                button.buttonStyle(.bordered)
+            } else {
+                button.buttonStyle(.borderedProminent)
+            }
+        }
+        .tint(DS.Palette.wishlist)
         .accessibilityHint(isSaved ? "Removes \(name) from Want to Visit" : "Adds \(name) to your map and Want to Visit list")
     }
 
@@ -126,6 +176,15 @@ struct ApplePlaceSheet: View {
             return item.location.coordinate
         } else {
             return item.placemark.coordinate
+        }
+    }
+
+    /// The hotel's town ("Athens"), from Apple's address.
+    private func town(of item: MKMapItem) -> String? {
+        if #available(iOS 26.0, *) {
+            return item.addressRepresentations?.cityName
+        } else {
+            return item.placemark.locality
         }
     }
 

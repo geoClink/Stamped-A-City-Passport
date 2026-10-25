@@ -408,5 +408,605 @@
     "currencyInfo": "墨西哥比索 ($)",
     "transportation": "Pumabús / 地铁",
     "transportationFact": "大学在偌大的校园里开设了自己的免费 Pumabús 线路。地铁 3 号线的 Universidad 站和 Copilco 站服务于校园。"
+  },
+  "Boston College": {
+    "nickname": "Ever to Excel（追求卓越）",
+    "airportInfo": "位于东波士顿的洛根国际机场是该地区的主要机场。",
+    "funFact": "1913 年建成的 Gasson Tower 成为后来普林斯顿、耶鲁和杜克大学高耸哥特式塔楼的范本。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是栗色和金色，运动队叫 Eagles（老鹰）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / MBTA Green Line",
+    "transportationFact": "主校区步行即可游览。绿线 B 支线的终点就是联邦大道上的 Boston College 站，可直达波士顿市中心。"
+  },
+  "Clemson University": {
+    "nickname": "Tigers（老虎）之家",
+    "airportInfo": "位于克莱姆森以东、85 号州际公路旁的格林维尔-斯帕坦堡国际机场是最近的商业机场。",
+    "funFact": "校园围绕 John C. Calhoun 的种植园宅邸 Fort Hill 发展起来，这座宅邸至今仍作为博物馆留在校园里。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是橙色和帝王紫（regalia），运动队叫 Tigers（老虎）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / CATbus",
+    "transportationFact": "中心校区步行即可游览。Clemson Area Transit 的 CATbus 免费，往返校园和克莱姆森市区。"
+  },
+  "Duke University": {
+    "nickname": "Blue Devils（蓝魔鬼）之家",
+    "airportInfo": "位于达勒姆以东的罗利-达勒姆国际机场是三角研究园地区的主要机场。",
+    "funFact": "著名非裔美国建筑师、Horace Trumbauer 事务所首席设计师 Julian Abele 设计了 Duke Chapel 和西校区的大部分建筑。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是杜克蓝和白色，运动队叫 Blue Devils（蓝魔鬼）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Duke Transit",
+    "transportationFact": "每个校区都可以步行游览。杜克的免费校园巴士（包括 C1 East-West 线）连接东校区和西校区。"
+  },
+  "Florida State University": {
+    "nickname": "Vires, Artes, Mores（力量、技艺、品德）",
+    "airportInfo": "位于市区西南的塔拉哈西国际机场是最近的商业机场。",
+    "funFact": "建筑师 William Augustus Edwards 设计了 Westcott Building 和 Dodd Hall 等早期学院哥特式建筑，Legacy Hall 和 Student Union 等新建筑延续了这一风格。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是石榴红和金色，运动队叫 Seminoles（塞米诺尔人）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Seminole Express",
+    "transportationFact": "校园步行即可游览。与 StarMetro 合办的 Seminole Express 巴士服务校园和附近街区，学生凭 FSUCard 免费乘车。"
+  },
+  "Georgia Institute of Technology": {
+    "nickname": "The Ramblin' Wreck",
+    "airportInfo": "位于市区南边的哈茨菲尔德-杰克逊机场可从中城乘 MARTA 红线和金线前往。",
+    "funFact": "自 1888 年大楼启用以来，Tech Tower 七层塔楼四面的 TECH 灯牌一直是校园的标志。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是古金色和白色，运动队叫 Yellow Jackets（黄夹克蜂）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Stinger 巴士 / MARTA",
+    "transportationFact": "校园步行即可游览。佐治亚理工的 Stinger 巴士环绕校园，并连接 Tech Square 和 MARTA 的 Midtown 站。"
+  },
+  "University of Louisville": {
+    "nickname": "Cardinals（红雀）之家",
+    "airportInfo": "路易斯维尔穆罕默德·阿里国际机场在 Belknap 校区以南，开车很快就到。",
+    "funFact": "主行政楼 Grawemeyer Hall 仿照托马斯·杰斐逊设计的弗吉尼亚大学圆厅（Rotunda）建造。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是红色和黑色，运动队叫 Cardinals（红雀）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / TARC 巴士",
+    "transportationFact": "Belknap 校区步行即可游览。学生和教职工凭 UofL 证件免费乘坐 TARC 巴士，其中 28 路通往健康科学中心。"
+  },
+  "University of Miami": {
+    "nickname": "The U",
+    "airportInfo": "位于珊瑚山墙以北的迈阿密国际机场是该地区的主要机场。",
+    "funFact": "1953 年建成的 Ring Theatre 拥有一座用钢带固定的混凝土穹顶，可抵御飓风的强风。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是橙色、绿色和白色，运动队叫 Hurricanes（飓风）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Metrorail / Hurry 'Canes 班车",
+    "transportationFact": "校园步行即可游览。免费的 Hurry 'Canes 班车连接校园和 Metrorail 的 University 站。"
+  },
+  "North Carolina State University": {
+    "nickname": "Think and Do（思考与实践）",
+    "airportInfo": "位于罗利西北的罗利-达勒姆国际机场是三角研究园地区的主要机场。",
+    "funFact": "纪念第一次世界大战的 Memorial Belltower 用 1,400 吨开采自北卡罗来纳州 Mount Airy 的花岗岩建成。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是红色和白色，运动队叫 Wolfpack（狼群）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Wolfline",
+    "transportationFact": "北校区步行即可游览。免费的 Wolfline 巴士连接主校区和百年校区。"
+  },
+  "University of North Carolina at Chapel Hill": {
+    "nickname": "Lux libertas（光明与自由）",
+    "airportInfo": "位于教堂山以东的罗利-达勒姆国际机场是三角研究园地区的主要机场。",
+    "funFact": "1793 年动工的 Old East 是美国州立大学中最古老的建筑。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是卡罗来纳蓝和白色，运动队叫 Tar Heels（焦油脚跟）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Chapel Hill Transit",
+    "transportationFact": "校园步行即可游览。Chapel Hill Transit 的免费巴士往返校园以及教堂山和卡伯勒镇。"
+  },
+  "University of Pittsburgh": {
+    "nickname": "Veritas et Virtus（真理与美德）",
+    "airportInfo": "位于市区以西的匹兹堡国际机场是该地区的主要机场。",
+    "funFact": "42 层高的 Cathedral of Learning 是西半球最高的教育建筑，内有 31 间由匹兹堡各族裔社区设计的 Nationality Rooms（民族教室）。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是蓝色和金色，运动队叫 Panthers（黑豹）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Pitt 班车",
+    "transportationFact": "奥克兰校区步行即可游览。Pitt 在奥克兰区运营自己的班车，学生凭 Pitt 证件可免费乘坐 Pittsburgh Regional Transit 的公交、轻轨和缆索铁路。"
+  },
+  "Southern Methodist University": {
+    "nickname": "The Hilltop（山顶）",
+    "airportInfo": "位于校园以西几公里的达拉斯爱田机场是最近的机场，DFW 国际机场则更远。",
+    "funFact": "SMU 的首任校长仿照托马斯·杰斐逊的弗吉尼亚大学选择了红砖乔治亚风格，Dallas Hall 的穹顶则取法万神殿。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是红色和蓝色，运动队叫 Mustangs（野马）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / SMU Express 班车 / DART",
+    "transportationFact": "校园步行即可游览。免费的 SMU Express 班车连接校园和 DART 红线、蓝线、橙线经过的 SMU/Mockingbird 站。"
+  },
+  "Syracuse University": {
+    "nickname": "The Orange",
+    "airportInfo": "位于市区以北的锡拉丘兹汉考克国际机场是最近的商业机场。",
+    "funFact": "1873 年建成的第二帝国风格 Hall of Languages 是校园的第一座建筑，起初整所大学都在这里。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是橙色，运动队也叫 Orange（橙人）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Centro 巴士",
+    "transportationFact": "主校区步行即可游览。Centro 运营雪城大学的校园巴士线路，以及前往锡拉丘兹市中心的城市巴士。"
+  },
+  "Virginia Tech": {
+    "nickname": "Ut Prosim（愿我服务）",
+    "airportInfo": "位于布莱克斯堡以东罗阿诺克的罗阿诺克-布莱克斯堡地区机场是最近的商业机场。",
+    "funFact": "校园大部分建筑外墙都用 Hokie Stone 砌成，这是一种当地石灰岩，开采自大学自 1950 年代起经营的采石场。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是芝加哥栗色和焦橙色，运动队叫 Hokies。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Blacksburg Transit",
+    "transportationFact": "操练场（Drillfield）周围的校园步行即可游览。Blacksburg Transit 的巴士在校园和镇上对所有乘客免费。"
+  },
+  "Wake Forest University": {
+    "nickname": "Pro Humanitate（为了人类）",
+    "airportInfo": "位于温斯顿-塞勒姆以东的皮埃蒙特三合会国际机场是最近的大型商业机场。",
+    "funFact": "Reynolda 校区的大部分建筑采用改良乔治亚风格，以花岗岩和石灰岩镶边的 Old Virginia 红砖建成，由 Jens Fredrick Larson 为学校 1956 年从维克森林镇迁来而规划。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是古金色和黑色，运动队叫 Demon Deacons（恶魔执事）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / 大学班车",
+    "transportationFact": "Reynolda 校区步行即可游览。大学班车从校内的 Shuttle Hub 发车，工作日还有前往 Wake Downtown 的线路。"
+  },
+  "University of Arizona": {
+    "nickname": "Bear Down(全力以赴)",
+    "airportInfo": "图森国际机场位于市中心以南，是亚利桑那州南部的主要机场。",
+    "funFact": "亚利桑那大学几乎每栋建筑都用了红砖。校园建筑师罗伊·普莱斯在 1920 和 1930 年代通过百年纪念厅、Bear Down 体育馆和亚利桑那州立博物馆南楼延续了这一风格。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是枢机红和海军蓝，运动队叫 Wildcats（野猫）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Sun Link Streetcar",
+    "transportationFact": "校园核心区可步行游览。Sun Link 有轨电车连接校园与 Main Gate Square、第四大道和图森市中心。"
+  },
+  "Arizona State University": {
+    "nickname": "太阳魔鬼之家",
+    "airportInfo": "天港国际机场位于坦佩校区以西，PHX Sky Train 可换乘 Valley Metro 轻轨。",
+    "funFact": "ASU Gammage 是弗兰克·劳埃德·赖特最后的公共委托项目之一。赖特以他为巴格达构想的一座歌剧院为基础，设计了这座圆形建筑。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是栗红色和金色，运动队叫 Sun Devils（太阳魔鬼）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Valley Metro Rail",
+    "transportationFact": "Valley Metro 轻轨在坦佩校区边缘设站。坦佩免费的 Orbit 社区巴士和坦佩有轨电车也服务这一带。"
+  },
+  "Brigham Young University": {
+    "nickname": "Enter to Learn; Go Forth to Serve（入校求学，出校服务）",
+    "airportInfo": "盐湖城国际机场位于普罗沃以北，是犹他州的主要机场。",
+    "funFact": "1950 年建成的艾林科学中心是 BYU 第一栋摆脱古典样式的建筑，由此开启了遍布校园的金黄浅褐色砖墙风格。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是海军蓝和白色，运动队叫 Cougars（美洲狮）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / UTA UVX",
+    "transportationFact": "校园可步行游览。UTA 的 UVX 快速公交在 BYU 设有四个车站，连接犹他谷大学以及普罗沃和奥勒姆的 FrontRunner 车站。"
+  },
+  "University of Houston": {
+    "nickname": "Go Coogs（加油美洲狮）",
+    "airportInfo": "校园东南的霍比机场是最近的机场。城北的乔治·布什洲际机场（IAH）承担大部分国际航班。",
+    "funFact": "1939 年落成的罗伊·G·卡伦楼是校园里最古老的建筑，据信也是美国大学校园中第一栋装有空调的建筑。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是猩红色和白色，运动队叫 Cougars（美洲狮）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / METRORail Purple Line",
+    "transportationFact": "METRORail 紫线沿校园设有多个车站，可直达休斯敦市中心。"
+  },
+  "Iowa State University": {
+    "nickname": "Science with Practice（科学与实践）",
+    "airportInfo": "得梅因国际机场位于埃姆斯以南，是爱荷华州中部的主要机场。",
+    "funFact": "钟楼（Campanile）建于 1897 至 1898 年，内有斯坦顿纪念排钟。它出现在学校的官方戒指和权杖上，也是校歌《The Bells of Iowa State》的主题。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是枢机红和金色，运动队叫 Cyclones（旋风）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / CyRide",
+    "transportationFact": "中央校区可步行游览。CyRide 公交由市政府、大学和学生会共同运营，覆盖校园和整个埃姆斯。"
+  },
+  "University of Kansas": {
+    "nickname": "Rock Chalk, Jayhawk",
+    "airportInfo": "堪萨斯城国际机场位于劳伦斯以东，是该地区的主要机场。",
+    "funFact": "KU 在奥里德山（Mount Oread）上的许多早期建筑，比如斯普纳楼，都用就近从山边开采的粗糙灰色奥里德石灰岩建成。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是深红色和蓝色，运动队叫 Jayhawks（松鸦鹰）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / KU on Wheels",
+    "transportationFact": "山顶上的校园可步行游览。KU on Wheels 和 Lawrence Transit 作为一个协调系统运营，KU 师生凭 KU Card 乘车。"
+  },
+  "Kansas State University": {
+    "nickname": "Every Man a Wildcat（人人都是野猫）",
+    "airportInfo": "曼哈顿地区机场有 American Eagle 航班飞往达拉斯-沃斯堡和芝加哥奥黑尔。",
+    "funFact": "尼科尔斯楼看上去像一座带城垛的城堡。1968 年一场大火烧毁了内部，1985 年在原有石墙内重建。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是皇家紫，运动队叫 Wildcats（野猫）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / aTa Bus",
+    "transportationFact": "校园可步行游览。通过与 aTa Bus 的合作，K-State 师生凭证件免费乘坐校园和曼哈顿市内线路。"
+  },
+  "Oklahoma State University": {
+    "nickname": "牛仔之家",
+    "airportInfo": "斯蒂尔沃特地区机场服务本市。最近的大型机场是塔尔萨国际机场（TUL）和俄克拉何马城的威尔·罗杰斯机场（OKC）。",
+    "funFact": "校园大部分建筑遵循 1920 年代末亨利·G·贝内特校长规划确立的“改良乔治亚式”风格，埃德蒙·洛图书馆和学生会大楼是其中的地标。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是橙色和黑色，运动队叫 Cowboys（牛仔）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / The Bus",
+    "transportationFact": "校园可步行游览。The Bus（OSU-Stillwater Community Transit）由大学运营、向公众开放，OSU 师生凭证件免费乘车。"
+  },
+  "Texas Tech University": {
+    "nickname": "Guns Up",
+    "airportInfo": "拉伯克普雷斯顿·史密斯国际机场是拉伯克地区的主要机场。",
+    "funFact": "行政楼是校园最早的建筑之一，仿照西班牙的阿尔卡拉大学建造，有一对钟楼和一个庭院。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是猩红色和黑色，运动队叫 Red Raiders（红色突袭者）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Citibus",
+    "transportationFact": "Citibus 运营环绕校园的免费线路，如 Red Raider 和 Double T 线，德州理工学生凭学生证还可免费乘坐其他 Citibus 线路。"
+  },
+  "West Virginia University": {
+    "nickname": "Let's Go Mountaineers（加油登山者）",
+    "airportInfo": "摩根敦市立机场有 United Express 航班飞往华盛顿杜勒斯和芝加哥奥黑尔。最近的大型机场是匹兹堡国际机场（PIT）。",
+    "funFact": "伍德本楼的中央塔楼自 1910 年起装有一座塞斯·托马斯钟。这座钟原本挂在同一广场上、学校最古老的建筑马丁楼的穹顶小塔里。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是古金色和蓝色，运动队叫 Mountaineers（登山者）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Personal Rapid Transit (PRT)",
+    "transportationFact": "WVU 的个人快速交通系统（PRT）让无人驾驶小车在专用轨道上运行，连接摩根敦市中心、埃文斯代尔校区和健康科学校区。"
+  },
+  "Baylor University": {
+    "nickname": "Sic 'em Bears（冲啊熊队）",
+    "airportInfo": "韦科地区机场服务本市。最近的大型机场是达拉斯-沃斯堡国际机场（DFW）。",
+    "funFact": "阿姆斯特朗·勃朗宁图书馆收藏着诗人罗伯特·勃朗宁和伊丽莎白·巴雷特·勃朗宁作品的最大合集，据信也拥有世界上最多的非宗教彩色玻璃窗。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是绿色和金色，运动队叫 Bears（熊）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Baylor University Shuttle",
+    "transportationFact": "校园可步行游览。韦科公交运营免费的贝勒大学穿梭巴士（BUS），连接校园和附近的公寓与社区。"
+  },
+  "University of Cincinnati": {
+    "nickname": "熊猫队之家",
+    "airportInfo": "CVG 机场位于俄亥俄河对岸的肯塔基州北部，是辛辛那提的主要机场。",
+    "funFact": "辛辛那提大学请多位名建筑师设计校园建筑，包括迈克尔·格雷夫斯、彼得·艾森曼、亨利·科布、弗兰克·盖里、格瓦思米·西格尔、摩尔·鲁布尔·尤德尔、汤姆·梅恩的 Morphosis 事务所和伯纳德·屈米。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是红色和黑色，运动队叫 Bearcats（熊狸）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Bearcats Shuttle",
+    "transportationFact": "主校区可步行游览。Bearcats 穿梭巴士以 Transit Row 为起终点，连接上城校区和周边社区；Metro 公交也开往上城。"
+  },
+  "University of Colorado Boulder": {
+    "nickname": "Sko Buffs（加油野牛）",
+    "airportInfo": "丹佛国际机场位于博尔德东南，是该地区的主要机场。RTD 的 AB 线巴士往返机场和博尔德。",
+    "funFact": "科罗拉多大学博尔德分校的建筑风格被称为“托斯卡纳乡土复兴式”，出自建筑师查尔斯·克劳德之手：粗糙的本地砂岩墙、红瓦屋顶和石灰岩装饰。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是银色、金色和黑色，运动队叫 Buffaloes（野牛）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / RTD 巴士",
+    "transportationFact": "主校区可步行游览。包括 HOP 环线在内的 RTD 巴士连接校园和博尔德市中心，还有区域巴士开往丹佛。"
+  },
+  "Texas Christian University": {
+    "nickname": "Go Frogs（加油角蛙）",
+    "airportInfo": "DFW 机场位于沃斯堡东北，是该地区的主要机场。",
+    "funFact": "TCU 大多数建筑使用一种名为“TCU buff”的金色砖，配红瓦屋顶。罗伯特·卡尔礼拜堂打破了这一规矩，用了鲑鱼色砖，开放时还引起校友抗议。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是紫色和白色，运动队叫 Horned Frogs（角蛙）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Trinity Metro",
+    "transportationFact": "校园紧凑，可步行游览。Trinity Metro 运营沃斯堡的公共巴士和列车。"
+  },
+  "University of Central Florida": {
+    "nickname": "Charge On（冲锋）",
+    "airportInfo": "奥兰多国际机场位于校园西南，是该地区的主要机场。",
+    "funFact": "UCF 主校区按同心圆布局：外圈是 Gemini 大道，往里依次是 Apollo、Mercury 和 Pegasus 环路。它和加州大学尔湾分校是全美仅有的两座同心圆布局校园。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是黑色和金色，运动队叫 Knights（骑士）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / UCF 穿梭巴士",
+    "transportationFact": "圆形核心区可步行游览。UCF 穿梭巴士连接主校区和附近 20 多个学生公寓区，学生凭 UCF 证件免费乘坐 LYNX 公交。"
+  },
+  "University of Utah": {
+    "nickname": "Go Utes（加油犹特）",
+    "airportInfo": "盐湖城国际机场位于市中心以西。乘 TRAX 轻轨从机场到市中心，再换乘红线即可到校园。",
+    "funFact": "亨茨曼中心 1969 年开放时，其直径 364 英尺（111 米）的木结构穹顶是世界上最大的无柱木穹顶。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是深红色和白色，运动队叫 Utes（犹特人）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / TRAX Red Line",
+    "transportationFact": "UTA 的 TRAX 红线轻轨直接驶入校园，在体育场、南校区和医疗中心设站。"
+  },
+  "University of Illinois Urbana-Champaign": {
+    "nickname": "Fighting Illini 之家",
+    "airportInfo": "Willard 机场位于校园正南的 Savoy，每天有航班飞往芝加哥奥黑尔和达拉斯-沃斯堡。许多访客则选择飞往芝加哥。",
+    "funFact": "建筑师 Charles A. Platt 为校园设计了多座乔治复兴式建筑，Main Library 就是其中之一。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是橙色和蓝色，运动队叫 Fighting Illini。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / MTD 公交",
+    "transportationFact": "香槟-厄巴纳公共交通局（MTD）的公交车频繁穿行校园，学生凭 i-card 乘车。"
+  },
+  "Indiana University Bloomington": {
+    "nickname": "Hoosiers 之家",
+    "airportInfo": "布卢明顿以北的印第安纳波利斯国际机场是最近的有定期航班的机场。",
+    "funFact": "校园里许多建筑都用印第安纳石灰岩建成，这是该州闻名的本地石材。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是奶油色和深红色，运动队叫 Hoosiers。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / IU Campus Bus",
+    "transportationFact": "IU 校园巴士环绕校园运行，Bloomington Transit 的公交车连接城市其他地方。"
+  },
+  "University of Iowa": {
+    "nickname": "Hawkeyes 之家",
+    "airportInfo": "爱荷华城以北、Cedar Rapids 附近的东爱荷华机场是最近的有定期航班的机场。",
+    "funFact": "希腊复兴式的 Old Capitol 是爱荷华州的第一座州议会大厦，坐落在 Pentacrest 中央，四周环绕着四座布杂艺术风格的建筑。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是黑色和金色，运动队叫 Hawkeyes。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Cambus",
+    "transportationFact": "大学免费的 Cambus 巴士在校园内运行，并通往医院。"
+  },
+  "University of Maryland, College Park": {
+    "nickname": "Fear the Turtle",
+    "airportInfo": "波托马克河对岸弗吉尼亚州阿灵顿的里根国家机场是最近的大型机场，BWI 和杜勒斯机场也服务这一地区。",
+    "funFact": "建于 1898 年的 Morrill Hall 是 1912 年校园大火中唯一完好无损的教学楼。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是红、白、黑、金四色，运动队叫 Terrapins。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Shuttle-UM / 地铁",
+    "transportationFact": "大学的 Shuttle-UM 巴士服务校园及周边社区，College Park–University of Maryland 地铁站可通往华盛顿。"
+  },
+  "Michigan State University": {
+    "nickname": "Spartans Will",
+    "airportInfo": "兰辛的首都地区国际机场是最近的有定期航班的机场。",
+    "funFact": "Beaumont Tower 矗立在 College Hall 的原址上，那是美国第一座为讲授科学农业而建的建筑。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是绿色和白色，运动队叫 Spartans。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / CATA 公交",
+    "transportationFact": "CATA 公交车穿过校园，连接东兰辛和兰辛。"
+  },
+  "University of Minnesota Twin Cities": {
+    "nickname": "Ski-U-Mah",
+    "airportInfo": "MSP 机场位于双城以南。从校园乘 Green Line 轻轨到市中心，再换乘 Blue Line。",
+    "funFact": "Frank Gehry 设计的不锈钢 Weisman Art Museum 于 1993 年建成，坐落在密西西比河上方的峭壁上。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是栗色和金色，运动队叫 Golden Gophers。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Campus Connector / Green Line",
+    "transportationFact": "免费的 Campus Connector 巴士连接东岸、西岸和圣保罗校区，Metro Green Line 轻轨穿过校园。"
+  },
+  "University of Nebraska–Lincoln": {
+    "nickname": "There Is No Place Like Nebraska",
+    "airportInfo": "市中心西北的林肯机场是最近的机场，奥马哈的 Eppley 机场航班更多。",
+    "funFact": "Philip Johnson 设计的 Sheldon Museum of Art 于 1963 年开放，用意大利石灰华建成，围绕一座大厅和中央楼梯展开。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是猩红色和奶油色，运动队叫 Cornhuskers。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / StarTran",
+    "transportationFact": "StarTran 公交车连接 City、East 和 Innovation 校区，学生通过交通费获得公交卡。"
+  },
+  "Northwestern University": {
+    "nickname": "凡是真实的",
+    "airportInfo": "埃文斯顿以西的奥黑尔机场是该地区的主要机场，芝加哥中途机场也服务这座城市。",
+    "funFact": "建于 1869 年的 University Hall 是校园里现存最古老的原始建筑，它的旧钟表机芯如今收藏在史密森尼学会。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是紫色和白色，运动队叫 Wildcats。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / CTA 紫线 / Metra",
+    "transportationFact": "CTA 紫线和 Metra 列车在校园附近停靠，大学的校际班车连接埃文斯顿和芝加哥校区。"
+  },
+  "Ohio State University": {
+    "nickname": "Buckeyes 之家",
+    "airportInfo": "哥伦布市中心以东的 John Glenn 哥伦布国际机场是该地区的主要机场。",
+    "funFact": "马蹄形的 Ohio Stadium 上层看台悬挑在下层之上，北侧圆厅仿照罗马万神殿的穹顶。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是猩红色和灰色，运动队叫 Buckeyes。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / CABS 巴士",
+    "transportationFact": "免费的校园区巴士（CABS）在校园内运行，COTA 公交车服务哥伦布市其他地区。"
+  },
+  "Pennsylvania State University": {
+    "nickname": "We Are... Penn State",
+    "airportInfo": "2023 年前名为 University Park 机场的州立学院地区机场是最近的机场。",
+    "funFact": "Charles Klauder 既设计了 1929 年开放的 Rec Hall，也设计了 1930 年建成的新 Old Main。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是蓝色和白色，运动队叫 Nittany Lions。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / CATA 公交",
+    "transportationFact": "CATA 在校园内运营免费的 Blue Loop、White Loop 和 Red Link，并有通往 State College 其他地区的市区线路。"
+  },
+  "Purdue University": {
+    "nickname": "Boiler Up!",
+    "airportInfo": "西拉法叶东南的印第安纳波利斯国际机场是最近的大型机场。",
+    "funFact": "1995 年建成的 Purdue Bell Tower 挂着旧 Heavilon Hall 钟楼的钟，那座楼于 1956 年拆除。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是古金色和黑色，运动队叫 Boilermakers。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Purdue Campus Transit / CityBus",
+    "transportationFact": "免费的 Purdue Campus Transit 环线绕校园运行，CityBus 线路连接西拉法叶和拉法叶。"
+  },
+  "Rutgers University–New Brunswick": {
+    "nickname": "大学美式橄榄球的诞生地",
+    "airportInfo": "新不伦瑞克东北的纽瓦克自由国际机场可乘 NJ Transit 东北走廊线火车到达。",
+    "funFact": "1809 年动工的 Old Queens 由 John McComb Jr. 设计，他也设计了纽约市政厅。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是猩红色，运动队叫 Scarlet Knights。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / 罗格斯巴士 / NJ Transit",
+    "transportationFact": "罗格斯免费巴士连接 College Avenue、Busch、Livingston 和 Cook/Douglass 校区，NJ Transit 火车停靠新不伦瑞克站。"
+  },
+  "University of Wisconsin–Madison": {
+    "nickname": "On, Wisconsin!",
+    "airportInfo": "麦迪逊市中心东北的 Dane County 地区机场是该市的机场。",
+    "funFact": "1851 年按 John F. Rague 的设计建成的 North Hall 是大学的第一座建筑，至今仍矗立在 Bascom Hill 上。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是枢机红和白色，运动队叫 Badgers。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Madison Metro",
+    "transportationFact": "Madison Metro 公交车穿过校园，学生凭大学公交卡乘车。"
+  },
+  "University of Oregon": {
+    "nickname": "Go Ducks",
+    "airportInfo": "城市西北的尤金机场是最近的机场。",
+    "funFact": "曾任大学建筑学院院长的 Ellis F. Lawrence 设计了 Knight Library 和艺术博物馆。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是绿色和黄色，运动队叫 Ducks。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / LTD EmX",
+    "transportationFact": "Lane Transit District 的 EmX 快速公交在校园边缘停靠，学生凭学生证乘坐 LTD 公交车。"
+  },
+  "University of Southern California": {
+    "nickname": "Fight On!",
+    "airportInfo": "校园西南的洛杉矶国际机场（LAX）是洛杉矶的主要机场。",
+    "funFact": "1880 年启用的 Widney Alumni House 是南加州最古老的大学建筑。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是枢机红和金色，运动队叫 Trojans。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Metro E 线",
+    "transportationFact": "Metro E 线沿 Exposition Park 在校园旁设有车站，USC 还运营自己的校园班车。"
+  },
+  "University of Alabama": {
+    "nickname": "Roll Tide",
+    "airportInfo": "塔斯卡卢萨东北方的伯明翰-沙特尔斯沃思国际机场，是最近的有定期航班的机场。",
+    "funFact": "校长官邸和旧天文台（今天的麦克斯韦楼）是少数在南北战争中幸存下来的校园建筑。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是深红色和白色，运动队叫 Crimson Tide。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / CrimsonRide 巴士",
+    "transportationFact": "中央草坪位于一座适合步行的校园中心。大学的免费 CrimsonRide 巴士运行校内及往返公寓的线路。"
+  },
+  "University of Arkansas": {
+    "nickname": "Woo Pig Sooie",
+    "airportInfo": "费耶特维尔以北的西北阿肯色国家机场是该地区的主要机场。",
+    "funFact": "校园最古老的建筑 Old Main 所用的砖，是用在校园里挖出的黏土、在楼西边的窑里烧成的。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是主教红和白色，运动队叫 Razorbacks。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Razorback Transit",
+    "transportationFact": "山顶上的校园适合步行游览。Razorback Transit 在校园和费耶特维尔市内运营免费巴士。"
+  },
+  "Auburn University": {
+    "nickname": "War Eagle",
+    "airportInfo": "奥本东南方、佐治亚州的哥伦布机场有达美航空飞往亚特兰大的航班，那里有规模大得多的哈茨菲尔德-杰克逊机场。",
+    "funFact": "兰登楼于1846年作为奥本女子学院的礼拜堂建成，1883年被拆开后在学院校园里重新搭建起来。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是焦橙色和海军蓝，运动队叫 Tigers。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Tiger Transit",
+    "transportationFact": "萨姆福德楼周围的历史核心区适合步行游览。Tiger Transit 巴士在学期中的工作日为师生服务。"
+  },
+  "University of Florida": {
+    "nickname": "Go Gators",
+    "airportInfo": "校园东北方的盖恩斯维尔地区机场有飞往各大枢纽的航班。",
+    "funFact": "威廉·奥古斯塔斯·爱德华兹几乎以学院哥特式规划了整个早期校园，世纪塔沿用了坎特伯雷大教堂贝尔哈利塔的比例。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是橙色和蓝色，运动队叫 Gators。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / RTS 巴士",
+    "transportationFact": "历史街区适合步行游览。盖恩斯维尔的 RTS 巴士频繁经过校园。"
+  },
+  "University of Georgia": {
+    "nickname": "Go Dawgs",
+    "airportInfo": "雅典镇没有定期航班，因此大多数访客从镇子西南方的亚特兰大哈茨菲尔德-杰克逊机场进出。",
+    "funFact": "佐治亚大学最古老的建筑属于联邦风格。建于1824年的德摩斯梯尼楼保留着一枚华丽的石膏天花圆饰，依据阿舍·本杰明的图样制作。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是红色和黑色，运动队叫 Bulldogs。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / UGA Campus Transit",
+    "transportationFact": "北校区适合步行游览。UGA Campus Transit 巴士在整个校园运行。"
+  },
+  "Louisiana State University": {
+    "nickname": "Geaux Tigers",
+    "airportInfo": "市中心以北的巴吞鲁日大都会机场服务这座城市。",
+    "funFact": "1926年启用的校园以意大利文艺复兴风格建成，老虎体育场的看台下曾经设有学生宿舍。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是紫色和金色，运动队叫 Tigers。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Tiger Trails 巴士",
+    "transportationFact": "中央草坪周围的中心校区适合步行游览。LSU 的免费 Tiger Trails 巴士连接校园和附近的公寓。"
+  },
+  "University of Mississippi": {
+    "nickname": "Hotty Toddy",
+    "airportInfo": "牛津镇以东的图珀洛地区机场每天有几班航班。北边的孟菲斯国际机场是最近的大型机场。",
+    "funFact": "威廉·尼科尔斯以雅典附近的一座爱奥尼亚式神庙为蓝本设计了1848年的 Lyceum，巴纳德天文台则仿照俄罗斯的普尔科沃天文台。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是主教红和海军蓝，运动队叫 Rebels。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Oxford-University Transit",
+    "transportationFact": "The Circle 和 The Grove 位于一座适合步行的校园中心。Oxford-University Transit 巴士连接校园和镇上。"
+  },
+  "University of Missouri": {
+    "nickname": "Mizzou",
+    "airportInfo": "市区东南方的哥伦比亚地区机场有飞往各大枢纽的定期航班。",
+    "funFact": "弗朗西斯方院上的六根柱子，是1892年被大火烧毁的学术楼仅存的部分。接替它的杰西楼于1895年在柱子后方建成。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是黑色和金色，运动队叫 Tigers。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Tiger Line 班车",
+    "transportationFact": "弗朗西斯方院周围的校园适合步行游览。密苏里大学与哥伦比亚市合作运营的免费 Tiger Line 班车服务校园，Go COMO 市公交也免费。"
+  },
+  "University of Oklahoma": {
+    "nickname": "Boomer Sooner",
+    "airportInfo": "诺曼以北、俄克拉何马城的威尔·罗杰斯国际机场是最近的大型机场。",
+    "funFact": "弗兰克·劳埃德·赖特把俄克拉何马大学用砖和浅色石材建造的学院哥特式称为“切罗基哥特式”，新建筑也按这种风格设计。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是深红色和奶油色，运动队叫 Sooners。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / CART 巴士",
+    "transportationFact": "South Oval 周围的中心校区适合步行游览。OU 的 CART 巴士服务校园和附近公寓，市内线路由 EMBARK Norman 运营。"
+  },
+  "University of South Carolina": {
+    "nickname": "Emollit Mores Nec Sinit Esse Feros",
+    "airportInfo": "哥伦比亚大都会机场位于市中心西南方。",
+    "funFact": "马蹄形广场上的第一座建筑拉特利奇于1805年建成，广场上的南卡罗来纳图书馆是美国最古老的独立大学图书馆。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是石榴红和黑色，运动队叫 Gamecocks。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Carolina Shuttle",
+    "transportationFact": "马蹄形广场和中心校区适合步行游览。由 The COMET 运营的 Carolina Shuttle 对学生和教职员工免费。"
+  },
+  "Vanderbilt University": {
+    "nickname": "Anchor Down",
+    "airportInfo": "纳什维尔国际机场位于纳什维尔市中心东南方。",
+    "funFact": "柯克兰楼于1874年以维多利亚哥特式建成，1905年火灾后改以意大利风格重建；皮博迪校区则仿照杰斐逊的弗吉尼亚大学。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是黑色和金色，运动队叫 Commodores。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / VandyRide",
+    "transportationFact": "校园适合步行游览。VandyRide 班车在校园内运行，WeGo 市公交经过西区大道。"
+  },
+  "University of Kentucky": {
+    "nickname": "Go Big Blue",
+    "airportInfo": "蓝草机场就在列克星敦西边。",
+    "funFact": "1998年开放的威廉·T·扬图书馆为八角形平面，每个立面都有两层高的砖石拱廊；纪念堂大厅里有安·赖斯·奥汉隆1934年的壁画。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是蓝色和白色，运动队叫 Wildcats。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Lextran 巴士",
+    "transportationFact": "中心校区适合步行游览。UK 与 Lextran 合作运营的校园巴士免费，学生和教职员工凭 UK 证件还可免费乘坐 Lextran 市公交。"
+  },
+  "Mississippi State University": {
+    "nickname": "Hail State",
+    "airportInfo": "斯塔克维尔以东的金三角地区机场服务这一地区。",
+    "funFact": "操练场曾供学员团使用，南北两端由一对镜像般的建筑李楼和斯沃姆楼围合。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是栗色和白色，运动队叫 Bulldogs。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / SMART 巴士",
+    "transportationFact": "操练场周围的校园适合步行游览。Starkville–MSU Area Rapid Transit 在校园和镇上运营免费巴士。"
+  },
+  "University of Tennessee": {
+    "nickname": "Go Vols",
+    "airportInfo": "诺克斯维尔以南、阿尔科亚的麦吉泰森机场是最近的机场。",
+    "funFact": "2008年至2011年修复艾尔斯楼时，加上了1921年设计中就有、却因费用从未建成的钟面和水磨石地面。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是橙色和白色，运动队叫 Volunteers。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / T 巴士",
+    "transportationFact": "UT 的免费 T 巴士在校园内运行固定线路，学生凭 VolCard 可免费乘坐 Knoxville Area Transit 巴士。"
+  },
+  "Texas A&M University": {
+    "nickname": "Gig 'em",
+    "airportInfo": "伊斯特伍德机场位于大学城西缘、靠近校园，有美鹰航空的航班。",
+    "funFact": "校园建筑师 F. E. 吉塞克不太懂钢筋混凝土，于是把1914年学术楼的钢筋用量加了一倍。后来工人加装水管时不得不用喷灯。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是栗色和白色，运动队叫 Aggies。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / Texas A&M 校园巴士",
+    "transportationFact": "主校区适合步行游览。Texas A&M 在学期中运营校园巴士线路。"
   }
 }

@@ -3,6 +3,33 @@
   "name": "University of Paris (Sorbonne)",
   "enumCase": "sorbonne",
   "country": "france",
+  "colors": ["#25306A", "#E72F26"],
+  "traditions": [
+   {
+    "id": "trad_sorbonne_montaigne_foot",
+    "name": "Touch Montaigne's Shoe",
+    "description": "Across the rue des Écoles from the Sorbonne, students touch the foot of Paul Landowski's seated Montaigne statue for luck before exams. Visitors can stop by the statue and see the shoe polished bright by generations of hands.",
+    "coordinates": [48.849933, 2.343997],
+    "coordinatesSource": "https://www.openstreetmap.org/node/1904888793",
+    "source": "https://www.sortiraparis.com/en/what-to-visit-in-paris/history-heritage/guides/271102-lucky-places-in-paris-superstitions-to-bring-good-luck"
+   },
+   {
+    "id": "trad_sorbonne_cardinal_hat",
+    "name": "Richelieu's Cardinal Hat",
+    "description": "In the Sorbonne Chapel, a cardinal's hat hangs above Cardinal Richelieu's marble tomb, as tradition dictates. Visitors can see it when the chapel opens for guided tours and Heritage Days.",
+    "coordinates": [48.848418, 2.343195],
+    "coordinatesSource": "https://www.openstreetmap.org/way/95860808",
+    "source": "https://fr.wikipedia.org/wiki/Chapelle_de_la_Sorbonne"
+   },
+   {
+    "id": "trad_sorbonne_heritage_days",
+    "name": "Heritage Days at the Sorbonne",
+    "description": "Each September during the European Heritage Days, the Sorbonne opens its reception halls and Grand Amphitheatre to the public for free. Visitors can walk up onto the amphitheatre's stage and tour rooms that are normally closed.",
+    "coordinates": [48.848636, 2.343603],
+    "coordinatesSource": "https://www.openstreetmap.org/way/4433289",
+    "source": "https://www.sortiraparis.com/en/news/heritage-days/articles/197405-heritage-days-2026-discover-the-iconic-sorbonne-university-in-paris"
+   }
+  ],
   "wiki": "University of Paris",
   "currency": "EUR (€)",
   "details": {
@@ -100,6 +127,33 @@
   "name": "University of Padua",
   "enumCase": "uniPadua",
   "country": "italy",
+  "colors": ["#9B0014", "#FFFFFF"],
+  "traditions": [
+   {
+    "id": "trad_padua_galileo_lectern",
+    "name": "Galileo's Lectern",
+    "description": "The wooden lectern Galileo is said to have lectured from, built for him by his own students according to tradition, stands at the entrance of the Sala dei Quaranta in Palazzo Bo. Visitors can see it on a guided tour of the palace.",
+    "coordinates": [45.406738, 11.877394],
+    "coordinatesSource": "https://www.openstreetmap.org/relation/3312085",
+    "source": "https://www.unipd.it/sala-quaranta-palazzo-bo"
+   },
+   {
+    "id": "trad_padua_bo_chain",
+    "name": "Don't Jump the Chain",
+    "description": "Local superstition holds that students should never jump over the chain in front of Palazzo Bo, or their studies will suffer. Visitors can see the chain and step around it.",
+    "coordinates": [45.406738, 11.877394],
+    "coordinatesSource": "https://www.openstreetmap.org/relation/3312085",
+    "source": "https://italoamericano.org/quirky-rituals/"
+   },
+   {
+    "id": "trad_padua_pedrocchi",
+    "name": "Caffè Pedrocchi",
+    "description": "The historic café beside Palazzo Bo has been a meeting place for students and professors since 1831, and students may sit in its green room without buying anything. Visitors can stop for its mint coffee and look for the bullet hole left from the 1848 student uprising in the white room.",
+    "coordinates": [45.407692, 11.877095],
+    "coordinatesSource": "https://www.openstreetmap.org/node/325130331",
+    "source": "https://www.unipd.it/caff%C3%A8-pedrocchi-palazzo-ragione"
+   }
+  ],
   "wiki": "University of Padua",
   "currency": "EUR (€)",
   "details": {
@@ -182,6 +236,33 @@
   "name": "KU Leuven",
   "enumCase": "kuLeuven",
   "country": "belgium",
+  "colors": ["#00407A", "#52BDEC"],
+  "traditions": [
+   {
+    "id": "trad_kuleuven_fonske",
+    "name": "Fonske",
+    "description": "Fons Sapientiae ('Fountain of Wisdom') is a statue of a student pouring wisdom into his head while reading, given to the city by the university for its 550th anniversary in 1975. Student societies dress it up for special occasions, and visitors can stop for a photo on Rector De Somerplein.",
+    "coordinates": [50.8793, 4.702301],
+    "coordinatesSource": "https://www.openstreetmap.org/node/2346968384",
+    "source": "https://nl.wikipedia.org/wiki/Fonske"
+   },
+   {
+    "id": "trad_kuleuven_carillon",
+    "name": "University Library Carillon",
+    "description": "The University Library tower holds one of Europe's largest carillons, a memorial gift from American engineers, and its main bell rings every hour. On tower visits the carillonneur takes visitors up to hear a live concert from the front row.",
+    "coordinates": [50.877998, 4.70732],
+    "coordinatesSource": "https://www.openstreetmap.org/relation/1744584",
+    "source": "https://www.visitleuven.be/en/tower-visit-and-live-carillon-concert-university-library"
+   },
+   {
+    "id": "trad_kuleuven_totem",
+    "name": "Totem on Ladeuzeplein",
+    "description": "For its 575th anniversary in 2004, the university gave the city Jan Fabre's Totem, a giant jewel beetle stuck on a 23 m steel needle in front of the University Library. Visitors can take a photo of it on Ladeuzeplein.",
+    "coordinates": [50.878598, 4.706349],
+    "coordinatesSource": "https://www.openstreetmap.org/node/10152565836",
+    "source": "https://en.wikipedia.org/wiki/Ladeuzeplein"
+   }
+  ],
   "wiki": "KU Leuven",
   "currency": "EUR (€)",
   "details": {
@@ -264,6 +345,25 @@
   "name": "Aalto University",
   "enumCase": "aalto",
   "country": "finland",
+  "colors": ["#46A5FF", "#F7E159"],
+  "traditions": [
+   {
+    "id": "trad_aalto_student_museum",
+    "name": "Museum of Student Life",
+    "description": "In a basement in the Otaniemi student village, the student union's museum (formerly the Polyteekkarimuseo) shows teekkari and other Aalto student traditions, from caps and overalls to famous pranks. Volunteer guides open it to visitors on Sunday afternoons during term.",
+    "coordinates": [60.187366, 24.836496],
+    "coordinatesSource": "https://www.openstreetmap.org/node/25038585",
+    "source": "https://www.ayy.fi/en/museum-of-student-life"
+   },
+   {
+    "id": "trad_aalto_chapel_cross",
+    "name": "Otaniemi Chapel Forest View",
+    "description": "Heikki and Kaija Siren's 1956 campus chapel has a glass wall behind the altar that looks onto the forest and a cross set into the bedrock outside. The university lists the view as one of the most popular sights in Otaniemi.",
+    "coordinates": [60.189364, 24.837247],
+    "coordinatesSource": "https://www.openstreetmap.org/way/4266572",
+    "source": "https://www.aalto.fi/en/campus/this-is-how-otaniemi-grew-into-a-centre-of-technology-business-and-art"
+   }
+  ],
   "wiki": "Aalto University",
   "currency": "EUR (€)",
   "details": {
@@ -348,6 +448,33 @@
   "name": "Uppsala University",
   "enumCase": "uppsala",
   "country": "sweden",
+  "colors": ["#990000", "#FFFFFF"],
+  "traditions": [
+   {
+    "id": "trad_uppsala_cap_raising",
+    "name": "Walpurgis Cap Raising",
+    "description": "At 3 pm on 30 April, students on the slope below the Carolina Rediviva library put on their white student caps together as the rector waves his cap from the library balcony. Anyone can join the crowd on the hill to watch.",
+    "coordinates": [59.855015, 17.631109],
+    "coordinatesSource": "https://www.openstreetmap.org/way/27652301",
+    "source": "https://www.uu.se/nyheter/2015/2015-04-24-sista-april-firande-med-traditioner---och-en-del-nyheter"
+   },
+   {
+    "id": "trad_uppsala_gunilla_bell",
+    "name": "Spring Song at Gunillaklockan",
+    "description": "On the evening of 30 April, students gather at the Gunilla bell beside Uppsala Castle for the spring song and the spring speech. Visitors can stand with the crowd and listen.",
+    "coordinates": [59.854218, 17.634057],
+    "coordinatesSource": "https://www.openstreetmap.org/node/2789196460",
+    "source": "https://www.uu.se/nyheter/2015/2015-04-24-sista-april-firande-med-traditioner---och-en-del-nyheter"
+   },
+   {
+    "id": "trad_uppsala_anatomical_theatre",
+    "name": "Gustavianum Anatomical Theatre",
+    "description": "Under the copper cupola of the Gustavianum, the university museum preserves the anatomical theatre Olof Rudbeck the Elder built in the 1660s. Visitors can step inside it as part of a museum visit.",
+    "coordinates": [59.857943, 17.631724],
+    "coordinatesSource": "https://www.openstreetmap.org/way/32119036",
+    "source": "https://www.uu.se/en/gustavianum/exhibitions/permanent-exhibitions/the-anatomical-theatre"
+   }
+  ],
   "wiki": "Uppsala University",
   "currency": "SEK",
   "details": {

@@ -299,3 +299,304 @@
 
 // MARK: - Campus Architecture
 "CAMPUS ARCHITECTURE" = "캠퍼스 건축";
+"OTHER U.S. CAMPUSES" = "기타 미국 캠퍼스";
+"CONFERENCE MASTER" = "컨퍼런스 마스터";
+
+// MARK: - Campus Visit
+"Plan a Campus Visit" = "캠퍼스 방문 계획하기";
+"%d landmarks, one walking day" = "랜드마크 %d곳, 걸어서 하루";
+"Open your campus visit" = "캠퍼스 방문 열기";
+"Opens a one-day walking trip of every landmark on campus." = "캠퍼스의 모든 랜드마크를 도는 하루 도보 여행을 엽니다.";
+"%@ Campus Visit" = "%@ 캠퍼스 방문";
+
+// MARK: - Campus Traditions
+"CAMPUS TRADITIONS" = "캠퍼스 전통";
+"%d of %d traditions done" = "전통 %d/%d개 완료";
+"Traditions Keeper" = "전통 지킴이";
+"Done" = "완료";
+"Not done" = "미완료";
+"Double tap to check this tradition off." = "두 번 탭하여 이 전통을 체크하세요.";
+"Show %@ in Maps" = "지도에서 %@ 보기";
+
+// MARK: - College List & Road Trip
+"My College List" = "나의 대학 목록";
+"Add to My College List" = "나의 대학 목록에 추가";
+"Remove from My College List" = "나의 대학 목록에서 삭제";
+"On your list" = "목록에 있음";
+"Plan a College Road Trip" = "대학 탐방 여행 계획하기";
+"Tap the heart on any campus page to add it here." = "캠퍼스 페이지에서 하트를 탭하면 여기에 추가됩니다.";
+"1 school" = "대학 1곳";
+"%d schools" = "대학 %d곳";
+"No Schools Yet" = "아직 대학이 없습니다";
+"Open any campus in Campus Architecture and tap the heart to add it to your list. Then plan a road trip that visits them all, one campus a day." = "캠퍼스 건축에서 캠퍼스를 열고 하트를 탭해 목록에 추가하세요. 그런 다음 하루에 한 캠퍼스씩 모두 둘러보는 여행을 계획하세요.";
+"Makes one trip with a day at each school, in a short driving order." = "대학마다 하루씩, 이동 거리가 짧은 순서로 여행 하나를 만듭니다.";
+"%1$d of %2$d landmarks stamped" = "랜드마크 %2$d곳 중 %1$d곳 스탬프 완료";
+"College Road Trip" = "대학 탐방 여행";
+"College Road Trips" = "대학 탐방 여행";
+"Schools to Visit" = "방문할 대학";
+"One day per school, each a walking tour of its landmarks." = "대학마다 하루, 각 대학의 랜드마크를 걸어서 둘러봅니다.";
+"Driving Order" = "이동 순서";
+"Starts at %@, then always drives to the closest school left. Distances are straight-line." = "%@에서 출발해 남은 대학 중 가장 가까운 곳으로 이동합니다. 거리는 직선거리입니다.";
+"Cancel" = "취소";
+"Open" = "열기";
+"Create" = "만들기";
+"%d landmarks" = "랜드마크 %d곳";
+"Day %1$d: %2$@" = "%1$d일차: %2$@";
+"%1$@ from %2$@" = "%2$@에서 %1$@";
+"%@ Road Trip" = "%@ 탐방 여행";
+"%d-Campus Road Trip" = "캠퍼스 %d곳 탐방 여행";
+"Tour %@ in 3D" = "%@ 3D로 둘러보기";
+
+// MARK: - Campus disclaimer
+"Stamped! is not affiliated with or endorsed by any university. School names and colors are used only to identify them." = "Stamped!는 어떤 대학과도 제휴하거나 승인을 받지 않았습니다. 대학 이름과 색상은 식별 목적으로만 사용됩니다.";
+
+// MARK: - Hotels & map chips
+"Landmarks" = "랜드마크";
+"Food" = "음식";
+"Coffee" = "카페";
+"Culture" = "문화";
+"Stay" = "숙박";
+"Find Hotels" = "호텔 찾기";
+"Find hotels in %1$@ on %2$@" = "%2$@에서 %1$@ 호텔 찾기";
+"Opens the hotel website. Stamped! doesn't handle bookings or payments." = "호텔 웹사이트를 엽니다. Stamped!는 예약이나 결제를 처리하지 않습니다.";
+"Stamped! may earn a commission." = "Stamped!는 수수료를 받을 수 있습니다.";
+"Check Prices" = "가격 확인";
+"Check prices for %1$@ on %2$@" = "%2$@에서 %1$@ 가격 확인";
+"Hotels near %@" = "%@ 근처 호텔";
+
+// MARK: - City page tiles & home shortcuts
+"Quiz Mastered" = "퀴즈 마스터";
+"Architecture Quiz" = "건축 퀴즈";
+"Best %d/10" = "최고 %d/10";
+"10 questions" = "10문항";
+"Double tap to start the quiz." = "두 번 탭하여 퀴즈를 시작하세요.";
+"Plan a Trip" = "여행 계획하기";
+"Day by day" = "하루씩";
+"Plan your days, stop by stop." = "하루하루, 정류지마다 계획하세요.";
+"Campus Visit" = "캠퍼스 방문";
+"Open your visit" = "방문 열기";
+"%d stops, 1 day" = "%d곳, 하루";
+"My Journey" = "나의 여정";
+"Achievements" = "업적";
+"World Map" = "세계 지도";
+"My Trips" = "나의 여행";
+
+// MARK: - Home banner & world map
+"Pick a city or campus below, then stamp every landmark." = "아래에서 도시나 캠퍼스를 고르고 모든 랜드마크에 스탬프를 찍으세요.";
+"campuses visited" = "방문한 캠퍼스";
+"Double tap to read more." = "두 번 탭하여 더 읽기.";
+
+// MARK: - City map
+"Add a Place" = "장소 추가";
+"Add to Trip" = "여행에 추가";
+"All Landmarks" = "모든 랜드마크";
+"All Styles" = "모든 양식";
+"Choose every landmark or one of your trips to tour" = "모든 랜드마크나 둘러볼 여행을 고르세요";
+"Close" = "닫기";
+"Filter landmarks, switch to satellite view or add a place" = "랜드마크 필터, 위성 보기 전환 또는 장소 추가";
+"Flies between every landmark automatically" = "모든 랜드마크 사이를 자동으로 비행합니다";
+"Map key" = "지도 범례";
+"Map options" = "지도 옵션";
+"Next landmark" = "다음 랜드마크";
+"No landmarks match this filter" = "이 필터에 맞는 랜드마크가 없습니다";
+"Previous landmark" = "이전 랜드마크";
+"Remove from Want to Visit" = "가보고 싶은 곳에서 삭제";
+"Show" = "보기";
+"Shows this landmark's card" = "이 랜드마크의 카드를 표시합니다";
+"Stop" = "정지";
+"Stops the guided tour" = "가이드 투어를 멈춥니다";
+"Style" = "양식";
+"Tour" = "투어";
+"View Details" = "세부정보 보기";
+"Your Trips" = "나의 여행";
+"Your place" = "내 장소";
+"Your places" = "내 장소";
+"Stamped" = "스탬프 완료";
+"Not yet visited" = "아직 방문 안 함";
+"Not Visited" = "미방문";
+"Up next (pulsing)" = "다음 목적지(깜박임)";
+"Want to Visit" = "가보고 싶은 곳";
+"Saved" = "저장됨";
+"Show Map View" = "지도 보기";
+"Show Satellite View" = "위성 보기";
+
+// MARK: - Passport campuses
+"%d Cities Stamped" = "도시 %d곳 스탬프";
+"%d of %d campuses" = "캠퍼스 %d/%d곳";
+"CAMPUSES" = "캠퍼스";
+"Stamp every landmark on a campus to add its stamp here, in school colors." = "캠퍼스의 모든 랜드마크에 스탬프를 찍으면 학교 색상의 스탬프가 여기에 추가됩니다.";
+"+ %d campuses" = "+ 캠퍼스 %d곳";
+"+ 1 campus" = "+ 캠퍼스 1곳";
+"Optimize route" = "경로 최적화";
+"Reorders this day's stops so each one is the closest to the last" = "각 정류지가 이전 정류지와 가장 가깝도록 순서를 바꿉니다";
+"Campus Explored!" = "캠퍼스 탐험 완료!";
+"City Explored!" = "도시 탐험 완료!";
+"Save the schools you're considering, then plan a road trip to visit them." = "관심 있는 대학을 저장하고, 방문할 여행을 계획하세요.";
+"+%d more" = "외 %d곳";
+
+// MARK: - City page sections
+"Weather" = "날씨";
+"Chronology" = "연대표";
+"Upcoming Events" = "예정된 이벤트";
+"Nearby Dining" = "근처 식당";
+"Travel Dossier" = "여행 정보";
+"%d of %d landmarks stamped" = "랜드마크 %d/%d곳 스탬프";
+"Read more" = "더 보기";
+"Show less" = "간략히";
+
+/* Map place card events */
+"Upcoming Events Here" = "이곳의 예정된 이벤트";
+"Happening Nearby" = "근처에서 열리는 이벤트";
+
+/* Design system section headers */
+"ARCHITECTURAL ITINERARY" = "건축 여행 일정";
+"Saved Places" = "저장한 장소";
+"Anywhere" = "어디든지";
+
+/* My Journey section headers */
+"FAVOURITE ARCHITECT" = "좋아하는 건축가";
+"MILESTONES" = "마일스톤";
+
+/* Settings */
+"Birthday" = "생일";
+"Used for the Birthday Stamp achievement" = "'생일 스탬프' 업적에 사용됩니다";
+"Set" = "설정";
+"Feedback & Support" = "피드백 및 지원";
+"Report Incorrect Info" = "잘못된 정보 신고";
+"Wrong building details, photos, or descriptions" = "잘못된 건물 정보, 사진 또는 설명";
+"Suggest a Building" = "건물 제안하기";
+"Know a landmark we're missing?" = "빠진 명소를 알고 계신가요?";
+"General Feedback" = "일반 피드백";
+"Ideas, bugs, or anything else" = "아이디어, 버그 또는 기타 무엇이든";
+
+/* My Journey and Achievements */
+"stamps" = "스탬프";
+"%lld%% of the world explored" = "세계의 %lld%% 탐험 완료";
+"%lld buildings left to discover" = "발견할 건물 %lld개 남음";
+"%lld stamps, %lld percent of the world explored" = "스탬프 %lld개, 세계의 %lld퍼센트 탐험 완료";
+"Cities Visited" = "방문한 도시";
+"Cities Mastered" = "정복한 도시";
+"Countries" = "국가";
+"Days Active" = "활동한 날";
+"1 building stamped" = "건물 1개 스탬프 완료";
+"%lld buildings stamped" = "건물 %lld개 스탬프 완료";
+"Total Stamps" = "전체 스탬프";
+"%lld of %lld" = "%lld / %lld";
+"achievements" = "업적";
+"All" = "전체";
+"Cities" = "도시";
+"Mastery" = "정복";
+"Continents" = "대륙";
+"Campuses" = "캠퍼스";
+"First Stamp" = "첫 스탬프";
+"Visit your very first landmark" = "첫 번째 명소 방문하기";
+"On The Move" = "이동 중";
+"Visit 10 landmarks" = "명소 10곳 방문하기";
+"Passport Regular" = "여권 단골";
+"Visit 50 landmarks" = "명소 50곳 방문하기";
+"Century Club" = "센추리 클럽";
+"Visit 100 landmarks" = "명소 100곳 방문하기";
+"Night Stamper" = "야간 스탬퍼";
+"Stamp a landmark between midnight and 5am" = "자정부터 새벽 5시 사이에 명소 스탬프 찍기";
+"Weekend Wanderer" = "주말 여행자";
+"Stamp a landmark on a Saturday or Sunday" = "토요일이나 일요일에 명소 스탬프 찍기";
+"First Destination" = "첫 목적지";
+"Stamp a landmark in any city" = "아무 도시에서나 명소 스탬프 찍기";
+"Multi-City" = "여러 도시";
+"Stamp landmarks in 5 different cities" = "서로 다른 5개 도시에서 명소 스탬프 찍기";
+"Jet Setter" = "제트 세터";
+"Stamp landmarks in 15 different cities" = "서로 다른 15개 도시에서 명소 스탬프 찍기";
+"World Traveler" = "세계 여행자";
+"Stamp landmarks in 30 different cities" = "서로 다른 30개 도시에서 명소 스탬프 찍기";
+"Completionist" = "완벽주의자";
+"Collect every stamp in a single city" = "한 도시의 스탬프 모두 모으기";
+"Triple Crown" = "트리플 크라운";
+"Fully complete 3 cities" = "3개 도시 완전 정복";
+"City Master" = "도시 마스터";
+"Fully complete 10 cities" = "10개 도시 완전 정복";
+"Bi-Continental" = "두 대륙";
+"Stamp landmarks on 2 different continents" = "서로 다른 2개 대륙에서 명소 스탬프 찍기";
+"Old World" = "구대륙";
+"Stamp landmarks in both Europe and Asia" = "유럽과 아시아 모두에서 명소 스탬프 찍기";
+"World Citizen" = "세계 시민";
+"Stamp landmarks on 4 different continents" = "서로 다른 4개 대륙에서 명소 스탬프 찍기";
+"Around The World" = "세계 일주";
+"Stamp landmarks on all 6 continents" = "6개 대륙 모두에서 명소 스탬프 찍기";
+"Continent Conqueror" = "대륙 정복자";
+"Fully complete a city on every continent" = "모든 대륙에서 도시 하나씩 완전 정복";
+"Early Bird" = "얼리버드";
+"Stamp a landmark before 8am" = "오전 8시 전에 명소 스탬프 찍기";
+"Frequent Flyer" = "단골 여행자";
+"Stamp 5 landmarks in a single day" = "하루에 명소 5곳 스탬프 찍기";
+"Seasoned Traveler" = "노련한 여행자";
+"Stamp landmarks across 3 different calendar months" = "서로 다른 3개월에 걸쳐 명소 스탬프 찍기";
+"New Year's Stamp" = "새해 스탬프";
+"Stamp a landmark on January 1st" = "1월 1일에 명소 스탬프 찍기";
+"Birthday Stamp" = "생일 스탬프";
+"Stamp a landmark on your birthday" = "생일에 명소 스탬프 찍기";
+"Home Turf" = "홈그라운드";
+"Fully complete any US city" = "미국 도시 하나 완전 정복";
+"Island Hopper" = "섬 여행자";
+"Stamp landmarks in Honolulu, Bali, and Zanzibar" = "호놀룰루, 발리, 잔지바르에서 명소 스탬프 찍기";
+"Halfway There" = "절반 달성";
+"Reach 50% completion in any city" = "아무 도시에서나 50% 달성하기";
+"Grand Slam" = "그랜드 슬램";
+"Fully complete 25 cities" = "25개 도시 완전 정복";
+"Legend" = "전설";
+"Collect 500 total stamps" = "스탬프 총 500개 모으기";
+"Campus Tour" = "캠퍼스 투어";
+"Stamp a building on any campus" = "아무 캠퍼스에서나 건물 스탬프 찍기";
+"Campus Hopper" = "캠퍼스 순례자";
+"Stamp buildings on 5 different campuses" = "서로 다른 5개 캠퍼스에서 건물 스탬프 찍기";
+"Valedictorian" = "수석 졸업생";
+"Fully complete any campus" = "캠퍼스 하나 완전 정복";
+"Honor Roll" = "우등생 명단";
+"Fully complete 5 campuses" = "5개 캠퍼스 완전 정복";
+"New Tradition" = "새로운 전통";
+"Do your first campus tradition" = "첫 캠퍼스 전통 해 보기";
+"Do every tradition on one campus" = "한 캠퍼스의 모든 전통 해 보기";
+"Tradition Collector" = "전통 수집가";
+"Do 25 campus traditions" = "캠퍼스 전통 25개 해 보기";
+"Stamp a building on every %@ campus" = "모든 %@ 캠퍼스에서 건물 스탬프 찍기";
+
+/* Home and first-launch card */
+"Cities, Landmarks or Architects" = "도시, 명소 또는 건축가";
+"My Passport" = "내 여권";
+"YOUR ODYSSEY AWAITS" = "당신의 여정이 기다립니다";
+"Unlock your first badge" = "첫 배지를 잠금 해제하세요";
+"Unlock Your Collection" = "컬렉션을 잠금 해제하세요";
+"Every city mastered is a stamp earned." = "도시를 정복할 때마다 스탬프를 얻습니다.";
+"PASSPORT STAMPED" = "여권 스탬프 완료";
+"DATE: %@" = "날짜: %@";
+"DID YOU KNOW?" = "알고 계셨나요?";
+"While originally intended only as a protective sealant, the bridge’s signature ‘International Orange’ was made permanent when the architect realized its vibrant hue served as a perfect, high-contrast beacon against the San Francisco fog." = "원래는 보호용 도료일 뿐이었던 다리의 상징색 '인터내셔널 오렌지'는, 건축가가 그 선명한 색이 샌프란시스코의 안개 속에서 완벽하게 눈에 띈다는 것을 알게 되면서 영구적인 색이 되었습니다.";
+"Visit Landmarks" = "명소 방문하기";
+"Mark buildings as discovered to reach 100% completion." = "건물을 발견함으로 표시해 100% 달성하세요.";
+"Capture the View" = "풍경 담기";
+"Add personal photos to create a custom gallery." = "개인 사진을 추가해 나만의 갤러리를 만드세요.";
+"Collect the Stamp" = "스탬프 모으기";
+"Complete a city to earn its official Passport seal." = "도시를 완료하고 공식 여권 도장을 받으세요.";
+"Ace the Quiz" = "퀴즈 만점 받기";
+"Score perfectly on the architecture test to show your expertise." = "건축 퀴즈에서 만점을 받아 실력을 보여 주세요.";
+"Generate Itinerary" = "일정 만들기";
+"Instantly create a smart travel plan for any city." = "어느 도시든 바로 똑똑한 여행 계획을 만드세요.";
+"Convert Currency" = "환율 변환";
+"Check exchange rates instantly within the Travel Dossier." = "여행 정보에서 환율을 바로 확인하세요.";
+"Unlock My First Stamp" = "첫 스탬프 잠금 해제";
+
+/* Regions that aren't countries (countries come from iOS) */
+"England" = "잉글랜드";
+"Scotland" = "스코틀랜드";
+"New South Wales" = "뉴사우스웨일스";
+"Victoria" = "빅토리아";
+"Queensland" = "퀸즐랜드";
+
+/* Passport */
+"Your Passport" = "나의 여권";
+"EXPLORATION PROGRESS" = "탐험 진행도";
+
+/* World Map */
+"cities visited" = "도시 방문";
+"Visited" = "방문함";
+"Not yet" = "아직";
+"View City" = "도시 보기";

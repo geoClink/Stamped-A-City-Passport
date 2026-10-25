@@ -35,13 +35,14 @@ struct AreaSearchSheet: View {
                 Button {
                     pick(item)
                 } label: {
-                    HStack(spacing: 12) {
+                    HStack(spacing: DS.Space.m) {
                         Image(systemName: "mappin.circle.fill")
                             .font(.title2)
-                            .foregroundStyle(Color.adventureOrange)
-                        VStack(alignment: .leading, spacing: 2) {
+                            .foregroundStyle(DS.Palette.accent)
+                        VStack(alignment: .leading, spacing: DS.Space.xs) {
                             Text(item.name ?? "Unnamed place")
-                                .font(.headline)
+                                // Serif, the style guide's type for destinations
+                                .font(.system(.headline, design: .serif))
                                 .foregroundStyle(.primary)
                             if let address = item.displayAddress {
                                 Text(address)
@@ -98,7 +99,7 @@ struct AreaSearchSheet: View {
                 Text("Planning in \(choice.city.name) adds its landmarks, stamps and quiz.")
             }
         }
-        .tint(Color.adventureOrange)
+        .tint(DS.Palette.accent)
     }
 
     // MARK: - Actions

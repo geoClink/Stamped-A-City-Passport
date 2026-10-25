@@ -31,8 +31,8 @@ enum SpotlightManager {
             for building in city.buildings {
                 let attr = CSSearchableItemAttributeSet(contentType: .item)
                 attr.title = building.name
-                attr.contentDescription = "by \(building.architect) · \(city.name)"
-                attr.keywords = [building.name, building.architect, building.buildingStyle, city.name, "landmark"]
+                attr.contentDescription = building.knownArchitect.map { "by \($0) · \(city.name)" } ?? city.name
+                attr.keywords = [building.name, building.knownArchitect, building.knownStyle, city.name, "landmark"].compactMap { $0 }
                 items.append(CSSearchableItem(
                     uniqueIdentifier: "stamped://building/\(building.id)/\(city.id)",
                     domainIdentifier: "com.stamped.building",

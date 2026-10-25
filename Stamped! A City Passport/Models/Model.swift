@@ -254,6 +254,66 @@ struct CityLocation: Hashable, Sendable {
         case aalto = "Aalto University"
         case uppsala = "Uppsala University"
         case floridaSouthern = "Florida Southern College"
+        case bostonCollege = "Boston College"
+        case clemson = "Clemson University"
+        case duke = "Duke University"
+        case floridaState = "Florida State University"
+        case georgiaTech = "Georgia Institute of Technology"
+        case uLouisville = "University of Louisville"
+        case uMiami = "University of Miami"
+        case ncState = "North Carolina State University"
+        case uncChapelHill = "University of North Carolina at Chapel Hill"
+        case uPittsburgh = "University of Pittsburgh"
+        case smu = "Southern Methodist University"
+        case syracuse = "Syracuse University"
+        case virginiaTech = "Virginia Tech"
+        case wakeForest = "Wake Forest University"
+        case uArizona = "University of Arizona"
+        case arizonaState = "Arizona State University"
+        case byu = "Brigham Young University"
+        case uHouston = "University of Houston"
+        case iowaState = "Iowa State University"
+        case uKansas = "University of Kansas"
+        case kansasState = "Kansas State University"
+        case oklahomaState = "Oklahoma State University"
+        case texasTech = "Texas Tech University"
+        case westVirginia = "West Virginia University"
+        case baylor = "Baylor University"
+        case uCincinnati = "University of Cincinnati"
+        case cuBoulder = "University of Colorado Boulder"
+        case tcu = "Texas Christian University"
+        case ucf = "University of Central Florida"
+        case uUtah = "University of Utah"
+        case uIllinois = "University of Illinois Urbana-Champaign"
+        case uIndiana = "Indiana University Bloomington"
+        case uIowa = "University of Iowa"
+        case uMaryland = "University of Maryland, College Park"
+        case michiganState = "Michigan State University"
+        case uMinnesota = "University of Minnesota Twin Cities"
+        case uNebraska = "University of Nebraska–Lincoln"
+        case northwestern = "Northwestern University"
+        case ohioState = "Ohio State University"
+        case pennState = "Pennsylvania State University"
+        case purdue = "Purdue University"
+        case rutgers = "Rutgers University–New Brunswick"
+        case uWisconsin = "University of Wisconsin–Madison"
+        case uOregon = "University of Oregon"
+        case uSouthernCalifornia = "University of Southern California"
+        case uAlabama = "University of Alabama"
+        case uArkansas = "University of Arkansas"
+        case auburn = "Auburn University"
+        case uFlorida = "University of Florida"
+        case uGeorgia = "University of Georgia"
+        case lsu = "Louisiana State University"
+        case olemiss = "University of Mississippi"
+        case mizzou = "University of Missouri"
+        case uOklahoma = "University of Oklahoma"
+        case uSouthCarolina = "University of South Carolina"
+        case vanderbilt = "Vanderbilt University"
+        case uKentucky = "University of Kentucky"
+        case msState = "Mississippi State University"
+        case uTennessee = "University of Tennessee"
+        case texasAM = "Texas A&M University"
         case oxford = "University of Oxford"
         case cambridge = "University of Cambridge"
         case stAndrews = "University of St Andrews"
@@ -391,7 +451,7 @@ struct CityLocation: Hashable, Sendable {
             case .uniSydney: return .newSouthWales
             case .stAndrews, .uniGlasgow, .uniEdinburgh: return .scotland
             case .uppsala: return .sweden
-            case .utAustin, .floridaSouthern, .yale, .harvard, .mit, .princeton, .cornell, .columbia, .upenn, .brown, .dartmouth, .georgetown, .uChicago, .notreDame, .uMichigan, .illinoisTech, .uVirginia, .stanford, .berkeley, .ucla, .uWashington: return .unitedStates
+            case .utAustin, .floridaSouthern, .bostonCollege, .clemson, .duke, .floridaState, .georgiaTech, .uLouisville, .uMiami, .ncState, .uncChapelHill, .uPittsburgh, .smu, .syracuse, .virginiaTech, .wakeForest, .uArizona, .arizonaState, .byu, .uHouston, .iowaState, .uKansas, .kansasState, .oklahomaState, .texasTech, .westVirginia, .baylor, .uCincinnati, .cuBoulder, .tcu, .ucf, .uUtah, .uIllinois, .uIndiana, .uIowa, .uMaryland, .michiganState, .uMinnesota, .uNebraska, .northwestern, .ohioState, .pennState, .purdue, .rutgers, .uWisconsin, .uOregon, .uSouthernCalifornia, .uAlabama, .uArkansas, .auburn, .uFlorida, .uGeorgia, .lsu, .olemiss, .mizzou, .uOklahoma, .uSouthCarolina, .vanderbilt, .uKentucky, .msState, .uTennessee, .texasAM, .yale, .harvard, .mit, .princeton, .cornell, .columbia, .upenn, .brown, .dartmouth, .georgetown, .uChicago, .notreDame, .uMichigan, .illinoisTech, .uVirginia, .stanford, .berkeley, .ucla, .uWashington: return .unitedStates
             case .uniMelbourne: return .victoria
             // END CAMPUSES
             }
@@ -444,5 +504,48 @@ extension CityLocation.Continent {
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
+    }
+}
+
+// MARK: - Country names in the app's language
+
+extension CityLocation.Country {
+    /// The name shown on screen: iOS supplies country names in every language from the
+    /// ISO code; England, Scotland and the Australian states come from Localizable.strings.
+    /// English keeps the raw value, so English screens read exactly as before.
+    var localizedName: String {
+        guard !Self.isEnglish else { return rawValue }
+        if let regionCode, let name = Self.appLocale.localizedString(forRegionCode: regionCode) {
+            return name
+        }
+        return NSLocalizedString(rawValue, comment: "Country or region name")
+    }
+
+    /// A region name ("Australia") in the app's language, for groups that aren't one country.
+    static func localizedRegion(_ code: String, english: String) -> String {
+        guard !isEnglish else { return english }
+        return appLocale.localizedString(forRegionCode: code) ?? english
+    }
+
+    /// The language the app is actually showing, which can differ from the device's region.
+    private static var appLocale: Locale { Locale(identifier: Bundle.main.preferredLocalizations.first ?? "en") }
+    private static var isEnglish: Bool { appLocale.language.languageCode == .english }
+
+    /// Nil for places that aren't countries (England, Scotland, Australian states)
+    private var regionCode: String? {
+        switch self {
+        case .unitedStates: return "US"; case .brazil: return "BR"; case .indonesia: return "ID"; case .singapore: return "SG"; case .italy: return "IT"; case .saudiArabia: return "SA"
+        case .southkorea: return "KR"; case .egypt: return "EG"; case .canada: return "CA"; case .uae: return "AE"; case .japan: return "JP"; case .france: return "FR"
+        case .mexico: return "MX"; case .sar: return "HK"; case .denmark: return "DK"; case .germany: return "DE"; case .netherlands: return "NL"; case .israel: return "IL"
+        case .china: return "CN"; case .thailand: return "TH"; case .india: return "IN"; case .spain: return "ES"; case .ireland: return "IE"; case .turkey: return "TR"
+        case .argentina: return "AR"; case .peru: return "PE"; case .chile: return "CL"; case .southAfrica: return "ZA"; case .kenya: return "KE"; case .morocco: return "MA"
+        case .newZealand: return "NZ"; case .czechRepublic: return "CZ"; case .austria: return "AT"; case .portugal: return "PT"; case .yemen: return "YE"; case .greece: return "GR"
+        case .hungary: return "HU"; case .taiwan: return "TW"; case .malaysia: return "MY"; case .vietnam: return "VN"; case .switzerland: return "CH"; case .sweden: return "SE"
+        case .colombia: return "CO"; case .nigeria: return "NG"; case .ghana: return "GH"; case .ethiopia: return "ET"; case .qatar: return "QA"; case .jordan: return "JO"
+        case .oman: return "OM"; case .philippines: return "PH"; case .norway: return "NO"; case .finland: return "FI"; case .belgium: return "BE"; case .poland: return "PL"
+        case .cuba: return "CU"; case .nepal: return "NP"; case .iceland: return "IS"; case .russia: return "RU"; case .georgia: return "GE"; case .sriLanka: return "LK"
+        case .senegal: return "SN"; case .tanzania: return "TZ"; case .bangladesh: return "BD"
+        case .england, .scotland, .newSouthWales, .victoria, .queensland: return nil
+        }
     }
 }

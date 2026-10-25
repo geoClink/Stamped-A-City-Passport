@@ -45,9 +45,13 @@ struct OnboardingView: View {
                     shouldReduceMotion: shouldReduceMotion
                 )
                 
-                VStack {
+                VStack(spacing: 0) {
+                    // Skip lives in the page itself rather than an empty, transparent
+                    // navigation bar, so nothing sits on top of it and eats its taps
+                    SkipButton(viewModel: viewModel, isHighContrast: isHighContrast)
+
                     tabContent
-                    
+
                     NavigationButton(
                         viewModel: viewModel,
                         isHighContrast: isHighContrast,
@@ -55,9 +59,7 @@ struct OnboardingView: View {
                     )
                 }
             }
-            .toolbar {
-                SkipButtonToolbar(viewModel: viewModel, isHighContrast: isHighContrast)
-            }
+            .toolbar(.hidden, for: .navigationBar)
         }
     }
 }

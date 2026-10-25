@@ -188,7 +188,9 @@ struct CityExploreView: View {
                             .font(.headline)
                             .foregroundStyle(.white)
                     }
-                    Text("\(String(building.yearBuilt)) · \(building.buildingStyle)")
+                    Text([building.hasKnownYear ? String(building.yearBuilt) : nil, building.knownStyle]
+                            .compactMap { $0 }
+                            .joined(separator: " · "))
                         .font(.caption)
                         .foregroundStyle(.white.opacity(0.7))
                     if vm.loadedScans.contains(building.id) {

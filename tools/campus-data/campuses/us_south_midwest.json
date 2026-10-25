@@ -3,6 +3,60 @@
     "name": "University of Chicago",
     "enumCase": "uChicago",
     "country": "unitedStates",
+    "aliases": [
+      "UChicago",
+      "Chicago"
+    ],
+    "colors": [
+      "#800000",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_uchicago_reynolds_seal",
+        "name": "Reynolds Club Seal",
+        "description": "Legend says a student who steps on the University seal in the lobby of the Reynolds Club won't graduate in four years. Visitors can see the seal in the student union lobby and decide whether to test the myth.",
+        "coordinates": [
+          41.791091,
+          -87.598377
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/157655073",
+        "source": "https://chicagomaroon.com/?p=2703"
+      },
+      {
+        "id": "trad_uchicago_cobb_gate",
+        "name": "Cobb Gate Gargoyles",
+        "description": "By campus lore, the grotesques on Cobb Gate stand for the admissions officers and the climb of first- to fourth-year students, with the fourth-year at the top. Visitors can walk through the gate and look up to spot each figure.",
+        "coordinates": [
+          41.791227,
+          -87.599677
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/285311999",
+        "source": "https://architecture.uchicago.edu/locations/cobb_gate"
+      },
+      {
+        "id": "trad_uchicago_botany_pond",
+        "name": "Botany Pond",
+        "description": "Botany Pond in Hull Court is a beloved campus spot where visitors come to see the ducklings and turtles. Stop by the pond for a quiet look at the wildlife and gardens.",
+        "coordinates": [
+          41.79088,
+          -87.599439
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/152422456",
+        "source": "https://mag.uchicago.edu/university-news/evergreen"
+      },
+      {
+        "id": "trad_uchicago_carillon",
+        "name": "Rockefeller Chapel Carillon",
+        "description": "The 72-bell carillon at the top of Rockefeller Chapel is played in a daily recital, and student guild members give weekly concerts with bell-tower tours beforehand for anyone interested. Visitors can listen from the quad or join a tour.",
+        "coordinates": [
+          41.788534,
+          -87.597042
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/150457349",
+        "source": "https://rockefeller.uchicago.edu/carillon"
+      }
+    ],
     "wiki": "University of Chicago",
     "currency": "USD ($)",
     "details": {
@@ -115,6 +169,73 @@
     "name": "University of Notre Dame",
     "enumCase": "notreDame",
     "country": "unitedStates",
+    "conference": "acc",
+    "aliases": [
+      "Notre Dame",
+      "ND",
+      "Fighting Irish"
+    ],
+    "colors": [
+      "#0C2340",
+      "#AE9142"
+    ],
+    "traditions": [
+      {
+        "id": "trad_notre_dame_main_steps",
+        "name": "Main Building Front Steps",
+        "description": "Undergraduates avoid the front steps of the Main Building, as legend says using them means not graduating; seniors first walk them at graduation. Visitors are welcome to use the steps and take a photo under the Golden Dome.",
+        "coordinates": [
+          41.702996,
+          -86.238988
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/16131680",
+        "source": "https://admissions.nd.edu/visit-engage/stories-news/college-bound-notre-dame-traditions"
+      },
+      {
+        "id": "trad_notre_dame_grotto_candle",
+        "name": "Light a Candle at the Grotto",
+        "description": "Students, alumni and visitors light candles and say a prayer at the Grotto of Our Lady of Lourdes; Notre Dame Magazine jokes you should leave double the suggested offering \"just to be sure.\" Visitors can light a candle and read Tom Dooley's letter to Father Hesburgh there.",
+        "coordinates": [
+          41.703025,
+          -86.240397
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/3024495722",
+        "source": "https://magazine.nd.edu/news/101-things-you-should-do-on-a-football-weekend/"
+      },
+      {
+        "id": "trad_notre_dame_touchdown_jesus",
+        "name": "Touchdown Jesus",
+        "description": "The Word of Life mural on the face of the Hesburgh Library, better known as Touchdown Jesus, is one of the campus landmarks where visiting families line up for photos. Visitors can pose in front of it by the reflecting pool.",
+        "coordinates": [
+          41.702193,
+          -86.234114
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/7124005748",
+        "source": "https://magazine.nd.edu/news/101-things-you-should-do-on-a-football-weekend/"
+      },
+      {
+        "id": "trad_notre_dame_fair_catch_corby",
+        "name": "Fair Catch Corby",
+        "description": "The statue of Father William Corby with his arm raised, nicknamed Fair-Catch Corby, stands outside Corby Hall and is a classic campus photo stop. Visitors can pose beside it.",
+        "coordinates": [
+          41.702518,
+          -86.240619
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/16138828",
+        "source": "https://magazine.nd.edu/news/101-things-you-should-do-on-a-football-weekend/"
+      },
+      {
+        "id": "trad_notre_dame_lyons_arch",
+        "name": "Lyons Hall Arch",
+        "description": "Campus superstition holds that a couple who kiss under the archway of Lyons Hall may get engaged before graduation. Visitors can walk through the arch and see it for themselves.",
+        "coordinates": [
+          41.700682,
+          -86.243319
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/152173982",
+        "source": "https://admissions.nd.edu/visit-engage/stories-news/college-bound-notre-dame-traditions"
+      }
+    ],
     "wiki": "University of Notre Dame",
     "currency": "USD ($)",
     "details": {
@@ -227,6 +348,62 @@
     "name": "University of Michigan",
     "enumCase": "uMichigan",
     "country": "unitedStates",
+    "conference": "bigTen",
+    "aliases": [
+      "UMich",
+      "Michigan",
+      "Wolverines"
+    ],
+    "colors": [
+      "#00274C",
+      "#FFCB05"
+    ],
+    "traditions": [
+      {
+        "id": "trad_umich_diag_m",
+        "name": "The Block M on the Diag",
+        "description": "Superstition says stepping on the bronze M in the Diag before your first exam means you'll fail it, so students walk around it. Visitors can find the M at the centre of the Diag and take a photo beside it.",
+        "coordinates": [
+          42.276944,
+          -83.738212
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/4960655779",
+        "source": "https://prod.lsa.umich.edu/content/michigan-lsa/en/news-events/all-news/search-news/campus-traditions.html"
+      },
+      {
+        "id": "trad_umich_engineering_arch",
+        "name": "Engineering Arch",
+        "description": "Legend says a couple who kiss under the West Hall engineering arch at midnight will eventually marry. Visitors can walk through the arch at the southeast corner of the Diag.",
+        "coordinates": [
+          42.275934,
+          -83.736429
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/99883661",
+        "source": "https://prod.lsa.umich.edu/content/michigan-lsa/en/news-events/all-news/search-news/campus-traditions.html"
+      },
+      {
+        "id": "trad_umich_cube",
+        "name": "The Cube",
+        "description": "Endover, a 15-foot steel cube balanced on one corner in Regents' Plaza, is mounted so that it spins with a push. Visitors can give it a spin.",
+        "coordinates": [
+          42.275903,
+          -83.74189
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/1458141546",
+        "source": "https://en.wikipedia.org/wiki/Endover"
+      },
+      {
+        "id": "trad_umich_rock",
+        "name": "The Rock",
+        "description": "A large boulder at Hill Street and Washtenaw Avenue has been painted over and over since the 1950s by students and the public. Visitors can stop to see its latest coat of paint.",
+        "coordinates": [
+          42.272565,
+          -83.728492
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/2229515306",
+        "source": "https://en.wikipedia.org/wiki/The_Rock_(University_of_Michigan)"
+      }
+    ],
     "wiki": "University of Michigan",
     "currency": "USD ($)",
     "details": {
@@ -329,6 +506,49 @@
     "name": "Illinois Institute of Technology",
     "enumCase": "illinoisTech",
     "country": "unitedStates",
+    "aliases": [
+      "Illinois Tech",
+      "IIT"
+    ],
+    "colors": [
+      "#CC0000",
+      "#76777B"
+    ],
+    "traditions": [
+      {
+        "id": "trad_iit_pumpkin_launch",
+        "name": "Pumpkin Launch",
+        "description": "Every October during family weekend, student teams build catapults and trebuchets and compete to fling pumpkins for distance and accuracy on Ed Glancy Field. The event draws spectators from across Chicago.",
+        "coordinates": [
+          41.839174,
+          -87.624252
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/134142287",
+        "source": "https://www.iit.edu/events/biomedical-engineering-society-12th-annual-pumpkin-launch"
+      },
+      {
+        "id": "trad_iit_crown_hall",
+        "name": "S. R. Crown Hall",
+        "description": "Crown Hall, home of the College of Architecture, is widely considered Mies van der Rohe's finest work and seems to float above the lawn on travertine steps. Visitors can see this landmark of modern architecture up close.",
+        "coordinates": [
+          41.833199,
+          -87.627273
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/157657436",
+        "source": "https://www.architecture.org/learn/resources/buildings-of-chicago/building/crown-hall/"
+      },
+      {
+        "id": "trad_iit_mtcc_tube",
+        "name": "The Tube over the Campus Center",
+        "description": "Rem Koolhaas's McCormick Tribune Campus Center has a stainless-steel tube carrying CTA Green Line trains right over its roof. Visitors can watch trains pass through the tube overhead.",
+        "coordinates": [
+          41.835678,
+          -87.625834
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/17010865",
+        "source": "https://en.wikipedia.org/wiki/McCormick_Tribune_Campus_Center"
+      }
+    ],
     "wiki": "Illinois Institute of Technology",
     "currency": "USD ($)",
     "details": {
@@ -411,6 +631,62 @@
     "name": "University of Virginia",
     "enumCase": "uVirginia",
     "country": "unitedStates",
+    "conference": "acc",
+    "aliases": [
+      "UVA",
+      "Virginia",
+      "Cavaliers"
+    ],
+    "colors": [
+      "#232D4B",
+      "#E57200"
+    ],
+    "traditions": [
+      {
+        "id": "trad_uva_poe_room",
+        "name": "Edgar Allan Poe's Room",
+        "description": "Poe's student room at 13 West Range is kept furnished as an 1826 student room. Visitors look in through a glass door and can press a button to hear a recording about Poe's time at UVA.",
+        "coordinates": [
+          38.035141,
+          -78.50516
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/344866073",
+        "source": "https://www.visitcharlottesville.org/directory/edgar-allan-poes-room-university-of-virginia/"
+      },
+      {
+        "id": "trad_uva_beta_bridge",
+        "name": "Painted Beta Bridge",
+        "description": "Since the latter half of the 20th century, students have painted messages on the Rugby Road bridge, from club events to birthdays and memorials. Stop by to see what is painted on it this week.",
+        "coordinates": [
+          38.039569,
+          -78.501819
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/1282280413",
+        "source": "https://archive.news.virginia.edu/content/painting-beta-bridge-tradition-expression/"
+      },
+      {
+        "id": "trad_uva_lighting_of_the_lawn",
+        "name": "Lighting of the Lawn",
+        "description": "Each December, a cappella performances on the Lawn end with a light show on the Rotunda. The lights around the Academical Village then stay lit every night until early January.",
+        "coordinates": [
+          38.035646,
+          -78.503383
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/4809573",
+        "source": "https://en.wikipedia.org/wiki/Events_Held_on_The_Lawn_at_UVA"
+      },
+      {
+        "id": "trad_uva_lawn_trick_or_treat",
+        "name": "Trick-or-Treating on the Lawn",
+        "description": "On Halloween, students living in the Lawn rooms hand out candy to local children, a tradition since the 1980s. Families line up along the 54 Lawn rooms.",
+        "coordinates": [
+          38.034259,
+          -78.504132
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/339379987",
+        "source": "https://en.wikipedia.org/wiki/Events_Held_on_The_Lawn_at_UVA"
+      }
+    ],
     "wiki": "University of Virginia",
     "currency": "USD ($)",
     "details": {

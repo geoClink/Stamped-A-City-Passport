@@ -24,25 +24,21 @@ struct EventsSection: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Label("UPCOMING EVENTS", systemImage: "ticket.fill")
-                .font(.system(.caption, design: .default))
-                .fontWeight(.semibold)
-                .foregroundColor(.secondary)
-                .kerning(1.2)
-                .padding(.horizontal)
+        VStack(alignment: .leading, spacing: DS.Space.m) {
+            DSSectionHeader("Upcoming Events", systemImage: "ticket.fill", isHighContrast: isHighContrast)
+                .dsPageMargin()
 
             // Unified card container
             VStack(alignment: .leading, spacing: 0) {
                 if service.isLoading {
-                    HStack(spacing: 10) {
+                    HStack(spacing: DS.Space.s) {
                         ProgressView().scaleEffect(0.7)
                         Text("Finding events…")
                             .font(.caption).foregroundColor(.secondary)
                     }
-                    .padding(16)
+                    .padding(DS.Space.l)
                 } else if service.events.isEmpty {
-                    HStack(spacing: 12) {
+                    HStack(spacing: DS.Space.m) {
                         Image(systemName: "ticket.fill")
                             .font(.title2)
                             .foregroundColor(.secondary.opacity(0.5))
@@ -53,12 +49,12 @@ struct EventsSection: View {
                                 .font(.caption).foregroundColor(.secondary)
                         }
                     }
-                    .padding(16)
+                    .padding(DS.Space.l)
                 } else {
                     // Filter chips
                     if presentCategories.count > 1 {
                         ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(spacing: 8) {
+                            HStack(spacing: DS.Space.s) {
                                 FilterChip(
                                     label: "All",
                                     icon: nil,
@@ -71,51 +67,55 @@ struct EventsSection: View {
                                         label: cat.rawValue,
                                         icon: cat.icon,
                                         isSelected: selectedCategory == cat,
-                                        color: categoryColor(cat)
+                                        color: cat.tint(brandColor: brandColor, isHighContrast: isHighContrast)
                                     ) { selectedCategory = (selectedCategory == cat) ? nil : cat }
                                 }
                             }
-                            .padding(.horizontal, 16)
+                            .padding(.horizontal, DS.Space.l)
                         }
-                        .padding(.top, 14)
+                        .padding(.top, DS.Space.l)
 
-                        Divider().padding(.horizontal, 16).padding(.top, 12)
+                        Divider().padding(.horizontal, DS.Space.l).padding(.top, DS.Space.m)
                     }
 
                     let displayed = filteredEvents
                     if displayed.isEmpty {
                         Text("No \(selectedCategory?.rawValue ?? "") events found")
                             .font(.caption).foregroundColor(.secondary)
-                            .padding(16)
+                            .padding(DS.Space.l)
                     } else {
                         ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(alignment: .top, spacing: 12) {
+                            HStack(alignment: .top, spacing: DS.Space.m) {
                                 ForEach(displayed) { event in
-                                    EventCard(event: event, brandColor: brandColor)
+                                    EventCard(event: event, brandColor: brandColor, isHighContrast: isHighContrast)
                                 }
                             }
-                            .padding(.horizontal, 16)
-                            .padding(.vertical, 14)
+                            .padding(DS.Space.l)
                         }
                     }
                 }
             }
-            .background(Color(UIColor.secondarySystemBackground))
-            .cornerRadius(16)
-            .padding(.horizontal)
+            .dsCard(padding: 0, isHighContrast: isHighContrast)
+            .dsPageMargin()
 
             Text("Event data from Ticketmaster. Stamped is not responsible for event cancellations.")
                 .font(.caption2)
-                .foregroundColor(.secondary)
-                .padding(.horizontal)
+                .foregroundColor(isHighContrast ? .primary : .secondary)
+                .dsPageMargin()
         }
     }
+}
 
-    private func categoryColor(_ cat: TicketmasterEvent.EventCategory) -> Color {
-        switch cat {
+// MARK: - Category color
+
+private extension TicketmasterEvent.EventCategory {
+    /// Event categories keep their own semantic colors; high contrast drops the color coding.
+    func tint(brandColor: Color, isHighContrast: Bool) -> Color {
+        if isHighContrast { return .primary }
+        switch self {
         case .music:  return .purple
         case .sports: return .blue
-        case .arts:   return .pink
+        case .arts:   return .teal  // pink is reserved for Want to Visit
         case .film:   return .indigo
         case .family: return .green
         default:      return brandColor
@@ -134,15 +134,16 @@ private struct FilterChip: View {
 
     var body: some View {
         Button(action: action) {
-            HStack(spacing: 4) {
+            HStack(spacing: DS.Space.xs) {
                 if let icon {
                     Image(systemName: icon).font(.caption.weight(.medium))
                 }
-                Text(label).font(.caption.bold())
+                Text(label).font(.caption.bold()).lineLimit(1)
             }
-            .foregroundColor(isSelected ? .white : color)
-            .padding(.horizontal, 12)
-            .padding(.vertical, 8)
+            // In high contrast the fill is .primary, so the label flips to the background color
+            .foregroundColor(isSelected ? (color == .primary ? Color(UIColor.systemBackground) : .white) : color)
+            .padding(.horizontal, DS.Space.m)
+            .padding(.vertical, DS.Space.s)
             .background(Capsule().fill(isSelected ? color : color.opacity(0.12)))
         }
         .buttonStyle(.plain)
@@ -157,16 +158,13 @@ private struct FilterChip: View {
 private struct EventCard: View {
     let event: TicketmasterEvent
     let brandColor: Color
+    let isHighContrast: Bool
+
+    @ScaledMetric(relativeTo: .subheadline) private var cardWidth: CGFloat = 220
+    @ScaledMetric(relativeTo: .subheadline) private var badgeSize: CGFloat = 36
 
     private var accentColor: Color {
-        switch event.category {
-        case .music:  return .purple
-        case .sports: return .blue
-        case .arts:   return .pink
-        case .film:   return .indigo
-        case .family: return .green
-        default:      return brandColor
-        }
+        event.category.tint(brandColor: brandColor, isHighContrast: isHighContrast)
     }
 
     var body: some View {
@@ -186,15 +184,15 @@ private struct EventCard: View {
     }
 
     private var cardContent: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        VStack(alignment: .leading, spacing: DS.Space.s) {
             // Top row: icon badge + price
             HStack(alignment: .top) {
                 ZStack {
-                    RoundedRectangle(cornerRadius: 8)
+                    RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
                         .fill(accentColor.opacity(0.15))
-                        .frame(width: 36, height: 36)
+                        .frame(width: badgeSize, height: badgeSize)
                     Image(systemName: event.category.icon)
-                        .font(.system(size: 15, weight: .medium))
+                        .font(.subheadline.weight(.medium))
                         .foregroundColor(accentColor)
                 }
 
@@ -204,8 +202,9 @@ private struct EventCard: View {
                     Text(price)
                         .font(.caption.bold())
                         .foregroundColor(accentColor)
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 4)
+                        .lineLimit(1)
+                        .padding(.horizontal, DS.Space.s)
+                        .padding(.vertical, DS.Space.xs)
                         .background(Capsule().fill(accentColor.opacity(0.12)))
                 }
             }
@@ -221,7 +220,7 @@ private struct EventCard: View {
             Spacer(minLength: 0)
 
             // Date / time / venue
-            VStack(alignment: .leading, spacing: 3) {
+            VStack(alignment: .leading, spacing: DS.Space.xs) {
                 if !event.date.isEmpty {
                     Label(event.date + (event.time.isEmpty ? "" : " · \(event.time)"),
                           systemImage: "calendar")
@@ -248,10 +247,17 @@ private struct EventCard: View {
                 }
             }
         }
-        .padding(14)
-        .frame(width: 220, alignment: .leading)
-        .background(Color(UIColor.secondarySystemBackground))
-        .cornerRadius(16)
+        .padding(DS.Space.m)
+        .frame(width: cardWidth, alignment: .leading)
+        // A card inside the section card: one step lighter/darker and the small radius
+        .background(
+            RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
+                .fill(isHighContrast ? Color(UIColor.systemBackground) : Color(UIColor.tertiarySystemGroupedBackground))
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
+                .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
+        )
     }
 
     private var accessibilityLabel: String {

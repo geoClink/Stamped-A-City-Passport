@@ -18,15 +18,21 @@ extension PassportStampView {
     }
     
     var cityInfoSection: some View {
-        VStack(spacing: 4) {
+        VStack(spacing: DS.Space.xs) {
             Text("PASSPORT STAMPED")
                 .font(.caption2.weight(.black))
                 .tracking(2)
                 .foregroundColor(stampColor)
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
             
+            // Shrinks rather than breaking a long name mid-word
             Text(cityName.uppercased())
                 .font(.system(.title2, design: .serif))
                 .bold()
+                .multilineTextAlignment(.center)
+                .lineLimit(3)
+                .minimumScaleFactor(0.6)
             
             if !dateCompleted.isEmpty {
                 Text("COMPLETED: \(dateCompleted)")
@@ -37,7 +43,7 @@ extension PassportStampView {
     }
     
     var funFactSection: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: DS.Space.s) {
             Text("DID YOU KNOW?")
                 .font(.caption.weight(.heavy))
                 .tracking(1)
@@ -88,9 +94,10 @@ struct StampCelebrationView: View {
             backgroundOverlay
             
             ScrollView(showsIndicators: false) {
-                VStack(spacing: 40) {
-                    VStack(spacing: 8) {
-                        Text("City Explored!")
+                VStack(spacing: DS.Space.section) {
+                    VStack(spacing: DS.Space.s) {
+                        // Campuses get their own wording
+                        Text(CityLocation.City(rawValue: cityName)?.isCampus == true ? "Campus Explored!" : "City Explored!")
                             .font(.system(.largeTitle, design: .serif))
                             .bold()
                             .foregroundColor(.white)
@@ -99,9 +106,12 @@ struct StampCelebrationView: View {
                             .font(.system(.subheadline, design: .monospaced))
                             .tracking(4)
                             .foregroundColor(isHighContrast ? .white : .white.opacity(0.8))
+                            .lineLimit(2)
+                            .minimumScaleFactor(0.7)
                     }
-                    .padding(.top, 60)
+                    .padding(.top, DS.Space.section * 2)
                     .multilineTextAlignment(.center)
+                    .dsPageMargin()
                     
                     PassportStampView(
                         cityName: cityName,
@@ -109,14 +119,15 @@ struct StampCelebrationView: View {
                         funFact: funFact,
                         isHighContrast: isHighContrast
                     )
-                    .padding(.horizontal)
+                    .dsPageMargin()
+                    // Lifts the stamp off the dark backdrop
                     .shadow(color: isHighContrast ? .clear : .black.opacity(0.3), radius: 20, x: 0, y: 10)
                     
                     if showButton {
                         actionButton
                     }
                 }
-                .padding(.bottom, 40)
+                .padding(.bottom, DS.Space.section)
             }
         }
         .onAppear {
@@ -148,11 +159,13 @@ extension StampCelebrationView {
                 .font(Font.headline)
                 .foregroundColor(isHighContrast ? .black : .white)
                 .frame(maxWidth: .infinity)
-                .padding(.vertical, 16)
-                .background(isHighContrast ? Color.white : Color.adventureOrange)
-                .cornerRadius(14)
+                .padding(.vertical, DS.Space.l)
+                .background(
+                    RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                        .fill(isHighContrast ? Color.white : DS.Palette.accent)
+                )
         }
-        .padding(.horizontal, 40)
+        .padding(.horizontal, DS.Space.section)
         .transition(reduceMotion ? .opacity : .move(edge: .bottom).combined(with: .opacity))
     }
     

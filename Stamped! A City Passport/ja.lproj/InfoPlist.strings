@@ -1,0 +1,5 @@
+/* Permission prompts (the English text is set in the target's build settings) */
+"NSLocationWhenInUseUsageDescription" = "Stamped! は探索中に近くの名所を表示します。";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Stamped! はバックグラウンドでも名所の近くに来たらお知らせします。";
+"NSCameraUsageDescription" = "訪れている名所を撮影するためにカメラへのアクセスを許可してください。";
+"NSPhotoLibraryUsageDescription" = "パスポート用の名所の写真を保存・選択するために写真へのアクセスを許可してください。";

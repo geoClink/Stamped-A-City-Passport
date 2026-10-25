@@ -1,0 +1,1228 @@
+{
+  "Boston College": {
+    "trad_bc_golden_eagle": {
+      "name": "황금 독수리 동상",
+      "description": "개슨 홀 앞, 높이 약 9m의 기둥 위에 금빛 독수리가 앉아 있습니다. 1954년 대학이 받은 동상의 복제품입니다. 방문객은 개슨 타워를 배경으로 독수리 사진을 찍습니다."
+    },
+    "trad_bc_flutie_statue": {
+      "name": "더그 플루티 동상",
+      "description": "얼럼나이 스타디움 앞의 동상은 쿼터백 더그 플루티를 유명하게 만든 헤일 메리 패스를 재현합니다. 팬들은 경기장으로 가는 길에 들러 사진을 찍습니다."
+    }
+  },
+  "Clemson University": {
+    "trad_clemson_howards_rock": {
+      "name": "하워즈 록",
+      "description": "메모리얼 스타디움의 '더 힐' 꼭대기 받침대 위에 놓인 규암으로, 선수들은 홈경기에서 필드로 달려 내려가기 전에 이 돌을 문지릅니다. 방문객은 경기장 동쪽 끝에서 볼 수 있습니다."
+    },
+    "trad_clemson_lovers_lane": {
+      "name": "프레지던츠 파크의 러버스 레인",
+      "description": "캠퍼스 전설에 따르면 프레지던츠 파크를 손잡고 걸은 연인은 결혼한다고 합니다. 방문객은 캠퍼스 가장자리의 공원을 산책합니다."
+    },
+    "trad_clemson_bowman_field": {
+      "name": "보먼 필드",
+      "description": "틸먼 홀 앞 잔디밭인 보먼 필드는 클렘슨 생도들의 열병장이었습니다. 방문객은 이곳에서 틸먼 홀의 시계탑을 바라봅니다."
+    }
+  },
+  "Duke University": {
+    "trad_duke_chapel_carillon": {
+      "name": "듀크 채플 카리용",
+      "description": "듀크 채플 탑의 50개 종으로 된 카리용은 평일 매일 오후 5시에 연주되며, 금요일에는 교가가 울립니다. 방문객은 채플 근처에 모여 감상합니다."
+    },
+    "trad_duke_krzyzewskiville": {
+      "name": "슈셉스키빌",
+      "description": "가장 큰 남자 농구 경기를 앞두고 학생들은 캐머런 실내 경기장 옆 잔디밭에 '슈셉스키빌'이라는 텐트촌을 세우고 야영합니다. 겨울에 방문하면 텐트 옆을 걸어볼 수 있습니다."
+    }
+  },
+  "Florida State University": {
+    "trad_fsu_unconquered": {
+      "name": "언컨커드 동상",
+      "description": "도크 캠벨 스타디움 앞의 이 청동상은 뒷다리로 선 말을 탄 세미놀 기수를 표현합니다. 홈 미식축구 경기 전 해 질 녘에 창에 불이 붙고, 팬들이 모여 지켜봅니다."
+    },
+    "trad_fsu_legacy_walk": {
+      "name": "레거시 워크",
+      "description": "메달과 가넷색 깃발이 랜디스 그린에서 시작하는 캠퍼스 역사 산책로를 안내합니다. 방문객은 이를 따라 역사적 건물과 동상, 기념물을 둘러봅니다."
+    }
+  },
+  "Georgia Institute of Technology": {
+    "trad_gatech_tech_tower": {
+      "name": "테크 타워",
+      "description": "테크 타워 네 면에 걸린 TECH 조명 글자는 대학의 가장 유명한 상징입니다. 방문객은 아래 잔디밭에서 사진을 찍으며, 글자를 가져가는 것은 금지되어 있습니다."
+    },
+    "trad_gatech_campanile": {
+      "name": "케슬러 캄파닐레",
+      "description": "학생회관 앞의 높이 24m 스테인리스 강철 종탑은 1996년 올림픽을 위해 세워졌으며, 뾰족한 꼭대기가 테크 타워를 닮았습니다. 방문객은 그 아래에서 만나고 사진을 찍습니다."
+    }
+  },
+  "University of Louisville": {
+    "trad_uofl_thinker": {
+      "name": "생각하는 사람",
+      "description": "로댕의 '생각하는 사람' 대형 청동상이 1949년부터 그로메이어 홀 앞에 있습니다. 이 동상과 사진을 찍는 것은 캠퍼스 방문의 단골 코스입니다."
+    }
+  },
+  "University of Miami": {
+    "trad_umiami_u_statue": {
+      "name": "더 록의 U 동상",
+      "description": "섈랄라 학생회관 옆 록 플라자의 U 동상은 캠퍼스의 대표 사진 명소입니다. 방문객은 그 앞에서 사진을 찍습니다."
+    },
+    "trad_umiami_boat_burning": {
+      "name": "홈커밍 보트 태우기",
+      "description": "1956년부터 홈커밍 때마다 오세올라 호수에서 보트를 태웁니다. 보트가 가라앉기 전에 돛대가 쓰러지면 다음 날 경기에서 허리케인스가 이긴다는 전설이 있습니다."
+    },
+    "trad_umiami_bronze_ibis": {
+      "name": "청동 따오기",
+      "description": "대학 마스코트인 따오기 세바스천의 청동상이 뉴먼 동문회관 앞에 서 있습니다. 방문객은 들러서 사진을 찍습니다."
+    }
+  },
+  "North Carolina State University": {
+    "trad_ncstate_belltower_red": {
+      "name": "붉게 빛나는 벨타워",
+      "description": "NC 스테이트가 큰 경기에서 이기면 메모리얼 벨타워가 붉게 밝혀집니다. 팬들은 탑 아래에 모여 응원 구호를 외치고 울프팩 손동작을 합니다."
+    },
+    "trad_ncstate_free_expression_tunnel": {
+      "name": "프리 익스프레션 터널",
+      "description": "노스 캠퍼스와 센트럴 캠퍼스를 잇는 철로 아래 보행자 터널로, 누구나 벽과 천장, 바닥에 그림을 그릴 수 있습니다. 방문객은 지나가며 최신 메시지를 구경합니다."
+    }
+  },
+  "University of North Carolina at Chapel Hill": {
+    "trad_unc_old_well": {
+      "name": "올드 웰의 물 한 모금",
+      "description": "캠퍼스 전통에 따르면 개강 첫날 올드 웰의 식수대에서 물을 마시면 행운이 온다고 합니다. 방문객은 언제든 마실 수 있습니다."
+    },
+    "trad_unc_davie_poplar": {
+      "name": "데이비 포플러",
+      "description": "매코클 플레이스에 선 수백 년 된 튤립나무가 서 있는 한 대학이 번성한다는 전설이 있습니다. 방문객은 멈춰 서서 나무를 봅니다."
+    },
+    "trad_unc_bell_tower": {
+      "name": "캐롤라이나 블루로 빛나는 종탑",
+      "description": "모어헤드-패터슨 종탑은 타힐스가 미식축구에서 이기면 캐롤라이나 블루로 밝혀집니다. 방문객은 캠퍼스 남쪽에 선 높이 52m의 탑을 볼 수 있습니다."
+    }
+  },
+  "University of Pittsburgh": {
+    "trad_pitt_victory_lights": {
+      "name": "빅토리 라이트",
+      "description": "피트가 미식축구에서 이기거나 다른 우승을 하면 캐시드럴 오브 러닝 꼭대기가 금빛으로 빛나며, 2018년에는 파란 광선도 더해졌습니다. 오클랜드 어디서나 보입니다."
+    },
+    "trad_pitt_panther_nose": {
+      "name": "팬서 동상",
+      "description": "윌리엄 피트 유니언의 팬서 동상은 학생들이 오랫동안 행운을 빌며 문질러 코가 닳았습니다. 방문객도 문지르고 갑니다."
+    },
+    "trad_pitt_heinz_chapel_steps": {
+      "name": "하인즈 채플 계단",
+      "description": "하인즈 기념 채플 앞 계단은 젊은 연인에게 행운을 가져다준다고 합니다. 방문객은 이곳에서 사진을 찍습니다."
+    }
+  },
+  "Southern Methodist University": {
+    "trad_smu_dallas_hall_seal": {
+      "name": "댈러스 홀의 SMU 문장",
+      "description": "댈러스 홀 로툰다 바닥에는 SMU 문장이 박혀 있습니다. 신입생은 로툰다 패시지에서 그 주위를 돌고 졸업할 때 그 위를 건넙니다. 방문객은 로툰다에서 볼 수 있습니다."
+    },
+    "trad_smu_celebration_of_lights": {
+      "name": "셀러브레이션 오브 라이츠",
+      "description": "연말 셀러브레이션 오브 라이츠에는 댈러스 홀이 수천 개의 불빛으로 장식됩니다. 손님들은 코코아와 쿠키를 들고 잔디밭에 모이며, 저녁은 '고요한 밤'으로 마무리됩니다."
+    }
+  },
+  "Syracuse University": {
+    "trad_syracuse_kissing_bench": {
+      "name": "키싱 벤치",
+      "description": "톨리 홀과 홀 오브 랭귀지스 사이의 이 화강암 벤치는 1912년 졸업반의 선물입니다. 여기서 키스한 연인은 결혼하고, 혼자 앉으면 계속 혼자라는 전설이 있습니다."
+    },
+    "trad_syracuse_crouse_chimes": {
+      "name": "크라우스 차임",
+      "description": "크라우스 칼리지 탑의 종은 1889년부터 하루 두 번과 특별한 날에 울립니다. 방문객은 아래 쿼드에서 감상합니다."
+    }
+  },
+  "Virginia Tech": {
+    "trad_vt_corps_retreat": {
+      "name": "생도단 강하식",
+      "description": "생도단(Corps of Cadets)은 매일 저녁 옛 제1 병영인 레인 홀 앞에서 강하식을 엽니다. 방문객은 어퍼 쿼드에서 지켜볼 수 있습니다."
+    }
+  },
+  "Wake Forest University": {
+    "trad_wfu_wait_chapel": {
+      "name": "웨이트 채플 카리용",
+      "description": "웨이트 채플 탑에는 청동 종 48개로 된 12톤 카리용이 있으며, 채플은 대통령 후보 토론회가 열린 곳이기도 합니다. 방문객은 쿼드 끝에 선 채플을 볼 수 있습니다."
+    },
+    "trad_wfu_stone_arch": {
+      "name": "돌 아치",
+      "description": "쿼드의 이 아치는 노스캐롤라이나주 웨이크포리스트 옛 캠퍼스에 있는 아치의 복제품으로, 해마다 졸업반이 졸업식에서 이 아치를 지나갑니다. 방문객도 지나갈 수 있습니다."
+    },
+    "trad_wfu_magnolias": {
+      "name": "목련",
+      "description": "맨체스터 플라자의 목련은 1947년 옛 캠퍼스에서 모은 씨앗에서 자랐습니다. 방문객은 아래쪽 쿼드에서 목련 사이를 거닙니다."
+    }
+  },
+  "University of Arizona": {
+    "trad_uarizona_bear_down": {
+      "name": "베어 다운 체육관",
+      "description": "학교의 구호 'Bear Down'은 1926년 죽음을 앞둔 학생회장 존 '버튼' 새먼이 팀에 보낸 말에서 나왔으며, 옛 남자 체육관인 베어 다운 체육관이 그 이름을 잇고 있습니다. 구호가 살아 있는 체육관에 들러 보세요."
+    }
+  },
+  "Arizona State University": {
+    "trad_asu_palm_walk": {
+      "name": "팜 워크",
+      "description": "팜 워크는 템피 캠퍼스의 남북을 잇는 가장 인기 있는 길로, 20미터가 넘는 야자수가 늘어서 있습니다. 끝까지 걸으며 야자수 아래에서 사진을 찍어 보세요."
+    },
+    "trad_asu_pitchfork": {
+      "name": "청동 삼지창",
+      "description": "높이 약 1.9미터의 청동 삼지창이 풋볼 경기장 남동쪽 입구에 서 있습니다. 옆에 서서 'Fork 'em' 손동작을 해 보세요."
+    }
+  },
+  "Brigham Young University": {
+    "trad_byu_brigham_young_statue": {
+      "name": "브리검 영 동상",
+      "description": "손자인 조각가 마흐온리 영이 만든 브리검 영 동상이 에이브러햄 O. 스무트 행정관 앞에 서 있습니다. 대학 이름의 주인공 동상을 찾아가 보세요."
+    },
+    "trad_byu_cougar_statue": {
+      "name": "경기장의 쿠거 동상",
+      "description": "이탈리아에서 주조되어 1965년과 1969년 졸업생이 기증한 청동 쿠거가 캠퍼스 북동쪽의 라벨 에드워즈 경기장을 지킵니다. 함께 사진을 찍어 보세요."
+    },
+    "trad_byu_carillon": {
+      "name": "매시 정각의 카리용",
+      "description": "센테니얼 카리용은 매시 정각마다 찬송가 'Come, Come, Ye Saints'에 바탕을 둔 선율의 첫 소절을 울립니다. 정각에 탑 근처에서 들어 보세요."
+    }
+  },
+  "University of Houston": {
+    "trad_uhouston_rub_the_paw": {
+      "name": "럽 더 포(Rub the Paw)",
+      "description": "큰 경기 전 팬들은 E. 컬렌 빌딩 앞 컬렌 패밀리 플라자의 청동 쿠거 동상 두 개의 앞발을 문지르며 행운을 빕니다. 기말시험 전에 문지르는 학생도 있습니다."
+    },
+    "trad_uhouston_gate_2_cougar": {
+      "name": "2번 게이트의 쿠거",
+      "description": "경기 날에는 팬들이 풋볼 경기장 2번 게이트의 쿠거 동상 앞발도 문지릅니다. 행운을 빌며 문질러 보세요."
+    }
+  },
+  "Iowa State University": {
+    "trad_iastate_zodiac": {
+      "name": "황도대를 밟지 마세요",
+      "description": "메모리얼 유니언 골드 스타 홀 바닥에는 청동 황도대가 박혀 있습니다. 밟으면 다음 시험에서 떨어진다는 전설이 있으니, 여러 세대의 학생들처럼 돌아서 걸어 보세요."
+    },
+    "trad_iastate_campaniling": {
+      "name": "캄파닐링",
+      "description": "자정에 캄파닐레(종탑) 아래에서 키스를 받으면 진정한 아이오와 주립대생이 된다는 전통이 있으며, 홈커밍 때는 수백 명이 '매스 캄파닐링'에 모입니다. 종탑을 찾아 종소리를 들어 보세요."
+    },
+    "trad_iastate_lake_laverne": {
+      "name": "러번 호수",
+      "description": "1935년 처음으로 백조가 러번 호수에 왔고 랜슬롯과 일레인이라는 이름을 얻었습니다. 말없이 호수를 세 바퀴 도는 커플은 함께할 운명이라는 전설이 있습니다."
+    }
+  },
+  "University of Kansas": {
+    "trad_ku_campanile": {
+      "name": "메모리얼 캄파닐레",
+      "description": "졸업식 날 졸업생들은 제2차 세계대전 기념 캄파닐레를 통과해 언덕을 내려갑니다. 그 전에 통과하면 졸업하지 못한다는 전설이 있으니 밖에서 감상하세요."
+    },
+    "trad_ku_jayhawk_statue": {
+      "name": "스트롱 홀의 제이호크",
+      "description": "스트롱 홀 앞의 청동 제이호크는 1956년 졸업생의 선물입니다. 잠시 멈춰 함께 사진을 찍어 보세요."
+    }
+  },
+  "Kansas State University": {
+    "trad_kstate_call_hall_ice_cream": {
+      "name": "콜 홀 아이스크림",
+      "description": "K-State의 자체 유가공 공장은 '퍼플 프라이드'를 비롯해 40가지가 넘는 아이스크림을 만들어 콜 홀에서 팝니다. 한 스쿱 맛보세요."
+    }
+  },
+  "Oklahoma State University": {
+    "trad_okstate_library_lawn": {
+      "name": "에드먼 로 도서관 잔디밭 사진",
+      "description": "신입생들은 첫날 에드먼 로 도서관 앞 잔디밭에서 사진을 찍습니다. 도서관 앞에서 사진을 남겨 보세요."
+    },
+    "trad_okstate_old_central_bell": {
+      "name": "올드 센트럴의 종",
+      "description": "1917년 풋볼 승리 소식이 스틸워터에 전해지자 올드 센트럴의 종이 몇 시간 동안 울렸고, 여기서 베들럼 종의 전통이 시작되었습니다. 캠퍼스 최초의 영구 건물을 찾아가 보세요."
+    },
+    "trad_okstate_theta_pond": {
+      "name": "시타 연못",
+      "description": "시타 연못은 1895년 저수지로 만들어졌으며 지금은 캠퍼스에서 가장 아름다운 곳 중 하나입니다. 연못 주위를 산책해 보세요."
+    }
+  },
+  "Texas Tech University": {
+    "trad_ttu_victory_bells": {
+      "name": "빅토리 벨",
+      "description": "본관 동쪽 탑의 빅토리 벨은 텍사스 공과대학교 운동부가 이길 때마다, 그리고 졸업식 때 울립니다. 승리 후에 귀를 기울여 보세요."
+    },
+    "trad_ttu_carol_of_lights": {
+      "name": "캐럴 오브 라이츠",
+      "description": "1959년부터 매년 12월 텍사스 공과대학교는 본관과 주변 건물을 축제 조명으로 장식합니다. 시즌이 시작될 때 조명을 보러 오세요."
+    },
+    "trad_ttu_masked_rider_statue": {
+      "name": "마스크드 라이더 동상",
+      "description": "마스코트 마스크드 라이더를 기리는 그랜트 스피드의 실물보다 큰 조각상이 프레이저 동문회관 앞에 서 있습니다. 함께 사진을 찍어 보세요."
+    }
+  },
+  "West Virginia University": {
+    "trad_wvu_woodburn_lighting": {
+      "name": "우드번 홀 연말 조명",
+      "description": "WVU는 연말에 우드번 홀에 조명을 밝힙니다. 2025년에 다시 시작된 캠퍼스 전통입니다. 12월에 와서 불이 켜진 모습을 보세요."
+    },
+    "trad_wvu_mountaineer_statue": {
+      "name": "마운티니어 동상",
+      "description": "조각가 도널드 디 루가 1971년에 만든 청동 마운티니어 동상이 학생회관 마운틴레어에 있습니다. 찾아서 사진을 찍어 보세요."
+    }
+  },
+  "Baylor University": {
+    "trad_baylor_judge_baylor": {
+      "name": "베일러 판사 동상",
+      "description": "파운더스 몰에 있는 R.E.B. 베일러 판사의 청동 동상은 웨이코 홀을 바라보며, 인기 있는 사진 명소입니다. 대학 이름의 주인공과 사진을 찍어 보세요."
+    },
+    "trad_baylor_mclane_carillon": {
+      "name": "매클레인 카리용",
+      "description": "1988년 매클레인 가문이 기증한 48개 종의 매클레인 카리용이 팻 네프 홀에서 캠퍼스를 음악으로 채웁니다. 팻 네프 홀 근처에서 들어 보세요."
+    }
+  },
+  "University of Cincinnati": {
+    "trad_ucincy_bearcat_statue": {
+      "name": "베어캣 동상",
+      "description": "존 헤어가 만든 높이 약 4.5미터의 청동 베어캣은 2010년 명예 단체 시그마 시그마가 기증했으며, 캠퍼스 투어와 졸업 사진의 인기 배경입니다. 마리안 스펜서 홀 앞 커먼스 웨이에 있습니다."
+    }
+  },
+  "University of Colorado Boulder": {
+    "trad_cuboulder_norlin_inscriptions": {
+      "name": "노린 도서관의 명문",
+      "description": "도서관 서쪽 벽면, 노린 쿼드랭글을 내려다보는 곳에 조지 노린 총장이 쓴 두 명문이 새겨져 있습니다. 'Who knows only his own generation remains always a child'와 문 위의 'Enter here the timeless fellowship of the human spirit'입니다. 안뜰에서 읽어 보세요."
+    },
+    "trad_cuboulder_heritage_center": {
+      "name": "올드 메인의 CU 헤리티지 센터",
+      "description": "캠퍼스 최초의 건물인 올드 메인에는 CU 헤리티지 센터가 있으며, 전시실에서 대학의 역사를 소개합니다. CU의 과거를 만나러 가 보세요."
+    }
+  },
+  "Texas Christian University": {
+    "trad_tcu_lucky_frog": {
+      "name": "행운의 뿔개구리 동상",
+      "description": "학생들은 1984년 새들러 홀과 리드 홀 사이에 설치된 세포 아르노스의 용접 뿔개구리 동상의 코를 시험 전에 문지르며 행운을 빕니다. 여러분도 문질러 보세요."
+    },
+    "trad_tcu_frog_fountain": {
+      "name": "프로그 분수",
+      "description": "졸업생과 가족들은 프로그 분수에서 학위복 사진을 찍고, 홈경기에서 프로그스가 득점하면 분수 위 하늘에 불꽃이 터집니다. 분수에서 사진을 찍어 보세요."
+    },
+    "trad_tcu_carols_by_candlelight": {
+      "name": "캐럴스 바이 캔들라이트",
+      "description": "40년 넘게 매년 12월 로버트 카 예배당에서 '캐럴스 바이 캔들라이트'가 열립니다. 연말에 예배당을 찾아가 보세요."
+    }
+  },
+  "University of Central Florida": {
+    "trad_ucf_pegasus_seal": {
+      "name": "인장을 밟지 마세요",
+      "description": "학생회관의 페가수스 인장을 밟으면 졸업하지 못한다는 전설이 있지만, 졸업장을 받은 뒤에는 건너도 됩니다. 인장을 찾아 돌아서 걸어 보세요."
+    }
+  },
+  "University of Utah": {
+    "trad_uutah_block_u": {
+      "name": "블록 U",
+      "description": "1907년 처음 만들어진 캠퍼스 위 언덕의 블록 U는 홈경기 때 불이 켜지고, 풋볼·농구·체조 홈경기 승리 후에는 빨갛게 깜박입니다. 승리 후 언덕을 올려다보세요."
+    }
+  },
+  "University of Illinois Urbana-Champaign": {
+    "trad_illinois_alma_mater": {
+      "name": "알마 마터 동상",
+      "description": "로라도 태프트가 1929년에 만든, 가운을 입고 두 팔을 벌린 여인의 청동상이 올트겔드 홀 옆에서 학생들을 맞이합니다. 이 동상과 찍는 사진은 일리노이의 대표 사진입니다."
+    },
+    "trad_illinois_altgeld_chimes": {
+      "name": "올트겔드 차임",
+      "description": "올트겔드 홀 탑의 15개 종은 1920년부터 시간을 알리고 짧은 연주회를 열어 왔습니다. 탑 근처에서 매 연주회마다 연주되는 「Hail to the Orange」를 들어 보세요."
+    },
+    "trad_illinois_morrow_plots": {
+      "name": "모로 플롯",
+      "description": "1876년에 조성된 이 작은 밭은 미국에서 가장 오래된 농업 시험 포장이며 국가 사적입니다. 학부 도서관 옆을 걸으며 둘러보세요."
+    }
+  },
+  "Indiana University Bloomington": {
+    "trad_indiana_rose_well_house": {
+      "name": "로즈 웰 하우스",
+      "description": "자정에 로즈 웰 하우스 아래에서 키스하면 오래가는 사랑이 이루어진다는 전설이 있습니다. 던 우즈 근처의 이 작은 정자는 청혼 장소로도 사랑받습니다."
+    },
+    "trad_indiana_sample_gates": {
+      "name": "샘플 게이트",
+      "description": "석회암으로 만든 샘플 게이트는 커크우드 애비뉴에서 올드 크레슨트로 들어가는 입구입니다. 많은 졸업생처럼 문을 지나며 사진을 찍어 보세요."
+    },
+    "trad_indiana_wells_statue": {
+      "name": "허먼 B 웰스 동상",
+      "description": "사랑받던 전 총장의 청동상이 벤치에 앉아 손을 내밀고 있습니다. 가족이 그와 악수하면 그 학생은 제때 졸업한다는 이야기가 있습니다."
+    },
+    "trad_indiana_showalter_fountain": {
+      "name": "쇼월터 분수",
+      "description": "파인 아츠 플라자의 분수는 청동 물고기에 둘러싸인 비너스의 탄생을 표현합니다. 물고기를 세어 보고, 1987년 농구 우승 뒤 사라진 물고기를 대신한 것을 찾아보세요."
+    }
+  },
+  "University of Iowa": {
+    "trad_uiowa_old_capitol_photo": {
+      "name": "올드 캐피털 기념사진",
+      "description": "졸업생들은 올드 캐피털의 기둥과 「Iowa」가 새겨진 문 앞에서 사진 찍기를 좋아합니다. 펜타크레스트 중심의 계단에서 사진을 남기세요."
+    },
+    "trad_uiowa_kinnick_wave": {
+      "name": "키닉 웨이브",
+      "description": "홈경기에서 1쿼터가 끝나면 관중 모두가 동쪽 관중석 위 어린이 병원을 향해 경기를 지켜보는 환자들에게 손을 흔듭니다. 경기를 보러 가면 함께하세요."
+    }
+  },
+  "University of Maryland, College Park": {
+    "trad_umd_testudo": {
+      "name": "테스투도의 코 문지르기",
+      "description": "학생들은 맥켈딘 도서관 앞 청동 거북 테스투도의 코를 문지르며 행운을 빌고, 기말고사 기간에는 작은 공물을 놓습니다. 지나가며 코를 문질러 보세요."
+    }
+  },
+  "Michigan State University": {
+    "trad_michstate_the_rock": {
+      "name": "더 록",
+      "description": "1873년 졸업반이 기증한, 레드 시더 강가의 바위는 계속 새로운 메시지로 다시 칠해집니다. 오늘은 무엇이 적혀 있는지 보러 가세요."
+    },
+    "trad_michstate_spartan_statue": {
+      "name": "스파르탄 동상",
+      "description": "높이 3미터에 가까운 청동 스파르탄 동상은 특히 졸업식 때 인기 있는 사진 배경입니다. 함께 셀카를 찍어 보세요."
+    },
+    "trad_michstate_beaumont_tower": {
+      "name": "보몬트 타워 개방일",
+      "description": "보몬트 타워는 매달 첫째 수요일과 졸업식 때 방문객에게 개방됩니다. 올라가서 카리용과 캠퍼스 전망을 즐기세요."
+    }
+  },
+  "University of Minnesota Twin Cities": {
+    "trad_umn_goldy_statue": {
+      "name": "골디 고퍼 동상",
+      "description": "코프먼 기념 유니언 앞 화강암 M 옆에 청동 골디 고퍼가 서 있습니다. 모임 장소이자 학교 정신의 상징입니다. 사진을 찍으러 들러 보세요."
+    }
+  },
+  "University of Nebraska–Lincoln": {
+    "trad_unl_archie": {
+      "name": "매머드 아치",
+      "description": "학생들은 시험과 과제 전에 모릴 홀 앞 청동 매머드 아치의 발을 문지르며 행운을 빕니다. 발을 문지르거나 하이파이브를 해 보세요."
+    }
+  },
+  "Northwestern University": {
+    "trad_northwestern_the_rock": {
+      "name": "더 록",
+      "description": "학생들은 1940년대부터 이 바위를 칠해 왔고, 한밤중에 칠하기 전에 하루 동안 지키는 경우가 많습니다. 최신 메시지를 보러 가세요."
+    },
+    "trad_northwestern_weber_arch": {
+      "name": "웨버 아치",
+      "description": "신입생은 입학할 때 웨버 아치를 지나 행진해 들어오고, 졸업반은 마지막에 반대 방향으로 지나 나갑니다. 셰리던 로드에서 아치를 지나 캠퍼스로 들어가 보세요."
+    },
+    "trad_northwestern_shakespeare_garden": {
+      "name": "셰익스피어 가든",
+      "description": "캠퍼스 북쪽의 조용한 정원으로, 캠퍼스 방문 지도에 나오는 장소 중 하나입니다. 산책길에 들러 보세요."
+    }
+  },
+  "Ohio State University": {
+    "trad_ohiostate_long_walk": {
+      "name": "롱 워크",
+      "description": "롱 워크는 오벌을 가로질러 유니버시티 홀로 이어지는 길로, 예전에는 신입생이 다닐 수 없었습니다. 캠퍼스 중심을 끝까지 걸어 보세요."
+    },
+    "trad_ohiostate_buckeye_grove": {
+      "name": "벅아이 그로브",
+      "description": "오하이오 스타디움 옆에는 오하이오 주립대의 퍼스트 팀 올아메리칸 한 명마다 명판과 함께 벅아이 나무가 심어집니다. 나무 사이에서 유명 선수의 이름을 찾아보세요."
+    },
+    "trad_ohiostate_victory_bell": {
+      "name": "빅토리 벨",
+      "description": "오하이오 스타디움 남동쪽 탑의 빅토리 벨은 오하이오 주립대가 이길 때마다 울립니다. 홈경기 후에 귀를 기울여 보세요."
+    }
+  },
+  "Pennsylvania State University": {
+    "trad_pennstate_lion_shrine": {
+      "name": "니타니 라이언 슈라인",
+      "description": "1942년에 봉헌된 하인츠 워네케의 석회암 사자상은 캠퍼스에서 가장 많이 사진에 찍히는 장소입니다. 많은 학생이 첫날과 졸업 전에 이곳에서 사진을 찍습니다."
+    },
+    "trad_pennstate_berkey_creamery": {
+      "name": "버키 크리머리",
+      "description": "1892년부터 이어진 아이스크림 강좌로 알려진 대학 유제품 공방이 식품과학관에서 직접 만든 아이스크림을 팝니다. 콘 하나 사러 들러 보세요."
+    }
+  },
+  "Purdue University": {
+    "trad_purdue_bell_tower": {
+      "name": "벨 타워 아래 키스",
+      "description": "벨 타워 아래에서 키스한 뒤 근처 스톤 라이언 분수 앞을 지나간 연인은 언젠가 결혼한다는 전설이 있습니다. 캠퍼스 중앙의 탑을 찾아가 보세요."
+    },
+    "trad_purdue_hello_walk": {
+      "name": "헬로 워크",
+      "description": "헬로 워크는 유니버시티 홀로 가는 길에서 시작해 지금은 메모리얼 몰을 가로지르는 모든 길을 말합니다. 마주치는 모든 사람에게 웃으며 인사하세요."
+    }
+  },
+  "Rutgers University–New Brunswick": {
+    "trad_rutgers_willie_the_silent": {
+      "name": "윌리 더 사일런트",
+      "description": "학생들이 윌리 더 사일런트라고 부르는 오라녜 공 침묵공 빌럼의 1928년 청동상은 캠퍼스에서 가장 사랑받는 동상 중 하나입니다. 부어히스 몰에서 찾아보세요."
+    },
+    "trad_rutgers_old_queens_bell": {
+      "name": "올드 퀸스 종",
+      "description": "올드 퀸스 큐폴라의 종은 입학식, 졸업식 등 큰 행사 때 울리며, 노래 「The Bells Must Ring」의 영감이 되었습니다. 퀸스 캠퍼스에서 큐폴라를 올려다보세요."
+    }
+  },
+  "University of Wisconsin–Madison": {
+    "trad_wisc_abe_lincoln": {
+      "name": "배스컴 힐의 링컨 동상",
+      "description": "배스컴 홀 앞에 앉아 있는 링컨 동상은 졸업 주말 기념사진의 하이라이트입니다. 언덕 위에서 동상 옆에 서서 사진을 찍어 보세요."
+    },
+    "trad_wisc_terrace_chairs": {
+      "name": "테라스의 선버스트 의자",
+      "description": "메모리얼 유니언 테라스의 선버스트 의자는 대학에서 가장 잘 알려진 상징 중 하나입니다. 멘도타 호숫가에서 앉아 보세요."
+    },
+    "trad_wisc_babcock_ice_cream": {
+      "name": "뱁콕 홀 아이스크림",
+      "description": "뱁콕 홀의 대학 낙농장에서 만든 아이스크림은 학생들의 단골 간식이자 관광 명소입니다. 한 스쿱 맛보세요."
+    }
+  },
+  "University of Oregon": {
+    "trad_uoregon_yell_o": {
+      "name": "옐오 덕 동상",
+      "description": "「O」 손동작을 하는 덕의 450킬로그램 청동상이 매슈 나이트 아레나와 포드 동문 센터 사이에 서 있습니다. 옆에서 O를 만들어 사진을 찍어 보세요."
+    },
+    "trad_uoregon_bowerman_statue": {
+      "name": "빌 바워먼 동상",
+      "description": "코치이자 나이키 공동 창업자인 빌 바워먼의 2000년 청동상이 헤이워드 필드 모퉁이에 서 있습니다. 경기장을 한 바퀴 돌며 들러 보세요."
+    }
+  },
+  "University of Southern California": {
+    "trad_southerncal_tommy_trojan": {
+      "name": "토미 트로전",
+      "description": "한 플라자의 청동 트로이 전사상은 캠퍼스에서 가장 인기 있는 만남의 장소입니다. UCLA전 전에는 덕트 테이프로 감싸고 트로전 나이츠가 밤낮으로 지킵니다."
+    },
+    "trad_southerncal_hecuba": {
+      "name": "헤카베 동상",
+      "description": "트로이의 왕비 헤카베의 동상은 토미 트로전의 짝으로 2017년 USC 빌리지 중앙 광장에서 공개되었습니다. 광장에서 만나 보세요."
+    }
+  },
+  "University of Melbourne": {
+    "trad_unimelbourne_old_quad_stonemasons": {
+      "name": "올드 쿼드와 8시간 노동제",
+      "description": "올드 쿼드는 대학의 첫 건물로, 1856년 이 건물을 짓던 석공들이 일손을 놓고 8시간 노동제를 쟁취한 행진에 동참했습니다. 캠퍼스의 역사적 중심인 올드 쿼드를 걸어서 둘러볼 수 있습니다."
+    },
+    "trad_unimelbourne_old_arts_clock": {
+      "name": "올드 아츠 시계의 이상한 점 찾기",
+      "description": "학생과 방문객 모두 올드 아츠 빌딩 시계탑의 로마 숫자를 살펴보고 무엇이 이상한지 찾아보세요."
+    },
+    "trad_unimelbourne_original_fence": {
+      "name": "원래 울타리의 마지막 조각",
+      "description": "한때 캠퍼스 전체를 둘러쌌던 연철 울타리 중 단 한 구간이 메디컬 빌딩 바깥에 남아 있습니다. 대학은 멜버른시로부터 무료 가스등을 받는 대가로 교정을 일반에 개방했는데, 방문객은 남아 있는 울타리 구간을 찾아볼 수 있습니다."
+    }
+  },
+  "University of Sydney": {
+    "trad_unisydney_jacaranda": {
+      "name": "쿼드랭글의 자카란다",
+      "description": "캠퍼스 전설에 따르면 쿼드랭글의 자카란다가 꽃을 피우기 전까지 공부를 시작하지 않은 학생은 시험에 떨어진다고 합니다. 늦봄이면 1928년 원래 나무를 복제한 이 나무가 보랏빛으로 피어나 인기 있는 사진 배경이 됩니다."
+    },
+    "trad_unisydney_carillon": {
+      "name": "전쟁 기념 카리용 연주",
+      "description": "시계탑에는 1928년에 봉헌된 전쟁 기념 카리용이 있으며, 호주에 단 세 대뿐인 카리용 중 하나입니다. 점심시간에 라이브 연주를 들을 수 있습니다(시험 기간과 공휴일 제외)."
+    },
+    "trad_unisydney_kangaroo_gargoyle": {
+      "name": "캥거루 가고일 찾기",
+      "description": "쿼드랭글의 수많은 가고일 중에는 호주 동물도 있는데, 시계탑의 캥거루와 북쪽 로비 입구 위의 쿠카부라가 대표적입니다. 사암 건물 주변을 돌며 찾아보세요."
+    },
+    "trad_unisydney_graffiti_tunnel": {
+      "name": "그래피티 터널",
+      "description": "그래피티 터널은 베트남 전쟁에 반대하는 학생 시위에서 시작되어 지금은 끊임없이 변하는 살아 있는 예술 작품이 되었습니다. 터널을 걸으며 학생들의 최신 작품을 감상해 보세요."
+    }
+  },
+  "University of Texas at Austin": {
+    "trad_ut_austin_tower_lighting": {
+      "name": "타워 점등",
+      "description": "1937년부터 UT 타워는 롱혼스의 성과를 기념해 불을 밝혀 왔습니다. 미식축구 승리에는 꼭대기만 주황색, 큰 이정표에는 전체가 주황색, 전국 우승에는 주황색과 함께 'No. 1'이 켜집니다. 밤에 타워를 보며 무엇을 축하하는지 확인해 보세요."
+    },
+    "trad_ut_austin_kniker_carillon": {
+      "name": "니커 카리용",
+      "description": "타워 꼭대기에 있는 56개 종의 니커 카리용은 텍사스에서 가장 큰 카리용으로, 학생 카리용 연주자 길드가 연주하며 모든 연주는 「The Eyes of Texas」로 마무리됩니다. 종이 울릴 때 메인 몰에서 들어 보세요."
+    },
+    "trad_ut_austin_turtle_pond": {
+      "name": "거북이 연못",
+      "description": "1939년 생물학 연구용으로 만들어진 거북이 연못에는 주로 붉은귀거북인 거북이가 최소 100마리 살고 있으며, 캠퍼스에서 인기 있는 들를 곳입니다. 따뜻한 날씨에 가장 활발한 거북이들을 구경해 보세요."
+    },
+    "trad_ut_austin_littlefield_tower_photo": {
+      "name": "리틀필드 분수에서 찍는 타워 사진",
+      "description": "21번가와 유니버시티 애비뉴에서 리틀필드 분수를 앞에 두고 바라보는 타워는 캠퍼스에서 가장 많이 사진에 담기는 풍경 중 하나입니다. 사우스 몰에서 이 클래식한 사진을 찍어 보세요."
+    }
+  },
+  "University College London": {
+    "trad_ucl_bentham_auto_icon": {
+      "name": "제러미 벤담의 오토 아이콘",
+      "description": "UCL의 '정신적 설립자'인 철학자 제러미 벤담의 보존된 유골이 본인의 옷을 입고(머리는 밀랍) 스튜던트 센터 입구의 유리 상자 안에 앉아 있습니다. 2013년에는 UCL 이사회 회의에 실제로 참석시키기도 했습니다. 일반에 공개 전시되어 있어 직접 볼 수 있습니다."
+    },
+    "trad_ucl_portico_photo": {
+      "name": "포르티코에서 사진 찍기",
+      "description": "메인 쿼드에 있는 윌킨스 빌딩의 포르티코는 UCL에서 가장 많이 사진에 담기는 상징적인 장소입니다. 쿼드에서 기둥과 돔이 함께 나오는 클래식한 사진을 찍어 보세요."
+    },
+    "trad_ucl_flaxman_gallery": {
+      "name": "돔 아래 플랙스먼 갤러리",
+      "description": "옥타곤 돔 아래의 플랙스먼 갤러리에는 조각가 존 플랙스먼의 작품이 단일 컬렉션으로는 가장 많이 모여 있으며, 실물 크기의 「사탄을 물리치는 성 미카엘」도 있습니다. 크리스토퍼 놀란의 영화 「인셉션」에도 등장했습니다. 조각 작품을 감상해 보세요."
+    }
+  },
+  "King's College London": {
+    "trad_kcl_reggie_the_lion": {
+      "name": "사자 레지",
+      "description": "사자 레지는 킹스 칼리지의 마스코트로, 한때 스포츠 경기에서 행진하기도 했습니다. 라이벌 학생들에게 여러 해 동안 '사자 납치'를 당한 끝에, 원본은 이제 스트랜드 캠퍼스의 유리 상자 안에 전시되어 있습니다. 전시된 레지를 만나 보세요."
+    },
+    "trad_kcl_chapel_evensong": {
+      "name": "칼리지 채플의 합창 저녁 기도",
+      "description": "학기 중 매주 화요일 오후 5시 30분, 1864년 조지 길버트 스콧 경이 재설계한 1등급 등록 건축물인 칼리지 채플에서 합창 저녁 기도(Choral Evensong)가 열립니다. 방문객도 예배에 참석할 수 있습니다."
+    },
+    "trad_kcl_bush_house_inscription": {
+      "name": "부시 하우스의 우정 비문",
+      "description": "BBC 월드 서비스의 옛 본거지로 지금은 스트랜드 캠퍼스의 일부인 부시 하우스에는 1925년에 공개된 두 조각상 위로 'To the friendship of English speaking peoples(영어를 쓰는 민족들의 우정을 위하여)'라는 비문이 새겨져 있습니다. 킹스웨이에서 바라보며 사진을 찍어 보세요."
+    }
+  },
+  "University of Paris (Sorbonne)": {
+    "trad_sorbonne_montaigne_foot": {
+      "name": "몽테뉴의 신발 만지기",
+      "description": "소르본 맞은편 에콜 거리 건너편에서, 학생들은 시험 전에 행운을 빌며 폴 랑도프스키가 만든 앉아 있는 몽테뉴 동상의 발을 만집니다. 동상에 들러 여러 세대의 손길로 반짝이게 닳은 신발을 확인해 보세요."
+    },
+    "trad_sorbonne_cardinal_hat": {
+      "name": "리슐리외의 추기경 모자",
+      "description": "소르본 성당에는 전통에 따라 리슐리외 추기경의 대리석 무덤 위에 추기경 모자가 걸려 있습니다. 성당이 가이드 투어와 문화유산의 날에 개방될 때 볼 수 있습니다."
+    },
+    "trad_sorbonne_heritage_days": {
+      "name": "소르본의 문화유산의 날",
+      "description": "매년 9월 유럽 문화유산의 날에 소르본은 접견실과 대강당을 일반에 무료로 개방합니다. 대강당 무대에 올라가 보고 평소 닫혀 있는 방들을 둘러볼 수 있습니다."
+    }
+  },
+  "University of Padua": {
+    "trad_padua_galileo_lectern": {
+      "name": "갈릴레오의 강연대",
+      "description": "전통에 따르면 갈릴레오의 제자들이 직접 만들어 주었고 그가 강의했다고 전해지는 나무 강연대가 보 궁전(Palazzo Bo)의 '40인의 방(Sala dei Quaranta)' 입구에 놓여 있습니다. 궁전 가이드 투어에서 볼 수 있습니다."
+    },
+    "trad_padua_bo_chain": {
+      "name": "사슬을 뛰어넘지 마세요",
+      "description": "이 지역의 미신에 따르면 학생은 보 궁전 앞의 사슬을 절대 뛰어넘어서는 안 되며, 그러면 학업이 망한다고 합니다. 사슬을 보고 돌아서 지나가 보세요."
+    },
+    "trad_padua_pedrocchi": {
+      "name": "카페 페드로키",
+      "description": "보 궁전 옆의 이 역사적인 카페는 1831년부터 학생과 교수들의 만남의 장소였으며, 학생들은 아무것도 사지 않고 초록 방에 앉아 있을 수 있습니다. 민트 커피를 맛보고, 하얀 방에서 1848년 학생 봉기 때 남은 총알 자국을 찾아보세요."
+    }
+  },
+  "KU Leuven": {
+    "trad_kuleuven_fonske": {
+      "name": "폰스케",
+      "description": "'지혜의 샘(Fons Sapientiae)'은 책을 읽으며 머리에 지혜를 붓는 학생의 동상으로, 1975년 대학 창립 550주년을 맞아 대학이 도시에 선물했습니다. 학생 단체들이 특별한 날에 옷을 입히기도 하며, 레크토르 드 소메르플레인에서 사진을 찍어 보세요."
+    },
+    "trad_kuleuven_carillon": {
+      "name": "대학 도서관 카리용",
+      "description": "대학 도서관 탑에는 미국 엔지니어들이 기념으로 기증한 유럽 최대 규모의 카리용 중 하나가 있으며, 큰 종이 매시간 울립니다. 탑 투어에서는 카리용 연주자가 방문객을 위로 데려가 맨 앞자리에서 라이브 연주를 들려줍니다."
+    },
+    "trad_kuleuven_totem": {
+      "name": "라되즈플레인의 토템",
+      "description": "2004년 창립 575주년을 맞아 대학은 도시에 얀 파브르의 「토템」을 선물했습니다. 대학 도서관 앞 23m 강철 바늘에 꽂힌 거대한 비단벌레 작품입니다. 라되즈플레인에서 사진을 찍어 보세요."
+    }
+  },
+  "Aalto University": {
+    "trad_aalto_student_museum": {
+      "name": "학생 생활 박물관",
+      "description": "오타니에미 학생촌의 한 지하실에 있는 학생회 박물관(옛 폴리테카리 박물관)은 모자와 작업복부터 유명한 장난까지, 테카리(공대생)를 비롯한 알토 학생 전통을 보여 줍니다. 학기 중 일요일 오후에 자원봉사 가이드가 방문객에게 문을 엽니다."
+    },
+    "trad_aalto_chapel_cross": {
+      "name": "오타니에미 예배당의 숲 전망",
+      "description": "헤이키 시렌과 카이야 시렌이 1956년에 지은 캠퍼스 예배당은 제단 뒤 유리벽 너머로 숲이 보이고, 바깥 암반에는 십자가가 세워져 있습니다. 대학은 이 풍경을 오타니에미에서 가장 인기 있는 볼거리 중 하나로 꼽습니다."
+    }
+  },
+  "Uppsala University": {
+    "trad_uppsala_cap_raising": {
+      "name": "발푸르기스 모자 쓰기",
+      "description": "4월 30일 오후 3시, 카롤리나 레디비바 도서관 아래 언덕에 모인 학생들은 총장이 도서관 발코니에서 모자를 흔드는 순간 다 함께 하얀 학생모를 씁니다. 누구나 언덕의 인파에 섞여 구경할 수 있습니다."
+    },
+    "trad_uppsala_gunilla_bell": {
+      "name": "군닐라 종 앞에서 부르는 봄 노래",
+      "description": "4월 30일 저녁, 학생들은 웁살라 성 옆 군닐라 종(Gunillaklockan) 앞에 모여 봄 노래를 부르고 봄 연설을 듣습니다. 방문객도 인파와 함께 서서 들을 수 있습니다."
+    },
+    "trad_uppsala_anatomical_theatre": {
+      "name": "구스타비아눔 해부학 극장",
+      "description": "구스타비아눔의 구리 돔 아래, 대학 박물관은 1660년대 올로프 루드베크(아버지)가 만든 해부학 극장을 보존하고 있습니다. 박물관 관람 중에 안으로 들어가 볼 수 있습니다."
+    }
+  },
+  "Florida Southern College": {
+    "trad_flsouthern_pfeiffer_chapel": {
+      "name": "애니 파이퍼 채플",
+      "description": "대학은 프랭크 로이드 라이트가 설계한 이 채플을 캠퍼스의 높이 솟은 심장이라 부르며, 콘크리트와 색유리로 된 종탑이 꼭대기를 장식합니다. 샤프 패밀리 관광 교육 센터에서 시작하는 라이트 가이드 투어에서 볼 수 있습니다."
+    },
+    "trad_flsouthern_water_dome": {
+      "name": "워터 돔 분수",
+      "description": "라이트의 가장 큰 수경 시설로, 2007년에야 그의 설계대로 완공되었으며 분수는 하루 중 정해진 시간에 가동됩니다. 주변 산책로에서 언제든지 볼 수 있습니다."
+    }
+  },
+  "University of Oxford": {
+    "trad_oxford_great_tom": {
+      "name": "그레이트 톰의 101번 종소리",
+      "description": "매일 밤 9시 5분(옛 '옥스퍼드 시간'으로 9시)에 크라이스트 처치 톰 타워의 그레이트 톰 종이 101번 울립니다. 칼리지의 원래 장학생 100명에 1663년에 추가된 1명을 더한 숫자입니다. 세인트 올데이츠 거리에 서서 들어 보세요."
+    },
+    "trad_oxford_may_morning": {
+      "name": "모들린 타워의 메이 모닝",
+      "description": "5월 1일 오전 6시, 모들린 칼리지 합창단이 그레이트 타워 꼭대기에서 「Hymnus Eucharisticus」를 부릅니다. 약 500년을 이어 온 의식입니다. 아래쪽 하이 스트리트와 모들린 다리에 사람들이 모여 듣습니다."
+    },
+    "trad_oxford_bridge_of_sighs": {
+      "name": "탄식의 다리",
+      "description": "베네치아의 다리를 닮았다고 해서 '탄식의 다리'라는 별명이 붙은 허트퍼드 다리는 뉴 칼리지 레인 위로 허트퍼드 칼리지의 두 건물을 연결합니다. 골목에 멈춰 서서 이 도시의 명소를 보고 사진에 담아 보세요."
+    }
+  },
+  "University of Cambridge": {
+    "trad_cambridge_nine_lessons": {
+      "name": "킹스 칼리지의 9개 성경 봉독과 캐럴",
+      "description": "크리스마스이브에 킹스 칼리지 합창단이 킹스 칼리지 채플에서 '9개 성경 봉독과 캐럴의 축제'를 부릅니다. 입장권은 공개 추첨으로 배정되며, 신청한 사람을 위한 대기 줄도 있습니다."
+    },
+    "trad_cambridge_corpus_clock": {
+      "name": "코퍼스 시계",
+      "description": "'크로노파지(시간을 먹는 자)'라고도 불리는 코퍼스 시계는 바늘 없는 금도금 시계로, 베넷 스트리트와 트럼핑턴 스트리트 모퉁이에 있는 코퍼스 크리스티 칼리지 테일러 도서관의 거리 높이에 설치되어 있습니다. 메뚜기처럼 생긴 형상이 시계와 함께 움직이는 모습을 지켜보세요."
+    },
+    "trad_cambridge_mathematical_bridge": {
+      "name": "수학의 다리 전설",
+      "description": "아이작 뉴턴이 퀸스 칼리지의 수학의 다리를 너트나 볼트 없이 지었고, 분해한 뒤로는 아무도 다시 조립하지 못했다는 유명한 이야기가 있습니다. 강이나 실버 스트리트에서 다리를 보고 이야기가 사실인지 직접 판단해 보세요."
+    },
+    "trad_cambridge_newton_apple_tree": {
+      "name": "뉴턴의 사과나무",
+      "description": "트리니티 칼리지 그레이트 게이트 바깥, 뉴턴이 살던 방 아래에 1954년에 심은 사과나무가 자랍니다. 그의 중력 이야기와 관련된 울즈소프 저택 나무의 후손입니다. 트리니티 스트리트에 멈춰 서서 보세요."
+    },
+    "trad_cambridge_henry_chair_leg": {
+      "name": "헨리 8세의 의자 다리",
+      "description": "트리니티 그레이트 게이트 위의 헨리 8세 동상은 19세기에 학생들이 그의 홀을 의자 다리로 바꿔 놓은 것으로 유명합니다. 트리니티 스트리트에서 올려다보며 그가 무엇을 들고 있는지 확인해 보세요."
+    }
+  },
+  "University of St Andrews": {
+    "trad_st_andrews_ph_initials": {
+      "name": "패트릭 해밀턴의 PH",
+      "description": "세인트 살바토르 쿼드 바깥 자갈길에 새겨진 PH라는 글자는 1528년 패트릭 해밀턴이 화형당한 자리를 표시합니다. 이 글자를 밟는 학생은 학위를 받지 못한다는 전통이 있어 방문객도 돌아서 지나갑니다."
+    },
+    "trad_st_andrews_pier_walk": {
+      "name": "피어 워크",
+      "description": "매주 채플 예배가 끝나면 빨간 가운을 입은 학생들이 역사적인 항구 방파제를 끝까지 걷습니다. 가장 붐비는 행진은 신입생 주간 마지막에 열립니다. 행렬을 구경하거나 직접 방파제를 걸어 보세요."
+    }
+  },
+  "University of Glasgow": {
+    "trad_glasgow_unicorn": {
+      "name": "유니콘의 뿔 문지르기",
+      "description": "1690년에 조각된 사자와 유니콘 계단은 하이 스트리트의 옛 칼리지에서 돌 하나하나를 옮겨 왔습니다. 유니콘을 쓰다듬거나 뿔을 문지르면, 특히 시험 전에 행운이 온다고 합니다."
+    },
+    "trad_glasgow_quad_grass": {
+      "name": "쿼드 잔디에 들어가지 마세요",
+      "description": "학생이 졸업 전에 쿼드랭글 잔디를 밟으면 불운이 온다고 여겨집니다. 방문객은 백파이프 연주자가 이끄는 졸업 행렬이 지나가는 길에서 이스트 쿼드와 웨스트 쿼드를 감상할 수 있습니다."
+    },
+    "trad_glasgow_cloisters": {
+      "name": "회랑",
+      "description": "이스트 쿼드랭글과 웨스트 쿼드랭글 사이의 아치형 회랑(언더크로프트)은 「아웃랜더」, 「클라우드 아틀라스」 등 여러 영화와 TV 시리즈에 등장했습니다. 홈이 파인 기둥 아래를 걸으며 사진을 찍어 보세요."
+    }
+  },
+  "University of Edinburgh": {
+    "trad_edinburgh_hume_toe": {
+      "name": "데이비드 흄의 발가락 문지르기",
+      "description": "로열 마일에 있는 에든버러 대학에서 공부한 데이비드 흄의 동상은 학생, 관광객, 행인들이 행운을 빌며 문질러 발가락이 반짝입니다. 흄 자신은 미신을 비판한 것으로 유명했지만, 한번 문질러 보세요."
+    },
+    "trad_edinburgh_old_college_youth": {
+      "name": "올드 칼리지의 황금 청년상 찾기",
+      "description": "1887년에 더해진 올드 칼리지의 돔 꼭대기에는 존 허치슨이 만든 금박 「청년」 동상이 서 있습니다. 사우스 브리지에서 올려다보거나 졸업식과 축제 행사가 열리는 안뜰로 들어가 보세요."
+    }
+  },
+  "Durham University": {
+    "trad_durham_sanctuary_knocker": {
+      "name": "성역의 문고리 보기",
+      "description": "중세에는 큰 죄를 지은 사람도 더럼 대성당 북쪽 문의 고리를 붙잡으면 37일간 성역의 보호를 요청할 수 있었습니다. 북쪽 문에 달린 복제 고리를 볼 수 있으며, 12세기 원본은 대성당 박물관에 있습니다."
+    },
+    "trad_durham_castle_college": {
+      "name": "성 안의 칼리지 둘러보기",
+      "description": "팰리스 그린의 더럼 성은 유니버시티 칼리지의 보금자리로, 약 150명의 학생이 살고 있으며 지금도 중세 그레이트 홀에서 정찬이 열립니다. 학기 외 기간에 매일 운영되는 가이드 투어로 내부를 볼 수 있습니다."
+    },
+    "trad_durham_dun_cow": {
+      "name": "던 카우 찾기",
+      "description": "지역 전설에 따르면 성 커스버트의 시신을 옮기던 수도사들이 잃어버린 회갈색 소(던 카우)를 찾던 젖 짜는 아가씨를 따라가 지금 대성당이 서 있는 언덕에 이르렀다고 합니다. 대성당 옆 던 카우 레인은 대성당에 새겨진 이 이야기의 조각에서 이름을 따왔으며, 방문객은 그 조각을 찾아볼 수 있습니다."
+    }
+  },
+  "Trinity College Dublin": {
+    "trad_tcd_campanile": {
+      "name": "캄파닐레 아래로 걷지 마세요",
+      "description": "학생들의 미신에 따르면 프런트 스퀘어의 캄파닐레 종이 울리는 동안 그 아래를 지나가는 사람은 시험에 떨어진다고 해서, 학생들은 비가 와도 좀처럼 그 아래로 피하지 않습니다. 학생들이 종탑 아래를 지나지 않고 돌아가는 모습을 지켜보세요."
+    },
+    "trad_tcd_book_of_kells": {
+      "name": "켈스의 서와 롱 룸 보기",
+      "description": "올드 라이브러리는 1661년부터 「켈스의 서」를 소장하고 있으며, 롱 룸에는 해마다 90만 명이 넘는 방문객이 찾아옵니다. 입장권을 사서 필사본을 보고 롱 룸을 걸어 보세요."
+    }
+  },
+  "Yale University": {
+    "trad_yale_woolsey_foot": {
+      "name": "울지의 발 문지르기",
+      "description": "여러 세대의 학생들이 행운을 빌며 올드 캠퍼스에 있는 시어도어 드와이트 울지 총장 청동상의 튀어나온 발을 문질러 왔습니다. 반짝이는 발을 방문객도 문질러 보세요."
+    },
+    "trad_yale_harkness_carillon": {
+      "name": "하크니스 카리용 듣기",
+      "description": "예일 카리용 연주자 길드의 학생들은 학기 중 하루 두 번, 낮 12시 30분과 오후 5시 30분에 하크니스 타워의 카리용을 연주하며, 여름에는 금요일 콘서트도 열립니다. 근처 거리와 안뜰에서 들을 수 있습니다."
+    },
+    "trad_yale_womens_table": {
+      "name": "여성의 테이블 방문하기",
+      "description": "스털링 기념 도서관 앞에 있는 마야 린의 1993년 작품 「여성의 테이블」에는 1701년 이후 해마다 예일에서 공부한 여성의 수를 나타내는 숫자가 나선형으로 새겨져 있습니다. 가까이 다가가 나선을 읽어 보세요."
+    }
+  },
+  "Harvard University": {
+    "trad_harvard_john_harvard_foot": {
+      "name": "존 하버드의 왼발 만지기",
+      "description": "하버드 야드의 존 하버드 동상 왼발을 만지면 행운이 온다고 하며, 그 덕에 발이 금빛으로 반짝입니다. 가이드들은 이 동상을 '세 가지 거짓말의 동상'이라 부르며, 방문객들은 동상과 함께 사진을 찍곤 합니다."
+    },
+    "trad_harvard_dexter_gate": {
+      "name": "덱스터 게이트 양면 읽기",
+      "description": "매사추세츠 애비뉴의 덱스터 게이트 바깥쪽에는 'Enter to grow in wisdom(지혜를 키우러 들어오라)', 안쪽에는 'Depart to serve better thy country and thy kind(나라와 동포를 더 잘 섬기러 떠나라)'라고 쓰여 있습니다. 문을 지나며 두 문구를 모두 읽어 보세요."
+    },
+    "trad_harvard_johnston_gate_sheriffs": {
+      "name": "존스턴 게이트의 보안관들",
+      "description": "수 세기 동안 미들섹스 카운티와 서퍽 카운티의 보안관들이 졸업식 날 말을 타고 하버드 야드에 들어왔으며, 전통적으로 존스턴 게이트를 통해 들어옵니다. 야드의 정문인 1889년 게이트는 언제든 볼 수 있습니다."
+    }
+  },
+  "Massachusetts Institute of Technology": {
+    "trad_mit_mithenge": {
+      "name": "MIT헨지",
+      "description": "11월 중순과 1월 말 무렵의 며칠 동안, 지는 해가 인피니트 코리더와 일직선을 이루어 복도 전체를 비춥니다. 사람들이 복도에 모여 쏟아지는 빛을 지켜봅니다."
+    },
+    "trad_mit_smoot_markers": {
+      "name": "하버드 브리지의 스무트 표시",
+      "description": "하버드 브리지 보도에는 1958년 신입 회원 올리버 스무트의 키를 단위로 한 '스무트'로 다리 길이를 잰 표시가 칠해져 있습니다. 다리를 걸으며 'Halfway to Hell(지옥까지 절반)' 표시와 마지막 '364.4 스무트 ± 귀 하나' 표시를 찾아보세요."
+    }
+  },
+  "Princeton University": {
+    "trad_princeton_fitzrandolph_gate": {
+      "name": "피츠랜돌프 게이트 미신",
+      "description": "캠퍼스 전설에 따르면 졸업 전에 피츠랜돌프 게이트를 통해 밖으로 나가는 학생은 학위를 마치지 못한다고 해서, 학부생들은 졸업식 전까지 이 문을 피합니다. 나소 스트리트에서 문을 보고 어느 쪽으로 걸을지 직접 정해 보세요."
+    },
+    "trad_princeton_blair_arch_sings": {
+      "name": "블레어 아치의 아치 싱",
+      "description": "캠퍼스에서 가장 큰 아치인 블레어 아치는 프린스턴의 아카펠라 '아치 싱(arch sing)'이 많이 열리는 곳입니다. 아치 아래에 서서 메아리를 들어 보거나 무료 저녁 공연을 즐겨 보세요."
+    },
+    "trad_princeton_big_cannon": {
+      "name": "캐넌 그린의 큰 대포",
+      "description": "독립전쟁 시대의 대포가 1840년부터 나소 홀 뒤 캐넌 그린에 포구를 아래로 하여 묻혀 있으며, 조금씩 가라앉고 있습니다. 드러난 끝부분을 볼 수 있으며, 이 잔디밭은 프린스턴이 미식축구에서 하버드와 예일을 모두 이겼을 때 모닥불을 피우는 곳이기도 합니다."
+    }
+  },
+  "Cornell University": {
+    "trad_cornell_founders_footprints": {
+      "name": "설립자 동상과 발자국",
+      "description": "전설에 따르면 에즈라 코넬과 앤드루 딕슨 화이트의 동상은 어떤 불가능한 조건이 갖춰지면 받침대에서 걸어 내려와 아츠 쿼드에서 악수를 한다고 하며, 두 동상 사이에 칠해진 발자국이 이 전설을 표시합니다. 발자국을 찾아 두 설립자 사이에서 포즈를 취해 보세요."
+    },
+    "trad_cornell_cornell_chimes": {
+      "name": "맥그로 타워의 코넬 차임",
+      "description": "학기 중에는 학생 차임 연주자들이 맥그로 타워에 있는 21개 종의 코넬 차임을 하루 세 번 연주하며, 방문객은 모든 연주에 참여할 수 있습니다. 호 플라자나 아츠 쿼드에서 들어 보세요."
+    },
+    "trad_cornell_dragon_day": {
+      "name": "드래곤 데이",
+      "description": "봄방학 전 금요일, 건축학과 1학년 학생들이 손으로 만든 거대한 용을 끌고 시블리 홀을 지나 아츠 쿼드로 행진합니다. 행진로에 서서 용이 지나가는 모습을 구경해 보세요."
+    }
+  },
+  "Columbia University": {
+    "trad_columbia_alma_mater_owl": {
+      "name": "알마 마터 동상의 부엉이 찾기",
+      "description": "지혜의 상징인 부엉이가 알마 마터 동상의 다리 근처 옷자락 주름에 숨어 있으며, 이를 가장 먼저 찾는 신입생이 수석 졸업생이 된다는 미신이 있습니다. 로 도서관 앞 동상에서 부엉이를 찾아보세요."
+    },
+    "trad_columbia_low_steps": {
+      "name": "로 계단",
+      "description": "'로 비치(Low Beach)'라는 별명이 붙은 로 기념 도서관의 넓은 계단은 컬럼비아 학생들이 가장 좋아하는 만남의 장소입니다. 계단에 앉아 버틀러 도서관까지 이어지는 풍경을 감상해 보세요."
+    },
+    "trad_columbia_sundial": {
+      "name": "해시계",
+      "description": "칼리지 워크 중앙에 있는 1914년 1885년 졸업반 해시계는 1946년에 화강암 공을 잃었지만, 그 받침대는 지금도 대표적인 모임 장소이자 자유 발언 장소입니다. 겨울 트리 점등식과 율 로그(Yule Log) 행사도 여기서 시작됩니다."
+    },
+    "trad_columbia_tree_lighting": {
+      "name": "칼리지 워크 트리 점등",
+      "description": "매년 12월 초, 아카펠라 음악과 핫초코가 함께하는 행사 속에 칼리지 워크의 나무들에 불이 켜지며, 조명은 2월 말까지 이어집니다. 겨울 저녁에 칼리지 워크를 걸으며 감상해 보세요."
+    }
+  },
+  "University of Pennsylvania": {
+    "trad_penn_the_button": {
+      "name": "더 버튼",
+      "description": "클래스 올든버그의 「스플릿 버튼」이 칼리지 그린에 놓여 있는데, 학생들 사이에서는 벤저민 프랭클린의 조끼에서 떨어진 단추가 로커스트 워크를 굴러 내려와 두 쪽으로 갈라진 것이라는 이야기가 전해집니다. 캠퍼스의 중심 명소이자 인기 있는 사진 장소입니다."
+    },
+    "trad_penn_ivy_stones": {
+      "name": "칼리지 홀의 아이비 데이 석판",
+      "description": "1873년부터 졸업반마다 글자를 새긴 아이비 석판을 캠퍼스 건물에 붙여 왔으며, 지금은 캠퍼스 곳곳에 200개 가까이 있습니다. 칼리지 홀에서 시작해 벽에 있는 졸업 연도 석판을 찾아보세요."
+    },
+    "trad_penn_hey_day": {
+      "name": "로커스트 워크의 헤이 데이",
+      "description": "매년 봄, 밀짚모자 스타일의 모자를 쓴 3학년 학생들이 로커스트 워크를 따라 칼리지 홀까지 행진해 4학년으로 선포됩니다. 1865년 클래스 데이까지 거슬러 올라가는 전통입니다. 행렬이 지나가는 모습을 구경해 보세요."
+    }
+  },
+  "Brown University": {
+    "trad_brown_van_wickle_gates": {
+      "name": "밴 위클 게이트",
+      "description": "밴 위클 게이트의 가운데 문은 입학식과 졸업식 때만 열리며, 이 문을 두 번 넘게 지나가는 학생은 졸업하지 못한다는 미신이 있습니다. 프로스펙트 스트리트에서 1901년에 만든 연철 문을 보고, 대신 옆문으로 지나가 보세요."
+    },
+    "trad_brown_bronze_bruno": {
+      "name": "청동 브루노",
+      "description": "브라운 대학의 곰 마스코트 브루노의 7피트(약 2.1m) 청동상이 칼리지 그린에 서 있으며, 받침대에는 1636년 로저 윌리엄스가 밟았다고 전해지는 점판암이 있습니다. 들러서 마스코트와 사진을 찍어 보세요."
+    }
+  },
+  "Dartmouth College": {
+    "trad_dartmouth_bonfire": {
+      "name": "다트머스 나이트 모닥불",
+      "description": "매년 홈커밍 주말에 그린에 큰 모닥불을 쌓고, 1학년 학생들이 졸업 연도 숫자만큼 그 주위를 돕니다. 그린 주변에서 퍼레이드와 타오르는 모닥불을 구경할 수 있습니다."
+    },
+    "trad_dartmouth_snow_sculpture": {
+      "name": "윈터 카니발 눈 조각",
+      "description": "매년 2월 윈터 카니발을 맞아 학생들이 그린에 주제가 있는 큰 눈 조각을 만듭니다. 들러서 구경하고 사진을 찍어 보세요."
+    },
+    "trad_dartmouth_bentley_nose": {
+      "name": "워너 벤틀리의 코",
+      "description": "학생들은 행운을 빌며 홉킨스 예술 센터에 있는 워너 벤틀리 동상의 코를 문지르는데, 그 때문에 코의 색이 변했습니다. '홉(Hop)'을 찾은 방문객도 동상을 찾아 문질러 볼 수 있습니다."
+    },
+    "trad_dartmouth_bema_old_pine": {
+      "name": "베마와 올드 파인",
+      "description": "클래스 데이에 4학년 학생들은 칼리지 파크의 자연 원형극장인 베마에 모인 뒤 언덕을 올라 올드 파인(늙은 소나무) 그루터기에서 1830년대부터 이어진 작별 의식을 치릅니다. 칼리지 파크를 걸으며 두 장소를 모두 둘러보세요."
+    }
+  },
+  "Georgetown University": {
+    "trad_georgetown_healy_seal": {
+      "name": "힐리 홀 문장",
+      "description": "힐리 홀 중앙 입구 바닥에 모자이크로 된 조지타운 문장이 박혀 있는데, 이를 밟으면 졸업하지 못한다는 전설 때문에 학생들은 돌아서 지나갑니다. 문장을 보고 학생들이 피해 가는 모습을 지켜보세요."
+    },
+    "trad_georgetown_exorcist_steps": {
+      "name": "엑소시스트 계단",
+      "description": "프로스펙트 스트리트에서 M 스트리트로 내려가는 가파른 돌계단은 동문 윌리엄 피터 블래티가 쓴 「엑소시스트」의 마지막 장면에 등장하며, 호야스(조지타운 학생)들은 일부러 이 계단을 뛰어 올라갑니다. 공공 계단을 올라 사진을 찍어 보세요."
+    }
+  },
+  "University of Chicago": {
+    "trad_uchicago_reynolds_seal": {
+      "name": "레이놀즈 클럽 문장",
+      "description": "전설에 따르면 레이놀즈 클럽 로비에 있는 대학 문장을 밟는 학생은 4년 안에 졸업하지 못한다고 합니다. 학생회관 로비에서 문장을 보고 전설을 시험해 볼지 정해 보세요."
+    },
+    "trad_uchicago_cobb_gate": {
+      "name": "콥 게이트 가고일",
+      "description": "캠퍼스 전설에 따르면 콥 게이트의 괴수상은 입학 사정관들과 1학년부터 4학년까지 올라가는 학생들을 나타내며, 맨 위에는 4학년이 있습니다. 문을 지나며 올려다보고 각 형상을 찾아보세요."
+    },
+    "trad_uchicago_botany_pond": {
+      "name": "보태니 연못",
+      "description": "헐 코트의 보태니 연못은 사랑받는 캠퍼스 명소로, 방문객들이 새끼 오리와 거북이를 보러 찾아옵니다. 연못에 들러 조용히 야생 동물과 정원을 감상해 보세요."
+    },
+    "trad_uchicago_carillon": {
+      "name": "록펠러 채플 카리용",
+      "description": "록펠러 채플 꼭대기에 있는 72개 종의 카리용은 매일 연주되며, 학생 길드 회원들이 매주 콘서트를 열고 그 전에 원하는 사람 누구에게나 종탑 투어를 제공합니다. 쿼드에서 듣거나 투어에 참여해 보세요."
+    }
+  },
+  "University of Notre Dame": {
+    "trad_notre_dame_main_steps": {
+      "name": "메인 빌딩 정면 계단",
+      "description": "이 계단을 이용하면 졸업하지 못한다는 전설 때문에 학부생들은 메인 빌딩의 정면 계단을 피하며, 4학년 학생들은 졸업식 때 처음으로 이 계단을 걷습니다. 방문객은 자유롭게 계단을 이용하고 골든 돔 아래에서 사진을 찍을 수 있습니다."
+    },
+    "trad_notre_dame_grotto_candle": {
+      "name": "그로토에서 촛불 켜기",
+      "description": "학생, 동문, 방문객들은 루르드의 성모 그로토에서 촛불을 켜고 기도합니다. 「노트르담 매거진」은 '확실히 하려면' 권장 헌금의 두 배를 내라고 농담하기도 합니다. 촛불을 켜고, 그곳에 있는 톰 둘리가 헤스버그 신부에게 보낸 편지를 읽어 보세요."
+    },
+    "trad_notre_dame_touchdown_jesus": {
+      "name": "터치다운 지저스",
+      "description": "헤스버그 도서관 정면의 벽화 「생명의 말씀」은 '터치다운 지저스'라는 이름으로 더 잘 알려져 있으며, 방문 가족들이 줄을 서서 사진을 찍는 캠퍼스 명소 중 하나입니다. 반사 연못 옆에서 벽화를 배경으로 포즈를 취해 보세요."
+    },
+    "trad_notre_dame_fair_catch_corby": {
+      "name": "페어 캐치 코비",
+      "description": "팔을 든 윌리엄 코비 신부의 동상은 '페어 캐치 코비'라는 별명으로 불리며, 코비 홀 바깥에 서 있는 대표적인 캠퍼스 사진 장소입니다. 동상 옆에서 포즈를 취해 보세요."
+    },
+    "trad_notre_dame_lyons_arch": {
+      "name": "라이언스 홀 아치",
+      "description": "캠퍼스 미신에 따르면 라이언스 홀 아치 아래에서 키스한 커플은 졸업 전에 약혼할 수도 있다고 합니다. 아치를 지나가며 직접 확인해 보세요."
+    }
+  },
+  "University of Michigan": {
+    "trad_umich_diag_m": {
+      "name": "다이애그의 블록 M",
+      "description": "미신에 따르면 첫 시험 전에 다이애그의 청동 M을 밟으면 그 시험에 떨어진다고 해서 학생들은 돌아서 지나갑니다. 다이애그 중앙에서 M을 찾아 옆에서 사진을 찍어 보세요."
+    },
+    "trad_umich_engineering_arch": {
+      "name": "엔지니어링 아치",
+      "description": "전설에 따르면 자정에 웨스트 홀 엔지니어링 아치 아래에서 키스한 커플은 결국 결혼한다고 합니다. 다이애그 남동쪽 모퉁이에 있는 아치를 지나가 보세요."
+    },
+    "trad_umich_cube": {
+      "name": "더 큐브",
+      "description": "리전츠 플라자에 한쪽 모서리로 서 있는 15피트(약 4.6m) 강철 큐브 「엔도버」는 밀면 돌아가도록 설치되어 있습니다. 한번 돌려 보세요."
+    },
+    "trad_umich_rock": {
+      "name": "더 록",
+      "description": "힐 스트리트와 워시트노 애비뉴 교차로의 큰 바위는 1950년대부터 학생과 시민들이 계속 덧칠해 왔습니다. 들러서 최신 페인트칠을 구경해 보세요."
+    }
+  },
+  "Illinois Institute of Technology": {
+    "trad_iit_pumpkin_launch": {
+      "name": "호박 발사 대회",
+      "description": "매년 10월 가족 주말에 학생 팀들이 투석기와 트레뷰셋을 만들어 에드 글랜시 필드에서 호박을 누가 더 멀리, 더 정확하게 날리는지 겨룹니다. 시카고 곳곳에서 관람객이 모여듭니다."
+    },
+    "trad_iit_crown_hall": {
+      "name": "S. R. 크라운 홀",
+      "description": "건축대학이 자리한 크라운 홀은 미스 반데어로에의 최고 걸작으로 널리 꼽히며, 트래버틴 계단 위로 잔디밭 위에 떠 있는 듯 보입니다. 현대 건축의 이 명작을 가까이에서 감상해 보세요."
+    },
+    "trad_iit_mtcc_tube": {
+      "name": "캠퍼스 센터 위의 튜브",
+      "description": "렘 콜하스가 설계한 맥코믹 트리뷴 캠퍼스 센터에는 CTA 그린 라인 열차가 지붕 바로 위로 지나가는 스테인리스 강철 튜브가 있습니다. 머리 위 튜브로 열차가 지나가는 모습을 지켜보세요."
+    }
+  },
+  "University of Virginia": {
+    "trad_uva_poe_room": {
+      "name": "에드거 앨런 포의 방",
+      "description": "웨스트 레인지 13호에 있는 포의 학생 시절 방은 1826년 학생 방처럼 가구가 갖춰져 있습니다. 유리문으로 안을 들여다보고, 버튼을 눌러 포의 UVA 시절에 관한 녹음을 들을 수 있습니다."
+    },
+    "trad_uva_beta_bridge": {
+      "name": "페인트칠한 베타 브리지",
+      "description": "20세기 후반부터 학생들은 럭비 로드 다리에 동아리 행사부터 생일, 추모까지 다양한 메시지를 칠해 왔습니다. 들러서 이번 주에는 무엇이 칠해져 있는지 확인해 보세요."
+    },
+    "trad_uva_lighting_of_the_lawn": {
+      "name": "론 점등식",
+      "description": "매년 12월, 론에서 열리는 아카펠라 공연은 로툰다의 조명 쇼로 마무리됩니다. 이후 아카데미컬 빌리지 주변 조명이 1월 초까지 매일 밤 켜져 있습니다."
+    },
+    "trad_uva_lawn_trick_or_treat": {
+      "name": "론에서 트릭 오어 트릿",
+      "description": "핼러윈이면 론의 방에 사는 학생들이 지역 아이들에게 사탕을 나눠 줍니다. 1980년대부터 이어진 전통입니다. 가족들이 54개의 론 방을 따라 줄을 섭니다."
+    }
+  },
+  "Stanford University": {
+    "trad_stanford_class_plaques": {
+      "name": "이너 쿼드의 졸업반 명판",
+      "description": "졸업반마다 타임캡슐을 묻고 이너 쿼드 주변 보도에 청동 명판으로 표시하는데, 메모리얼 교회 앞의 1896년 명판부터 시작됩니다. 아케이드를 걸으며 원하는 졸업 연도를 찾아보세요."
+    },
+    "trad_stanford_hoover_tower": {
+      "name": "후버 타워 전망대",
+      "description": "250피트(약 76m) 높이의 전망대에서는 캠퍼스가 넓게 내려다보이고, 맑은 날에는 샌프란시스코 스카이라인도 보입니다. 타워에는 벨기에 미국 교육 재단이 기증한 카리용도 있습니다."
+    },
+    "trad_stanford_memorial_church_cherubs": {
+      "name": "메모리얼 교회의 아기 천사",
+      "description": "지역 전설에 따르면 성단소 벽감 위와 기둥 머리에 새겨진 돌 아기 천사들은 교회를 지을 당시 캠퍼스에 살던 아이들을 모델로 했다고 합니다. 교회 안에서 올려다보며 찾아보세요."
+    }
+  },
+  "University of California, Berkeley": {
+    "trad_berkeley_campanile": {
+      "name": "캄파닐레",
+      "description": "엘리베이터를 타고 세이더 타워 전망대에 오르면 캠퍼스와 베이가 내려다보입니다. 카리용은 매일 짧은 연주를 하며, 수업 마지막 날에는 「They're Hanging Danny Deever in the Morning」을 연주한 뒤 기말고사 기간 동안 침묵합니다."
+    },
+    "trad_berkeley_four_point_oh_ball": {
+      "name": "4.0 볼",
+      "description": "학생들은 행운을 빌며, 특히 대학 문장을 밟은 뒤에 캄파닐레 앞의 돌 공을 문지르거나 입을 맞춥니다. 지나가는 길에 한번 만져 보세요."
+    },
+    "trad_berkeley_athena_doe": {
+      "name": "도 도서관의 아테나",
+      "description": "전설에 따르면 도 도서관 입구의 아테나 상 아래로 걸어 들어가면 지혜를 얻지만, 다시 그 아래로 걸어 나오면 지혜를 잃는다고 합니다. 그래서 학생들은 지혜를 지키려고 뒷문으로 나갑니다."
+    },
+    "trad_berkeley_big_c": {
+      "name": "빅 C 하이킹",
+      "description": "풋힐 주차장 근처에서 출발하는 길을 따라 캠퍼스 위 언덕의 빅 C까지 오를 수 있으며, 거의 모든 버클리 학생이 한 번은 하는 하이킹입니다. 캠퍼스와 베이를 내려다보는 경치를 즐겨 보세요."
+    }
+  },
+  "University of California, Los Angeles": {
+    "trad_ucla_bruin_bear_paw": {
+      "name": "브루인 곰의 발 문지르기",
+      "description": "학생들은 기말고사 주간에 행운을 빌며 브루인 플라자에 있는 브루인 곰 동상의 발을 문지릅니다. 방문객도 들러 사진을 찍고 발을 문질러 봅니다."
+    },
+    "trad_ucla_janss_sixth_step": {
+      "name": "여섯 번째 계단 건너뛰기",
+      "description": "전설에 따르면 잰스 계단의 여섯 번째 계단을 밟으면 불운이 따르고 졸업이 한 쿼터 늦어진다고 합니다. 많은 학생이 올라가는 길에 그 계단을 건너뜁니다."
+    },
+    "trad_ucla_inverted_fountain": {
+      "name": "인버티드 분수",
+      "description": "신입생들은 물이 위로 솟지 않고 우물 안으로 떨어지는 1968년의 이 분수에서 '브루인 세례'를 받습니다. 전통에 따르면 그 후 졸업할 때까지 물을 만지지 않으므로, 방문객도 구경만 하고 만지지 않습니다."
+    }
+  },
+  "University of Washington": {
+    "trad_uw_quad_cherry_blossoms": {
+      "name": "쿼드의 벚꽃",
+      "description": "매년 봄 꽃이 필 때 쿼드의 왕벚나무를 보러 가는 것은 UW의 필수 전통입니다. 만개 시기에는 사진을 찍는 학생과 방문객으로 붐빕니다."
+    },
+    "trad_uw_rainier_vista": {
+      "name": "레이니어 비스타",
+      "description": "드럼헬러 분수를 지나 레이니어 비스타로 이어지는 전망은 레드 스퀘어에서 레이니어산이 가려지지 않도록 보호되고 있습니다. 맑은 날 맨 위에 서면 캠퍼스 최고의 경치를 볼 수 있습니다."
+    },
+    "trad_uw_sylvan_grove_columns": {
+      "name": "실번 그로브의 기둥",
+      "description": "UW 최초의 시내 건물에서 가져온 삼나무 기둥 네 개가 실번 그로브에 서 있으며, 충성, 근면, 신앙, 효율을 상징합니다. 신입생은 입학할 때와 졸업할 때 기둥 하나를 만집니다. 방문객은 숲에서 기둥들을 볼 수 있습니다."
+    },
+    "trad_uw_the_wave": {
+      "name": "허스키 스타디움의 파도타기 응원",
+      "description": "UW에 따르면 유명한 경기장 파도타기 응원은 1981년 허스키 스타디움의 미식축구 경기에서 시작되었습니다. 경기 날 관중석에 파도가 밀려오면 함께해 보세요."
+    }
+  },
+  "McGill University": {
+    "trad_mcgill_roddick_gates_chimes": {
+      "name": "로딕 게이트의 차임",
+      "description": "셔브룩 스트리트에 있는 맥길의 공식 정문 로딕 게이트에는 시계 네 개가 있으며, 그 종이 웨스트민스터 차임을 울립니다. 문을 지나 캠퍼스로 들어가며 차임 소리에 귀 기울여 보세요."
+    },
+    "trad_mcgill_founders_tomb": {
+      "name": "제임스 맥길의 무덤",
+      "description": "설립자 제임스 맥길의 유해는 몬트리올의 한 묘지에서 옮겨져 1875년에 봉헌된 아츠 빌딩 앞 기념비에 안치되어 있습니다. 아래쪽 캠퍼스에 있는 설립자의 무덤에 들러 보세요."
+    },
+    "trad_mcgill_three_bares_photo": {
+      "name": "쓰리 베어스에서 사진 찍기",
+      "description": "1931년 봄 학위 수여식에서 공개된 쓰리 베어스 분수는 레드패스 박물관 근처 나무가 우거진 작은 골짜기에 있으며, 수많은 졸업 사진에 등장합니다. 이 유명한 캠퍼스 명소에서 사진을 찍어 보세요."
+    }
+  },
+  "University of Toronto": {
+    "trad_uoft_reznikoff_gargoyles": {
+      "name": "레즈니코프의 가고일",
+      "description": "유니버시티 칼리지에서 가장 유명한 유령 이야기에 따르면, 석공 이반 레즈니코프가 1850년대 건물을 짓던 중 경쟁자에게 살해당했다고 합니다. UC 남서쪽 모퉁이 근처에서 두 경쟁자의 얼굴을 새겼다는 가고일 두 개와 도끼 자국이 남아 있다는 문을 찾아보세요."
+    },
+    "trad_uoft_hart_house_stone_face": {
+      "name": "눈물 흘리는 돌 얼굴",
+      "description": "캠퍼스 유령 이야기 중에는 하트 하우스에 있는 돌 얼굴 조각이 한쪽 눈에서 물을 흘렸다는 이야기가 있습니다. 하트 하우스를 찾으면 고딕 양식 석조 장식 사이에서 그 얼굴을 찾아보세요."
+    },
+    "trad_uoft_soldiers_tower_carillon": {
+      "name": "솔저스 타워 카리용",
+      "description": "솔저스 타워 카리용의 51개 종은 세계대전에서 목숨을 잃은 대학 구성원들을 기리며, 무료 공개 연주와 학위 수여식 즈음에 울려 퍼집니다. 하트 하우스 서클 잔디밭이나 유니버시티 칼리지 안뜰에서 들어 보세요."
+    }
+  },
+  "University of British Columbia": {
+    "trad_ubc_great_trek_cairn": {
+      "name": "그레이트 트렉 케언",
+      "description": "메인 몰에 있는 이 돌무더기 기념비는 1922년 학생들이 정부에 캠퍼스 완공을 촉구하며 포인트 그레이까지 행진한 '그레이트 트렉'을 기념하며, 현장에서 모은 돌로 지어졌습니다. 매년 9월 홈커밍 기간에 이곳에서 기념식이 열리며, 비문은 언제든 읽을 수 있습니다."
+    },
+    "trad_ubc_engineers_cairn": {
+      "name": "페인트칠한 공대 케언",
+      "description": "공대 학생들이 관리하는 메인 몰의 콘크리트 기념물은 대의, 기념일, 캠퍼스 행사에 맞춰 새로 칠해집니다. 들러서 최신 페인트칠을 구경해 보세요."
+    },
+    "trad_ubc_ladner_carillon": {
+      "name": "래드너 시계탑 차임",
+      "description": "메인 도서관 앞의 래드너 시계탑은 정시마다 종을 울리며, 카리용은 낮 동안과 학위 수여식 같은 특별한 날에 짧은 연주를 합니다. 도서관 정원에서 들어 보세요."
+    }
+  },
+  "National Autonomous University of Mexico": {
+    "trad_unam_megaofrenda": {
+      "name": "망자의 날 메가오프렌다",
+      "description": "매년 망자의 날 즈음 UNAM의 학부와 부서들은 제단들로 이루어진 거대한 공동 제물(메가오프렌다)을 만드는데, 오랫동안 시우다드 우니베르시타리아의 중앙 잔디밭인 라스 이슬라스에서 열려 왔습니다. 11월 초에 무료로 제단 사이를 걸어 볼 수 있습니다."
+    },
+    "trad_unam_central_library_mural": {
+      "name": "중앙 도서관 모자이크",
+      "description": "후안 오고르만의 돌 모자이크가 중앙 도서관의 네 면을 모두 덮고 있으며, 각 면은 멕시코 역사의 서로 다른 시대를 보여 줍니다. 건물을 한 바퀴 돌며 모든 면을 보고 이 캠퍼스 아이콘을 사진에 담아 보세요."
+    },
+    "trad_unam_rectoria_murals": {
+      "name": "총장실 타워 벽화",
+      "description": "총장실 타워에는 다비드 알파로 시케이로스의 벽화 세 점과 함께, 꼭대기에 'Por mi raza hablará el espíritu(나의 민족을 통해 정신이 말하리라)'라는 표어가 적힌 대학 문장이 있습니다. 광장에서 벽화와 문장을 감상해 보세요."
+    },
+    "trad_unam_stadium_rivera_relief": {
+      "name": "올림픽 경기장의 디에고 리베라 부조",
+      "description": "에스타디오 올림피코 우니베르시타리오의 정문에는 자연석의 색을 살린 디에고 리베라의 부조가 있으며, 경기장에는 지금도 1968년 올림픽 성화대가 남아 있습니다. 경기장 바깥에서 부조를 볼 수 있습니다."
+    }
+  },
+  "University of Alabama": {
+    "trad_ua_walk_of_fame": {
+      "name": "데니 차임스 명예의 거리",
+      "description": "1948년부터 미식축구팀 주장들은 데니 차임스 아래 콘크리트에 손자국과 발자국을 남겨 왔습니다. 탑 주위를 걸으며 이름을 찾아보고, 15분마다 울리는 웨스트민스터 종소리를 들어 보세요."
+    },
+    "trad_ua_walk_of_champions": {
+      "name": "워크 오브 챔피언스",
+      "description": "브라이언트-데니 스타디움 앞에는 크림슨 타이드의 전국 우승 기록을 새긴 화강암 판과 우승 감독들의 동상이 있습니다. 경기 날에는 팬들이 길을 메우고 도착하는 팀을 응원합니다."
+    }
+  },
+  "University of Arkansas": {
+    "trad_uark_senior_walk": {
+      "name": "시니어 워크",
+      "description": "캠퍼스 보도에는 1876년부터 졸업생들의 이름이 학년별로 새겨져 있습니다. 올드 메인 근처에서 출발해 발밑의 이름들을 읽어 보세요."
+    },
+    "trad_uark_spoofers_stone": {
+      "name": "스푸퍼스 스톤",
+      "description": "올드 메인 옆의 이 석회암은 남녀 학생의 교제가 금지되던 시절 틈새에 연애편지를 끼워 두던 곳입니다. 지금은 청혼 장소로 인기가 높습니다."
+    }
+  },
+  "Auburn University": {
+    "trad_auburn_toomers_corner": {
+      "name": "투머스 코너",
+      "description": "칼리지 스트리트와 매그놀리아 애비뉴가 만나는 곳에서 팬들은 오번의 승리를 축하하며 참나무에 화장지를 던집니다. 대학도 인정하는 축하 방식입니다. 교차로와 새로 심은 투머스 오크를 찾아보거나, 승리 후에 구경하러 오세요."
+    },
+    "trad_auburn_tiger_walk": {
+      "name": "타이거 워크",
+      "description": "홈경기 전 팬들은 도너휴 드라이브에 줄지어 서서 조던-헤어 스타디움으로 걸어 들어가는 팀을 응원합니다. 오번은 이를 대학 미식축구에서 가장 많이 따라 한 전통이라고 부릅니다."
+    }
+  },
+  "University of Florida": {
+    "trad_uf_century_tower": {
+      "name": "센추리 타워 카리용",
+      "description": "2003년에 지금의 모습을 갖춘 센추리 타워의 61개 종 카리용이 캠퍼스 중심에 울려 퍼집니다. 아래 잔디밭에서 들어 보세요."
+    }
+  },
+  "University of Georgia": {
+    "trad_uga_arch": {
+      "name": "디 아치",
+      "description": "아치는 노스 캠퍼스와 애선스 시내를 잇는 문입니다. 전설에 따르면 학생들은 졸업 전에는 그 아래를 지나지 않기 때문에, 많은 방문객이 옆으로 돌아가 사진을 찍습니다."
+    },
+    "trad_uga_chapel_bell": {
+      "name": "채플 벨",
+      "description": "채플 옆의 종은 1894년부터 미식축구 승리를 축하하며 울려 왔습니다. 대학은 운동 경기 승리와 특별한 날에 종을 울리도록 권합니다."
+    }
+  },
+  "Louisiana State University": {
+    "trad_lsu_mike_habitat": {
+      "name": "마이크 더 타이거 서식지",
+      "description": "LSU는 1936년부터 캠퍼스에서 살아 있는 호랑이를 길러 왔습니다. 타이거 스타디움과 피트 매러비치 어셈블리 센터 사이의 서식지에서 마이크를 만나 보세요. 일 년 내내 방문할 수 있습니다."
+    },
+    "trad_lsu_victory_hill": {
+      "name": "빅토리 힐 행진",
+      "description": "홈경기 전 팬들은 빅토리 힐에 늘어서서 팀과 코치진, 골든 밴드가 그릭 시어터에서 타이거 스타디움으로 행진하는 모습을 지켜봅니다."
+    }
+  },
+  "University of Mississippi": {
+    "trad_olemiss_walk_of_champions": {
+      "name": "워크 오브 챔피언스",
+      "description": "토요일 홈경기 전마다 팀은 워크 오브 챔피언스 아치에서 출발해 그로브를 가로질러 걷습니다. 이 아치는 1962년 무패 팀이 1998년에 기증했습니다. 팬들이 길가에 늘어서 응원합니다."
+    },
+    "trad_olemiss_meredith_monument": {
+      "name": "민권 기념비",
+      "description": "라이시엄과 도서관 사이에 대학 최초의 흑인 입학생 제임스 메러디스의 실물 크기 동상이 서 있고, Courage, Knowledge, Perseverance, Opportunity라는 단어를 새긴 석회암 문이 있습니다."
+    },
+    "trad_olemiss_grove": {
+      "name": "더 그로브",
+      "description": "참나무 그늘이 드리운 약 4헥타르의 공원이 캠퍼스 중심에 있습니다. 산책을 즐기고, 경기 날에는 그로브 무대에서 프라이드 오브 더 사우스가 연주하는 경기 전 공연을 들어 보세요."
+    }
+  },
+  "University of Missouri": {
+    "trad_mizzou_columns": {
+      "name": "컬럼스 사이로 걷기",
+      "description": "매년 8월 신입생들은 컬럼스 사이를 지나 제시 홀을 향해 달리고, 5월에는 졸업생들이 반대 방향으로 걷습니다. 방문객도 프랜시스 쿼드랭글에서 같은 길을 걸을 수 있습니다."
+    },
+    "trad_mizzou_francis_nose": {
+      "name": "데이비드 R. 프랜시스의 코",
+      "description": "전설에 따르면 제시 홀 북동쪽 입구 근처에 있는 데이비드 R. 프랜시스 청동 부조의 코를 문지르면 다음 시험에서 A를 받는다고 합니다. 프랜시스는 1892년 화재 후 대학을 컬럼비아에 남게 한 인물로 꼽힙니다."
+    },
+    "trad_mizzou_jefferson_tombstone": {
+      "name": "토머스 제퍼슨의 묘비",
+      "description": "몬티첼로에 있던 토머스 제퍼슨 무덤의 원래 묘비가 프랜시스 쿼드랭글 동쪽에 서 있습니다. 루이지애나 매입 지역에서 처음 세워진 대학이라는 이유로 1883년 후손들이 미주리 대학에 기증했습니다."
+    }
+  },
+  "University of Oklahoma": {
+    "trad_ou_seed_sower": {
+      "name": "시드 소어",
+      "description": "사우스 오벌 옆에 폴 무어가 만든 높이 약 3.7미터의 씨 뿌리는 사람 청동상이 서 있습니다. 대학 문장의 인물과 초대 총장 데이비드 로스 보이드의 비유에서 따왔습니다. 팀의 볼 경기 행선지가 정해지면 장식됩니다."
+    },
+    "trad_ou_heisman_park": {
+      "name": "하이즈먼 파크",
+      "description": "미식축구 경기장 동쪽에 오클라호마 출신 하이즈먼 트로피 수상자들의 청동상이 있습니다. 사진 명소로 인기가 높습니다."
+    }
+  },
+  "University of South Carolina": {
+    "trad_uofsc_maxcy_monument": {
+      "name": "맥시 기념비",
+      "description": "호스슈 한가운데에 초대 총장 조너선 맥시를 기리는 기념비가 서 있습니다. 로버트 밀스가 설계해 1827년에 세워졌습니다. 라틴어 비문과 옆의 영어 번역을 읽어 보세요."
+    },
+    "trad_uofsc_cocky_statue": {
+      "name": "코키 동상",
+      "description": "게임콕 마스코트 동상이 러셀 하우스 근처 그린 스트리트에 있으며, 방문객은 함께 사진을 찍을 수 있습니다."
+    }
+  },
+  "Vanderbilt University": {
+    "trad_vandy_commodore_statue": {
+      "name": "코모도어 밴더빌트 동상",
+      "description": "기부로 대학을 세운 코닐리어스 밴더빌트의 동상이 에스플러네이드 북쪽 끝에서 웨스트 엔드 애비뉴를 바라보고 서 있습니다. 개교기념일인 3월 17일 무렵 이곳에서 창립자의 날 행사가 열립니다."
+    }
+  },
+  "University of Kentucky": {
+    "trad_uky_bowman": {
+      "name": "와일드캣 보먼",
+      "description": "와일드캣 동문 광장의 청동 살쾡이 동상은 2012년 학생 투표로 보먼이라는 이름을 얻었습니다. 방문객들은 행운을 빌며 머리를 쓰다듬고 코와 앞발을 문지릅니다."
+    }
+  },
+  "Mississippi State University": {
+    "trad_msstate_cowbells": {
+      "name": "데이비스 웨이드 스타디움의 카우벨",
+      "description": "미시시피 주립대 경기에서 팬들은 카우벨을 울립니다. 학교 정신을 상징하는 가장 유명한 물건입니다. 홈경기에 카우벨을 가져가거나 경기장의 카우벨 옐 응원 행사에서 들어 보세요."
+    },
+    "trad_msstate_drill_field": {
+      "name": "드릴 필드",
+      "description": "중앙 광장은 사관생도단의 훈련장으로 쓰인 데서 이름이 붙었습니다. 학생들은 수업 사이에 이곳에서 쉬고, 개강 첫 주에는 응원 행사 '더 드릴'이 열립니다."
+    }
+  },
+  "University of Tennessee": {
+    "trad_utk_torchbearer": {
+      "name": "토치베어러",
+      "description": "서클 파크의 토치베어러 동상 명판에는 '볼런티어 신조'가 새겨져 있습니다. 대학의 토치 나이트 행사의 바탕이 된 신조를 읽어 보세요."
+    },
+    "trad_utk_the_rock": {
+      "name": "더 록",
+      "description": "이 커다란 석회암 바위는 생일 축하부터 청혼까지 다양한 메시지로 학생들이 계속 새로 칠합니다. 오늘은 무엇이 적혀 있는지 들러 보세요."
+    },
+    "trad_utk_vol_walk": {
+      "name": "볼 워크",
+      "description": "홈경기 전 밴드를 앞세운 팀이 토치베어러에서 네일랜드 스타디움까지 걸어가고, 팬들이 길가에 늘어섭니다. 1990년부터 이어진 전통입니다."
+    }
+  },
+  "Texas A&M University": {
+    "trad_tamu_pennies_on_sully": {
+      "name": "설리에게 동전을",
+      "description": "학생들은 시험 전 행운을 빌며 로런스 설리번 로스 동상 받침대에 1센트 동전을 놓습니다. 그가 남긴 'a penny for your thoughts'라는 답에서 비롯되었습니다. 동전은 매 학기 기부됩니다."
+    },
+    "trad_tamu_century_tree": {
+      "name": "센추리 트리",
+      "description": "캠퍼스에 가장 먼저 심은 나무 중 하나인 이 라이브오크는 수령이 100년을 훌쩍 넘습니다. 전설에 따르면 함께 이 나무 아래를 걷는 연인은 결혼한다고 합니다."
+    }
+  }
+}

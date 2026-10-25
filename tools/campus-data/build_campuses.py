@@ -39,6 +39,9 @@ CAMPUS_LIST_PATH = APP_DIR / "Models" / "CampusList.swift"
 CAMPUS_FOLDER = TOOL_DIR / "campuses"
 CACHE_PATH = TOOL_DIR / "wiki_coordinates.json"
 TRANSLATION_FOLDER = TOOL_DIR / "translations"  # e.g. translations/de.json
+# Tradition names and descriptions per language: {campus name: {tradition id: {name, description}}}
+TRADITION_TRANSLATION_FOLDER = TRANSLATION_FOLDER / "traditions"  # e.g. translations/traditions/de.json
+TRADITIONS_FILE = "CampusTraditions.json"  # in Resources/ (English) and each *.lproj/
 
 MAX_KM_FROM_CAMPUS = 2.0
 MIN_BUILDINGS = 4  # the quiz needs at least 4 mappable landmarks per city
@@ -54,6 +57,9 @@ TRANSLATED_FIELDS = [
     "currencyInfo", "transportation", "transportationFact",
 ]
 TEXT_FIELDS = ["id", "wiki", "name", "description", "architect", "address", "oldUse", "newUse", "buildingStyle"]
+TRADITION_FIELDS = ["id", "name", "description", "coordinatesSource", "source"]
+# US campuses can name their athletic conference (a CampusConference case); without one they show under "Other"
+CONFERENCES = ["bigTen", "sec", "acc", "big12", "ivyLeague"]
 
 
 # MARK: - Small helpers
@@ -161,6 +167,7 @@ def check_campuses(campuses: list[dict], cache: dict) -> tuple[list[str], list[s
     seen_cases: set[str] = set()
     seen_names: set[str] = set()
     seen_ids: set[str] = set()
+    seen_tradition_ids: set[str] = set()
 
     for campus in campuses:
         label = f"{campus.get('name', '?')} ({campus['_file']})"
@@ -172,6 +179,14 @@ def check_campuses(campuses: list[dict], cache: dict) -> tuple[list[str], list[s
 
         if campus["country"] not in countries:
             errors.append(f"{label}: country '{campus['country']}' is not a CityLocation.Country case")
+        if "conference" in campus:
+            if campus["conference"] not in CONFERENCES:
+                errors.append(f"{label}: conference '{campus['conference']}' is not one of {', '.join(CONFERENCES)}")
+            elif campus["country"] != "unitedStates":
+                errors.append(f"{label}: only US campuses are grouped by conference")
+        aliases = campus.get("aliases", [])
+        if not isinstance(aliases, list) or not all(isinstance(a, str) and a.strip() for a in aliases):
+            errors.append(f"{label}: 'aliases' must be a list of non-empty names")
         if campus["enumCase"] in cities or campus["enumCase"] in seen_cases:
             errors.append(f"{label}: enum case '{campus['enumCase']}' is already used")
         if not re.fullmatch(r"[a-z][A-Za-z0-9]*", campus["enumCase"]):
@@ -244,6 +259,33 @@ def check_campuses(campuses: list[dict], cache: dict) -> tuple[list[str], list[s
         stacked = {(b["_lat"], b["_lon"]) for b in located}
         if len(stacked) < len(located):
             errors.append(f"{label}: two buildings share exactly the same coordinates")
+
+        # School colors tint the campus stamp: 1–3 hex colors, primary first
+        colors = campus.get("colors", [])
+        if not isinstance(colors, list) or len(colors) > 3 or not all(
+            isinstance(c, str) and re.fullmatch(r"#[0-9A-Fa-f]{6}", c) for c in colors
+        ):
+            errors.append(f"{label}: 'colors' must be 1–3 hex colors like \"#18453B\"")
+
+        # Traditions for the scavenger hunt: each one a real, sourced spot on campus
+        for tradition in campus.get("traditions", []):
+            tradition_label = f"{campus['name']} / tradition {tradition.get('name', '?')}"
+            for field in TRADITION_FIELDS:
+                if not str(tradition.get(field, "")).strip():
+                    errors.append(f"{tradition_label}: '{field}' is empty")
+            tradition_id = tradition.get("id", "")
+            if not re.fullmatch(r"trad_[a-z0-9_]+", tradition_id):
+                errors.append(f"{tradition_label}: id '{tradition_id}' should look like trad_school_name")
+            if tradition_id in seen_tradition_ids:
+                errors.append(f"{tradition_label}: duplicate id '{tradition_id}'")
+            seen_tradition_ids.add(tradition_id)
+            point = tradition.get("coordinates")
+            if not (isinstance(point, list) and len(point) == 2 and all(isinstance(v, (int, float)) for v in point)):
+                errors.append(f"{tradition_label}: needs 'coordinates' [lat, lon]")
+                continue
+            km = distance_km(campus["_lat"], campus["_lon"], *point)
+            if km > MAX_KM_FROM_CAMPUS:
+                errors.append(f"{tradition_label}: {km:.2f} km from the campus centre")
 
         # The university's own article should be near the campus centre too
         university_point = cache.get(campus["wiki"])
@@ -350,6 +392,38 @@ def missing_translations(campuses: list[dict]) -> list[str]:
     return warnings
 
 
+def load_tradition_translations(language: str) -> dict:
+    """Campus name -> tradition id -> {name, description}, from translations/traditions/<language>.json."""
+    path = TRADITION_TRANSLATION_FOLDER / f"{language}.json"
+    return json.loads(path.read_text()) if path.exists() else {}
+
+
+def write_traditions(campuses: list[dict]) -> None:
+    """CampusTraditions.json: campus name -> traditions, in English and in every app language.
+    A tradition that isn't translated yet uses the English text."""
+    def entries(translations: dict) -> dict:
+        result = {}
+        for campus in campuses:
+            translated = translations.get(campus["name"], {})
+            result[campus["name"]] = [
+                {
+                    "id": t["id"],
+                    "name": translated.get(t["id"], {}).get("name", t["name"]),
+                    "description": translated.get(t["id"], {}).get("description", t["description"]),
+                    "latitude": t["coordinates"][0],
+                    "longitude": t["coordinates"][1],
+                }
+                for t in campus.get("traditions", [])
+            ]
+        return {name: traditions for name, traditions in result.items() if traditions}
+
+    (APP_DIR / "Resources" / TRADITIONS_FILE).write_text(json.dumps(entries({}), indent=2, ensure_ascii=False) + "\n")
+    for language_path in sorted(APP_DIR.glob("*.lproj/CityDetails.json")):
+        language = language_path.parent.stem
+        localized = entries(load_tradition_translations(language))
+        (language_path.parent / TRADITIONS_FILE).write_text(json.dumps(localized, indent=2, ensure_ascii=False) + "\n")
+
+
 def write_app_files(campuses: list[dict]) -> None:
     campus_names = {campus["name"] for campus in campuses}
 
@@ -399,6 +473,18 @@ def write_app_files(campuses: list[dict]) -> None:
         # A shared article would give every building in the group the same photo, so skip those
         for c in campuses for b in c["buildings"] if b["wiki"] != b["name"] and not b.get("sharedArticle")
     ) or "        :"
+    conferences = "\n".join(
+        f"        .{c['enumCase']}: .{c['conference']}," for c in campuses if c.get("conference")
+    ) or "        :"
+    colors = "\n".join(
+        f"        .{c['enumCase']}: [{', '.join(swift_string(color) for color in c['colors'])}],"
+        for c in campuses if c.get("colors")
+    ) or "        :"
+    write_traditions(campuses)
+    aliases = "\n".join(
+        f"        .{c['enumCase']}: [{', '.join(swift_string(a) for a in c['aliases'])}],"
+        for c in campuses if c.get("aliases")
+    ) or "        :"
     CAMPUS_LIST_PATH.write_text(f"""//
 //  CampusList.swift
 //  Stamped! A City Passport
@@ -413,6 +499,21 @@ extension CityLocation.City {{
     /// Every campus in the "Campus Architecture" collection.
     static let campuses: Set<CityLocation.City> = [
 {case_list}
+    ]
+
+    /// Athletic conference of each US campus; US campuses not listed show under "Other".
+    static let campusConferences: [CityLocation.City: CampusConference] = [
+{conferences}
+    ]
+
+    /// Short names and abbreviations each campus is also found by in search.
+    static let campusSearchAliases: [CityLocation.City: [String]] = [
+{aliases}
+    ]
+
+    /// Official school colors as hex, primary first; they tint the campus stamp.
+    static let campusColors: [CityLocation.City: [String]] = [
+{colors}
     ]
 }}
 

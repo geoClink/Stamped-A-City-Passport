@@ -74,7 +74,7 @@ struct AddPlaceSheet: View {
                     .font(.title3)
                     .foregroundStyle(.white)
                     .frame(width: 36, height: 36)
-                    .background(Color.pink, in: Circle())
+                    .background(DS.Palette.wishlist, in: Circle())
                 VStack(alignment: .leading, spacing: 2) {
                     Text(name).font(.headline).foregroundStyle(.primary)
                     if let address = address(of: item) {
@@ -84,7 +84,7 @@ struct AddPlaceSheet: View {
                 Spacer()
                 Image(systemName: isSaved ? "heart.fill" : "plus.circle")
                     .font(.title3)
-                    .foregroundStyle(.pink)
+                    .foregroundStyle(DS.Palette.wishlist)
                     .contentTransition(.symbolEffect(.replace))
             }
         }

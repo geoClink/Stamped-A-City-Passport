@@ -19,6 +19,8 @@ struct AddToTripSheet: View {
     @Environment(\.dismiss) private var dismiss
     @ObservedObject private var store = TripStore.shared
     @AppStorage("haptics_enabled") private var hapticsEnabled = true
+    @AppStorage("high_contrast_mode") private var isHighContrast = false
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @State private var addedTo: String?
 
     private var trips: [Trip] { store.trips(in: cityName) }
@@ -27,20 +29,27 @@ struct AddToTripSheet: View {
         NavigationStack {
             List {
                 ForEach(trips) { trip in
-                    Section(trip.name) {
+                    Section {
                         ForEach(Array(trip.days.enumerated()), id: \.element.id) { index, day in
                             Button {
                                 add(to: day.id, in: trip, dayNumber: index + 1)
                             } label: {
-                                HStack {
-                                    Text(dayTitle(trip: trip, index: index))
-                                        .foregroundStyle(.primary)
-                                    Spacer()
-                                    Text(day.stops.isEmpty ? "Empty" : day.stops.count == 1 ? "1 stop" : "\(day.stops.count) stops")
-                                        .font(.caption)
-                                        .foregroundStyle(.secondary)
+                                HStack(spacing: DS.Space.s) {
+                                    // The stop count goes under the day at accessibility sizes
+                                    let layout = dynamicTypeSize.isAccessibilitySize
+                                        ? AnyLayout(VStackLayout(alignment: .leading, spacing: DS.Space.xs))
+                                        : AnyLayout(HStackLayout(spacing: DS.Space.s))
+                                    layout {
+                                        Text(dayTitle(trip: trip, index: index))
+                                            .foregroundStyle(.primary)
+                                        if !dynamicTypeSize.isAccessibilitySize { Spacer() }
+                                        Text(day.stops.isEmpty ? "Empty" : day.stops.count == 1 ? "1 stop" : "\(day.stops.count) stops")
+                                            .font(.caption)
+                                            .foregroundStyle(.secondary)
+                                    }
+                                    if dynamicTypeSize.isAccessibilitySize { Spacer() }
                                     Image(systemName: "plus.circle.fill")
-                                        .foregroundStyle(Color.adventureOrange)
+                                        .foregroundStyle(DS.Palette.accent)
                                 }
                             }
                         }
@@ -51,6 +60,9 @@ struct AddToTripSheet: View {
                         } label: {
                             Label("Add to a New Day", systemImage: "calendar.badge.plus")
                         }
+                    } header: {
+                        // Interpolated so the trip's name shows as is, not looked up as a key
+                        DSSectionHeader("\(trip.name)", systemImage: "suitcase", isHighContrast: isHighContrast)
                     }
                 }
 
@@ -75,16 +87,19 @@ struct AddToTripSheet: View {
             }
             .safeAreaInset(edge: .top) {
                 Text(stopName)
-                    .font(.headline)
-                    .lineLimit(1)
-                    .padding(.top, 4)
+                    // Serif, the style guide's type for destinations
+                    .font(.system(.headline, design: .serif))
+                    .lineLimit(2)
+                    .multilineTextAlignment(.center)
+                    .padding(.top, DS.Space.xs)
+                    .dsPageMargin()
             }
             // Brief confirmation, then close
             .overlay {
                 if let addedTo {
                     Label("Added to \(addedTo)", systemImage: "checkmark.circle.fill")
                         .font(.headline)
-                        .padding()
+                        .padding(DS.Space.l)
                         .background(.regularMaterial, in: Capsule())
                         .transition(.scale.combined(with: .opacity))
                 }

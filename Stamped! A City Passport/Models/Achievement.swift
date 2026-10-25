@@ -8,6 +8,8 @@ struct Achievement: Identifiable {
     let icon: String
     let color: Color
     let category: Category
+    /// Filled into the title and description, e.g. the conference name in "%@ Road Trip"
+    private let formatArgument: String?
     private let _check: (GlobalProgressManager, [CityLocation.City]) -> Bool
 
     enum Category: String, CaseIterable, Identifiable {
@@ -18,6 +20,8 @@ struct Achievement: Identifiable {
         case continents = "Continents"
         case campuses = "Campuses"
         var id: String { rawValue }
+        /// The filter chip and card label, in the user's language
+        var localizedName: String { NSLocalizedString(rawValue, comment: "Achievement category") }
         var systemIcon: String {
             switch self {
             case .all: return "star"
@@ -31,6 +35,7 @@ struct Achievement: Identifiable {
     }
 
     init(id: String, title: String, description: String, icon: String, color: Color, category: Category,
+         formatArgument: String? = nil,
          check: @escaping (GlobalProgressManager, [CityLocation.City]) -> Bool) {
         self.id = id
         self.title = title
@@ -38,7 +43,18 @@ struct Achievement: Identifiable {
         self.icon = icon
         self.color = color
         self.category = category
+        self.formatArgument = formatArgument
         self._check = check
+    }
+
+    /// `title` and `description` are English keys; these are what the screen shows.
+    var localizedTitle: String { localized(title) }
+    var localizedDescription: String { localized(description) }
+
+    private func localized(_ key: String) -> String {
+        let text = NSLocalizedString(key, comment: "Achievement")
+        guard let formatArgument else { return text }
+        return String(format: text, formatArgument)
     }
 
     /// Campus achievements only see campuses; every other achievement only sees real cities,
@@ -263,5 +279,39 @@ extension Achievement {
                     icon: "rosette", color: .purple, category: .campuses) { m, campuses in
             campuses.filter { m.isCityComplete($0) }.count >= 5
         },
-    ]
+
+        // MARK: Campus traditions
+        Achievement(id: "first_tradition", title: "New Tradition",
+                    description: "Do your first campus tradition",
+                    icon: "bell.fill", color: .orange, category: .campuses) { m, _ in
+            !m.completedTraditionIDs.isEmpty
+        },
+        Achievement(id: "traditions_keeper", title: "Traditions Keeper",
+                    description: "Do every tradition on one campus",
+                    icon: "flag.checkered", color: gold, category: .campuses) { m, campuses in
+            campuses.contains { campus in
+                !campus.traditions.isEmpty && campus.traditions.allSatisfy { m.isTraditionDone($0.id) }
+            }
+        },
+        Achievement(id: "tradition_collector", title: "Tradition Collector",
+                    description: "Do 25 campus traditions",
+                    icon: "sparkles", color: .pink, category: .campuses) { m, _ in
+            m.completedTraditionIDs.count >= 25
+        },
+    ] + conferenceAchievements
+
+    /// One per US conference: stamp a building on every campus in it ("Big Ten Road Trip").
+    static let conferenceAchievements: [Achievement] = CampusConference.allCases
+        .filter { $0 != .other }
+        .map { conference in
+            Achievement(id: "conference_\(conference.rawValue)", title: "%@ Road Trip",
+                        description: "Stamp a building on every %@ campus",
+                        icon: "flag.checkered", color: .orange, category: .campuses,
+                        formatArgument: conference.name) { m, campuses in
+                let members = campuses.filter { $0.conference == conference }
+                return !members.isEmpty && members.allSatisfy { campus in
+                    campus.buildings.contains { m.visitedIDs.contains($0.id) }
+                }
+            }
+        }
 }

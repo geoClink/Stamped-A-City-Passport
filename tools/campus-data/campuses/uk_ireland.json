@@ -3,6 +3,48 @@
     "name": "University of Oxford",
     "enumCase": "oxford",
     "country": "england",
+    "aliases": [
+      "Oxford"
+    ],
+    "colors": [
+      "#002147",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_oxford_great_tom",
+        "name": "Great Tom's 101 Strokes",
+        "description": "Every night at 9:05pm (9pm old 'Oxford time') the Great Tom bell in Christ Church's Tom Tower rings 101 times, once for each of the college's original 100 scholars plus one added in 1663. Stand on St Aldate's to hear it.",
+        "coordinates": [
+          51.750203,
+          -1.256554
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/146574165",
+        "source": "https://en.wikipedia.org/wiki/Tom_Tower"
+      },
+      {
+        "id": "trad_oxford_may_morning",
+        "name": "May Morning at Magdalen Tower",
+        "description": "At 6am on 1 May the Magdalen College Choir sings the Hymnus Eucharisticus from the top of the Great Tower, a ceremony going back about 500 years. Crowds gather on the High Street and Magdalen Bridge below to listen.",
+        "coordinates": [
+          51.751719,
+          -1.246859
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/77881357",
+        "source": "https://www.magd.ox.ac.uk/may-morning/"
+      },
+      {
+        "id": "trad_oxford_bridge_of_sighs",
+        "name": "Bridge of Sighs",
+        "description": "Hertford Bridge, nicknamed the Bridge of Sighs after the Venice bridge it is said to resemble, links two parts of Hertford College over New College Lane. Stop on the lane to see and photograph this city landmark.",
+        "coordinates": [
+          51.754502,
+          -1.253781
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/62333303",
+        "source": "https://en.wikipedia.org/wiki/Bridge_of_Sighs,_Oxford"
+      }
+    ],
     "wiki": "University of Oxford",
     "currency": "GBP (£)",
     "details": {
@@ -145,6 +187,70 @@
     "name": "University of Cambridge",
     "enumCase": "cambridge",
     "country": "england",
+    "aliases": [
+      "Cambridge"
+    ],
+    "colors": [
+      "#8EE8D8",
+      "#133844"
+    ],
+    "traditions": [
+      {
+        "id": "trad_cambridge_nine_lessons",
+        "name": "Nine Lessons and Carols at King's",
+        "description": "On Christmas Eve the King's College Choir sings the Festival of Nine Lessons and Carols in King's College Chapel. Tickets come from a public ballot, with a standby queue for people who applied.",
+        "coordinates": [
+          52.20478,
+          0.116544
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/164848633",
+        "source": "https://en.wikipedia.org/wiki/A_Festival_of_Nine_Lessons_and_Carols"
+      },
+      {
+        "id": "trad_cambridge_corpus_clock",
+        "name": "Corpus Clock",
+        "description": "The Corpus Clock, or Chronophage, is a gold-plated clock with no hands, set at street level on Corpus Christi College's Taylor Library at the corner of Bene't Street and Trumpington Street. Stop to watch its grasshopper-like figure as the clock runs.",
+        "coordinates": [
+          52.203759,
+          0.117688
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/298290448",
+        "source": "https://en.wikipedia.org/wiki/Corpus_Clock"
+      },
+      {
+        "id": "trad_cambridge_mathematical_bridge",
+        "name": "Mathematical Bridge Myth",
+        "description": "A popular fable says Isaac Newton built Queens' College's Mathematical Bridge without nuts or bolts, and that nobody could put it back together after taking it apart. View the bridge from the river or Silver Street and judge the story yourself.",
+        "coordinates": [
+          52.202214,
+          0.115049
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/570076432",
+        "source": "https://en.wikipedia.org/wiki/Mathematical_Bridge"
+      },
+      {
+        "id": "trad_cambridge_newton_apple_tree",
+        "name": "Newton's Apple Tree",
+        "description": "Outside Trinity College's Great Gate, below the rooms where Newton lived, grows an apple tree planted in 1954 and descended from the Woolsthorpe Manor tree linked to his story of gravity. Visitors stop on Trinity Street to see it.",
+        "coordinates": [
+          52.207305,
+          0.117735
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/5470780323",
+        "source": "https://mathshistory.st-andrews.ac.uk/Gaz/Cambridge_Colleges"
+      },
+      {
+        "id": "trad_cambridge_henry_chair_leg",
+        "name": "Henry VIII's Chair Leg",
+        "description": "The statue of Henry VIII on Trinity's Great Gate is famous because students swapped his sceptre for a chair leg in the 19th century. Look up from Trinity Street to see what he is holding.",
+        "coordinates": [
+          52.207137,
+          0.117586
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/443675369",
+        "source": "https://en.wikipedia.org/wiki/Great_Court,_Trinity_College,_Cambridge"
+      }
+    ],
     "wiki": "University of Cambridge",
     "currency": "GBP (£)",
     "details": {
@@ -257,6 +363,37 @@
     "name": "University of St Andrews",
     "enumCase": "stAndrews",
     "country": "scotland",
+    "aliases": [
+      "St Andrews"
+    ],
+    "colors": [
+      "#00539B",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_st_andrews_ph_initials",
+        "name": "Patrick Hamilton's PH",
+        "description": "The letters PH set in the cobbles outside St Salvator's Quad mark where Patrick Hamilton was burned at the stake in 1528. Tradition says any student who steps on them will fail their degree, so visitors step around them too.",
+        "coordinates": [
+          56.341258,
+          -2.794631
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/13061767374",
+        "source": "https://www.st-andrews.ac.uk/about/facts/"
+      },
+      {
+        "id": "trad_st_andrews_pier_walk",
+        "name": "Pier Walk",
+        "description": "After chapel each week, students in red gowns walk the length of the historic harbour pier, with the busiest walk at the end of Freshers' Week. Visitors can watch the procession or walk the pier themselves.",
+        "coordinates": [
+          56.339596,
+          -2.781318
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/180160426",
+        "source": "https://news.st-andrews.ac.uk/archive/university-of-st-andrews-traditions/"
+      }
+    ],
     "wiki": "University of St Andrews",
     "currency": "GBP (£)",
     "details": {
@@ -344,6 +481,48 @@
     "name": "University of Glasgow",
     "enumCase": "uniGlasgow",
     "country": "scotland",
+    "aliases": [
+      "Glasgow"
+    ],
+    "colors": [
+      "#011451",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_glasgow_unicorn",
+        "name": "Rub the Unicorn's Horn",
+        "description": "The Lion and Unicorn Staircase, carved in 1690, was moved stone by stone from the Old College on the High Street. Patting the unicorn or rubbing its horn is said to bring good luck, especially before exams.",
+        "coordinates": [
+          55.871353,
+          -4.289906
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/14241625248",
+        "source": "https://www.gla.ac.uk/explore/visit/campustours/prospectivestudents/studentsselfguided/unicornandlion/"
+      },
+      {
+        "id": "trad_glasgow_quad_grass",
+        "name": "Keep Off the Quad Grass",
+        "description": "It is thought to be bad luck for students to walk on the grass of the quadrangles before they graduate. Visitors can admire the East and West Quads from the paths, where graduation processions led by a piper take place.",
+        "coordinates": [
+          55.871366,
+          -4.287898
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/1362917540",
+        "source": "https://www.gla.ac.uk/explore/visit/campustours/prospectivestudents/studentsselfguided/quadrangles/"
+      },
+      {
+        "id": "trad_glasgow_cloisters",
+        "name": "The Cloisters",
+        "description": "The vaulted Cloisters (the Undercroft) between the East and West Quadrangles have appeared in films and TV series including Outlander and Cloud Atlas. Walk through and take a photo under the fluted columns.",
+        "coordinates": [
+          55.871446,
+          -4.288488
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/1287233421",
+        "source": "https://www.gla.ac.uk/explore/visit/campustours/prospectivestudents/studentsselfguided/cloisters/"
+      }
+    ],
     "wiki": "University of Glasgow",
     "currency": "GBP (£)",
     "details": {
@@ -426,6 +605,37 @@
     "name": "University of Edinburgh",
     "enumCase": "uniEdinburgh",
     "country": "scotland",
+    "aliases": [
+      "Edinburgh"
+    ],
+    "colors": [
+      "#D50032",
+      "#041E42"
+    ],
+    "traditions": [
+      {
+        "id": "trad_edinburgh_hume_toe",
+        "name": "Rub David Hume's Toe",
+        "description": "Former Edinburgh student David Hume's statue on the Royal Mile has a toe polished bright by students, tourists and passers-by rubbing it for luck. Visitors can give it a rub, though Hume himself was a famous critic of superstition.",
+        "coordinates": [
+          55.949552,
+          -3.192443
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/2112878976",
+        "source": "https://cfi.co/lifestyle/2023/04/david-humes-philosophy-controversy-superstition-atheism-and-lucky-toes"
+      },
+      {
+        "id": "trad_edinburgh_old_college_youth",
+        "name": "Spot the Gilded Youth on Old College",
+        "description": "The dome of Old College, added in 1887, is crowned by John Hutchison's gilded statue of Youth. Visitors can look up at it from South Bridge or walk into the quadrangle, which also hosts graduation ceremonies and festival events.",
+        "coordinates": [
+          55.947424,
+          -3.186515
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/33710",
+        "source": "https://en.wikipedia.org/wiki/Old_College,_University_of_Edinburgh"
+      }
+    ],
     "wiki": "University of Edinburgh",
     "currency": "GBP (£)",
     "details": {
@@ -538,6 +748,48 @@
     "name": "Durham University",
     "enumCase": "durhamUni",
     "country": "england",
+    "aliases": [
+      "Durham"
+    ],
+    "colors": [
+      "#68246D",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_durham_sanctuary_knocker",
+        "name": "See the Sanctuary Knocker",
+        "description": "In medieval times, anyone who had committed a great offence could grasp the ring on Durham Cathedral's north door and claim 37 days of sanctuary. Visitors can see the replica ring on the north door; the 12th-century original is in the Cathedral Museum.",
+        "coordinates": [
+          54.773262,
+          -1.576333
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/3584722",
+        "source": "https://www.durhamworldheritagesite.com/architecture/cathedral/intro/sanctuary-knocker"
+      },
+      {
+        "id": "trad_durham_castle_college",
+        "name": "Tour the Castle College",
+        "description": "Durham Castle on Palace Green is home to University College, where about 150 students live and formal dinners are still held in the medieval Great Hall. Visitors can see inside on a guided tour, which runs daily outside term time.",
+        "coordinates": [
+          54.775509,
+          -1.576891
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/81522967",
+        "source": "https://en.wikipedia.org/wiki/University_College,_Durham"
+      },
+      {
+        "id": "trad_durham_dun_cow",
+        "name": "Find the Dun Cow",
+        "description": "Local legend says monks carrying St Cuthbert's body followed a milkmaid looking for her lost dun cow to the hill where the cathedral now stands. Dun Cow Lane, beside the cathedral, takes its name from a carving of the story on the cathedral, and visitors can look for it.",
+        "coordinates": [
+          54.773834,
+          -1.575284
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/13854125",
+        "source": "https://en.wikipedia.org/wiki/Durham,_England"
+      }
+    ],
     "wiki": "Durham University",
     "currency": "GBP (£)",
     "details": {
@@ -630,6 +882,38 @@
     "name": "Trinity College Dublin",
     "enumCase": "trinityDublin",
     "country": "ireland",
+    "aliases": [
+      "Trinity",
+      "TCD"
+    ],
+    "colors": [
+      "#0569B9",
+      "#C1DAEE"
+    ],
+    "traditions": [
+      {
+        "id": "trad_tcd_campanile",
+        "name": "Don't Walk Under the Campanile",
+        "description": "Student superstition says that anyone who walks under the Campanile in Front Square while its bell tolls will fail their exams, so students rarely shelter beneath it, even in rain. Visitors can watch students walk around it rather than through it.",
+        "coordinates": [
+          53.344404,
+          -6.257315
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/44075420",
+        "source": "https://www.visittrinity.ie/blog/historical-walking-tours-of-dublin-discover-the-citys-hidden-stories/"
+      },
+      {
+        "id": "trad_tcd_book_of_kells",
+        "name": "See the Book of Kells and the Long Room",
+        "description": "The Old Library has held the Book of Kells since 1661, and its Long Room gets over 900,000 visitors a year. Visitors can buy a ticket to see the manuscript and walk through the Long Room.",
+        "coordinates": [
+          53.34393,
+          -6.256801
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/44075406",
+        "source": "https://en.wikipedia.org/wiki/Trinity_College_Dublin"
+      }
+    ],
     "wiki": "Trinity College Dublin",
     "currency": "EUR (€)",
     "details": {

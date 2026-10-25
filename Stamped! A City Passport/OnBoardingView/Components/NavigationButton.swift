@@ -15,15 +15,28 @@ struct NavigationButton: View {
     let shouldReduceMotion: Bool
     
     var body: some View {
-        Button(viewModel.isLastPage ? L.Onboarding.getStarted : L.Onboarding.next) {
+        // The page's one filled primary action: orange, or white on black in high contrast
+        Button {
             viewModel.nextPage(reduceMotion: shouldReduceMotion)
+        } label: {
+            Text(viewModel.isLastPage ? L.Onboarding.getStarted : L.Onboarding.next)
+                .font(.headline.weight(isHighContrast ? .black : .bold))
+                .lineLimit(2)
+                .minimumScaleFactor(0.8)
+                .multilineTextAlignment(.center)
+                .frame(maxWidth: .infinity, minHeight: 44)
+                .padding(.vertical, DS.Space.m)
+                .foregroundStyle(isHighContrast ? Color.black : Color.white)
+                .background(
+                    RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                        .fill(isHighContrast ? Color.white : DS.Palette.accent)
+                )
+                .contentShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
         }
-        .buttonStyle(.borderedProminent)
-        .tint(isHighContrast ? .white : Color.adventureOrange)
-        .foregroundColor(isHighContrast ? .black : .white)
-        .fontWeight(isHighContrast ? .black : .bold)
-        .controlSize(.large)
-        .padding()
+        .buttonStyle(.plain)
         .hoverEffect(.lift)
+        .dsPageMargin()
+        .padding(.top, DS.Space.s)
+        .padding(.bottom, DS.Space.l)
     }
 }

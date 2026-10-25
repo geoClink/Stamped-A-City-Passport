@@ -18,23 +18,30 @@ struct QuickConverterView: View {
     private var allCurrencies: [String] { viewModel.availableCurrencies }
 
     private var accentColor: Color {
-        isHighContrast ? .primary : Color("adventureOrange")
+        isHighContrast ? .primary : DS.Palette.accent
     }
 
+    /// The swap button keeps at least a 44pt tap target as the icon scales
+    @ScaledMetric(relativeTo: .title) private var swapButtonSize: CGFloat = 44
+
     var body: some View {
-        VStack(spacing: 12) {
-            HStack(alignment: .center) {
-                VStack(alignment: .leading, spacing: 6) {
+        VStack(spacing: DS.Space.m) {
+            // Bottom-aligned so the swap button sits level with the field and the result
+            // at every text size, under the two labels
+            HStack(alignment: .bottom) {
+                VStack(alignment: .leading, spacing: DS.Space.s) {
                     headerLabel(isInput: true)
                     
                     TextField("1.00", text: $userAmount)
                         .keyboardType(.decimalPad)
                         .font(.title3.bold())
-                        .padding(10)
-                        .background(isHighContrast ? Color.clear : Color(.systemGray6))
-                        .cornerRadius(isHighContrast ? 0 : 10)
+                        .padding(DS.Space.s)
+                        .background(
+                            RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
+                                .fill(isHighContrast ? Color.clear : Color(.systemGray6))
+                        )
                         .overlay(
-                            RoundedRectangle(cornerRadius: isHighContrast ? 0 : 10)
+                            RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
                                 .stroke(Color.primary, lineWidth: isHighContrast ? 2 : 0)
                         )
                         .frame(minHeight: 44)
@@ -51,17 +58,16 @@ struct QuickConverterView: View {
                     UIAccessibility.post(notification: .announcement, argument: "Swapped. Converting from \(from) to \(to)")
                 } label: {
                     Image(systemName: "arrow.left.arrow.right.circle.fill")
-                        .font(.system(size: 28))
+                        .font(.title)
                         .foregroundColor(accentColor)
-                        .frame(width: 44, height: 44)
+                        .frame(width: swapButtonSize, height: swapButtonSize)
                         .background(Color.white.opacity(0.001))
                         .contentShape(Rectangle())
                 }
-                .padding(.top, 20)
                 .accessibilityLabel("Swap conversion direction")
                 .accessibilityHint("Currently converting from \(viewModel.isSwapped ? "Local" : "Home") to \(viewModel.isSwapped ? "Home" : "Local") currency.")
                 
-                VStack(alignment: .trailing, spacing: 6) {
+                VStack(alignment: .trailing, spacing: DS.Space.s) {
                     headerLabel(isInput: false)
                     
                     Text(viewModel.convertAmount(userAmount))
@@ -69,7 +75,7 @@ struct QuickConverterView: View {
                         .foregroundColor(accentColor)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .frame(height: 44)
-                        .padding(.horizontal, 4)
+                        .padding(.horizontal, DS.Space.xs)
                         .accessibilityElement(children: .combine)
                         .accessibilityLabel("Converted amount")
                         .accessibilityValue(viewModel.convertAmount(userAmount))
@@ -80,7 +86,7 @@ struct QuickConverterView: View {
                 }
             }
             
-            HStack(alignment: .center, spacing: 8) {
+            HStack(alignment: .center, spacing: DS.Space.s) {
                 // Tappable compact status icon (opens modal)
                 Button { showingCurrencyInfo = true } label: {
                     Group {
@@ -121,15 +127,15 @@ struct QuickConverterView: View {
                             .scaleEffect(0.8)
                     } else {
                         Image(systemName: "arrow.clockwise")
-                            .font(.system(size: 14, weight: .semibold))
+                            .font(.footnote.weight(.semibold))
                     }
                 }
                 .buttonStyle(PlainButtonStyle())
-                .padding(.leading, 6)
+                .padding(.leading, DS.Space.s)
                 .accessibilityLabel(NSLocalizedString("refresh.rates.accessibility", comment: "Accessibility label for refresh rates button"))
                 .accessibilityHint(NSLocalizedString("refresh.rates.hint", comment: "Accessibility hint for refresh rates button"))
             }
-            .padding(.top, 4)
+            .padding(.top, DS.Space.xs)
             .sheet(isPresented: $showingCurrencyInfo) {
                 CurrencyInfoModal(viewModel: viewModel, isHighContrast: isHighContrast)
             }
@@ -140,16 +146,16 @@ struct QuickConverterView: View {
                 .foregroundStyle(isHighContrast ? .primary : .secondary)
                 .lineLimit(2)
                 .minimumScaleFactor(0.7)
-                .padding(.top, 2)
         }
-        .padding(14)
+        .padding(DS.Space.m)
+        // Sits inside a card, so it takes the small radius
         .background(
-            RoundedRectangle(cornerRadius: isHighContrast ? 0 : 16)
+            RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
                 .fill(isHighContrast ? Color(UIColor.systemBackground) : accentColor.opacity(0.06))
         )
         .overlay(
-            RoundedRectangle(cornerRadius: isHighContrast ? 0 : 16)
-                .stroke(Color.primary, lineWidth: isHighContrast ? 3 : 0)
+            RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
+                .stroke(Color.primary, lineWidth: isHighContrast ? 2 : 0)
         )
         .accessibilityElement(children: .contain)
         .accessibilityLabel("Currency Converter")
@@ -174,10 +180,10 @@ struct QuickConverterView: View {
                     }
                 }
             } label: {
-                HStack(spacing: 4) {
+                HStack(spacing: DS.Space.xs) {
                     Text("Home (\(viewModel.selectedHomeCurrency))")
                     Image(systemName: "chevron.up.chevron.down")
-                        .font(.system(size: 10, weight: .bold))
+                        .font(.caption2.weight(.bold))
                 }
                 .font(.caption2.bold())
                 .fontWeight(isHighContrast ? .black : .bold)
@@ -205,8 +211,8 @@ private struct CurrencyInfoModal: View {
 
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading, spacing: 16) {
-                HStack(spacing: 12) {
+            VStack(alignment: .leading, spacing: DS.Space.l) {
+                HStack(spacing: DS.Space.m) {
                     Group {
                         switch viewModel.currencyMode {
                         case .live:
@@ -214,7 +220,7 @@ private struct CurrencyInfoModal: View {
                                 .foregroundColor(isHighContrast ? .primary : .green)
                         case .cached:
                             Image(systemName: "clock.fill")
-                                .foregroundColor(isHighContrast ? .primary : Color("adventureOrange"))
+                                .foregroundColor(isHighContrast ? .primary : DS.Palette.accent)
                         case .offline:
                             Image(systemName: "wifi.slash")
                                 .foregroundColor(isHighContrast ? .primary : .secondary)
@@ -222,7 +228,7 @@ private struct CurrencyInfoModal: View {
                     }
                     .font(.title2)
 
-                    VStack(alignment: .leading, spacing: 4) {
+                    VStack(alignment: .leading, spacing: DS.Space.xs) {
                         Text(NSLocalizedString("modal.title", comment: "Title for currency info modal"))
                             .font(.headline)
                         Text("")
@@ -234,7 +240,7 @@ private struct CurrencyInfoModal: View {
 
                 Divider()
 
-                VStack(alignment: .leading, spacing: 8) {
+                VStack(alignment: .leading, spacing: DS.Space.s) {
                     HStack { Text(NSLocalizedString("modal.provider", comment: "Label for provider")); Spacer(); Text(viewModel.currencyProvider ?? "—") }
                     HStack { Text(NSLocalizedString("modal.last_updated", comment: "Label for last updated")); Spacer(); Text(dateText) }
                 }
@@ -242,7 +248,7 @@ private struct CurrencyInfoModal: View {
 
                 Divider()
 
-                VStack(alignment: .leading, spacing: 10) {
+                VStack(alignment: .leading, spacing: DS.Space.s) {
                     if viewModel.currencyMode == .live {
                         Text(NSLocalizedString("modal.explain_live", comment: "Explanation for live mode"))
                     } else if viewModel.currencyMode == .cached {
@@ -256,7 +262,7 @@ private struct CurrencyInfoModal: View {
 
                 Spacer()
             }
-            .padding()
+            .padding(DS.Space.l)
             .navigationTitle(Text(NSLocalizedString("modal.header", comment: "Modal header")))
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {

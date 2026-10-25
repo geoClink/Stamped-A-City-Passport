@@ -24,20 +24,20 @@ struct PassportShareCardView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(spacing: 28) {
+                VStack(spacing: DS.Space.xl) {
                     cardPreview
                     shareButton
                 }
-                .padding(.vertical, 24)
+                .padding(.vertical, DS.Space.xl)
             }
-            .background(Color(UIColor.systemGroupedBackground))
+            .background(DS.Palette.pageBackground)
             .navigationTitle("Share Passport")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Done") { dismiss() }
                         .fontWeight(.semibold)
-                        .foregroundStyle(Color.adventureOrange)
+                        .foregroundStyle(DS.Palette.accent)
                 }
             }
         }
@@ -53,9 +53,10 @@ struct PassportShareCardView: View {
             countryCount: countryCount,
             visitedCities: visitedCities
         )
-        .clipShape(RoundedRectangle(cornerRadius: 20))
+        .clipShape(RoundedRectangle(cornerRadius: DS.Radius.large, style: .continuous))
+        // Kept on purpose: the preview reads as a printed card you're about to hand over
         .shadow(color: .black.opacity(0.3), radius: 20, x: 0, y: 8)
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DS.Space.xl)
     }
 
     // MARK: - Share Button
@@ -71,15 +72,17 @@ struct PassportShareCardView: View {
                     .font(.headline)
                     .foregroundStyle(.white)
                     .frame(maxWidth: .infinity)
-                    .padding(.vertical, 16)
-                    .background(Color.adventureOrange)
-                    .cornerRadius(14)
-                    .padding(.horizontal, 24)
+                    .padding(.vertical, DS.Space.l)
+                    .background(
+                        RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                            .fill(DS.Palette.accent)
+                    )
+                    .padding(.horizontal, DS.Space.xl)
             }
         } else {
             ProgressView()
                 .frame(maxWidth: .infinity)
-                .padding(.vertical, 28)
+                .padding(.vertical, DS.Space.section)
         }
     }
 
@@ -107,13 +110,16 @@ struct PassportShareCardView: View {
 
 // MARK: - Passport Card Design
 
+/// Rendered to a fixed 360x500 image, so its type uses fixed point sizes on purpose:
+/// Dynamic Type would reflow the layout and push content off the card.
+
 struct PassportCard: View {
     let stampCount: Int
     let cityCount: Int
     let countryCount: Int
     let visitedCities: [CityLocation.City]
 
-    static let orange = Color.adventureOrange
+    static let orange = DS.Palette.accent
     static let cardWidth: CGFloat = 360
     static let cardHeight: CGFloat = 500
 
@@ -127,7 +133,6 @@ struct PassportCard: View {
         }
         .frame(width: Self.cardWidth, height: Self.cardHeight)
         .background(Color.white)
-        .clipShape(RoundedRectangle(cornerRadius: 0))
     }
 
     // MARK: - Orange top band
@@ -136,7 +141,7 @@ struct PassportCard: View {
         VStack(spacing: 0) {
             // App bar
             HStack {
-                HStack(spacing: 8) {
+                HStack(spacing: DS.Space.s) {
                     Image(systemName: "globe.americas.fill")
                         .font(.system(size: 20, weight: .bold))
                         .foregroundStyle(.white)
@@ -156,9 +161,9 @@ struct PassportCard: View {
                     .font(.system(size: 9, weight: .medium))
                     .foregroundStyle(.white.opacity(0.7))
             }
-            .padding(.horizontal, 22)
-            .padding(.top, 22)
-            .padding(.bottom, 18)
+            .padding(.horizontal, DS.Space.xl)
+            .padding(.top, DS.Space.xl)
+            .padding(.bottom, DS.Space.l)
 
             // Big stamp count
             VStack(spacing: 6) {
@@ -174,7 +179,7 @@ struct PassportCard: View {
                     .tracking(3)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 22)
+            .padding(.bottom, DS.Space.xl)
 
             // Cities / countries row
             HStack(spacing: 0) {
@@ -184,7 +189,7 @@ struct PassportCard: View {
                     .frame(width: 1, height: 28)
                 statBlock(value: countryCount, label: "COUNTRIES")
             }
-            .padding(.bottom, 22)
+            .padding(.bottom, DS.Space.xl)
         }
         .background(Self.orange)
     }
@@ -205,14 +210,14 @@ struct PassportCard: View {
     // MARK: - White bottom section with city tags
 
     private var bottomSection: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        VStack(alignment: .leading, spacing: DS.Space.s) {
             if !visitedCities.isEmpty {
                 Text("CITIES VISITED")
                     .font(.system(size: 9, weight: .bold))
                     .foregroundStyle(Self.orange)
                     .tracking(3)
-                    .padding(.top, 16)
-                    .padding(.horizontal, 20)
+                    .padding(.top, DS.Space.l)
+                    .padding(.horizontal, DS.Space.l)
 
                 LazyVGrid(
                     columns: [GridItem(.adaptive(minimum: 74, maximum: 120), spacing: 6)],
@@ -222,23 +227,21 @@ struct PassportCard: View {
                         Text(city.name)
                             .font(.system(size: 9, weight: .semibold))
                             .foregroundStyle(Self.orange)
-                            .padding(.horizontal, 8)
-                            .padding(.vertical, 5)
-                            .background(Self.orange.opacity(0.1))
-                            .cornerRadius(5)
+                            .padding(.horizontal, DS.Space.s)
+                            .padding(.vertical, DS.Space.xs)
+                            .background(Self.orange.opacity(0.1), in: RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous))
                             .lineLimit(1)
                     }
                     if extraCount > 0 {
                         Text("+\(extraCount) more")
                             .font(.system(size: 9, weight: .medium))
                             .foregroundStyle(Self.orange.opacity(0.6))
-                            .padding(.horizontal, 8)
-                            .padding(.vertical, 5)
-                            .background(Self.orange.opacity(0.05))
-                            .cornerRadius(5)
+                            .padding(.horizontal, DS.Space.s)
+                            .padding(.vertical, DS.Space.xs)
+                            .background(Self.orange.opacity(0.05), in: RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous))
                     }
                 }
-                .padding(.horizontal, 20)
+                .padding(.horizontal, DS.Space.l)
             }
 
             Spacer(minLength: 0)
@@ -253,8 +256,8 @@ struct PassportCard: View {
                     .foregroundStyle(Self.orange.opacity(0.4))
                     .tracking(1)
             }
-            .padding(.horizontal, 20)
-            .padding(.bottom, 16)
+            .padding(.horizontal, DS.Space.l)
+            .padding(.bottom, DS.Space.l)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
     }

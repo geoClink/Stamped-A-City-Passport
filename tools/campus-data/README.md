@@ -28,6 +28,9 @@ The script itself only uses the Python standard library; `requirements.txt` is f
      `coordinates`. The article's single point is then ignored, and no shared photo is used.
    - Building ids look like `campus_yale_sterling_library` and must never change once shipped
      (iCloud stamps are saved by id).
+   - US campuses can set `"conference"` (`bigTen`, `sec`, `acc`, `big12` or `ivyLeague`). The city list
+     groups US campuses by conference; a US campus without one shows under "Other U.S. Campuses".
+     Update it when a school changes conference.
 2. Check it:
    ```bash
    python build_campuses.py --check

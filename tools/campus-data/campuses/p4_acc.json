@@ -1,0 +1,1877 @@
+[
+  {
+    "name": "Boston College",
+    "enumCase": "bostonCollege",
+    "country": "unitedStates",
+    "conference": "acc",
+    "aliases": [
+      "BC"
+    ],
+    "colors": [
+      "#8C2232",
+      "#DBCCA6"
+    ],
+    "traditions": [
+      {
+        "id": "trad_bc_golden_eagle",
+        "name": "Golden Eagle Statue",
+        "description": "A gilded eagle on a 30-foot column stands in front of Gasson Hall, a replica of the statue the college received in 1954. Visitors take a photo of the eagle with Gasson Tower behind it.",
+        "coordinates": [
+          42.3356283,
+          -71.1704848
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/29630478",
+        "source": "https://www.bc.edu/bc-web/sites/bc-news/articles/2026/summer/golden-again.html"
+      },
+      {
+        "id": "trad_bc_flutie_statue",
+        "name": "Doug Flutie Statue",
+        "description": "A statue outside Alumni Stadium recreates the Hail Mary pass that made quarterback Doug Flutie famous. Fans stop for a photo with it on the way to the stadium.",
+        "coordinates": [
+          42.3350993,
+          -71.1663078
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/29585757",
+        "source": "https://www.bc.edu/content/bc-web/offices/alumni/sites/a-to-z-guide.html"
+      }
+    ],
+    "wiki": "Boston College",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Ever to Excel",
+      "airportName": "Boston Logan International Airport",
+      "airportCode": "BOS",
+      "airportInfo": "Logan International, in East Boston, is the main airport for the region.",
+      "funFact": "Gasson Tower, finished in 1913, set the pattern for the tall Gothic towers later built at Princeton, Yale and Duke.",
+      "language": "English",
+      "languageInfo": "The school colors are maroon and gold, and the teams are the Eagles.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / MBTA Green Line",
+      "transportationFact": "The main campus is walkable. The Green Line B branch ends at Boston College station on Commonwealth Avenue, with direct trains toward downtown Boston."
+    },
+    "buildings": [
+      {
+        "id": "campus_bc_gasson_hall",
+        "wiki": "Gasson Hall",
+        "name": "Gasson Hall",
+        "description": "Charles Donagh Maginnis placed this Collegiate Gothic hall at the highest point of Chestnut Hill as the centerpiece of his 1908 campus plan. Its 200-foot bell tower became the symbol of the college when the building opened in 1913.",
+        "architect": "Charles Donagh Maginnis",
+        "yearBuilt": 1913,
+        "address": "140 Commonwealth Ave, Chestnut Hill, MA 02467",
+        "oldUse": "Recitation Building",
+        "newUse": "Classrooms and Offices",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 4,
+        "height": 61,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_bc_bapst_library",
+        "wiki": "Bapst Library",
+        "name": "Bapst Library",
+        "description": "Maginnis & Walsh designed the college's first library, completed in 1928 and long praised as one of the finest Collegiate Gothic buildings in America. Its Gargan Hall reading room has tall stained-glass windows.",
+        "architect": "Maginnis & Walsh",
+        "yearBuilt": 1928,
+        "address": "140 Commonwealth Ave, Chestnut Hill, MA 02467",
+        "oldUse": "Main University Library",
+        "newUse": "Library and Study Hall",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_bc_st_marys_hall",
+        "wiki": "Boston College Main Campus Historic District",
+        "name": "St. Mary's Hall",
+        "description": "Completed in 1917 with its own chapel, this stone hall is one of the original Gothic Revival buildings of Maginnis's plan. It closes the north side of the main quadrangle.",
+        "architect": "Maginnis & Walsh",
+        "yearBuilt": 1917,
+        "address": "140 Commonwealth Ave, Chestnut Hill, MA 02467",
+        "oldUse": "Hall and Chapel",
+        "newUse": "Hall and Chapel",
+        "buildingStyle": "Gothic Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          42.3368768,
+          -71.1705355
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/29812424"
+      },
+      {
+        "id": "campus_bc_devlin_hall",
+        "wiki": "Boston College Main Campus Historic District",
+        "name": "Devlin Hall",
+        "description": "Built in 1924 as the college's science building, this Gothic Revival hall won the Harleston Parker Medal in 1926 as the most beautiful building in Boston. It is one of the original stone buildings of the Maginnis plan.",
+        "architect": "Maginnis & Walsh",
+        "yearBuilt": 1924,
+        "address": "140 Commonwealth Ave, Chestnut Hill, MA 02467",
+        "oldUse": "Science Building",
+        "newUse": "Academic Building",
+        "buildingStyle": "Gothic Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          42.3352571,
+          -71.1696537
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/29890053"
+      },
+      {
+        "id": "campus_bc_fulton_hall",
+        "wiki": "Fulton Hall",
+        "name": "Fulton Hall",
+        "description": "Maginnis & Walsh built this plain stone hall in 1948 for the crowd of students who came after World War II on the G.I. Bill. A 1993 renovation by Svigals & Associates added a skylit atrium for the Carroll School of Management.",
+        "architect": "Maginnis & Walsh; Svigals & Associates (1993 renovation)",
+        "yearBuilt": 1948,
+        "address": "140 Commonwealth Ave, Chestnut Hill, MA 02467",
+        "oldUse": "Academic Building",
+        "newUse": "Carroll School of Management",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Clemson University",
+    "enumCase": "clemson",
+    "country": "unitedStates",
+    "conference": "acc",
+    "aliases": [
+      "Clemson",
+      "Clemson Tigers"
+    ],
+    "colors": [
+      "#F56600",
+      "#522D80"
+    ],
+    "traditions": [
+      {
+        "id": "trad_clemson_howards_rock",
+        "name": "Howard's Rock",
+        "description": "This piece of quartzite sits on a pedestal atop The Hill in Memorial Stadium, and players rub it before running down onto the field at home games. Visitors can see it at the east end of the stadium.",
+        "coordinates": [
+          34.6789551,
+          -82.8422007
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/5849779838",
+        "source": "https://clemson.edu/about/traditions.html"
+      },
+      {
+        "id": "trad_clemson_lovers_lane",
+        "name": "Lover's Lane in President's Park",
+        "description": "Campus legend says couples who walk hand in hand through President's Park will marry. Visitors stroll the park at the edge of campus.",
+        "coordinates": [
+          34.6790936,
+          -82.8327753
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/26996602",
+        "source": "https://clemson.edu/about/traditions.html"
+      },
+      {
+        "id": "trad_clemson_bowman_field",
+        "name": "Bowman Field",
+        "description": "Bowman Field, the lawn in front of Tillman Hall, was the parade ground for Clemson's cadets. Visitors take in the view of the Tillman Hall clock tower from the field.",
+        "coordinates": [
+          34.680875,
+          -82.8366232
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/370814149",
+        "source": "https://clemson.edu/about/traditions.html"
+      }
+    ],
+    "wiki": "Clemson University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Home of the Tigers",
+      "airportName": "Greenville-Spartanburg International Airport",
+      "airportCode": "GSP",
+      "airportInfo": "Greenville-Spartanburg International, east of Clemson along Interstate 85, is the nearest commercial airport.",
+      "funFact": "The campus grew up around Fort Hill, the plantation house of John C. Calhoun, which still stands on campus as a museum.",
+      "language": "English",
+      "languageInfo": "The school colors are orange and regalia (purple), and the teams are the Tigers.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / CATbus",
+      "transportationFact": "The central campus is walkable. Clemson Area Transit's CATbus is fare-free and runs routes across campus and into the city of Clemson."
+    },
+    "buildings": [
+      {
+        "id": "campus_clemson_tillman_hall",
+        "wiki": "Tillman Hall at Clemson University",
+        "name": "Tillman Hall",
+        "description": "Atlanta architects Bruce & Morgan designed the university's main building with its clock tower, completed in 1893 and rebuilt after a fire in 1895. It overlooks Bowman Field and houses the College of Education.",
+        "architect": "Bruce & Morgan",
+        "yearBuilt": 1893,
+        "address": "101 Gantt Circle, Clemson, SC 29634",
+        "oldUse": "Main Building",
+        "newUse": "College of Education",
+        "buildingStyle": "Late Victorian",
+        "numberOfStories": 3,
+        "height": 0,
+        "foodSpots": [],
+        "coordinates": [
+          34.6800966,
+          -82.8375159
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/27757700"
+      },
+      {
+        "id": "campus_clemson_fort_hill",
+        "wiki": "Fort Hill (Clemson, South Carolina)",
+        "name": "Fort Hill",
+        "description": "This Greek Revival plantation house was the home of John C. Calhoun from 1825 to 1850. The university was founded on the plantation in 1889 and keeps the house as a museum.",
+        "architect": "Unknown",
+        "yearBuilt": 1802,
+        "address": "Clemson, SC 29634",
+        "oldUse": "Plantation House",
+        "newUse": "Museum",
+        "buildingStyle": "Greek Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_clemson_hanover_house",
+        "wiki": "Hanover House (Clemson University)",
+        "name": "Hanover House",
+        "description": "A French Huguenot family built this cypress house with a gambrel roof in 1714–1716 in the South Carolina Lowcountry. It was moved to the campus in the 1940s to save it from the flooding of Lake Moultrie.",
+        "architect": "Paul de St. Julien",
+        "yearBuilt": 1716,
+        "address": "Cherry Road, Clemson, SC 29634",
+        "oldUse": "Plantation House",
+        "newUse": "Museum",
+        "buildingStyle": "Colonial",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_clemson_lee_lowry_hall",
+        "wiki": "Lee and Lowry Hall",
+        "name": "Lee and Lowry Hall",
+        "description": "Harlan McClure, dean of architecture, designed this International Style complex, completed in 1958 as the Structural Science Building. Three wings enclose two courtyards, and it is listed on the National Register of Historic Places.",
+        "architect": "Harlan E. McClure",
+        "yearBuilt": 1958,
+        "address": "Clemson, SC 29634",
+        "oldUse": "Structural Science Building",
+        "newUse": "Architecture and Engineering Building",
+        "buildingStyle": "International Style",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_clemson_memorial_stadium",
+        "wiki": "Memorial Stadium (Clemson)",
+        "name": "Memorial Stadium",
+        "description": "Known as Death Valley, the stadium opened in 1942 with 20,500 seats built for $125,000. It has grown into one of the largest stadiums in college football.",
+        "architect": "Carl Lee and H. E. Glenn",
+        "yearBuilt": 1942,
+        "address": "Avenue of Champions, Clemson, SC 29634",
+        "oldUse": "Football Stadium",
+        "newUse": "Football Stadium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Duke University",
+    "enumCase": "duke",
+    "country": "unitedStates",
+    "conference": "acc",
+    "aliases": [
+      "Duke",
+      "Blue Devils"
+    ],
+    "colors": [
+      "#013088",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_duke_chapel_carillon",
+        "name": "Duke Chapel Carillon",
+        "description": "The 50-bell carillon in the Duke Chapel tower is played every weekday at 5 p.m., and the alma mater is played on Fridays. Visitors gather near the chapel to listen.",
+        "coordinates": [
+          36.0018682,
+          -78.9402861
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/626679838",
+        "source": "https://chapel.duke.edu/carillon/"
+      },
+      {
+        "id": "trad_duke_krzyzewskiville",
+        "name": "Krzyzewskiville",
+        "description": "Before the biggest men's basketball games, students camp in a tent city called Krzyzewskiville on the lawn beside Cameron Indoor Stadium. Visitors in winter can walk past the tents.",
+        "coordinates": [
+          35.9974496,
+          -78.9422669
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/625303119",
+        "source": "https://en.wikipedia.org/wiki/Krzyzewskiville"
+      }
+    ],
+    "wiki": "Duke University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Home of the Blue Devils",
+      "airportName": "Raleigh-Durham International Airport",
+      "airportCode": "RDU",
+      "airportInfo": "Raleigh-Durham International, east of Durham, is the main airport for the Research Triangle.",
+      "funFact": "Julian Abele, a noted African-American architect and chief designer for Horace Trumbauer's firm, designed Duke Chapel and much of West Campus.",
+      "language": "English",
+      "languageInfo": "The school colors are Duke blue and white, and the teams are the Blue Devils.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Duke Transit",
+      "transportationFact": "Each campus is walkable. Duke's free campus buses, including the C1 East-West route, link East and West campuses."
+    },
+    "buildings": [
+      {
+        "id": "campus_duke_chapel",
+        "wiki": "Duke Chapel",
+        "name": "Duke Chapel",
+        "description": "Finished in 1935, the chapel was the last of the original West Campus buildings and rises 210 feet at the center of campus. Julian Abele designed it in Collegiate Gothic stone for about 1,800 worshippers.",
+        "architect": "Julian Abele (Horace Trumbauer firm)",
+        "yearBuilt": 1935,
+        "address": "West Campus, Duke University, Durham, NC 27708",
+        "oldUse": "Chapel",
+        "newUse": "Chapel",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 64,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_duke_nasher_museum",
+        "wiki": "Nasher Museum of Art",
+        "name": "Nasher Museum of Art",
+        "description": "Rafael Viñoly designed the museum's $24 million building, which opened in 2005 on Central Campus. It replaced the older Duke University Museum of Art, founded in 1969.",
+        "architect": "Rafael Viñoly",
+        "yearBuilt": 2005,
+        "address": "2001 Campus Dr, Durham, NC 27705",
+        "oldUse": "Art Museum",
+        "newUse": "Art Museum",
+        "buildingStyle": "Modern",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_duke_cameron_indoor",
+        "wiki": "Cameron Indoor Stadium",
+        "name": "Cameron Indoor Stadium",
+        "description": "Julian Abele's first drawings signed under his own name were for this 9,314-seat arena, which opened in 1940. It is the home of Duke basketball and its Cameron Crazies.",
+        "architect": "Julian Abele (Office of Horace Trumbauer)",
+        "yearBuilt": 1940,
+        "address": "115 Whitford Dr, Durham, NC 27708",
+        "oldUse": "Indoor Arena",
+        "newUse": "Indoor Arena",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_duke_hart_house",
+        "wiki": "J. Deryl Hart House",
+        "name": "J. Deryl Hart House",
+        "description": "This three-story brick and half-timbered Tudor Revival house was built in 1933–1934 as one of five faculty homes on early West Campus. It is now the official residence of Duke's president.",
+        "architect": "Thomas Wright Cooper and G. Murray Nelson",
+        "yearBuilt": 1934,
+        "address": "2324 Duke University Rd, Durham, NC 27708",
+        "oldUse": "Faculty Residence",
+        "newUse": "President's Residence",
+        "buildingStyle": "Tudor Revival",
+        "numberOfStories": 3,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_duke_wallace_wade",
+        "wiki": "Wallace Wade Stadium",
+        "name": "Wallace Wade Stadium",
+        "description": "Horace Trumbauer's firm designed the football stadium, which opened in 1929 in a wooded hollow on West Campus. It seats about 35,000 for Blue Devils football.",
+        "architect": "Horace Trumbauer",
+        "yearBuilt": 1929,
+        "address": "Frank Bassett Dr, Durham, NC 27708",
+        "oldUse": "Football Stadium",
+        "newUse": "Football Stadium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Florida State University",
+    "enumCase": "floridaState",
+    "country": "unitedStates",
+    "conference": "acc",
+    "aliases": [
+      "FSU",
+      "Florida State",
+      "Seminoles",
+      "Noles"
+    ],
+    "colors": [
+      "#782F40",
+      "#CEB888"
+    ],
+    "traditions": [
+      {
+        "id": "trad_fsu_unconquered",
+        "name": "Unconquered Statue",
+        "description": "This bronze statue outside Doak Campbell Stadium shows a Seminole rider on a rearing horse. Its spear is lit at sunset before home football games, and fans gather to watch.",
+        "coordinates": [
+          30.4369314,
+          -84.3029864
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/4636776741",
+        "source": "https://seminoles.com/news/2006/3/8/florida-states-expanded-spear-lighting-tradition-begins-monday-night"
+      },
+      {
+        "id": "trad_fsu_legacy_walk",
+        "name": "Legacy Walk",
+        "description": "Medallions and garnet banners mark a walking tour of campus history that starts at Landis Green. Visitors follow it past historic buildings, statues and monuments.",
+        "coordinates": [
+          30.4417312,
+          -84.2949907
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/106455324",
+        "source": "https://en.wikipedia.org/wiki/FSU_Legacy_Walk"
+      }
+    ],
+    "wiki": "Florida State University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Vires, Artes, Mores",
+      "airportName": "Tallahassee International Airport",
+      "airportCode": "TLH",
+      "airportInfo": "Tallahassee International, southwest of the city, is the nearest commercial airport.",
+      "funFact": "Architect William Augustus Edwards designed early Collegiate Gothic halls such as the Westcott Building and Dodd Hall, and newer buildings like Legacy Hall and the Student Union keep the style.",
+      "language": "English",
+      "languageInfo": "The school colors are garnet and gold, and the teams are the Seminoles.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Seminole Express",
+      "transportationFact": "The campus is walkable. The Seminole Express buses, run with StarMetro, serve campus and nearby neighborhoods, and students ride free with their FSUCard."
+    },
+    "buildings": [
+      {
+        "id": "campus_fsu_westcott_building",
+        "wiki": "Westcott Building",
+        "name": "Westcott Building",
+        "description": "Built in 1910 as the administration building of the Florida State College, this Collegiate Gothic hall closes the view up College Avenue. It holds the university's main offices and Ruby Diamond Auditorium.",
+        "architect": "William Augustus Edwards",
+        "yearBuilt": 1910,
+        "address": "Florida State University, Tallahassee, FL 32306",
+        "oldUse": "Administration Building",
+        "newUse": "Administration and Concert Hall",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_fsu_dodd_hall",
+        "wiki": "Dodd Hall",
+        "name": "Dodd Hall",
+        "description": "Built in 1923 as the library of the Florida State College for Women, Dodd Hall is one of the most ornate Collegiate Gothic buildings on campus. It was the main library until Strozier Library opened in 1956.",
+        "architect": "William Augustus Edwards",
+        "yearBuilt": 1923,
+        "address": "641 University Way, Tallahassee, FL 32306",
+        "oldUse": "Library",
+        "newUse": "Department of Religion and Heritage Museum",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_fsu_legacy_hall",
+        "wiki": "Legacy Hall",
+        "name": "Legacy Hall",
+        "description": "Goody Clancy designed this five-story home for the College of Business, completed in 2025 as the largest academic building on campus. It follows the Collegiate Gothic style of the older campus.",
+        "architect": "Goody Clancy",
+        "yearBuilt": 2025,
+        "address": "402 W Gaines St, Tallahassee, FL 32306",
+        "oldUse": "College of Business",
+        "newUse": "College of Business",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 5,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_fsu_student_union",
+        "wiki": "Student Union (Florida State University)",
+        "name": "Student Union",
+        "description": "The four-story student union opened in 2022 on the site of six older buildings. It is a modern building wrapped in a Collegiate Gothic brick exterior to match the campus.",
+        "architect": "Architects Lewis + Whitlock / Workshop Architects",
+        "yearBuilt": 2022,
+        "address": "75 N Woodward Ave, Tallahassee, FL 32306",
+        "oldUse": "Student Union",
+        "newUse": "Student Union",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 4,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_fsu_doak_campbell",
+        "wiki": "Doak Campbell Stadium",
+        "name": "Doak Campbell Stadium",
+        "description": "The football stadium opened in 1950 and later grew into a mixed-use complex with offices, classrooms and the University Center. Its brick facade matches the Collegiate Gothic design of most campus buildings.",
+        "architect": "Ball-Horton & Associates",
+        "yearBuilt": 1950,
+        "address": "403 Stadium Dr W, Tallahassee, FL 32304",
+        "oldUse": "Football Stadium",
+        "newUse": "Football Stadium and University Center",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Georgia Institute of Technology",
+    "enumCase": "georgiaTech",
+    "country": "unitedStates",
+    "conference": "acc",
+    "aliases": [
+      "Georgia Tech",
+      "GT",
+      "Yellow Jackets"
+    ],
+    "colors": [
+      "#B39051",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_gatech_tech_tower",
+        "name": "Tech Tower",
+        "description": "The lighted TECH letters on all four sides of Tech Tower are the best-known symbol of the institute. Visitors take a photo from the lawn below; taking the letters is banned.",
+        "coordinates": [
+          33.7724961,
+          -84.3946737
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/42706709",
+        "source": "https://en.wikipedia.org/wiki/Traditions_of_the_Georgia_Institute_of_Technology"
+      },
+      {
+        "id": "trad_gatech_campanile",
+        "name": "Kessler Campanile",
+        "description": "This 80-foot stainless steel campanile in front of the student center was built for the 1996 Olympics, and its peaks echo Tech Tower. Visitors meet and take photos at its base.",
+        "coordinates": [
+          33.7743044,
+          -84.3981828
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/11698623873",
+        "source": "https://en.wikipedia.org/wiki/Kessler_Campanile"
+      }
+    ],
+    "wiki": "Georgia Tech",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "The Ramblin' Wreck",
+      "airportName": "Hartsfield-Jackson Atlanta International Airport",
+      "airportCode": "ATL",
+      "airportInfo": "Hartsfield-Jackson, south of the city, can be reached from Midtown on MARTA's Red and Gold lines.",
+      "funFact": "The lighted TECH signs on all four sides of Tech Tower's seven-story tower have marked the campus since the building opened in 1888.",
+      "language": "English",
+      "languageInfo": "The school colors are old gold and white, and the teams are the Yellow Jackets.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Stinger buses / MARTA",
+      "transportationFact": "The campus is walkable. Georgia Tech's Stinger buses loop the campus and link it with Tech Square and Midtown MARTA station."
+    },
+    "buildings": [
+      {
+        "id": "campus_gatech_tech_tower",
+        "wiki": "Tech Tower",
+        "name": "Tech Tower",
+        "description": "Bruce & Morgan designed the red brick Academic Building, completed in 1888 as the school's first building. Its central tower carries the lighted TECH signs that are the symbol of the institute.",
+        "architect": "Bruce & Morgan",
+        "yearBuilt": 1888,
+        "address": "225 North Ave NW, Atlanta, GA 30332",
+        "oldUse": "Academic Building",
+        "newUse": "Administration Building",
+        "buildingStyle": "Victorian / Romanesque Revival",
+        "numberOfStories": 4,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_gatech_library",
+        "wiki": "Georgia Tech Library",
+        "name": "Georgia Tech Library",
+        "description": "The S. Price Gilbert Memorial Library, led by architecture professor Paul Heffernan, was dedicated in 1953 and is an early example of modernism on campus. A renovation of the library and its Crosland Tower was finished in 2020.",
+        "architect": "Paul Heffernan (Bush-Brown, Gailey & Heffernan)",
+        "yearBuilt": 1953,
+        "address": "Georgia Tech campus, Atlanta, GA 30332",
+        "oldUse": "Library",
+        "newUse": "Library",
+        "buildingStyle": "International Style",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_gatech_kendeda",
+        "wiki": "Kendeda Building",
+        "name": "Kendeda Building",
+        "description": "Opened in 2019, this mass timber building was designed to meet the Living Building Challenge, and a large solar canopy covers its roof.",
+        "architect": "Lord Aeck Sargent and Miller Hull",
+        "yearBuilt": 2019,
+        "address": "422 Ferst Dr NW, Atlanta, GA 30332",
+        "oldUse": "Academic Building",
+        "newUse": "Academic Building",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "coordinates": [
+          33.7786705,
+          -84.399532
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/977377065"
+      },
+      {
+        "id": "campus_gatech_kessler_campanile",
+        "wiki": "Kessler Campanile",
+        "name": "Kessler Campanile",
+        "description": "Artist Richard Hill designed this 80-foot twisting obelisk of 244 stainless steel plates for the 1996 Olympic Games. It plays the fight song through speakers that sound like carillon bells.",
+        "architect": "Richard Hill",
+        "yearBuilt": 1996,
+        "address": "Tech Walkway, Atlanta, GA 30332",
+        "oldUse": "Campanile",
+        "newUse": "Campanile",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 24,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_gatech_mccamish",
+        "wiki": "McCamish Pavilion",
+        "name": "McCamish Pavilion",
+        "description": "Opened in 1956 as Alexander Memorial Coliseum, the arena's steel dome was built without columns to give every fan a clear view. It was rebuilt inside and renamed in 2012.",
+        "architect": "Aeck Associates",
+        "yearBuilt": 1956,
+        "address": "965 Fowler St NW, Atlanta, GA 30332",
+        "oldUse": "Basketball Arena",
+        "newUse": "Basketball Arena",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of Louisville",
+    "enumCase": "uLouisville",
+    "country": "unitedStates",
+    "conference": "acc",
+    "aliases": [
+      "Louisville",
+      "UofL",
+      "U of L"
+    ],
+    "colors": [
+      "#AD0000",
+      "#000000"
+    ],
+    "traditions": [
+      {
+        "id": "trad_uofl_thinker",
+        "name": "The Thinker",
+        "description": "A large bronze cast of Rodin's The Thinker has sat in front of Grawemeyer Hall since 1949. Having your picture taken with it is a classic stop on a campus visit.",
+        "coordinates": [
+          38.2150774,
+          -85.7604332
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/1520587047",
+        "source": "https://louisville.edu/visits/explore-campus/uofl-top-10"
+      }
+    ],
+    "wiki": "University of Louisville",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Home of the Cardinals",
+      "airportName": "Louisville Muhammad Ali International Airport",
+      "airportCode": "SDF",
+      "airportInfo": "Louisville Muhammad Ali International is a short drive south of Belknap Campus.",
+      "funFact": "Grawemeyer Hall, the main administration building, was modeled on Thomas Jefferson's Rotunda at the University of Virginia.",
+      "language": "English",
+      "languageInfo": "The school colors are red and black, and the teams are the Cardinals.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / TARC buses",
+      "transportationFact": "Belknap Campus is walkable. Students and staff ride TARC buses free with a UofL ID, including Route 28 to the Health Sciences Center."
+    },
+    "buildings": [
+      {
+        "id": "campus_uofl_grawemeyer_hall",
+        "wiki": "Grawemeyer Hall",
+        "name": "Grawemeyer Hall",
+        "description": "Completed in 1926 and modeled on Jefferson's Rotunda, this domed building houses the president's office. A Foucault pendulum hangs 72 feet under the dome.",
+        "architect": "Allied Architects of Kentucky",
+        "yearBuilt": 1926,
+        "address": "2301 S 3rd St, Louisville, KY 40292",
+        "oldUse": "Administration Building",
+        "newUse": "Administration Building",
+        "buildingStyle": "Neoclassical",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uofl_playhouse",
+        "wiki": "University of Louisville",
+        "name": "University Playhouse",
+        "description": "Built in 1874 as the chapel of the orphanage and reform school that once stood on the Belknap grounds, this wooden building became the university's theater in 1925. It was taken apart plank by plank in 1977 to make way for Ekstrom Library and reopened in 1980.",
+        "architect": "Unknown",
+        "yearBuilt": 1874,
+        "address": "1911 S 3rd St, Louisville, KY 40208",
+        "oldUse": "Chapel",
+        "newUse": "Theater",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          38.219983,
+          -85.7608211
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/332056843"
+      },
+      {
+        "id": "campus_uofl_ekstrom_library",
+        "wiki": "William F. Ekstrom Library",
+        "name": "Ekstrom Library",
+        "description": "The university's main library opened in 1981 in a building by the Louisville firm Louis & Henry, which won a Kentucky Society of Architects merit award. It holds about two million historic photographs.",
+        "architect": "Louis & Henry",
+        "yearBuilt": 1981,
+        "address": "2301 S 3rd St, Louisville, KY 40292",
+        "oldUse": "Library",
+        "newUse": "Library",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uofl_cardinal_stadium",
+        "wiki": "Cardinal Stadium",
+        "name": "L&N Federal Credit Union Stadium",
+        "description": "The football stadium opened in 1998 at the south end of campus in a horseshoe shape designed to expand.",
+        "architect": "Rosser International; Luckett & Farley",
+        "yearBuilt": 1998,
+        "address": "2800 S Floyd St, Louisville, KY 40209",
+        "oldUse": "Football Stadium",
+        "newUse": "Football Stadium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of Miami",
+    "enumCase": "uMiami",
+    "country": "unitedStates",
+    "conference": "acc",
+    "aliases": [
+      "The U",
+      "UMiami",
+      "Miami",
+      "Hurricanes"
+    ],
+    "colors": [
+      "#F05A00",
+      "#005030"
+    ],
+    "traditions": [
+      {
+        "id": "trad_umiami_u_statue",
+        "name": "U Statue at the Rock",
+        "description": "The U statue on the Rock Plaza, beside the Shalala Student Center, is the classic campus photo spot. Visitors take a picture in front of it.",
+        "coordinates": [
+          25.7194982,
+          -80.279084
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/366186666",
+        "source": "https://news.miami.edu/admissions/stories/2022/01/ten-spots-for-photo-ops-on-campus.html"
+      },
+      {
+        "id": "trad_umiami_boat_burning",
+        "name": "Homecoming Boat Burning",
+        "description": "Since 1956 a boat has been burned on Lake Osceola at Homecoming. Legend says that if the mast falls before the boat sinks, the Hurricanes will win the next day's game.",
+        "coordinates": [
+          25.7183486,
+          -80.2792068
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/17745477",
+        "source": "https://news.miami.edu/stories/2019/08/the-history-behind-canes-most-cherished-traditions.html"
+      },
+      {
+        "id": "trad_umiami_bronze_ibis",
+        "name": "Bronze Ibis",
+        "description": "A bronze statue of Sebastian the Ibis, the university mascot, stands in front of the Newman Alumni Center. Visitors stop for a photo with it.",
+        "coordinates": [
+          25.7114558,
+          -80.283673
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/423877815",
+        "source": "https://news.miami.edu/admissions/stories/2022/01/ten-spots-for-photo-ops-on-campus.html"
+      }
+    ],
+    "wiki": "University of Miami",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "The U",
+      "airportName": "Miami International Airport",
+      "airportCode": "MIA",
+      "airportInfo": "Miami International, north of Coral Gables, is the main airport for the area.",
+      "funFact": "The Ring Theatre, finished in 1953, has a concrete dome held in place by a steel band and was built to withstand hurricane winds.",
+      "language": "English",
+      "languageInfo": "The school colors are orange, green and white, and the teams are the Hurricanes.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Metrorail / Hurry 'Canes shuttle",
+      "transportationFact": "The campus is walkable. The free Hurry 'Canes Shuttle connects campus with Metrorail's University station."
+    },
+    "buildings": [
+      {
+        "id": "campus_umiami_lowe_art_museum",
+        "wiki": "Lowe Art Museum",
+        "name": "Lowe Art Museum",
+        "description": "Robert M. Little designed the museum's first building, dedicated in 1952 with a gift from Joe and Emily Lowe. Wings for the Kress collection and a 1990s expansion by Charles Harrison Pawley followed.",
+        "architect": "Robert M. Little; Charles Harrison Pawley (expansion)",
+        "yearBuilt": 1952,
+        "address": "1301 Stanford Dr, Coral Gables, FL 33146",
+        "oldUse": "Art Gallery",
+        "newUse": "Art Museum",
+        "buildingStyle": "International Style",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "coordinates": [
+          25.7192672,
+          -80.2755732
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/6462117"
+      },
+      {
+        "id": "campus_umiami_ring_theatre",
+        "wiki": "Jerry Herman Ring Theatre",
+        "name": "Jerry Herman Ring Theatre",
+        "description": "Robert M. Little and Marion Manley designed this round theatre, completed in 1953. Its concrete roof is held by a steel ring, and it was built to withstand hurricane winds.",
+        "architect": "Robert M. Little and Marion Manley",
+        "yearBuilt": 1953,
+        "address": "Coral Gables, FL 33146",
+        "oldUse": "Theatre",
+        "newUse": "Theatre",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_umiami_watsco_center",
+        "wiki": "Watsco Center",
+        "name": "Watsco Center",
+        "description": "Opened in 2003 as the Convocation Center, this 8,000-seat arena hosts Hurricanes basketball, concerts and lectures.",
+        "architect": "Ellerbe Becket; Spillis Candela",
+        "yearBuilt": 2003,
+        "address": "1245 Dauer Dr, Coral Gables, FL 33146",
+        "oldUse": "Arena",
+        "newUse": "Arena",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_umiami_merrick_building",
+        "wiki": "University of Miami",
+        "name": "Merrick Building",
+        "description": "Begun in 1926 in the Mediterranean Revival style, the university's first building stood half finished for more than 20 years after the hurricane and the end of the land boom. Robert Murray Little completed it in 1950 in the International Style around the original frame.",
+        "architect": "Robert Murray Little",
+        "yearBuilt": 1950,
+        "address": "5202 University Dr, Coral Gables, FL 33146",
+        "oldUse": "Unfinished Classroom Building",
+        "newUse": "Classroom Building",
+        "buildingStyle": "International Style",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          25.7210375,
+          -80.2762312
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/435375321"
+      }
+    ]
+  },
+  {
+    "name": "North Carolina State University",
+    "enumCase": "ncState",
+    "country": "unitedStates",
+    "conference": "acc",
+    "aliases": [
+      "NC State",
+      "NCSU",
+      "Wolfpack"
+    ],
+    "colors": [
+      "#CC0000",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_ncstate_belltower_red",
+        "name": "Belltower Lit Red",
+        "description": "When NC State wins a major sporting event, the Memorial Belltower is lit red. Fans gather at its base to chant and make the Wolfpack hand sign.",
+        "coordinates": [
+          35.7861408,
+          -78.6635001
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/47917976",
+        "source": "https://ca.sports.yahoo.com/news/light-red-nc-state-iconic-120000829.html"
+      },
+      {
+        "id": "trad_ncstate_free_expression_tunnel",
+        "name": "Free Expression Tunnel",
+        "description": "Anyone is allowed to paint the walls, ceiling and floor of this pedestrian tunnel under the railroad between North and Central Campus. Visitors walk through to see the latest messages.",
+        "coordinates": [
+          35.7856548,
+          -78.6716159
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/175292173",
+        "source": "https://en.wikipedia.org/wiki/Free_Expression_Tunnel"
+      }
+    ],
+    "wiki": "North Carolina State University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Think and Do",
+      "airportName": "Raleigh-Durham International Airport",
+      "airportCode": "RDU",
+      "airportInfo": "Raleigh-Durham International, northwest of Raleigh, is the main airport for the Research Triangle.",
+      "funFact": "The Memorial Belltower, a World War I memorial, is built from 1,400 tons of granite quarried at Mount Airy, North Carolina.",
+      "language": "English",
+      "languageInfo": "The school colors are red and white, and the teams are the Wolfpack.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Wolfline",
+      "transportationFact": "North Campus is walkable. The fare-free Wolfline buses connect Main and Centennial campuses."
+    },
+    "buildings": [
+      {
+        "id": "campus_ncstate_belltower",
+        "wiki": "North Carolina State University Memorial Belltower",
+        "name": "Memorial Belltower",
+        "description": "This 115-foot granite tower honors alumni killed in World War I. Its shaft mixes Romanesque features with Gothic height, and the tower was formally dedicated in 1949.",
+        "architect": "William Henry Deacy",
+        "yearBuilt": 1937,
+        "address": "Raleigh, NC 27695",
+        "oldUse": "War Memorial",
+        "newUse": "War Memorial and Bell Tower",
+        "buildingStyle": "Romanesque Revival and Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 35,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ncstate_dh_hill_library",
+        "wiki": "D. H. Hill Library",
+        "name": "D. H. Hill Jr. Library",
+        "description": "The main North Campus library was completed in 1953 and opened in 1954, then grew in several later stages into a tower on Hillsborough Street. It holds most of the university's books.",
+        "architect": "Northup and O'Brien",
+        "yearBuilt": 1954,
+        "address": "Raleigh, NC 27695",
+        "oldUse": "Library",
+        "newUse": "Library",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ncstate_gregg_museum",
+        "wiki": "Gregg Museum of Art & Design",
+        "name": "Gregg Museum of Art & Design",
+        "description": "Hobart Upjohn designed this Georgian Revival house, finished in 1928, as the chancellor's residence. It now houses the university art museum, with a new wing by Perkins and Will.",
+        "architect": "Hobart Upjohn; Perkins and Will (addition)",
+        "yearBuilt": 1928,
+        "address": "1903 Hillsborough St, Raleigh, NC 27607",
+        "oldUse": "Chancellor's Residence",
+        "newUse": "Art Museum",
+        "buildingStyle": "Georgian Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ncstate_reynolds_coliseum",
+        "wiki": "Reynolds Coliseum",
+        "name": "Reynolds Coliseum",
+        "description": "William Neal Reynolds Coliseum opened in 1949 for agricultural shows and basketball. It hosts women's basketball, volleyball and ROTC programs.",
+        "architect": "Unknown",
+        "yearBuilt": 1949,
+        "address": "103 Dunn Ave, Raleigh, NC 27607",
+        "oldUse": "Arena",
+        "newUse": "Arena and ROTC",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of North Carolina at Chapel Hill",
+    "enumCase": "uncChapelHill",
+    "country": "unitedStates",
+    "conference": "acc",
+    "aliases": [
+      "UNC",
+      "Carolina",
+      "Tar Heels",
+      "Chapel Hill"
+    ],
+    "colors": [
+      "#7BAFD4",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_unc_old_well",
+        "name": "Sip from the Old Well",
+        "description": "Campus tradition says a drink from the fountain at the Old Well on the first day of classes brings good luck. Visitors can take a sip from the fountain any day.",
+        "coordinates": [
+          35.9120628,
+          -79.0512347
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/44342795",
+        "source": "https://en.wikipedia.org/wiki/Old_Well"
+      },
+      {
+        "id": "trad_unc_davie_poplar",
+        "name": "Davie Poplar",
+        "description": "Legend says the university will thrive as long as this centuries-old tulip poplar in McCorkle Place stands. Visitors stop to see the tree.",
+        "coordinates": [
+          35.9128488,
+          -79.0516791
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/2580259233",
+        "source": "https://en.wikipedia.org/wiki/Davie_Poplar"
+      },
+      {
+        "id": "trad_unc_bell_tower",
+        "name": "Bell Tower in Carolina Blue",
+        "description": "The Morehead-Patterson Bell Tower is lit Carolina blue after Tar Heel football wins. Visitors can see the 172-foot tower on the south side of campus.",
+        "coordinates": [
+          35.908607,
+          -79.0492161
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/44341889",
+        "source": "https://en.wikipedia.org/wiki/Morehead-Patterson_Bell_Tower"
+      }
+    ],
+    "wiki": "University of North Carolina at Chapel Hill",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Lux libertas",
+      "airportName": "Raleigh-Durham International Airport",
+      "airportCode": "RDU",
+      "airportInfo": "Raleigh-Durham International, east of Chapel Hill, is the main airport for the Research Triangle.",
+      "funFact": "Old East, begun in 1793, is the oldest building of any state university in the United States.",
+      "language": "English",
+      "languageInfo": "The school colors are Carolina blue and white, and the teams are the Tar Heels.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Chapel Hill Transit",
+      "transportationFact": "The campus is walkable. Chapel Hill Transit runs fare-free buses across campus and through Chapel Hill and Carrboro."
+    },
+    "buildings": [
+      {
+        "id": "campus_unc_old_well",
+        "wiki": "Old Well",
+        "name": "Old Well",
+        "description": "University registrar Eugene Lewis Harris gave the campus well this neoclassical domed rotunda in 1897, modeled on the Temple of Love at Versailles. It is the best-known symbol of the university.",
+        "architect": "Eugene Lewis Harris",
+        "yearBuilt": 1897,
+        "address": "Cameron Ave, Chapel Hill, NC 27514",
+        "oldUse": "Well",
+        "newUse": "Monument and Drinking Fountain",
+        "buildingStyle": "Neoclassical",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_unc_old_east",
+        "wiki": "Old East",
+        "name": "Old East",
+        "description": "Built in 1793 by enslaved labor, Old East is the first building of any state university in the country. A third story was added in 1823, and it is still a residence hall.",
+        "architect": "Unknown",
+        "yearBuilt": 1793,
+        "address": "Cameron Ave, Chapel Hill, NC 27514",
+        "oldUse": "Residence Hall",
+        "newUse": "Residence Hall",
+        "buildingStyle": "Georgian",
+        "numberOfStories": 3,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_unc_playmakers_theatre",
+        "wiki": "Playmakers Theatre",
+        "name": "Playmakers Theatre",
+        "description": "Alexander Jackson Davis designed this Greek Revival temple, built in 1850 as Smith Hall. It is a National Historic Landmark and a stage for the PlayMakers Repertory Company.",
+        "architect": "Alexander Jackson Davis",
+        "yearBuilt": 1850,
+        "address": "Cameron Ave, Chapel Hill, NC 27514",
+        "oldUse": "Smith Hall",
+        "newUse": "Theatre",
+        "buildingStyle": "Greek Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_unc_wilson_library",
+        "wiki": "Louis Round Wilson Library",
+        "name": "Wilson Library",
+        "description": "Arthur Cleveland Nash and William Kendall of McKim, Mead & White designed this neoclassical library, completed in 1929. Its dome rises 85 feet over the south end of the South Quadrangle.",
+        "architect": "Arthur Cleveland Nash and William Kendall",
+        "yearBuilt": 1929,
+        "address": "Chapel Hill, NC 27514",
+        "oldUse": "Main Library",
+        "newUse": "Special Collections Library",
+        "buildingStyle": "Beaux-Arts",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_unc_bell_tower",
+        "wiki": "Morehead-Patterson Bell Tower",
+        "name": "Morehead-Patterson Bell Tower",
+        "description": "McKim, Mead & White designed this 172-foot brick tower, completed in 1931, with a clock on each side and a Guastavino tile arcade at its base. It is lit Carolina blue after football wins.",
+        "architect": "McKim, Mead & White",
+        "yearBuilt": 1931,
+        "address": "Chapel Hill, NC 27514",
+        "oldUse": "Bell Tower",
+        "newUse": "Bell Tower",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 52,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of Pittsburgh",
+    "enumCase": "uPittsburgh",
+    "country": "unitedStates",
+    "conference": "acc",
+    "aliases": [
+      "Pitt"
+    ],
+    "colors": [
+      "#003594",
+      "#FFB81C"
+    ],
+    "traditions": [
+      {
+        "id": "trad_pitt_victory_lights",
+        "name": "Victory Lights",
+        "description": "The top of the Cathedral of Learning glows gold after Pitt football wins and other championships, with a blue beam added in 2018. Visitors can see it across Oakland.",
+        "coordinates": [
+          40.4442951,
+          -79.953191
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/30678664",
+        "source": "https://pitt.edu/pittwire/features-articles/pitt-athletics-traditions"
+      },
+      {
+        "id": "trad_pitt_panther_nose",
+        "name": "Panther Statue",
+        "description": "The panther statue at the William Pitt Union has a worn nose from years of students rubbing it for good luck. Visitors rub it too.",
+        "coordinates": [
+          40.4433871,
+          -79.9548392
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/154245869",
+        "source": "https://www.hr.pitt.edu/onboarding/pitt-traditions"
+      },
+      {
+        "id": "trad_pitt_heinz_chapel_steps",
+        "name": "Heinz Chapel Steps",
+        "description": "The steps in front of Heinz Memorial Chapel are said to be a good luck charm for young couples. Visitors take a photo on them.",
+        "coordinates": [
+          40.4452589,
+          -79.95186
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/30678681",
+        "source": "https://www.hr.pitt.edu/onboarding/pitt-traditions"
+      }
+    ],
+    "wiki": "University of Pittsburgh",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Veritas et Virtus",
+      "airportName": "Pittsburgh International Airport",
+      "airportCode": "PIT",
+      "airportInfo": "Pittsburgh International, west of the city, is the main airport for the region.",
+      "funFact": "The 42-story Cathedral of Learning is the tallest educational building in the Western Hemisphere and holds 31 Nationality Rooms designed by Pittsburgh's ethnic communities.",
+      "language": "English",
+      "languageInfo": "The school colors are blue and gold, and the teams are the Panthers.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Pitt shuttles",
+      "transportationFact": "The Oakland campus is walkable. Pitt runs its own shuttles around Oakland, and students ride Pittsburgh Regional Transit buses, light rail and inclines free with their Pitt ID."
+    },
+    "buildings": [
+      {
+        "id": "campus_pitt_cathedral_of_learning",
+        "wiki": "Cathedral of Learning",
+        "name": "Cathedral of Learning",
+        "description": "Charles Klauder's 535-foot Late Gothic Revival skyscraper was begun in 1926 and dedicated in 1937. Its vaulted Commons Room is ringed by the Nationality Rooms.",
+        "architect": "Charles Klauder",
+        "yearBuilt": 1937,
+        "address": "Fifth Ave, Pittsburgh, PA 15260",
+        "oldUse": "Classrooms and Offices",
+        "newUse": "Classrooms and Offices",
+        "buildingStyle": "Late Gothic Revival",
+        "numberOfStories": 42,
+        "height": 163,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_pitt_heinz_chapel",
+        "wiki": "Heinz Memorial Chapel",
+        "name": "Heinz Memorial Chapel",
+        "description": "Charles Klauder designed this French Gothic Revival chapel, built in 1933–1938 next to the Cathedral of Learning. It hosts services and many weddings.",
+        "architect": "Charles Klauder",
+        "yearBuilt": 1938,
+        "address": "Fifth Ave and S Bellefield Ave, Pittsburgh, PA 15260",
+        "oldUse": "Chapel",
+        "newUse": "Chapel",
+        "buildingStyle": "French Gothic Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_pitt_stephen_foster_memorial",
+        "wiki": "Stephen Foster Memorial",
+        "name": "Stephen Foster Memorial",
+        "description": "Klauder designed this Gothic Revival memorial to songwriter Stephen Foster, dedicated in 1937 and faced in the same Indiana limestone as the Cathedral of Learning. It holds two theaters and the Foster archives.",
+        "architect": "Charles Klauder",
+        "yearBuilt": 1937,
+        "address": "Forbes Ave, Pittsburgh, PA 15260",
+        "oldUse": "Memorial and Theater",
+        "newUse": "Theaters and Museum",
+        "buildingStyle": "Gothic Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_pitt_thaw_hall",
+        "wiki": "Thaw Hall",
+        "name": "Thaw Hall",
+        "description": "Henry Hornbostel designed this five-story Beaux-Arts building of stone, brick and terra cotta, completed in 1910. It is the only surviving building of his hillside Acropolis plan for the campus.",
+        "architect": "Henry Hornbostel",
+        "yearBuilt": 1910,
+        "address": "Pittsburgh, PA 15260",
+        "oldUse": "Engineering Building",
+        "newUse": "Academic Building",
+        "buildingStyle": "Beaux-Arts",
+        "numberOfStories": 5,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_pitt_frick_fine_arts",
+        "wiki": "Frick Fine Arts Building",
+        "name": "Frick Fine Arts Building",
+        "description": "Built in 1962–1965 of white limestone and marble, this Renaissance-style villa surrounds a central courtyard on the edge of Schenley Plaza. An octagonal cupola caps its rotunda.",
+        "architect": "Burton Kenneth Johnstone",
+        "yearBuilt": 1965,
+        "address": "Schenley Plaza, Pittsburgh, PA 15260",
+        "oldUse": "Fine Arts Building",
+        "newUse": "History of Art and Architecture",
+        "buildingStyle": "Neo-Renaissance",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Southern Methodist University",
+    "enumCase": "smu",
+    "country": "unitedStates",
+    "conference": "acc",
+    "aliases": [
+      "SMU",
+      "Mustangs"
+    ],
+    "colors": [
+      "#CC0035",
+      "#354CA1"
+    ],
+    "traditions": [
+      {
+        "id": "trad_smu_dallas_hall_seal",
+        "name": "SMU Seal in Dallas Hall",
+        "description": "The SMU seal is set into the rotunda floor of Dallas Hall. First-year students walk around it at the Rotunda Passage and across it at graduation; visitors can see it in the rotunda.",
+        "coordinates": [
+          32.8452642,
+          -96.7849058
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/179096189",
+        "source": "https://smu.edu/EnrollmentServices/registrar/AcademicCeremonies/AboutUs/Symbols/RotundaPassage"
+      },
+      {
+        "id": "trad_smu_celebration_of_lights",
+        "name": "Celebration of Lights",
+        "description": "At the holiday Celebration of Lights, Dallas Hall is covered in thousands of lights. Guests gather on the lawn for cocoa and cookies, and the evening ends with Silent Night.",
+        "coordinates": [
+          32.84524,
+          -96.78485
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/12403582111",
+        "source": "https://www.smu.edu/admission/experience/spirit-traditions"
+      }
+    ],
+    "wiki": "Southern Methodist University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "The Hilltop",
+      "airportName": "Dallas Love Field",
+      "airportCode": "DAL",
+      "airportInfo": "Dallas Love Field, a few miles west of campus, is the closest airport. DFW International is farther out.",
+      "funFact": "SMU's first president chose red brick Georgian architecture after Thomas Jefferson's University of Virginia, and Dallas Hall's dome was inspired by the Pantheon.",
+      "language": "English",
+      "languageInfo": "The school colors are red and blue, and the teams are the Mustangs.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / SMU Express shuttles / DART",
+      "transportationFact": "The campus is walkable. Free SMU Express shuttles link campus with DART's SMU/Mockingbird Station on the Red, Blue and Orange lines."
+    },
+    "buildings": [
+      {
+        "id": "campus_smu_dallas_hall",
+        "wiki": "Dallas Hall",
+        "name": "Dallas Hall",
+        "description": "Shepley, Rutan & Coolidge designed SMU's first building, completed in 1915, with a domed rotunda inspired by the Pantheon. It set the Georgian Revival style for the whole campus.",
+        "architect": "Shepley, Rutan & Coolidge",
+        "yearBuilt": 1915,
+        "address": "3225 University Blvd, University Park, TX 75205",
+        "oldUse": "Entire University",
+        "newUse": "Classrooms and Offices",
+        "buildingStyle": "Georgian Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_smu_mcfarlin_auditorium",
+        "wiki": "McFarlin Memorial Auditorium",
+        "name": "McFarlin Memorial Auditorium",
+        "description": "Opened in 1926, this Georgian Revival theatre seats 2,386 on three levels. It is the third-oldest building on campus.",
+        "architect": "R. H. Hunt",
+        "yearBuilt": 1926,
+        "address": "6405 Boaz Ln, University Park, TX 75205",
+        "oldUse": "Auditorium",
+        "newUse": "Auditorium",
+        "buildingStyle": "Georgian Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_smu_perkins_hall",
+        "wiki": "Perkins Hall of Administration",
+        "name": "Perkins Hall of Administration",
+        "description": "DeWitt & Washburn designed this Georgian Revival hall, built in 1925. It is listed on the National Register of Historic Places.",
+        "architect": "DeWitt & Washburn",
+        "yearBuilt": 1925,
+        "address": "University Park, TX 75205",
+        "oldUse": "Administration Building",
+        "newUse": "Administration Building",
+        "buildingStyle": "Georgian Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_smu_hyer_hall",
+        "wiki": "Hyer Hall",
+        "name": "Hyer Hall",
+        "description": "Built in 1927 by C. D. Hill & Company in the Georgian Revival style, Hyer Hall is one of the early academic buildings at SMU. It is listed on the National Register of Historic Places.",
+        "architect": "C. D. Hill & Company",
+        "yearBuilt": 1927,
+        "address": "University Park, TX 75205",
+        "oldUse": "Academic Building",
+        "newUse": "Academic Building",
+        "buildingStyle": "Georgian Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_smu_bush_center",
+        "wiki": "George W. Bush Presidential Center",
+        "name": "George W. Bush Presidential Center",
+        "description": "Robert A.M. Stern Architects designed this brick and limestone complex, opened in 2013, for the library and museum of the 43rd president.",
+        "architect": "Robert A.M. Stern Architects",
+        "yearBuilt": 2013,
+        "address": "2943 SMU Blvd, Dallas, TX 75205",
+        "oldUse": "Presidential Library",
+        "newUse": "Presidential Library and Museum",
+        "buildingStyle": "New Classical",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Syracuse University",
+    "enumCase": "syracuse",
+    "country": "unitedStates",
+    "conference": "acc",
+    "aliases": [
+      "Syracuse",
+      "Cuse"
+    ],
+    "colors": [
+      "#F76900",
+      "#000E54"
+    ],
+    "traditions": [
+      {
+        "id": "trad_syracuse_kissing_bench",
+        "name": "Kissing Bench",
+        "description": "This granite bench between Tolley Hall and the Hall of Languages was a gift from the class of 1912. Legend says a couple who kisses on it will marry, and anyone who sits there alone will stay single.",
+        "coordinates": [
+          43.0385705,
+          -76.1345205
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/156759790",
+        "source": "https://posts.syr.edu/2021/07/22/syracuse-university-traditions-know-them-love-them/"
+      },
+      {
+        "id": "trad_syracuse_crouse_chimes",
+        "name": "Crouse Chimes",
+        "description": "The chimes in the tower of Crouse College have rung since 1889 and are played twice a day and on special occasions. Visitors listen from the Quad below.",
+        "coordinates": [
+          43.0384505,
+          -76.1368611
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/156759793",
+        "source": "https://www.syracuse.edu/about/history/traditions/"
+      }
+    ],
+    "wiki": "Syracuse University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "The Orange",
+      "airportName": "Syracuse Hancock International Airport",
+      "airportCode": "SYR",
+      "airportInfo": "Syracuse Hancock International, north of the city, is the nearest commercial airport.",
+      "funFact": "The Second Empire Hall of Languages, finished in 1873, was the first building on campus and at first housed the entire university.",
+      "language": "English",
+      "languageInfo": "The school color is orange, and the teams are the Orange.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Centro buses",
+      "transportationFact": "Main Campus is walkable. Centro runs Syracuse University's campus bus routes as well as city buses to downtown Syracuse."
+    },
+    "buildings": [
+      {
+        "id": "campus_syracuse_hall_of_languages",
+        "wiki": "Hall of Languages, Syracuse University",
+        "name": "Hall of Languages",
+        "description": "Horatio Nelson White designed the university's first building in the Second Empire style, built in 1871–1873. For its first years it held the entire university.",
+        "architect": "Horatio Nelson White",
+        "yearBuilt": 1873,
+        "address": "Syracuse, NY 13244",
+        "oldUse": "Entire University",
+        "newUse": "College of Arts and Sciences",
+        "buildingStyle": "Second Empire",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_syracuse_crouse_college",
+        "wiki": "Crouse College",
+        "name": "Crouse College",
+        "description": "Archimedes Russell designed this Richardsonian Romanesque hall of brownstone, completed in 1889 as a women's college. Its high roofs, gables and round arches make it a campus landmark.",
+        "architect": "Archimedes Russell",
+        "yearBuilt": 1889,
+        "address": "Syracuse, NY 13244",
+        "oldUse": "Women's College",
+        "newUse": "College of Visual and Performing Arts",
+        "buildingStyle": "Richardsonian Romanesque",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_syracuse_hendricks_chapel",
+        "wiki": "Hendricks Chapel",
+        "name": "Hendricks Chapel",
+        "description": "John Russell Pope and Dwight James Baum designed this domed chapel, completed in 1930, drawing on Palladio and the Pantheon. It is the multi-faith center of the university.",
+        "architect": "John Russell Pope and Dwight James Baum",
+        "yearBuilt": 1930,
+        "address": "Syracuse, NY 13244",
+        "oldUse": "Chapel",
+        "newUse": "Chapel",
+        "buildingStyle": "Georgian Colonial / Palladian",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_syracuse_carnegie_library",
+        "wiki": "Comstock Tract Buildings",
+        "name": "Carnegie Library",
+        "description": "Professors Frederick Revels and Earl Hallenbeck designed this Renaissance-style library, opened in 1907 with Andrew Carnegie's gift. Ionic columns frame the front, and the reading room has a high vaulted ceiling.",
+        "architect": "Frederick W. Revels and Earl Hallenbeck",
+        "yearBuilt": 1907,
+        "address": "130 Sims Dr, Syracuse, NY 13210",
+        "oldUse": "University Library",
+        "newUse": "Library",
+        "buildingStyle": "Renaissance Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          43.0365914,
+          -76.1340187
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/156759716"
+      },
+      {
+        "id": "campus_syracuse_jma_dome",
+        "wiki": "JMA Wireless Dome",
+        "name": "JMA Wireless Dome",
+        "description": "Opened in 1980 as the Carrier Dome, this domed stadium is the home of Orange football, basketball and lacrosse. A major renovation in 2021–2022 gave it a new roof.",
+        "architect": "Finch-Heery; Hueber Hares Glavin",
+        "yearBuilt": 1980,
+        "address": "900 Irving Ave, Syracuse, NY 13244",
+        "oldUse": "Domed Stadium",
+        "newUse": "Domed Stadium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Virginia Tech",
+    "enumCase": "virginiaTech",
+    "country": "unitedStates",
+    "conference": "acc",
+    "aliases": [
+      "VT",
+      "Hokies",
+      "VPI"
+    ],
+    "colors": [
+      "#861F41",
+      "#E87722"
+    ],
+    "traditions": [
+      {
+        "id": "trad_vt_corps_retreat",
+        "name": "Corps of Cadets Retreat",
+        "description": "The Corps of Cadets holds its nightly retreat ceremony in front of Lane Hall, the old Barracks No. 1. Visitors can watch from the Upper Quad.",
+        "coordinates": [
+          37.2309218,
+          -80.4197604
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/60193838",
+        "source": "https://www.vt.edu/about/locations/buildings/lane-hall.html"
+      }
+    ],
+    "wiki": "Virginia Tech",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Ut Prosim (That I May Serve)",
+      "airportName": "Roanoke-Blacksburg Regional Airport",
+      "airportCode": "ROA",
+      "airportInfo": "Roanoke-Blacksburg Regional, in Roanoke east of Blacksburg, is the nearest commercial airport.",
+      "funFact": "Most campus buildings are faced with Hokie Stone, a local limestone cut from a quarry the university has run since the 1950s.",
+      "language": "English",
+      "languageInfo": "The school colors are Chicago maroon and burnt orange, and the teams are the Hokies.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Blacksburg Transit",
+      "transportationFact": "The campus around the Drillfield is walkable. Blacksburg Transit buses are fare-free for all riders on campus and around town."
+    },
+    "buildings": [
+      {
+        "id": "campus_vt_burruss_hall",
+        "wiki": "Campus of Virginia Tech",
+        "name": "Burruss Hall",
+        "description": "Completed in 1936 as the Teaching and Administration Building, Burruss Hall faces the Drillfield in Collegiate Gothic Hokie Stone. Its 3,003-seat auditorium hosts commencement and concerts.",
+        "architect": "Unknown",
+        "yearBuilt": 1936,
+        "address": "800 Drillfield Dr, Blacksburg, VA 24061",
+        "oldUse": "Teaching and Administration Building",
+        "newUse": "Administration Building and Auditorium",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          37.2290557,
+          -80.4237199
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/1074686"
+      },
+      {
+        "id": "campus_vt_lane_hall",
+        "wiki": "Campus of Virginia Tech",
+        "name": "Lane Hall",
+        "description": "Built in 1888 as Barracks No. 1, the first dormitory of the college, this three-story brick building has a mansard roof and central tower. The Corps of Cadets still holds retreat in front of it.",
+        "architect": "Unknown",
+        "yearBuilt": 1888,
+        "address": "280 Alumni Mall, Blacksburg, VA 24061",
+        "oldUse": "Cadet Barracks",
+        "newUse": "Academic Offices",
+        "buildingStyle": "Second Empire",
+        "numberOfStories": 3,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          37.2309218,
+          -80.4197604
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/60193838"
+      },
+      {
+        "id": "campus_vt_solitude",
+        "wiki": "Solitude (Blacksburg, Virginia)",
+        "name": "Solitude",
+        "description": "The oldest building on campus, this log and frame house was begun about 1802 and enlarged by the Preston family into the 1850s, gaining a Greek Revival look. It is listed on the National Register of Historic Places.",
+        "architect": "Unknown",
+        "yearBuilt": 1804,
+        "address": "West Campus Dr, Blacksburg, VA 24061",
+        "oldUse": "Farmhouse",
+        "newUse": "Historic House",
+        "buildingStyle": "Greek Revival",
+        "numberOfStories": 2,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_vt_lane_stadium",
+        "wiki": "Lane Stadium",
+        "name": "Lane Stadium",
+        "description": "Opened in 1965, the stadium is the home of Hokies football and sits about 2,057 feet above sea level.",
+        "architect": "Carneal and Johnston; Smithey and Boynton",
+        "yearBuilt": 1965,
+        "address": "285 Beamer Way, Blacksburg, VA 24060",
+        "oldUse": "Football Stadium",
+        "newUse": "Football Stadium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_vt_cassell_coliseum",
+        "wiki": "Cassell Coliseum",
+        "name": "Cassell Coliseum",
+        "description": "Opened in 1962 and finished in 1964 for $2.7 million, this arena seats 8,925 for Hokies basketball.",
+        "architect": "Carneal and Johnston",
+        "yearBuilt": 1962,
+        "address": "675 Washington St SW, Blacksburg, VA 24061",
+        "oldUse": "Arena",
+        "newUse": "Arena",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Wake Forest University",
+    "enumCase": "wakeForest",
+    "country": "unitedStates",
+    "conference": "acc",
+    "aliases": [
+      "Wake Forest",
+      "Wake",
+      "WFU",
+      "Demon Deacons"
+    ],
+    "colors": [
+      "#CEB888",
+      "#2C2A29"
+    ],
+    "traditions": [
+      {
+        "id": "trad_wfu_wait_chapel",
+        "name": "Wait Chapel Carillon",
+        "description": "Wait Chapel's tower holds a 12-ton carillon of 48 bronze bells, and the chapel has hosted presidential debates. Visitors see it at the head of the Quad.",
+        "coordinates": [
+          36.1352187,
+          -80.2789962
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/31267355",
+        "source": "https://traditions.campuslife.wfu.edu/est-1834/"
+      },
+      {
+        "id": "trad_wfu_stone_arch",
+        "name": "Stone Arch",
+        "description": "This arch on the Quad is a replica of the one on the Old Campus in Wake Forest, North Carolina, and each graduating class walks through it at Commencement. Visitors can walk through it too.",
+        "coordinates": [
+          36.1343948,
+          -80.2781606
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/31270694",
+        "source": "https://traditions.campuslife.wfu.edu/est-1834/"
+      },
+      {
+        "id": "trad_wfu_magnolias",
+        "name": "The Magnolias",
+        "description": "The magnolias on Manchester Plaza grew from seeds collected on the Old Campus in 1947. Visitors walk among them on the lower quad.",
+        "coordinates": [
+          36.132692,
+          -80.2766807
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/31274198",
+        "source": "https://traditions.campuslife.wfu.edu/est-1834/"
+      }
+    ],
+    "wiki": "Wake Forest University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Pro Humanitate",
+      "airportName": "Piedmont Triad International Airport",
+      "airportCode": "GSO",
+      "airportInfo": "Piedmont Triad International, east of Winston-Salem, is the nearest major commercial airport.",
+      "funFact": "Most Reynolda Campus buildings are modified Georgian in Old Virginia brick trimmed with granite and limestone, planned by Jens Fredrick Larson for the college's 1956 move from the town of Wake Forest.",
+      "language": "English",
+      "languageInfo": "The school colors are old gold and black, and the teams are the Demon Deacons.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / university shuttles",
+      "transportationFact": "The Reynolda Campus is walkable. University shuttles leave from a campus Shuttle Hub, including a weekday route to Wake Downtown."
+    },
+    "buildings": [
+      {
+        "id": "campus_wfu_wait_chapel",
+        "wiki": "Wait Chapel",
+        "name": "Wait Chapel",
+        "description": "The first building finished on the Reynolda Campus, in 1956, the chapel faces Reynolda Hall across Hearn Plaza. Its steeple rises 213 feet.",
+        "architect": "Jens Fredrick Larson",
+        "yearBuilt": 1956,
+        "address": "Hearn Plaza, Winston-Salem, NC 27109",
+        "oldUse": "Chapel",
+        "newUse": "Chapel and Auditorium",
+        "buildingStyle": "Modified Georgian",
+        "numberOfStories": 0,
+        "height": 65,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_wfu_reynolda_hall",
+        "wiki": "Reynolda Hall",
+        "name": "Reynolda Hall",
+        "description": "Opened in 1956, the main building of the Reynolda Campus faces Wait Chapel across the Upper Quad, with its back to the Magnolia Quad.",
+        "architect": "Unknown",
+        "yearBuilt": 1956,
+        "address": "2130 Eure Dr, Winston-Salem, NC 27109",
+        "oldUse": "Student Center and Administration",
+        "newUse": "Student Center and Administration",
+        "buildingStyle": "Modified Georgian",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_wfu_zsr_library",
+        "wiki": "Z. Smith Reynolds Library",
+        "name": "Z. Smith Reynolds Library",
+        "description": "The university's main library opened with the new campus in 1956 as an eight-story building south of Hearn Plaza. A four-story wing was added in 1991.",
+        "architect": "Unknown",
+        "yearBuilt": 1956,
+        "address": "2100 Eure Dr, Winston-Salem, NC 27109",
+        "oldUse": "Library",
+        "newUse": "Library",
+        "buildingStyle": "Modified Georgian",
+        "numberOfStories": 8,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_wfu_reynolda_house",
+        "wiki": "Reynolda House Museum of American Art",
+        "name": "Reynolda House",
+        "description": "Charles Barton Keen designed this large bungalow with a green tile roof for R. J. and Katharine Reynolds, finished in 1917. It is now a museum of American art.",
+        "architect": "Charles Barton Keen",
+        "yearBuilt": 1917,
+        "address": "2250 Reynolda Rd, Winston-Salem, NC 27106",
+        "oldUse": "Country House",
+        "newUse": "Art Museum",
+        "buildingStyle": "Arts and Crafts / Colonial Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_wfu_reynolds_gym",
+        "wiki": "Reynolds Gymnasium",
+        "name": "Reynolds Gymnasium",
+        "description": "Completed in March 1956 when the college moved to Winston-Salem, the gym is a multi-purpose arena on the Reynolda Campus.",
+        "architect": "Unknown",
+        "yearBuilt": 1956,
+        "address": "Winston-Salem, NC 27109",
+        "oldUse": "Arena",
+        "newUse": "Gymnasium and Recreation",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  }
+]

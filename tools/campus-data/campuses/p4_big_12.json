@@ -1,0 +1,1973 @@
+[
+  {
+    "name": "University of Arizona",
+    "enumCase": "uArizona",
+    "country": "unitedStates",
+    "conference": "big12",
+    "aliases": [
+      "UArizona",
+      "Arizona Wildcats"
+    ],
+    "colors": [
+      "#AB0520",
+      "#0C234B"
+    ],
+    "traditions": [
+      {
+        "id": "trad_uarizona_bear_down",
+        "name": "Bear Down Gym",
+        "description": "\"Bear Down,\" the school's rallying cry, comes from a 1926 message from dying student body president John \"Button\" Salmon to his team, and Bear Down Gym, the old men's gymnasium, carries the name. Stop by the gym where the slogan lives on.",
+        "coordinates": [
+          32.2311572,
+          -110.9501043
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/32974139",
+        "source": "https://wildcat.arizona.edu/129004/news/campus-guide-17-a-brief-history-of-wildcat-country/"
+      }
+    ],
+    "wiki": "University of Arizona",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Bear Down",
+      "airportName": "Tucson International Airport",
+      "airportCode": "TUS",
+      "airportInfo": "Tucson International, south of the city center, is the main airport for southern Arizona.",
+      "funFact": "Red brick is part of almost every University of Arizona building. Campus architect Roy Place carried the look through the 1920s and 1930s in Centennial Hall, Bear Down Gym and the Arizona State Museum's south building.",
+      "language": "English",
+      "languageInfo": "The school colors are cardinal red and navy blue, and the teams are the Wildcats.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Sun Link Streetcar",
+      "transportationFact": "The core of campus is walkable. The Sun Link streetcar connects campus with Main Gate Square, Fourth Avenue and downtown Tucson."
+    },
+    "buildings": [
+      {
+        "id": "campus_uarizona_old_main",
+        "wiki": "Old Main, University of Arizona",
+        "name": "Old Main",
+        "description": "Phoenix architect James Miller Creighton designed the university's first building, begun in 1887 and opened in 1891. It is one of the oldest surviving school buildings in the western United States and now holds the Office of the President.",
+        "architect": "James Miller Creighton",
+        "yearBuilt": 1891,
+        "address": "University of Arizona campus, Tucson, AZ",
+        "oldUse": "School of Agriculture Building",
+        "newUse": "Office of the President",
+        "buildingStyle": "Eclectic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uarizona_state_museum",
+        "wiki": "Arizona State Museum",
+        "name": "Arizona State Museum",
+        "description": "Founded in 1893, the museum collects and studies the archaeology and cultures of the Southwest. Its south building, designed by Roy Place in 1935, mixes Italian and Spanish Romanesque Revival details in red brick.",
+        "architect": "Roy Place",
+        "yearBuilt": 1935,
+        "address": "University of Arizona campus, Tucson, AZ",
+        "oldUse": "Arizona State Museum",
+        "newUse": "Anthropology Museum",
+        "buildingStyle": "Italian and Spanish Romanesque Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uarizona_centennial_hall",
+        "wiki": "Centennial Hall (Tucson, Arizona)",
+        "name": "Centennial Hall",
+        "description": "Roy Place designed the campus auditorium in the Italian Romanesque Revival style, with large arched windows and entrances. It opened in 1937, and from 1947 to 1984 its Sunday Evening Forum hosted speakers such as Martin Luther King Jr. and Eleanor Roosevelt.",
+        "architect": "Roy Place",
+        "yearBuilt": 1937,
+        "address": "1020 E University Blvd, Tucson, AZ",
+        "oldUse": "Main Auditorium",
+        "newUse": "Performing Arts Hall",
+        "buildingStyle": "Italian Romanesque Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "coordinates": [
+          32.2309125,
+          -110.9554365
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/9435878"
+      },
+      {
+        "id": "campus_uarizona_bear_down_gym",
+        "wiki": "Bear Down Gym",
+        "name": "Bear Down Gym",
+        "description": "Lyman & Place designed this red brick men's gymnasium, opened in 1926, with Classical Revival touches such as a strong base and diamond motifs in its frieze. It was home to Wildcats basketball until McKale Center opened in 1973.",
+        "architect": "Lyman & Place (Roy Place)",
+        "yearBuilt": 1926,
+        "address": "E Fourth St, University of Arizona campus, Tucson, AZ",
+        "oldUse": "Men's Gymnasium",
+        "newUse": "Multi-purpose Hall",
+        "buildingStyle": "Classical Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Arizona State University",
+    "enumCase": "arizonaState",
+    "country": "unitedStates",
+    "conference": "big12",
+    "aliases": [
+      "ASU",
+      "Arizona State",
+      "Sun Devils"
+    ],
+    "colors": [
+      "#8C1D40",
+      "#FFC627"
+    ],
+    "traditions": [
+      {
+        "id": "trad_asu_palm_walk",
+        "name": "Palm Walk",
+        "description": "Palm Walk links the north and south ends of the Tempe campus and is its most popular corridor, lined with palms taller than 70 feet. Walk its length and take a photo under the palms.",
+        "coordinates": [
+          33.4220414,
+          -111.9327327
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/28740161",
+        "source": "https://alumni.asu.edu/traditions"
+      },
+      {
+        "id": "trad_asu_pitchfork",
+        "name": "Bronze Pitchfork",
+        "description": "A 6-foot-3 bronze pitchfork stands at the southeast entrance of the football stadium. Pose beside it and make the \"Fork 'em\" hand sign.",
+        "coordinates": [
+          33.4264044,
+          -111.9325879
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/7312612",
+        "source": "https://news.asu.edu/20190116-sun-devil-life-best-selfie-spots-around-campus"
+      }
+    ],
+    "wiki": "Arizona State University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Home of the Sun Devils",
+      "airportName": "Phoenix Sky Harbor International Airport",
+      "airportCode": "PHX",
+      "airportInfo": "Sky Harbor is west of the Tempe campus, and the PHX Sky Train connects it to Valley Metro light rail.",
+      "funFact": "ASU Gammage is one of Frank Lloyd Wright's last public commissions. Wright based its round design on an opera house he had planned for Baghdad.",
+      "language": "English",
+      "languageInfo": "The school colors are maroon and gold, and the teams are the Sun Devils.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Valley Metro Rail",
+      "transportationFact": "Valley Metro light rail stops at the edge of the Tempe campus. Tempe's free Orbit neighborhood buses and the Tempe Streetcar also serve the area."
+    },
+    "buildings": [
+      {
+        "id": "campus_asu_gammage",
+        "wiki": "ASU Gammage",
+        "name": "ASU Gammage",
+        "description": "Frank Lloyd Wright designed this round performing arts center, built from 1962 to 1964 and opened after his death. It seats about 3,000 and was listed on the National Register of Historic Places in 1985.",
+        "architect": "Frank Lloyd Wright",
+        "yearBuilt": 1964,
+        "address": "1200 S Forest Ave, Tempe, AZ",
+        "oldUse": "Performing Arts Center",
+        "newUse": "Performing Arts Center",
+        "buildingStyle": "Usonian",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_asu_old_main",
+        "wiki": "Old Main (Arizona State University)",
+        "name": "Old Main",
+        "description": "The oldest building on the Tempe campus, finished in 1898 for the Territorial Normal School. W. A. McGinnis designed it mainly in the Queen Anne style, with Richardsonian Romanesque touches and a red sandstone entrance stair.",
+        "architect": "W. A. McGinnis",
+        "yearBuilt": 1898,
+        "address": "400 E Tyler Mall, Tempe, AZ",
+        "oldUse": "Main Building, Tempe Normal School",
+        "newUse": "University Building",
+        "buildingStyle": "Queen Anne / Richardsonian Romanesque",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_asu_industrial_arts",
+        "wiki": "Industrial Arts Building (Tempe, Arizona)",
+        "name": "Industrial Arts Building",
+        "description": "This Classical Revival building from 1914 later served as the Anthropology Building. It now houses the School of Human Evolution and Social Change.",
+        "architect": "L. G. Knipe",
+        "yearBuilt": 1914,
+        "address": "ASU Campus (Building 4), Tempe, AZ",
+        "oldUse": "Industrial Arts Building",
+        "newUse": "School of Human Evolution and Social Change",
+        "buildingStyle": "Classical Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_asu_matthews_hall",
+        "wiki": "Matthews Hall (Tempe, Arizona)",
+        "name": "Matthews Hall",
+        "description": "L. G. Knipe designed this Prairie School building, dedicated in 1920 as a men's dormitory. It is the oldest intact dormitory on campus and now holds a photography gallery and offices.",
+        "architect": "L. G. Knipe",
+        "yearBuilt": 1918,
+        "address": "925 S Forest Mall, Tempe, AZ",
+        "oldUse": "Men's Dormitory",
+        "newUse": "Gallery and Offices",
+        "buildingStyle": "Prairie School",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_asu_admin_science",
+        "wiki": "Administration/Science Building",
+        "name": "Administration/Science Building",
+        "description": "D. W. Millard designed the campus's second-oldest building around 1909 as Science Hall, in the Queen Anne style with Neoclassical influence. Saved from demolition in 1983, it now holds the University Club.",
+        "architect": "D. W. Millard",
+        "yearBuilt": 1909,
+        "address": "425 E University Dr, Tempe, AZ",
+        "oldUse": "Science Hall",
+        "newUse": "University Club",
+        "buildingStyle": "Queen Anne / Neoclassical",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Brigham Young University",
+    "enumCase": "byu",
+    "country": "unitedStates",
+    "conference": "big12",
+    "aliases": [
+      "BYU",
+      "Brigham Young"
+    ],
+    "colors": [
+      "#002E5D",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_byu_brigham_young_statue",
+        "name": "Brigham Young Statue",
+        "description": "A statue of Brigham Young by his grandson, sculptor Mahonri Young, stands in front of the Abraham O. Smoot Administration Building. Visit the statue of the man the school is named for.",
+        "coordinates": [
+          40.2505239,
+          -111.6492863
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/2022210246",
+        "source": "https://universe.byu.edu/?p=382640"
+      },
+      {
+        "id": "trad_byu_cougar_statue",
+        "name": "Stadium Cougar Statue",
+        "description": "A bronze cougar, cast in Italy and given by the classes of 1965 and 1969, guards LaVell Edwards Stadium on the northeast end of campus. Take a photo with it.",
+        "coordinates": [
+          40.2573194,
+          -111.6545784
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/36322635",
+        "source": "https://universe.byu.edu/?p=382640"
+      },
+      {
+        "id": "trad_byu_carillon",
+        "name": "Hourly Carillon Tune",
+        "description": "At the top of every hour the Centennial Carillon tolls the first lines of a tune based on the hymn \"Come, Come, Ye Saints.\" Stand near the tower on the hour to hear it.",
+        "coordinates": [
+          40.2527714,
+          -111.6476271
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/1028561240",
+        "source": "https://en.wikipedia.org/wiki/Brigham_Young_University_Centennial_Carillon_Tower"
+      }
+    ],
+    "wiki": "Brigham Young University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Enter to Learn; Go Forth to Serve",
+      "airportName": "Salt Lake City International Airport",
+      "airportCode": "SLC",
+      "airportInfo": "Salt Lake City International, north of Provo, is the main airport for Utah.",
+      "funFact": "The Eyring Science Center of 1950 was the first BYU building to break from classical design, starting the gold-buff brick look found across much of the campus.",
+      "language": "English",
+      "languageInfo": "The school colors are navy blue and white, and the teams are the Cougars.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / UTA UVX",
+      "transportationFact": "The campus is walkable. UTA's UVX bus rapid transit line has four stops at BYU and links it with Utah Valley University and the FrontRunner stations in Provo and Orem."
+    },
+    "buildings": [
+      {
+        "id": "campus_byu_carillon",
+        "wiki": "Brigham Young University Centennial Carillon Tower",
+        "name": "Centennial Carillon Tower",
+        "description": "Fred L. Markham designed this simple modern bell tower, dedicated in October 1975 for the school's 100th anniversary. Its carillon was built with 53 bells, the largest weighing 4,730 pounds, and a 54th bell was added in 2025.",
+        "architect": "Fred L. Markham",
+        "yearBuilt": 1975,
+        "address": "Brigham Young University campus, Provo, UT",
+        "oldUse": "Carillon Tower",
+        "newUse": "Carillon Tower",
+        "buildingStyle": "Modern",
+        "numberOfStories": 0,
+        "height": 30,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_byu_museum_of_art",
+        "wiki": "Brigham Young University Museum of Art",
+        "name": "Museum of Art",
+        "description": "Opened in October 1993, the museum was built to show BYU's collection of more than 17,000 works, which had never had a permanent home. It is one of the best-attended university art museums in the United States.",
+        "architect": "James Langenheim",
+        "yearBuilt": 1993,
+        "address": "Brigham Young University campus, Provo, UT",
+        "oldUse": "Art Museum",
+        "newUse": "Art Museum",
+        "buildingStyle": "Modern",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_byu_kimball_tower",
+        "wiki": "Spencer W. Kimball Tower",
+        "name": "Spencer W. Kimball Tower",
+        "description": "Completed in 1981, the 12-story tower holds classrooms and offices. It was set at a 45-degree angle to the buildings around it to avoid a corridor effect.",
+        "architect": "Hal Beecher, John Fetzer and Emil B. Fetzer",
+        "yearBuilt": 1981,
+        "address": "Brigham Young University campus, Provo, UT",
+        "oldUse": "Classrooms and Offices",
+        "newUse": "Classrooms and Offices",
+        "buildingStyle": "Modernist",
+        "numberOfStories": 12,
+        "height": 49,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_byu_eyring_science",
+        "wiki": "Eyring Science Center",
+        "name": "Eyring Science Center",
+        "description": "Fred L. Markham designed this science building, completed in 1950 and named for physicist Carl F. Eyring in 1954. A Foucault pendulum swings in its lobby.",
+        "architect": "Fred L. Markham",
+        "yearBuilt": 1950,
+        "address": "Brigham Young University campus, Provo, UT",
+        "oldUse": "Science Building",
+        "newUse": "Science Building",
+        "buildingStyle": "Modern",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of Houston",
+    "enumCase": "uHouston",
+    "country": "unitedStates",
+    "conference": "big12",
+    "aliases": [
+      "U of H",
+      "Houston Cougars",
+      "Coogs"
+    ],
+    "colors": [
+      "#C8102E",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_uhouston_rub_the_paw",
+        "name": "Rub the Paw",
+        "description": "Before big games, fans rub the paws of the two bronze cougar statues in Cullen Family Plaza in front of the E. Cullen Building for luck. Some students rub them before final exams too.",
+        "coordinates": [
+          29.7207927,
+          -95.3445305
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/363833380",
+        "source": "https://uh.edu/about/history/"
+      },
+      {
+        "id": "trad_uhouston_gate_2_cougar",
+        "name": "Gate 2 Cougar",
+        "description": "On game days, fans also rub the paw of the cougar statue at Gate 2 of the football stadium. Give it a rub for luck.",
+        "coordinates": [
+          29.7219969,
+          -95.3491839
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/1350963741",
+        "source": "https://uh.edu/about/history/"
+      }
+    ],
+    "wiki": "University of Houston",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Go Coogs",
+      "airportName": "William P. Hobby Airport",
+      "airportCode": "HOU",
+      "airportInfo": "Hobby Airport, southeast of campus, is the closest airport. George Bush Intercontinental (IAH), north of the city, handles most international flights.",
+      "funFact": "The Roy G. Cullen Building, finished in 1939, is the oldest building on campus and is believed to be the first building on a U.S. college campus with air conditioning.",
+      "language": "English",
+      "languageInfo": "The school colors are scarlet red and white, and the teams are the Cougars.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / METRORail Purple Line",
+      "transportationFact": "METRORail's Purple Line has stops along the campus and runs to downtown Houston."
+    },
+    "buildings": [
+      {
+        "id": "campus_uhouston_ezekiel_cullen",
+        "wiki": "Ezekiel W. Cullen Building",
+        "name": "Ezekiel W. Cullen Building",
+        "description": "Texas architect Alfred C. Finn designed the university's administrative headquarters in the Art Deco style; it opened in 1950. Its east half holds the 1,544-seat Cullen Performance Hall.",
+        "architect": "Alfred C. Finn",
+        "yearBuilt": 1950,
+        "address": "Cullen Family Plaza, University of Houston, Houston, TX",
+        "oldUse": "Administration Building",
+        "newUse": "Administration and Performance Hall",
+        "buildingStyle": "Art Deco",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uhouston_roy_cullen",
+        "wiki": "Roy G. Cullen Building",
+        "name": "Roy G. Cullen Building",
+        "description": "The first permanent building on the present campus, built in 1938 and 1939 with a gift from Hugh Roy Cullen in memory of his son. Lamar Q. Cato designed it in the Art Deco style.",
+        "architect": "Lamar Q. Cato",
+        "yearBuilt": 1939,
+        "address": "University of Houston campus, Houston, TX",
+        "oldUse": "Roy Gustav Cullen Memorial Building",
+        "newUse": "Academic Building",
+        "buildingStyle": "Art Deco",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "coordinates": [
+          29.7200362,
+          -95.3449732
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/364021618"
+      },
+      {
+        "id": "campus_uhouston_moody_towers",
+        "wiki": "Moody Towers",
+        "name": "Moody Towers",
+        "description": "Twin 18-story Modernist residence halls designed by Pitts, Phelps & White. They house about 1,100 students and the largest dining hall on campus.",
+        "architect": "Pitts, Phelps & White",
+        "yearBuilt": 1970,
+        "address": "4401 Wheeler St, Houston, TX 77004",
+        "oldUse": "Residence Halls",
+        "newUse": "Residence Halls",
+        "buildingStyle": "Modernist",
+        "numberOfStories": 18,
+        "height": 73,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uhouston_architecture",
+        "wiki": "Hines College of Architecture",
+        "name": "Hines College of Architecture Building",
+        "description": "Philip Johnson and John Burgee based the architecture school's building, finished in 1985, on Claude-Nicolas Ledoux's unbuilt House of Education. Its rooms gather around a tall central atrium.",
+        "architect": "Philip Johnson and John Burgee",
+        "yearBuilt": 1985,
+        "address": "University of Houston campus, Houston, TX",
+        "oldUse": "Architecture School",
+        "newUse": "Architecture School",
+        "buildingStyle": "Postmodern",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Iowa State University",
+    "enumCase": "iowaState",
+    "country": "unitedStates",
+    "conference": "big12",
+    "aliases": [
+      "Iowa State",
+      "Cyclones"
+    ],
+    "colors": [
+      "#C8102E",
+      "#F1BE48"
+    ],
+    "traditions": [
+      {
+        "id": "trad_iastate_zodiac",
+        "name": "Don't Step on the Zodiac",
+        "description": "A bronze zodiac is set in the floor of Gold Star Hall in the Memorial Union. Legend says stepping on it means failing your next exam, so walk around it like generations of students.",
+        "coordinates": [
+          42.0236772,
+          -93.6458587
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/183224150",
+        "source": "https://discoverames.com/blog/its-a-tradition/"
+      },
+      {
+        "id": "trad_iastate_campaniling",
+        "name": "Campaniling",
+        "description": "Tradition says you become a true Iowa Stater when you are kissed under the Campanile at midnight, and hundreds gather for \"Mass Campaniling\" at Homecoming. Visit the Campanile and listen for its bells.",
+        "coordinates": [
+          42.025428,
+          -93.6460367
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/183041212",
+        "source": "https://discoverames.com/blog/its-a-tradition/"
+      },
+      {
+        "id": "trad_iastate_lake_laverne",
+        "name": "Lake LaVerne",
+        "description": "Swans first came to Lake LaVerne in 1935 and were named Lancelot and Elaine. Legend says couples who walk silently around the lake three times are meant to be together.",
+        "coordinates": [
+          42.0235616,
+          -93.6489068
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/3329428",
+        "source": "https://discoverames.com/blog/its-a-tradition/"
+      }
+    ],
+    "wiki": "Iowa State University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Science with Practice",
+      "airportName": "Des Moines International Airport",
+      "airportCode": "DSM",
+      "airportInfo": "Des Moines International, south of Ames, is the main airport for central Iowa.",
+      "funFact": "The Campanile, built in 1897 and 1898, holds the Stanton Memorial Carillon. It appears on the university's official ring and mace and is the subject of the alma mater, \"The Bells of Iowa State.\"",
+      "language": "English",
+      "languageInfo": "The school colors are cardinal and gold, and the teams are the Cyclones.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / CyRide",
+      "transportationFact": "Central Campus is walkable. CyRide buses, run by the city, the university and student government, cover campus and all of Ames."
+    },
+    "buildings": [
+      {
+        "id": "campus_iastate_campanile",
+        "wiki": "Campanile (Iowa State University)",
+        "name": "Campanile",
+        "description": "George E. Hallett designed this free-standing brick bell tower, built in 1897 to 1898, with Venetian Gothic towers as its model. It holds the Stanton Memorial Carillon and is a symbol of the university.",
+        "architect": "George E. Hallett",
+        "yearBuilt": 1898,
+        "address": "Central Campus, Iowa State University, Ames, IA",
+        "oldUse": "Bell Tower",
+        "newUse": "Carillon Tower",
+        "buildingStyle": "Venetian Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_iastate_beardshear",
+        "wiki": "Beardshear Hall",
+        "name": "Beardshear Hall",
+        "description": "Proudfoot & Bird designed this Neoclassical and Beaux-Arts administration building, finished in 1906. It holds the offices of the president and the provost.",
+        "architect": "Proudfoot & Bird",
+        "yearBuilt": 1906,
+        "address": "Morrill Rd, Iowa State University, Ames, IA",
+        "oldUse": "Administration Building",
+        "newUse": "Administration Building",
+        "buildingStyle": "Neoclassical / Beaux-Arts",
+        "numberOfStories": 4,
+        "height": 0,
+        "foodSpots": [],
+        "coordinates": [
+          42.026204,
+          -93.6484304
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/33725619"
+      },
+      {
+        "id": "campus_iastate_morrill_hall",
+        "wiki": "Morrill Hall (Iowa State University)",
+        "name": "Morrill Hall",
+        "description": "Completed in 1891 as the library, museum and chapel, uses still carved in its east stonework. Closed as unsafe in 1996, the Romanesque building reopened in 2007 as the Christian Petersen Art Museum.",
+        "architect": "Josselyn & Taylor",
+        "yearBuilt": 1891,
+        "address": "Morrill Rd, Iowa State University, Ames, IA",
+        "oldUse": "Library, Museum and Chapel",
+        "newUse": "Christian Petersen Art Museum",
+        "buildingStyle": "Romanesque",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_iastate_lab_of_mechanics",
+        "wiki": "Laboratory of Mechanics",
+        "name": "Laboratory of Mechanics",
+        "description": "Built in 1883 as Engineering Hall, this two-story brick building is a simple version of the Second Empire style, with a mansard-roofed tower at its entrance.",
+        "architect": "J. B. Ballinger; Foster & Liebbe",
+        "yearBuilt": 1883,
+        "address": "Union Dr, Iowa State University, Ames, IA",
+        "oldUse": "Engineering Hall",
+        "newUse": "Academic Building",
+        "buildingStyle": "Second Empire",
+        "numberOfStories": 2,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of Kansas",
+    "enumCase": "uKansas",
+    "country": "unitedStates",
+    "conference": "big12",
+    "aliases": [
+      "KU",
+      "Kansas",
+      "Jayhawks"
+    ],
+    "colors": [
+      "#0051BA",
+      "#E8000D"
+    ],
+    "traditions": [
+      {
+        "id": "trad_ku_campanile",
+        "name": "Memorial Campanile",
+        "description": "Graduates walk through the World War II Memorial Campanile on their way down the Hill at commencement. Legend says walking through it before then means you won't graduate, so admire it from outside.",
+        "coordinates": [
+          38.9600053,
+          -95.2469287
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/115429559",
+        "source": "https://bloglaw.ku.edu/10-things-about-ku-you-probably-wont-learn-law-school"
+      },
+      {
+        "id": "trad_ku_jayhawk_statue",
+        "name": "Strong Hall Jayhawk",
+        "description": "The bronze Jayhawk outside Strong Hall was a gift from the class of 1956. Stop for a photo with it.",
+        "coordinates": [
+          38.958435,
+          -95.2474873
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/115429558",
+        "source": "https://bloglaw.ku.edu/10-things-about-ku-you-probably-wont-learn-law-school"
+      }
+    ],
+    "wiki": "University of Kansas",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Rock Chalk, Jayhawk",
+      "airportName": "Kansas City International Airport",
+      "airportCode": "MCI",
+      "airportInfo": "Kansas City International, east of Lawrence, is the main airport for the region.",
+      "funFact": "Many of KU's early buildings on Mount Oread, such as Spooner Hall, are built of rough gray Oread limestone quarried close to the hill itself.",
+      "language": "English",
+      "languageInfo": "The school colors are crimson and blue, and the teams are the Jayhawks.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / KU on Wheels",
+      "transportationFact": "The hilltop campus is walkable. KU on Wheels and Lawrence Transit run as one coordinated system, and KU students, faculty and staff ride with their KU Card."
+    },
+    "buildings": [
+      {
+        "id": "campus_ku_spooner_hall",
+        "wiki": "Spooner Hall",
+        "name": "Spooner Hall",
+        "description": "Henry Van Brunt designed KU's first library, built in 1893 and 1894 of Oread limestone with red sandstone trim. A sculpted owl sits on the peak of its west gable.",
+        "architect": "Henry Van Brunt",
+        "yearBuilt": 1894,
+        "address": "14th St and Oread Ave, Lawrence, KS",
+        "oldUse": "University Library",
+        "newUse": "Academic Building",
+        "buildingStyle": "Richardsonian Romanesque",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ku_dyche_hall",
+        "wiki": "University of Kansas Natural History Museum",
+        "name": "Dyche Hall",
+        "description": "Dyche Hall, home of the Natural History Museum, is built of Oread limestone with carved arches and grotesques of Cottonwood limestone. It was listed on the National Register of Historic Places in 1974 for its Romanesque style.",
+        "architect": "Root & Siemens; Henry Bennett",
+        "yearBuilt": 1901,
+        "address": "14th St and Oread Ave, Lawrence, KS",
+        "oldUse": "Natural History Museum",
+        "newUse": "Natural History Museum",
+        "buildingStyle": "Romanesque",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ku_strong_hall",
+        "wiki": "Strong Hall (Lawrence, Kansas)",
+        "name": "Strong Hall",
+        "description": "Montrose Pallen McArdle first planned a grand Renaissance building with a rotunda, but the legislature cut the plans. The administration building was finished in 1911 in the Classical Revival style.",
+        "architect": "Montrose Pallen McArdle",
+        "yearBuilt": 1911,
+        "address": "Jayhawk Dr and Poplar Ln, Lawrence, KS",
+        "oldUse": "Administration Building",
+        "newUse": "Administration Building",
+        "buildingStyle": "Classical Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ku_bailey_hall",
+        "wiki": "Bailey Hall (University of Kansas)",
+        "name": "Bailey Hall",
+        "description": "Built in 1905 as the Chemistry Building, this Romanesque hall was designed by John G. Haskell, one of the architects of the Kansas State Capitol.",
+        "architect": "John G. Haskell",
+        "yearBuilt": 1905,
+        "address": "Jayhawk Dr and Sunflower Rd, Lawrence, KS",
+        "oldUse": "Chemistry Building",
+        "newUse": "Academic Building",
+        "buildingStyle": "Romanesque",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Kansas State University",
+    "enumCase": "kansasState",
+    "country": "unitedStates",
+    "conference": "big12",
+    "aliases": [
+      "K-State",
+      "Kansas State"
+    ],
+    "colors": [
+      "#512888",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_kstate_call_hall_ice_cream",
+        "name": "Call Hall Ice Cream",
+        "description": "K-State's own dairy plant makes more than 40 ice cream flavors, including \"Purple Pride,\" sold at Call Hall. Stop in for a scoop.",
+        "coordinates": [
+          39.1960718,
+          -96.5812726
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/58688930",
+        "source": "https://k-state.com/about/todaystraditions.php"
+      }
+    ],
+    "wiki": "Kansas State University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Every Man a Wildcat",
+      "airportName": "Manhattan Regional Airport",
+      "airportCode": "MHK",
+      "airportInfo": "Manhattan Regional Airport has American Eagle flights to Dallas/Fort Worth and Chicago O'Hare.",
+      "funFact": "Nichols Hall looks like a castle with battlements. A fire destroyed its interior in 1968, and the building was rebuilt inside its old stone walls in 1985.",
+      "language": "English",
+      "languageInfo": "The school color is royal purple, and the teams are the Wildcats.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / aTa Bus",
+      "transportationFact": "The campus is walkable. Through a partnership with the aTa Bus, K-State students, faculty and staff ride campus and Manhattan routes free with their K-State ID."
+    },
+    "buildings": [
+      {
+        "id": "campus_kstate_anderson_hall",
+        "wiki": "Anderson Hall (Manhattan, Kansas)",
+        "name": "Anderson Hall",
+        "description": "Erasmus T. Carr designed this Gothic stone building, whose first wing was finished in 1879. It is the university's central administration building.",
+        "architect": "Erasmus T. Carr",
+        "yearBuilt": 1879,
+        "address": "Kansas State University campus, Manhattan, KS",
+        "oldUse": "Practical Agriculture Building",
+        "newUse": "Administration Building",
+        "buildingStyle": "Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_kstate_nichols_hall",
+        "wiki": "Nichols Hall",
+        "name": "Nichols Hall",
+        "description": "Built in 1911, it looks from outside like a castle with battlements. Fire destroyed its interior in 1968, and it was rebuilt in 1985 for journalism and the performing arts.",
+        "architect": "Unknown",
+        "yearBuilt": 1911,
+        "address": "Kansas State University campus, Manhattan, KS",
+        "oldUse": "Gymnasium",
+        "newUse": "Media, Music, Theatre and Dance",
+        "buildingStyle": "Neo-Renaissance",
+        "numberOfStories": 3,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_kstate_seaton_hall",
+        "wiki": "Seaton Hall",
+        "name": "Seaton Hall",
+        "description": "A sprawling building just north of the Student Union, begun with its south wing in 1908 and extended in stages until 1959. It is named for a longtime dean of engineering and architecture.",
+        "architect": "Unknown",
+        "yearBuilt": 1908,
+        "address": "Kansas State University campus, Manhattan, KS",
+        "oldUse": "Engineering and Architecture",
+        "newUse": "Architecture and Engineering",
+        "buildingStyle": "Neo-Renaissance",
+        "numberOfStories": 3,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_kstate_hale_library",
+        "wiki": "Hale Library",
+        "name": "Hale Library",
+        "description": "The main library grew from a 1927 Romanesque Revival building by Paul Weigel and Charles Cuthbert. Hammond Beeby Babka's 1997 expansion joined the old and new parts and won an AIA regional merit award.",
+        "architect": "Paul Weigel and Charles Cuthbert; Hammond Beeby Babka (1997)",
+        "yearBuilt": 1927,
+        "address": "Kansas State University campus, Manhattan, KS",
+        "oldUse": "Campus Library",
+        "newUse": "Main Library",
+        "buildingStyle": "Romanesque Revival",
+        "numberOfStories": 5,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Oklahoma State University",
+    "enumCase": "oklahomaState",
+    "country": "unitedStates",
+    "conference": "big12",
+    "aliases": [
+      "Oklahoma State",
+      "OK State",
+      "Pokes"
+    ],
+    "colors": [
+      "#FE5C00",
+      "#000000"
+    ],
+    "traditions": [
+      {
+        "id": "trad_okstate_library_lawn",
+        "name": "Edmon Low Library Lawn Photo",
+        "description": "New students pose for a first-day photo on the lawn in front of Edmon Low Library. Take your own photo in front of the library.",
+        "coordinates": [
+          36.1230647,
+          -97.0697025
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/116506567",
+        "source": "https://stories.okstate.edu/content/2026/50_must_do_experiences_for_every_osu_freshman"
+      },
+      {
+        "id": "trad_okstate_old_central_bell",
+        "name": "Old Central Bell",
+        "description": "When news of a 1917 football win reached Stillwater, Old Central's bell rang for hours, starting the Bedlam bell tradition. Visit the first permanent building on campus.",
+        "coordinates": [
+          36.120811,
+          -97.0665862
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/209462073",
+        "source": "https://visitstillwater.org/things-to-do/stillwater-area-history/old-central"
+      },
+      {
+        "id": "trad_okstate_theta_pond",
+        "name": "Theta Pond",
+        "description": "Theta Pond began as a reservoir in 1895 and is now one of the most scenic spots on campus. Take a walk around it.",
+        "coordinates": [
+          36.120018,
+          -97.0708324
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/79996443",
+        "source": "https://en.wikipedia.org/wiki/Oklahoma_State_University"
+      }
+    ],
+    "wiki": "Oklahoma State University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Home of the Cowboys",
+      "airportName": "Stillwater Regional Airport",
+      "airportCode": "SWO",
+      "airportInfo": "Stillwater Regional Airport serves the city. Tulsa International (TUL) and Will Rogers in Oklahoma City (OKC) are the nearest large airports.",
+      "funFact": "Most of the campus follows the \"Modified Georgian\" style set by President Henry G. Bennett's plan of the late 1920s. The Edmon Low Library and the Student Union are two of its landmarks.",
+      "language": "English",
+      "languageInfo": "The school colors are orange and black, and the teams are the Cowboys.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / The Bus",
+      "transportationFact": "The campus is walkable. The Bus, OSU-Stillwater Community Transit, is run by the university and open to the public; OSU students, faculty and staff ride free with their ID."
+    },
+    "buildings": [
+      {
+        "id": "campus_okstate_old_central",
+        "wiki": "Old Central",
+        "name": "Old Central",
+        "description": "The first permanent building of Oklahoma A&M, built in 1893 and 1894 in the Richardsonian Romanesque style. Its bell clapper was once the trophy of the Bedlam rivalry with the University of Oklahoma.",
+        "architect": "Herman Hadley",
+        "yearBuilt": 1894,
+        "address": "Oklahoma State University campus, Stillwater, OK",
+        "oldUse": "College Building",
+        "newUse": "University Building",
+        "buildingStyle": "Richardsonian Romanesque",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_okstate_edmon_low",
+        "wiki": "Edmon Low Library",
+        "name": "Edmon Low Library",
+        "description": "The Georgian-style library opened in 1953 and became the center of campus under President Bennett's long-range plan. It holds more than 3 million volumes.",
+        "architect": "Unknown",
+        "yearBuilt": 1953,
+        "address": "Oklahoma State University campus, Stillwater, OK",
+        "oldUse": "Main Library",
+        "newUse": "Main Library",
+        "buildingStyle": "Georgian",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_okstate_student_union",
+        "wiki": "Student Union (Oklahoma State University)",
+        "name": "Student Union",
+        "description": "Built in 1950 in the campus's Modified Georgian style, it was billed as the largest student union in the world. It also holds the Atherton Hotel, run by the hotel school.",
+        "architect": "Unknown",
+        "yearBuilt": 1950,
+        "address": "Oklahoma State University campus, Stillwater, OK",
+        "oldUse": "Student Union",
+        "newUse": "Student Union and Hotel",
+        "buildingStyle": "Modified Georgian",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_okstate_bennett_chapel",
+        "wiki": "Bennett Memorial Chapel",
+        "name": "Bennett Memorial Chapel",
+        "description": "Architecture professor John Rex Cunningham designed this interdenominational chapel, dedicated in 1957. It honors students killed in the World Wars and President Henry G. Bennett and his wife Vera.",
+        "architect": "John Rex Cunningham",
+        "yearBuilt": 1957,
+        "address": "Oklahoma State University campus, Stillwater, OK",
+        "oldUse": "Memorial Chapel",
+        "newUse": "Memorial Chapel",
+        "buildingStyle": "Modern",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Texas Tech University",
+    "enumCase": "texasTech",
+    "country": "unitedStates",
+    "conference": "big12",
+    "aliases": [
+      "Texas Tech",
+      "TTU",
+      "Red Raiders"
+    ],
+    "colors": [
+      "#C30020",
+      "#000000"
+    ],
+    "traditions": [
+      {
+        "id": "trad_ttu_victory_bells",
+        "name": "Victory Bells",
+        "description": "The Victory Bells in the east tower of the Administration Building ring after every Texas Tech athletic win and at graduations. Listen for them after a win.",
+        "coordinates": [
+          33.5831752,
+          -101.8743018
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/75509107",
+        "source": "https://en.wikipedia.org/wiki/Texas_Tech_University_traditions"
+      },
+      {
+        "id": "trad_ttu_carol_of_lights",
+        "name": "Carol of Lights",
+        "description": "Since 1959, Texas Tech has covered the Administration Building and nearby buildings in holiday lights each December. Come see the lights at the start of the season.",
+        "coordinates": [
+          33.5831752,
+          -101.8743018
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/75509107",
+        "source": "https://today.ttu.edu/posts/2022/12/Stories/Texas-Tech-Hosts-64th-Annual-Carol-of-Lights-and-Centennial-Kickoff"
+      },
+      {
+        "id": "trad_ttu_masked_rider_statue",
+        "name": "Masked Rider Statue",
+        "description": "A larger-than-life sculpture by Grant Speed honoring the Masked Rider mascot stands outside the Frazier Alumni Pavilion. Take a photo with it.",
+        "coordinates": [
+          33.5896496,
+          -101.8747022
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/77689548",
+        "source": "https://en.wikipedia.org/wiki/Texas_Tech_University_traditions"
+      }
+    ],
+    "wiki": "Texas Tech University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Guns Up",
+      "airportName": "Lubbock Preston Smith International Airport",
+      "airportCode": "LBB",
+      "airportInfo": "Lubbock Preston Smith International is the main airport for the Lubbock area.",
+      "funFact": "The Administration Building, one of the original campus buildings, is modeled on the University of Alcalá de Henares in Spain, with twin bell towers and a courtyard.",
+      "language": "English",
+      "languageInfo": "The school colors are scarlet and black, and the teams are the Red Raiders.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Citibus",
+      "transportationFact": "Citibus runs free loops around campus, such as the Red Raider and Double T routes, and Texas Tech students ride off-campus Citibus routes free with their ID."
+    },
+    "buildings": [
+      {
+        "id": "campus_ttu_administration",
+        "wiki": "Administration Building (Texas Tech University)",
+        "name": "Administration Building",
+        "description": "One of the original campus buildings, built in 1924 and 1925 and modeled on the University of Alcalá de Henares in Spain. It has twin bell towers, two wings and a courtyard.",
+        "architect": "Wyatt C. Hedrick",
+        "yearBuilt": 1925,
+        "address": "Texas Tech University campus, Lubbock, TX",
+        "oldUse": "Administration Building",
+        "newUse": "Administration Building",
+        "buildingStyle": "Spanish Renaissance",
+        "numberOfStories": 3,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ttu_west_hall",
+        "wiki": "West Hall (Texas Tech University)",
+        "name": "West Hall",
+        "description": "Wyatt C. Hedrick designed this Spanish-style building in 1934 as Men's Dormitory No. 1. It was later named for Texas businessman James Marion West Sr.",
+        "architect": "Wyatt C. Hedrick",
+        "yearBuilt": 1934,
+        "address": "2500 Broadway St, Lubbock, TX",
+        "oldUse": "Men's Dormitory",
+        "newUse": "University Building",
+        "buildingStyle": "Spanish",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ttu_dairy_barn",
+        "wiki": "Texas Technological College Dairy Barn",
+        "name": "Dairy Barn",
+        "description": "Built in 1926 and 1927 to teach dairy science, the barn was used for 40 years. Students raised money in the early 1990s to save it as a symbol of the college's farming roots.",
+        "architect": "Wyatt C. Hedrick",
+        "yearBuilt": 1927,
+        "address": "Texas Tech University campus, Lubbock, TX",
+        "oldUse": "Dairy Barn",
+        "newUse": "Historic Landmark",
+        "buildingStyle": "Bungalow/Craftsman",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ttu_ag_pavilion",
+        "wiki": "Agricultural Pavilion",
+        "name": "Agricultural Pavilion",
+        "description": "One of the original campus buildings, finished in 1925 as the Livestock Judging Pavilion in the Mission Revival style. Texas Tech basketball played here until the gymnasium opened in 1927.",
+        "architect": "Wyatt C. Hedrick",
+        "yearBuilt": 1925,
+        "address": "Texas Tech University campus, Lubbock, TX",
+        "oldUse": "Livestock Judging Pavilion",
+        "newUse": "Agricultural Pavilion",
+        "buildingStyle": "Mission Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "West Virginia University",
+    "enumCase": "westVirginia",
+    "country": "unitedStates",
+    "conference": "big12",
+    "aliases": [
+      "WVU",
+      "West Virginia",
+      "Mountaineers"
+    ],
+    "colors": [
+      "#002855",
+      "#EAAA00"
+    ],
+    "traditions": [
+      {
+        "id": "trad_wvu_woodburn_lighting",
+        "name": "Woodburn Hall Holiday Lighting",
+        "description": "WVU lights up Woodburn Hall for the holidays, a campus tradition revived in 2025. Visit in December to see it lit.",
+        "coordinates": [
+          39.6360104,
+          -79.9553417
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/154524440",
+        "source": "https://eberly.wvu.edu/news-events/eberly-news/2025/11/17/let-s-glow-a-beloved-holiday-tradition-returns-to-campus"
+      },
+      {
+        "id": "trad_wvu_mountaineer_statue",
+        "name": "Mountaineer Statue",
+        "description": "Sculptor Donald De Lue's 1971 bronze statue of the Mountaineer stands at the Mountainlair student union. Find it and take a photo.",
+        "coordinates": [
+          39.6348483,
+          -79.9535717
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/154926873",
+        "source": "https://en.wikipedia.org/wiki/Mountainlair"
+      }
+    ],
+    "wiki": "West Virginia University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Let's Go Mountaineers",
+      "airportName": "Morgantown Municipal Airport",
+      "airportCode": "MGW",
+      "airportInfo": "Morgantown Municipal Airport has United Express flights to Washington Dulles and Chicago O'Hare. Pittsburgh International (PIT) is the nearest large airport.",
+      "funFact": "Woodburn Hall's central tower has held a Seth Thomas clock since 1910. The clock first hung in the cupola of Martin Hall, the university's oldest building, on the same circle.",
+      "language": "English",
+      "languageInfo": "The school colors are old gold and blue, and the teams are the Mountaineers.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Personal Rapid Transit (PRT)",
+      "transportationFact": "WVU's Personal Rapid Transit runs small driverless cars on a guideway linking downtown Morgantown, the Evansdale campus and the Health Sciences campus."
+    },
+    "buildings": [
+      {
+        "id": "campus_wvu_woodburn_circle",
+        "wiki": "Woodburn Circle",
+        "name": "Woodburn Circle",
+        "description": "Three halls built between 1870 and 1893 around an oval path: Martin, Woodburn and Chitwood. Woodburn Hall, with its mansard roof and Italianate tower, is the symbol of the university.",
+        "architect": "C. C. Kemble; Elmer F. Jacobs",
+        "yearBuilt": 1876,
+        "address": "University Ave, Morgantown, WV",
+        "oldUse": "University Halls",
+        "newUse": "Academic Buildings",
+        "buildingStyle": "Second Empire",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_wvu_stewart_hall",
+        "wiki": "Stewart Hall (Morgantown, West Virginia)",
+        "name": "Stewart Hall",
+        "description": "Built from 1900 to 1902 of sandstone and concrete, with a tall octagonal tower and a two-story arcaded rotunda inside. It was the library until 1931 and is now the administration building.",
+        "architect": "Wilson Bros. & Co.",
+        "yearBuilt": 1902,
+        "address": "West Virginia University campus, Morgantown, WV",
+        "oldUse": "University Library",
+        "newUse": "Administration Building",
+        "buildingStyle": "Romanesque Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_wvu_elizabeth_moore",
+        "wiki": "Elizabeth Moore Hall",
+        "name": "Elizabeth Moore Hall",
+        "description": "Built from 1926 to 1928 for women's physical education, this red brick Georgian Revival building has five front arches on Doric columns. It now holds the dean of students and the dance program.",
+        "architect": "Davis, Dunlap & Barney",
+        "yearBuilt": 1928,
+        "address": "University Ave, Morgantown, WV",
+        "oldUse": "Women's Physical Education Building",
+        "newUse": "Student Life and Dance",
+        "buildingStyle": "Georgian Revival",
+        "numberOfStories": 3,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_wvu_oglebay_hall",
+        "wiki": "Oglebay Hall",
+        "name": "Oglebay Hall",
+        "description": "A 1918 Classical Revival classroom building with four Doric columns under a pediment. It housed the College of Agriculture until 1961, a reminder of WVU's land-grant roots.",
+        "architect": "Unknown",
+        "yearBuilt": 1918,
+        "address": "University Ave, Morgantown, WV",
+        "oldUse": "College of Agriculture",
+        "newUse": "Academic Building",
+        "buildingStyle": "Classical Revival",
+        "numberOfStories": 3,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_wvu_purinton_house",
+        "wiki": "Purinton House",
+        "name": "Purinton House",
+        "description": "Built in 1904, this house with a wide Ionic porch was the home of university presidents from 1905 to 1967. President William Howard Taft gave a speech from its porch in 1911.",
+        "architect": "J. Charles Fulton",
+        "yearBuilt": 1904,
+        "address": "University Ave, Morgantown, WV",
+        "oldUse": "President's Residence",
+        "newUse": "Historic House",
+        "buildingStyle": "Classical Revival / Colonial Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Baylor University",
+    "enumCase": "baylor",
+    "country": "unitedStates",
+    "conference": "big12",
+    "aliases": [
+      "Baylor",
+      "Baylor Bears"
+    ],
+    "colors": [
+      "#154734",
+      "#FFB81C"
+    ],
+    "traditions": [
+      {
+        "id": "trad_baylor_judge_baylor",
+        "name": "Judge Baylor Statue",
+        "description": "A bronze statue of Judge R.E.B. Baylor on Founders Mall faces Waco Hall and is a favorite campus photo spot. Take a photo with the school's namesake.",
+        "coordinates": [
+          31.5448581,
+          -97.1205593
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/468606597",
+        "source": "https://magazine.web.baylor.edu/news/story/2024/icons-and-traditions"
+      },
+      {
+        "id": "trad_baylor_mclane_carillon",
+        "name": "McLane Carillon",
+        "description": "The 48-bell McLane Carillon at Pat Neff Hall, a gift from the McLane family in 1988, fills the campus with music. Listen for it near Pat Neff Hall.",
+        "coordinates": [
+          31.5457472,
+          -97.1213019
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/30655426",
+        "source": "https://magazine.web.baylor.edu/news/story/2024/icons-and-traditions"
+      }
+    ],
+    "wiki": "Baylor University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Sic 'em Bears",
+      "airportName": "Waco Regional Airport",
+      "airportCode": "ACT",
+      "airportInfo": "Waco Regional Airport serves the city. Dallas/Fort Worth International (DFW) is the nearest large airport.",
+      "funFact": "The Armstrong Browning Library holds the largest collections of works by poets Robert and Elizabeth Barrett Browning, and is thought to have the world's largest collection of secular stained glass.",
+      "language": "English",
+      "languageInfo": "The school colors are green and gold, and the teams are the Bears.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Baylor University Shuttle",
+      "transportationFact": "The campus is walkable. Waco Transit runs the free Baylor University Shuttle (BUS), which links campus with nearby apartments and neighborhoods."
+    },
+    "buildings": [
+      {
+        "id": "campus_baylor_armstrong_browning",
+        "wiki": "Armstrong Browning Library & Museum",
+        "name": "Armstrong Browning Library",
+        "description": "Eggers and Higgins designed this three-story Italian Renaissance library, dedicated in 1951, with Indiana limestone walls and bronze doors modeled on Ghiberti's Florentine baptistery doors. It holds the largest collections of the Brownings' works and dozens of stained glass windows.",
+        "architect": "Eggers and Higgins; Wyatt C. Hedrick",
+        "yearBuilt": 1951,
+        "address": "8th St and Speight Ave, Waco, TX",
+        "oldUse": "Browning Library",
+        "newUse": "Library and Museum",
+        "buildingStyle": "Italian Renaissance",
+        "numberOfStories": 3,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_baylor_pat_neff_hall",
+        "wiki": "Baylor University",
+        "name": "Pat Neff Hall",
+        "description": "Baylor's administration building, designed by Waco architects Birch D. Easterwood and Son in the American Georgian style and finished in 1939. Its dome was first clad in stainless steel and was gilded in 2000.",
+        "architect": "Birch D. Easterwood and Son",
+        "yearBuilt": 1939,
+        "address": "Baylor University campus, Waco, TX",
+        "oldUse": "Administration Building",
+        "newUse": "Administration Building",
+        "buildingStyle": "American Georgian",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          31.5457416,
+          -97.1213074
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/30655426"
+      },
+      {
+        "id": "campus_baylor_moody_library",
+        "wiki": "Moody Memorial Library",
+        "name": "Moody Memorial Library",
+        "description": "Jarvis Putty Jarvis designed Baylor's larger central library, opened in 1968 and described at its groundbreaking as modern and functional. It is joined to the Jesse H. Jones Library by hallways on two floors.",
+        "architect": "Jarvis Putty Jarvis",
+        "yearBuilt": 1968,
+        "address": "Baylor University campus, Waco, TX",
+        "oldUse": "Central Library",
+        "newUse": "Central Library",
+        "buildingStyle": "Modern",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_baylor_mayborn",
+        "wiki": "Mayborn Museum Complex",
+        "name": "Mayborn Museum Complex",
+        "description": "Opened in May 2004, the 142,000-square-foot museum joins a natural history wing, a hands-on discovery center and a 13-acre historic village of 19th-century Texas buildings.",
+        "architect": "Unknown",
+        "yearBuilt": 2004,
+        "address": "1300 S University Parks Dr, Waco, TX",
+        "oldUse": "Natural Science and Cultural History Museum",
+        "newUse": "Museum",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_baylor_mclane_stadium",
+        "wiki": "McLane Stadium",
+        "name": "McLane Stadium",
+        "description": "Populous designed this 45,140-seat football stadium on the bank of the Brazos River, opened in 2014. Its open south end faces across the river to the main campus.",
+        "architect": "Populous",
+        "yearBuilt": 2014,
+        "address": "1001 S M.L.K. Jr Blvd, Waco, TX 76704",
+        "oldUse": "Football Stadium",
+        "newUse": "Football Stadium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of Cincinnati",
+    "enumCase": "uCincinnati",
+    "country": "unitedStates",
+    "conference": "big12",
+    "aliases": [
+      "UCincinnati",
+      "Cincinnati Bearcats",
+      "Bearcats"
+    ],
+    "colors": [
+      "#E00122",
+      "#000000"
+    ],
+    "traditions": [
+      {
+        "id": "trad_ucincy_bearcat_statue",
+        "name": "Bearcat Statue",
+        "description": "The 15-foot bronze Bearcat by Jon Hair, a gift of the Sigma Sigma honorary in 2010, is a favorite photo backdrop for campus tours and graduates. It stands on Commons Way outside Marian Spencer Hall.",
+        "coordinates": [
+          39.1331179,
+          -84.5125066
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/14027644391",
+        "source": "https://www.uc.edu/news/articles/2026/04/local-media-cover-reinstallation-of-bearcat-statue.html"
+      }
+    ],
+    "wiki": "University of Cincinnati",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Home of the Bearcats",
+      "airportName": "Cincinnati/Northern Kentucky International Airport",
+      "airportCode": "CVG",
+      "airportInfo": "CVG is across the Ohio River in northern Kentucky and is the main airport for Cincinnati.",
+      "funFact": "UC hired well-known architects for many campus buildings, including Michael Graves, Peter Eisenman, Henry Cobb, Frank Gehry, Gwathmey Siegel, Moore Ruble Yudell, Thom Mayne's Morphosis and Bernard Tschumi.",
+      "language": "English",
+      "languageInfo": "The school colors are red and black, and the teams are the Bearcats.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Bearcats Shuttle",
+      "transportationFact": "The main campus is walkable. UC's Bearcats Shuttle routes start and end at Transit Row and link the Uptown campus with nearby neighborhoods; Metro buses also serve Uptown."
+    },
+    "buildings": [
+      {
+        "id": "campus_ucincy_van_wormer",
+        "wiki": "Van Wormer Library",
+        "name": "Van Wormer Library",
+        "description": "Samuel Hannaford designed this classical library, opened in 1901 and paid for by Asa Van Wormer in memory of his wife. A 2006 renovation added a new dome that lights every floor; it now holds university offices.",
+        "architect": "Samuel Hannaford",
+        "yearBuilt": 1901,
+        "address": "University of Cincinnati campus, Cincinnati, OH",
+        "oldUse": "University Library",
+        "newUse": "Administrative Offices",
+        "buildingStyle": "Classical",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ucincy_aronoff_center",
+        "wiki": "University of Cincinnati College of Design, Architecture, Art, and Planning",
+        "name": "Aronoff Center for Design and Art",
+        "description": "Peter Eisenman designed this home of the design and architecture college, opened in 1996, to join three older buildings into one. Its fragmented facade has panels of several colors and irregular windows.",
+        "architect": "Peter Eisenman; Lorenz & Williams",
+        "yearBuilt": 1996,
+        "address": "University of Cincinnati campus, Cincinnati, OH",
+        "oldUse": "Design and Architecture College",
+        "newUse": "Design and Architecture College",
+        "buildingStyle": "Deconstructivist",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ucincy_vontz_center",
+        "wiki": "University of Cincinnati",
+        "name": "Vontz Center for Molecular Studies",
+        "description": "Frank Gehry designed this research laboratory, opened in September 1999 as the gateway to the UC medical campus. Its curved, leaning walls are clad in red brick, unusual for Gehry, to relate to the older university buildings nearby.",
+        "architect": "Frank Gehry; BHDP Architecture",
+        "yearBuilt": 1999,
+        "address": "University of Cincinnati medical campus, Cincinnati, OH",
+        "oldUse": "Molecular Research Laboratory",
+        "newUse": "Molecular Research Laboratory",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          39.1362015,
+          -84.5061026
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/475665113"
+      },
+      {
+        "id": "campus_ucincy_nippert_stadium",
+        "wiki": "Nippert Stadium",
+        "name": "Nippert Stadium",
+        "description": "Frederick W. Garber designed the concrete stadium begun in 1915, making it one of the oldest playing sites in college football. Its 2014–15 expansion added a glass and steel west pavilion by Architecture Research Office.",
+        "architect": "Frederick W. Garber; Architecture Research Office (2015 expansion)",
+        "yearBuilt": 1915,
+        "address": "2700 Bearcats Way, Cincinnati, OH",
+        "oldUse": "Football Stadium",
+        "newUse": "Football Stadium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of Colorado Boulder",
+    "enumCase": "cuBoulder",
+    "country": "unitedStates",
+    "conference": "big12",
+    "aliases": [
+      "CU Boulder",
+      "Colorado",
+      "Buffaloes",
+      "Buffs"
+    ],
+    "colors": [
+      "#CFB87C",
+      "#000000"
+    ],
+    "traditions": [
+      {
+        "id": "trad_cuboulder_norlin_inscriptions",
+        "name": "Norlin Library Inscriptions",
+        "description": "Two inscriptions by President George Norlin are carved on the library's west face over Norlin Quadrangle: \"Who knows only his own generation remains always a child\" and, over the door, \"Enter here the timeless fellowship of the human spirit.\" Read them from the quad.",
+        "coordinates": [
+          40.0087071,
+          -105.2707683
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/28828232",
+        "source": "https://en.wikipedia.org/wiki/University_of_Colorado_Boulder"
+      },
+      {
+        "id": "trad_cuboulder_heritage_center",
+        "name": "CU Heritage Center in Old Main",
+        "description": "Old Main, the first building on campus, houses the CU Heritage Center, whose galleries tell the university's history. Visit to see the stories of CU's past.",
+        "coordinates": [
+          40.0092235,
+          -105.2733574
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/46194626",
+        "source": "https://en.wikipedia.org/wiki/University_of_Colorado_Boulder"
+      }
+    ],
+    "wiki": "University of Colorado Boulder",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Sko Buffs",
+      "airportName": "Denver International Airport",
+      "airportCode": "DEN",
+      "airportInfo": "Denver International, southeast of Boulder, is the main airport for the region. RTD's AB bus runs between the airport and Boulder.",
+      "funFact": "CU Boulder's look, called Tuscan Vernacular Revival, came from architect Charles Klauder: rough local sandstone walls, red tile roofs and limestone trim.",
+      "language": "English",
+      "languageInfo": "The school colors are silver, gold and black, and the teams are the Buffaloes.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / RTD Buses",
+      "transportationFact": "The main campus is walkable. RTD buses, including the HOP circulator, link campus with downtown Boulder, and regional buses run to Denver."
+    },
+    "buildings": [
+      {
+        "id": "campus_cuboulder_norlin_quad",
+        "wiki": "Norlin Quadrangle Historic District",
+        "name": "Norlin Quadrangle",
+        "description": "The historic core of campus, with twelve buildings around a central lawn, including Old Main of 1876, Macky Auditorium and Norlin Library. Charles Klauder designed many of them in the sandstone and red tile style that marks the campus.",
+        "architect": "Charles Klauder and others",
+        "yearBuilt": 1876,
+        "address": "University of Colorado campus, Boulder, CO",
+        "oldUse": "Campus Quadrangle",
+        "newUse": "Campus Quadrangle",
+        "buildingStyle": "Tuscan Vernacular Revival / Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_cuboulder_henderson",
+        "wiki": "University of Colorado Museum of Natural History",
+        "name": "Henderson Building (Museum of Natural History)",
+        "description": "Charles Klauder designed the museum's building, completed in 1937 by the Works Progress Administration and named for first curator Junius Henderson in 1951. It holds more than five million specimens and artifacts.",
+        "architect": "Charles Klauder",
+        "yearBuilt": 1937,
+        "address": "15th St and Broadway, Boulder, CO",
+        "oldUse": "Museum",
+        "newUse": "Natural History Museum",
+        "buildingStyle": "Tuscan Vernacular Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_cuboulder_sommers_bausch",
+        "wiki": "Sommers–Bausch Observatory",
+        "name": "Sommers–Bausch Observatory",
+        "description": "Built from 1950 to 1953 in an adapted rural Italian style to match the campus. It is the teaching and research observatory of the astrophysics department.",
+        "architect": "Unknown",
+        "yearBuilt": 1953,
+        "address": "University of Colorado campus, Boulder, CO",
+        "oldUse": "Astronomical Observatory",
+        "newUse": "Astronomical Observatory",
+        "buildingStyle": "Tuscan Vernacular Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_cuboulder_folsom_field",
+        "wiki": "Folsom Field",
+        "name": "Folsom Field",
+        "description": "This horseshoe-shaped football stadium opened in 1924 as Colorado Stadium. Its field sits at 5,360 feet, more than a mile above sea level.",
+        "architect": "Waldo E. Brockway",
+        "yearBuilt": 1924,
+        "address": "2400 Colorado Ave, Boulder, CO",
+        "oldUse": "Football Stadium",
+        "newUse": "Football Stadium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_cuboulder_cheyenne_arapaho",
+        "wiki": "Cheyenne Arapaho Hall",
+        "name": "Cheyenne Arapaho Hall",
+        "description": "This four-story residence hall on the south side of Farrand Field was completed in 1954. In 1989 it was renamed for the two tribes whose villages were attacked at the Sand Creek Massacre.",
+        "architect": "Trautwein & Howard; Peterson & Linstedt",
+        "yearBuilt": 1954,
+        "address": "University of Colorado campus, Boulder, CO",
+        "oldUse": "Residence Hall",
+        "newUse": "Residence Hall",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 4,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Texas Christian University",
+    "enumCase": "tcu",
+    "country": "unitedStates",
+    "conference": "big12",
+    "aliases": [
+      "TCU",
+      "Horned Frogs"
+    ],
+    "colors": [
+      "#4D1979",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_tcu_lucky_frog",
+        "name": "Lucky Horned Frog Statue",
+        "description": "Students rub the nose of the welded Horned Frog statue by Seppo Aarnos, installed in 1984 between Sadler and Reed halls, for luck before tests. Give it a rub.",
+        "coordinates": [
+          32.7088833,
+          -97.3615399
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/75793537",
+        "source": "https://tcu.edu/about/traditions.php"
+      },
+      {
+        "id": "trad_tcu_frog_fountain",
+        "name": "Frog Fountain",
+        "description": "Seniors and their families take cap-and-gown photos at Frog Fountain, and fireworks light the sky over it when the Frogs score at home games. Take a photo at the fountain.",
+        "coordinates": [
+          32.709619,
+          -97.3624259
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/469234903",
+        "source": "https://familyweekend.tcu.edu/history-traditions-tour/frog-fountain/"
+      },
+      {
+        "id": "trad_tcu_carols_by_candlelight",
+        "name": "Carols by Candlelight",
+        "description": "For more than 40 years, Carols by Candlelight has been held each December in Robert Carr Chapel. Visit the chapel during the holiday season.",
+        "coordinates": [
+          32.7101446,
+          -97.3598222
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/318762971",
+        "source": "https://tcu.edu/about/traditions.php"
+      }
+    ],
+    "wiki": "Texas Christian University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Go Frogs",
+      "airportName": "Dallas/Fort Worth International Airport",
+      "airportCode": "DFW",
+      "airportInfo": "DFW Airport, northeast of Fort Worth, is the main airport for the region.",
+      "funFact": "Most TCU buildings use a golden brick blend called \"TCU buff\" with red tile roofs. Robert Carr Chapel broke the rule with salmon-colored brick, and alumni protested when it opened.",
+      "language": "English",
+      "languageInfo": "The school colors are purple and white, and the teams are the Horned Frogs.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Trinity Metro",
+      "transportationFact": "The campus is compact and walkable. Trinity Metro runs Fort Worth's public buses and trains."
+    },
+    "buildings": [
+      {
+        "id": "campus_tcu_amon_carter_stadium",
+        "wiki": "Amon G. Carter Stadium",
+        "name": "Amon G. Carter Stadium",
+        "description": "TCU's football stadium opened in 1930 and was rebuilt from 2010 to 2012 by HKS in a Southwestern Art Deco style, using TCU brick, arches and stone details.",
+        "architect": "William Jasdon; HKS (2010–12 rebuild)",
+        "yearBuilt": 1930,
+        "address": "2850 Stadium Dr, Fort Worth, TX",
+        "oldUse": "Football Stadium",
+        "newUse": "Football Stadium",
+        "buildingStyle": "Southwestern Art Deco",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_tcu_robert_carr_chapel",
+        "wiki": "Texas Christian University",
+        "name": "Robert Carr Chapel",
+        "description": "Joseph R. Pelich designed TCU's chapel in the Georgian Colonial Revival style, and it opened in May 1954. Its spire copies the one on the Old Lyme church in Connecticut, and its salmon brick sets it apart from the rest of campus.",
+        "architect": "Joseph R. Pelich",
+        "yearBuilt": 1954,
+        "address": "Texas Christian University campus, Fort Worth, TX",
+        "oldUse": "University Chapel",
+        "newUse": "University Chapel",
+        "buildingStyle": "Georgian Colonial Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          32.7101446,
+          -97.3598222
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/318762971"
+      },
+      {
+        "id": "campus_tcu_schollmaier_arena",
+        "wiki": "Schollmaier Arena",
+        "name": "Schollmaier Arena",
+        "description": "Built in 1961 as Daniel–Meyer Coliseum, the basketball arena was renovated and renamed in 2015. Its new brick facade echoes the Art Deco look of the neighboring stadium.",
+        "architect": "Joseph R. Pelich (1961)",
+        "yearBuilt": 1961,
+        "address": "2900 Stadium Dr, Fort Worth, TX 76109",
+        "oldUse": "Daniel–Meyer Coliseum",
+        "newUse": "Basketball Arena",
+        "buildingStyle": "Art Deco",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_tcu_lupton_stadium",
+        "wiki": "Lupton Stadium",
+        "name": "Lupton Stadium",
+        "description": "Leo A. Daly designed this 4,500-seat baseball stadium, home of the Horned Frogs since February 2003.",
+        "architect": "Leo A. Daly",
+        "yearBuilt": 2003,
+        "address": "3700 Berry St, Fort Worth, TX",
+        "oldUse": "Baseball Stadium",
+        "newUse": "Baseball Stadium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of Central Florida",
+    "enumCase": "ucf",
+    "country": "unitedStates",
+    "conference": "big12",
+    "aliases": [
+      "UCF",
+      "Central Florida",
+      "Knights"
+    ],
+    "colors": [
+      "#000000",
+      "#FFC904"
+    ],
+    "traditions": [
+      {
+        "id": "trad_ucf_pegasus_seal",
+        "name": "Don't Step on the Seal",
+        "description": "Legend says you won't graduate if you walk across the Pegasus seal in the Student Union, though graduates may cross it once they have their diplomas. Find the seal and walk around it.",
+        "coordinates": [
+          28.6020387,
+          -81.2004879
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/154245264",
+        "source": "https://www.ucf.edu/about-ucf/traditions/"
+      }
+    ],
+    "wiki": "University of Central Florida",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Charge On",
+      "airportName": "Orlando International Airport",
+      "airportCode": "MCO",
+      "airportInfo": "Orlando International, southwest of campus, is the main airport for the region.",
+      "funFact": "UCF's main campus is laid out in rings: Gemini Boulevard, then Apollo, Mercury and Pegasus Circles. It is one of only two U.S. campuses with a concentric-circle plan, along with UC Irvine.",
+      "language": "English",
+      "languageInfo": "The school colors are black and gold, and the teams are the Knights.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / UCF Shuttles",
+      "transportationFact": "The circular core is walkable. UCF's off-campus shuttles link the main campus with more than 20 nearby apartment complexes, and students ride LYNX buses free with their UCF ID."
+    },
+    "buildings": [
+      {
+        "id": "campus_ucf_hitt_library",
+        "wiki": "University of Central Florida Libraries",
+        "name": "John C. Hitt Library",
+        "description": "UCF's main library opened in 1968 at the center of campus, just south of the Student Union. The concrete building is an example of Brutalism and was named for the university's fourth president in 2011.",
+        "architect": "Unknown",
+        "yearBuilt": 1968,
+        "address": "University of Central Florida campus, Orlando, FL",
+        "oldUse": "Main Library",
+        "newUse": "Main Library",
+        "buildingStyle": "Brutalist",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ucf_robinson_observatory",
+        "wiki": "Robinson Observatory",
+        "name": "Robinson Observatory",
+        "description": "Built in 1995 for over $500,000, with Herbert Robinson paying almost half. The College of Sciences runs it and holds public viewings twice a month.",
+        "architect": "Unknown",
+        "yearBuilt": 1995,
+        "address": "University of Central Florida campus, Orlando, FL",
+        "oldUse": "Astronomical Observatory",
+        "newUse": "Astronomical Observatory",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ucf_bounce_house",
+        "wiki": "Acrisure Bounce House",
+        "name": "Acrisure Bounce House",
+        "description": "360 Architecture designed this steel and brick-clad football stadium, built in 18 months and opened in 2007. It replaced the Citrus Bowl in downtown Orlando as the Knights' home.",
+        "architect": "360 Architecture",
+        "yearBuilt": 2007,
+        "address": "4465 Knights Victory Way, Orlando, FL 32816",
+        "oldUse": "Football Stadium",
+        "newUse": "Football Stadium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ucf_arena",
+        "wiki": "Addition Financial Arena",
+        "name": "Addition Financial Arena",
+        "description": "HOK Sport designed this 252,000-square-foot arena, opened in 2007 as part of Knights Plaza. It seats over 9,400 for basketball.",
+        "architect": "HOK Sport",
+        "yearBuilt": 2007,
+        "address": "12777 Gemini Blvd N, Orlando, FL",
+        "oldUse": "Arena",
+        "newUse": "Arena",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of Utah",
+    "enumCase": "uUtah",
+    "country": "unitedStates",
+    "conference": "big12",
+    "aliases": [
+      "Utah",
+      "U of U",
+      "Utes"
+    ],
+    "colors": [
+      "#CC0000",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_uutah_block_u",
+        "name": "Block U",
+        "description": "The Block U on the hillside above campus, first built in 1907, lights up for home athletic events, flashing red after home wins in football, basketball and gymnastics. Look up at the hill after a win.",
+        "coordinates": [
+          40.7793672,
+          -111.8400323
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/33908511",
+        "source": "https://utahutes.com/sports/2016/6/10/trads-light-the-u-html"
+      }
+    ],
+    "wiki": "University of Utah",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Go Utes",
+      "airportName": "Salt Lake City International Airport",
+      "airportCode": "SLC",
+      "airportInfo": "Salt Lake City International is west of downtown. TRAX light rail runs from the airport to downtown, where riders can change to the Red Line for campus.",
+      "funFact": "When the Huntsman Center opened in 1969, its wooden dome, 364 feet across, was the largest clear-span wood dome in the world.",
+      "language": "English",
+      "languageInfo": "The school colors are crimson and white, and the teams are the Utes.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / TRAX Red Line",
+      "transportationFact": "UTA's TRAX Red Line light rail runs onto campus, with stops at the stadium, south campus and the medical center."
+    },
+    "buildings": [
+      {
+        "id": "campus_uutah_park_building",
+        "wiki": "University of Utah Circle",
+        "name": "Park Building",
+        "description": "Completed in 1914 as the Central Building at the head of Presidents Circle and renamed in 1919 for former president John R. Park. The Neoclassical building has an Ionic portico and holds the president's office.",
+        "architect": "Unknown",
+        "yearBuilt": 1914,
+        "address": "Presidents Circle, University of Utah, Salt Lake City, UT",
+        "oldUse": "Central Building",
+        "newUse": "Administration Building",
+        "buildingStyle": "Neoclassical Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          40.7650137,
+          -111.8487922
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/33632418"
+      },
+      {
+        "id": "campus_uutah_kingsbury_hall",
+        "wiki": "Kingsbury Hall",
+        "name": "Kingsbury Hall",
+        "description": "Edward O. Anderson and Lorenzo Snow Young designed this performing arts hall on Presidents Circle, built in 1930 with Egyptian Revival touches and made to match the neighboring Park Building. Ballet West and Utah Opera both started here.",
+        "architect": "Edward O. Anderson and Lorenzo Snow Young",
+        "yearBuilt": 1930,
+        "address": "1395 E Presidents Circle, Salt Lake City, UT",
+        "oldUse": "Performing Arts Hall",
+        "newUse": "Performing Arts Hall",
+        "buildingStyle": "Egyptian Revival / Neoclassical",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uutah_thomas_building",
+        "wiki": "University of Utah Circle",
+        "name": "George Thomas Building",
+        "description": "Ashton & Evans designed this mainly Neoclassical library, built in 1935 as a Public Works Administration project. It later held the Utah Museum of Natural History and has been converted into the Crocker Science Center.",
+        "architect": "Ashton & Evans",
+        "yearBuilt": 1935,
+        "address": "Presidents Circle, University of Utah, Salt Lake City, UT",
+        "oldUse": "George Thomas Library",
+        "newUse": "Crocker Science Center",
+        "buildingStyle": "Neoclassical",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          40.7640459,
+          -111.8511297
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/33632671"
+      },
+      {
+        "id": "campus_uutah_huntsman_center",
+        "wiki": "Jon M. Huntsman Center",
+        "name": "Jon M. Huntsman Center",
+        "description": "Opened in late 1969 as the Special Events Center, this 15,000-seat arena sits under a large wooden dome. It is home to Utes basketball and the Red Rocks gymnastics team.",
+        "architect": "Robert Fowler",
+        "yearBuilt": 1969,
+        "address": "1825 E South Campus Dr, Salt Lake City, UT",
+        "oldUse": "Special Events Center",
+        "newUse": "Arena",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uutah_natural_history",
+        "wiki": "Natural History Museum of Utah",
+        "name": "Natural History Museum of Utah",
+        "description": "Ennead Architects and GSBS designed the museum's Rio Tinto Center, opened in 2011 on terraces up the foothills. Bands of copper on its walls recall Utah's layered rock.",
+        "architect": "Ennead Architects; GSBS Architects",
+        "yearBuilt": 2011,
+        "address": "301 Wakara Way, Salt Lake City, UT",
+        "oldUse": "Natural History Museum",
+        "newUse": "Natural History Museum",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  }
+]

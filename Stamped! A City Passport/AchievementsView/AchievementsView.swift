@@ -6,6 +6,8 @@ struct AchievementsView: View {
     @StateObject private var cityVM = CityViewModel()
 
     @Environment(\.horizontalSizeClass) private var sizeClass
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+    @AppStorage("high_contrast_mode") private var isHighContrast = false
     @State private var selectedCategory: Achievement.Category = .all
 
     private var cities: [CityLocation.City] { cityVM.allCities }
@@ -20,30 +22,36 @@ struct AchievementsView: View {
         Achievement.allAchievements.filter { $0.isEarned(manager: progress, cities: cities) }.count
     }
 
+    // Fewer, wider cards at accessibility sizes so titles don't break mid-word
     private var columns: [GridItem] {
-        let count = sizeClass == .regular ? 4 : 2
-        return Array(repeating: GridItem(.flexible(), spacing: 12), count: count)
+        let count: Int
+        if dynamicTypeSize.isAccessibilitySize {
+            count = sizeClass == .regular ? 2 : 1
+        } else {
+            count = sizeClass == .regular ? 4 : 2
+        }
+        return Array(repeating: GridItem(.flexible(), spacing: DS.Space.m), count: count)
     }
 
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(spacing: 24) {
+                VStack(spacing: DS.Space.xl) {
                     progressHeader
                     categoryPicker
                     achievementGrid
                 }
-                .padding(.horizontal, 20)
-                .padding(.bottom, 32)
+                .dsPageMargin()
+                .padding(.bottom, DS.Space.section)
             }
-            .background(Color(UIColor.systemGroupedBackground))
+            .background(DS.Palette.pageBackground)
             .navigationTitle("Achievements")
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Done") { dismiss() }
                         .fontWeight(.semibold)
-                        .foregroundStyle(Color.adventureOrange)
+                        .foregroundStyle(isHighContrast ? Color.primary : DS.Palette.accent)
                 }
             }
         }
@@ -52,19 +60,27 @@ struct AchievementsView: View {
     // MARK: - Progress Header
 
     private var progressHeader: some View {
-        VStack(spacing: 12) {
-            HStack(alignment: .lastTextBaseline, spacing: 4) {
+        VStack(spacing: DS.Space.m) {
+            HStack(alignment: .lastTextBaseline, spacing: DS.Space.xs) {
                 Text("\(earnedCount)")
                     .font(.system(.largeTitle, design: .serif))
                     .fontWeight(.bold)
-                    .foregroundStyle(Color.adventureOrange)
+                    .foregroundStyle(isHighContrast ? Color.primary : DS.Palette.accent)
                 Text("/ \(Achievement.allAchievements.count)")
                     .font(.title2)
-                    .foregroundStyle(.secondary)
-                Spacer()
-                Text("achievements")
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(isHighContrast ? .primary : .secondary)
+                Spacer(minLength: DS.Space.s)
+                if !dynamicTypeSize.isAccessibilitySize {
+                    achievementsLabel
+                }
+            }
+            .lineLimit(1)
+            .minimumScaleFactor(0.7)
+
+            // Moves under the count at accessibility sizes so the row doesn't clip
+            if dynamicTypeSize.isAccessibilitySize {
+                achievementsLabel
+                    .frame(maxWidth: .infinity, alignment: .leading)
             }
 
             GeometryReader { geo in
@@ -73,44 +89,56 @@ struct AchievementsView: View {
                         .fill(Color(UIColor.tertiarySystemFill))
                         .frame(height: 8)
                     Capsule()
-                        .fill(Color.adventureOrange)
+                        .fill(isHighContrast ? Color.primary : DS.Palette.accent)
                         .frame(width: geo.size.width * CGFloat(earnedCount) / CGFloat(Achievement.allAchievements.count), height: 8)
                         .animation(.spring(response: 0.6, dampingFraction: 0.8), value: earnedCount)
                 }
             }
             .frame(height: 8)
         }
-        .padding(16)
-        .background(Color(UIColor.secondarySystemGroupedBackground))
-        .cornerRadius(16)
+        .dsCard(isHighContrast: isHighContrast)
+    }
+
+    private var achievementsLabel: some View {
+        Text("achievements")
+            .font(.subheadline)
+            .foregroundStyle(isHighContrast ? .primary : .secondary)
+            .lineLimit(1)
+            .minimumScaleFactor(0.8)
     }
 
     // MARK: - Category Picker
 
     private var categoryPicker: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 8) {
+            HStack(spacing: DS.Space.s) {
                 ForEach(Achievement.Category.allCases) { category in
+                    let isSelected = selectedCategory == category
                     Button {
                         withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
                             selectedCategory = category
                         }
                     } label: {
-                        HStack(spacing: 6) {
+                        HStack(spacing: DS.Space.xs) {
                             Image(systemName: category.systemIcon)
                                 .font(.caption)
-                            Text(category.rawValue)
+                            Text(category.localizedName)
                                 .font(.subheadline.weight(.medium))
+                                .lineLimit(1)
                         }
-                        .padding(.horizontal, 14)
-                        .padding(.vertical, 8)
+                        .padding(.horizontal, DS.Space.m)
+                        .padding(.vertical, DS.Space.s)
                         .background(
-                            selectedCategory == category
-                            ? Color.adventureOrange
-                            : Color(UIColor.secondarySystemGroupedBackground)
+                            Capsule().fill(
+                                isSelected
+                                ? (isHighContrast ? Color.primary : DS.Palette.accent)
+                                : (isHighContrast ? Color(UIColor.systemBackground) : DS.Palette.cardBackground)
+                            )
                         )
-                        .foregroundStyle(selectedCategory == category ? .white : .primary)
-                        .clipShape(Capsule())
+                        .overlay(
+                            Capsule().stroke(isHighContrast && !isSelected ? Color.primary : Color.clear, lineWidth: 1.5)
+                        )
+                        .foregroundStyle(isSelected ? (isHighContrast ? Color(UIColor.systemBackground) : .white) : .primary)
                     }
                 }
             }
@@ -121,10 +149,10 @@ struct AchievementsView: View {
     // MARK: - Grid
 
     private var achievementGrid: some View {
-        LazyVGrid(columns: columns, spacing: 12) {
+        LazyVGrid(columns: columns, spacing: DS.Space.m) {
             ForEach(displayed) { achievement in
                 let earned = achievement.isEarned(manager: progress, cities: cities)
-                AchievementCard(achievement: achievement, earned: earned)
+                AchievementCard(achievement: achievement, earned: earned, isHighContrast: isHighContrast)
             }
         }
     }
@@ -135,51 +163,55 @@ struct AchievementsView: View {
 private struct AchievementCard: View {
     let achievement: Achievement
     let earned: Bool
+    var isHighContrast = false
+
+    @ScaledMetric(relativeTo: .title3) private var badgeSize: CGFloat = 44
+
+    // Each badge keeps its own color once earned; locked badges stay gray
+    private var badgeColor: Color {
+        isHighContrast ? .primary : (earned ? achievement.color : .secondary)
+    }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        VStack(alignment: .leading, spacing: DS.Space.s) {
             HStack {
                 ZStack {
                     Circle()
-                        .fill(earned ? achievement.color.opacity(0.15) : Color(UIColor.tertiarySystemFill))
-                        .frame(width: 44, height: 44)
+                        .fill(earned && !isHighContrast ? achievement.color.opacity(0.15) : Color(UIColor.tertiarySystemFill))
+                        .frame(width: badgeSize, height: badgeSize)
                     Image(systemName: earned ? achievement.icon : "lock.fill")
-                        .font(.system(size: 18, weight: .semibold))
-                        .foregroundStyle(earned ? achievement.color : Color.secondary)
+                        .font(.title3.weight(.semibold))
+                        .foregroundStyle(badgeColor)
                 }
                 Spacer()
                 if earned {
                     Image(systemName: "checkmark.circle.fill")
                         .font(.caption)
-                        .foregroundStyle(Color.green)
+                        .foregroundStyle(isHighContrast ? Color.primary : DS.Palette.gold)
                 }
             }
 
-            Text(achievement.title)
+            Text(achievement.localizedTitle)
                 .font(.subheadline.weight(.bold))
-                .foregroundStyle(earned ? .primary : .secondary)
+                .foregroundStyle(earned || isHighContrast ? .primary : .secondary)
                 .lineLimit(2)
+                .minimumScaleFactor(0.8)
 
-            Text(achievement.description)
+            Text(achievement.localizedDescription)
                 .font(.caption)
-                .foregroundStyle(.secondary)
-                .lineLimit(2)
+                .foregroundStyle(isHighContrast ? .primary : .secondary)
+                // Three lines: German and French goals run longer than English
+                .lineLimit(3)
                 .fixedSize(horizontal: false, vertical: true)
 
-            if earned {
-                Text(achievement.category.rawValue.uppercased())
-                    .font(.caption2.weight(.semibold))
-                    .foregroundStyle(achievement.color)
-            } else {
-                Text(achievement.category.rawValue.uppercased())
-                    .font(.caption2.weight(.semibold))
-                    .foregroundStyle(Color(UIColor.tertiaryLabel))
-            }
+            Text(achievement.category.localizedName.localizedUppercase)
+                .font(.caption2.weight(.semibold))
+                .foregroundStyle(isHighContrast ? Color.primary : (earned ? achievement.color : Color(UIColor.tertiaryLabel)))
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
         }
-        .padding(14)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color(UIColor.secondarySystemGroupedBackground))
-        .cornerRadius(16)
-        .opacity(earned ? 1.0 : 0.6)
+        .dsCard(padding: DS.Space.m, isHighContrast: isHighContrast)
+        // Dimming would undo high contrast, so locked cards only fade in standard mode
+        .opacity(earned || isHighContrast ? 1.0 : 0.85)  // quiet, but the goal text stays readable
     }
 }

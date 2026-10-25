@@ -299,3 +299,304 @@
 
 // MARK: - Campus Architecture
 "CAMPUS ARCHITECTURE" = "ARCHITECTURE DES CAMPUS";
+"OTHER U.S. CAMPUSES" = "AUTRES CAMPUS AMÉRICAINS";
+"CONFERENCE MASTER" = "MAÎTRE DE LA CONFÉRENCE";
+
+// MARK: - Campus Visit
+"Plan a Campus Visit" = "Planifier une visite du campus";
+"%d landmarks, one walking day" = "%d lieux emblématiques, une journée à pied";
+"Open your campus visit" = "Ouvrir votre visite du campus";
+"Opens a one-day walking trip of every landmark on campus." = "Ouvre un parcours à pied d'une journée passant par tous les lieux emblématiques du campus.";
+"%@ Campus Visit" = "Visite du campus de %@";
+
+// MARK: - Campus Traditions
+"CAMPUS TRADITIONS" = "TRADITIONS DU CAMPUS";
+"%d of %d traditions done" = "%d tradition(s) faite(s) sur %d";
+"Traditions Keeper" = "Gardien des traditions";
+"Done" = "Fait";
+"Not done" = "Pas fait";
+"Double tap to check this tradition off." = "Touchez deux fois pour cocher cette tradition.";
+"Show %@ in Maps" = "Afficher %@ dans Plans";
+
+// MARK: - College List & Road Trip
+"My College List" = "Ma liste d'universités";
+"Add to My College List" = "Ajouter à Ma liste d'universités";
+"Remove from My College List" = "Retirer de Ma liste d'universités";
+"On your list" = "Dans votre liste";
+"Plan a College Road Trip" = "Planifier un road trip universitaire";
+"Tap the heart on any campus page to add it here." = "Touchez le cœur sur la page d'un campus pour l'ajouter ici.";
+"1 school" = "1 université";
+"%d schools" = "%d universités";
+"No Schools Yet" = "Aucune université pour l'instant";
+"Open any campus in Campus Architecture and tap the heart to add it to your list. Then plan a road trip that visits them all, one campus a day." = "Ouvrez un campus dans Architecture des campus et touchez le cœur pour l'ajouter à votre liste. Planifiez ensuite un road trip qui les visite tous, un campus par jour.";
+"Makes one trip with a day at each school, in a short driving order." = "Crée un voyage avec une journée par université, dans un ordre qui limite les trajets.";
+"%1$d of %2$d landmarks stamped" = "%1$d lieux emblématiques tamponnés sur %2$d";
+"College Road Trip" = "Road trip universitaire";
+"College Road Trips" = "Road trips universitaires";
+"Schools to Visit" = "Universités à visiter";
+"One day per school, each a walking tour of its landmarks." = "Une journée par université, chacune un parcours à pied de ses lieux emblématiques.";
+"Driving Order" = "Ordre de route";
+"Starts at %@, then always drives to the closest school left. Distances are straight-line." = "Commence à %@, puis va toujours à l'université restante la plus proche. Distances à vol d'oiseau.";
+"Cancel" = "Annuler";
+"Open" = "Ouvrir";
+"Create" = "Créer";
+"%d landmarks" = "%d lieux emblématiques";
+"Day %1$d: %2$@" = "Jour %1$d : %2$@";
+"%1$@ from %2$@" = "À %1$@ de %2$@";
+"%@ Road Trip" = "Road trip : %@";
+"%d-Campus Road Trip" = "Road trip de %d campus";
+"Tour %@ in 3D" = "Visiter %@ en 3D";
+
+// MARK: - Campus disclaimer
+"Stamped! is not affiliated with or endorsed by any university. School names and colors are used only to identify them." = "Stamped! n'est affiliée à aucune université et n'est approuvée par aucune. Les noms et couleurs des universités servent uniquement à les identifier.";
+
+// MARK: - Hotels & map chips
+"Landmarks" = "Monuments";
+"Food" = "Cuisine";
+"Coffee" = "Café";
+"Culture" = "Culture";
+"Stay" = "Hébergement";
+"Find Hotels" = "Trouver un hôtel";
+"Find hotels in %1$@ on %2$@" = "Trouver des hôtels à %1$@ sur %2$@";
+"Opens the hotel website. Stamped! doesn't handle bookings or payments." = "Ouvre le site de réservation d'hôtels. Stamped! ne gère ni les réservations ni les paiements.";
+"Stamped! may earn a commission." = "Stamped! peut percevoir une commission.";
+"Check Prices" = "Voir les prix";
+"Check prices for %1$@ on %2$@" = "Voir les prix de %1$@ sur %2$@";
+"Hotels near %@" = "Hôtels près de %@";
+
+// MARK: - City page tiles & home shortcuts
+"Quiz Mastered" = "Quiz maîtrisé";
+"Architecture Quiz" = "Quiz d'architecture";
+"Best %d/10" = "Record %d/10";
+"10 questions" = "10 questions";
+"Double tap to start the quiz." = "Touchez deux fois pour commencer le quiz.";
+"Plan a Trip" = "Planifier un voyage";
+"Day by day" = "Jour par jour";
+"Plan your days, stop by stop." = "Planifiez vos journées, étape par étape.";
+"Campus Visit" = "Visite du campus";
+"Open your visit" = "Ouvrir la visite";
+"%d stops, 1 day" = "%d étapes, 1 jour";
+"My Journey" = "Mon parcours";
+"Achievements" = "Succès";
+"World Map" = "Carte du monde";
+"My Trips" = "Mes voyages";
+
+// MARK: - Home banner & world map
+"Pick a city or campus below, then stamp every landmark." = "Choisissez une ville ou un campus ci-dessous, puis tamponnez chaque monument.";
+"campuses visited" = "campus visités";
+"Double tap to read more." = "Touchez deux fois pour en lire plus.";
+
+// MARK: - City map
+"Add a Place" = "Ajouter un lieu";
+"Add to Trip" = "Ajouter au voyage";
+"All Landmarks" = "Tous les monuments";
+"All Styles" = "Tous les styles";
+"Choose every landmark or one of your trips to tour" = "Choisissez tous les monuments ou l'un de vos voyages à survoler";
+"Close" = "Fermer";
+"Filter landmarks, switch to satellite view or add a place" = "Filtrer les monuments, passer en vue satellite ou ajouter un lieu";
+"Flies between every landmark automatically" = "Survole automatiquement chaque monument";
+"Map key" = "Légende de la carte";
+"Map options" = "Options de la carte";
+"Next landmark" = "Monument suivant";
+"No landmarks match this filter" = "Aucun monument ne correspond à ce filtre";
+"Previous landmark" = "Monument précédent";
+"Remove from Want to Visit" = "Retirer de À visiter";
+"Show" = "Afficher";
+"Shows this landmark's card" = "Affiche la fiche de ce monument";
+"Stop" = "Arrêter";
+"Stops the guided tour" = "Arrête la visite guidée";
+"Style" = "Style";
+"Tour" = "Visite";
+"View Details" = "Voir les détails";
+"Your Trips" = "Vos voyages";
+"Your place" = "Votre lieu";
+"Your places" = "Vos lieux";
+"Stamped" = "Tamponné";
+"Not yet visited" = "Pas encore visité";
+"Not Visited" = "Non visité";
+"Up next (pulsing)" = "Prochain (clignote)";
+"Want to Visit" = "À visiter";
+"Saved" = "Enregistré";
+"Show Map View" = "Afficher la vue Plan";
+"Show Satellite View" = "Afficher la vue satellite";
+
+// MARK: - Passport campuses
+"%d Cities Stamped" = "%d villes tamponnées";
+"%d of %d campuses" = "%d campus sur %d";
+"CAMPUSES" = "CAMPUS";
+"Stamp every landmark on a campus to add its stamp here, in school colors." = "Tamponnez chaque monument d'un campus pour ajouter ici son tampon aux couleurs de l'université.";
+"+ %d campuses" = "+ %d campus";
+"+ 1 campus" = "+ 1 campus";
+"Optimize route" = "Optimiser l'itinéraire";
+"Reorders this day's stops so each one is the closest to the last" = "Réordonne les étapes du jour pour que chacune soit la plus proche de la précédente";
+"Campus Explored!" = "Campus exploré !";
+"City Explored!" = "Ville explorée !";
+"Save the schools you're considering, then plan a road trip to visit them." = "Enregistrez les universités qui vous intéressent, puis planifiez un road trip pour les visiter.";
+"+%d more" = "+%d autres";
+
+// MARK: - City page sections
+"Weather" = "Météo";
+"Chronology" = "Chronologie";
+"Upcoming Events" = "Événements à venir";
+"Nearby Dining" = "Restaurants à proximité";
+"Travel Dossier" = "Carnet de voyage";
+"%d of %d landmarks stamped" = "%d monument(s) tamponné(s) sur %d";
+"Read more" = "Lire la suite";
+"Show less" = "Afficher moins";
+
+/* Map place card events */
+"Upcoming Events Here" = "Événements à venir ici";
+"Happening Nearby" = "À proximité";
+
+/* Design system section headers */
+"ARCHITECTURAL ITINERARY" = "Itinéraire architectural";
+"Saved Places" = "Lieux enregistrés";
+"Anywhere" = "Partout";
+
+/* My Journey section headers */
+"FAVOURITE ARCHITECT" = "Architecte préféré";
+"MILESTONES" = "Étapes clés";
+
+/* Settings */
+"Birthday" = "Anniversaire";
+"Used for the Birthday Stamp achievement" = "Utilisé pour le succès Tampon d’anniversaire";
+"Set" = "Définir";
+"Feedback & Support" = "Avis et assistance";
+"Report Incorrect Info" = "Signaler une erreur";
+"Wrong building details, photos, or descriptions" = "Détails, photos ou descriptions erronés";
+"Suggest a Building" = "Suggérer un bâtiment";
+"Know a landmark we're missing?" = "Vous connaissez un monument qui manque ?";
+"General Feedback" = "Avis général";
+"Ideas, bugs, or anything else" = "Idées, bugs ou autre chose";
+
+/* My Journey and Achievements */
+"stamps" = "tampons";
+"%lld%% of the world explored" = "%lld %% du monde exploré";
+"%lld buildings left to discover" = "Encore %lld bâtiments à découvrir";
+"%lld stamps, %lld percent of the world explored" = "%lld tampons, %lld pour cent du monde exploré";
+"Cities Visited" = "Villes visitées";
+"Cities Mastered" = "Villes maîtrisées";
+"Countries" = "Pays";
+"Days Active" = "Jours actifs";
+"1 building stamped" = "1 bâtiment tamponné";
+"%lld buildings stamped" = "%lld bâtiments tamponnés";
+"Total Stamps" = "Total des tampons";
+"%lld of %lld" = "%lld sur %lld";
+"achievements" = "succès";
+"All" = "Tous";
+"Cities" = "Villes";
+"Mastery" = "Maîtrise";
+"Continents" = "Continents";
+"Campuses" = "Campus";
+"First Stamp" = "Premier tampon";
+"Visit your very first landmark" = "Visitez votre tout premier monument";
+"On The Move" = "En route";
+"Visit 10 landmarks" = "Visitez 10 monuments";
+"Passport Regular" = "Habitué du passeport";
+"Visit 50 landmarks" = "Visitez 50 monuments";
+"Century Club" = "Club des cent";
+"Visit 100 landmarks" = "Visitez 100 monuments";
+"Night Stamper" = "Tamponneur nocturne";
+"Stamp a landmark between midnight and 5am" = "Tamponnez un monument entre minuit et 5 h";
+"Weekend Wanderer" = "Flâneur du week-end";
+"Stamp a landmark on a Saturday or Sunday" = "Tamponnez un monument un samedi ou un dimanche";
+"First Destination" = "Première destination";
+"Stamp a landmark in any city" = "Tamponnez un monument dans n'importe quelle ville";
+"Multi-City" = "Multi-villes";
+"Stamp landmarks in 5 different cities" = "Tamponnez des monuments dans 5 villes différentes";
+"Jet Setter" = "Globe-trotteur";
+"Stamp landmarks in 15 different cities" = "Tamponnez des monuments dans 15 villes différentes";
+"World Traveler" = "Voyageur du monde";
+"Stamp landmarks in 30 different cities" = "Tamponnez des monuments dans 30 villes différentes";
+"Completionist" = "Complétiste";
+"Collect every stamp in a single city" = "Obtenez tous les tampons d'une ville";
+"Triple Crown" = "Triple couronne";
+"Fully complete 3 cities" = "Complétez entièrement 3 villes";
+"City Master" = "Maître des villes";
+"Fully complete 10 cities" = "Complétez entièrement 10 villes";
+"Bi-Continental" = "Bicontinental";
+"Stamp landmarks on 2 different continents" = "Tamponnez des monuments sur 2 continents";
+"Old World" = "Ancien Monde";
+"Stamp landmarks in both Europe and Asia" = "Tamponnez des monuments en Europe et en Asie";
+"World Citizen" = "Citoyen du monde";
+"Stamp landmarks on 4 different continents" = "Tamponnez des monuments sur 4 continents";
+"Around The World" = "Le tour du monde";
+"Stamp landmarks on all 6 continents" = "Tamponnez des monuments sur les 6 continents";
+"Continent Conqueror" = "Conquérant des continents";
+"Fully complete a city on every continent" = "Complétez une ville sur chaque continent";
+"Early Bird" = "Lève-tôt";
+"Stamp a landmark before 8am" = "Tamponnez un monument avant 8 h";
+"Frequent Flyer" = "Grand voyageur";
+"Stamp 5 landmarks in a single day" = "Tamponnez 5 monuments en une seule journée";
+"Seasoned Traveler" = "Voyageur aguerri";
+"Stamp landmarks across 3 different calendar months" = "Tamponnez des monuments sur 3 mois différents";
+"New Year's Stamp" = "Tampon du Nouvel An";
+"Stamp a landmark on January 1st" = "Tamponnez un monument le 1er janvier";
+"Birthday Stamp" = "Tampon d'anniversaire";
+"Stamp a landmark on your birthday" = "Tamponnez un monument le jour de votre anniversaire";
+"Home Turf" = "À domicile";
+"Fully complete any US city" = "Complétez entièrement une ville des États-Unis";
+"Island Hopper" = "Sauteur d'îles";
+"Stamp landmarks in Honolulu, Bali, and Zanzibar" = "Tamponnez des monuments à Honolulu, Bali et Zanzibar";
+"Halfway There" = "À mi-chemin";
+"Reach 50% completion in any city" = "Atteignez 50 % dans une ville";
+"Grand Slam" = "Grand Chelem";
+"Fully complete 25 cities" = "Complétez entièrement 25 villes";
+"Legend" = "Légende";
+"Collect 500 total stamps" = "Obtenez 500 tampons au total";
+"Campus Tour" = "Visite du campus";
+"Stamp a building on any campus" = "Tamponnez un bâtiment sur n'importe quel campus";
+"Campus Hopper" = "Tournée des campus";
+"Stamp buildings on 5 different campuses" = "Tamponnez des bâtiments sur 5 campus différents";
+"Valedictorian" = "Major de promo";
+"Fully complete any campus" = "Complétez entièrement un campus";
+"Honor Roll" = "Tableau d'honneur";
+"Fully complete 5 campuses" = "Complétez entièrement 5 campus";
+"New Tradition" = "Nouvelle tradition";
+"Do your first campus tradition" = "Accomplissez votre première tradition de campus";
+"Do every tradition on one campus" = "Accomplissez toutes les traditions d'un campus";
+"Tradition Collector" = "Collectionneur de traditions";
+"Do 25 campus traditions" = "Accomplissez 25 traditions de campus";
+"Stamp a building on every %@ campus" = "Tamponnez un bâtiment sur chaque campus %@";
+
+/* Home and first-launch card */
+"Cities, Landmarks or Architects" = "Villes, monuments ou architectes";
+"My Passport" = "Mon passeport";
+"YOUR ODYSSEY AWAITS" = "VOTRE ODYSSÉE VOUS ATTEND";
+"Unlock your first badge" = "Débloquez votre premier badge";
+"Unlock Your Collection" = "Débloquez votre collection";
+"Every city mastered is a stamp earned." = "Chaque ville maîtrisée vous rapporte un tampon.";
+"PASSPORT STAMPED" = "PASSEPORT TAMPONNÉ";
+"DATE: %@" = "DATE : %@";
+"DID YOU KNOW?" = "LE SAVIEZ-VOUS ?";
+"While originally intended only as a protective sealant, the bridge’s signature ‘International Orange’ was made permanent when the architect realized its vibrant hue served as a perfect, high-contrast beacon against the San Francisco fog." = "Prévu au départ comme simple couche de protection, le célèbre « International Orange » du pont est devenu définitif quand l’architecte a vu que cette teinte vive ressortait parfaitement dans le brouillard de San Francisco.";
+"Visit Landmarks" = "Visitez des monuments";
+"Mark buildings as discovered to reach 100% completion." = "Marquez les bâtiments découverts pour atteindre 100 %.";
+"Capture the View" = "Capturez la vue";
+"Add personal photos to create a custom gallery." = "Ajoutez vos photos pour créer votre galerie.";
+"Collect the Stamp" = "Obtenez le tampon";
+"Complete a city to earn its official Passport seal." = "Terminez une ville pour obtenir son sceau officiel.";
+"Ace the Quiz" = "Réussissez le quiz";
+"Score perfectly on the architecture test to show your expertise." = "Obtenez un sans-faute au quiz d’architecture pour prouver votre expertise.";
+"Generate Itinerary" = "Créez un itinéraire";
+"Instantly create a smart travel plan for any city." = "Créez instantanément un plan de voyage pour n’importe quelle ville.";
+"Convert Currency" = "Convertissez les devises";
+"Check exchange rates instantly within the Travel Dossier." = "Consultez les taux de change dans le dossier de voyage.";
+"Unlock My First Stamp" = "Débloquer mon premier tampon";
+
+/* Regions that aren't countries (countries come from iOS) */
+"England" = "Angleterre";
+"Scotland" = "Écosse";
+"New South Wales" = "Nouvelle-Galles du Sud";
+"Victoria" = "Victoria";
+"Queensland" = "Queensland";
+
+/* Passport */
+"Your Passport" = "Votre passeport";
+"EXPLORATION PROGRESS" = "PROGRESSION";
+
+/* World Map */
+"cities visited" = "villes visitées";
+"Visited" = "Visité";
+"Not yet" = "Pas encore";
+"View City" = "Voir la ville";

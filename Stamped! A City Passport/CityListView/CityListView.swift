@@ -9,7 +9,6 @@ import SwiftUI
 
 // MARK: - CITY LIST VIEW
 struct CityListView: View {
-    @Environment(\.isSearching) private var isSearching
     
     @StateObject var viewModel = CityViewModel()
     @ObservedObject var progressManager = GlobalProgressManager.shared
@@ -24,15 +23,23 @@ struct CityListView: View {
     
     @State var expandedCountries: [CityLocation.Country: Bool] = [:]
     @State var expandedContinents: [CityLocation.Continent: Bool] = [:]
-    @State var expandedCampusCountries: [CityLocation.Country: Bool] = [:]
+    @State var expandedCampusGroups: [CampusGroup.Kind: Bool] = [:]
     @State var isCampusSectionExpanded = false
+    @Environment(\.dynamicTypeSize) var dynamicTypeSize
     @State var searchText = ""
+    /// Results for `searchedText`, worked out shortly after typing stops
+    @State private var searchResults: [MixedSearchResult] = []
+    @State private var searchedText = ""
+    /// True while the search field is active, even before anything is typed
+    @State private var isSearchActive = false
     @State var showingSettings = false
     @State var showingMyJourney = false
     @State var showingPassport = false
     @State var showingAchievements = false
     @State var showingWorldMap = false
     @State var showingMyTrips = false
+    @State var showingCollegeList = false
+    @ObservedObject var collegeList = CollegeListStore.shared
     @State var selectedCity: CityLocation.City?
     @State var columnVisibility = NavigationSplitViewVisibility.all
     
@@ -45,6 +52,10 @@ struct CityListView: View {
             List(selection: $selectedCity) {
                 if searchText.isEmpty {
                     headerSection
+                        // No side insets: the tiles and cards draw their own backgrounds, so the
+                        // row's default inset made them sit ~16 pt further in than the search bar
+                        // and the continent cards below
+                        .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                         .listRowSeparator(.hidden)
                         .listRowBackground(Color.clear)
                     
@@ -76,9 +87,9 @@ struct CityListView: View {
 
                     campusSection
                 } else {
-                    let results = viewModel.filteredResults(query: searchText)
-                    
-                    if results.isEmpty {
+                    let results = searchResults
+
+                    if results.isEmpty && searchedText == searchText {
                         emptySearchContent
                     } else {
                         ForEach(results) { result in
@@ -95,10 +106,13 @@ struct CityListView: View {
                 }
             }
             .listStyle(.sidebar)
+            // Same gap between every block on home (the system default is much larger)
+            .listSectionSpacing(DS.Space.m)
             .disabled(!hasSeenPassportHint)
             .blur(radius: hasSeenPassportHint ? 0 : (isHighContrast ? 0 : 3))
             .safeAreaInset(edge: .bottom) {
-                if hasSeenPassportHint && searchText.isEmpty {
+                // Hidden while searching, so it never covers results or sits on the keyboard
+                if hasSeenPassportHint && searchText.isEmpty && !isSearchActive {
                     passportFloatingButton
                         .padding(.vertical, 8)
                         .background {
@@ -119,7 +133,16 @@ struct CityListView: View {
                         }
                 }
             }
-            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Cities, Landmarks or Architects")
+            .searchable(text: $searchText, isPresented: $isSearchActive, placement: .navigationBarDrawer(displayMode: .always), prompt: "Cities, Landmarks or Architects")
+            // Search runs once typing pauses, not on every letter, so the keyboard keeps up
+            .task(id: searchText) {
+                if !searchText.isEmpty {
+                    try? await Task.sleep(for: .milliseconds(150))
+                    if Task.isCancelled { return }
+                }
+                searchResults = viewModel.filteredResults(query: searchText)
+                searchedText = searchText
+            }
             .toolbar { sidebarToolbar }
             .animation(.spring(response: 0.35, dampingFraction: 0.8), value: searchText.isEmpty)
 
@@ -129,12 +152,6 @@ struct CityListView: View {
                     ScrollView {
                         VStack(alignment: .leading, spacing: 0) {
                             CityDetailView(city: city)
-                            
-                            Divider()
-                                .padding(.top, 10)
-                                .padding(.bottom, 25)
-                                .padding(.horizontal, 25)
-
                             CityItineraryView(city: city)
                         }
                     }
@@ -152,6 +169,12 @@ struct CityListView: View {
         .sheet(isPresented: $showingAchievements) { AchievementsView() }
         .sheet(isPresented: $showingWorldMap) { WorldMapView() }
         // Like the trip planner: a sheet on iPhone, full screen on iPad (room for its split view)
+        .sheet(isPresented: $showingCollegeList) {
+            CollegeListView(onOpenCampus: { campus in
+                showingCollegeList = false
+                selectedCity = campus
+            })
+        }
         .sheet(isPresented: myTripsPresented(fullScreen: false)) { MyTripsView() }
         .fullScreenCover(isPresented: myTripsPresented(fullScreen: true)) { MyTripsView() }
         .fullScreenCover(isPresented: $showingPassport) {
@@ -171,10 +194,11 @@ struct CityListView: View {
 
     // MARK: - List Sections
 
-    /// "Campus Architecture": every campus, grouped by country, below the continents.
+    /// "Campus Architecture": every campus below the continents, US campuses by conference
+    /// and the rest by country.
     @ViewBuilder
     private var campusSection: some View {
-        let campusGroups = viewModel.campusesByCountry
+        let campusGroups = viewModel.campusGroups
         if !campusGroups.isEmpty {
             Section {
                 DisclosureGroup(isExpanded: Binding(
@@ -186,14 +210,98 @@ struct CityListView: View {
                         }
                     }
                 )) {
-                    ForEach(campusGroups) { countryGroup in
-                        cityCountrySection(country: countryGroup.id, cities: countryGroup.cities, isCampusSection: true)
+                    collegeListRow
+                    ForEach(campusGroups) { group in
+                        campusGroupSection(group)
                     }
                 } label: {
                     CampusSectionHeader(isHighContrast: isHighContrast, isExpanded: isCampusSectionExpanded)
                 }
             }
         }
+    }
+
+    /// On home, under the shortcut tiles: the student's schools and the road trip, one tap away.
+    /// (Before, the list was only inside Campus Architecture at the very bottom.)
+    var collegeListCard: some View {
+        let schools = collegeList.campuses
+        let summary: String = schools.isEmpty
+            ? NSLocalizedString("Save the schools you're considering, then plan a road trip to visit them.", comment: "Home: My College List card when the list is empty")
+            : ListFormatter.localizedString(byJoining: schools.prefix(3).map(\.campusVisitShortName))
+                + (schools.count > 3 ? " " + String(format: NSLocalizedString("+%d more", comment: "Home: My College List card, more schools than shown"), schools.count - 3) : "")
+        return HStack(spacing: 14) {
+            Image(systemName: "graduationcap.fill")
+                .font(.title2)
+                .foregroundStyle(isHighContrast ? AnyShapeStyle(Color.primary) : AnyShapeStyle(LinearGradient.sectionIcon))
+                .frame(width: 40, height: 40)
+                .background(Circle().fill(brandColor.opacity(isHighContrast ? 0 : 0.12)))
+                .accessibilityHidden(true)
+            VStack(alignment: .leading, spacing: 3) {
+                HStack(spacing: 6) {
+                    Text(NSLocalizedString("My College List", comment: "City list: row that opens the user's list of campuses"))
+                        .font(.headline)
+                        .foregroundStyle(.primary)
+                    if !schools.isEmpty {
+                        Text("\(schools.count)")
+                            .font(.caption.monospaced().bold())
+                            .foregroundStyle(brandColor)
+                    }
+                }
+                Text(summary)
+                    .font(.footnote)
+                    .foregroundStyle(isHighContrast ? .primary : .secondary)
+                    .lineLimit(2)
+            }
+            Spacer(minLength: 0)
+            Image(systemName: "chevron.right")
+                .font(.caption.bold())
+                .foregroundStyle(.secondary)
+        }
+        .padding(14)
+        .background(
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .fill(isHighContrast ? Color(UIColor.systemBackground) : Color(UIColor.secondarySystemGroupedBackground))
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
+        )
+        .contentShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+        // A tap gesture, not a Button: it sits in the same List row as the shortcut tiles
+        .onTapGesture {
+            HapticManager.shared.trigger(.selection)
+            showingCollegeList = true
+        }
+        .accessibilityElement(children: .combine)
+        .accessibilityAddTraits(.isButton)
+        .accessibilityAction { showingCollegeList = true }
+    }
+
+    /// First row of "Campus Architecture": the schools a student is considering, and their road trip.
+    private var collegeListRow: some View {
+        Button {
+            HapticManager.shared.trigger(.selection)
+            showingCollegeList = true
+        } label: {
+            HStack(spacing: 12) {
+                Image(systemName: "heart.fill")
+                    .foregroundColor(isHighContrast ? .primary : brandColor)
+                Text(NSLocalizedString("My College List", comment: "City list: row that opens the user's list of campuses"))
+                    .font(.subheadline.bold())
+                    .foregroundColor(.primary)
+                Spacer()
+                if !collegeList.isEmpty {
+                    Text("\(collegeList.campuses.count)")
+                        .font(.caption.monospaced().bold())
+                        .foregroundColor(.secondary)
+                }
+                Image(systemName: "chevron.right")
+                    .font(.caption.bold())
+                    .foregroundColor(.secondary)
+            }
+            .padding(.vertical, 6)
+        }
+        .buttonStyle(.plain)
     }
 
     @ViewBuilder

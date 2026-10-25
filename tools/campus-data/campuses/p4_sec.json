@@ -1,0 +1,1870 @@
+[
+  {
+    "name": "University of Alabama",
+    "enumCase": "uAlabama",
+    "country": "unitedStates",
+    "conference": "sec",
+    "aliases": [
+      "Alabama",
+      "Bama",
+      "Crimson Tide"
+    ],
+    "colors": [
+      "#9E1B32",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_ua_walk_of_fame",
+        "name": "Walk of Fame at Denny Chimes",
+        "description": "Since 1948, Alabama's football captains have pressed their handprints and footprints into the concrete around the base of Denny Chimes. Walk around the tower to find the names, and listen for the Westminster chimes every 15 minutes.",
+        "coordinates": [
+          33.2099035,
+          -87.5463171
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/440069743",
+        "source": "https://dennychimes.ua.edu/traditions/"
+      },
+      {
+        "id": "trad_ua_walk_of_champions",
+        "name": "Walk of Champions",
+        "description": "Outside Bryant–Denny Stadium, granite slabs list the Crimson Tide's national championships beside statues of championship coaches. On game days fans line the walk to cheer the team as it arrives.",
+        "coordinates": [
+          33.2095313,
+          -87.5503283
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/130596759",
+        "source": "https://stories.ua.edu/visitors-guide/"
+      }
+    ],
+    "wiki": "University of Alabama",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Roll Tide",
+      "airportName": "Birmingham–Shuttlesworth International Airport",
+      "airportCode": "BHM",
+      "airportInfo": "Birmingham–Shuttlesworth International Airport, northeast of Tuscaloosa, is the nearest airport with regular airline service.",
+      "funFact": "The President's Mansion and the old observatory, now Maxwell Hall, are among the few campus buildings that survived the Civil War.",
+      "language": "English",
+      "languageInfo": "The school colors are crimson and white, and the teams are the Crimson Tide.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / CrimsonRide buses",
+      "transportationFact": "The Quad sits at the heart of a walkable campus. The university's free CrimsonRide buses run campus and apartment routes."
+    },
+    "buildings": [
+      {
+        "id": "campus_ua_denny_chimes",
+        "wiki": "Denny Chimes",
+        "name": "Denny Chimes",
+        "description": "This 35-meter Art Deco campanile on the south side of the Quad was dedicated in 1929 and named for university president George H. Denny. Its brick shaft tapers to a limestone belfry that holds a 25-bell carillon.",
+        "architect": "Skinner, Maxwell and Company (builder)",
+        "yearBuilt": 1929,
+        "address": "The Quad, University of Alabama, Tuscaloosa, AL 35487",
+        "oldUse": "Bell Tower",
+        "newUse": "Carillon Tower",
+        "buildingStyle": "Art Deco",
+        "numberOfStories": 0,
+        "height": 35,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ua_presidents_mansion",
+        "wiki": "President's Mansion (University of Alabama)",
+        "name": "President's Mansion",
+        "description": "Completed in 1841 to a design by Michael Barry, this Greek Revival mansion has housed every university president since. It narrowly escaped destruction during the Civil War and is one of the oldest buildings on campus.",
+        "architect": "Michael Barry",
+        "yearBuilt": 1841,
+        "address": "University Blvd, University of Alabama, Tuscaloosa, AL 35487",
+        "oldUse": "President's Residence",
+        "newUse": "President's Residence",
+        "buildingStyle": "Greek Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ua_maxwell_hall",
+        "wiki": "Old University of Alabama Observatory",
+        "name": "Maxwell Hall (Old Observatory)",
+        "description": "Completed in 1844, this Greek Revival observatory once held an 8-inch Troughton & Simms refractor under a revolving 18-foot dome. Now called Frederick R. Maxwell Hall, it houses an arts research program.",
+        "architect": "Unknown",
+        "yearBuilt": 1844,
+        "address": "University of Alabama, Tuscaloosa, AL 35487",
+        "oldUse": "Astronomical Observatory",
+        "newUse": "Arts Research Center",
+        "buildingStyle": "Greek Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ua_smith_hall",
+        "wiki": "Alabama Museum of Natural History",
+        "name": "Smith Hall",
+        "description": "Smith Hall, completed in 1909 and dedicated in 1910, is a Beaux-Arts building with a three-story central block and two-story wings. It houses the Alabama Museum of Natural History, the oldest museum in the state.",
+        "architect": "Unknown",
+        "yearBuilt": 1909,
+        "address": "Smith Hall, University of Alabama, Tuscaloosa, AL 35487",
+        "oldUse": "Natural History Museum",
+        "newUse": "Natural History Museum",
+        "buildingStyle": "Beaux-Arts",
+        "numberOfStories": 3,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of Arkansas",
+    "enumCase": "uArkansas",
+    "country": "unitedStates",
+    "conference": "sec",
+    "aliases": [
+      "Arkansas",
+      "UArk",
+      "Razorbacks",
+      "Hogs"
+    ],
+    "colors": [
+      "#9D2235",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_uark_senior_walk",
+        "name": "Senior Walk",
+        "description": "The campus sidewalks carry the names of the university's graduates, class by class, going back to 1876. Start near Old Main and look down to read the names.",
+        "coordinates": [
+          36.0686953,
+          -94.1716272
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/468186739",
+        "source": "https://www.uark.edu/about/traditions.php"
+      },
+      {
+        "id": "trad_uark_spoofers_stone",
+        "name": "Spoofer's Stone",
+        "description": "This limestone rock near Old Main dates from a time when men and women students were not allowed to mingle, and they left love notes in its cracks. It is now a popular spot for marriage proposals.",
+        "coordinates": [
+          36.0686953,
+          -94.1716272
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/468186739",
+        "source": "https://www.uark.edu/about/traditions.php"
+      }
+    ],
+    "wiki": "University of Arkansas",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Woo Pig Sooie",
+      "airportName": "Northwest Arkansas National Airport",
+      "airportCode": "XNA",
+      "airportInfo": "Northwest Arkansas National Airport, north of Fayetteville, is the main airport for the region.",
+      "funFact": "Old Main, the oldest building on campus, was built from bricks made of clay dug on the campus and fired in kilns west of the building.",
+      "language": "English",
+      "languageInfo": "The school colors are cardinal and white, and the teams are the Razorbacks.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Razorback Transit",
+      "transportationFact": "The hilltop campus is walkable. Razorback Transit runs fare-free buses on campus and around Fayetteville."
+    },
+    "buildings": [
+      {
+        "id": "campus_uark_old_main",
+        "wiki": "Old Main (University of Arkansas)",
+        "name": "Old Main",
+        "description": "Chicago architect John Mills Van Osdel designed this five-story Second Empire hall, completed in 1875. Its two towers, 130 and 123 feet tall, are among the best-known sights in Arkansas.",
+        "architect": "John Mills Van Osdel",
+        "yearBuilt": 1875,
+        "address": "Old Main, University of Arkansas, Fayetteville, AR 72701",
+        "oldUse": "Main Academic Building",
+        "newUse": "College of Arts and Sciences",
+        "buildingStyle": "Second Empire",
+        "numberOfStories": 5,
+        "height": 40,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uark_vol_walker",
+        "wiki": "Vol Walker Hall",
+        "name": "Vol Walker Hall",
+        "description": "Built in 1935 as the campus library, this Georgian Revival building now houses the Fay Jones School of Architecture and Design. A 2013 addition by Marlon Blackwell won a national AIA Honor Award.",
+        "architect": "Unknown; Marlon Blackwell (2013 addition)",
+        "yearBuilt": 1935,
+        "address": "Campus Dr, University of Arkansas, Fayetteville, AR 72701",
+        "oldUse": "Library",
+        "newUse": "School of Architecture",
+        "buildingStyle": "Georgian Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uark_greek_theatre",
+        "wiki": "Chi Omega Greek Theatre",
+        "name": "Chi Omega Greek Theatre",
+        "description": "This open-air theatre, designed by Jamieson and Spearl, was a gift to the university from the Chi Omega sorority and was completed in 1930. It is listed on the National Register of Historic Places.",
+        "architect": "Jamieson and Spearl",
+        "yearBuilt": 1930,
+        "address": "Dickson St, University of Arkansas, Fayetteville, AR 72701",
+        "oldUse": "Outdoor Theatre",
+        "newUse": "Outdoor Theatre",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uark_chemistry",
+        "wiki": "University of Arkansas Chemistry Building",
+        "name": "Chemistry Building",
+        "description": "Wittenberg & Delony designed this Collegiate Gothic science building, completed in 1935. It was added to the National Register of Historic Places in 1992.",
+        "architect": "Wittenberg & Delony",
+        "yearBuilt": 1935,
+        "address": "Campus Dr, University of Arkansas, Fayetteville, AR 72701",
+        "oldUse": "Chemistry Building",
+        "newUse": "Academic Building",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uark_peabody_hall",
+        "wiki": "Peabody Hall (University of Arkansas)",
+        "name": "Peabody Hall",
+        "description": "Completed in 1913 with funds from George Peabody, this Classical Revival building with Mission influences has housed teacher education ever since.",
+        "architect": "L.J. Roberts",
+        "yearBuilt": 1913,
+        "address": "Peabody Hall, University of Arkansas, Fayetteville, AR 72701",
+        "oldUse": "Teacher Education",
+        "newUse": "College of Education",
+        "buildingStyle": "Classical Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "coordinates": [
+          36.0695384,
+          -94.170745
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/468186749"
+      }
+    ]
+  },
+  {
+    "name": "Auburn University",
+    "enumCase": "auburn",
+    "country": "unitedStates",
+    "conference": "sec",
+    "aliases": [
+      "Auburn"
+    ],
+    "colors": [
+      "#0B2341",
+      "#E86100"
+    ],
+    "traditions": [
+      {
+        "id": "trad_auburn_toomers_corner",
+        "name": "Toomer's Corner",
+        "description": "Where College Street meets Magnolia Avenue, fans celebrate Auburn wins by rolling the oaks with toilet paper, a celebration the university endorses. Visit the corner and the replanted Toomer's Oaks, or come after a win to watch.",
+        "coordinates": [
+          32.6063055,
+          -85.4818803
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/4644825575",
+        "source": "https://auburntigers.com/traditions-rolling-toomers-corner"
+      },
+      {
+        "id": "trad_auburn_tiger_walk",
+        "name": "Tiger Walk",
+        "description": "Before home football games, fans line Donahue Drive to cheer the team as it walks into Jordan-Hare Stadium. Auburn calls it one of the most copied traditions in college football.",
+        "coordinates": [
+          32.6021616,
+          -85.4891613
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/39662051",
+        "source": "https://en.wikipedia.org/wiki/Auburn_University_traditions"
+      }
+    ],
+    "wiki": "Auburn University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "War Eagle",
+      "airportName": "Columbus Airport",
+      "airportCode": "CSG",
+      "airportInfo": "Columbus Airport in Georgia, southeast of Auburn, has Delta flights to Atlanta, home of the much larger Hartsfield–Jackson airport.",
+      "funFact": "Langdon Hall was built in 1846 as a chapel for the Auburn Female College, then taken apart and rebuilt on the college campus in 1883.",
+      "language": "English",
+      "languageInfo": "The school colors are burnt orange and navy blue, and the teams are the Tigers.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Tiger Transit",
+      "transportationFact": "The historic core around Samford Hall is walkable. Tiger Transit buses serve students, faculty and staff on weekdays during the semester."
+    },
+    "buildings": [
+      {
+        "id": "campus_auburn_samford_hall",
+        "wiki": "Samford Hall",
+        "name": "Samford Hall",
+        "description": "Designed by Bruce and Morgan of Atlanta and completed in 1888, this four-story Italianate hall was modeled on the earlier Old Main. Its clock tower is the best-known symbol of Auburn.",
+        "architect": "Bruce and Morgan",
+        "yearBuilt": 1888,
+        "address": "Samford Hall, Auburn University, Auburn, AL 36849",
+        "oldUse": "Main Building",
+        "newUse": "Administration",
+        "buildingStyle": "Italianate",
+        "numberOfStories": 4,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_auburn_langdon_hall",
+        "wiki": "Langdon Hall",
+        "name": "Langdon Hall",
+        "description": "Built in the Greek Revival style in 1846 as the chapel of the Auburn Female College, it was moved to campus in 1883 and is the oldest building in Auburn. It hosted debates on Southern secession before the Civil War.",
+        "architect": "Unknown; W. P. Wood (1883 remodel)",
+        "yearBuilt": 1846,
+        "address": "College St, Auburn, AL 36849",
+        "oldUse": "Chapel",
+        "newUse": "Auditorium and Offices",
+        "buildingStyle": "Greek Revival",
+        "numberOfStories": 2,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_auburn_chapel",
+        "wiki": "Auburn University Chapel",
+        "name": "Auburn University Chapel",
+        "description": "Built in 1851 as a Presbyterian church, the chapel was renovated in a Gothic style around 1900. It is the oldest campus building still on its original site.",
+        "architect": "Edwin Reese",
+        "yearBuilt": 1851,
+        "address": "College St at Thach Ave, Auburn, AL 36849",
+        "oldUse": "Presbyterian Church",
+        "newUse": "University Chapel",
+        "buildingStyle": "Gothic Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_auburn_cater_hall",
+        "wiki": "Cater Hall",
+        "name": "Cater Hall",
+        "description": "Joseph Hudnut designed this Classical Revival house, built in 1915 as the home of the college president. It later became the social center for the women's Quad dormitories.",
+        "architect": "Joseph Hudnut",
+        "yearBuilt": 1915,
+        "address": "277 W Thach Ave, Auburn, AL 36849",
+        "oldUse": "President's Residence",
+        "newUse": "University Offices",
+        "buildingStyle": "Classical Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of Florida",
+    "enumCase": "uFlorida",
+    "country": "unitedStates",
+    "conference": "sec",
+    "aliases": [
+      "UF",
+      "Florida",
+      "Gators"
+    ],
+    "colors": [
+      "#FA4616",
+      "#0021A5"
+    ],
+    "traditions": [
+      {
+        "id": "trad_uf_century_tower",
+        "name": "Century Tower carillon",
+        "description": "The 61-bell carillon in Century Tower, completed in its present form in 2003, rings out over the center of campus. Stand on the lawn below to listen.",
+        "coordinates": [
+          29.6488138,
+          -82.3433213
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/150860043",
+        "source": "https://en.wikipedia.org/wiki/Century_Tower_(University_of_Florida)"
+      }
+    ],
+    "wiki": "University of Florida",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Go Gators",
+      "airportName": "Gainesville Regional Airport",
+      "airportCode": "GNV",
+      "airportInfo": "Gainesville Regional Airport, northeast of campus, has flights to major hubs.",
+      "funFact": "William Augustus Edwards planned nearly all of the early campus in Collegiate Gothic, and Century Tower follows the proportions of Bell Harry Tower at Canterbury Cathedral.",
+      "language": "English",
+      "languageInfo": "The school colors are orange and blue, and the teams are the Gators.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / RTS buses",
+      "transportationFact": "The historic district is walkable. Gainesville's RTS buses run frequent routes through campus."
+    },
+    "buildings": [
+      {
+        "id": "campus_uf_century_tower",
+        "wiki": "Century Tower (University of Florida)",
+        "name": "Century Tower",
+        "description": "This 48-meter bell tower, begun in 1953, marks the centennial of UF's parent school and honors students who died in the World Wars. Its 61-bell carillon was completed in 2003.",
+        "architect": "Jefferson M. Hamilton",
+        "yearBuilt": 1953,
+        "address": "Century Tower, University of Florida, Gainesville, FL 32611",
+        "oldUse": "Memorial Bell Tower",
+        "newUse": "Carillon Tower",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 48,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uf_auditorium",
+        "wiki": "University Auditorium (Gainesville, Florida)",
+        "name": "University Auditorium",
+        "description": "William Augustus Edwards designed this Collegiate Gothic hall, built between 1922 and 1924. Its cruciform interior carries a late 14th-century style hammerbeam roof.",
+        "architect": "William Augustus Edwards",
+        "yearBuilt": 1924,
+        "address": "University Auditorium, University of Florida, Gainesville, FL 32611",
+        "oldUse": "Auditorium",
+        "newUse": "Auditorium",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uf_thomas_hall",
+        "wiki": "Thomas Hall (Gainesville, Florida)",
+        "name": "Thomas Hall",
+        "description": "Built in 1905 and named for Gainesville mayor William Reuben Thomas, this Collegiate Gothic hall is one of the two oldest buildings on campus. It has long served as a residence hall.",
+        "architect": "William Augustus Edwards",
+        "yearBuilt": 1905,
+        "address": "Murphree Area, University of Florida, Gainesville, FL 32612",
+        "oldUse": "Classrooms and Dormitory",
+        "newUse": "Residence Hall",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uf_buckman_hall",
+        "wiki": "Buckman Hall (Gainesville, Florida)",
+        "name": "Buckman Hall",
+        "description": "Opened in 1906 alongside Thomas Hall, Buckman Hall is one of the two original buildings of the Gainesville campus. William A. Edwards designed it in the Collegiate Gothic style.",
+        "architect": "William Augustus Edwards",
+        "yearBuilt": 1906,
+        "address": "Murphree Area, University of Florida, Gainesville, FL 32612",
+        "oldUse": "Dormitory",
+        "newUse": "Residence Hall",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uf_anderson_hall",
+        "wiki": "Anderson Hall (Gainesville, Florida)",
+        "name": "Anderson Hall",
+        "description": "Opened in 1913 as Language Hall, this Collegiate Gothic building by William Augustus Edwards now houses political science and religion. It was added to the National Register of Historic Places in 1979.",
+        "architect": "William Augustus Edwards",
+        "yearBuilt": 1913,
+        "address": "Anderson Hall, University of Florida, Gainesville, FL 32611",
+        "oldUse": "Language Hall",
+        "newUse": "Academic Building",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of Georgia",
+    "enumCase": "uGeorgia",
+    "country": "unitedStates",
+    "conference": "sec",
+    "aliases": [
+      "UGA",
+      "Georgia",
+      "Dawgs"
+    ],
+    "colors": [
+      "#BA0C2F",
+      "#000000"
+    ],
+    "traditions": [
+      {
+        "id": "trad_uga_arch",
+        "name": "The Arch",
+        "description": "The Arch is the gateway between North Campus and downtown Athens. By legend, students do not walk under it until they graduate, so many visitors walk around it and take a photo instead.",
+        "coordinates": [
+          33.9575243,
+          -83.3752855
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/4886558902",
+        "source": "https://www.redandblack.com/culture/how-to-display-your-bulldog-pride-through-uga-traditions/article_f455668a-575d-11e6-a8c1-dbdbc6874a72.html"
+      },
+      {
+        "id": "trad_uga_chapel_bell",
+        "name": "Chapel Bell",
+        "description": "The bell beside the Chapel has been rung to celebrate football wins since 1894. The university encourages ringing it for athletic victories and other special occasions.",
+        "coordinates": [
+          33.956616,
+          -83.375418
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/12229933633",
+        "source": "https://gse.uga.edu/wp-content/uploads/sites/8/2024/07/UGA-Traditions.pdf"
+      }
+    ],
+    "wiki": "University of Georgia",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Go Dawgs",
+      "airportName": "Hartsfield–Jackson Atlanta International Airport",
+      "airportCode": "ATL",
+      "airportInfo": "Athens has no scheduled airline service, so most visitors fly into Atlanta's Hartsfield–Jackson airport, southwest of town.",
+      "funFact": "UGA's oldest buildings are in the Federal style. Demosthenian Hall, built in 1824, keeps an ornate plaster ceiling medallion based on a template by Asher Benjamin.",
+      "language": "English",
+      "languageInfo": "The school colors are red and black, and the teams are the Bulldogs.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / UGA Campus Transit",
+      "transportationFact": "North Campus is walkable. UGA Campus Transit buses run routes across campus."
+    },
+    "buildings": [
+      {
+        "id": "campus_uga_demosthenian_hall",
+        "wiki": "Demosthenian Literary Society",
+        "name": "Demosthenian Hall",
+        "description": "Built in 1824 for one of the nation's oldest student debating societies, this North Campus hall is still used for weekly meetings. Its upper chamber keeps a plaster ceiling medallion based on a design by Asher Benjamin.",
+        "architect": "James Tinsley (builder)",
+        "yearBuilt": 1824,
+        "address": "North Campus, University of Georgia, Athens, GA 30602",
+        "oldUse": "Debating Society Hall",
+        "newUse": "Debating Society Hall",
+        "buildingStyle": "Federal",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uga_presidents_house",
+        "wiki": "President's House (University of Georgia)",
+        "name": "President's House",
+        "description": "John Thomas Grant built this Greek Revival mansion in 1856. It was given to the university in 1949 and has been the president's residence since.",
+        "architect": "Unknown",
+        "yearBuilt": 1856,
+        "address": "570 Prince Ave, Athens, GA 30601",
+        "oldUse": "Private Residence",
+        "newUse": "President's Residence",
+        "buildingStyle": "Greek Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uga_lucy_cobb",
+        "wiki": "Lucy Cobb Institute",
+        "name": "Lucy Cobb Institute",
+        "description": "Built in 1858 for a girls' school founded by Thomas R. R. Cobb, the building closed as a school in 1931. It now houses the university's Carl Vinson Institute of Government.",
+        "architect": "W. W. Thomas",
+        "yearBuilt": 1858,
+        "address": "200 N Milledge Ave, Athens, GA 30601",
+        "oldUse": "Girls' School",
+        "newUse": "Institute of Government",
+        "buildingStyle": "Early Republic / Regency",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uga_seney_stovall",
+        "wiki": "Seney–Stovall Chapel",
+        "name": "Seney–Stovall Chapel",
+        "description": "This octagonal red brick chapel on the Lucy Cobb grounds was funded after a student wrote to George I. Seney asking for help. Local architect William Winstead Thomas designed it, and it was dedicated in 1885.",
+        "architect": "William Winstead Thomas",
+        "yearBuilt": 1885,
+        "address": "N Milledge Ave, Athens, GA 30601",
+        "oldUse": "School Chapel",
+        "newUse": "Event Venue",
+        "buildingStyle": "Octagon Mode",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Louisiana State University",
+    "enumCase": "lsu",
+    "country": "unitedStates",
+    "conference": "sec",
+    "aliases": [
+      "LSU",
+      "Louisiana State"
+    ],
+    "colors": [
+      "#461D7C",
+      "#FDD023"
+    ],
+    "traditions": [
+      {
+        "id": "trad_lsu_mike_habitat",
+        "name": "Mike the Tiger's habitat",
+        "description": "LSU has kept a live tiger on campus since 1936. Visit Mike in his habitat between Tiger Stadium and the Pete Maravich Assembly Center, which is open to visitors year-round.",
+        "coordinates": [
+          30.4134234,
+          -91.1850659
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/4610681494",
+        "source": "https://lsusports.net/lsus-live-tiger-mascot-mike-vii/"
+      },
+      {
+        "id": "trad_lsu_victory_hill",
+        "name": "Victory Hill march",
+        "description": "Before home games, fans line Victory Hill to watch the team, coaches and the Golden Band march from the Greek Theatre toward Tiger Stadium.",
+        "coordinates": [
+          30.4161043,
+          -91.1803752
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/4610575192",
+        "source": "https://en.wikipedia.org/wiki/Louisiana_State_University_traditions"
+      }
+    ],
+    "wiki": "Louisiana State University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Geaux Tigers",
+      "airportName": "Baton Rouge Metropolitan Airport",
+      "airportCode": "BTR",
+      "airportInfo": "Baton Rouge Metropolitan Airport, north of downtown, serves the city.",
+      "funFact": "The campus dedicated in 1926 was built in an Italian Renaissance style, and Tiger Stadium once had student dormitories built beneath its stands.",
+      "language": "English",
+      "languageInfo": "The school colors are purple and gold, and the teams are the Tigers.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Tiger Trails buses",
+      "transportationFact": "The central campus around the Quad is walkable. LSU's free Tiger Trails buses connect campus with nearby apartments."
+    },
+    "buildings": [
+      {
+        "id": "campus_lsu_memorial_tower",
+        "wiki": "Memorial Tower",
+        "name": "Memorial Tower",
+        "description": "This 53-meter clock tower by Theodore Link, built from 1923 to 1926, honors Louisianans who died in World War I. Students call it the Campanile.",
+        "architect": "Theodore Link",
+        "yearBuilt": 1926,
+        "address": "Memorial Tower, Louisiana State University, Baton Rouge, LA 70803",
+        "oldUse": "War Memorial and Clock Tower",
+        "newUse": "Clock Tower and Offices",
+        "buildingStyle": "Italian Renaissance",
+        "numberOfStories": 0,
+        "height": 53,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_lsu_field_house",
+        "wiki": "Huey P. Long Field House",
+        "name": "Huey P. Long Field House",
+        "description": "Built in 1932, the field house served as the first student union, with a post office, ballroom, gym and what was then the largest swimming pool in the country.",
+        "architect": "Weiss, Dreyfous and Seiferth",
+        "yearBuilt": 1932,
+        "address": "Field House Dr, Louisiana State University, Baton Rouge, LA 70803",
+        "oldUse": "Field House and Student Union",
+        "newUse": "Kinesiology and Social Work",
+        "buildingStyle": "Italian Renaissance",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_lsu_tiger_stadium",
+        "wiki": "Tiger Stadium (Louisiana)",
+        "name": "Tiger Stadium",
+        "description": "Opened in 1924 with 12,000 seats, the stadium now holds more than 100,000. In the 1930s dormitories for students were built into its stands.",
+        "architect": "Wogan and Bernard",
+        "yearBuilt": 1924,
+        "address": "W Stadium Rd, Baton Rouge, LA 70803",
+        "oldUse": "Football Stadium",
+        "newUse": "Football Stadium",
+        "buildingStyle": "Italian Renaissance",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_lsu_french_house",
+        "wiki": "Roger Hadfield Ogden Honors College",
+        "name": "French House",
+        "description": "This Renaissance-style chateau was dedicated in 1935 as a center for the study of French language and culture. Since 1999 it has housed the Ogden Honors College.",
+        "architect": "Unknown",
+        "yearBuilt": 1935,
+        "address": "French House, Louisiana State University, Baton Rouge, LA 70803",
+        "oldUse": "French Language Center",
+        "newUse": "Honors College",
+        "buildingStyle": "French Renaissance",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of Mississippi",
+    "enumCase": "olemiss",
+    "country": "unitedStates",
+    "conference": "sec",
+    "aliases": [
+      "Ole Miss",
+      "Rebels"
+    ],
+    "colors": [
+      "#CF142B",
+      "#142142"
+    ],
+    "traditions": [
+      {
+        "id": "trad_olemiss_walk_of_champions",
+        "name": "Walk of Champions",
+        "description": "Before every Saturday home game, the team walks through the Grove from the Walk of Champions arch, a 1998 gift from the unbeaten 1962 team. Fans line the path to cheer them on.",
+        "coordinates": [
+          34.3657509,
+          -89.5327617
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/489414073",
+        "source": "https://olemisssports.com/sports/2018/7/20/trads-the-grove-html"
+      },
+      {
+        "id": "trad_olemiss_meredith_monument",
+        "name": "Civil Rights Monument",
+        "description": "Between the Lyceum and the library, a life-size statue of James Meredith, the first Black student admitted to the university, stands with a limestone portal carved with the words Courage, Knowledge, Perseverance and Opportunity.",
+        "coordinates": [
+          34.3652987,
+          -89.5365903
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/3190645370",
+        "source": "https://www.newswise.com/articles/dedication-set-oct-1-for-civil-rights-monument"
+      },
+      {
+        "id": "trad_olemiss_grove",
+        "name": "The Grove",
+        "description": "This 10-acre park shaded by oaks sits at the center of campus. Stroll through it, and on game days hear the Pride of the South play its pregame show at the Grove stage.",
+        "coordinates": [
+          34.3658088,
+          -89.5327448
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/277450221",
+        "source": "https://en.wikipedia.org/wiki/The_Grove_(Ole_Miss)"
+      }
+    ],
+    "wiki": "University of Mississippi",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Hotty Toddy",
+      "airportName": "Tupelo Regional Airport",
+      "airportCode": "TUP",
+      "airportInfo": "Tupelo Regional Airport, east of Oxford, has a few daily flights. Memphis International Airport, to the north, is the nearest major airport.",
+      "funFact": "William Nichols based the 1848 Lyceum on an Ionic temple near Athens, and Barnard Observatory was modeled on the observatory at Pulkovo in Russia.",
+      "language": "English",
+      "languageInfo": "The school colors are cardinal red and navy blue, and the teams are the Rebels.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Oxford-University Transit",
+      "transportationFact": "The Circle and the Grove sit at the center of a walkable campus. Oxford-University Transit buses link campus with the town."
+    },
+    "buildings": [
+      {
+        "id": "campus_olemiss_lyceum",
+        "wiki": "Lyceum (Mississippi)",
+        "name": "The Lyceum",
+        "description": "English architect William Nichols designed the Lyceum, the first building on the campus, completed in 1848. It served as a hospital in the Civil War and as the federal headquarters during the 1962 riot.",
+        "architect": "William Nichols",
+        "yearBuilt": 1848,
+        "address": "The Circle, University, MS 38677",
+        "oldUse": "Academic Building",
+        "newUse": "Administration",
+        "buildingStyle": "Neoclassical Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          34.3654531,
+          -89.5360997
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/187869639"
+      },
+      {
+        "id": "campus_olemiss_barnard",
+        "wiki": "Barnard Observatory",
+        "name": "Barnard Observatory",
+        "description": "Completed in 1859 for Chancellor Frederick Barnard, this Greek Revival observatory was meant to hold the world's largest refracting telescope. The Civil War stopped the purchase, and it now houses the Center for the Study of Southern Culture.",
+        "architect": "Unknown",
+        "yearBuilt": 1859,
+        "address": "Barnard Observatory, University, MS 38677",
+        "oldUse": "Astronomical Observatory",
+        "newUse": "Center for the Study of Southern Culture",
+        "buildingStyle": "Greek Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_olemiss_kennon",
+        "wiki": "Kennon Observatory",
+        "name": "Kennon Observatory",
+        "description": "Built in 1939, this observatory has two copper-roofed domes and is aligned exactly east to west. A tube in the south wall lets the noon sun reach the floor only on the equinoxes.",
+        "architect": "R. W. Naef",
+        "yearBuilt": 1939,
+        "address": "Kennon Observatory, University, MS 38677",
+        "oldUse": "Astronomical Observatory",
+        "newUse": "Astronomical Observatory",
+        "buildingStyle": "Classical",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_olemiss_rowan_oak",
+        "wiki": "Rowan Oak",
+        "name": "Rowan Oak",
+        "description": "William Faulkner lived in this primitive Greek Revival house, built in 1844, from 1930 until his death in 1962. The university has owned it since 1972 and keeps it open to visitors.",
+        "architect": "Robert Sheegog",
+        "yearBuilt": 1844,
+        "address": "Old Taylor Rd, Oxford, MS 38655",
+        "oldUse": "Private Residence",
+        "newUse": "Historic House Museum",
+        "buildingStyle": "Greek Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of Missouri",
+    "enumCase": "mizzou",
+    "country": "unitedStates",
+    "conference": "sec",
+    "aliases": [
+      "Mizzou",
+      "Missouri"
+    ],
+    "colors": [
+      "#FDB719",
+      "#000000"
+    ],
+    "traditions": [
+      {
+        "id": "trad_mizzou_columns",
+        "name": "Walk through the Columns",
+        "description": "Each August, new students sprint through the Columns toward Jesse Hall, and graduating seniors walk back the other way in May. Visitors can walk the same route across Francis Quadrangle.",
+        "coordinates": [
+          38.946276,
+          -92.328778
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/3660281914",
+        "source": "https://missouri.edu/index.php/about/traditions"
+      },
+      {
+        "id": "trad_mizzou_francis_nose",
+        "name": "David R. Francis's nose",
+        "description": "By legend, rubbing the nose on the bronze relief of David R. Francis near the northeast entrance of Jesse Hall brings an A on the next exam. Francis is credited with keeping the university in Columbia after the 1892 fire.",
+        "coordinates": [
+          38.9452339,
+          -92.3286872
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/136080615",
+        "source": "https://showme.missouri.edu/2022/a-little-extra-luck"
+      },
+      {
+        "id": "trad_mizzou_jefferson_tombstone",
+        "name": "Thomas Jefferson's tombstone",
+        "description": "The original marker from Thomas Jefferson's grave at Monticello stands on the east side of Francis Quadrangle. His heirs gave it to Mizzou in 1883 as the first university founded in the Louisiana Purchase territory.",
+        "coordinates": [
+          38.9463586,
+          -92.3287867
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/513460415",
+        "source": "https://missouri.edu/index.php/about/traditions"
+      }
+    ],
+    "wiki": "University of Missouri",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Mizzou",
+      "airportName": "Columbia Regional Airport",
+      "airportCode": "COU",
+      "airportInfo": "Columbia Regional Airport, southeast of the city, has airline service to major hubs.",
+      "funFact": "The six Columns on Francis Quadrangle are all that remain of Academic Hall, which burned in 1892. Its replacement, Jesse Hall, rose behind them in 1895.",
+      "language": "English",
+      "languageInfo": "The school colors are black and gold, and the teams are the Tigers.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Tiger Line shuttles",
+      "transportationFact": "The campus around Francis Quadrangle is walkable. MU's free Tiger Line shuttles, run with the City of Columbia, serve campus, and Go COMO city buses are free too."
+    },
+    "buildings": [
+      {
+        "id": "campus_mizzou_jesse_hall",
+        "wiki": "Jesse Hall",
+        "name": "Jesse Hall",
+        "description": "Morris Frederick Bell modeled this administration building on Richard M. Upjohn's Connecticut State House. Its dome has risen 55 meters above Francis Quadrangle since 1895.",
+        "architect": "Morris Frederick Bell",
+        "yearBuilt": 1895,
+        "address": "Jesse Hall, Columbia, MO 65211",
+        "oldUse": "Academic Hall",
+        "newUse": "Administration and Auditorium",
+        "buildingStyle": "Late Victorian",
+        "numberOfStories": 0,
+        "height": 55,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_mizzou_columns",
+        "wiki": "The Columns (Columbia, Missouri)",
+        "name": "The Columns",
+        "description": "These 13-meter columns, built from 1840 to 1843, are the remains of the portico of Academic Hall. They stand in the center of Francis Quadrangle and appear in the school song.",
+        "architect": "Stephen Hills",
+        "yearBuilt": 1843,
+        "address": "Francis Quadrangle, Columbia, MO 65211",
+        "oldUse": "Portico of Academic Hall",
+        "newUse": "Monument",
+        "buildingStyle": "Classical Revival",
+        "numberOfStories": 0,
+        "height": 13,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_mizzou_switzler_hall",
+        "wiki": "Switzler Hall",
+        "name": "Switzler Hall",
+        "description": "Completed in 1872 on the west side of Francis Quadrangle, Switzler Hall is the oldest academic building on campus. It is named for newspaper editor William Franklin Switzler.",
+        "architect": "Walsh, Smith, & Jugenfeld",
+        "yearBuilt": 1872,
+        "address": "Francis Quadrangle, Columbia, MO 65211",
+        "oldUse": "Academic Building",
+        "newUse": "Department of Communication",
+        "buildingStyle": "Late Victorian",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_mizzou_memorial_union",
+        "wiki": "Memorial Union (University of Missouri)",
+        "name": "Memorial Union",
+        "description": "Jamieson and Spearl designed this war memorial union, built in stages between 1923 and 1963. Its Gothic tower, dedicated in 1926, links the north and south wings.",
+        "architect": "Jamieson and Spearl",
+        "yearBuilt": 1926,
+        "address": "Memorial Union, Columbia, MO 65211",
+        "oldUse": "War Memorial and Student Union",
+        "newUse": "Student Union",
+        "buildingStyle": "Gothic Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of Oklahoma",
+    "enumCase": "uOklahoma",
+    "country": "unitedStates",
+    "conference": "sec",
+    "aliases": [
+      "OU",
+      "Oklahoma",
+      "Sooners"
+    ],
+    "colors": [
+      "#841617",
+      "#DDCBA4"
+    ],
+    "traditions": [
+      {
+        "id": "trad_ou_seed_sower",
+        "name": "The Seed Sower",
+        "description": "A 12-foot bronze Seed Sower by Paul Moore stands by the South Oval, based on the figure in the university seal and a parable told by first president David Ross Boyd. It is dressed up when the team learns its bowl destination.",
+        "coordinates": [
+          35.2050658,
+          -97.4457142
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/392509122",
+        "source": "https://www.oudaily.com/iconic-spots-on-campus-part-of-ou-tradition/article_e27ea55a-67e9-11e7-bf92-3bbc2743cffc.html"
+      },
+      {
+        "id": "trad_ou_heisman_park",
+        "name": "Heisman Park",
+        "description": "On the east side of the football stadium, bronze statues honor Oklahoma's Heisman Trophy winners. It is a popular spot for photos.",
+        "coordinates": [
+          35.2052402,
+          -97.4408049
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/556021598",
+        "source": "https://soonersports.com/news/2005/9/7/208396745"
+      }
+    ],
+    "wiki": "University of Oklahoma",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Boomer Sooner",
+      "airportName": "Will Rogers International Airport",
+      "airportCode": "OKC",
+      "airportInfo": "Will Rogers International Airport in Oklahoma City, north of Norman, is the nearest major airport.",
+      "funFact": "Frank Lloyd Wright coined the term Cherokee Gothic for OU's brick and pale-stone take on Collegiate Gothic, and newer buildings are designed to match it.",
+      "language": "English",
+      "languageInfo": "The school colors are crimson and cream, and the teams are the Sooners.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / CART buses",
+      "transportationFact": "The central campus around the South Oval is walkable. OU's CART buses serve campus and nearby apartments, and EMBARK Norman runs the city routes."
+    },
+    "buildings": [
+      {
+        "id": "campus_ou_bizzell_library",
+        "wiki": "Bizzell Memorial Library",
+        "name": "Bizzell Memorial Library",
+        "description": "Layton Hicks & Forsyth designed this five-story Collegiate Gothic library, erected in 1929 under president William Bennett Bizzell. It is a National Historic Landmark.",
+        "architect": "Layton Hicks & Forsyth",
+        "yearBuilt": 1929,
+        "address": "401 W Brooks St, Norman, OK 73019",
+        "oldUse": "Library",
+        "newUse": "Library",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 5,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ou_memorial_union",
+        "wiki": "Memorial Union (University of Oklahoma)",
+        "name": "Oklahoma Memorial Union",
+        "description": "Completed in 1929 as a memorial to those from the university who died in World War I, this red brick and white stone Collegiate Gothic union gained its 30-meter clock tower in 1936.",
+        "architect": "Unknown",
+        "yearBuilt": 1929,
+        "address": "Oklahoma Memorial Union, Norman, OK 73019",
+        "oldUse": "War Memorial and Student Union",
+        "newUse": "Student Union",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 30,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ou_boyd_house",
+        "wiki": "Boyd House (University of Oklahoma)",
+        "name": "Boyd House",
+        "description": "OU's first president, David Ross Boyd, built this house in 1906. A later president remodeled it between 1915 and 1922 in the Neoclassical Revival style, adding its four Ionic columns.",
+        "architect": "David Ross Boyd",
+        "yearBuilt": 1906,
+        "address": "407 W Boyd St, Norman, OK 73069",
+        "oldUse": "President's Residence",
+        "newUse": "President's Residence",
+        "buildingStyle": "Neoclassical Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ou_fred_jones_museum",
+        "wiki": "Fred Jones Jr. Museum of Art",
+        "name": "Fred Jones Jr. Museum of Art",
+        "description": "The museum opened in a new building in 1971 and was doubled in 2005 by a wing from Hugh Newell Jacobsen. The wing is a set of square limestone, slate and glass pavilions.",
+        "architect": "Hugh Newell Jacobsen (2005 wing)",
+        "yearBuilt": 1971,
+        "address": "Elm Ave, Norman, OK 73019",
+        "oldUse": "Art Museum",
+        "newUse": "Art Museum",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of South Carolina",
+    "enumCase": "uSouthCarolina",
+    "country": "unitedStates",
+    "conference": "sec",
+    "aliases": [
+      "South Carolina",
+      "Gamecocks",
+      "UofSC"
+    ],
+    "colors": [
+      "#73000A",
+      "#000000"
+    ],
+    "traditions": [
+      {
+        "id": "trad_uofsc_maxcy_monument",
+        "name": "Maxcy Monument",
+        "description": "At the center of the Horseshoe stands the monument to Jonathan Maxcy, the first president, designed by Robert Mills and dedicated in 1827. Read the Latin inscriptions and the English translations nearby.",
+        "coordinates": [
+          33.9982602,
+          -81.0285542
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/4993320679",
+        "source": "https://sc.edu/about/our_history/university_history/architecture_green_spaces/monuments/index.php"
+      },
+      {
+        "id": "trad_uofsc_cocky_statue",
+        "name": "Cocky statue",
+        "description": "A statue of the Gamecock mascot stands off Greene Street near the Russell House, and visitors are invited to take a photo with it.",
+        "coordinates": [
+          33.9975701,
+          -81.0262322
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/9864795506",
+        "source": "https://www.sc.edu/uofsc/posts/2023/09/family-weekend-family-friendly-things-in-columbia.php"
+      }
+    ],
+    "wiki": "University of South Carolina",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Emollit Mores Nec Sinit Esse Feros",
+      "airportName": "Columbia Metropolitan Airport",
+      "airportCode": "CAE",
+      "airportInfo": "Columbia Metropolitan Airport is southwest of the city center.",
+      "funFact": "The Horseshoe's first building, Rutledge, was finished in 1805, and the South Caroliniana Library on the Horseshoe is the oldest free-standing university library in the United States.",
+      "language": "English",
+      "languageInfo": "The school colors are garnet and black, and the teams are the Gamecocks.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Carolina Shuttle",
+      "transportationFact": "The Horseshoe and central campus are walkable. The Carolina Shuttle, run by The COMET, is free for students, faculty and staff."
+    },
+    "buildings": [
+      {
+        "id": "campus_uofsc_horseshoe",
+        "wiki": "Old Campus District, University of South Carolina",
+        "name": "The Horseshoe",
+        "description": "The Horseshoe is the original campus of South Carolina College, laid out from plans by Robert Mills and others. Its first building, Rutledge, was completed in 1805.",
+        "architect": "Robert Mills, et al.",
+        "yearBuilt": 1805,
+        "address": "Horseshoe, Sumter St, Columbia, SC 29208",
+        "oldUse": "College Campus",
+        "newUse": "Residence Halls, Library and Offices",
+        "buildingStyle": "Early Republic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uofsc_longstreet_theatre",
+        "wiki": "Longstreet Theatre",
+        "name": "Longstreet Theatre",
+        "description": "Jacob Graves designed this Greek Revival hall, completed in 1855 as a chapel and lecture hall. Poor acoustics kept it from that role, and after serving as a hospital, arsenal and gym, it became a theatre in the round in 1977.",
+        "architect": "Jacob Graves",
+        "yearBuilt": 1855,
+        "address": "1300 Greene St, Columbia, SC 29208",
+        "oldUse": "College Hall",
+        "newUse": "Theatre",
+        "buildingStyle": "Greek Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uofsc_currell_college",
+        "wiki": "Currell College",
+        "name": "Currell College",
+        "description": "This two-story red brick building, completed in 1919, is the only one William Augustus Edwards designed for the university. It was built for the law school.",
+        "architect": "William Augustus Edwards",
+        "yearBuilt": 1919,
+        "address": "Currell College, Columbia, SC 29208",
+        "oldUse": "Law School",
+        "newUse": "Academic Building",
+        "buildingStyle": "Late Gothic Revival",
+        "numberOfStories": 2,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uofsc_horry_guignard",
+        "wiki": "Horry-Guignard House",
+        "name": "Horry-Guignard House",
+        "description": "Built before 1813, this two-story late Federal style frame house was probably built by Revolutionary War colonel Peter Horry. It is now part of the School of Law complex.",
+        "architect": "Unknown",
+        "yearBuilt": 1813,
+        "address": "Pendleton St, Columbia, SC 29208",
+        "oldUse": "Private Residence",
+        "newUse": "School of Law",
+        "buildingStyle": "Federal",
+        "numberOfStories": 2,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Vanderbilt University",
+    "enumCase": "vanderbilt",
+    "country": "unitedStates",
+    "conference": "sec",
+    "aliases": [
+      "Vanderbilt",
+      "Vandy",
+      "Commodores"
+    ],
+    "colors": [
+      "#CFAE70",
+      "#1C1C1C"
+    ],
+    "traditions": [
+      {
+        "id": "trad_vandy_commodore_statue",
+        "name": "Commodore Vanderbilt statue",
+        "description": "The statue of Cornelius Vanderbilt, whose gift founded the university, stands at the north end of the esplanade facing West End Avenue. The statue is a site for Founder's Day ceremonies around March 17, the anniversary of the founding.",
+        "coordinates": [
+          36.148246,
+          -86.8027544
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/544397715",
+        "source": "https://news.vanderbilt.edu/2005/03/14/vanderbilt-observes-founders-day-march-17-59397/"
+      }
+    ],
+    "wiki": "Vanderbilt University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Anchor Down",
+      "airportName": "Nashville International Airport",
+      "airportCode": "BNA",
+      "airportInfo": "Nashville International Airport is southeast of downtown Nashville.",
+      "funFact": "Kirkland Hall was built in 1874 in the Victorian Gothic style and rebuilt as Italianate after a 1905 fire, while the Peabody campus was modeled on Jefferson's University of Virginia.",
+      "language": "English",
+      "languageInfo": "The school colors are black and gold, and the teams are the Commodores.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / VandyRide",
+      "transportationFact": "The campus is walkable. VandyRide shuttles run around campus, and WeGo city buses run along West End Avenue."
+    },
+    "buildings": [
+      {
+        "id": "campus_vandy_kirkland_hall",
+        "wiki": "Kirkland Hall",
+        "name": "Kirkland Hall",
+        "description": "Designed by William Crawford Smith and built in 1874 as Vanderbilt's first teaching building, the hall burned in 1905. It was rebuilt in 1906 in the Italianate style with a single 52-meter tower.",
+        "architect": "William Crawford Smith",
+        "yearBuilt": 1874,
+        "address": "Kirkland Hall, Vanderbilt University, Nashville, TN 37235",
+        "oldUse": "Main Building",
+        "newUse": "Administration",
+        "buildingStyle": "Italianate",
+        "numberOfStories": 0,
+        "height": 52,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_vandy_alumni_hall",
+        "wiki": "Alumni Hall (Vanderbilt University)",
+        "name": "Alumni Hall",
+        "description": "Henry C. Hibbs designed this Collegiate Gothic hall, built in 1925 to honor the 44 Vanderbilt men who died in World War I. It was renovated in 2013 and serves as a student center.",
+        "architect": "Henry C. Hibbs",
+        "yearBuilt": 1925,
+        "address": "2205 West End Ave, Nashville, TN 37235",
+        "oldUse": "War Memorial and Student Center",
+        "newUse": "Student Center",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_vandy_old_gym",
+        "wiki": "Old Gym (Vanderbilt University)",
+        "name": "Old Gym",
+        "description": "Completed in 1880 with an indoor running track, this Victorian building is one of the few survivors of the early campus. It later held the fine arts department and now houses admissions.",
+        "architect": "Peter J. Williamson",
+        "yearBuilt": 1880,
+        "address": "2301 West End Ave, Nashville, TN 37235",
+        "oldUse": "Gymnasium",
+        "newUse": "Admissions Office",
+        "buildingStyle": "Victorian",
+        "numberOfStories": 3,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_vandy_home_economics",
+        "wiki": "Home Economics Building (Vanderbilt University)",
+        "name": "Home Economics Building",
+        "description": "Ludlow and Peabody designed this red brick building, one of the first two on the new Peabody College campus in 1912. Its columns and swags follow the classical model of the University of Virginia.",
+        "architect": "Ludlow and Peabody",
+        "yearBuilt": 1912,
+        "address": "134 Magnolia Cir, Nashville, TN 37203",
+        "oldUse": "Household Arts Building",
+        "newUse": "Academic Building",
+        "buildingStyle": "Neoclassical",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_vandy_mayborn",
+        "wiki": "Mayborn Building",
+        "name": "Mayborn Building",
+        "description": "Completed in 1914 as the Manual Training building, this is the oldest building on the Peabody campus. Ludlow and Peabody designed it with limestone facings and a well-known smokestack.",
+        "architect": "Ludlow and Peabody",
+        "yearBuilt": 1914,
+        "address": "130 Magnolia Cir, Nashville, TN 37203",
+        "oldUse": "Manual Training Building",
+        "newUse": "Human and Organizational Development",
+        "buildingStyle": "Neoclassical",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of Kentucky",
+    "enumCase": "uKentucky",
+    "country": "unitedStates",
+    "conference": "sec",
+    "aliases": [
+      "Kentucky",
+      "UKY"
+    ],
+    "colors": [
+      "#0033A0",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_uky_bowman",
+        "name": "Bowman the Wildcat",
+        "description": "The bronze Wildcat statue in Wildcat Alumni Plaza was named Bowman by student vote in 2012. Visitors pat his head and rub his nose and paws for good luck.",
+        "coordinates": [
+          38.0282667,
+          -84.5086422
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/3122452723",
+        "source": "https://uknow.uky.edu/node/15408"
+      }
+    ],
+    "wiki": "University of Kentucky",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Go Big Blue",
+      "airportName": "Blue Grass Airport",
+      "airportCode": "LEX",
+      "airportInfo": "Blue Grass Airport is just west of Lexington.",
+      "funFact": "William T. Young Library, opened in 1998, has an octagonal plan with two-story brick-and-stone arcades on each facade, and Memorial Hall's lobby holds a 1934 fresco by Ann Rice O'Hanlon.",
+      "language": "English",
+      "languageInfo": "The school colors are blue and white, and the teams are the Wildcats.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Lextran buses",
+      "transportationFact": "Central campus is walkable. UK's campus bus routes, run with Lextran, are free, and students and staff ride Lextran city buses free with a UK ID."
+    },
+    "buildings": [
+      {
+        "id": "campus_uky_main_building",
+        "wiki": "Main Building (University of Kentucky)",
+        "name": "Main Building",
+        "description": "Dedicated in 1882, this brick and stone building is the only one left of the four that first housed State College. It was rebuilt inside after a 2001 fire and reopened in 2004.",
+        "architect": "H. P. McDonald",
+        "yearBuilt": 1882,
+        "address": "Main Building, University of Kentucky, Lexington, KY 40506",
+        "oldUse": "College Building",
+        "newUse": "Administration",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 4,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uky_memorial_hall",
+        "wiki": "Memorial Hall (University of Kentucky)",
+        "name": "Memorial Hall",
+        "description": "Completed in 1929 as a memorial to those who died in World War I, this 40-meter hall with Corinthian columns and a spire was paid for by a ten-year subscription campaign. Its lobby holds a 1934 fresco by Ann Rice O'Hanlon.",
+        "architect": "Warner and Mitchell",
+        "yearBuilt": 1929,
+        "address": "610 S Limestone, Lexington, KY 40506",
+        "oldUse": "War Memorial and Auditorium",
+        "newUse": "Auditorium",
+        "buildingStyle": "Colonial Revival",
+        "numberOfStories": 0,
+        "height": 40,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uky_young_library",
+        "wiki": "William T. Young Library",
+        "name": "William T. Young Library",
+        "description": "Kallmann McKinnell & Wood of Boston designed this six-story library, dedicated in 1998. Its octagonal plan has two-story brick-and-stone arcades on each facade.",
+        "architect": "Kallmann McKinnell & Wood",
+        "yearBuilt": 1998,
+        "address": "500 S Limestone, Lexington, KY 40506",
+        "oldUse": "Library",
+        "newUse": "Library",
+        "buildingStyle": "Neo-Palladian",
+        "numberOfStories": 6,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uky_king_library",
+        "wiki": "Margaret I. King Library",
+        "name": "Margaret I. King Library",
+        "description": "The original library was completed in 1931 for 250,000 volumes, with additions in 1963 and 1974. It now houses special collections.",
+        "architect": "Unknown",
+        "yearBuilt": 1931,
+        "address": "179 Funkhouser Dr, Lexington, KY 40506",
+        "oldUse": "Main Library",
+        "newUse": "Special Collections Library",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_uky_patterson_tower",
+        "wiki": "Patterson Office Tower",
+        "name": "Patterson Office Tower",
+        "description": "Built from 1967 to 1969 and named for the university's first president, James Kennedy Patterson, this tower holds offices for about 960 faculty and staff.",
+        "architect": "Unknown",
+        "yearBuilt": 1969,
+        "address": "Patterson Office Tower, University of Kentucky, Lexington, KY 40506",
+        "oldUse": "Office Tower",
+        "newUse": "Office Tower",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Mississippi State University",
+    "enumCase": "msState",
+    "country": "unitedStates",
+    "conference": "sec",
+    "aliases": [
+      "Mississippi State",
+      "Miss State"
+    ],
+    "colors": [
+      "#5D1725",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_msstate_cowbells",
+        "name": "Cowbells at Davis Wade Stadium",
+        "description": "Fans ring cowbells at Mississippi State games, the most famous symbol of the school's spirit. Bring a cowbell to a home game, or hear them at the Cowbell Yell pep rally in the stadium.",
+        "coordinates": [
+          33.4564527,
+          -88.7934036
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/207653615",
+        "source": "https://www5.msstate.edu/state-spotlight/2025/08/ringing-tradition"
+      },
+      {
+        "id": "trad_msstate_drill_field",
+        "name": "The Drill Field",
+        "description": "The main quadrangle is named for its use by the Corps of Cadets. Students relax here between classes, and the Drill pep rally is held on it in the first week of classes.",
+        "coordinates": [
+          33.4538086,
+          -88.7893773
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/7505367",
+        "source": "https://www.admissions.msstate.edu/about/traditions"
+      }
+    ],
+    "wiki": "Mississippi State University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Hail State",
+      "airportName": "Golden Triangle Regional Airport",
+      "airportCode": "GTR",
+      "airportInfo": "Golden Triangle Regional Airport, east of Starkville, serves the area.",
+      "funFact": "The Drill Field, once used by the Corps of Cadets, is closed at its north and south ends by two mirror-image buildings, Lee Hall and Swalm Hall.",
+      "language": "English",
+      "languageInfo": "The school colors are maroon and white, and the teams are the Bulldogs.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / SMART buses",
+      "transportationFact": "The campus around the Drill Field is walkable. Starkville–MSU Area Rapid Transit runs free buses on campus and in town."
+    },
+    "buildings": [
+      {
+        "id": "campus_msstate_lee_hall",
+        "wiki": "Mississippi State University",
+        "name": "Lee Hall",
+        "description": "Built in 1909 as an academic building and chapel and named for founding president Stephen D. Lee, this Beaux-Arts hall stands at one end of the Drill Field.",
+        "architect": "Unknown",
+        "yearBuilt": 1909,
+        "address": "Lee Blvd, Mississippi State, MS 39762",
+        "oldUse": "Academic Building and Chapel",
+        "newUse": "Academic Building",
+        "buildingStyle": "Beaux-Arts",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          33.4549009,
+          -88.7890608
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/201222327"
+      },
+      {
+        "id": "campus_msstate_montgomery_hall",
+        "wiki": "National Register of Historic Places listings in Oktibbeha County, Mississippi",
+        "name": "Montgomery Hall",
+        "description": "R. H. Hunt designed this Beaux-Arts science building, built in 1902–1903. Corinthian columns mark its central pavilion, and a five-story apse projects from the rear.",
+        "architect": "R. H. Hunt",
+        "yearBuilt": 1903,
+        "address": "Old Main Plaza, Mississippi State, MS 39762",
+        "oldUse": "Scientific Building",
+        "newUse": "Academic Building",
+        "buildingStyle": "Beaux-Arts",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          33.4538313,
+          -88.7914326
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/202228229"
+      },
+      {
+        "id": "campus_msstate_mitchell_library",
+        "wiki": "Mississippi State University",
+        "name": "Mitchell Memorial Library",
+        "description": "Built in 1950 on the east side of the Drill Field, this is the largest building on the quadrangle and the main university library. It holds the Ulysses S. Grant Presidential Library.",
+        "architect": "Unknown",
+        "yearBuilt": 1950,
+        "address": "395 Hardy Rd, Mississippi State, MS 39762",
+        "oldUse": "Library",
+        "newUse": "Library and Presidential Library",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          33.4526756,
+          -88.7886788
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/200661865"
+      },
+      {
+        "id": "campus_msstate_davis_wade",
+        "wiki": "Davis Wade Stadium",
+        "name": "Davis Wade Stadium",
+        "description": "Built in 1914 as New Athletic Field, this is the second-oldest stadium in the Football Bowl Subdivision. Its 1936 concrete stands were built with WPA labor.",
+        "architect": "Unknown",
+        "yearBuilt": 1914,
+        "address": "90 BS Hood Dr, Mississippi State, MS 39762",
+        "oldUse": "Football Stadium",
+        "newUse": "Football Stadium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "University of Tennessee",
+    "enumCase": "uTennessee",
+    "country": "unitedStates",
+    "conference": "sec",
+    "aliases": [
+      "Tennessee",
+      "UTK",
+      "UT Knoxville",
+      "Vols"
+    ],
+    "colors": [
+      "#FF8200",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_utk_torchbearer",
+        "name": "The Torchbearer",
+        "description": "The Torchbearer statue in Circle Park carries the Volunteer Creed on its plaque. Read the creed, the source of the university's Torch Night ceremony.",
+        "coordinates": [
+          35.953354,
+          -83.9273555
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/4639008302",
+        "source": "https://www.utk.edu/about/traditions"
+      },
+      {
+        "id": "trad_utk_the_rock",
+        "name": "The Rock",
+        "description": "This large limestone boulder is painted over and over by students with messages, from birthdays to marriage proposals. Stop by to see what it says today.",
+        "coordinates": [
+          35.95138889,
+          -83.93083333
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/?mlat=35.95139&mlon=-83.93083#map=19/35.95139/-83.93083",
+        "source": "https://www.utk.edu/about/traditions"
+      },
+      {
+        "id": "trad_utk_vol_walk",
+        "name": "Vol Walk",
+        "description": "Before home games, fans line the route as the team walks from the Torchbearer to Neyland Stadium, led by the band. The tradition dates to 1990.",
+        "coordinates": [
+          35.9550206,
+          -83.9241185
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/21459078",
+        "source": "https://utsports.com/news/2012/10/20/The_Vol_Walk_Celebrates_An_Anniversary"
+      }
+    ],
+    "wiki": "University of Tennessee",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Go Vols",
+      "airportName": "McGhee Tyson Airport",
+      "airportCode": "TYS",
+      "airportInfo": "McGhee Tyson Airport in Alcoa, south of Knoxville, is the nearest airport.",
+      "funFact": "Ayres Hall's 2008–2011 restoration added clock faces and terrazzo floors that were in the 1921 design but had never been built because of cost.",
+      "language": "English",
+      "languageInfo": "The school colors are orange and white, and the teams are the Volunteers.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / T buses",
+      "transportationFact": "UT's free T buses run fixed routes across campus, and students ride Knoxville Area Transit buses free with their VolCard."
+    },
+    "buildings": [
+      {
+        "id": "campus_utk_ayres_hall",
+        "wiki": "Ayres Hall",
+        "name": "Ayres Hall",
+        "description": "Miller, Fullenwider and Dowling of Chicago designed this Gothic Revival hall on The Hill, completed in 1921. Its clock tower rises 43 meters and is the best-known symbol of the university.",
+        "architect": "Miller, Fullenwider and Dowling",
+        "yearBuilt": 1921,
+        "address": "1403 Circle Dr, Knoxville, TN 37996",
+        "oldUse": "Academic Building",
+        "newUse": "Academic Building",
+        "buildingStyle": "Gothic Revival",
+        "numberOfStories": 0,
+        "height": 43,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_utk_mcclung_museum",
+        "wiki": "McClung Museum of Natural History and Culture",
+        "name": "McClung Museum",
+        "description": "UT architect Malcolm Rice and the firm Barber McMurry designed this modernist museum, the first university building on Circle Park. It holds collections of natural history, archaeology and decorative arts.",
+        "architect": "Malcolm Rice; Barber McMurry",
+        "yearBuilt": 1963,
+        "address": "Circle Park, University of Tennessee, Knoxville, TN 37996",
+        "oldUse": "Museum",
+        "newUse": "Museum",
+        "buildingStyle": "Modernist",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_utk_hodges_library",
+        "wiki": "John C. Hodges Library",
+        "name": "John C. Hodges Library",
+        "description": "The 1969 undergraduate library was wrapped by a 1987 expansion that more than tripled its size. The interior uses Italian and Spanish marble and is designed to let in natural light.",
+        "architect": "McCarty Holsaple McCarty; Cooper and Perry; Lindsey and Maples (1987 expansion)",
+        "yearBuilt": 1969,
+        "address": "1015 Volunteer Blvd, Knoxville, TN 37996",
+        "oldUse": "Undergraduate Library",
+        "newUse": "Main Library",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "coordinates": [
+          35.9550548,
+          -83.9298707
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/155024530"
+      },
+      {
+        "id": "campus_utk_neyland_stadium",
+        "wiki": "Neyland Stadium",
+        "name": "Neyland Stadium",
+        "description": "Opened in 1921 as Shields–Watkins Field, the stadium has grown through 16 expansions to about 102,000 seats. It is named for coach Robert Neyland.",
+        "architect": "Unknown; McCarty Holsaple McCarty (renovations)",
+        "yearBuilt": 1921,
+        "address": "1235 Phillip Fulmer Way, Knoxville, TN 37916",
+        "oldUse": "Football Stadium",
+        "newUse": "Football Stadium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Texas A&M University",
+    "enumCase": "texasAM",
+    "country": "unitedStates",
+    "conference": "sec",
+    "aliases": [
+      "Texas A&M",
+      "TAMU",
+      "Aggies"
+    ],
+    "colors": [
+      "#500000",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_tamu_pennies_on_sully",
+        "name": "Pennies on Sully",
+        "description": "Students leave pennies at the base of the statue of Lawrence Sullivan Ross for luck before exams, recalling his reply \"a penny for your thoughts.\" The coins are given to charity each semester.",
+        "coordinates": [
+          30.6157404,
+          -96.3407842
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/86199626",
+        "source": "https://www.tamu.edu/campus-community/traditions/aggie-culture/pennies-on-sully.html"
+      },
+      {
+        "id": "trad_tamu_century_tree",
+        "name": "Century Tree",
+        "description": "This live oak, one of the first trees planted on campus, is well over 100 years old. By legend, a couple who walk beneath it together will marry.",
+        "coordinates": [
+          30.6158806,
+          -96.3413475
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/4017426495",
+        "source": "https://www.tamu.edu/campus-community/traditions/aggie-culture/century-tree.html"
+      }
+    ],
+    "wiki": "Texas A&M University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Gig 'em",
+      "airportName": "Easterwood Airport",
+      "airportCode": "CLL",
+      "airportInfo": "Easterwood Airport, at the west edge of College Station near campus, has American Eagle flights.",
+      "funFact": "Campus architect F. E. Giesecke knew little about reinforced concrete, so he doubled the steel in the 1914 Academic Building. Workers later needed blowtorches to add water pipes.",
+      "language": "English",
+      "languageInfo": "The school colors are maroon and white, and the teams are the Aggies.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Texas A&M buses",
+      "transportationFact": "Main Campus is walkable. Texas A&M runs campus bus routes during the semester."
+    },
+    "buildings": [
+      {
+        "id": "campus_tamu_academic_building",
+        "wiki": "Campus of Texas A&M University",
+        "name": "Academic Building",
+        "description": "Completed in 1914 on the site of Old Main, which burned in 1912, this four-story building is crowned by a copper dome green with verdigris. It stands at the crossroads of campus.",
+        "architect": "F. E. Giesecke",
+        "yearBuilt": 1914,
+        "address": "Academic Building, Texas A&M University, College Station, TX 77843",
+        "oldUse": "Academic Building",
+        "newUse": "Academic Building",
+        "buildingStyle": "Beaux-Arts",
+        "numberOfStories": 4,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          30.6157404,
+          -96.3407842
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/86199626"
+      },
+      {
+        "id": "campus_tamu_administration_building",
+        "wiki": "Campus of Texas A&M University",
+        "name": "Jack K. Williams Administration Building",
+        "description": "Opened in 1932 at the main entrance to campus, this monumental classical building has Ionic columns, marble staircases and stained-glass windows.",
+        "architect": "C. S. P. Vosper; F. E. Giesecke",
+        "yearBuilt": 1932,
+        "address": "400 Bizzell St, College Station, TX 77843",
+        "oldUse": "Administration",
+        "newUse": "Administration",
+        "buildingStyle": "Neoclassical",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          30.6186995,
+          -96.33649
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/137166991"
+      },
+      {
+        "id": "campus_tamu_albritton_tower",
+        "wiki": "Campus of Texas A&M University",
+        "name": "Albritton Bell Tower",
+        "description": "Given by Martha and Ford D. Albritton and dedicated in 1984, the 42-meter tower holds 49 bells cast by the Paccard foundry. The bells ring every quarter-hour.",
+        "architect": "Unknown",
+        "yearBuilt": 1984,
+        "address": "Old Main Dr, College Station, TX 77843",
+        "oldUse": "Bell Tower",
+        "newUse": "Bell Tower",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 42,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          30.6131298,
+          -96.3446636
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/45827879"
+      },
+      {
+        "id": "campus_tamu_cushing_library",
+        "wiki": "Texas A&M University Libraries",
+        "name": "Cushing Memorial Library",
+        "description": "Built in 1930 as the first freestanding library on campus, this neoclassical building by F. E. Giesecke and S. C. P. Vosper has pilasters carved with ram heads and cow skulls. It now holds special collections and the University Archives.",
+        "architect": "F. E. Giesecke; S. C. P. Vosper",
+        "yearBuilt": 1930,
+        "address": "Nagle St, College Station, TX 77843",
+        "oldUse": "Library",
+        "newUse": "Special Collections and Archives",
+        "buildingStyle": "Neoclassical",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          30.6163551,
+          -96.3399534
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/249571645"
+      },
+      {
+        "id": "campus_tamu_bush_library",
+        "wiki": "George H. W. Bush Presidential Library and Museum",
+        "name": "George H. W. Bush Presidential Library and Museum",
+        "description": "Hellmuth, Obata + Kassabaum designed the library, dedicated in 1997 on the west campus. It is the presidential library and burial site of George H. W. and Barbara Bush.",
+        "architect": "Hellmuth, Obata and Kassabaum",
+        "yearBuilt": 1997,
+        "address": "1000 George Bush Dr W, College Station, TX 77845",
+        "oldUse": "Presidential Library",
+        "newUse": "Presidential Library and Museum",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  }
+]

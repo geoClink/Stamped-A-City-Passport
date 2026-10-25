@@ -85,8 +85,14 @@ final class TripStore: ObservableObject {
     }
 
     /// Trips planned outside the Stamped cities (2.5's "New Trip Anywhere").
+    /// College road trips are left out; they have their own list.
     var anywhereTrips: [Trip] {
-        trips.filter { $0.listedCity == nil }
+        trips.filter { $0.listedCity == nil && !$0.isRoadTrip }
+    }
+
+    /// Trips made by "Plan a College Road Trip", in the order they were made.
+    var collegeRoadTrips: [Trip] {
+        trips.filter(\.isRoadTrip)
     }
 
     func trip(withID tripID: String) -> Trip? {
@@ -128,6 +134,114 @@ final class TripStore: ObservableObject {
     /// whose area was dropped by an older app version re-saving it).
     func setArea(_ area: TripArea?, for tripID: String) {
         updateTrip(tripID) { $0.area = area }
+    }
+
+    // MARK: - Campus Visits
+
+    /// The ready-made visit trip's name, e.g. "Duke Campus Visit".
+    static func campusVisitName(for campus: CityLocation.City) -> String {
+        String(
+            format: NSLocalizedString("%@ Campus Visit", comment: "Trip planner: name of a campus's ready-made one-day trip, e.g. \"Duke Campus Visit\""),
+            campus.campusVisitShortName
+        )
+    }
+
+    /// The campus's visit trip if it's been made already, or nil.
+    func existingCampusVisit(for campus: CityLocation.City) -> Trip? {
+        let name = Self.campusVisitName(for: campus)
+        // The name check also finds a visit trip the 2.4 app re-saved without `isCampusVisit`
+        return trips(in: campus.name).first { $0.isCampusVisit == true || $0.name == name }
+    }
+
+    /// The campus's visit trip: one day with every landmark, in walking order.
+    /// If there's already one it's returned instead, so a second tap doesn't make a duplicate.
+    @discardableResult
+    func campusVisitTrip(for campus: CityLocation.City) -> Trip {
+        if let existing = existingCampusVisit(for: campus) {
+            return existing
+        }
+
+        // Built whole and appended once, so it's one save rather than one per stop
+        let trip = Trip(name: Self.campusVisitName(for: campus), cityName: campus.name, days: [Self.walkingDay(for: campus)], isCampusVisit: true)
+        trips.append(trip)
+        return trip
+    }
+
+    /// One day holding every landmark of a campus (or city), in the same
+    /// nearest-stop order as the day header's "Optimize route".
+    static func walkingDay(for city: CityLocation.City) -> TripDay {
+        let buildings = city.buildings
+        let stops = buildings.map { TripStop(kind: .landmark(buildingID: $0.id)) }
+        let resolved = stops.map { ResolvedTripStop(stop: $0, buildings: buildings, customPlaces: []) }
+        let byID = Dictionary(uniqueKeysWithValues: stops.map { ($0.id, $0) })
+        return TripDay(stops: ResolvedTripStop.optimizedStopIDs(resolved).compactMap { byID[$0] })
+    }
+
+    // MARK: - College Road Trips
+
+    /// The order to drive between campuses: start at the first one, then always
+    /// go to the closest campus not yet visited (straight-line, by campus centre).
+    /// Duplicates and non-campuses are dropped.
+    static func roadTripOrder(_ campuses: [CityLocation.City]) -> [CityLocation.City] {
+        var seen: Set<CityLocation.City> = []
+        let unique = campuses.filter { $0.isCampus && seen.insert($0).inserted }
+        let points = unique.map { RoutePoint(id: $0.rawValue, latitude: $0.coordinate.lat, longitude: $0.coordinate.lon) }
+        return WalkingRoute.nearestNeighbourOrder(points).compactMap { CityLocation.City(rawValue: $0.id) }
+    }
+
+    /// Straight-line metres between two campus centres, for the "drive" shown between days.
+    static func meters(from: CityLocation.City, to: CityLocation.City) -> Double {
+        WalkingRoute.meters(
+            from: RoutePoint(id: from.rawValue, latitude: from.coordinate.lat, longitude: from.coordinate.lon),
+            to: RoutePoint(id: to.rawValue, latitude: to.coordinate.lat, longitude: to.coordinate.lon)
+        )
+    }
+
+    /// A road trip's name: "Duke, Georgia and Wake Forest Road Trip" for up to three
+    /// campuses, "5-Campus Road Trip" for more.
+    static func collegeRoadTripName(for orderedCampuses: [CityLocation.City]) -> String {
+        if (1...3).contains(orderedCampuses.count) {
+            let names = ListFormatter.localizedString(byJoining: orderedCampuses.map(\.campusVisitShortName))
+            return String(
+                format: NSLocalizedString("%@ Road Trip", comment: "Trip planner: name of a college road trip, e.g. \"Duke, UNC and Wake Forest Road Trip\""),
+                names
+            )
+        }
+        return String(
+            format: NSLocalizedString("%d-Campus Road Trip", comment: "Trip planner: name of a college road trip visiting many campuses, e.g. \"5-Campus Road Trip\""),
+            orderedCampuses.count
+        )
+    }
+
+    /// A road trip already made for exactly these campuses in this order, if any.
+    func existingCollegeRoadTrip(for orderedCampuses: [CityLocation.City]) -> Trip? {
+        guard !orderedCampuses.isEmpty else { return nil }
+        return collegeRoadTrips.first { $0.roadTripCampuses == orderedCampuses }
+    }
+
+    /// One trip visiting the campuses: one day per campus, each day that campus's
+    /// landmarks in walking order, the days in a short driving order starting from
+    /// the first campus given. If the same road trip was made already it's returned
+    /// instead, so a second tap doesn't make a duplicate. nil when no campus is given.
+    @discardableResult
+    func collegeRoadTrip(for campuses: [CityLocation.City]) -> Trip? {
+        let ordered = Self.roadTripOrder(campuses)
+        guard let first = ordered.first else { return nil }
+        if let existing = existingCollegeRoadTrip(for: ordered) {
+            return existing
+        }
+
+        let label = NSLocalizedString("College Road Trip", comment: "Trip planner: place label for a trip that visits several campuses")
+        let trip = Trip(
+            name: Self.collegeRoadTripName(for: ordered),
+            // A label, like an anywhere trip's; never a Stamped city's name
+            cityName: Trip.anywhereCityName(for: label, context: nil),
+            days: ordered.map { Self.walkingDay(for: $0) },
+            area: TripArea(name: first.name, latitude: first.coordinate.lat, longitude: first.coordinate.lon),
+            isCollegeRoadTrip: true
+        )
+        trips.append(trip)
+        return trip
     }
 
     // MARK: - Days

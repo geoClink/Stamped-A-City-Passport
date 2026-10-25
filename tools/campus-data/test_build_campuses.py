@@ -83,3 +83,59 @@ def test_shared_article_buildings_use_their_own_coordinates() -> None:
 
     assert errors == []
     assert campus["buildings"][1]["_lat"] == 28.031  # its own OSM point, not the article's
+
+
+def test_conference_must_be_known_and_us_only() -> None:
+    # A typo in "conference" or a conference on a non-US campus would put it in the wrong list group
+    def campus(enum_case: str, country: str, conference: str) -> dict:
+        return {
+            "name": enum_case, "enumCase": enum_case, "country": country, "conference": conference,
+            "wiki": "Test College", "currency": "USD ($)", "_file": "test.json",
+            "details": {field: "x" for field in build_campuses.DETAIL_FIELDS},
+            "buildings": [{
+                "id": f"campus_{enum_case.lower()}_b{n}", "wiki": f"B{n}", "name": f"B{n}", "description": "d",
+                "architect": "a", "address": "x", "oldUse": "o", "newUse": "n", "buildingStyle": "s",
+                "yearBuilt": 1900, "coordinates": [28.03 + n / 1000, -81.95], "coordinatesSource": "osm",
+                "sharedArticle": True,
+            } for n in range(4)],
+        }
+    campuses = [
+        campus("testBigTen", "unitedStates", "bigTen"),
+        campus("testTypo", "unitedStates", "bigTenn"),
+        campus("testAbroad", "canada", "acc"),
+    ]
+    errors, _ = build_campuses.check_campuses(campuses, {"Test College": [28.03, -81.95]})
+
+    assert not any("testBigTen" in error for error in errors)
+    assert any("testTypo" in error and "bigTenn" in error for error in errors)
+    assert any("testAbroad" in error and "only US campuses" in error for error in errors)
+
+
+def test_colors_and_traditions_are_checked() -> None:
+    # Bad hex colors or a tradition far from campus would show up wrong in the app
+    def campus(enum_case: str, colors: list, tradition_point: list[float]) -> dict:
+        return {
+            "name": enum_case, "enumCase": enum_case, "country": "unitedStates", "colors": colors,
+            "wiki": "Test College", "currency": "USD ($)", "_file": "test.json",
+            "details": {field: "x" for field in build_campuses.DETAIL_FIELDS},
+            "buildings": [{
+                "id": f"campus_{enum_case.lower()}_b{n}", "wiki": f"B{n}", "name": f"B{n}", "description": "d",
+                "architect": "a", "address": "x", "oldUse": "o", "newUse": "n", "buildingStyle": "s",
+                "yearBuilt": 1900, "coordinates": [28.03 + n / 1000, -81.95], "coordinatesSource": "osm",
+                "sharedArticle": True,
+            } for n in range(4)],
+            "traditions": [{
+                "id": f"trad_{enum_case.lower()}_bell", "name": "Ring the bell", "description": "d",
+                "coordinates": tradition_point, "coordinatesSource": "osm", "source": "https://example.edu",
+            }],
+        }
+    campuses = [
+        campus("good", ["#18453B", "#FFFFFF"], [28.031, -81.95]),
+        campus("badcolor", ["green"], [28.031, -81.95]),
+        campus("faraway", ["#000000"], [29.0, -81.95]),
+    ]
+    errors, _ = build_campuses.check_campuses(campuses, {"Test College": [28.03, -81.95]})
+
+    assert not any(error.startswith("good") for error in errors)
+    assert any(error.startswith("badcolor") and "colors" in error for error in errors)
+    assert any(error.startswith("faraway") and "km from the campus centre" in error for error in errors)

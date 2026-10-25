@@ -67,7 +67,7 @@ final class ItineraryNarrativeService: ObservableObject {
     private func generateDayNarrative(dayNumber: Int, buildings: [Building]) async {
         let session = LanguageModelSession(model: .default)
         let buildingNames = buildings.map { $0.name }.joined(separator: ", ")
-        let styles = Set(buildings.map { $0.buildingStyle }).joined(separator: ", ")
+        let styles = Set(buildings.compactMap(\.knownStyle)).joined(separator: ", ")
 
         let prompt = """
         Write 2 sentences introducing Day \(dayNumber) of an architectural tour.

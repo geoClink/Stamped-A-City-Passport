@@ -15,20 +15,21 @@ struct CityStampDetailView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.horizontalSizeClass) var sizeClass
     @AppStorage("reduce_motion") var manualReduceMotion = false
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     
     @State private var stampScale: CGFloat = 0.5
     @State private var stampOpacity: Double = 0
     
     var body: some View {
         ZStack {
-            Color(UIColor.systemGroupedBackground).ignoresSafeArea()
+            DS.Palette.pageBackground.ignoresSafeArea()
             
             passportBackgroundPattern
             
-            VStack(spacing: sizeClass == .regular ? 50 : 30) {
+            VStack(spacing: sizeClass == .regular ? DS.Space.section * 1.5 : DS.Space.section) {
                 Spacer()
                 
-                VStack(spacing: 20) {
+                VStack(spacing: DS.Space.xl) {
                     PassportStampView(
                         cityName: city.name,
                         dateCompleted: date,
@@ -46,17 +47,24 @@ struct CityStampDetailView: View {
                             .multilineTextAlignment(.center)
                             .foregroundColor(.secondary)
                             .frame(maxWidth: 400)
-                            .padding(.top)
+                            .padding(.top, DS.Space.l)
                     }
                 }
                 
-                VStack(spacing: 16) {
-                    HStack(spacing: 20) {
+                VStack(spacing: DS.Space.l) {
+                    // Side by side normally; stacked at accessibility sizes so labels don't clip
+                    let buttons = dynamicTypeSize.isAccessibilitySize
+                        ? AnyLayout(VStackLayout(spacing: DS.Space.m))
+                        : AnyLayout(HStackLayout(spacing: DS.Space.l))
+                    buttons {
                         ShareLink(item: "I just unlocked the \(city.name) Architecture Stamp! 🏛️") {
                             Label("Share Achievement", systemImage: "square.and.arrow.up")
                                 .font(.headline)
-                                .padding()
-                                .background(RoundedRectangle(cornerRadius: 12).fill(Color.secondary.opacity(0.1)))
+                                .padding(DS.Space.l)
+                                .background(
+                                    RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
+                                        .fill(Color.secondary.opacity(0.1))
+                                )
                         }
                         .buttonStyle(.plain)
                         
@@ -64,22 +72,22 @@ struct CityStampDetailView: View {
                             Text("Dismiss")
                                 .font(.headline)
                                 .foregroundColor(.white)
-                                .padding(.vertical, 14)
-                                .padding(.horizontal, 40)
-                                .background(Color.adventureOrange)
+                                .padding(.vertical, DS.Space.l)
+                                .padding(.horizontal, DS.Space.section)
+                                .background(DS.Palette.accent)
                                 .clipShape(Capsule())
                         }
                     }
                     
                     Text("VERIFIED ON \(date.uppercased())")
-                        .font(.system(size: 10, weight: .bold, design: .monospaced))
+                        .font(.system(.caption2, design: .monospaced).weight(.bold))
                         .tracking(3)
                         .foregroundColor(.secondary.opacity(0.6))
                 }
                 
                 Spacer()
             }
-            .padding(40)
+            .padding(DS.Space.section)
         }
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
@@ -91,11 +99,11 @@ struct CityStampDetailView: View {
     }
     
     var passportBackgroundPattern: some View {
-        VStack(spacing: 40) {
+        VStack(spacing: DS.Space.section) {
             ForEach(0..<10) { _ in
                 Divider()
                     .overlay(Color.secondary.opacity(0.1))
-                    .padding(.horizontal, 20)
+                    .dsPageMargin()
             }
         }
         .allowsHitTesting(false)

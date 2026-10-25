@@ -1,0 +1,5 @@
+/* Permission prompts (the English text is set in the target's build settings) */
+"NSLocationWhenInUseUsageDescription" = "Stamped! zeigt dir Wahrzeichen in der Nähe, während du unterwegs bist.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Stamped! benachrichtigt dich, wenn du in der Nähe eines Wahrzeichens bist – auch im Hintergrund.";
+"NSCameraUsageDescription" = "Erlaube den Kamerazugriff, um das Wahrzeichen zu fotografieren, das du gerade besuchst.";
+"NSPhotoLibraryUsageDescription" = "Erlaube den Zugriff auf deine Fotos, um Wahrzeichenfotos für deinen Pass zu sichern und auszuwählen.";

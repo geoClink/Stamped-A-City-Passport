@@ -25,8 +25,13 @@ struct WorldMapView: View {
         city.buildings.filter { progress.visitedIDs.contains($0.id) }.count
     }
 
+    /// Real cities only; campuses are counted on their own, so the total is 140, not 241
     private var visitedCityCount: Int {
-        cities.filter { isVisited($0) }.count
+        CityLocation.City.cityCases.filter { isVisited($0) }.count
+    }
+
+    private var visitedCampusCount: Int {
+        CityLocation.City.campusCases.filter { isVisited($0) }.count
     }
 
     var body: some View {
@@ -123,7 +128,7 @@ struct WorldMapView: View {
                     Text(city.name)
                         .font(.headline)
                         .foregroundStyle(.primary)
-                    Text(city.country.rawValue)
+                    Text(city.country.localizedName)
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
@@ -170,25 +175,31 @@ struct WorldMapView: View {
 
     // MARK: - Stats Bar
 
-    private var statsBar: some View {
-        HStack(spacing: 16) {
-            VStack(alignment: .leading, spacing: 2) {
-                HStack(alignment: .lastTextBaseline, spacing: 4) {
-                    Text("\(visitedCityCount)")
-                        .font(.title2.bold())
-                        .foregroundStyle(Color.adventureOrange)
-                    Text("/ \(cities.count)")
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
-                }
-                Text("cities visited")
-                    .font(.caption)
+    private func statCount(_ visited: Int, of total: Int, label: LocalizedStringKey) -> some View {
+        VStack(alignment: .leading, spacing: 2) {
+            HStack(alignment: .lastTextBaseline, spacing: 4) {
+                Text("\(visited)")
+                    .font(.title2.bold())
+                    .foregroundStyle(Color.adventureOrange)
+                Text("/ \(total)")
+                    .font(.subheadline)
                     .foregroundStyle(.secondary)
             }
+            Text(label)
+                .font(.caption)
+                .foregroundStyle(.secondary)
+        }
+    }
 
-            Spacer()
-
-            HStack(spacing: 12) {
+    private var statsBar: some View {
+        // Counts on top, the pin key underneath, so neither gets squeezed
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(spacing: 24) {
+                statCount(visitedCityCount, of: CityLocation.City.cityCases.count, label: "cities visited")
+                statCount(visitedCampusCount, of: CityLocation.City.campusCases.count, label: "campuses visited")
+                Spacer(minLength: 0)
+            }
+            HStack(spacing: 16) {
                 pinLegend(visited: true, label: "Visited")
                 pinLegend(visited: false, label: "Not yet")
             }
@@ -199,7 +210,7 @@ struct WorldMapView: View {
         .safeAreaPadding(.bottom)
     }
 
-    private func pinLegend(visited: Bool, label: String) -> some View {
+    private func pinLegend(visited: Bool, label: LocalizedStringKey) -> some View {
         HStack(spacing: 6) {
             ZStack {
                 Circle()

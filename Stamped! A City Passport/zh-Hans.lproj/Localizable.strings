@@ -299,3 +299,304 @@
 
 // MARK: - Campus Architecture
 "CAMPUS ARCHITECTURE" = "校园建筑";
+"OTHER U.S. CAMPUSES" = "其他美国校园";
+"CONFERENCE MASTER" = "联盟大师";
+
+// MARK: - Campus Visit
+"Plan a Campus Visit" = "规划校园参观";
+"%d landmarks, one walking day" = "%d 个地标，步行一日游";
+"Open your campus visit" = "打开你的校园参观";
+"Opens a one-day walking trip of every landmark on campus." = "打开一条步行游览校园所有地标的一日行程。";
+"%@ Campus Visit" = "%@ 校园参观";
+
+// MARK: - Campus Traditions
+"CAMPUS TRADITIONS" = "校园传统";
+"%d of %d traditions done" = "已完成 %d/%d 项传统";
+"Traditions Keeper" = "传统守护者";
+"Done" = "已完成";
+"Not done" = "未完成";
+"Double tap to check this tradition off." = "轻点两下即可勾选这项传统。";
+"Show %@ in Maps" = "在地图中显示 %@";
+
+// MARK: - College List & Road Trip
+"My College List" = "我的大学清单";
+"Add to My College List" = "添加到我的大学清单";
+"Remove from My College List" = "从我的大学清单中移除";
+"On your list" = "已在清单中";
+"Plan a College Road Trip" = "规划大学之旅";
+"Tap the heart on any campus page to add it here." = "在任意校园页面轻点爱心即可添加到这里。";
+"1 school" = "1 所大学";
+"%d schools" = "%d 所大学";
+"No Schools Yet" = "还没有大学";
+"Open any campus in Campus Architecture and tap the heart to add it to your list. Then plan a road trip that visits them all, one campus a day." = "在“校园建筑”中打开任意校园，轻点爱心将其添加到清单。然后规划一次每天一所校园、逐一参观的旅程。";
+"Makes one trip with a day at each school, in a short driving order." = "创建一个行程，每所大学一天，并按车程较短的顺序排列。";
+"%1$d of %2$d landmarks stamped" = "已盖章 %1$d/%2$d 个地标";
+"College Road Trip" = "大学之旅";
+"College Road Trips" = "大学之旅";
+"Schools to Visit" = "要参观的大学";
+"One day per school, each a walking tour of its landmarks." = "每所大学一天，每天步行游览其地标。";
+"Driving Order" = "行车顺序";
+"Starts at %@, then always drives to the closest school left. Distances are straight-line." = "从%@出发，然后总是前往剩下最近的大学。距离为直线距离。";
+"Cancel" = "取消";
+"Open" = "打开";
+"Create" = "创建";
+"%d landmarks" = "%d 个地标";
+"Day %1$d: %2$@" = "第 %1$d 天：%2$@";
+"%1$@ from %2$@" = "距%2$@ %1$@";
+"%@ Road Trip" = "%@之旅";
+"%d-Campus Road Trip" = "%d 所校园之旅";
+"Tour %@ in 3D" = "以 3D 游览%@";
+
+// MARK: - Campus disclaimer
+"Stamped! is not affiliated with or endorsed by any university. School names and colors are used only to identify them." = "Stamped! 与任何大学均无关联，也未获任何大学认可。大学名称和颜色仅用于识别。";
+
+// MARK: - Hotels & map chips
+"Landmarks" = "地标";
+"Food" = "美食";
+"Coffee" = "咖啡";
+"Culture" = "文化";
+"Stay" = "住宿";
+"Find Hotels" = "查找酒店";
+"Find hotels in %1$@ on %2$@" = "在 %2$@ 上查找%1$@的酒店";
+"Opens the hotel website. Stamped! doesn't handle bookings or payments." = "打开酒店网站。Stamped! 不处理预订或付款。";
+"Stamped! may earn a commission." = "Stamped! 可能会获得佣金。";
+"Check Prices" = "查看价格";
+"Check prices for %1$@ on %2$@" = "在 %2$@ 上查看%1$@的价格";
+"Hotels near %@" = "%@附近的酒店";
+
+// MARK: - City page tiles & home shortcuts
+"Quiz Mastered" = "测验已掌握";
+"Architecture Quiz" = "建筑测验";
+"Best %d/10" = "最佳 %d/10";
+"10 questions" = "10 道题";
+"Double tap to start the quiz." = "轻点两下开始测验。";
+"Plan a Trip" = "规划行程";
+"Day by day" = "逐日安排";
+"Plan your days, stop by stop." = "逐日逐站规划行程。";
+"Campus Visit" = "校园参观";
+"Open your visit" = "打开参观行程";
+"%d stops, 1 day" = "%d 站，1 天";
+"My Journey" = "我的旅程";
+"Achievements" = "成就";
+"World Map" = "世界地图";
+"My Trips" = "我的行程";
+
+// MARK: - Home banner & world map
+"Pick a city or campus below, then stamp every landmark." = "在下方选择一座城市或一个校园，然后为每个地标盖章。";
+"campuses visited" = "已到访校园";
+"Double tap to read more." = "轻点两下阅读更多。";
+
+// MARK: - City map
+"Add a Place" = "添加地点";
+"Add to Trip" = "添加到行程";
+"All Landmarks" = "所有地标";
+"All Styles" = "所有风格";
+"Choose every landmark or one of your trips to tour" = "选择全部地标或你的某个行程来游览";
+"Close" = "关闭";
+"Filter landmarks, switch to satellite view or add a place" = "筛选地标、切换到卫星视图或添加地点";
+"Flies between every landmark automatically" = "自动在所有地标之间飞行";
+"Map key" = "地图图例";
+"Map options" = "地图选项";
+"Next landmark" = "下一个地标";
+"No landmarks match this filter" = "没有符合此筛选条件的地标";
+"Previous landmark" = "上一个地标";
+"Remove from Want to Visit" = "从想去的地方移除";
+"Show" = "显示";
+"Shows this landmark's card" = "显示此地标的卡片";
+"Stop" = "停止";
+"Stops the guided tour" = "停止导览";
+"Style" = "风格";
+"Tour" = "导览";
+"View Details" = "查看详情";
+"Your Trips" = "你的行程";
+"Your place" = "你的地点";
+"Your places" = "你的地点";
+"Stamped" = "已盖章";
+"Not yet visited" = "尚未到访";
+"Not Visited" = "未到访";
+"Up next (pulsing)" = "下一个（闪烁）";
+"Want to Visit" = "想去的地方";
+"Saved" = "已保存";
+"Show Map View" = "显示地图视图";
+"Show Satellite View" = "显示卫星视图";
+
+// MARK: - Passport campuses
+"%d Cities Stamped" = "已盖章 %d 座城市";
+"%d of %d campuses" = "%d/%d 个校园";
+"CAMPUSES" = "校园";
+"Stamp every landmark on a campus to add its stamp here, in school colors." = "为校园的每个地标盖章，即可在这里添加该校校色的印章。";
+"+ %d campuses" = "+ %d 个校园";
+"+ 1 campus" = "+ 1 个校园";
+"Optimize route" = "优化路线";
+"Reorders this day's stops so each one is the closest to the last" = "重新排列当天的站点，使每一站都离上一站最近";
+"Campus Explored!" = "校园探索完成！";
+"City Explored!" = "城市探索完成！";
+"Save the schools you're considering, then plan a road trip to visit them." = "收藏你感兴趣的大学，然后规划一次参观之旅。";
+"+%d more" = "另外 %d 所";
+
+// MARK: - City page sections
+"Weather" = "天气";
+"Chronology" = "年代顺序";
+"Upcoming Events" = "即将举行的活动";
+"Nearby Dining" = "附近餐饮";
+"Travel Dossier" = "旅行档案";
+"%d of %d landmarks stamped" = "已盖章 %d/%d 个地标";
+"Read more" = "阅读更多";
+"Show less" = "收起";
+
+/* Map place card events */
+"Upcoming Events Here" = "此处即将举行的活动";
+"Happening Nearby" = "附近的活动";
+
+/* Design system section headers */
+"ARCHITECTURAL ITINERARY" = "建筑行程";
+"Saved Places" = "已保存的地点";
+"Anywhere" = "任意地点";
+
+/* My Journey section headers */
+"FAVOURITE ARCHITECT" = "最喜欢的建筑师";
+"MILESTONES" = "里程碑";
+
+/* Settings */
+"Birthday" = "生日";
+"Used for the Birthday Stamp achievement" = "用于“生日印章”成就";
+"Set" = "设置";
+"Feedback & Support" = "反馈与支持";
+"Report Incorrect Info" = "报告错误信息";
+"Wrong building details, photos, or descriptions" = "建筑信息、照片或描述有误";
+"Suggest a Building" = "推荐建筑";
+"Know a landmark we're missing?" = "知道我们遗漏的地标吗？";
+"General Feedback" = "一般反馈";
+"Ideas, bugs, or anything else" = "想法、错误或其他任何内容";
+
+/* My Journey and Achievements */
+"stamps" = "枚印章";
+"%lld%% of the world explored" = "已探索世界的 %lld%%";
+"%lld buildings left to discover" = "还有 %lld 座建筑待发现";
+"%lld stamps, %lld percent of the world explored" = "%lld 枚印章，已探索世界的百分之 %lld";
+"Cities Visited" = "到访城市";
+"Cities Mastered" = "已征服城市";
+"Countries" = "国家";
+"Days Active" = "活跃天数";
+"1 building stamped" = "已盖章 1 座建筑";
+"%lld buildings stamped" = "已盖章 %lld 座建筑";
+"Total Stamps" = "印章总数";
+"%lld of %lld" = "%lld / %lld";
+"achievements" = "项成就";
+"All" = "全部";
+"Cities" = "城市";
+"Mastery" = "精通";
+"Continents" = "大洲";
+"Campuses" = "校园";
+"First Stamp" = "第一枚印章";
+"Visit your very first landmark" = "参观你的第一个地标";
+"On The Move" = "在路上";
+"Visit 10 landmarks" = "参观 10 个地标";
+"Passport Regular" = "护照常客";
+"Visit 50 landmarks" = "参观 50 个地标";
+"Century Club" = "百城俱乐部";
+"Visit 100 landmarks" = "参观 100 个地标";
+"Night Stamper" = "夜间盖章者";
+"Stamp a landmark between midnight and 5am" = "在午夜至凌晨 5 点之间为地标盖章";
+"Weekend Wanderer" = "周末漫游者";
+"Stamp a landmark on a Saturday or Sunday" = "在周六或周日为地标盖章";
+"First Destination" = "第一个目的地";
+"Stamp a landmark in any city" = "在任意城市为地标盖章";
+"Multi-City" = "多城之旅";
+"Stamp landmarks in 5 different cities" = "在 5 个不同城市为地标盖章";
+"Jet Setter" = "空中飞人";
+"Stamp landmarks in 15 different cities" = "在 15 个不同城市为地标盖章";
+"World Traveler" = "环球旅行者";
+"Stamp landmarks in 30 different cities" = "在 30 个不同城市为地标盖章";
+"Completionist" = "全收集达人";
+"Collect every stamp in a single city" = "集齐一座城市的所有印章";
+"Triple Crown" = "三冠王";
+"Fully complete 3 cities" = "完全征服 3 座城市";
+"City Master" = "城市大师";
+"Fully complete 10 cities" = "完全征服 10 座城市";
+"Bi-Continental" = "跨越两洲";
+"Stamp landmarks on 2 different continents" = "在 2 个不同大洲为地标盖章";
+"Old World" = "旧大陆";
+"Stamp landmarks in both Europe and Asia" = "在欧洲和亚洲都为地标盖章";
+"World Citizen" = "世界公民";
+"Stamp landmarks on 4 different continents" = "在 4 个不同大洲为地标盖章";
+"Around The World" = "环游世界";
+"Stamp landmarks on all 6 continents" = "在全部 6 个大洲为地标盖章";
+"Continent Conqueror" = "大洲征服者";
+"Fully complete a city on every continent" = "在每个大洲完全征服一座城市";
+"Early Bird" = "早起的鸟儿";
+"Stamp a landmark before 8am" = "在早上 8 点前为地标盖章";
+"Frequent Flyer" = "常旅客";
+"Stamp 5 landmarks in a single day" = "一天内为 5 个地标盖章";
+"Seasoned Traveler" = "资深旅行者";
+"Stamp landmarks across 3 different calendar months" = "在 3 个不同月份为地标盖章";
+"New Year's Stamp" = "新年印章";
+"Stamp a landmark on January 1st" = "在 1 月 1 日为地标盖章";
+"Birthday Stamp" = "生日印章";
+"Stamp a landmark on your birthday" = "在生日当天为地标盖章";
+"Home Turf" = "主场";
+"Fully complete any US city" = "完全征服任意一座美国城市";
+"Island Hopper" = "跳岛达人";
+"Stamp landmarks in Honolulu, Bali, and Zanzibar" = "在檀香山、巴厘岛和桑给巴尔为地标盖章";
+"Halfway There" = "已过半程";
+"Reach 50% completion in any city" = "在任意城市达到 50% 完成度";
+"Grand Slam" = "大满贯";
+"Fully complete 25 cities" = "完全征服 25 座城市";
+"Legend" = "传奇";
+"Collect 500 total stamps" = "累计收集 500 枚印章";
+"Campus Tour" = "校园之旅";
+"Stamp a building on any campus" = "在任意校园为一座建筑盖章";
+"Campus Hopper" = "校园漫游者";
+"Stamp buildings on 5 different campuses" = "在 5 个不同校园为建筑盖章";
+"Valedictorian" = "毕业生代表";
+"Fully complete any campus" = "完全征服任意一个校园";
+"Honor Roll" = "光荣榜";
+"Fully complete 5 campuses" = "完全征服 5 个校园";
+"New Tradition" = "新传统";
+"Do your first campus tradition" = "完成你的第一个校园传统";
+"Do every tradition on one campus" = "完成一个校园的所有传统";
+"Tradition Collector" = "传统收藏家";
+"Do 25 campus traditions" = "完成 25 个校园传统";
+"Stamp a building on every %@ campus" = "在 %@ 的每个校园为一座建筑盖章";
+
+/* Home and first-launch card */
+"Cities, Landmarks or Architects" = "城市、地标或建筑师";
+"My Passport" = "我的护照";
+"YOUR ODYSSEY AWAITS" = "你的旅程正在等待";
+"Unlock your first badge" = "解锁你的第一枚徽章";
+"Unlock Your Collection" = "解锁你的收藏";
+"Every city mastered is a stamp earned." = "每征服一座城市，就获得一枚印章。";
+"PASSPORT STAMPED" = "护照已盖章";
+"DATE: %@" = "日期：%@";
+"DID YOU KNOW?" = "你知道吗？";
+"While originally intended only as a protective sealant, the bridge’s signature ‘International Orange’ was made permanent when the architect realized its vibrant hue served as a perfect, high-contrast beacon against the San Francisco fog." = "这座大桥标志性的“国际橙”原本只是防护底漆，后来建筑师发现这种鲜艳的颜色在旧金山的雾中格外醒目，便将它永久保留了下来。";
+"Visit Landmarks" = "参观地标";
+"Mark buildings as discovered to reach 100% completion." = "将建筑标记为已发现，达到 100% 完成度。";
+"Capture the View" = "记录美景";
+"Add personal photos to create a custom gallery." = "添加个人照片，打造专属相册。";
+"Collect the Stamp" = "收集印章";
+"Complete a city to earn its official Passport seal." = "完成一座城市，获得它的官方护照印章。";
+"Ace the Quiz" = "拿下测验";
+"Score perfectly on the architecture test to show your expertise." = "在建筑测验中拿满分，展示你的专业知识。";
+"Generate Itinerary" = "生成行程";
+"Instantly create a smart travel plan for any city." = "为任意城市即时生成智能旅行计划。";
+"Convert Currency" = "货币换算";
+"Check exchange rates instantly within the Travel Dossier." = "在旅行档案中即时查看汇率。";
+"Unlock My First Stamp" = "解锁我的第一枚印章";
+
+/* Regions that aren't countries (countries come from iOS) */
+"England" = "英格兰";
+"Scotland" = "苏格兰";
+"New South Wales" = "新南威尔士";
+"Victoria" = "维多利亚";
+"Queensland" = "昆士兰";
+
+/* Passport */
+"Your Passport" = "你的护照";
+"EXPLORATION PROGRESS" = "探索进度";
+
+/* World Map */
+"cities visited" = "座城市已到访";
+"Visited" = "已到访";
+"Not yet" = "尚未到访";
+"View City" = "查看城市";

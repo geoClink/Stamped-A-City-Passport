@@ -61,7 +61,7 @@ struct WikiBuildingPhoto: View {
 
     // Shown when Wikipedia has no photo and no asset exists in the catalog
     private var assetFallback: some View {
-        VStack(spacing: 10) {
+        VStack(spacing: DS.Space.s) {
             Image(systemName: "photo.slash")
                 .font(.system(size: fallbackIconSize))
                 .foregroundStyle(.secondary)
@@ -71,14 +71,14 @@ struct WikiBuildingPhoto: View {
         }
         .frame(maxWidth: .infinity)
         .frame(height: height)
-        .background(Color(UIColor.secondarySystemBackground))
+        .background(DS.Palette.cardBackground)
         .accessibilityElement(children: .combine)
         .accessibilityLabel("No photo available for \(building.name)")
     }
 
     private var shimmerPlaceholder: some View {
         Rectangle()
-            .fill(Color(UIColor.secondarySystemBackground))
+            .fill(DS.Palette.cardBackground)
             .frame(maxWidth: .infinity)
             .frame(height: height)
             .shimmering()
@@ -89,6 +89,7 @@ struct WikiBuildingPhoto: View {
 
 struct WikiDescriptionCard: View {
     let building: Building
+    var isHighContrast = false
 
     @State private var extract: String? = nil
     @State private var isLoading = true
@@ -98,21 +99,19 @@ struct WikiDescriptionCard: View {
         Group {
             if isLoading {
                 // Reserve space so the layout doesn't shift when content loads
-                Rectangle()
-                    .fill(Color(UIColor.secondarySystemBackground))
+                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                    .fill(DS.Palette.cardBackground)
                     .frame(height: 90)
-                    .cornerRadius(12)
                     .shimmering()
             } else if let text = extract {
-                VStack(alignment: .leading, spacing: 8) {
-                    HStack(spacing: 6) {
+                VStack(alignment: .leading, spacing: DS.Space.s) {
+                    HStack(spacing: DS.Space.xs) {
                         Image(systemName: "w.circle.fill")
                             .font(.caption)
-                            .foregroundColor(.secondary)
                         Text("From Wikipedia")
-                            .font(.caption2)
-                            .foregroundColor(.secondary)
+                            .font(.caption2.monospaced().weight(.semibold))
                     }
+                    .foregroundColor(isHighContrast ? .primary : .secondary)
                     Text(text)
                         .font(.subheadline)
                         .foregroundColor(.primary)
@@ -121,15 +120,12 @@ struct WikiDescriptionCard: View {
                     if !expanded {
                         Button("Read more") { withAnimation(.easeInOut(duration: 0.2)) { expanded = true } }
                             .font(.caption.bold())
-                            .foregroundColor(.secondary)
+                            .foregroundColor(isHighContrast ? .primary : DS.Palette.accent)
                             .accessibilityLabel("Read more about \(building.name)")
                             .accessibilityHint("Expands the full Wikipedia description")
                     }
                 }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(14)
-                .background(Color(UIColor.secondarySystemBackground))
-                .cornerRadius(12)
+                .dsCard(isHighContrast: isHighContrast)
                 .transition(.opacity)
             }
             // If loaded and no extract: render nothing (no reserved space needed)

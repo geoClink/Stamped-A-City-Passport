@@ -71,6 +71,9 @@ struct CityMapView: View {
     @AppStorage("haptics_enabled") private var hapticsEnabled = true
     /// Satellite photos (default) or the regular drawn map; remembered between launches.
     @AppStorage("map_uses_satellite") private var useSatellite = true
+    /// The map key shows by itself once, then lives behind the "?" button
+    @AppStorage("map_legend_seen") private var hasSeenMapLegend = false
+    @State private var showingLegend = false
     @Environment(\.accessibilityReduceTransparency) private var reduceTransparency
     @Environment(\.horizontalSizeClass) private var sizeClass
     @Environment(\.dismiss) private var dismiss
@@ -113,7 +116,7 @@ struct CityMapView: View {
     }
 
     private var styles: [String] {
-        Set(mappableBuildings.map(\.buildingStyle)).filter { !$0.isEmpty }.sorted()
+        Set(mappableBuildings.compactMap(\.knownStyle)).sorted()
     }
 
     /// Middle of the city's landmarks. The median ignores one far-away landmark
@@ -209,7 +212,9 @@ struct CityMapView: View {
             MapCompass()
             MapPitchToggle()
         }
-        .navigationTitle("\(cityName) Map")
+        // Orange, not system blue, for Apple's own map controls (the 2D/3D toggle, the compass)
+        .tint(.adventureOrange)
+        .navigationTitle(mapTitle)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar { toolbarContent }
         .onAppear {
@@ -277,7 +282,7 @@ struct CityMapView: View {
                 .padding(.bottom, 8)
                 .transition(.move(edge: .bottom).combined(with: .opacity))
             } else {
-                legend
+                legendButton
                     .frame(maxWidth: .infinity, alignment: .trailing)
                     .padding()
             }
@@ -367,18 +372,23 @@ struct CityMapView: View {
 
     // MARK: - Toolbar
 
+    /// "Michigan State" rather than "Michigan State University Map", so the title fits between the buttons.
+    private var mapTitle: String {
+        guard let city = CityLocation.City(rawValue: cityName), city.isCampus else { return cityName }
+        return city.campusVisitShortName
+    }
+
     @ToolbarContentBuilder
     private var toolbarContent: some ToolbarContent {
-        // On iPad the map is full screen (no swipe-down), so it needs a way out
-        if sizeClass == .regular {
-            ToolbarItem(placement: .cancellationAction) {
-                Button("Done") {
-                    stopTour()
-                    dismiss()
-                }
+        // Swiping down pans the map instead of closing it, so every device gets a Done button
+        ToolbarItem(placement: .cancellationAction) {
+            Button("Done") {
+                stopTour()
+                dismiss()
             }
         }
-        ToolbarItem(placement: .topBarLeading) {
+        // Filters, Add a Place and the satellite switch share one menu, so the title has room
+        ToolbarItem(placement: .topBarTrailing) {
             Menu {
                 Picker("Show", selection: $filter) {
                     ForEach(MapFilter.allCases) { option in
@@ -394,29 +404,27 @@ struct CityMapView: View {
                     }
                     .pickerStyle(.menu)
                 }
+                Section {
+                    Button {
+                        useSatellite.toggle()
+                    } label: {
+                        Label(useSatellite ? "Show Map View" : "Show Satellite View",
+                              systemImage: useSatellite ? "map" : "globe.americas.fill")
+                    }
+                    Button {
+                        stopTour()
+                        showingAddPlace = true
+                    } label: {
+                        Label("Add a Place", systemImage: "plus")
+                    }
+                }
             } label: {
                 Image(systemName: filter == .all && styleFilter == nil
                       ? "line.3.horizontal.decrease.circle"
                       : "line.3.horizontal.decrease.circle.fill")
             }
-            .accessibilityLabel("Filter landmarks")
-        }
-        ToolbarItem(placement: .topBarLeading) {
-            Button {
-                stopTour()
-                showingAddPlace = true
-            } label: {
-                Image(systemName: "plus")
-            }
-            .accessibilityLabel("Add a place to Want to Visit")
-        }
-        ToolbarItem(placement: .topBarTrailing) {
-            Button {
-                useSatellite.toggle()
-            } label: {
-                Image(systemName: useSatellite ? "map" : "globe.americas.fill")
-            }
-            .accessibilityLabel(useSatellite ? "Show map view" : "Show satellite view")
+            .accessibilityLabel("Map options")
+            .accessibilityHint("Filter landmarks, switch to satellite view or add a place")
         }
         ToolbarItem(placement: .topBarTrailing) {
             if isTouring {
@@ -458,6 +466,38 @@ struct CityMapView: View {
 
     // MARK: - Legend
 
+    /// A small "?" in the corner; the legend opens on tap. It shows by itself the first time
+    /// someone opens a map, then stays out of the way.
+    private var legendButton: some View {
+        Button {
+            showingLegend.toggle()
+        } label: {
+            Image(systemName: "questionmark")
+                .font(.footnote.weight(.bold))
+                .foregroundStyle(Color.primary)
+                .frame(width: 36, height: 36)
+                .background {
+                    Circle().fill(reduceTransparency
+                        ? AnyShapeStyle(Color(UIColor.secondarySystemBackground))
+                        : AnyShapeStyle(.regularMaterial))
+                }
+                .shadow(color: .black.opacity(0.12), radius: 4, y: 2)
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel("Map key")
+        .popover(isPresented: $showingLegend) {
+            legend
+                .padding(6)
+                .presentationCompactAdaptation(.popover)
+        }
+        .onAppear {
+            if !hasSeenMapLegend {
+                hasSeenMapLegend = true
+                showingLegend = true
+            }
+        }
+    }
+
     private var legend: some View {
         VStack(alignment: .leading, spacing: 6) {
             LegendRow(color: .adventureOrange, label: "Stamped")
@@ -466,7 +506,7 @@ struct CityMapView: View {
                 LegendRow(color: .adventureOrange, label: "Up next (pulsing)", isRing: true)
             }
             if !visibleCustomPlaces.isEmpty {
-                LegendRow(color: .pink, label: "Your places")
+                LegendRow(color: DS.Palette.wishlist, label: "Your places")
             }
         }
         .padding(10)
@@ -700,7 +740,8 @@ enum MapFilter: String, CaseIterable, Identifiable {
     case all, notVisited, stamped, wishlist
     var id: Self { self }
 
-    var title: String {
+    // LocalizedStringKey so Label looks the titles up in Localizable.strings
+    var title: LocalizedStringKey {
         switch self {
         case .all:        "All Landmarks"
         case .notVisited: "Not Visited"
@@ -761,9 +802,9 @@ private struct PinView: View {
             if isWishlisted {
                 Image(systemName: "heart.fill")
                     .font(.system(size: pinIconSize * 0.8))
-                    .foregroundStyle(.white, .pink)
+                    .foregroundStyle(.white, DS.Palette.wishlist)
                     .padding(3)
-                    .background(Color.pink, in: Circle())
+                    .background(DS.Palette.wishlist, in: Circle())
                     .offset(x: 6, y: -6)
             }
         }
@@ -807,9 +848,9 @@ private struct MapLandmarkCard: View {
                         .font(.headline)
                         .lineLimit(2)
                         .minimumScaleFactor(0.85)
-                    Text(building.hasKnownYear
-                         ? "\(building.buildingStyle) · Built \(String(building.yearBuilt))"
-                         : building.buildingStyle)
+                    Text([building.knownStyle, building.hasKnownYear ? "Built \(String(building.yearBuilt))" : nil]
+                            .compactMap { $0 }
+                            .joined(separator: " · "))
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                         .lineLimit(2)
@@ -965,7 +1006,7 @@ private struct CustomPlacePin: View {
             .font(.system(size: pinIconSize, weight: .bold))
             .foregroundStyle(.white)
             .frame(width: pinSize, height: pinSize)
-            .background(Color.pink, in: Circle())
+            .background(DS.Palette.wishlist, in: Circle())
             .overlay(Circle().stroke(.white, lineWidth: 2))
             .shadow(radius: 3)
             .scaleEffect(isSelected ? 1.3 : 1)
@@ -1003,7 +1044,7 @@ private struct CustomPlaceCard: View {
                     .font(.title2)
                     .foregroundStyle(.white)
                     .frame(width: 52, height: 52)
-                    .background(Color.pink, in: RoundedRectangle(cornerRadius: 12))
+                    .background(DS.Palette.wishlist, in: RoundedRectangle(cornerRadius: 12))
                 VStack(alignment: .leading, spacing: 4) {
                     Text(place.name).font(.headline).lineLimit(2)
                     if let address = place.address {
@@ -1011,7 +1052,7 @@ private struct CustomPlaceCard: View {
                     }
                     Label("Your place", systemImage: "heart.fill")
                         .font(.caption)
-                        .foregroundStyle(.pink)
+                        .foregroundStyle(DS.Palette.wishlist)
                 }
                 Spacer(minLength: 0)
                 Button(action: onClose) {
@@ -1074,7 +1115,7 @@ private struct CustomPlaceCard: View {
 
 private struct LegendRow: View {
     let color: Color
-    let label: String
+    let label: LocalizedStringKey
     var isRing = false
 
     var body: some View {
@@ -1085,8 +1126,8 @@ private struct LegendRow: View {
                 Circle().fill(color).frame(width: 10, height: 10)
             }
             Text(label)
-                .font(.caption2)
-                .foregroundStyle(.secondary)
+                .font(.footnote)
+                .foregroundStyle(.primary)
         }
     }
 }
