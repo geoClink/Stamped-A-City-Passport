@@ -91,11 +91,17 @@ struct CityExploreView: View {
         .animation(.spring(duration: 0.3), value: vm.selectedBuilding?.id)
         .onChange(of: isRaining) { _, value in CityAudioManager.shared.setRaining(value) }
         .sheet(isPresented: $showingCredits) { SoundCreditsView() }
-        .sheet(isPresented: $showingLookAround) {
+        .fullScreenCover(isPresented: $showingLookAround) {
             if let scene = lookAroundScene {
-                LookAroundPreviewWrapper(scene: scene)
-                    .ignoresSafeArea()
-                    .presentationDetents([.large])
+                ZStack(alignment: .topTrailing) {
+                    LookAroundPreviewWrapper(scene: scene)
+                        .ignoresSafeArea()
+                    Button("Done") { showingLookAround = false }
+                        .font(.body.weight(.semibold))
+                        .padding(.horizontal, 16).padding(.vertical, 8)
+                        .background(.regularMaterial, in: Capsule())
+                        .padding()
+                }
             }
         }
         .onChange(of: vm.selectedBuilding) { _, building in

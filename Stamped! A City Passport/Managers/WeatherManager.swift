@@ -2,14 +2,21 @@
 //  WeatherManager.swift
 //  Stamped! A City Passport
 //
-//  Uses Open-Meteo (free, no API key, global coverage) to fetch current
-//  conditions and a 3-day forecast keyed by building centroid.
-//  Replaces WeatherKit — no entitlement or provisioning required.
+//  Uses Apple WeatherKit to fetch current conditions and a 7-day forecast
+//  keyed by building centroid.
+//  Requires the WeatherKit entitlement, and WeatherKit enabled for the app ID
+//  under both Capabilities and App Services in the Apple Developer portal.
 //
 
 import Foundation
 import CoreLocation
 import Combine
+import WeatherKit
+#if canImport(UIKit)
+import UIKit
+#elseif canImport(AppKit)
+import AppKit
+#endif
 
 struct DayForecast: Identifiable {
     let id = UUID()
@@ -31,6 +38,20 @@ final class WeatherManager: ObservableObject {
     @Published var forecast: [DayForecast] = []
     @Published var isLoading = false
     @Published var failed = false
+    /// True when WeatherKit rejected the request because the app isn't authorized
+    /// (missing entitlement, or WeatherKit not enabled for the app ID in the developer portal).
+    @Published var notAuthorized = false
+    /// Apple Weather mark and legal link — required wherever WeatherKit data is shown.
+    @Published var attribution: WeatherAttribution?
+
+    /// Debug builds surface the setup error in the city view so a missing capability is easy to spot.
+    var showsSetupError: Bool {
+        #if DEBUG
+        return notAuthorized
+        #else
+        return false
+        #endif
+    }
 
     private var cachedCityName = ""
     private var cacheTimestamp: Date?
@@ -55,54 +76,40 @@ final class WeatherManager: ObservableObject {
 
         isLoading = true
         failed = false
+        notAuthorized = false
 
         // Respect device locale for temperature unit
         let useFahrenheit = Locale.current.measurementSystem == .us
-        let unit = useFahrenheit ? "fahrenheit" : "celsius"
+        let unit: UnitTemperature = useFahrenheit ? .fahrenheit : .celsius
         let suffix = useFahrenheit ? "°F" : "°C"
-
-        let urlString = "https://api.open-meteo.com/v1/forecast" +
-            "?latitude=\(lat)&longitude=\(lon)" +
-            "&current=temperature_2m,weather_code,is_day" +
-            "&daily=weather_code,temperature_2m_max,temperature_2m_min" +
-            "&temperature_unit=\(unit)" +
-            "&timezone=auto&forecast_days=8"
-
-        guard let url = URL(string: urlString) else { isLoading = false; return }
+        func format(_ t: Measurement<UnitTemperature>) -> String {
+            "\(Int(t.converted(to: unit).value.rounded()))\(suffix)"
+        }
 
         do {
-            let (data, response) = try await URLSession.shared.data(from: url)
-            guard (response as? HTTPURLResponse)?.statusCode == 200 else {
-                failed = true; isLoading = false; return
+            let service = WeatherService.shared
+            let (current, daily) = try await service.weather(
+                for: CLLocation(latitude: lat, longitude: lon),
+                including: .current, .daily
+            )
+            if attribution == nil {
+                attribution = try? await service.attribution
             }
 
-            let decoded = try JSONDecoder().decode(OpenMeteoResponse.self, from: data)
+            temperature = format(current.temperature)
+            symbolName = filledSymbol(current.symbolName)
+            conditionDescription = current.condition.description
+            isDaylight = current.isDaylight
 
-            let code = decoded.current.weather_code
-            let isDay = decoded.current.is_day == 1
-
-            temperature = "\(Int(decoded.current.temperature_2m.rounded()))\(suffix)"
-            symbolName = wmoSymbol(code: code, isDay: isDay)
-            conditionDescription = wmoDescription(code: code)
-            isDaylight = isDay
-
-            let parser = DateFormatter()
-            parser.dateFormat = "yyyy-MM-dd"
-
-            forecast = zip(decoded.daily.time, zip(decoded.daily.weather_code,
-                           zip(decoded.daily.temperature_2m_max, decoded.daily.temperature_2m_min)))
-                .prefix(7)
-                .compactMap { (dateStr, rest) in
-                    let (wCode, (high, low)) = rest
-                    guard let date = parser.date(from: dateStr) else { return nil }
-                    return DayForecast(
-                        date: date,
-                        high: "\(Int(high.rounded()))\(suffix)",
-                        low: "\(Int(low.rounded()))\(suffix)",
-                        symbolName: wmoSymbol(code: wCode, isDay: true),
-                        conditionDescription: wmoDescription(code: wCode)
-                    )
-                }
+            forecast = daily.forecast.prefix(7).map { day in
+                DayForecast(
+                    date: displayDate(for: day.date, longitude: lon),
+                    high: format(day.highTemperature),
+                    low: format(day.lowTemperature),
+                    symbolName: filledSymbol(day.symbolName),
+                    conditionDescription: day.condition.description
+                )
+            }
 
             cachedCityName = cityName
             cacheTimestamp = Date()
@@ -110,70 +117,53 @@ final class WeatherManager: ObservableObject {
 
         } catch {
             failed = true
-            print("[Weather] Error: \(error)")
+            if Self.isAuthorizationError(error) {
+                notAuthorized = true
+                print("""
+                [Weather] ❌ WeatherKit is not authorized for this app (\(error)).
+                [Weather]    Check: the WeatherKit entitlement is in the build, and WeatherKit is enabled
+                [Weather]    for \(Bundle.main.bundleIdentifier ?? "this app ID") under BOTH Capabilities and
+                [Weather]    App Services in Certificates, Identifiers & Profiles. It can take ~30 min to activate.
+                """)
+            } else {
+                print("[Weather] Error: \(error)")
+            }
         }
 
         isLoading = false
     }
 
-    // MARK: - WMO code → SF Symbol
+    // MARK: - Helpers
 
-    private func wmoSymbol(code: Int, isDay: Bool) -> String {
-        switch code {
-        case 0, 1:       return isDay ? "sun.max.fill" : "moon.stars.fill"
-        case 2:          return isDay ? "cloud.sun.fill" : "cloud.moon.fill"
-        case 3:          return "cloud.fill"
-        case 45, 48:     return "cloud.fog.fill"
-        case 51, 53, 55: return "cloud.drizzle.fill"
-        case 56, 57:     return "cloud.sleet.fill"
-        case 61, 63, 65: return "cloud.rain.fill"
-        case 66, 67:     return "cloud.sleet.fill"
-        case 71, 73, 75, 77: return "cloud.snow.fill"
-        case 80, 81, 82: return "cloud.heavyrain.fill"
-        case 85, 86:     return "cloud.snow.fill"
-        case 95, 96, 99: return "cloud.bolt.rain.fill"
-        default:         return "cloud.fill"
-        }
+    /// WeatherKit's JWT/auth failures surface as WeatherError.permissionDenied or as an
+    /// opaque WeatherDaemon "WDSJWTAuthenticatorServiceListener" error.
+    private static func isAuthorizationError(_ error: Error) -> Bool {
+        if let weatherError = error as? WeatherError, case .permissionDenied = weatherError { return true }
+        let text = "\((error as NSError).domain) \(String(reflecting: error))"
+        return text.contains("JWTAuthenticator")
     }
 
-    private func wmoDescription(code: Int) -> String {
-        switch code {
-        case 0:          return "Clear Sky"
-        case 1:          return "Mainly Clear"
-        case 2:          return "Partly Cloudy"
-        case 3:          return "Overcast"
-        case 45, 48:     return "Foggy"
-        case 51, 53, 55: return "Drizzle"
-        case 56, 57:     return "Freezing Drizzle"
-        case 61, 63, 65: return "Rain"
-        case 66, 67:     return "Freezing Rain"
-        case 71, 73, 75: return "Snow"
-        case 77:         return "Snow Grains"
-        case 80, 81, 82: return "Rain Showers"
-        case 85, 86:     return "Snow Showers"
-        case 95:         return "Thunderstorm"
-        case 96, 99:     return "Thunderstorm with Hail"
-        default:         return "Cloudy"
-        }
+    /// WeatherKit returns outline symbols ("cloud.sun"); prefer the filled variant when one exists.
+    private func filledSymbol(_ name: String) -> String {
+        let filled = name.hasSuffix(".fill") ? name : name + ".fill"
+        #if canImport(UIKit)
+        return UIImage(systemName: filled) != nil ? filled : name
+        #elseif canImport(AppKit)
+        return NSImage(systemSymbolName: filled, accessibilityDescription: nil) != nil ? filled : name
+        #else
+        return name
+        #endif
     }
-}
 
-// MARK: - Open-Meteo response shapes
-
-private struct OpenMeteoResponse: Codable {
-    let current: OMCurrent
-    let daily: OMDaily
-}
-
-private struct OMCurrent: Codable {
-    let temperature_2m: Double
-    let weather_code: Int
-    let is_day: Int
-}
-
-private struct OMDaily: Codable {
-    let time: [String]
-    let weather_code: [Int]
-    let temperature_2m_max: [Double]
-    let temperature_2m_min: [Double]
+    /// A forecast day's date is midnight in the city's time zone, which can fall on the
+    /// previous weekday in the device's time zone. Read the city's calendar day using a
+    /// longitude-based offset (city noon stays on the same day), then rebuild it as noon
+    /// on that day in the device's calendar so the weekday label is right.
+    private func displayDate(for date: Date, longitude: Double) -> Date {
+        var cityCalendar = Calendar(identifier: .gregorian)
+        cityCalendar.timeZone = TimeZone(secondsFromGMT: Int(longitude / 15 * 3600)) ?? .current
+        var parts = cityCalendar.dateComponents([.year, .month, .day], from: date.addingTimeInterval(12 * 3600))
+        parts.hour = 12
+        return Calendar.current.date(from: parts) ?? date
+    }
 }
