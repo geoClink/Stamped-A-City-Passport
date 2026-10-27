@@ -467,6 +467,7 @@ extension WikimediaService {
         "campus_umd_rossborough_inn": "The Rossborough Inn",
         "campus_umd_morrill_hall": "Morrill Hall (University of Maryland)",
         "campus_michstate_cowles_house": "Cowles House (East Lansing, Michigan)",
+        "campus_michstate_main_library": "Michigan State University Libraries",
         "campus_unl_old_university_library": "Old University Library",
         "campus_unl_memorial_stadium": "Memorial Stadium (Lincoln)",
         "campus_northwestern_university_hall": "University Hall (Northwestern University)",
