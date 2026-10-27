@@ -15,6 +15,27 @@ How to use this file:
 - Vision Pro: layered app icon, a 10-question architecture quiz per city, and the Want to Visit list (landmarks and saved places synced with iPhone). Download size cut from 355 MB to about 24 MB by leaving out the Detroit 3D model.
 - Vision Pro: a 3D globe of every city with live stamp pins; drag to spin and tilt, tap to turn a city toward you.
 - Vision Pro: available in all 9 of the app's languages.
+
+## [2.6] (build 11) – not yet uploaded
+
+### Added
+- Links to a city or campus page on the Stamped! website open that city or campus in the app.
+- Michigan State: 14 more buildings (18 in all, from Linton Hall and Laboratory Row to Spartan Stadium and the Facility for Rare Isotope Beams) and 7 more traditions (10 in all, including the Dairy Store, Beal Botanical Garden and the band's march to the stadium), translated into all 9 languages.
+- "Know a tradition we're missing?" under every campus's traditions opens a pre-filled email.
+
+### Changed
+- Weather now comes from Apple Weather (WeatherKit).
+- Look Around opens full screen.
+- Reports from a building page, a city's menu or Settings now include the building, app version and language, so a fix can be matched to what you saw.
+
+### Fixed
+- Report emails for names with "&" (like Texas A&M) were cut off.
+- "Report an issue with this building" showed in English in every language.
+- Opening the same city twice from Spotlight did nothing the second time.
+
+## [2.5] (build 10) – 2026-10-24
+
+### Added
 - Campus Architecture: 60 more campuses (every Big Ten, SEC, ACC and Big 12 school), now 101 campuses and over 450 buildings, translated into all 9 languages.
 - US campuses are grouped by conference (Big Ten, SEC, ACC, Big 12, Ivy League, Other) and sorted by short name; Australian campuses share one Australia group.
 - Search finds campuses by short names and nicknames, such as "UGA", "Ole Miss" or "Tar Heels".
