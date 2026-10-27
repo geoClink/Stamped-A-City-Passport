@@ -93,6 +93,17 @@ struct CityListView: View {
                         emptySearchContent
                     } else {
                         ForEach(results) { result in
+                            #if os(macOS)
+                            // Every landmark of a city shares that city's tag, so the Mac list would
+                            // highlight all of them at once. Plain buttons select the city without that.
+                            Button {
+                                selectedCity = result.city
+                            } label: {
+                                searchResultRow(result)
+                            }
+                            .buttonStyle(.plain)
+                            .selectionDisabled()
+                            #else
                             NavigationLink(value: result.city) {
                                 searchResultRow(result)
                             }
@@ -101,6 +112,7 @@ struct CityListView: View {
                                 HapticManager.shared.trigger(.selection)
                                 selectedCity = result.city
                             })
+                            #endif
                         }
                     }
                 }
@@ -176,13 +188,23 @@ struct CityListView: View {
         .fullScreenCover(isPresented: $showingSettings) { SettingsView() }
         .fullScreenCover(isPresented: $showingMyJourney) { MyJourneyView() }
         .sheet(isPresented: $showingAchievements) { AchievementsView() }
-        .sheet(isPresented: $showingWorldMap) { WorldMapView() }
+        .sheet(isPresented: $showingWorldMap) {
+            WorldMapView()
+            #if os(macOS)
+                // The map has no natural size, so without this the Mac sheet collapses to a thin strip.
+                .frame(minWidth: 1100, minHeight: 760)
+            #endif
+        }
         // Like the trip planner: a sheet on iPhone, full screen on iPad (room for its split view)
         .sheet(isPresented: $showingCollegeList) {
             CollegeListView(onOpenCampus: { campus in
                 showingCollegeList = false
                 selectedCity = campus
             })
+            #if os(macOS)
+            // Like the World Map, the list has no natural size, so the Mac sheet collapsed without this.
+            .frame(minWidth: 900, minHeight: 700)
+            #endif
         }
         .sheet(isPresented: myTripsPresented(fullScreen: false)) { MyTripsView() }
         .fullScreenCover(isPresented: myTripsPresented(fullScreen: true)) { MyTripsView() }

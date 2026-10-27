@@ -173,7 +173,9 @@ extension View {
         @ViewBuilder content: @escaping () -> Content
     ) -> some View {
         sheet(isPresented: isPresented, onDismiss: onDismiss) {
-            content().frame(minWidth: 720, minHeight: 600)
+            content()
+                .frame(minWidth: 720, minHeight: 600)
+                .presentationSizing(.fitted)   // size the sheet to the content, not the Mac's default sheet size
         }
     }
 
@@ -183,7 +185,9 @@ extension View {
         @ViewBuilder content: @escaping (Item) -> Content
     ) -> some View {
         sheet(item: item, onDismiss: onDismiss) { item in
-            content(item).frame(minWidth: 720, minHeight: 600)
+            content(item)
+                .frame(minWidth: 720, minHeight: 600)
+                .presentationSizing(.fitted)
         }
     }
 }
