@@ -371,6 +371,34 @@
     "trad_michstate_beaumont_tower": {
       "name": "Beaumont Tower: offener Turm",
       "description": "Der Beaumont Tower ist am ersten Mittwoch jedes Monats und zum Abschluss für Besucher geöffnet. Gehen Sie hinauf zum Glockenspiel und genießen Sie den Blick über den Campus."
+    },
+    "trad_michstate_dairy_store": {
+      "name": "MSU Dairy Store",
+      "description": "Der MSU Dairy Store wurde beim Eiscreme-Wettbewerb 2025 der American Dairy Science Association zum Grand Champion gekürt. Besuchen Sie den Laden in der Anthony Hall und probieren Sie eine Sorte."
+    },
+    "trad_michstate_beal_garden": {
+      "name": "W. J. Beal Botanical Garden",
+      "description": "Professor William J. Beal legte diesen Garten 1873 an; er gilt als der älteste durchgehend gepflegte botanische Universitätsgarten der USA. Spazieren Sie täglich bei Tageslicht kostenlos hindurch."
+    },
+    "trad_michstate_horticulture_gardens": {
+      "name": "MSU Horticulture Gardens",
+      "description": "Die Gärten an der Bogue Street umfassen mehr als 700 Rosensorten und den Michigan 4-H Children's Garden. Schlendern Sie täglich kostenlos hindurch."
+    },
+    "trad_michstate_river_trail": {
+      "name": "Red Cedar River Trail",
+      "description": "Ein Weg führt am Südufer des Red Cedar River über den Campus, und hier beginnt auch der Lansing River Trail. Fahren Sie Rad, gehen Sie zu Fuß oder paddeln Sie auf dem Fluss."
+    },
+    "trad_michstate_izzone": {
+      "name": "Die Izzone",
+      "description": "Die nach Trainer Tom Izzo benannte Izzone ist der Studentenblock mit rund 5.000 Plätzen bei den Basketballspielen der Männer im Breslin Center. Besuchen Sie ein Spiel und hören Sie, wie laut es wird."
+    },
+    "trad_michstate_magic_johnson_statue": {
+      "name": "Magic-Johnson-Statue",
+      "description": "Eine 3,7 Meter hohe Bronzefigur von Earvin „Magic“ Johnson, der MSU 1979 zum nationalen Titel führte, steht seit 2003 vor dem Breslin Center. Machen Sie ein Foto mit ihr."
+    },
+    "trad_michstate_band_march": {
+      "name": "Marsch der Spartan Marching Band",
+      "description": "An Football-Samstagen wärmt sich die Band auf dem Adams Field auf und marschiert etwa eine Stunde vor dem Anpfiff an der Spartan-Statue vorbei die Red Cedar Road hinauf zum Stadion. Stellen Sie sich an den Weg und feuern Sie sie an."
     }
   },
   "University of Minnesota Twin Cities": {

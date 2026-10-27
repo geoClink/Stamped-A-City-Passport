@@ -852,6 +852,55 @@
       "description": "Beaumont Tower opens to visitors on the first Wednesday of each month and at graduation. Go up to see the carillon and the view over campus.",
       "latitude": 42.7319499,
       "longitude": -84.482282
+    },
+    {
+      "id": "trad_michstate_dairy_store",
+      "name": "MSU Dairy Store",
+      "description": "The MSU Dairy Store was voted Grand Champion in the American Dairy Science Association's 2025 Ice Cream Competition. Stop at its Anthony Hall shop and try a flavor.",
+      "latitude": 42.724304,
+      "longitude": -84.4784471
+    },
+    {
+      "id": "trad_michstate_beal_garden",
+      "name": "W. J. Beal Botanical Garden",
+      "description": "Professor William J. Beal began this garden in 1873, and it is claimed to be the oldest continuously maintained university botanical garden in the US. Stroll it for free any day during daylight hours.",
+      "latitude": 42.7310173,
+      "longitude": -84.4849455
+    },
+    {
+      "id": "trad_michstate_horticulture_gardens",
+      "name": "MSU Horticulture Gardens",
+      "description": "The gardens on Bogue Street hold more than 700 rose cultivars and the Michigan 4-H Children's Garden. Wander them for free any day.",
+      "latitude": 42.7216193,
+      "longitude": -84.4739287
+    },
+    {
+      "id": "trad_michstate_river_trail",
+      "name": "Red Cedar River Trail",
+      "description": "A trail runs across campus along the south bank of the Red Cedar River, and the Lansing River Trail starts here. Bike or walk it, or kayak the river.",
+      "latitude": 42.7292296,
+      "longitude": -84.4843508
+    },
+    {
+      "id": "trad_michstate_izzone",
+      "name": "The Izzone",
+      "description": "Named for coach Tom Izzo, the Izzone is the student section of about 5,000 at men's basketball games in the Breslin Center. Catch a game to hear it roar.",
+      "latitude": 42.728155,
+      "longitude": -84.492058
+    },
+    {
+      "id": "trad_michstate_magic_johnson_statue",
+      "name": "Magic Johnson Statue",
+      "description": "A 12-foot bronze of Earvin \"Magic\" Johnson, who led MSU to the 1979 national title, has stood outside the Breslin Center since 2003. Snap a photo with it.",
+      "latitude": 42.7273255,
+      "longitude": -84.4917902
+    },
+    {
+      "id": "trad_michstate_band_march",
+      "name": "Spartan Marching Band March",
+      "description": "On football Saturdays the band warms up on Adams Field, then marches past the Spartan Statue and up Red Cedar Road to the stadium about an hour before kickoff. Line the route to cheer it on.",
+      "latitude": 42.7325438,
+      "longitude": -84.4855646
     }
   ],
   "University of Minnesota Twin Cities": [

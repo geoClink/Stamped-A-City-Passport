@@ -371,6 +371,34 @@
     "trad_michstate_beaumont_tower": {
       "name": "Beaumont Tower ouverte",
       "description": "La Beaumont Tower ouvre aux visiteurs le premier mercredi de chaque mois et lors de la remise des diplômes. Montez voir le carillon et la vue sur le campus."
+    },
+    "trad_michstate_dairy_store": {
+      "name": "MSU Dairy Store",
+      "description": "La MSU Dairy Store a été sacrée Grand Champion du concours de crème glacée 2025 de l'American Dairy Science Association. Passez à sa boutique d'Anthony Hall et goûtez un parfum."
+    },
+    "trad_michstate_beal_garden": {
+      "name": "Jardin botanique W. J. Beal",
+      "description": "Le professeur William J. Beal a créé ce jardin en 1873 ; il passe pour le plus ancien jardin botanique universitaire entretenu sans interruption aux États-Unis. Promenez-vous-y gratuitement tous les jours, aux heures de jour."
+    },
+    "trad_michstate_horticulture_gardens": {
+      "name": "Jardins d'horticulture de MSU",
+      "description": "Les jardins de Bogue Street comptent plus de 700 variétés de roses et le Michigan 4-H Children's Garden. Flânez-y gratuitement tous les jours."
+    },
+    "trad_michstate_river_trail": {
+      "name": "Sentier de la Red Cedar",
+      "description": "Un sentier traverse le campus le long de la rive sud de la Red Cedar, et le Lansing River Trail commence ici. Parcourez-le à vélo ou à pied, ou descendez la rivière en kayak."
+    },
+    "trad_michstate_izzone": {
+      "name": "L'Izzone",
+      "description": "Baptisée d'après l'entraîneur Tom Izzo, l'Izzone est la tribune étudiante d'environ 5 000 places lors des matchs de basket masculin au Breslin Center. Assistez à un match pour l'entendre rugir."
+    },
+    "trad_michstate_magic_johnson_statue": {
+      "name": "Statue de Magic Johnson",
+      "description": "Une statue en bronze de 3,7 mètres d'Earvin « Magic » Johnson, qui a mené MSU au titre national en 1979, se dresse devant le Breslin Center depuis 2003. Prenez une photo avec elle."
+    },
+    "trad_michstate_band_march": {
+      "name": "Défilé de la Spartan Marching Band",
+      "description": "Les samedis de match, la fanfare s'échauffe sur Adams Field, puis défile devant la statue du Spartiate et remonte Red Cedar Road jusqu'au stade, environ une heure avant le coup d'envoi. Placez-vous sur le parcours pour l'encourager."
     }
   },
   "University of Minnesota Twin Cities": {

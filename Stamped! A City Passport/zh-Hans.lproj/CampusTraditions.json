@@ -852,6 +852,55 @@
       "description": "Beaumont Tower 每月第一个星期三和毕业典礼时对访客开放。上去看看钟琴，俯瞰校园。",
       "latitude": 42.7319499,
       "longitude": -84.482282
+    },
+    {
+      "id": "trad_michstate_dairy_store",
+      "name": "MSU Dairy Store",
+      "description": "MSU Dairy Store 在美国乳品科学协会 2025 年冰淇淋大赛中获评总冠军。去它在 Anthony Hall 的店里尝一种口味吧。",
+      "latitude": 42.724304,
+      "longitude": -84.4784471
+    },
+    {
+      "id": "trad_michstate_beal_garden",
+      "name": "W. J. Beal 植物园",
+      "description": "William J. Beal 教授于 1873 年创建了这座植物园，据称是美国持续维护时间最长的大学植物园。白天随时可以免费漫步其中。",
+      "latitude": 42.7310173,
+      "longitude": -84.4849455
+    },
+    {
+      "id": "trad_michstate_horticulture_gardens",
+      "name": "MSU 园艺花园",
+      "description": "Bogue Street 旁的花园种有 700 多个玫瑰品种，还有 Michigan 4-H 儿童花园。每天都可以免费游览。",
+      "latitude": 42.7216193,
+      "longitude": -84.4739287
+    },
+    {
+      "id": "trad_michstate_river_trail",
+      "name": "Red Cedar 河步道",
+      "description": "一条步道沿 Red Cedar 河南岸横穿校园，Lansing River Trail 也从这里开始。骑车、步行，或划皮划艇顺流而下吧。",
+      "latitude": 42.7292296,
+      "longitude": -84.4843508
+    },
+    {
+      "id": "trad_michstate_izzone",
+      "name": "Izzone 学生看台",
+      "description": "Izzone 以教练 Tom Izzo 命名，是 Breslin Center 男篮比赛中约 5,000 人的学生看台。去看一场比赛，感受它的呐喊。",
+      "latitude": 42.728155,
+      "longitude": -84.492058
+    },
+    {
+      "id": "trad_michstate_magic_johnson_statue",
+      "name": "魔术师约翰逊雕像",
+      "description": "带领 MSU 夺得 1979 年全国冠军的埃尔文·“魔术师”·约翰逊的 3.7 米高青铜像，自 2003 年起矗立在 Breslin Center 外。和它合个影吧。",
+      "latitude": 42.7273255,
+      "longitude": -84.4917902
+    },
+    {
+      "id": "trad_michstate_band_march",
+      "name": "Spartan 军乐队游行",
+      "description": "橄榄球比赛日的星期六，乐队先在 Adams Field 热身，然后在开球前约一小时经过斯巴达勇士像，沿 Red Cedar Road 行进到体育场。站在沿途为他们加油吧。",
+      "latitude": 42.7325438,
+      "longitude": -84.4855646
     }
   ],
   "University of Minnesota Twin Cities": [
