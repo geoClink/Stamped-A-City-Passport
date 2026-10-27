@@ -72,7 +72,7 @@ struct AreaSearchSheet: View {
                     ContentUnavailableView.search(text: query)
                 }
             }
-            .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always),
+            .searchable(text: $query, placement: .alwaysVisible,
                         prompt: "City or region")
             .navigationTitle("New Trip Anywhere")
             .navigationBarTitleDisplayMode(.inline)

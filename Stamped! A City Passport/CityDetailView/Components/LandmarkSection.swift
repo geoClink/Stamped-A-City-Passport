@@ -113,9 +113,7 @@ struct LandmarkSection: View {
         }
         .accessibilityElement(children: .contain)
         .accessibilityLabel("Landmarks in \(viewModel.city.name)")
-        .sheet(item: $browserLink) { link in
-            InAppBrowser(url: link.url).ignoresSafeArea()
-        }
+        .inAppBrowser(item: $browserLink)
         .sheet(isPresented: $showingAddPlace) {
             if let center = cityCenter {
                 AddPlaceSheet(cityName: viewModel.city.name, cityCenter: center)

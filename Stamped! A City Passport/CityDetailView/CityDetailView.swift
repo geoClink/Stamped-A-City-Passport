@@ -196,6 +196,11 @@ struct CityDetailView: View {
             NavigationStack {
                 QuizView(buildings: viewModel.city.buildings, cityName: viewModel.city.name)
             }
+            #if os(macOS)
+            // On the Mac a full-screen cover becomes a sheet sized to its content; the quiz's
+            // side-by-side layout needs room or the answer buttons collapse to nothing.
+            .frame(minWidth: 1100, idealWidth: 1200, minHeight: 760, idealHeight: 820)
+            #endif
         }
         // iPhone: swipe-down sheet. iPad: full screen, since an iPad sheet is a small centered window.
         .sheet(isPresented: mapPresented(fullScreen: false)) { cityMap }

@@ -73,6 +73,7 @@ class SoundManager: NSObject, ObservableObject, AVSpeechSynthesizerDelegate {
     func speakGreeting(_ greeting: String, for country: CityLocation.Country) {
         guard isSoundEnabled else { return }
         
+        #if os(iOS)
         do {
             let session = AVAudioSession.sharedInstance()
             try session.setCategory(.ambient, mode: .spokenAudio, options: .duckOthers)
@@ -80,6 +81,7 @@ class SoundManager: NSObject, ObservableObject, AVSpeechSynthesizerDelegate {
         } catch {
             print("❌ Audio Session Error: \(error)")
         }
+        #endif
         
         if synthesizer.isSpeaking {
             synthesizer.stopSpeaking(at: .immediate)
@@ -131,14 +133,18 @@ class SoundManager: NSObject, ObservableObject, AVSpeechSynthesizerDelegate {
     nonisolated func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
         Task { @MainActor in
             self.isSpeaking = false
+            #if os(iOS)
             try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
+            #endif
         }
     }
     
     nonisolated func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
         Task { @MainActor in
             self.isSpeaking = false
+            #if os(iOS)
             try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
+            #endif
         }
     }
 }

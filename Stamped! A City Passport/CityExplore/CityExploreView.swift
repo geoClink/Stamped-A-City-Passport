@@ -6,12 +6,13 @@
 //  AR mode      — place the city miniature on a real surface using RealityKit
 //
 
-#if os(iOS)
 import SwiftUI
+import MapKit
+
+#if os(iOS)
 import RealityKit
 import SceneKit
 import Combine
-import MapKit
 
 // MARK: - Mode
 
@@ -235,6 +236,8 @@ struct CityExploreView: View {
     }
 }
 
+#endif
+
 // MARK: - Look Around wrapper
 
 /// Wraps MKLookAroundViewController for SwiftUI presentation.
@@ -252,6 +255,7 @@ struct LookAroundPreviewWrapper: UIViewControllerRepresentable {
     }
 }
 
+#if os(iOS)
 // MARK: - Object Mode (SceneKit)
 
 /// Pure 3D viewer with black background — no camera, no AR.

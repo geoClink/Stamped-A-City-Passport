@@ -66,6 +66,15 @@ struct OnboardingView: View {
 
 extension OnboardingView {
     var tabContent: some View {
+        #if os(macOS)
+        // No swipeable page style on the Mac: show the current step; the buttons move between steps.
+        OnboardingStep(
+            data: viewModel.steps[viewModel.currentPage],
+            isHighContrast: isHighContrast
+        )
+        .id(viewModel.currentPage)
+        .transition(.opacity)
+        #else
         TabView(selection: $viewModel.currentPage) {
             ForEach(0..<viewModel.steps.count, id: \.self) { index in
                 OnboardingStep(
@@ -76,6 +85,7 @@ extension OnboardingView {
             }
         }
         .tabViewStyle(.page(indexDisplayMode: .always))
+        #endif
     }
 }
 

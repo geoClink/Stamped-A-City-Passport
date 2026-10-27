@@ -22,9 +22,11 @@ class SpeechManager: ObservableObject {
         recognitionTask?.cancel()
         self.transcribedText = ""
         
+        #if os(iOS)
         let audioSession = AVAudioSession.sharedInstance()
         try? audioSession.setCategory(.record, mode: .measurement, options: .duckOthers)
         try? audioSession.setActive(true, options: .notifyOthersOnDeactivation)
+        #endif
         
         recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
         

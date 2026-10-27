@@ -38,7 +38,7 @@ struct CityListView: View {
     @State private var searchResults: [MixedSearchResult] = []
     @State private var searchedText = ""
     /// True while the search field is active, even before anything is typed
-    @State private var isSearchActive = false
+    @State var isSearchActive = false
     @State var showingSettings = false
     @State var showingMyJourney = false
     @State var showingPassport = false
@@ -51,7 +51,7 @@ struct CityListView: View {
     @State var columnVisibility = NavigationSplitViewVisibility.all
     
     var isHighContrast: Bool { manualHighContrast || systemContrast == .increased }
-    var isIPad: Bool { UIDevice.current.userInterfaceIdiom == .pad }
+    var isIPad: Bool { DeviceInfo.isLargeScreen }
     var brandColor: Color { isHighContrast ? .primary : Color.adventureOrange }
 
     var body: some View {
@@ -100,6 +100,17 @@ struct CityListView: View {
                         emptySearchContent
                     } else {
                         ForEach(results) { result in
+                            #if os(macOS)
+                            // Every landmark of a city shares that city's tag, so the Mac list would
+                            // highlight all of them at once. Plain buttons select the city without that.
+                            Button {
+                                selectedCity = result.city
+                            } label: {
+                                searchResultRow(result)
+                            }
+                            .buttonStyle(.plain)
+                            .selectionDisabled()
+                            #else
                             NavigationLink(value: result.city) {
                                 searchResultRow(result)
                             }
@@ -108,6 +119,7 @@ struct CityListView: View {
                                 HapticManager.shared.trigger(.selection)
                                 selectedCity = result.city
                             })
+                            #endif
                         }
                     }
                 }
@@ -140,7 +152,7 @@ struct CityListView: View {
                         }
                 }
             }
-            .searchable(text: $searchText, isPresented: $isSearchActive, placement: .navigationBarDrawer(displayMode: .always), prompt: "Cities, Landmarks or Architects")
+            .searchable(text: $searchText, isPresented: $isSearchActive, placement: .sidebarSearch, prompt: "Cities, Landmarks or Architects")
             // Search runs once typing pauses, not on every letter, so the keyboard keeps up
             .task(id: searchText) {
                 if !searchText.isEmpty {
@@ -151,11 +163,19 @@ struct CityListView: View {
                 searchedText = searchText
             }
             .toolbar { sidebarToolbar }
+            #if os(macOS)
+            .navigationSplitViewColumnWidth(min: 280, ideal: 340, max: 460)
+            #endif
             .animation(.spring(response: 0.35, dampingFraction: 0.8), value: searchText.isEmpty)
 
         } detail: {
             NavigationStack {
                 if let city = selectedCity {
+                    #if os(macOS)
+                    // Mac: the 3D map fills the window, the city's details sit in an inspector
+                    MacCityWorkspace(city: city)
+                        .id(city.id)
+                    #else
                     ScrollView {
                         VStack(alignment: .leading, spacing: 0) {
                             CityDetailView(city: city)
@@ -165,6 +185,7 @@ struct CityListView: View {
                     .id(city.id)
                     .background(Color(UIColor.systemGroupedBackground))
                     .navigationBarBackButtonHidden(horizontalSizeClass == .regular)
+                    #endif
                 } else {
                     welcomePlaceholder
                 }
@@ -174,19 +195,36 @@ struct CityListView: View {
         .fullScreenCover(isPresented: $showingSettings) { SettingsView() }
         .fullScreenCover(isPresented: $showingMyJourney) { MyJourneyView() }
         .sheet(isPresented: $showingAchievements) { AchievementsView() }
-        .sheet(isPresented: $showingWorldMap) { WorldMapView() }
+        .sheet(isPresented: $showingWorldMap) {
+            WorldMapView()
+            #if os(macOS)
+                // The map has no natural size, so without this the Mac sheet collapses to a thin strip.
+                .frame(minWidth: 1100, minHeight: 760)
+            #endif
+        }
         // Like the trip planner: a sheet on iPhone, full screen on iPad (room for its split view)
         .sheet(isPresented: $showingCollegeList) {
             CollegeListView(onOpenCampus: { campus in
                 showingCollegeList = false
                 selectedCity = campus
             })
+            #if os(macOS)
+            // Like the World Map, the list has no natural size, so the Mac sheet collapsed without this.
+            .frame(minWidth: 900, minHeight: 700)
+            #endif
         }
         .sheet(isPresented: myTripsPresented(fullScreen: false)) { MyTripsView() }
         .fullScreenCover(isPresented: myTripsPresented(fullScreen: true)) { MyTripsView() }
         .fullScreenCover(isPresented: $showingPassport) {
             PassportGalleryView(cities: viewModel.allCities)
         }
+        #if os(macOS)
+        .onChange(of: navManager.menuCommand) { _, command in
+            guard let command else { return }
+            navManager.menuCommand = nil
+            handleMenuCommand(command)
+        }
+        #endif
         .onChange(of: navManager.spotlightCity) { _, city in
             if let city {
                 selectedCity = city
@@ -345,3 +383,23 @@ struct CityListView: View {
         .padding(.vertical, 4)
     }
 }
+
+#if os(macOS)
+// MARK: - Mac menu bar commands
+extension CityListView {
+    func handleMenuCommand(_ command: MenuCommand) {
+        switch command {
+        case .search:
+            columnVisibility = .all
+            isSearchActive = true
+        case .passport: showingPassport = true
+        case .myJourney: showingMyJourney = true
+        case .myTrips: showingMyTrips = true
+        case .worldMap: showingWorldMap = true
+        case .achievements: showingAchievements = true
+        case .collegeList: showingCollegeList = true
+        case .settings: showingSettings = true
+        }
+    }
+}
+#endif

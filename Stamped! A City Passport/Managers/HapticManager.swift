@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-#if !os(visionOS)
+#if os(iOS)
 import UIKit
 #endif
 
@@ -29,7 +29,7 @@ final class HapticManager {
 
     func trigger(_ style: HapticStyle) {
         guard hapticsEnabled else { return }
-        #if !os(visionOS)
+        #if os(iOS)
         switch style {
         case .selection: UISelectionFeedbackGenerator().selectionChanged()
         case .impact: UIImpactFeedbackGenerator(style: .medium).impactOccurred()

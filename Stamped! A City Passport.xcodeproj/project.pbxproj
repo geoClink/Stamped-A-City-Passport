@@ -10,7 +10,7 @@
 		DE008D3C305244CD0003C067 /* detroit.obj in Resources */ = {isa = PBXBuildFile; fileRef = DE008D39305244CD0003C067 /* detroit.obj */; };
 		DE2C6F8B304CB5AF00F657DA /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2C6F8A304CB5AF00F657DA /* WidgetKit.framework */; };
 		DE2C6F8D304CB5AF00F657DA /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2C6F8C304CB5AF00F657DA /* SwiftUI.framework */; };
-		DE2C6F9C304CB5B000F657DA /* PassportWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DE2C6F88304CB5AF00F657DA /* PassportWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DE2C6F9C304CB5B000F657DA /* PassportWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DE2C6F88304CB5AF00F657DA /* PassportWidgetExtension.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DE2C6FCB304D06FD00F657DA /* BuildingRegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C6FB6304D059900F657DA /* BuildingRegistryTests.swift */; };
 		DE2C6FCC304D070300F657DA /* ProgressAndDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C6FB7304D059900F657DA /* ProgressAndDetailsTests.swift */; };
 		DE2C6FCD304D070900F657DA /* RegistryDecodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C6FB8304D059900F657DA /* RegistryDecodeTests.swift */; };
@@ -527,6 +527,7 @@
 /* Begin PBXTargetDependency section */
 		DE2C6F9B304CB5B000F657DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = DE2C6F87304CB5AF00F657DA /* PassportWidgetExtension */;
 			targetProxy = DE2C6F9A304CB5B000F657DA /* PBXContainerItemProxy */;
 		};
@@ -786,11 +787,20 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = YES;
+				ENABLE_RESOURCE_ACCESS_LOCATION = YES;
+				ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Stamped--A-City-Passport-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Stamped!";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 George Clinkscales";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to the camera so you can take picture of the landmark you are visiting!";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Stamped! alerts you when you're near a landmark, even in the background.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Stamped! shows nearby landmarks while you explore.";
@@ -807,13 +817,20 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 2.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "name.GeorgeClinkscales.Stamped--A-City-Passport";
 				PRODUCT_NAME = "Stamped!";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -834,11 +851,20 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = YES;
+				ENABLE_RESOURCE_ACCESS_LOCATION = YES;
+				ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Stamped--A-City-Passport-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Stamped!";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 George Clinkscales";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to the camera so you can take picture of the landmark you are visiting!";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Stamped! alerts you when you're near a landmark, even in the background.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Stamped! shows nearby landmarks while you explore.";
@@ -855,13 +881,20 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 2.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "name.GeorgeClinkscales.Stamped--A-City-Passport";
 				PRODUCT_NAME = "Stamped!";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;

@@ -601,6 +601,15 @@
 "Not yet" = "Noch nicht";
 "View City" = "Stadt ansehen";
 
+/* Mac menu bar and toolbar */
+"Settings…" = "Einstellungen…";
+"Search Cities and Landmarks" = "Städte und Sehenswürdigkeiten suchen";
+"Hide City Details" = "Stadtdetails ausblenden";
+"Show City Details" = "Stadtdetails einblenden";
+"City Details" = "Stadtdetails";
+"Show or hide the city's details" = "Details der Stadt ein- oder ausblenden";
+"Choose image file" = "Bilddatei auswählen";
+
 /* Suggestions and reports (open a pre-filled email) */
 "Report an issue with this building" = "Ein Problem mit diesem Gebäude melden";
 "Report an issue with %@" = "Ein Problem mit %@ melden";
