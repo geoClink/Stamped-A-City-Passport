@@ -77,6 +77,17 @@ struct CampusTraditionsSection: View {
             .dsCard(padding: isHighContrast ? DS.Space.m : 0, isHighContrast: isHighContrast)
             .dsPageMargin()
 
+            // Students know the traditions best; this opens a pre-filled email
+            if let url = FeedbackMail.tradition(for: campus) {
+                Link(destination: url) {
+                    Label(NSLocalizedString("Know a tradition we're missing?", comment: "Campus page: link under the traditions list that opens an email suggesting a new tradition"), systemImage: "plus.bubble")
+                        .font(.subheadline)
+                        .foregroundColor(accent)
+                }
+                .accessibilityHint(NSLocalizedString("Opens your email app", comment: "VoiceOver hint for links that open a pre-filled email"))
+                .dsPageMargin()
+            }
+
             Text(CampusDisclaimer.text)
                 .font(.caption2)
                 .foregroundColor(isHighContrast ? .primary : .secondary)

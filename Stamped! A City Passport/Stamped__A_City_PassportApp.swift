@@ -58,6 +58,12 @@ struct GlobalDiscoveryApp: App {
                     navManager.spotlightCity = city
                 }
             }
+            // Links to a city or campus page on the Stamped! website open it here
+            .onOpenURL { url in
+                if let city = WebLinkRouter.city(from: url) {
+                    navManager.spotlightCity = city
+                }
+            }
             #if os(macOS)
             .frame(minWidth: 960, minHeight: 640)
             // The app's buttons draw their own circles, capsules and cards (designed for iOS);

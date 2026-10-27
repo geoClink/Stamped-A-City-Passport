@@ -609,3 +609,9 @@
 "City Details" = "도시 정보";
 "Show or hide the city's details" = "도시 정보를 표시하거나 숨깁니다";
 "Choose image file" = "이미지 파일 선택";
+
+/* Suggestions and reports (open a pre-filled email) */
+"Report an issue with this building" = "이 건물에 대한 문제 신고";
+"Report an issue with %@" = "%@에 대한 문제 신고";
+"Opens your email app" = "이메일 앱을 엽니다";
+"Know a tradition we're missing?" = "빠진 전통을 알고 계신가요?";

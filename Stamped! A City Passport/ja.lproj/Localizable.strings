@@ -609,3 +609,9 @@
 "City Details" = "都市の詳細";
 "Show or hide the city's details" = "都市の詳細を表示または非表示にします";
 "Choose image file" = "画像ファイルを選択";
+
+/* Suggestions and reports (open a pre-filled email) */
+"Report an issue with this building" = "この建物の問題を報告";
+"Report an issue with %@" = "%@ の問題を報告";
+"Opens your email app" = "メールアプリを開きます";
+"Know a tradition we're missing?" = "載っていない伝統をご存じですか？";

@@ -609,3 +609,9 @@
 "City Details" = "Détails de la ville";
 "Show or hide the city's details" = "Afficher ou masquer les détails de la ville";
 "Choose image file" = "Choisir un fichier image";
+
+/* Suggestions and reports (open a pre-filled email) */
+"Report an issue with this building" = "Signaler un problème avec ce bâtiment";
+"Report an issue with %@" = "Signaler un problème avec %@";
+"Opens your email app" = "Ouvre votre app de messagerie";
+"Know a tradition we're missing?" = "Vous connaissez une tradition qui manque ?";

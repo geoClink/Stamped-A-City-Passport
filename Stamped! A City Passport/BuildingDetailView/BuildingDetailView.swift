@@ -918,16 +918,8 @@ extension BuildingDetailView {
 
     // MARK: - Report Issue
     var reportIssueButton: some View {
-
-        // Replace georgeclinkscalesdev@proton.me with your support email before shipping
-        let email = "georgeclinkscalesdev@proton.me"
-        let subject = "Content Issue: \(building.name)"
-        let body = "Building: \(building.name)\nCity: \(viewModel.city.name)\n\nWhat's wrong:\n"
-        let encodedSubject = subject.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-        let encodedBody = body.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-
-        return Group {
-            if let url = URL(string: "mailto:\(email)?subject=\(encodedSubject)&body=\(encodedBody)") {
+        Group {
+            if let url = FeedbackMail.building(building, in: viewModel.city) {
                 Link(destination: url) {
                     HStack(spacing: DS.Space.xs) {
                         Image(systemName: "flag")

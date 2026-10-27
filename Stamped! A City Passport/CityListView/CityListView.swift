@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+extension EnvironmentValues {
+    /// True when the whole window is wide (iPad, unfolded iPhone Duo). Screens inside a split
+    /// view column read this instead of their own size class: on the unfolded Duo each column
+    /// is compact, so the map opened as a half-screen sheet instead of full screen.
+    @Entry var isWideWindow = false
+}
+
 // MARK: - CITY LIST VIEW
 struct CityListView: View {
     
@@ -221,6 +228,8 @@ struct CityListView: View {
         .onChange(of: navManager.spotlightCity) { _, city in
             if let city {
                 selectedCity = city
+                // Clear it so opening the same city again (from Spotlight or a link) still works
+                navManager.spotlightCity = nil
             }
         }
         .overlay {
@@ -228,6 +237,8 @@ struct CityListView: View {
                 onboardingOverlay
             }
         }
+        // Last, so the sheets and full-screen covers above see it too
+        .environment(\.isWideWindow, horizontalSizeClass == .regular)
     }
 
     // MARK: - List Sections

@@ -1,0 +1,66 @@
+{
+  "locale": "it",
+  "version": "2.6",
+  "subtitle": "Campus e architettura",
+  "promotional_text": "Pianifica le visite alle università: salva le preferite, esplora ogni campus di Big Ten, SEC, ACC e Big 12, vivi le tradizioni e colleziona timbri nei loro colori.",
+  "keywords": "università,campus,college,studiare in USA,road trip,viaggio,monumenti,itinerario,tour,quiz",
+  "whats_new": "Novità della 2.6\n• Michigan State al completo: 18 edifici, da Linton Hall e Laboratory Row allo Spartan Stadium, e 10 tradizioni, tra cui il Dairy Store e la sfilata della banda fino allo stadio.\n• Conosci una tradizione che manca? Suggeriscila dalla pagina di qualsiasi campus.\n• I link alla pagina di una città o di un campus sul sito di Stamped! ora la aprono direttamente nell'app.\n• Look Around si apre a schermo intero.\n• Il meteo ora arriva da Meteo di Apple.\n\nCorrezioni\n• Quando segnali un errore, ora sappiamo a quale edificio ti riferisci.\n• Le email per università come Texas A&M non vengono più troncate.",
+  "description": "Stamped! trasforma i grandi edifici del mondo in un passaporto da riempire. Esplora più di 1.800 luoghi simbolo dell'architettura in 140 città e 101 campus universitari, ottieni un timbro per ognuno che visiti e sorvola città vere su una mappa 3D fotorealistica.\n\nPIANIFICA LE VISITE ALLE UNIVERSITÀ\n• 101 campus: tutte le università di Big Ten, SEC, ACC e Big 12, la Ivy League e splendidi campus in tutto il mondo\n• Salva le università che ti interessano nella mia lista di università\n• Crea un viaggio tra le università: un giorno per ognuna, in un ordine con tragitti brevi\n• Pianifica una visita al campus: un itinerario a piedi di un giorno tra i suoi luoghi simbolo\n• Trova hotel vicino al campus per ogni notte del viaggio\n\nTRADIZIONI DEL CAMPUS\n• Oltre 250 tradizioni da fare o da vedere, dalle statue portafortuna alle campane e ai cancelli famosi\n• Spuntale mentre visiti e ottieni il badge Custode delle tradizioni\n• Timbri dei campus nei colori di ogni università\n\nPIANIFICA OGNI VIAGGIO\n• Pianifica più giorni di luoghi simbolo e luoghi salvati\n• Riordina le tappe, vedi i tempi a piedi e ottimizza il percorso\n• Sorvola il tuo viaggio giorno per giorno sulla mappa 3D\n• I viaggi e la lista di università si sincronizzano con iCloud\n\nESPLORA IN 3D\n• Mappe 3D fotorealistiche di città e campus con immagini satellitari\n• Un tour guidato che vola tra tutti i luoghi simbolo\n• Anteprime Guardati intorno delle strade prima di partire\n• Filtri per cibo, caffè, cultura e alloggi\n\nCOLLEZIONA TIMBRI\n• Ottieni un timbro sul passaporto per ogni luogo simbolo visitato\n• Segui i progressi sulla mappa del mondo, per città, paese e conference\n• Sblocca traguardi e condividi il tuo passaporto\n• Guarda i progressi a colpo d'occhio con il widget della schermata Home\n\nSCOPRI LE STORIE\n• Architetti, anni di costruzione, stili e storia di ogni edificio\n• Un quiz di architettura di 10 domande per ogni città e campus\n• Cerca per nome, architetto o soprannome del campus\n\nDisponibile in 9 lingue, con opzioni di contrasto elevato e movimento ridotto.\n\nStamped! non è affiliata né approvata da alcuna università. I nomi e i colori delle università sono usati solo per identificarle.",
+  "screenshot_headlines": [
+    {
+      "file": "01-college-list",
+      "verb": "VISITA",
+      "lines": [
+        "101 CAMPUS",
+        "IN UN SOLO VIAGGIO"
+      ]
+    },
+    {
+      "file": "02-traditions",
+      "verb": "VIVI",
+      "lines": [
+        "LE TRADIZIONI",
+        "DEL CAMPUS"
+      ]
+    },
+    {
+      "file": "03-school-stamps",
+      "verb": "COLLEZIONA",
+      "lines": [
+        "TIMBRI NEI COLORI",
+        "DELLE UNIVERSITÀ"
+      ]
+    },
+    {
+      "file": "04-fly-3d",
+      "verb": "SORVOLA",
+      "lines": [
+        "I CAMPUS",
+        "IN 3D"
+      ]
+    },
+    {
+      "file": "05-plan-trips",
+      "verb": "PIANIFICA",
+      "lines": [
+        "TUTTO IL VIAGGIO,",
+        "GIORNO PER GIORNO"
+      ]
+    },
+    {
+      "file": "06-test-smarts",
+      "verb": "METTI ALLA PROVA",
+      "lines": [
+        "LA TUA CULTURA",
+        "ARCHITETTONICA"
+      ]
+    }
+  ],
+  "banner": {
+    "verb": "PIANIFICA",
+    "lines": [
+      "IL TUO VIAGGIO",
+      "TRA LE UNIVERSITÀ"
+    ]
+  }
+}
