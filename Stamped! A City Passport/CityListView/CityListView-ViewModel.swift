@@ -318,7 +318,7 @@ extension CityListView {
     /// Picks sheet or full screen for My Trips, so only one of them is ever shown.
     func myTripsPresented(fullScreen: Bool) -> Binding<Bool> {
         Binding(
-            get: { showingMyTrips && isIPad == fullScreen },
+            get: { showingMyTrips && (horizontalSizeClass == .regular) == fullScreen },
             set: { showingMyTrips = $0 }
         )
     }

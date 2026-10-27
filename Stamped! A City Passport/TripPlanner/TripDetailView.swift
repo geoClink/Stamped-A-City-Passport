@@ -35,6 +35,7 @@ struct TripDetailView: View {
     @ObservedObject private var store = TripStore.shared
     @ObservedObject private var progress = GlobalProgressManager.shared
     @Environment(\.horizontalSizeClass) private var sizeClass
+    @Environment(\.isWideWindow) private var isWideWindow
 
     /// The day shown on the route map. nil means the first day.
     @State private var mapDayID: String?
@@ -81,7 +82,7 @@ struct TripDetailView: View {
     /// Same as the city page's map: a sheet on iPhone, full screen on iPad.
     private func tourPresented(fullScreen: Bool) -> Binding<Bool> {
         Binding(
-            get: { showingTour && (sizeClass == .regular) == fullScreen },
+            get: { showingTour && isWideWindow == fullScreen },
             set: { showingTour = $0 }
         )
     }

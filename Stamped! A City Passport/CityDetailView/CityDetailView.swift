@@ -15,6 +15,7 @@ struct CityDetailView: View {
     @Environment(\.colorSchemeContrast) var systemContrast
     @Environment(\.dismiss) var dismiss
     @Environment(\.horizontalSizeClass) var sizeClass
+    @Environment(\.isWideWindow) private var isWideWindow
     
     @AppStorage("high_contrast_mode") var appHighContrast = false
     @AppStorage("reduce_motion") var reduceMotion = false
@@ -51,7 +52,7 @@ struct CityDetailView: View {
     /// One `showingMap` flag drives two presentations; each only "sees" it on its own size class.
     private func mapPresented(fullScreen: Bool) -> Binding<Bool> {
         Binding(
-            get: { showingMap && (sizeClass == .regular) == fullScreen },
+            get: { showingMap && isWideWindow == fullScreen },
             set: { showingMap = $0 }
         )
     }
@@ -59,7 +60,7 @@ struct CityDetailView: View {
     /// Same iPhone-sheet / iPad-full-screen split as the map.
     private func tripPlannerPresented(fullScreen: Bool) -> Binding<Bool> {
         Binding(
-            get: { showingTripPlanner && (sizeClass == .regular) == fullScreen },
+            get: { showingTripPlanner && isWideWindow == fullScreen },
             set: { showingTripPlanner = $0 }
         )
     }
