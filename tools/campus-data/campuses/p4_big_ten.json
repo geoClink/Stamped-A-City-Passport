@@ -592,6 +592,95 @@
         ],
         "coordinatesSource": "https://www.openstreetmap.org/way/26095337",
         "source": "https://msutoday.msu.edu/news/2025/09/must-do-spartan-experiences"
+      },
+      {
+        "id": "trad_michstate_dairy_store",
+        "name": "MSU Dairy Store",
+        "description": "The MSU Dairy Store was voted Grand Champion in the American Dairy Science Association's 2025 Ice Cream Competition. Stop at its Anthony Hall shop and try a flavor.",
+        "coordinates": [
+          42.724304,
+          -84.4784471
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/985588243",
+        "source": "https://msutoday.msu.edu/news/2025/09/must-do-spartan-experiences"
+      },
+      {
+        "id": "trad_michstate_beal_garden",
+        "name": "W. J. Beal Botanical Garden",
+        "description": "Professor William J. Beal began this garden in 1873, and it is claimed to be the oldest continuously maintained university botanical garden in the US. Stroll it for free any day during daylight hours.",
+        "coordinates": [
+          42.7310173,
+          -84.4849455
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/19053382",
+        "source": [
+          "https://en.wikipedia.org/wiki/W._J._Beal_Botanical_Garden",
+          "https://msutoday.msu.edu/news/2025/09/must-do-spartan-experiences"
+        ]
+      },
+      {
+        "id": "trad_michstate_horticulture_gardens",
+        "name": "MSU Horticulture Gardens",
+        "description": "The gardens on Bogue Street hold more than 700 rose cultivars and the Michigan 4-H Children's Garden. Wander them for free any day.",
+        "coordinates": [
+          42.7216193,
+          -84.4739287
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/156019859",
+        "source": "https://en.wikipedia.org/wiki/Michigan_State_University_Horticulture_Gardens"
+      },
+      {
+        "id": "trad_michstate_river_trail",
+        "name": "Red Cedar River Trail",
+        "description": "A trail runs across campus along the south bank of the Red Cedar River, and the Lansing River Trail starts here. Bike or walk it, or kayak the river.",
+        "coordinates": [
+          42.7292296,
+          -84.4843508
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/12272746",
+        "source": [
+          "https://en.wikipedia.org/wiki/Campus_of_Michigan_State_University",
+          "https://msutoday.msu.edu/news/2025/09/must-do-spartan-experiences"
+        ]
+      },
+      {
+        "id": "trad_michstate_izzone",
+        "name": "The Izzone",
+        "description": "Named for coach Tom Izzo, the Izzone is the student section of about 5,000 at men's basketball games in the Breslin Center. Catch a game to hear it roar.",
+        "coordinates": [
+          42.728155,
+          -84.492058
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/26262201",
+        "source": [
+          "https://en.wikipedia.org/wiki/Izzone",
+          "https://msutoday.msu.edu/news/2025/09/must-do-spartan-experiences"
+        ]
+      },
+      {
+        "id": "trad_michstate_magic_johnson_statue",
+        "name": "Magic Johnson Statue",
+        "description": "A 12-foot bronze of Earvin \"Magic\" Johnson, who led MSU to the 1979 national title, has stood outside the Breslin Center since 2003. Snap a photo with it.",
+        "coordinates": [
+          42.7273255,
+          -84.4917902
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/9674202027",
+        "source": [
+          "https://en.wikipedia.org/wiki/Campus_of_Michigan_State_University",
+          "https://en.wikipedia.org/wiki/Jenison_Fieldhouse"
+        ]
+      },
+      {
+        "id": "trad_michstate_band_march",
+        "name": "Spartan Marching Band March",
+        "description": "On football Saturdays the band warms up on Adams Field, then marches past the Spartan Statue and up Red Cedar Road to the stadium about an hour before kickoff. Line the route to cheer it on.",
+        "coordinates": [
+          42.7325438,
+          -84.4855646
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/18655776",
+        "source": "https://www.spartanmarchingband.com/game-day-information"
       }
     ],
     "wiki": "Michigan State University",
@@ -674,6 +763,307 @@
         "numberOfStories": 0,
         "height": 0,
         "foodSpots": []
+      },
+      {
+        "id": "campus_michstate_linton_hall",
+        "wiki": "Campus of Michigan State University",
+        "name": "Linton Hall",
+        "description": "Detroit firm Marsh & Arnold designed this Romanesque library and museum of limestone and fieldstone, completed in 1881 under architect William P. Appleyard. It held the president's office until 1968 and now houses the College of Arts and Letters.",
+        "architect": "Marsh & Arnold; William P. Appleyard (supervising)",
+        "yearBuilt": 1881,
+        "address": "Michigan State University, East Lansing, MI 48824",
+        "oldUse": "Library and Museum",
+        "newUse": "College Offices",
+        "buildingStyle": "Romanesque",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          42.732078,
+          -84.480414
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/26262261",
+        "source": [
+          "https://kevinforsyth.net/ELMAC/?p=1247",
+          "https://msutoday.msu.edu/news/2024/building-stories-iconic-buildings",
+          "https://onthebanks.msu.edu/Timeline/162-568-47/librarymuseum-linton-hall-constructed"
+        ]
+      },
+      {
+        "id": "campus_michstate_eustace_cole_hall",
+        "wiki": "Laboratory Row",
+        "name": "Eustace–Cole Hall",
+        "description": "Built in 1888 to ideas from horticulturist Liberty Hyde Bailey, this was the first separate horticulture laboratory in the United States. It mixes Queen Anne, Richardsonian Romanesque and Shingle Style features and is the only main-campus building on the National Register of Historic Places.",
+        "architect": "Liberty Hyde Bailey; William P. Appleyard",
+        "yearBuilt": 1888,
+        "address": "468 E Circle Dr, East Lansing, MI 48824",
+        "oldUse": "Horticultural Laboratory",
+        "newUse": "Honors College",
+        "buildingStyle": "Queen Anne / Richardsonian Romanesque",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          42.732577,
+          -84.479604
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/104086449",
+        "source": [
+          "https://en.wikipedia.org/wiki/Eustace_Hall",
+          "https://kevinforsyth.net/ELMAC/hort-lab/",
+          "https://msutoday.msu.edu/news/2024/building-stories-iconic-buildings"
+        ]
+      },
+      {
+        "id": "campus_michstate_cook_seevers_hall",
+        "wiki": "Laboratory Row",
+        "name": "Cook–Seevers Hall",
+        "description": "Professor Samuel Johnson designed this building, opened in 1889 as the college's first agricultural laboratory. It is named for entomologist Albert J. Cook and, since a 2018 renovation, for alumnus Gary L. Seevers.",
+        "architect": "Samuel Johnson",
+        "yearBuilt": 1889,
+        "address": "Michigan State University, East Lansing, MI 48824",
+        "oldUse": "Agriculture Laboratory",
+        "newUse": "Offices",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          42.731487,
+          -84.479515
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/241731334",
+        "source": [
+          "https://en.wikipedia.org/wiki/Laboratory_Row",
+          "https://kevinforsyth.net/ELMAC/ag-lab/"
+        ]
+      },
+      {
+        "id": "campus_michstate_chittenden_hall",
+        "wiki": "Laboratory Row",
+        "name": "Chittenden Hall",
+        "description": "George Lohman designed this first campus building made for dairy work, dedicated in 1901; doors high in its north wall once let the cows in. It later housed Forestry, whose name is carved over the entrance, and became home to the Graduate School in 2014.",
+        "architect": "George Lohman",
+        "yearBuilt": 1901,
+        "address": "Michigan State University, East Lansing, MI 48824",
+        "oldUse": "Dairy Building",
+        "newUse": "Graduate School",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          42.731758,
+          -84.479385
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/241731333",
+        "source": [
+          "https://en.wikipedia.org/wiki/Laboratory_Row",
+          "https://kevinforsyth.net/ELMAC/dairy/",
+          "https://msutoday.msu.edu/news/2024/building-stories-iconic-buildings"
+        ]
+      },
+      {
+        "id": "campus_michstate_marshall_adams_hall",
+        "wiki": "Laboratory Row",
+        "name": "Marshall–Adams Hall",
+        "description": "College architect Edwyn A. Bowd designed this 1902 laboratory, the first freestanding bacteriology laboratory in the United States. Its red brick walls and fieldstone-arched Richardsonian Romanesque entry now house the Department of Economics.",
+        "architect": "Edwyn A. Bowd",
+        "yearBuilt": 1902,
+        "address": "Michigan State University, East Lansing, MI 48824",
+        "oldUse": "Bacteriology Laboratory",
+        "newUse": "Department of Economics",
+        "buildingStyle": "Richardsonian Romanesque",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          42.732316,
+          -84.479045
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/104086443",
+        "source": [
+          "https://en.wikipedia.org/wiki/Laboratory_Row",
+          "https://kevinforsyth.net/ELMAC/bac-lab/"
+        ]
+      },
+      {
+        "id": "campus_michstate_morrill_hall_of_agriculture",
+        "wiki": "Laboratory Row",
+        "name": "Justin S. Morrill Hall of Agriculture",
+        "description": "College architect Edwyn A. Bowd designed this five-story neoclassical hall, the largest building on campus when it was dedicated in 1909. Renamed in 2013 for Senator Justin Morrill, author of the land-grant act, it still houses the College of Agriculture and Natural Resources.",
+        "architect": "Edwyn A. Bowd",
+        "yearBuilt": 1909,
+        "address": "446 W Circle Dr, East Lansing, MI 48824",
+        "oldUse": "Agriculture Hall",
+        "newUse": "College of Agriculture and Natural Resources",
+        "buildingStyle": "Neoclassical",
+        "numberOfStories": 5,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          42.731024,
+          -84.479251
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/26270890",
+        "source": [
+          "https://en.wikipedia.org/wiki/Laboratory_Row",
+          "https://kevinforsyth.net/ELMAC/ag-hall/",
+          "https://msutoday.msu.edu/news/2024/building-stories-iconic-buildings"
+        ]
+      },
+      {
+        "id": "campus_michstate_msu_museum",
+        "wiki": "MSU Museum",
+        "name": "MSU Museum",
+        "description": "Edwyn Bowd designed this building as the college library, completed in 1924, and it became the museum's home after the new Main Library opened in 1955. The museum, founded in 1857, was Michigan's first Smithsonian Affiliate.",
+        "architect": "Edwyn Bowd (Bowd–Munson)",
+        "yearBuilt": 1924,
+        "address": "409 W Circle Dr, East Lansing, MI 48824",
+        "oldUse": "Library",
+        "newUse": "Museum",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "source": [
+          "https://en.wikipedia.org/wiki/MSU_Museum",
+          "https://kevinforsyth.net/ELMAC/library/"
+        ]
+      },
+      {
+        "id": "campus_michstate_spartan_stadium",
+        "wiki": "Spartan Stadium",
+        "name": "Spartan Stadium",
+        "description": "Edwyn Bowd designed the first 14,000-seat stadium, opened in 1923; its sides were double-decked in 1957, the year it was named Spartan Stadium. A 2005 west-side addition of suites and a press box made it the tallest building in East Lansing.",
+        "architect": "Edwyn Bowd (1923); Orlie Munson (1957); HNTB (2005)",
+        "yearBuilt": 1923,
+        "address": "1 Spartan Way, East Lansing, MI 48824",
+        "oldUse": "Football Stadium",
+        "newUse": "Football Stadium",
+        "buildingStyle": "Stadium",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "source": [
+          "https://en.wikipedia.org/wiki/Spartan_Stadium"
+        ]
+      },
+      {
+        "id": "campus_michstate_demonstration_hall",
+        "wiki": "Demonstration Hall",
+        "name": "Demonstration Hall",
+        "description": "Bowd–Munson designed this Romanesque Revival hall, built in 1928 with offices, classrooms and a riding arena for military science. Once home to Spartan basketball and hockey, it now serves ROTC and the Spartan Marching Band.",
+        "architect": "Bowd–Munson",
+        "yearBuilt": 1928,
+        "address": "Michigan State University, East Lansing, MI 48824",
+        "oldUse": "Military Drill Hall and Arena",
+        "newUse": "ROTC and Marching Band",
+        "buildingStyle": "Romanesque Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "source": [
+          "https://en.wikipedia.org/wiki/Demonstration_Hall"
+        ]
+      },
+      {
+        "id": "campus_michstate_jenison_fieldhouse",
+        "wiki": "Jenison Fieldhouse",
+        "name": "Jenison Fieldhouse",
+        "description": "Opened in 1940 and named for alumnus Frederick Cowles Jenison, this three-story late Art Deco fieldhouse has reliefs of baseball, basketball and football players above its three main doors. Magic Johnson's 1979 national champions played here, and a plaque outside recalls the 1963 \"Game of Change.\"",
+        "architect": "Unknown",
+        "yearBuilt": 1940,
+        "address": "Michigan State University, East Lansing, MI 48824",
+        "oldUse": "Basketball Arena and Fieldhouse",
+        "newUse": "Athletics Arena",
+        "buildingStyle": "Art Deco",
+        "numberOfStories": 3,
+        "height": 0,
+        "foodSpots": [],
+        "source": [
+          "https://en.wikipedia.org/wiki/Jenison_Fieldhouse",
+          "https://en.wikipedia.org/wiki/Bowd%E2%80%93Munson_Company"
+        ]
+      },
+      {
+        "id": "campus_michstate_breslin_center",
+        "wiki": "Breslin Student Events Center",
+        "name": "Breslin Student Events Center",
+        "description": "HNTB and Giffels, Hoyem, Basso designed this arena, opened in 1989 and named for alumnus and administrator Jack Breslin. Home of Spartan basketball, it gained the Tom Izzo Basketball Hall of History in a 2016–2017 renovation.",
+        "architect": "HNTB; Giffels, Hoyem, Basso",
+        "yearBuilt": 1989,
+        "address": "534 Birch Rd, East Lansing, MI 48824",
+        "oldUse": "Arena",
+        "newUse": "Arena",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "source": [
+          "https://en.wikipedia.org/wiki/Breslin_Student_Events_Center"
+        ]
+      },
+      {
+        "id": "campus_michstate_munn_ice_arena",
+        "wiki": "Munn Ice Arena",
+        "name": "Munn Ice Arena",
+        "description": "Grand Rapids firm Daverman Associates designed this hockey-only arena, opened in 1974 and named for coach and athletic director Clarence \"Biggie\" Munn. Its rink was named for longtime coach Ron Mason in 2023.",
+        "architect": "Daverman Associates",
+        "yearBuilt": 1974,
+        "address": "509 Birch Rd, East Lansing, MI 48824",
+        "oldUse": "Ice Arena",
+        "newUse": "Ice Arena",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "source": [
+          "https://en.wikipedia.org/wiki/Munn_Ice_Arena"
+        ]
+      },
+      {
+        "id": "campus_michstate_abrams_planetarium",
+        "wiki": "Abrams Planetarium",
+        "name": "Abrams Planetarium",
+        "description": "Ralph Calder Associates of Detroit designed this planetarium, opened in 1963 and named for aerial photography pioneer Talbert Abrams and his wife Leota. Its 150-seat sky theater sits under a fifty-foot dome.",
+        "architect": "Ralph Calder Associates",
+        "yearBuilt": 1963,
+        "address": "755 Science Dr, East Lansing, MI 48824",
+        "oldUse": "Planetarium",
+        "newUse": "Planetarium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "source": [
+          "https://en.wikipedia.org/wiki/Abrams_Planetarium"
+        ]
+      },
+      {
+        "id": "campus_michstate_frib",
+        "wiki": "Facility for Rare Isotope Beams",
+        "name": "Facility for Rare Isotope Beams",
+        "description": "SmithGroup JJR designed this U.S. Department of Energy user facility for nuclear science, completed in 2022. Scientists use it to make and study rare isotopes, short-lived atomic nuclei not normally found on Earth.",
+        "architect": "SmithGroup JJR",
+        "yearBuilt": 2022,
+        "address": "640 S Shaw Ln, East Lansing, MI 48824",
+        "oldUse": "Nuclear Science Laboratory",
+        "newUse": "Nuclear Science Laboratory",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "source": [
+          "https://en.wikipedia.org/wiki/Facility_for_Rare_Isotope_Beams",
+          "https://msutoday.msu.edu/news/2025/09/must-do-spartan-experiences"
+        ]
       }
     ]
   },

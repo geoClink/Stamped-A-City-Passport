@@ -12,6 +12,10 @@
     60.1862761,
     24.8262565
   ],
+  "Abrams Planetarium": [
+    42.7256,
+    -84.476
+  ],
   "Academic libraries in Leuven": [
     50.87805556,
     4.7075
@@ -185,6 +189,10 @@
     35.21166667,
     -97.44611111
   ],
+  "Breslin Student Events Center": [
+    42.728227,
+    -84.492396
+  ],
   "Bridge of Sighs, Cambridge": [
     52.208425,
     0.11576667
@@ -240,6 +248,7 @@
     -93.646
   ],
   "Campanile (Trinity College Dublin)": null,
+  "Campus of Michigan State University": null,
   "Campus of Texas A&M University": [
     30.62663,
     -96.34105
@@ -418,6 +427,10 @@
     42.05666667,
     -87.675
   ],
+  "Demonstration Hall": [
+    42.729629,
+    -84.488699
+  ],
   "Demosthenian Literary Society": [
     33.9569,
     -83.3752
@@ -512,6 +525,10 @@
   "Ezekiel W. Cullen Building": [
     29.72037,
     -95.34374
+  ],
+  "Facility for Rare Isotope Beams": [
+    42.72478056,
+    -84.47382778
   ],
   "Fifth Third Arena": [
     39.131101,
@@ -786,6 +803,10 @@
     43.03611111,
     -76.13638889
   ],
+  "Jenison Fieldhouse": [
+    42.730843,
+    -84.489928
+  ],
   "Jerry Herman Ring Theatre": [
     25.71963333,
     -80.28010556
@@ -887,6 +908,7 @@
     45.401879,
     11.868568
   ],
+  "Laboratory Row": null,
   "Laboratory of Mechanics": [
     42.02561111,
     -93.65061111
@@ -959,6 +981,10 @@
   "MIT Chapel": [
     42.35833333,
     -71.09416667
+  ],
+  "MSU Museum": [
+    42.7315,
+    -84.4816
   ],
   "MSU Union": [
     42.734114,
@@ -1135,6 +1161,10 @@
   "Mueller Tower": [
     40.82013889,
     -96.70258333
+  ],
+  "Munn Ice Arena": [
+    42.72805556,
+    -84.48916667
   ],
   "Museo Universitario Arte Contemporáneo": null,
   "Museum Building (Trinity College Dublin)": null,
@@ -1548,6 +1578,10 @@
   "Southern Methodist University": [
     32.83855,
     -96.78294
+  ],
+  "Spartan Stadium": [
+    42.72805556,
+    -84.48472222
   ],
   "Speed Art Museum": [
     38.21786111,

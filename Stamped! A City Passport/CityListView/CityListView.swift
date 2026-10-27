@@ -183,6 +183,8 @@ struct CityListView: View {
         .onChange(of: navManager.spotlightCity) { _, city in
             if let city {
                 selectedCity = city
+                // Clear it so opening the same city again (from Spotlight or a link) still works
+                navManager.spotlightCity = nil
             }
         }
         .overlay {

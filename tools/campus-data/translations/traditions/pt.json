@@ -371,6 +371,34 @@
     "trad_michstate_beaumont_tower": {
       "name": "Beaumont Tower aberta",
       "description": "A Beaumont Tower abre para visitantes na primeira quarta-feira de cada mês e na formatura. Suba para ver o carrilhão e a vista do campus."
+    },
+    "trad_michstate_dairy_store": {
+      "name": "MSU Dairy Store",
+      "description": "A MSU Dairy Store foi eleita Grande Campeã no concurso de sorvetes de 2025 da American Dairy Science Association. Passe na loja do Anthony Hall e prove um sabor."
+    },
+    "trad_michstate_beal_garden": {
+      "name": "Jardim Botânico W. J. Beal",
+      "description": "O professor William J. Beal criou este jardim em 1873, considerado o jardim botânico universitário mantido sem interrupção mais antigo dos EUA. Passeie por ele de graça todos os dias, durante o dia."
+    },
+    "trad_michstate_horticulture_gardens": {
+      "name": "Jardins de Horticultura da MSU",
+      "description": "Os jardins da Bogue Street têm mais de 700 variedades de rosas e o Michigan 4-H Children's Garden. Passeie por eles de graça todos os dias."
+    },
+    "trad_michstate_river_trail": {
+      "name": "Trilha do Rio Red Cedar",
+      "description": "Uma trilha atravessa o campus pela margem sul do Rio Red Cedar, e é aqui que começa a Lansing River Trail. Percorra de bicicleta ou a pé, ou desça o rio de caiaque."
+    },
+    "trad_michstate_izzone": {
+      "name": "A Izzone",
+      "description": "Batizada em homenagem ao técnico Tom Izzo, a Izzone é a torcida estudantil de cerca de 5.000 pessoas nos jogos de basquete masculino no Breslin Center. Vá a um jogo para ouvi-la vibrar."
+    },
+    "trad_michstate_magic_johnson_statue": {
+      "name": "Estátua de Magic Johnson",
+      "description": "Uma estátua de bronze de 3,7 metros de Earvin \"Magic\" Johnson, que levou a MSU ao título nacional de 1979, fica em frente ao Breslin Center desde 2003. Tire uma foto com ela."
+    },
+    "trad_michstate_band_march": {
+      "name": "Desfile da Spartan Marching Band",
+      "description": "Nos sábados de futebol americano, a banda aquece no Adams Field e depois desfila pela Estátua do Espartano e sobe a Red Cedar Road até o estádio, cerca de uma hora antes do jogo. Fique no percurso para torcer."
     }
   },
   "University of Minnesota Twin Cities": {

@@ -600,3 +600,9 @@
 "Visited" = "Visité";
 "Not yet" = "Pas encore";
 "View City" = "Voir la ville";
+
+/* Suggestions and reports (open a pre-filled email) */
+"Report an issue with this building" = "Signaler un problème avec ce bâtiment";
+"Report an issue with %@" = "Signaler un problème avec %@";
+"Opens your email app" = "Ouvre votre app de messagerie";
+"Know a tradition we're missing?" = "Vous connaissez une tradition qui manque ?";

@@ -350,11 +350,6 @@ struct CityDetailView: View {
     }
 
     private func reportCityURL() -> URL? {
-        let email = "georgeclinkscalesdev@proton.me"
-        let subject = "Content Issue: \(viewModel.city.name)"
-        let body = "City: \(viewModel.city.name)\nCountry: \(viewModel.city.country.rawValue)\n\nWhat's wrong:\n"
-        let encodedSubject = subject.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? ""
-        let encodedBody = body.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? ""
-        return URL(string: "mailto:\(email)?subject=\(encodedSubject)&body=\(encodedBody)")
+        FeedbackMail.place(viewModel.city)
     }
 }

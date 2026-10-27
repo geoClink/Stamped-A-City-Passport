@@ -600,3 +600,9 @@
 "Visited" = "已到访";
 "Not yet" = "尚未到访";
 "View City" = "查看城市";
+
+/* Suggestions and reports (open a pre-filled email) */
+"Report an issue with this building" = "报告此建筑的问题";
+"Report an issue with %@" = "报告 %@ 的问题";
+"Opens your email app" = "打开你的邮件 App";
+"Know a tradition we're missing?" = "知道我们漏掉的传统吗？";

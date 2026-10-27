@@ -54,6 +54,12 @@ struct GlobalDiscoveryApp: App {
                     navManager.spotlightCity = city
                 }
             }
+            // Links to a city or campus page on the Stamped! website open it here
+            .onOpenURL { url in
+                if let city = WebLinkRouter.city(from: url) {
+                    navManager.spotlightCity = city
+                }
+            }
         }
     }
 }

@@ -852,6 +852,55 @@
       "description": "La Beaumont Tower abre a los visitantes el primer miércoles de cada mes y en la graduación. Suba a ver el carillón y la vista del campus.",
       "latitude": 42.7319499,
       "longitude": -84.482282
+    },
+    {
+      "id": "trad_michstate_dairy_store",
+      "name": "MSU Dairy Store",
+      "description": "La MSU Dairy Store fue elegida Gran Campeona en el concurso de helados de 2025 de la American Dairy Science Association. Pasa por su tienda en Anthony Hall y prueba un sabor.",
+      "latitude": 42.724304,
+      "longitude": -84.4784471
+    },
+    {
+      "id": "trad_michstate_beal_garden",
+      "name": "Jardín Botánico W. J. Beal",
+      "description": "El profesor William J. Beal creó este jardín en 1873, y se considera el jardín botánico universitario con mantenimiento continuo más antiguo de Estados Unidos. Recórrelo gratis cualquier día durante las horas de luz.",
+      "latitude": 42.7310173,
+      "longitude": -84.4849455
+    },
+    {
+      "id": "trad_michstate_horticulture_gardens",
+      "name": "Jardines de Horticultura de MSU",
+      "description": "Los jardines de Bogue Street reúnen más de 700 variedades de rosas y el Michigan 4-H Children's Garden. Pasea por ellos gratis cualquier día.",
+      "latitude": 42.7216193,
+      "longitude": -84.4739287
+    },
+    {
+      "id": "trad_michstate_river_trail",
+      "name": "Sendero del río Red Cedar",
+      "description": "Un sendero cruza el campus por la orilla sur del río Red Cedar, y aquí comienza el Lansing River Trail. Recórrelo en bici o a pie, o navega el río en kayak.",
+      "latitude": 42.7292296,
+      "longitude": -84.4843508
+    },
+    {
+      "id": "trad_michstate_izzone",
+      "name": "La Izzone",
+      "description": "Con el nombre del entrenador Tom Izzo, la Izzone es la grada estudiantil de unas 5.000 personas en los partidos de baloncesto masculino del Breslin Center. Ve a un partido para oírla rugir.",
+      "latitude": 42.728155,
+      "longitude": -84.492058
+    },
+    {
+      "id": "trad_michstate_magic_johnson_statue",
+      "name": "Estatua de Magic Johnson",
+      "description": "Una figura de bronce de 3,7 metros de Earvin «Magic» Johnson, que llevó a MSU al título nacional de 1979, está frente al Breslin Center desde 2003. Hazte una foto con ella.",
+      "latitude": 42.7273255,
+      "longitude": -84.4917902
+    },
+    {
+      "id": "trad_michstate_band_march",
+      "name": "Desfile de la Spartan Marching Band",
+      "description": "Los sábados de fútbol americano, la banda calienta en Adams Field y luego desfila junto a la Estatua del Espartano y sube por Red Cedar Road hasta el estadio, una hora antes del inicio. Colócate en el recorrido para animarla.",
+      "latitude": 42.7325438,
+      "longitude": -84.4855646
     }
   ],
   "University of Minnesota Twin Cities": [

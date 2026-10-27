@@ -371,6 +371,34 @@
     "trad_michstate_beaumont_tower": {
       "name": "보몬트 타워 개방일",
       "description": "보몬트 타워는 매달 첫째 수요일과 졸업식 때 방문객에게 개방됩니다. 올라가서 카리용과 캠퍼스 전망을 즐기세요."
+    },
+    "trad_michstate_dairy_store": {
+      "name": "MSU 데어리 스토어",
+      "description": "MSU 데어리 스토어는 미국낙농과학회의 2025년 아이스크림 대회에서 그랜드 챔피언으로 뽑혔습니다. 앤서니 홀 매장에 들러 한 가지 맛을 맛보세요."
+    },
+    "trad_michstate_beal_garden": {
+      "name": "W. J. 빌 식물원",
+      "description": "윌리엄 J. 빌 교수가 1873년에 만든 이 식물원은 미국에서 가장 오래도록 끊임없이 관리된 대학 식물원으로 알려져 있습니다. 낮 시간에는 매일 무료로 둘러볼 수 있습니다."
+    },
+    "trad_michstate_horticulture_gardens": {
+      "name": "MSU 원예 정원",
+      "description": "보그 스트리트의 정원에는 700종이 넘는 장미 품종과 미시간 4-H 어린이 정원이 있습니다. 매일 무료로 거닐어 보세요."
+    },
+    "trad_michstate_river_trail": {
+      "name": "레드 시더 강 트레일",
+      "description": "레드 시더 강 남쪽 기슭을 따라 캠퍼스를 가로지르는 트레일로, 랜싱 리버 트레일이 여기서 시작됩니다. 자전거나 도보로 둘러보거나 카약으로 강을 따라가 보세요."
+    },
+    "trad_michstate_izzone": {
+      "name": "이존",
+      "description": "톰 이조 감독의 이름을 딴 이존은 브레슬린 센터에서 열리는 남자 농구 경기의 약 5,000석 규모 학생 응원석입니다. 경기를 보러 가서 그 함성을 들어 보세요."
+    },
+    "trad_michstate_magic_johnson_statue": {
+      "name": "매직 존슨 동상",
+      "description": "1979년 MSU를 전국 우승으로 이끈 어빈 '매직' 존슨의 3.7미터 높이 청동상이 2003년부터 브레슬린 센터 앞에 서 있습니다. 함께 사진을 찍어 보세요."
+    },
+    "trad_michstate_band_march": {
+      "name": "스파르탄 마칭 밴드 행진",
+      "description": "풋볼 경기가 있는 토요일이면 밴드는 애덤스 필드에서 몸을 푼 뒤, 킥오프 약 1시간 전에 스파르탄 동상을 지나 레드 시더 로드를 따라 경기장까지 행진합니다. 행진 경로에서 응원해 보세요."
     }
   },
   "University of Minnesota Twin Cities": {

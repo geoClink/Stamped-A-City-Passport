@@ -600,3 +600,9 @@
 "Visited" = "訪問済み";
 "Not yet" = "未訪問";
 "View City" = "都市を見る";
+
+/* Suggestions and reports (open a pre-filled email) */
+"Report an issue with this building" = "この建物の問題を報告";
+"Report an issue with %@" = "%@ の問題を報告";
+"Opens your email app" = "メールアプリを開きます";
+"Know a tradition we're missing?" = "載っていない伝統をご存じですか？";
