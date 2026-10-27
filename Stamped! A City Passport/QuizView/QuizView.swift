@@ -53,7 +53,7 @@ struct QuizView: View {
                 .navigationTitle("\(viewModel.cityName) Expert")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
+                    ToolbarItem(placement: .closeSheet) {
                         Button("Exit") { dismiss() }
                             .fontWeight(isHighContrast ? .black : .bold)
                             .foregroundColor(brandColor)

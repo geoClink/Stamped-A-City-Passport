@@ -195,6 +195,18 @@ extension View {
 
 // MARK: - Shared
 
+extension ToolbarItemPlacement {
+    /// The Done/Exit button that closes a sheet. Top-right on iPhone/iPad. On the Mac the trailing
+    /// spot becomes `.primaryAction`, which a sheet doesn't show, so it goes where the Mac puts sheet buttons.
+    static var closeSheet: ToolbarItemPlacement {
+        #if os(macOS)
+        .confirmationAction
+        #else
+        .navigationBarTrailing
+        #endif
+    }
+}
+
 extension SearchFieldPlacement {
     /// The search field that always shows under the navigation bar on iPhone/iPad;
     /// on the Mac, the window's own search field (at the top of the sidebar when there is one).

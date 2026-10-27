@@ -34,7 +34,7 @@ struct PassportShareCardView: View {
             .navigationTitle("Share Passport")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarItem(placement: .closeSheet) {
                     Button("Done") { dismiss() }
                         .fontWeight(.semibold)
                         .foregroundStyle(DS.Palette.accent)
