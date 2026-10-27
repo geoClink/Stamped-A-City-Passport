@@ -37863,6 +37863,24 @@
       "currency": "USD ($)",
       "latitude": 42.724781,
       "longitude": -84.473828
+    },
+    {
+      "id": "campus_michstate_main_library",
+      "name": "Main Library",
+      "assetName": "campus_michstate_main_library",
+      "description": "Completed in 1955 on the north bank of the Red Cedar River, overlooking Beal Botanical Garden, this research library replaced the old one, which became the MSU Museum, and students lined up to pass the books across. An east wing added in 1967 tripled its shelf space, and it holds one of the world's largest comic art collections and the Vincent Voice Library.",
+      "architect": "Unknown",
+      "yearBuilt": 1955,
+      "address": "366 W Circle Dr, East Lansing, MI 48824",
+      "oldUse": "Research Library",
+      "newUse": "Main Library",
+      "buildingStyle": "Unknown",
+      "numberOfStories": 0,
+      "height": 0,
+      "foodSpots": [],
+      "currency": "USD ($)",
+      "latitude": 42.731022,
+      "longitude": -84.483592
     }
   ],
   "University of Minnesota Twin Cities": [

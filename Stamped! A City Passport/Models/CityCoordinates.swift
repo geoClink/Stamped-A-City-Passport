@@ -205,7 +205,7 @@ extension CityLocation.City {
         case .uIndiana:            return (39.1671, -86.5219)
         case .uIowa:               return (41.6599, -91.5363)
         case .uMaryland:           return (38.9867, -76.9420)
-        case .michiganState:       return (42.7306, -84.4822)
+        case .michiganState:       return (42.7306, -84.4823)
         case .uMinnesota:          return (44.9743, -93.2362)
         case .uNebraska:           return (40.8189, -96.7046)
         case .northwestern:        return (42.0536, -87.6746)
