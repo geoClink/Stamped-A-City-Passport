@@ -221,20 +221,21 @@ private extension SettingsView {
                 subtitle: "Ideas, bugs, or anything else",
                 icon: "envelope.fill",
                 subject: "Stamped App Feedback",
-                body: ""
+                body: "",
+                isSuggestion: false
             )
         }
     }
 
-    private func feedbackLink(title: LocalizedStringKey, subtitle: LocalizedStringKey, icon: String, subject: String, body: String) -> some View {
-        // Replace georgeclinkscalesdev@proton.me with your support email address
-        let email = "georgeclinkscalesdev@proton.me"
-        let encodedSubject = subject.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-        let encodedBody = body.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-        let urlString = "mailto:\(email)?subject=\(encodedSubject)&body=\(encodedBody)"
+    /// Corrections and building ideas carry the suggestion tag (so they're filed with the website's);
+    /// general feedback doesn't.
+    private func feedbackLink(title: LocalizedStringKey, subtitle: LocalizedStringKey, icon: String, subject: String, body: String, isSuggestion: Bool = true) -> some View {
+        let url = isSuggestion
+            ? FeedbackMail.general(subject: subject, body: body)
+            : URL(string: "mailto:\(FeedbackMail.address)?subject=\(FeedbackMail.encoded(subject))&body=\(FeedbackMail.encoded(body + "\n\n" + FeedbackMail.appInfo))")
 
         return Group {
-            if let url = URL(string: urlString) {
+            if let url {
                 Link(destination: url) {
                     feedbackRow(title: title, subtitle: subtitle, icon: icon)
                 }
