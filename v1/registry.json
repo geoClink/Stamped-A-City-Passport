@@ -2159,6 +2159,28 @@
       "longitude": 55.1898536
     },
     {
+      "id": "dxb_burj_khalifa",
+      "name": "Burj Khalifa",
+      "assetName": "burjKhalifa",
+      "description": "The tallest building in the world, this 828-metre tower rises from a Y-shaped plan inspired by the desert flower Hymenocallis. Its three wings buttress a central core and step back in a spiral as the tower climbs, which breaks up the wind and lets it stand so tall. Architect Adrian Smith designed it while at Skidmore, Owings & Merrill, and it opened in January 2010. The top 244 metres are a steel spire, and on a clear day the tip can be seen almost 95 kilometres away. Visitors ride some of the world's fastest elevators to the At the Top observation decks on the 124th, 125th and 148th floors.",
+      "architect": "Adrian Smith (SOM)",
+      "yearBuilt": 2010,
+      "address": "1 Sheikh Mohammed bin Rashid Blvd, Downtown Dubai, Dubai, United Arab Emirates",
+      "oldUse": "Mixed-use",
+      "newUse": "Hotel / Residential / Observation",
+      "buildingStyle": "Neo-futurism",
+      "numberOfStories": 163,
+      "height": 828,
+      "foodSpots": [
+        "At.mosphere",
+        "Armani/Ristorante",
+        "Armani/Amal"
+      ],
+      "currency": "AED (د.إ)",
+      "latitude": 25.1972,
+      "longitude": 55.2742
+    },
+    {
       "id": "dxb_museum_future",
       "name": "Museum of the Future",
       "assetName": "museumFuture",
@@ -4519,6 +4541,27 @@
       "currency": "USD ($)",
       "latitude": 41.7897893,
       "longitude": -87.595994
+    },
+    {
+      "id": "chi-16",
+      "name": "Trump International Hotel & Tower",
+      "assetName": "trumpTowerCHI",
+      "description": "Rising 98 stories beside the Chicago River, this glass and stainless-steel tower was designed by Adrian Smith of Skidmore, Owings & Merrill and finished in 2009. Its setbacks step in at the heights of its neighbours, the Wrigley Building, Marina City and 330 North Wabash, so it ties into the skyline around it. The silvery facade picks up the colour of the river and the sky. Including its spire it reaches 423 metres, making it the second-tallest building in Chicago after Willis Tower. It holds a hotel on the lower floors and condominiums above, with a riverside terrace on the 16th floor.",
+      "architect": "Adrian Smith (SOM)",
+      "yearBuilt": 2009,
+      "address": "401 N Wabash Ave, Chicago, IL 60611",
+      "oldUse": "Hotel / Residential",
+      "newUse": "Hotel / Residential",
+      "buildingStyle": "Modernism",
+      "numberOfStories": 98,
+      "height": 423,
+      "foodSpots": [
+        "The Terrace at Trump",
+        "Shaw's Crab House"
+      ],
+      "currency": "USD ($)",
+      "latitude": 41.8889,
+      "longitude": -87.6264
     }
   ],
   "Boston": [
@@ -11290,7 +11333,7 @@
       "name": "Jin Mao Tower",
       "assetName": "jinMao",
       "description": "The Jin Mao Tower is a postmodern skyscraper that masterfully draws inspiration from traditional Chinese tiered pagoda architecture. The number eight, which is widely associated with prosperity and luck in China, is central to every aspect of its design. The structure consists of eighty-eight floors and features an octagonal core supported by eight massive exterior columns. Inside, the building houses a spectacular thirty-three-story atrium that belongs to the Grand Hyatt hotel. It remains a beloved landmark that bridges the gap between ancient Chinese symbolism and modern high-rise engineering.",
-      "architect": "Skidmore, Owings & Merrill (SOM)",
+      "architect": "Adrian Smith (SOM)",
       "yearBuilt": 1999,
       "address": "88 Century Ave, Lujiazui, Pudong New Area, Shanghai 200120, China",
       "oldUse": "Mixed-use",
