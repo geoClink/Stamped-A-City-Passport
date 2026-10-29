@@ -19,19 +19,38 @@ import CoreLocation
 /// The single configuration point for hotel links.
 enum HotelPartner {
     /// Which hotel site the "Find Hotels" and "Check Prices" buttons open.
-    static let provider: HotelProvider = .booking
+    /// Expedia for now: its tracked links work today. Booking.com (applied through CJ,
+    /// 29 Oct 2026) can come back once it's approved, alongside Expedia or instead of it.
+    static let provider: HotelProvider = .expedia
 
     /// The affiliate ID for `provider`, or nil for plain public search links.
     ///
     /// Leave this nil until the provider's affiliate program approves the app. After
-    /// approval, copy the ID from the partner dashboard (Booking.com: the Affiliate
-    /// Partner Centre, where the "aid" appears in every link it generates) and paste it
-    /// here as a string. It is not a secret: it's sent in plain sight in every link a
-    /// user opens, so it is fine to keep it in source control.
+    /// approval, copy the ID from the partner dashboard and paste it here as a string:
+    /// Booking.com: the "aid" that appears in every link its deep link builder makes.
+    /// Expedia: the Partnerize camref, `expediaCamref` below.
+    /// It is not a secret: it's sent in plain sight in every link a user opens, so it
+    /// is fine to keep it in source control.
     ///
     /// While this is nil the links carry no tracking parameters at all, and the
     /// "may earn a commission" note stays hidden.
-    static let affiliateID: String? = nil
+    static let affiliateID: String? = expediaCamref
+
+    /// The Expedia Group Affiliate Program's Partnerize camref for this account, from the
+    /// code the Creator Hub's Search widgets page generates (data-camref). Set
+    /// `affiliateID` to this when `provider` is `.expedia`.
+    static let expediaCamref = "1110lStp6"
+}
+
+/// How a provider's affiliate links carry the affiliate ID.
+enum AffiliateTracking: Equatable {
+    /// Added to the search link as a query parameter, e.g. Booking.com's "aid".
+    case queryParameter(String)
+    /// The search link is wrapped in a Partnerize click link:
+    /// https://prf.hn/click/camref:<id>/destination:<encoded search link>.
+    /// Checked 29 Oct 2026: it lands on the same Expedia search with the affiliate's
+    /// tracking (affcid, clickref) added.
+    case partnerize
 }
 
 /// The hotel sites Stamped can link to.
@@ -58,20 +77,20 @@ enum HotelProvider: String, CaseIterable, Identifiable {
         }
     }
 
-    /// The query parameter that carries the affiliate ID, or nil when it hasn't been
-    /// confirmed from the provider's partner documentation (then no ID is ever added).
-    var affiliateParameter: String? {
+    /// How the affiliate ID is carried, or nil when it hasn't been confirmed from the
+    /// provider's partner program (then no ID is ever added).
+    var affiliateTracking: AffiliateTracking? {
         switch self {
         case .booking:
             // Booking.com affiliate links carry the affiliate ID as "aid"
-            // (e.g. https://www.booking.com/?aid=XXXXXXX). Double-check against a link
-            // from the Partner Centre's deep link builder once the account is approved.
-            "aid"
-        case .expedia, .hotelsCom:
-            // TODO: The Expedia Group Affiliate Program builds tracked links in its own
-            // dashboard; the query parameter for a hand-built search link isn't in the
-            // public docs. Fill this in from the partner docs after approval. Until
-            // then an Expedia/Hotels.com ID is ignored (and no commission note shows).
+            // (e.g. https://www.booking.com/?aid=XXXXXXX). Booking now signs affiliates up
+            // through CJ, so double-check against a link CJ generates once approved.
+            .queryParameter("aid")
+        case .expedia:
+            .partnerize
+        case .hotelsCom:
+            // Hotels.com is a separate Partnerize campaign, so the Expedia camref doesn't
+            // cover it. Until it has its own, a Hotels.com ID is ignored.
             nil
         }
     }
@@ -156,7 +175,7 @@ struct HotelLinkBuilder {
 
     /// The trimmed ID, when one is set and this provider's parameter is known.
     private var activeAffiliateID: String? {
-        guard provider.affiliateParameter != nil,
+        guard provider.affiliateTracking != nil,
               let id = affiliateID?.trimmingCharacters(in: .whitespacesAndNewlines),
               !id.isEmpty else { return nil }
         return id
@@ -191,6 +210,7 @@ struct HotelLinkBuilder {
     ///
     /// Booking.com:  searchresults.html?ss=<text>&latitude=<lat>&longitude=<lon>&checkin=yyyy-MM-dd&checkout=yyyy-MM-dd[&aid=<id>]
     /// Expedia / Hotels.com:  Hotel-Search?destination=<text>&latLong=<lat>,<lon>&startDate=yyyy-MM-dd&endDate=yyyy-MM-dd
+    /// With an Expedia camref, that search link is wrapped in a Partnerize click link.
     func url(for search: HotelSearch) -> URL? {
         let destination = search.destination.trimmingCharacters(in: .whitespacesAndNewlines)
         var items: [(String, String)] = []
@@ -217,7 +237,8 @@ struct HotelLinkBuilder {
             }
         }
 
-        if let id = activeAffiliateID, let parameter = provider.affiliateParameter {
+        let id = activeAffiliateID
+        if let id, case .queryParameter(let parameter) = provider.affiliateTracking {
             items.append((parameter, id))
         }
 
@@ -226,7 +247,12 @@ struct HotelLinkBuilder {
         let query = items
             .map { "\(Self.encode($0.0))=\(Self.encode($0.1))" }
             .joined(separator: "&")
-        return URL(string: "\(provider.searchEndpoint)?\(query)")
+        let searchLink = "\(provider.searchEndpoint)?\(query)"
+
+        if let id, provider.affiliateTracking == .partnerize {
+            return URL(string: "https://prf.hn/click/camref:\(Self.encode(id))/destination:\(Self.encode(searchLink))")
+        }
+        return URL(string: searchLink)
     }
 
     /// Five decimals is about a metre, plenty for "hotels near here".

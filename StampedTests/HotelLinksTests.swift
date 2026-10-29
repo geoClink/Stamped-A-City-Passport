@@ -89,13 +89,26 @@ final class HotelLinksTests: XCTestCase {
         XCTAssertEqual(url?.absoluteString, "https://www.hotels.com/Hotel-Search?destination=Tokyo%2C%20Japan")
     }
 
-    func testExpediaIgnoresAffiliateIDUntilItsParameterIsKnown() throws {
-        // Expedia's affiliate parameter is still a TODO, so an ID must not change the link
+    func testExpediaCamrefWrapsTheSearchInAPartnerizeLink() throws {
+        let search = HotelSearch(destination: "Boston, United States",
+                                 checkIn: date(2026, 12, 4), checkOut: date(2026, 12, 6))
+        let plain = try XCTUnwrap(builder(.expedia).url(for: search))
+        XCTAssertFalse(builder(.expedia).earnsCommission)
+
+        let tracked = builder(.expedia, affiliateID: " \(HotelPartner.expediaCamref) ")
+        let url = try XCTUnwrap(tracked.url(for: search))
+        XCTAssertTrue(tracked.earnsCommission)
+        XCTAssertEqual(url.absoluteString,
+                       "https://prf.hn/click/camref:1110lStp6/destination:" + HotelLinkBuilder.encode(plain.absoluteString))
+        // The whole search link sits in one path segment, so its "?" and "&" are escaped
+        XCTAssertNil(url.query)
+    }
+
+    func testHotelsComIgnoresAffiliateID() throws {
+        // The Expedia camref doesn't cover Hotels.com, so an ID must not change the link
         let search = HotelSearch(destination: "Boston, United States")
-        let plain = builder(.expedia).url(for: search)
-        let withID = builder(.expedia, affiliateID: "abc").url(for: search)
-        XCTAssertEqual(plain, withID)
-        XCTAssertFalse(builder(.expedia, affiliateID: "abc").earnsCommission)
+        XCTAssertEqual(builder(.hotelsCom).url(for: search), builder(.hotelsCom, affiliateID: "abc").url(for: search))
+        XCTAssertFalse(builder(.hotelsCom, affiliateID: "abc").earnsCommission)
     }
 
     // MARK: Encoding
