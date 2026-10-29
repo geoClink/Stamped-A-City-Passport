@@ -15,7 +15,31 @@ struct WorldMapView: View {
         )
     )
 
+    /// What the map shows now and how wide it is, for grouping pins that would overlap.
+    @State private var visibleRegion: MKCoordinateRegion?
+    @State private var mapWidth: CGFloat = 0
+
     private var cities: [CityLocation.City] { cityVM.allCities }
+
+    private static func coordinate(of city: CityLocation.City) -> CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: city.coordinate.lat, longitude: city.coordinate.lon)
+    }
+
+    /// Pins grouped into numbered bubbles when zoomed out. The selected city
+    /// always keeps its own pin, so its callout never points at a bubble.
+    private var clusters: [MapCluster<CityLocation.City>] {
+        let others = cities.filter { $0 != selectedCity }
+        var result = MapClusterer.clusters(
+            of: others,
+            coordinateOf: Self.coordinate(of:),
+            region: visibleRegion,
+            mapWidth: mapWidth
+        )
+        if let selectedCity, cities.contains(selectedCity) {
+            result.append(MapCluster(items: [selectedCity], coordinate: Self.coordinate(of: selectedCity)))
+        }
+        return result
+    }
 
     private func isVisited(_ city: CityLocation.City) -> Bool {
         city.buildings.contains { progress.visitedIDs.contains($0.id) }
@@ -77,31 +101,50 @@ struct WorldMapView: View {
 
     private var map: some View {
         Map(position: $cameraPosition) {
-            ForEach(cities) { city in
-                let coord = CLLocationCoordinate2D(
-                    latitude: city.coordinate.lat,
-                    longitude: city.coordinate.lon
-                )
-                let visited = isVisited(city)
-                let isSelected = selectedCity == city
+            ForEach(clusters) { cluster in
+                if cluster.isCluster {
+                    Annotation("", coordinate: cluster.coordinate, anchor: .center) {
+                        MapClusterBubble(count: cluster.items.count, anyVisited: cluster.items.contains(where: isVisited))
+                            .onTapGesture { zoom(into: cluster) }
+                    }
+                    .annotationTitles(.hidden)
+                } else {
+                    let city = cluster.items[0]
+                    let visited = isVisited(city)
+                    let isSelected = selectedCity == city
 
-                Annotation(city.name, coordinate: coord, anchor: .bottom) {
-                    CityMapPin(visited: visited, isSelected: isSelected)
-                        .onTapGesture {
-                            HapticManager.shared.trigger(.selection)
-                            withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) {
-                                selectedCity = (selectedCity == city) ? nil : city
+                    Annotation(city.name, coordinate: cluster.coordinate, anchor: .bottom) {
+                        CityMapPin(visited: visited, isSelected: isSelected)
+                            .onTapGesture {
+                                HapticManager.shared.trigger(.selection)
+                                withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) {
+                                    selectedCity = (selectedCity == city) ? nil : city
+                                }
                             }
-                        }
+                    }
+                    .annotationTitles(.hidden)
                 }
-                .annotationTitles(.hidden)
             }
         }
+        // Regroup the pins once the map stops moving
+        .onMapCameraChange(frequency: .onEnd) { context in
+            visibleRegion = context.region
+        }
+        .onGeometryChange(for: CGFloat.self) { $0.size.width } action: { mapWidth = $0 }
         .mapStyle(.standard(elevation: .realistic))
         .onTapGesture {
             withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
                 selectedCity = nil
             }
+        }
+    }
+
+    /// Tapping a bubble zooms in until its pins come apart.
+    private func zoom(into cluster: MapCluster<CityLocation.City>) {
+        HapticManager.shared.trigger(.selection)
+        let region = cluster.zoomRegion(coordinateOf: Self.coordinate(of:), minimumSpan: 0.6)
+        withAnimation(.easeInOut(duration: 0.6)) {
+            cameraPosition = .region(region)
         }
     }
 

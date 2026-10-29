@@ -606,3 +606,8 @@
 "Report an issue with %@" = "%@에 대한 문제 신고";
 "Opens your email app" = "이메일 앱을 엽니다";
 "Know a tradition we're missing?" = "빠진 전통을 알고 계신가요?";
+
+// World map: numbered bubble for pins grouped together
+"%lld places" = "%lld곳";
+"Zooms in on these places" = "이 장소들을 확대합니다";
+"Stops %@" = "경유지 %@";
