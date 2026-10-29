@@ -615,3 +615,8 @@
 "Report an issue with %@" = "%@ の問題を報告";
 "Opens your email app" = "メールアプリを開きます";
 "Know a tradition we're missing?" = "載っていない伝統をご存じですか？";
+
+// World map: numbered bubble for pins grouped together
+"%lld places" = "%lld か所";
+"Zooms in on these places" = "これらの場所にズームします";
+"Stops %@" = "立ち寄り先 %@";

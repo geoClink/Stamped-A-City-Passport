@@ -98,10 +98,20 @@ struct EventsSection: View {
             .dsCard(padding: 0, isHighContrast: isHighContrast)
             .dsPageMargin()
 
-            Text("Event data from Ticketmaster. Stamped is not responsible for event cancellations.")
+            Text(service.events.contains { $0.sellerName == "SeatGeek" }
+                 ? LocalizedStringKey("Event data from Ticketmaster and SeatGeek. Stamped is not responsible for event cancellations.")
+                 : "Event data from Ticketmaster. Stamped is not responsible for event cancellations.")
                 .font(.caption2)
                 .foregroundColor(isHighContrast ? .primary : .secondary)
                 .dsPageMargin()
+
+            // SeatGeek ticket links carry a partner ID once one is set, so say so
+            if SeatGeekPartner.affiliateID != nil, service.events.contains(where: { $0.sellerName == "SeatGeek" }) {
+                Text(NSLocalizedString("Stamped! may earn a commission.", comment: "Hotel links: disclosure shown under hotel buttons when an affiliate ID is configured"))
+                    .font(.caption2)
+                    .foregroundColor(isHighContrast ? .primary : .secondary)
+                    .dsPageMargin()
+            }
         }
     }
 }
@@ -180,7 +190,7 @@ private struct EventCard: View {
         }
         .accessibilityElement(children: .combine)
         .accessibilityLabel(accessibilityLabel)
-        .accessibilityHint(event.ticketURL != nil ? "Opens Ticketmaster to buy tickets" : "")
+        .accessibilityHint(event.ticketURL != nil ? "Opens \(event.sellerName) to buy tickets" : "")
     }
 
     private var cardContent: some View {

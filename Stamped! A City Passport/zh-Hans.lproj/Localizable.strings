@@ -615,3 +615,8 @@
 "Report an issue with %@" = "报告 %@ 的问题";
 "Opens your email app" = "打开你的邮件 App";
 "Know a tradition we're missing?" = "知道我们漏掉的传统吗？";
+
+// World map: numbered bubble for pins grouped together
+"%lld places" = "%lld 个地点";
+"Zooms in on these places" = "放大查看这些地点";
+"Stops %@" = "站点 %@";

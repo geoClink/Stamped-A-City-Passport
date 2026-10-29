@@ -2,7 +2,7 @@
 //  PlaceEventsView.swift
 //  Stamped! A City Passport
 //
-//  Upcoming Ticketmaster events at a place, shown on its map card.
+//  Upcoming Ticketmaster and SeatGeek events at a place, shown on its map card.
 //  Shows nothing at all while loading or when there are no events, so cards
 //  for places without events don't change.
 //

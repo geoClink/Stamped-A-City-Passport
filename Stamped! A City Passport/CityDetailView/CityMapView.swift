@@ -43,6 +43,10 @@ struct CityMapView: View {
     @State private var detailBuilding: Building?
     /// onAppear also fires when coming Back from a building page; only frame the city the first time.
     @State private var hasFramedCity = false
+    /// Pins are added only after the map's first camera has settled. With the 3D
+    /// (realistic elevation) style, pins that are there from the start stay hidden
+    /// until the map is moved by hand.
+    @State private var mapIsReady = false
 
     @State private var filter: MapFilter = .all
     @State private var styleFilter: String?
@@ -69,6 +73,11 @@ struct CityMapView: View {
     /// The current day's walking route, drawn as a dashed line while touring a trip.
     @State private var tripTourLine: [CLLocationCoordinate2D] = []
     @State private var userLocation: CLLocation?
+    /// Where the camera last stopped, and where each pin sat on screen then (for grouping pins that overlap).
+    @State private var lastCamera: MapCamera?
+    @State private var pinScreenPoints: [String: CGPoint] = [:]
+    /// Bubbles start the size of a pin and grow with the text size, like the pins.
+    @ScaledMetric(relativeTo: .callout) private var clusterSize: CGFloat = 32
 
     @AppStorage("haptics_enabled") private var hapticsEnabled = true
     /// Satellite photos (default) or the regular drawn map; remembered between launches.
@@ -166,7 +175,9 @@ struct CityMapView: View {
     // MARK: - Body
 
     var body: some View {
-        map
+        MapReader { proxy in
+            map(proxy)
+        }
         // Orange, not system blue, for Apple's own map controls (the 2D/3D toggle, the compass)
         .tint(.adventureOrange)
         .navigationTitle(mapTitle)
@@ -326,7 +337,7 @@ struct CityMapView: View {
 
     // MARK: - Map
 
-    private var map: some View {
+    private func map(_ proxy: MapProxy) -> some View {
         mapBase
         // Satellite photos draped over Apple's 3D city scans (the same data as Flyover).
         // Cities without 3D coverage fall back to flat satellite imagery automatically.
@@ -335,6 +346,22 @@ struct CityMapView: View {
         .mapControls {
             MapCompass()
             MapPitchToggle()
+        }
+        // Regroup overlapping pins once the camera stops, and when pins come or go
+        .onMapCameraChange(frequency: .onEnd) { context in
+            lastCamera = context.camera
+            pinScreenPoints = screenPoints(proxy)
+            // Add the pins a moment after the first settled camera: the 3D map also drops
+            // pins added in the same update, or even on the next turn of the main loop.
+            if !mapIsReady {
+                Task {
+                    try? await Task.sleep(for: .milliseconds(300))
+                    mapIsReady = true
+                }
+            }
+        }
+        .onChange(of: pinItems.map(\.id)) {
+            pinScreenPoints = screenPoints(proxy)
         }
     }
 
@@ -357,37 +384,127 @@ struct CityMapView: View {
             MapPolyline(coordinates: tripTourLine)
                 .stroke(Color.adventureOrange, style: StrokeStyle(lineWidth: 4, lineCap: .round, dash: [8, 6]))
         }
-        ForEach(filteredBuildings) { building in
-            let isVisited = progress.isVisited(building.id)
-            Annotation(building.name, coordinate: coordinate(of: building), anchor: .bottom) {
-                PinView(
-                    isVisited: isVisited,
-                    isWishlisted: progress.isWishlisted(building.id),
-                    isUpNext: building.id == upNext?.id,
-                    isSelected: building.id == selectedBuilding?.id
-                )
-                .onTapGesture {
-                    stopTour()
-                    flyTo(building)
+        ForEach(mapIsReady ? pinClusters : []) { cluster in
+            if cluster.isCluster {
+                Annotation("", coordinate: cluster.coordinate, anchor: .center) {
+                    clusterBubble(for: cluster)
+                        .onTapGesture {
+                            stopTour()
+                            zoom(into: cluster)
+                        }
                 }
-                .accessibilityLabel(isVisited ? "\(building.name), stamped" : "\(building.name), not yet visited")
-                .accessibilityHint("Shows this landmark's card")
-                .accessibilityAddTraits(.isButton)
-            }
-        }
-        ForEach(visibleCustomPlaces) { place in
-            Annotation(place.name, coordinate: place.coordinate, anchor: .bottom) {
-                CustomPlacePin(category: place.category, isSelected: place.id == selectedPlace?.id)
-                    .onTapGesture {
-                        stopTour()
-                        flyTo(place)
-                    }
-                    .accessibilityLabel("\(place.name), your saved place")
-                    .accessibilityAddTraits(.isButton)
+                .annotationTitles(.hidden)
+            } else {
+                switch cluster.items[0] {
+                case .landmark(let building): landmarkAnnotation(building)
+                case .place(let place):       placeAnnotation(place)
+                }
             }
         }
         if userLocationInCity != nil {
             UserAnnotation()
+        }
+    }
+
+    // MARK: - Pins
+
+    /// Every landmark and saved place that gets a pin, before any grouping.
+    private var pinItems: [CityMapItem] {
+        filteredBuildings.map(CityMapItem.landmark) + visibleCustomPlaces.map(CityMapItem.place)
+    }
+
+    /// Pins grouped into numbered bubbles where they'd overlap. The selected landmark
+    /// or place always keeps its own pin, so its card never points at a bubble.
+    private var pinClusters: [MapCluster<CityMapItem>] {
+        let selectedID = selectedBuilding.map { CityMapItem.landmark($0).id } ?? selectedPlace.map { CityMapItem.place($0).id }
+        let items = pinItems
+        var result = MapClusterer.clusters(
+            of: items.filter { $0.id != selectedID },
+            coordinateOf: \.coordinate,
+            screenPoints: pinScreenPoints,
+            // Pins are 32 pt across, so group any closer than a pin and a bit
+            radius: 40
+        )
+        if let selected = items.first(where: { $0.id == selectedID }) {
+            result.append(MapCluster(items: [selected], coordinate: selected.coordinate))
+        }
+        return result
+    }
+
+    /// Below this camera distance (metres) nothing is grouped: a landmark's swoop
+    /// and the tour fly in to 700 m, and there every pin should show on its own.
+    private static let clusteringMinimumDistance: CLLocationDistance = 800
+
+    private func screenPoints(_ proxy: MapProxy) -> [String: CGPoint] {
+        MapClusterer.screenPoints(
+            of: pinItems,
+            coordinateOf: \.coordinate,
+            proxy: proxy,
+            camera: lastCamera,
+            minimumDistance: Self.clusteringMinimumDistance
+        )
+    }
+
+    /// Orange once any landmark in it is stamped, pink when it's only saved places,
+    /// grey otherwise: the same colours as the pins it stands for.
+    private func clusterBubble(for cluster: MapCluster<CityMapItem>) -> some View {
+        let anyStamped = cluster.items.contains {
+            if case .landmark(let building) = $0 { return progress.isVisited(building.id) }
+            return false
+        }
+        let onlySavedPlaces = cluster.items.allSatisfy {
+            if case .place = $0 { return true }
+            return false
+        }
+        let fill = anyStamped ? Color.adventureOrange
+            : onlySavedPlaces ? DS.Palette.wishlist
+            : Color(UIColor.systemGray3)
+        return MapClusterBubble(count: cluster.items.count, fill: fill, baseDiameter: clusterSize)
+    }
+
+    /// Tapping a bubble flies in until its pins come apart, keeping the 3D tilt.
+    private func zoom(into cluster: MapCluster<CityMapItem>) {
+        let camera = cluster.zoomCamera(
+            coordinateOf: \.coordinate,
+            minimumDistance: 500,
+            heading: lastCamera?.heading ?? 0,
+            pitch: 60
+        )
+        withAnimation(.easeInOut(duration: 1.2)) {
+            position = .camera(camera)
+        }
+    }
+
+    @MapContentBuilder
+    private func landmarkAnnotation(_ building: Building) -> some MapContent {
+        let isVisited = progress.isVisited(building.id)
+        Annotation(building.name, coordinate: coordinate(of: building), anchor: .bottom) {
+            PinView(
+                isVisited: isVisited,
+                isWishlisted: progress.isWishlisted(building.id),
+                isUpNext: building.id == upNext?.id,
+                isSelected: building.id == selectedBuilding?.id
+            )
+            .onTapGesture {
+                stopTour()
+                flyTo(building)
+            }
+            .accessibilityLabel(isVisited ? "\(building.name), stamped" : "\(building.name), not yet visited")
+            .accessibilityHint("Shows this landmark's card")
+            .accessibilityAddTraits(.isButton)
+        }
+    }
+
+    @MapContentBuilder
+    private func placeAnnotation(_ place: CustomPlace) -> some MapContent {
+        Annotation(place.name, coordinate: place.coordinate, anchor: .bottom) {
+            CustomPlacePin(category: place.category, isSelected: place.id == selectedPlace?.id)
+                .onTapGesture {
+                    stopTour()
+                    flyTo(place)
+                }
+                .accessibilityLabel("\(place.name), your saved place")
+                .accessibilityAddTraits(.isButton)
         }
     }
 
@@ -1019,6 +1136,28 @@ private struct CardLookAroundPreview: UIViewControllerRepresentable {
 }
 
 // MARK: - Custom place pin and card
+
+/// A landmark or a saved place, so both kinds of pin can share a bubble.
+private enum CityMapItem: Identifiable {
+    case landmark(Building)
+    case place(CustomPlace)
+
+    var id: String {
+        switch self {
+        case .landmark(let building): "landmark-" + building.id
+        case .place(let place):       "place-" + place.id
+        }
+    }
+
+    var coordinate: CLLocationCoordinate2D {
+        switch self {
+        case .landmark(let building):
+            CLLocationCoordinate2D(latitude: building.latitude ?? 0, longitude: building.longitude ?? 0)
+        case .place(let place):
+            place.coordinate
+        }
+    }
+}
 
 private struct CustomPlacePin: View {
     let category: String?

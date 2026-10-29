@@ -296,3 +296,8 @@
 
 // MARK: - Report City
 "cityDetail.menu.reportCityInfo" = "Report City Info";
+
+// World map: numbered bubble for pins grouped together
+"%lld places" = "%lld places";
+"Zooms in on these places" = "Zooms in on these places";
+"Stops %@" = "Stops %@";

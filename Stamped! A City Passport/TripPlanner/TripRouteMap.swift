@@ -15,34 +15,84 @@ struct TripRouteMap: View {
     /// Where to centre the map before any stops are added (the middle of the city).
     let cityCenter: CLLocationCoordinate2D?
 
-    /// Each located stop with its 1-based number in the day's full list.
-    private var numberedStops: [(number: Int, stop: ResolvedTripStop, coordinate: CLLocationCoordinate2D)] {
+    @State private var position: MapCameraPosition
+    /// Where each stop's badge sat on screen when the camera last stopped (for grouping badges that overlap).
+    @State private var stopScreenPoints: [String: CGPoint] = [:]
+    @ScaledMetric(relativeTo: .caption) private var clusterSize: CGFloat = 26
+
+    init(stops: [ResolvedTripStop], cityCenter: CLLocationCoordinate2D?) {
+        self.stops = stops
+        self.cityCenter = cityCenter
+        _position = State(initialValue: Self.startPosition(stops: stops, cityCenter: cityCenter))
+    }
+
+    /// A located stop with its 1-based number in the day's full list.
+    private struct NumberedStop: Identifiable {
+        let number: Int
+        let stop: ResolvedTripStop
+        let coordinate: CLLocationCoordinate2D
+        var id: String { stop.id }
+    }
+
+    private var numberedStops: [NumberedStop] {
         stops.enumerated().compactMap { index, stop in
             guard let point = stop.routePoint else { return nil }
             let coordinate = CLLocationCoordinate2D(latitude: point.latitude, longitude: point.longitude)
-            return (index + 1, stop, coordinate)
+            return NumberedStop(number: index + 1, stop: stop, coordinate: coordinate)
         }
     }
 
+    /// Badges grouped into one bubble where they'd overlap (two stops in the same building, say).
+    private var stopClusters: [MapCluster<NumberedStop>] {
+        MapClusterer.clusters(of: numberedStops, coordinateOf: \.coordinate, screenPoints: stopScreenPoints)
+    }
+
+    /// Closer than this (metres), every stop shows its own number.
+    private static let clusteringMinimumDistance: CLLocationDistance = 400
+
     var body: some View {
-        Map(initialPosition: startPosition) {
-            if numberedStops.count > 1 {
-                MapPolyline(coordinates: numberedStops.map(\.coordinate))
-                    .stroke(DS.Palette.accent, style: StrokeStyle(lineWidth: 3, lineCap: .round, dash: [6, 5]))
-            }
-            ForEach(numberedStops, id: \.stop.id) { item in
-                Annotation(item.stop.name, coordinate: item.coordinate) {
-                    StopNumberBadge(number: item.number, isLandmark: item.stop.isLandmark)
+        MapReader { proxy in
+            Map(position: $position) {
+                if numberedStops.count > 1 {
+                    MapPolyline(coordinates: numberedStops.map(\.coordinate))
+                        .stroke(DS.Palette.accent, style: StrokeStyle(lineWidth: 3, lineCap: .round, dash: [6, 5]))
+                }
+                ForEach(stopClusters) { cluster in
+                    if cluster.isCluster {
+                        Annotation("", coordinate: cluster.coordinate) {
+                            clusterBubble(for: cluster)
+                                .onTapGesture { zoom(into: cluster) }
+                        }
+                        .annotationTitles(.hidden)
+                    } else {
+                        let item = cluster.items[0]
+                        Annotation(item.stop.name, coordinate: item.coordinate) {
+                            StopNumberBadge(number: item.number, isLandmark: item.stop.isLandmark)
+                        }
+                    }
                 }
             }
+            .mapStyle(.standard(pointsOfInterest: .excludingAll))
+            .onMapCameraChange(frequency: .onEnd) { context in
+                stopScreenPoints = MapClusterer.screenPoints(
+                    of: numberedStops,
+                    coordinateOf: \.coordinate,
+                    proxy: proxy,
+                    camera: context.camera,
+                    minimumDistance: Self.clusteringMinimumDistance
+                )
+            }
         }
-        .mapStyle(.standard(pointsOfInterest: .excludingAll))
         // Keeps pins and their names from sitting right on the map's edges
         .safeAreaPadding(DS.Space.xl)
         // Rebuild the map when the stops change (another day, a reorder, an
         // optimize). Map doesn't reliably redraw its line otherwise, and a
         // fresh map also re-frames itself around the new stops.
         .id(stops.map(\.id))
+        .onChange(of: stops.map(\.id)) {
+            stopScreenPoints = [:]
+            position = Self.startPosition(stops: stops, cityCenter: cityCenter)
+        }
         .overlay {
             if numberedStops.isEmpty {
                 Text("Add stops to see your route")
@@ -55,10 +105,35 @@ struct TripRouteMap: View {
         .accessibilityLabel("Map of this day's route, \(numberedStops.count) stops")
     }
 
+    /// Shows the stop numbers it holds ("1–4", or "2, 5"), so it can't be mistaken for a single
+    /// stop's badge. Pink when every stop in it is a saved place, like their badges.
+    private func clusterBubble(for cluster: MapCluster<NumberedStop>) -> some View {
+        let numbers = cluster.items.map(\.number).sorted()
+        let isRun = numbers.last! - numbers.first! == numbers.count - 1
+        let title = isRun ? "\(numbers.first!)–\(numbers.last!)"
+            : numbers.count <= 3 ? numbers.map(String.init).joined(separator: ", ")
+            : "\(numbers.first!)–\(numbers.last!)…"
+        return MapClusterBubble(
+            count: cluster.items.count,
+            fill: cluster.items.contains(where: \.stop.isLandmark) ? DS.Palette.accent : DS.Palette.wishlist,
+            baseDiameter: clusterSize,
+            label: Text("Stops \(numbers.map(String.init).formatted(.list(type: .and)))"),
+            title: title
+        )
+    }
+
+    /// Tapping a bubble zooms in until its stops come apart.
+    private func zoom(into cluster: MapCluster<NumberedStop>) {
+        let camera = cluster.zoomCamera(coordinateOf: \.coordinate, minimumDistance: 300, pitch: 0)
+        withAnimation(.easeInOut(duration: 0.8)) {
+            position = .camera(camera)
+        }
+    }
+
     /// With stops, frame them all automatically. With none, show the city
     /// rather than the whole country.
-    private var startPosition: MapCameraPosition {
-        guard numberedStops.isEmpty, let cityCenter else { return .automatic }
+    private static func startPosition(stops: [ResolvedTripStop], cityCenter: CLLocationCoordinate2D?) -> MapCameraPosition {
+        guard !stops.contains(where: { $0.routePoint != nil }), let cityCenter else { return .automatic }
         return .region(MKCoordinateRegion(center: cityCenter, latitudinalMeters: 4000, longitudinalMeters: 4000))
     }
 

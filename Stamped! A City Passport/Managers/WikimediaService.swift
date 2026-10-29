@@ -297,6 +297,7 @@ extension WikimediaService {
         "chi-03": "875 North Michigan Avenue",                       // 875 North Michigan
         "chi-07": "Aqua (Chicago)",                                  // Aqua Tower
         "chi-06": "Rookery Building",                                // The Rookery
+        "chi-16": "Trump International Hotel and Tower (Chicago)",   // Trump International Hotel & Tower
 
         // Cleveland
         "cle-04": "Guardian Bank Building",                          // Guardian Building (668 Euclid)

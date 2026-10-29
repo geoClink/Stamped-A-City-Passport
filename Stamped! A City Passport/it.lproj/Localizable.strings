@@ -615,3 +615,8 @@
 "Report an issue with %@" = "Segnala un problema con %@";
 "Opens your email app" = "Apre la tua app di posta";
 "Know a tradition we're missing?" = "Conosci una tradizione che manca?";
+
+// World map: numbered bubble for pins grouped together
+"%lld places" = "%lld luoghi";
+"Zooms in on these places" = "Ingrandisce su questi luoghi";
+"Stops %@" = "Tappe %@";
