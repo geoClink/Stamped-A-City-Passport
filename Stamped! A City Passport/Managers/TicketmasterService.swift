@@ -2,7 +2,8 @@
 //  TicketmasterService.swift
 //  Stamped! A City Passport
 //
-//  Fetches upcoming events near a city using the Ticketmaster Discovery API v2.
+//  Fetches upcoming events near a city using the Ticketmaster Discovery API v2,
+//  merged with SeatGeek's (SeatGeekService) when a SeatGeek client ID is set.
 //  API key is read from Info.plist — never hardcoded.
 //  Free tier: 5,000 calls/day.
 //
@@ -23,6 +24,10 @@ struct TicketmasterEvent: Identifiable {
     let priceRange: String?    // e.g. "$25 – $120"
     let ticketURL: URL?
     let imageURL: URL?
+    /// Who sells the tickets: "Ticketmaster" or "SeatGeek".
+    var sellerName = "Ticketmaster"
+    /// When it starts, for putting both sellers' events in one date order.
+    var startDate: Date? = nil
 
     enum EventCategory: String {
         case music       = "Music"
@@ -86,11 +91,6 @@ final class TicketmasterService: ObservableObject {
             return
         }
 
-        guard let key = apiKey, !key.isEmpty else {
-            print("[Ticketmaster] API key missing from Info.plist")
-            return
-        }
-
         // Compute city centroid
         let coords = buildings.compactMap { b -> CLLocationCoordinate2D? in
             guard let lat = b.latitude, let lon = b.longitude else { return nil }
@@ -99,6 +99,24 @@ final class TicketmasterService: ObservableObject {
         guard !coords.isEmpty else { return }
         let lat = coords.map { $0.latitude }.reduce(0, +) / Double(coords.count)
         let lon = coords.map { $0.longitude }.reduce(0, +) / Double(coords.count)
+        let center = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+
+        guard let key = apiKey, !key.isEmpty else {
+            print("[Ticketmaster] API key missing from Info.plist")
+            // SeatGeek alone still fills the list when it's set up
+            guard SeatGeekService.isConfigured else { return }
+            isLoading = true
+            failed = false
+            let seatGeek = await SeatGeekService.events(near: center, radius: "25mi", days: 60, limit: 8)
+            events = seatGeek ?? []
+            failed = seatGeek == nil
+            if !failed {
+                cachedCityName = cityName
+                cacheTimestamp = Date()
+            }
+            isLoading = false
+            return
+        }
 
         // Date window: today → 60 days out
         let now = Date()
@@ -125,29 +143,51 @@ final class TicketmasterService: ObservableObject {
         isLoading = true
         failed = false
 
+        async let seatGeekRequest = SeatGeekService.events(near: center, radius: "25mi", days: 60, limit: 8)
+
+        var ticketmasterEvents: [TicketmasterEvent]? = nil
         do {
             let (data, response) = try await URLSession.shared.data(from: url)
-            guard (response as? HTTPURLResponse)?.statusCode == 200 else {
+            if (response as? HTTPURLResponse)?.statusCode == 200 {
+                let decoded = try JSONDecoder().decode(TMResponse.self, from: data)
+                ticketmasterEvents = (decoded._embedded?.events ?? []).compactMap(makeEvent)
+            } else {
                 print("[Ticketmaster] Bad status: \((response as? HTTPURLResponse)?.statusCode ?? -1)")
-                failed = true
-                isLoading = false
-                return
             }
+        } catch {
+            print("[Ticketmaster] Error: \(error.localizedDescription)")
+        }
+        let seatGeekEvents = await seatGeekRequest
 
-            let decoded = try JSONDecoder().decode(TMResponse.self, from: data)
-            let rawEvents = decoded._embedded?.events ?? []
-
-            events = rawEvents.compactMap(makeEvent)
-
+        // Failed only when neither seller answered
+        if ticketmasterEvents == nil && (seatGeekEvents == nil || !SeatGeekService.isConfigured) {
+            failed = true
+        } else {
+            events = Self.merged(ticketmasterEvents ?? [], seatGeekEvents ?? [], limit: 12)
             cachedCityName = cityName
             cacheTimestamp = Date()
             print("[Ticketmaster] Loaded \(events.count) events for \(cityName)")
-        } catch {
-            failed = true
-            print("[Ticketmaster] Error: \(error.localizedDescription)")
         }
 
         isLoading = false
+    }
+
+    /// Both sellers' events in date order. An event both sell (same name, same day)
+    /// shows once, from Ticketmaster.
+    private static func merged(_ ticketmaster: [TicketmasterEvent], _ seatGeek: [TicketmasterEvent], limit: Int) -> [TicketmasterEvent] {
+        func key(_ event: TicketmasterEvent) -> String {
+            event.name.lowercased().filter { $0.isLetter || $0.isNumber } + "|" + event.date
+        }
+        let taken = Set(ticketmaster.map(key))
+        let extra = seatGeek.filter { !taken.contains(key($0)) }
+        guard !extra.isEmpty else { return ticketmaster }
+        let all = (ticketmaster + extra).enumerated().sorted { a, b in
+            switch (a.element.startDate, b.element.startDate) {
+            case let (x?, y?): return x < y
+            default:           return a.offset < b.offset
+            }
+        }
+        return Array(all.map(\.element).prefix(limit))
     }
 
     // MARK: - Events at one place
@@ -156,7 +196,21 @@ final class TicketmasterService: ObservableObject {
     /// Events whose venue name matches the place come first; if none match, the
     /// closest events within about 1 km are returned and `isAtVenue` is false.
     func events(near coordinate: CLLocationCoordinate2D, placeName: String) async -> (events: [TicketmasterEvent], isAtVenue: Bool) {
-        guard let key = apiKey, !key.isEmpty else { return ([], false) }
+        async let seatGeekRequest = SeatGeekService.events(near: coordinate, radius: "1km", days: 90, limit: 20)
+        let ticketmaster = await ticketmasterEvents(near: coordinate)
+        let all = Self.merged(ticketmaster, await seatGeekRequest ?? [], limit: 40)
+
+        let place = placeName.lowercased()
+        let atVenue = all.filter { event in
+            let venue = event.venueName.lowercased()
+            return !venue.isEmpty && (venue.contains(place) || place.contains(venue))
+        }
+        return atVenue.isEmpty ? (Array(all.prefix(3)), false) : (Array(atVenue.prefix(5)), true)
+    }
+
+    /// Ticketmaster's events within about 1 km over the next 90 days, soonest first.
+    private func ticketmasterEvents(near coordinate: CLLocationCoordinate2D) async -> [TicketmasterEvent] {
+        guard let key = apiKey, !key.isEmpty else { return [] }
 
         let now = Date()
         let future = Calendar.current.date(byAdding: .day, value: 90, to: now) ?? now
@@ -178,15 +232,9 @@ final class TicketmasterService: ObservableObject {
               let (data, response) = try? await URLSession.shared.data(from: url),
               (response as? HTTPURLResponse)?.statusCode == 200,
               let decoded = try? JSONDecoder().decode(TMResponse.self, from: data)
-        else { return ([], false) }
+        else { return [] }
 
-        let all = (decoded._embedded?.events ?? []).compactMap(makeEvent)
-        let place = placeName.lowercased()
-        let atVenue = all.filter { event in
-            let venue = event.venueName.lowercased()
-            return !venue.isEmpty && (venue.contains(place) || place.contains(venue))
-        }
-        return atVenue.isEmpty ? (Array(all.prefix(3)), false) : (Array(atVenue.prefix(5)), true)
+        return (decoded._embedded?.events ?? []).compactMap(makeEvent)
     }
 
     // MARK: - Helpers
@@ -237,8 +285,16 @@ final class TicketmasterService: ObservableObject {
                 category: category,
                 priceRange: priceStr,
                 ticketURL: ticketURL,
-                imageURL: imageURL
+                imageURL: imageURL,
+                startDate: startDate(localDate, localTime)
             )
+    }
+
+    private func startDate(_ day: String, _ time: String) -> Date? {
+        let parser = DateFormatter()
+        parser.locale = Locale(identifier: "en_US_POSIX")
+        parser.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        return parser.date(from: "\(day) \(time.isEmpty ? "00:00:00" : time)")
     }
 
     private func formatDate(_ iso: String) -> String {
