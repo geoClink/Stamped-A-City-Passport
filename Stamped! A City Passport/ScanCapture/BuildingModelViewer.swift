@@ -61,7 +61,7 @@ struct BuildingModelViewer: View {
             .navigationTitle(buildingName)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarItem(placement: .closeSheet) {
                     Button("Done") { dismiss() }
                         .fontWeight(.semibold)
                         .foregroundStyle(Color.adventureOrange)

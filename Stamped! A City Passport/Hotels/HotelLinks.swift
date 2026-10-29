@@ -297,10 +297,7 @@ struct FindHotelsButton: View {
                     HotelCommissionNote()
                 }
             }
-            .sheet(item: $browserLink) { link in
-                InAppBrowser(url: link.url)
-                    .ignoresSafeArea()
-            }
+            .inAppBrowser(item: $browserLink)
         }
     }
 }

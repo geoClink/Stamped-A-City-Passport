@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-#if !os(visionOS)
+#if os(iOS)
 import UIKit
 
 struct CameraPicker: UIViewControllerRepresentable {

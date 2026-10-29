@@ -40,7 +40,7 @@ struct AddPlaceSheet: View {
                     ContentUnavailableView.search(text: query)
                 }
             }
-            .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always),
+            .searchable(text: $query, placement: .alwaysVisible,
                         prompt: "Search \(cityName)")
             .navigationTitle("Want to Visit")
             .navigationBarTitleDisplayMode(.inline)

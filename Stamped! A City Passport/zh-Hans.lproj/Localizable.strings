@@ -601,6 +601,15 @@
 "Not yet" = "尚未到访";
 "View City" = "查看城市";
 
+/* Mac menu bar and toolbar */
+"Settings…" = "设置…";
+"Search Cities and Landmarks" = "搜索城市和地标";
+"Hide City Details" = "隐藏城市详情";
+"Show City Details" = "显示城市详情";
+"City Details" = "城市详情";
+"Show or hide the city's details" = "显示或隐藏城市详情";
+"Choose image file" = "选择图片文件";
+
 /* Suggestions and reports (open a pre-filled email) */
 "Report an issue with this building" = "报告此建筑的问题";
 "Report an issue with %@" = "报告 %@ 的问题";

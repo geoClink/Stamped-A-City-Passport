@@ -7,7 +7,9 @@
 
 import Foundation
 import SwiftUI
+#if os(iOS)
 import UIKit
+#endif
 import Combine
 
 @MainActor

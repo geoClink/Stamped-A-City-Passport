@@ -601,6 +601,15 @@
 "Not yet" = "未訪問";
 "View City" = "都市を見る";
 
+/* Mac menu bar and toolbar */
+"Settings…" = "設定…";
+"Search Cities and Landmarks" = "都市とランドマークを検索";
+"Hide City Details" = "都市の詳細を隠す";
+"Show City Details" = "都市の詳細を表示";
+"City Details" = "都市の詳細";
+"Show or hide the city's details" = "都市の詳細を表示または非表示にします";
+"Choose image file" = "画像ファイルを選択";
+
 /* Suggestions and reports (open a pre-filled email) */
 "Report an issue with this building" = "この建物の問題を報告";
 "Report an issue with %@" = "%@ の問題を報告";

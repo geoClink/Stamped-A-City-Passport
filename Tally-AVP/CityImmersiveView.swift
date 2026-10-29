@@ -189,7 +189,7 @@ struct CityImmersiveView: View {
         spatialCfg.reverbLevel = -12
 
         // ── Comerica Park — baseball crowd ──────────────────────────────────────
-        if let resource = try? await AudioFileResource.load(
+        if let resource = try? await AudioFileResource(
             named: "baseball_crowd",
             configuration: .init(shouldLoop: true, shouldRandomizeStartTime: true)
         ) {
@@ -203,7 +203,7 @@ struct CityImmersiveView: View {
         }
 
         // ── Ford Field — football crowd ─────────────────────────────────────────
-        if let resource = try? await AudioFileResource.load(
+        if let resource = try? await AudioFileResource(
             named: "football_crowd",
             configuration: .init(shouldLoop: true, shouldRandomizeStartTime: true)
         ) {

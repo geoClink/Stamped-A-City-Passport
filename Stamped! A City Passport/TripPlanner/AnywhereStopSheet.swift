@@ -99,7 +99,7 @@ struct AnywhereStopSheet: View {
                     ProgressView()
                 }
             }
-            .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always),
+            .searchable(text: $query, placement: .alwaysVisible,
                         prompt: "Search \(areaName)")
             .navigationTitle("Add Stops")
             .navigationBarTitleDisplayMode(.inline)

@@ -48,7 +48,7 @@ struct AchievementsView: View {
             .navigationTitle("Achievements")
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarItem(placement: .closeSheet) {
                     Button("Done") { dismiss() }
                         .fontWeight(.semibold)
                         .foregroundStyle(isHighContrast ? Color.primary : DS.Palette.accent)

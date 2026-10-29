@@ -58,6 +58,15 @@ private extension SettingsView {
         }
     }
 
+    /// Top-left on iPad. A Mac sheet doesn't show the leading spot, so there it goes with the sheet's buttons.
+    static var backButtonPlacement: ToolbarItemPlacement {
+        #if os(macOS)
+        .confirmationAction
+        #else
+        .navigationBarLeading
+        #endif
+    }
+
     var ipadLayout: some View {
         NavigationSplitView {
             List(selection: $selectedTab) {
@@ -73,7 +82,7 @@ private extension SettingsView {
             }
             .navigationTitle(L.Settings.title)
             .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
+                ToolbarItem(placement: Self.backButtonPlacement) {
                     Button(L.Settings.back) { dismiss() }
                         .fontWeight(viewModel.highContrast ? .black : .bold)
                         .foregroundColor(viewModel.highContrast ? .primary : DS.Palette.accent)

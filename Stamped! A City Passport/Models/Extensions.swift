@@ -82,7 +82,11 @@ extension View {
         if isIPad {
             self.listStyle(.sidebar)
         } else {
+            #if os(macOS)
+            self.listStyle(.inset)
+            #else
             self.listStyle(.insetGrouped)
+            #endif
         }
     }
 }
