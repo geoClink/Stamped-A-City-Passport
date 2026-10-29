@@ -1,0 +1,66 @@
+{
+  "locale": "de-DE",
+  "version": "2.7",
+  "subtitle": "Campusbesuche & Architektur",
+  "promotional_text": "Plane deine Hochschulbesuche: Favoriten speichern, jeden Campus der Big Ten, SEC, ACC und Big 12 besuchen, Campus-Traditionen erleben und Stempel in Schulfarben sammeln.",
+  "keywords": "Uni,Universität,Hochschule,College,Campus,Roadtrip,Studium USA,Wahrzeichen,Reiseplaner,Quiz",
+  "whats_new": "Neu in 2.7\n• Kartennadeln werden beim Herauszoomen zu nummerierten Blasen zusammengefasst und beim Hineinzoomen wieder aufgeteilt. Tippen Sie auf eine Blase, um hineinzuzoomen.\n• Die Türme von Adrian Smith: der Burj Khalifa in Dubai und der Trump International Hotel & Tower in Chicago. Der Jin Mao Tower in Shanghai wird jetzt ihm zugeschrieben.\n• Mehr Veranstaltungen in jeder Stadt: SeatGeek kommt zu Ticketmaster hinzu.\n\nFehlerbehebungen\n• Stadtkarten zeigen ihre Sehenswürdigkeiten sofort beim Öffnen.",
+  "description": "Stamped! macht die großen Bauwerke der Welt zu einem Reisepass, den du füllst. Entdecke mehr als 1.800 Wahrzeichen der Architektur in 140 Städten und auf 101 Universitätscampussen, sammle für jedes besuchte Gebäude einen Stempel und fliege auf einer fotorealistischen 3D-Karte durch echte Städte.\n\nPLANE DEINE HOCHSCHULBESUCHE\n• 101 Campusse: jede Hochschule der Big Ten, SEC, ACC und Big 12, die Ivy League und großartige Campusse weltweit\n• Speichere Hochschulen, die dich interessieren, in Meine College-Liste\n• Erstelle einen College-Roadtrip: ein Tag pro Hochschule, in einer Reihenfolge mit kurzen Fahrten\n• Campusbesuch planen: ein eintägiger Rundgang zu den Wahrzeichen eines Campus\n• Finde Hotels in Campusnähe für jede Nacht deiner Reise\n\nCAMPUS-TRADITIONEN\n• Über 250 Campus-Traditionen zum Mitmachen oder Ansehen, von Glücksstatuen bis zu Glocken und berühmten Toren\n• Hake sie unterwegs ab und verdiene das Abzeichen Hüter der Traditionen\n• Campus-Stempel in Schulfarben\n\nPLANE JEDE REISE\n• Plane mehrere Tage mit Wahrzeichen und deinen eigenen gespeicherten Orten\n• Ordne Stopps neu, sieh Gehzeiten und optimiere deine Route\n• Überfliege deine Reise Tag für Tag auf der 3D-Karte\n• Deine Reisen und deine College-Liste werden mit iCloud synchronisiert\n\nENTDECKE IN 3D\n• Fotorealistische 3D-Karten von Städten und Campussen mit Satellitenbildern\n• Eine geführte Tour, die zwischen allen Wahrzeichen fliegt\n• Umsehen-Vorschauen der Straßen, bevor du losgehst\n• Kartenfilter für Essen, Kaffee, Kultur und Übernachten\n\nSAMMLE STEMPEL\n• Erhalte für jedes besuchte Wahrzeichen einen Passstempel\n• Verfolge deinen Fortschritt auf der Weltkarte, nach Stadt, Land und Conference\n• Schalte Erfolge frei und teile deinen Pass\n• Sieh deinen Fortschritt auf einen Blick mit dem Home-Bildschirm-Widget\n\nENTDECKE DIE GESCHICHTEN\n• Architekten, Baujahre, Stile und Geschichte zu jedem Gebäude\n• Ein Architekturquiz mit 10 Fragen für jede Stadt und jeden Campus\n• Suche nach Name, Architekt oder Campus-Spitzname\n\nVerfügbar in 9 Sprachen, mit Optionen für hohen Kontrast und reduzierte Bewegung.\n\nStamped! ist mit keiner Universität verbunden und wird von keiner unterstützt. Namen und Farben der Hochschulen dienen nur zu ihrer Kennzeichnung.",
+  "screenshot_headlines": [
+    {
+      "file": "01-college-list",
+      "verb": "BESUCHE",
+      "lines": [
+        "101 CAMPUSSE",
+        "AUF EINEM ROADTRIP"
+      ]
+    },
+    {
+      "file": "02-traditions",
+      "verb": "ERLEBE",
+      "lines": [
+        "DIE CAMPUS-",
+        "TRADITIONEN"
+      ]
+    },
+    {
+      "file": "03-school-stamps",
+      "verb": "SAMMLE",
+      "lines": [
+        "STEMPEL IN",
+        "SCHULFARBEN"
+      ]
+    },
+    {
+      "file": "04-fly-3d",
+      "verb": "FLIEGE",
+      "lines": [
+        "ÜBER DEN CAMPUS",
+        "IN 3D"
+      ]
+    },
+    {
+      "file": "05-plan-trips",
+      "verb": "PLANE",
+      "lines": [
+        "DEINE REISE,",
+        "TAG FÜR TAG"
+      ]
+    },
+    {
+      "file": "06-test-smarts",
+      "verb": "TESTE",
+      "lines": [
+        "DEIN WISSEN ÜBER",
+        "ARCHITEKTUR"
+      ]
+    }
+  ],
+  "banner": {
+    "verb": "PLANE",
+    "lines": [
+      "DEINEN COLLEGE-",
+      "ROADTRIP"
+    ]
+  }
+}

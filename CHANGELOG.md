@@ -16,7 +16,20 @@ How to use this file:
 - Vision Pro: a 3D globe of every city with live stamp pins; drag to spin and tilt, tap to turn a city toward you.
 - Vision Pro: available in all 9 of the app's languages.
 
-## [2.6] (build 11) – not yet uploaded
+## [2.7] (build 12) – not yet uploaded
+
+### Added
+- Map pins group into numbered bubbles when zoomed out and split apart as you zoom in; tapping a bubble zooms in. On city maps (landmarks and saved places) and trip route maps.
+- Adrian Smith buildings: Burj Khalifa (Dubai) and Trump International Hotel & Tower (Chicago). Jin Mao Tower (Shanghai) is now credited to Adrian Smith (SOM).
+- Events also come from SeatGeek, merged with Ticketmaster, so cities Ticketmaster covers thinly get a fuller list. Needs `SEATGEEK_CLIENT_ID` in the API-key plist; without it the app uses Ticketmaster only.
+
+### Changed
+- Find Hotels and Check Prices open Expedia, through Expedia's affiliate program (Partnerize), with a "may earn a commission" note. Booking.com stays supported for when its affiliate application is approved.
+
+### Fixed
+- City map pins show as soon as the map opens, instead of only after the map is moved.
+
+## [2.6] (build 11) – 2026-10-27
 
 ### Added
 - Links to a city or campus page on the Stamped! website open that city or campus in the app.
