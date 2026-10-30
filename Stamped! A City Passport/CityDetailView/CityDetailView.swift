@@ -150,7 +150,7 @@ struct CityDetailView: View {
                     // Top Eats — hidden when failed so we don't show "Couldn't load"
                     let eats = FoursquareService.shared
                     if eats.isLoading || !eats.venues.isEmpty {
-                        TopEatsSection(service: eats, isHighContrast: isHighContrast)
+                        TopEatsSection(service: eats, cityName: viewModel.city.name, isHighContrast: isHighContrast)
                     }
                 }
             }
