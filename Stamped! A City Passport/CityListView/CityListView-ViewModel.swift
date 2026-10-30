@@ -186,7 +186,7 @@ extension CityListView {
         }
     }
 
-    private func cityRowWrapper(city: CityLocation.City) -> some View {
+    func cityRowWrapper(city: CityLocation.City) -> some View {
         ZStack {
             NavigationLink(value: city) { EmptyView() }.opacity(0)
             CityRow(city: city,
@@ -202,8 +202,6 @@ extension CityListView {
     var headerSection: some View {
         // One gap everywhere on home: between these blocks and between the list sections
         VStack(spacing: DS.Space.m) {
-            quickActions
-            collegeListCard
             // The welcome banner stays until the first stamp of any kind, city or campus
             if viewModel.masteredCount + viewModel.masteredCampusCount == 0 {
                 ZeroProgressHeader(isHighContrast: isHighContrast)
@@ -213,6 +211,8 @@ extension CityListView {
                     showingPassport = true
                 }
             }
+            // My College List now leads the Campuses filter below, so it no longer has a card here
+            quickActions
         }
     }
 
@@ -254,8 +254,8 @@ extension CityListView {
                 .minimumScaleFactor(0.7)
         }
         .padding(.horizontal, 4)
-        .frame(maxWidth: .infinity, minHeight: 64)
-        .padding(.vertical, 8)
+        .frame(maxWidth: .infinity, minHeight: 52)
+        .padding(.vertical, 6)
         .background(
             RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
                 .fill(isHighContrast ? Color(UIColor.systemBackground) : Color(UIColor.secondarySystemGroupedBackground))

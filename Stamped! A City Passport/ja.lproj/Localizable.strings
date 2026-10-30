@@ -626,3 +626,12 @@
 "%lld places" = "%lld か所";
 "Zooms in on these places" = "これらの場所にズームします";
 "Stops %@" = "立ち寄り先 %@";
+
+// MARK: - Passport search
+"Search cities or countries" = "都市や国を検索";
+"No stamps match \U201C%@\U201D" = "「%@」に一致するスタンプはありません";
+
+// MARK: - City page tabs
+"Plan" = "計画";
+"Local" = "周辺情報";
+"Section" = "セクション";

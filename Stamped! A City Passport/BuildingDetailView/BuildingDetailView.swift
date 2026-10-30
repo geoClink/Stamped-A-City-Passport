@@ -404,17 +404,19 @@ extension BuildingDetailView {
     /// stamp button, then the reading sections.
     private var detailContent: some View {
         VStack(alignment: .leading, spacing: DS.Space.section) {
+            // Everything you can do here sits together under the name: stamp, save, look,
+            // book a tour, get there. The reading sections follow.
             VStack(alignment: .leading, spacing: DS.Space.l) {
                 titleHeader
                 factChips
                 actionButtons
+                toursButton
+                addressCard
             }
             if isVisited {
                 BuildingNoteField(buildingID: building.id, noteText: $noteText, isHighContrast: isHighContrast)
             }
             aboutSection
-            infoSection
-            toursSection
             threeDModelSection
             localFlavorsSection
             reportIssueButton
@@ -499,26 +501,21 @@ extension BuildingDetailView {
         }
     }
 
-    /// The address (taps through to Maps); the other specs are the chips under the name.
-    var infoSection: some View {
-        VStack(alignment: .leading, spacing: DS.Space.m) {
-            DSSectionHeader(sizeClass == .regular ? LocalizedStringKey("building.technicalSpecs") : LocalizedStringKey("building.buildingInfo"),
-                            systemImage: "info.circle", isHighContrast: isHighContrast)
-            specCard(label: L.Building.location, value: building.address, icon: "mappin.and.ellipse")
-        }
+    /// The address (taps through to Maps), with the actions rather than in its own section;
+    /// the other specs are the chips under the name.
+    var addressCard: some View {
+        specCard(label: L.Building.location, value: building.address, icon: "mappin.and.ellipse")
     }
 
-    /// Guided tours and tickets on GetYourGuide. Cities only: campus buildings rarely have
-    /// tours of their own, and a search for one lands on unrelated tours.
+    /// Guided tours and tickets on GetYourGuide, with the other actions. Cities only: campus
+    /// buildings rarely have tours of their own, and a search for one lands on unrelated tours.
     @ViewBuilder
-    var toursSection: some View {
+    var toursButton: some View {
         if !viewModel.city.isCampus {
-            VStack(alignment: .leading, spacing: DS.Space.m) {
-                DSSectionHeader("Tours & Tickets", systemImage: "ticket", isHighContrast: isHighContrast)
-                ToursButton(landmark: building.name, place: viewModel.city.hotelSearchName)
-                    .buttonStyle(.bordered)
-                    .tint(isHighContrast ? .primary : brandColor)
+            ToursButton(landmark: building.name, place: viewModel.city.hotelSearchName) { label in
+                AnyView(secondaryButtonStyle(label, tint: brandColor))
             }
+            .buttonStyle(.plain)
         }
     }
 

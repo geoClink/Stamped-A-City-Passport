@@ -626,3 +626,12 @@
 "%lld places" = "%lld lugares";
 "Zooms in on these places" = "Aproxima o mapa destes lugares";
 "Stops %@" = "Paradas %@";
+
+// MARK: - Passport search
+"Search cities or countries" = "Buscar cidades ou países";
+"No stamps match \U201C%@\U201D" = "Nenhum carimbo corresponde a “%@”";
+
+// MARK: - City page tabs
+"Plan" = "Planejar";
+"Local" = "Local";
+"Section" = "Seção";
