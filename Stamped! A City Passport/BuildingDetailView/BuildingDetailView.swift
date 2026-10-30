@@ -432,11 +432,8 @@ extension BuildingDetailView {
                 .fontWeight(.bold)
                 .fixedSize(horizontal: false, vertical: true)
                 .accessibilityAddTraits(.isHeader)
-            if let architect = building.knownArchitect {
-                Text(L.Building.designedBy(architect))
-                    .font(.subheadline.italic())
-                    .foregroundColor(isHighContrast ? .primary : .secondary)
-            }
+            // "Designed by …", tappable through to the architect's page
+            ArchitectLink(building: building, isHighContrast: isHighContrast)
             if isVisited, let date = GlobalProgressManager.shared.visitDates[building.id] {
                 Label("Stamped \(date.formatted(date: .abbreviated, time: .omitted))", systemImage: "checkmark.seal.fill")
                     .font(.caption.bold())

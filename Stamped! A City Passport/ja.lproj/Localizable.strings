@@ -635,3 +635,10 @@
 "Plan" = "計画";
 "Local" = "周辺情報";
 "Section" = "セクション";
+
+// Architect page
+"architect.landmarks" = "Stamped!にある作品";
+"architect.openHint" = "建築家のページを開きます";
+"architect.fromWikipedia" = "Wikipediaより";
+"architect.readOnWikipedia" = "Wikipediaで読む";
+"architect.photoCredit" = "写真: Wikimedia Commons";

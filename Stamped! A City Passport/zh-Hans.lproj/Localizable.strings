@@ -635,3 +635,10 @@
 "Plan" = "规划";
 "Local" = "当地";
 "Section" = "部分";
+
+// Architect page
+"architect.landmarks" = "Stamped!中的作品";
+"architect.openHint" = "打开建筑师页面";
+"architect.fromWikipedia" = "来自维基百科";
+"architect.readOnWikipedia" = "在维基百科上阅读";
+"architect.photoCredit" = "照片：Wikimedia Commons";

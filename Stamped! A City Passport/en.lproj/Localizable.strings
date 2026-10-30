@@ -301,3 +301,10 @@
 "%lld places" = "%lld places";
 "Zooms in on these places" = "Zooms in on these places";
 "Stops %@" = "Stops %@";
+
+// Architect page
+"architect.landmarks" = "Their Landmarks in Stamped!";
+"architect.openHint" = "Opens the architect's page";
+"architect.fromWikipedia" = "From Wikipedia";
+"architect.readOnWikipedia" = "Read on Wikipedia";
+"architect.photoCredit" = "Photo: Wikimedia Commons";

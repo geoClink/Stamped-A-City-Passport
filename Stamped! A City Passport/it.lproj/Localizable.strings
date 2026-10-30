@@ -635,3 +635,10 @@
 "Plan" = "Pianifica";
 "Local" = "Sul posto";
 "Section" = "Sezione";
+
+// Architect page
+"architect.landmarks" = "I suoi edifici in Stamped!";
+"architect.openHint" = "Apre la pagina dell'architetto";
+"architect.fromWikipedia" = "Da Wikipedia";
+"architect.readOnWikipedia" = "Leggi su Wikipedia";
+"architect.photoCredit" = "Foto: Wikimedia Commons";
