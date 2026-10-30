@@ -23,6 +23,9 @@ struct QuizView: View {
     private var brandColor: Color { isHighContrast ? .primary : Color.adventureOrange }
     private var isIPad: Bool { DeviceInfo.isLargeScreen }
 
+    @ScaledMetric(relativeTo: .subheadline) private var factIconSize: CGFloat = 20
+    @ScaledMetric(relativeTo: .headline) private var missIconSize: CGFloat = 16
+
     init(buildings: [Building], cityName: String) {
         _viewModel = StateObject(wrappedValue: QuizViewModel(buildings: buildings, cityName: cityName))
     }
@@ -77,29 +80,50 @@ private extension QuizView {
     }
 
     func stackedLayout(_ building: Building, isPortrait: Bool) -> some View {
-        ScrollView {
-            VStack(spacing: 32) {
-                headerView(useSideBySide: false)
-                
-                ProgressView(value: Double(viewModel.questionCount), total: Double(viewModel.maxQuestions))
-                    .tint(brandColor)
-                    .scaleEffect(x: 1, y: 1.5)
-                    .padding(.horizontal, isIPad ? 100 : 20)
+        ScrollViewReader { scroller in
+            ScrollView {
+                VStack(spacing: 32) {
+                    headerView(useSideBySide: false)
+                        .id(ScrollTarget.top)
 
-                dossierCard(building)
-                    .padding(.horizontal, isIPad ? 100 : 20)
+                    ProgressView(value: Double(viewModel.questionCount), total: Double(viewModel.maxQuestions))
+                        .tint(brandColor)
+                        .scaleEffect(x: 1, y: 1.5)
+                        .padding(.horizontal, isIPad ? 100 : 20)
+
+                    dossierCard(building)
+                        .padding(.horizontal, isIPad ? 100 : 20)
                 
-                voiceControlSection(useSideBySide: false)
-                    .padding(.horizontal, isIPad ? 100 : 20)
+                    voiceControlSection(useSideBySide: false)
+                        .padding(.horizontal, isIPad ? 100 : 20)
                 
-                interactionArea(useSideBySide: false, isPortrait: isPortrait)
-                    .padding(.horizontal, isIPad ? 100 : 0)
-                
-                
-                Spacer(minLength: 40)
+                    interactionArea(useSideBySide: false, isPortrait: isPortrait)
+                        .padding(.horizontal, isIPad ? 100 : 0)
+
+
+                    Spacer(minLength: 40)
+                }
+                .padding(.top)
             }
-            .padding(.top)
+            // After an answer the facts line and Next button can sit below the fold on
+            // iPhone, so bring them up; a new question starts back at the top.
+            .onChange(of: viewModel.selectedOption) { _, selected in
+                guard selected != nil else { return }
+                DispatchQueue.main.async {
+                    withAnimation(reduceMotion ? nil : .easeInOut) {
+                        scroller.scrollTo(ScrollTarget.next, anchor: .bottom)
+                    }
+                }
+            }
+            .onChange(of: viewModel.questionCount) { _, _ in
+                scroller.scrollTo(ScrollTarget.top, anchor: .top)
+            }
         }
+    }
+
+    /// Spots the stacked layout scrolls to
+    enum ScrollTarget: Hashable {
+        case top, next
     }
     
     func ipadLandscapeLayout(_ building: Building) -> some View {
@@ -140,7 +164,7 @@ private extension QuizView {
                     .foregroundColor(brandColor)
                     .tracking(2)
                 
-                Text(viewModel.currentQuestionType.prompt)
+                Text(viewModel.promptText)
                     .font(.system(isIPad ? .title : .headline, design: .serif))
                     .fontWeight(isHighContrast ? .black : .bold)
                     .multilineTextAlignment(.center)
@@ -149,7 +173,13 @@ private extension QuizView {
             .padding(.horizontal)
 
             answerButtonSection(useSideBySide: useSideBySide, isPortrait: isPortrait)
-            
+
+            if viewModel.selectedOption != nil {
+                answerFollowUp
+                    .padding(.horizontal, (useSideBySide || !isIPad) ? 20 : 100)
+                    .transition(.opacity)
+            }
+
             hintSection
             
             if useSideBySide { Spacer() }
@@ -307,20 +337,35 @@ private extension QuizView {
                     .italic(viewModel.currentQuestionType == .name)
                 
                 Divider().background(brandColor.opacity(0.3))
-                
-                VStack(alignment: .leading, spacing: 14) {
-                    if let style = building.knownStyle {
-                        dossierRow(label: "STYLE", value: style, icon: "fossil.shell", hide: viewModel.currentQuestionType == .style)
-                    }
-                    if building.hasKnownYear {
-                        dossierRow(label: "YEAR", value: "\(building.yearBuilt)", icon: "calendar", hide: viewModel.currentQuestionType == .year)
-                    }
-                    // 0 means the story count isn't known (common for campus buildings)
-                    if building.numberOfStories > 0 {
-                        dossierRow(label: "STORIES", value: "\(building.numberOfStories) Stories", icon: "building.2", hide: viewModel.currentQuestionType == .stories)
-                    }
-                    if let architect = building.knownArchitect {
-                        dossierRow(label: "ARCHITECT", value: architect, icon: "person.text.rectangle", hide: viewModel.currentQuestionType == .architect)
+
+                if viewModel.isPhotoQuestion {
+                    // The photo replaces the data rows; no caption, and VoiceOver
+                    // doesn't read the name. If it can't load, the view model
+                    // swaps in a different question about this building.
+                    WikiBuildingPhoto(
+                        building: building,
+                        height: isIPad ? 280 : 200,
+                        accessibilityLabelText: String(localized: "Photo of the building in question"),
+                        onUnavailable: { viewModel.photoUnavailable(for: building.id) }
+                    )
+                    // A fresh photo view per building, so the last one's photo never lingers
+                    .id(building.id)
+                    .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+                } else {
+                    VStack(alignment: .leading, spacing: 14) {
+                        if let style = building.knownStyle {
+                            dossierRow(label: "STYLE", value: style, icon: "fossil.shell", hide: viewModel.currentQuestionType == .style)
+                        }
+                        if building.hasKnownYear {
+                            dossierRow(label: "YEAR", value: "\(building.yearBuilt)", icon: "calendar", hide: viewModel.currentQuestionType == .year)
+                        }
+                        // 0 means the story count isn't known (common for campus buildings)
+                        if building.numberOfStories > 0 {
+                            dossierRow(label: "STORIES", value: "\(building.numberOfStories) Stories", icon: "building.2", hide: viewModel.currentQuestionType == .stories)
+                        }
+                        if let architect = building.knownArchitect {
+                            dossierRow(label: "ARCHITECT", value: architect, icon: "person.text.rectangle", hide: viewModel.currentQuestionType == .architect)
+                        }
                     }
                 }
             }
@@ -401,6 +446,8 @@ private extension QuizView {
                     }
                 }
 
+                missesSection
+
                 Button { dismiss() } label: {
                     Text("RETURN TO CITY")
                         .font(.headline)
@@ -414,6 +461,98 @@ private extension QuizView {
                 Spacer(minLength: 40)
             }
             .padding(.horizontal, 20)
+        }
+    }
+
+    // MARK: After the Answer
+
+    /// The building's facts in one line, then the button to move on.
+    var answerFollowUp: some View {
+        VStack(spacing: DS.Space.l) {
+            HStack(alignment: .top, spacing: DS.Space.m) {
+                Image(systemName: "info.circle.fill")
+                    .font(.system(size: factIconSize))
+                    .foregroundStyle(brandColor)
+                    .accessibilityHidden(true)
+                Text(viewModel.factLine)
+                    .font(.system(.subheadline, design: .rounded))
+                    .fontWeight(isHighContrast ? .bold : .semibold)
+                    .foregroundStyle(.primary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            .dsCard(isHighContrast: isHighContrast)
+
+            Button { viewModel.nextQuestion(reduceMotion: reduceMotion) } label: {
+                Label(viewModel.isLastQuestion ? "See Results" : "Next Question",
+                      systemImage: viewModel.isLastQuestion ? "flag.checkered" : "arrow.right")
+                    .font(.headline)
+                    .frame(maxWidth: 300)
+                    .padding(.vertical, DS.Space.l)
+                    .background(brandColor)
+                    .foregroundColor(isHighContrast ? Color(UIColor.systemBackground) : .white)
+                    .clipShape(Capsule())
+            }
+            .disabled(viewModel.showingStreakCelebration)
+            .keyboardShortcut(.defaultAction)
+            .id(ScrollTarget.next)
+        }
+    }
+
+    // MARK: Review Your Misses
+
+    @ViewBuilder
+    var missesSection: some View {
+        if !viewModel.misses.isEmpty {
+            VStack(alignment: .leading, spacing: DS.Space.m) {
+                DSSectionHeader("Review your misses", systemImage: "arrow.uturn.backward.circle", isHighContrast: isHighContrast)
+                ForEach(viewModel.misses) { miss in
+                    missRow(miss)
+                }
+            }
+            .frame(maxWidth: 600)
+        }
+    }
+
+    func missRow(_ miss: QuizMiss) -> some View {
+        HStack(alignment: .top, spacing: DS.Space.m) {
+            Image(systemName: missIcon(for: miss))
+                .font(.system(size: missIconSize))
+                .frame(width: missIconSize * 1.75, height: missIconSize * 1.75)
+                .background(brandColor.opacity(0.15))
+                .foregroundColor(brandColor)
+                .clipShape(Circle())
+                .accessibilityHidden(true)
+
+            VStack(alignment: .leading, spacing: DS.Space.xs) {
+                Text(miss.buildingName)
+                    .font(.headline)
+                    .fixedSize(horizontal: false, vertical: true)
+                // For "which landmark?" questions the building's name is the answer
+                if miss.questionType != .name {
+                    Text("Correct answer: \(miss.correctAnswer)")
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(.primary)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                Text("Your answer: \(miss.givenAnswer)")
+                    .font(.subheadline)
+                    .foregroundStyle(isHighContrast ? .primary : .secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+        .dsCard(isHighContrast: isHighContrast)
+        .accessibilityElement(children: .combine)
+    }
+
+    /// The same icons the data card uses for each kind of fact
+    func missIcon(for miss: QuizMiss) -> String {
+        if miss.isPhoto { return "photo" }
+        switch miss.questionType {
+        case .name: return "building.columns"
+        case .style: return "fossil.shell"
+        case .year: return "calendar"
+        case .architect: return "person.text.rectangle"
+        case .stories: return "building.2"
         }
     }
 
@@ -460,7 +599,7 @@ private extension QuizView {
             }
             
             if viewModel.isListening {
-                Text(viewModel.currentQuestionType.voicePrompt)
+                Text(viewModel.voicePromptText)
                     .font(.caption2)
                     .foregroundColor(.secondary)
                     .transition(.opacity)

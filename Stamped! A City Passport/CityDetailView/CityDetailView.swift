@@ -124,6 +124,7 @@ struct CityDetailView: View {
                     LandmarkSection(viewModel: viewModel, isHighContrast: isHighContrast)
 
                     BuildingTimelineSection(
+                        viewModel: viewModel,
                         buildings: viewModel.city.buildings,
                         visitedIDs: GlobalProgressManager.shared.visitedIDs,
                         isHighContrast: isHighContrast
@@ -138,6 +139,11 @@ struct CityDetailView: View {
                         EventsSection(service: events, isHighContrast: isHighContrast)
                     }
 
+                    // Campuses only: the school's own calendar (hides itself when there's nothing)
+                    if viewModel.city.campusEventFeed != nil {
+                        CampusEventsSection(service: CampusEventsService.shared, campus: viewModel.city, isHighContrast: isHighContrast)
+                    }
+
                     TravelInfoSection(viewModel: viewModel, isHighContrast: isHighContrast)
 
                 case .local:
@@ -150,7 +156,7 @@ struct CityDetailView: View {
                     // Top Eats — hidden when failed so we don't show "Couldn't load"
                     let eats = FoursquareService.shared
                     if eats.isLoading || !eats.venues.isEmpty {
-                        TopEatsSection(service: eats, isHighContrast: isHighContrast)
+                        TopEatsSection(service: eats, cityName: viewModel.city.name, isHighContrast: isHighContrast)
                     }
                 }
             }
@@ -175,7 +181,8 @@ struct CityDetailView: View {
                 cityName: viewModel.city.name,
                 buildings: viewModel.city.buildings
             )
-            _ = await (w, e, f)
+            async let c: () = CampusEventsService.shared.fetchEvents(for: viewModel.city)
+            _ = await (w, e, f, c)
         }
         .onAppear {
             ProximityManager.shared.startMonitoring(
@@ -199,6 +206,9 @@ struct CityDetailView: View {
                     cityName: viewModel.city.name,
                     buildings: viewModel.city.buildings
                 )
+            }
+            Task {
+                await CampusEventsService.shared.fetchEvents(for: viewModel.city)
             }
         }
         .onDisappear {
