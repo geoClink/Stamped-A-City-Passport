@@ -759,3 +759,9 @@
 
 /* Game Day: a game whose start time isn't announced yet */
 "Time TBA" = "时间待定";
+
+/* Vrbo and Viator links */
+"Vacation Rentals on Vrbo" = "在 Vrbo 上找度假租赁";
+"Opens Vrbo. Stamped! doesn't handle bookings or payments." = "打开 Vrbo。Stamped! 不处理预订或付款。";
+"More tours on Viator" = "在 Viator 上查看更多游览";
+"Opens Viator. Stamped! doesn't handle bookings or payments." = "打开 Viator。Stamped! 不处理预订或付款。";

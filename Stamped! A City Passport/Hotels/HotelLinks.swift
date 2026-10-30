@@ -40,6 +40,10 @@ enum HotelPartner {
     /// code the Creator Hub's Search widgets page generates (data-camref). Set
     /// `affiliateID` to this when `provider` is `.expedia`.
     static let expediaCamref = "1110lStp6"
+
+    /// Vrbo USA's Partnerize camref (Creator Hub → Search widgets → vrbo.com, 30 Oct 2026).
+    /// A separate campaign from Expedia's, so it has its own code. nil hides the Vrbo button.
+    static let vrboCamref: String? = "1100l6yuA7"
 }
 
 /// How a provider's affiliate links carry the affiliate ID.
@@ -323,6 +327,56 @@ struct FindHotelsButton: View {
                     HotelCommissionNote()
                 }
             }
+            .inAppBrowser(item: $browserLink)
+        }
+    }
+}
+
+// MARK: - Vrbo
+
+/// Vacation rentals on Vrbo for the same place and dates as a hotel search, wrapped in Vrbo's
+/// Partnerize click link (checked 30 Oct 2026: it lands on Vrbo's search with the camref).
+///
+/// https://prf.hn/click/camref:<id>/destination:<https://www.vrbo.com/search?destination=…&startDate=…&endDate=…>
+struct VrboLinkBuilder {
+    var camref: String? = HotelPartner.vrboCamref
+    var hotelLinks = HotelLinkBuilder()
+
+    func url(for search: HotelSearch) -> URL? {
+        guard let camref = camref?.trimmingCharacters(in: .whitespacesAndNewlines), !camref.isEmpty else { return nil }
+        let destination = search.destination.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !destination.isEmpty else { return nil }
+        var items = [("destination", destination)]
+        if let dates = hotelLinks.stayDates(for: search) {
+            items.append(("startDate", dates.checkIn))
+            items.append(("endDate", dates.checkOut))
+        }
+        let query = items.map { "\(HotelLinkBuilder.encode($0.0))=\(HotelLinkBuilder.encode($0.1))" }.joined(separator: "&")
+        let searchLink = "https://www.vrbo.com/search?\(query)"
+        return URL(string: "https://prf.hn/click/camref:\(HotelLinkBuilder.encode(camref))/destination:\(HotelLinkBuilder.encode(searchLink))")
+    }
+}
+
+/// "Vacation Rentals on Vrbo": a smaller link next to Find Hotels, for families and groups
+/// who'd rather have a whole place. Hidden when no Vrbo camref is set.
+struct VrboButton: View {
+    let search: HotelSearch
+    /// true: the in-app browser; false: hand the link to the system (Safari or the Vrbo app)
+    var opensInApp = true
+
+    private let builder = VrboLinkBuilder()
+    @State private var browserLink: BrowserLink?
+    @Environment(\.openURL) private var openURL
+
+    var body: some View {
+        if let url = builder.url(for: search) {
+            Button {
+                if opensInApp { browserLink = BrowserLink(url: url) } else { openURL(url) }
+            } label: {
+                Label(NSLocalizedString("Vacation Rentals on Vrbo", comment: "Hotel links: opens Vrbo's vacation rental search for the same place and dates"),
+                      systemImage: "house.fill")
+            }
+            .accessibilityHint(NSLocalizedString("Opens Vrbo. Stamped! doesn't handle bookings or payments.", comment: "Vrbo button, VoiceOver hint"))
             .inAppBrowser(item: $browserLink)
         }
     }

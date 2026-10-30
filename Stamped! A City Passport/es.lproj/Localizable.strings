@@ -759,3 +759,9 @@
 
 /* Game Day: a game whose start time isn't announced yet */
 "Time TBA" = "Hora por confirmar";
+
+/* Vrbo and Viator links */
+"Vacation Rentals on Vrbo" = "Alquileres vacacionales en Vrbo";
+"Opens Vrbo. Stamped! doesn't handle bookings or payments." = "Abre Vrbo. Stamped! no gestiona reservas ni pagos.";
+"More tours on Viator" = "Más tours en Viator";
+"Opens Viator. Stamped! doesn't handle bookings or payments." = "Abre Viator. Stamped! no gestiona reservas ni pagos.";

@@ -759,3 +759,9 @@
 
 /* Game Day: a game whose start time isn't announced yet */
 "Time TBA" = "時間未定";
+
+/* Vrbo and Viator links */
+"Vacation Rentals on Vrbo" = "Vrboでバケーションレンタル";
+"Opens Vrbo. Stamped! doesn't handle bookings or payments." = "Vrboを開きます。Stamped!は予約や支払いを扱いません。";
+"More tours on Viator" = "Viatorでほかのツアー";
+"Opens Viator. Stamped! doesn't handle bookings or payments." = "Viatorを開きます。Stamped!は予約や支払いを扱いません。";
