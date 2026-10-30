@@ -38,7 +38,10 @@ struct BuildingDetailView: View {
     @State private var geocodeErrorMessage: String = ""
     @State private var showingReportMenu = false
     @State private var noteText: String = ""
-    @State private var nearbyVenues: [(name: String, category: String)] = []
+    /// Nearby restaurants, nearest first; `meters` is the straight-line distance from this building.
+    @State private var nearbyVenues: [(name: String, category: String, meters: CLLocationDistance, mapItem: MKMapItem)] = []
+    /// The nearby restaurant whose Apple place card is open.
+    @State private var tappedPlace: TappedApplePlace?
     @State private var isLoadingVenues = false
     @State private var lookAroundScene: MKLookAroundScene? = nil
     @State private var showingLookAround = false
@@ -60,6 +63,8 @@ struct BuildingDetailView: View {
     // Food cards and their icon grow with the text size so names don't clip
     @ScaledMetric(relativeTo: .subheadline) var flavorCardWidth: CGFloat = 160
     @ScaledMetric(relativeTo: .subheadline) var flavorIconSize: CGFloat = 40
+    /// Street photo (or type icon) at the top of each nearby-restaurant card
+    @ScaledMetric(relativeTo: .body) private var placeThumbnailHeight: CGFloat = 72
     @ScaledMetric(relativeTo: .largeTitle) var placeholderIconSize: CGFloat = 60
     
     // MARK: - Computed States
@@ -130,6 +135,9 @@ struct BuildingDetailView: View {
             }
         }
         #endif
+        .sheet(item: $tappedPlace) { place in
+            ApplePlaceSheet(mapItem: place.mapItem, cityName: viewModel.city.name)
+        }
         .sheet(isPresented: $showingModelViewer) {
             if let url = localModelURL {
                 BuildingModelViewer(modelURL: url, buildingName: building.name)
@@ -169,22 +177,18 @@ struct BuildingDetailView: View {
         )
         request.resultTypes = .pointOfInterest
         request.pointOfInterestFilter = MKPointOfInterestFilter(including: [
-            .restaurant, .cafe, .bakery, .brewery, .foodMarket, .nightlife
+            .restaurant, .cafe, .bakery, .brewery, .winery, .foodMarket, .nightlife
         ])
         if let response = try? await MKLocalSearch(request: request).start() {
+            let origin = CLLocationCoordinate2D(latitude: lat, longitude: lon)
             nearbyVenues = response.mapItems.prefix(6).compactMap { item in
                 guard let name = item.name else { return nil }
-                let cat: String
-                switch item.pointOfInterestCategory {
-                case .cafe:       cat = "Café"
-                case .bakery:     cat = "Bakery"
-                case .brewery:    cat = "Brewery"
-                case .foodMarket: cat = "Market"
-                case .nightlife:  cat = "Bar"
-                default:          cat = "Restaurant"
-                }
-                return (name: name, category: cat)
+                return (name: name,
+                        category: DiningPlaceLabel.category(for: item),
+                        meters: DiningPlaceLabel.distance(from: origin, to: item),
+                        mapItem: item)
             }
+            .sorted { $0.meters < $1.meters }
         }
         isLoadingVenues = false
     }
@@ -417,8 +421,17 @@ extension BuildingDetailView {
                 BuildingNoteField(buildingID: building.id, noteText: $noteText, isHighContrast: isHighContrast)
             }
             aboutSection
-            threeDModelSection
+            BuildingPhotoGallery(building: building, isHighContrast: isHighContrast)
+            // US landmarks only; hidden when the Library of Congress has nothing for it
+            HistoricPhotosSection(building: building, city: viewModel.city, isHighContrast: isHighContrast)
+            if BuildingScanService.isEnabled {
+                threeDModelSection
+            }
             localFlavorsSection
+            // Food tours on GetYourGuide (cities only), styled like Tours & Tickets
+            FoodToursButton(city: viewModel.city) { AnyView(secondaryButtonStyle($0, tint: brandColor)) }
+                .buttonStyle(.plain)
+            StaysNearbySection(building: building, cityName: viewModel.city.name, isHighContrast: isHighContrast)
             reportIssueButton
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -432,11 +445,8 @@ extension BuildingDetailView {
                 .fontWeight(.bold)
                 .fixedSize(horizontal: false, vertical: true)
                 .accessibilityAddTraits(.isHeader)
-            if let architect = building.knownArchitect {
-                Text(L.Building.designedBy(architect))
-                    .font(.subheadline.italic())
-                    .foregroundColor(isHighContrast ? .primary : .secondary)
-            }
+            // "Designed by …", tappable through to the architect's page
+            ArchitectLink(building: building, isHighContrast: isHighContrast)
             if isVisited, let date = GlobalProgressManager.shared.visitDates[building.id] {
                 Label("Stamped \(date.formatted(date: .abbreviated, time: .omitted))", systemImage: "checkmark.seal.fill")
                     .font(.caption.bold())
@@ -535,7 +545,9 @@ extension BuildingDetailView {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(alignment: .top, spacing: DS.Space.m) {
                         ForEach(nearbyVenues, id: \.name) { venue in
-                            localFlavorCard(name: venue.name, category: venue.category)
+                            localFlavorCard(name: venue.name, category: venue.category, meters: venue.meters, mapItem: venue.mapItem) {
+                                tappedPlace = TappedApplePlace(mapItem: venue.mapItem)
+                            }
                         }
                     }
                     .padding(.horizontal, 2)
@@ -577,17 +589,14 @@ extension BuildingDetailView {
             )
     }
 
-    private func localFlavorCard(name: String, category: String) -> some View {
-        let mapsURL: URL? = {
-            let encoded = name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-            if let lat = building.latitude, let lon = building.longitude {
-                return URL(string: "maps://?q=\(encoded)&near=\(lat),\(lon)")
-            }
-            return URL(string: "maps://?q=\(encoded)")
-        }()
-
+    /// A nearby restaurant card; a tap opens Apple's place card (photos, hours, ratings) in the app.
+    private func localFlavorCard(name: String, category: String, meters: CLLocationDistance, mapItem: MKMapItem, onTap: @escaping () -> Void) -> some View {
+        // "4 min walk" or "1.2 km", formatted here so it follows the units setting live.
+        let distance = DiningPlaceLabel.distanceText(meters: meters, useMetric: useMetric)
         let card = flavorCardStyle(VStack(alignment: .leading, spacing: DS.Space.s) {
-            flavorIcon
+            // Apple's street photo of the place, or an icon for its type (café, bakery, bar…)
+            PlaceThumbnail(mapItem: mapItem, category: mapItem.pointOfInterestCategory,
+                           height: placeThumbnailHeight, isHighContrast: isHighContrast)
 
             Text(name)
                 .font(.subheadline).fontWeight(.bold)
@@ -597,32 +606,34 @@ extension BuildingDetailView {
 
             Spacer(minLength: DS.Space.xs)
 
-            HStack(spacing: DS.Space.xs) {
-                Text(category)
-                    .font(.caption2.monospaced()).fontWeight(.semibold)
-                    .foregroundColor(isHighContrast ? .primary : .secondary)
-                    .textCase(.uppercase)
-                    .lineLimit(2)
-                    .minimumScaleFactor(0.8)
+            HStack(alignment: .bottom, spacing: DS.Space.xs) {
+                // Category above distance, each on its own line, so the narrow card never
+                // wraps mid-label (a joined "4 min walk · CAFÉ" broke at the dot)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(category.localizedUppercase)
+                        .font(.caption2.monospaced()).fontWeight(.semibold)
+                    Text(distance)
+                        .font(.caption2)
+                }
+                .foregroundColor(isHighContrast ? .primary : .secondary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
                 Spacer()
-                Image(systemName: "arrow.up.right")
+                Image(systemName: "chevron.right")
                     .font(.caption2)
                     .foregroundColor(isHighContrast ? .primary : .secondary)
             }
         })
 
-        return Group {
-            if let url = mapsURL {
-                Link(destination: url) { card }
-                    .simultaneousGesture(TapGesture().onEnded {
-                        HapticManager.shared.trigger(.selection)
-                    })
-                    .accessibilityLabel("\(name), \(category)")
-                    .accessibilityHint("Opens in Apple Maps")
-            } else {
-                card
-            }
+        return Button {
+            HapticManager.shared.trigger(.selection)
+            onTap()
+        } label: {
+            card
         }
+        .buttonStyle(.plain)
+        .accessibilityLabel("\(name), \(category), \(distance)")
+        .accessibilityHint("Shows photos, hours and ratings")
     }
 
     func foodSpotsSection(spots: [String]) -> some View {
@@ -831,7 +842,7 @@ extension BuildingDetailView {
         // Show scan nudge after the stamp animation plays, but only when:
         // - user just stamped (wasn't visited before)
         // - no community scan exists yet
-        if wasUnvisited && existingScanRecord == nil && !isCheckingScan {
+        if BuildingScanService.isEnabled && wasUnvisited && existingScanRecord == nil && !isCheckingScan {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
                 showingScanNudge = true
             }

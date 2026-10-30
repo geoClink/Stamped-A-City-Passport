@@ -1,0 +1,40 @@
+{
+  "Michigan State University": {
+    "life_michstate_brody_neighborhood": {
+      "description": "Sei residenze (Armstrong, Bailey, Bryan, Butterfield, Emmons e Rather) raccolte intorno a Brody Hall, nella parte ovest del campus. Si mangia a Brody Square, e il centro del campus è a circa 15 minuti a piedi verso est."
+    },
+    "life_michstate_north_neighborhood": {
+      "description": "Dieci residenze, tra cui Mayo, Landon, Campbell, Snyder e Phillips, nel verde nord del campus, vicino alla Union, alla Main Library e a Grand River Avenue. Si mangia agli Heritage Commons di Landon o a The Gallery di Snyder-Phillips."
+    },
+    "life_michstate_river_trail_neighborhood": {
+      "description": "McDonel, Owen, Shaw e Van Hoosen si trovano lungo il fiume Red Cedar e il suo sentiero. Si mangia a The Vista, nella Shaw Hall, oppure a Thrive, nella Owen Hall, pensato per chi ha allergie."
+    },
+    "life_michstate_east_neighborhood": {
+      "description": "Tre grandi residenze, Akers, Holmes e Hubbard, sul lato est del campus, più tranquillo. Si mangia vicino a casa, a The Edge di Akers o nella mensa di Holmes."
+    },
+    "life_michstate_south_neighborhood": {
+      "description": "Case, Holden, Wilson e Wonders sono a pochi passi dallo Spartan Stadium e dal Breslin Center, quindi nei giorni di partita si è nel vivo dell'azione. Si mangia a South Pointe, in Case, o nella mensa di Holden."
+    },
+    "life_michstate_union": {
+      "description": "Aperta nel 1925 all'angolo tra Grand River e Abbot in memoria degli ex studenti che servirono nella Prima guerra mondiale, la Union è ancora il punto d'incontro per mangiare, studiare e comprare articoli MSU. La sera resta aperta più a lungo per chi ha la tessera MSU."
+    },
+    "life_michstate_main_library": {
+      "description": "Scegliete come studiare: l'ala est è per il lavoro in silenzio, l'ala ovest per i progetti di gruppo. Durante gli esami finali la biblioteca è aperta 24 ore su 24."
+    },
+    "life_michstate_stem_facility": {
+      "description": "Aperto nel 2021 accanto allo Spartan Stadium e collegato alla vecchia centrale elettrica di Shaw Lane, offre circa 1.200 posti per studiare e lavorare in gruppo tra una lezione e l'altra."
+    },
+    "life_michstate_brody_square": {
+      "description": "La grande mensa all'interno della Brody Hall serve colazione, pranzo e cena. È una delle due mense che offrono cene kosher nei giorni feriali durante l'anno accademico."
+    },
+    "life_michstate_the_gallery": {
+      "description": "La mensa della North Neighborhood, tra la Snyder Hall e la Phillips Hall. Come Brody Square, serve cene kosher nei giorni feriali durante l'anno accademico."
+    },
+    "life_michstate_the_vista": {
+      "description": "La mensa della River Trail Neighborhood, nella Shaw Hall, a pochi passi dal fiume Red Cedar. Quasi tutti i giorni serve colazione, pranzo e cena."
+    },
+    "life_michstate_grand_river_avenue": {
+      "description": "La via principale alberata del centro di East Lansing corre lungo il lato nord del campus. Gli studenti la attraversano per un caffè, un pasto o lo shopping, e la città organizza lì vicino concerti estivi e cinema all'aperto."
+    }
+  }
+}

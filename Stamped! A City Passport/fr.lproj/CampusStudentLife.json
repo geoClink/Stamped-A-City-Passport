@@ -1,0 +1,100 @@
+{
+  "Michigan State University": [
+    {
+      "id": "life_michstate_brody_neighborhood",
+      "name": "Brody Neighborhood",
+      "category": "housing",
+      "description": "Six résidences (Armstrong, Bailey, Bryan, Butterfield, Emmons et Rather) regroupées autour de Brody Hall, à l'ouest du campus. On mange à Brody Square, et le centre du campus est à environ 15 minutes à pied vers l'est.",
+      "latitude": 42.7315666,
+      "longitude": -84.495796
+    },
+    {
+      "id": "life_michstate_north_neighborhood",
+      "name": "North Neighborhood",
+      "category": "housing",
+      "description": "Dix résidences, dont Mayo, Landon, Campbell, Snyder et Phillips, dans le nord verdoyant du campus, près de la Union, de la Main Library et de Grand River Avenue. Les résidents mangent à Heritage Commons, dans Landon, ou à The Gallery, dans Snyder-Phillips.",
+      "latitude": 42.7316553,
+      "longitude": -84.4810755
+    },
+    {
+      "id": "life_michstate_river_trail_neighborhood",
+      "name": "River Trail Neighborhood",
+      "category": "housing",
+      "description": "McDonel, Owen, Shaw et Van Hoosen bordent la rivière Red Cedar et son sentier. On mange à The Vista, dans Shaw Hall, ou à Thrive, dans Owen Hall, adapté aux personnes allergiques.",
+      "latitude": 42.7268939,
+      "longitude": -84.471738
+    },
+    {
+      "id": "life_michstate_east_neighborhood",
+      "name": "East Neighborhood",
+      "category": "housing",
+      "description": "Trois grandes résidences, Akers, Holmes et Hubbard, à l'est du campus, dans un coin plus calme. Les résidents mangent tout près, à The Edge dans Akers ou au restaurant de Holmes.",
+      "latitude": 42.7249901,
+      "longitude": -84.4648929
+    },
+    {
+      "id": "life_michstate_south_neighborhood",
+      "name": "South Neighborhood",
+      "category": "housing",
+      "description": "Case, Holden, Wilson et Wonders sont à quelques minutes à pied du Spartan Stadium et du Breslin Center : les jours de match, on est aux premières loges. Les résidents mangent à South Pointe, dans Case, ou au restaurant de Holden.",
+      "latitude": 42.7229925,
+      "longitude": -84.4904746
+    },
+    {
+      "id": "life_michstate_union",
+      "name": "MSU Union",
+      "category": "union",
+      "description": "Ouverte en 1925 à l'angle de Grand River et d'Abbot en hommage aux anciens élèves ayant servi pendant la Première Guerre mondiale, la Union reste le lieu où les étudiants se retrouvent pour manger, réviser et acheter des articles MSU. Le soir, elle reste ouverte plus tard pour les étudiants munis de leur carte MSU.",
+      "latitude": 42.7341865,
+      "longitude": -84.4828649
+    },
+    {
+      "id": "life_michstate_main_library",
+      "name": "Main Library",
+      "category": "study",
+      "description": "Choisissez votre façon de travailler : l'aile est est réservée au travail en silence, l'aile ouest aux projets de groupe. Pendant les examens, la bibliothèque est ouverte jour et nuit.",
+      "latitude": 42.7308851,
+      "longitude": -84.4832076
+    },
+    {
+      "id": "life_michstate_stem_facility",
+      "name": "STEM Teaching and Learning Facility",
+      "category": "study",
+      "description": "Ouvert en 2021 à côté du Spartan Stadium et relié à l'ancienne centrale électrique de Shaw Lane, ce bâtiment offre environ 1 200 places pour étudier et travailler en groupe entre les cours.",
+      "latitude": 42.7265599,
+      "longitude": -84.4830313
+    },
+    {
+      "id": "life_michstate_brody_square",
+      "name": "Brody Square",
+      "category": "dining",
+      "description": "Le grand restaurant universitaire de Brody Hall sert petit-déjeuner, déjeuner et dîner. C'est l'un des deux restaurants qui proposent des dîners casher en semaine pendant l'année universitaire.",
+      "latitude": 42.7315208,
+      "longitude": -84.4954898
+    },
+    {
+      "id": "life_michstate_the_gallery",
+      "name": "The Gallery at Snyder Phillips",
+      "category": "dining",
+      "description": "Le restaurant de North Neighborhood, entre Snyder Hall et Phillips Hall. Comme Brody Square, il sert des dîners casher en semaine pendant l'année universitaire.",
+      "latitude": 42.729981,
+      "longitude": -84.473446
+    },
+    {
+      "id": "life_michstate_the_vista",
+      "name": "The Vista at Shaw",
+      "category": "dining",
+      "description": "Le restaurant de River Trail Neighborhood, dans Shaw Hall, à deux pas de la rivière Red Cedar. Il sert petit-déjeuner, déjeuner et dîner la plupart des jours.",
+      "latitude": 42.7267058,
+      "longitude": -84.4753714
+    },
+    {
+      "id": "life_michstate_grand_river_avenue",
+      "name": "Grand River Avenue",
+      "category": "hangout",
+      "description": "La rue principale bordée d'arbres du centre-ville d'East Lansing longe le nord du campus. Les étudiants la traversent pour un café, un repas ou du shopping, et la ville organise tout près des concerts d'été et du cinéma en plein air.",
+      "latitude": 42.7352,
+      "longitude": -84.483
+    }
+  ]
+}

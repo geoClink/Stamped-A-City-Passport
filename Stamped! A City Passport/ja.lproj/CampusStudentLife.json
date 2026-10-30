@@ -1,0 +1,100 @@
+{
+  "Michigan State University": [
+    {
+      "id": "life_michstate_brody_neighborhood",
+      "name": "Brody Neighborhood",
+      "category": "housing",
+      "description": "キャンパス西側のBrody Hallを囲む6つの寮（Armstrong、Bailey、Bryan、Butterfield、Emmons、Rather）。食事はBrody Squareで、キャンパス中心部までは東へ歩いて約15分です。",
+      "latitude": 42.7315666,
+      "longitude": -84.495796
+    },
+    {
+      "id": "life_michstate_north_neighborhood",
+      "name": "North Neighborhood",
+      "category": "housing",
+      "description": "Mayo、Landon、Campbell、Snyder、Phillipsなど10の寮が、緑豊かなキャンパス北部、Union、Main Library、Grand River Avenueの近くに集まっています。食事はLandonのHeritage CommonsかSnyder-PhillipsのThe Galleryで。",
+      "latitude": 42.7316553,
+      "longitude": -84.4810755
+    },
+    {
+      "id": "life_michstate_river_trail_neighborhood",
+      "name": "River Trail Neighborhood",
+      "category": "housing",
+      "description": "McDonel、Owen、Shaw、Van HoosenはRed Cedar川と川沿いの遊歩道のそばにあります。食事はShaw HallのThe Vistaのほか、Owen Hallにはアレルギーに配慮したThriveもあります。",
+      "latitude": 42.7268939,
+      "longitude": -84.471738
+    },
+    {
+      "id": "life_michstate_east_neighborhood",
+      "name": "East Neighborhood",
+      "category": "housing",
+      "description": "キャンパスの静かな東端にあるAkers、Holmes、Hubbardの3つの大きな寮。食事はすぐ近くの、AkersのThe EdgeかHolmesのダイニングホールで。",
+      "latitude": 42.7249901,
+      "longitude": -84.4648929
+    },
+    {
+      "id": "life_michstate_south_neighborhood",
+      "name": "South Neighborhood",
+      "category": "housing",
+      "description": "Case、Holden、Wilson、Wondersの寮は、Spartan StadiumとBreslin Centerから歩いてすぐ。試合の日の盛り上がりを身近に感じられます。食事はCaseのSouth PointeかHoldenのダイニングホールで。",
+      "latitude": 42.7229925,
+      "longitude": -84.4904746
+    },
+    {
+      "id": "life_michstate_union",
+      "name": "MSU Union",
+      "category": "union",
+      "description": "1925年、第一次世界大戦に従軍した卒業生を記念してGrand RiverとAbbotの角に開館したUnion。今も学生が食事や勉強、MSUグッズの買い物に集まる場所です。夜はMSUの学生証を持つ学生向けに遅くまで開いています。",
+      "latitude": 42.7341865,
+      "longitude": -84.4828649
+    },
+    {
+      "id": "life_michstate_main_library",
+      "name": "Main Library",
+      "category": "study",
+      "description": "勉強スタイルで選べます。東棟は静かに集中する場所、西棟はグループワーク向けです。期末試験の期間中は24時間開館します。",
+      "latitude": 42.7308851,
+      "longitude": -84.4832076
+    },
+    {
+      "id": "life_michstate_stem_facility",
+      "name": "STEM Teaching and Learning Facility",
+      "category": "study",
+      "description": "2021年にSpartan Stadiumの隣に開館し、旧Shaw Lane発電所とつながった建物。授業の合間の勉強やグループワークに使える席が約1,200あります。",
+      "latitude": 42.7265599,
+      "longitude": -84.4830313
+    },
+    {
+      "id": "life_michstate_brody_square",
+      "name": "Brody Square",
+      "category": "dining",
+      "description": "Brody Hall内にある大きなダイニングホールで、朝食・昼食・夕食を提供しています。学期中の平日にコーシャの夕食を出す2つのダイニングホールのひとつです。",
+      "latitude": 42.7315208,
+      "longitude": -84.4954898
+    },
+    {
+      "id": "life_michstate_the_gallery",
+      "name": "The Gallery at Snyder Phillips",
+      "category": "dining",
+      "description": "SnyderとPhillipsの2つの寮の間にある、North Neighborhoodのダイニングホール。Brody Squareと同じく、学期中の平日にはコーシャの夕食も出しています。",
+      "latitude": 42.729981,
+      "longitude": -84.473446
+    },
+    {
+      "id": "life_michstate_the_vista",
+      "name": "The Vista at Shaw",
+      "category": "dining",
+      "description": "Red Cedar川のすぐそば、Shaw HallにあるRiver Trail Neighborhoodのダイニングホール。ほとんどの日に朝食・昼食・夕食を提供しています。",
+      "latitude": 42.7267058,
+      "longitude": -84.4753714
+    },
+    {
+      "id": "life_michstate_grand_river_avenue",
+      "name": "Grand River Avenue",
+      "category": "hangout",
+      "description": "East Lansingのダウンタウンを通る並木のメインストリートで、キャンパスの北端に沿って延びています。学生はコーヒーや食事、買い物に出かけ、近くでは夏のコンサートや野外映画会も開かれます。",
+      "latitude": 42.7352,
+      "longitude": -84.483
+    }
+  ]
+}
