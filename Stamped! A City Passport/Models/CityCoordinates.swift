@@ -34,6 +34,15 @@ extension CityLocation.City {
         case .newOrleans:       return (29.9511, -90.0715)
         case .lasVegas:         return (36.1699, -115.1398)
         case .buffalo:          return (42.8864, -78.8784)
+        case .columbusIndiana:  return (39.2140, -85.9111)
+        case .oakPark:          return (41.8883, -87.7894)
+        case .palmSprings:      return (33.8303, -116.5453)
+        case .fortWorth:        return (32.7564, -97.3325)
+        case .kansasCity:       return (39.0997, -94.5783)
+        case .savannah:         return (32.0811, -81.0911)
+        case .charleston:       return (32.8139, -79.9319)
+        case .baltimore:        return (39.2894, -76.6153)
+        case .sanDiego:         return (32.7150, -117.1625)
         // MARK: Canada
         case .montreal:         return (45.5017, -73.5673)
         case .victoria:         return (48.4284, -123.3656)
@@ -68,6 +77,7 @@ extension CityLocation.City {
         case .edinburgh:        return (55.9533, -3.1883)
         case .cork:             return (51.8985, -8.4756)
         case .dublin:           return (53.3498, -6.2603)
+        case .glasgow:          return (55.8611, -4.2500)
         // MARK: Western Europe
         case .paris:            return (48.8566, 2.3522)
         case .amsterdam:        return (52.3676, 4.9041)
@@ -85,6 +95,9 @@ extension CityLocation.City {
         case .zurich:           return (47.3769, 8.5417)
         case .salzburg:         return (47.8095, 13.0550)
         case .reykjavik:        return (64.1466, -21.9426)
+        case .bilbao:           return (43.2631, -2.9350)
+        case .valencia:         return (39.4700, -0.3764)
+        case .rotterdam:        return (51.9200, 4.4800)
         // MARK: Central / Eastern Europe
         case .rome:             return (41.9028, 12.4964)
         case .milan:            return (45.4642, 9.1900)
@@ -141,6 +154,7 @@ extension CityLocation.City {
         case .kathmandu:        return (27.7172, 85.3240)
         case .colombo:          return (6.9271, 79.8612)
         case .dhaka:            return (23.8103, 90.4125)
+        case .chandigarh:       return (30.7400, 76.7900)
         // MARK: Africa
         case .cairo:            return (30.0444, 31.2357)
         case .capeTown:         return (-33.9249, 18.4241)

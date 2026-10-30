@@ -142,6 +142,19 @@
     "transportation": "トランスジャカルタと MRT",
     "transportationFact": "トランスジャカルタは世界最長のバス高速交通システムで、市内の渋滞を避けるために専用車線を利用しています。新しいジャカルタ MRT は、市内の主要な南北通路に、高速で現代的な地下鉄の代替手段を提供します。ライリンク空港鉄道は、スカルノハッタと市内中心部の間のエアコン完備の高級な接続を提供します。"
   },
+  "Baltimore": {
+    "airportCode": "BWI",
+    "airportInfo": "ボルチモア・ワシントン国際サーグッド・マーシャル空港はダウンタウンの南約9マイルにあり、ボルチモア出身で米国最高裁初のアフリカ系アメリカ人判事となったサーグッド・マーシャルにちなんで名付けられています。サウスウエスト航空の主要な運航拠点です。空港敷地内の駅からはアムトラックとMARCの列車に乗り継げ、ライトレールリンクはコンコースEのすぐ横に停車します。",
+    "airportName": "BWI Marshall",
+    "currencyCode": "USD",
+    "currencyInfo": "米ドル ($)",
+    "funFact": "1814年9月のイギリス軍によるフォート・マクヘンリー砲撃の際、夜明けになってもなお翻る星条旗を目にしたフランシス・スコット・キーが詩を書き、それが米国国歌「星条旗」となりました。また、この街には独立後のアメリカで最初に建てられたカトリック大聖堂もあります。",
+    "language": "英語",
+    "languageInfo": "どこでも英語が話され、地元の人々は街の愛称を大切にしています。ボルチモアは「チャーム・シティ」や略して「ビーモア（B'more）」と呼ばれ、古い愛称「モブタウン」は19世紀の騒々しい過去を物語っています。",
+    "nickname": "チャーム・シティ",
+    "transportation": "ライトレールリンク",
+    "transportationFact": "メリーランド州交通局がライトレールリンクとメトロ・サブウェイリンク、そしてボルチモアリンクのバス網を運営しています。無料のチャーム・シティ・サーキュレーターのバスはダウンタウンを巡り、フェルズ・ポイントやフェデラル・ヒル、フォート・マクヘンリーまで走ります。ボルチモア・ペン駅はアムトラックの北東回廊と街を結んでいます。"
+  },
   "Bangkok": {
     "airportCode": "BKK",
     "airportInfo": "スワンナプーム空港は、見事な金屋根の建築物が特徴で、伝統的なタイの神話や仏教美術を描いた巨大な彫像で飾られています。この空港は、インスタグラムで世界で最も写真が撮られる場所の 1 つであり、広大なガラス張りのターミナルと東南アジアへの重要な玄関口としての役割で知られています。",
@@ -232,6 +245,19 @@
     "nickname": "グレイシティ",
     "transportation": "U バーンと S バーン",
     "transportationFact": "U バーンは地下鉄ですが、S バーンは主に市内全域の高架線を運行しています。ベルリンの交通機関は、駅の入り口に物理的な改札口のない「優等システム」で運営されています。黄色の BVG バスと東部の包括的なトラム ネットワークが、市内の総合的な交通機関を完成させています。"
+  },
+  "Bilbao": {
+    "airportCode": "BIO",
+    "airportInfo": "ビルバオ空港は市の北約9kmのロイウにあり、バスク州そして北スペイン全体で最も利用者の多い空港です。2000年に開業したメインターミナルはサンティアゴ・カラトラバの設計で、それ自体が建築の名所となっています。地下鉄はまだ空港に乗り入れていませんが、3号線の延伸が計画されています。",
+    "airportName": "Bilbao Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "ユーロ (€)",
+    "funFact": "ビルバオは1300年、ビスカヤ領主ディエゴ・ロペス5世・デ・アロが与えた都市特許状によって創設されました。1997年のグッゲンハイム美術館の開館は劇的な都市再生をもたらし、今では世界中の都市計画家がこれを「ビルバオ効果」と呼んでいます。山々に囲まれた谷に位置することから、地元の人々は親しみを込めて街を「エル・ボチョ（穴）」と呼びます。",
+    "language": "スペイン語とバスク語",
+    "languageInfo": "ビルバオで最も話されている言語はスペイン語で、次いでバスク州全域の公用語であるバスク語（エウスカラ）です。市によると、住民の少なくとも半数がある程度バスク語を話せ、学校ではバイリンガル教育が選べます。通りの標識からアスクナ・セントロアやイソザキ・アテアといった名所まで、バスク語の名前があちこちに見られます。",
+    "nickname": "エル・ボチョ",
+    "transportation": "地下鉄とトラム",
+    "transportationFact": "ビルバオ地下鉄は1995年に開業し、駅はノーマン・フォスターが設計しました。曲線を描くガラス張りの出入口は、建築家の名にちなんで「フォステリートス」と呼ばれています。現在は3路線がサスピカレアク/カスコ・ビエホ駅で交わり、2002年からは近代的なトラムも市内を走っています。中心部からはケーブルカーがアルチャンダ山へ登り、河口を一望できます。"
   },
   "Bogotá": {
     "airportCode": "BOG",
@@ -415,6 +441,32 @@
     "transportation": "トランスジャカルタと MRT",
     "transportationFact": "トランスジャカルタは世界最長のバス高速交通システムで、市内の渋滞を避けるために専用車線を利用しています。新しいジャカルタ MRT は、市内の主要な南北通路に、高速で現代的な地下鉄の代替手段を提供します。ライリンク空港鉄道は、スカルノハッタと市内中心部の間のエアコン完備の高級な接続を提供します。"
   },
+  "Chandigarh": {
+    "airportCode": "IXC",
+    "airportInfo": "チャンディーガル空港の正式名称はシャヒード・バガット・シン国際空港で、インド空軍と敷地を共有しています。面白いことに、滑走路はチャンディーガルにありますが、2015年に開業した新しいターミナルは境界を越えたパンジャーブ州モハリ側に建っています。",
+    "airportName": "Chandigarh Airport",
+    "currencyCode": "INR",
+    "currencyInfo": "インドルピー (₹)",
+    "funFact": "チャンディーガルは独立後のインドで最初期に建設された計画都市の一つで、パンジャーブ州の新しい州都としてル・コルビュジエが設計しました。街の名前は近くにある女神チャンディーの寺院にちなむ「チャンディーの砦」という意味で、キャピトル・コンプレックスは2016年にユネスコ世界遺産に登録されました。",
+    "language": "ヒンディー語とパンジャーブ語",
+    "languageInfo": "チャンディーガルで最も多く話されているのはヒンディー語で、パンジャーブ語がそれに続きます。一方、連邦直轄領としての公用語は英語です。公立学校では3つの言語すべての教科書が使われています。",
+    "nickname": "シティ・ビューティフル",
+    "transportation": "CTUバス",
+    "transportationFact": "ル・コルビュジエはチャンディーガルに「レ・セット・ヴォワ（7つの道）」と呼ばれる7段階の道路体系を設け、高速の車の流れを自転車や歩行者から切り離しました。公共交通はチャンディーガル交通公社（CTU）が運営し、バスは17区と43区のターミナルから発着します。また、この街は人口あたりの車両数がインドで最も多い都市です。"
+  },
+  "Charleston": {
+    "airportCode": "CHS",
+    "airportInfo": "チャールストン国際空港はサウスカロライナ州で最も利用者の多い空港で、ダウンタウンから北西へ約12マイルのノースチャールストンにあります。隣接するチャールストン空軍基地と滑走路を共用している珍しい空港です。",
+    "airportName": "Charleston Int'l",
+    "currencyCode": "USD",
+    "currencyInfo": "米ドル ($)",
+    "funFact": "チャールストンは1670年、イングランド王チャールズ2世にちなんで「チャールズ・タウン」として創設され、1680年に現在の半島へ移されました。1690年代には北米で5番目に大きな都市へと成長していました。",
+    "language": "英語",
+    "languageInfo": "チャールストンには独特のなまりがあり、年配の地元の人の多くは「r」を発音せず、街の名前を「チャルストン」と呼びます。地元の言葉はシーアイランドやローカントリーのクレオール言語であるガラ語の影響も受けており、今も一部のアフリカ系住民が話しています。",
+    "nickname": "ホーリー・シティ",
+    "transportation": "CARTA",
+    "transportationFact": "チャールストン地域交通局（CARTA）は都市圏全域で定期路線バスを運行しており、全車両に自転車ラックが付いています。ダウンタウン・エリア・シャトルのトロリーバスが歴史地区の観光名所やホテルを結んでいます。障がいのある利用者向けの送迎サービスもあります。"
+  },
   "Chengdu": {
     "airportCode": "TFU",
     "airportInfo": "Chengdu Tianfu International Airport, opened in 2021, is one of China's newest major airports and serves as a gateway to western China. It complements the older Chengdu Shuangliu Airport (CTU) which remains operational. Tianfu is one of the largest airports in China by area and is designed to eventually become a global hub connecting western China to the world.",
@@ -479,6 +531,19 @@
     "nickname": "商業首都",
     "transportation": "CTB Buses & Tuk-tuks",
     "transportationFact": "Colombo's primary public transport is the CTB (Ceylon Transport Board) bus network, supplemented by private buses on the same routes. Three-wheelers (tuk-tuks) are ubiquitous and the most practical way for visitors to navigate the city. Colombo's commuter rail connects the city center to suburbs along the coast. A light rail transit project (LRT) is under construction to create a modern rapid transit option for the city's growing population."
+  },
+  "Columbus, Indiana": {
+    "airportCode": "IND",
+    "airportInfo": "コロンバスには定期便がないため、ほとんどの旅行者は北へ直線距離で約 65 km のインディアナポリス国際空港を利用します。同空港の 2025 年の旅客数は 1,060 万人を超え、町のすぐ北にある小さなコロンバス市営空港は自家用機などに使われています。",
+    "airportName": "Indianapolis International",
+    "currencyCode": "USD",
+    "currencyInfo": "米ドル ($)",
+    "funFact": "人口約 5 万人の小さな町ですが、コロンバスはモダン建築で世界的に有名です。エンジンメーカー、カミンズのトップだった J・アーウィン・ミラーは、施主が一流事務所のリストから建築家を選べば、公共建築の設計料をカミンズ財団が負担するという制度を始めました。その結果、エリエルとエーロ・サーリネン、I・M・ペイ、ハリー・ウィーズ、ロバート・ヴェンチューリらの作品が生まれ、国定歴史建造物は 7 件を数えます。",
+    "language": "英語",
+    "languageInfo": "英語はどこでも通じ、南インディアナののんびりした訛りが聞かれます。インディアナの人々は昔から自分たちを「フージャー」と呼び、町のあちこちでこの言葉を耳にします。",
+    "nickname": "大草原のアテネ",
+    "transportation": "ColumBUS & 徒歩",
+    "transportationFact": "市内バス「ColumBUS」は月曜から土曜まで 5 路線を運行しています。中心部では有名な建築の多くが数ブロック以内に集まっているので、歩いて巡るのがいちばんです。州間高速道路 65 号線が市の西側を通り、インディアナ州道 46 号線が南部を横切っています。"
   },
   "Copenhagen": {
     "airportCode": "CPH",
@@ -662,6 +727,19 @@
     "transportation": "ATAF Buses & Trams",
     "transportationFact": "Florence's historic center is designated a Limited Traffic Zone (ZTL), restricting private cars from the medieval streets during much of the day. The city is best explored on foot or by bicycle — a popular bike-sharing network called Mobike operates throughout the center. The T1 and T2 tram lines connect the main train station to the outlying neighborhoods, while orange ATAF buses serve the wider metropolitan area."
   },
+  "Fort Worth": {
+    "airportCode": "DFW",
+    "airportInfo": "1974年にダラスとフォートワースのほぼ中間に開港したDFWは、17,000エーカーを超える敷地を持ち、面積ではデンバーに次いで全米第2位の空港です。アメリカン航空最大のハブであり、独自の警察、消防、救急医療サービスまで備えています。",
+    "airportName": "Dallas/Fort Worth",
+    "currencyCode": "USD",
+    "currencyInfo": "米ドル ($)",
+    "funFact": "フォートワースは1849年、トリニティ川を見下ろす崖の上の陸軍前哨基地として始まり、テキサス・ロングホーン牛の取引の中心地として発展したことから「カウタウン」の愛称で呼ばれるようになりました。現在はテキサス州で4番目に人口の多い都市で、カウボーイの伝統と、ルイス・カーン、安藤忠雄、フィリップ・ジョンソンが設計した美術館が共存しています。",
+    "language": "英語",
+    "languageInfo": "地元の人々は温かみのある北テキサスなまりの英語を話し、グループに呼びかけるときは「y'all」が日常的に使われます。市のモットー「Where the West Begins（西部が始まる場所）」は、会話の中に感じられる親しみやすくのんびりとした西部の気質をよく表しています。",
+    "nickname": "カウタウン",
+    "transportation": "TEXRail",
+    "transportationFact": "TEXRailはフォートワース中心部のT&Pステーションから DFW空港のターミナルBまで27.2マイルを走り、9つの駅に停車します。トリニティ・レールウェイ・エクスプレスはフォートワースとダラスの中心部を結び、フォートワース・セントラル駅はトリニティ・メトロのバスの主要な乗り換え拠点です。"
+  },
   "Fortaleza": {
     "airportCode": "GRU",
     "airportInfo": "グアルーリョスはブラジルへの主要な国際玄関口であり、旅客数で南米で最も利用者の多い空港です。これは、ワールドカップとオリンピックのために大幅に近代化された大規模な複合施設で、豊富な豪華アメニティを備えた長距離国際線専用ターミナルを備えています。",
@@ -687,6 +765,19 @@
     "nickname": "博多",
     "transportation": "Fukuoka City Subway & Nishitetsu",
     "transportationFact": "Fukuoka has three city subway lines that efficiently connect the airport, Hakata Station, and the main entertainment districts. The private Nishitetsu railway extends to southern Kyushu cities. Hakata Station is also a shinkansen hub, with bullet trains reaching Osaka in under 2.5 hours and Tokyo in 5 hours. The compact, walkable city center makes many of the best food and cultural experiences reachable on foot."
+  },
+  "Glasgow": {
+    "airportCode": "GLA",
+    "airportInfo": "グラスゴー空港はレンフルーシャーにあり、市中心部から西へ約 13 km です。空港と中央バスターミナルの間は直通バスで結ばれています。グラスゴー専用の 2 つの空港のうち大きい方で、南西約 30 マイルのグラスゴー・プレストウィック空港へはグラスゴー・セントラル駅から直通列車が出ています。エディンバラ空港へのアクセスも便利です。",
+    "airportName": "Glasgow Airport",
+    "currencyCode": "GBP",
+    "currencyInfo": "英ポンド (£)",
+    "funFact": "グラスゴーは 1990 年に欧州文化首都、1999 年には英国の建築・デザイン都市に選ばれました。ヴィクトリア朝時代の繁栄から「大英帝国第二の都市」と呼ばれ、当時の壮麗な建築の多くが今も街並みを彩っています。またチャールズ・レニー・マッキントッシュの街でもあり、彼の建物がガーネットヒルからメアリーヒルまで点在しています。",
+    "language": "英語",
+    "languageInfo": "英語はどこでも通じますが、たいてい強いグラスゴー訛りで、スコットランド語の単語もたくさん混じります。街の名前はブリトン語に由来し、「愛しい緑の場所」という意味だとよく言われます。スコットランド・ゲール語ではグラシュー、スコットランド語ではグレスカと呼ばれます。",
+    "nickname": "愛しい緑の場所",
+    "transportation": "グラスゴー地下鉄と鉄道",
+    "transportationFact": "グラスゴー地下鉄は、ロンドン地下鉄、ブダペスト地下鉄に次ぐ世界で 3 番目に古い地下鉄で、英国で唯一の完全地下式メトロです。地下鉄は地域交通局 SPT が運営しており、ほかに広い近郊鉄道網もあります。グラスゴーとエディンバラの間には 4 本の直通鉄道路線があります。"
   },
   "Guadalajara": {
     "airportCode": "GDL",
@@ -817,6 +908,19 @@
     "nickname": "Egoli",
     "transportation": "Gautrain & Rea Vaya BRT",
     "transportationFact": "The Gautrain rapid rail system connects O.R. Tambo Airport to the financial hub of Sandton in just 15 minutes — one of the fastest airport-to-city rail links in Africa. It continues to Pretoria, the administrative capital, making it a vital regional connector. The Rea Vaya Bus Rapid Transit system operates on dedicated bus lanes through the city. For most visitors, private ride-hailing apps are the most practical way to get around."
+  },
+  "Kansas City": {
+    "airportCode": "MCI",
+    "airportInfo": "カンザスシティ国際空港は1972年にミッドコンチネント国際空港として開港し、ダウンタウンの北西約15マイルに10,680エーカーの敷地を持ちます。2023年に完成した真新しいターミナルが旧ターミナルに取って代わりました。",
+    "airportName": "Kansas City International",
+    "currencyCode": "USD",
+    "currencyInfo": "米ドル ($)",
+    "funFact": "カンザスシティは広範な噴水網で国際的に知られ、「噴水の街」という愛称で呼ばれています。ミズーリ州で最も人口の多いこの都市は、カンザスシティ・ジャズと独自のスタイルのバーベキューでも有名です。",
+    "language": "英語",
+    "languageInfo": "話されているのは、ゆったりとした中西部なまりの英語です。地元の人々は街の名前を「KC」と略すことが多く、州境のミズーリ州側であることをはっきりさせたいときは「KCMO」と呼びます。",
+    "nickname": "噴水の街",
+    "transportation": "KCストリートカー",
+    "transportationFact": "KCストリートカーは2016年に開業し、特別な交通開発地区が費用を負担しているため無料で乗車できます。2025年と2026年の延伸により路線は6.4マイル、19駅となり、北のバークレー・リバーフロント・パークから南のミズーリ大学カンザスシティ校までを結んでいます。"
   },
   "Kathmandu": {
     "airportCode": "KTM",
@@ -1195,6 +1299,19 @@
     "transportation": "Tramway de Nice",
     "transportationFact": "Nice's modern tramway has three lines connecting the old town, the port, the airport, and the university districts. Line 1's cross-city route connects the main train station to the seafront. The city's extensive pedestrian zones along the waterfront and through the Vieux-Nice (old town) make the city extremely walkable. Ferries connect the old port to Corsica and Sardinia."
   },
+  "Oak Park": {
+    "airportCode": "ORD",
+    "airportInfo": "シカゴ市境のすぐ西に位置するオークパークを訪れる人にとって、オヘア国際空港が主な玄関口です。シカゴとオークパークを結ぶ主要幹線道路のアイゼンハワー・エクスプレスウェイは、空港へのアクセスも担っています。",
+    "airportName": "O'Hare Int'l",
+    "currencyCode": "USD",
+    "currencyInfo": "米ドル ($)",
+    "funFact": "オークパークには、フランク・ロイド・ライトが設計した住宅が世界で最も多く集まっています。ライトは1889年にこの村に移り住み、キャリアの最初の20年をここで過ごしました。また、この村は創設以来「禁酒」の地で、1973年にようやくレストランやホテルで食事と一緒にお酒を出せるようになるまで、酒類の販売が禁じられていました。",
+    "language": "英語",
+    "languageInfo": "シカゴに隣接する緑豊かなこの村では英語が話され、大都市と同じ中西部らしい幅広いアクセントが聞かれます。文学とのゆかりも深く、アーネスト・ヘミングウェイはここで生まれ、『ターザン』の作者エドガー・ライス・バローズは村内の3軒の家に住みました。",
+    "nickname": "ザ・ヴィレッジ",
+    "transportation": "CTA「L」とメトラ",
+    "transportationFact": "CTA「L」のグリーンラインとブルーラインの2路線が、オークパークとシカゴのダウンタウンを直結しています。メトラのユニオン・パシフィック・ウェスト線は村の中心部にあるオークパーク駅に停車します。CTAとペースのバスが、村内の路線や近隣郊外への移動を支えています。"
+  },
   "Orlando": {
     "airportCode": "MCO",
     "airportInfo": "この空港は、熱帯の巨大な屋内アトリウムと、主要ハブ空港からエアサイド ターミナルまで乗客を輸送する自動モノレールで有名です。 MCO はマッコイ空軍基地の略で、世界的な観光客の玄関口となる前に軍事施設として使われていたこの場所への敬意を表しています。",
@@ -1233,6 +1350,19 @@
     "nickname": "The Tiger City",
     "transportation": "T-bane & Trams",
     "transportationFact": "Oslo's T-bane (metro) has six lines that converge in the city center and fan out to the suburbs. The Ruter transit authority integrates the metro, trams, buses, and ferries to the Oslofjord islands under a single ticketing system. Oslo's electric trams are among the oldest continuously operating tram lines in the world. The city has invested heavily in cycling infrastructure and electric vehicles — Oslo has more EVs per capita than almost any city on Earth."
+  },
+  "Palm Springs": {
+    "airportCode": "PSP",
+    "airportInfo": "パームスプリングス国際空港はダウンタウンからわずか約3キロ東にあり、着陸後すぐにプールサイドへ向かえます。第二次世界大戦中の陸軍飛行場を起源とし、ゲート間をつなぐ屋外の通路で知られ、2011年には「アメリカで最もストレスの少ない空港」ランキングで3位に選ばれました。",
+    "airportName": "Palm Springs Int'l",
+    "currencyCode": "USD",
+    "currencyInfo": "米ドル ($)",
+    "funFact": "パームスプリングス・エアリアル・トラムウェイは世界最大の回転式ロープウェイで、チノ・キャニオンを上って標高8,516フィートの山頂駅まで乗客を運びます。毎年2月には、名高いミッドセンチュリー建築を祝う「モダニズム・ウィーク」が開かれ、11日間にわたりツアーや映画、講演が行われます。",
+    "language": "英語",
+    "languageInfo": "この砂漠のリゾートでは英語が日常語ですが、谷で最も古い言葉は約2,000年前にこの地に定住したカウィヤ族のイヴィリュアット語です。冬になると「スノーバード」と呼ばれる避寒客が訪れて人口がおよそ3倍になり、その多くはカナダからやって来ます。",
+    "nickname": "デザート・モダニズムの都",
+    "transportation": "サンライン・トランジット",
+    "transportationFact": "サンライン・トランジット・エージェンシーが、パームスプリングスを含むコーチェラ・バレー全域のバス網を運行しています。アムトラックのサンセット・リミテッドとテキサス・イーグルの併結列車が、週3回パームスプリングス駅に停車します。アムトラック・スルーウェイのバスが、ダウンタウンや空港とリバーサイド、パサデナなどの都市を結んでいます。"
   },
   "Paris": {
     "airportCode": "CDG",
@@ -1429,6 +1559,19 @@
     "transportation": "ATACメトロ",
     "transportationFact": "建設作業員が頻繁に古代遺跡を発見するため、ローマ地下鉄の拡張は遅れることがよくあります。高頻度のトラムは、地下鉄ではアクセスできない歴史的地区の多くを運行しています。レオナルド エクスプレスは、空港とテルミニ中央駅を結ぶ直行列車です。"
   },
+  "Rotterdam": {
+    "airportCode": "RTM",
+    "airportInfo": "ロッテルダム・ハーグ空港は市街から約5.5キロメートルの場所にあり、ロッテルダムとハーグの両都市を結んでいます。長くゼスティーンホーフェンの名で知られたこの空港は1956年10月に正式開港し、2019年には200万人を超える旅客が利用しました。",
+    "airportName": "Rotterdam The Hague",
+    "currencyCode": "EUR",
+    "currencyInfo": "ユーロ (€)",
+    "funFact": "ロッテルダムの歴史は1270年頃、ロッテ川に築かれたダムから始まり、これが街の名前の由来となりました。1940年のドイツ軍の爆撃で旧市街の大半が破壊された後、街は大胆な現代建築のショーケースとして生まれ変わり、現在はヨーロッパ最大の港湾都市でもあります。",
+    "language": "オランダ語",
+    "languageInfo": "公用語はオランダ語で、お店やトラム、市場などで耳にするのもオランダ語です。また非常に国際色豊かな街で、180を超える国籍の人々が暮らしています。",
+    "nickname": "ヨーロッパの玄関口",
+    "transportation": "RETメトロ",
+    "transportationFact": "ロッテルダムは1968年、オランダ初の地下鉄路線を開業しました。わずか5.9キロメートルの路線で、ニューウェ・マース川の下をトンネルでくぐっていました。現在はRETが地域全体で地下鉄、トラム、バスを運行しており、トラムは車や自転車、歩行者と並んでエラスムス橋を渡ります。"
+  },
   "Salzburg": {
     "airportCode": "SZG",
     "airportInfo": "Salzburg Airport Wolfgang Amadeus Mozart, named after the city's most famous son, is one of Austria's most scenic airports, with the Alps rising directly behind the runways. It is Austria's second largest airport and serves as a winter gateway for skiers heading to the nearby Salzburg ski region. A direct bus connects the terminal to the city center in 15 minutes.",
@@ -1441,6 +1584,19 @@
     "nickname": "北のローマ",
     "transportation": "Salzburg Buses & Trolleybuses",
     "transportationFact": "Salzburg's city center is compact and highly walkable — the old town can be crossed on foot in about 20 minutes. The city's bus network and electric trolleybuses (O-Buses) serve the broader metropolitan area. Funicular railways connect the riverside old town to the fortress above and the Mönchsberg plateau. Many visitors rent bicycles to follow the riverside paths and explore the surrounding Salzach Valley."
+  },
+  "San Diego": {
+    "airportCode": "SAN",
+    "airportInfo": "サンディエゴ国際空港はダウンタウンの北西わずか3マイルにあり、滑走路1本の空港としては全米で最も忙しい空港です。1928年に飛行家チャールズ・リンドバーグにちなんだリンドバーグ・フィールドとして開港しました。飛行機は街の上空を低く飛んで着陸し、ダウンタウンに近いためFAAがサンディエゴの高層ビルの高さを制限しています。",
+    "airportName": "San Diego Int'l",
+    "currencyCode": "USD",
+    "currencyInfo": "米ドル ($)",
+    "funFact": "サンディエゴは「カリフォルニア発祥の地」を名乗っています。1769年、修道士フニペロ・セラがここにミッション・サンディエゴ・デ・アルカラを創設し、これがアルタ・カリフォルニア最初の伝道所となりました。バルボア・パークには、完全な屋外会場にあるパイプオルガンとして世界最大のスプレッケルス・オルガンもあります。",
+    "language": "英語",
+    "languageInfo": "主な言語は英語ですが、国境の街らしくスペインの伝統が地名に表れています。サンディエゴという名前自体がスペインの聖人アルカラのディダクス（サン・ディエゴ）に由来し、地元の人々は誇りを込めて「アメリカで最も素晴らしい街」と呼んでいます。",
+    "nickname": "アメリカで最も素晴らしい街",
+    "transportation": "サンディエゴ・トロリー",
+    "transportationFact": "サンディエゴ・トロリーは1981年に運行を開始し、アメリカの第2世代ライトレールの中で最も古い路線網です。ブルー、オレンジ、グリーン、カッパーの各線が毎日運行し、ブルーラインはメキシコへの国境検問所のすぐ隣のサン・イシドロが終点です。市内バスも運行するサンディエゴ都市交通システム（MTS）の一部です。"
   },
   "San Francisco": {
     "airportCode": "SFO",
@@ -1480,6 +1636,19 @@
     "nickname": "島の都市",
     "transportation": "サンティアゴ地下鉄",
     "transportationFact": "サンティアゴ地下鉄は、ラテンアメリカで最も近代的で効率的な地下鉄システムであると広く考えられています。このネットワークには 7 つの路線があり、ゴムタイヤと鋼鉄車輪の電車を組み合わせて市内を移動します。 Red (旧 Transantiago) は大規模な電気バスを運行し、サンティアゴを環境に優しい都市交通のリーダーにしています。"
+  },
+  "Savannah": {
+    "airportCode": "SAV",
+    "airportInfo": "サバンナ/ヒルトンヘッド国際空港は市の北西、プーラー近郊の州間高速道路95号線沿いにあります。その名のとおりサバンナとヒルトンヘッドの両方へ向かう旅行者が利用する空港で、1948年からはサバンナの公式気象観測地点にもなっています。",
+    "airportName": "Savannah/Hilton Head",
+    "currencyCode": "USD",
+    "currencyInfo": "米ドル ($)",
+    "funFact": "サバンナは1733年にジェームズ・オグルソープによって創設され、緑豊かな広場を格子状に配した街並みで設計されました。そのうち22の広場が今も残っています。ダウンタウンは1966年に指定された、アメリカ最大級の国定歴史建造物地区のひとつです。",
+    "language": "英語",
+    "languageInfo": "サバンナでは、もてなしの街という評判にふさわしい、ゆったりとして上品な南部なまりが話されています。見知らぬ人からの気さくな挨拶や「y'all」がよく聞かれ、地元の人は目の前の家にまつわる話を喜んで聞かせてくれます。",
+    "nickname": "南部のホステス・シティ",
+    "transportation": "チャタム・エリア・トランジット (CAT)",
+    "transportationFact": "チャタム・エリア・トランジットは地域内で17の定期バス路線を運行しています。ダウンタウンの無料サービス「dot」にはフォーサイス・ループとダウンタウン・ループがあります。サバンナ・ベルズ・フェリーはリバー・ストリートとハッチンソン島の間を無料で結んでいます。"
   },
   "Seattle": {
     "airportCode": "SEA",
@@ -1701,6 +1870,19 @@
     "nickname": "6ix",
     "transportation": "TTC",
     "transportationFact": "トロント交通委員会は、アメリカ大陸で最大かつ最も利用者の多い路面電車ネットワークを運営しています。地下鉄システムは、市内の交通移動の中核を形成する 2 つの主要な路線で構成されています。 GO Transit は、トロントとオンタリオ州の他の地域を結ぶ鉄道とバスの大規模な地域ネットワークを提供しています。"
+  },
+  "Valencia": {
+    "airportCode": "VLC",
+    "airportInfo": "バレンシア空港はマニセス空港とも呼ばれ、市の西約8kmのマニセスにあります。2025年にはヨーロッパ、カナダ、北アフリカへの140路線で1,180万人の旅客を扱い、その大半が国際線でした。バレンシア州ではアリカンテに次いで2番目に利用者の多い空港です。",
+    "airportName": "Valencia Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "ユーロ (€)",
+    "funFact": "紀元前138年にローマ人がウァレンティア・エデタノルムとして築いたバレンシアは、スペインで最も古い都市の一つです。パエリアと、カヤツリグサの塊茎から作る冷たい飲み物オルチャタ発祥の地でもあります。1957年の壊滅的な洪水の後、トゥリア川は市外へ流路を変えられ、旧河床は芸術科学都市まで続く緑の帯「トゥリア庭園」に生まれ変わりました。",
+    "language": "スペイン語とバレンシア語",
+    "languageInfo": "スペイン語とバレンシア語はどちらも公用語で、市内の子どもたちは全員バレンシア語を学ぶことが義務付けられています。ただし日常生活ではスペイン語が主流で、2019年の市の調査では住民の76%がスペイン語のみを使い、約18%が両方の言語を使っていました。市内とその周辺で話されるバレンシア語の変種は「アピチャット」と呼ばれます。",
+    "nickname": "喜びの都市",
+    "transportation": "メトロバレンシア",
+    "transportationFact": "メトロバレンシアは地下鉄、ライトレール、トラムの路線を組み合わせた総延長161km以上のネットワークで、そのうち約30kmが地下区間です。最も利用者の多い駅はノルド駅に隣接するシャティバ駅で、2012年に最も混雑した日はファリャス祭の最終日でした。このシステムは狭軌鉄道「トレネット」から発展したもので、その最初の区間は1888年に開業しました。"
   },
   "Vancouver": {
     "airportCode": "YVR",

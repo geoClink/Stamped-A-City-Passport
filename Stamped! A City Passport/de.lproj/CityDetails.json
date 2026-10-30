@@ -142,6 +142,19 @@
     "transportation": "TransJakarta & MRT",
     "transportationFact": "TransJakarta ist das längste Bus-Rapid-Transit-System der Welt und nutzt spezielle Fahrspuren, um den starken Verkehr der Stadt zu vermeiden. Die neue MRT in Jakarta bietet eine schnelle, moderne U-Bahn-Alternative für den wichtigsten Nord-Süd-Korridor der Stadt. Der Railink-Flughafenzug bietet eine erstklassige, klimatisierte Verbindung zwischen Soekarno-Hatta und dem Stadtzentrum."
   },
+  "Baltimore": {
+    "airportCode": "BWI",
+    "airportInfo": "Der Baltimore/Washington International Thurgood Marshall Airport liegt etwa 9 Meilen südlich der Innenstadt und ehrt den in Baltimore geborenen Thurgood Marshall, den ersten afroamerikanischen Richter am Obersten Gerichtshof der USA. Er ist eine wichtige Basis von Southwest Airlines. Ein Bahnhof auf dem Flughafengelände verbindet Reisende mit Amtrak- und MARC-Zügen, und die Light RailLink hält direkt neben Concourse E.",
+    "airportName": "BWI Marshall",
+    "currencyCode": "USD",
+    "currencyInfo": "US-Dollar ($)",
+    "funFact": "Als die Briten im September 1814 Fort McHenry beschossen, inspirierte der Anblick der amerikanischen Flagge, die im Morgengrauen noch wehte, Francis Scott Key zu dem Gedicht, aus dem „The Star-Spangled Banner“ wurde – die Nationalhymne der USA. Außerdem steht hier die erste katholische Kathedrale, die nach der Unabhängigkeit in den Vereinigten Staaten gebaut wurde.",
+    "language": "Englisch",
+    "languageInfo": "Überall wird Englisch gesprochen, und die Einheimischen lieben die Spitznamen ihrer Stadt. Baltimore wird gern „Charm City“ oder kurz „B'more“ genannt, während der ältere Name „Mobtown“ an die stürmische Vergangenheit im 19. Jahrhundert erinnert.",
+    "nickname": "Charm City",
+    "transportation": "Light RailLink",
+    "transportationFact": "Die Maryland Transit Administration betreibt die Light RailLink und die Metro SubwayLink sowie ein Netz von BaltimoreLink-Bussen. Die kostenlosen Busse des Charm City Circulator fahren durch die Innenstadt und hinaus nach Fells Point, Federal Hill und Fort McHenry. Die Baltimore Penn Station verbindet die Stadt mit Amtraks Northeast Corridor."
+  },
   "Bangkok": {
     "airportCode": "BKK",
     "airportInfo": "Der Flughafen Suvarnabhumi verfügt über eine atemberaubende Architektur mit Golddächern und ist mit riesigen Statuen geschmückt, die traditionelle thailändische Mythen und buddhistische Kunst darstellen. Der Flughafen ist einer der am meisten fotografierten Orte der Welt auf Instagram, bekannt für seine weitläufigen Glasterminals und seine Rolle als wichtiges Tor nach Südostasien.",
@@ -232,6 +245,19 @@
     "nickname": "Graue Stadt",
     "transportation": "U-Bahn und S-Bahn",
     "transportationFact": "Bei der U-Bahn handelt es sich um die U-Bahn, während die S-Bahn überwiegend auf Hochgleisen im gesamten Stadtgebiet verkehrt. Der Berliner Nahverkehr funktioniert nach einem „Ehrensystem“ ohne physische Drehkreuze an den Bahnhofseingängen. Gelbe BVG-Busse und ein flächendeckendes Straßenbahnnetz im Osten runden den integrierten Nahverkehr der Stadt ab."
+  },
+  "Bilbao": {
+    "airportCode": "BIO",
+    "airportInfo": "Der Flughafen Bilbao liegt rund 9 km nördlich der Stadt in Loiu und ist der verkehrsreichste Flughafen des Baskenlands und ganz Nordspaniens. Das im Jahr 2000 eröffnete Hauptterminal wurde von Santiago Calatrava entworfen und ist selbst ein architektonisches Wahrzeichen. Noch fährt keine Metro zum Flughafen, eine Verlängerung der Linie 3 ist jedoch geplant.",
+    "airportName": "Bilbao Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "Euro (€)",
+    "funFact": "Bilbao wurde im Jahr 1300 durch ein Stadtrecht gegründet, das Diego López V. de Haro, Herr von Biskaya, verlieh. Die Eröffnung des Guggenheim-Museums 1997 löste einen so dramatischen städtischen Aufschwung aus, dass Planer weltweit heute vom „Bilbao-Effekt“ sprechen. Liebevoll nennen die Einheimischen ihre Stadt „El Botxo“ – „das Loch“ –, weil sie in einem von Bergen umgebenen Tal liegt.",
+    "language": "Spanisch und Baskisch",
+    "languageInfo": "Spanisch ist die meistgesprochene Sprache in Bilbao, gefolgt vom Baskischen (Euskara), das im gesamten Baskenland Amtssprache ist. Laut Stadtverwaltung spricht mindestens die Hälfte der Einwohner etwas Baskisch, und die Schulen bieten zweisprachige Bildungsmodelle an. Baskische Namen begegnen einem überall – von Straßenschildern bis zu Wahrzeichen wie Azkuna Zentroa und Isozaki Atea.",
+    "nickname": "El Botxo",
+    "transportation": "Metro und Straßenbahn",
+    "transportationFact": "Die Metro Bilbao wurde 1995 mit Stationen von Norman Foster eröffnet; ihre geschwungenen gläsernen Eingangsüberdachungen heißen nach dem Architekten „Fosteritos“. Heute treffen sich drei Metrolinien in Zazpikaleak/Casco Viejo, und seit 2002 fährt eine moderne Straßenbahn durch die Stadt. Eine Standseilbahn führt vom Zentrum auf den Berg Artxanda, von dem aus man weit über die Ría blickt."
   },
   "Bogotá": {
     "airportCode": "BOG",
@@ -415,6 +441,32 @@
     "transportation": "TransJakarta & MRT",
     "transportationFact": "TransJakarta ist das längste Bus-Rapid-Transit-System der Welt und nutzt spezielle Fahrspuren, um den starken Verkehr der Stadt zu vermeiden. Die neue MRT in Jakarta bietet eine schnelle, moderne U-Bahn-Alternative für den wichtigsten Nord-Süd-Korridor der Stadt. Der Railink-Flughafenzug bietet eine erstklassige, klimatisierte Verbindung zwischen Soekarno-Hatta und dem Stadtzentrum."
   },
+  "Chandigarh": {
+    "airportCode": "IXC",
+    "airportInfo": "Der Flughafen Chandigarh, offiziell Shaheed Bhagat Singh International Airport, teilt sich sein Gelände mit der indischen Luftwaffe. Kurioserweise liegt die Start- und Landebahn in Chandigarh, während das 2015 eröffnete moderne Terminal schon jenseits der Grenze in Mohali im Bundesstaat Punjab steht.",
+    "airportName": "Chandigarh Airport",
+    "currencyCode": "INR",
+    "currencyInfo": "Indische Rupie (₹)",
+    "funFact": "Chandigarh ist eine der ersten Planstädte Indiens nach der Unabhängigkeit und wurde von Le Corbusier als neue Hauptstadt des Punjab entworfen. Der Name bedeutet „Festung der Chandi“, nach einem nahegelegenen Tempel der Göttin Chandi, und der Kapitolkomplex wurde 2016 zum UNESCO-Welterbe erklärt.",
+    "language": "Hindi und Punjabi",
+    "languageInfo": "Hindi ist die meistgesprochene Sprache in Chandigarh, gefolgt von Punjabi, während Englisch die Amtssprache des Unionsterritoriums ist. In staatlichen Schulen gibt es sogar Lehrbücher in allen drei Sprachen.",
+    "nickname": "Die schöne Stadt",
+    "transportation": "CTU-Busse",
+    "transportationFact": "Le Corbusier gab Chandigarh ein siebenstufiges Straßensystem namens „les Sept Voies“, das schnellen Verkehr von Radfahrern und Fußgängern trennt. Den öffentlichen Nahverkehr betreibt das Chandigarh Transport Undertaking, dessen Busse von Busbahnhöfen in den Sektoren 17 und 43 abfahren – und die Stadt hat die meisten Fahrzeuge pro Kopf in ganz Indien."
+  },
+  "Charleston": {
+    "airportCode": "CHS",
+    "airportInfo": "Charleston International ist der verkehrsreichste Passagierflughafen South Carolinas und liegt in North Charleston, rund 12 Meilen nordwestlich der Innenstadt. Ungewöhnlich ist, dass er seine Start- und Landebahnen mit der benachbarten Charleston Air Force Base teilt.",
+    "airportName": "Charleston Int'l",
+    "currencyCode": "USD",
+    "currencyInfo": "US-Dollar ($)",
+    "funFact": "Charleston wurde 1670 als Charles Town gegründet, benannt zu Ehren König Karls II. von England, und zog 1680 an seinen heutigen Standort auf der Halbinsel um. In den 1690er-Jahren war es bereits zur fünftgrößten Stadt Nordamerikas angewachsen.",
+    "language": "Englisch",
+    "languageInfo": "Charleston hat einen ganz eigenen Akzent: Viele ältere Einheimische verschlucken das „r“ und nennen ihre Heimatstadt „Chalston“. Geprägt wurde die Sprache auch vom Gullah, einer Kreolsprache der Sea Islands und des Lowcountry, die manche afroamerikanische Bewohner bis heute sprechen.",
+    "nickname": "Die Heilige Stadt",
+    "transportation": "CARTA",
+    "transportationFact": "Die Charleston Area Regional Transportation Authority (CARTA) betreibt feste Buslinien im gesamten Stadtgebiet, alle mit Fahrradträgern. Die Trolleybusse des Downtown Area Shuttle verbinden die Sehenswürdigkeiten und Hotels der Altstadt. Für Fahrgäste mit Behinderung bietet CARTA zudem einen Abholservice an der Haustür."
+  },
   "Chengdu": {
     "airportCode": "TFU",
     "airportInfo": "Chengdu Tianfu International Airport, opened in 2021, is one of China's newest major airports and serves as a gateway to western China. It complements the older Chengdu Shuangliu Airport (CTU) which remains operational. Tianfu is one of the largest airports in China by area and is designed to eventually become a global hub connecting western China to the world.",
@@ -479,6 +531,19 @@
     "nickname": "Die Handelshauptstadt",
     "transportation": "CTB Buses & Tuk-tuks",
     "transportationFact": "Colombo's primary public transport is the CTB (Ceylon Transport Board) bus network, supplemented by private buses on the same routes. Three-wheelers (tuk-tuks) are ubiquitous and the most practical way for visitors to navigate the city. Colombo's commuter rail connects the city center to suburbs along the coast. A light rail transit project (LRT) is under construction to create a modern rapid transit option for the city's growing population."
+  },
+  "Columbus, Indiana": {
+    "airportCode": "IND",
+    "airportInfo": "Columbus hat keinen eigenen Linienflugverkehr, daher fliegen die meisten Besucher nach Indianapolis International, etwa 65 km Luftlinie nördlich. Der Flughafen zählte 2025 mehr als 10,6 Millionen Passagiere, während der kleine Columbus Municipal Airport nördlich der Stadt Privatflüge abwickelt.",
+    "airportName": "Indianapolis International",
+    "currencyCode": "USD",
+    "currencyInfo": "US-Dollar ($)",
+    "funFact": "Die Stadt mit rund 50.000 Einwohnern ist weltweit für ihre moderne Architektur berühmt. J. Irwin Miller, Chef des Motorenherstellers Cummins, rief ein Programm ins Leben, bei dem die Cummins Foundation die Architektenhonorare für öffentliche Gebäude bezahlte, sofern der Bauherr ein Büro von einer Liste renommierter Firmen wählte. So entstanden Werke von Eliel und Eero Saarinen, I. M. Pei, Harry Weese und Robert Venturi sowie sieben National Historic Landmarks.",
+    "language": "Englisch",
+    "languageInfo": "Überall wird Englisch gesprochen, mit dem entspannten Akzent des südlichen Indiana. Die Menschen aus Indiana nennen sich seit Langem „Hoosiers“, und das Wort hört man in der ganzen Stadt.",
+    "nickname": "Athen der Prärie",
+    "transportation": "ColumBUS & zu Fuß",
+    "transportationFact": "Der städtische ColumBUS fährt montags bis samstags auf fünf Linien. In der Innenstadt liegen viele der berühmten Gebäude nur wenige Blocks voneinander entfernt, daher erkundet man sie am besten zu Fuß. Die Interstate 65 führt westlich an der Stadt vorbei, und die Indiana Route 46 durchquert den Süden."
   },
   "Copenhagen": {
     "airportCode": "CPH",
@@ -662,6 +727,19 @@
     "transportation": "ATAF Buses & Trams",
     "transportationFact": "Florence's historic center is designated a Limited Traffic Zone (ZTL), restricting private cars from the medieval streets during much of the day. The city is best explored on foot or by bicycle — a popular bike-sharing network called Mobike operates throughout the center. The T1 and T2 tram lines connect the main train station to the outlying neighborhoods, while orange ATAF buses serve the wider metropolitan area."
   },
+  "Fort Worth": {
+    "airportCode": "DFW",
+    "airportInfo": "Der 1974 etwa auf halbem Weg zwischen Dallas und Fort Worth eröffnete Flughafen DFW erstreckt sich über mehr als 17.000 Acres und ist damit nach Denver der flächenmäßig zweitgrößte Flughafen der Vereinigten Staaten. Er ist das größte Drehkreuz von American Airlines und verfügt sogar über eigene Polizei, Feuerwehr und Rettungsdienste.",
+    "airportName": "Dallas/Fort Worth",
+    "currencyCode": "USD",
+    "currencyInfo": "US-Dollar ($)",
+    "funFact": "Fort Worth begann 1849 als Armeeposten auf einer Anhöhe über dem Trinity River und wurde zu einem Zentrum des texanischen Longhorn-Rinderhandels, was der Stadt den Spitznamen Cowtown einbrachte. Heute ist sie die viertgrößte Stadt in Texas und verbindet ihr Cowboy-Erbe mit Museen von Louis Kahn, Tadao Ando und Philip Johnson.",
+    "language": "Englisch",
+    "languageInfo": "Die Einheimischen sprechen Englisch mit einem warmen nordtexanischen Akzent, und „y'all“ ist die alltägliche Anrede für eine Gruppe. Das Stadtmotto „Where the West Begins“ fasst den freundlichen, gelassenen Geist des Westens zusammen, den man in jedem Gespräch hört.",
+    "nickname": "Cowtown",
+    "transportation": "TEXRail",
+    "transportationFact": "TEXRail fährt 27,2 Meilen von der T&P Station in der Innenstadt von Fort Worth bis zum Terminal B des Flughafens DFW und bedient neun Stationen. Der Trinity Railway Express verbindet die Innenstädte von Fort Worth und Dallas, und die Fort Worth Central Station ist der wichtigste Umsteigeknoten für die Busse von Trinity Metro."
+  },
   "Fortaleza": {
     "airportCode": "GRU",
     "airportInfo": "Als wichtigstes internationales Tor nach Brasilien ist Guarulhos gemessen am Passagieraufkommen der verkehrsreichste Flughafen Südamerikas. Es handelt sich um einen riesigen Komplex, der für die Weltmeisterschaft und die Olympischen Spiele erheblich modernisiert wurde und über einen eigenen Terminal für internationale Langstreckenflüge mit umfangreichen Luxusannehmlichkeiten verfügt.",
@@ -687,6 +765,19 @@
     "nickname": "Hakata",
     "transportation": "Fukuoka City Subway & Nishitetsu",
     "transportationFact": "Fukuoka has three city subway lines that efficiently connect the airport, Hakata Station, and the main entertainment districts. The private Nishitetsu railway extends to southern Kyushu cities. Hakata Station is also a shinkansen hub, with bullet trains reaching Osaka in under 2.5 hours and Tokyo in 5 hours. The compact, walkable city center makes many of the best food and cultural experiences reachable on foot."
+  },
+  "Glasgow": {
+    "airportCode": "GLA",
+    "airportInfo": "Der Flughafen Glasgow liegt in Renfrewshire, etwa 13 km westlich des Stadtzentrums, und Busse verbinden ihn direkt mit dem zentralen Busbahnhof. Er ist der größere der beiden Flughäfen, die Glasgow bedienen; Glasgow Prestwick liegt rund 30 Meilen südwestlich und hat eine direkte Zugverbindung ab Glasgow Central. Auch der Flughafen Edinburgh ist leicht erreichbar.",
+    "airportName": "Glasgow Airport",
+    "currencyCode": "GBP",
+    "currencyInfo": "Pfund Sterling (£)",
+    "funFact": "Glasgow war 1990 Kulturhauptstadt Europas und 1999 die britische Stadt der Architektur und des Designs. Ihr viktorianischer Aufschwung brachte ihr den Titel „zweite Stadt des Britischen Empire“ ein, und viele prächtige Bauten aus dieser Zeit säumen bis heute die Straßen. Es ist auch die Stadt von Charles Rennie Mackintosh, dessen Gebäude von Garnethill bis Maryhill verstreut sind.",
+    "language": "Englisch",
+    "languageInfo": "Überall wird Englisch gesprochen, meist mit starkem Glasgower Akzent und vielen schottischen Wörtern. Der Name der Stadt stammt aus dem Britannischen und soll oft „lieber grüner Ort“ bedeuten; auf Schottisch-Gälisch heißt sie Glaschu, auf Scots Glesca.",
+    "nickname": "Der liebe grüne Ort",
+    "transportation": "Glasgow Subway & Züge",
+    "transportationFact": "Die Glasgow Subway ist nach der Londoner U-Bahn und der Budapester Metro die drittälteste U-Bahn der Welt und die einzige vollständig unterirdische Metro im Vereinigten Königreich. Die Subway wird von der regionalen Verkehrsbehörde SPT betrieben, daneben gibt es ein großes Vorortbahnnetz. Vier direkte Bahnstrecken verbinden Glasgow mit Edinburgh."
   },
   "Guadalajara": {
     "airportCode": "GDL",
@@ -817,6 +908,19 @@
     "nickname": "Egoli",
     "transportation": "Gautrain & Rea Vaya BRT",
     "transportationFact": "The Gautrain rapid rail system connects O.R. Tambo Airport to the financial hub of Sandton in just 15 minutes — one of the fastest airport-to-city rail links in Africa. It continues to Pretoria, the administrative capital, making it a vital regional connector. The Rea Vaya Bus Rapid Transit system operates on dedicated bus lanes through the city. For most visitors, private ride-hailing apps are the most practical way to get around."
+  },
+  "Kansas City": {
+    "airportCode": "MCI",
+    "airportInfo": "Kansas City International wurde 1972 als Mid-Continent International Airport eröffnet und erstreckt sich über 10.680 Acres etwa 15 Meilen nordwestlich der Innenstadt. Ein brandneuer Terminalkomplex, der 2023 fertiggestellt wurde, ersetzte das ursprüngliche Terminal.",
+    "airportName": "Kansas City International",
+    "currencyCode": "USD",
+    "currencyInfo": "US-Dollar ($)",
+    "funFact": "Kansas City ist international für sein ausgedehntes Netz an Brunnen bekannt, was ihr den Spitznamen „Stadt der Brunnen“ einbrachte. Die bevölkerungsreichste Stadt Missouris ist außerdem berühmt für den Kansas-City-Jazz und ihren ganz eigenen Barbecue-Stil.",
+    "language": "Englisch",
+    "languageInfo": "Gesprochen wird Englisch mit einem entspannten Akzent des Mittleren Westens. Einheimische kürzen den Stadtnamen oft zu „KC“ ab – oder zu „KCMO“, um klarzustellen, dass sie die Seite in Missouri meinen.",
+    "nickname": "Stadt der Brunnen",
+    "transportation": "KC Streetcar",
+    "transportationFact": "Die KC Streetcar wurde 2016 eröffnet und ist kostenlos; die Kosten trägt ein eigens eingerichteter Verkehrsentwicklungsbezirk. Durch Verlängerungen in den Jahren 2025 und 2026 wuchs die Strecke auf 6,4 Meilen und 19 Haltestellen, vom Berkley Riverfront Park im Norden bis zur University of Missouri–Kansas City im Süden."
   },
   "Kathmandu": {
     "airportCode": "KTM",
@@ -1195,6 +1299,19 @@
     "transportation": "Tramway de Nice",
     "transportationFact": "Nice's modern tramway has three lines connecting the old town, the port, the airport, and the university districts. Line 1's cross-city route connects the main train station to the seafront. The city's extensive pedestrian zones along the waterfront and through the Vieux-Nice (old town) make the city extremely walkable. Ferries connect the old port to Corsica and Sardinia."
   },
+  "Oak Park": {
+    "airportCode": "ORD",
+    "airportInfo": "O'Hare International ist das wichtigste Tor für Besucher von Oak Park, das direkt westlich der Stadtgrenze von Chicago liegt. Der Eisenhower Expressway, die Hauptverbindung zwischen Chicago und Oak Park, führt auch zum Flughafen.",
+    "airportName": "O'Hare Int'l",
+    "currencyCode": "USD",
+    "currencyInfo": "US-Dollar ($)",
+    "funFact": "Oak Park besitzt die weltweit größte Sammlung von Wohnhäusern Frank Lloyd Wrights, denn Wright verbrachte hier die ersten 20 Jahre seiner Karriere, nachdem er sich 1889 im Ort niedergelassen hatte. Außerdem war der Ort von Anfang an „trocken“: Der Verkauf von Alkohol war bis 1973 verboten, erst dann durften Restaurants und Hotels Getränke zum Essen ausschenken.",
+    "language": "Englisch",
+    "languageInfo": "In diesem grünen Ort direkt neben Chicago wird Englisch gesprochen, mit demselben breiten Akzent des Mittleren Westens wie in der Großstadt. Oak Park ist auch stolz auf seine literarischen Wurzeln: Ernest Hemingway wurde hier geboren, und Tarzan-Schöpfer Edgar Rice Burroughs lebte in drei verschiedenen Häusern im Ort.",
+    "nickname": "Das Dorf",
+    "transportation": "CTA-„L“ & Metra",
+    "transportationFact": "Zwei Linien der CTA-„L“, die Green Line und die Blue Line, verbinden Oak Park direkt mit der Innenstadt von Chicago. Die Union Pacific West Line von Metra hält am Bahnhof Oak Park im Ortszentrum. Busse von CTA und Pace bedienen lokale Strecken und Verbindungen in die Nachbarvororte."
+  },
   "Orlando": {
     "airportCode": "MCO",
     "airportInfo": "Der Flughafen ist berühmt für sein riesiges tropisches Innenatrium und seine Flotte automatisierter Einschienenbahnen, die Passagiere vom Hauptdrehkreuz zu den luftseitigen Terminals transportieren. MCO steht für McCoy Air Force Base und ist eine Hommage an das frühere Leben des Ortes als Militäranlage, bevor er zu einem globalen Touristentor wurde.",
@@ -1233,6 +1350,19 @@
     "nickname": "The Tiger City",
     "transportation": "T-bane & Trams",
     "transportationFact": "Oslo's T-bane (metro) has six lines that converge in the city center and fan out to the suburbs. The Ruter transit authority integrates the metro, trams, buses, and ferries to the Oslofjord islands under a single ticketing system. Oslo's electric trams are among the oldest continuously operating tram lines in the world. The city has invested heavily in cycling infrastructure and electric vehicles — Oslo has more EVs per capita than almost any city on Earth."
+  },
+  "Palm Springs": {
+    "airportCode": "PSP",
+    "airportInfo": "Palm Springs International liegt nur drei Kilometer östlich der Innenstadt, sodass der Pool nach der Landung nie weit entfernt ist. Der einstige Armeeflugplatz aus dem Zweiten Weltkrieg ist für seine offenen Gänge zwischen den Gates bekannt und wurde 2011 auf Platz drei der stressfreiesten Flughäfen Amerikas gewählt.",
+    "airportName": "Palm Springs Int'l",
+    "currencyCode": "USD",
+    "currencyInfo": "US-Dollar ($)",
+    "funFact": "Die Palm Springs Aerial Tramway ist die größte Pendelbahn der Welt mit rotierenden Kabinen und bringt Fahrgäste durch den Chino Canyon zu einer Bergstation auf 8.516 Fuß. Jeden Februar feiert die Stadt ihre berühmte Architektur der Jahrhundertmitte mit der Modernism Week, einem elftägigen Festival mit Führungen, Filmen und Vorträgen.",
+    "language": "Englisch",
+    "languageInfo": "Englisch ist die Alltagssprache dieses Wüstenkurorts, doch die älteste Stimme des Tals gehört den Cahuilla, die sich hier vor etwa 2.000 Jahren niederließen und Ivilyuat sprachen. Im Winter verdreifacht sich die Einwohnerzahl ungefähr, wenn die „Snowbirds“ ankommen, die meisten davon aus Kanada.",
+    "nickname": "Hauptstadt der Wüstenmoderne",
+    "transportation": "SunLine Transit",
+    "transportationFact": "Die SunLine Transit Agency betreibt das Busnetz in Palm Springs und im übrigen Coachella Valley. Die gemeinsam verkehrenden Amtrak-Züge Sunset Limited und Texas Eagle halten dreimal pro Woche am Bahnhof Palm Springs. Amtrak-Thruway-Busse verbinden die Innenstadt und den Flughafen mit Städten wie Riverside und Pasadena."
   },
   "Paris": {
     "airportCode": "CDG",
@@ -1429,6 +1559,19 @@
     "transportation": "ATAC-Metro",
     "transportationFact": "Der Ausbau der römischen Metro verzögert sich oft, weil Bautrupps häufig antike Ruinen entdecken. Hochfrequente Straßenbahnen bedienen viele der historischen Viertel, die mit der U-Bahn nicht erreichbar sind. Der Leonardo Express ist ein spezieller Nonstop-Zug, der den Flughafen mit dem Hauptbahnhof Termini verbindet."
   },
+  "Rotterdam": {
+    "airportCode": "RTM",
+    "airportInfo": "Der Flughafen Rotterdam The Hague liegt rund 5,5 Kilometer von der Stadt entfernt und bedient sowohl Rotterdam als auch Den Haag. Der lange als Zestienhoven bekannte Flughafen wurde im Oktober 1956 offiziell eröffnet und fertigte 2019 über zwei Millionen Passagiere ab.",
+    "airportName": "Rotterdam The Hague",
+    "currencyCode": "EUR",
+    "currencyInfo": "Euro (€)",
+    "funFact": "Rotterdams Geschichte begann um 1270 mit einem Damm im Fluss Rotte, der der Stadt ihren Namen gab. Nachdem die deutsche Bombardierung von 1940 den Großteil der Altstadt zerstört hatte, erfand sich die Stadt als Schaufenster kühner moderner Architektur neu – und heute beherbergt sie zudem den größten Seehafen Europas.",
+    "language": "Niederländisch",
+    "languageInfo": "Amtssprache ist Niederländisch, und sie ist in Geschäften, Straßenbahnen und auf Märkten überall zu hören. Zugleich ist die Stadt bemerkenswert international: Hier leben Menschen aus mehr als 180 Nationen.",
+    "nickname": "Tor zu Europa",
+    "transportation": "RET-Metro",
+    "transportationFact": "Rotterdam eröffnete 1968 die erste U-Bahn-Linie der Niederlande, eine nur 5,9 Kilometer lange Strecke, die unter der Nieuwe Maas hindurchführte. Heute betreibt die RET Metro, Straßenbahnen und Busse in der ganzen Region, und die Straßenbahn rollt sogar zusammen mit Autos, Radfahrern und Fußgängern über die Erasmusbrücke."
+  },
   "Salzburg": {
     "airportCode": "SZG",
     "airportInfo": "Salzburg Airport Wolfgang Amadeus Mozart, named after the city's most famous son, is one of Austria's most scenic airports, with the Alps rising directly behind the runways. It is Austria's second largest airport and serves as a winter gateway for skiers heading to the nearby Salzburg ski region. A direct bus connects the terminal to the city center in 15 minutes.",
@@ -1441,6 +1584,19 @@
     "nickname": "Das Rom des Nordens",
     "transportation": "Salzburg Buses & Trolleybuses",
     "transportationFact": "Salzburg's city center is compact and highly walkable — the old town can be crossed on foot in about 20 minutes. The city's bus network and electric trolleybuses (O-Buses) serve the broader metropolitan area. Funicular railways connect the riverside old town to the fortress above and the Mönchsberg plateau. Many visitors rent bicycles to follow the riverside paths and explore the surrounding Salzach Valley."
+  },
+  "San Diego": {
+    "airportCode": "SAN",
+    "airportInfo": "Der San Diego International liegt nur drei Meilen nordwestlich der Innenstadt und ist der verkehrsreichste Flughafen mit nur einer Start- und Landebahn in den USA. Er wurde 1928 als Lindbergh Field zu Ehren des Fliegers Charles Lindbergh eröffnet. Die Flugzeuge fliegen tief über die Stadt an, und wegen der Nähe zur Innenstadt begrenzt die FAA die Höhe der Wolkenkratzer San Diegos.",
+    "airportName": "San Diego Int'l",
+    "currencyCode": "USD",
+    "currencyInfo": "US-Dollar ($)",
+    "funFact": "San Diego nennt sich „Geburtsort Kaliforniens“: 1769 gründete der Ordensbruder Junípero Serra hier die Mission San Diego de Alcalá, die erste der Missionen Alta Kaliforniens. Im Balboa Park steht außerdem die Spreckels-Orgel, die größte Pfeifenorgel der Welt an einem vollständig offenen Spielort.",
+    "language": "Englisch",
+    "languageInfo": "Englisch ist die Hauptsprache, doch das spanische Erbe dieser Grenzstadt zeigt sich in ihren Ortsnamen. San Diego selbst ist nach dem spanischen Heiligen Didacus von Alcalá benannt, und die Einheimischen nennen ihre Heimat stolz „America's Finest City“.",
+    "nickname": "Amerikas schönste Stadt",
+    "transportation": "San Diego Trolley",
+    "transportationFact": "Die San Diego Trolley nahm 1981 den Betrieb auf und ist das älteste Stadtbahnsystem der zweiten Generation in den USA. Ihre Linien Blue, Orange, Green und Copper fahren täglich, und die Blue Line endet in San Ysidro direkt neben dem Grenzübergang nach Mexiko. Sie gehört zum San Diego Metropolitan Transit System, das auch die Stadtbusse betreibt."
   },
   "San Francisco": {
     "airportCode": "SFO",
@@ -1480,6 +1636,19 @@
     "nickname": "Stadt der Insel",
     "transportation": "U-Bahn von Santiago",
     "transportationFact": "Die U-Bahn von Santiago gilt allgemein als das modernste und effizienteste U-Bahn-System Lateinamerikas. Das Netzwerk umfasst sieben Linien und nutzt eine Mischung aus gummibereiften und stahlbereiften Zügen, um durch die Stadt zu navigieren. Red (ehemals Transantiago) betreibt eine riesige Flotte von Elektrobussen und macht Santiago damit zu einem führenden Unternehmen im umweltfreundlichen Stadtverkehr."
+  },
+  "Savannah": {
+    "airportCode": "SAV",
+    "airportInfo": "Der Flughafen Savannah/Hilton Head International liegt nordwestlich der Stadt bei Pooler, direkt an der Interstate 95. Wie der Name verrät, nutzen ihn Reisende nach Savannah und nach Hilton Head, und seit 1948 werden hier Savannahs offizielle Wetterdaten gemessen.",
+    "airportName": "Savannah/Hilton Head",
+    "currencyCode": "USD",
+    "currencyInfo": "US-Dollar ($)",
+    "funFact": "Savannah wurde 1733 von James Oglethorpe gegründet, der die Stadt rund um ein Raster begrünter öffentlicher Plätze anlegte; 22 davon sind bis heute erhalten. Die Innenstadt zählt zu den größten National Historic Landmark Districts der USA und wurde 1966 ausgewiesen.",
+    "language": "Englisch",
+    "languageInfo": "In Savannah spricht man mit einem gemächlichen, charmanten Südstaaten-Tonfall, der zum Ruf der Stadt für Gastfreundschaft passt. Rechnen Sie mit freundlichen Grüßen von Fremden, vielen „y'all“ und Einheimischen, die gern eine Geschichte über das Haus erzählen, vor dem Sie gerade stehen.",
+    "nickname": "Die Gastgeberstadt des Südens",
+    "transportation": "Chatham Area Transit (CAT)",
+    "transportationFact": "Chatham Area Transit betreibt 17 feste Buslinien in der Region. Zum kostenlosen „dot“-Angebot in der Innenstadt gehören die Forsyth- und die Downtown-Schleife. Die Savannah Belles Ferry bringt Fahrgäste gratis zwischen der River Street und Hutchinson Island hin und her."
   },
   "Seattle": {
     "airportCode": "SEA",
@@ -1701,6 +1870,19 @@
     "nickname": "Der 6ix",
     "transportation": "Die TTC",
     "transportationFact": "Die Toronto Transit Commission betreibt das größte und verkehrsreichste Straßenbahnnetz in Amerika. Das U-Bahn-System besteht aus zwei Hauptlinien, die den Kern des städtischen Nahverkehrs bilden. GO Transit bietet ein riesiges regionales Netz von Zügen und Bussen, die Toronto mit dem Rest von Ontario verbinden."
+  },
+  "Valencia": {
+    "airportCode": "VLC",
+    "airportInfo": "Der Flughafen Valencia, auch Flughafen Manises genannt, liegt rund 8 km westlich der Stadt in Manises. 2025 fertigte er 11,8 Millionen Passagiere auf 140 Strecken nach Europa, Kanada und Nordafrika ab, die meisten davon international. Er ist nach Alicante der zweitgrößte Flughafen der Region Valencia.",
+    "airportName": "Valencia Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "Euro (€)",
+    "funFact": "Valencia wurde 138 v. Chr. von den Römern als Valentia Edetanorum gegründet und ist eine der ältesten Städte Spaniens. Hier wurden die Paella und die Horchata (Orxata), das gekühlte Erdmandelgetränk, erfunden. Nach einer verheerenden Flut im Jahr 1957 wurde der Turia um die Stadt herumgeleitet; sein altes Flussbett wurde zu den Turia-Gärten – einem grünen Band, das an der Stadt der Künste und der Wissenschaften endet.",
+    "language": "Spanisch und Valencianisch",
+    "languageInfo": "Spanisch und Valencianisch sind beide Amtssprachen, und Valencianisch ist für alle Schulkinder der Stadt Pflicht. Im Alltag dominiert jedoch das Spanische: Laut einer städtischen Umfrage von 2019 verwenden 76 % der Einwohner ausschließlich Spanisch, rund 18 % nutzen beide Sprachen. Die in und um die Stadt gesprochene Variante des Valencianischen heißt Apitxat.",
+    "nickname": "Stadt der Freude",
+    "transportation": "Metrovalencia",
+    "transportationFact": "Metrovalencia vereint Metro-, Stadtbahn- und Straßenbahnlinien auf einem über 161 km langen Netz, davon etwa 30 km unterirdisch. Die meistgenutzte Station ist Xàtiva direkt neben der Estació del Nord, und 2012 war der letzte Tag des Fallas-Festes der verkehrsreichste Tag des Jahres. Das System ging aus den Schmalspurbahnen des „Trenet“ hervor, deren erster Abschnitt 1888 eröffnet wurde."
   },
   "Vancouver": {
     "airportCode": "YVR",
