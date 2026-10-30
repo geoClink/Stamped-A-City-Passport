@@ -636,6 +636,23 @@
 "Local" = "현지 정보";
 "Section" = "섹션";
 
+// Restaurant cards: category labels from Apple Maps
+"dining.restaurant" = "레스토랑";
+"dining.cafe" = "카페";
+"dining.bakery" = "베이커리";
+"dining.brewery" = "양조장";
+"dining.winery" = "와이너리";
+"dining.market" = "마켓";
+"dining.bar" = "바";
+
+// MARK: - Campus events
+"Campus Events" = "캠퍼스 행사";
+"Finding campus events…" = "캠퍼스 행사를 찾는 중…";
+"From the %@ calendar" = "출처: %@ 캘린더";
+"Opens the event page" = "행사 페이지를 엽니다";
+"Event Details" = "행사 세부 정보";
+"All day" = "하루 종일";
+
 // Architect page
 "architect.landmarks" = "Stamped!에 있는 작품";
 "architect.openHint" = "건축가 페이지를 엽니다";
