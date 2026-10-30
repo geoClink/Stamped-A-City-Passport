@@ -759,3 +759,7 @@
 
 /* Game Day: a game whose start time isn't announced yet */
 "Time TBA" = "时间待定";
+
+/* Audio story on a landmark page */
+"Listen" = "收听";
+"Reads this landmark's story aloud in English" = "用英语朗读这座地标的故事";

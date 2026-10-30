@@ -759,3 +759,7 @@
 
 /* Game Day: a game whose start time isn't announced yet */
 "Time TBA" = "Uhrzeit folgt";
+
+/* Audio story on a landmark page */
+"Listen" = "Anhören";
+"Reads this landmark's story aloud in English" = "Liest die Geschichte dieses Bauwerks auf Englisch vor";

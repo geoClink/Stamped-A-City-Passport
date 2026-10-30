@@ -143,6 +143,8 @@ struct BuildingDetailView: View {
                 BuildingModelViewer(modelURL: url, buildingName: building.name)
             }
         }
+        // The story stops when you leave the landmark, so it never keeps talking on another page
+        .onDisappear { AudioStoryPlayer.shared.stop() }
         .task(id: building.id) {
             async let venues: () = fetchNearbyVenues()
             async let lookAround: () = fetchLookAroundScene()
@@ -503,6 +505,8 @@ extension BuildingDetailView {
     var aboutSection: some View {
         VStack(alignment: .leading, spacing: DS.Space.m) {
             DSSectionHeader("building.historicalSignificance", systemImage: "book.closed", isHighContrast: isHighContrast)
+            // Hear the story read aloud, e.g. while standing in front of the building
+            ListenButton(building: building, tint: brandColor)
             Text(building.description)
                 .font(.body)
                 .lineSpacing(DS.Space.xs)

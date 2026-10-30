@@ -759,3 +759,7 @@
 
 /* Game Day: a game whose start time isn't announced yet */
 "Time TBA" = "時間未定";
+
+/* Audio story on a landmark page */
+"Listen" = "聴く";
+"Reads this landmark's story aloud in English" = "この名建築の物語を英語で読み上げます";

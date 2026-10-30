@@ -759,3 +759,7 @@
 
 /* Game Day: a game whose start time isn't announced yet */
 "Time TBA" = "시간 미정";
+
+/* Audio story on a landmark page */
+"Listen" = "듣기";
+"Reads this landmark's story aloud in English" = "이 랜드마크의 이야기를 영어로 읽어 줍니다";
