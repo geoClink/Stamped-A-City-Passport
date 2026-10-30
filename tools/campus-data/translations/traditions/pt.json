@@ -1478,5 +1478,95 @@
       "name": "Assembly Series na Graham Chapel",
       "description": "A Graham Chapel recebe a Assembly Series, o tradicional ciclo de palestras da universidade, que já trouxe ao campus nomes como Eleanor Roosevelt e Gloria Steinem. Confira a programação e assista a uma palestra."
     }
+  },
+  "Colorado State University": {
+    "trad_colostate_oval": {
+      "name": "Uma volta pelo Oval",
+      "description": "Projetado em 1909 para ligar os principais prédios do campus, o Oval é ladeado por 65 olmos-americanos. Dê uma volta pelo coração histórico do campus."
+    },
+    "trad_colostate_ram_clock": {
+      "name": "Encontro embaixo do relógio",
+      "description": "Há gerações os estudantes marcam encontro \"embaixo do relógio\" no Lory Student Center. Procure o Ram Clock acima da praça de alimentação e ouça seu toque de hora em hora."
+    },
+    "trad_colostate_game_day": {
+      "name": "Dia de jogo com CAM the Ram",
+      "description": "CAM the Ram, o mascote vivo batizado em homenagem a Colorado A&M, atravessa a end zone correndo depois de cada touchdown dos Rams. O Old Main Bell, roubado em 1919 e devolvido em 2016, hoje fica numa torre no estádio. Assista a um jogo em casa no Canvas Stadium."
+    },
+    "trad_colostate_trial_garden": {
+      "name": "Annual Flower Trial Garden",
+      "description": "Neste jardim a CSU testa novas variedades de flores; a entrada é gratuita e ele abre todos os dias durante o dia. Visite entre o fim de maio e outubro, quando os canteiros estão floridos."
+    }
+  },
+  "Eastern Michigan University": {
+    "trad_emu_water_tower": {
+      "name": "Ypsilanti Water Tower",
+      "description": "Construída em 1890 no ponto mais alto de Ypsilanti, a caixa-d'água de pedra faz divisa com o campus e é o marco mais conhecido da cidade. Os moradores dão direções a partir dela, então tire uma foto com ela."
+    },
+    "trad_emu_kiosk": {
+      "name": "O quiosque do Pray-Harrold",
+      "description": "Cobrir de cartazes de eventos o quiosque em frente ao prédio Pray-Harrold é uma antiga tradição da Eastern. Passe por lá e veja o que está acontecendo nesta semana."
+    },
+    "trad_emu_pease_organ": {
+      "name": "Concerto no Pease Auditorium",
+      "description": "O Pease Auditorium é a sala de concertos do campus desde 1915. Assista a uma apresentação e ouça o órgão Aeolian-Skinner de 81 registros."
+    },
+    "trad_emu_starkweather_ghost": {
+      "name": "O fantasma do Starkweather Hall",
+      "description": "Segundo uma lenda do campus, Mary Ann Starkweather, que pagou pelo prédio, o assombra porque ele não serve mais ao propósito religioso que ela queria. Passe pelo prédio mais antigo do campus e olhe para sua torre."
+    }
+  },
+  "Michigan Technological University": {
+    "trad_mtu_snow_statues": {
+      "name": "Esculturas de neve do Winter Carnival",
+      "description": "Todo fevereiro, desde os anos 1930, os estudantes empilham, pisoteiam e esculpem neve em estátuas gigantes com um tema anual para o Winter Carnival, que começou em 1922. Caminhe pelo campus para vê-las."
+    },
+    "trad_mtu_pep_band": {
+      "name": "Huskies Pep Band num jogo de hóquei",
+      "description": "A Huskies Pep Band, criada em 1928, toca em todos os jogos de hóquei em casa. Dê os braços ao público e balance ao som da \"Blue Skirt Waltz\", o hino do Copper Country."
+    },
+    "trad_mtu_copper_boulder": {
+      "name": "O bloco gigante de cobre",
+      "description": "O Copper Pavilion, em frente ao A. E. Seaman Mineral Museum, guarda um bloco de cobre de 19 toneladas tirado do fundo do lago Superior, recordista do Guinness. Vá ver o tamanho dele."
+    },
+    "trad_mtu_rozsa": {
+      "name": "Um espetáculo no Rozsa Center",
+      "description": "O Rozsa Center for the Performing Arts recebe festivais de cinema e música o ano todo, como o Pine Mountain Music Festival e o 41 North Film Festival. Confira a programação e vá a um espetáculo."
+    }
+  },
+  "Oakland University": {
+    "trad_oakland_carillon": {
+      "name": "Concertos de carrilhão no verão",
+      "description": "Em seis sextas-feiras de cada verão, carrilhonistas do mundo todo fazem concertos gratuitos nos 49 sinos da Elliott Tower. Venha ouvir do gramado ao redor da torre."
+    },
+    "trad_oakland_grizz": {
+      "name": "Esfregar o Grizz",
+      "description": "Antes de uma prova importante, os estudantes esfregam a barriga do urso-pardo de bronze de 2,4 m em frente ao O'rena para dar sorte. Esfregue também e tire uma foto."
+    },
+    "trad_oakland_holiday_walk": {
+      "name": "Holiday Walk no Meadow Brook Hall",
+      "description": "Em cada temporada de festas, o Meadow Brook Hall é decorado para o Holiday Walk, e à noite as Winter Wonder Lights iluminam os jardins. Planeje uma visita para ver a mansão enfeitada para a época."
+    },
+    "trad_oakland_amphitheatre": {
+      "name": "Show de verão em Meadow Brook",
+      "description": "O Meadow Brook Amphitheatre recebe shows de verão no campus desde 1964. Assista a um show de um lugar coberto ou do gramado."
+    }
+  },
+  "Central Michigan University": {
+    "trad_cmich_fire_up_chips": {
+      "name": "Fire Up, Chips!",
+      "description": "\"Fire Up, Chips!\" é a saudação e o grito de guerra da Central. Num jogo de futebol americano no Kelly/Shorts Stadium, balance suas chaves antes das jogadas importantes e finja bater pratos junto com a torcida."
+    },
+    "trad_cmich_warriner_chimes": {
+      "name": "Os sinos do Warriner Hall",
+      "description": "Desde 1939 soam sinos no Warriner Hall, e hoje sinos gravados anunciam cada nova hora. Fique no Warriner Mall na hora cheia e ouça."
+    },
+    "trad_cmich_boat_race": {
+      "name": "Corrida de barcos de papelão",
+      "description": "Na manhã do Homecoming, estudantes de engenharia tentam atravessar os Rose Ponds remando em barcos feitos de papelão. Ache um lugar na margem e torça por eles."
+    },
+    "trad_cmich_pow_wow": {
+      "name": "Celebrating Life Pow Wow",
+      "description": "Todo mês de março, a Central realiza o Celebrating Life Pow Wow na McGuirk Arena, com danças tradicionais, tambores, artesanato e comida. É aberto ao público, então venha assistir."
+    }
   }
 }

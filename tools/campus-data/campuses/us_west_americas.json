@@ -1461,5 +1461,163 @@
         "coordinatesSource": "https://www.openstreetmap.org/way/44634973"
       }
     ]
+  },
+  {
+    "name": "Colorado State University",
+    "enumCase": "coloradoState",
+    "country": "unitedStates",
+    "aliases": [
+      "CSU",
+      "Colorado State",
+      "Rams"
+    ],
+    "colors": [
+      "#1E4D2B",
+      "#C8C372"
+    ],
+    "traditions": [
+      {
+        "id": "trad_colostate_oval",
+        "name": "Walk the Oval",
+        "description": "Designed in 1909 to link the main campus buildings, the Oval is lined with 65 American elm trees. Take a stroll around the historic heart of campus.",
+        "coordinates": [
+          40.576189,
+          -105.080783
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/3540396834",
+        "source": "https://international.colostate.edu/isss/resources/life-in-fort-collins/csu-traditions-campus-life/"
+      },
+      {
+        "id": "trad_colostate_ram_clock",
+        "name": "Meet Under the Clock",
+        "description": "For generations, students have arranged to \"meet under the clock\" in the Lory Student Center. Find the Ram Clock above the food court and listen for its hourly chime.",
+        "coordinates": [
+          40.574788,
+          -105.084724
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/131469182",
+        "source": "https://source.colostate.edu/meet-me-under-the-clock-still-a-timeless-csu-tradition"
+      },
+      {
+        "id": "trad_colostate_game_day",
+        "name": "Game Day with CAM the Ram",
+        "description": "CAM the Ram, the live mascot named for Colorado A&M, runs across the end zone after Rams touchdowns. The Old Main Bell, stolen in 1919 and returned in 2016, now hangs in a tower at the stadium. Catch a home game at Canvas Stadium.",
+        "coordinates": [
+          40.569831,
+          -105.088506
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/802352567",
+        "source": "https://admissions.colostate.edu/2017/06/16/csu-traditions/"
+      },
+      {
+        "id": "trad_colostate_trial_garden",
+        "name": "Annual Flower Trial Garden",
+        "description": "CSU tests new flower varieties in this garden, which is free and open every day during daylight hours. Visit between late May and October, when the beds are in bloom.",
+        "coordinates": [
+          40.569381,
+          -105.07615
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/130623646",
+        "source": "https://flowertrials.colostate.edu/visit/"
+      }
+    ],
+    "wiki": "Colorado State University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Home of the Rams",
+      "airportName": "Denver International Airport",
+      "airportCode": "DEN",
+      "airportInfo": "Denver International Airport, southeast of Fort Collins, is the main airport for northern Colorado.",
+      "funFact": "The Oval at the heart of campus was designed in 1909 and is lined with 65 American elm trees. The loop around it is 2,065 feet (629 m) long.",
+      "language": "English",
+      "languageInfo": "The school colors are green and gold, and the teams are the Rams.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Transfort MAX / Around the Horn",
+      "transportationFact": "Transfort's MAX bus rapid transit line serves the campus, and the Around the Horn bus loops around campus from the CSU Transit Center next to the Lory Student Center."
+    },
+    "buildings": [
+      {
+        "id": "campus_colostate_routt_hall",
+        "wiki": "Botanical and Horticultural Laboratory",
+        "name": "Routt Hall",
+        "description": "Built in 1890 as the Botanical and Horticultural Laboratory of the Colorado Agricultural College, this is one of the oldest buildings left on campus. Its rich brick and stone detail echoes the lost Old Main.",
+        "architect": "Otto Bulow",
+        "yearBuilt": 1890,
+        "address": "Colorado State University campus, Fort Collins, CO 80523",
+        "oldUse": "Botanical and Horticultural Laboratory",
+        "newUse": "University Building",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_colostate_ammons_hall",
+        "wiki": "Colorado State University",
+        "name": "Ammons Hall",
+        "description": "Eugene G. Groves designed this building, which opened in 1922 as the Women's Club Building, a gymnasium and social center for women students. It stands at the northwest corner of the Oval and now houses the University Welcome Center.",
+        "architect": "Eugene G. Groves",
+        "yearBuilt": 1922,
+        "address": "Colorado State University campus, Fort Collins, CO 80523",
+        "oldUse": "Women's Gymnasium and Social Center",
+        "newUse": "University Welcome Center",
+        "buildingStyle": "Italian Renaissance Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          40.577654,
+          -105.081792
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/103927703"
+      },
+      {
+        "id": "campus_colostate_morgan_library",
+        "wiki": "Morgan Library (Colorado State University)",
+        "name": "Morgan Library",
+        "description": "Named for president William E. Morgan, the main library opened in January 1964 to a design by James M. Hunter & Associates of Boulder. A renovation finished in 2012 added the glass study area known as the Cube.",
+        "architect": "James M. Hunter & Associates",
+        "yearBuilt": 1964,
+        "address": "1201 Center Avenue Mall, Fort Collins, CO 80523",
+        "oldUse": "Library",
+        "newUse": "Library",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_colostate_moby_arena",
+        "wiki": "Moby Arena",
+        "name": "Moby Arena",
+        "description": "Opened in January 1966, the 8,083-seat arena is officially the Colorado State Auditorium-Gymnasium. Its nickname comes from a student newspaper article that said the hump-roofed building looked like a beached whale.",
+        "architect": "Bunts and Kelsey",
+        "yearBuilt": 1966,
+        "address": "951 W Plum St, Fort Collins, CO",
+        "oldUse": "Basketball Arena",
+        "newUse": "Basketball Arena",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_colostate_canvas_stadium",
+        "wiki": "Canvas Stadium",
+        "name": "Canvas Stadium",
+        "description": "Opened in August 2017, this stadium brought Rams football back to the main campus from Hughes Stadium, several miles away. It seats 36,500 and can hold as many as 41,000.",
+        "architect": "Populous and ICON Venue Group",
+        "yearBuilt": 2017,
+        "address": "751 W Pitkin St, Fort Collins, CO",
+        "oldUse": "Football Stadium",
+        "newUse": "Football Stadium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
   }
 ]

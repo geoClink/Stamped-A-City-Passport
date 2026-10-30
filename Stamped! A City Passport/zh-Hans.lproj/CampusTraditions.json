@@ -1561,6 +1561,126 @@
       "longitude": -85.894756
     }
   ],
+  "Eastern Michigan University": [
+    {
+      "id": "trad_emu_water_tower",
+      "name": "伊普西兰蒂水塔",
+      "description": "这座石砌水塔于 1890 年建在伊普西兰蒂的最高点，紧邻校园，是全城最有名的地标。当地人常用它来指路，来和它合个影吧。",
+      "latitude": 42.245552,
+      "longitude": -83.62469
+    },
+    {
+      "id": "trad_emu_kiosk",
+      "name": "Pray-Harrold 公告亭",
+      "description": "在 Pray-Harrold 楼前的公告亭贴满校园活动传单，是东密歇根大学的老传统。过去看看这周有什么活动。",
+      "latitude": 42.249577,
+      "longitude": -83.62259
+    },
+    {
+      "id": "trad_emu_pease_organ",
+      "name": "在 Pease 礼堂听音乐会",
+      "description": "Pease 礼堂自 1915 年起就是校园的音乐厅。去听一场演出，感受那台 81 个音栓的 Aeolian-Skinner 管风琴。",
+      "latitude": 42.246433,
+      "longitude": -83.621446
+    },
+    {
+      "id": "trad_emu_starkweather_ghost",
+      "name": "Starkweather Hall 的幽灵",
+      "description": "校园传说称，出资建楼的 Mary Ann Starkweather 因为这栋楼不再用于她希望的宗教用途而在此出没。走过校园里最古老的建筑，抬头看看它的塔楼。",
+      "latitude": 42.246508,
+      "longitude": -83.624681
+    }
+  ],
+  "Michigan Technological University": [
+    {
+      "id": "trad_mtu_snow_statues",
+      "name": "冬季嘉年华雪雕",
+      "description": "自 20 世纪 30 年代起，每年 2 月学生们都会为始于 1922 年的冬季嘉年华，按当年的主题把雪堆起、踩实、雕刻成巨大的雪雕。在校园里走走，看看这些作品吧。",
+      "latitude": 47.119075,
+      "longitude": -88.547552
+    },
+    {
+      "id": "trad_mtu_pep_band",
+      "name": "冰球赛上的 Huskies Pep Band",
+      "description": "成立于 1928 年的 Huskies Pep Band 在每场冰球主场比赛上演奏。和观众挽起手臂，随着铜矿区的“国歌”《Blue Skirt Waltz》一起摇摆吧。",
+      "latitude": 47.112465,
+      "longitude": -88.545851
+    },
+    {
+      "id": "trad_mtu_copper_boulder",
+      "name": "巨型铜块",
+      "description": "A. E. Seaman 矿物博物馆外的铜展亭里，有一块从苏必利尔湖底打捞上来的 19 吨重铜块，保持着吉尼斯世界纪录。去看看它到底有多大吧。",
+      "latitude": 47.110802,
+      "longitude": -88.552384
+    },
+    {
+      "id": "trad_mtu_rozsa",
+      "name": "在 Rozsa 中心看演出",
+      "description": "Rozsa 表演艺术中心全年举办电影节和音乐节，包括 Pine Mountain 音乐节和 41 North 电影节。查一下日程，去看一场演出吧。",
+      "latitude": 47.117527,
+      "longitude": -88.54196
+    }
+  ],
+  "Oakland University": [
+    {
+      "id": "trad_oakland_carillon",
+      "name": "夏季钟琴音乐会",
+      "description": "每年夏天的六个星期五，来自世界各地的钟琴演奏家会用 Elliott Tower 的 49 口钟举办免费音乐会。来塔周围的草坪上听一听吧。",
+      "latitude": 42.673542,
+      "longitude": -83.215527
+    },
+    {
+      "id": "trad_oakland_grizz",
+      "name": "摸摸 Grizz",
+      "description": "大考之前，学生们会摸摸 O'rena 外那座约 2.4 米高的青铜灰熊雕像的肚子，祈求好运。你也摸一摸，再拍张照吧。",
+      "latitude": 42.674293,
+      "longitude": -83.214225
+    },
+    {
+      "id": "trad_oakland_holiday_walk",
+      "name": "Meadow Brook Hall 节日漫步",
+      "description": "每年节日季，Meadow Brook Hall 都会为节日漫步活动布置一新，夜晚的冬日奇幻灯光照亮整个庄园。安排一次参观，看看这座盛装的宅邸吧。",
+      "latitude": 42.67223,
+      "longitude": -83.20146
+    },
+    {
+      "id": "trad_oakland_amphitheatre",
+      "name": "Meadow Brook 夏季音乐会",
+      "description": "Meadow Brook 露天剧场自 1964 年起就在校园里举办夏季音乐会。坐在顶棚下或草坪上欣赏一场演出吧。",
+      "latitude": 42.676282,
+      "longitude": -83.202996
+    }
+  ],
+  "Central Michigan University": [
+    {
+      "id": "trad_cmich_fire_up_chips",
+      "name": "Fire Up, Chips!",
+      "description": "“Fire Up, Chips!”是中密歇根大学的问候语和加油口号。在 Kelly/Shorts 体育场看橄榄球赛时，关键进攻前晃响你的钥匙，再和观众一起做敲镲的动作。",
+      "latitude": 43.57757,
+      "longitude": -84.77105
+    },
+    {
+      "id": "trad_cmich_warriner_chimes",
+      "name": "Warriner Hall 的报时钟声",
+      "description": "自 1939 年起，Warriner Hall 就会响起钟声，如今录制的钟声在每个整点报时。整点时站在 Warriner Mall 上听一听吧。",
+      "latitude": 43.592425,
+      "longitude": -84.775515
+    },
+    {
+      "id": "trad_cmich_boat_race",
+      "name": "纸板船比赛",
+      "description": "返校节早上，工程专业的学生会划着纸板做的船，试着横渡 Rose Ponds。在岸边找个位置为他们加油吧。",
+      "latitude": 43.581132,
+      "longitude": -84.770682
+    },
+    {
+      "id": "trad_cmich_pow_wow",
+      "name": "Celebrating Life 帕瓦节",
+      "description": "每年 3 月，中密歇根大学都会在 McGuirk 体育馆举办 Celebrating Life 帕瓦节，有传统舞蹈、鼓乐、手工艺品和美食。活动向公众开放，欢迎来观看。",
+      "latitude": 43.581566,
+      "longitude": -84.774189
+    }
+  ],
   "Yale University": [
     {
       "id": "trad_yale_woolsey_foot",
@@ -2419,6 +2539,36 @@
       "description": "校园南侧锦标赛公园的运动场曾举办最早的玫瑰碗比赛。沿着跑道走一走，看看这项著名赛事开始的地方。",
       "latitude": 34.132928,
       "longitude": -118.125456
+    }
+  ],
+  "Colorado State University": [
+    {
+      "id": "trad_colostate_oval",
+      "name": "漫步 Oval",
+      "description": "Oval 于 1909 年设计，用来连接校园的主要建筑，四周种着 65 棵美国榆树。到这个充满历史的校园中心散散步吧。",
+      "latitude": 40.576189,
+      "longitude": -105.080783
+    },
+    {
+      "id": "trad_colostate_ram_clock",
+      "name": "在钟下见面",
+      "description": "几代学生都约在 Lory 学生中心的“钟下”见面。找到美食广场上方的 Ram Clock，听听它每个整点的报时声。",
+      "latitude": 40.574788,
+      "longitude": -105.084724
+    },
+    {
+      "id": "trad_colostate_game_day",
+      "name": "和 CAM the Ram 一起过比赛日",
+      "description": "以 Colorado A&M 命名的活体吉祥物 CAM the Ram 会在 Rams 每次达阵后冲过端区。1919 年被偷、2016 年归还的 Old Main 钟，如今挂在体育场的一座塔里。去 Canvas 体育场看一场主场比赛吧。",
+      "latitude": 40.569831,
+      "longitude": -105.088506
+    },
+    {
+      "id": "trad_colostate_trial_garden",
+      "name": "年度花卉试验园",
+      "description": "CSU 在这座花园里试种新的花卉品种，花园免费开放，每天白天都可参观。5 月下旬到 10 月花坛盛开时来最好。",
+      "latitude": 40.569381,
+      "longitude": -105.07615
     }
   ]
 }

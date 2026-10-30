@@ -257,6 +257,10 @@ extension CityLocation.City {
         case .wayneState:          return (42.3572, -83.0675)
         case .westernMichigan:     return (42.2826, -85.6097)
         case .grandValleyState:    return (42.9650, -85.8902)
+        case .easternMichigan:     return (42.2481, -83.6253)
+        case .michiganTech:        return (47.1155, -88.5493)
+        case .oaklandUniversity:   return (42.6737, -83.2056)
+        case .centralMichigan:     return (43.5853, -84.7738)
         case .yale:                return (41.3105, -72.9292)
         case .harvard:             return (42.3744, -71.1161)
         case .mit:                 return (42.3596, -71.0922)
@@ -288,6 +292,7 @@ extension CityLocation.City {
         case .ubc:                 return (49.2685, -123.2566)
         case .unam:                return (19.3284, -99.1875)
         case .caltech:             return (34.1372, -118.1253)
+        case .coloradoState:       return (40.5748, -105.0853)
         // END CAMPUSES
         }
     }

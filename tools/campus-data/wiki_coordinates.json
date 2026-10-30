@@ -1,4 +1,8 @@
 {
+  "A. E. Seaman Mineral Museum": [
+    47.1108,
+    -88.5526
+  ],
   "ASU Gammage": [
     33.41629722,
     -111.93807778
@@ -193,6 +197,14 @@
     42.33762778,
     -71.17153889
   ],
+  "Botanical and Horticultural Laboratory": [
+    40.57782,
+    -105.07796
+  ],
+  "Bowen Field House": [
+    42.25002,
+    -83.62594
+  ],
   "Boyd House (University of Oklahoma)": [
     35.21166667,
     -97.44611111
@@ -233,6 +245,7 @@
     38.648,
     -90.3052
   ],
+  "Brooks Astronomical Observatory": null,
   "Brown Building (Manhattan)": [
     40.73,
     -73.99527778
@@ -240,6 +253,10 @@
   "Brown University": [
     41.826,
     -71.403
+  ],
+  "Bruce T. Halle Library": [
+    42.2487,
+    -83.6276
   ],
   "Buckman Hall (Gainesville, Florida)": [
     29.65055556,
@@ -285,6 +302,10 @@
   "Candler School of Theology": [
     33.78975,
     -84.32020833
+  ],
+  "Canvas Stadium": [
+    40.57,
+    -105.0885
   ],
   "Cardinal Stadium": [
     38.20583333,
@@ -334,6 +355,14 @@
   "Central Library (UNAM)": [
     19.33361111,
     -99.18722222
+  ],
+  "Central Michigan University": [
+    43.5898,
+    -84.7775
+  ],
+  "Central Michigan University Libraries": [
+    43.58934,
+    -84.77429
   ],
   "Century Tower (University of Florida)": [
     29.648834,
@@ -411,9 +440,17 @@
     44.9727,
     -93.2354
   ],
+  "College Club House and Gymnasium": [
+    47.12,
+    -88.54944444
+  ],
   "College Hall (University of Pennsylvania)": [
     39.95127778,
     -75.19375
+  ],
+  "Colorado State University": [
+    40.5762,
+    -105.0808
   ],
   "Columbia University": [
     40.8075,
@@ -553,6 +590,11 @@
     42.286643,
     -85.597531
   ],
+  "Eastern Michigan University": [
+    42.250154,
+    -83.624454
+  ],
+  "Eastern Michigan University Student Center": null,
   "Edinburgh University Library": [
     55.9428,
     -3.189
@@ -573,6 +615,10 @@
   "Elliott Hall of Music": [
     40.4279,
     -86.9149
+  ],
+  "Elliott Tower": [
+    42.67361111,
+    -83.21583333
   ],
   "Elmer Holmes Bobst Library": [
     40.72944444,
@@ -971,6 +1017,10 @@
     41.825725,
     -71.40508889
   ],
+  "John Dodge House": [
+    42.67297,
+    -83.1947
+  ],
   "John E. Fetzer Center": [
     42.285,
     -85.6179
@@ -1007,6 +1057,10 @@
   "Kansas State University": [
     39.1914,
     -96.5809
+  ],
+  "Kelly/Shorts Stadium": [
+    43.5775,
+    -84.77083333
   ],
   "Kendeda Building": null,
   "Kenneth C. Griffin School of Computer Science": [
@@ -1165,6 +1219,10 @@
     42.734114,
     -84.48289
   ],
+  "MacInnes Student Ice Arena": [
+    47.1125,
+    -88.5458
+  ],
   "Maccabees Building": [
     42.35777778,
     -83.06555556
@@ -1266,6 +1324,11 @@
     42.35916667,
     -83.07083333
   ],
+  "McGuirk Arena": [
+    43.580888,
+    -84.773941
+  ],
+  "McKenny Hall": null,
   "McLane Stadium": [
     31.5582,
     -97.1157
@@ -1273,6 +1336,14 @@
   "McLennan Library Building": [
     45.5033,
     -73.576
+  ],
+  "Meadow Brook Amphitheatre": [
+    42.67625,
+    -83.20305556
+  ],
+  "Meadow Brook Hall": [
+    42.67194444,
+    -83.20111111
   ],
   "Mellon Institute of Industrial Research": [
     40.44612222,
@@ -1314,6 +1385,10 @@
     43.07638889,
     -89.4
   ],
+  "Memorial Union Building (MTU)": [
+    47.1188,
+    -88.5492
+  ],
   "Michael C. Carlos Museum": [
     33.79027778,
     -84.32416667
@@ -1325,6 +1400,10 @@
   "Michigan State University Libraries": [
     42.73102222,
     -84.48359167
+  ],
+  "Michigan Technological University": [
+    47.12,
+    -88.55
   ],
   "Mies Building for the Eskenazi School of Art, Architecture + Design": [
     39.16916667,
@@ -1342,6 +1421,10 @@
     33.454,
     -88.789
   ],
+  "Moby Arena": [
+    40.57566944,
+    -105.09340278
+  ],
   "Moody Memorial Library": [
     31.5489,
     -97.1176
@@ -1353,6 +1436,10 @@
   "Morehead-Patterson Bell Tower": [
     35.9086,
     -79.0492
+  ],
+  "Morgan Library (Colorado State University)": [
+    40.57307778,
+    -105.08489444
   ],
   "Morrill Hall (Cornell University)": [
     42.44861111,
@@ -1450,6 +1537,14 @@
   "Northwestern University": [
     42.05583333,
     -87.67472222
+  ],
+  "OU Credit Union O'rena": [
+    42.673972,
+    -83.213158
+  ],
+  "Oakland University": [
+    42.672659,
+    -83.215776
   ],
   "Odegaard Undergraduate Library": [
     47.65666667,
@@ -1550,6 +1645,10 @@
     -84.5064
   ],
   "Peabody Hall (University of Arkansas)": null,
+  "Pease Auditorium": [
+    42.24640556,
+    -83.62149444
+  ],
   "Penn Museum": [
     39.949,
     -75.1911
@@ -1787,6 +1886,7 @@
     51.7543,
     -1.255
   ],
+  "Sherzer Hall": null,
   "Silver Center": [
     40.7303091,
     -73.9956898
@@ -1871,6 +1971,10 @@
   "Stanford University": [
     37.4275,
     -122.17027778
+  ],
+  "Starkweather Hall": [
+    42.24638889,
+    -83.62416667
   ],
   "Stata Center": [
     42.36164,

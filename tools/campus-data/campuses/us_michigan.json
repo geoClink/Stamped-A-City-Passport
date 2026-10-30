@@ -570,5 +570,655 @@
         "foodSpots": []
       }
     ]
+  },
+  {
+    "name": "Eastern Michigan University",
+    "enumCase": "easternMichigan",
+    "country": "unitedStates",
+    "aliases": [
+      "EMU",
+      "Eastern Michigan",
+      "Eastern"
+    ],
+    "colors": [
+      "#046A38",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_emu_water_tower",
+        "name": "Ypsilanti Water Tower",
+        "description": "Built in 1890 on the highest point in Ypsilanti, the stone water tower borders the campus and is the city's best-known landmark. Locals give directions by it, so take a photo with it.",
+        "coordinates": [
+          42.245552,
+          -83.62469
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/882710137",
+        "source": "https://en.wikipedia.org/wiki/Ypsilanti_Water_Tower"
+      },
+      {
+        "id": "trad_emu_kiosk",
+        "name": "The Pray-Harrold Kiosk",
+        "description": "Covering the kiosk outside Pray-Harrold with flyers for campus events is a longstanding Eastern tradition. Stop by and read what's happening this week.",
+        "coordinates": [
+          42.249577,
+          -83.62259
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/156159939",
+        "source": "https://en.wikipedia.org/wiki/Eastern_Michigan_University"
+      },
+      {
+        "id": "trad_emu_pease_organ",
+        "name": "Concert at Pease Auditorium",
+        "description": "Pease Auditorium has been the campus concert hall since 1915. Catch a performance and listen for its 81-rank Aeolian-Skinner pipe organ.",
+        "coordinates": [
+          42.246433,
+          -83.621446
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/182127803",
+        "source": "https://en.wikipedia.org/wiki/Pease_Auditorium"
+      },
+      {
+        "id": "trad_emu_starkweather_ghost",
+        "name": "The Ghost of Starkweather Hall",
+        "description": "Campus legend says Mary Ann Starkweather, who paid for the hall, haunts it because it no longer serves the religious purpose she intended. Walk past the oldest building on campus and look up at its tower.",
+        "coordinates": [
+          42.246508,
+          -83.624681
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/182174539",
+        "source": "https://www.easternecho.com/article/2009/10/starkweather_hall_surrounded_by_haunted_history"
+      }
+    ],
+    "wiki": "Eastern Michigan University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Home of the Eagles",
+      "airportName": "Detroit Metropolitan Wayne County Airport",
+      "airportCode": "DTW",
+      "airportInfo": "Detroit Metropolitan Wayne County Airport in Romulus, east of Ypsilanti, is the nearest major airport.",
+      "funFact": "Founded in 1849 as the Michigan State Normal School, Eastern was the fourth teachers' college in the United States and the first outside New England.",
+      "language": "English",
+      "languageInfo": "The school colors are green and white, and the teams are the Eagles.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / TheRide buses",
+      "transportationFact": "The main campus is compact and easy to walk. TheRide buses link Ypsilanti and the campus with Ann Arbor."
+    },
+    "buildings": [
+      {
+        "id": "campus_emu_starkweather_hall",
+        "wiki": "Starkweather Hall",
+        "name": "Starkweather Hall",
+        "description": "Built in 1896 with a gift from Mary Ann Starkweather for the Students' Christian Association, this fieldstone building is the oldest on campus. When it opened, it was the only religious center at any teachers' college in the country.",
+        "architect": "Malcomson and Higginbotham",
+        "yearBuilt": 1896,
+        "address": "901 W Forest Ave, Ypsilanti, MI 48197",
+        "oldUse": "Religious Center",
+        "newUse": "University Offices",
+        "buildingStyle": "Richardsonian Romanesque",
+        "numberOfStories": 2,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_emu_pease_auditorium",
+        "wiki": "Pease Auditorium",
+        "name": "Pease Auditorium",
+        "description": "Smith, Hinchman & Grylls designed this concert hall, dedicated in 1915 in memory of music professor Frederic H. Pease. Its 81-rank Aeolian-Skinner organ was installed in the early 1960s and restored in the late 1990s.",
+        "architect": "Smith, Hinchman & Grylls",
+        "yearBuilt": 1915,
+        "address": "494 College Pl, Ypsilanti, MI 48197",
+        "oldUse": "Concert Hall",
+        "newUse": "Concert Hall",
+        "buildingStyle": "Classical Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_emu_sherzer_hall",
+        "wiki": "Sherzer Hall",
+        "name": "Sherzer Hall",
+        "description": "E. W. Arnold of Battle Creek designed this 1903 science building, which has survived two fires. The Sherzer Observatory sits on top, and the building is now home to the art department.",
+        "architect": "E. W. Arnold",
+        "yearBuilt": 1903,
+        "address": "Eastern Michigan University, Ypsilanti, MI 48197",
+        "oldUse": "Natural Science Building",
+        "newUse": "Art Department",
+        "buildingStyle": "Romanesque / Georgian",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "coordinates": [
+          42.247096,
+          -83.624914
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/182174117"
+      },
+      {
+        "id": "campus_emu_mckenny_hall",
+        "wiki": "McKenny Hall",
+        "name": "McKenny Hall",
+        "description": "Opened in 1931 as Charles McKenny Union, this was the campus's first student union. Over the years it held a bowling alley, a ballroom and bookstores; today it houses offices and a Chick-fil-A.",
+        "architect": "Frank Eurich, Jr.",
+        "yearBuilt": 1931,
+        "address": "Eastern Michigan University, Ypsilanti, MI 48197",
+        "oldUse": "Student Union",
+        "newUse": "Offices and Dining",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "coordinates": [
+          42.246242,
+          -83.625551
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/182174120"
+      },
+      {
+        "id": "campus_emu_halle_library",
+        "wiki": "Bruce T. Halle Library",
+        "name": "Bruce T. Halle Library",
+        "description": "Opened in 1998, the four-story library is named for EMU graduate Bruce T. Halle, founder of Discount Tire. Most of its books are kept in an automated retrieval system several stories below the building.",
+        "architect": "Unknown",
+        "yearBuilt": 1998,
+        "address": "Eastern Michigan University, Ypsilanti, MI 48197",
+        "oldUse": "Library",
+        "newUse": "Library",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 4,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_emu_student_center",
+        "wiki": "Eastern Michigan University Student Center",
+        "name": "Eastern Michigan University Student Center",
+        "description": "Opened in 2006, the four-floor Student Center replaced McKenny Union as the hub of campus life. It stands in University Park near the library.",
+        "architect": "Burt Hill Kosar Rittelmann Associates",
+        "yearBuilt": 2006,
+        "address": "900 Oakwood St, Ypsilanti, MI 48197",
+        "oldUse": "Student Union",
+        "newUse": "Student Union",
+        "buildingStyle": "Postmodern",
+        "numberOfStories": 4,
+        "height": 0,
+        "foodSpots": [],
+        "coordinates": [
+          42.251683,
+          -83.627405
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/156672469"
+      },
+      {
+        "id": "campus_emu_bowen_field_house",
+        "wiki": "Bowen Field House",
+        "name": "Bowen Field House",
+        "description": "Opened in 1955, this 6,000-seat field house was home to Eagles basketball until the Convocation Center opened in the late 1990s. It still hosts track and field, wrestling and gymnastics.",
+        "architect": "Unknown",
+        "yearBuilt": 1955,
+        "address": "Eastern Michigan University, Ypsilanti, MI 48197",
+        "oldUse": "Basketball Arena",
+        "newUse": "Track, Wrestling and Gymnastics Venue",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Michigan Technological University",
+    "enumCase": "michiganTech",
+    "country": "unitedStates",
+    "aliases": [
+      "Michigan Tech",
+      "MTU"
+    ],
+    "colors": [
+      "#FFCD00",
+      "#000000"
+    ],
+    "traditions": [
+      {
+        "id": "trad_mtu_snow_statues",
+        "name": "Winter Carnival Snow Statues",
+        "description": "Every February since the 1930s, students pile, stomp and carve snow into giant statues on a yearly theme for Winter Carnival, which began in 1922. Walk the campus and see them.",
+        "coordinates": [
+          47.119075,
+          -88.547552
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/16237013",
+        "source": "https://www.mtu.edu/winter-carnival/about/history/"
+      },
+      {
+        "id": "trad_mtu_pep_band",
+        "name": "Huskies Pep Band at a Hockey Game",
+        "description": "The Huskies Pep Band, formed in 1928, plays at every home hockey game. Join the crowd in linking arms and swaying to the \"Blue Skirt Waltz\", the Copper Country Anthem.",
+        "coordinates": [
+          47.112465,
+          -88.545851
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/130000442",
+        "source": "https://en.wikipedia.org/wiki/Michigan_Technological_University"
+      },
+      {
+        "id": "trad_mtu_copper_boulder",
+        "name": "The Giant Copper Boulder",
+        "description": "The Copper Pavilion outside the A. E. Seaman Mineral Museum holds a 19-ton boulder of copper pulled from the bottom of Lake Superior, a Guinness World Record holder. Go see how big it is.",
+        "coordinates": [
+          47.110802,
+          -88.552384
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/1804193228",
+        "source": "https://en.wikipedia.org/wiki/A._E._Seaman_Mineral_Museum"
+      },
+      {
+        "id": "trad_mtu_rozsa",
+        "name": "A Show at the Rozsa Center",
+        "description": "The Rozsa Center for the Performing Arts hosts film and music festivals through the year, including the Pine Mountain Music Festival and the 41 North Film Festival. Check the calendar and catch a show.",
+        "coordinates": [
+          47.117527,
+          -88.54196
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/129969081",
+        "source": "https://en.wikipedia.org/wiki/Michigan_Technological_University"
+      }
+    ],
+    "wiki": "Michigan Technological University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Home of the Huskies",
+      "airportName": "Houghton County Memorial Airport",
+      "airportCode": "CMX",
+      "airportInfo": "Houghton County Memorial Airport, north of Hancock across Portage Lake, is the nearest airport with airline service.",
+      "funFact": "Founded in 1885 as the Michigan Mining School, Michigan Tech was the first college in Michigan's Upper Peninsula. Houghton gets about 218 inches (5.5 m) of snow in an average year.",
+      "language": "English",
+      "languageInfo": "The school colors are black and gold, and the teams are the Huskies.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking",
+      "transportationFact": "The main part of campus sits on a bluff above Portage Lake along US-41 and can be crossed on foot in about 10 minutes."
+    },
+    "buildings": [
+      {
+        "id": "campus_mtu_college_club_house",
+        "wiki": "College Club House and Gymnasium",
+        "name": "College Club House and Gymnasium",
+        "description": "Built in 1904, this English Tudor Revival building is the oldest standing building on Michigan Tech's campus. Also known as the ROTC Building, it was listed on the National Register of Historic Places in 1980.",
+        "architect": "Charlton & Kuenzli",
+        "yearBuilt": 1904,
+        "address": "1416 College Ave, Houghton, MI 49931",
+        "oldUse": "Club House and Gymnasium",
+        "newUse": "ROTC Building",
+        "buildingStyle": "English Tudor Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_mtu_memorial_union",
+        "wiki": "Memorial Union Building (MTU)",
+        "name": "Memorial Union Building",
+        "description": "Alumni raised $300,000 toward this student union, finished in 1952 and named in tribute to Michigan Tech people who served in the armed forces. Renovated in 1987, it holds dining, a bookstore, lounges and game rooms.",
+        "architect": "Unknown",
+        "yearBuilt": 1952,
+        "address": "Michigan Technological University, Houghton, MI 49931",
+        "oldUse": "Student Union",
+        "newUse": "Student Union",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_mtu_seaman_museum",
+        "wiki": "A. E. Seaman Mineral Museum",
+        "name": "A. E. Seaman Mineral Museum",
+        "description": "Michigan's official mineral museum began in 1902 and moved into its own new building, Thomas D. Shaffner Hall, in 2011. It holds more than 36,000 specimens, many from the Lake Superior region.",
+        "architect": "Unknown",
+        "yearBuilt": 2011,
+        "address": "Michigan Technological University, Houghton, MI 49931",
+        "oldUse": "Mineral Museum",
+        "newUse": "Mineral Museum",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_mtu_macinnes_arena",
+        "wiki": "MacInnes Student Ice Arena",
+        "name": "MacInnes Student Ice Arena",
+        "description": "Opened in January 1972, the home of Huskies hockey is named for John MacInnes, who coached the team from 1956 to 1983 with a record of 555-295-39. Spring commencement is held here too.",
+        "architect": "Unknown",
+        "yearBuilt": 1972,
+        "address": "Michigan Technological University, Houghton, MI 49931",
+        "oldUse": "Ice Arena",
+        "newUse": "Ice Arena",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Oakland University",
+    "enumCase": "oaklandUniversity",
+    "country": "unitedStates",
+    "aliases": [
+      "Oakland",
+      "Golden Grizzlies",
+      "Grizzlies"
+    ],
+    "colors": [
+      "#BC945B",
+      "#000000"
+    ],
+    "traditions": [
+      {
+        "id": "trad_oakland_carillon",
+        "name": "Summer Carillon Concerts",
+        "description": "On six Fridays each summer, carillonneurs from around the world give free concerts on the 49 bells of Elliott Tower. Come and listen from the lawn around the tower.",
+        "coordinates": [
+          42.673542,
+          -83.215527
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/468616655",
+        "source": "https://oakland.edu/news/smtd/2026/Oakland-Universitys-Summer-Carillon-Concert-Series-returns-July-10/"
+      },
+      {
+        "id": "trad_oakland_grizz",
+        "name": "Rub the Grizz",
+        "description": "Students rub the belly of the 8-foot bronze grizzly outside the O'rena for luck before a big exam. Give it a rub and take a photo.",
+        "coordinates": [
+          42.674293,
+          -83.214225
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/5965504766",
+        "source": "https://oaklandpostonline.com/29103/showcase/looking-back-grizz-statue-built-in-2006"
+      },
+      {
+        "id": "trad_oakland_holiday_walk",
+        "name": "Holiday Walk at Meadow Brook Hall",
+        "description": "Each holiday season, Meadow Brook Hall is decorated for its Holiday Walk, and Winter Wonder Lights fill the grounds at night. Plan a visit to see the mansion dressed for the season.",
+        "coordinates": [
+          42.67223,
+          -83.20146
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/420166995",
+        "source": "https://meadowbrookhall.org/"
+      },
+      {
+        "id": "trad_oakland_amphitheatre",
+        "name": "Summer Concert at Meadow Brook",
+        "description": "Meadow Brook Amphitheatre has hosted summer concerts on campus since 1964. Catch a show from a pavilion seat or out on the lawn.",
+        "coordinates": [
+          42.676282,
+          -83.202996
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/355204449",
+        "source": "https://en.wikipedia.org/wiki/Meadow_Brook_Amphitheatre"
+      }
+    ],
+    "wiki": "Oakland University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Home of the Golden Grizzlies",
+      "airportName": "Detroit Metropolitan Wayne County Airport",
+      "airportCode": "DTW",
+      "airportInfo": "Detroit Metropolitan Wayne County Airport in Romulus, southwest of Detroit, is the main airport for the area, about an hour's drive from campus.",
+      "funFact": "Oakland was founded in 1957 with a gift from Matilda Dodge Wilson and her husband Alfred, including their Meadow Brook estate. Their 110-room mansion, Meadow Brook Hall, still stands on campus.",
+      "language": "English",
+      "languageInfo": "The school colors are black and gold, and the teams are the Golden Grizzlies.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Car",
+      "transportationFact": "The main campus spans Auburn Hills and Rochester Hills. Meadow Brook Hall and the John Dodge House are on the east side, about 1 to 2 km from Elliott Tower."
+    },
+    "buildings": [
+      {
+        "id": "campus_oakland_elliott_tower",
+        "wiki": "Elliott Tower",
+        "name": "Elliott Tower",
+        "description": "A gift from Hugh and Nancy Elliott, this 151-foot carillon tower was dedicated in September 2014 as the centerpiece of the main campus. A fountain and a garden surround its base.",
+        "architect": "Niagara Murano",
+        "yearBuilt": 2014,
+        "address": "Oakland University, Rochester, MI 48309",
+        "oldUse": "Carillon Tower",
+        "newUse": "Carillon Tower",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_oakland_meadow_brook_hall",
+        "wiki": "Meadow Brook Hall",
+        "name": "Meadow Brook Hall",
+        "description": "Matilda Dodge Wilson and her second husband, lumber baron Alfred Wilson, built this 110-room Tudor Revival mansion between 1926 and 1929. It is now a National Historic Landmark and one of the largest historic house museums in the country.",
+        "architect": "William E. Kapp; Smith, Hinchman & Grylls",
+        "yearBuilt": 1929,
+        "address": "350 Estate Dr, Rochester Hills, MI 48309",
+        "oldUse": "Private Residence",
+        "newUse": "Historic House Museum",
+        "buildingStyle": "Tudor Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_oakland_john_dodge_house",
+        "wiki": "John Dodge House",
+        "name": "John Dodge House",
+        "description": "This farmhouse was built in 1898, and automaker John F. Dodge and his wife Matilda bought it in 1908 as a weekend retreat, growing it from 14 to 30 rooms. It now holds university offices.",
+        "architect": "Unknown",
+        "yearBuilt": 1898,
+        "address": "Oakland University, Rochester Hills, MI 48309",
+        "oldUse": "Farmhouse",
+        "newUse": "University Offices",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_oakland_meadow_brook_amphitheatre",
+        "wiki": "Meadow Brook Amphitheatre",
+        "name": "Meadow Brook Amphitheatre",
+        "description": "Opened in 1964 as the Meadow Brook Music Festival, this outdoor music venue seats 7,701: 2,819 under the pavilion roof and the rest on the lawn.",
+        "architect": "Unknown",
+        "yearBuilt": 1964,
+        "address": "3554 Walton Blvd, Rochester Hills, MI 48309",
+        "oldUse": "Music Festival Venue",
+        "newUse": "Amphitheatre",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_oakland_orena",
+        "wiki": "OU Credit Union O'rena",
+        "name": "OU Credit Union O'rena",
+        "description": "Opened in November 1998, the 4,000-seat arena is home to Golden Grizzlies basketball and volleyball. It is nicknamed \"The Blacktop\" for the black court first used in the 2015-16 season.",
+        "architect": "TMP Architecture",
+        "yearBuilt": 1998,
+        "address": "Oakland University, Auburn Hills, MI 48326",
+        "oldUse": "Arena",
+        "newUse": "Arena",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Central Michigan University",
+    "enumCase": "centralMichigan",
+    "country": "unitedStates",
+    "aliases": [
+      "CMich",
+      "Central Michigan",
+      "Central",
+      "Chippewas",
+      "Chips"
+    ],
+    "colors": [
+      "#6A0032",
+      "#FFC82E"
+    ],
+    "traditions": [
+      {
+        "id": "trad_cmich_fire_up_chips",
+        "name": "Fire Up, Chips!",
+        "description": "\"Fire Up, Chips!\" is Central's greeting and rallying cry. At a football game at Kelly/Shorts Stadium, jingle your keys before big plays and mime crashing cymbals with the crowd.",
+        "coordinates": [
+          43.57757,
+          -84.77105
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/182550057",
+        "source": "https://www.cmich.edu/student-life/traditions-spirit"
+      },
+      {
+        "id": "trad_cmich_warriner_chimes",
+        "name": "Warriner Hall Chimes",
+        "description": "Chimes have sounded from Warriner Hall since 1939, and today recorded chimes greet each new hour. Stand on Warriner Mall and listen for them on the hour.",
+        "coordinates": [
+          43.592425,
+          -84.775515
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/480080554",
+        "source": "https://www.clarkehistoricallibrary.org/2013/12/the-warriner-chimes.html"
+      },
+      {
+        "id": "trad_cmich_boat_race",
+        "name": "Cardboard Boat Race",
+        "description": "On Homecoming morning, engineering students try to paddle boats made of cardboard across the Rose Ponds. Find a spot on the bank and cheer them on.",
+        "coordinates": [
+          43.581132,
+          -84.770682
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/480079774",
+        "source": "https://www.cmich.edu/student-life/traditions-spirit"
+      },
+      {
+        "id": "trad_cmich_pow_wow",
+        "name": "Celebrating Life Pow Wow",
+        "description": "Each March, Central hosts the Celebrating Life Pow Wow in McGuirk Arena, with traditional dancing, drumming, arts and food. It is open to the public, so come and watch.",
+        "coordinates": [
+          43.581566,
+          -84.774189
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/9820898448",
+        "source": "https://www.cmich.edu/offices-departments/native-american-programs/programs/pow-wow"
+      }
+    ],
+    "wiki": "Central Michigan University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Fire Up, Chips!",
+      "airportName": "MBS International Airport",
+      "airportCode": "MBS",
+      "airportInfo": "MBS International Airport in Freeland, east of Mount Pleasant, is the nearest airport with airline service.",
+      "funFact": "Kelly/Shorts Stadium, with 35,127 seats, is the largest on-campus stadium in the Mid-American Conference.",
+      "language": "English",
+      "languageInfo": "The school colors are maroon and gold, and the teams are the Chippewas.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking",
+      "transportationFact": "The campus is easy to walk: Warriner Hall on the north side is about 1.5 km from Kelly/Shorts Stadium in the southeast."
+    },
+    "buildings": [
+      {
+        "id": "campus_cmich_warriner_hall",
+        "wiki": "Central Michigan University",
+        "name": "Warriner Hall",
+        "description": "Built where Old Main stood before it burned in 1925, this building opened in 1928 as the Administration Building, with the library in its east wing. It was named for president Eugene C. Warriner when he retired in 1939.",
+        "architect": "Unknown",
+        "yearBuilt": 1928,
+        "address": "Central Michigan University, Mount Pleasant, MI 48859",
+        "oldUse": "Administration Building and Library",
+        "newUse": "Administration Building",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          43.591155,
+          -84.775327
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/504646648"
+      },
+      {
+        "id": "campus_cmich_park_library",
+        "wiki": "Central Michigan University Libraries",
+        "name": "Charles V. Park Library",
+        "description": "Named for longtime library director Charles V. Park, the library opened in 1969 and reopened in 2002 after it was enlarged to more than 300,000 square feet. The Clarke Historical Library, with rare books and Michigan history, is on its first floor.",
+        "architect": "Unknown",
+        "yearBuilt": 1969,
+        "address": "Central Michigan University, Mount Pleasant, MI 48859",
+        "oldUse": "Library",
+        "newUse": "Library",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_cmich_brooks_observatory",
+        "wiki": "Brooks Astronomical Observatory",
+        "name": "Brooks Astronomical Observatory",
+        "description": "Set up in 1964 on the roof of the Brooks Hall science building, the observatory is named for Kendall P. Brooks, who taught astronomy here from 1910 to 1947. Its 16-inch telescope dates from 1996.",
+        "architect": "Unknown",
+        "yearBuilt": 1964,
+        "address": "Brooks Hall, Central Michigan University, Mount Pleasant, MI 48859",
+        "oldUse": "Astronomical Observatory",
+        "newUse": "Astronomical Observatory",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "coordinates": [
+          43.587798,
+          -84.774759
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/413724781"
+      },
+      {
+        "id": "campus_cmich_kelly_shorts_stadium",
+        "wiki": "Kelly/Shorts Stadium",
+        "name": "Kelly/Shorts Stadium",
+        "description": "Opened in 1972 and enlarged since, the home of Chippewas football seats 35,127, the most of any on-campus stadium in the Mid-American Conference. Its field is named for former coaches Roy Kramer and Herb Deromedi.",
+        "architect": "Hobbs+Black",
+        "yearBuilt": 1972,
+        "address": "2300 E Campus Dr, Mount Pleasant, MI 48858",
+        "oldUse": "Football Stadium",
+        "newUse": "Football Stadium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_cmich_mcguirk_arena",
+        "wiki": "McGuirk Arena",
+        "name": "McGuirk Arena",
+        "description": "Opened in 1973 as Rose Arena, this arena is home to Chippewas basketball, gymnastics, volleyball and wrestling. It is part of the larger CMU Events Center.",
+        "architect": "Unknown",
+        "yearBuilt": 1973,
+        "address": "Central Michigan University, Mount Pleasant, MI 48859",
+        "oldUse": "Arena",
+        "newUse": "Arena",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
   }
 ]

@@ -1118,5 +1118,55 @@
     "currencyInfo": "Dólar americano ($)",
     "transportation": "A pé / Campus Circulator / MetroLink",
     "transportationFact": "Um ônibus gratuito, o Campus Circulator, circula pelo Danforth Campus, e os trens da Blue Line do MetroLink param na estação Skinker, bem ao lado."
+  },
+  "Colorado State University": {
+    "nickname": "A casa dos Rams",
+    "airportInfo": "O Aeroporto Internacional de Denver, a sudeste de Fort Collins, é o principal aeroporto do norte do Colorado.",
+    "funFact": "O Oval, no coração do campus, foi projetado em 1909 e é ladeado por 65 olmos-americanos. O caminho ao redor dele tem 629 m.",
+    "language": "Inglês",
+    "languageInfo": "As cores da universidade são verde e dourado, e as equipes se chamam Rams.",
+    "currencyInfo": "Dólar americano ($)",
+    "transportation": "A pé / Transfort MAX / Around the Horn",
+    "transportationFact": "A linha de ônibus rápido MAX da Transfort atende o campus, e o ônibus Around the Horn circula pelo campus a partir do CSU Transit Center, ao lado do Lory Student Center."
+  },
+  "Eastern Michigan University": {
+    "nickname": "A casa dos Eagles",
+    "airportInfo": "O Aeroporto Metropolitano de Detroit, em Romulus, a leste de Ypsilanti, é o grande aeroporto mais próximo.",
+    "funFact": "Fundada em 1849 como Michigan State Normal School, a Eastern foi a quarta escola de formação de professores dos Estados Unidos e a primeira fora da Nova Inglaterra.",
+    "language": "Inglês",
+    "languageInfo": "As cores da universidade são verde e branco, e as equipes se chamam Eagles.",
+    "currencyInfo": "Dólar americano ($)",
+    "transportation": "A pé / ônibus TheRide",
+    "transportationFact": "O campus principal é compacto e fácil de percorrer a pé. Os ônibus TheRide ligam Ypsilanti e o campus a Ann Arbor."
+  },
+  "Michigan Technological University": {
+    "nickname": "A casa dos Huskies",
+    "airportInfo": "O Aeroporto Houghton County Memorial, ao norte de Hancock, do outro lado do lago Portage, é o aeroporto mais próximo com voos comerciais.",
+    "funFact": "Fundada em 1885 como Michigan Mining School, a Michigan Tech foi a primeira instituição de ensino superior da Península Superior de Michigan. Em Houghton caem cerca de 5,5 m de neve em um ano normal.",
+    "language": "Inglês",
+    "languageInfo": "As cores da universidade são preto e dourado, e as equipes se chamam Huskies.",
+    "currencyInfo": "Dólar americano ($)",
+    "transportation": "A pé",
+    "transportationFact": "A parte principal do campus fica num morro sobre o lago Portage, ao longo da US-41, e pode ser atravessada a pé em cerca de 10 minutos."
+  },
+  "Oakland University": {
+    "nickname": "A casa dos Golden Grizzlies",
+    "airportInfo": "O Aeroporto Metropolitano de Detroit, em Romulus, a sudoeste de Detroit, é o principal aeroporto da região, a cerca de uma hora de carro do campus.",
+    "funFact": "A Oakland foi fundada em 1957 com uma doação de Matilda Dodge Wilson e seu marido Alfred, que incluía a propriedade de Meadow Brook. A mansão de 110 cômodos do casal, Meadow Brook Hall, ainda está no campus.",
+    "language": "Inglês",
+    "languageInfo": "As cores da universidade são preto e dourado, e as equipes se chamam Golden Grizzlies.",
+    "currencyInfo": "Dólar americano ($)",
+    "transportation": "A pé / de carro",
+    "transportationFact": "O campus principal se estende por Auburn Hills e Rochester Hills. Meadow Brook Hall e a John Dodge House ficam no lado leste, a 1 ou 2 km da Elliott Tower."
+  },
+  "Central Michigan University": {
+    "nickname": "Fire Up, Chips!",
+    "airportInfo": "O Aeroporto Internacional MBS, em Freeland, a leste de Mount Pleasant, é o aeroporto mais próximo com voos comerciais.",
+    "funFact": "Com 35.127 lugares, o Kelly/Shorts Stadium é o maior estádio dentro de um campus da Mid-American Conference.",
+    "language": "Inglês",
+    "languageInfo": "As cores da universidade são grená e dourado, e as equipes se chamam Chippewas.",
+    "currencyInfo": "Dólar americano ($)",
+    "transportation": "A pé",
+    "transportationFact": "O campus é fácil de percorrer a pé: o Warriner Hall, ao norte, fica a cerca de 1,5 km do Kelly/Shorts Stadium, a sudeste."
   }
 }

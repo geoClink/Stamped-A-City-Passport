@@ -1561,6 +1561,126 @@
       "longitude": -85.894756
     }
   ],
+  "Eastern Michigan University": [
+    {
+      "id": "trad_emu_water_tower",
+      "name": "Ypsilanti Water Tower",
+      "description": "Built in 1890 on the highest point in Ypsilanti, the stone water tower borders the campus and is the city's best-known landmark. Locals give directions by it, so take a photo with it.",
+      "latitude": 42.245552,
+      "longitude": -83.62469
+    },
+    {
+      "id": "trad_emu_kiosk",
+      "name": "The Pray-Harrold Kiosk",
+      "description": "Covering the kiosk outside Pray-Harrold with flyers for campus events is a longstanding Eastern tradition. Stop by and read what's happening this week.",
+      "latitude": 42.249577,
+      "longitude": -83.62259
+    },
+    {
+      "id": "trad_emu_pease_organ",
+      "name": "Concert at Pease Auditorium",
+      "description": "Pease Auditorium has been the campus concert hall since 1915. Catch a performance and listen for its 81-rank Aeolian-Skinner pipe organ.",
+      "latitude": 42.246433,
+      "longitude": -83.621446
+    },
+    {
+      "id": "trad_emu_starkweather_ghost",
+      "name": "The Ghost of Starkweather Hall",
+      "description": "Campus legend says Mary Ann Starkweather, who paid for the hall, haunts it because it no longer serves the religious purpose she intended. Walk past the oldest building on campus and look up at its tower.",
+      "latitude": 42.246508,
+      "longitude": -83.624681
+    }
+  ],
+  "Michigan Technological University": [
+    {
+      "id": "trad_mtu_snow_statues",
+      "name": "Winter Carnival Snow Statues",
+      "description": "Every February since the 1930s, students pile, stomp and carve snow into giant statues on a yearly theme for Winter Carnival, which began in 1922. Walk the campus and see them.",
+      "latitude": 47.119075,
+      "longitude": -88.547552
+    },
+    {
+      "id": "trad_mtu_pep_band",
+      "name": "Huskies Pep Band at a Hockey Game",
+      "description": "The Huskies Pep Band, formed in 1928, plays at every home hockey game. Join the crowd in linking arms and swaying to the \"Blue Skirt Waltz\", the Copper Country Anthem.",
+      "latitude": 47.112465,
+      "longitude": -88.545851
+    },
+    {
+      "id": "trad_mtu_copper_boulder",
+      "name": "The Giant Copper Boulder",
+      "description": "The Copper Pavilion outside the A. E. Seaman Mineral Museum holds a 19-ton boulder of copper pulled from the bottom of Lake Superior, a Guinness World Record holder. Go see how big it is.",
+      "latitude": 47.110802,
+      "longitude": -88.552384
+    },
+    {
+      "id": "trad_mtu_rozsa",
+      "name": "A Show at the Rozsa Center",
+      "description": "The Rozsa Center for the Performing Arts hosts film and music festivals through the year, including the Pine Mountain Music Festival and the 41 North Film Festival. Check the calendar and catch a show.",
+      "latitude": 47.117527,
+      "longitude": -88.54196
+    }
+  ],
+  "Oakland University": [
+    {
+      "id": "trad_oakland_carillon",
+      "name": "Summer Carillon Concerts",
+      "description": "On six Fridays each summer, carillonneurs from around the world give free concerts on the 49 bells of Elliott Tower. Come and listen from the lawn around the tower.",
+      "latitude": 42.673542,
+      "longitude": -83.215527
+    },
+    {
+      "id": "trad_oakland_grizz",
+      "name": "Rub the Grizz",
+      "description": "Students rub the belly of the 8-foot bronze grizzly outside the O'rena for luck before a big exam. Give it a rub and take a photo.",
+      "latitude": 42.674293,
+      "longitude": -83.214225
+    },
+    {
+      "id": "trad_oakland_holiday_walk",
+      "name": "Holiday Walk at Meadow Brook Hall",
+      "description": "Each holiday season, Meadow Brook Hall is decorated for its Holiday Walk, and Winter Wonder Lights fill the grounds at night. Plan a visit to see the mansion dressed for the season.",
+      "latitude": 42.67223,
+      "longitude": -83.20146
+    },
+    {
+      "id": "trad_oakland_amphitheatre",
+      "name": "Summer Concert at Meadow Brook",
+      "description": "Meadow Brook Amphitheatre has hosted summer concerts on campus since 1964. Catch a show from a pavilion seat or out on the lawn.",
+      "latitude": 42.676282,
+      "longitude": -83.202996
+    }
+  ],
+  "Central Michigan University": [
+    {
+      "id": "trad_cmich_fire_up_chips",
+      "name": "Fire Up, Chips!",
+      "description": "\"Fire Up, Chips!\" is Central's greeting and rallying cry. At a football game at Kelly/Shorts Stadium, jingle your keys before big plays and mime crashing cymbals with the crowd.",
+      "latitude": 43.57757,
+      "longitude": -84.77105
+    },
+    {
+      "id": "trad_cmich_warriner_chimes",
+      "name": "Warriner Hall Chimes",
+      "description": "Chimes have sounded from Warriner Hall since 1939, and today recorded chimes greet each new hour. Stand on Warriner Mall and listen for them on the hour.",
+      "latitude": 43.592425,
+      "longitude": -84.775515
+    },
+    {
+      "id": "trad_cmich_boat_race",
+      "name": "Cardboard Boat Race",
+      "description": "On Homecoming morning, engineering students try to paddle boats made of cardboard across the Rose Ponds. Find a spot on the bank and cheer them on.",
+      "latitude": 43.581132,
+      "longitude": -84.770682
+    },
+    {
+      "id": "trad_cmich_pow_wow",
+      "name": "Celebrating Life Pow Wow",
+      "description": "Each March, Central hosts the Celebrating Life Pow Wow in McGuirk Arena, with traditional dancing, drumming, arts and food. It is open to the public, so come and watch.",
+      "latitude": 43.581566,
+      "longitude": -84.774189
+    }
+  ],
   "Yale University": [
     {
       "id": "trad_yale_woolsey_foot",
@@ -2419,6 +2539,36 @@
       "description": "The athletic field at Tournament Park, on the south side of campus, hosted the first Rose Bowl games. Walk past the track to see where the famous game began.",
       "latitude": 34.132928,
       "longitude": -118.125456
+    }
+  ],
+  "Colorado State University": [
+    {
+      "id": "trad_colostate_oval",
+      "name": "Walk the Oval",
+      "description": "Designed in 1909 to link the main campus buildings, the Oval is lined with 65 American elm trees. Take a stroll around the historic heart of campus.",
+      "latitude": 40.576189,
+      "longitude": -105.080783
+    },
+    {
+      "id": "trad_colostate_ram_clock",
+      "name": "Meet Under the Clock",
+      "description": "For generations, students have arranged to \"meet under the clock\" in the Lory Student Center. Find the Ram Clock above the food court and listen for its hourly chime.",
+      "latitude": 40.574788,
+      "longitude": -105.084724
+    },
+    {
+      "id": "trad_colostate_game_day",
+      "name": "Game Day with CAM the Ram",
+      "description": "CAM the Ram, the live mascot named for Colorado A&M, runs across the end zone after Rams touchdowns. The Old Main Bell, stolen in 1919 and returned in 2016, now hangs in a tower at the stadium. Catch a home game at Canvas Stadium.",
+      "latitude": 40.569831,
+      "longitude": -105.088506
+    },
+    {
+      "id": "trad_colostate_trial_garden",
+      "name": "Annual Flower Trial Garden",
+      "description": "CSU tests new flower varieties in this garden, which is free and open every day during daylight hours. Visit between late May and October, when the beds are in bloom.",
+      "latitude": 40.569381,
+      "longitude": -105.07615
     }
   ]
 }

@@ -19,8 +19,14 @@
     "Brown University": {
       "athleticsURL": "https://brownbears.com"
     },
+    "Central Michigan University": {
+      "athleticsURL": "https://cmuchippewas.com"
+    },
     "Clemson University": {
       "athleticsURL": "https://clemsontigers.com"
+    },
+    "Colorado State University": {
+      "athleticsURL": "https://csurams.com"
     },
     "Columbia University": {
       "athleticsURL": "https://gocolumbialions.com"
@@ -33,6 +39,9 @@
     },
     "Duke University": {
       "athleticsURL": "https://goduke.com"
+    },
+    "Eastern Michigan University": {
+      "athleticsURL": "https://emueagles.com"
     },
     "Florida Southern College": {
       "athleticsURL": "https://fscmocs.com"
@@ -179,6 +188,9 @@
         ]
       }
     },
+    "Michigan Technological University": {
+      "athleticsURL": "https://michigantechhuskies.com"
+    },
     "Mississippi State University": {
       "athleticsURL": "https://hailstate.com"
     },
@@ -187,6 +199,9 @@
     },
     "Northwestern University": {
       "athleticsURL": "https://nusports.com"
+    },
+    "Oakland University": {
+      "athleticsURL": "https://goldengrizzlies.com"
     },
     "Ohio State University": {
       "athleticsURL": "https://ohiostatebuckeyes.com"
