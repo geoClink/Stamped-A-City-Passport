@@ -635,3 +635,10 @@
 "Plan" = "계획";
 "Local" = "현지 정보";
 "Section" = "섹션";
+
+// MARK: - Building photo gallery (Wikimedia Commons)
+"More Photos" = "사진 더 보기";
+"Photo of %@" = "%@ 사진";
+"Opens the photo full screen" = "사진을 전체 화면으로 엽니다";
+"View on Wikimedia Commons" = "위키미디어 공용에서 보기";
+"Shows the photo's author and license" = "사진의 작성자와 라이선스를 표시합니다";

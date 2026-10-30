@@ -635,3 +635,10 @@
 "Plan" = "計画";
 "Local" = "周辺情報";
 "Section" = "セクション";
+
+// MARK: - Building photo gallery (Wikimedia Commons)
+"More Photos" = "その他の写真";
+"Photo of %@" = "%@の写真";
+"Opens the photo full screen" = "写真を全画面で表示します";
+"View on Wikimedia Commons" = "ウィキメディア・コモンズで見る";
+"Shows the photo's author and license" = "写真の作者とライセンスを表示します";

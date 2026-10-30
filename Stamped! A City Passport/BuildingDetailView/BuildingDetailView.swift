@@ -417,6 +417,7 @@ extension BuildingDetailView {
                 BuildingNoteField(buildingID: building.id, noteText: $noteText, isHighContrast: isHighContrast)
             }
             aboutSection
+            BuildingPhotoGallery(building: building, isHighContrast: isHighContrast)
             threeDModelSection
             localFlavorsSection
             reportIssueButton
