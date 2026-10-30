@@ -635,3 +635,15 @@
 "Plan" = "规划";
 "Local" = "当地";
 "Section" = "部分";
+
+// MARK: - College Facts (College Scorecard)
+"COLLEGE FACTS" = "大学数据";
+"Acceptance rate" = "录取率";
+"Undergraduates" = "本科生人数";
+"In-state tuition" = "州内学费";
+"Out-of-state tuition" = "州外学费";
+"Graduation rate" = "毕业率";
+"Median earnings after 10 years" = "10 年后收入中位数";
+"Tuition and fees are per year. Graduation is within 6 years; earnings are the median 10 years after starting." = "学费及杂费按年计算。毕业率为 6 年内毕业；收入为入学 10 年后的中位数。";
+"Source: U.S. Department of Education College Scorecard" = "来源：美国教育部 College Scorecard";
+"Opens the College Scorecard website" = "打开 College Scorecard 网站";

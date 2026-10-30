@@ -635,3 +635,15 @@
 "Plan" = "Planear";
 "Local" = "Local";
 "Section" = "Sección";
+
+// MARK: - College Facts (College Scorecard)
+"COLLEGE FACTS" = "DATOS DE LA UNIVERSIDAD";
+"Acceptance rate" = "Tasa de admisión";
+"Undergraduates" = "Estudiantes de grado";
+"In-state tuition" = "Matrícula para residentes";
+"Out-of-state tuition" = "Matrícula para no residentes";
+"Graduation rate" = "Tasa de graduación";
+"Median earnings after 10 years" = "Ingreso mediano a los 10 años";
+"Tuition and fees are per year. Graduation is within 6 years; earnings are the median 10 years after starting." = "Matrícula y tasas por año. Graduación en un plazo de 6 años; ingresos medianos 10 años después de empezar.";
+"Source: U.S. Department of Education College Scorecard" = "Fuente: College Scorecard del Departamento de Educación de EE. UU.";
+"Opens the College Scorecard website" = "Abre el sitio web de College Scorecard";

@@ -132,6 +132,9 @@ struct CityDetailView: View {
                 case .plan:
                     CityItineraryView(city: viewModel.city)
 
+                    // US campuses only: College Scorecard facts (hidden while loading or without data)
+                    CollegeFactsSection(campus: viewModel.city, isHighContrast: isHighContrast)
+
                     // Events — hidden when there are none
                     let events = TicketmasterService.shared
                     if events.isLoading || !events.events.isEmpty {
