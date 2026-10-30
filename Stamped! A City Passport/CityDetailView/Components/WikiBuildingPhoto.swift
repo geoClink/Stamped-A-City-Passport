@@ -59,7 +59,8 @@ struct WikiBuildingPhoto: View {
         .clipped()
         .task {
             let summary = await WikimediaService.shared.summary(for: building.name, buildingID: building.id)
-            photoURL = summary.photoURL
+            // A city saved for offline use loads its saved photo file instead
+            photoURL = OfflineStore.shared.displayURL(for: summary.photoURL)
             loaded = true
         }
     }

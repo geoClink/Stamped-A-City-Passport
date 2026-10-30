@@ -56,7 +56,8 @@ struct CityHeroHeader: View {
             let summary = await WikimediaService.shared.citySummary(for: city.name)
             // A city's article photo is usually its skyline; a university's is often a founder's
             // portrait, a seal or a logo, so campuses use their own landmark photo instead
-            photoURL = city.isCampus ? nil : summary.photoURL
+            // (a city saved for offline use loads its saved photo file instead)
+            photoURL = city.isCampus ? nil : OfflineStore.shared.displayURL(for: summary.photoURL)
             if let extract = summary.extract, !extract.isEmpty {
                 // Keep only the first two sentences for a tight blurb
                 let sentences = extract.components(separatedBy: ". ")

@@ -759,3 +759,24 @@
 
 /* Game Day: a game whose start time isn't announced yet */
 "Time TBA" = "Horário a definir";
+
+/* Save for Offline: city page card and Settings list */
+"Offline Use" = "Uso offline";
+"Save the landmark photos and Wikipedia text to use without a connection, like on a flight." = "Salve as fotos e os textos da Wikipédia dos pontos turísticos para usar sem conexão, como em um voo.";
+"Save for Offline" = "Salvar para uso offline";
+"Downloads photos and text for %d landmarks." = "Baixa fotos e textos de %d pontos turísticos.";
+"Saving %d of %d…" = "Salvando %d de %d…";
+"Stops saving. What's saved so far is kept for next time." = "Interrompe o salvamento. O que já foi salvo fica guardado para a próxima vez.";
+"Saved for Offline" = "Salvo para uso offline";
+"%1$@, saved %2$@" = "%1$@, salvo em %2$@";
+"Remove Offline Copy" = "Remover cópia offline";
+"Deletes the saved photos and text from this device." = "Apaga deste dispositivo as fotos e textos salvos.";
+"Remove the offline copy of %@?" = "Remover a cópia offline de %@?";
+"Remove" = "Remover";
+"Couldn't finish saving. Check your connection and try again; what's saved so far is kept." = "Não foi possível terminar de salvar. Verifique sua conexão e tente de novo; o que já foi salvo é mantido.";
+"Low Data Mode is on. Turn it off in Settings to save photos." = "O Modo de Dados Reduzidos está ativado. Desative-o em Ajustes para salvar fotos.";
+"Couldn't save to this device. Check that there's free storage." = "Não foi possível salvar neste dispositivo. Verifique se há espaço livre.";
+"Maps, weather, events and photo galleries still need a connection. For an offline map, download this area in Apple Maps (Offline Maps)." = "Mapas, clima, eventos e galerias de fotos ainda precisam de conexão. Para um mapa offline, baixe esta área no Mapas da Apple (Mapas Offline).";
+"No cities saved yet. Open a city or campus and tap Save for Offline in its Plan tab." = "Nenhuma cidade salva ainda. Abra uma cidade ou um campus e toque em Salvar para uso offline na aba Planejar.";
+"Remove %@" = "Remover %@";
+"Maps aren't saved. For an offline map, download the area in Apple Maps (Offline Maps)." = "Os mapas não são salvos. Para um mapa offline, baixe a área no Mapas da Apple (Mapas Offline).";

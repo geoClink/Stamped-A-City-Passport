@@ -759,3 +759,24 @@
 
 /* Game Day: a game whose start time isn't announced yet */
 "Time TBA" = "时间待定";
+
+/* Save for Offline: city page card and Settings list */
+"Offline Use" = "离线使用";
+"Save the landmark photos and Wikipedia text to use without a connection, like on a flight." = "保存地标照片和维基百科简介，在飞机上等没有网络的地方也能使用。";
+"Save for Offline" = "保存以供离线使用";
+"Downloads photos and text for %d landmarks." = "下载 %d 个地标的照片和简介。";
+"Saving %d of %d…" = "正在保存第 %d 个，共 %d 个…";
+"Stops saving. What's saved so far is kept for next time." = "停止保存。已保存的内容会保留，下次继续。";
+"Saved for Offline" = "已保存以供离线使用";
+"%1$@, saved %2$@" = "%1$@，保存于 %2$@";
+"Remove Offline Copy" = "移除离线副本";
+"Deletes the saved photos and text from this device." = "从此设备删除已保存的照片和简介。";
+"Remove the offline copy of %@?" = "要移除 %@ 的离线副本吗？";
+"Remove" = "移除";
+"Couldn't finish saving. Check your connection and try again; what's saved so far is kept." = "未能完成保存。请检查网络连接后重试；已保存的内容会保留。";
+"Low Data Mode is on. Turn it off in Settings to save photos." = "低数据模式已开启。要保存照片，请在“设置”中关闭它。";
+"Couldn't save to this device. Check that there's free storage." = "无法保存到此设备。请检查是否有可用的存储空间。";
+"Maps, weather, events and photo galleries still need a connection. For an offline map, download this area in Apple Maps (Offline Maps)." = "地图、天气、活动和照片图库仍需要网络连接。如需离线地图，请在 Apple 地图中下载此区域（离线地图）。";
+"No cities saved yet. Open a city or campus and tap Save for Offline in its Plan tab." = "尚未保存任何城市。打开一个城市或校园，在“规划”标签中轻点“保存以供离线使用”。";
+"Remove %@" = "移除 %@";
+"Maps aren't saved. For an offline map, download the area in Apple Maps (Offline Maps)." = "地图不会被保存。如需离线地图，请在 Apple 地图中下载该区域（离线地图）。";

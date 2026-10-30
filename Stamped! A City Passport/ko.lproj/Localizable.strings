@@ -759,3 +759,24 @@
 
 /* Game Day: a game whose start time isn't announced yet */
 "Time TBA" = "시간 미정";
+
+/* Save for Offline: city page card and Settings list */
+"Offline Use" = "오프라인 사용";
+"Save the landmark photos and Wikipedia text to use without a connection, like on a flight." = "명소 사진과 위키백과 설명을 저장해 비행기 안처럼 연결이 없는 곳에서도 사용하세요.";
+"Save for Offline" = "오프라인용으로 저장";
+"Downloads photos and text for %d landmarks." = "명소 %d곳의 사진과 설명을 다운로드합니다.";
+"Saving %d of %d…" = "%d/%d 저장 중…";
+"Stops saving. What's saved so far is kept for next time." = "저장을 멈춥니다. 지금까지 저장한 내용은 다음을 위해 남겨 둡니다.";
+"Saved for Offline" = "오프라인용으로 저장됨";
+"%1$@, saved %2$@" = "%1$@, %2$@에 저장";
+"Remove Offline Copy" = "오프라인 사본 제거";
+"Deletes the saved photos and text from this device." = "저장한 사진과 설명을 이 기기에서 삭제합니다.";
+"Remove the offline copy of %@?" = "%@의 오프라인 사본을 제거할까요?";
+"Remove" = "제거";
+"Couldn't finish saving. Check your connection and try again; what's saved so far is kept." = "저장을 완료하지 못했습니다. 연결을 확인한 후 다시 시도하세요. 지금까지 저장한 내용은 유지됩니다.";
+"Low Data Mode is on. Turn it off in Settings to save photos." = "저데이터 모드가 켜져 있습니다. 사진을 저장하려면 설정에서 끄세요.";
+"Couldn't save to this device. Check that there's free storage." = "이 기기에 저장할 수 없습니다. 여유 공간이 있는지 확인하세요.";
+"Maps, weather, events and photo galleries still need a connection. For an offline map, download this area in Apple Maps (Offline Maps)." = "지도, 날씨, 이벤트, 사진 갤러리는 여전히 연결이 필요합니다. 오프라인 지도가 필요하면 Apple 지도에서 이 지역을 다운로드하세요(오프라인 지도).";
+"No cities saved yet. Open a city or campus and tap Save for Offline in its Plan tab." = "아직 저장한 도시가 없습니다. 도시나 캠퍼스를 열고 계획 탭에서 오프라인용으로 저장을 탭하세요.";
+"Remove %@" = "%@ 제거";
+"Maps aren't saved. For an offline map, download the area in Apple Maps (Offline Maps)." = "지도는 저장되지 않습니다. 오프라인 지도가 필요하면 Apple 지도에서 지역을 다운로드하세요(오프라인 지도).";
