@@ -21,8 +21,10 @@ extension CityLocation.City {
     /// City → official public events calendar. Every feed is https and needs no API key.
     static let cityEventFeeds: [CityLocation.City: CampusEventFeed] = [
         // Public libraries (LibCal), each limited to its central branch with `cam`
+        // Denver also keeps only Adults (8515) and All Ages (8513) with `aud`: the central
+        // branch's full feed is mostly teen programs
         .denver: CampusEventFeed(
-            source: .ical(url: URL(string: "https://denverlibrary.libcal.com/ical_subscribe.php?src=p&cid=20634&cam=8762")!),
+            source: .ical(url: URL(string: "https://denverlibrary.libcal.com/ical_subscribe.php?src=p&cid=20634&cam=8762&aud=8515,8513")!),
             calendarName: "Denver Public Library"
         ),
         .houston: CampusEventFeed(
@@ -54,6 +56,17 @@ extension CityLocation.City {
         .boston: CampusEventFeed(
             source: .ical(url: URL(string: "https://www.trumba.com/calendars/freedom_trail_foundation_events.ics")!),
             calendarName: "Freedom Trail Foundation"
+        ),
+        // WordPress "The Events Calendar" feeds, linked from the organisations' own event pages
+        // (checked 2026-10-30). Honolulu is the Hawaiʻi State Library on King Street, not the
+        // statewide feed, which covers every island.
+        .honolulu: CampusEventFeed(
+            source: .ical(url: URL(string: "https://www.librarieshawaii.org/venue/hawaii-state-library/?ical=1")!),
+            calendarName: "Hawaiʻi State Library"
+        ),
+        .miami: CampusEventFeed(
+            source: .ical(url: URL(string: "https://museumofmiami.org/?post_type=tribe_events&ical=1&eventDisplay=list")!),
+            calendarName: "Museum of Miami"
         ),
         .vancouver: CampusEventFeed(
             source: .ical(url: URL(string: "https://www.trumba.com/calendars/city-of-vancouver-events.ics")!),
