@@ -370,6 +370,14 @@
 "Find tours and tickets for %@ on GetYourGuide" = "GetYourGuide で %@ のツアーとチケットを探す";
 "Opens GetYourGuide. Stamped! doesn't handle bookings or payments." = "GetYourGuide を開きます。Stamped! は予約や支払いを扱いません。";
 
+// MARK: - Building page: food tours & nearby stays
+"Find Food Tours & Cooking Classes" = "フードツアーと料理教室を探す";
+"Find food tours and cooking classes in %@ on GetYourGuide" = "GetYourGuide で %@ のフードツアーと料理教室を探す";
+"Stays Near Here" = "近くの宿泊先";
+"%lld min walk" = "徒歩%lld分";
+"Hotel data from Apple Maps." = "ホテルのデータは Apple マップによるものです。";
+"Shows this hotel's details and prices." = "このホテルの詳細と料金を表示します。";
+
 // MARK: - City page tiles & home shortcuts
 "Quiz Mastered" = "クイズ制覇";
 "Architecture Quiz" = "建築クイズ";

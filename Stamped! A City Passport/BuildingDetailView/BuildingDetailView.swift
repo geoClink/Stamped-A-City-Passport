@@ -419,6 +419,10 @@ extension BuildingDetailView {
             aboutSection
             threeDModelSection
             localFlavorsSection
+            // Food tours on GetYourGuide (cities only), styled like Tours & Tickets
+            FoodToursButton(city: viewModel.city) { AnyView(secondaryButtonStyle($0, tint: brandColor)) }
+                .buttonStyle(.plain)
+            StaysNearbySection(building: building, cityName: viewModel.city.name, isHighContrast: isHighContrast)
             reportIssueButton
         }
         .frame(maxWidth: .infinity, alignment: .leading)
