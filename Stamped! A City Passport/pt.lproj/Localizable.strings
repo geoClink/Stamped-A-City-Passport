@@ -652,3 +652,10 @@
 "Opens the event page" = "Abre a página do evento";
 "Event Details" = "Detalhes do evento";
 "All day" = "Dia inteiro";
+
+// Architect page
+"architect.landmarks" = "Seus edifícios no Stamped!";
+"architect.openHint" = "Abre a página do arquiteto";
+"architect.fromWikipedia" = "Da Wikipédia";
+"architect.readOnWikipedia" = "Ler na Wikipédia";
+"architect.photoCredit" = "Foto: Wikimedia Commons";

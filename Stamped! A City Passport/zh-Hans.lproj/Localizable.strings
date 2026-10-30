@@ -652,3 +652,10 @@
 "Opens the event page" = "打开活动页面";
 "Event Details" = "活动详情";
 "All day" = "全天";
+
+// Architect page
+"architect.landmarks" = "Stamped!中的作品";
+"architect.openHint" = "打开建筑师页面";
+"architect.fromWikipedia" = "来自维基百科";
+"architect.readOnWikipedia" = "在维基百科上阅读";
+"architect.photoCredit" = "照片：Wikimedia Commons";

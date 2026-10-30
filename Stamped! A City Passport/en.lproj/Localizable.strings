@@ -310,3 +310,10 @@
 "dining.winery" = "Winery";
 "dining.market" = "Market";
 "dining.bar" = "Bar";
+
+// Architect page
+"architect.landmarks" = "Their Landmarks in Stamped!";
+"architect.openHint" = "Opens the architect's page";
+"architect.fromWikipedia" = "From Wikipedia";
+"architect.readOnWikipedia" = "Read on Wikipedia";
+"architect.photoCredit" = "Photo: Wikimedia Commons";

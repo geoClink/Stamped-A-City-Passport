@@ -652,3 +652,10 @@
 "Opens the event page" = "イベントのページを開きます";
 "Event Details" = "イベントの詳細";
 "All day" = "終日";
+
+// Architect page
+"architect.landmarks" = "Stamped!にある作品";
+"architect.openHint" = "建築家のページを開きます";
+"architect.fromWikipedia" = "Wikipediaより";
+"architect.readOnWikipedia" = "Wikipediaで読む";
+"architect.photoCredit" = "写真: Wikimedia Commons";

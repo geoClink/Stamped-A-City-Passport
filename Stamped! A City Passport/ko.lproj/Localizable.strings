@@ -652,3 +652,10 @@
 "Opens the event page" = "행사 페이지를 엽니다";
 "Event Details" = "행사 세부 정보";
 "All day" = "하루 종일";
+
+// Architect page
+"architect.landmarks" = "Stamped!에 있는 작품";
+"architect.openHint" = "건축가 페이지를 엽니다";
+"architect.fromWikipedia" = "위키백과 발췌";
+"architect.readOnWikipedia" = "위키백과에서 읽기";
+"architect.photoCredit" = "사진: Wikimedia Commons";
