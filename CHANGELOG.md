@@ -21,6 +21,7 @@ How to use this file:
 ### Added
 - Map pins group into numbered bubbles when zoomed out and split apart as you zoom in; tapping a bubble zooms in. On city maps (landmarks and saved places) and trip route maps.
 - Adrian Smith buildings: Burj Khalifa (Dubai) and Trump International Hotel & Tower (Chicago). Jin Mao Tower (Shanghai) is now credited to Adrian Smith (SOM).
+- Tours & Tickets on every city landmark page: a GetYourGuide search for that landmark (partner ID PBXFUP9), with a commission note. Campus buildings don't get it.
 - Events also come from SeatGeek, merged with Ticketmaster, so cities Ticketmaster covers thinly get a fuller list. Needs `SEATGEEK_CLIENT_ID` in the API-key plist; without it the app uses Ticketmaster only.
 
 ### Changed
