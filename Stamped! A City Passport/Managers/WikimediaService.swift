@@ -90,9 +90,8 @@ actor WikimediaService {
             // A "may refer to" list of other articles, not the place itself: try the next title
             if decoded.type == "disambiguation" { return nil }
 
-            // Prefer originalimage (higher resolution), fall back to thumbnail
-            var photoURL = decoded.originalimage?.source.flatMap(URL.init)
-                ?? decoded.thumbnail?.source.flatMap(URL.init)
+            // A phone-sized copy of the lead photo (see sizedPhotoURL)
+            var photoURL = Self.sizedPhotoURL(original: decoded.originalimage, thumbnail: decoded.thumbnail)
 
             // Some articles have no lead photo, or use a logo/diagram as it
             // (e.g. One World Trade Center). Look further down the article instead.
@@ -109,6 +108,26 @@ actor WikimediaService {
     }
 
     /// First real photograph (not a logo, map or diagram) in the article's media list.
+    /// The width asked for: one of Wikimedia's standard thumbnail sizes, sharp on any iPhone or iPad
+    nonisolated static let photoWidth = 1280
+
+    /// The lead photo at `photoWidth` instead of the full original. Originals can be huge
+    /// (Chicago's is 3,736 px and 8 MB), slow enough on a phone that the page showed
+    /// "No photo available" while waiting. Wikimedia thumbnail URLs carry their width
+    /// ("/330px-"), so the summary's thumbnail is re-sized to `photoWidth`. A photo that's
+    /// already smaller than that, or a thumbnail without a width, uses the original.
+    nonisolated static func sizedPhotoURL(original: WikiImage?, thumbnail: WikiImage?) -> URL? {
+        let originalURL = original?.source.flatMap(URL.init)
+        if let width = original?.width, width <= photoWidth, let originalURL {
+            return originalURL
+        }
+        if let source = thumbnail?.source,
+           let range = source.range(of: #"/\d+px-"#, options: .regularExpression) {
+            return URL(string: source.replacingCharacters(in: range, with: "/\(photoWidth)px-")) ?? originalURL
+        }
+        return originalURL ?? thumbnail?.source.flatMap(URL.init)
+    }
+
     private func firstPhotoInArticle(encodedTitle: String) async -> URL? {
         guard let url = URL(string: "https://en.wikipedia.org/api/rest_v1/page/media-list/\(encodedTitle)"),
               let (data, response) = try? await URLSession.shared.data(for: wikiRequest(url)),
@@ -754,8 +773,10 @@ nonisolated private struct WikiAPIResponse: Decodable {
     let extract: String?
 }
 
-nonisolated private struct WikiImage: Decodable {
+nonisolated struct WikiImage: Decodable {
     let source: String?
+    /// Pixel width, used to tell a huge original from one that's already phone-sized
+    var width: Int? = nil
 }
 
 nonisolated private struct WikiMediaList: Decodable {

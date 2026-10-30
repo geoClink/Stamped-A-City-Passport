@@ -756,3 +756,6 @@
 /* Local Calendar: a city's library, museum or city hall events */
 "Local Calendar" = "地域のカレンダー";
 "Finding local events…" = "地域のイベントを検索中…";
+
+/* Game Day: a game whose start time isn't announced yet */
+"Time TBA" = "時間未定";

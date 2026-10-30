@@ -213,10 +213,6 @@ class QuizViewModel: ObservableObject {
             score += 1
             currentStreak += 1
             if currentStreak > bestStreak { bestStreak = currentStreak }
-            if score > highScore {
-                highScore = score
-                brokeHighScore = true
-            }
             if score == 10 { hasPerfectScore = true }
 
             HapticManager.shared.trigger(.success)
@@ -242,6 +238,12 @@ class QuizViewModel: ObservableObject {
             if !reduceMotion {
                 withAnimation(.default) { shakeTrigger += 1 }
             }
+        }
+        // The best score only counts finished quizzes: saving it after every correct answer
+        // left "Best 1/10" behind when someone quit after the first question
+        if isLastQuestion, score > highScore {
+            highScore = score
+            brokeHighScore = true
         }
         // No auto-advance: the player reads the facts line, then taps Next.
     }

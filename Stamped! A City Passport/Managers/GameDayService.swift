@@ -86,7 +86,8 @@ final class GameDayService {
             guard !seen.contains(titleKey), !seen.contains(slotKey) else { continue }
             seen.insert(titleKey)
             seen.insert(slotKey)
-            gamesByVenue[venue, default: []].append(event)
+            // Show our name for the venue ("Spartan Stadium"), not the seller's ("Spartan Stadium-MI")
+            gamesByVenue[venue, default: []].append(event.atVenue(named: venueNames[venue]))
         }
         let picked = gamesByVenue.values.flatMap { $0.prefix(perVenue) }
         return Array(soonestFirst(picked).prefix(limit))
@@ -133,6 +134,42 @@ final class GameDayService {
             let nameWords = words(name).joined(separator: " ")
             return !nameWords.isEmpty && titleWords.contains(" \(nameWords) ")
         }
+    }
+
+    // MARK: - Titles
+
+    /// Words that can sit in front of a sport name: "Mens Ice Hockey", "Women's Volleyball"
+    private static let sportQualifiers: Set<String> = ["mens", "men's", "womens", "women's", "ice", "field", "beach"]
+
+    /// Sellers repeat the sport on both teams: "Michigan State Spartans Football vs. Washington Huskies
+    /// Football". Returns ("Michigan State Spartans vs. Washington Huskies", "Football"), taking the
+    /// sport from the side that names it in full ("Mens Ice Hockey"). Titles without a shared sport
+    /// on both sides of " vs. " or " at " come back unchanged, with no sport.
+    static func displayTitle(_ name: String) -> (title: String, sport: String?) {
+        for separator in [" vs. ", " vs ", " at "] {
+            guard let range = name.range(of: separator) else { continue }
+            var left = name[..<range.lowerBound].split(separator: " ").map(String.init)
+            var right = name[range.upperBound...].split(separator: " ").map(String.init)
+            // The words both teams end with, e.g. ["Football"] or ["Womens", "Volleyball"]
+            var shared = 0
+            while shared < min(left.count, right.count) - 1,
+                  left[left.count - 1 - shared].lowercased() == right[right.count - 1 - shared].lowercased() {
+                shared += 1
+            }
+            guard shared > 0 else { return (name, nil) }
+            var sportWords = Array(right.suffix(shared))
+            left.removeLast(shared)
+            right.removeLast(shared)
+            // "Mens Ice" in front of the shared "Hockey" belongs to the sport, not the team
+            while right.count > 1, let last = right.last, sportQualifiers.contains(last.lowercased()) {
+                sportWords.insert(right.removeLast(), at: 0)
+            }
+            while left.count > 1, let last = left.last, sportQualifiers.contains(last.lowercased()) {
+                left.removeLast()
+            }
+            return (left.joined(separator: " ") + separator + right.joined(separator: " "), sportWords.joined(separator: " "))
+        }
+        return (name, nil)
     }
 
     /// Lowercased words, punctuation dropped: "Spartan Stadium-MI" → ["spartan", "stadium", "mi"]

@@ -756,3 +756,6 @@
 /* Local Calendar: a city's library, museum or city hall events */
 "Local Calendar" = "Calendario locale";
 "Finding local events…" = "Ricerca di eventi locali…";
+
+/* Game Day: a game whose start time isn't announced yet */
+"Time TBA" = "Orario da definire";
