@@ -1383,5 +1383,684 @@
         "foodSpots": []
       }
     ]
+  },
+  {
+    "name": "Johns Hopkins University",
+    "enumCase": "johnsHopkins",
+    "country": "unitedStates",
+    "aliases": [
+      "JHU",
+      "Johns Hopkins",
+      "Hopkins",
+      "Blue Jays"
+    ],
+    "colors": [
+      "#002D72",
+      "#68ACE5"
+    ],
+    "traditions": [
+      {
+        "id": "trad_jhu_gilman_seal",
+        "name": "The Gilman Hall Seal",
+        "description": "Legend says a student who steps on the university seal in the Gilman Hall foyer won't graduate, so it's roped off. Have a look, then walk around it.",
+        "coordinates": [
+          39.328972,
+          -76.621593
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/180508492",
+        "source": "https://apply.jhu.edu/hopkins-insider/a-hopkins-bucket-list-for-every-blue-jay/"
+      },
+      {
+        "id": "trad_jhu_blue_jay_statue",
+        "name": "The Painted Blue Jay",
+        "description": "Student groups repaint the Blue Jay statue to mark events and celebrations. Stop by to see what colors it's wearing today.",
+        "coordinates": [
+          39.331058,
+          -76.619621
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/9005850729",
+        "source": "https://apply.jhu.edu/hopkins-insider/a-hopkins-bucket-list-for-every-blue-jay/"
+      },
+      {
+        "id": "trad_jhu_lacrosse",
+        "name": "Lacrosse at Homewood Field",
+        "description": "Lacrosse is the signature sport at Hopkins, and home games at Homewood Field draw big crowds. Catch a game and cheer on the Blue Jays.",
+        "coordinates": [
+          39.333484,
+          -76.620872
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/51724389",
+        "source": "https://apply.jhu.edu/hopkins-insider/a-hopkins-bucket-list-for-every-blue-jay/"
+      },
+      {
+        "id": "trad_jhu_the_beach",
+        "name": "The Beach",
+        "description": "\"The Beach\" is the big lawn by the Eisenhower Library on Charles Street, where students study, picnic and play. Spread out a blanket and watch the sunset.",
+        "coordinates": [
+          39.329106,
+          -76.618484
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/193901017",
+        "source": "https://apply.jhu.edu/hopkins-insider/a-hopkins-bucket-list-for-every-blue-jay/"
+      },
+      {
+        "id": "trad_jhu_spring_fair",
+        "name": "Spring Fair",
+        "description": "Every spring since 1972, students have run Spring Fair, a weekend festival with vendors, food, rides and music that draws Baltimore residents too. Visit in April to join in.",
+        "coordinates": [
+          39.329034,
+          -76.620381
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/992080901",
+        "source": "https://en.wikipedia.org/wiki/Johns_Hopkins_University"
+      },
+      {
+        "id": "trad_jhu_art_museum",
+        "name": "The Art Museum Next Door",
+        "description": "The Baltimore Museum of Art sits just steps from campus, and admission is free. Add it to your campus visit.",
+        "coordinates": [
+          39.325818,
+          -76.619723
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/114709357",
+        "source": "https://apply.jhu.edu/hopkins-insider/a-hopkins-bucket-list-for-every-blue-jay/"
+      }
+    ],
+    "wiki": "Johns Hopkins University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Veritas vos liberabit",
+      "airportName": "Baltimore/Washington International Thurgood Marshall Airport",
+      "airportCode": "BWI",
+      "airportInfo": "BWI, south of Baltimore, is the closest major airport. MARC and Amtrak trains link it with Baltimore Penn Station, a short ride from campus.",
+      "funFact": "Johns Hopkins opened in 1876 on the model of European research universities and is considered the first research university in the United States.",
+      "language": "English",
+      "languageInfo": "Students call the Milton S. Eisenhower Library 'MSE' and the old Hutzler Reading Room in Gilman Hall 'the Hut.' The teams are the Blue Jays.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Baltimore Penn Station",
+      "transportationFact": "Homewood's brick paths are easy to walk. Baltimore Penn Station, with Amtrak and MARC trains, is a short drive or bus ride south of campus."
+    },
+    "buildings": [
+      {
+        "id": "campus_jhu_homewood_museum",
+        "wiki": "Homewood Museum",
+        "name": "Homewood Museum",
+        "description": "Charles Carroll Jr. began this country house of his own design in 1801 on an estate given by his father, a signer of the Declaration of Independence. Its red brick and white marble Federal style set the look for the whole campus, and it is now a museum.",
+        "architect": "Charles Carroll Jr.",
+        "yearBuilt": 1801,
+        "address": "3400 N Charles St, Baltimore, MD 21218",
+        "oldUse": "Country House",
+        "newUse": "House Museum",
+        "buildingStyle": "Federal",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_jhu_gilman_hall",
+        "wiki": "Homewood Campus of Johns Hopkins University",
+        "name": "Gilman Hall",
+        "description": "Parker, Thomas & Rice designed Gilman Hall, dedicated in 1915 as the academic heart of Homewood and named for first president Daniel Coit Gilman. A renovation finished in 2010 added a glass-roofed atrium that holds the university's Archaeological Museum.",
+        "architect": "Parker, Thomas & Rice",
+        "yearBuilt": 1915,
+        "address": "3400 N Charles St, Baltimore, MD 21218",
+        "oldUse": "Academic Building",
+        "newUse": "Humanities Building",
+        "buildingStyle": "Federal",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          39.328972,
+          -76.621593
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/180508492"
+      },
+      {
+        "id": "campus_jhu_eisenhower_library",
+        "wiki": "Homewood Campus of Johns Hopkins University",
+        "name": "Milton S. Eisenhower Library",
+        "description": "Opened in 1964, the main library has six stories but only two above ground, in keeping with a campus myth that nothing may stand taller than Gilman Hall. Its interior is being rebuilt in a major renovation.",
+        "architect": "Unknown",
+        "yearBuilt": 1964,
+        "address": "3400 N Charles St, Baltimore, MD 21218",
+        "oldUse": "Library",
+        "newUse": "Library",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 6,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          39.329059,
+          -76.619409
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/180508454"
+      },
+      {
+        "id": "campus_jhu_shriver_hall",
+        "wiki": "Homewood Campus of Johns Hopkins University",
+        "name": "Shriver Hall",
+        "description": "Built from 1952 to 1954 with a bequest from lawyer Alfred Jenkins Shriver, this lecture hall follows his will closely: its murals show his class of 1891, Baltimore philanthropists and ten Baltimore beauties he chose himself.",
+        "architect": "Buckler, Fenhagen, Meyer and Ayers",
+        "yearBuilt": 1954,
+        "address": "3400 N Charles St, Baltimore, MD 21218",
+        "oldUse": "Lecture Hall",
+        "newUse": "Lecture Hall",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          39.326464,
+          -76.620267
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/134680371"
+      },
+      {
+        "id": "campus_jhu_nichols_house",
+        "wiki": "Homewood Campus of Johns Hopkins University",
+        "name": "Nichols House",
+        "description": "This two-story Georgian house was built in 1958 to help bring Milton S. Eisenhower to Hopkins, and he became its first resident. It is the president's home and once hosted Russian president Boris Yeltsin.",
+        "architect": "Unknown",
+        "yearBuilt": 1958,
+        "address": "3400 N Charles St, Baltimore, MD 21218",
+        "oldUse": "President's House",
+        "newUse": "President's House",
+        "buildingStyle": "Georgian",
+        "numberOfStories": 2,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          39.329779,
+          -76.623201
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/180508463"
+      },
+      {
+        "id": "campus_jhu_homewood_field",
+        "wiki": "Homewood Field",
+        "name": "Homewood Field",
+        "description": "Opened in 1906, Homewood Field is home to Hopkins lacrosse, whose teams represented the United States at the 1928 and 1932 Olympic lacrosse demonstrations. The national lacrosse museum stood beside it until 2016.",
+        "architect": "Unknown",
+        "yearBuilt": 1906,
+        "address": "3400 N Charles St, Baltimore, MD 21218",
+        "oldUse": "Athletic Field",
+        "newUse": "Stadium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_jhu_stsci",
+        "wiki": "Space Telescope Science Institute",
+        "name": "Space Telescope Science Institute",
+        "description": "On the edge of Homewood, this institute runs science operations for the Hubble and James Webb space telescopes. It was founded in 1981, and its original building was completed in 1983.",
+        "architect": "Unknown",
+        "yearBuilt": 1983,
+        "address": "3700 San Martin Dr, Baltimore, MD 21218",
+        "oldUse": "Research Institute",
+        "newUse": "Research Institute",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_jhu_wyman_park_building",
+        "wiki": "Wyman Park Building",
+        "name": "Wyman Park Building",
+        "description": "Built in 1934 as the U.S. Marine Hospital, it was the second-largest hospital in the system that cared for merchant sailors. Johns Hopkins once planned to tear it down but renovated it from 2021 to 2023 for offices.",
+        "architect": "Unknown",
+        "yearBuilt": 1934,
+        "address": "3100 Wyman Park Dr, Baltimore, MD 21211",
+        "oldUse": "Marine Hospital",
+        "newUse": "University Offices",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "New York University",
+    "enumCase": "nyu",
+    "country": "unitedStates",
+    "aliases": [
+      "NYU",
+      "Violets"
+    ],
+    "colors": [
+      "#57068C",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_nyu_washington_square_arch",
+        "name": "Washington Square Arch",
+        "description": "The arch belongs to the city, but it has become the unofficial symbol of NYU, whose buildings ring the park. Take a photo with the arch and Fifth Avenue behind it.",
+        "coordinates": [
+          40.731235,
+          -73.997102
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/248166269",
+        "source": "https://en.wikipedia.org/wiki/Washington_Square_Arch"
+      },
+      {
+        "id": "trad_nyu_bust_of_sylvette",
+        "name": "Bust of Sylvette",
+        "description": "In the plaza between the Silver Towers stands a huge enlargement of Picasso's Bust of Sylvette, made with Carl Nesjar. Walk into the courtyard to see it up close.",
+        "coordinates": [
+          40.727029,
+          -73.99839
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/5243566395",
+        "source": "https://en.wikipedia.org/wiki/University_Village_(Manhattan)"
+      },
+      {
+        "id": "trad_nyu_gould_plaza",
+        "name": "Gould Plaza",
+        "description": "This plaza off West 4th Street, framed by the Stern School and the Courant Institute, is where NYU students gather after classes. Look for the purple NYU flags on the buildings around it.",
+        "coordinates": [
+          40.728861,
+          -73.99592
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/481655771",
+        "source": "https://en.wikipedia.org/wiki/Gould_Plaza"
+      },
+      {
+        "id": "trad_nyu_grey_art_museum",
+        "name": "Grey Art Museum",
+        "description": "NYU's fine art museum, known as the Grey Art Gallery until 2023, now has larger galleries at 18 Cooper Square. Visit to see the university's collection, including modern Asian and Middle Eastern art.",
+        "coordinates": [
+          40.72781,
+          -73.991541
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/12997486602",
+        "source": "https://en.wikipedia.org/wiki/Grey_Art_Museum"
+      }
+    ],
+    "wiki": "New York University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "To Persevere and to Excel",
+      "airportName": "LaGuardia Airport",
+      "airportCode": "LGA",
+      "airportInfo": "New York City has three major airports: LaGuardia, JFK and Newark. AirTrain links JFK and Newark with trains into Manhattan.",
+      "funFact": "Most of NYU's buildings are scattered around Washington Square Park in Greenwich Village. Samuel Morse worked on the telegraph in the university's first Main Building, on the site of today's Silver Center.",
+      "language": "English",
+      "languageInfo": "The school colors are NYU Violet and white, and the teams are the Violets. The mascot, since 1981, is a bobcat.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / NYC Subway",
+      "transportationFact": "The West Fourth Street–Washington Square station is just west of the park at Sixth Avenue, and the 8th Street–NYU station on Broadway serves the east side of campus."
+    },
+    "buildings": [
+      {
+        "id": "campus_nyu_silver_center",
+        "wiki": "Silver Center",
+        "name": "Silver Center",
+        "description": "Alfred Zucker designed this brick, stone and terra-cotta building in 1892 to replace NYU's Gothic Revival first building on the same spot. Known as Main Building until 2002, it is home to the College of Arts and Science.",
+        "architect": "Alfred Zucker",
+        "yearBuilt": 1892,
+        "address": "32 Waverly Pl, New York, NY",
+        "oldUse": "Academic and Commercial Building",
+        "newUse": "College of Arts and Science",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_nyu_bobst_library",
+        "wiki": "Elmer Holmes Bobst Library",
+        "name": "Elmer Holmes Bobst Library",
+        "description": "Philip Johnson and Richard Foster designed NYU's 12-story main library, which opened in 1973 on the south side of Washington Square Park. Its marble floor was designed to look three-dimensional from above.",
+        "architect": "Philip Johnson and Richard Foster",
+        "yearBuilt": 1973,
+        "address": "70 Washington Square S, New York, NY 10012",
+        "oldUse": "University Library",
+        "newUse": "University Library",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 12,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_nyu_brown_building",
+        "wiki": "Brown Building (Manhattan)",
+        "name": "Brown Building",
+        "description": "John Woolley designed this ten-story iron and steel loft building, completed in 1901. Built as the Asch Building, it was the site of the 1911 Triangle Shirtwaist Factory fire and is now a National Historic Landmark owned by NYU.",
+        "architect": "John Woolley",
+        "yearBuilt": 1901,
+        "address": "23–29 Washington Pl, New York, NY",
+        "oldUse": "Commercial Building",
+        "newUse": "University Classrooms and Labs",
+        "buildingStyle": "Neo-Renaissance",
+        "numberOfStories": 10,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_nyu_skirball_center",
+        "wiki": "Skirball Center for the Performing Arts",
+        "name": "Skirball Center for the Performing Arts",
+        "description": "Completed in 2003 inside NYU's Kimmel Center, this 850-seat theater was designed by Kevin Roche John Dinkeloo and Associates. It presents dance, theater, music and talks open to the public.",
+        "architect": "Kevin Roche John Dinkeloo and Associates",
+        "yearBuilt": 2003,
+        "address": "566 LaGuardia Pl, New York, NY 10012",
+        "oldUse": "Theater",
+        "newUse": "Theater",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_nyu_silver_towers",
+        "wiki": "University Village (Manhattan)",
+        "name": "Silver Towers",
+        "description": "I. M. Pei and James Ingo Freed designed these 30-story towers of University Village, completed in 1966. They house NYU faculty and graduate students around a plaza with an enlargement of Picasso's Bust of Sylvette.",
+        "architect": "I. M. Pei and James Ingo Freed",
+        "yearBuilt": 1966,
+        "address": "100 and 110 Bleecker St, New York, NY 10012",
+        "oldUse": "Faculty Housing",
+        "newUse": "Faculty and Graduate Housing",
+        "buildingStyle": "Modern",
+        "numberOfStories": 30,
+        "height": 0,
+        "foodSpots": [],
+        "coordinates": [
+          40.726942,
+          -73.99795
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/247848703"
+      },
+      {
+        "id": "campus_nyu_provincetown_playhouse",
+        "wiki": "Provincetown Playhouse",
+        "name": "Provincetown Playhouse",
+        "description": "The Provincetown Players, whose members included Eugene O'Neill, turned a former stable and wine-bottling plant into this theater in 1918. Now owned by NYU, it is used by the Steinhardt School.",
+        "architect": "Unknown",
+        "yearBuilt": 1918,
+        "address": "133 MacDougal St, New York, NY",
+        "oldUse": "Stable and Bottling Plant",
+        "newUse": "Theater",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_nyu_casa_italiana",
+        "wiki": "General Winfield Scott House",
+        "name": "Casa Italiana Zerilli-Marimò",
+        "description": "NYU's center for Italian culture is in an Italianate brownstone built in 1851–52, where General Winfield Scott lived from 1853 to 1855. It hosts free public lectures, films and concerts.",
+        "architect": "Unknown",
+        "yearBuilt": 1851,
+        "address": "24 W 12th St, New York, NY",
+        "oldUse": "Private Residence",
+        "newUse": "Italian Cultural Center",
+        "buildingStyle": "Italianate",
+        "numberOfStories": 4,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Carnegie Mellon University",
+    "enumCase": "carnegieMellon",
+    "country": "unitedStates",
+    "aliases": [
+      "CMU",
+      "Carnegie Mellon",
+      "Carnegie Tech",
+      "Tartans"
+    ],
+    "colors": [
+      "#C41230",
+      "#000000"
+    ],
+    "traditions": [
+      {
+        "id": "trad_cmu_the_fence",
+        "name": "The Fence",
+        "description": "Painting the Fence in the middle of the Cut has been a tradition since the 1920s, and the original wooden fence once held the Guinness record as the most painted object. Walk by to see the newest coat of paint and message.",
+        "coordinates": [
+          40.443317,
+          -79.942966
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/231024625",
+        "source": "https://en.wikipedia.org/wiki/Carnegie_Mellon_University_traditions"
+      },
+      {
+        "id": "trad_cmu_buggy",
+        "name": "Buggy Races",
+        "description": "During Spring Carnival, student teams push and free-roll sleek, unpowered buggies around a course in Schenley Park in a race officially called Sweepstakes. Head into the park to watch the heats.",
+        "coordinates": [
+          40.438872,
+          -79.944514
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/714792792",
+        "source": "https://en.wikipedia.org/wiki/Carnegie_Mellon_University_traditions"
+      },
+      {
+        "id": "trad_cmu_midway",
+        "name": "Spring Carnival Midway",
+        "description": "Each April, campus groups build multi-story booths with games for the Spring Carnival Midway on the College of Fine Arts parking lot. The carnival is open to the Pittsburgh community, so stop by and explore the booths.",
+        "coordinates": [
+          40.441448,
+          -79.942951
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/27591225",
+        "source": "https://en.wikipedia.org/wiki/Carnegie_Mellon_University_traditions"
+      },
+      {
+        "id": "trad_cmu_kiltie_band",
+        "name": "The Kiltie Band",
+        "description": "Formed in 1908, the Kiltie Band wears kilts in honor of Andrew Carnegie's Scottish roots and plays at every home football game. Catch a game to hear the band and see King Arthur's quest for the Grail between the third and fourth quarters.",
+        "coordinates": [
+          40.443218,
+          -79.940227
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/220799873",
+        "source": "https://en.wikipedia.org/wiki/Carnegie_Mellon_University_traditions"
+      }
+    ],
+    "wiki": "Carnegie Mellon University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "My Heart Is in the Work",
+      "airportName": "Pittsburgh International Airport",
+      "airportCode": "PIT",
+      "airportInfo": "Pittsburgh International is about 27 km west of downtown Pittsburgh. The 28X bus runs to the airport from Oakland, the university district next to campus.",
+      "funFact": "Carnegie Mellon was formed in 1967, when the Carnegie Institute of Technology, founded by Andrew Carnegie in 1900, merged with the Mellon Institute of Industrial Research.",
+      "language": "English",
+      "languageInfo": "Campus has a Scottish theme in honor of Andrew Carnegie: the teams are the Tartans, the mascot is Scotty the Scottish terrier, and the band plays in kilts.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / PRT buses",
+      "transportationFact": "The main campus is compact and easy to walk. Pittsburgh Regional Transit buses connect it with Oakland and Downtown, and the 28X runs from Oakland to the airport."
+    },
+    "buildings": [
+      {
+        "id": "campus_cmu_hamerschlag_hall",
+        "wiki": "Carnegie Mellon University",
+        "name": "Hamerschlag Hall",
+        "description": "Palmer & Hornbostel designed this Beaux-Arts engineering building, first called Machinery Hall. It was built in stages in 1906 and 1914 and is one of the College of Engineering's teaching buildings.",
+        "architect": "Palmer & Hornbostel",
+        "yearBuilt": 1906,
+        "address": "425 Hamerschlag Dr, Pittsburgh, PA 15213",
+        "oldUse": "Machinery Hall",
+        "newUse": "Engineering Building",
+        "buildingStyle": "Beaux-Arts",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          40.442423,
+          -79.946671
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/27551077"
+      },
+      {
+        "id": "campus_cmu_college_of_fine_arts",
+        "wiki": "Carnegie Mellon College of Fine Arts",
+        "name": "College of Fine Arts Building",
+        "description": "Henry Hornbostel designed this Beaux-Arts building for the School of Applied Design, completed in stages in 1912 and 1916. Today it is home to the College of Fine Arts, one of the first comprehensive arts schools in the country.",
+        "architect": "Henry Hornbostel",
+        "yearBuilt": 1912,
+        "address": "4914 Frew St, Pittsburgh, PA 15213",
+        "oldUse": "School of Applied Design",
+        "newUse": "College of Fine Arts",
+        "buildingStyle": "Beaux-Arts",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          40.441448,
+          -79.942951
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/27591225"
+      },
+      {
+        "id": "campus_cmu_margaret_morrison",
+        "wiki": "Carnegie Mellon University",
+        "name": "Margaret Morrison Carnegie Hall",
+        "description": "Palmer & Hornbostel built this hall in 1906 and 1914 for the Margaret Morrison Carnegie School for Women. It now houses the Schools of Architecture and Design, and George A. Romero filmed Creepshow in and around it.",
+        "architect": "Palmer & Hornbostel",
+        "yearBuilt": 1906,
+        "address": "5001 Margaret Morrison St, Pittsburgh, PA 15213",
+        "oldUse": "Women's College",
+        "newUse": "Architecture and Design School",
+        "buildingStyle": "Beaux-Arts",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          40.442286,
+          -79.941562
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/27591314"
+      },
+      {
+        "id": "campus_cmu_baker_hall",
+        "wiki": "Carnegie Mellon University",
+        "name": "Baker Hall",
+        "description": "First called the Central Building and later Administration Hall, this Palmer & Hornbostel building went up in 1914 and 1919. It was renovated in the early 2000s.",
+        "architect": "Palmer & Hornbostel",
+        "yearBuilt": 1914,
+        "address": "4825 Frew St, Pittsburgh, PA 15213",
+        "oldUse": "Administration Hall",
+        "newUse": "Academic Building",
+        "buildingStyle": "Beaux-Arts",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          40.44151,
+          -79.945096
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/27590907"
+      },
+      {
+        "id": "campus_cmu_doherty_hall",
+        "wiki": "Carnegie Mellon University",
+        "name": "Doherty Hall",
+        "description": "Palmer & Hornbostel completed this hall in 1908 for the School of Applied Sciences, and it was later known as Engineering Hall. New chemistry labs were added in the early 2000s.",
+        "architect": "Palmer & Hornbostel",
+        "yearBuilt": 1908,
+        "address": "281 Hamerschlag Dr, Pittsburgh, PA 15213",
+        "oldUse": "School of Applied Sciences",
+        "newUse": "Science and Engineering Labs",
+        "buildingStyle": "Beaux-Arts",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          40.44251,
+          -79.944608
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/27574545"
+      },
+      {
+        "id": "campus_cmu_hamburg_hall",
+        "wiki": "Main Building, U.S. Bureau of Mines",
+        "name": "Hamburg Hall",
+        "description": "Henry Hornbostel designed this Beaux-Arts building, built from 1915 to 1917 as the main building of the U.S. Bureau of Mines experiment station. The university bought the complex in 1985, and it is now home to Heinz College.",
+        "architect": "Palmer & Hornbostel; Henry Hornbostel",
+        "yearBuilt": 1917,
+        "address": "4800 Forbes Ave, Pittsburgh, PA 15213",
+        "oldUse": "U.S. Bureau of Mines Headquarters",
+        "newUse": "Heinz College",
+        "buildingStyle": "Beaux-Arts",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_cmu_mellon_institute",
+        "wiki": "Mellon Institute of Industrial Research",
+        "name": "Mellon Institute",
+        "description": "Benno Janssen designed this Neoclassical research building, finished in 1937, with a monumental Ionic colonnade that Andrew Mellon wanted to echo the Treasury Building in Washington. Its monolithic limestone columns are said to be the largest in the world.",
+        "architect": "Benno Janssen (Janssen & Cocken)",
+        "yearBuilt": 1937,
+        "address": "4400 Fifth Ave, Pittsburgh, PA 15213",
+        "oldUse": "Industrial Research Institute",
+        "newUse": "University Research Building",
+        "buildingStyle": "Neoclassical",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_cmu_gates_hillman",
+        "wiki": "Kenneth C. Griffin School of Computer Science",
+        "name": "Gates and Hillman Centers",
+        "description": "Mack Scogin Merrill Elam Architects designed this LEED Gold computer science complex, opened in 2009. A footbridge links it to the Purnell Center for the Arts, a nod to joining computing and entertainment.",
+        "architect": "Mack Scogin Merrill Elam Architects",
+        "yearBuilt": 2009,
+        "address": "Carnegie Mellon University, Pittsburgh, PA 15213",
+        "oldUse": "Computer Science Building",
+        "newUse": "Computer Science Building",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          40.443845,
+          -79.944373
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/21724638"
+      },
+      {
+        "id": "campus_cmu_walking_to_the_sky",
+        "wiki": "Walking to the Sky",
+        "name": "Walking to the Sky",
+        "description": "Jonathan Borofsky's stainless steel sculpture of figures striding up a tall pole was installed in 2006 on the lawn off Forbes Avenue. The original stood at Rockefeller Center before moving to Dallas.",
+        "architect": "Jonathan Borofsky",
+        "yearBuilt": 2006,
+        "address": "Forbes Ave, Pittsburgh, PA 15213",
+        "oldUse": "Sculpture",
+        "newUse": "Sculpture",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
   }
 ]

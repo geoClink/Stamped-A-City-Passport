@@ -1176,5 +1176,290 @@
         "coordinatesSource": "https://www.openstreetmap.org/way/264036412"
       }
     ]
+  },
+  {
+    "name": "California Institute of Technology",
+    "enumCase": "caltech",
+    "country": "unitedStates",
+    "aliases": [
+      "Caltech",
+      "Cal Tech",
+      "Beavers"
+    ],
+    "colors": [
+      "#FF6C0C",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_caltech_fleming_cannon",
+        "name": "The Fleming Cannon",
+        "description": "A Franco-Prussian War-era cannon rests on its wheels in front of Fleming House and is fired only for big moments like commencement. MIT students once hauled it across the country as a prank. Stop by to see it.",
+        "coordinates": [
+          34.136563,
+          -118.123157
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/10129302",
+        "source": "https://en.wikipedia.org/wiki/House_system_at_the_California_Institute_of_Technology"
+      },
+      {
+        "id": "trad_caltech_turtle_pond",
+        "name": "The Turtle Pond",
+        "description": "Dozens of turtles, mostly red-eared sliders, live in the pond in Throop Memorial Garden, where Caltech's first building once stood. Look for them sunning on the rocks, but don't feed them.",
+        "coordinates": [
+          34.136838,
+          -118.125183
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/193245415",
+        "source": "https://tech.caltech.edu/2023/04/2023-04-27-whats-with-the-turtles/"
+      },
+      {
+        "id": "trad_caltech_watson_lectures",
+        "name": "Watson Lectures",
+        "description": "For about a century Caltech scientists have explained their work in free public talks, today called the Watson Lectures and held at Beckman Auditorium. Catch one in person or online.",
+        "coordinates": [
+          34.139191,
+          -118.125541
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/30086742",
+        "source": "https://magazine.caltech.edu/post/watson-lectures-100-years"
+      },
+      {
+        "id": "trad_caltech_pumpkin_drop",
+        "name": "Halloween Pumpkin Drop",
+        "description": "Every Halloween, students drop pumpkins frozen in liquid nitrogen from the top of Caltech Hall, the former Millikan Library, while a crowd watches for a spark. The name nods to Millikan's famous oil-drop experiment.",
+        "coordinates": [
+          34.136865,
+          -118.126055
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/44635068",
+        "source": "https://en.wikipedia.org/wiki/California_Institute_of_Technology"
+      },
+      {
+        "id": "trad_caltech_tournament_park",
+        "name": "Tournament Park",
+        "description": "The athletic field at Tournament Park, on the south side of campus, hosted the first Rose Bowl games. Walk past the track to see where the famous game began.",
+        "coordinates": [
+          34.132928,
+          -118.125456
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/468517521",
+        "source": "https://en.wikipedia.org/wiki/California_Institute_of_Technology"
+      }
+    ],
+    "wiki": "California Institute of Technology",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "The truth shall make you free",
+      "airportName": "Hollywood Burbank Airport",
+      "airportCode": "BUR",
+      "airportInfo": "Hollywood Burbank Airport is the closest airport to Caltech. Los Angeles International (LAX) has many more flights but is a longer drive across the city.",
+      "funFact": "NASA's Jet Propulsion Laboratory grew out of rocket research at Caltech's Guggenheim lab in the 1930s, and Caltech still manages JPL today.",
+      "language": "English",
+      "languageInfo": "Write it 'Caltech', one word: the institute considers spellings like 'Cal Tech' incorrect. The school color is orange, and the teams are the Beavers.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Metro A Line",
+      "transportationFact": "The compact campus is easy to walk. Metro A Line light rail stops at Lake and Allen stations, about a mile north of campus."
+    },
+    "buildings": [
+      {
+        "id": "campus_caltech_athenaeum",
+        "wiki": "Athenaeum at Caltech",
+        "name": "The Athenaeum",
+        "description": "Gordon Kaufmann designed this Mediterranean Revival faculty club, which opened in 1930 with gardens by Florence Yoch and Lucile Council. Albert Einstein stayed here during his winter visits to Caltech.",
+        "architect": "Gordon Kaufmann",
+        "yearBuilt": 1930,
+        "address": "California Institute of Technology, Pasadena, CA 91125",
+        "oldUse": "Faculty Club",
+        "newUse": "Faculty Club and Guest Rooms",
+        "buildingStyle": "Mediterranean Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_caltech_beckman_institute",
+        "wiki": "Beckman Institute at Caltech",
+        "name": "Beckman Institute",
+        "description": "Albert C. Martin & Associates designed this Spanish-style research building around a courtyard and reflecting pool. Funded by Arnold and Mabel Beckman and dedicated in 1989, it hosts chemistry and biology research and the Caltech Science Museum.",
+        "architect": "Albert C. Martin & Associates",
+        "yearBuilt": 1989,
+        "address": "California Institute of Technology, Pasadena, CA 91125",
+        "oldUse": "Research Institute",
+        "newUse": "Research Institute",
+        "buildingStyle": "Spanish style",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_caltech_guggenheim_lab",
+        "wiki": "Guggenheim Aeronautical Laboratory",
+        "name": "Guggenheim Aeronautical Laboratory",
+        "description": "Opened in 1929 with money from the Daniel Guggenheim Fund, this lab became the first university rocket research center under Theodore von Kármán, work that led to the Jet Propulsion Laboratory. Carvings over its doors show the Douglas World Cruisers that first flew around the world.",
+        "architect": "Mayers, Murray & Phillip (Goodhue Associates); Clarence S. Stein",
+        "yearBuilt": 1929,
+        "address": "California Institute of Technology, Pasadena, CA 91125",
+        "oldUse": "Aeronautics Laboratory",
+        "newUse": "Aerospace Laboratories (GALCIT)",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "coordinates": [
+          34.136558,
+          -118.124475
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/44635061"
+      },
+      {
+        "id": "campus_caltech_beckman_auditorium",
+        "wiki": "Campus of the California Institute of Technology",
+        "name": "Beckman Auditorium",
+        "description": "Edward Durell Stone designed this round white concert hall, a gift of Arnold and Mabel Beckman that opened with a gala concert in 1964. Its 1,136 seats host Caltech's public lectures, shows and films.",
+        "architect": "Edward Durell Stone",
+        "yearBuilt": 1964,
+        "address": "California Institute of Technology, Pasadena, CA 91125",
+        "oldUse": "Auditorium",
+        "newUse": "Auditorium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          34.139191,
+          -118.125541
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/30086742"
+      },
+      {
+        "id": "campus_caltech_caltech_hall",
+        "wiki": "Campus of the California Institute of Technology",
+        "name": "Caltech Hall",
+        "description": "The nine-story former Millikan Library is the tallest building on campus; its donor argued a tower would save green space on a low-rise campus. Completed in 1967, it was renamed Caltech Hall in 2021 and now holds offices and study space.",
+        "architect": "Flewelling & Moody",
+        "yearBuilt": 1967,
+        "address": "California Institute of Technology, Pasadena, CA 91125",
+        "oldUse": "Library",
+        "newUse": "Offices and Study Space",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 9,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          34.136865,
+          -118.126055
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/44635068"
+      },
+      {
+        "id": "campus_caltech_dabney_hall",
+        "wiki": "Campus of the California Institute of Technology",
+        "name": "Dabney Hall",
+        "description": "Planned by Bertram Goodhue's office and opened in 1928, Dabney Hall is one of the oldest buildings on campus. It still houses the humanities, with Dabney Lounge and the Humanities Library inside.",
+        "architect": "Mayers, Murray & Phillip (Goodhue Associates); Clarence S. Stein",
+        "yearBuilt": 1928,
+        "address": "California Institute of Technology, Pasadena, CA 91125",
+        "oldUse": "Humanities Building",
+        "newUse": "Humanities Offices and Library",
+        "buildingStyle": "Spanish Mission-influenced",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          34.137416,
+          -118.125406
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/44635060"
+      },
+      {
+        "id": "campus_caltech_parsons_gates",
+        "wiki": "Campus of the California Institute of Technology",
+        "name": "Parsons-Gates Hall of Administration",
+        "description": "Built in 1917 as the first unit of the Gates chemistry labs, this is the oldest building still standing on campus. Damaged in the 1971 San Fernando earthquake, it was rebuilt in 1983 for the offices of the president and provost.",
+        "architect": "Elmer Grey; Bertram Goodhue (1917); Bobrow/Thomas & Associates (1983 rebuild)",
+        "yearBuilt": 1917,
+        "address": "California Institute of Technology, Pasadena, CA 91125",
+        "oldUse": "Chemistry Laboratory",
+        "newUse": "Administration",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          34.137416,
+          -118.125902
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/44635027"
+      },
+      {
+        "id": "campus_caltech_bridge_lab",
+        "wiki": "Campus of the California Institute of Technology",
+        "name": "Norman Bridge Laboratory of Physics",
+        "description": "Bertram Goodhue designed this physics lab, first occupied in 1922 and the oldest academic building on campus. Robert Millikan had his laboratories here, and its second floor holds the Feynman Lecture Hall.",
+        "architect": "Bertram Goodhue",
+        "yearBuilt": 1922,
+        "address": "California Institute of Technology, Pasadena, CA 91125",
+        "oldUse": "Physics Laboratory",
+        "newUse": "Physics, Mathematics and Astronomy",
+        "buildingStyle": "Spanish Mission-influenced",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          34.13638,
+          -118.125901
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/123323785"
+      },
+      {
+        "id": "campus_caltech_kerckhoff_labs",
+        "wiki": "Campus of the California Institute of Technology",
+        "name": "Kerckhoff Laboratories of the Biological Sciences",
+        "description": "Opened in 1928, Kerckhoff is home to Caltech biology. Ed Lewis worked here on fruit fly genetics, research that won the 1995 Nobel Prize, and it keeps one of the few fruit fly collections in the US.",
+        "architect": "Mayers, Murray & Phillip (Goodhue Associates); Clarence S. Stein",
+        "yearBuilt": 1928,
+        "address": "California Institute of Technology, Pasadena, CA 91125",
+        "oldUse": "Biology Laboratory",
+        "newUse": "Biology Laboratory",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          34.137116,
+          -118.127018
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/44635015"
+      },
+      {
+        "id": "campus_caltech_cahill_center",
+        "wiki": "Campus of the California Institute of Technology",
+        "name": "Cahill Center for Astronomy and Astrophysics",
+        "description": "Thom Mayne's firm Morphosis designed this astronomy center, which opened in 2009 as the first building on campus to earn LEED Gold. Its street number, 1216, is the wavelength of ultraviolet light given off by hydrogen.",
+        "architect": "Thom Mayne / Morphosis",
+        "yearBuilt": 2009,
+        "address": "1216 E California Blvd, Pasadena, CA 91125",
+        "oldUse": "Astronomy Center",
+        "newUse": "Astronomy Center",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          34.13562,
+          -118.126273
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/44634973"
+      }
+    ]
   }
 ]

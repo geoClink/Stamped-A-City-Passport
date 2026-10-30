@@ -1464,6 +1464,103 @@
       "longitude": -6.256801
     }
   ],
+  "Wayne State University": [
+    {
+      "id": "trad_wayne_planetarium",
+      "name": "금요일 밤 천체투영관 쇼",
+      "description": "올드 메인에 있는 웨인 주립대학교 천체투영관은 대부분의 금요일 저녁에 무료 공개 쇼를 열어 지금의 밤하늘을 안내하고 돔 영상을 상영합니다. 좌석은 선착순이니 일찍 가세요.",
+      "latitude": 42.3550413,
+      "longitude": -83.0672617
+    },
+    {
+      "id": "trad_wayne_falcons",
+      "name": "올드 메인의 송골매",
+      "description": "올드 메인 시계탑의 발코니에는 송골매가 살고 있으며, 대학은 이들을 날개 달린 워리어스라고 부릅니다. 탑을 올려다보며 찾아보세요.",
+      "latitude": 42.3550413,
+      "longitude": -83.0672617
+    },
+    {
+      "id": "trad_wayne_artwalk",
+      "name": "캠퍼스 아트워크",
+      "description": "기증받은 약 30점의 야외 조각이 캠퍼스를 언제든 둘러볼 수 있는 야외 갤러리로 만듭니다. 톰슨 홈 앞의 \"City with Halo\"에서 시작해 아트워크 지도를 따라가 보세요.",
+      "latitude": 42.354757,
+      "longitude": -83.065481
+    },
+    {
+      "id": "trad_wayne_homecoming",
+      "name": "톰 애덤스 필드의 홈커밍 경기",
+      "description": "홈커밍 주간은 톰 애덤스 필드에서 열리는 워리어스 풋볼 경기로 마무리되며, 팬들은 그린과 골드 옷을 입고 응원합니다. 관중과 함께 워리어스를 응원해 보세요.",
+      "latitude": 42.355801,
+      "longitude": -83.078358
+    }
+  ],
+  "Western Michigan University": [
+    {
+      "id": "trad_wmu_bronco_statue",
+      "name": "브롱코 동상",
+      "description": "조각가 베릴 굿나잇이 만든 약 800킬로그램의 청동 브롱코가 1997년부터 캠퍼스에 서 있습니다. 원래는 그녀의 대작 \"The Day the Wall Came Down\"의 일부였습니다. 함께 사진을 찍어 보세요.",
+      "latitude": 42.284638,
+      "longitude": -85.608672
+    },
+    {
+      "id": "trad_wmu_homecoming",
+      "name": "월도 스타디움의 홈커밍",
+      "description": "매년 10월 WMU는 홈커밍을 맞아 도시를 브라운과 골드로 물들이고, 월도 스타디움에서 열리는 브롱코스 풋볼 경기로 마무리합니다. 관중석에서 함께하세요.",
+      "latitude": 42.285762,
+      "longitude": -85.60112
+    },
+    {
+      "id": "trad_wmu_hockey_banner",
+      "name": "로슨 아레나의 전국 챔피언",
+      "description": "브롱코스는 2025년 남자 아이스하키에서 첫 전국 우승을 차지했습니다. 로슨 아레나에서 경기를 보며 우승 배너를 찾아보세요.",
+      "latitude": 42.275962,
+      "longitude": -85.617875
+    },
+    {
+      "id": "trad_wmu_prospect_hill",
+      "name": "프로스펙트 힐을 올라 헤리티지 홀로",
+      "description": "WMU는 프로스펙트 힐에서 시작되었습니다. 1905년 이스트 홀이 문을 열었고, 한때는 전차가 사람들을 언덕 위로 실어 날랐습니다. 복원된 이스트 홀인 헤리티지 홀과 옆에 있는 노스 홀의 주랑 현관까지 걸어 올라가 보세요.",
+      "latitude": 42.286211,
+      "longitude": -85.597018
+    }
+  ],
+  "Grand Valley State University": [
+    {
+      "id": "trad_gvsu_little_mac",
+      "name": "리틀 맥 다리와 협곡",
+      "description": "학생들은 협곡과 리틀 맥 다리를 캠퍼스에서 가장 아름다운 곳으로 뽑았습니다. 보행자 다리를 건너며 아래로 흐르는 시냇물을 내려다보세요.",
+      "latitude": 42.964644,
+      "longitude": -85.886536
+    },
+    {
+      "id": "trad_gvsu_carillon",
+      "name": "쿡 타워의 카리용 연주",
+      "description": "매주 대학의 카리용 연주자가 쿡 카리용 타워의 종으로 바흐부터 팝송까지 다양한 음악을 연주합니다. 종소리가 들린다면 누군가 탑 위에서 직접 연주하고 있는 것입니다.",
+      "latitude": 42.963457,
+      "longitude": -85.888593
+    },
+    {
+      "id": "trad_gvsu_zumberge_pond",
+      "name": "점버지 연못",
+      "description": "레이커스 학생들은 계절에 상관없이 점버지 연못 옆 계단에서 공부하고, 먹고, 쉬는 것을 좋아합니다. 자리에 앉아 경치를 즐겨 보세요.",
+      "latitude": 42.962773,
+      "longitude": -85.887481
+    },
+    {
+      "id": "trad_gvsu_library_roof",
+      "name": "도서관 옥상에서 보는 풍경",
+      "description": "메리 아이데마 퓨 도서관 옥상에서는 앨런데일 캠퍼스가 한눈에 내려다보이며, 가을 단풍철에 학생들이 특히 좋아하는 곳입니다. 올라가서 경치를 감상해 보세요.",
+      "latitude": 42.96288,
+      "longitude": -85.889788
+    },
+    {
+      "id": "trad_gvsu_lubbers_gameday",
+      "name": "러버스 스타디움의 레이커스 풋볼",
+      "description": "러버스 스타디움의 공식 좌석은 10,444석이지만 종종 수천 명의 팬이 더 몰리며, 2021년에는 17,007명의 최다 관중 기록을 세웠습니다. 레이커스 홈경기에 함께하세요.",
+      "latitude": 42.969127,
+      "longitude": -85.894756
+    }
+  ],
   "Yale University": [
     {
       "id": "trad_yale_woolsey_foot",
@@ -1687,6 +1784,110 @@
       "longitude": -77.070156
     }
   ],
+  "Johns Hopkins University": [
+    {
+      "id": "trad_jhu_gilman_seal",
+      "name": "길먼 홀의 교장",
+      "description": "길먼 홀 로비 바닥의 대학 교장을 밟는 학생은 졸업하지 못한다는 전설이 있어 교장 주위에 줄이 쳐져 있습니다. 구경한 뒤에는 돌아서 지나가세요.",
+      "latitude": 39.328972,
+      "longitude": -76.621593
+    },
+    {
+      "id": "trad_jhu_blue_jay_statue",
+      "name": "색칠된 블루제이",
+      "description": "학생 단체들이 행사와 기념일마다 블루제이 동상을 새로 칠합니다. 오늘은 어떤 색인지 들러서 확인해 보세요.",
+      "latitude": 39.331058,
+      "longitude": -76.619621
+    },
+    {
+      "id": "trad_jhu_lacrosse",
+      "name": "홈우드 필드의 라크로스",
+      "description": "라크로스는 홉킨스를 대표하는 스포츠로, 홈우드 필드의 홈경기에는 많은 관중이 모입니다. 경기를 보며 블루제이스를 응원해 보세요.",
+      "latitude": 39.333484,
+      "longitude": -76.620872
+    },
+    {
+      "id": "trad_jhu_the_beach",
+      "name": "더 비치",
+      "description": "'더 비치'는 찰스 스트리트의 아이젠하워 도서관 옆 넓은 잔디밭으로, 학생들이 공부하고 소풍하고 놀이를 즐기는 곳입니다. 담요를 펴고 노을을 감상해 보세요.",
+      "latitude": 39.329106,
+      "longitude": -76.618484
+    },
+    {
+      "id": "trad_jhu_spring_fair",
+      "name": "스프링 페어",
+      "description": "1972년부터 매년 봄 학생들이 스프링 페어를 엽니다. 노점, 음식, 놀이기구, 음악이 어우러진 주말 축제로 볼티모어 주민들도 찾아옵니다. 4월에 방문해 함께 즐겨 보세요.",
+      "latitude": 39.329034,
+      "longitude": -76.620381
+    },
+    {
+      "id": "trad_jhu_art_museum",
+      "name": "바로 옆 미술관",
+      "description": "볼티모어 미술관은 캠퍼스에서 몇 걸음 거리에 있으며 입장료가 무료입니다. 캠퍼스 방문 일정에 넣어 보세요.",
+      "latitude": 39.325818,
+      "longitude": -76.619723
+    }
+  ],
+  "New York University": [
+    {
+      "id": "trad_nyu_washington_square_arch",
+      "name": "워싱턴 스퀘어 아치",
+      "description": "아치는 시 소유이지만, 공원을 둘러싼 건물들을 가진 NYU의 비공식 상징이 되었습니다. 5번가를 배경으로 아치와 함께 사진을 찍어 보세요.",
+      "latitude": 40.731235,
+      "longitude": -73.997102
+    },
+    {
+      "id": "trad_nyu_bust_of_sylvette",
+      "name": "실베트의 흉상",
+      "description": "실버 타워스 사이 광장에는 칼 네스야르와 함께 만든 피카소 '실베트의 흉상'의 거대한 확대판이 서 있습니다. 안뜰로 들어가 가까이에서 보세요.",
+      "latitude": 40.727029,
+      "longitude": -73.99839
+    },
+    {
+      "id": "trad_nyu_gould_plaza",
+      "name": "굴드 플라자",
+      "description": "스턴 스쿨과 쿠란트 연구소로 둘러싸인 웨스트 4번가의 이 광장은 NYU 학생들이 수업 후에 모이는 곳입니다. 주변 건물에 걸린 보라색 NYU 깃발을 찾아보세요.",
+      "latitude": 40.728861,
+      "longitude": -73.99592
+    },
+    {
+      "id": "trad_nyu_grey_art_museum",
+      "name": "그레이 미술관",
+      "description": "2023년까지 그레이 아트 갤러리로 불린 NYU의 미술관은 이제 쿠퍼 스퀘어 18번지에 더 넓은 전시실을 두고 있습니다. 아시아와 중동의 근대 미술을 포함한 대학 소장품을 보러 가 보세요.",
+      "latitude": 40.72781,
+      "longitude": -73.991541
+    }
+  ],
+  "Carnegie Mellon University": [
+    {
+      "id": "trad_cmu_the_fence",
+      "name": "더 펜스",
+      "description": "컷이라 불리는 잔디밭 한가운데 있는 펜스에 페인트를 칠하는 것은 1920년대부터 이어진 전통으로, 원래의 나무 펜스는 '가장 많이 칠해진 물체'로 기네스 기록을 보유했습니다. 들러서 가장 최근의 페인트와 메시지를 확인해 보세요.",
+      "latitude": 40.443317,
+      "longitude": -79.942966
+    },
+    {
+      "id": "trad_cmu_buggy",
+      "name": "버기 레이스",
+      "description": "스프링 카니발 기간에 학생 팀들이 동력 없는 날렵한 버기를 밀고 굴려 셴리 공원의 코스를 달리는데, 공식 이름은 스윕스테이크스입니다. 공원에 가서 경주를 구경해 보세요.",
+      "latitude": 40.438872,
+      "longitude": -79.944514
+    },
+    {
+      "id": "trad_cmu_midway",
+      "name": "스프링 카니발 미드웨이",
+      "description": "매년 4월이면 캠퍼스 단체들이 칼리지 오브 파인 아츠 주차장에 게임을 즐길 수 있는 여러 층짜리 부스를 지어 스프링 카니발 미드웨이를 엽니다. 피츠버그 주민에게도 열려 있으니 부스를 둘러보세요.",
+      "latitude": 40.441448,
+      "longitude": -79.942951
+    },
+    {
+      "id": "trad_cmu_kiltie_band",
+      "name": "킬티 밴드",
+      "description": "1908년에 결성된 킬티 밴드는 앤드루 카네기의 스코틀랜드 뿌리를 기려 킬트를 입고, 홈 미식축구 경기마다 연주합니다. 경기를 보러 가면 3쿼터와 4쿼터 사이에 아서 왕이 성배를 찾아 나서는 모습도 볼 수 있습니다.",
+      "latitude": 40.443218,
+      "longitude": -79.940227
+    }
+  ],
   "University of Chicago": [
     {
       "id": "trad_uchicago_reynolds_seal",
@@ -1835,6 +2036,147 @@
       "description": "핼러윈이면 론의 방에 사는 학생들이 지역 아이들에게 사탕을 나눠 줍니다. 1980년대부터 이어진 전통입니다. 가족들이 54개의 론 방을 따라 줄을 섭니다.",
       "latitude": 38.034259,
       "longitude": -78.504132
+    }
+  ],
+  "Rice University": [
+    {
+      "id": "trad_rice_sallyport",
+      "name": "샐리포트 통과하기",
+      "description": "전통에 따라 라이스 학생들은 졸업하는 날 러벳 홀의 아치 '샐리포트'를 지나 학교를 떠나며, 그전까지는 이곳을 지나지 않습니다. 아치 아래에 서서 아카데믹 쿼드를 바라보세요.",
+      "latitude": 29.71903,
+      "longitude": -95.397827
+    },
+    {
+      "id": "trad_rice_skyspace",
+      "name": "해 질 녘의 스카이스페이스",
+      "description": "제임스 터렐의 '트와일라잇 에피파니' 스카이스페이스에서는 해 뜰 때와 해 질 때 무료 빛 공연이 열려, 바뀌는 색색의 빛이 지붕 구멍으로 보이는 하늘을 바꿔 놓습니다. 자리를 잡으려면 일찍 오세요.",
+      "latitude": 29.716487,
+      "longitude": -95.404264
+    },
+    {
+      "id": "trad_rice_moon_speech",
+      "name": "달 연설의 경기장",
+      "description": "1962년 케네디 대통령은 라이스 스타디움에서 연설하며 이번 10년 안에 달에 가자고 국민에게 도전 과제를 던졌습니다. 그 유명한 연설이 열린 경기장을 찾아가 보세요.",
+      "latitude": 29.716323,
+      "longitude": -95.409324
+    },
+    {
+      "id": "trad_rice_mob",
+      "name": "마칭 아울 밴드",
+      "description": "마칭 아울 밴드, 즉 MOB는 스캐터 밴드로, 대형을 갖춰 행진하는 대신 미식축구 경기에서 코믹한 촌극을 선보입니다. 하프타임 공연을 꼭 보세요.",
+      "latitude": 29.715311,
+      "longitude": -95.40839
+    },
+    {
+      "id": "trad_rice_tree_for_every_student",
+      "name": "학생마다 나무 한 그루",
+      "description": "4,000그루가 넘는 나무와 관목이 캠퍼스 전체를 수목원으로 만들어, 라이스에는 학생 한 명당 나무가 한 그루씩 있다는 전설이 생겼습니다. 그늘진 안뜰을 산책해 보세요.",
+      "latitude": 29.718631,
+      "longitude": -95.398857
+    }
+  ],
+  "Emory University": [
+    {
+      "id": "trad_emory_gravity_monument",
+      "name": "그래비티 모뉴먼트",
+      "description": "다우먼 드라이브 옆 숲속에는 로저 뱁슨이 1963년 과학을 기리며 에머리에 기증한 분홍색 대리석 기념비가 숨어 있습니다. 많은 사람이 숲속의 묘비 같다고 말합니다. 직접 찾아보세요.",
+      "latitude": 33.790089,
+      "longitude": -84.326958
+    },
+    {
+      "id": "trad_emory_lullwater_tower",
+      "name": "럴워터 보호림과 탑",
+      "description": "럴워터 보호림은 산책하는 사람과 조깅하는 사람이 즐겨 찾는 약 62헥타르의 숲과 물가입니다. 오솔길을 따라 월터 캔들러가 집에 전기를 대려고 댐 옆에 세운 오래된 화강암 탑까지 가 보세요.",
+      "latitude": 33.801285,
+      "longitude": -84.314417
+    },
+    {
+      "id": "trad_emory_quad_eaves",
+      "name": "처마 밑의 글자",
+      "description": "헨리 혼보스텔은 분홍빛 조지아 대리석과 붉은 기와지붕으로 쿼드의 모습을 만들었습니다. 오래된 건물의 처마 밑을 올려다보면 예전에 그 안에서 무엇을 가르쳤는지 알려 주는 글자가 새겨져 있습니다.",
+      "latitude": 33.790622,
+      "longitude": -84.32474
+    },
+    {
+      "id": "trad_emory_source_route",
+      "name": "소스 루트",
+      "description": "카를로스 박물관 뒤편에서 계단이 베이커 우드랜드로 내려갑니다. 1970년대에 설치된 환경 조각의 일부입니다. 계단을 따라 숲으로 들어가 보세요.",
+      "latitude": 33.78962,
+      "longitude": -84.324451
+    },
+    {
+      "id": "trad_emory_robinson_tower",
+      "name": "로빈슨 시계탑의 종",
+      "description": "콕스 홀의 시계탑에는 이사 J. 윌리엄 로빈슨 부부를 기리며 2001년에 봉헌된 카리용 종이 있습니다. 캠퍼스를 걸으며 귀 기울여 보세요.",
+      "latitude": 33.792417,
+      "longitude": -84.323165
+    }
+  ],
+  "Tulane University": [
+    {
+      "id": "trad_tulane_streetcar",
+      "name": "세인트찰스 노면전차 타기",
+      "description": "세인트찰스 노선은 1835년부터 운행해 온, 세계에서 가장 오래된 연속 운행 노면전차 노선입니다. 깁슨 홀 앞의 툴레인 대학교 정류장까지 타 보세요.",
+      "latitude": 29.9351111,
+      "longitude": -90.1237354
+    },
+    {
+      "id": "trad_tulane_tiffany_woodward_way",
+      "name": "우드워드 웨이의 티파니 창",
+      "description": "1890년대 가든 디스트릭트에 있던 뉴컴 칼리지 옛 캠퍼스의 예배당을 위해 만든 루이스 컴퍼트 티파니의 스테인드글라스 세폭 창 두 점이 지금은 뉴컴 미술관의 우드워드 웨이 통로에 있습니다. 잠시 멈춰 찾아보세요.",
+      "latitude": 29.94198,
+      "longitude": -90.121078
+    },
+    {
+      "id": "trad_tulane_rogers_chapel",
+      "name": "로저스 기념 예배당",
+      "description": "캠퍼스 뉴컴 쪽의 마이라 클레어 로저스 기념 예배당에도 툴레인의 티파니 스테인드글라스가 있습니다. 안을 들여다보며 창을 감상해 보세요.",
+      "latitude": 29.94172,
+      "longitude": -90.122965
+    },
+    {
+      "id": "trad_tulane_mari_gallery",
+      "name": "딘위디 홀의 마야 전시실",
+      "description": "중미연구소는 1924년부터 마야 문명을 연구해 왔습니다. 딘위디 홀 3층의 전시실은 평일에 일반에 공개됩니다.",
+      "latitude": 29.935005,
+      "longitude": -90.122182
+    }
+  ],
+  "Washington University in St. Louis": [
+    {
+      "id": "trad_washu_seal",
+      "name": "교표를 밟지 마세요",
+      "description": "캠퍼스 전설에 따르면 브루킹스 홀 아래의 대학 교표를 밟으면 졸업하지 못하지만, 총장의 메달을 만지면 저주가 풀린다고 합니다. 교표를 찾아 피해서 걸어가 보세요.",
+      "latitude": 38.648039,
+      "longitude": -90.305061
+    },
+    {
+      "id": "trad_washu_declaration",
+      "name": "올린 도서관의 독립선언문",
+      "description": "올린 도서관에는 서명 전에 인쇄되어 식민지 곳곳에 소식을 알린 독립선언문 브로드사이드 인쇄본이 전시되어 있습니다. 전시에 들러 직접 보세요.",
+      "latitude": 38.648623,
+      "longitude": -90.307722
+    },
+    {
+      "id": "trad_washu_holmes_lounge",
+      "name": "홈스 라운지에서 점심",
+      "description": "리질리 홀의 옛 도서관 열람실은 이제 캠퍼스에서 가장 아름다운 공간 중 하나인 홈스 라운지가 되었습니다. 이곳에서 점심을 먹으며 분위기를 즐겨 보세요.",
+      "latitude": 38.648161,
+      "longitude": -90.306419
+    },
+    {
+      "id": "trad_washu_underpass",
+      "name": "그림으로 꾸민 지하도",
+      "description": "사우스 40과 메인 캠퍼스를 잇는 지하도는 캠퍼스 행사를 알리는 그림으로 가득합니다. 지나가며 최신 디자인을 구경해 보세요.",
+      "latitude": 38.647071,
+      "longitude": -90.312267
+    },
+    {
+      "id": "trad_washu_assembly_series",
+      "name": "그레이엄 채플의 어셈블리 시리즈",
+      "description": "그레이엄 채플에서는 엘리너 루스벨트, 글로리아 스타이넘 같은 연사를 캠퍼스로 초청해 온 대학의 오랜 강연 프로그램, 어셈블리 시리즈가 열립니다. 일정을 확인하고 강연을 들어 보세요.",
+      "latitude": 38.648232,
+      "longitude": -90.308906
     }
   ],
   "Stanford University": [
@@ -2040,6 +2382,43 @@
       "description": "에스타디오 올림피코 우니베르시타리오의 정문에는 자연석의 색을 살린 디에고 리베라의 부조가 있으며, 경기장에는 지금도 1968년 올림픽 성화대가 남아 있습니다. 경기장 바깥에서 부조를 볼 수 있습니다.",
       "latitude": 19.331688,
       "longitude": -99.192286
+    }
+  ],
+  "California Institute of Technology": [
+    {
+      "id": "trad_caltech_fleming_cannon",
+      "name": "플레밍 대포",
+      "description": "보불전쟁 시대의 대포가 바퀴를 단 채 플레밍 하우스 앞에 놓여 있으며, 졸업식 같은 중요한 순간에만 발포됩니다. MIT 학생들이 장난으로 이 대포를 미국 반대편까지 옮겨 간 적도 있습니다. 들러서 구경해 보세요.",
+      "latitude": 34.136563,
+      "longitude": -118.123157
+    },
+    {
+      "id": "trad_caltech_turtle_pond",
+      "name": "거북이 연못",
+      "description": "칼텍의 첫 건물이 있던 자리인 스루프 메모리얼 가든 연못에는 붉은귀거북을 중심으로 수십 마리의 거북이가 삽니다. 바위 위에서 햇볕을 쬐는 거북이를 찾아보되, 먹이는 주지 마세요.",
+      "latitude": 34.136838,
+      "longitude": -118.125183
+    },
+    {
+      "id": "trad_caltech_watson_lectures",
+      "name": "왓슨 강연",
+      "description": "칼텍 과학자들은 약 한 세기 동안 무료 공개 강연으로 자신들의 연구를 소개해 왔습니다. 지금은 왓슨 강연이라 불리며 벡먼 오디토리엄에서 열립니다. 현장이나 온라인으로 참여해 보세요.",
+      "latitude": 34.139191,
+      "longitude": -118.125541
+    },
+    {
+      "id": "trad_caltech_pumpkin_drop",
+      "name": "핼러윈 호박 낙하",
+      "description": "매년 핼러윈이면 학생들이 액체 질소로 얼린 호박을 옛 밀리컨 도서관인 칼텍 홀 꼭대기에서 떨어뜨리고, 관중은 불꽃이 튀는지 지켜봅니다. 이름은 밀리컨의 유명한 기름방울 실험에서 따왔습니다.",
+      "latitude": 34.136865,
+      "longitude": -118.126055
+    },
+    {
+      "id": "trad_caltech_tournament_park",
+      "name": "토너먼트 파크",
+      "description": "캠퍼스 남쪽 토너먼트 파크의 운동장에서 초창기 로즈볼 경기가 열렸습니다. 트랙을 따라 걸으며 그 유명한 경기가 시작된 곳을 둘러보세요.",
+      "latitude": 34.132928,
+      "longitude": -118.125456
     }
   ]
 }

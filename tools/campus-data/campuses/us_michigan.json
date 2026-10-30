@@ -1,0 +1,574 @@
+[
+  {
+    "name": "Wayne State University",
+    "enumCase": "wayneState",
+    "country": "unitedStates",
+    "aliases": [
+      "WSU",
+      "Wayne State",
+      "Wayne",
+      "Warriors"
+    ],
+    "colors": [
+      "#0C5449",
+      "#FFCC33"
+    ],
+    "traditions": [
+      {
+        "id": "trad_wayne_planetarium",
+        "name": "Friday Night Planetarium Show",
+        "description": "The Wayne State Planetarium in Old Main puts on free public shows most Friday evenings, with a tour of the current night sky and a fulldome film. Arrive early, since seats are first come, first served.",
+        "coordinates": [
+          42.3550413,
+          -83.0672617
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/8874010",
+        "source": "https://planetarium.wayne.edu/shows"
+      },
+      {
+        "id": "trad_wayne_falcons",
+        "name": "Old Main's Peregrine Falcons",
+        "description": "Peregrine falcons live on a balcony of Old Main's clock tower, and the university calls them its winged Warriors. Look up at the tower to spot them.",
+        "coordinates": [
+          42.3550413,
+          -83.0672617
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/8874010",
+        "source": "https://events.wayne.edu/clas/2025/02/20"
+      },
+      {
+        "id": "trad_wayne_artwalk",
+        "name": "Campus ArtWalk",
+        "description": "Around 30 donated outdoor sculptures make the campus an open-air gallery you can visit any time. Start at \"City with Halo\" in front of the Thompson Home and follow the ArtWalk map.",
+        "coordinates": [
+          42.354757,
+          -83.065481
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/69216998",
+        "source": "https://today.wayne.edu/news/2024/06/17/art-in-every-corner-wayne-states-artwalk-transforms-campus-into-living-museum-62898"
+      },
+      {
+        "id": "trad_wayne_homecoming",
+        "name": "Homecoming Game at Tom Adams Field",
+        "description": "Homecoming week ends with Warrior football at Tom Adams Field, and fans are asked to wear green and gold. Join the crowd and cheer on the Warriors.",
+        "coordinates": [
+          42.355801,
+          -83.078358
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/610626204",
+        "source": "https://homecoming.wayne.edu/"
+      }
+    ],
+    "wiki": "Wayne State University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Warrior Strong",
+      "airportName": "Detroit Metropolitan Wayne County Airport",
+      "airportCode": "DTW",
+      "airportInfo": "Detroit Metropolitan Wayne County Airport in Romulus, southwest of Detroit, is Michigan's busiest airport and the main gateway to the city.",
+      "funFact": "Old Main, the clock-towered heart of campus, was built in the 1890s as Detroit's Central High School. College classes that started there grew into Wayne State University.",
+      "language": "English",
+      "languageInfo": "The school colors are green and gold, and the teams are the Warriors.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / QLINE streetcar",
+      "transportationFact": "The main campus in Midtown is easy to walk. The QLINE streetcar runs along Woodward Avenue at the campus's east edge and links it with Downtown Detroit and New Center."
+    },
+    "buildings": [
+      {
+        "id": "campus_wayne_old_main",
+        "wiki": "Old Main (Wayne State University)",
+        "name": "Old Main",
+        "description": "Malcomson & Higginbotham designed this brick and limestone landmark as Detroit's Central High School, which began classes here in 1896. Its clock tower still marks the corner of Cass and Warren.",
+        "architect": "Malcomson & Higginbotham; Field, Hinchman & Smith",
+        "yearBuilt": 1895,
+        "address": "4841 Cass Ave, Detroit, MI 48201",
+        "oldUse": "Central High School",
+        "newUse": "Academic Building",
+        "buildingStyle": "Romanesque Revival / Queen Anne",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_wayne_mcgregor_center",
+        "wiki": "McGregor Memorial Conference Center",
+        "name": "McGregor Memorial Conference Center",
+        "description": "Minoru Yamasaki's travertine-clad pavilion, completed in 1958, sits beside a reflecting pool and sunken garden under a skylit hall. It is a National Historic Landmark for its architecture.",
+        "architect": "Minoru Yamasaki",
+        "yearBuilt": 1958,
+        "address": "495 Gilmour Mall, Detroit, MI 48202",
+        "oldUse": "Conference Center",
+        "newUse": "Conference Center",
+        "buildingStyle": "International Style / New Formalism",
+        "numberOfStories": 2,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_wayne_maccabees_building",
+        "wiki": "Maccabees Building",
+        "name": "Maccabees Building",
+        "description": "Albert Kahn designed this 15-story Art Deco tower on Woodward Avenue, finished in 1927. Also called Wayne Tower, it is now owned by Wayne State.",
+        "architect": "Albert Kahn",
+        "yearBuilt": 1927,
+        "address": "5057 Woodward Ave, Detroit, MI 48202",
+        "oldUse": "Office Building",
+        "newUse": "University Offices",
+        "buildingStyle": "Art Deco",
+        "numberOfStories": 15,
+        "height": 60,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_wayne_freer_house",
+        "wiki": "Charles Lang Freer House",
+        "name": "Charles Lang Freer House",
+        "description": "Wilson Eyre designed this Shingle-style house in 1892 for art collector Charles Lang Freer, whose gift founded the Smithsonian's Freer Gallery of Art. It now houses Wayne State's Merrill Palmer Skillman Institute.",
+        "architect": "Wilson Eyre",
+        "yearBuilt": 1892,
+        "address": "71 E Ferry St, Detroit, MI 48202",
+        "oldUse": "Private Residence",
+        "newUse": "Research Institute",
+        "buildingStyle": "Shingle Style",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_wayne_hilberry_theatre",
+        "wiki": "Hilberry Theatre",
+        "name": "Hilberry Theatre",
+        "description": "Built in 1917 as the First Church of Christ, Scientist, this Neoclassical building became Wayne State's graduate theatre in 1963. It is being renovated as the Gretchen C. Valade Jazz Center.",
+        "architect": "Field, Hinchman & Smith",
+        "yearBuilt": 1917,
+        "address": "4743 Cass Ave, Detroit, MI",
+        "oldUse": "Church",
+        "newUse": "Jazz Center",
+        "buildingStyle": "Neoclassical",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_wayne_hilberry_gateway",
+        "wiki": "Hilberry Gateway",
+        "name": "Hilberry Gateway",
+        "description": "This performing arts center opened in April 2023 next to the old Hilberry Theatre. Its 550-seat proscenium theater is home to the university's theatre and dance productions.",
+        "architect": "Unknown",
+        "yearBuilt": 2023,
+        "address": "4715 Cass Ave, Detroit, MI 48202",
+        "oldUse": "Performing Arts Center",
+        "newUse": "Performing Arts Center",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_wayne_reuther_library",
+        "wiki": "Walter P. Reuther Library",
+        "name": "Walter P. Reuther Library",
+        "description": "O'Dell, Hewlett and Luckenbach designed this home for the largest labor archives in North America, completed in 1975. It is named for UAW president Walter Reuther.",
+        "architect": "O'Dell, Hewlett and Luckenbach",
+        "yearBuilt": 1975,
+        "address": "5401 Cass Ave, Detroit, MI",
+        "oldUse": "Archive Library",
+        "newUse": "Archive Library",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 4,
+        "height": 0,
+        "foodSpots": [],
+        "coordinates": [
+          42.358902,
+          -83.068942
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/68996105"
+      },
+      {
+        "id": "campus_wayne_undergraduate_library",
+        "wiki": "David Adamany Undergraduate Library",
+        "name": "David Adamany Undergraduate Library",
+        "description": "Built in 1997 at the center of Gullen Mall, this is one of Wayne State's largest libraries, with more than 2,000 seats. It is named for the university's eighth president, David Adamany.",
+        "architect": "Unknown",
+        "yearBuilt": 1997,
+        "address": "5150 Anthony Wayne Dr, Detroit, MI",
+        "oldUse": "Library",
+        "newUse": "Library",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Western Michigan University",
+    "enumCase": "westernMichigan",
+    "country": "unitedStates",
+    "aliases": [
+      "WMU",
+      "Western Michigan",
+      "Western",
+      "Broncos"
+    ],
+    "colors": [
+      "#F1C500",
+      "#532E1F"
+    ],
+    "traditions": [
+      {
+        "id": "trad_wmu_bronco_statue",
+        "name": "The Bronco Statue",
+        "description": "A 1,800-pound bronze bronco by sculptor Veryl Goodnight has stood on campus since 1997. It was first part of her larger work \"The Day the Wall Came Down.\" Snap a photo with it.",
+        "coordinates": [
+          42.284638,
+          -85.608672
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/248664208",
+        "source": "https://www.kalamazooarts.org/?p=8046"
+      },
+      {
+        "id": "trad_wmu_homecoming",
+        "name": "Homecoming at Waldo Stadium",
+        "description": "Each October WMU paints the town brown and gold for Homecoming, ending with Broncos football at Waldo Stadium. Join the crowd in the stands.",
+        "coordinates": [
+          42.285762,
+          -85.60112
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/122700161",
+        "source": "https://wmich.edu/news/news/2025/10/homecoming-2025-weekend-kickoff"
+      },
+      {
+        "id": "trad_wmu_hockey_banner",
+        "name": "National Champions at Lawson Arena",
+        "description": "The Broncos won their first men's ice hockey national championship in 2025. Catch a game at Lawson Arena and look for the championship banner.",
+        "coordinates": [
+          42.275962,
+          -85.617875
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/1671510340",
+        "source": "https://en.wikipedia.org/wiki/Western_Michigan_Broncos_men%27s_ice_hockey"
+      },
+      {
+        "id": "trad_wmu_prospect_hill",
+        "name": "Up Prospect Hill to Heritage Hall",
+        "description": "WMU began on Prospect Hill, where East Hall opened in 1905 and a trolley once carried people up the slope. Walk up to Heritage Hall, the restored East Hall, and the North Hall portico beside it.",
+        "coordinates": [
+          42.286211,
+          -85.597018
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/635830753",
+        "source": "https://en.wikipedia.org/wiki/East_Campus_(Western_Michigan_University)"
+      }
+    ],
+    "wiki": "Western Michigan University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "So That All May Learn",
+      "airportName": "Kalamazoo/Battle Creek International Airport",
+      "airportCode": "AZO",
+      "airportInfo": "Kalamazoo/Battle Creek International Airport, southeast of downtown Kalamazoo, is the nearest airport with airline service.",
+      "funFact": "Hyames Field, WMU's baseball park on East Campus, hosted the very first College World Series in 1947 and again in 1948.",
+      "language": "English",
+      "languageInfo": "The school colors are brown and gold, and the teams are the Broncos.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Metro buses",
+      "transportationFact": "Kalamazoo's Metro buses serve Western Michigan University as well as the city and its suburbs."
+    },
+    "buildings": [
+      {
+        "id": "campus_wmu_heritage_hall",
+        "wiki": "East Campus (Western Michigan University)",
+        "name": "Heritage Hall (East Hall)",
+        "description": "East Hall, the first building of the Western State Normal School, opened on Prospect Hill in 1905. After its wings came down in 2013, the original core reopened in 2015 as Heritage Hall, home of the WMU Alumni Center.",
+        "architect": "Unknown",
+        "yearBuilt": 1905,
+        "address": "Oakland Dr, Kalamazoo, MI 49008",
+        "oldUse": "Administration Building",
+        "newUse": "Alumni Center",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_wmu_miller_auditorium",
+        "wiki": "Miller Auditorium",
+        "name": "Miller Auditorium",
+        "description": "Opened in 1968 and named for WMU's third president, James W. Miller, this 3,497-seat hall is the fifth-largest auditorium in Michigan. Touring Broadway shows and the Kalamazoo Symphony Orchestra perform here.",
+        "architect": "Unknown",
+        "yearBuilt": 1968,
+        "address": "1341 Theatre Dr, Kalamazoo, MI 49008",
+        "oldUse": "Auditorium",
+        "newUse": "Performing Arts Venue",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_wmu_richmond_center",
+        "wiki": "Richmond Center for Visual Arts",
+        "name": "Richmond Center for Visual Arts",
+        "description": "Opened in 2007, this arts center houses part of the Frostic School of Art. Its first floor holds three galleries for rotating shows, the university art collection and student work.",
+        "architect": "Unknown",
+        "yearBuilt": 2007,
+        "address": "Western Michigan University, Kalamazoo, MI 49008",
+        "oldUse": "Art Center",
+        "newUse": "Galleries and Art School",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_wmu_waldo_stadium",
+        "wiki": "Waldo Stadium",
+        "name": "Waldo Stadium",
+        "description": "Broncos football has played on this East Campus site since 1914, and the full stadium opened in 1939. It is named for Dwight B. Waldo, the school's first president, and seats 30,200.",
+        "architect": "Unknown",
+        "yearBuilt": 1939,
+        "address": "Stadium Dr, Kalamazoo, MI 49008",
+        "oldUse": "Football Stadium",
+        "newUse": "Football Stadium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_wmu_hyames_field",
+        "wiki": "Hyames Field",
+        "name": "Hyames Field",
+        "description": "Built in 1939 alongside Waldo Stadium, this baseball park hosted the first College World Series in 1947 and the second in 1948. It is home to Broncos baseball.",
+        "architect": "Unknown",
+        "yearBuilt": 1939,
+        "address": "Stadium Dr, Kalamazoo, MI 49008",
+        "oldUse": "Baseball Stadium",
+        "newUse": "Baseball Stadium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_wmu_university_arena",
+        "wiki": "University Arena (Western Michigan University)",
+        "name": "University Arena (Read Fieldhouse)",
+        "description": "Read Fieldhouse opened in 1957 and is named for longtime basketball coach Buck Read. A 1994 renovation turned the floor 90 degrees and created the 5,421-seat University Arena.",
+        "architect": "Unknown",
+        "yearBuilt": 1957,
+        "address": "Western Michigan University, Kalamazoo, MI 49008",
+        "oldUse": "Fieldhouse",
+        "newUse": "Basketball and Volleyball Arena",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_wmu_lawson_arena",
+        "wiki": "Lawson Arena",
+        "name": "Lawson Arena",
+        "description": "This horseshoe-shaped, 3,667-seat ice arena opened in 1974 for Broncos hockey. Its old-style design and loud fans make it one of the toughest rinks for visiting teams.",
+        "architect": "Unknown",
+        "yearBuilt": 1974,
+        "address": "1903 W Michigan Ave, Kalamazoo, MI 49008",
+        "oldUse": "Ice Arena",
+        "newUse": "Ice Arena",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_wmu_fetzer_center",
+        "wiki": "John E. Fetzer Center",
+        "name": "John E. Fetzer Center",
+        "description": "Opened in 1983, this conference center is named for radio pioneer and Detroit Tigers owner John Fetzer. Its lounge has an exhibit on his life.",
+        "architect": "Unknown",
+        "yearBuilt": 1983,
+        "address": "Western Michigan University, Kalamazoo, MI 49008",
+        "oldUse": "Conference Center",
+        "newUse": "Conference Center",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Grand Valley State University",
+    "enumCase": "grandValleyState",
+    "country": "unitedStates",
+    "aliases": [
+      "GVSU",
+      "Grand Valley",
+      "GV",
+      "Lakers"
+    ],
+    "colors": [
+      "#0032A0",
+      "#000000",
+      "#FFFFFF"
+    ],
+    "traditions": [
+      {
+        "id": "trad_gvsu_little_mac",
+        "name": "Little Mac Bridge and the Ravines",
+        "description": "Students voted the ravines and the Little Mac Bridge the most beautiful spot on campus. Cross the footbridge and look down at the stream below.",
+        "coordinates": [
+          42.964644,
+          -85.886536
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/233920151",
+        "source": "https://www.gvsu.edu/studentlife/weekly/top-4-most-beautiful-spots-on-campus-206.htm"
+      },
+      {
+        "id": "trad_gvsu_carillon",
+        "name": "Carillon Music at Cook Tower",
+        "description": "Every week the university carillonist plays music, from Bach to pop songs, on the bells of the Cook Carillon Tower. If you hear bells, someone is up there playing live.",
+        "coordinates": [
+          42.963457,
+          -85.888593
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/233773250",
+        "source": "https://www.gvsu.edu/carillons"
+      },
+      {
+        "id": "trad_gvsu_zumberge_pond",
+        "name": "Zumberge Pond",
+        "description": "Lakers love to study, eat or just relax on the steps beside Zumberge Pond in any season. Take a seat and enjoy the view.",
+        "coordinates": [
+          42.962773,
+          -85.887481
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/233773402",
+        "source": "https://www.gvsu.edu/studentlife/weekly/top-4-most-beautiful-spots-on-campus-206.htm"
+      },
+      {
+        "id": "trad_gvsu_library_roof",
+        "name": "View from the Library Roof",
+        "description": "The roof of the Mary Idema Pew Library gives a sweeping view of the Allendale campus, a student favorite when the leaves change in fall. Go up and take in the view.",
+        "coordinates": [
+          42.96288,
+          -85.889788
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/233773333",
+        "source": "https://www.gvsu.edu/studentlife/weekly/top-4-most-beautiful-spots-on-campus-206.htm"
+      },
+      {
+        "id": "trad_gvsu_lubbers_gameday",
+        "name": "Laker Football at Lubbers Stadium",
+        "description": "Lubbers Stadium officially seats 10,444 but often holds thousands more fans, with a record crowd of 17,007 in 2021. Join them for a Lakers home game.",
+        "coordinates": [
+          42.969127,
+          -85.894756
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/192636837",
+        "source": "https://en.wikipedia.org/wiki/Lubbers_Stadium"
+      }
+    ],
+    "wiki": "Grand Valley State University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Home of the Lakers",
+      "airportName": "Gerald R. Ford International Airport",
+      "airportCode": "GRR",
+      "airportInfo": "Gerald R. Ford International Airport, southeast of Grand Rapids, is the nearest airport with airline service.",
+      "funFact": "Grand Valley is one of only three institutions in the Western Hemisphere with more than one carillon tower: the Cook Carillon in Allendale and the Beckering Family Carillon in Grand Rapids.",
+      "language": "English",
+      "languageInfo": "The school colors are blue, black and white, and the teams are the Lakers.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Laker Line bus",
+      "transportationFact": "The Laker Line bus, run by The Rapid, links the Allendale campus with GVSU's campuses in downtown Grand Rapids along Lake Michigan Drive, and it is open to the public."
+    },
+    "buildings": [
+      {
+        "id": "campus_gvsu_cook_carillon_tower",
+        "wiki": "Cook Carillon Tower",
+        "name": "Cook Carillon Tower",
+        "description": "This 10-story brick and stone clock tower, finished in 1994, is the focal point of the Allendale campus. Its 48 bronze bells were cast by the Royal Eijsbouts foundry in the Netherlands.",
+        "architect": "Unknown",
+        "yearBuilt": 1994,
+        "address": "North Campus Dr, Allendale, MI 49401",
+        "oldUse": "Carillon Tower",
+        "newUse": "Carillon Tower",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 10,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_gvsu_kirkhof_center",
+        "wiki": "Kirkhof Center",
+        "name": "Kirkhof Center",
+        "description": "Dedicated in 1974 as the Campus Center, the student union was renamed for Russel H. Kirkhof in 1984. It holds dining, meeting rooms and student offices, and the Laker Line bus stops outside.",
+        "architect": "Unknown",
+        "yearBuilt": 1974,
+        "address": "South Campus Dr, Allendale, MI 49401",
+        "oldUse": "Student Union",
+        "newUse": "Student Union",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_gvsu_pew_library",
+        "wiki": "Grand Valley State University",
+        "name": "Mary Idema Pew Library",
+        "description": "SHW Group designed this library, which opened in June 2013 as the intellectual heart of the Allendale campus. It was the first library in Michigan to earn LEED Platinum certification.",
+        "architect": "SHW Group",
+        "yearBuilt": 2013,
+        "address": "10582 S Campus Dr, Allendale, MI 49401",
+        "oldUse": "Library",
+        "newUse": "Library and Learning Commons",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          42.96288,
+          -85.889788
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/233773333"
+      },
+      {
+        "id": "campus_gvsu_lubbers_stadium",
+        "wiki": "Lubbers Stadium",
+        "name": "Lubbers Stadium",
+        "description": "Opened in 1973 as Lakers Stadium and later named for president Arend Lubbers, this is the home of Grand Valley football. It seats 10,444 and drew a record 17,007 fans in 2021.",
+        "architect": "Unknown",
+        "yearBuilt": 1973,
+        "address": "4415 Stadium Dr, Allendale, MI 49401",
+        "oldUse": "Football Stadium",
+        "newUse": "Football Stadium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_gvsu_fieldhouse",
+        "wiki": "GVSU Fieldhouse",
+        "name": "GVSU Fieldhouse Arena",
+        "description": "Opened in 1982 after the roof of the old \"Dome\" was condemned, this 4,200-seat arena is home to Lakers basketball and volleyball. It also hosts commencement and concerts.",
+        "architect": "Unknown",
+        "yearBuilt": 1982,
+        "address": "Grand Valley State University, Allendale, MI 49401",
+        "oldUse": "Arena",
+        "newUse": "Arena",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  }
+]

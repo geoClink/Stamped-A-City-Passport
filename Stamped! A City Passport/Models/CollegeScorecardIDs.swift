@@ -100,5 +100,18 @@ extension CityLocation.City {
         .berkeley: 110635,            // University of California-Berkeley
         .ucla: 110662,                // University of California-Los Angeles
         .uWashington: 236948,         // University of Washington-Seattle Campus
+        // Added with the 11 new campuses on 2026-10-29. These IDs and names are from Wikidata
+        // (P1771) only: they haven't been checked against the Scorecard yet, which needs the key.
+        .wayneState: 172644,          // Wayne State University
+        .westernMichigan: 172699,     // Western Michigan University
+        .grandValleyState: 170082,    // Grand Valley State University
+        .caltech: 110404,             // California Institute of Technology
+        .johnsHopkins: 162928,        // Johns Hopkins University
+        .rice: 227757,                // Rice University
+        .emory: 139658,               // Emory University
+        .tulane: 160755,              // Tulane University
+        .nyu: 193900,                 // New York University
+        .carnegieMellon: 211440,      // Carnegie Mellon University
+        .washU: 179867,               // Washington University in St. Louis
     ]
 }
