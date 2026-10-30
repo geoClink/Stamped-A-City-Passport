@@ -635,3 +635,19 @@
 "Plan" = "계획";
 "Local" = "현지 정보";
 "Section" = "섹션";
+
+// MARK: - Quiz: photo questions, facts after each answer, review your misses
+"Which building is this?" = "이 건물은 무엇일까요?";
+"Say the name of the building in the photo..." = "사진 속 건물의 이름을 말하세요...";
+"Photo of the building in question" = "문제의 건물 사진";
+"No photo available" = "사진 없음";
+"Next Question" = "다음 문제";
+"See Results" = "결과 보기";
+"Review your misses" = "틀린 문제 다시 보기";
+"Correct answer: %@" = "정답: %@";
+"Your answer: %@" = "내 답: %@";
+"Designed by %@ and completed in %@." = "%1$@이(가) 설계했으며 %2$@년에 완공되었습니다.";
+"Designed by %@." = "%@이(가) 설계했습니다.";
+"Completed in %@." = "%@년에 완공되었습니다.";
+"A fine example of %@ design." = "%@ 양식의 훌륭한 예입니다.";
+"This landmark is in %@." = "이 랜드마크는 %@에 있습니다.";

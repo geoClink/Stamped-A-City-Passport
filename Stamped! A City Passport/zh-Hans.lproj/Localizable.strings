@@ -635,3 +635,19 @@
 "Plan" = "规划";
 "Local" = "当地";
 "Section" = "部分";
+
+// MARK: - Quiz: photo questions, facts after each answer, review your misses
+"Which building is this?" = "这是哪座建筑？";
+"Say the name of the building in the photo..." = "说出照片中建筑的名称...";
+"Photo of the building in question" = "题目中建筑的照片";
+"No photo available" = "暂无照片";
+"Next Question" = "下一题";
+"See Results" = "查看结果";
+"Review your misses" = "回顾答错的题";
+"Correct answer: %@" = "正确答案：%@";
+"Your answer: %@" = "你的答案：%@";
+"Designed by %@ and completed in %@." = "由%1$@设计，于%2$@年建成。";
+"Designed by %@." = "由%@设计。";
+"Completed in %@." = "于%@年建成。";
+"A fine example of %@ design." = "%@风格的优秀范例。";
+"This landmark is in %@." = "这座地标位于%@。";

@@ -635,3 +635,19 @@
 "Plan" = "Planen";
 "Local" = "Vor Ort";
 "Section" = "Bereich";
+
+// MARK: - Quiz: photo questions, facts after each answer, review your misses
+"Which building is this?" = "Welches Gebäude ist das?";
+"Say the name of the building in the photo..." = "Sag den Namen des Gebäudes auf dem Foto...";
+"Photo of the building in question" = "Foto des gesuchten Gebäudes";
+"No photo available" = "Kein Foto verfügbar";
+"Next Question" = "Nächste Frage";
+"See Results" = "Ergebnis ansehen";
+"Review your misses" = "Deine Fehler im Überblick";
+"Correct answer: %@" = "Richtige Antwort: %@";
+"Your answer: %@" = "Deine Antwort: %@";
+"Designed by %@ and completed in %@." = "Entworfen von %1$@ und fertiggestellt %2$@.";
+"Designed by %@." = "Entworfen von %@.";
+"Completed in %@." = "Fertiggestellt %@.";
+"A fine example of %@ design." = "Ein schönes Beispiel für den Stil %@.";
+"This landmark is in %@." = "Dieses Wahrzeichen steht in %@.";
