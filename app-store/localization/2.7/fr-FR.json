@@ -1,0 +1,66 @@
+{
+  "locale": "fr-FR",
+  "version": "2.7",
+  "subtitle": "Monuments & visites de campus",
+  "promotional_text": "Explorez 1 900 bâtiments célèbres dans 140 villes sur une carte 3D, préparez votre voyage et gagnez un tampon pour chacun. Visite d'universités ? 112 campus sont inclus.",
+  "keywords": "architecture,ville,voyage,city trip,itinéraire,3D,carte,université,tampon,guide,tourisme",
+  "whats_new": "Nouveautés de la 2.7\n• 11 nouveaux campus, dont Caltech, Johns Hopkins, Rice, NYU et Carnegie Mellon, ainsi que les tours d'Adrian Smith : la Burj Khalifa à Dubaï et le Trump International Hotel & Tower à Chicago.\n• Les pages des campus ont une fiche Histoire, un Jour de match avec les prochains matchs à domicile et un lien vers les scores en direct, et les agendas de 11 universités.\n• Chiffres clés des campus américains : taux d'admission et de réussite, frais de scolarité et revenus après le diplôme.\n• Pages d'architectes : touchez le nom d'un architecte pour découvrir son histoire et tous ses bâtiments.\n• Une galerie de photos pour chaque monument, et des photos et dessins historiques de la Bibliothèque du Congrès pour les monuments américains.\n• Restaurants et hôtels près de chaque monument, avec photos de la rue et temps de marche, ainsi que des visites gourmandes et guidées avec GetYourGuide.\n• Plus d'événements : six mois à l'avance, un mélange de concerts, spectacles et matchs, et une liste complète. Les événements des bibliothèques et musées dans 9 villes.\n• Les repères de la carte se regroupent en bulles numérotées quand vous dézoomez.\n• Le quiz d'architecture a des questions en photo et explique chaque réponse.\n• Un écran d'accueil épuré, des pages de ville en onglets et une recherche dans votre passeport.\n\nCorrections\n• Les cartes des villes affichent leurs repères dès l'ouverture.\n• Chaque événement n'apparaît qu'une fois, même si deux billetteries le proposent.",
+  "description": "Stamped! transforme les plus beaux bâtiments du monde en un passeport à remplir. Explorez plus de 1 900 monuments d'architecture dans 140 villes et 112 campus universitaires, obtenez un tampon pour chacun que vous visitez et survolez de vraies villes sur une carte 3D photoréaliste.\n\nPRÉPAREZ VOS VISITES D'UNIVERSITÉS\n• 112 campus : toutes les universités du Big Ten, de la SEC, de l'ACC et du Big 12, la Ivy League et de superbes campus dans le monde\n• Gardez les universités qui vous intéressent dans Ma liste d'universités\n• Créez un road trip universitaire : une journée par université, dans un ordre qui limite les trajets\n• Planifiez une visite du campus : un parcours à pied d'une journée entre ses lieux emblématiques\n• Trouvez un hôtel près du campus pour chaque nuit\n\nTRADITIONS DU CAMPUS\n• Plus de 250 traditions à vivre ou à voir, des statues porte-bonheur aux cloches et aux portes célèbres\n• Cochez-les au fil de la visite et obtenez le badge Gardien des traditions\n• Des tampons de campus aux couleurs de l'université\n\nPLANIFIEZ TOUS VOS VOYAGES\n• Planifiez plusieurs jours de monuments et de lieux enregistrés\n• Réorganisez les étapes, voyez les temps de marche et optimisez votre itinéraire\n• Survolez votre voyage jour par jour sur la carte 3D\n• Vos voyages et votre liste d'universités se synchronisent avec iCloud\n• Restaurants, hôtels, visites et événements locaux autour de vos étapes\n\nEXPLOREZ EN 3D\n• Cartes 3D photoréalistes des villes et des campus avec images satellite\n• Une visite guidée qui survole chaque monument\n• Look Around pour découvrir les rues avant d'y aller\n• Filtres pour la cuisine, les cafés, la culture et l'hébergement\n\nCOLLECTIONNEZ LES TAMPONS\n• Un tampon de passeport pour chaque monument visité\n• Suivez votre progression sur la carte du monde, par ville, pays et conférence\n• Débloquez des succès et partagez votre passeport\n• Voyez votre progression d'un coup d'œil avec le widget de l'écran d'accueil\n\nDÉCOUVREZ LES HISTOIRES\n• Architectes, dates de construction, styles et histoire de chaque bâtiment\n• Un quiz d'architecture de 10 questions pour chaque ville et chaque campus\n• Recherchez par nom, architecte ou surnom de campus\n• Pages d'architectes, galeries de photos et photos historiques de la Bibliothèque du Congrès\n\nDisponible en 9 langues, avec des options de contraste élevé et de réduction des animations.\n\nStamped! n'est affiliée à aucune université et n'est approuvée par aucune. Les noms et couleurs des universités servent uniquement à les identifier.",
+  "screenshot_headlines": [
+    {
+      "file": "01-college-list",
+      "verb": "VISITEZ",
+      "lines": [
+        "101 CAMPUS",
+        "EN UN ROAD TRIP"
+      ]
+    },
+    {
+      "file": "02-traditions",
+      "verb": "VIVEZ",
+      "lines": [
+        "LES TRADITIONS",
+        "DU CAMPUS"
+      ]
+    },
+    {
+      "file": "03-school-stamps",
+      "verb": "COLLECTIONNEZ",
+      "lines": [
+        "DES TAMPONS AUX",
+        "COULEURS DES FACS"
+      ]
+    },
+    {
+      "file": "04-fly-3d",
+      "verb": "SURVOLEZ",
+      "lines": [
+        "LES CAMPUS",
+        "EN 3D"
+      ]
+    },
+    {
+      "file": "05-plan-trips",
+      "verb": "PLANIFIEZ",
+      "lines": [
+        "VOTRE VOYAGE,",
+        "JOUR PAR JOUR"
+      ]
+    },
+    {
+      "file": "06-test-smarts",
+      "verb": "TESTEZ",
+      "lines": [
+        "VOS CONNAISSANCES",
+        "EN ARCHITECTURE"
+      ]
+    }
+  ],
+  "banner": {
+    "verb": "PLANIFIEZ",
+    "lines": [
+      "VOTRE ROAD TRIP",
+      "UNIVERSITAIRE"
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "locale": "it",
+  "version": "2.7",
+  "subtitle": "Monumenti e visite ai campus",
+  "promotional_text": "Esplora 1.900 edifici famosi in 140 città su una mappa 3D, pianifica il viaggio e colleziona un timbro per ognuno. Visiti delle università? Ci sono anche 112 campus.",
+  "keywords": "architettura,città,viaggio,turismo,itinerario,3D,mappa,università,timbri,guida,tour",
+  "whats_new": "Novità della 2.7\n• 11 nuovi campus, tra cui Caltech, Johns Hopkins, Rice, NYU e Carnegie Mellon, più le torri di Adrian Smith: il Burj Khalifa a Dubai e il Trump International Hotel & Tower a Chicago.\n• Le pagine dei campus hanno una scheda sulla storia, il Giorno della partita con le prossime partite in casa e un link ai risultati in diretta, e i calendari degli eventi di 11 università.\n• Dati dell'università per i campus negli USA: tassi di ammissione e di laurea, tasse universitarie e redditi dopo la laurea.\n• Pagine degli architetti: tocca il nome di un architetto per scoprirne la storia e tutti i suoi edifici.\n• Una galleria fotografica per ogni monumento, e foto e disegni storici della Library of Congress per i monumenti negli USA.\n• Ristoranti e hotel vicino a ogni monumento, con foto della strada e tempi a piedi, più tour gastronomici e visite guidate di GetYourGuide.\n• Più eventi: sei mesi in anticipo, un mix di concerti, spettacoli e partite, e un elenco completo. Gli eventi di biblioteche e musei in 9 città.\n• I segnaposto sulla mappa si raggruppano in bolle numerate quando riduci lo zoom.\n• Il quiz di architettura ha domande con foto e spiega ogni risposta.\n• Una schermata iniziale più pulita, pagine delle città a schede e la ricerca nel passaporto.\n\nCorrezioni\n• Le mappe delle città mostrano i segnaposto appena si aprono.\n• Ogni evento compare una sola volta, anche se lo vendono due biglietterie.",
+  "description": "Stamped! trasforma i grandi edifici del mondo in un passaporto da riempire. Esplora più di 1.900 luoghi simbolo dell'architettura in 140 città e 112 campus universitari, ottieni un timbro per ognuno che visiti e sorvola città vere su una mappa 3D fotorealistica.\n\nPIANIFICA LE VISITE ALLE UNIVERSITÀ\n• 112 campus: tutte le università di Big Ten, SEC, ACC e Big 12, la Ivy League e splendidi campus in tutto il mondo\n• Salva le università che ti interessano nella mia lista di università\n• Crea un viaggio tra le università: un giorno per ognuna, in un ordine con tragitti brevi\n• Pianifica una visita al campus: un itinerario a piedi di un giorno tra i suoi luoghi simbolo\n• Trova hotel vicino al campus per ogni notte del viaggio\n\nTRADIZIONI DEL CAMPUS\n• Oltre 250 tradizioni da fare o da vedere, dalle statue portafortuna alle campane e ai cancelli famosi\n• Spuntale mentre visiti e ottieni il badge Custode delle tradizioni\n• Timbri dei campus nei colori di ogni università\n\nPIANIFICA OGNI VIAGGIO\n• Pianifica più giorni di luoghi simbolo e luoghi salvati\n• Riordina le tappe, vedi i tempi a piedi e ottimizza il percorso\n• Sorvola il tuo viaggio giorno per giorno sulla mappa 3D\n• I viaggi e la lista di università si sincronizzano con iCloud\n• Ristoranti, hotel, tour ed eventi locali vicino alle tue tappe\n\nESPLORA IN 3D\n• Mappe 3D fotorealistiche di città e campus con immagini satellitari\n• Un tour guidato che vola tra tutti i luoghi simbolo\n• Anteprime Guardati intorno delle strade prima di partire\n• Filtri per cibo, caffè, cultura e alloggi\n\nCOLLEZIONA TIMBRI\n• Ottieni un timbro sul passaporto per ogni luogo simbolo visitato\n• Segui i progressi sulla mappa del mondo, per città, paese e conference\n• Sblocca traguardi e condividi il tuo passaporto\n• Guarda i progressi a colpo d'occhio con il widget della schermata Home\n\nSCOPRI LE STORIE\n• Architetti, anni di costruzione, stili e storia di ogni edificio\n• Un quiz di architettura di 10 domande per ogni città e campus\n• Cerca per nome, architetto o soprannome del campus\n• Pagine degli architetti, gallerie fotografiche e foto storiche della Library of Congress\n\nDisponibile in 9 lingue, con opzioni di contrasto elevato e movimento ridotto.\n\nStamped! non è affiliata né approvata da alcuna università. I nomi e i colori delle università sono usati solo per identificarle.",
+  "screenshot_headlines": [
+    {
+      "file": "01-college-list",
+      "verb": "VISITA",
+      "lines": [
+        "101 CAMPUS",
+        "IN UN SOLO VIAGGIO"
+      ]
+    },
+    {
+      "file": "02-traditions",
+      "verb": "VIVI",
+      "lines": [
+        "LE TRADIZIONI",
+        "DEL CAMPUS"
+      ]
+    },
+    {
+      "file": "03-school-stamps",
+      "verb": "COLLEZIONA",
+      "lines": [
+        "TIMBRI NEI COLORI",
+        "DELLE UNIVERSITÀ"
+      ]
+    },
+    {
+      "file": "04-fly-3d",
+      "verb": "SORVOLA",
+      "lines": [
+        "I CAMPUS",
+        "IN 3D"
+      ]
+    },
+    {
+      "file": "05-plan-trips",
+      "verb": "PIANIFICA",
+      "lines": [
+        "TUTTO IL VIAGGIO,",
+        "GIORNO PER GIORNO"
+      ]
+    },
+    {
+      "file": "06-test-smarts",
+      "verb": "METTI ALLA PROVA",
+      "lines": [
+        "LA TUA CULTURA",
+        "ARCHITETTONICA"
+      ]
+    }
+  ],
+  "banner": {
+    "verb": "PIANIFICA",
+    "lines": [
+      "IL TUO VIAGGIO",
+      "TRA LE UNIVERSITÀ"
+    ]
+  }
+}
