@@ -18,8 +18,9 @@ final class GameDayTests: XCTestCase {
 
     /// An event as Ticketmaster or SeatGeek would give it
     private func event(_ name: String, venue: String, category: TicketmasterEvent.EventCategory = .sports,
-                       date: String = "Sat, Nov 8", start: Date? = nil, seller: String = "Ticketmaster") -> TicketmasterEvent {
-        TicketmasterEvent(id: UUID().uuidString, name: name, date: date, time: "12:00 PM", venueName: venue,
+                       date: String = "Sat, Nov 8", time: String = "12:00 PM", start: Date? = nil,
+                       seller: String = "Ticketmaster") -> TicketmasterEvent {
+        TicketmasterEvent(id: UUID().uuidString, name: name, date: date, time: time, venueName: venue,
                           category: category, priceRange: nil, ticketURL: URL(string: "https://example.com/tickets"),
                           imageURL: nil, sellerName: seller, startDate: start)
     }
@@ -49,6 +50,25 @@ final class GameDayTests: XCTestCase {
         let events = [
             event("Michigan State Spartans Hockey vs. Notre Dame", venue: "Munn Ice Arena"),
             event("Michigan State Spartans Hockey vs. Notre Dame", venue: "Munn Ice Arena", seller: "SeatGeek"),
+        ]
+        XCTAssertEqual(GameDayService.homeGames(from: events, venueNames: msuVenues, teamNames: msuTeams).count, 1)
+    }
+
+    // The sellers title the same game differently and name the arena differently;
+    // the same venue, day and time still makes it one game
+    func testSameGameWithDifferentTitlesShowsOnce() {
+        let events = [
+            event("Michigan State Spartans Womens Volleyball vs. Indiana Hoosiers Womens Volleyball", venue: "Jack Breslin Arena"),
+            event("Indiana Hoosiers at Michigan State Spartans Womens Volleyball", venue: "Jack Breslin Student Events Center", seller: "SeatGeek"),
+        ]
+        XCTAssertEqual(GameDayService.homeGames(from: events, venueNames: msuVenues, teamNames: msuTeams).count, 1)
+    }
+
+    // Before kickoff is set, both sellers leave the time blank; same stadium and day is still one game
+    func testSameGameWithoutKickoffTimeShowsOnce() {
+        let events = [
+            event("Michigan State Spartans Football vs. Washington Huskies Football", venue: "Spartan Stadium-MI", date: "Sat, Nov 14", time: ""),
+            event("Washington Huskies at Michigan State Spartans Football", venue: "Spartan Stadium (Michigan)", date: "Sat, Nov 14", time: "", seller: "SeatGeek"),
         ]
         XCTAssertEqual(GameDayService.homeGames(from: events, venueNames: msuVenues, teamNames: msuTeams).count, 1)
     }

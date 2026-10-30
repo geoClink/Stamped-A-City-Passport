@@ -77,9 +77,15 @@ final class GameDayService {
                   let venue = venueIndex(event.venueName, venueNames: venueNames),
                   mentionsTeam(event.name, teamNames: teamNames)
             else { continue }
-            // The same game can come from both sellers
-            let key = words(event.name).joined() + "|" + event.date
-            guard seen.insert(key).inserted else { continue }
+            // The same game can come from both sellers, often titled differently
+            // ("Spartans vs. Hoosiers" and "Hoosiers at Spartans"), so a game at the same
+            // venue, day and time counts as already seen too. Before kickoff is set, both
+            // sellers leave the time blank, and a venue holds one untimed game a day.
+            let titleKey = words(event.name).joined() + "|" + event.date
+            let slotKey = "\(venue)|\(event.date)|\(event.time)"
+            guard !seen.contains(titleKey), !seen.contains(slotKey) else { continue }
+            seen.insert(titleKey)
+            seen.insert(slotKey)
             gamesByVenue[venue, default: []].append(event)
         }
         let picked = gamesByVenue.values.flatMap { $0.prefix(perVenue) }
