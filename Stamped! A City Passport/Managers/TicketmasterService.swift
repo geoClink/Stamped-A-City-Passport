@@ -29,6 +29,13 @@ struct TicketmasterEvent: Identifiable {
     /// When it starts, for putting both sellers' events in one date order.
     var startDate: Date? = nil
 
+    /// The same event with another venue name, e.g. our "Spartan Stadium" for the seller's "Spartan Stadium-MI"
+    func atVenue(named venue: String) -> TicketmasterEvent {
+        TicketmasterEvent(id: id, name: name, date: date, time: time, venueName: venue, category: category,
+                          priceRange: priceRange, ticketURL: ticketURL, imageURL: imageURL,
+                          sellerName: sellerName, startDate: startDate)
+    }
+
     enum EventCategory: String {
         case music       = "Music"
         case sports      = "Sports"
@@ -174,7 +181,7 @@ final class TicketmasterService: ObservableObject {
         ticketmasterLoaded += (ticketmaster?.events ?? []).filter { Self.isUpcoming($0) }
         seatGeekLoaded += (seatGeek ?? []).filter { Self.isUpcoming($0) }
         nextPage += 1
-        loadedEvents = Self.merged(ticketmasterLoaded, seatGeekLoaded, limit: .max)
+        loadedEvents = Self.withoutRepeats(Self.merged(ticketmasterLoaded, seatGeekLoaded, limit: .max))
         events = Self.highlights(from: loadedEvents, limit: Self.rowLimit, perCategory: Self.perCategoryLimit)
 
         // A full page means that seller may have more. Ticketmaster only pages through its
@@ -223,6 +230,15 @@ final class TicketmasterService: ObservableObject {
             print("[Ticketmaster] Error: \(error.localizedDescription)")
             return nil
         }
+    }
+
+    /// One entry per event at a venue. An exhibit's time slots ("Balloon Museum" at 10:00, 10:30,
+    /// 11:00…), a run of shows, and exact duplicates keep only the soonest, so one listing can't
+    /// fill the list. `events` must already be soonest first.
+    static func withoutRepeats(_ events: [TicketmasterEvent]) -> [TicketmasterEvent] {
+        func normalized(_ text: String) -> String { text.lowercased().filter { $0.isLetter || $0.isNumber } }
+        var seen = Set<String>()
+        return events.filter { seen.insert(normalized($0.name) + "|" + normalized($0.venueName)).inserted }
     }
 
     /// False for an event whose date has passed. Long-running exhibits come back dated the

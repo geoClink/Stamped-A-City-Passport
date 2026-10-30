@@ -104,10 +104,10 @@ struct StaysNearbySection: View {
                 Spacer(minLength: DS.Space.xs)
 
                 HStack(spacing: DS.Space.xs) {
+                    // Written like the restaurant cards above ("2 min walk"), not in capitals
                     Text(distance)
-                        .font(.caption2.monospaced()).fontWeight(.semibold)
+                        .font(.caption2)
                         .foregroundColor(isHighContrast ? .primary : .secondary)
-                        .textCase(.uppercase)
                         .lineLimit(2)
                         .minimumScaleFactor(0.8)
                     Spacer()

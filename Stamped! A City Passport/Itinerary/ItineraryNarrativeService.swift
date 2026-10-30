@@ -18,11 +18,13 @@ final class ItineraryNarrativeService: ObservableObject {
     private var currentCityKey: String = ""
  
     // MARK: - Cache keys
+    // "_v2": texts written by the old prompts could say "unknown-style" or name places that
+    // aren't stops, so a new key makes every device write them once more with the new prompts
     private func narrativeCacheKey(_ city: String) -> String {
-        "narratives_\(city.lowercased().replacingOccurrences(of: " ", with: "_"))"
+        "narratives_v2_\(city.lowercased().replacingOccurrences(of: " ", with: "_"))"
     }
     private func descriptionCacheKey(_ city: String) -> String {
-        "descriptions_\(city.lowercased().replacingOccurrences(of: " ", with: "_"))"
+        "descriptions_v2_\(city.lowercased().replacingOccurrences(of: " ", with: "_"))"
     }
  
     // MARK: - Load from cache
@@ -68,10 +70,13 @@ final class ItineraryNarrativeService: ObservableObject {
         let session = LanguageModelSession(model: .default)
         let buildingNames = buildings.map { $0.name }.joined(separator: ", ")
         let styles = Set(buildings.compactMap(\.knownStyle)).joined(separator: ", ")
+        // Without a known style there's nothing to say, and "Styles: ." invited made-up ones
+        let stylesText = styles.isEmpty ? "" : " Styles: \(styles)."
 
         let prompt = """
         Write 2 sentences introducing Day \(dayNumber) of an architectural tour.
-        Stops: \(buildingNames). Styles: \(styles).
+        Stops: \(buildingNames).\(stylesText)
+        Mention only these stops; don't name any other building or place.
         Travel guide tone. No bullet points.
         """
 
@@ -93,9 +98,13 @@ final class ItineraryNarrativeService: ObservableObject {
 
         let session = LanguageModelSession(model: .default)
         // Don't tell the model "Built 0" for natural places; it would repeat it.
-        let builtText = building.hasKnownYear ? "Built \(building.yearBuilt), " : ""
+        // Likewise an unknown style: "Unknown style" came back as "unknown-style hall"
+        let facts = [building.hasKnownYear ? "Built \(building.yearBuilt)" : nil,
+                     building.knownStyle.map { "\($0) style" }]
+            .compactMap { $0 }.joined(separator: ", ")
+        let factsText = facts.isEmpty ? "" : " \(facts)."
         let prompt = """
-        One sentence, max 15 words. Why visit \(building.name)? \(builtText)\(building.buildingStyle) style. Be specific.
+        One sentence, max 15 words. Why visit \(building.name)?\(factsText) Be specific.
         """
 
         do {

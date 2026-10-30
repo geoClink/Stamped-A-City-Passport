@@ -124,15 +124,24 @@ struct GameDaySection: View {
 
     @ViewBuilder
     private func gameRow(_ game: TicketmasterEvent) -> some View {
+        // "Spartans vs. Huskies" with "Football" on its own line, not the sport on both teams
+        let display = GameDayService.displayTitle(game.name)
         let row = HStack(alignment: .top, spacing: DS.Space.m) {
             VStack(alignment: .leading, spacing: DS.Space.xs) {
-                Text(game.name)
+                if let sport = display.sport {
+                    Text(sport.localizedUppercase)
+                        .font(.caption2.monospaced().weight(.semibold))
+                        .foregroundColor(isHighContrast ? .primary : accent)
+                }
+                Text(display.title)
                     .font(.subheadline.weight(.semibold))
                     .foregroundColor(.primary)
                     .multilineTextAlignment(.leading)
                     .fixedSize(horizontal: false, vertical: true)
                 if !game.date.isEmpty {
-                    Label(game.date + (game.time.isEmpty ? "" : " · \(game.time)"), systemImage: "calendar")
+                    // Sellers leave the time blank until kickoff is set
+                    Label(game.date + " · " + (game.time.isEmpty ? NSLocalizedString("Time TBA", comment: "Game Day: a game whose start time isn't announced yet") : game.time),
+                          systemImage: "calendar")
                         .font(.caption)
                         .foregroundColor(isHighContrast ? .primary : .secondary)
                 }
