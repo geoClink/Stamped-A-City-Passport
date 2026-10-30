@@ -719,3 +719,10 @@
 "Tuition and fees are per year. Graduation is within 6 years; earnings are the median 10 years after starting." = "学費は年額（諸経費込み）。卒業率は6年以内、年収は入学から10年後の中央値です。";
 "Source: U.S. Department of Education College Scorecard" = "出典：米国教育省 College Scorecard";
 "Opens the College Scorecard website" = "College Scorecard のサイトを開きます";
+
+// MARK: - Campus History (Wikipedia)
+"HISTORY" = "歴史";
+"Founded %@" = "%@年創立";
+"From Wikipedia" = "Wikipedia より";
+"Read more on Wikipedia" = "Wikipedia で続きを読む";
+"Opens the full article on Wikipedia" = "Wikipedia の記事全文を開きます";

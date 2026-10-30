@@ -719,3 +719,10 @@
 "Tuition and fees are per year. Graduation is within 6 years; earnings are the median 10 years after starting." = "Matrícula y tasas por año. Graduación en un plazo de 6 años; ingresos medianos 10 años después de empezar.";
 "Source: U.S. Department of Education College Scorecard" = "Fuente: College Scorecard del Departamento de Educación de EE. UU.";
 "Opens the College Scorecard website" = "Abre el sitio web de College Scorecard";
+
+// MARK: - Campus History (Wikipedia)
+"HISTORY" = "HISTORIA";
+"Founded %@" = "Fundada en %@";
+"From Wikipedia" = "De Wikipedia";
+"Read more on Wikipedia" = "Leer más en Wikipedia";
+"Opens the full article on Wikipedia" = "Abre el artículo completo en Wikipedia";

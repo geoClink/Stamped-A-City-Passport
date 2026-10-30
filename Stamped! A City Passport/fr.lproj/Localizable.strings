@@ -719,3 +719,10 @@
 "Tuition and fees are per year. Graduation is within 6 years; earnings are the median 10 years after starting." = "Frais de scolarité par an. Diplôme obtenu en 6 ans maximum ; revenu médian 10 ans après l'entrée.";
 "Source: U.S. Department of Education College Scorecard" = "Source : College Scorecard du ministère de l'Éducation des États-Unis";
 "Opens the College Scorecard website" = "Ouvre le site College Scorecard";
+
+// MARK: - Campus History (Wikipedia)
+"HISTORY" = "HISTOIRE";
+"Founded %@" = "Fondée en %@";
+"From Wikipedia" = "Extrait de Wikipédia";
+"Read more on Wikipedia" = "Lire la suite sur Wikipédia";
+"Opens the full article on Wikipedia" = "Ouvre l'article complet sur Wikipédia";

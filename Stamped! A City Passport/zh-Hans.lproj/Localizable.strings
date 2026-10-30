@@ -719,3 +719,10 @@
 "Tuition and fees are per year. Graduation is within 6 years; earnings are the median 10 years after starting." = "学费及杂费按年计算。毕业率为 6 年内毕业；收入为入学 10 年后的中位数。";
 "Source: U.S. Department of Education College Scorecard" = "来源：美国教育部 College Scorecard";
 "Opens the College Scorecard website" = "打开 College Scorecard 网站";
+
+// MARK: - Campus History (Wikipedia)
+"HISTORY" = "历史";
+"Founded %@" = "创立于 %@ 年";
+"From Wikipedia" = "摘自维基百科";
+"Read more on Wikipedia" = "在维基百科上阅读更多";
+"Opens the full article on Wikipedia" = "在维基百科上打开完整文章";

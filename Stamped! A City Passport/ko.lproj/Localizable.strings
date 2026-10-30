@@ -719,3 +719,10 @@
 "Tuition and fees are per year. Graduation is within 6 years; earnings are the median 10 years after starting." = "학비는 연간 기준(수수료 포함)입니다. 졸업률은 6년 이내 기준, 소득은 입학 10년 후 중앙값입니다.";
 "Source: U.S. Department of Education College Scorecard" = "출처: 미국 교육부 College Scorecard";
 "Opens the College Scorecard website" = "College Scorecard 웹사이트를 엽니다";
+
+// MARK: - Campus History (Wikipedia)
+"HISTORY" = "역사";
+"Founded %@" = "%@년 설립";
+"From Wikipedia" = "위키백과 발췌";
+"Read more on Wikipedia" = "위키백과에서 더 읽기";
+"Opens the full article on Wikipedia" = "위키백과에서 전체 문서를 엽니다";
