@@ -49,6 +49,8 @@ struct GlobalDiscoveryApp: App {
                 }
             }
             .animation(.spring(response: 0.7, dampingFraction: 0.85), value: hasSeenOnboarding)
+            // Finishing a city or campus is when to ask for an App Store rating
+            .reviewPromptAfterCompletingCity()
             .task {
                 ProximityManager.shared.requestPermissions()
                 SpotlightManager.indexAll(cities: CityLocation.City.allCases)

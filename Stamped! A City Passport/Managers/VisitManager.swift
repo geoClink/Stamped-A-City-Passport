@@ -236,7 +236,33 @@ class GlobalProgressManager: ObservableObject {
                 visitDates[buildingID] = Date()
                 saveVisitDates()
             }
+            // This stamp finished the whole city or campus: a good moment to ask for a rating
+            if Self.shouldAskForReview(cityBuildings: cityBuildings, visited: visitedIDs,
+                                       lastAskedVersion: defaults.string(forKey: reviewAskedVersionKey),
+                                       currentVersion: Self.appVersion) {
+                defaults.set(Self.appVersion, forKey: reviewAskedVersionKey)
+                reviewMoment = Date()
+            }
         }
+    }
+
+    // MARK: - Rating prompt
+
+    /// Set when a stamp completes a city or campus; ReviewPromptModifier asks for an App Store
+    /// rating when it changes. At most once per app version (Apple also limits it to 3 a year
+    /// and decides itself whether to show the prompt).
+    @Published private(set) var reviewMoment: Date?
+    private let reviewAskedVersionKey = "reviewPromptAskedVersion"
+
+    static var appVersion: String {
+        Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
+    }
+
+    /// True when every landmark of the city is now stamped and this version hasn't asked yet.
+    nonisolated static func shouldAskForReview(cityBuildings: [Building], visited: Set<String>,
+                                               lastAskedVersion: String?, currentVersion: String) -> Bool {
+        guard !cityBuildings.isEmpty, lastAskedVersion != currentVersion else { return false }
+        return cityBuildings.allSatisfy { visited.contains($0.id) }
     }
 
     private func saveVisitDates() {
