@@ -636,6 +636,46 @@
 "Local" = "当地";
 "Section" = "部分";
 
+// Restaurant cards: category labels from Apple Maps
+"dining.restaurant" = "餐厅";
+"dining.cafe" = "咖啡馆";
+"dining.bakery" = "面包店";
+"dining.brewery" = "精酿酒厂";
+"dining.winery" = "酒庄";
+"dining.market" = "市场";
+"dining.bar" = "酒吧";
+
+// MARK: - Campus events
+"Campus Events" = "校园活动";
+"Finding campus events…" = "正在查找校园活动…";
+"From the %@ calendar" = "来源：%@ 日历";
+"Opens the event page" = "打开活动页面";
+"Event Details" = "活动详情";
+"All day" = "全天";
+
+// Architect page
+"architect.landmarks" = "Stamped!中的作品";
+"architect.openHint" = "打开建筑师页面";
+"architect.fromWikipedia" = "来自维基百科";
+"architect.readOnWikipedia" = "在维基百科上阅读";
+"architect.photoCredit" = "照片：Wikimedia Commons";
+
+// MARK: - Building photo gallery (Wikimedia Commons)
+"More Photos" = "更多照片";
+"Photo of %@" = "%@的照片";
+"Opens the photo full screen" = "全屏打开照片";
+"View on Wikimedia Commons" = "在维基共享资源上查看";
+"Shows the photo's author and license" = "显示照片的作者和许可协议";
+
+// MARK: - Historic Photos & Drawings (Library of Congress)
+"Historic Photos & Drawings" = "历史照片与图纸";
+"Drawing" = "图纸";
+"Shows the image larger" = "放大显示图片";
+"View on loc.gov" = "在 loc.gov 上查看";
+"Image unavailable" = "图片无法显示";
+"Measured drawing" = "测绘图";
+"Historic photo" = "历史照片";
+
 // MARK: - Quiz: photo questions, facts after each answer, review your misses
 "Which building is this?" = "这是哪座建筑？";
 "Say the name of the building in the photo..." = "说出照片中建筑的名称...";

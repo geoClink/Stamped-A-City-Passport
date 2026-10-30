@@ -68,11 +68,14 @@ struct WikiBuildingPhoto: View {
     private var assetFallback: some View {
         VStack(spacing: DS.Space.s) {
             Image(systemName: "photo.slash")
-                .font(.system(size: fallbackIconSize))
+                // Small thumbnails (like the Chronology strip) get a smaller icon and no caption
+                .font(.system(size: min(fallbackIconSize, height * 0.4)))
                 .foregroundStyle(.secondary)
-            Text("No photo available")
-                .font(.caption)
-                .foregroundStyle(.secondary)
+            if height >= 100 {
+                Text("No photo available")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
         }
         .frame(maxWidth: .infinity)
         .frame(height: height)

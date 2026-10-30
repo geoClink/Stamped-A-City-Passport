@@ -636,6 +636,46 @@
 "Local" = "Sur place";
 "Section" = "Section";
 
+// Restaurant cards: category labels from Apple Maps
+"dining.restaurant" = "Restaurant";
+"dining.cafe" = "Café";
+"dining.bakery" = "Boulangerie";
+"dining.brewery" = "Brasserie";
+"dining.winery" = "Vignoble";
+"dining.market" = "Marché";
+"dining.bar" = "Bar";
+
+// MARK: - Campus events
+"Campus Events" = "Événements du campus";
+"Finding campus events…" = "Recherche d’événements du campus…";
+"From the %@ calendar" = "Source : calendrier %@";
+"Opens the event page" = "Ouvre la page de l’événement";
+"Event Details" = "Détails de l’événement";
+"All day" = "Toute la journée";
+
+// Architect page
+"architect.landmarks" = "Ses monuments dans Stamped!";
+"architect.openHint" = "Ouvre la page de l'architecte";
+"architect.fromWikipedia" = "Extrait de Wikipédia";
+"architect.readOnWikipedia" = "Lire sur Wikipédia";
+"architect.photoCredit" = "Photo : Wikimedia Commons";
+
+// MARK: - Building photo gallery (Wikimedia Commons)
+"More Photos" = "Plus de photos";
+"Photo of %@" = "Photo de %@";
+"Opens the photo full screen" = "Ouvre la photo en plein écran";
+"View on Wikimedia Commons" = "Voir sur Wikimedia Commons";
+"Shows the photo's author and license" = "Affiche l’auteur et la licence de la photo";
+
+// MARK: - Historic Photos & Drawings (Library of Congress)
+"Historic Photos & Drawings" = "Photos et relevés historiques";
+"Drawing" = "Relevé";
+"Shows the image larger" = "Affiche l’image en plus grand";
+"View on loc.gov" = "Voir sur loc.gov";
+"Image unavailable" = "Image indisponible";
+"Measured drawing" = "Relevé architectural";
+"Historic photo" = "Photo historique";
+
 // MARK: - Quiz: photo questions, facts after each answer, review your misses
 "Which building is this?" = "Quel est ce bâtiment ?";
 "Say the name of the building in the photo..." = "Dites le nom du bâtiment sur la photo...";
