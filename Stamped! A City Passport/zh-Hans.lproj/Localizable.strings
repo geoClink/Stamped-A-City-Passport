@@ -370,6 +370,14 @@
 "Find tours and tickets for %@ on GetYourGuide" = "在 GetYourGuide 上查找%@的游览和门票";
 "Opens GetYourGuide. Stamped! doesn't handle bookings or payments." = "打开 GetYourGuide。Stamped! 不处理预订或付款。";
 
+// MARK: - Building page: food tours & nearby stays
+"Find Food Tours & Cooking Classes" = "查找美食之旅和烹饪课程";
+"Find food tours and cooking classes in %@ on GetYourGuide" = "在 GetYourGuide 上查找%@的美食之旅和烹饪课程";
+"Stays Near Here" = "附近住宿";
+"%lld min walk" = "步行 %lld 分钟";
+"Hotel data from Apple Maps." = "酒店数据来自 Apple 地图。";
+"Shows this hotel's details and prices." = "显示此酒店的详细信息和价格。";
+
 // MARK: - City page tiles & home shortcuts
 "Quiz Mastered" = "测验已掌握";
 "Architecture Quiz" = "建筑测验";

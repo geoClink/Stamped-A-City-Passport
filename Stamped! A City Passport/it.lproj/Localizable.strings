@@ -370,6 +370,14 @@
 "Find tours and tickets for %@ on GetYourGuide" = "Trova tour e biglietti per %@ su GetYourGuide";
 "Opens GetYourGuide. Stamped! doesn't handle bookings or payments." = "Apre GetYourGuide. Stamped! non gestisce prenotazioni né pagamenti.";
 
+// MARK: - Building page: food tours & nearby stays
+"Find Food Tours & Cooking Classes" = "Trova tour gastronomici e corsi di cucina";
+"Find food tours and cooking classes in %@ on GetYourGuide" = "Trova tour gastronomici e corsi di cucina a %@ su GetYourGuide";
+"Stays Near Here" = "Alloggi qui vicino";
+"%lld min walk" = "%lld min a piedi";
+"Hotel data from Apple Maps." = "Dati degli hotel da Mappe di Apple.";
+"Shows this hotel's details and prices." = "Mostra i dettagli e i prezzi di questo hotel.";
+
 // MARK: - City page tiles & home shortcuts
 "Quiz Mastered" = "Quiz superato";
 "Architecture Quiz" = "Quiz di architettura";
