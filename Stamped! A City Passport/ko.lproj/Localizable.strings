@@ -364,6 +364,12 @@
 "Check prices for %1$@ on %2$@" = "%2$@에서 %1$@ 가격 확인";
 "Hotels near %@" = "%@ 근처 호텔";
 
+// MARK: - Tours (GetYourGuide)
+"Tours & Tickets" = "투어 및 티켓";
+"Find Tours & Tickets" = "투어 및 티켓 찾기";
+"Find tours and tickets for %@ on GetYourGuide" = "GetYourGuide에서 %@ 투어 및 티켓 찾기";
+"Opens GetYourGuide. Stamped! doesn't handle bookings or payments." = "GetYourGuide를 엽니다. Stamped!는 예약이나 결제를 처리하지 않습니다.";
+
 // MARK: - City page tiles & home shortcuts
 "Quiz Mastered" = "퀴즈 마스터";
 "Architecture Quiz" = "건축 퀴즈";

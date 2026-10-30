@@ -364,6 +364,12 @@
 "Check prices for %1$@ on %2$@" = "在 %2$@ 上查看%1$@的价格";
 "Hotels near %@" = "%@附近的酒店";
 
+// MARK: - Tours (GetYourGuide)
+"Tours & Tickets" = "游览和门票";
+"Find Tours & Tickets" = "查找游览和门票";
+"Find tours and tickets for %@ on GetYourGuide" = "在 GetYourGuide 上查找%@的游览和门票";
+"Opens GetYourGuide. Stamped! doesn't handle bookings or payments." = "打开 GetYourGuide。Stamped! 不处理预订或付款。";
+
 // MARK: - City page tiles & home shortcuts
 "Quiz Mastered" = "测验已掌握";
 "Architecture Quiz" = "建筑测验";

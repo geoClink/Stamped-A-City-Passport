@@ -364,6 +364,12 @@
 "Check prices for %1$@ on %2$@" = "%2$@で%1$@の料金を確認";
 "Hotels near %@" = "%@周辺のホテル";
 
+// MARK: - Tours (GetYourGuide)
+"Tours & Tickets" = "ツアーとチケット";
+"Find Tours & Tickets" = "ツアーとチケットを探す";
+"Find tours and tickets for %@ on GetYourGuide" = "GetYourGuide で %@ のツアーとチケットを探す";
+"Opens GetYourGuide. Stamped! doesn't handle bookings or payments." = "GetYourGuide を開きます。Stamped! は予約や支払いを扱いません。";
+
 // MARK: - City page tiles & home shortcuts
 "Quiz Mastered" = "クイズ制覇";
 "Architecture Quiz" = "建築クイズ";

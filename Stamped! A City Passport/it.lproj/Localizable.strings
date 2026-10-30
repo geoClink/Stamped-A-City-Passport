@@ -364,6 +364,12 @@
 "Check prices for %1$@ on %2$@" = "Vedi i prezzi di %1$@ su %2$@";
 "Hotels near %@" = "Hotel vicino a %@";
 
+// MARK: - Tours (GetYourGuide)
+"Tours & Tickets" = "Tour e biglietti";
+"Find Tours & Tickets" = "Trova tour e biglietti";
+"Find tours and tickets for %@ on GetYourGuide" = "Trova tour e biglietti per %@ su GetYourGuide";
+"Opens GetYourGuide. Stamped! doesn't handle bookings or payments." = "Apre GetYourGuide. Stamped! non gestisce prenotazioni né pagamenti.";
+
 // MARK: - City page tiles & home shortcuts
 "Quiz Mastered" = "Quiz superato";
 "Architecture Quiz" = "Quiz di architettura";

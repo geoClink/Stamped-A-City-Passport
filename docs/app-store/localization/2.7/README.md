@@ -1,6 +1,6 @@
 # App Store product page – version 2.7 translations
 
-Same layout as `../2.6`, and every field except "What's New" is copied from 2.6 unchanged. The description's rounded numbers still hold: "more than 1,800" landmarks (1,882), 101 campuses.
+Same layout as `../2.6`. "What's New" is new, and the subtitle, keywords and promotional text are city-first: Stamped leads with city landmarks, with college campuses as the extra. The promotional text already went live on 2.6 on 29 Oct 2026. The subtitle was not final yet; "3D Landmarks & Campus Tours" is the other English option. The rest is copied from 2.6 unchanged. The description's rounded numbers still hold: "more than 1,800" landmarks (1,882), 101 campuses.
 
 ## What's New
 

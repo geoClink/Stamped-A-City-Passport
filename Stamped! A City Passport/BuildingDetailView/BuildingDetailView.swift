@@ -414,6 +414,7 @@ extension BuildingDetailView {
             }
             aboutSection
             infoSection
+            toursSection
             threeDModelSection
             localFlavorsSection
             reportIssueButton
@@ -506,7 +507,21 @@ extension BuildingDetailView {
             specCard(label: L.Building.location, value: building.address, icon: "mappin.and.ellipse")
         }
     }
- 
+
+    /// Guided tours and tickets on GetYourGuide. Cities only: campus buildings rarely have
+    /// tours of their own, and a search for one lands on unrelated tours.
+    @ViewBuilder
+    var toursSection: some View {
+        if !viewModel.city.isCampus {
+            VStack(alignment: .leading, spacing: DS.Space.m) {
+                DSSectionHeader("Tours & Tickets", systemImage: "ticket", isHighContrast: isHighContrast)
+                ToursButton(landmark: building.name, place: viewModel.city.hotelSearchName)
+                    .buttonStyle(.bordered)
+                    .tint(isHighContrast ? .primary : brandColor)
+            }
+        }
+    }
+
     @ViewBuilder
     var localFlavorsSection: some View {
         // Only show the section if the building has coordinates (so we can search)
