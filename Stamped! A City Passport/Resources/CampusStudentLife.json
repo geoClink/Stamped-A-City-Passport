@@ -1,0 +1,100 @@
+{
+  "Michigan State University": [
+    {
+      "id": "life_michstate_brody_neighborhood",
+      "name": "Brody Neighborhood",
+      "category": "housing",
+      "description": "Six halls (Armstrong, Bailey, Bryan, Butterfield, Emmons and Rather) grouped around Brody Hall on the west side of campus. Meals are at Brody Square, and central campus is about a 15-minute walk east.",
+      "latitude": 42.7315666,
+      "longitude": -84.495796
+    },
+    {
+      "id": "life_michstate_north_neighborhood",
+      "name": "North Neighborhood",
+      "category": "housing",
+      "description": "Ten halls, including Mayo, Landon, Campbell, Snyder and Phillips, in the leafy north of campus near the Union, the Main Library and Grand River Avenue. Residents eat at Heritage Commons in Landon or The Gallery in Snyder-Phillips.",
+      "latitude": 42.7316553,
+      "longitude": -84.4810755
+    },
+    {
+      "id": "life_michstate_river_trail_neighborhood",
+      "name": "River Trail Neighborhood",
+      "category": "housing",
+      "description": "McDonel, Owen, Shaw and Van Hoosen sit along the Red Cedar River and its riverside trail. Dining is at The Vista in Shaw Hall, with the allergen-friendly Thrive in Owen Hall.",
+      "latitude": 42.7268939,
+      "longitude": -84.471738
+    },
+    {
+      "id": "life_michstate_east_neighborhood",
+      "name": "East Neighborhood",
+      "category": "housing",
+      "description": "Three big halls, Akers, Holmes and Hubbard, on the quieter east edge of campus. Residents eat close to home at The Edge in Akers or the dining hall in Holmes.",
+      "latitude": 42.7249901,
+      "longitude": -84.4648929
+    },
+    {
+      "id": "life_michstate_south_neighborhood",
+      "name": "South Neighborhood",
+      "category": "housing",
+      "description": "Case, Holden, Wilson and Wonders, a short walk from Spartan Stadium and the Breslin Center, so game days feel close. Residents eat at South Pointe in Case or the Holden dining hall.",
+      "latitude": 42.7229925,
+      "longitude": -84.4904746
+    },
+    {
+      "id": "life_michstate_union",
+      "name": "MSU Union",
+      "category": "union",
+      "description": "Opened in 1925 at Grand River and Abbot as a memorial to alumni who served in World War I, the Union is still where Spartans meet to eat, study and shop for MSU gear. In the evening it stays open later for students with an MSU ID.",
+      "latitude": 42.7341865,
+      "longitude": -84.4828649
+    },
+    {
+      "id": "life_michstate_main_library",
+      "name": "Main Library",
+      "category": "study",
+      "description": "Pick your study style: the east wing is for quiet work and the west wing is for group projects. During finals the library stays open around the clock.",
+      "latitude": 42.7308851,
+      "longitude": -84.4832076
+    },
+    {
+      "id": "life_michstate_stem_facility",
+      "name": "STEM Teaching and Learning Facility",
+      "category": "study",
+      "description": "Opened in 2021 next to Spartan Stadium and joined to the old Shaw Lane Power Plant, it has around 1,200 seats for studying and group work between classes.",
+      "latitude": 42.7265599,
+      "longitude": -84.4830313
+    },
+    {
+      "id": "life_michstate_brody_square",
+      "name": "Brody Square",
+      "category": "dining",
+      "description": "The big dining hall inside Brody Hall, serving breakfast, lunch and dinner. It is one of two halls with kosher dinners on weeknights during the school year.",
+      "latitude": 42.7315208,
+      "longitude": -84.4954898
+    },
+    {
+      "id": "life_michstate_the_gallery",
+      "name": "The Gallery at Snyder Phillips",
+      "category": "dining",
+      "description": "North Neighborhood's dining hall, set between Snyder and Phillips halls. Like Brody Square, it serves kosher dinners on weeknights during the school year.",
+      "latitude": 42.729981,
+      "longitude": -84.473446
+    },
+    {
+      "id": "life_michstate_the_vista",
+      "name": "The Vista at Shaw",
+      "category": "dining",
+      "description": "The River Trail Neighborhood's dining hall in Shaw Hall, steps from the Red Cedar River. It serves breakfast, lunch and dinner on most days.",
+      "latitude": 42.7267058,
+      "longitude": -84.4753714
+    },
+    {
+      "id": "life_michstate_grand_river_avenue",
+      "name": "Grand River Avenue",
+      "category": "hangout",
+      "description": "Downtown East Lansing's tree-lined main street runs along the north edge of campus. Students cross over for coffee, food and shopping, and the city hosts summer concerts and outdoor movies nearby.",
+      "latitude": 42.7352,
+      "longitude": -84.483
+    }
+  ]
+}
