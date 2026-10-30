@@ -666,3 +666,12 @@
 "Opens the photo full screen" = "Öffnet das Foto im Vollbild";
 "View on Wikimedia Commons" = "Auf Wikimedia Commons ansehen";
 "Shows the photo's author and license" = "Zeigt Urheber und Lizenz des Fotos";
+
+// MARK: - Historic Photos & Drawings (Library of Congress)
+"Historic Photos & Drawings" = "Historische Fotos & Zeichnungen";
+"Drawing" = "Zeichnung";
+"Shows the image larger" = "Zeigt das Bild größer";
+"View on loc.gov" = "Auf loc.gov ansehen";
+"Image unavailable" = "Bild nicht verfügbar";
+"Measured drawing" = "Bauaufnahme";
+"Historic photo" = "Historisches Foto";

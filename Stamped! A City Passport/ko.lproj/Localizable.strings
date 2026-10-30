@@ -666,3 +666,12 @@
 "Opens the photo full screen" = "사진을 전체 화면으로 엽니다";
 "View on Wikimedia Commons" = "위키미디어 공용에서 보기";
 "Shows the photo's author and license" = "사진의 작성자와 라이선스를 표시합니다";
+
+// MARK: - Historic Photos & Drawings (Library of Congress)
+"Historic Photos & Drawings" = "역사적 사진과 도면";
+"Drawing" = "도면";
+"Shows the image larger" = "이미지를 크게 표시합니다";
+"View on loc.gov" = "loc.gov에서 보기";
+"Image unavailable" = "이미지를 사용할 수 없음";
+"Measured drawing" = "실측 도면";
+"Historic photo" = "역사적 사진";
