@@ -51,12 +51,26 @@ final class AudioStoryPlayer: NSObject, ObservableObject, AVSpeechSynthesizerDel
         synthesizer.speak(utterance)
     }
 
+    /// Reads the story and returns when it ends or is stopped, for a guided tour that moves
+    /// on to the next landmark when the story is over.
+    func playAndWait(_ building: Building) async {
+        play(building)
+        await withCheckedContinuation { continuation in
+            finishWaiter = continuation
+        }
+    }
+
     func stop() {
         if synthesizer.isSpeaking { synthesizer.stopSpeaking(at: .immediate) }
         finished()
     }
 
+    /// The tour waiting for the current story to end (playAndWait)
+    private var finishWaiter: CheckedContinuation<Void, Never>?
+
     private func finished() {
+        finishWaiter?.resume()
+        finishWaiter = nil
         playingBuildingID = nil
         #if os(iOS) || os(visionOS)
         // Let music or a podcast the person paused come back
@@ -93,31 +107,5 @@ final class AudioStoryPlayer: NSObject, ObservableObject, AVSpeechSynthesizerDel
 
     nonisolated func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
         Task { @MainActor in self.finished() }
-    }
-}
-
-/// The "Listen" / "Stop" button above a landmark's story
-struct ListenButton: View {
-    let building: Building
-    let tint: Color
-    @ObservedObject private var player = AudioStoryPlayer.shared
-
-    var body: some View {
-        let playing = player.isPlaying(building)
-        Button {
-            HapticManager.shared.trigger(.selection)
-            player.toggle(building)
-        } label: {
-            Label(playing ? NSLocalizedString("Stop", comment: "Audio story: stops reading the landmark's story aloud")
-                          : NSLocalizedString("Listen", comment: "Audio story: reads the landmark's story aloud"),
-                  systemImage: playing ? "stop.fill" : "speaker.wave.2.fill")
-                .font(.subheadline.weight(.semibold))
-                .foregroundColor(tint)
-                .padding(.horizontal, DS.Space.m)
-                .padding(.vertical, DS.Space.s)
-                .background(Capsule().fill(tint.opacity(0.12)))
-        }
-        .buttonStyle(.plain)
-        .accessibilityHint(playing ? "" : NSLocalizedString("Reads this landmark's story aloud in English", comment: "Audio story: VoiceOver hint for Listen"))
     }
 }
