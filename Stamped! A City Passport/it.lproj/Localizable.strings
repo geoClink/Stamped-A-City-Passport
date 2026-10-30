@@ -659,3 +659,10 @@
 "architect.fromWikipedia" = "Da Wikipedia";
 "architect.readOnWikipedia" = "Leggi su Wikipedia";
 "architect.photoCredit" = "Foto: Wikimedia Commons";
+
+// MARK: - Building photo gallery (Wikimedia Commons)
+"More Photos" = "Altre foto";
+"Photo of %@" = "Foto di %@";
+"Opens the photo full screen" = "Apre la foto a schermo intero";
+"View on Wikimedia Commons" = "Visualizza su Wikimedia Commons";
+"Shows the photo's author and license" = "Mostra l’autore e la licenza della foto";
