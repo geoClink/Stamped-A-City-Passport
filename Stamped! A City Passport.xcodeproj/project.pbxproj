@@ -84,6 +84,7 @@
 				Models/Building.swift,
 				Models/CityAudioManager.swift,
 				Models/CustomPlace.swift,
+				Models/LandmarkPanorama.swift,
 				Models/SoundCreditsView.swift,
 				PrivacyInfo.xcprivacy,
 				QuizView/Components/QuestionType.swift,
@@ -92,6 +93,7 @@
 				Resources/BuildingRegistry.json,
 				Resources/city_ambience.m4a,
 				Resources/football_crowd.m4a,
+				Resources/LandmarkPanoramas.json,
 				Resources/night_crickets.m4a,
 				Resources/rain_loop.m4a,
 			);

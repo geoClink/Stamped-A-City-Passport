@@ -342,6 +342,7 @@ private struct LandmarkCard: View {
                     Label(title, systemImage: isPlaying ? "stop.fill" : "speaker.wave.2.fill")
                 }
                 .tint(.orange)
+                PanoramaButton(building: building)
                 Button(action: onWishlist) {
                     // Typed as LocalizedStringKey so both titles get translated
                     let title: LocalizedStringKey = isWishlisted ? "Saved" : "Want to Go"
