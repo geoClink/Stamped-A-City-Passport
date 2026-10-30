@@ -675,3 +675,19 @@
 "Image unavailable" = "Image indisponible";
 "Measured drawing" = "Relevé architectural";
 "Historic photo" = "Photo historique";
+
+// MARK: - Quiz: photo questions, facts after each answer, review your misses
+"Which building is this?" = "Quel est ce bâtiment ?";
+"Say the name of the building in the photo..." = "Dites le nom du bâtiment sur la photo...";
+"Photo of the building in question" = "Photo du bâtiment en question";
+"No photo available" = "Aucune photo disponible";
+"Next Question" = "Question suivante";
+"See Results" = "Voir les résultats";
+"Review your misses" = "Revoir vos erreurs";
+"Correct answer: %@" = "Bonne réponse : %@";
+"Your answer: %@" = "Votre réponse : %@";
+"Designed by %@ and completed in %@." = "Conçu par %1$@ et achevé en %2$@.";
+"Designed by %@." = "Conçu par %@.";
+"Completed in %@." = "Achevé en %@.";
+"A fine example of %@ design." = "Un bel exemple du style %@.";
+"This landmark is in %@." = "Ce monument se trouve à %@.";
