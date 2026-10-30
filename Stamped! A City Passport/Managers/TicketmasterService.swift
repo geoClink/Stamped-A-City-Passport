@@ -174,12 +174,22 @@ final class TicketmasterService: ObservableObject {
 
     /// Both sellers' events in date order. An event both sell (same name, same day)
     /// shows once, from Ticketmaster.
-    private static func merged(_ ticketmaster: [TicketmasterEvent], _ seatGeek: [TicketmasterEvent], limit: Int) -> [TicketmasterEvent] {
+    static func merged(_ ticketmaster: [TicketmasterEvent], _ seatGeek: [TicketmasterEvent], limit: Int) -> [TicketmasterEvent] {
         func key(_ event: TicketmasterEvent) -> String {
             event.name.lowercased().filter { $0.isLetter || $0.isNumber } + "|" + event.date
         }
+        // The sellers often title the same event differently ("Spartans vs. Hoosiers" and
+        // "Hoosiers at Spartans") and name the venue differently, so an event at the same
+        // venue (GameDayService's matching) on the same day and time is the same event too
+        func isSameSlot(_ seatGeekEvent: TicketmasterEvent, _ ticketmasterEvent: TicketmasterEvent) -> Bool {
+            seatGeekEvent.date == ticketmasterEvent.date
+                && seatGeekEvent.time == ticketmasterEvent.time
+                && GameDayService.isAtVenue(seatGeekEvent.venueName, venueNames: [ticketmasterEvent.venueName])
+        }
         let taken = Set(ticketmaster.map(key))
-        let extra = seatGeek.filter { !taken.contains(key($0)) }
+        let extra = seatGeek.filter { event in
+            !taken.contains(key(event)) && !ticketmaster.contains { isSameSlot(event, $0) }
+        }
         guard !extra.isEmpty else { return ticketmaster }
         let all = (ticketmaster + extra).enumerated().sorted { a, b in
             switch (a.element.startDate, b.element.startDate) {
