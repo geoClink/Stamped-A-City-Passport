@@ -769,3 +769,24 @@
 "Opens Vrbo. Stamped! doesn't handle bookings or payments." = "Vrboを開きます。Stamped!は予約や支払いを扱いません。";
 "More tours on Viator" = "Viatorでほかのツアー";
 "Opens Viator. Stamped! doesn't handle bookings or payments." = "Viatorを開きます。Stamped!は予約や支払いを扱いません。";
+
+/* Save for Offline: city page card and Settings list */
+"Offline Use" = "オフライン利用";
+"Save the landmark photos and Wikipedia text to use without a connection, like on a flight." = "名所の写真とWikipediaの説明を保存して、機内など接続がない場所でも使えるようにします。";
+"Save for Offline" = "オフライン用に保存";
+"Downloads photos and text for %d landmarks." = "%d か所の名所の写真と説明をダウンロードします。";
+"Saving %d of %d…" = "%d / %d を保存中…";
+"Stops saving. What's saved so far is kept for next time." = "保存を中止します。保存済みの分は次回のために残ります。";
+"Saved for Offline" = "オフライン用に保存済み";
+"%1$@, saved %2$@" = "%1$@、%2$@ に保存";
+"Remove Offline Copy" = "オフラインコピーを削除";
+"Deletes the saved photos and text from this device." = "保存した写真と説明をこのデバイスから削除します。";
+"Remove the offline copy of %@?" = "%@ のオフラインコピーを削除しますか？";
+"Remove" = "削除";
+"Couldn't finish saving. Check your connection and try again; what's saved so far is kept." = "保存を完了できませんでした。接続を確認してもう一度お試しください。保存済みの分は残ります。";
+"Low Data Mode is on. Turn it off in Settings to save photos." = "省データモードがオンです。写真を保存するには設定でオフにしてください。";
+"Couldn't save to this device. Check that there's free storage." = "このデバイスに保存できませんでした。空き容量を確認してください。";
+"Maps, weather, events and photo galleries still need a connection. For an offline map, download this area in Apple Maps (Offline Maps)." = "地図、天気、イベント、フォトギャラリーには引き続き接続が必要です。オフラインで地図を使うには、Appleマップでこのエリアをダウンロードしてください（オフラインマップ）。";
+"No cities saved yet. Open a city or campus and tap Save for Offline in its Plan tab." = "保存した都市はまだありません。都市またはキャンパスを開き、「計画」タブで「オフライン用に保存」をタップしてください。";
+"Remove %@" = "%@ を削除";
+"Maps aren't saved. For an offline map, download the area in Apple Maps (Offline Maps)." = "地図は保存されません。オフラインで地図を使うには、Appleマップでエリアをダウンロードしてください（オフラインマップ）。";

@@ -141,6 +141,9 @@ struct CityDetailView: View {
                 case .plan:
                     CityItineraryView(city: viewModel.city)
 
+                    // Save for Offline: photos and Wikipedia text for flights and trips abroad
+                    OfflineSaveSection(city: viewModel.city, isHighContrast: isHighContrast)
+
                     // US campuses only: College Scorecard facts (hidden while loading or without data)
                     CollegeFactsSection(campus: viewModel.city, isHighContrast: isHighContrast)
 

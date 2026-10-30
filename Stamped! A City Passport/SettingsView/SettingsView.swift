@@ -17,9 +17,10 @@ struct SettingsView: View {
     @State private var showingFirstAlert = false
     @State private var showingFinalAlert = false
     @State private var selectedTab: SettingsTab? = .experience
+    @ObservedObject private var offline = OfflineDownloader.shared
 
     enum SettingsTab: Hashable {
-        case experience, danger
+        case experience, offline, danger
     }
 
     var body: some View {
@@ -41,6 +42,7 @@ private extension SettingsView {
         NavigationStack {
             List {
                 experienceSection
+                offlineSection
                 feedbackSection
                 dangerZoneSection
             }
@@ -72,6 +74,7 @@ private extension SettingsView {
             List(selection: $selectedTab) {
                 Section(L.Settings.title) {
                     Label(L.Settings.experience, systemImage: "hand.tap").tag(SettingsTab.experience)
+                    Label("Saved for Offline", systemImage: "arrow.down.circle").tag(SettingsTab.offline)
                 }
 
                 Section(L.Settings.maintenance) {
@@ -93,16 +96,25 @@ private extension SettingsView {
         }
     }
 
+    private var detailTitle: String {
+        switch selectedTab {
+        case .danger: return L.Settings.resetProgress
+        case .offline: return NSLocalizedString("Saved for Offline", comment: "Settings: list of cities saved for offline use")
+        default: return L.Settings.experience
+        }
+    }
+
     @ViewBuilder
     private var detailView: some View {
         Form {
             switch selectedTab {
             case .experience: experienceSection
+            case .offline: offlineSection
             case .danger: dangerZoneSection
             case .none: Text(L.Settings.selectSetting).foregroundColor(.secondary)
             }
         }
-        .navigationTitle(selectedTab == .danger ? L.Settings.resetProgress : L.Settings.experience)
+        .navigationTitle(detailTitle)
     }
 }
 
@@ -204,6 +216,40 @@ private extension SettingsView {
             .padding(.vertical, DS.Space.m)
         }
         .tint(viewModel.highContrast ? .primary : viewModel.brandColor)
+    }
+
+    /// Cities saved with "Save for Offline" on their page, with their size and Remove
+    var offlineSection: some View {
+        Section {
+            if offline.savedCities.isEmpty {
+                Text("No cities saved yet. Open a city or campus and tap Save for Offline in its Plan tab.")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                    .padding(.vertical, DS.Space.xs)
+            } else {
+                ForEach(offline.savedCities) { record in
+                    rowLayout {
+                        Label {
+                            rowText(title: Text(record.cityName), subtitle: Text(OfflineSaveSection.detail(for: record)))
+                        } icon: {
+                            rowIcon("checkmark.circle.fill")
+                        }
+                        Spacer(minLength: 0)
+                        Button("Remove", role: .destructive) {
+                            offline.remove(cityID: record.cityID)
+                        }
+                        .buttonStyle(.borderless)
+                        .foregroundColor(viewModel.highContrast ? .primary : .red)
+                        .accessibilityLabel(Text(String(format: NSLocalizedString("Remove %@", comment: "Settings, Saved for Offline: VoiceOver label for removing a city's offline copy"), record.cityName)))
+                    }
+                    .padding(.vertical, DS.Space.xs)
+                }
+            }
+        } header: {
+            Text("Saved for Offline").fontWeight(viewModel.highContrast ? .bold : .regular)
+        } footer: {
+            Text("Maps aren't saved. For an offline map, download the area in Apple Maps (Offline Maps).")
+        }
     }
 
     var feedbackSection: some View {

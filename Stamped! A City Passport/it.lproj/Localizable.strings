@@ -769,3 +769,24 @@
 "Opens Vrbo. Stamped! doesn't handle bookings or payments." = "Apre Vrbo. Stamped! non gestisce prenotazioni né pagamenti.";
 "More tours on Viator" = "Altri tour su Viator";
 "Opens Viator. Stamped! doesn't handle bookings or payments." = "Apre Viator. Stamped! non gestisce prenotazioni né pagamenti.";
+
+/* Save for Offline: city page card and Settings list */
+"Offline Use" = "Uso offline";
+"Save the landmark photos and Wikipedia text to use without a connection, like on a flight." = "Salva le foto e i testi di Wikipedia dei monumenti per usarli senza connessione, ad esempio in volo.";
+"Save for Offline" = "Salva per l’uso offline";
+"Downloads photos and text for %d landmarks." = "Scarica foto e testi di %d monumenti.";
+"Saving %d of %d…" = "Salvataggio %d di %d…";
+"Stops saving. What's saved so far is kept for next time." = "Interrompe il salvataggio. Quanto già salvato resta per la prossima volta.";
+"Saved for Offline" = "Salvato per l’uso offline";
+"%1$@, saved %2$@" = "%1$@, salvato il %2$@";
+"Remove Offline Copy" = "Rimuovi copia offline";
+"Deletes the saved photos and text from this device." = "Elimina da questo dispositivo le foto e i testi salvati.";
+"Remove the offline copy of %@?" = "Rimuovere la copia offline di %@?";
+"Remove" = "Rimuovi";
+"Couldn't finish saving. Check your connection and try again; what's saved so far is kept." = "Salvataggio non completato. Controlla la connessione e riprova; quanto già salvato viene mantenuto.";
+"Low Data Mode is on. Turn it off in Settings to save photos." = "La modalità dati ridotti è attiva. Disattivala in Impostazioni per salvare le foto.";
+"Couldn't save to this device. Check that there's free storage." = "Impossibile salvare su questo dispositivo. Verifica che ci sia spazio libero.";
+"Maps, weather, events and photo galleries still need a connection. For an offline map, download this area in Apple Maps (Offline Maps)." = "Mappe, meteo, eventi e gallerie fotografiche richiedono comunque una connessione. Per una mappa offline, scarica questa zona in Mappe di Apple (Mappe offline).";
+"No cities saved yet. Open a city or campus and tap Save for Offline in its Plan tab." = "Nessuna città salvata. Apri una città o un campus e tocca Salva per l’uso offline nella scheda Pianifica.";
+"Remove %@" = "Rimuovi %@";
+"Maps aren't saved. For an offline map, download the area in Apple Maps (Offline Maps)." = "Le mappe non vengono salvate. Per una mappa offline, scarica la zona in Mappe di Apple (Mappe offline).";
