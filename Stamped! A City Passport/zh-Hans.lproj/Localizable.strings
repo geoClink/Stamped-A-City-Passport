@@ -635,3 +635,10 @@
 "Plan" = "规划";
 "Local" = "当地";
 "Section" = "部分";
+
+// MARK: - Campus History (Wikipedia)
+"HISTORY" = "历史";
+"Founded %@" = "创立于 %@ 年";
+"From Wikipedia" = "摘自维基百科";
+"Read more on Wikipedia" = "在维基百科上阅读更多";
+"Opens the full article on Wikipedia" = "在维基百科上打开完整文章";

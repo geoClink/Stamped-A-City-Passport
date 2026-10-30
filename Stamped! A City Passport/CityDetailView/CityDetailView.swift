@@ -121,6 +121,9 @@ struct CityDetailView: View {
                         CampusTraditionsSection(campus: viewModel.city, isHighContrast: isHighContrast)
                     }
 
+                    // Campuses only: founding year and a few lines of history from Wikipedia
+                    CampusHistorySection(campus: viewModel.city, isHighContrast: isHighContrast)
+
                     LandmarkSection(viewModel: viewModel, isHighContrast: isHighContrast)
 
                     BuildingTimelineSection(

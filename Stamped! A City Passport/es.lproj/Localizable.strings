@@ -635,3 +635,10 @@
 "Plan" = "Planear";
 "Local" = "Local";
 "Section" = "Sección";
+
+// MARK: - Campus History (Wikipedia)
+"HISTORY" = "HISTORIA";
+"Founded %@" = "Fundada en %@";
+"From Wikipedia" = "De Wikipedia";
+"Read more on Wikipedia" = "Leer más en Wikipedia";
+"Opens the full article on Wikipedia" = "Abre el artículo completo en Wikipedia";

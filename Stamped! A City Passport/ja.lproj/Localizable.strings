@@ -635,3 +635,10 @@
 "Plan" = "計画";
 "Local" = "周辺情報";
 "Section" = "セクション";
+
+// MARK: - Campus History (Wikipedia)
+"HISTORY" = "歴史";
+"Founded %@" = "%@年創立";
+"From Wikipedia" = "Wikipedia より";
+"Read more on Wikipedia" = "Wikipedia で続きを読む";
+"Opens the full article on Wikipedia" = "Wikipedia の記事全文を開きます";
