@@ -636,6 +636,30 @@
 "Local" = "Local";
 "Section" = "Sección";
 
+// Restaurant cards: category labels from Apple Maps
+"dining.restaurant" = "Restaurante";
+"dining.cafe" = "Cafetería";
+"dining.bakery" = "Panadería";
+"dining.brewery" = "Cervecería";
+"dining.winery" = "Bodega";
+"dining.market" = "Mercado";
+"dining.bar" = "Bar";
+
+// MARK: - Campus events
+"Campus Events" = "Eventos del campus";
+"Finding campus events…" = "Buscando eventos del campus…";
+"From the %@ calendar" = "Del calendario de %@";
+"Opens the event page" = "Abre la página del evento";
+"Event Details" = "Detalles del evento";
+"All day" = "Todo el día";
+
+// Architect page
+"architect.landmarks" = "Sus edificios en Stamped!";
+"architect.openHint" = "Abre la página del arquitecto";
+"architect.fromWikipedia" = "De Wikipedia";
+"architect.readOnWikipedia" = "Leer en Wikipedia";
+"architect.photoCredit" = "Foto: Wikimedia Commons";
+
 // MARK: - Building photo gallery (Wikimedia Commons)
 "More Photos" = "Más fotos";
 "Photo of %@" = "Foto de %@";
