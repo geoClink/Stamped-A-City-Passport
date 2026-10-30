@@ -707,3 +707,15 @@
 "Completed in %@." = "%@년에 완공되었습니다.";
 "A fine example of %@ design." = "%@ 양식의 훌륭한 예입니다.";
 "This landmark is in %@." = "이 랜드마크는 %@에 있습니다.";
+
+// MARK: - College Facts (College Scorecard)
+"COLLEGE FACTS" = "대학 정보";
+"Acceptance rate" = "합격률";
+"Undergraduates" = "학부생 수";
+"In-state tuition" = "주내 학비";
+"Out-of-state tuition" = "주외 학비";
+"Graduation rate" = "졸업률";
+"Median earnings after 10 years" = "10년 후 소득 중앙값";
+"Tuition and fees are per year. Graduation is within 6 years; earnings are the median 10 years after starting." = "학비는 연간 기준(수수료 포함)입니다. 졸업률은 6년 이내 기준, 소득은 입학 10년 후 중앙값입니다.";
+"Source: U.S. Department of Education College Scorecard" = "출처: 미국 교육부 College Scorecard";
+"Opens the College Scorecard website" = "College Scorecard 웹사이트를 엽니다";

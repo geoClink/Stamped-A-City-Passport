@@ -707,3 +707,15 @@
 "Completed in %@." = "%@年に完成。";
 "A fine example of %@ design." = "%@様式の好例です。";
 "This landmark is in %@." = "このランドマークは%@にあります。";
+
+// MARK: - College Facts (College Scorecard)
+"COLLEGE FACTS" = "大学データ";
+"Acceptance rate" = "合格率";
+"Undergraduates" = "学部生数";
+"In-state tuition" = "州内学費";
+"Out-of-state tuition" = "州外学費";
+"Graduation rate" = "卒業率";
+"Median earnings after 10 years" = "10年後の年収中央値";
+"Tuition and fees are per year. Graduation is within 6 years; earnings are the median 10 years after starting." = "学費は年額（諸経費込み）。卒業率は6年以内、年収は入学から10年後の中央値です。";
+"Source: U.S. Department of Education College Scorecard" = "出典：米国教育省 College Scorecard";
+"Opens the College Scorecard website" = "College Scorecard のサイトを開きます";

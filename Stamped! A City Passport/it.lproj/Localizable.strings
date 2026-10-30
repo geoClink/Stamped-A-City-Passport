@@ -707,3 +707,15 @@
 "Completed in %@." = "Completato nel %@.";
 "A fine example of %@ design." = "Un bell'esempio di stile %@.";
 "This landmark is in %@." = "Questo monumento si trova a %@.";
+
+// MARK: - College Facts (College Scorecard)
+"COLLEGE FACTS" = "DATI DELL'UNIVERSITÀ";
+"Acceptance rate" = "Tasso di ammissione";
+"Undergraduates" = "Studenti undergraduate";
+"In-state tuition" = "Retta per residenti";
+"Out-of-state tuition" = "Retta per non residenti";
+"Graduation rate" = "Tasso di laurea";
+"Median earnings after 10 years" = "Reddito mediano dopo 10 anni";
+"Tuition and fees are per year. Graduation is within 6 years; earnings are the median 10 years after starting." = "Rette e tasse annuali. Laurea entro 6 anni; reddito mediano 10 anni dopo l'iscrizione.";
+"Source: U.S. Department of Education College Scorecard" = "Fonte: College Scorecard del Dipartimento dell'Istruzione degli Stati Uniti";
+"Opens the College Scorecard website" = "Apre il sito di College Scorecard";
