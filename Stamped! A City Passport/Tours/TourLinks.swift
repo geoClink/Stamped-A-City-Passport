@@ -67,6 +67,8 @@ struct TourLinkBuilder {
 struct ToursButton: View {
     let landmark: String
     let place: String
+    /// Lets a screen dress the label like its own buttons (the landmark page's tinted tiles)
+    var styleLabel: (AnyView) -> AnyView = { $0 }
 
     private let builder = TourLinkBuilder()
     @State private var browserLink: BrowserLink?
@@ -77,8 +79,10 @@ struct ToursButton: View {
                 Button {
                     browserLink = BrowserLink(url: url)
                 } label: {
-                    Label(NSLocalizedString("Find Tours & Tickets", comment: "Landmark page button: opens GetYourGuide's tours and tickets for this landmark"),
-                          systemImage: "ticket.fill")
+                    styleLabel(AnyView(
+                        Label(NSLocalizedString("Find Tours & Tickets", comment: "Landmark page button: opens GetYourGuide's tours and tickets for this landmark"),
+                              systemImage: "ticket.fill")
+                    ))
                 }
                 .accessibilityLabel(String(
                     format: NSLocalizedString("Find tours and tickets for %@ on GetYourGuide", comment: "Tours button, VoiceOver: e.g. \"Find tours and tickets for Colosseum on GetYourGuide\""),

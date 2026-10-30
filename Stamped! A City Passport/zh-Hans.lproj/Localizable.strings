@@ -626,3 +626,12 @@
 "%lld places" = "%lld 个地点";
 "Zooms in on these places" = "放大查看这些地点";
 "Stops %@" = "站点 %@";
+
+// MARK: - Passport search
+"Search cities or countries" = "搜索城市或国家";
+"No stamps match \U201C%@\U201D" = "没有与“%@”匹配的印章";
+
+// MARK: - City page tabs
+"Plan" = "规划";
+"Local" = "当地";
+"Section" = "部分";

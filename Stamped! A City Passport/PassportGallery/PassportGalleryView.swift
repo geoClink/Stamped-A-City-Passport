@@ -24,6 +24,8 @@ struct PassportGalleryView: View {
     @State private var showingShareCard = false
     /// iPad: the Campuses entry in the sidebar is showing instead of a country
     @State private var showingCampusPage = false
+    /// Filters the stamps by city or country name
+    @State private var searchText = ""
 
     /// Decorative icons scale with the text around them
     @ScaledMetric(relativeTo: .largeTitle) private var trophySize: CGFloat = 70
@@ -48,6 +50,7 @@ struct PassportGalleryView: View {
                 NavigationSplitView {
                     sidebarList
                         .navigationTitle("Countries")
+                        .searchable(text: $searchText, placement: .sidebar, prompt: searchPrompt)
                         .background(brandColor.opacity(highContrast ? 0 : 0.03))
                 } detail: {
                     if showingCampusPage {
@@ -68,7 +71,11 @@ struct PassportGalleryView: View {
                 NavigationStack {
                     ScrollView {
                         VStack(spacing: DS.Space.section) {
-                            passportHeader
+                            if isSearching {
+                                if !hasSearchResults { noResultsState }
+                            } else {
+                                passportHeader
+                            }
                             // Campuses first: the countries below are mostly locked cities
                             campusSection(columns: stampColumns)
                             countryGridSection
@@ -76,6 +83,11 @@ struct PassportGalleryView: View {
                         .dsPageMargin()
                         .padding(.vertical, DS.Space.l)
                     }
+                    #if os(macOS)
+                    .searchable(text: $searchText, prompt: searchPrompt)
+                    #else
+                    .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: searchPrompt)
+                    #endif
                     .navigationTitle("Your Passport")
                     .navigationBarTitleDisplayMode(.inline)
                     .background(pageBackground)
@@ -123,11 +135,11 @@ private extension PassportGalleryView {
     var sidebarList: some View {
         List(selection: $selectedCountry) {
             Section {
-                ForEach(sortedCountries, id: \.self) { country in
+                ForEach(visibleCountries, id: \.self) { country in
                     countryRow(country)
                 }
             }
-            if !allCampuses.isEmpty {
+            if !allCampuses.isEmpty && (!isSearching || !campusesToShow.isEmpty) {
                 Section {
                     Button {
                         selectedCountry = nil
@@ -198,7 +210,7 @@ private extension PassportGalleryView {
                     .frame(height: 4)
 
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 220), spacing: DS.Space.xl)], spacing: DS.Space.xl) {
-                    let countryCities = groupedCities[country] ?? []
+                    let countryCities = visibleCities(in: country)
                     ForEach(countryCities) { city in
                         if isCityCompleted(city) {
                             MiniPassportStamp(city: city, highContrast: highContrast)
@@ -225,6 +237,20 @@ private extension PassportGalleryView {
         }
     }
     
+    /// Shown when the search matches no city, country or campus
+    var noResultsState: some View {
+        VStack(spacing: DS.Space.m) {
+            Image(systemName: "magnifyingglass")
+                .font(.largeTitle)
+                .foregroundStyle(.secondary)
+            Text(String(format: NSLocalizedString("No stamps match \u{201C}%@\u{201D}", comment: "Passport search: nothing matches, e.g. No stamps match “Paris”"), searchQuery))
+                .font(.headline)
+                .multilineTextAlignment(.center)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.top, DS.Space.section)
+    }
+
     var emptyBookState: some View {
         VStack(spacing: DS.Space.xl) {
             Image(systemName: "map.fill")
@@ -286,7 +312,7 @@ private extension PassportGalleryView {
     }
 
     var countryGridSection: some View {
-        ForEach(sortedCountries, id: \.self) { country in
+        ForEach(visibleCountries, id: \.self) { country in
             VStack(alignment: .leading, spacing: DS.Space.m) {
                 // One line, shrinking to fit, so long names like ARGENTINA never break mid-word.
                 // Country names aren't translated, so the key just shows as written.
@@ -298,7 +324,7 @@ private extension PassportGalleryView {
                 }
                 
                 LazyVGrid(columns: stampColumns, spacing: DS.Space.m) {
-                    let countryCities = groupedCities[country] ?? []
+                    let countryCities = visibleCities(in: country)
                     ForEach(countryCities) { city in
                         if isCityCompleted(city) {
                             MiniPassportStamp(city: city, highContrast: highContrast)
@@ -321,7 +347,35 @@ private extension PassportGalleryView {
 private extension PassportGalleryView {
     /// Stamped campuses in school colors. Locked campuses aren't listed (there are 101);
     /// the count says how many are left.
+    @ViewBuilder
     func campusSection(columns: [GridItem]) -> some View {
+        if isSearching {
+            // A search lists matching campuses, locked ones too, so a school is easy to find
+            if !campusesToShow.isEmpty {
+                VStack(alignment: .leading, spacing: DS.Space.m) {
+                    DSSectionHeader(title: "CAMPUSES", systemImage: "graduationcap.fill", isHighContrast: highContrast) { EmptyView() }
+                    LazyVGrid(columns: columns, spacing: DS.Space.m) {
+                        ForEach(campusesToShow) { campus in
+                            if isCityCompleted(campus) {
+                                MiniPassportStamp(city: campus, highContrast: highContrast)
+                                    .contentShape(Rectangle())
+                                    .onTapGesture {
+                                        if hapticsEnabled { HapticManager.shared.trigger(.selection) }
+                                        selectedCity = campus
+                                    }
+                            } else {
+                                LockedStampView(cityName: campus.name, isHighContrast: highContrast)
+                            }
+                        }
+                    }
+                }
+            }
+        } else {
+            allCampusesSection(columns: columns)
+        }
+    }
+
+    func allCampusesSection(columns: [GridItem]) -> some View {
         VStack(alignment: .leading, spacing: DS.Space.m) {
             DSSectionHeader(title: "CAMPUSES", systemImage: "graduationcap.fill", isHighContrast: highContrast) {
                 Text("\(stampedCampuses.count)/\(allCampuses.count)")
@@ -367,6 +421,35 @@ extension PassportGalleryView {
         groupedCities.keys.sorted { $0.localizedName.localizedStandardCompare($1.localizedName) == .orderedAscending }
     }
     
+    var searchPrompt: String {
+        NSLocalizedString("Search cities or countries", comment: "Passport: search field prompt")
+    }
+
+    var searchQuery: String { searchText.trimmingCharacters(in: .whitespacesAndNewlines) }
+    var isSearching: Bool { !searchQuery.isEmpty }
+
+    /// A city matches by its own name or its country's
+    func matchesSearch(_ city: CityLocation.City) -> Bool {
+        !isSearching
+            || city.name.localizedCaseInsensitiveContains(searchQuery)
+            || city.country.localizedName.localizedCaseInsensitiveContains(searchQuery)
+    }
+
+    func visibleCities(in country: CityLocation.Country) -> [CityLocation.City] {
+        (groupedCities[country] ?? []).filter(matchesSearch)
+    }
+
+    var visibleCountries: [CityLocation.Country] {
+        sortedCountries.filter { !visibleCities(in: $0).isEmpty }
+    }
+
+    /// While searching: every matching campus, stamped or not
+    var campusesToShow: [CityLocation.City] {
+        allCampuses.filter(matchesSearch).sorted { $0.campusSortName < $1.campusSortName }
+    }
+
+    var hasSearchResults: Bool { !visibleCountries.isEmpty || !campusesToShow.isEmpty }
+
     var completedCount: Int {
         cities.filter { !$0.isCampus && isCityCompleted($0) }.count
     }

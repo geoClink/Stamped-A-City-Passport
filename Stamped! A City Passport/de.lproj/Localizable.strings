@@ -626,3 +626,12 @@
 "%lld places" = "%lld Orte";
 "Zooms in on these places" = "Zoomt auf diese Orte";
 "Stops %@" = "Stopps %@";
+
+// MARK: - Passport search
+"Search cities or countries" = "Städte oder Länder suchen";
+"No stamps match \U201C%@\U201D" = "Keine Stempel passen zu „%@“";
+
+// MARK: - City page tabs
+"Plan" = "Planen";
+"Local" = "Vor Ort";
+"Section" = "Bereich";

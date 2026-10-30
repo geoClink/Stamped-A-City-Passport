@@ -32,6 +32,8 @@ struct CityListView: View {
     @State var expandedContinents: [CityLocation.Continent: Bool] = [:]
     @State var expandedCampusGroups: [CampusGroup.Kind: Bool] = [:]
     @State var isCampusSectionExpanded = false
+    /// Which part of the world the home list shows: a continent's raw value, or "campuses"
+    @AppStorage("home_explore_filter") var exploreFilter = CityLocation.Continent.northAmerica.rawValue
     @Environment(\.dynamicTypeSize) var dynamicTypeSize
     @State var searchText = ""
     /// Results for `searchedText`, worked out shortly after typing stops
@@ -66,33 +68,27 @@ struct CityListView: View {
                         .listRowSeparator(.hidden)
                         .listRowBackground(Color.clear)
                     
-                    ForEach(viewModel.groupedByContinent) { continentGroup in
-                        let isExpanded = expandedContinents[continentGroup.id, default: false]
-                        
-                        Section {
-                            DisclosureGroup(isExpanded: Binding(
-                                get: { isExpanded },
-                                set: { newValue in
-                                    if newValue { HapticManager.shared.trigger(.selection) }
-                                    withAnimation(.spring(response: 0.6, dampingFraction: 0.7)) {
-                                        expandedContinents[continentGroup.id] = newValue
-                                    }
+                    exploreFilterBar
+                        .listRowInsets(EdgeInsets(top: DS.Space.s, leading: 0, bottom: DS.Space.s, trailing: 0))
+                        .listRowSeparator(.hidden)
+                        .listRowBackground(Color.clear)
+
+                    if exploreFilter == Self.campusFilter {
+                        campusSection
+                    } else {
+                        // One continent at a time, its countries shown open: a city is one tap away
+                        ForEach(selectedContinentGroup?.countries ?? []) { countryGroup in
+                            Section {
+                                ForEach(countryGroup.cities) { city in
+                                    cityRowWrapper(city: city)
                                 }
-                            )) {
-                                ForEach(continentGroup.countries) { countryGroup in
-                                    cityCountrySection(country: countryGroup.id, cities: countryGroup.cities)
-                                }
-                            } label: {
-                                ContinentHeader(
-                                    continent: continentGroup.id,
-                                    isHighContrast: isHighContrast,
-                                    isExpanded: isExpanded
-                                )
+                            } header: {
+                                CountryHeaderLabel(country: countryGroup.id,
+                                                   isMastered: viewModel.isCountryMastered(countryGroup.id),
+                                                   isHighContrast: isHighContrast)
                             }
                         }
                     }
-
-                    campusSection
                 } else {
                     let results = searchResults
 
@@ -178,8 +174,8 @@ struct CityListView: View {
                     #else
                     ScrollView {
                         VStack(alignment: .leading, spacing: 0) {
+                            // The itinerary is in the city page's Plan tab
                             CityDetailView(city: city)
-                            CityItineraryView(city: city)
                         }
                     }
                     .id(city.id)
@@ -243,90 +239,89 @@ struct CityListView: View {
 
     // MARK: - List Sections
 
-    /// "Campus Architecture": every campus below the continents, US campuses by conference
-    /// and the rest by country.
+    /// The Campuses filter: the student's College List first, then every campus,
+    /// US campuses by conference and the rest by country.
     @ViewBuilder
     private var campusSection: some View {
-        let campusGroups = viewModel.campusGroups
-        if !campusGroups.isEmpty {
-            Section {
-                DisclosureGroup(isExpanded: Binding(
-                    get: { isCampusSectionExpanded },
-                    set: { newValue in
-                        if newValue { HapticManager.shared.trigger(.selection) }
-                        withAnimation(.spring(response: 0.6, dampingFraction: 0.7)) {
-                            isCampusSectionExpanded = newValue
+        Section {
+            collegeListRow
+        }
+        ForEach(viewModel.campusGroups) { group in
+            campusGroupSection(group)
+        }
+    }
+
+    // MARK: - Explore filter
+
+    static let campusFilter = "campuses"
+
+    private var selectedContinentGroup: ContinentGroup? {
+        viewModel.groupedByContinent.first { $0.id.rawValue == exploreFilter }
+            ?? viewModel.groupedByContinent.sorted { $0.id < $1.id }.first
+    }
+
+    /// Continents, then Campuses, as a row of chips that scrolls sideways
+    private var exploreFilterBar: some View {
+        let continents = viewModel.groupedByContinent.map(\.id).sorted()
+        let selected = exploreFilter == Self.campusFilter ? Self.campusFilter : (selectedContinentGroup?.id.rawValue ?? "")
+        return ScrollViewReader { proxy in
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: DS.Space.s) {
+                    ForEach(continents, id: \.self) { continent in
+                        filterChip(continent.localizedName, systemImage: continent.iconName,
+                                   isSelected: selected == continent.rawValue) {
+                            exploreFilter = continent.rawValue
                         }
+                        .id(continent.rawValue)
                     }
-                )) {
-                    collegeListRow
-                    ForEach(campusGroups) { group in
-                        campusGroupSection(group)
+                    if !viewModel.campusGroups.isEmpty {
+                        filterChip(NSLocalizedString("Campuses", comment: "Home filter chip: show campuses instead of a continent's cities"),
+                                   systemImage: "graduationcap.fill",
+                                   isSelected: selected == Self.campusFilter) {
+                            exploreFilter = Self.campusFilter
+                        }
+                        .id(Self.campusFilter)
                     }
-                } label: {
-                    CampusSectionHeader(isHighContrast: isHighContrast, isExpanded: isCampusSectionExpanded)
                 }
             }
+            // The chosen chip may be off the right edge (North America, Campuses): bring it into view
+            .onAppear { proxy.scrollTo(selected, anchor: .center) }
         }
     }
 
-    /// On home, under the shortcut tiles: the student's schools and the road trip, one tap away.
-    /// (Before, the list was only inside Campus Architecture at the very bottom.)
-    var collegeListCard: some View {
-        let schools = collegeList.campuses
-        let summary: String = schools.isEmpty
-            ? NSLocalizedString("Save the schools you're considering, then plan a road trip to visit them.", comment: "Home: My College List card when the list is empty")
-            : ListFormatter.localizedString(byJoining: schools.prefix(3).map(\.campusVisitShortName))
-                + (schools.count > 3 ? " " + String(format: NSLocalizedString("+%d more", comment: "Home: My College List card, more schools than shown"), schools.count - 3) : "")
-        return HStack(spacing: 14) {
-            Image(systemName: "graduationcap.fill")
-                .font(.title2)
-                .foregroundStyle(isHighContrast ? AnyShapeStyle(Color.primary) : AnyShapeStyle(LinearGradient.sectionIcon))
-                .frame(width: 40, height: 40)
-                .background(Circle().fill(brandColor.opacity(isHighContrast ? 0 : 0.12)))
+    private func filterChip(_ title: String, systemImage: String, isSelected: Bool,
+                            action: @escaping () -> Void) -> some View {
+        // A tap gesture, not a Button: every Button in a List row fires on any tap in the row
+        HStack(spacing: 6) {
+            Image(systemName: systemImage)
+                .font(.footnote)
+                .foregroundStyle(isSelected ? AnyShapeStyle(isHighContrast ? Color(UIColor.systemBackground) : .white) : AnyShapeStyle(isHighContrast ? Color.primary : Color.adventureOrange))
                 .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 3) {
-                HStack(spacing: 6) {
-                    Text(NSLocalizedString("My College List", comment: "City list: row that opens the user's list of campuses"))
-                        .font(.headline)
-                        .foregroundStyle(.primary)
-                    if !schools.isEmpty {
-                        Text("\(schools.count)")
-                            .font(.caption.monospaced().bold())
-                            .foregroundStyle(brandColor)
-                    }
-                }
-                Text(summary)
-                    .font(.footnote)
-                    .foregroundStyle(isHighContrast ? .primary : .secondary)
-                    .lineLimit(2)
+            Text(title)
+        }
+            .font(.subheadline.weight(.semibold))
+            .lineLimit(1)
+            .padding(.horizontal, 14)
+            .padding(.vertical, 8)
+            .foregroundStyle(isSelected ? (isHighContrast ? Color(UIColor.systemBackground) : .white) : .primary)
+            .background(
+                Capsule().fill(isSelected
+                    ? (isHighContrast ? Color.primary : Color.adventureOrange)
+                    : (isHighContrast ? Color(UIColor.systemBackground) : Color(UIColor.secondarySystemGroupedBackground)))
+            )
+            .overlay(Capsule().stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2))
+            .contentShape(Capsule())
+            .onTapGesture {
+                guard !isSelected else { return }
+                HapticManager.shared.trigger(.selection)
+                withAnimation(.snappy) { action() }
             }
-            Spacer(minLength: 0)
-            Image(systemName: "chevron.right")
-                .font(.caption.bold())
-                .foregroundStyle(.secondary)
-        }
-        .padding(14)
-        .background(
-            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                .fill(isHighContrast ? Color(UIColor.systemBackground) : Color(UIColor.secondarySystemGroupedBackground))
-        )
-        .overlay(
-            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
-        )
-        .contentShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
-        // A tap gesture, not a Button: it sits in the same List row as the shortcut tiles
-        .onTapGesture {
-            HapticManager.shared.trigger(.selection)
-            showingCollegeList = true
-        }
-        .accessibilityElement(children: .combine)
-        .accessibilityAddTraits(.isButton)
-        .accessibilityAction { showingCollegeList = true }
+            .accessibilityElement(children: .combine)
+            .accessibilityAddTraits(isSelected ? [.isButton, .isSelected] : .isButton)
+            .accessibilityAction { action() }
     }
 
-    /// First row of "Campus Architecture": the schools a student is considering, and their road trip.
+    /// First row of the Campuses filter: the schools a student is considering, and their road trip.
     private var collegeListRow: some View {
         Button {
             HapticManager.shared.trigger(.selection)

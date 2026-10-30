@@ -30,6 +30,21 @@ struct CityDetailView: View {
     /// The trip the planner opens on, set by "Plan a Campus Visit". nil opens the trip list.
     @State private var tripPlannerTripID: String?
     @State private var resetType: CityDetailViewModel.ResetType = .none
+    /// Which part of the city page shows under the tiles; kept between cities
+    @AppStorage("city_page_tab") private var selectedTab: CityPageTab = .landmarks
+
+    /// The city page in three parts, so it isn't one very long scroll
+    enum CityPageTab: String, CaseIterable, Identifiable {
+        case landmarks, plan, local
+        var id: String { rawValue }
+        var title: String {
+            switch self {
+            case .landmarks: return NSLocalizedString("Landmarks", comment: "City page tab: the landmark list")
+            case .plan: return NSLocalizedString("Plan", comment: "City page tab: itinerary, events, hotels and travel info")
+            case .local: return NSLocalizedString("Local", comment: "City page tab: weather and nearby dining")
+            }
+        }
+    }
     
     var isHighContrast: Bool { systemContrast == .increased || appHighContrast }
     var brandColor: Color { isHighContrast ? .primary : Color.adventureOrange }
@@ -90,42 +105,54 @@ struct CityDetailView: View {
                     .transition(reduceMotion ? .opacity : .asymmetric(insertion: .scale.combined(with: .opacity), removal: .opacity))
                 }
                 
-                // Campuses only: the traditions scavenger hunt
-                if !viewModel.city.traditions.isEmpty {
-                    CampusTraditionsSection(campus: viewModel.city, isHighContrast: isHighContrast)
+                Picker(NSLocalizedString("Section", comment: "City page: picker between Landmarks, Plan and Local"), selection: $selectedTab) {
+                    ForEach(CityPageTab.allCases) { tab in
+                        Text(tab.title).tag(tab)
+                    }
                 }
+                .pickerStyle(.segmented)
+                .dsPageMargin()
+                .onChange(of: selectedTab) { _, _ in HapticManager.shared.trigger(.selection) }
 
+                switch selectedTab {
+                case .landmarks:
+                    // Campuses only: the traditions scavenger hunt
+                    if !viewModel.city.traditions.isEmpty {
+                        CampusTraditionsSection(campus: viewModel.city, isHighContrast: isHighContrast)
+                    }
 
-                LandmarkSection(viewModel: viewModel, isHighContrast: isHighContrast)
+                    LandmarkSection(viewModel: viewModel, isHighContrast: isHighContrast)
 
+                    BuildingTimelineSection(
+                        buildings: viewModel.city.buildings,
+                        visitedIDs: GlobalProgressManager.shared.visitedIDs,
+                        isHighContrast: isHighContrast
+                    )
 
-                BuildingTimelineSection(
-                    buildings: viewModel.city.buildings,
-                    visitedIDs: GlobalProgressManager.shared.visitedIDs,
-                    isHighContrast: isHighContrast
-                )
+                case .plan:
+                    CityItineraryView(city: viewModel.city)
 
-                // Weather — hidden when failed/empty so we don't advertise broken state
-                let weather = WeatherManager.shared
-                if weather.isLoading || !weather.temperature.isEmpty || weather.showsSetupError {
-                    WeatherSection(weather: weather, isHighContrast: isHighContrast)
+                    // Events — hidden when there are none
+                    let events = TicketmasterService.shared
+                    if events.isLoading || !events.events.isEmpty {
+                        EventsSection(service: events, isHighContrast: isHighContrast)
+                    }
+
+                    TravelInfoSection(viewModel: viewModel, isHighContrast: isHighContrast)
+
+                case .local:
+                    // Weather — hidden when failed/empty so we don't advertise broken state
+                    let weather = WeatherManager.shared
+                    if weather.isLoading || !weather.temperature.isEmpty || weather.showsSetupError {
+                        WeatherSection(weather: weather, isHighContrast: isHighContrast)
+                    }
+
+                    // Top Eats — hidden when failed so we don't show "Couldn't load"
+                    let eats = FoursquareService.shared
+                    if eats.isLoading || !eats.venues.isEmpty {
+                        TopEatsSection(service: eats, isHighContrast: isHighContrast)
+                    }
                 }
-
-                // Events — shown before Top Eats since Ticketmaster is more reliable
-                let events = TicketmasterService.shared
-                if events.isLoading || !events.events.isEmpty {
-                    EventsSection(service: events, isHighContrast: isHighContrast)
-                }
-
-                // Top Eats — hidden when failed so we don't show "Couldn't load"
-                let eats = FoursquareService.shared
-                if eats.isLoading || !eats.venues.isEmpty {
-                    TopEatsSection(service: eats, isHighContrast: isHighContrast)
-                }
-
-
-                TravelInfoSection(viewModel: viewModel, isHighContrast: isHighContrast)
-                
             }
             .padding(.top, DS.Space.s)
             .padding(.bottom, DS.Space.section)

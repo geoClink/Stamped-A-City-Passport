@@ -25,6 +25,10 @@ How to use this file:
 - Events also come from SeatGeek, merged with Ticketmaster, so cities Ticketmaster covers thinly get a fuller list. Needs `SEATGEEK_CLIENT_ID` in the API-key plist; without it the app uses Ticketmaster only.
 
 ### Changed
+- Cleaner home screen: pick a continent (or Campuses) from a row of chips and its cities show right away, grouped by country, instead of opening continent, then country. My College List now leads the Campuses chip.
+- City pages are split into Landmarks, Plan (itinerary, events, hotels) and Local (weather, dining) tabs, so the page is no longer one long scroll.
+- Landmark pages keep every action together under the name: stamp, Want to Visit, Look Around, Tours & Tickets and the address.
+- Passport has a search bar: find a city, country or campus, including ones not stamped yet.
 - Find Hotels and Check Prices open Expedia, through Expedia's affiliate program (Partnerize), with a "may earn a commission" note. Booking.com stays supported for when its affiliate application is approved.
 
 ### Fixed

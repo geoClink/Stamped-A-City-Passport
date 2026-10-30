@@ -39,8 +39,8 @@ struct MacCityWorkspace: View {
         .inspector(isPresented: $showingDetails) {
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {
+                    // The itinerary is in the city page's Plan tab
                     CityDetailView(city: city)
-                    CityItineraryView(city: city)
                 }
             }
             .background(Color(UIColor.systemGroupedBackground))

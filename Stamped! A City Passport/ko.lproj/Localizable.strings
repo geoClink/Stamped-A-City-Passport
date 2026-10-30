@@ -626,3 +626,12 @@
 "%lld places" = "%lld곳";
 "Zooms in on these places" = "이 장소들을 확대합니다";
 "Stops %@" = "경유지 %@";
+
+// MARK: - Passport search
+"Search cities or countries" = "도시 또는 국가 검색";
+"No stamps match \U201C%@\U201D" = "‘%@’과(와) 일치하는 스탬프가 없습니다";
+
+// MARK: - City page tabs
+"Plan" = "계획";
+"Local" = "현지 정보";
+"Section" = "섹션";
