@@ -1008,5 +1008,115 @@
     "currencyInfo": "Dólar estadounidense ($)",
     "transportation": "A pie / Autobuses de Texas A&M",
     "transportationFact": "El Main Campus se recorre a pie. Texas A&M opera rutas de autobús en el campus durante el semestre."
+  },
+  "Wayne State University": {
+    "nickname": "Warrior Strong",
+    "airportInfo": "El Aeropuerto Metropolitano de Detroit-Condado de Wayne, en Romulus, al suroeste de Detroit, es el más transitado de Míchigan y la principal puerta de entrada a la ciudad.",
+    "funFact": "Old Main, el corazón del campus con su torre del reloj, se construyó en la década de 1890 como la Central High School de Detroit. Las clases universitarias que empezaron allí dieron origen a la Wayne State University.",
+    "language": "Inglés",
+    "languageInfo": "Los colores de la universidad son el verde y el dorado, y sus equipos son los Warriors.",
+    "currencyInfo": "Dólar estadounidense ($)",
+    "transportation": "A pie / tranvía QLINE",
+    "transportationFact": "El campus principal, en Midtown, se recorre fácilmente a pie. El tranvía QLINE circula por Woodward Avenue, en el borde este del campus, y lo conecta con el centro de Detroit y New Center."
+  },
+  "Western Michigan University": {
+    "nickname": "So That All May Learn",
+    "airportInfo": "El Aeropuerto Internacional de Kalamazoo/Battle Creek, al sureste del centro de Kalamazoo, es el aeropuerto más cercano con vuelos comerciales.",
+    "funFact": "Hyames Field, el estadio de béisbol de la WMU en el East Campus, acogió la primera College World Series de la historia en 1947 y de nuevo en 1948.",
+    "language": "Inglés",
+    "languageInfo": "Los colores de la universidad son el marrón y el dorado, y sus equipos son los Broncos.",
+    "currencyInfo": "Dólar estadounidense ($)",
+    "transportation": "A pie / autobuses Metro",
+    "transportationFact": "Los autobuses Metro de Kalamazoo dan servicio a la Western Michigan University, a la ciudad y a sus alrededores."
+  },
+  "Grand Valley State University": {
+    "nickname": "La casa de los Lakers",
+    "airportInfo": "El Aeropuerto Internacional Gerald R. Ford, al sureste de Grand Rapids, es el aeropuerto más cercano con vuelos comerciales.",
+    "funFact": "Grand Valley es una de solo tres instituciones del hemisferio occidental con más de una torre de carillón: el Cook Carillon en Allendale y el Beckering Family Carillon en Grand Rapids.",
+    "language": "Inglés",
+    "languageInfo": "Los colores de la universidad son el azul, el negro y el blanco, y sus equipos son los Lakers.",
+    "currencyInfo": "Dólar estadounidense ($)",
+    "transportation": "A pie / autobús Laker Line",
+    "transportationFact": "El autobús Laker Line, operado por The Rapid, une el campus de Allendale con los campus de la GVSU en el centro de Grand Rapids por Lake Michigan Drive, y está abierto al público."
+  },
+  "California Institute of Technology": {
+    "nickname": "La verdad os hará libres",
+    "airportInfo": "El aeropuerto Hollywood Burbank es el más cercano a Caltech. El Aeropuerto Internacional de Los Ángeles (LAX) tiene muchos más vuelos, pero el trayecto por la ciudad es más largo.",
+    "funFact": "El Jet Propulsion Laboratory de la NASA nació de la investigación de cohetes en el laboratorio Guggenheim de Caltech en la década de 1930, y Caltech sigue gestionando el JPL hoy.",
+    "language": "Inglés",
+    "languageInfo": "Se escribe «Caltech», en una sola palabra: el instituto considera incorrectas grafías como «Cal Tech». El color de la escuela es el naranja y los equipos son los Beavers.",
+    "currencyInfo": "Dólar estadounidense ($)",
+    "transportation": "A pie / Metro A Line",
+    "transportationFact": "El campus es compacto y fácil de recorrer a pie. El tren ligero Metro A Line para en las estaciones Lake y Allen, a algo más de un kilómetro y medio al norte del campus."
+  },
+  "Johns Hopkins University": {
+    "nickname": "Veritas vos liberabit",
+    "airportInfo": "BWI, al sur de Baltimore, es el gran aeropuerto más cercano. Los trenes MARC y Amtrak lo conectan con la estación Penn de Baltimore, a poca distancia del campus.",
+    "funFact": "Johns Hopkins abrió en 1876 siguiendo el modelo de las universidades de investigación europeas y se considera la primera universidad de investigación de Estados Unidos.",
+    "language": "Inglés",
+    "languageInfo": "Los estudiantes llaman «MSE» a la Milton S. Eisenhower Library y «the Hut» a la antigua sala de lectura Hutzler de Gilman Hall. Los equipos son los Blue Jays.",
+    "currencyInfo": "Dólar estadounidense ($)",
+    "transportation": "A pie / Estación Penn de Baltimore",
+    "transportationFact": "Los caminos de ladrillo de Homewood se recorren fácilmente a pie. La estación Penn de Baltimore, con trenes Amtrak y MARC, está a un breve trayecto en coche o autobús al sur del campus."
+  },
+  "Rice University": {
+    "nickname": "Letras, Ciencia, Arte",
+    "airportInfo": "Hobby es el más cercano a Rice de los dos grandes aeropuertos de Houston. George Bush Intercontinental (IAH) tiene muchos más vuelos de largo recorrido, pero queda más lejos, al norte.",
+    "funFact": "Cuando Rice abrió en 1912, los estudiantes no pagaban matrícula, tal como exigían el testamento del fundador William Marsh Rice y la primera carta del instituto.",
+    "language": "Inglés",
+    "languageInfo": "La mascota es Sammy the Owl: cuando estudiantes de Texas A&M robaron la mascota del búho en 1917, el telegrama cifrado de un detective informó que «Sammy is fairly well». Los colores son el azul y el gris.",
+    "currencyInfo": "Dólar estadounidense ($)",
+    "transportation": "A pie / METRORail Red Line",
+    "transportationFact": "El campus, lleno de árboles, es fácil de recorrer a pie. La METRORail Red Line circula por Main Street, con la estación Hermann Park/Rice U cerca de la esquina este del campus."
+  },
+  "Emory University": {
+    "nickname": "El corazón sabio busca el conocimiento",
+    "airportInfo": "Hartsfield–Jackson, al sur del centro de Atlanta, es el aeropuerto más cercano. El campus de Emory en Druid Hills está al noreste del centro.",
+    "funFact": "Emory se trasladó de Oxford (Georgia) a Atlanta en 1915, después de que el fundador de Coca-Cola, Asa Griggs Candler, donara terrenos y un millón de dólares. Después, Henry Hornbostel definió el aspecto del campus con mármol rosa de Georgia y tejados de teja roja.",
+    "language": "Inglés",
+    "languageInfo": "Los colores de la universidad son el azul y el dorado, y sus equipos son los Eagles. Emory tiene dos mascotas: Swoop, el águila, y Dooley, el esqueleto.",
+    "currencyInfo": "Dólar estadounidense ($)",
+    "transportation": "A pie / Lanzaderas Cliff de Emory",
+    "transportationFact": "The Cliff, el sistema de lanzaderas de Emory, recorre el campus y los barrios cercanos. Sus autobuses funcionan con biodiésel hecho de aceite de cocina reciclado."
+  },
+  "Tulane University": {
+    "nickname": "No para uno mismo, sino para los suyos",
+    "airportInfo": "El Aeropuerto Internacional Louis Armstrong de Nueva Orleans está en Kenner, a unos 18 km al oeste del centro de Nueva Orleans.",
+    "funFact": "El campus Uptown de Tulane está frente al Audubon Park, al otro lado de St. Charles Avenue. Gibson Hall, construido en 1894, fue el primer edificio académico del campus, y los edificios del Newcomb College los diseñó el arquitecto de Yale James Gamble Rogers.",
+    "language": "Inglés",
+    "languageInfo": "Los colores de la universidad son el verde y el azul, y sus equipos son la Green Wave. La mascota es Riptide, el pelícano.",
+    "currencyInfo": "Dólar estadounidense ($)",
+    "transportation": "A pie / Tranvía de St. Charles",
+    "transportationFact": "El tranvía de St. Charles para justo delante del campus y llega hasta el centro de Nueva Orleans. McAlister Place, antes una calle que cruzaba el campus, se convirtió en paseo peatonal en 2009."
+  },
+  "New York University": {
+    "nickname": "Perseverar y sobresalir",
+    "airportInfo": "Nueva York tiene tres grandes aeropuertos: LaGuardia, JFK y Newark. El AirTrain conecta JFK y Newark con trenes hacia Manhattan.",
+    "funFact": "La mayoría de los edificios de NYU están repartidos alrededor de Washington Square Park, en Greenwich Village. Samuel Morse trabajó en el telégrafo en el primer Main Building de la universidad, donde hoy está el Silver Center.",
+    "language": "Inglés",
+    "languageInfo": "Los colores de la universidad son el violeta NYU y el blanco, y sus equipos son los Violets. Desde 1981, la mascota es un lince rojo.",
+    "currencyInfo": "Dólar estadounidense ($)",
+    "transportation": "A pie / Metro de Nueva York",
+    "transportationFact": "La estación West Fourth Street–Washington Square está justo al oeste del parque, en la Sexta Avenida, y la estación 8th Street–NYU, en Broadway, da servicio al lado este del campus."
+  },
+  "Carnegie Mellon University": {
+    "nickname": "Mi corazón está en el trabajo",
+    "airportInfo": "Pittsburgh International está a unos 27 km al oeste del centro de Pittsburgh. El autobús 28X va al aeropuerto desde Oakland, el barrio universitario junto al campus.",
+    "funFact": "Carnegie Mellon nació en 1967, cuando el Carnegie Institute of Technology, fundado por Andrew Carnegie en 1900, se fusionó con el Mellon Institute of Industrial Research.",
+    "language": "Inglés",
+    "languageInfo": "El campus tiene un aire escocés en honor a Andrew Carnegie: los equipos se llaman Tartans, la mascota es Scotty, un terrier escocés, y la banda toca con falda escocesa.",
+    "currencyInfo": "Dólar estadounidense ($)",
+    "transportation": "A pie / autobuses de PRT",
+    "transportationFact": "El campus principal es compacto y fácil de recorrer a pie. Los autobuses de Pittsburgh Regional Transit lo conectan con Oakland y el centro, y el 28X va de Oakland al aeropuerto."
+  },
+  "Washington University in St. Louis": {
+    "nickname": "Per Veritatem Vis",
+    "airportInfo": "Lambert está a unos 23 km al noroeste del centro de St. Louis. La Red Line de MetroLink para en las dos terminales del aeropuerto.",
+    "funFact": "Brookings Hall fue el edificio de administración de la Exposición Universal de 1904, y el Francis Field del campus fue el estadio principal de los Juegos Olímpicos de verano de 1904, los primeros celebrados en el hemisferio occidental.",
+    "language": "Inglés",
+    "languageInfo": "Los colores de la universidad son el rojo y el verde, y los equipos se llaman Bears, con una mascota llamada Forest, el oso.",
+    "currencyInfo": "Dólar estadounidense ($)",
+    "transportation": "A pie / Campus Circulator / MetroLink",
+    "transportationFact": "Un autobús gratuito, el Campus Circulator, recorre el Danforth Campus, y los trenes de la Blue Line de MetroLink paran en la estación Skinker, junto al campus."
   }
 }

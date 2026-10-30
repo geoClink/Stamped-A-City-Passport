@@ -627,6 +627,12 @@ extension WikimediaService {
         "mia-03",               // Miami / The Carlyle: Wikipedia has the New York hotel
         "orl_suntrust_center",  // Orlando / Truist Plaza (SunTrust Center): Wikipedia has Atlanta's
         "vic-10",               // Victoria / Mayfair Shopping Centre: falls back to the city article
+        // Campus buildings with no article of their own (sharedArticle in tools/campus-data), whose
+        // bare name leads to another building or to the whole campus's article
+        "campus_jhu_gilman_hall",        // Johns Hopkins / Gilman Hall: Wikipedia has UC Berkeley's
+        "campus_jhu_eisenhower_library", // Johns Hopkins / Eisenhower Library: redirects to the Homewood campus article
+        "campus_cmu_baker_hall",         // Carnegie Mellon / Baker Hall: redirects to another school's Baker Memorial Hall
+        "campus_cmu_gates_hillman",      // Carnegie Mellon / Gates and Hillman Centers: redirects to the computer science school
     ]
 }
 

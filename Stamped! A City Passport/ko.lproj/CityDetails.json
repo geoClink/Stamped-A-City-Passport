@@ -2833,6 +2833,45 @@
     "transportation": "도보 / 루아스 / 버스",
     "transportationFact": "트리니티는 더블린 한가운데에 있어 걸어서 쉽게 갈 수 있습니다. 루아스(트램)와 많은 시내버스 노선이 캠퍼스 주변에 정차합니다."
   },
+  "Wayne State University": {
+    "airportCode": "DTW",
+    "airportInfo": "디트로이트 남서쪽 로뮬러스에 있는 디트로이트 메트로폴리탄 웨인 카운티 공항은 미시간주에서 가장 붐비는 공항이자 도시의 관문입니다.",
+    "airportName": "Detroit Metropolitan Wayne County Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "미국 달러($)",
+    "funFact": "시계탑이 있는 캠퍼스의 중심 올드 메인은 1890년대에 디트로이트의 센트럴 고등학교로 지어졌습니다. 그곳에서 시작된 대학 강의가 웨인 주립대학교로 발전했습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 그린과 골드이고, 팀 이름은 워리어스입니다.",
+    "nickname": "Warrior Strong",
+    "transportation": "도보 / QLINE 노면전차",
+    "transportationFact": "미드타운의 메인 캠퍼스는 걸어서 둘러보기 좋습니다. QLINE 노면전차가 캠퍼스 동쪽의 우드워드 애비뉴를 따라 달리며 디트로이트 다운타운, 뉴센터와 연결합니다."
+  },
+  "Western Michigan University": {
+    "airportCode": "AZO",
+    "airportInfo": "캘러머주 시내 남동쪽의 캘러머주/배틀크리크 국제공항이 정기 항공편이 있는 가장 가까운 공항입니다.",
+    "airportName": "Kalamazoo/Battle Creek International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "미국 달러($)",
+    "funFact": "이스트 캠퍼스에 있는 WMU의 야구장 하이엄스 필드는 1947년 최초의 칼리지 월드 시리즈를 개최했고 1948년에도 다시 열었습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 브라운과 골드이고, 팀 이름은 브롱코스입니다.",
+    "nickname": "So That All May Learn",
+    "transportation": "도보 / Metro 버스",
+    "transportationFact": "캘러머주의 Metro 버스가 웨스턴미시간 대학교와 시내, 주변 교외 지역을 운행합니다."
+  },
+  "Grand Valley State University": {
+    "airportCode": "GRR",
+    "airportInfo": "그랜드래피즈 남동쪽의 제럴드 R. 포드 국제공항이 정기 항공편이 있는 가장 가까운 공항입니다.",
+    "airportName": "Gerald R. Ford International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "미국 달러($)",
+    "funFact": "그랜드밸리는 카리용 탑을 두 개 이상 가진 서반구의 단 세 곳의 기관 중 하나입니다. 앨런데일의 쿡 카리용과 그랜드래피즈의 베커링 패밀리 카리용입니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 블루, 블랙, 화이트이고, 팀 이름은 레이커스입니다.",
+    "nickname": "레이커스의 본거지",
+    "transportation": "도보 / 레이커 라인 버스",
+    "transportationFact": "The Rapid가 운행하는 레이커 라인 버스가 레이크 미시간 드라이브를 따라 앨런데일 캠퍼스와 그랜드래피즈 시내의 GVSU 캠퍼스를 연결하며, 누구나 이용할 수 있습니다."
+  },
   "Yale University": {
     "airportCode": "BDL",
     "airportInfo": "하트퍼드 근처의 브래들리 공항은 뉴헤이븐에서 차로 북쪽으로 약 1시간 거리입니다. 많은 방문객이 뉴욕으로 와서 메트로노스 뉴헤이븐 라인을 타고 유니언역까지 바로 오기도 합니다.",
@@ -2963,6 +3002,45 @@
     "transportation": "도보 / GUTS 셔틀",
     "transportationFact": "조지타운에는 자체 메트로역이 없어서 대학의 무료 GUTS 셔틀버스가 캠퍼스와 인근 메트로역을 연결합니다. 언덕 위의 캠퍼스 자체는 걷기 쉽습니다."
   },
+  "Johns Hopkins University": {
+    "airportCode": "BWI",
+    "airportInfo": "볼티모어 남쪽의 BWI 공항이 가장 가까운 주요 공항입니다. MARC와 암트랙 열차가 캠퍼스에서 가까운 볼티모어 펜역과 공항을 연결합니다.",
+    "airportName": "Baltimore/Washington International Thurgood Marshall Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "미국 달러($)",
+    "funFact": "존스 홉킨스는 1876년 유럽 연구 중심 대학을 모델로 문을 열었으며, 미국 최초의 연구 중심 대학으로 여겨집니다.",
+    "language": "영어",
+    "languageInfo": "학생들은 밀턴 S. 아이젠하워 도서관을 'MSE', 길먼 홀의 옛 허츨러 열람실을 'the Hut'이라고 부릅니다. 팀 이름은 블루제이스입니다.",
+    "nickname": "Veritas vos liberabit",
+    "transportation": "도보 / 볼티모어 펜역",
+    "transportationFact": "홈우드의 벽돌 길은 걷기 편합니다. 암트랙과 MARC 열차가 다니는 볼티모어 펜역은 캠퍼스 남쪽으로 차나 버스로 금방입니다."
+  },
+  "New York University": {
+    "airportCode": "LGA",
+    "airportInfo": "뉴욕에는 라과디아, JFK, 뉴어크의 세 주요 공항이 있습니다. 에어트레인이 JFK와 뉴어크를 맨해튼행 열차와 이어 줍니다.",
+    "airportName": "LaGuardia Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "미국 달러($)",
+    "funFact": "NYU 건물 대부분은 그리니치빌리지의 워싱턴 스퀘어 공원 주변에 흩어져 있습니다. 새뮤얼 모스는 지금의 실버 센터 자리에 있던 대학 최초의 메인 빌딩에서 전신기를 연구했습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 NYU 바이올렛과 흰색이며, 팀 이름은 바이올리츠입니다. 마스코트는 1981년부터 밥캣입니다.",
+    "nickname": "인내하고 뛰어나라",
+    "transportation": "도보 / 뉴욕 지하철",
+    "transportationFact": "웨스트 4번가–워싱턴 스퀘어역은 공원 바로 서쪽 6번가에 있고, 브로드웨이의 8번가–NYU역이 캠퍼스 동쪽을 연결합니다."
+  },
+  "Carnegie Mellon University": {
+    "airportCode": "PIT",
+    "airportInfo": "피츠버그 국제공항은 피츠버그 도심에서 서쪽으로 약 27km 떨어져 있습니다. 캠퍼스 옆 대학가인 오클랜드에서 공항까지 28X 버스가 운행합니다.",
+    "airportName": "Pittsburgh International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "미국 달러($)",
+    "funFact": "카네기멜론 대학교는 1967년, 1900년 앤드루 카네기가 세운 카네기 공과대학과 멜론 산업연구소가 합병하면서 탄생했습니다.",
+    "language": "영어",
+    "languageInfo": "캠퍼스에는 앤드루 카네기를 기리는 스코틀랜드 분위기가 가득합니다. 팀 이름은 타탄스, 마스코트는 스코티시 테리어 스코티이며, 밴드는 킬트를 입고 연주합니다.",
+    "nickname": "내 마음은 일에 있다",
+    "transportation": "도보 / PRT 버스",
+    "transportationFact": "메인 캠퍼스는 아담해서 걸어서 둘러보기 좋습니다. 피츠버그 리저널 트랜싯 버스가 오클랜드와 도심을 연결하고, 28X 버스는 오클랜드에서 공항까지 운행합니다."
+  },
   "University of Chicago": {
     "airportCode": "MDW",
     "airportInfo": "시카고의 두 공항 중 도시 남쪽에 있는 하이드 파크에서 더 가까운 곳은 미드웨이 공항입니다. 오헤어 국제공항(ORD)은 장거리 항공편이 훨씬 많지만 도시를 가로질러 더 오래 가야 합니다.",
@@ -3027,6 +3105,58 @@
     "nickname": "캐벌리어스의 본거지",
     "transportation": "도보 / University Transit Service",
     "transportationFact": "론(Lawn) 주변의 센트럴 그라운즈는 걷기 쉽습니다. 무료 University Transit Service 버스가 그라운즈의 나머지 지역을 연결합니다."
+  },
+  "Rice University": {
+    "airportCode": "HOU",
+    "airportInfo": "휴스턴의 두 주요 공항 중 라이스에 더 가까운 곳은 호비 공항입니다. 조지 부시 인터콘티넨털 공항(IAH)은 장거리 항공편이 훨씬 많지만 북쪽으로 더 오래 가야 합니다.",
+    "airportName": "William P. Hobby Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "미국 달러($)",
+    "funFact": "1912년 라이스가 문을 열었을 때, 설립자 윌리엄 마시 라이스의 유언과 첫 설립 헌장에 따라 학생들은 등록금을 전혀 내지 않았습니다.",
+    "language": "영어",
+    "languageInfo": "마스코트는 새미 디 아울입니다. 1917년 텍사스 A&M 학생들이 부엉이 마스코트를 훔쳐 갔을 때, 한 탐정의 암호 전보가 'Sammy is fairly well'이라고 알렸습니다. 학교 색은 파란색과 회색입니다.",
+    "nickname": "문학, 과학, 예술",
+    "transportation": "도보 / METRORail 레드 라인",
+    "transportationFact": "나무가 우거진 캠퍼스는 걸어서 둘러보기 좋습니다. METRORail 레드 라인이 메인 스트리트를 따라 달리며, 허먼 파크/라이스 U역은 캠퍼스 동쪽 모퉁이 근처에 있습니다."
+  },
+  "Emory University": {
+    "airportCode": "ATL",
+    "airportInfo": "애틀랜타 도심 남쪽의 하츠필드–잭슨 공항이 가장 가까운 공항입니다. 에머리의 드루이드 힐스 캠퍼스는 도심 북동쪽에 있습니다.",
+    "airportName": "Hartsfield–Jackson Atlanta International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "미국 달러($)",
+    "funFact": "코카콜라 창업자 에이사 그리그스 캔들러가 땅과 100만 달러를 기부한 뒤, 에머리는 1915년 조지아주 옥스퍼드에서 애틀랜타로 옮겨 왔습니다. 이후 헨리 혼보스텔이 분홍빛 조지아 대리석과 붉은 기와지붕으로 캠퍼스의 모습을 정했습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 파란색과 금색이며, 팀 이름은 이글스입니다. 에머리에는 독수리 스우프와 해골 둘리라는 두 마스코트가 있습니다.",
+    "nickname": "지혜로운 마음은 지식을 구한다",
+    "transportation": "도보 / 에머리 Cliff 셔틀",
+    "transportationFact": "에머리의 셔틀 시스템인 The Cliff가 캠퍼스와 인근 동네를 오갑니다. 버스는 재활용 식용유로 만든 바이오디젤로 달립니다."
+  },
+  "Tulane University": {
+    "airportCode": "MSY",
+    "airportInfo": "루이 암스트롱 뉴올리언스 국제공항은 케너에 있으며, 뉴올리언스 도심에서 서쪽으로 약 18km 떨어져 있습니다.",
+    "airportName": "Louis Armstrong New Orleans International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "미국 달러($)",
+    "funFact": "툴레인의 업타운 캠퍼스는 세인트찰스 애비뉴를 사이에 두고 오듀본 공원과 마주하고 있습니다. 1894년에 지은 깁슨 홀은 캠퍼스 최초의 강의동이며, 뉴컴 칼리지 건물들은 예일대 건축으로 유명한 제임스 갬블 로저스가 설계했습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 초록색과 파란색이며, 팀 이름은 그린 웨이브입니다. 마스코트는 펠리컨 립타이드입니다.",
+    "nickname": "자신이 아닌 자신의 사람들을 위하여",
+    "transportation": "도보 / 세인트찰스 노면전차",
+    "transportationFact": "세인트찰스 노면전차는 캠퍼스 바로 앞에 서며 뉴올리언스 도심까지 운행합니다. 캠퍼스 한가운데를 지나던 도로였던 매캘리스터 플레이스는 2009년 보행로가 되었습니다."
+  },
+  "Washington University in St. Louis": {
+    "airportCode": "STL",
+    "airportInfo": "램버트 공항은 세인트루이스 도심에서 북서쪽으로 약 23km 떨어져 있습니다. 메트로링크 레드 라인이 공항의 두 터미널에 모두 정차합니다.",
+    "airportName": "St. Louis Lambert International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "미국 달러($)",
+    "funFact": "브루킹스 홀은 1904년 세계박람회의 행정 본부였고, 캠퍼스의 프랜시스 필드는 서반구에서 처음 열린 1904년 하계 올림픽의 주경기장이었습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 빨간색과 초록색이며, 팀 이름은 베어스, 마스코트는 곰 포레스트입니다.",
+    "nickname": "Per Veritatem Vis",
+    "transportation": "도보 / 캠퍼스 서큘레이터 / 메트로링크",
+    "transportationFact": "무료 셔틀 캠퍼스 서큘레이터가 댄포스 캠퍼스를 순환하고, 메트로링크 블루 라인 열차가 바로 옆 스킨커역에 정차합니다."
   },
   "Stanford University": {
     "airportCode": "SFO",
@@ -3131,5 +3261,18 @@
     "nickname": "C.U.",
     "transportation": "Pumabús / 메트로",
     "transportationFact": "대학은 넓은 캠퍼스 곳곳에 자체 무료 Pumabús 노선을 운행합니다. 메트로 3호선의 우니베르시다드역과 코필코역이 캠퍼스와 연결됩니다."
+  },
+  "California Institute of Technology": {
+    "airportCode": "BUR",
+    "airportInfo": "할리우드 버뱅크 공항이 칼텍에서 가장 가까운 공항입니다. 로스앤젤레스 국제공항(LAX)은 항공편이 훨씬 많지만 시내를 가로질러 가야 해서 더 오래 걸립니다.",
+    "airportName": "Hollywood Burbank Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "미국 달러($)",
+    "funFact": "NASA의 제트추진연구소(JPL)는 1930년대 칼텍 구겐하임 연구소의 로켓 연구에서 시작되었으며, 지금도 칼텍이 JPL을 운영합니다.",
+    "language": "영어",
+    "languageInfo": "'Caltech'는 한 단어로 씁니다. 'Cal Tech' 같은 표기는 틀린 것으로 여겨집니다. 학교 색은 주황색이고 팀 이름은 비버스입니다.",
+    "nickname": "진리가 너희를 자유롭게 하리라",
+    "transportation": "도보 / 메트로 A 라인",
+    "transportationFact": "아담한 캠퍼스는 걸어서 둘러보기 좋습니다. 경전철 메트로 A 라인이 캠퍼스 북쪽 약 1.6km에 있는 레이크역과 앨런역에 정차합니다."
   }
 }

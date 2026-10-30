@@ -769,5 +769,994 @@
         "foodSpots": []
       }
     ]
+  },
+  {
+    "name": "Rice University",
+    "enumCase": "rice",
+    "country": "unitedStates",
+    "aliases": [
+      "Rice",
+      "Owls"
+    ],
+    "colors": [
+      "#00205B",
+      "#7C7E7F"
+    ],
+    "traditions": [
+      {
+        "id": "trad_rice_sallyport",
+        "name": "Through the Sallyport",
+        "description": "By tradition, Rice students pass through the Sallyport arch in Lovett Hall as they leave at graduation and avoid it until then. Stand under the arch and look across the Academic Quad.",
+        "coordinates": [
+          29.71903,
+          -95.397827
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/1158042516",
+        "source": "https://magazine.rice.edu/winter-2018/through-sallyport-or-not"
+      },
+      {
+        "id": "trad_rice_skyspace",
+        "name": "Skyspace at Sunset",
+        "description": "James Turrell's Twilight Epiphany Skyspace puts on a free light show at sunrise and sunset, as changing colored light transforms the sky seen through its roof opening. Arrive early for a seat.",
+        "coordinates": [
+          29.716487,
+          -95.404264
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/2611731395",
+        "source": "https://news.rice.edu/news/2026/james-turrells-twilight-epiphany-skyspace-anchor-rice-public-art-collection-reopens-sept"
+      },
+      {
+        "id": "trad_rice_moon_speech",
+        "name": "The Moon Speech Stadium",
+        "description": "In 1962 President Kennedy spoke at Rice Stadium and challenged the nation to reach the Moon by the end of the decade. Visit the stadium where the famous speech was given.",
+        "coordinates": [
+          29.716323,
+          -95.409324
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/44885334",
+        "source": "https://en.wikipedia.org/wiki/First_Community_Stadium"
+      },
+      {
+        "id": "trad_rice_mob",
+        "name": "The Marching Owl Band",
+        "description": "The Marching Owl Band, or MOB, is a scatter band: instead of marching in formation, it performs comic skits at football games. Catch its halftime show.",
+        "coordinates": [
+          29.715311,
+          -95.40839
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/8040376917",
+        "source": "https://en.wikipedia.org/wiki/Rice_University"
+      },
+      {
+        "id": "trad_rice_tree_for_every_student",
+        "name": "A Tree for Every Student",
+        "description": "More than 4,000 trees and shrubs make the whole campus an arboretum, which gave rise to the legend that Rice has a tree for every student. Stroll the shady quads.",
+        "coordinates": [
+          29.718631,
+          -95.398857
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/543427272",
+        "source": "https://en.wikipedia.org/wiki/Campus_of_Rice_University"
+      }
+    ],
+    "wiki": "Rice University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Letters, Science, Art",
+      "airportName": "William P. Hobby Airport",
+      "airportCode": "HOU",
+      "airportInfo": "Hobby is the closer of Houston's two main airports to Rice. George Bush Intercontinental (IAH) has many more long-haul flights but is a longer drive north.",
+      "funFact": "When Rice opened in 1912, students paid no tuition at all, as founder William Marsh Rice's will and the institute's first charter required.",
+      "language": "English",
+      "languageInfo": "The mascot is Sammy the Owl: when Texas A&M students stole the owl mascot in 1917, a detective's coded telegram reported that 'Sammy is fairly well.' The colors are blue and gray.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / METRORail Red Line",
+      "transportationFact": "The wooded campus is easy to walk. The METRORail Red Line runs along Main Street, with the Hermann Park/Rice U station near the campus's eastern corner."
+    },
+    "buildings": [
+      {
+        "id": "campus_rice_lovett_hall",
+        "wiki": "Campus of Rice University",
+        "name": "Lovett Hall",
+        "description": "Ralph Adams Cram's firm designed Rice's landmark first building, the asymmetrical Administration Building completed in 1912. Graduating students leave the university through its arched Sallyport.",
+        "architect": "Cram, Goodhue & Ferguson",
+        "yearBuilt": 1912,
+        "address": "6100 Main St, Houston, TX 77005",
+        "oldUse": "Administration Building",
+        "newUse": "Administration",
+        "buildingStyle": "Mediterranean Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          29.71903,
+          -95.397827
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/44896261"
+      },
+      {
+        "id": "campus_rice_fondren_library",
+        "wiki": "Fondren Library",
+        "name": "Fondren Library",
+        "description": "Houston architect John F. Staub designed Rice's main library, dedicated in 1949 and funded by the family of Humble Oil co-founder Walter Fondren. It was known for its open stacks and Art Deco touches.",
+        "architect": "John F. Staub",
+        "yearBuilt": 1949,
+        "address": "6100 Main St, Houston, TX 77005",
+        "oldUse": "Library",
+        "newUse": "Library",
+        "buildingStyle": "Art Deco-influenced",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_rice_herzstein_hall",
+        "wiki": "Campus of Rice University",
+        "name": "Herzstein Hall",
+        "description": "Cram, Goodhue & Ferguson designed this 1914 building as Rice's physics hall, one of the first on the Academic Quad. Its amphitheater was the largest on campus when it was built.",
+        "architect": "Cram, Goodhue & Ferguson",
+        "yearBuilt": 1914,
+        "address": "6100 Main St, Houston, TX 77005",
+        "oldUse": "Physics Building",
+        "newUse": "Classrooms and Amphitheater",
+        "buildingStyle": "Mediterranean Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          29.719393,
+          -95.398334
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/21261250"
+      },
+      {
+        "id": "campus_rice_maxfield_hall",
+        "wiki": "Campus of Rice University",
+        "name": "Maxfield Hall",
+        "description": "Built in 1912 as the Mechanical Laboratory and power house, crowned by a tall campanile, this was the second building on campus. Renovated and renamed Maxfield Hall in 2021, it now houses the statistics department.",
+        "architect": "Cram, Goodhue & Ferguson",
+        "yearBuilt": 1912,
+        "address": "6100 Main St, Houston, TX 77005",
+        "oldUse": "Mechanical Laboratory and Power House",
+        "newUse": "Statistics Department",
+        "buildingStyle": "Mediterranean Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          29.72013,
+          -95.40033
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/44885323"
+      },
+      {
+        "id": "campus_rice_cohen_house",
+        "wiki": "Campus of Rice University",
+        "name": "Cohen House",
+        "description": "William Ward Watkin, Rice's supervising architect, designed this faculty club, completed in 1927 with a gift honoring Robert and Agnes Cohen. It was the first building in Texas built as a university faculty club.",
+        "architect": "William Ward Watkin",
+        "yearBuilt": 1927,
+        "address": "6100 Main St, Houston, TX 77005",
+        "oldUse": "Faculty Club",
+        "newUse": "Faculty Club",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          29.717783,
+          -95.397177
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/51817597"
+      },
+      {
+        "id": "campus_rice_stadium",
+        "wiki": "First Community Stadium",
+        "name": "First Community Stadium",
+        "description": "Opened in 1950 with 70,000 seats, Rice's football stadium hosted President Kennedy's \"We choose to go to the Moon\" speech in 1962 and Super Bowl VIII in 1974.",
+        "architect": "Hermon Lloyd & W. B. Morgan; Milton McGinty",
+        "yearBuilt": 1950,
+        "address": "6100 Main St, Houston, TX 77005",
+        "oldUse": "Football Stadium",
+        "newUse": "Football Stadium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_rice_tudor_fieldhouse",
+        "wiki": "Tudor Fieldhouse",
+        "name": "Tudor Fieldhouse",
+        "description": "Opened in 1950 as Rice Gymnasium, this arena was renamed for alumnus Bobby Tudor, who led its renovation. Its court, Autry Court, is home to Owls basketball and volleyball.",
+        "architect": "Unknown",
+        "yearBuilt": 1950,
+        "address": "6100 Main St, Houston, TX 77005",
+        "oldUse": "Gymnasium",
+        "newUse": "Basketball and Volleyball Arena",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_rice_reckling_park",
+        "wiki": "Reckling Park",
+        "name": "Reckling Park",
+        "description": "Jackson & Ryan designed the Owls' baseball park, opened in 2000 on the site of Cameron Field. The team that won the 2003 College World Series played its home games here.",
+        "architect": "Jackson & Ryan",
+        "yearBuilt": 2000,
+        "address": "6100 Main St, Houston, TX 77005",
+        "oldUse": "Baseball Stadium",
+        "newUse": "Baseball Stadium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_rice_moody_center",
+        "wiki": "Campus of Rice University",
+        "name": "Moody Center for the Arts",
+        "description": "Los Angeles architect Michael Maltzan designed this arts center, opened in 2017 with studio classrooms, a makerspace and gallery space for visiting artists.",
+        "architect": "Michael Maltzan",
+        "yearBuilt": 2017,
+        "address": "6100 Main St, Houston, TX 77005",
+        "oldUse": "Arts Center",
+        "newUse": "Arts Center",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          29.714059,
+          -95.405565
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/426173280"
+      },
+      {
+        "id": "campus_rice_baker_hall",
+        "wiki": "Rice University's Baker Institute for Public Policy",
+        "name": "Baker Hall",
+        "description": "Completed in 1997, Baker Hall houses Rice's Baker Institute for Public Policy, a think tank founded in 1993 and named for former Secretary of State James A. Baker III.",
+        "architect": "Unknown",
+        "yearBuilt": 1997,
+        "address": "6100 Main St, Houston, TX 77005",
+        "oldUse": "Public Policy Institute",
+        "newUse": "Public Policy Institute",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Emory University",
+    "enumCase": "emory",
+    "country": "unitedStates",
+    "aliases": [
+      "Emory",
+      "Eagles"
+    ],
+    "colors": [
+      "#002F6C",
+      "#F2A900"
+    ],
+    "traditions": [
+      {
+        "id": "trad_emory_gravity_monument",
+        "name": "The Gravity Monument",
+        "description": "Hidden in the trees off Dowman Drive is a pink marble monument that Roger Babson gave Emory in 1963 to honor the sciences. Many say it looks more like a tombstone in the woods. See if you can find it.",
+        "coordinates": [
+          33.790089,
+          -84.326958
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/9880132750",
+        "source": "https://web.archive.org/web/20191225185057/http://www.emoryhistory.emory.edu/facts-figures/places/landmarks/index.html"
+      },
+      {
+        "id": "trad_emory_lullwater_tower",
+        "name": "Lullwater Preserve and Tower",
+        "description": "Lullwater Preserve is a 154-acre stretch of woods and water that walkers and joggers enjoy. Follow the trail to the old granite tower Walter Candler built beside his dam to power his house.",
+        "coordinates": [
+          33.801285,
+          -84.314417
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/276912773",
+        "source": "https://web.archive.org/web/20191225185057/http://www.emoryhistory.emory.edu/facts-figures/places/landmarks/index.html"
+      },
+      {
+        "id": "trad_emory_quad_eaves",
+        "name": "Words Under the Eaves",
+        "description": "Henry Hornbostel set the look of the Quad with pink Georgia marble and red tile roofs. Look up under the eaves of the older buildings to find carved words naming what was once taught inside.",
+        "coordinates": [
+          33.790622,
+          -84.32474
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/286009562",
+        "source": "https://web.archive.org/web/20191225185057/http://www.emoryhistory.emory.edu/facts-figures/places/landmarks/index.html"
+      },
+      {
+        "id": "trad_emory_source_route",
+        "name": "Source Route",
+        "description": "Behind the Carlos Museum, a set of stairs leads down into Baker Woodland. It is part of an environmental sculpture installed in the 1970s. Take the steps into the woods.",
+        "coordinates": [
+          33.78962,
+          -84.324451
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/216260410",
+        "source": "https://web.archive.org/web/20191225185057/http://www.emoryhistory.emory.edu/facts-figures/places/landmarks/index.html"
+      },
+      {
+        "id": "trad_emory_robinson_tower",
+        "name": "Robinson Clock Tower Bells",
+        "description": "The clock tower on Cox Hall carries carillon bells dedicated in 2001 to honor trustee J. William Robinson and his wife. Listen for them as you cross the campus.",
+        "coordinates": [
+          33.792417,
+          -84.323165
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/51305052",
+        "source": "https://web.archive.org/web/2019/http://emoryhistory.emory.edu/facts-figures/places/names/atlanta/robinson-tower.html"
+      }
+    ],
+    "wiki": "Emory University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "The Wise Heart Seeks Knowledge",
+      "airportName": "Hartsfield–Jackson Atlanta International Airport",
+      "airportCode": "ATL",
+      "airportInfo": "Hartsfield–Jackson, south of downtown Atlanta, is the nearest airport. Emory's Druid Hills campus is northeast of downtown.",
+      "funFact": "Emory moved to Atlanta from Oxford, Georgia, in 1915 after Coca-Cola founder Asa Griggs Candler gave land and a million dollars. Henry Hornbostel then set the campus look of pink Georgia marble and red tile roofs.",
+      "language": "English",
+      "languageInfo": "The school colors are blue and gold, and the teams are the Eagles. Emory has two mascots: Swoop the Eagle and Dooley the skeleton.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Emory Cliff shuttles",
+      "transportationFact": "The Cliff, Emory's shuttle system, runs routes around campus and to nearby neighborhoods. Its buses run on biodiesel made from recycled cooking oil."
+    },
+    "buildings": [
+      {
+        "id": "campus_emory_carlos_museum",
+        "wiki": "Michael C. Carlos Museum",
+        "name": "Michael C. Carlos Museum",
+        "description": "Michael Graves designed this museum building on the historic Quad, completed in 1993. It holds the largest collection of ancient art in the Southeast, from Egypt, Greece and Rome to Africa and the ancient Americas.",
+        "architect": "Michael Graves",
+        "yearBuilt": 1993,
+        "address": "571 S Kilgo Cir, Atlanta, GA 30322",
+        "oldUse": "Art Museum",
+        "newUse": "Art Museum",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_emory_candler_library",
+        "wiki": "History of Emory University",
+        "name": "Candler Library",
+        "description": "Coca-Cola founder Asa Griggs Candler paid for this library, built in 1926 and renovated in 2004. Inside are the Matheson Reading Room and a 1920s copy of Thorvaldsen's Triumph of Alexander frieze.",
+        "architect": "Unknown",
+        "yearBuilt": 1926,
+        "address": "550 Asbury Cir, Atlanta, GA 30322",
+        "oldUse": "University Library",
+        "newUse": "Library and Classrooms",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          33.791334,
+          -84.323543
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/43317371"
+      },
+      {
+        "id": "campus_emory_woodruff_library",
+        "wiki": "Emory University Libraries",
+        "name": "Robert W. Woodruff Library",
+        "description": "Emory's main library was built in 1969 as a 10-story tower; a four-story wing was added in front in 1995. The Rose Library of rare books and manuscripts is on the tenth floor.",
+        "architect": "Unknown",
+        "yearBuilt": 1969,
+        "address": "540 Asbury Cir, Atlanta, GA 30322",
+        "oldUse": "University Library",
+        "newUse": "University Library",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 10,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_emory_cannon_chapel",
+        "wiki": "Candler School of Theology",
+        "sharedArticle": true,
+        "coordinates": [
+          33.791288,
+          -84.3251
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/51286211",
+        "name": "Cannon Chapel",
+        "description": "Paul Rudolph designed this chapel for the Candler School of Theology. President Jimmy Carter spoke at its groundbreaking in 1979, and it is named for former dean William R. Cannon.",
+        "architect": "Paul Rudolph",
+        "yearBuilt": 1980,
+        "address": "515 N Kilgo Cir, Atlanta, GA 30322",
+        "oldUse": "University Chapel",
+        "newUse": "University Chapel",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_emory_rita_anne_rollins_building",
+        "wiki": "Candler School of Theology",
+        "sharedArticle": true,
+        "coordinates": [
+          33.791648,
+          -84.325921
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/167837151",
+        "name": "Rita Anne Rollins Building",
+        "description": "Completed in 2008, this home of the Candler School of Theology has marble and stucco walls under a clay tile roof. A 2014 addition links it to the Pitts Theology Library.",
+        "architect": "Unknown",
+        "yearBuilt": 2008,
+        "address": "1531 Dickey Dr, Atlanta, GA 30322",
+        "oldUse": "School of Theology",
+        "newUse": "School of Theology",
+        "buildingStyle": "Italianate",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_emory_glenn_memorial",
+        "wiki": "History of Emory University",
+        "sharedArticle": true,
+        "coordinates": [
+          33.788643,
+          -84.324188
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/51294626",
+        "name": "Glenn Memorial Church",
+        "description": "Built in 1931 near the main entrance to campus, this Methodist church honors minister Wilbur Fisk Glenn. For years Emory held its commencement in the church school amphitheater next door.",
+        "architect": "Unknown",
+        "yearBuilt": 1931,
+        "address": "1652 N Decatur Rd, Atlanta, GA",
+        "oldUse": "Church",
+        "newUse": "Church and Auditorium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_emory_schwartz_center",
+        "wiki": "Donna and Marvin Schwartz Center for Performing Arts",
+        "name": "Schwartz Center for Performing Arts",
+        "description": "Completed in 2003, this arts center is built around the 825-seat Emerson Concert Hall, a tall shoebox hall modeled on halls like Vienna's Musikverein. Its stucco and Portuguese limestone echo the older campus.",
+        "architect": "Michael Dennis",
+        "yearBuilt": 2003,
+        "address": "N Decatur Rd at Clifton Rd, Atlanta, GA 30322",
+        "oldUse": "Performing Arts Center",
+        "newUse": "Performing Arts Center",
+        "buildingStyle": "Stucco and Limestone",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_emory_goizueta",
+        "wiki": "Goizueta Business School",
+        "name": "Goizueta Business School",
+        "description": "Named for Coca-Cola chairman Roberto Goizueta, the business school's building at Fishburne Drive and Clifton Road was dedicated in 1997. A second building for research and doctoral study followed in 2005.",
+        "architect": "Unknown",
+        "yearBuilt": 1997,
+        "address": "Fishburne Dr at Clifton Rd NE, Atlanta, GA 30322",
+        "oldUse": "Business School",
+        "newUse": "Business School",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_emory_university_hospital",
+        "wiki": "Emory University Hospital",
+        "name": "Emory University Hospital",
+        "description": "The hospital moved to the campus in 1922 into a new 275-bed building given by Asa Griggs Candler. Today it is an 853-bed teaching hospital staffed by the faculty of Emory's School of Medicine.",
+        "architect": "Unknown",
+        "yearBuilt": 1922,
+        "address": "1364 Clifton Rd NE, Atlanta, GA 30322",
+        "oldUse": "Hospital",
+        "newUse": "Teaching Hospital",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_emory_lullwater_house",
+        "wiki": "Lullwater House",
+        "name": "Lullwater House",
+        "description": "Ivey and Crook designed this L-shaped mansion for Walter T. Candler, completed in 1926 with granite quarried on the estate. Emory bought it in 1958, and it is now the president's home overlooking Candler Lake.",
+        "architect": "Ivey and Crook",
+        "yearBuilt": 1926,
+        "address": "Lullwater Preserve, Atlanta, GA 30322",
+        "oldUse": "Private Residence",
+        "newUse": "President's House",
+        "buildingStyle": "Tudor-Gothic Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Tulane University",
+    "enumCase": "tulane",
+    "country": "unitedStates",
+    "aliases": [
+      "Tulane",
+      "Green Wave"
+    ],
+    "colors": [
+      "#21543F",
+      "#71C5E8"
+    ],
+    "traditions": [
+      {
+        "id": "trad_tulane_streetcar",
+        "name": "Ride the St. Charles Streetcar",
+        "description": "The St. Charles line has run since 1835 and is the oldest continuously operating streetcar line in the world. Ride it to the Tulane University stop in front of Gibson Hall.",
+        "coordinates": [
+          29.9351111,
+          -90.1237354
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/4597154662",
+        "source": "https://en.wikipedia.org/wiki/St._Charles_Streetcar_Line"
+      },
+      {
+        "id": "trad_tulane_tiffany_woodward_way",
+        "name": "Tiffany Windows on Woodward Way",
+        "description": "Two Louis Comfort Tiffany stained-glass triptychs, made in the 1890s for a chapel at Newcomb College's old Garden District campus, now line the Woodward Way breezeway at the Newcomb Art Museum. Stop and look for them.",
+        "coordinates": [
+          29.94198,
+          -90.121078
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/327443295",
+        "source": "https://en.wikipedia.org/wiki/Newcomb_Art_Museum"
+      },
+      {
+        "id": "trad_tulane_rogers_chapel",
+        "name": "Rogers Memorial Chapel",
+        "description": "More of Tulane's Tiffany stained glass is in the Myra Clare Rogers Memorial Chapel on the Newcomb side of campus. Peek inside to see the windows.",
+        "coordinates": [
+          29.94172,
+          -90.122965
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/327443147",
+        "source": "https://en.wikipedia.org/wiki/Newcomb_Art_Museum"
+      },
+      {
+        "id": "trad_tulane_mari_gallery",
+        "name": "Maya Gallery in Dinwiddie Hall",
+        "description": "The Middle American Research Institute has studied the Maya since 1924. Its gallery on the third floor of Dinwiddie Hall is open to the public on weekdays.",
+        "coordinates": [
+          29.935005,
+          -90.122182
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/327443125",
+        "source": "https://en.wikipedia.org/wiki/Middle_American_Research_Institute"
+      }
+    ],
+    "wiki": "Tulane University",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Not for Oneself, but for One's Own",
+      "airportName": "Louis Armstrong New Orleans International Airport",
+      "airportCode": "MSY",
+      "airportInfo": "Louis Armstrong New Orleans International is in Kenner, about 11 miles (18 km) west of downtown New Orleans.",
+      "funFact": "Tulane's Uptown campus faces Audubon Park across St. Charles Avenue. Gibson Hall, built in 1894, was the first academic building on the campus, and the Newcomb College buildings were designed by Yale architect James Gamble Rogers.",
+      "language": "English",
+      "languageInfo": "The school colors are green and blue, and the teams are the Green Wave. The mascot is Riptide the Pelican.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / St. Charles Streetcar",
+      "transportationFact": "The St. Charles Streetcar stops right in front of the campus and runs to downtown New Orleans. McAlister Place, once a road through the middle of campus, became a walkway in 2009."
+    },
+    "buildings": [
+      {
+        "id": "campus_tulane_gibson_hall",
+        "wiki": "Gibson Hall (Tulane University)",
+        "name": "Gibson Hall",
+        "description": "Built in 1894, Gibson Hall is the oldest building on the Uptown campus and its front door on St. Charles Avenue. Harrod and Andry designed it in Richardsonian Romanesque stone over brick.",
+        "architect": "Harrod and Andry",
+        "yearBuilt": 1894,
+        "address": "6823 St Charles Ave, New Orleans, LA 70118",
+        "oldUse": "Academic Building",
+        "newUse": "Administration and Admissions",
+        "buildingStyle": "Richardsonian Romanesque",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_tulane_richardson_memorial",
+        "wiki": "Tulane University School of Architecture and Built Environment",
+        "sharedArticle": true,
+        "coordinates": [
+          29.935596,
+          -90.121815
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/327443322",
+        "name": "Richardson Memorial Hall",
+        "description": "Built in 1908, this five-story hall on the oldest part of campus is home to the School of Architecture and Built Environment. A major renovation and expansion reopened it in 2025.",
+        "architect": "Unknown",
+        "yearBuilt": 1908,
+        "address": "West Rd, New Orleans, LA 70118",
+        "oldUse": "Academic Building",
+        "newUse": "School of Architecture",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 5,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_tulane_howard_tilton_library",
+        "wiki": "Howard-Tilton Memorial Library",
+        "name": "Howard-Tilton Memorial Library",
+        "description": "Tulane's main library moved into its current building on Freret Street in 1968. It holds the Hogan Jazz Archive and the Latin American Library. Hurricane Katrina flooded its basement, and a 2013–2016 project added two floors.",
+        "architect": "Unknown",
+        "yearBuilt": 1968,
+        "address": "Freret St at Newcomb Pl, New Orleans, LA 70118",
+        "oldUse": "University Library",
+        "newUse": "University Library",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_tulane_mcalister_auditorium",
+        "wiki": "McAlister Auditorium",
+        "name": "McAlister Auditorium",
+        "description": "Built in 1940, this Moderne take on the Roman Pantheon has a saucer-shaped, self-supporting concrete dome 110 feet (34 m) across, said at the time to be the largest of its kind in the world.",
+        "architect": "Favrot and Reed",
+        "yearBuilt": 1940,
+        "address": "McAlister Pl, New Orleans, LA 70118",
+        "oldUse": "Auditorium",
+        "newUse": "Auditorium and Event Space",
+        "buildingStyle": "Moderne",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "coordinates": [
+          29.939924,
+          -90.118919
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/327443411"
+      },
+      {
+        "id": "campus_tulane_devlin_fieldhouse",
+        "wiki": "Devlin Fieldhouse",
+        "name": "Devlin Fieldhouse",
+        "description": "Paid for with the football team's earnings from the 1932 Rose Bowl, the 'Rose Bowl Gym' opened in 1933. It is still home to Green Wave basketball, with about 4,100 seats.",
+        "architect": "Armstrong & Koch",
+        "yearBuilt": 1933,
+        "address": "Tulane University, New Orleans, LA 70118",
+        "oldUse": "Gymnasium",
+        "newUse": "Arena",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_tulane_yulman_stadium",
+        "wiki": "Yulman Stadium",
+        "name": "Yulman Stadium",
+        "description": "Opened in 2014, Yulman Stadium brought Green Wave football back to campus for the first time since old Tulane Stadium was torn down in 1980. It seats 30,000 and was built so it can grow later.",
+        "architect": "Gould Evans & Associates; Lee Ledbetter & Associates",
+        "yearBuilt": 2014,
+        "address": "2900 Ben Weiner Dr, New Orleans, LA 70118",
+        "oldUse": "Football Stadium",
+        "newUse": "Football Stadium",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_tulane_woldenberg_art_center",
+        "wiki": "Newcomb Art Museum",
+        "name": "Newcomb Art Museum",
+        "description": "The museum's galleries in the Woldenberg Art Center opened with a 1996 expansion of the Newcomb art department. It is known for its Newcomb Pottery, and two Tiffany stained-glass triptychs line its Woodward Way breezeway.",
+        "architect": "Unknown",
+        "yearBuilt": 1996,
+        "address": "Woldenberg Art Center, Newcomb Pl, New Orleans, LA 70118",
+        "oldUse": "Art Department",
+        "newUse": "Art Museum",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
+  },
+  {
+    "name": "Washington University in St. Louis",
+    "enumCase": "washU",
+    "country": "unitedStates",
+    "aliases": [
+      "WashU",
+      "WUSTL",
+      "Wash U",
+      "Bears"
+    ],
+    "colors": [
+      "#BA0C2F",
+      "#215732"
+    ],
+    "traditions": [
+      {
+        "id": "trad_washu_seal",
+        "name": "Don't Step on the Seal",
+        "description": "Campus legend says that stepping on the university seal under Brookings Hall will keep you from graduating, though touching the Chancellor's Medallion breaks the curse. Find the seal and walk around it.",
+        "coordinates": [
+          38.648039,
+          -90.305061
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/44076778",
+        "source": "https://source.washu.edu/2018/08/50-things-every-first-year-washu-student-must-do/"
+      },
+      {
+        "id": "trad_washu_declaration",
+        "name": "Declaration of Independence in Olin",
+        "description": "Olin Library displays a broadside copy of the Declaration of Independence, printed before the document was signed to spread the news across the colonies. Stop by the exhibit to see it in person.",
+        "coordinates": [
+          38.648623,
+          -90.307722
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/185357795",
+        "source": "https://source.washu.edu/2018/08/50-things-every-first-year-washu-student-must-do/"
+      },
+      {
+        "id": "trad_washu_holmes_lounge",
+        "name": "Lunch at Holmes Lounge",
+        "description": "The old library reading room in Ridgley Hall is now Holmes Lounge, one of the most beautiful rooms on campus. Grab lunch there and take in the surroundings.",
+        "coordinates": [
+          38.648161,
+          -90.306419
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/1336923267",
+        "source": "https://source.washu.edu/2018/08/50-things-every-first-year-washu-student-must-do/"
+      },
+      {
+        "id": "trad_washu_underpass",
+        "name": "The Painted Underpass",
+        "description": "The underpass linking the South 40 to the main campus is covered in painted announcements for campus events. Walk through to see the latest designs.",
+        "coordinates": [
+          38.647071,
+          -90.312267
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/43753190",
+        "source": "https://source.washu.edu/2018/08/50-things-every-first-year-washu-student-must-do/"
+      },
+      {
+        "id": "trad_washu_assembly_series",
+        "name": "Assembly Series in Graham Chapel",
+        "description": "Graham Chapel hosts the Assembly Series, the university's long-running lecture program, which has brought speakers such as Eleanor Roosevelt and Gloria Steinem to campus. Check the schedule and catch a talk.",
+        "coordinates": [
+          38.648232,
+          -90.308906
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/185357811",
+        "source": "https://source.washu.edu/2018/08/50-things-every-first-year-washu-student-must-do/"
+      }
+    ],
+    "wiki": "Washington University in St. Louis",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Per Veritatem Vis",
+      "airportName": "St. Louis Lambert International Airport",
+      "airportCode": "STL",
+      "airportInfo": "Lambert is about 23 km northwest of downtown St. Louis. MetroLink's Red Line stops at both airport terminals.",
+      "funFact": "Brookings Hall was the administration building of the 1904 World's Fair, and Francis Field on campus was the main stadium of the 1904 Summer Olympics, the first held in the Western Hemisphere.",
+      "language": "English",
+      "languageInfo": "The school colors are red and green, and the teams are the Bears, with a mascot named Forest the bear.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Campus Circulator / MetroLink",
+      "transportationFact": "A free Campus Circulator shuttle loops the Danforth Campus, and MetroLink Blue Line trains stop at Skinker station beside it."
+    },
+    "buildings": [
+      {
+        "id": "campus_washu_brookings_hall",
+        "wiki": "Brookings Hall",
+        "name": "Brookings Hall",
+        "description": "Cope and Stewardson designed this Collegiate Gothic gateway, built from 1900 to 1902 as the centerpiece of the new campus. It served as the administration building of the 1904 World's Fair and is still the university's administrative center.",
+        "architect": "Cope and Stewardson (James P. Jamieson)",
+        "yearBuilt": 1902,
+        "address": "Danforth Campus, Washington University, St. Louis, MO 63130",
+        "oldUse": "World's Fair Administration Building",
+        "newUse": "University Administration",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_washu_graham_chapel",
+        "wiki": "Washington University Hilltop Campus Historic District",
+        "name": "Graham Chapel",
+        "description": "Dedicated in 1909, this Collegiate Gothic chapel was modeled after King's College Chapel at Cambridge, though on a far smaller scale. It hosts concerts, plays and the university's Assembly Series lectures.",
+        "architect": "Cope and Stewardson (James P. Jamieson)",
+        "yearBuilt": 1909,
+        "address": "Danforth Campus, Washington University, St. Louis, MO 63130",
+        "oldUse": "University Chapel",
+        "newUse": "Chapel and Lecture Hall",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          38.648232,
+          -90.308906
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/185357811"
+      },
+      {
+        "id": "campus_washu_busch_hall",
+        "wiki": "Washington University Hilltop Campus Historic District",
+        "name": "Busch Hall",
+        "description": "Named for Anheuser-Busch co-founder Adolphus Busch, this was the first building begun on the campus, with its cornerstone laid in 1900. It was the chemistry building until 1950 and now houses humanities departments.",
+        "architect": "Cope and Stewardson",
+        "yearBuilt": 1900,
+        "address": "Danforth Campus, Washington University, St. Louis, MO 63130",
+        "oldUse": "Chemistry Building",
+        "newUse": "Humanities Building",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          38.647456,
+          -90.305612
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/461391336"
+      },
+      {
+        "id": "campus_washu_ridgley_hall",
+        "wiki": "Washington University Hilltop Campus Historic District",
+        "name": "Ridgley Hall",
+        "description": "The university's first library until the early 1960s, Ridgley displayed Queen Victoria's Diamond Jubilee gifts during the 1904 World's Fair. Its old reading room is now the ornate Holmes Lounge.",
+        "architect": "Cope and Stewardson",
+        "yearBuilt": 1901,
+        "address": "Danforth Campus, Washington University, St. Louis, MO 63130",
+        "oldUse": "University Library",
+        "newUse": "Language Departments and Lounge",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          38.648136,
+          -90.30617
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/697249227"
+      },
+      {
+        "id": "campus_washu_eads_hall",
+        "wiki": "Washington University Hilltop Campus Historic District",
+        "name": "Eads Hall",
+        "description": "In 1922, physics professor Arthur Holly Compton ran experiments in this hall's basement showing that light behaves as particles, work that won him the 1927 Nobel Prize. During the 1904 World's Fair it was used by the Board of Lady Managers.",
+        "architect": "Cope and Stewardson",
+        "yearBuilt": 1902,
+        "address": "Danforth Campus, Washington University, St. Louis, MO 63130",
+        "oldUse": "Academic Building",
+        "newUse": "Teaching and Writing Centers",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          38.648216,
+          -90.306922
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/697249228"
+      },
+      {
+        "id": "campus_washu_olin_library",
+        "wiki": "Washington University Libraries",
+        "name": "Olin Library",
+        "description": "Dedicated in 1962 and renovated in 2003, Olin is the main library of the university and the largest library in Missouri. It holds a broadside of the Declaration of Independence printed before the signing.",
+        "architect": "Unknown",
+        "yearBuilt": 1962,
+        "address": "Danforth Campus, Washington University, St. Louis, MO 63130",
+        "oldUse": "University Library",
+        "newUse": "University Library",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_washu_steinberg_hall",
+        "wiki": "Danforth Campus",
+        "name": "Steinberg Hall",
+        "description": "Completed in 1960, this was the first commission of Fumihiko Maki, who later won the Pritzker Prize. It houses the Art and Architecture Library and the Department of Art History and Archaeology.",
+        "architect": "Fumihiko Maki",
+        "yearBuilt": 1960,
+        "address": "Danforth Campus, Washington University, St. Louis, MO 63130",
+        "oldUse": "Art Building",
+        "newUse": "Art and Architecture Library",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          38.646567,
+          -90.302777
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/120125035"
+      },
+      {
+        "id": "campus_washu_kemper_art_museum",
+        "wiki": "Mildred Lane Kemper Art Museum",
+        "name": "Mildred Lane Kemper Art Museum",
+        "description": "Founded in 1881 as the oldest art museum west of the Mississippi, the museum moved into this Fumihiko Maki building in 2006. A 2019 renovation added a polished stainless steel facade and a sculpture garden.",
+        "architect": "Fumihiko Maki",
+        "yearBuilt": 2006,
+        "address": "1 Brookings Dr, St. Louis, MO 63130",
+        "oldUse": "Art Museum",
+        "newUse": "Art Museum",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_washu_francis_field",
+        "wiki": "Francis Olympic Field",
+        "name": "Francis Olympic Field",
+        "description": "Built for the 1904 World's Fair, this stadium was the main venue of the 1904 Summer Olympics, and its permanent stands were an early use of reinforced concrete. It is still home to the Bears' football, soccer and track teams.",
+        "architect": "Cope and Stewardson",
+        "yearBuilt": 1904,
+        "address": "Forsyth Blvd, St. Louis County, MO 63105",
+        "oldUse": "Olympic Stadium",
+        "newUse": "University Stadium",
+        "buildingStyle": "Reinforced Concrete Stadium",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_washu_francis_gymnasium",
+        "wiki": "Francis Gymnasium",
+        "name": "Francis Gymnasium",
+        "description": "Built in 1903, this gym was the main indoor venue of the 1904 Summer Olympics, hosting boxing and fencing. It has been used by the university's athletics department ever since.",
+        "architect": "Cope and Stewardson",
+        "yearBuilt": 1903,
+        "address": "Forsyth Blvd, St. Louis County, MO 63105",
+        "oldUse": "Olympic Venue",
+        "newUse": "Athletics Building",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
   }
 ]

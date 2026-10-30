@@ -32,3 +32,25 @@ students-only events, hazing, mocking another school, and Syracuse's Saltine War
 - [ ] Kingsbury Hall's style (Utah) comes from secondary sources only.
 - [ ] Thin campuses (1 tradition): Arizona, Virginia Tech, Florida, Vanderbilt, Kentucky, Louisville, Maryland,
       Minnesota, Nebraska, K-State, Cincinnati, UCF, Utah. A later research round can add more.
+
+### New campuses (Wayne State, Western Michigan, Grand Valley State, Caltech, Johns Hopkins, Rice, Emory, Tulane, NYU, Carnegie Mellon, WashU)
+- [ ] Colors from the Wikipedia infobox only (brand page wouldn't load): Wayne State, Tulane, NYU, WashU, Rice's gray #7C7E7F
+      (Rice Athletics uses #C1C6C8). WMU lists gold first because its brand page calls gold dominant.
+- [ ] Grand Valley has 5 buildings: only 4 Allendale buildings have their own article (the Pew Library uses the university article).
+- [ ] Hilberry Theatre (Wayne State): new use "Jazz Center" is the renovation Wikipedia says is under way; confirm it has reopened.
+- [ ] Years where sources disagree: Cahill Center (2009 vs 2010), Gilman Hall (1915 vs 1914), Lullwater House (1926 vs 1925),
+      Ridgley Hall (1901 vs 1902), Cannon Chapel (1980 vs 1977–82). Goizueta (1997) is the dedication; Newcomb Art Museum (1996)
+      is when its galleries opened.
+- [ ] Space Telescope Science Institute's 1983 comes from a photo caption on AURA's site. Several Caltech architects come from
+      Caltech's campus map, not Wikipedia.
+- [ ] Rice Lovett/Herzstein/Maxfield style "Mediterranean Revival" is the campus article's style for the whole campus.
+- [ ] Beckman Institute's Wikipedia point is about 200 m east of the building (under the 0.3 km warning).
+- [ ] Traditions to look at: Caltech Pumpkin Drop (no current-year confirmation), JHU Spring Fair (has a beer garden; the text is
+      about the fair), JHU "Art Museum Next Door" (the BMA isn't part of JHU), WashU Lunch at Holmes Lounge (visitor access not
+      confirmed), game-day-only items (WMU hockey banner, GVSU Lubbers Stadium, Wayne State Homecoming).
+- [ ] Approximate map points: WMU Bronco statue, Wayne State ArtWalk, CMU Fence / Buggy / Midway, Emory Words Under the Eaves and
+      Robinson Tower, Tulane Tiffany windows.
+- Left out on purpose: Caltech Ditch Day, Rice Beer Bike, Baker 13 and Willy's statue, CMU's Randy Pausch bridge, WashU WILD,
+  Emory Coke Toast and Dooley's Week, Tulane Ivy Day.
+- No article of their own and the bare name leads elsewhere, so these skip the photo (`WikimediaService.skipWikipedia`):
+  JHU Gilman Hall and Eisenhower Library, CMU Baker Hall and Gates and Hillman Centers.

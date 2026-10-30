@@ -1464,6 +1464,103 @@
       "longitude": -6.256801
     }
   ],
+  "Wayne State University": [
+    {
+      "id": "trad_wayne_planetarium",
+      "name": "Friday Night Planetarium Show",
+      "description": "The Wayne State Planetarium in Old Main puts on free public shows most Friday evenings, with a tour of the current night sky and a fulldome film. Arrive early, since seats are first come, first served.",
+      "latitude": 42.3550413,
+      "longitude": -83.0672617
+    },
+    {
+      "id": "trad_wayne_falcons",
+      "name": "Old Main's Peregrine Falcons",
+      "description": "Peregrine falcons live on a balcony of Old Main's clock tower, and the university calls them its winged Warriors. Look up at the tower to spot them.",
+      "latitude": 42.3550413,
+      "longitude": -83.0672617
+    },
+    {
+      "id": "trad_wayne_artwalk",
+      "name": "Campus ArtWalk",
+      "description": "Around 30 donated outdoor sculptures make the campus an open-air gallery you can visit any time. Start at \"City with Halo\" in front of the Thompson Home and follow the ArtWalk map.",
+      "latitude": 42.354757,
+      "longitude": -83.065481
+    },
+    {
+      "id": "trad_wayne_homecoming",
+      "name": "Homecoming Game at Tom Adams Field",
+      "description": "Homecoming week ends with Warrior football at Tom Adams Field, and fans are asked to wear green and gold. Join the crowd and cheer on the Warriors.",
+      "latitude": 42.355801,
+      "longitude": -83.078358
+    }
+  ],
+  "Western Michigan University": [
+    {
+      "id": "trad_wmu_bronco_statue",
+      "name": "The Bronco Statue",
+      "description": "A 1,800-pound bronze bronco by sculptor Veryl Goodnight has stood on campus since 1997. It was first part of her larger work \"The Day the Wall Came Down.\" Snap a photo with it.",
+      "latitude": 42.284638,
+      "longitude": -85.608672
+    },
+    {
+      "id": "trad_wmu_homecoming",
+      "name": "Homecoming at Waldo Stadium",
+      "description": "Each October WMU paints the town brown and gold for Homecoming, ending with Broncos football at Waldo Stadium. Join the crowd in the stands.",
+      "latitude": 42.285762,
+      "longitude": -85.60112
+    },
+    {
+      "id": "trad_wmu_hockey_banner",
+      "name": "National Champions at Lawson Arena",
+      "description": "The Broncos won their first men's ice hockey national championship in 2025. Catch a game at Lawson Arena and look for the championship banner.",
+      "latitude": 42.275962,
+      "longitude": -85.617875
+    },
+    {
+      "id": "trad_wmu_prospect_hill",
+      "name": "Up Prospect Hill to Heritage Hall",
+      "description": "WMU began on Prospect Hill, where East Hall opened in 1905 and a trolley once carried people up the slope. Walk up to Heritage Hall, the restored East Hall, and the North Hall portico beside it.",
+      "latitude": 42.286211,
+      "longitude": -85.597018
+    }
+  ],
+  "Grand Valley State University": [
+    {
+      "id": "trad_gvsu_little_mac",
+      "name": "Little Mac Bridge and the Ravines",
+      "description": "Students voted the ravines and the Little Mac Bridge the most beautiful spot on campus. Cross the footbridge and look down at the stream below.",
+      "latitude": 42.964644,
+      "longitude": -85.886536
+    },
+    {
+      "id": "trad_gvsu_carillon",
+      "name": "Carillon Music at Cook Tower",
+      "description": "Every week the university carillonist plays music, from Bach to pop songs, on the bells of the Cook Carillon Tower. If you hear bells, someone is up there playing live.",
+      "latitude": 42.963457,
+      "longitude": -85.888593
+    },
+    {
+      "id": "trad_gvsu_zumberge_pond",
+      "name": "Zumberge Pond",
+      "description": "Lakers love to study, eat or just relax on the steps beside Zumberge Pond in any season. Take a seat and enjoy the view.",
+      "latitude": 42.962773,
+      "longitude": -85.887481
+    },
+    {
+      "id": "trad_gvsu_library_roof",
+      "name": "View from the Library Roof",
+      "description": "The roof of the Mary Idema Pew Library gives a sweeping view of the Allendale campus, a student favorite when the leaves change in fall. Go up and take in the view.",
+      "latitude": 42.96288,
+      "longitude": -85.889788
+    },
+    {
+      "id": "trad_gvsu_lubbers_gameday",
+      "name": "Laker Football at Lubbers Stadium",
+      "description": "Lubbers Stadium officially seats 10,444 but often holds thousands more fans, with a record crowd of 17,007 in 2021. Join them for a Lakers home game.",
+      "latitude": 42.969127,
+      "longitude": -85.894756
+    }
+  ],
   "Yale University": [
     {
       "id": "trad_yale_woolsey_foot",
@@ -1687,6 +1784,110 @@
       "longitude": -77.070156
     }
   ],
+  "Johns Hopkins University": [
+    {
+      "id": "trad_jhu_gilman_seal",
+      "name": "The Gilman Hall Seal",
+      "description": "Legend says a student who steps on the university seal in the Gilman Hall foyer won't graduate, so it's roped off. Have a look, then walk around it.",
+      "latitude": 39.328972,
+      "longitude": -76.621593
+    },
+    {
+      "id": "trad_jhu_blue_jay_statue",
+      "name": "The Painted Blue Jay",
+      "description": "Student groups repaint the Blue Jay statue to mark events and celebrations. Stop by to see what colors it's wearing today.",
+      "latitude": 39.331058,
+      "longitude": -76.619621
+    },
+    {
+      "id": "trad_jhu_lacrosse",
+      "name": "Lacrosse at Homewood Field",
+      "description": "Lacrosse is the signature sport at Hopkins, and home games at Homewood Field draw big crowds. Catch a game and cheer on the Blue Jays.",
+      "latitude": 39.333484,
+      "longitude": -76.620872
+    },
+    {
+      "id": "trad_jhu_the_beach",
+      "name": "The Beach",
+      "description": "\"The Beach\" is the big lawn by the Eisenhower Library on Charles Street, where students study, picnic and play. Spread out a blanket and watch the sunset.",
+      "latitude": 39.329106,
+      "longitude": -76.618484
+    },
+    {
+      "id": "trad_jhu_spring_fair",
+      "name": "Spring Fair",
+      "description": "Every spring since 1972, students have run Spring Fair, a weekend festival with vendors, food, rides and music that draws Baltimore residents too. Visit in April to join in.",
+      "latitude": 39.329034,
+      "longitude": -76.620381
+    },
+    {
+      "id": "trad_jhu_art_museum",
+      "name": "The Art Museum Next Door",
+      "description": "The Baltimore Museum of Art sits just steps from campus, and admission is free. Add it to your campus visit.",
+      "latitude": 39.325818,
+      "longitude": -76.619723
+    }
+  ],
+  "New York University": [
+    {
+      "id": "trad_nyu_washington_square_arch",
+      "name": "Washington Square Arch",
+      "description": "The arch belongs to the city, but it has become the unofficial symbol of NYU, whose buildings ring the park. Take a photo with the arch and Fifth Avenue behind it.",
+      "latitude": 40.731235,
+      "longitude": -73.997102
+    },
+    {
+      "id": "trad_nyu_bust_of_sylvette",
+      "name": "Bust of Sylvette",
+      "description": "In the plaza between the Silver Towers stands a huge enlargement of Picasso's Bust of Sylvette, made with Carl Nesjar. Walk into the courtyard to see it up close.",
+      "latitude": 40.727029,
+      "longitude": -73.99839
+    },
+    {
+      "id": "trad_nyu_gould_plaza",
+      "name": "Gould Plaza",
+      "description": "This plaza off West 4th Street, framed by the Stern School and the Courant Institute, is where NYU students gather after classes. Look for the purple NYU flags on the buildings around it.",
+      "latitude": 40.728861,
+      "longitude": -73.99592
+    },
+    {
+      "id": "trad_nyu_grey_art_museum",
+      "name": "Grey Art Museum",
+      "description": "NYU's fine art museum, known as the Grey Art Gallery until 2023, now has larger galleries at 18 Cooper Square. Visit to see the university's collection, including modern Asian and Middle Eastern art.",
+      "latitude": 40.72781,
+      "longitude": -73.991541
+    }
+  ],
+  "Carnegie Mellon University": [
+    {
+      "id": "trad_cmu_the_fence",
+      "name": "The Fence",
+      "description": "Painting the Fence in the middle of the Cut has been a tradition since the 1920s, and the original wooden fence once held the Guinness record as the most painted object. Walk by to see the newest coat of paint and message.",
+      "latitude": 40.443317,
+      "longitude": -79.942966
+    },
+    {
+      "id": "trad_cmu_buggy",
+      "name": "Buggy Races",
+      "description": "During Spring Carnival, student teams push and free-roll sleek, unpowered buggies around a course in Schenley Park in a race officially called Sweepstakes. Head into the park to watch the heats.",
+      "latitude": 40.438872,
+      "longitude": -79.944514
+    },
+    {
+      "id": "trad_cmu_midway",
+      "name": "Spring Carnival Midway",
+      "description": "Each April, campus groups build multi-story booths with games for the Spring Carnival Midway on the College of Fine Arts parking lot. The carnival is open to the Pittsburgh community, so stop by and explore the booths.",
+      "latitude": 40.441448,
+      "longitude": -79.942951
+    },
+    {
+      "id": "trad_cmu_kiltie_band",
+      "name": "The Kiltie Band",
+      "description": "Formed in 1908, the Kiltie Band wears kilts in honor of Andrew Carnegie's Scottish roots and plays at every home football game. Catch a game to hear the band and see King Arthur's quest for the Grail between the third and fourth quarters.",
+      "latitude": 40.443218,
+      "longitude": -79.940227
+    }
+  ],
   "University of Chicago": [
     {
       "id": "trad_uchicago_reynolds_seal",
@@ -1835,6 +2036,147 @@
       "description": "On Halloween, students living in the Lawn rooms hand out candy to local children, a tradition since the 1980s. Families line up along the 54 Lawn rooms.",
       "latitude": 38.034259,
       "longitude": -78.504132
+    }
+  ],
+  "Rice University": [
+    {
+      "id": "trad_rice_sallyport",
+      "name": "Through the Sallyport",
+      "description": "By tradition, Rice students pass through the Sallyport arch in Lovett Hall as they leave at graduation and avoid it until then. Stand under the arch and look across the Academic Quad.",
+      "latitude": 29.71903,
+      "longitude": -95.397827
+    },
+    {
+      "id": "trad_rice_skyspace",
+      "name": "Skyspace at Sunset",
+      "description": "James Turrell's Twilight Epiphany Skyspace puts on a free light show at sunrise and sunset, as changing colored light transforms the sky seen through its roof opening. Arrive early for a seat.",
+      "latitude": 29.716487,
+      "longitude": -95.404264
+    },
+    {
+      "id": "trad_rice_moon_speech",
+      "name": "The Moon Speech Stadium",
+      "description": "In 1962 President Kennedy spoke at Rice Stadium and challenged the nation to reach the Moon by the end of the decade. Visit the stadium where the famous speech was given.",
+      "latitude": 29.716323,
+      "longitude": -95.409324
+    },
+    {
+      "id": "trad_rice_mob",
+      "name": "The Marching Owl Band",
+      "description": "The Marching Owl Band, or MOB, is a scatter band: instead of marching in formation, it performs comic skits at football games. Catch its halftime show.",
+      "latitude": 29.715311,
+      "longitude": -95.40839
+    },
+    {
+      "id": "trad_rice_tree_for_every_student",
+      "name": "A Tree for Every Student",
+      "description": "More than 4,000 trees and shrubs make the whole campus an arboretum, which gave rise to the legend that Rice has a tree for every student. Stroll the shady quads.",
+      "latitude": 29.718631,
+      "longitude": -95.398857
+    }
+  ],
+  "Emory University": [
+    {
+      "id": "trad_emory_gravity_monument",
+      "name": "The Gravity Monument",
+      "description": "Hidden in the trees off Dowman Drive is a pink marble monument that Roger Babson gave Emory in 1963 to honor the sciences. Many say it looks more like a tombstone in the woods. See if you can find it.",
+      "latitude": 33.790089,
+      "longitude": -84.326958
+    },
+    {
+      "id": "trad_emory_lullwater_tower",
+      "name": "Lullwater Preserve and Tower",
+      "description": "Lullwater Preserve is a 154-acre stretch of woods and water that walkers and joggers enjoy. Follow the trail to the old granite tower Walter Candler built beside his dam to power his house.",
+      "latitude": 33.801285,
+      "longitude": -84.314417
+    },
+    {
+      "id": "trad_emory_quad_eaves",
+      "name": "Words Under the Eaves",
+      "description": "Henry Hornbostel set the look of the Quad with pink Georgia marble and red tile roofs. Look up under the eaves of the older buildings to find carved words naming what was once taught inside.",
+      "latitude": 33.790622,
+      "longitude": -84.32474
+    },
+    {
+      "id": "trad_emory_source_route",
+      "name": "Source Route",
+      "description": "Behind the Carlos Museum, a set of stairs leads down into Baker Woodland. It is part of an environmental sculpture installed in the 1970s. Take the steps into the woods.",
+      "latitude": 33.78962,
+      "longitude": -84.324451
+    },
+    {
+      "id": "trad_emory_robinson_tower",
+      "name": "Robinson Clock Tower Bells",
+      "description": "The clock tower on Cox Hall carries carillon bells dedicated in 2001 to honor trustee J. William Robinson and his wife. Listen for them as you cross the campus.",
+      "latitude": 33.792417,
+      "longitude": -84.323165
+    }
+  ],
+  "Tulane University": [
+    {
+      "id": "trad_tulane_streetcar",
+      "name": "Ride the St. Charles Streetcar",
+      "description": "The St. Charles line has run since 1835 and is the oldest continuously operating streetcar line in the world. Ride it to the Tulane University stop in front of Gibson Hall.",
+      "latitude": 29.9351111,
+      "longitude": -90.1237354
+    },
+    {
+      "id": "trad_tulane_tiffany_woodward_way",
+      "name": "Tiffany Windows on Woodward Way",
+      "description": "Two Louis Comfort Tiffany stained-glass triptychs, made in the 1890s for a chapel at Newcomb College's old Garden District campus, now line the Woodward Way breezeway at the Newcomb Art Museum. Stop and look for them.",
+      "latitude": 29.94198,
+      "longitude": -90.121078
+    },
+    {
+      "id": "trad_tulane_rogers_chapel",
+      "name": "Rogers Memorial Chapel",
+      "description": "More of Tulane's Tiffany stained glass is in the Myra Clare Rogers Memorial Chapel on the Newcomb side of campus. Peek inside to see the windows.",
+      "latitude": 29.94172,
+      "longitude": -90.122965
+    },
+    {
+      "id": "trad_tulane_mari_gallery",
+      "name": "Maya Gallery in Dinwiddie Hall",
+      "description": "The Middle American Research Institute has studied the Maya since 1924. Its gallery on the third floor of Dinwiddie Hall is open to the public on weekdays.",
+      "latitude": 29.935005,
+      "longitude": -90.122182
+    }
+  ],
+  "Washington University in St. Louis": [
+    {
+      "id": "trad_washu_seal",
+      "name": "Don't Step on the Seal",
+      "description": "Campus legend says that stepping on the university seal under Brookings Hall will keep you from graduating, though touching the Chancellor's Medallion breaks the curse. Find the seal and walk around it.",
+      "latitude": 38.648039,
+      "longitude": -90.305061
+    },
+    {
+      "id": "trad_washu_declaration",
+      "name": "Declaration of Independence in Olin",
+      "description": "Olin Library displays a broadside copy of the Declaration of Independence, printed before the document was signed to spread the news across the colonies. Stop by the exhibit to see it in person.",
+      "latitude": 38.648623,
+      "longitude": -90.307722
+    },
+    {
+      "id": "trad_washu_holmes_lounge",
+      "name": "Lunch at Holmes Lounge",
+      "description": "The old library reading room in Ridgley Hall is now Holmes Lounge, one of the most beautiful rooms on campus. Grab lunch there and take in the surroundings.",
+      "latitude": 38.648161,
+      "longitude": -90.306419
+    },
+    {
+      "id": "trad_washu_underpass",
+      "name": "The Painted Underpass",
+      "description": "The underpass linking the South 40 to the main campus is covered in painted announcements for campus events. Walk through to see the latest designs.",
+      "latitude": 38.647071,
+      "longitude": -90.312267
+    },
+    {
+      "id": "trad_washu_assembly_series",
+      "name": "Assembly Series in Graham Chapel",
+      "description": "Graham Chapel hosts the Assembly Series, the university's long-running lecture program, which has brought speakers such as Eleanor Roosevelt and Gloria Steinem to campus. Check the schedule and catch a talk.",
+      "latitude": 38.648232,
+      "longitude": -90.308906
     }
   ],
   "Stanford University": [
@@ -2040,6 +2382,43 @@
       "description": "The main entrance of the Estadio Olímpico Universitario features a relief by Diego Rivera made of naturally coloured stones, and the stadium still has its 1968 Olympic cauldron. Visitors can see the relief from outside the stadium.",
       "latitude": 19.331688,
       "longitude": -99.192286
+    }
+  ],
+  "California Institute of Technology": [
+    {
+      "id": "trad_caltech_fleming_cannon",
+      "name": "The Fleming Cannon",
+      "description": "A Franco-Prussian War-era cannon rests on its wheels in front of Fleming House and is fired only for big moments like commencement. MIT students once hauled it across the country as a prank. Stop by to see it.",
+      "latitude": 34.136563,
+      "longitude": -118.123157
+    },
+    {
+      "id": "trad_caltech_turtle_pond",
+      "name": "The Turtle Pond",
+      "description": "Dozens of turtles, mostly red-eared sliders, live in the pond in Throop Memorial Garden, where Caltech's first building once stood. Look for them sunning on the rocks, but don't feed them.",
+      "latitude": 34.136838,
+      "longitude": -118.125183
+    },
+    {
+      "id": "trad_caltech_watson_lectures",
+      "name": "Watson Lectures",
+      "description": "For about a century Caltech scientists have explained their work in free public talks, today called the Watson Lectures and held at Beckman Auditorium. Catch one in person or online.",
+      "latitude": 34.139191,
+      "longitude": -118.125541
+    },
+    {
+      "id": "trad_caltech_pumpkin_drop",
+      "name": "Halloween Pumpkin Drop",
+      "description": "Every Halloween, students drop pumpkins frozen in liquid nitrogen from the top of Caltech Hall, the former Millikan Library, while a crowd watches for a spark. The name nods to Millikan's famous oil-drop experiment.",
+      "latitude": 34.136865,
+      "longitude": -118.126055
+    },
+    {
+      "id": "trad_caltech_tournament_park",
+      "name": "Tournament Park",
+      "description": "The athletic field at Tournament Park, on the south side of campus, hosted the first Rose Bowl games. Walk past the track to see where the famous game began.",
+      "latitude": 34.132928,
+      "longitude": -118.125456
     }
   ]
 }
