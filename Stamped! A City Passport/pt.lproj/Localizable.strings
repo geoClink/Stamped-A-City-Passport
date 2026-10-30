@@ -760,6 +760,10 @@
 /* Game Day: a game whose start time isn't announced yet */
 "Time TBA" = "Horário a definir";
 
+/* Audio story on a landmark page */
+"Listen" = "Ouvir";
+"Reads this landmark's story aloud in English" = "Lê em voz alta a história deste ponto turístico em inglês";
+
 /* Vrbo and Viator links */
 "Vacation Rentals on Vrbo" = "Aluguéis de temporada no Vrbo";
 "Opens Vrbo. Stamped! doesn't handle bookings or payments." = "Abre o Vrbo. O Stamped! não faz reservas nem pagamentos.";
