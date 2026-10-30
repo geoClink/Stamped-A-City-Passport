@@ -16,7 +16,7 @@ How to use this file:
 - Vision Pro: a 3D globe of every city with live stamp pins; drag to spin and tilt, tap to turn a city toward you.
 - Vision Pro: available in all 9 of the app's languages.
 
-## [2.7] (build 12) – not yet uploaded
+## [2.7] (build 12) – 2026-10-30 (iPhone; Mac in review)
 
 ### Added
 - Map pins group into numbered bubbles when zoomed out and split apart as you zoom in; tapping a bubble zooms in. On city maps (landmarks and saved places) and trip route maps.
