@@ -121,6 +121,11 @@ struct CityDetailView: View {
                         CampusTraditionsSection(campus: viewModel.city, isHighContrast: isHighContrast)
                     }
 
+                    // Campuses only: where students live, eat, study and hang out
+                    if !viewModel.city.studentLife.isEmpty {
+                        StudentLifeSection(campus: viewModel.city, isHighContrast: isHighContrast)
+                    }
+
                     LandmarkSection(viewModel: viewModel, isHighContrast: isHighContrast)
 
                     BuildingTimelineSection(

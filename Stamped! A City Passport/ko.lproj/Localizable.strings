@@ -318,6 +318,14 @@
 "Double tap to check this tradition off." = "두 번 탭하여 이 전통을 체크하세요.";
 "Show %@ in Maps" = "지도에서 %@ 보기";
 
+// MARK: - Campus Student Life
+"STUDENT LIFE" = "학생 생활";
+"Where Students Live" = "학생들이 사는 곳";
+"Student Union" = "학생회관";
+"Study Spots" = "공부하기 좋은 곳";
+"Dining Halls" = "학생 식당";
+"Hangouts" = "모임 장소";
+
 // MARK: - College List & Road Trip
 "My College List" = "나의 대학 목록";
 "Add to My College List" = "나의 대학 목록에 추가";

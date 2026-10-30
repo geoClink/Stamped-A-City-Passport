@@ -318,6 +318,14 @@
 "Double tap to check this tradition off." = "Toque duas vezes para marcar esta tradição.";
 "Show %@ in Maps" = "Ver %@ no Mapas";
 
+// MARK: - Campus Student Life
+"STUDENT LIFE" = "VIDA ESTUDANTIL";
+"Where Students Live" = "Onde os estudantes moram";
+"Student Union" = "Centro estudantil";
+"Study Spots" = "Lugares para estudar";
+"Dining Halls" = "Refeitórios";
+"Hangouts" = "Pontos de encontro";
+
 // MARK: - College List & Road Trip
 "My College List" = "Minha lista de universidades";
 "Add to My College List" = "Adicionar à Minha lista de universidades";

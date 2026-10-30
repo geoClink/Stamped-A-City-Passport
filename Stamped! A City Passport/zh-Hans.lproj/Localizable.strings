@@ -318,6 +318,14 @@
 "Double tap to check this tradition off." = "轻点两下即可勾选这项传统。";
 "Show %@ in Maps" = "在地图中显示 %@";
 
+// MARK: - Campus Student Life
+"STUDENT LIFE" = "学生生活";
+"Where Students Live" = "学生住在哪里";
+"Student Union" = "学生活动中心";
+"Study Spots" = "学习场所";
+"Dining Halls" = "学生餐厅";
+"Hangouts" = "休闲去处";
+
 // MARK: - College List & Road Trip
 "My College List" = "我的大学清单";
 "Add to My College List" = "添加到我的大学清单";
