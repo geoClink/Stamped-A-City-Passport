@@ -1252,5 +1252,231 @@
       "name": "Century Tree",
       "description": "Este roble, uno de los primeros árboles plantados en el campus, tiene bastante más de 100 años. Según la leyenda, la pareja que pasa junta bajo él se casará."
     }
+  },
+  "Wayne State University": {
+    "trad_wayne_planetarium": {
+      "name": "Planetario los viernes por la noche",
+      "description": "El planetario de Wayne State, en Old Main, ofrece funciones públicas gratuitas casi todos los viernes por la noche, con un recorrido por el cielo nocturno actual y una película de cúpula completa. Llega temprano: los asientos se asignan por orden de llegada."
+    },
+    "trad_wayne_falcons": {
+      "name": "Los halcones peregrinos de Old Main",
+      "description": "En un balcón de la torre del reloj de Old Main viven halcones peregrinos, a los que la universidad llama sus Warriors alados. Mira hacia la torre para encontrarlos."
+    },
+    "trad_wayne_artwalk": {
+      "name": "ArtWalk del campus",
+      "description": "Unas 30 esculturas al aire libre donadas convierten el campus en una galería que puedes visitar a cualquier hora. Empieza en \"City with Halo\", frente al Thompson Home, y sigue el mapa del ArtWalk."
+    },
+    "trad_wayne_homecoming": {
+      "name": "Partido de Homecoming en el Tom Adams Field",
+      "description": "La semana de Homecoming termina con un partido de fútbol americano de los Warriors en el Tom Adams Field, y se pide a los aficionados que vistan de verde y dorado. Únete al público y anima a los Warriors."
+    }
+  },
+  "Western Michigan University": {
+    "trad_wmu_bronco_statue": {
+      "name": "La estatua del Bronco",
+      "description": "Un bronco de bronce de unos 800 kilos, obra de la escultora Veryl Goodnight, está en el campus desde 1997. Primero formó parte de su obra mayor \"The Day the Wall Came Down\". Hazte una foto con él."
+    },
+    "trad_wmu_homecoming": {
+      "name": "Homecoming en el Waldo Stadium",
+      "description": "Cada octubre la WMU pinta la ciudad de marrón y dorado por Homecoming, que culmina con fútbol americano de los Broncos en el Waldo Stadium. Únete al público en las gradas."
+    },
+    "trad_wmu_hockey_banner": {
+      "name": "Campeones nacionales en la Lawson Arena",
+      "description": "Los Broncos ganaron en 2025 su primer campeonato nacional de hockey sobre hielo masculino. Ve a un partido en la Lawson Arena y busca el estandarte de campeones."
+    },
+    "trad_wmu_prospect_hill": {
+      "name": "Subida al Prospect Hill hasta Heritage Hall",
+      "description": "La WMU nació en el Prospect Hill, donde East Hall abrió en 1905 y un tranvía subía antes a la gente por la ladera. Sube hasta Heritage Hall, la restaurada East Hall, y el pórtico de North Hall que está a su lado."
+    }
+  },
+  "Grand Valley State University": {
+    "trad_gvsu_little_mac": {
+      "name": "El puente Little Mac y los barrancos",
+      "description": "Los estudiantes votaron los barrancos y el puente Little Mac como el lugar más bonito del campus. Cruza la pasarela y mira el arroyo allá abajo."
+    },
+    "trad_gvsu_carillon": {
+      "name": "Música de carillón en la torre Cook",
+      "description": "Cada semana, las campanas de la Cook Carillon Tower suenan con música tocada en directo, de Bach a canciones pop. Si oyes campanas, alguien está tocando allá arriba."
+    },
+    "trad_gvsu_zumberge_pond": {
+      "name": "Zumberge Pond",
+      "description": "En cualquier estación, a los Lakers les encanta estudiar, comer o simplemente descansar en los escalones junto al Zumberge Pond. Siéntate y disfruta de la vista."
+    },
+    "trad_gvsu_library_roof": {
+      "name": "Vista desde la azotea de la biblioteca",
+      "description": "La azotea de la Mary Idema Pew Library ofrece una amplia vista del campus de Allendale, uno de los rincones favoritos de los estudiantes cuando las hojas cambian de color en otoño. Sube y disfruta del panorama."
+    },
+    "trad_gvsu_lubbers_gameday": {
+      "name": "Fútbol americano de los Lakers en el Lubbers Stadium",
+      "description": "El Lubbers Stadium tiene 10.444 asientos oficiales, pero a menudo recibe miles de aficionados más, con un récord de 17.007 en 2021. Únete a ellos en un partido en casa de los Lakers."
+    }
+  },
+  "California Institute of Technology": {
+    "trad_caltech_fleming_cannon": {
+      "name": "El cañón de Fleming",
+      "description": "Un cañón de la época de la guerra franco-prusiana descansa sobre sus ruedas frente a Fleming House y solo se dispara en grandes ocasiones, como la graduación. Unos estudiantes del MIT llegaron a llevárselo al otro lado del país como broma. Pasa a verlo."
+    },
+    "trad_caltech_turtle_pond": {
+      "name": "El estanque de las tortugas",
+      "description": "Decenas de tortugas, sobre todo de orejas rojas, viven en el estanque del Throop Memorial Garden, donde se alzaba el primer edificio de Caltech. Búscalas tomando el sol en las rocas, pero no les des de comer."
+    },
+    "trad_caltech_watson_lectures": {
+      "name": "Conferencias Watson",
+      "description": "Desde hace casi un siglo, los científicos de Caltech explican su trabajo en charlas públicas gratuitas, hoy llamadas Watson Lectures y celebradas en el Beckman Auditorium. Asiste a una en persona o en línea."
+    },
+    "trad_caltech_pumpkin_drop": {
+      "name": "Lanzamiento de calabazas en Halloween",
+      "description": "Cada Halloween, los estudiantes dejan caer calabazas congeladas en nitrógeno líquido desde lo alto de Caltech Hall, la antigua Millikan Library, mientras el público busca una chispa. El nombre alude al famoso experimento de la gota de aceite de Millikan."
+    },
+    "trad_caltech_tournament_park": {
+      "name": "Tournament Park",
+      "description": "El campo deportivo de Tournament Park, en el lado sur del campus, acogió los primeros partidos del Rose Bowl. Pasea junto a la pista para ver dónde empezó el famoso partido."
+    }
+  },
+  "Johns Hopkins University": {
+    "trad_jhu_gilman_seal": {
+      "name": "El sello de Gilman Hall",
+      "description": "Según la leyenda, el estudiante que pisa el sello de la universidad en el vestíbulo de Gilman Hall no se graduará, por eso está acordonado. Échale un vistazo y luego rodéalo."
+    },
+    "trad_jhu_blue_jay_statue": {
+      "name": "El Blue Jay pintado",
+      "description": "Los grupos estudiantiles vuelven a pintar la estatua del Blue Jay para celebrar eventos y fechas especiales. Pasa a ver qué colores luce hoy."
+    },
+    "trad_jhu_lacrosse": {
+      "name": "Lacrosse en Homewood Field",
+      "description": "El lacrosse es el deporte emblemático de Hopkins, y los partidos en casa en Homewood Field reúnen a grandes multitudes. Ve a un partido y anima a los Blue Jays."
+    },
+    "trad_jhu_the_beach": {
+      "name": "The Beach",
+      "description": "«The Beach» es el gran césped junto a la Eisenhower Library, en Charles Street, donde los estudiantes estudian, hacen pícnics y juegan. Extiende una manta y contempla el atardecer."
+    },
+    "trad_jhu_spring_fair": {
+      "name": "Spring Fair",
+      "description": "Cada primavera desde 1972, los estudiantes organizan la Spring Fair, un festival de fin de semana con puestos, comida, atracciones y música que también atrae a los vecinos de Baltimore. Ven en abril y únete."
+    },
+    "trad_jhu_art_museum": {
+      "name": "El museo de arte de al lado",
+      "description": "El Baltimore Museum of Art está a pocos pasos del campus y la entrada es gratuita. Inclúyelo en tu visita al campus."
+    }
+  },
+  "Rice University": {
+    "trad_rice_sallyport": {
+      "name": "A través del Sallyport",
+      "description": "Por tradición, los estudiantes de Rice cruzan el arco Sallyport de Lovett Hall al salir en su graduación y lo evitan hasta entonces. Ponte bajo el arco y contempla el Academic Quad."
+    },
+    "trad_rice_skyspace": {
+      "name": "El Skyspace al atardecer",
+      "description": "El Twilight Epiphany Skyspace de James Turrell ofrece un espectáculo de luz gratuito al amanecer y al atardecer, en el que la luz de colores cambiantes transforma el cielo visto a través de la abertura del techo. Llega temprano para conseguir asiento."
+    },
+    "trad_rice_moon_speech": {
+      "name": "El estadio del discurso de la Luna",
+      "description": "En 1962 el presidente Kennedy habló en el Rice Stadium y retó al país a llegar a la Luna antes de terminar la década. Visita el estadio donde se pronunció el famoso discurso."
+    },
+    "trad_rice_mob": {
+      "name": "La Marching Owl Band",
+      "description": "La Marching Owl Band, o MOB, es una banda «scatter»: en lugar de desfilar en formación, representa sketches cómicos en los partidos de fútbol americano. No te pierdas su espectáculo del medio tiempo."
+    },
+    "trad_rice_tree_for_every_student": {
+      "name": "Un árbol por cada estudiante",
+      "description": "Más de 4.000 árboles y arbustos convierten todo el campus en un arboreto, lo que dio origen a la leyenda de que Rice tiene un árbol por cada estudiante. Pasea por los patios sombreados."
+    }
+  },
+  "Emory University": {
+    "trad_emory_gravity_monument": {
+      "name": "El Gravity Monument",
+      "description": "Escondido entre los árboles junto a Dowman Drive hay un monumento de mármol rosa que Roger Babson regaló a Emory en 1963 en honor a las ciencias. Muchos dicen que parece más bien una lápida en el bosque. A ver si lo encuentras."
+    },
+    "trad_emory_lullwater_tower": {
+      "name": "Lullwater Preserve y su torre",
+      "description": "Lullwater Preserve es una reserva de 62 hectáreas de bosque y agua muy apreciada por paseantes y corredores. Sigue el sendero hasta la vieja torre de granito que Walter Candler construyó junto a su presa para dar electricidad a su casa."
+    },
+    "trad_emory_quad_eaves": {
+      "name": "Palabras bajo los aleros",
+      "description": "Henry Hornbostel definió el Quad con mármol rosa de Georgia y tejados de teja roja. Mira bajo los aleros de los edificios más antiguos y encontrarás palabras talladas que indican lo que se enseñaba dentro."
+    },
+    "trad_emory_source_route": {
+      "name": "Source Route",
+      "description": "Detrás del Carlos Museum, unas escaleras bajan hasta Baker Woodland. Forman parte de una escultura ambiental instalada en los años setenta. Baja los escalones hacia el bosque."
+    },
+    "trad_emory_robinson_tower": {
+      "name": "Campanas de la Robinson Clock Tower",
+      "description": "La torre del reloj de Cox Hall tiene un carillón dedicado en 2001 en honor al patrono J. William Robinson y a su esposa. Escúchalo mientras cruzas el campus."
+    }
+  },
+  "Tulane University": {
+    "trad_tulane_streetcar": {
+      "name": "Sube al tranvía de St. Charles",
+      "description": "La línea de St. Charles funciona desde 1835 y es la línea de tranvía en servicio continuo más antigua del mundo. Viaja hasta la parada Tulane University, frente a Gibson Hall."
+    },
+    "trad_tulane_tiffany_woodward_way": {
+      "name": "Vitrales de Tiffany en Woodward Way",
+      "description": "Dos trípticos de vidrieras de Louis Comfort Tiffany, hechos en la década de 1890 para una capilla del antiguo campus del Newcomb College en el Garden District, adornan hoy el pasaje Woodward Way del Newcomb Art Museum. Detente a buscarlos."
+    },
+    "trad_tulane_rogers_chapel": {
+      "name": "Rogers Memorial Chapel",
+      "description": "Más vidrieras de Tiffany de Tulane están en la Myra Clare Rogers Memorial Chapel, en el lado Newcomb del campus. Asómate para ver las ventanas."
+    },
+    "trad_tulane_mari_gallery": {
+      "name": "Galería maya en Dinwiddie Hall",
+      "description": "El Middle American Research Institute estudia a los mayas desde 1924. Su galería, en el tercer piso de Dinwiddie Hall, abre al público los días laborables."
+    }
+  },
+  "New York University": {
+    "trad_nyu_washington_square_arch": {
+      "name": "Washington Square Arch",
+      "description": "El arco es de la ciudad, pero se ha convertido en el símbolo no oficial de NYU, cuyos edificios rodean el parque. Hazte una foto con el arco y la Quinta Avenida detrás."
+    },
+    "trad_nyu_bust_of_sylvette": {
+      "name": "Bust of Sylvette",
+      "description": "En la plaza entre las Silver Towers se alza una enorme ampliación del Bust of Sylvette de Picasso, realizada con Carl Nesjar. Entra en el patio para verla de cerca."
+    },
+    "trad_nyu_gould_plaza": {
+      "name": "Gould Plaza",
+      "description": "Esta plaza junto a West 4th Street, rodeada por la Stern School y el Courant Institute, es donde se reúnen los estudiantes de NYU después de clase. Fíjate en las banderas moradas de NYU en los edificios de alrededor."
+    },
+    "trad_nyu_grey_art_museum": {
+      "name": "Grey Art Museum",
+      "description": "El museo de bellas artes de NYU, conocido como Grey Art Gallery hasta 2023, tiene ahora salas más grandes en 18 Cooper Square. Visítalo para ver la colección de la universidad, incluido arte moderno asiático y de Oriente Medio."
+    }
+  },
+  "Carnegie Mellon University": {
+    "trad_cmu_the_fence": {
+      "name": "La Valla",
+      "description": "Pintar la Valla en medio del Cut es una tradición desde la década de 1920, y la valla de madera original llegó a tener el récord Guinness del objeto más pintado. Pasa a ver la capa de pintura y el mensaje más recientes."
+    },
+    "trad_cmu_buggy": {
+      "name": "Carreras de buggies",
+      "description": "Durante el Spring Carnival, equipos de estudiantes empujan y dejan rodar buggies aerodinámicos sin motor por un circuito en Schenley Park, en una carrera llamada oficialmente Sweepstakes. Ve al parque a ver las mangas."
+    },
+    "trad_cmu_midway": {
+      "name": "El Midway del Spring Carnival",
+      "description": "Cada abril, los grupos del campus construyen casetas de varios pisos con juegos para el Midway del Spring Carnival, en el aparcamiento del College of Fine Arts. El carnaval está abierto a la comunidad de Pittsburgh, así que pásate a recorrer las casetas."
+    },
+    "trad_cmu_kiltie_band": {
+      "name": "La Kiltie Band",
+      "description": "Fundada en 1908, la Kiltie Band viste falda escocesa en honor a las raíces escocesas de Andrew Carnegie y toca en todos los partidos de fútbol americano en casa. Ve a un partido para oír a la banda y ver al rey Arturo buscar el Grial entre el tercer y el cuarto cuarto."
+    }
+  },
+  "Washington University in St. Louis": {
+    "trad_washu_seal": {
+      "name": "No pises el sello",
+      "description": "Según la leyenda del campus, pisar el sello de la universidad bajo Brookings Hall te impedirá graduarte, aunque tocar el medallón del rector rompe la maldición. Busca el sello y rodéalo."
+    },
+    "trad_washu_declaration": {
+      "name": "La Declaración de Independencia en Olin",
+      "description": "La Olin Library exhibe una copia impresa en hoja suelta de la Declaración de Independencia, impresa antes de la firma para difundir la noticia por las colonias. Pasa por la exposición para verla en persona."
+    },
+    "trad_washu_holmes_lounge": {
+      "name": "Almuerzo en Holmes Lounge",
+      "description": "La antigua sala de lectura de la biblioteca en Ridgley Hall es hoy Holmes Lounge, una de las salas más bonitas del campus. Almuerza allí y disfruta del entorno."
+    },
+    "trad_washu_underpass": {
+      "name": "El paso subterráneo pintado",
+      "description": "El paso subterráneo que une el South 40 con el campus principal está cubierto de anuncios pintados de eventos del campus. Crúzalo para ver los diseños más recientes."
+    },
+    "trad_washu_assembly_series": {
+      "name": "Assembly Series en Graham Chapel",
+      "description": "Graham Chapel acoge la Assembly Series, el veterano ciclo de conferencias de la universidad, que ha traído al campus a figuras como Eleanor Roosevelt y Gloria Steinem. Consulta el programa y asiste a una charla."
+    }
   }
 }

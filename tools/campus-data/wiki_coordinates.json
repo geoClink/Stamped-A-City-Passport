@@ -104,6 +104,10 @@
     45.505,
     -73.5775
   ],
+  "Athenaeum at Caltech": [
+    34.136838,
+    -118.121679
+  ],
   "Auburn University": [
     32.603,
     -85.486
@@ -160,6 +164,10 @@
   "Beaumont Tower": [
     42.73198056,
     -84.48215278
+  ],
+  "Beckman Institute at Caltech": [
+    34.13906,
+    -118.124503
   ],
   "Beinecke Rare Book and Manuscript Library": [
     41.31161,
@@ -221,6 +229,14 @@
     49.26944444,
     -123.25111111
   ],
+  "Brookings Hall": [
+    38.648,
+    -90.3052
+  ],
+  "Brown Building (Manhattan)": [
+    40.73,
+    -73.99527778
+  ],
   "Brown University": [
     41.826,
     -71.403
@@ -235,6 +251,10 @@
     -73.96333333
   ],
   "C. K. Choi Building": null,
+  "California Institute of Technology": [
+    34.1375,
+    -118.125
+  ],
   "Cambridge University Library": [
     52.20516667,
     0.10805556
@@ -249,14 +269,34 @@
   ],
   "Campanile (Trinity College Dublin)": null,
   "Campus of Michigan State University": null,
+  "Campus of Rice University": [
+    29.719,
+    -95.4
+  ],
   "Campus of Texas A&M University": [
     30.62663,
     -96.34105
   ],
   "Campus of Virginia Tech": null,
+  "Campus of the California Institute of Technology": [
+    34.138,
+    -118.125
+  ],
+  "Candler School of Theology": [
+    33.78975,
+    -84.32020833
+  ],
   "Cardinal Stadium": [
     38.20583333,
     -85.75888889
+  ],
+  "Carnegie Mellon College of Fine Arts": [
+    40.44415745,
+    -79.9428695
+  ],
+  "Carnegie Mellon University": [
+    40.4425,
+    -79.94333333
   ],
   "Carolina Rediviva": [
     59.85498333,
@@ -314,6 +354,10 @@
   "Charles E. Young Research Library": [
     34.07492,
     -118.441539
+  ],
+  "Charles Lang Freer House": [
+    42.36194444,
+    -83.06583333
   ],
   "Charles Perkins Centre": [
     -33.8875,
@@ -383,6 +427,10 @@
     43.6608,
     -79.3954
   ],
+  "Cook Carillon Tower": [
+    42.963425,
+    -85.888595
+  ],
   "Cornell University": [
     42.4492,
     -76.4839
@@ -415,9 +463,14 @@
     32.845,
     -96.78472222
   ],
+  "Danforth Campus": null,
   "Dartmouth College": [
     43.70333333,
     -72.28833333
+  ],
+  "David Adamany Undergraduate Library": [
+    42.3565,
+    -83.07036111
   ],
   "Davis Wade Stadium": [
     33.45638889,
@@ -447,6 +500,10 @@
     42.28166667,
     -83.73166667
   ],
+  "Devlin Fieldhouse": [
+    29.93861111,
+    -90.12055556
+  ],
   "Dipoli": [
     60.185,
     24.8325
@@ -471,6 +528,10 @@
     34.0201,
     -118.2838
   ],
+  "Donna and Marvin Schwartz Center for Performing Arts": [
+    33.789777,
+    -84.321249
+  ],
   "Duke Chapel": [
     36.00166389,
     -78.93981111
@@ -487,6 +548,10 @@
   "Durham University": [
     54.775,
     -1.575
+  ],
+  "East Campus (Western Michigan University)": [
+    42.286643,
+    -85.597531
   ],
   "Edinburgh University Library": [
     55.9428,
@@ -508,6 +573,22 @@
   "Elliott Hall of Music": [
     40.4279,
     -86.9149
+  ],
+  "Elmer Holmes Bobst Library": [
+    40.72944444,
+    -73.99722222
+  ],
+  "Emory University": [
+    33.79111111,
+    -84.32333333
+  ],
+  "Emory University Hospital": [
+    33.79166667,
+    -84.31991667
+  ],
+  "Emory University Libraries": [
+    33.7904,
+    -84.3229
   ],
   "Engineering Fountain": [
     40.42864,
@@ -534,6 +615,10 @@
     39.131101,
     -84.514207
   ],
+  "First Community Stadium": [
+    29.71638889,
+    -95.40916667
+  ],
   "Fisher Fine Arts Library": [
     39.95138889,
     -75.1925
@@ -554,6 +639,10 @@
     40.009,
     -105.267
   ],
+  "Fondren Library": [
+    29.718,
+    -95.4
+  ],
   "Fort Hill (Clemson, South Carolina)": [
     34.67791667,
     -82.83888889
@@ -561,6 +650,14 @@
   "Foster Pavilion": [
     31.55669833,
     -97.12161333
+  ],
+  "Francis Gymnasium": [
+    38.64880556,
+    -90.31475
+  ],
+  "Francis Olympic Field": [
+    38.64777778,
+    -90.31361111
   ],
   "Franklin D. Murphy Sculpture Garden": [
     34.07508333,
@@ -578,6 +675,10 @@
     42.3345,
     -71.1701
   ],
+  "GVSU Fieldhouse": [
+    42.966837,
+    -85.889794
+  ],
   "Garrison Hall": [
     30.2852,
     -97.7385
@@ -585,6 +686,10 @@
   "Gasson Hall": [
     42.3356,
     -71.1705
+  ],
+  "General Winfield Scott House": [
+    40.735,
+    -73.99583333
   ],
   "Geology Hall, New Brunswick, New Jersey": [
     40.49861111,
@@ -618,6 +723,10 @@
     47.65527778,
     -122.30944444
   ],
+  "Gibson Hall (Tulane University)": [
+    29.93541667,
+    -90.12277778
+  ],
   "Glasgow University Library": [
     55.8733,
     -4.289
@@ -625,6 +734,14 @@
   "Glasgow University Union": [
     55.8724,
     -4.285
+  ],
+  "Goizueta Business School": [
+    33.79,
+    -84.32133333
+  ],
+  "Grand Valley State University": [
+    42.96361111,
+    -85.88861111
   ],
   "Grawemeyer Hall": [
     38.215113,
@@ -646,6 +763,7 @@
     35.7855,
     -78.661294
   ],
+  "Guggenheim Aeronautical Laboratory": null,
   "Gustavianum": [
     59.85794444,
     17.63169444
@@ -707,13 +825,34 @@
     41.7025,
     -86.23416667
   ],
+  "Hilberry Gateway": [
+    42.354,
+    -83.066
+  ],
+  "Hilberry Theatre": [
+    42.35416667,
+    -83.06594444
+  ],
   "Hines College of Architecture": [
     29.724398,
     -95.341554
   ],
+  "History of Emory University": null,
   "Home Economics Building (Vanderbilt University)": [
     36.14311667,
     -86.79748333
+  ],
+  "Homewood Campus of Johns Hopkins University": [
+    39.333,
+    -76.621
+  ],
+  "Homewood Field": [
+    39.33361111,
+    -76.62083333
+  ],
+  "Homewood Museum": [
+    39.32944444,
+    -76.61916667
   ],
   "Hood Museum of Art": [
     43.70222222,
@@ -735,6 +874,10 @@
     39.95092,
     -75.19386
   ],
+  "Howard-Tilton Memorial Library": [
+    29.9399,
+    -90.1221
+  ],
   "Huey P. Long Field House": [
     30.41506,
     -91.18295
@@ -742,6 +885,10 @@
   "Humphrey Coliseum": [
     33.46166667,
     -88.79444444
+  ],
+  "Hyames Field": [
+    42.284569,
+    -85.602847
   ],
   "Hyer Hall": [
     32.84472222,
@@ -824,6 +971,10 @@
     41.825725,
     -71.40508889
   ],
+  "John E. Fetzer Center": [
+    42.285,
+    -85.6179
+  ],
   "John Euliano Park": [
     28.609435,
     -81.196105
@@ -835,6 +986,10 @@
   "John Medley Building": [
     -37.799234,
     144.960433
+  ],
+  "Johns Hopkins University": [
+    39.32888889,
+    -76.62027778
   ],
   "Johnson Hall (Eugene, Oregon)": [
     44.045124,
@@ -854,6 +1009,10 @@
     -96.5809
   ],
   "Kendeda Building": null,
+  "Kenneth C. Griffin School of Computer Science": [
+    40.44371,
+    -79.94443
+  ],
   "Kennon Observatory": [
     34.36425,
     -89.53644444
@@ -879,6 +1038,10 @@
     -111.85083333
   ],
   "Kingsgate Bridge": null,
+  "Kirkhof Center": [
+    42.9627,
+    -85.888595
+  ],
   "Kirkland Hall": [
     36.1482,
     -86.8028
@@ -925,6 +1088,10 @@
     38.90638889,
     -77.07222222
   ],
+  "Lawson Arena": [
+    42.275937,
+    -85.617765
+  ],
   "Lee and Lowry Hall": [
     34.67527778,
     -82.83833333
@@ -966,9 +1133,17 @@
     -73.96194444
   ],
   "Lowe Art Museum": null,
+  "Lubbers Stadium": [
+    42.96927778,
+    -85.89430556
+  ],
   "Lucy Cobb Institute": [
     33.95611111,
     -83.38972222
+  ],
+  "Lullwater House": [
+    33.8007,
+    -84.3157
   ],
   "Lupton Stadium": [
     32.703136,
@@ -990,6 +1165,10 @@
     42.734114,
     -84.48289
   ],
+  "Maccabees Building": [
+    42.35777778,
+    -83.06555556
+  ],
   "Macdonald-Harrington Building": [
     45.505268,
     -73.575804
@@ -1009,6 +1188,10 @@
   "Main Building (University of Texas at Austin)": [
     30.2861,
     -97.7393
+  ],
+  "Main Building, U.S. Bureau of Mines": [
+    40.44416667,
+    -79.94583333
   ],
   "Main Library (University of Illinois Urbana-Champaign)": [
     40.105,
@@ -1054,6 +1237,7 @@
     31.5517,
     -97.1152
   ],
+  "McAlister Auditorium": null,
   "McCamish Pavilion": [
     33.78083333,
     -84.39277778
@@ -1078,6 +1262,10 @@
     45.505,
     -73.5775
   ],
+  "McGregor Memorial Conference Center": [
+    42.35916667,
+    -83.07083333
+  ],
   "McLane Stadium": [
     31.5582,
     -97.1157
@@ -1085,6 +1273,10 @@
   "McLennan Library Building": [
     45.5033,
     -73.576
+  ],
+  "Mellon Institute of Industrial Research": [
+    40.44612222,
+    -79.95103333
   ],
   "Memorial Chapel (University of Maryland)": [
     38.983999,
@@ -1122,6 +1314,10 @@
     43.07638889,
     -89.4
   ],
+  "Michael C. Carlos Museum": [
+    33.79027778,
+    -84.32416667
+  ],
   "Michigan State University": [
     42.725,
     -84.48
@@ -1133,6 +1329,14 @@
   "Mies Building for the Eskenazi School of Art, Architecture + Design": [
     39.16916667,
     -86.51666667
+  ],
+  "Mildred Lane Kemper Art Museum": [
+    38.6472,
+    -90.3026
+  ],
+  "Miller Auditorium": [
+    42.279422,
+    -85.615519
   ],
   "Mississippi State University": [
     33.454,
@@ -1197,6 +1401,14 @@
   "New College, Edinburgh": [
     55.9498,
     -3.1952
+  ],
+  "New York University": [
+    40.73,
+    -73.995
+  ],
+  "Newcomb Art Museum": [
+    29.9418,
+    -90.1211
   ],
   "Newman College, Melbourne": [
     -37.795,
@@ -1290,6 +1502,10 @@
   "Old Main (University of Arkansas)": [
     36.0687,
     -94.1717
+  ],
+  "Old Main (Wayne State University)": [
+    42.35516944,
+    -83.06680556
   ],
   "Old Main, University of Arizona": [
     32.23194444,
@@ -1386,6 +1602,10 @@
     40.34693056,
     -74.65676944
   ],
+  "Provincetown Playhouse": [
+    40.7307,
+    -74
+  ],
   "Provost's House, Trinity College Dublin": [
     53.34333333,
     -6.25861111
@@ -1413,6 +1633,10 @@
   "Rauner Special Collections Library": [
     43.70439,
     -72.28819
+  ],
+  "Reckling Park": [
+    29.71333333,
+    -95.40416667
   ],
   "Recreation Building": [
     40.79578,
@@ -1446,6 +1670,14 @@
     36.13444444,
     -80.27583333
   ],
+  "Rice University": [
+    29.71694444,
+    -95.40277778
+  ],
+  "Rice University's Baker Institute for Public Policy": [
+    29.7166,
+    -95.4027
+  ],
   "Rice–Eccles Stadium": [
     40.75997458,
     -111.84885324
@@ -1453,6 +1685,10 @@
   "Richards Medical Research Laboratories": [
     39.94972222,
     -75.19805556
+  ],
+  "Richmond Center for Visual Arts": [
+    42.279935,
+    -85.61657
   ],
   "Robarts Library": [
     43.66444444,
@@ -1551,6 +1787,14 @@
     51.7543,
     -1.255
   ],
+  "Silver Center": [
+    40.7303091,
+    -73.9956898
+  ],
+  "Skirball Center for the Performing Arts": [
+    40.7298,
+    -73.9997
+  ],
   "Soldiers' Tower": [
     43.66347222,
     -79.39513889
@@ -1582,6 +1826,10 @@
   "Southern Methodist University": [
     32.83855,
     -96.78294
+  ],
+  "Space Telescope Science Institute": [
+    39.33277778,
+    -76.62333333
   ],
   "Spartan Stadium": [
     42.72805556,
@@ -1747,9 +1995,25 @@
     53.3444,
     -6.2577
   ],
+  "Tudor Fieldhouse": [
+    29.715102,
+    -95.403895
+  ],
+  "Tulane University": [
+    29.94,
+    -90.12
+  ],
+  "Tulane University School of Architecture and Built Environment": [
+    29.9356,
+    -90.1218
+  ],
   "UCL Main Building": [
     51.5247,
     -0.1336
+  ],
+  "University Arena (Western Michigan University)": [
+    42.283372,
+    -85.60845
   ],
   "University Auditorium (Gainesville, Florida)": [
     29.64888889,
@@ -1790,6 +2054,10 @@
   "University Hall, Leuven": [
     50.8779,
     4.7005
+  ],
+  "University Village (Manhattan)": [
+    40.7267,
+    -73.9986
   ],
   "University of Alabama": [
     33.21083333,
@@ -2082,6 +2350,14 @@
     36.134,
     -80.276
   ],
+  "Waldo Stadium": [
+    42.28583333,
+    -85.60111111
+  ],
+  "Walking to the Sky": [
+    40.4441,
+    -79.9428
+  ],
   "Wallace Wade Stadium": [
     35.99527778,
     -78.94166667
@@ -2098,13 +2374,30 @@
     44.975272,
     -93.236134
   ],
+  "Walter P. Reuther Library": null,
   "Washburn Observatory": [
     43.0765,
     -89.4089
   ],
+  "Washington University Hilltop Campus Historic District": [
+    38.64833333,
+    -90.30972222
+  ],
+  "Washington University Libraries": [
+    38.6486,
+    -90.3078
+  ],
+  "Washington University in St. Louis": [
+    38.648,
+    -90.305
+  ],
   "Watsco Center": [
     25.715,
     -80.27916667
+  ],
+  "Wayne State University": [
+    42.35734444,
+    -83.07010556
   ],
   "Weisman Art Museum": [
     44.97277778,
@@ -2121,6 +2414,10 @@
   "Westcott Building": [
     30.4406686,
     -84.2916516
+  ],
+  "Western Michigan University": [
+    42.28333333,
+    -85.61388889
   ],
   "Wexner Center for the Arts": [
     40.000188,
@@ -2170,6 +2467,10 @@
     39.16166667,
     -86.53055556
   ],
+  "Wyman Park Building": [
+    39.3252,
+    -76.6228
+  ],
   "Yale Center for British Art": [
     41.30790806,
     -72.93090611
@@ -2185,6 +2486,10 @@
   "Younger Hall": [
     56.3412414,
     -2.7938917
+  ],
+  "Yulman Stadium": [
+    29.94482,
+    -90.116816
   ],
   "Z. Smith Reynolds Library": [
     36.1318,

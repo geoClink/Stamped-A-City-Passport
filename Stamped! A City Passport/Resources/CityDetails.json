@@ -2833,6 +2833,45 @@
     "transportation": "Walking / Luas / Bus",
     "transportationFact": "Trinity sits right in the centre of Dublin, so the campus is easy to reach on foot. Luas trams and many city bus routes stop around its edges."
   },
+  "Wayne State University": {
+    "airportCode": "DTW",
+    "airportInfo": "Detroit Metropolitan Wayne County Airport in Romulus, southwest of Detroit, is Michigan's busiest airport and the main gateway to the city.",
+    "airportName": "Detroit Metropolitan Wayne County Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "US Dollar ($)",
+    "funFact": "Old Main, the clock-towered heart of campus, was built in the 1890s as Detroit's Central High School. College classes that started there grew into Wayne State University.",
+    "language": "English",
+    "languageInfo": "The school colors are green and gold, and the teams are the Warriors.",
+    "nickname": "Warrior Strong",
+    "transportation": "Walking / QLINE streetcar",
+    "transportationFact": "The main campus in Midtown is easy to walk. The QLINE streetcar runs along Woodward Avenue at the campus's east edge and links it with Downtown Detroit and New Center."
+  },
+  "Western Michigan University": {
+    "airportCode": "AZO",
+    "airportInfo": "Kalamazoo/Battle Creek International Airport, southeast of downtown Kalamazoo, is the nearest airport with airline service.",
+    "airportName": "Kalamazoo/Battle Creek International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "US Dollar ($)",
+    "funFact": "Hyames Field, WMU's baseball park on East Campus, hosted the very first College World Series in 1947 and again in 1948.",
+    "language": "English",
+    "languageInfo": "The school colors are brown and gold, and the teams are the Broncos.",
+    "nickname": "So That All May Learn",
+    "transportation": "Walking / Metro buses",
+    "transportationFact": "Kalamazoo's Metro buses serve Western Michigan University as well as the city and its suburbs."
+  },
+  "Grand Valley State University": {
+    "airportCode": "GRR",
+    "airportInfo": "Gerald R. Ford International Airport, southeast of Grand Rapids, is the nearest airport with airline service.",
+    "airportName": "Gerald R. Ford International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "US Dollar ($)",
+    "funFact": "Grand Valley is one of only three institutions in the Western Hemisphere with more than one carillon tower: the Cook Carillon in Allendale and the Beckering Family Carillon in Grand Rapids.",
+    "language": "English",
+    "languageInfo": "The school colors are blue, black and white, and the teams are the Lakers.",
+    "nickname": "Home of the Lakers",
+    "transportation": "Walking / Laker Line bus",
+    "transportationFact": "The Laker Line bus, run by The Rapid, links the Allendale campus with GVSU's campuses in downtown Grand Rapids along Lake Michigan Drive, and it is open to the public."
+  },
   "Yale University": {
     "airportCode": "BDL",
     "airportInfo": "Bradley, near Hartford, is about an hour's drive north of New Haven. Many visitors also fly into New York and take Metro-North's New Haven Line straight to Union Station.",
@@ -2963,6 +3002,45 @@
     "transportation": "Walking / GUTS shuttle",
     "transportationFact": "Georgetown has no Metro station of its own, so the university's free GUTS shuttle buses link campus with nearby Metro stops. The hilltop campus itself is easy to walk."
   },
+  "Johns Hopkins University": {
+    "airportCode": "BWI",
+    "airportInfo": "BWI, south of Baltimore, is the closest major airport. MARC and Amtrak trains link it with Baltimore Penn Station, a short ride from campus.",
+    "airportName": "Baltimore/Washington International Thurgood Marshall Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "US Dollar ($)",
+    "funFact": "Johns Hopkins opened in 1876 on the model of European research universities and is considered the first research university in the United States.",
+    "language": "English",
+    "languageInfo": "Students call the Milton S. Eisenhower Library 'MSE' and the old Hutzler Reading Room in Gilman Hall 'the Hut.' The teams are the Blue Jays.",
+    "nickname": "Veritas vos liberabit",
+    "transportation": "Walking / Baltimore Penn Station",
+    "transportationFact": "Homewood's brick paths are easy to walk. Baltimore Penn Station, with Amtrak and MARC trains, is a short drive or bus ride south of campus."
+  },
+  "New York University": {
+    "airportCode": "LGA",
+    "airportInfo": "New York City has three major airports: LaGuardia, JFK and Newark. AirTrain links JFK and Newark with trains into Manhattan.",
+    "airportName": "LaGuardia Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "US Dollar ($)",
+    "funFact": "Most of NYU's buildings are scattered around Washington Square Park in Greenwich Village. Samuel Morse worked on the telegraph in the university's first Main Building, on the site of today's Silver Center.",
+    "language": "English",
+    "languageInfo": "The school colors are NYU Violet and white, and the teams are the Violets. The mascot, since 1981, is a bobcat.",
+    "nickname": "To Persevere and to Excel",
+    "transportation": "Walking / NYC Subway",
+    "transportationFact": "The West Fourth Street–Washington Square station is just west of the park at Sixth Avenue, and the 8th Street–NYU station on Broadway serves the east side of campus."
+  },
+  "Carnegie Mellon University": {
+    "airportCode": "PIT",
+    "airportInfo": "Pittsburgh International is about 27 km west of downtown Pittsburgh. The 28X bus runs to the airport from Oakland, the university district next to campus.",
+    "airportName": "Pittsburgh International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "US Dollar ($)",
+    "funFact": "Carnegie Mellon was formed in 1967, when the Carnegie Institute of Technology, founded by Andrew Carnegie in 1900, merged with the Mellon Institute of Industrial Research.",
+    "language": "English",
+    "languageInfo": "Campus has a Scottish theme in honor of Andrew Carnegie: the teams are the Tartans, the mascot is Scotty the Scottish terrier, and the band plays in kilts.",
+    "nickname": "My Heart Is in the Work",
+    "transportation": "Walking / PRT buses",
+    "transportationFact": "The main campus is compact and easy to walk. Pittsburgh Regional Transit buses connect it with Oakland and Downtown, and the 28X runs from Oakland to the airport."
+  },
   "University of Chicago": {
     "airportCode": "MDW",
     "airportInfo": "Midway is the closer of Chicago's two airports to Hyde Park, on the city's South Side. O'Hare International (ORD) handles far more long-haul flights but is a longer trip across the city.",
@@ -3027,6 +3105,58 @@
     "nickname": "Home of the Cavaliers",
     "transportation": "Walking / University Transit Service",
     "transportationFact": "Central Grounds around the Lawn is easy to walk. Free University Transit Service buses connect the rest of the Grounds."
+  },
+  "Rice University": {
+    "airportCode": "HOU",
+    "airportInfo": "Hobby is the closer of Houston's two main airports to Rice. George Bush Intercontinental (IAH) has many more long-haul flights but is a longer drive north.",
+    "airportName": "William P. Hobby Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "US Dollar ($)",
+    "funFact": "When Rice opened in 1912, students paid no tuition at all, as founder William Marsh Rice's will and the institute's first charter required.",
+    "language": "English",
+    "languageInfo": "The mascot is Sammy the Owl: when Texas A&M students stole the owl mascot in 1917, a detective's coded telegram reported that 'Sammy is fairly well.' The colors are blue and gray.",
+    "nickname": "Letters, Science, Art",
+    "transportation": "Walking / METRORail Red Line",
+    "transportationFact": "The wooded campus is easy to walk. The METRORail Red Line runs along Main Street, with the Hermann Park/Rice U station near the campus's eastern corner."
+  },
+  "Emory University": {
+    "airportCode": "ATL",
+    "airportInfo": "Hartsfield–Jackson, south of downtown Atlanta, is the nearest airport. Emory's Druid Hills campus is northeast of downtown.",
+    "airportName": "Hartsfield–Jackson Atlanta International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "US Dollar ($)",
+    "funFact": "Emory moved to Atlanta from Oxford, Georgia, in 1915 after Coca-Cola founder Asa Griggs Candler gave land and a million dollars. Henry Hornbostel then set the campus look of pink Georgia marble and red tile roofs.",
+    "language": "English",
+    "languageInfo": "The school colors are blue and gold, and the teams are the Eagles. Emory has two mascots: Swoop the Eagle and Dooley the skeleton.",
+    "nickname": "The Wise Heart Seeks Knowledge",
+    "transportation": "Walking / Emory Cliff shuttles",
+    "transportationFact": "The Cliff, Emory's shuttle system, runs routes around campus and to nearby neighborhoods. Its buses run on biodiesel made from recycled cooking oil."
+  },
+  "Tulane University": {
+    "airportCode": "MSY",
+    "airportInfo": "Louis Armstrong New Orleans International is in Kenner, about 11 miles (18 km) west of downtown New Orleans.",
+    "airportName": "Louis Armstrong New Orleans International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "US Dollar ($)",
+    "funFact": "Tulane's Uptown campus faces Audubon Park across St. Charles Avenue. Gibson Hall, built in 1894, was the first academic building on the campus, and the Newcomb College buildings were designed by Yale architect James Gamble Rogers.",
+    "language": "English",
+    "languageInfo": "The school colors are green and blue, and the teams are the Green Wave. The mascot is Riptide the Pelican.",
+    "nickname": "Not for Oneself, but for One's Own",
+    "transportation": "Walking / St. Charles Streetcar",
+    "transportationFact": "The St. Charles Streetcar stops right in front of the campus and runs to downtown New Orleans. McAlister Place, once a road through the middle of campus, became a walkway in 2009."
+  },
+  "Washington University in St. Louis": {
+    "airportCode": "STL",
+    "airportInfo": "Lambert is about 23 km northwest of downtown St. Louis. MetroLink's Red Line stops at both airport terminals.",
+    "airportName": "St. Louis Lambert International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "US Dollar ($)",
+    "funFact": "Brookings Hall was the administration building of the 1904 World's Fair, and Francis Field on campus was the main stadium of the 1904 Summer Olympics, the first held in the Western Hemisphere.",
+    "language": "English",
+    "languageInfo": "The school colors are red and green, and the teams are the Bears, with a mascot named Forest the bear.",
+    "nickname": "Per Veritatem Vis",
+    "transportation": "Walking / Campus Circulator / MetroLink",
+    "transportationFact": "A free Campus Circulator shuttle loops the Danforth Campus, and MetroLink Blue Line trains stop at Skinker station beside it."
   },
   "Stanford University": {
     "airportCode": "SFO",
@@ -3131,5 +3261,18 @@
     "nickname": "C.U.",
     "transportation": "Pumabús / Metro",
     "transportationFact": "The university runs its own free Pumabús routes around the huge campus. Universidad and Copilco Metro stations on Line 3 serve the campus."
+  },
+  "California Institute of Technology": {
+    "airportCode": "BUR",
+    "airportInfo": "Hollywood Burbank Airport is the closest airport to Caltech. Los Angeles International (LAX) has many more flights but is a longer drive across the city.",
+    "airportName": "Hollywood Burbank Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "US Dollar ($)",
+    "funFact": "NASA's Jet Propulsion Laboratory grew out of rocket research at Caltech's Guggenheim lab in the 1930s, and Caltech still manages JPL today.",
+    "language": "English",
+    "languageInfo": "Write it 'Caltech', one word: the institute considers spellings like 'Cal Tech' incorrect. The school color is orange, and the teams are the Beavers.",
+    "nickname": "The truth shall make you free",
+    "transportation": "Walking / Metro A Line",
+    "transportationFact": "The compact campus is easy to walk. Metro A Line light rail stops at Lake and Allen stations, about a mile north of campus."
   }
 }

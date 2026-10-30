@@ -321,6 +321,9 @@ struct CityLocation: Hashable, Sendable {
         case uniEdinburgh = "University of Edinburgh"
         case durhamUni = "Durham University"
         case trinityDublin = "Trinity College Dublin"
+        case wayneState = "Wayne State University"
+        case westernMichigan = "Western Michigan University"
+        case grandValleyState = "Grand Valley State University"
         case yale = "Yale University"
         case harvard = "Harvard University"
         case mit = "Massachusetts Institute of Technology"
@@ -331,11 +334,18 @@ struct CityLocation: Hashable, Sendable {
         case brown = "Brown University"
         case dartmouth = "Dartmouth College"
         case georgetown = "Georgetown University"
+        case johnsHopkins = "Johns Hopkins University"
+        case nyu = "New York University"
+        case carnegieMellon = "Carnegie Mellon University"
         case uChicago = "University of Chicago"
         case notreDame = "University of Notre Dame"
         case uMichigan = "University of Michigan"
         case illinoisTech = "Illinois Institute of Technology"
         case uVirginia = "University of Virginia"
+        case rice = "Rice University"
+        case emory = "Emory University"
+        case tulane = "Tulane University"
+        case washU = "Washington University in St. Louis"
         case stanford = "Stanford University"
         case berkeley = "University of California, Berkeley"
         case ucla = "University of California, Los Angeles"
@@ -344,6 +354,7 @@ struct CityLocation: Hashable, Sendable {
         case uToronto = "University of Toronto"
         case ubc = "University of British Columbia"
         case unam = "National Autonomous University of Mexico"
+        case caltech = "California Institute of Technology"
         // END CAMPUSES
 
         var id: String { self.rawValue }
@@ -451,7 +462,7 @@ struct CityLocation: Hashable, Sendable {
             case .uniSydney: return .newSouthWales
             case .stAndrews, .uniGlasgow, .uniEdinburgh: return .scotland
             case .uppsala: return .sweden
-            case .utAustin, .floridaSouthern, .bostonCollege, .clemson, .duke, .floridaState, .georgiaTech, .uLouisville, .uMiami, .ncState, .uncChapelHill, .uPittsburgh, .smu, .syracuse, .virginiaTech, .wakeForest, .uArizona, .arizonaState, .byu, .uHouston, .iowaState, .uKansas, .kansasState, .oklahomaState, .texasTech, .westVirginia, .baylor, .uCincinnati, .cuBoulder, .tcu, .ucf, .uUtah, .uIllinois, .uIndiana, .uIowa, .uMaryland, .michiganState, .uMinnesota, .uNebraska, .northwestern, .ohioState, .pennState, .purdue, .rutgers, .uWisconsin, .uOregon, .uSouthernCalifornia, .uAlabama, .uArkansas, .auburn, .uFlorida, .uGeorgia, .lsu, .olemiss, .mizzou, .uOklahoma, .uSouthCarolina, .vanderbilt, .uKentucky, .msState, .uTennessee, .texasAM, .yale, .harvard, .mit, .princeton, .cornell, .columbia, .upenn, .brown, .dartmouth, .georgetown, .uChicago, .notreDame, .uMichigan, .illinoisTech, .uVirginia, .stanford, .berkeley, .ucla, .uWashington: return .unitedStates
+            case .utAustin, .floridaSouthern, .bostonCollege, .clemson, .duke, .floridaState, .georgiaTech, .uLouisville, .uMiami, .ncState, .uncChapelHill, .uPittsburgh, .smu, .syracuse, .virginiaTech, .wakeForest, .uArizona, .arizonaState, .byu, .uHouston, .iowaState, .uKansas, .kansasState, .oklahomaState, .texasTech, .westVirginia, .baylor, .uCincinnati, .cuBoulder, .tcu, .ucf, .uUtah, .uIllinois, .uIndiana, .uIowa, .uMaryland, .michiganState, .uMinnesota, .uNebraska, .northwestern, .ohioState, .pennState, .purdue, .rutgers, .uWisconsin, .uOregon, .uSouthernCalifornia, .uAlabama, .uArkansas, .auburn, .uFlorida, .uGeorgia, .lsu, .olemiss, .mizzou, .uOklahoma, .uSouthCarolina, .vanderbilt, .uKentucky, .msState, .uTennessee, .texasAM, .wayneState, .westernMichigan, .grandValleyState, .yale, .harvard, .mit, .princeton, .cornell, .columbia, .upenn, .brown, .dartmouth, .georgetown, .johnsHopkins, .nyu, .carnegieMellon, .uChicago, .notreDame, .uMichigan, .illinoisTech, .uVirginia, .rice, .emory, .tulane, .washU, .stanford, .berkeley, .ucla, .uWashington, .caltech: return .unitedStates
             case .uniMelbourne: return .victoria
             // END CAMPUSES
             }

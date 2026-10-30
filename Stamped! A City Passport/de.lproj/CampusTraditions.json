@@ -1464,6 +1464,103 @@
       "longitude": -6.256801
     }
   ],
+  "Wayne State University": [
+    {
+      "id": "trad_wayne_planetarium",
+      "name": "Planetariumsshow am Freitagabend",
+      "description": "Das Wayne State Planetarium in Old Main zeigt an den meisten Freitagabenden kostenlose öffentliche Vorführungen mit einer Tour durch den aktuellen Nachthimmel und einem Fulldome-Film. Komm früh, denn die Plätze werden nach Ankunft vergeben.",
+      "latitude": 42.3550413,
+      "longitude": -83.0672617
+    },
+    {
+      "id": "trad_wayne_falcons",
+      "name": "Die Wanderfalken von Old Main",
+      "description": "Auf einem Balkon des Uhrturms von Old Main leben Wanderfalken, die die Universität ihre geflügelten Warriors nennt. Schau zum Turm hinauf und entdecke sie.",
+      "latitude": 42.3550413,
+      "longitude": -83.0672617
+    },
+    {
+      "id": "trad_wayne_artwalk",
+      "name": "Campus-ArtWalk",
+      "description": "Rund 30 gespendete Skulpturen im Freien machen den Campus zu einer Galerie, die du jederzeit besuchen kannst. Beginne bei „City with Halo“ vor dem Thompson Home und folge der ArtWalk-Karte.",
+      "latitude": 42.354757,
+      "longitude": -83.065481
+    },
+    {
+      "id": "trad_wayne_homecoming",
+      "name": "Homecoming-Spiel auf dem Tom Adams Field",
+      "description": "Die Homecoming-Woche endet mit einem Footballspiel der Warriors auf dem Tom Adams Field, und die Fans sollen Grün und Gold tragen. Feuere die Warriors mit an.",
+      "latitude": 42.355801,
+      "longitude": -83.078358
+    }
+  ],
+  "Western Michigan University": [
+    {
+      "id": "trad_wmu_bronco_statue",
+      "name": "Die Bronco-Statue",
+      "description": "Ein rund 800 Kilogramm schwerer Bronze-Bronco der Bildhauerin Veryl Goodnight steht seit 1997 auf dem Campus. Ursprünglich gehörte er zu ihrem größeren Werk „The Day the Wall Came Down“. Mach ein Foto mit ihm.",
+      "latitude": 42.284638,
+      "longitude": -85.608672
+    },
+    {
+      "id": "trad_wmu_homecoming",
+      "name": "Homecoming im Waldo Stadium",
+      "description": "Jeden Oktober taucht die WMU die Stadt zum Homecoming in Braun und Gold, und zum Abschluss spielen die Broncos im Waldo Stadium Football. Mach mit auf den Rängen.",
+      "latitude": 42.285762,
+      "longitude": -85.60112
+    },
+    {
+      "id": "trad_wmu_hockey_banner",
+      "name": "Meister in der Lawson Arena",
+      "description": "2025 gewannen die Broncos ihre erste nationale Meisterschaft im Eishockey der Männer. Besuche ein Spiel in der Lawson Arena und halte Ausschau nach dem Meisterbanner.",
+      "latitude": 42.275962,
+      "longitude": -85.617875
+    },
+    {
+      "id": "trad_wmu_prospect_hill",
+      "name": "Hinauf auf den Prospect Hill zur Heritage Hall",
+      "description": "Die WMU begann auf dem Prospect Hill, wo 1905 die East Hall eröffnete und einst eine Bahn die Menschen den Hang hinauffuhr. Geh hinauf zur Heritage Hall, der restaurierten East Hall, und zum Portikus der North Hall daneben.",
+      "latitude": 42.286211,
+      "longitude": -85.597018
+    }
+  ],
+  "Grand Valley State University": [
+    {
+      "id": "trad_gvsu_little_mac",
+      "name": "Little Mac Bridge und die Schluchten",
+      "description": "Die Studierenden wählten die Schluchten und die Little Mac Bridge zum schönsten Ort des Campus. Geh über die Fußgängerbrücke und schau hinunter auf den Bach.",
+      "latitude": 42.964644,
+      "longitude": -85.886536
+    },
+    {
+      "id": "trad_gvsu_carillon",
+      "name": "Glockenspiel am Cook Tower",
+      "description": "Jede Woche erklingt auf den Glocken des Cook Carillon Tower live gespielte Musik von Bach bis Pop. Wenn du Glocken hörst, spielt dort oben gerade jemand für dich.",
+      "latitude": 42.963457,
+      "longitude": -85.888593
+    },
+    {
+      "id": "trad_gvsu_zumberge_pond",
+      "name": "Zumberge Pond",
+      "description": "Zu jeder Jahreszeit lernen, essen oder entspannen die Lakers gern auf den Stufen am Zumberge Pond. Setz dich und genieße die Aussicht.",
+      "latitude": 42.962773,
+      "longitude": -85.887481
+    },
+    {
+      "id": "trad_gvsu_library_roof",
+      "name": "Aussicht vom Bibliotheksdach",
+      "description": "Vom Dach der Mary Idema Pew Library hat man einen weiten Blick über den Campus in Allendale, besonders beliebt, wenn sich im Herbst das Laub färbt. Geh hinauf und genieße die Aussicht.",
+      "latitude": 42.96288,
+      "longitude": -85.889788
+    },
+    {
+      "id": "trad_gvsu_lubbers_gameday",
+      "name": "Lakers-Football im Lubbers Stadium",
+      "description": "Das Lubbers Stadium hat offiziell 10.444 Plätze, fasst aber oft Tausende Fans mehr; der Rekord liegt bei 17.007 Zuschauern im Jahr 2021. Sei bei einem Heimspiel der Lakers dabei.",
+      "latitude": 42.969127,
+      "longitude": -85.894756
+    }
+  ],
   "Yale University": [
     {
       "id": "trad_yale_woolsey_foot",
@@ -1687,6 +1784,110 @@
       "longitude": -77.070156
     }
   ],
+  "Johns Hopkins University": [
+    {
+      "id": "trad_jhu_gilman_seal",
+      "name": "Das Siegel in der Gilman Hall",
+      "description": "Der Legende nach schafft kein Studierender seinen Abschluss, der im Foyer der Gilman Hall auf das Universitätssiegel tritt, deshalb ist es abgesperrt. Wirf einen Blick darauf und geh dann außen herum.",
+      "latitude": 39.328972,
+      "longitude": -76.621593
+    },
+    {
+      "id": "trad_jhu_blue_jay_statue",
+      "name": "Der bemalte Blue Jay",
+      "description": "Studentengruppen bemalen die Blue-Jay-Statue immer wieder neu, um Veranstaltungen und Feiern zu würdigen. Schau vorbei und sieh, welche Farben sie heute trägt.",
+      "latitude": 39.331058,
+      "longitude": -76.619621
+    },
+    {
+      "id": "trad_jhu_lacrosse",
+      "name": "Lacrosse auf dem Homewood Field",
+      "description": "Lacrosse ist der Aushängeschild-Sport von Hopkins, und Heimspiele auf dem Homewood Field ziehen große Zuschauermengen an. Sieh dir ein Spiel an und feuere die Blue Jays an.",
+      "latitude": 39.333484,
+      "longitude": -76.620872
+    },
+    {
+      "id": "trad_jhu_the_beach",
+      "name": "The Beach",
+      "description": "„The Beach“ ist die große Rasenfläche an der Eisenhower Library an der Charles Street, wo Studierende lernen, picknicken und spielen. Breite eine Decke aus und genieße den Sonnenuntergang.",
+      "latitude": 39.329106,
+      "longitude": -76.618484
+    },
+    {
+      "id": "trad_jhu_spring_fair",
+      "name": "Spring Fair",
+      "description": "Seit 1972 veranstalten Studierende jeden Frühling die Spring Fair, ein Wochenendfest mit Ständen, Essen, Fahrgeschäften und Musik, das auch Einwohner Baltimores anzieht. Komm im April und feiere mit.",
+      "latitude": 39.329034,
+      "longitude": -76.620381
+    },
+    {
+      "id": "trad_jhu_art_museum",
+      "name": "Das Kunstmuseum nebenan",
+      "description": "Das Baltimore Museum of Art liegt nur wenige Schritte vom Campus entfernt, und der Eintritt ist frei. Nimm es in deinen Campusbesuch auf.",
+      "latitude": 39.325818,
+      "longitude": -76.619723
+    }
+  ],
+  "New York University": [
+    {
+      "id": "trad_nyu_washington_square_arch",
+      "name": "Washington Square Arch",
+      "description": "Der Bogen gehört der Stadt, ist aber zum inoffiziellen Symbol der NYU geworden, deren Gebäude den Park umgeben. Machen Sie ein Foto mit dem Bogen und der Fifth Avenue dahinter.",
+      "latitude": 40.731235,
+      "longitude": -73.997102
+    },
+    {
+      "id": "trad_nyu_bust_of_sylvette",
+      "name": "Bust of Sylvette",
+      "description": "Auf dem Platz zwischen den Silver Towers steht eine riesige Vergrößerung von Picassos Bust of Sylvette, geschaffen mit Carl Nesjar. Gehen Sie in den Innenhof, um sie aus der Nähe zu sehen.",
+      "latitude": 40.727029,
+      "longitude": -73.99839
+    },
+    {
+      "id": "trad_nyu_gould_plaza",
+      "name": "Gould Plaza",
+      "description": "Dieser Platz an der West 4th Street, gesäumt von der Stern School und dem Courant Institute, ist der Ort, an dem sich NYU-Studierende nach den Vorlesungen treffen. Achten Sie auf die lila NYU-Flaggen an den Gebäuden ringsum.",
+      "latitude": 40.728861,
+      "longitude": -73.99592
+    },
+    {
+      "id": "trad_nyu_grey_art_museum",
+      "name": "Grey Art Museum",
+      "description": "Das Kunstmuseum der NYU, bis 2023 als Grey Art Gallery bekannt, hat heute größere Galerien am 18 Cooper Square. Besuchen Sie es, um die Sammlung der Universität zu sehen, darunter moderne Kunst aus Asien und dem Nahen Osten.",
+      "latitude": 40.72781,
+      "longitude": -73.991541
+    }
+  ],
+  "Carnegie Mellon University": [
+    {
+      "id": "trad_cmu_the_fence",
+      "name": "Der Zaun",
+      "description": "Das Bemalen des Zauns mitten im Cut ist seit den 1920er-Jahren Tradition, und der ursprüngliche Holzzaun hielt einst den Guinness-Rekord als meistbemaltes Objekt. Geh vorbei und sieh dir die neueste Farbschicht und Botschaft an.",
+      "latitude": 40.443317,
+      "longitude": -79.942966
+    },
+    {
+      "id": "trad_cmu_buggy",
+      "name": "Buggy-Rennen",
+      "description": "Beim Spring Carnival schieben Studierendenteams schnittige Buggys ohne Antrieb und lassen sie auf einer Strecke im Schenley Park rollen, in einem Rennen, das offiziell Sweepstakes heißt. Geh in den Park und sieh dir die Läufe an.",
+      "latitude": 40.438872,
+      "longitude": -79.944514
+    },
+    {
+      "id": "trad_cmu_midway",
+      "name": "Midway beim Spring Carnival",
+      "description": "Jeden April bauen Campusgruppen mehrstöckige Buden mit Spielen für die Midway des Spring Carnival auf dem Parkplatz des College of Fine Arts. Das Fest ist offen für alle in Pittsburgh, also schau vorbei und erkunde die Buden.",
+      "latitude": 40.441448,
+      "longitude": -79.942951
+    },
+    {
+      "id": "trad_cmu_kiltie_band",
+      "name": "Die Kiltie Band",
+      "description": "Die 1908 gegründete Kiltie Band trägt Kilts zu Ehren von Andrew Carnegies schottischen Wurzeln und spielt bei jedem Footballheimspiel. Besuch ein Spiel, hör die Band und sieh König Artus zwischen dem dritten und vierten Viertel auf Gralssuche gehen.",
+      "latitude": 40.443218,
+      "longitude": -79.940227
+    }
+  ],
   "University of Chicago": [
     {
       "id": "trad_uchicago_reynolds_seal",
@@ -1835,6 +2036,147 @@
       "description": "An Halloween verteilen die Studierenden, die in den Zimmern am Lawn wohnen, seit den 1980er-Jahren Süßigkeiten an Kinder aus der Umgebung. Familien stellen sich entlang der 54 Lawn-Zimmer an.",
       "latitude": 38.034259,
       "longitude": -78.504132
+    }
+  ],
+  "Rice University": [
+    {
+      "id": "trad_rice_sallyport",
+      "name": "Durch den Sallyport",
+      "description": "Traditionell gehen Rice-Studierende erst bei ihrem Abschluss durch den Torbogen Sallyport in der Lovett Hall hinaus und meiden ihn bis dahin. Stell dich unter den Bogen und blick über den Academic Quad.",
+      "latitude": 29.71903,
+      "longitude": -95.397827
+    },
+    {
+      "id": "trad_rice_skyspace",
+      "name": "Skyspace bei Sonnenuntergang",
+      "description": "James Turrells Twilight Epiphany Skyspace zeigt bei Sonnenaufgang und Sonnenuntergang eine kostenlose Lichtshow, bei der wechselndes farbiges Licht den Himmel in der Dachöffnung verwandelt. Komm früh, um einen Platz zu bekommen.",
+      "latitude": 29.716487,
+      "longitude": -95.404264
+    },
+    {
+      "id": "trad_rice_moon_speech",
+      "name": "Das Stadion der Mondrede",
+      "description": "1962 sprach Präsident Kennedy im Rice Stadium und forderte die Nation auf, noch vor Ende des Jahrzehnts den Mond zu erreichen. Besuche das Stadion, in dem die berühmte Rede gehalten wurde.",
+      "latitude": 29.716323,
+      "longitude": -95.409324
+    },
+    {
+      "id": "trad_rice_mob",
+      "name": "Die Marching Owl Band",
+      "description": "Die Marching Owl Band, kurz MOB, ist eine Scatter Band: Statt in Formation zu marschieren, führt sie bei Footballspielen komische Sketche auf. Sieh dir ihre Halbzeitshow an.",
+      "latitude": 29.715311,
+      "longitude": -95.40839
+    },
+    {
+      "id": "trad_rice_tree_for_every_student",
+      "name": "Ein Baum für jeden Studierenden",
+      "description": "Mehr als 4.000 Bäume und Sträucher machen den ganzen Campus zu einem Arboretum, woraus die Legende entstand, Rice habe für jeden Studierenden einen Baum. Spaziere durch die schattigen Innenhöfe.",
+      "latitude": 29.718631,
+      "longitude": -95.398857
+    }
+  ],
+  "Emory University": [
+    {
+      "id": "trad_emory_gravity_monument",
+      "name": "Das Gravity Monument",
+      "description": "Versteckt zwischen den Bäumen an der Dowman Drive steht ein Denkmal aus rosa Marmor, das Roger Babson Emory 1963 zu Ehren der Naturwissenschaften schenkte. Viele finden, es sieht eher aus wie ein Grabstein im Wald. Versuchen Sie, es zu finden.",
+      "latitude": 33.790089,
+      "longitude": -84.326958
+    },
+    {
+      "id": "trad_emory_lullwater_tower",
+      "name": "Lullwater Preserve und Turm",
+      "description": "Das Lullwater Preserve ist ein 62 Hektar großes Gebiet aus Wald und Wasser, beliebt bei Spaziergängern und Joggern. Folgen Sie dem Weg zum alten Granitturm, den Walter Candler neben seinem Damm baute, um sein Haus mit Strom zu versorgen.",
+      "latitude": 33.801285,
+      "longitude": -84.314417
+    },
+    {
+      "id": "trad_emory_quad_eaves",
+      "name": "Inschriften unter den Traufen",
+      "description": "Henry Hornbostel prägte den Quad mit rosa Georgia-Marmor und roten Ziegeldächern. Schauen Sie unter die Traufen der älteren Gebäude: Dort stehen eingemeißelte Wörter, die verraten, was einst darin gelehrt wurde.",
+      "latitude": 33.790622,
+      "longitude": -84.32474
+    },
+    {
+      "id": "trad_emory_source_route",
+      "name": "Source Route",
+      "description": "Hinter dem Carlos Museum führt eine Treppe hinunter in die Baker Woodland. Sie gehört zu einer Umweltskulptur aus den 1970er-Jahren. Steigen Sie die Stufen hinab in den Wald.",
+      "latitude": 33.78962,
+      "longitude": -84.324451
+    },
+    {
+      "id": "trad_emory_robinson_tower",
+      "name": "Die Glocken des Robinson-Uhrturms",
+      "description": "Der Uhrturm der Cox Hall trägt ein Glockenspiel, das 2001 zu Ehren des Treuhänders J. William Robinson und seiner Frau geweiht wurde. Hören Sie hin, wenn Sie über den Campus gehen.",
+      "latitude": 33.792417,
+      "longitude": -84.323165
+    }
+  ],
+  "Tulane University": [
+    {
+      "id": "trad_tulane_streetcar",
+      "name": "Mit der St.-Charles-Straßenbahn fahren",
+      "description": "Die St.-Charles-Linie fährt seit 1835 und ist die älteste ununterbrochen betriebene Straßenbahnlinie der Welt. Fahren Sie bis zur Haltestelle Tulane University vor der Gibson Hall.",
+      "latitude": 29.9351111,
+      "longitude": -90.1237354
+    },
+    {
+      "id": "trad_tulane_tiffany_woodward_way",
+      "name": "Tiffany-Fenster am Woodward Way",
+      "description": "Zwei Buntglas-Triptychen von Louis Comfort Tiffany, in den 1890er-Jahren für eine Kapelle auf dem alten Campus des Newcomb College im Garden District geschaffen, säumen heute den Durchgang Woodward Way am Newcomb Art Museum. Halten Sie Ausschau nach ihnen.",
+      "latitude": 29.94198,
+      "longitude": -90.121078
+    },
+    {
+      "id": "trad_tulane_rogers_chapel",
+      "name": "Rogers Memorial Chapel",
+      "description": "Weiteres Tiffany-Buntglas von Tulane befindet sich in der Myra Clare Rogers Memorial Chapel auf der Newcomb-Seite des Campus. Werfen Sie einen Blick hinein, um die Fenster zu sehen.",
+      "latitude": 29.94172,
+      "longitude": -90.122965
+    },
+    {
+      "id": "trad_tulane_mari_gallery",
+      "name": "Maya-Galerie in der Dinwiddie Hall",
+      "description": "Das Middle American Research Institute erforscht die Maya seit 1924. Seine Galerie im dritten Stock der Dinwiddie Hall ist werktags für die Öffentlichkeit geöffnet.",
+      "latitude": 29.935005,
+      "longitude": -90.122182
+    }
+  ],
+  "Washington University in St. Louis": [
+    {
+      "id": "trad_washu_seal",
+      "name": "Nicht aufs Siegel treten",
+      "description": "Laut Campuslegende schafft niemand den Abschluss, der auf das Universitätssiegel unter der Brookings Hall tritt; wer das Medaillon des Chancellors berührt, bricht den Fluch. Such das Siegel und geh drumherum.",
+      "latitude": 38.648039,
+      "longitude": -90.305061
+    },
+    {
+      "id": "trad_washu_declaration",
+      "name": "Unabhängigkeitserklärung in der Olin Library",
+      "description": "Die Olin Library zeigt einen Flugblattdruck der Unabhängigkeitserklärung, der vor der Unterzeichnung gedruckt wurde, um die Nachricht in den Kolonien zu verbreiten. Schau in der Ausstellung vorbei und sieh ihn dir an.",
+      "latitude": 38.648623,
+      "longitude": -90.307722
+    },
+    {
+      "id": "trad_washu_holmes_lounge",
+      "name": "Mittagessen in der Holmes Lounge",
+      "description": "Der alte Lesesaal der Bibliothek in der Ridgley Hall ist heute die Holmes Lounge, einer der schönsten Räume auf dem Campus. Iss dort zu Mittag und genieß die Umgebung.",
+      "latitude": 38.648161,
+      "longitude": -90.306419
+    },
+    {
+      "id": "trad_washu_underpass",
+      "name": "Die bemalte Unterführung",
+      "description": "Die Unterführung zwischen der South 40 und dem Hauptcampus ist mit gemalten Ankündigungen für Campusveranstaltungen bedeckt. Geh hindurch und sieh dir die neuesten Motive an.",
+      "latitude": 38.647071,
+      "longitude": -90.312267
+    },
+    {
+      "id": "trad_washu_assembly_series",
+      "name": "Assembly Series in der Graham Chapel",
+      "description": "In der Graham Chapel findet die Assembly Series statt, die traditionsreiche Vortragsreihe der Universität, die Rednerinnen wie Eleanor Roosevelt und Gloria Steinem auf den Campus brachte. Wirf einen Blick ins Programm und besuch einen Vortrag.",
+      "latitude": 38.648232,
+      "longitude": -90.308906
     }
   ],
   "Stanford University": [
@@ -2040,6 +2382,43 @@
       "description": "Am Haupteingang des Estadio Olímpico Universitario befindet sich ein Relief von Diego Rivera aus natürlich gefärbten Steinen, und das Stadion besitzt noch immer seine olympische Feuerschale von 1968. Besucher können das Relief von außerhalb des Stadions sehen.",
       "latitude": 19.331688,
       "longitude": -99.192286
+    }
+  ],
+  "California Institute of Technology": [
+    {
+      "id": "trad_caltech_fleming_cannon",
+      "name": "Die Fleming-Kanone",
+      "description": "Eine Kanone aus der Zeit des Deutsch-Französischen Krieges steht auf ihren Rädern vor dem Fleming House und wird nur zu großen Anlässen wie der Abschlussfeier abgefeuert. MIT-Studenten schleppten sie einmal als Streich quer durchs Land. Schau vorbei und sieh sie dir an.",
+      "latitude": 34.136563,
+      "longitude": -118.123157
+    },
+    {
+      "id": "trad_caltech_turtle_pond",
+      "name": "Der Schildkrötenteich",
+      "description": "Dutzende Schildkröten, meist Rotwangen-Schmuckschildkröten, leben im Teich im Throop Memorial Garden, wo einst das erste Gebäude des Caltech stand. Halte Ausschau nach ihnen, wie sie sich auf den Steinen sonnen, aber füttere sie nicht.",
+      "latitude": 34.136838,
+      "longitude": -118.125183
+    },
+    {
+      "id": "trad_caltech_watson_lectures",
+      "name": "Watson Lectures",
+      "description": "Seit rund einem Jahrhundert erklären Wissenschaftler des Caltech ihre Arbeit in kostenlosen öffentlichen Vorträgen, die heute Watson Lectures heißen und im Beckman Auditorium stattfinden. Besuche einen vor Ort oder online.",
+      "latitude": 34.139191,
+      "longitude": -118.125541
+    },
+    {
+      "id": "trad_caltech_pumpkin_drop",
+      "name": "Halloween-Kürbiswurf",
+      "description": "Jedes Jahr an Halloween lassen Studierende in flüssigem Stickstoff gefrorene Kürbisse vom Dach der Caltech Hall, der früheren Millikan Library, fallen, während die Menge nach einem Funken Ausschau hält. Der Name spielt auf Millikans berühmten Öltröpfchenversuch an.",
+      "latitude": 34.136865,
+      "longitude": -118.126055
+    },
+    {
+      "id": "trad_caltech_tournament_park",
+      "name": "Tournament Park",
+      "description": "Auf dem Sportplatz im Tournament Park an der Südseite des Campus fanden die ersten Rose-Bowl-Spiele statt. Geh an der Laufbahn entlang und sieh, wo das berühmte Spiel begann.",
+      "latitude": 34.132928,
+      "longitude": -118.125456
     }
   ]
 }

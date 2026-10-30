@@ -747,6 +747,12 @@
 "Men's soccer" = "Football masculin";
 "Wrestling" = "Lutte";
 
+/* Upcoming Events: See all list */
+"See all events" = "Voir tous les événements";
+"Loading more events…" = "Chargement d’autres événements…";
+"Date to be announced" = "Date à confirmer";
+"Shows every upcoming event, by month" = "Affiche tous les événements à venir, par mois";
+
 /* Local Calendar: a city's library, museum or city hall events */
 "Local Calendar" = "Agenda local";
 "Finding local events…" = "Recherche d’événements locaux…";

@@ -12,15 +12,21 @@ struct EventsSection: View {
 
     @State private var selectedCategory: TicketmasterEvent.EventCategory? = nil
 
+    // Chips come from everything loaded, not just the short row, so a kind of event
+    // the row had no room for can still be picked
     private var presentCategories: [TicketmasterEvent.EventCategory] {
-        let cats = service.events.map { $0.category }
-        var seen = Set<String>()
-        return cats.filter { seen.insert($0.rawValue).inserted }
+        presentCategoriesIn(service.loadedEvents)
     }
 
+    /// The short row, or with a chip picked, the soonest of that kind from everything loaded
     private var filteredEvents: [TicketmasterEvent] {
         guard let cat = selectedCategory else { return service.events }
-        return service.events.filter { $0.category == cat }
+        return Array(service.loadedEvents.filter { $0.category == cat }.prefix(TicketmasterService.rowLimit))
+    }
+
+    /// True when See all would show more than the row does
+    private var hasMore: Bool {
+        service.loadedEvents.count > service.events.count || service.canLoadMore
     }
 
     var body: some View {
@@ -93,6 +99,26 @@ struct EventsSection: View {
                             .padding(DS.Space.l)
                         }
                     }
+
+                    if hasMore {
+                        Divider().padding(.horizontal, DS.Space.l)
+                        NavigationLink {
+                            AllEventsView(service: service, isHighContrast: isHighContrast)
+                        } label: {
+                            HStack {
+                                Text("See all events")
+                                    .font(.subheadline.weight(.semibold))
+                                Spacer()
+                                Image(systemName: "chevron.right")
+                                    .font(.caption.weight(.semibold))
+                            }
+                            .foregroundColor(brandColor)
+                            .padding(DS.Space.l)
+                            .contentShape(Rectangle())
+                        }
+                        .buttonStyle(.plain)
+                        .accessibilityHint("Shows every upcoming event, by month")
+                    }
                 }
             }
             .dsCard(padding: 0, isHighContrast: isHighContrast)
@@ -113,6 +139,176 @@ struct EventsSection: View {
                     .dsPageMargin()
             }
         }
+    }
+}
+
+/// Each kind of event once, in the order they first appear
+private func presentCategoriesIn(_ events: [TicketmasterEvent]) -> [TicketmasterEvent.EventCategory] {
+    var seen = Set<TicketmasterEvent.EventCategory>()
+    return events.map(\.category).filter { seen.insert($0).inserted }
+}
+
+// MARK: - See all
+
+/// Every upcoming event, grouped by month, with the same kind chips as the row.
+/// Reaching the bottom loads the next page from both sellers.
+struct AllEventsView: View {
+    @ObservedObject var service: TicketmasterService
+    let isHighContrast: Bool
+    var brandColor: Color { isHighContrast ? .primary : Color.adventureOrange }
+
+    @State private var selectedCategory: TicketmasterEvent.EventCategory? = nil
+
+    private var shownEvents: [TicketmasterEvent] {
+        guard let cat = selectedCategory else { return service.loadedEvents }
+        return service.loadedEvents.filter { $0.category == cat }
+    }
+
+    /// Events by month ("November 2026"), in date order; events without a date go last
+    private var months: [(title: String, events: [TicketmasterEvent])] {
+        var groups: [(title: String, events: [TicketmasterEvent])] = []
+        var undated: [TicketmasterEvent] = []
+        for event in shownEvents {
+            guard let start = event.startDate else {
+                undated.append(event)
+                continue
+            }
+            let title = start.formatted(.dateTime.month(.wide).year())
+            if groups.last?.title == title {
+                groups[groups.count - 1].events.append(event)
+            } else {
+                groups.append((title, [event]))
+            }
+        }
+        if !undated.isEmpty {
+            groups.append((NSLocalizedString("Date to be announced", comment: "All events list: heading over events with no date yet"), undated))
+        }
+        return groups
+    }
+
+    var body: some View {
+        List {
+            let categories = presentCategoriesIn(service.loadedEvents)
+            if categories.count > 1 {
+                Section {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: DS.Space.s) {
+                            FilterChip(label: "All", icon: nil, isSelected: selectedCategory == nil, color: brandColor) {
+                                selectedCategory = nil
+                            }
+                            ForEach(categories, id: \.rawValue) { cat in
+                                FilterChip(
+                                    label: cat.rawValue,
+                                    icon: cat.icon,
+                                    isSelected: selectedCategory == cat,
+                                    color: cat.tint(brandColor: brandColor, isHighContrast: isHighContrast)
+                                ) { selectedCategory = (selectedCategory == cat) ? nil : cat }
+                            }
+                        }
+                        .padding(.vertical, DS.Space.xs)
+                    }
+                }
+                .listRowBackground(Color.clear)
+                .listRowInsets(EdgeInsets(top: 0, leading: DS.Space.page, bottom: 0, trailing: DS.Space.page))
+            }
+
+            ForEach(months, id: \.title) { month in
+                Section(month.title) {
+                    ForEach(month.events) { event in
+                        EventRow(event: event, brandColor: brandColor, isHighContrast: isHighContrast)
+                    }
+                }
+            }
+
+            // Reaching the bottom asks both sellers for their next page
+            if service.canLoadMore {
+                HStack(spacing: DS.Space.s) {
+                    ProgressView()
+                    Text("Loading more events…")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
+                .frame(maxWidth: .infinity)
+                .listRowBackground(Color.clear)
+                .task(id: service.loadedEvents.count) { await service.loadMore() }
+            }
+
+            Section {
+                Text(service.loadedEvents.contains { $0.sellerName == "SeatGeek" }
+                     ? LocalizedStringKey("Event data from Ticketmaster and SeatGeek. Stamped is not responsible for event cancellations.")
+                     : "Event data from Ticketmaster. Stamped is not responsible for event cancellations.")
+                    .font(.caption2)
+                    .foregroundColor(isHighContrast ? .primary : .secondary)
+            }
+            .listRowBackground(Color.clear)
+        }
+        .navigationTitle("Upcoming Events")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+/// One event in the See all list: kind icon, name, date and venue, opening the seller's ticket page
+private struct EventRow: View {
+    let event: TicketmasterEvent
+    let brandColor: Color
+    let isHighContrast: Bool
+
+    @ScaledMetric(relativeTo: .subheadline) private var badgeSize: CGFloat = 32
+
+    private var accentColor: Color {
+        event.category.tint(brandColor: brandColor, isHighContrast: isHighContrast)
+    }
+
+    var body: some View {
+        if let url = event.ticketURL {
+            Link(destination: url) { content }
+                .accessibilityElement(children: .combine)
+                .accessibilityHint("Opens \(event.sellerName) to buy tickets")
+        } else {
+            content.accessibilityElement(children: .combine)
+        }
+    }
+
+    private var content: some View {
+        HStack(alignment: .top, spacing: DS.Space.m) {
+            ZStack {
+                RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
+                    .fill(accentColor.opacity(0.15))
+                    .frame(width: badgeSize, height: badgeSize)
+                Image(systemName: event.category.icon)
+                    .font(.subheadline.weight(.medium))
+                    .foregroundColor(accentColor)
+            }
+            .accessibilityHidden(true)
+
+            VStack(alignment: .leading, spacing: DS.Space.xs) {
+                Text(event.name)
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundColor(.primary)
+                    .multilineTextAlignment(.leading)
+                if !event.date.isEmpty {
+                    Text(event.date + (event.time.isEmpty ? "" : " · \(event.time)"))
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
+                if !event.venueName.isEmpty {
+                    Text(event.venueName)
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                        .lineLimit(1)
+                }
+            }
+
+            Spacer(minLength: 0)
+
+            if event.ticketURL != nil {
+                Image(systemName: "arrow.up.right")
+                    .font(.caption.bold())
+                    .foregroundColor(accentColor)
+                    .accessibilityHidden(true)
+            }
+        }
+        .padding(.vertical, DS.Space.xs)
     }
 }
 

@@ -1252,5 +1252,231 @@
       "name": "世纪树",
       "description": "这棵弗吉尼亚栎是校园最早种下的树之一，树龄远超100年。据说一起从树下走过的情侣将会结婚。"
     }
+  },
+  "Wayne State University": {
+    "trad_wayne_planetarium": {
+      "name": "周五晚上的天文馆表演",
+      "description": "位于 Old Main 的韦恩州立大学天文馆在大多数周五晚上举办免费公开表演，带你认识当晚的星空并观看球幕电影。座位先到先得，记得早点到。"
+    },
+    "trad_wayne_falcons": {
+      "name": "Old Main 的游隼",
+      "description": "Old Main 钟楼的一个阳台上住着游隼，学校称它们为“长着翅膀的 Warriors”。抬头看看钟楼，找找它们吧。"
+    },
+    "trad_wayne_artwalk": {
+      "name": "校园艺术漫步",
+      "description": "约 30 件捐赠的户外雕塑让校园成为一座随时可以参观的露天美术馆。从 Thompson Home 前的《City with Halo》出发，按照 ArtWalk 地图游览。"
+    },
+    "trad_wayne_homecoming": {
+      "name": "Tom Adams Field 的返校节比赛",
+      "description": "返校节周以 Warriors 在 Tom Adams Field 的橄榄球比赛收尾，球迷们会穿上绿色和金色。加入人群，为 Warriors 加油吧。"
+    }
+  },
+  "Western Michigan University": {
+    "trad_wmu_bronco_statue": {
+      "name": "野马雕像",
+      "description": "雕塑家 Veryl Goodnight 创作的约 800 公斤重的青铜野马自 1997 年起矗立在校园里，它原本是她的大型作品《The Day the Wall Came Down》的一部分。和它合个影吧。"
+    },
+    "trad_wmu_homecoming": {
+      "name": "Waldo Stadium 的返校节",
+      "description": "每年十月，WMU 都会在返校节把城市染成棕色和金色，最后在 Waldo Stadium 迎来 Broncos 的橄榄球比赛。到看台上和大家一起欢呼吧。"
+    },
+    "trad_wmu_hockey_banner": {
+      "name": "Lawson Arena 的全国冠军",
+      "description": "Broncos 在 2025 年赢得了队史首个男子冰球全国冠军。到 Lawson Arena 看一场比赛，找找冠军旗帜。"
+    },
+    "trad_wmu_prospect_hill": {
+      "name": "登上 Prospect Hill 前往 Heritage Hall",
+      "description": "WMU 起源于 Prospect Hill，East Hall 于 1905 年在这里启用，过去还有电车把人们送上山坡。走上山去看看修复后的 East Hall，也就是 Heritage Hall，以及旁边 North Hall 的门廊。"
+    }
+  },
+  "Grand Valley State University": {
+    "trad_gvsu_little_mac": {
+      "name": "Little Mac 桥和峡谷",
+      "description": "学生们把峡谷和 Little Mac 桥评为校园里最美的地方。走过这座人行桥，俯瞰桥下的小溪。"
+    },
+    "trad_gvsu_carillon": {
+      "name": "Cook 钟琴塔的钟琴音乐",
+      "description": "每周，学校的钟琴演奏家都会用 Cook Carillon Tower 的钟演奏从巴赫到流行歌曲的各种音乐。如果你听到钟声，那就是有人正在塔上现场演奏。"
+    },
+    "trad_gvsu_zumberge_pond": {
+      "name": "Zumberge 池塘",
+      "description": "无论什么季节，Lakers 们都喜欢在 Zumberge 池塘边的台阶上学习、吃饭或放松。坐下来欣赏风景吧。"
+    },
+    "trad_gvsu_library_roof": {
+      "name": "图书馆屋顶的风景",
+      "description": "从 Mary Idema Pew 图书馆的屋顶可以俯瞰阿伦代尔校园，秋天树叶变色时尤其受学生喜爱。上去看看风景吧。"
+    },
+    "trad_gvsu_lubbers_gameday": {
+      "name": "Lubbers Stadium 的 Lakers 橄榄球赛",
+      "description": "Lubbers Stadium 官方座位为 10,444 个，但常常多容纳数千名球迷，2021 年创下了 17,007 人的纪录。来看一场 Lakers 的主场比赛吧。"
+    }
+  },
+  "California Institute of Technology": {
+    "trad_caltech_fleming_cannon": {
+      "name": "弗莱明大炮",
+      "description": "一门普法战争时期的大炮架在轮子上，摆放在弗莱明宿舍楼前，只在毕业典礼等重大时刻鸣放。麻省理工学院的学生曾把它当作恶作剧运到美国另一端。不妨顺路来看看。"
+    },
+    "trad_caltech_turtle_pond": {
+      "name": "乌龟池",
+      "description": "斯鲁普纪念花园的池塘曾是加州理工学院第一栋建筑的所在地，如今住着几十只乌龟，大多是红耳龟。找找在石头上晒太阳的乌龟吧，但请不要喂食。"
+    },
+    "trad_caltech_watson_lectures": {
+      "name": "沃森讲座",
+      "description": "近一个世纪以来，加州理工学院的科学家们通过免费公开讲座介绍自己的研究，如今称为沃森讲座，在贝克曼礼堂举行。可以到现场或在线收看。"
+    },
+    "trad_caltech_pumpkin_drop": {
+      "name": "万圣节南瓜坠落",
+      "description": "每年万圣节，学生们把用液氮冻过的南瓜从加州理工楼（原密立根图书馆）顶上扔下，围观人群则寻找火花。名字取自密立根著名的油滴实验。"
+    },
+    "trad_caltech_tournament_park": {
+      "name": "锦标赛公园",
+      "description": "校园南侧锦标赛公园的运动场曾举办最早的玫瑰碗比赛。沿着跑道走一走，看看这项著名赛事开始的地方。"
+    }
+  },
+  "Johns Hopkins University": {
+    "trad_jhu_gilman_seal": {
+      "name": "吉尔曼楼校徽",
+      "description": "传说踩到吉尔曼楼门厅地面上大学校徽的学生将无法毕业，因此校徽被围了起来。看一看，然后绕着走吧。"
+    },
+    "trad_jhu_blue_jay_statue": {
+      "name": "彩绘蓝鸟雕像",
+      "description": "学生社团会为各种活动和庆祝重新粉刷蓝鸟雕像。来看看它今天是什么颜色。"
+    },
+    "trad_jhu_lacrosse": {
+      "name": "霍姆伍德球场的长曲棍球",
+      "description": "长曲棍球是霍普金斯的招牌运动，霍姆伍德球场的主场比赛总能吸引大批观众。来看一场比赛，为蓝鸟队加油吧。"
+    },
+    "trad_jhu_the_beach": {
+      "name": "“海滩”",
+      "description": "“海滩”是查尔斯街上艾森豪威尔图书馆旁的一大片草坪，学生们在这里学习、野餐和玩耍。铺开毯子，欣赏日落吧。"
+    },
+    "trad_jhu_spring_fair": {
+      "name": "春季集市",
+      "description": "自 1972 年起，学生们每年春天都会举办春季集市，这个周末节庆有摊位、美食、游乐设施和音乐，也吸引巴尔的摩居民前来。四月来参加吧。"
+    },
+    "trad_jhu_art_museum": {
+      "name": "隔壁的美术馆",
+      "description": "巴尔的摩艺术博物馆距校园仅几步之遥，而且免费参观。把它加进你的校园参观行程吧。"
+    }
+  },
+  "Rice University": {
+    "trad_rice_sallyport": {
+      "name": "穿过萨利门",
+      "description": "按照传统，莱斯大学的学生在毕业那天穿过洛维特楼的萨利门拱门离校，在此之前都不从这里经过。站到拱门下，眺望学术四方院吧。"
+    },
+    "trad_rice_skyspace": {
+      "name": "日落时的天空空间",
+      "description": "詹姆斯·特瑞尔的“暮光顿悟”天空空间在日出和日落时上演免费灯光秀，变幻的彩色灯光让屋顶开口中的天空焕然一新。早点到才能找到座位。"
+    },
+    "trad_rice_moon_speech": {
+      "name": "登月演讲体育场",
+      "description": "1962 年，肯尼迪总统在莱斯体育场发表演讲，号召全国在十年内登上月球。来参观这场著名演讲的发生地吧。"
+    },
+    "trad_rice_mob": {
+      "name": "猫头鹰行进乐队",
+      "description": "猫头鹰行进乐队（MOB）是一支“散队”乐队：它不排队形行进，而是在橄榄球比赛中表演搞笑小品。别错过它的中场表演。"
+    },
+    "trad_rice_tree_for_every_student": {
+      "name": "每位学生一棵树",
+      "description": "4000 多棵乔木和灌木让整个校园成为一座树木园，由此诞生了“莱斯为每位学生种了一棵树”的传说。在绿荫下的四方院里散散步吧。"
+    }
+  },
+  "Emory University": {
+    "trad_emory_gravity_monument": {
+      "name": "引力纪念碑",
+      "description": "道曼路（Dowman Drive）旁的树林里藏着一座粉色大理石纪念碑，是罗杰·巴布森在 1963 年为致敬科学而赠给埃默里的。很多人说它更像林中的一块墓碑。试着找到它吧。"
+    },
+    "trad_emory_lullwater_tower": {
+      "name": "拉尔沃特保护区和塔楼",
+      "description": "拉尔沃特保护区是一片约 62 公顷的林地与水域，深受散步和慢跑者喜爱。沿小路走到沃尔特·坎德勒为给住宅供电而在水坝旁建造的旧花岗岩塔楼。"
+    },
+    "trad_emory_quad_eaves": {
+      "name": "屋檐下的文字",
+      "description": "亨利·霍恩博斯特尔用粉色佐治亚大理石和红瓦屋顶塑造了方院的面貌。抬头看看老建筑的屋檐下，刻着的文字写明了当年楼里教授的学科。"
+    },
+    "trad_emory_source_route": {
+      "name": "源头之路（Source Route）",
+      "description": "卡洛斯博物馆后面有一段台阶通往贝克林地（Baker Woodland），它是 20 世纪 70 年代安装的一件环境雕塑的一部分。顺着台阶走进树林吧。"
+    },
+    "trad_emory_robinson_tower": {
+      "name": "罗宾逊钟楼的钟声",
+      "description": "考克斯楼（Cox Hall）的钟楼里有一组 2001 年为纪念校董 J. 威廉·罗宾逊夫妇而献上的排钟。穿过校园时留心听一听。"
+    }
+  },
+  "Tulane University": {
+    "trad_tulane_streetcar": {
+      "name": "乘坐圣查尔斯有轨电车",
+      "description": "圣查尔斯线自 1835 年起运营至今，是世界上连续运营时间最长的有轨电车线路。乘车到吉布森楼前的“杜兰大学”站。"
+    },
+    "trad_tulane_tiffany_woodward_way": {
+      "name": "伍德沃德廊道的蒂芙尼彩窗",
+      "description": "两组路易斯·康福特·蒂芙尼的彩色玻璃三联窗，原是 19 世纪 90 年代为纽科姆学院花园区旧校区的礼拜堂制作的，如今装在纽科姆艺术博物馆的伍德沃德廊道（Woodward Way）上。停下来找找看。"
+    },
+    "trad_tulane_rogers_chapel": {
+      "name": "罗杰斯纪念礼拜堂",
+      "description": "校园纽科姆一侧的迈拉·克莱尔·罗杰斯纪念礼拜堂里也有杜兰的蒂芙尼彩色玻璃。往里看看这些窗户吧。"
+    },
+    "trad_tulane_mari_gallery": {
+      "name": "丁威迪楼的玛雅展厅",
+      "description": "中美洲研究所自 1924 年起研究玛雅文明。它位于丁威迪楼（Dinwiddie Hall）三楼的展厅在工作日向公众开放。"
+    }
+  },
+  "New York University": {
+    "trad_nyu_washington_square_arch": {
+      "name": "华盛顿广场拱门",
+      "description": "拱门属于纽约市，但已成为纽约大学的非官方象征，大学的建筑环绕着公园。以第五大道为背景，和拱门合个影吧。"
+    },
+    "trad_nyu_bust_of_sylvette": {
+      "name": "西尔维特胸像",
+      "description": "银色大厦（Silver Towers）之间的广场上，立着一座与卡尔·内斯亚尔合作完成、按毕加索《西尔维特胸像》放大的巨型雕塑。走进庭院近距离看看。"
+    },
+    "trad_nyu_gould_plaza": {
+      "name": "古尔德广场",
+      "description": "这座位于西四街、被斯特恩商学院和库朗研究所环绕的广场，是纽约大学学生下课后聚会的地方。留意周围建筑上挂着的紫色 NYU 旗帜。"
+    },
+    "trad_nyu_grey_art_museum": {
+      "name": "格雷艺术博物馆",
+      "description": "纽约大学的美术馆在 2023 年前名为格雷艺术画廊，如今在库珀广场 18 号拥有更大的展厅。去看看大学的藏品，其中包括亚洲和中东的现代艺术。"
+    }
+  },
+  "Carnegie Mellon University": {
+    "trad_cmu_the_fence": {
+      "name": "涂鸦围栏",
+      "description": "在 the Cut 草坪中央粉刷这道围栏是 20 世纪 20 年代延续至今的传统，原来的木围栏曾以“被粉刷次数最多的物体”保持吉尼斯纪录。路过时看看最新的颜色和留言吧。"
+    },
+    "trad_cmu_buggy": {
+      "name": "Buggy 赛车",
+      "description": "春季嘉年华期间，学生车队推动无动力的流线型 buggy 小车，让它在申利公园的赛道上滑行竞速，比赛正式名称为 Sweepstakes。到公园里观看比赛吧。"
+    },
+    "trad_cmu_midway": {
+      "name": "春季嘉年华 Midway",
+      "description": "每年四月，校园团体会在艺术学院停车场搭建多层游戏展位，组成春季嘉年华的 Midway。嘉年华向匹兹堡市民开放，不妨来逛逛这些展位。"
+    },
+    "trad_cmu_kiltie_band": {
+      "name": "Kiltie 乐队",
+      "description": "成立于 1908 年的 Kiltie 乐队身穿苏格兰短裙，以纪念安德鲁·卡内基的苏格兰血统，并在每场橄榄球主场比赛演奏。去看一场比赛，听乐队演奏，还能在第三和第四节之间看到亚瑟王出发寻找圣杯。"
+    }
+  },
+  "Washington University in St. Louis": {
+    "trad_washu_seal": {
+      "name": "别踩校徽",
+      "description": "校园传说称，踩到布鲁金斯楼下的大学校徽就无法毕业，不过触摸校长勋章便能解除诅咒。找到校徽，绕着它走吧。"
+    },
+    "trad_washu_declaration": {
+      "name": "奥林图书馆的《独立宣言》",
+      "description": "奥林图书馆展出一份《独立宣言》单张印刷本，它在宣言签署前印制，用来向各殖民地传播消息。到展览前亲眼看看吧。"
+    },
+    "trad_washu_holmes_lounge": {
+      "name": "在 Holmes Lounge 吃午餐",
+      "description": "里奇利楼原来的图书馆阅览室如今是 Holmes Lounge，是校园里最美的房间之一。在这里吃顿午餐，感受周围的氛围。"
+    },
+    "trad_washu_underpass": {
+      "name": "彩绘地下通道",
+      "description": "连接 South 40 宿舍区和主校园的地下通道上画满了校园活动的彩绘公告。穿过通道，看看最新的图案吧。"
+    },
+    "trad_washu_assembly_series": {
+      "name": "格雷厄姆礼拜堂的 Assembly Series",
+      "description": "格雷厄姆礼拜堂举办大学历史悠久的讲座系列 Assembly Series，曾邀请埃莉诺·罗斯福、格洛丽亚·斯泰纳姆等人来到校园。查看日程，去听一场讲座吧。"
+    }
   }
 }

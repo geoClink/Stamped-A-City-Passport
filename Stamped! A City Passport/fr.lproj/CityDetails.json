@@ -2833,6 +2833,45 @@
     "transportation": "À pied / Luas / Bus",
     "transportationFact": "Trinity se trouve en plein centre de Dublin, le campus est donc facile à rejoindre à pied. Les tramways Luas et de nombreuses lignes de bus urbains s'arrêtent tout autour."
   },
+  "Wayne State University": {
+    "airportCode": "DTW",
+    "airportInfo": "L'aéroport métropolitain de Detroit-Wayne County, à Romulus au sud-ouest de Detroit, est le plus fréquenté du Michigan et la principale porte d'entrée de la ville.",
+    "airportName": "Detroit Metropolitan Wayne County Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "Dollar américain ($)",
+    "funFact": "Old Main, cœur du campus avec sa tour de l'horloge, a été construit dans les années 1890 pour la Central High School de Detroit. Les cours universitaires qui y ont commencé ont donné naissance à la Wayne State University.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le vert et l'or, et ses équipes sont les Warriors.",
+    "nickname": "Warrior Strong",
+    "transportation": "À pied / tramway QLINE",
+    "transportationFact": "Le campus principal, à Midtown, se parcourt facilement à pied. Le tramway QLINE longe Woodward Avenue à l'est du campus et le relie au centre-ville de Detroit et à New Center."
+  },
+  "Western Michigan University": {
+    "airportCode": "AZO",
+    "airportInfo": "L'aéroport international de Kalamazoo/Battle Creek, au sud-est du centre de Kalamazoo, est l'aéroport le plus proche desservi par des lignes régulières.",
+    "airportName": "Kalamazoo/Battle Creek International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "Dollar américain ($)",
+    "funFact": "Hyames Field, le stade de baseball de la WMU sur l'East Campus, a accueilli la toute première College World Series en 1947, puis de nouveau en 1948.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le marron et l'or, et ses équipes sont les Broncos.",
+    "nickname": "So That All May Learn",
+    "transportation": "À pied / bus Metro",
+    "transportationFact": "Les bus Metro de Kalamazoo desservent la Western Michigan University ainsi que la ville et sa banlieue."
+  },
+  "Grand Valley State University": {
+    "airportCode": "GRR",
+    "airportInfo": "L'aéroport international Gerald R. Ford, au sud-est de Grand Rapids, est l'aéroport le plus proche desservi par des lignes régulières.",
+    "airportName": "Gerald R. Ford International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "Dollar américain ($)",
+    "funFact": "Grand Valley est l'une des trois seules institutions de l'hémisphère occidental à posséder plus d'une tour de carillon : le Cook Carillon à Allendale et le Beckering Family Carillon à Grand Rapids.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le bleu, le noir et le blanc, et ses équipes sont les Lakers.",
+    "nickname": "Le fief des Lakers",
+    "transportation": "À pied / bus Laker Line",
+    "transportationFact": "Le bus Laker Line, exploité par The Rapid, relie le campus d'Allendale aux campus de la GVSU au centre de Grand Rapids par Lake Michigan Drive, et il est ouvert à tous."
+  },
   "Yale University": {
     "airportCode": "BDL",
     "airportInfo": "Bradley, près de Hartford, est à environ une heure de route au nord de New Haven. De nombreux visiteurs arrivent aussi par New York et prennent la New Haven Line de Metro-North directement jusqu'à Union Station.",
@@ -2963,6 +3002,45 @@
     "transportation": "À pied / Navette GUTS",
     "transportationFact": "Georgetown n'a pas sa propre station de métro : les navettes gratuites GUTS de l'université relient donc le campus aux stations de métro voisines. Le campus perché sur la colline se parcourt facilement à pied."
   },
+  "Johns Hopkins University": {
+    "airportCode": "BWI",
+    "airportInfo": "BWI, au sud de Baltimore, est le grand aéroport le plus proche. Les trains MARC et Amtrak le relient à Baltimore Penn Station, à courte distance du campus.",
+    "airportName": "Baltimore/Washington International Thurgood Marshall Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "Dollar américain ($)",
+    "funFact": "Johns Hopkins a ouvert en 1876 sur le modèle des universités de recherche européennes et est considérée comme la première université de recherche des États-Unis.",
+    "language": "Anglais",
+    "languageInfo": "Les étudiants appellent la Milton S. Eisenhower Library « MSE » et l'ancienne salle de lecture Hutzler de Gilman Hall « the Hut ». Les équipes sont les Blue Jays.",
+    "nickname": "Veritas vos liberabit",
+    "transportation": "À pied / Baltimore Penn Station",
+    "transportationFact": "Les allées de brique de Homewood se parcourent facilement à pied. Baltimore Penn Station, desservie par Amtrak et MARC, se trouve à un court trajet en voiture ou en bus au sud du campus."
+  },
+  "New York University": {
+    "airportCode": "LGA",
+    "airportInfo": "New York compte trois grands aéroports : LaGuardia, JFK et Newark. L'AirTrain relie JFK et Newark aux trains vers Manhattan.",
+    "airportName": "LaGuardia Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "Dollar américain ($)",
+    "funFact": "La plupart des bâtiments de NYU sont répartis autour de Washington Square Park, à Greenwich Village. Samuel Morse a travaillé sur le télégraphe dans le premier Main Building de l'université, à l'emplacement de l'actuel Silver Center.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le violet NYU et le blanc, et ses équipes s'appellent les Violets. Depuis 1981, la mascotte est un lynx roux.",
+    "nickname": "Persévérer et exceller",
+    "transportation": "À pied / Métro de New York",
+    "transportationFact": "La station West Fourth Street–Washington Square se trouve juste à l'ouest du parc, sur la Sixième Avenue, et la station 8th Street–NYU, sur Broadway, dessert l'est du campus."
+  },
+  "Carnegie Mellon University": {
+    "airportCode": "PIT",
+    "airportInfo": "Pittsburgh International se trouve à environ 27 km à l'ouest du centre de Pittsburgh. Le bus 28X relie l'aéroport depuis Oakland, le quartier universitaire voisin du campus.",
+    "airportName": "Pittsburgh International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "Dollar américain ($)",
+    "funFact": "Carnegie Mellon est née en 1967 de la fusion du Carnegie Institute of Technology, fondé par Andrew Carnegie en 1900, et du Mellon Institute of Industrial Research.",
+    "language": "Anglais",
+    "languageInfo": "Le campus cultive un thème écossais en l'honneur d'Andrew Carnegie : les équipes s'appellent les Tartans, la mascotte est Scotty, un scottish-terrier, et la fanfare joue en kilt.",
+    "nickname": "Mon cœur est dans le travail",
+    "transportation": "À pied / bus PRT",
+    "transportationFact": "Le campus principal est compact et se parcourt facilement à pied. Les bus de Pittsburgh Regional Transit le relient à Oakland et au centre-ville, et le 28X va d'Oakland à l'aéroport."
+  },
   "University of Chicago": {
     "airportCode": "MDW",
     "airportInfo": "Midway est le plus proche de Hyde Park des deux aéroports de Chicago, dans le South Side de la ville. O'Hare International (ORD) accueille bien plus de vols long-courriers mais implique un trajet plus long à travers la ville.",
@@ -3027,6 +3105,58 @@
     "nickname": "Le fief des Cavaliers",
     "transportation": "À pied / University Transit Service",
     "transportationFact": "Les Central Grounds autour du Lawn se parcourent facilement à pied. Les bus gratuits de l'University Transit Service desservent le reste des Grounds."
+  },
+  "Rice University": {
+    "airportCode": "HOU",
+    "airportInfo": "Hobby est le plus proche de Rice des deux grands aéroports de Houston. George Bush Intercontinental (IAH) propose bien plus de vols long-courriers, mais il faut rouler plus longtemps vers le nord.",
+    "airportName": "William P. Hobby Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "Dollar américain ($)",
+    "funFact": "À l'ouverture de Rice en 1912, les étudiants ne payaient aucun frais de scolarité, comme l'exigeaient le testament du fondateur William Marsh Rice et la première charte de l'institut.",
+    "language": "Anglais",
+    "languageInfo": "La mascotte est Sammy the Owl : quand des étudiants de Texas A&M ont volé la mascotte hibou en 1917, le télégramme codé d'un détective a annoncé « Sammy is fairly well ». Les couleurs sont le bleu et le gris.",
+    "nickname": "Lettres, Science, Art",
+    "transportation": "À pied / METRORail Red Line",
+    "transportationFact": "Le campus boisé se parcourt facilement à pied. La METRORail Red Line longe Main Street, avec la station Hermann Park/Rice U près de l'angle est du campus."
+  },
+  "Emory University": {
+    "airportCode": "ATL",
+    "airportInfo": "Hartsfield–Jackson, au sud du centre d'Atlanta, est l'aéroport le plus proche. Le campus d'Emory à Druid Hills se trouve au nord-est du centre-ville.",
+    "airportName": "Hartsfield–Jackson Atlanta International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "Dollar américain ($)",
+    "funFact": "Emory a quitté Oxford (Géorgie) pour Atlanta en 1915, après que le fondateur de Coca-Cola, Asa Griggs Candler, eut offert des terrains et un million de dollars. Henry Hornbostel a ensuite donné au campus son style de marbre rose de Géorgie et de toits de tuiles rouges.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le bleu et l'or, et ses équipes s'appellent les Eagles. Emory a deux mascottes : Swoop l'aigle et Dooley le squelette.",
+    "nickname": "Le cœur sage recherche le savoir",
+    "transportation": "À pied / Navettes Cliff d'Emory",
+    "transportationFact": "The Cliff, le réseau de navettes d'Emory, dessert le campus et les quartiers voisins. Ses bus roulent au biodiesel fabriqué à partir d'huile de cuisson recyclée."
+  },
+  "Tulane University": {
+    "airportCode": "MSY",
+    "airportInfo": "L'aéroport international Louis Armstrong de La Nouvelle-Orléans se trouve à Kenner, à environ 18 km à l'ouest du centre de La Nouvelle-Orléans.",
+    "airportName": "Louis Armstrong New Orleans International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "Dollar américain ($)",
+    "funFact": "Le campus Uptown de Tulane fait face à l'Audubon Park, de l'autre côté de St. Charles Avenue. Gibson Hall, construit en 1894, fut le premier bâtiment d'enseignement du campus, et les bâtiments du Newcomb College ont été conçus par James Gamble Rogers, l'architecte de Yale.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le vert et le bleu, et ses équipes s'appellent la Green Wave. La mascotte est Riptide le pélican.",
+    "nickname": "Non pour soi, mais pour les siens",
+    "transportation": "À pied / Tramway de St. Charles",
+    "transportationFact": "Le tramway de St. Charles s'arrête juste devant le campus et va jusqu'au centre de La Nouvelle-Orléans. McAlister Place, autrefois une rue traversant le campus, est devenue une allée piétonne en 2009."
+  },
+  "Washington University in St. Louis": {
+    "airportCode": "STL",
+    "airportInfo": "Lambert se trouve à environ 23 km au nord-ouest du centre de St. Louis. La Red Line du MetroLink dessert les deux terminaux de l'aéroport.",
+    "airportName": "St. Louis Lambert International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "Dollar américain ($)",
+    "funFact": "Brookings Hall était le bâtiment administratif de l'Exposition universelle de 1904, et le Francis Field du campus fut le stade principal des Jeux olympiques d'été de 1904, les premiers organisés dans l'hémisphère occidental.",
+    "language": "Anglais",
+    "languageInfo": "Les couleurs de l'université sont le rouge et le vert, et les équipes s'appellent les Bears, avec pour mascotte Forest l'ours.",
+    "nickname": "Per Veritatem Vis",
+    "transportation": "À pied / Campus Circulator / MetroLink",
+    "transportationFact": "Une navette gratuite, le Campus Circulator, fait le tour du Danforth Campus, et les trains de la Blue Line du MetroLink s'arrêtent à la station Skinker, juste à côté."
   },
   "Stanford University": {
     "airportCode": "SFO",
@@ -3131,5 +3261,18 @@
     "nickname": "C.U.",
     "transportation": "Pumabús / Métro",
     "transportationFact": "L'université exploite ses propres lignes gratuites de Pumabús sur son immense campus. Les stations de métro Universidad et Copilco de la ligne 3 desservent le campus."
+  },
+  "California Institute of Technology": {
+    "airportCode": "BUR",
+    "airportInfo": "L'aéroport Hollywood Burbank est le plus proche de Caltech. L'aéroport international de Los Angeles (LAX) propose bien plus de vols, mais le trajet à travers la ville est plus long.",
+    "airportName": "Hollywood Burbank Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "Dollar américain ($)",
+    "funFact": "Le Jet Propulsion Laboratory de la NASA est né des recherches sur les fusées menées au laboratoire Guggenheim de Caltech dans les années 1930, et Caltech gère toujours le JPL aujourd'hui.",
+    "language": "Anglais",
+    "languageInfo": "On écrit « Caltech », en un seul mot : l'institut considère des graphies comme « Cal Tech » comme incorrectes. La couleur de l'école est l'orange et les équipes sont les Beavers.",
+    "nickname": "La vérité vous affranchira",
+    "transportation": "À pied / Metro A Line",
+    "transportationFact": "Le campus compact se parcourt facilement à pied. Le métro léger Metro A Line s'arrête aux stations Lake et Allen, à environ un kilomètre et demi au nord du campus."
   }
 }

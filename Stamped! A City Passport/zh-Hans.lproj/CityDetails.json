@@ -2833,6 +2833,45 @@
     "transportation": "步行 / Luas 有轨电车 / 公交",
     "transportationFact": "三一学院就在都柏林市中心，步行即可轻松到达。Luas 有轨电车和许多市内公交线路都在校园周边设站。"
   },
+  "Wayne State University": {
+    "airportCode": "DTW",
+    "airportInfo": "位于底特律西南罗穆卢斯的底特律大都会韦恩县机场是密歇根州最繁忙的机场，也是进出这座城市的主要门户。",
+    "airportName": "Detroit Metropolitan Wayne County Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "带钟楼的 Old Main 是校园的中心，19 世纪 90 年代作为底特律中央高中建成。在那里开设的大学课程后来发展成了韦恩州立大学。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是绿色和金色，运动队叫 Warriors。",
+    "nickname": "Warrior Strong",
+    "transportation": "步行 / QLINE 有轨电车",
+    "transportationFact": "中城区的主校园适合步行游览。QLINE 有轨电车沿校园东侧的伍德沃德大道行驶，连接底特律市中心和新中心区。"
+  },
+  "Western Michigan University": {
+    "airportCode": "AZO",
+    "airportInfo": "位于卡拉马祖市中心东南的卡拉马祖/巴特尔克里克国际机场是最近的有定期航班的机场。",
+    "airportName": "Kalamazoo/Battle Creek International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "WMU 位于东校区的棒球场 Hyames Field 在 1947 年举办了史上第一届大学世界大赛，1948 年再次举办。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是棕色和金色，运动队叫 Broncos。",
+    "nickname": "So That All May Learn",
+    "transportation": "步行 / Metro 公交",
+    "transportationFact": "卡拉马祖的 Metro 公交车服务西密歇根大学以及城市和周边郊区。"
+  },
+  "Grand Valley State University": {
+    "airportCode": "GRR",
+    "airportInfo": "位于大急流城东南的杰拉尔德·R·福特国际机场是最近的有定期航班的机场。",
+    "airportName": "Gerald R. Ford International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "大谷州立大学是西半球仅有的三所拥有不止一座钟琴塔的机构之一：阿伦代尔的 Cook 钟琴塔和大急流城的 Beckering Family 钟琴塔。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是蓝色、黑色和白色，运动队叫 Lakers。",
+    "nickname": "Lakers 之家",
+    "transportation": "步行 / Laker Line 公交",
+    "transportationFact": "由 The Rapid 运营的 Laker Line 公交车沿密歇根湖大道连接阿伦代尔校园和大急流城市中心的 GVSU 校区，并向公众开放。"
+  },
   "Yale University": {
     "airportCode": "BDL",
     "airportInfo": "哈特福德附近的布拉德利机场在纽黑文以北约一小时车程处。许多游客也会飞到纽约，再乘 Metro-North 的 New Haven Line 直达 Union Station。",
@@ -2963,6 +3002,45 @@
     "transportation": "步行 / GUTS 接驳车",
     "transportationFact": "乔治城没有自己的地铁站，因此大学的免费 GUTS 接驳巴士连接校园和附近的地铁站。山顶校园本身步行很方便。"
   },
+  "Johns Hopkins University": {
+    "airportCode": "BWI",
+    "airportInfo": "位于巴尔的摩南部的 BWI 机场是最近的大型机场。MARC 和美铁列车连接机场与离校园不远的巴尔的摩宾州车站。",
+    "airportName": "Baltimore/Washington International Thurgood Marshall Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "约翰斯·霍普金斯大学于 1876 年仿照欧洲研究型大学的模式开办，被视为美国第一所研究型大学。",
+    "language": "英语",
+    "languageInfo": "学生把米尔顿·S·艾森豪威尔图书馆叫作“MSE”，把吉尔曼楼里的老哈茨勒阅览室叫作“the Hut”。运动队名为蓝鸟队（Blue Jays）。",
+    "nickname": "Veritas vos liberabit",
+    "transportation": "步行 / 巴尔的摩宾州车站",
+    "transportationFact": "霍姆伍德校园的砖砌小路适合步行。有美铁和 MARC 列车停靠的巴尔的摩宾州车站，位于校园以南，开车或乘公交很快就到。"
+  },
+  "New York University": {
+    "airportCode": "LGA",
+    "airportInfo": "纽约有三座主要机场：拉瓜迪亚、肯尼迪（JFK）和纽瓦克。AirTrain 将肯尼迪和纽瓦克机场与开往曼哈顿的列车相连。",
+    "airportName": "LaGuardia Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "纽约大学的大部分建筑分布在格林尼治村的华盛顿广场公园周围。塞缪尔·莫尔斯曾在大学最早的主楼里研究电报，那里就是今天银色中心（Silver Center）的所在地。",
+    "language": "英语",
+    "languageInfo": "校色为 NYU 紫和白色，运动队名为 Violets（紫罗兰队）。吉祥物自 1981 年起是一只短尾猫。",
+    "nickname": "坚持不懈，追求卓越",
+    "transportation": "步行 / 纽约地铁",
+    "transportationFact": "West Fourth Street–Washington Square 站就在公园西边的第六大道上，百老汇上的 8th Street–NYU 站则服务校园东侧。"
+  },
+  "Carnegie Mellon University": {
+    "airportCode": "PIT",
+    "airportInfo": "匹兹堡国际机场位于匹兹堡市中心以西约 27 公里。28X 路公交车从校园旁的大学区奥克兰开往机场。",
+    "airportName": "Pittsburgh International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "卡内基梅隆大学成立于 1967 年，由安德鲁·卡内基于 1900 年创办的卡内基理工学院与梅隆工业研究所合并而成。",
+    "language": "英语",
+    "languageInfo": "为纪念安德鲁·卡内基，校园充满苏格兰元素：校队名为 Tartans（格子呢），吉祥物是苏格兰梗犬 Scotty，乐队则穿着苏格兰短裙演奏。",
+    "nickname": "我心在工作",
+    "transportation": "步行 / PRT 公交",
+    "transportationFact": "主校区紧凑，步行即可游览。匹兹堡地区交通局（PRT）的公交车连接奥克兰和市中心，28X 路从奥克兰开往机场。"
+  },
   "University of Chicago": {
     "airportCode": "MDW",
     "airportInfo": "中途机场（Midway）是芝加哥两个机场中离城市南区海德公园更近的一个。奥黑尔国际机场（ORD）的远程航班多得多，但要横穿城市，路程更远。",
@@ -3027,6 +3105,58 @@
     "nickname": "骑士之家",
     "transportation": "步行 / University Transit Service",
     "transportationFact": "the Lawn 周围的中央校园（Central Grounds）步行很方便。免费的 University Transit Service 巴士连接校园其他区域。"
+  },
+  "Rice University": {
+    "airportCode": "HOU",
+    "airportInfo": "在休斯敦两大机场中，霍比机场离莱斯大学更近。乔治·布什洲际机场（IAH）长途航班多得多，但要向北开更远的路。",
+    "airportName": "William P. Hobby Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "莱斯大学 1912 年开学时，依照创办人威廉·马什·莱斯的遗嘱和学院最初的章程，学生完全不交学费。",
+    "language": "英语",
+    "languageInfo": "吉祥物是猫头鹰萨米（Sammy the Owl）：1917 年德州农工大学的学生偷走了猫头鹰吉祥物，一位侦探发回的密电称“Sammy is fairly well”。校色是蓝色和灰色。",
+    "nickname": "文学、科学、艺术",
+    "transportation": "步行 / METRORail 红线",
+    "transportationFact": "绿树成荫的校园适合步行游览。METRORail 红线沿主街（Main Street）运行，Hermann Park/Rice U 站靠近校园东角。"
+  },
+  "Emory University": {
+    "airportCode": "ATL",
+    "airportInfo": "亚特兰大市中心以南的哈茨菲尔德–杰克逊机场是最近的机场。埃默里大学的德鲁伊山校区位于市中心东北方向。",
+    "airportName": "Hartsfield–Jackson Atlanta International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "可口可乐创始人阿萨·格里格斯·坎德勒捐出土地和一百万美元后，埃默里于 1915 年从佐治亚州牛津迁到亚特兰大。随后亨利·霍恩博斯特尔用粉色佐治亚大理石和红瓦屋顶奠定了校园的风貌。",
+    "language": "英语",
+    "languageInfo": "校色为蓝色和金色，运动队名为 Eagles（老鹰队）。埃默里有两个吉祥物：老鹰 Swoop 和骷髅 Dooley。",
+    "nickname": "智慧之心求知识",
+    "transportation": "步行 / 埃默里 Cliff 接驳车",
+    "transportationFact": "埃默里的接驳车系统 The Cliff 往返于校园和周边社区。车辆使用回收食用油制成的生物柴油。"
+  },
+  "Tulane University": {
+    "airportCode": "MSY",
+    "airportInfo": "路易斯·阿姆斯特朗新奥尔良国际机场位于肯纳，在新奥尔良市中心以西约 18 公里。",
+    "airportName": "Louis Armstrong New Orleans International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "杜兰大学的 Uptown 校区隔着圣查尔斯大道与奥杜邦公园相望。建于 1894 年的吉布森楼是校园里第一座教学楼，纽科姆学院的建筑则由以耶鲁校园闻名的建筑师詹姆斯·甘布尔·罗杰斯设计。",
+    "language": "英语",
+    "languageInfo": "校色为绿色和蓝色，运动队名为 Green Wave（绿浪队）。吉祥物是鹈鹕 Riptide。",
+    "nickname": "不为自己，而为自己人",
+    "transportation": "步行 / 圣查尔斯有轨电车",
+    "transportationFact": "圣查尔斯有轨电车就停在校园正门前，并开往新奥尔良市中心。曾经穿过校园中央的道路 McAlister Place 于 2009 年改为步行道。"
+  },
+  "Washington University in St. Louis": {
+    "airportCode": "STL",
+    "airportInfo": "兰伯特机场位于圣路易斯市中心西北约 23 公里。MetroLink 红线在机场两座航站楼均设站。",
+    "airportName": "St. Louis Lambert International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "布鲁金斯楼曾是 1904 年世界博览会的行政大楼，校园内的弗朗西斯球场则是 1904 年夏季奥运会的主体育场，那是西半球首次举办的奥运会。",
+    "language": "英语",
+    "languageInfo": "学校代表色为红色和绿色，校队名为 Bears（熊队），吉祥物是一只名叫 Forest 的熊。",
+    "nickname": "Per Veritatem Vis",
+    "transportation": "步行 / Campus Circulator 校园巴士 / MetroLink",
+    "transportationFact": "免费的 Campus Circulator 校园巴士环绕丹佛斯校区运行，MetroLink 蓝线列车停靠校区旁的 Skinker 站。"
   },
   "Stanford University": {
     "airportCode": "SFO",
@@ -3131,5 +3261,18 @@
     "nickname": "C.U.",
     "transportation": "Pumabús / 地铁",
     "transportationFact": "大学在偌大的校园里开设了自己的免费 Pumabús 线路。地铁 3 号线的 Universidad 站和 Copilco 站服务于校园。"
+  },
+  "California Institute of Technology": {
+    "airportCode": "BUR",
+    "airportInfo": "好莱坞伯班克机场是离加州理工学院最近的机场。洛杉矶国际机场（LAX）航班多得多，但需要穿越市区，路程更长。",
+    "airportName": "Hollywood Burbank Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "NASA 喷气推进实验室源于 20 世纪 30 年代加州理工学院古根海姆实验室的火箭研究，至今仍由加州理工学院管理。",
+    "language": "英语",
+    "languageInfo": "校名写作“Caltech”，是一个词：学校认为“Cal Tech”之类的写法是错误的。校色是橙色，运动队名为河狸队（Beavers）。",
+    "nickname": "真理必叫你们得以自由",
+    "transportation": "步行 / 地铁 A 线",
+    "transportationFact": "校园紧凑，步行即可游览。轻轨地铁 A 线停靠校园以北约 1.6 公里的 Lake 站和 Allen 站。"
   }
 }
