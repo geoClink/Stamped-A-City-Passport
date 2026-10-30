@@ -142,6 +142,19 @@
     "transportation": "트랜스자카르타 & MRT",
     "transportationFact": "TransJakarta는 세계에서 가장 긴 고속버스 시스템이며 도시의 교통 정체를 피하기 위해 전용 차선을 활용합니다. 새로운 자카르타 MRT는 도시의 주요 남북 통로에 빠르고 현대적인 지하철 대안을 제공합니다. Railink 공항 열차는 수카르노-하타(Soekarno-Hatta)와 도심 사이를 에어컨이 완비된 프리미엄 연결로 제공합니다."
   },
+  "Baltimore": {
+    "airportCode": "BWI",
+    "airportInfo": "볼티모어/워싱턴 국제 서굿 마셜 공항은 다운타운에서 남쪽으로 약 9마일 떨어져 있으며, 볼티모어 출신으로 미국 연방대법원 최초의 아프리카계 미국인 대법관이 된 서굿 마셜의 이름을 따왔습니다. 사우스웨스트 항공의 주요 운항 기지입니다. 공항 부지 내 기차역에서 암트랙과 MARC 열차로 갈아탈 수 있고, 라이트 레일링크는 콩코스 E 바로 옆에 정차합니다.",
+    "airportName": "BWI Marshall",
+    "currencyCode": "USD",
+    "currencyInfo": "미국 달러($)",
+    "funFact": "1814년 9월 영국군이 포트 맥헨리를 포격했을 때, 새벽까지 여전히 휘날리던 성조기를 본 프랜시스 스콧 키가 시를 썼고 이것이 미국 국가 '성조기(The Star-Spangled Banner)'가 되었습니다. 이 도시에는 독립 이후 미국에서 처음 세워진 가톨릭 대성당도 있습니다.",
+    "language": "영어",
+    "languageInfo": "어디서나 영어가 쓰이며, 주민들은 도시의 별명을 무척 아낍니다. 볼티모어는 '참 시티(Charm City)' 또는 줄여서 '비모어(B'more)'로 불리며, 옛 별명 '몹타운(Mobtown)'은 19세기의 떠들썩했던 과거를 떠올리게 합니다.",
+    "nickname": "참 시티",
+    "transportation": "라이트 레일링크",
+    "transportationFact": "메릴랜드 교통국이 라이트 레일링크와 메트로 서브웨이링크, 그리고 볼티모어링크 버스망을 운영합니다. 무료인 참 시티 서큘레이터 버스는 다운타운을 순환하며 펠스 포인트, 페더럴 힐, 포트 맥헨리까지 운행합니다. 볼티모어 펜 역은 도시를 암트랙 북동 회랑과 연결합니다."
+  },
   "Bangkok": {
     "airportCode": "BKK",
     "airportInfo": "수완나품 공항은 아름다운 황금 지붕 건축물을 자랑하며 태국 전통 신화와 불교 예술을 묘사한 거대한 조각상으로 장식되어 있습니다. 이 공항은 인스타그램에서 세계에서 가장 사진이 많이 찍히는 장소 중 하나이며, 거대한 유리 터미널과 동남아시아로 향하는 주요 관문 역할로 잘 알려져 있습니다.",
@@ -232,6 +245,19 @@
     "nickname": "그레이 시티",
     "transportation": "U반 및 S반",
     "transportationFact": "U-Bahn은 지하 지하철인 반면, S-Bahn은 주로 도시 전역의 고가 선로에서 운행됩니다. 베를린의 대중교통은 역 입구에 회전문이 없는 '명예 시스템'으로 운영됩니다. 노란색 BVG 버스와 동부의 포괄적인 트램 네트워크가 도시의 통합 대중교통을 완성합니다."
+  },
+  "Bilbao": {
+    "airportCode": "BIO",
+    "airportInfo": "빌바오 공항은 시내에서 북쪽으로 약 9km 떨어진 로이우에 있으며, 바스크 지방과 스페인 북부 전체에서 가장 붐비는 공항입니다. 2000년에 문을 연 메인 터미널은 산티아고 칼라트라바가 설계한 것으로, 그 자체로 하나의 건축 명소입니다. 아직 지하철이 공항까지 연결되지는 않지만 3호선 연장이 계획되어 있습니다.",
+    "airportName": "Bilbao Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "유로(€)",
+    "funFact": "빌바오는 1300년 비스카야의 영주 디에고 로페스 5세 데 아로가 부여한 도시 헌장으로 세워졌습니다. 1997년 구겐하임 미술관의 개관은 극적인 도시 재생을 일으켜, 오늘날 전 세계 도시계획가들은 이를 '빌바오 효과'라고 부릅니다. 산으로 둘러싸인 계곡에 자리해 있어 주민들은 애정을 담아 도시를 '엘 보초(구멍)'라고 부릅니다.",
+    "language": "스페인어 및 바스크어",
+    "languageInfo": "빌바오에서 가장 많이 쓰이는 언어는 스페인어이며, 그다음이 바스크 지방 전역의 공용어인 바스크어(에우스카라)입니다. 시에 따르면 주민의 절반 이상이 어느 정도 바스크어를 구사하며, 학교에서는 이중 언어 교육 과정을 선택할 수 있습니다. 거리 표지판부터 아스쿠나 센트로아, 이소자키 아테아 같은 명소까지 곳곳에서 바스크어 이름을 볼 수 있습니다.",
+    "nickname": "엘 보초",
+    "transportation": "지하철 및 트램",
+    "transportationFact": "빌바오 지하철은 1995년 노먼 포스터가 설계한 역들과 함께 개통했으며, 곡선형 유리 출입구는 건축가의 이름을 따 '포스테리토스'라고 불립니다. 현재 세 개의 노선이 사스피칼레아크/카스코 비에호 역에서 만나며, 2002년부터는 현대식 트램도 도심을 달립니다. 도심에서 출발하는 푸니쿨라를 타면 아르찬다 산에 올라 강어귀를 한눈에 내려다볼 수 있습니다."
   },
   "Bogotá": {
     "airportCode": "BOG",
@@ -415,6 +441,32 @@
     "transportation": "트랜스자카르타 & MRT",
     "transportationFact": "TransJakarta는 세계에서 가장 긴 고속버스 시스템이며 도시의 교통 정체를 피하기 위해 전용 차선을 활용합니다. 새로운 자카르타 MRT는 도시의 주요 남북 통로에 빠르고 현대적인 지하철 대안을 제공합니다. Railink 공항 열차는 수카르노-하타(Soekarno-Hatta)와 도심 사이를 에어컨이 완비된 프리미엄 연결로 제공합니다."
   },
+  "Chandigarh": {
+    "airportCode": "IXC",
+    "airportInfo": "찬디가르 공항의 정식 명칭은 샤히드 바가트 싱 국제공항이며, 인도 공군과 부지를 함께 사용합니다. 흥미롭게도 활주로는 찬디가르에 있지만, 2015년에 문을 연 현대식 터미널은 경계 너머 펀자브주 모할리에 자리하고 있습니다.",
+    "airportName": "Chandigarh Airport",
+    "currencyCode": "INR",
+    "currencyInfo": "인도 루피(₹)",
+    "funFact": "찬디가르는 독립 이후 인도에서 처음 건설된 계획도시 중 하나로, 르 코르뷔지에가 펀자브의 새 주도로 설계했습니다. 도시 이름은 근처에 있는 찬디 여신의 사원에서 유래한 '찬디의 요새'라는 뜻이며, 캐피톨 콤플렉스는 2016년 유네스코 세계문화유산으로 지정되었습니다.",
+    "language": "힌디어 및 펀자브어",
+    "languageInfo": "찬디가르에서 가장 많이 쓰이는 언어는 힌디어이고 그다음이 펀자브어이며, 연방 직할지의 공용어는 영어입니다. 공립학교에서는 세 언어로 된 교과서를 모두 사용합니다.",
+    "nickname": "시티 뷰티풀",
+    "transportation": "CTU 버스",
+    "transportationFact": "르 코르뷔지에는 찬디가르에 '레 세트 부아(7개의 길)'라는 7단계 도로 체계를 도입해 빠른 차량 흐름을 자전거와 보행자로부터 분리했습니다. 대중교통은 찬디가르 교통공사(CTU)가 운영하며 버스는 17구역과 43구역의 터미널에서 출발합니다. 또한 이 도시는 1인당 차량 수가 인도에서 가장 많습니다."
+  },
+  "Charleston": {
+    "airportCode": "CHS",
+    "airportInfo": "찰스턴 국제공항은 사우스캐롤라이나주에서 가장 붐비는 여객 공항으로, 다운타운에서 북서쪽으로 약 12마일 떨어진 노스찰스턴에 있습니다. 이웃한 찰스턴 공군기지와 활주로를 함께 쓰는 독특한 공항입니다.",
+    "airportName": "Charleston Int'l",
+    "currencyCode": "USD",
+    "currencyInfo": "미국 달러($)",
+    "funFact": "찰스턴은 1670년 잉글랜드 국왕 찰스 2세를 기리는 '찰스 타운'이라는 이름으로 세워졌고, 1680년에 지금의 반도로 옮겨졌습니다. 1690년대에는 이미 북미에서 다섯 번째로 큰 도시로 성장했습니다.",
+    "language": "영어",
+    "languageInfo": "찰스턴에는 독특한 억양이 있어, 나이 든 토박이들은 'r' 발음을 생략하고 고향 이름을 'Chalston'처럼 발음합니다. 지역 말투는 시아일랜드와 로컨트리의 크리올어인 굴라어의 영향도 받았으며, 일부 아프리카계 주민들은 지금도 이 언어를 사용합니다.",
+    "nickname": "홀리 시티",
+    "transportation": "CARTA",
+    "transportationFact": "찰스턴 지역 교통국(CARTA)은 도시 전역에서 정규 노선버스를 운행하며, 모든 버스에 자전거 거치대가 있습니다. 다운타운 에어리어 셔틀 트롤리 버스가 역사 지구의 명소와 호텔을 연결합니다. 장애가 있는 승객을 위한 문 앞 픽업 서비스도 제공합니다."
+  },
   "Chengdu": {
     "airportCode": "TFU",
     "airportInfo": "Chengdu Tianfu International Airport, opened in 2021, is one of China's newest major airports and serves as a gateway to western China. It complements the older Chengdu Shuangliu Airport (CTU) which remains operational. Tianfu is one of the largest airports in China by area and is designed to eventually become a global hub connecting western China to the world.",
@@ -479,6 +531,19 @@
     "nickname": "상업 수도",
     "transportation": "CTB Buses & Tuk-tuks",
     "transportationFact": "Colombo's primary public transport is the CTB (Ceylon Transport Board) bus network, supplemented by private buses on the same routes. Three-wheelers (tuk-tuks) are ubiquitous and the most practical way for visitors to navigate the city. Colombo's commuter rail connects the city center to suburbs along the coast. A light rail transit project (LRT) is under construction to create a modern rapid transit option for the city's growing population."
+  },
+  "Columbus, Indiana": {
+    "airportCode": "IND",
+    "airportInfo": "콜럼버스에는 정기 항공편이 없어서 대부분의 방문객은 북쪽으로 직선거리 약 65km 떨어진 인디애나폴리스 국제공항을 이용합니다. 이 공항은 2025년에 1,060만 명이 넘는 승객을 처리했으며, 도시 바로 북쪽의 작은 콜럼버스 시립 공항은 개인 비행에 쓰입니다.",
+    "airportName": "Indianapolis International",
+    "currencyCode": "USD",
+    "currencyInfo": "미국 달러($)",
+    "funFact": "인구 약 5만 명의 콜럼버스는 현대 건축으로 세계적으로 유명합니다. 엔진 제조사 커민스의 수장 J. 어윈 밀러는 건축주가 일류 설계사무소 목록에서 건축가를 고르면 커민스 재단이 공공건물의 설계비를 대신 내 주는 프로그램을 만들었습니다. 그 결과 엘리엘·에로 사리넨, I. M. 페이, 해리 위즈, 로버트 벤투리의 작품이 들어섰고, 국가 사적 랜드마크도 7곳이나 됩니다.",
+    "language": "영어",
+    "languageInfo": "어디서나 영어가 통하며, 인디애나 남부 특유의 느긋한 억양을 들을 수 있습니다. 인디애나 사람들은 오래전부터 스스로를 '후지어(Hoosier)'라고 부르며, 이 말은 도시 곳곳에서 들립니다.",
+    "nickname": "대초원의 아테네",
+    "transportation": "ColumBUS & 도보",
+    "transportationFact": "시내버스 ColumBUS는 월요일부터 토요일까지 5개 노선을 운행합니다. 시내에서는 유명 건축물 상당수가 몇 블록 안에 모여 있어 걸어서 둘러보는 것이 가장 좋습니다. 주간 고속도로 65번은 도시 서쪽을 지나고, 인디애나 주도 46번은 남부를 가로지릅니다."
   },
   "Copenhagen": {
     "airportCode": "CPH",
@@ -662,6 +727,19 @@
     "transportation": "ATAF Buses & Trams",
     "transportationFact": "Florence's historic center is designated a Limited Traffic Zone (ZTL), restricting private cars from the medieval streets during much of the day. The city is best explored on foot or by bicycle — a popular bike-sharing network called Mobike operates throughout the center. The T1 and T2 tram lines connect the main train station to the outlying neighborhoods, while orange ATAF buses serve the wider metropolitan area."
   },
+  "Fort Worth": {
+    "airportCode": "DFW",
+    "airportInfo": "1974년 댈러스와 포트워스의 거의 중간 지점에 문을 연 DFW는 17,000에이커가 넘는 부지를 차지해 덴버에 이어 미국에서 두 번째로 큰 공항입니다. 아메리칸 항공의 최대 허브이며 자체 경찰, 소방, 응급 의료 서비스까지 운영합니다.",
+    "airportName": "Dallas/Fort Worth",
+    "currencyCode": "USD",
+    "currencyInfo": "미국 달러($)",
+    "funFact": "포트워스는 1849년 트리니티강을 내려다보는 절벽 위의 육군 전초기지로 시작해 텍사스 롱혼 소 거래의 중심지로 성장했으며, 이로 인해 '카우타운'이라는 별명을 얻었습니다. 오늘날 텍사스에서 네 번째로 인구가 많은 도시로, 카우보이 전통과 함께 루이스 칸, 안도 다다오, 필립 존슨이 설계한 미술관을 자랑합니다.",
+    "language": "영어",
+    "languageInfo": "현지인들은 따뜻한 북부 텍사스 억양의 영어를 사용하며, 여러 사람을 부를 때는 'y'all'이라는 표현을 일상적으로 씁니다. 도시의 모토인 'Where the West Begins(서부가 시작되는 곳)'는 대화 속에서 느껴지는 친근하고 여유로운 서부의 정신을 잘 보여 줍니다.",
+    "nickname": "카우타운",
+    "transportation": "TEXRail",
+    "transportationFact": "TEXRail은 포트워스 시내의 T&P 역에서 DFW 공항 터미널 B까지 27.2마일을 달리며 9개 역에 정차합니다. 트리니티 철도 익스프레스는 포트워스 시내와 댈러스 시내를 연결하며, 포트워스 센트럴 역은 트리니티 메트로 버스의 주요 환승 거점입니다."
+  },
   "Fortaleza": {
     "airportCode": "GRU",
     "airportInfo": "브라질의 주요 국제 관문인 과룰류스는 남미에서 승객 수 기준으로 가장 분주한 공항입니다. 월드컵과 올림픽을 위해 대폭 현대화한 대규모 복합 단지로, 다양한 고급 편의시설을 갖춘 장거리 국제선 전용 터미널을 갖추고 있습니다.",
@@ -687,6 +765,19 @@
     "nickname": "하\\가다",
     "transportation": "Fukuoka City Subway & Nishitetsu",
     "transportationFact": "Fukuoka has three city subway lines that efficiently connect the airport, Hakata Station, and the main entertainment districts. The private Nishitetsu railway extends to southern Kyushu cities. Hakata Station is also a shinkansen hub, with bullet trains reaching Osaka in under 2.5 hours and Tokyo in 5 hours. The compact, walkable city center makes many of the best food and cultural experiences reachable on foot."
+  },
+  "Glasgow": {
+    "airportCode": "GLA",
+    "airportInfo": "글래스고 공항은 렌프루셔에 있으며 시내 중심에서 서쪽으로 약 13km 떨어져 있고, 중앙 버스 터미널까지 직행버스가 다닙니다. 글래스고 전용 공항 두 곳 중 더 큰 공항이며, 남서쪽으로 약 30마일 떨어진 글래스고 프레스트윅 공항은 글래스고 센트럴역에서 직통 열차로 갈 수 있습니다. 에든버러 공항도 쉽게 이용할 수 있습니다.",
+    "airportName": "Glasgow Airport",
+    "currencyCode": "GBP",
+    "currencyInfo": "파운드 스털링(£)",
+    "funFact": "글래스고는 1990년 유럽 문화 수도, 1999년 영국 건축·디자인 도시로 선정되었습니다. 빅토리아 시대의 번영으로 '대영제국 제2의 도시'라는 이름을 얻었고, 그 시절의 웅장한 건축물 상당수가 지금도 거리를 채우고 있습니다. 또한 찰스 레니 매킨토시의 도시로, 그의 건물들이 가넷힐에서 메리힐까지 곳곳에 흩어져 있습니다.",
+    "language": "영어",
+    "languageInfo": "어디서나 영어가 통하지만 보통 강한 글래스고 억양에 스코츠어 단어가 많이 섞입니다. 도시 이름은 브리튼어에서 왔으며 흔히 '사랑스러운 초록의 땅'이라는 뜻이라고 합니다. 스코틀랜드 게일어로는 글라슈, 스코츠어로는 글레스카라고 부릅니다.",
+    "nickname": "사랑스러운 초록의 땅",
+    "transportation": "글래스고 지하철 & 기차",
+    "transportationFact": "글래스고 지하철은 런던 지하철과 부다페스트 지하철에 이어 세계에서 세 번째로 오래된 지하철이며, 영국에서 유일하게 완전히 지하로만 다니는 메트로입니다. 지하철은 지역 교통 당국인 SPT가 운영하며, 이와 함께 넓은 근교 철도망이 있습니다. 글래스고와 에든버러 사이에는 직통 철도 노선이 4개 있습니다."
   },
   "Guadalajara": {
     "airportCode": "GDL",
@@ -817,6 +908,19 @@
     "nickname": "Egoli",
     "transportation": "Gautrain & Rea Vaya BRT",
     "transportationFact": "The Gautrain rapid rail system connects O.R. Tambo Airport to the financial hub of Sandton in just 15 minutes — one of the fastest airport-to-city rail links in Africa. It continues to Pretoria, the administrative capital, making it a vital regional connector. The Rea Vaya Bus Rapid Transit system operates on dedicated bus lanes through the city. For most visitors, private ride-hailing apps are the most practical way to get around."
+  },
+  "Kansas City": {
+    "airportCode": "MCI",
+    "airportInfo": "캔자스시티 국제공항은 1972년 미드콘티넨트 국제공항이라는 이름으로 개항했으며, 도심에서 북서쪽으로 약 15마일 떨어진 10,680에이커 부지에 자리하고 있습니다. 2023년에 완공된 새 터미널 단지가 기존 터미널을 대체했습니다.",
+    "airportName": "Kansas City International",
+    "currencyCode": "USD",
+    "currencyInfo": "미국 달러($)",
+    "funFact": "캔자스시티는 광범위한 분수 시스템으로 국제적인 명성을 얻어 '분수의 도시'라는 별명을 갖게 되었습니다. 미주리주에서 인구가 가장 많은 이 도시는 캔자스시티 재즈와 독특한 스타일의 바비큐로도 유명합니다.",
+    "language": "영어",
+    "languageInfo": "여유로운 중서부 억양의 영어를 사용합니다. 현지인들은 도시 이름을 흔히 'KC'로 줄여 부르며, 주 경계의 미주리 쪽임을 분명히 할 때는 'KCMO'라고 합니다.",
+    "nickname": "분수의 도시",
+    "transportation": "KC 스트리트카",
+    "transportationFact": "KC 스트리트카는 2016년에 개통했으며, 특별 교통개발지구가 비용을 부담하기 때문에 무료로 탈 수 있습니다. 2025년과 2026년의 연장으로 노선은 6.4마일, 19개 정류장으로 늘어나 북쪽의 버클리 리버프론트 공원에서 남쪽의 미주리 대학교 캔자스시티 캠퍼스까지 이어집니다."
   },
   "Kathmandu": {
     "airportCode": "KTM",
@@ -1195,6 +1299,19 @@
     "transportation": "Tramway de Nice",
     "transportationFact": "Nice's modern tramway has three lines connecting the old town, the port, the airport, and the university districts. Line 1's cross-city route connects the main train station to the seafront. The city's extensive pedestrian zones along the waterfront and through the Vieux-Nice (old town) make the city extremely walkable. Ferries connect the old port to Corsica and Sardinia."
   },
+  "Oak Park": {
+    "airportCode": "ORD",
+    "airportInfo": "시카고 시 경계 바로 서쪽에 자리한 오크파크를 찾는 방문객에게 오헤어 국제공항은 주요 관문입니다. 시카고와 오크파크를 잇는 주요 고속도로인 아이젠하워 고속도로를 통해 공항까지도 연결됩니다.",
+    "airportName": "O'Hare Int'l",
+    "currencyCode": "USD",
+    "currencyInfo": "미국 달러($)",
+    "funFact": "오크파크에는 세계에서 가장 많은 프랭크 로이드 라이트 설계 주택이 모여 있습니다. 라이트는 1889년 이 마을에 정착해 경력의 첫 20년을 이곳에서 보냈습니다. 또한 이 마을은 설립 당시부터 '금주' 지역이어서, 1973년 식당과 호텔이 식사와 함께 술을 낼 수 있게 되기 전까지 주류 판매가 금지되었습니다.",
+    "language": "영어",
+    "languageInfo": "시카고와 맞닿은 이 푸르른 마을에서는 영어를 사용하며, 대도시와 같은 넓은 중서부 억양을 들을 수 있습니다. 문학적 뿌리도 깊어, 어니스트 헤밍웨이가 이곳에서 태어났고 타잔의 작가 에드거 라이스 버로스는 마을 안의 세 집에서 살았습니다.",
+    "nickname": "더 빌리지",
+    "transportation": "CTA 'L' & 메트라",
+    "transportationFact": "CTA 'L'의 그린 라인과 블루 라인 두 노선이 오크파크와 시카고 도심을 바로 연결합니다. 메트라의 유니언 퍼시픽 웨스트 라인은 마을 중심의 오크파크역에 정차합니다. CTA와 페이스(Pace) 버스가 마을 내 노선과 인근 교외로의 연결을 담당합니다."
+  },
   "Orlando": {
     "airportCode": "MCO",
     "airportInfo": "공항은 거대한 실내 열대 아트리움과 주요 허브에서 에어사이드 터미널까지 승객을 수송하는 자동화된 모노레일로 유명합니다. MCO는 맥코이 공군 기지(McCoy Air Force Base)의 약자로, 이곳이 글로벌 관광 관문이 되기 전 군사 시설로 사용되던 장소에 대한 찬사입니다.",
@@ -1233,6 +1350,19 @@
     "nickname": "The Tiger City",
     "transportation": "T-bane & Trams",
     "transportationFact": "Oslo's T-bane (metro) has six lines that converge in the city center and fan out to the suburbs. The Ruter transit authority integrates the metro, trams, buses, and ferries to the Oslofjord islands under a single ticketing system. Oslo's electric trams are among the oldest continuously operating tram lines in the world. The city has invested heavily in cycling infrastructure and electric vehicles — Oslo has more EVs per capita than almost any city on Earth."
+  },
+  "Palm Springs": {
+    "airportCode": "PSP",
+    "airportInfo": "팜스프링스 국제공항은 시내에서 동쪽으로 불과 3km 거리에 있어 착륙 후 곧바로 수영장으로 향할 수 있습니다. 제2차 세계대전 당시 육군 비행장에서 출발한 이 공항은 게이트 사이의 야외 통로로 유명하며, 2011년 '미국에서 가장 스트레스 없는 공항' 목록에서 3위에 올랐습니다.",
+    "airportName": "Palm Springs Int'l",
+    "currencyCode": "USD",
+    "currencyInfo": "미국 달러($)",
+    "funFact": "팜스프링스 에어리얼 트램웨이는 세계에서 가장 큰 회전식 케이블카로, 치노 캐니언을 따라 해발 8,516피트의 산악 정류장까지 승객을 실어 나릅니다. 매년 2월 이 도시는 유명한 미드센추리 건축을 기념하는 '모더니즘 위크'를 열어 11일 동안 투어, 영화, 강연을 선보입니다.",
+    "language": "영어",
+    "languageInfo": "이 사막 휴양지의 일상 언어는 영어이지만, 계곡에서 가장 오래된 목소리는 약 2,000년 전 이곳에 정착해 이빌유앗어를 사용한 카우이야족의 것입니다. 겨울이면 '스노버드'라 불리는 피한객이 몰려와 인구가 약 세 배로 늘어나는데, 대부분 캐나다에서 옵니다.",
+    "nickname": "사막 모더니즘의 수도",
+    "transportation": "선라인 트랜싯",
+    "transportationFact": "선라인 트랜싯 에이전시가 팜스프링스를 비롯한 코첼라 밸리 전역의 버스망을 운영합니다. 암트랙의 선셋 리미티드와 텍사스 이글이 함께 운행하는 열차가 일주일에 세 번 팜스프링스역에 정차합니다. 암트랙 스루웨이 버스는 시내와 공항을 리버사이드, 패서디나 등의 도시와 연결합니다."
   },
   "Paris": {
     "airportCode": "CDG",
@@ -1429,6 +1559,19 @@
     "transportation": "ATAC 메트로",
     "transportationFact": "로마 지하철의 확장은 건설 인력이 고대 유적을 자주 발견하기 때문에 지연되는 경우가 많습니다. 고주파 트램은 지하철 노선으로는 접근할 수 없는 역사적인 지역의 많은 지역을 운행합니다. 레오나르도 익스프레스(Leonardo Express)는 공항과 테르미니 중앙역을 연결하는 직행 전용 열차입니다."
   },
+  "Rotterdam": {
+    "airportCode": "RTM",
+    "airportInfo": "로테르담 헤이그 공항은 시내에서 약 5.5km 떨어져 있으며 로테르담과 헤이그 두 도시를 함께 담당합니다. 오랫동안 제스티엔호번이라는 이름으로 알려졌던 이 공항은 1956년 10월에 공식 개항했으며, 2019년에는 200만 명이 넘는 승객이 이용했습니다.",
+    "airportName": "Rotterdam The Hague",
+    "currencyCode": "EUR",
+    "currencyInfo": "유로(€)",
+    "funFact": "로테르담의 역사는 1270년경 로테강에 쌓은 댐에서 시작되었고, 이것이 도시 이름의 유래가 되었습니다. 1940년 독일군의 폭격으로 옛 도심 대부분이 파괴된 뒤 도시는 과감한 현대 건축의 전시장으로 다시 태어났으며, 오늘날에는 유럽 최대의 항구도 품고 있습니다.",
+    "language": "네덜란드어",
+    "languageInfo": "공용어는 네덜란드어이며, 상점이나 트램, 시장에서 들리는 말도 네덜란드어입니다. 또한 180개가 넘는 국적의 사람들이 살고 있을 만큼 국제적인 도시입니다.",
+    "nickname": "유럽의 관문",
+    "transportation": "RET 메트로",
+    "transportationFact": "로테르담은 1968년 네덜란드 최초의 지하철 노선을 개통했습니다. 길이 5.9km의 짧은 노선으로, 니우어마스강 아래를 터널로 지났습니다. 현재 RET가 지역 전역에서 지하철, 트램, 버스를 운행하며, 트램은 자동차, 자전거, 보행자와 나란히 에라스뮈스 다리를 건넙니다."
+  },
   "Salzburg": {
     "airportCode": "SZG",
     "airportInfo": "Salzburg Airport Wolfgang Amadeus Mozart, named after the city's most famous son, is one of Austria's most scenic airports, with the Alps rising directly behind the runways. It is Austria's second largest airport and serves as a winter gateway for skiers heading to the nearby Salzburg ski region. A direct bus connects the terminal to the city center in 15 minutes.",
@@ -1441,6 +1584,19 @@
     "nickname": "잘츠부르크",
     "transportation": "Salzburg Buses & Trolleybuses",
     "transportationFact": "Salzburg's city center is compact and highly walkable — the old town can be crossed on foot in about 20 minutes. The city's bus network and electric trolleybuses (O-Buses) serve the broader metropolitan area. Funicular railways connect the riverside old town to the fortress above and the Mönchsberg plateau. Many visitors rent bicycles to follow the riverside paths and explore the surrounding Salzach Valley."
+  },
+  "San Diego": {
+    "airportCode": "SAN",
+    "airportInfo": "샌디에이고 국제공항은 다운타운에서 북서쪽으로 불과 3마일 떨어져 있으며, 활주로가 하나뿐인 공항 중 미국에서 가장 붐비는 곳입니다. 1928년 비행사 찰스 린드버그를 기려 린드버그 필드라는 이름으로 문을 열었습니다. 비행기가 도시 위를 낮게 날아 착륙하며, 다운타운과 가깝기 때문에 FAA가 샌디에이고 고층 빌딩의 높이를 제한합니다.",
+    "airportName": "San Diego Int'l",
+    "currencyCode": "USD",
+    "currencyInfo": "미국 달러($)",
+    "funFact": "샌디에이고는 스스로를 '캘리포니아의 발상지'라고 부릅니다. 1769년 수도사 후니페로 세라가 이곳에 미션 샌디에이고 데 알칼라를 세웠는데, 이것이 알타 캘리포니아 최초의 선교원입니다. 발보아 파크에는 완전한 야외 공연장에 있는 파이프 오르간으로는 세계 최대인 스프레클스 오르간도 있습니다.",
+    "language": "영어",
+    "languageInfo": "주요 언어는 영어이지만, 국경 도시답게 스페인의 유산이 지명에 남아 있습니다. 샌디에이고라는 이름 자체가 스페인 성인 알칼라의 디다쿠스(산 디에고)에서 유래했으며, 주민들은 자랑스럽게 이곳을 '미국 최고의 도시'라고 부릅니다.",
+    "nickname": "미국 최고의 도시",
+    "transportation": "샌디에이고 트롤리",
+    "transportationFact": "샌디에이고 트롤리는 1981년에 운행을 시작했으며, 미국 2세대 경전철 중 가장 오래된 시스템입니다. 블루, 오렌지, 그린, 코퍼 노선이 매일 운행하며, 블루 라인은 멕시코로 가는 국경 검문소 바로 옆인 산 이시드로가 종점입니다. 시내버스도 운영하는 샌디에이고 메트로폴리탄 교통 시스템(MTS)의 일부입니다."
   },
   "San Francisco": {
     "airportCode": "SFO",
@@ -1480,6 +1636,19 @@
     "nickname": "섬의 도시",
     "transportation": "산티아고 지하철",
     "transportationFact": "산티아고 지하철은 라틴 아메리카에서 가장 현대적이고 효율적인 지하철 시스템으로 널리 알려져 있습니다. 이 네트워크에는 7개 노선이 있으며 고무 타이어와 강철 바퀴 열차를 혼합하여 도시를 운행합니다. Red(이전 Transantiago)는 대규모 전기 버스를 운영하여 산티아고를 친환경 도시 교통 분야의 선두주자로 만들고 있습니다."
+  },
+  "Savannah": {
+    "airportCode": "SAV",
+    "airportInfo": "서배너/힐턴헤드 국제공항은 도시 북서쪽 풀러 인근, 95번 주간 고속도로 바로 옆에 있습니다. 이름 그대로 서배너와 힐턴헤드로 향하는 여행객 모두가 이용하는 공항이며, 1948년부터 서배너의 공식 기상 관측 지점이기도 합니다.",
+    "airportName": "Savannah/Hilton Head",
+    "currencyCode": "USD",
+    "currencyInfo": "미국 달러($)",
+    "funFact": "서배너는 1733년 제임스 오글소프가 세운 도시로, 나무가 우거진 공공 광장을 바둑판처럼 배치해 설계되었습니다. 그중 22개의 광장이 지금도 남아 있습니다. 다운타운은 1966년에 지정된 미국 최대 규모의 국가 사적 지구 중 하나입니다.",
+    "language": "영어",
+    "languageInfo": "서배너 사람들은 환대의 도시라는 명성에 걸맞게 느긋하고 품위 있는 남부 억양으로 말합니다. 낯선 사람과도 반갑게 인사를 나누고 'y'all'이라는 말을 자주 들을 수 있으며, 현지인들은 눈앞의 집에 얽힌 이야기를 기꺼이 들려줍니다.",
+    "nickname": "남부의 호스티스 시티",
+    "transportation": "채텀 에어리어 트랜싯(CAT)",
+    "transportationFact": "채텀 에어리어 트랜싯은 지역 전역에서 17개의 정규 버스 노선을 운영합니다. 다운타운 무료 서비스인 'dot'에는 포사이스 순환선과 다운타운 순환선이 있습니다. 서배너 벨스 페리는 리버 스트리트와 허친슨 섬 사이를 무료로 오갑니다."
   },
   "Seattle": {
     "airportCode": "SEA",
@@ -1701,6 +1870,19 @@
     "nickname": "6ix",
     "transportation": "TTC",
     "transportationFact": "토론토 교통 위원회(Toronto Transit Commission)는 아메리카 대륙에서 가장 크고 가장 바쁜 전차 네트워크를 운영하고 있습니다. 지하철 시스템은 도시 대중교통의 핵심을 형성하는 두 개의 주요 노선으로 구성됩니다. GO Transit은 토론토와 온타리오의 나머지 지역을 연결하는 대규모 지역 기차 및 버스 네트워크를 제공합니다."
+  },
+  "Valencia": {
+    "airportCode": "VLC",
+    "airportInfo": "마니세스 공항이라고도 불리는 발렌시아 공항은 시내에서 서쪽으로 약 8km 떨어진 마니세스에 있습니다. 2025년에는 유럽, 캐나다, 북아프리카를 잇는 140개 노선에서 1,180만 명의 승객을 처리했으며 대부분이 국제선 승객이었습니다. 발렌시아 지방에서는 알리칸테에 이어 두 번째로 붐비는 공항입니다.",
+    "airportName": "Valencia Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "유로(€)",
+    "funFact": "기원전 138년 로마인들이 발렌티아 에데타노룸이라는 이름으로 세운 발렌시아는 스페인에서 가장 오래된 도시 중 하나입니다. 파에야와 추파(타이거너트)로 만든 시원한 음료 오르차타의 발상지이기도 합니다. 1957년 큰 홍수 이후 투리아 강의 물길을 도시 밖으로 돌렸고, 옛 강바닥은 예술과학도시까지 이어지는 초록빛 띠 '투리아 정원'으로 바뀌었습니다.",
+    "language": "스페인어 및 발렌시아어",
+    "languageInfo": "스페인어와 발렌시아어는 모두 공용어이며, 시내의 모든 학생은 발렌시아어를 의무적으로 배웁니다. 하지만 일상에서는 스페인어가 우세해, 2019년 시 조사에 따르면 주민의 76%가 스페인어만 사용하고 약 18%가 두 언어를 함께 사용합니다. 시내와 그 주변에서 쓰이는 발렌시아어 방언은 '아피차트'라고 불립니다.",
+    "nickname": "기쁨의 도시",
+    "transportation": "메트로발렌시아",
+    "transportationFact": "메트로발렌시아는 지하철, 경전철, 트램 노선을 아우르는 총연장 161km 이상의 교통망으로, 그중 약 30km가 지하 구간입니다. 가장 붐비는 역은 노르드 역 바로 옆의 샤티바 역이며, 2012년 가장 혼잡했던 날은 파야스 축제의 마지막 날이었습니다. 이 시스템은 협궤 철도 '트레넷'에서 발전했으며, 그 첫 구간은 1888년에 개통했습니다."
   },
   "Vancouver": {
     "airportCode": "YVR",

@@ -172,12 +172,15 @@ extension WikimediaService {
         "Bath": "Bath, Somerset",
         "Buffalo": "Buffalo, New York",
         "Cartagena": "Cartagena, Colombia",
+        "Charleston": "Charleston, South Carolina",
         "Cork": "Cork (city)",
         "New York": "New York City",
+        "Oak Park": "Oak Park, Illinois",
         "Orlando": "Orlando, Florida",
         "Phoenix": "Phoenix, Arizona",
         "Portland": "Portland, Oregon",
         "Queenstown": "Queenstown, New Zealand",
+        "Savannah": "Savannah, Georgia",
         "Victoria": "Victoria, British Columbia",
     ]
 
@@ -234,6 +237,9 @@ extension WikimediaService {
         "bali-ulun-danu": "Pura Ulun Danu Bratan",                   // Pura Ulun Danu Beratan
         "bali-tirta-gangga": "Tirta Gangga",                         // Tirta Gangga Water Palace
         "bali-ubud-palace": "Ubud Palace",                           // Ubud Royal Palace (Puri Saren Agung)
+
+        // Baltimore
+        "baltimore_national_aquarium": "National Aquarium (Baltimore)", // National Aquarium
 
         // Barcelona
         "bcn_forum": "Forum Building",                               // Edifici Fòrum
@@ -301,6 +307,17 @@ extension WikimediaService {
         "jakarta-istiqlal": "Istiqlal Mosque, Jakarta",              // Istiqlal Mosque
         "jakarta-national-museum": "National Museum of Indonesia",   // National Museum (Gedung Gajah)
 
+        // Chandigarh
+        "chandigarh_secretariat": "Secretariat Building, Chandigarh", // Secretariat Building
+        "chandigarh_government_museum": "Government Museum and Art Gallery, Chandigarh", // Government Museum and Art Gallery
+        "chandigarh_gandhi_bhawan": "Gandhi Bhawan, Chandigarh",     // Gandhi Bhawan
+
+        // Charleston
+        "charleston_st_michaels_church": "St. Michael's Anglican Church (Charleston, South Carolina)", // St. Michael's Church
+        "charleston_st_philips_church": "St. Philip's Church (Charleston, South Carolina)", // St. Philip's Church
+        "charleston_old_exchange_provost_dungeon": "Exchange and Provost", // Old Exchange and Provost Dungeon
+        "charleston_city_market": "City Market (Charleston, South Carolina)", // Charleston City Market
+
         // Chengdu
         "cn_jinli_ancient_street": "Jinli",                          // Jinli Ancient Street
 
@@ -317,6 +334,13 @@ extension WikimediaService {
 
         // Colombo
         "lk_independence_memorial_hall": "Independence Memorial Hall", // Independence Memorial Hall, Colombo
+
+        // Columbus, Indiana
+        "columbus_in_first_christian_church": "First Christian Church (Columbus, Indiana)", // First Christian Church
+        "columbus_in_miller_house": "Miller House (Columbus, Indiana)", // Miller House
+        "columbus_in_first_baptist_church": "First Baptist Church (Columbus, Indiana)", // First Baptist Church
+        "columbus_in_fire_station_4": "Fire Station Number 4 (Columbus, Indiana)", // Fire Station No. 4
+        "columbus_in_old_city_hall": "Columbus City Hall (Indiana)", // Columbus City Hall
 
         // Copenhagen
         "cph_blox": "Danish Architecture Centre",                    // BLOX (Danish Architecture Center)
@@ -364,8 +388,18 @@ extension WikimediaService {
         "dxb_jumeirah_emirates": "Emirates Towers",                  // Jumeirah Emirates Towers
         "dxb_index_tower": "The Index (Dubai)",                      // The Index
 
+        // Fort Worth
+        "fort_worth_flatiron_building": "Flatiron Building (Fort Worth, Texas)", // Flatiron Building
+        "fort_worth_sinclair_building": "Sinclair Building (Fort Worth)", // Sinclair Building
+        "fort_worth_st_patrick_cathedral": "St. Patrick Cathedral (Fort Worth, Texas)", // St. Patrick Cathedral
+
         // Fortaleza
         "for-dragao-do-mar": "Dragão do Mar Center of Art and Culture", // Dragão do Mar Center
+
+        // Glasgow
+        "glasgow_the_lighthouse": "The Lighthouse, Glasgow",         // The Lighthouse
+        "glasgow_queens_cross_church": "Queen's Cross Church, Glasgow", // Queen's Cross Church
+        "glasgow_peoples_palace": "People's Palace, Glasgow",        // People's Palace
 
         // Guadalajara
         "mx_guadalajara_cathedral": "Guadalajara Cathedral",         // Guadalajara Metropolitan Cathedral
@@ -387,6 +421,11 @@ extension WikimediaService {
 
         // Johannesburg
         "johannesburg-constitution-hill": "Constitution Hill, Johannesburg", // Constitution Hill
+
+        // Kansas City
+        "kansas_city_jackson_county_courthouse": "Jackson County Courthouse (Kansas City, Missouri)", // Jackson County Courthouse
+        "kansas_city_christopher_s_bond_bridge": "Christopher S. Bond Bridge (Kansas City, Missouri)", // Christopher S. Bond Bridge
+        "kansas_city_community_christian_church": "Community Christian Church (Kansas City, Missouri)", // Community Christian Church
 
         // Kathmandu
         "np_garden_of_dreams": "Garden of Dreams",                   // Garden of Dreams, Kathmandu
@@ -488,6 +527,10 @@ extension WikimediaService {
         // Orlando
         "orl_lake_eola_pagoda": "Lake Eola Park",                    // Chinese Pagoda at Lake Eola
 
+        // Palm Springs
+        "palm_springs_villa_hermosa": "Villa Hermosa (Palm Springs, California)", // Villa Hermosa
+        "palm_springs_plaza_theatre": "Plaza Theatre (Palm Springs, California)", // Plaza Theatre
+
         // Paris
         "paris-sacre-coeur": "Sacré-Cœur, Paris",                    // Sacré-Cœur Basilica
 
@@ -537,6 +580,14 @@ extension WikimediaService {
         // Rome
         "rom_maxxi": "MAXXI",                                        // MAXXI Museum
 
+        // Rotterdam
+        "rotterdam_cube_houses": "Cube house",                       // Cube Houses
+        "rotterdam_depot_boijmans": "Depot Museum Boijmans Van Beuningen", // Depot Boijmans Van Beuningen
+        "rotterdam_hotel_new_york": "Hotel New York (Rotterdam)",    // Hotel New York
+
+        // San Diego
+        "san_diego_santa_fe_depot": "Santa Fe Depot (San Diego)",    // Santa Fe Depot
+
         // San Francisco
         "sf-03": "San Francisco Ferry Building",                     // Ferry Building
         "sf_grace_cathedral": "Grace Cathedral, San Francisco",      // Grace Cathedral
@@ -550,6 +601,12 @@ extension WikimediaService {
         "bahai-temple-south-america": "Santiago Bahá'í Temple",      // Bahá'í Temple of South America
         "gabriela-mistral-cultural-center": "Centro Cultural Gabriela Mistral", // GAM (Gabriela Mistral Cultural Center)
         "museo-historico-nacional": "Museo Histórico Nacional (Chile)", // National History Museum
+
+        // Savannah
+        "savannah_cathedral_st_john_the_baptist": "Cathedral Basilica of St. John the Baptist (Savannah, Georgia)", // Cathedral Basilica of St. John the Baptist
+        "savannah_mercer_house": "Mercer House (Savannah, Georgia)", // Mercer House
+        "savannah_independent_presbyterian_church": "Independent Presbyterian Church (Savannah, Georgia)", // Independent Presbyterian Church
+        "savannah_christ_church": "Christ Church (Savannah, Georgia)", // Christ Church
 
         // Seoul
         "ewha-campus-center": "Ewha Womans University",              // Ewha Womans University Campus Center
@@ -612,6 +669,10 @@ extension WikimediaService {
         // Toronto
         "brookfield-place": "Brookfield Place (Toronto)",            // Brookfield Place (Allen Lambert Galleria)
         "old-city-hall-toronto": "Old City Hall (Toronto)",          // Old City Hall
+
+        // Valencia
+        "valencia_mercado_central": "Mercado Central, Valencia",     // Mercado Central
+        "valencia_estacio_del_nord": "Estació del Nord (Valencia)",  // Estació del Nord
 
         // Vancouver
         "yvr-15": "Westcoast Building",                              // The Qube

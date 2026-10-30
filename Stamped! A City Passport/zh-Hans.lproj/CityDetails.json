@@ -142,6 +142,19 @@
     "transportation": "横贯雅加达和地铁",
     "transportationFact": "TransJakarta 是世界上最长的快速公交系统，利用专用车道来避开城市的拥堵交通。新的雅加达地铁为城市的主要南北走廊提供了快速、现代化的地下替代方案。 Raillink 机场列车提供苏加诺-哈达和市中心之间的优质空调连接。"
   },
+  "Baltimore": {
+    "airportCode": "BWI",
+    "airportInfo": "巴尔的摩/华盛顿瑟古德·马歇尔国际机场位于市中心以南约 9 英里，以巴尔的摩出生、美国最高法院首位非裔大法官瑟古德·马歇尔命名。这里是西南航空的重要运营基地。机场内的火车站可换乘美铁和 MARC 列车，轻轨 Light RailLink 就停靠在 E 候机大厅旁边。",
+    "airportName": "BWI Marshall",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "1814 年 9 月英军炮轰麦克亨利堡时，黎明时分仍在飘扬的美国国旗激发弗朗西斯·斯科特·基写下了一首诗，它后来成为美国国歌《星条旗》。这座城市还拥有美国独立后建造的第一座天主教大教堂。",
+    "language": "英语",
+    "languageInfo": "这里处处说英语，当地人很喜欢自己城市的绰号。巴尔的摩常被称为“魅力之城”，或简称“B'more”，而旧绰号“暴民镇”（Mobtown）则让人想起它喧闹的 19 世纪往事。",
+    "nickname": "魅力之城",
+    "transportation": "Light RailLink 轻轨",
+    "transportationFact": "马里兰州交通管理局运营 Light RailLink 轻轨、Metro SubwayLink 地铁以及 BaltimoreLink 公交网络。免费的 Charm City Circulator 巴士环绕市中心，并开往费尔斯角、联邦山和麦克亨利堡等地。巴尔的摩宾州车站将城市与美铁东北走廊相连。"
+  },
   "Bangkok": {
     "airportCode": "BKK",
     "airportInfo": "素万那普机场拥有令人惊叹的金色屋顶建筑，并装饰有描绘传统泰国神话和佛教艺术的巨大雕像。该机场是 Instagram 上全球出镜率最高的地点之一，以其庞大的玻璃航站楼及其作为通往东南亚的重要门户的作用而闻名。",
@@ -232,6 +245,19 @@
     "nickname": "灰城",
     "transportation": "地铁和轻轨",
     "transportationFact": "U-Bahn 是地下地铁，而 S-Bahn 主要在整个城市的高架轨道上运营。柏林的交通实行“荣誉系统”，车站入口处没有实体十字转门。黄色 BVG 巴士和东部综合的有轨电车网络完善了城市的综合交通。"
+  },
+  "Bilbao": {
+    "airportCode": "BIO",
+    "airportInfo": "毕尔巴鄂机场位于市区以北约9公里的洛伊乌，是巴斯克自治区乃至整个西班牙北部最繁忙的机场。其主航站楼于2000年启用，由圣地亚哥·卡拉特拉瓦设计，本身就是一座建筑地标。地铁目前尚未通达机场，但3号线的延伸工程已在规划中。",
+    "airportName": "Bilbao Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "欧元 (€)",
+    "funFact": "毕尔巴鄂于1300年依据比斯开领主迭戈·洛佩斯五世·德·阿罗颁发的城市特许状而建立。1997年古根海姆博物馆的开馆带来了戏剧性的城市复兴，如今世界各地的城市规划者都将其称为“毕尔巴鄂效应”。由于城市坐落在群山环抱的山谷中，当地人亲切地称它为“El Botxo”（意为“洞”）。",
+    "language": "西班牙语和巴斯克语",
+    "languageInfo": "西班牙语是毕尔巴鄂使用最广泛的语言，其次是在整个巴斯克自治区具有官方地位的巴斯克语（Euskara）。据市政府统计，至少一半的居民能说一些巴斯克语，学校也提供双语教学模式。从街道路牌到阿斯库纳中心、矶崎之门等地标，巴斯克语名称随处可见。",
+    "nickname": "El Botxo（“洞”）",
+    "transportation": "地铁和有轨电车",
+    "transportationFact": "毕尔巴鄂地铁于1995年开通，车站由诺曼·福斯特设计，其弧形玻璃出入口雨棚以建筑师之名被昵称为“fosteritos”。如今三条地铁线路在Zazpikaleak/Casco Viejo站交汇，自2002年起还有现代化有轨电车穿行市区。从市中心乘坐缆索铁路可登上阿尔昌达山，俯瞰整个河口景色。"
   },
   "Bogotá": {
     "airportCode": "BOG",
@@ -415,6 +441,32 @@
     "transportation": "横贯雅加达和地铁",
     "transportationFact": "TransJakarta 是世界上最长的快速公交系统，利用专用车道来避开城市的拥堵交通。新的雅加达地铁为城市的主要南北走廊提供了快速、现代化的地下替代方案。 Raillink 机场列车提供苏加诺-哈达和市中心之间的优质空调连接。"
   },
+  "Chandigarh": {
+    "airportCode": "IXC",
+    "airportInfo": "昌迪加尔机场的正式名称为沙希德·巴加特·辛格国际机场，与印度空军共用场地。有趣的是，机场跑道位于昌迪加尔境内，而2015年启用的现代化航站楼却位于边界另一侧的旁遮普邦莫哈利。",
+    "airportName": "Chandigarh Airport",
+    "currencyCode": "INR",
+    "currencyInfo": "印度卢比 (₹)",
+    "funFact": "昌迪加尔是印度独立后最早的规划城市之一，由勒·柯布西耶设计，作为旁遮普邦的新首府。城市名称意为“昌迪女神的堡垒”，得名于附近一座供奉昌迪女神的神庙；其议会建筑群于2016年被列入联合国教科文组织世界遗产名录。",
+    "language": "印地语和旁遮普语",
+    "languageInfo": "印地语是昌迪加尔使用最广泛的语言，其次是旁遮普语，而英语则是这个中央直辖区的官方语言。公立学校甚至同时使用这三种语言的教科书。",
+    "nickname": "美丽之城",
+    "transportation": "CTU公交",
+    "transportationFact": "勒·柯布西耶为昌迪加尔设计了名为“七路系统”（les Sept Voies）的七级道路体系，将快速车流与自行车和行人分开。公共交通由昌迪加尔交通公司（CTU）运营，公交车从第17区和第43区的汽车站发车；这座城市的人均车辆拥有量也居印度之首。"
+  },
+  "Charleston": {
+    "airportCode": "CHS",
+    "airportInfo": "查尔斯顿国际机场是南卡罗来纳州客流量最大的机场，位于北查尔斯顿，距市中心西北约12英里。它与相邻的查尔斯顿空军基地共用跑道，这一点颇为少见。",
+    "airportName": "Charleston Int'l",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "查尔斯顿于1670年以“查尔斯镇”之名建立，以纪念英格兰国王查理二世，并于1680年迁至今天的半岛上。到17世纪90年代，它已发展为北美第五大城市。",
+    "language": "英语",
+    "languageInfo": "查尔斯顿有着独特的口音，许多年长的本地人会省略“r”音，把家乡念成“Chalston”。当地口语还受到古拉语的影响，这是一种源自海岛群岛和低地地区的克里奥尔语，至今仍有部分非裔居民在使用。",
+    "nickname": "圣城",
+    "transportation": "CARTA",
+    "transportationFact": "查尔斯顿地区交通管理局（CARTA）在整个城区运营固定线路公交车，所有车辆均配有自行车架。市中心区域穿梭电车巴士连接历史街区的景点和酒店。CARTA还为残障乘客提供上门接送服务。"
+  },
   "Chengdu": {
     "airportCode": "TFU",
     "airportInfo": "Chengdu Tianfu International Airport, opened in 2021, is one of China's newest major airports and serves as a gateway to western China. It complements the older Chengdu Shuangliu Airport (CTU) which remains operational. Tianfu is one of the largest airports in China by area and is designed to eventually become a global hub connecting western China to the world.",
@@ -479,6 +531,19 @@
     "nickname": "商业首都",
     "transportation": "CTB Buses & Tuk-tuks",
     "transportationFact": "Colombo's primary public transport is the CTB (Ceylon Transport Board) bus network, supplemented by private buses on the same routes. Three-wheelers (tuk-tuks) are ubiquitous and the most practical way for visitors to navigate the city. Colombo's commuter rail connects the city center to suburbs along the coast. A light rail transit project (LRT) is under construction to create a modern rapid transit option for the city's growing population."
+  },
+  "Columbus, Indiana": {
+    "airportCode": "IND",
+    "airportInfo": "哥伦布没有定期航班，因此大多数游客会飞抵北面直线距离约 65 公里的印第安纳波利斯国际机场。该机场 2025 年旅客吞吐量超过 1060 万人次，而城北的小型哥伦布市立机场主要服务私人飞行。",
+    "airportName": "Indianapolis International",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "哥伦布人口约 5 万，却以现代建筑闻名世界。发动机制造商康明斯的掌门人 J·欧文·米勒设立了一项计划：只要业主从一份顶尖事务所名单中挑选建筑师，康明斯基金会就为公共建筑支付设计费。于是这里有了埃利尔与埃罗·沙里宁、贝聿铭、哈里·威斯和罗伯特·文丘里等人的作品，以及七处国家历史地标。",
+    "language": "英语",
+    "languageInfo": "这里处处通用英语，带着印第安纳南部悠闲的口音。印第安纳人很早就自称“Hoosier”，在城里随处都能听到这个词。",
+    "nickname": "草原上的雅典",
+    "transportation": "ColumBUS 巴士与步行",
+    "transportationFact": "市内的 ColumBUS 巴士周一至周六运营五条线路。市中心的许多地标建筑相隔只有几个街区，步行游览最合适。65 号州际公路从城市西侧经过，印第安纳 46 号州道横穿城南。"
   },
   "Copenhagen": {
     "airportCode": "CPH",
@@ -662,6 +727,19 @@
     "transportation": "ATAF Buses & Trams",
     "transportationFact": "Florence's historic center is designated a Limited Traffic Zone (ZTL), restricting private cars from the medieval streets during much of the day. The city is best explored on foot or by bicycle — a popular bike-sharing network called Mobike operates throughout the center. The T1 and T2 tram lines connect the main train station to the outlying neighborhoods, while orange ATAF buses serve the wider metropolitan area."
   },
+  "Fort Worth": {
+    "airportCode": "DFW",
+    "airportInfo": "DFW 机场于 1974 年在达拉斯和沃思堡之间大致居中的位置启用，占地超过 17,000 英亩，按面积计算是仅次于丹佛的美国第二大机场。它是美国航空最大的枢纽，甚至拥有自己的警察、消防和紧急医疗服务。",
+    "airportName": "Dallas/Fort Worth",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "沃思堡始于 1849 年俯瞰三一河的一处陡崖上的陆军前哨，后来发展成为德克萨斯长角牛贸易中心，因此得名“牛镇”。如今它是德克萨斯州人口第四多的城市，将牛仔传统与路易斯·康、安藤忠雄和菲利普·约翰逊设计的博物馆融为一体。",
+    "language": "英语",
+    "languageInfo": "当地人说带有温暖北德克萨斯拖腔的英语，称呼一群人时日常会用“y'all”。城市格言“Where the West Begins”（西部从这里开始）概括了人们交谈中流露出的友善、从容的西部精神。",
+    "nickname": "牛镇",
+    "transportation": "TEXRail",
+    "transportationFact": "TEXRail 从沃思堡市中心的 T&P 车站开往 DFW 机场 B 航站楼，全长 27.2 英里，设有 9 个车站。三一铁路快车连接沃思堡市中心和达拉斯市中心，而沃思堡中央车站是三一地铁公交系统的主要换乘枢纽。"
+  },
   "Fortaleza": {
     "airportCode": "GRU",
     "airportInfo": "As the primary international gateway to Brazil, Guarulhos is the busiest airport in South America by passenger volume. It is a massive complex that was significantly modernized for the World Cup and Olympics, featuring a dedicated terminal for long-haul international flights with extensive luxury amenities.",
@@ -687,6 +765,19 @@
     "nickname": "博多",
     "transportation": "Fukuoka City Subway & Nishitetsu",
     "transportationFact": "Fukuoka has three city subway lines that efficiently connect the airport, Hakata Station, and the main entertainment districts. The private Nishitetsu railway extends to southern Kyushu cities. Hakata Station is also a shinkansen hub, with bullet trains reaching Osaka in under 2.5 hours and Tokyo in 5 hours. The compact, walkable city center makes many of the best food and cultural experiences reachable on foot."
+  },
+  "Glasgow": {
+    "airportCode": "GLA",
+    "airportInfo": "格拉斯哥机场位于伦弗鲁郡，距市中心以西约 13 公里，有巴士直达市中心的主汽车站。它是格拉斯哥两座专属机场中较大的一座；格拉斯哥普雷斯蒂克机场位于西南约 30 英里处，可从格拉斯哥中央车站乘直达火车前往。前往爱丁堡机场也很方便。",
+    "airportName": "Glasgow Airport",
+    "currencyCode": "GBP",
+    "currencyInfo": "英镑 (£)",
+    "funFact": "格拉斯哥于 1990 年当选欧洲文化之都，1999 年又成为英国建筑与设计之城。维多利亚时代的繁荣让它赢得了“大英帝国第二城市”的称号，那个时代的许多宏伟建筑至今仍矗立在街头。这里也是查尔斯·雷尼·麦金托什的城市，他的作品从加内特山一直分布到玛丽山。",
+    "language": "英语",
+    "languageInfo": "这里处处通用英语，但通常带有浓重的格拉斯哥口音，还夹杂着许多苏格兰语词汇。城市名称源自布立吞语，常被解释为“亲爱的绿色之地”；在苏格兰盖尔语中称为 Glaschu，在苏格兰语中称为 Glesca。",
+    "nickname": "亲爱的绿色之地",
+    "transportation": "格拉斯哥地铁与火车",
+    "transportationFact": "格拉斯哥地铁是继伦敦地铁和布达佩斯地铁之后世界上第三古老的地下铁路，也是英国唯一一条完全在地下运行的地铁。地铁由地区交通管理机构 SPT 运营，此外还有庞大的郊区铁路网。格拉斯哥与爱丁堡之间有四条直达铁路线。"
   },
   "Guadalajara": {
     "airportCode": "GDL",
@@ -817,6 +908,19 @@
     "nickname": "Egoli",
     "transportation": "Gautrain & Rea Vaya BRT",
     "transportationFact": "The Gautrain rapid rail system connects O.R. Tambo Airport to the financial hub of Sandton in just 15 minutes — one of the fastest airport-to-city rail links in Africa. It continues to Pretoria, the administrative capital, making it a vital regional connector. The Rea Vaya Bus Rapid Transit system operates on dedicated bus lanes through the city. For most visitors, private ride-hailing apps are the most practical way to get around."
+  },
+  "Kansas City": {
+    "airportCode": "MCI",
+    "airportInfo": "堪萨斯城国际机场于 1972 年以“中部大陆国际机场”之名启用，占地 10,680 英亩，位于市中心西北约 15 英里处。2023 年落成的全新航站楼建筑群取代了原有航站楼。",
+    "airportName": "Kansas City International",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "堪萨斯城以其庞大的喷泉系统闻名国际，因此获得了“喷泉之城”的美称。这座密苏里州人口最多的城市还以堪萨斯城爵士乐和独具风格的烧烤而著称。",
+    "language": "英语",
+    "languageInfo": "这里通行带有悠闲中西部口音的英语。当地人常把城市名简称为“KC”，若要强调是州界密苏里一侧的那座城市，则称“KCMO”。",
+    "nickname": "喷泉之城",
+    "transportation": "KC 有轨电车",
+    "transportationFact": "KC 有轨电车于 2016 年开通，由一个专门的交通发展区承担费用，因此可免费乘坐。经过 2025 年和 2026 年的延伸，线路增至 6.4 英里、19 个车站，北起伯克利河滨公园，南至密苏里大学堪萨斯城分校。"
   },
   "Kathmandu": {
     "airportCode": "KTM",
@@ -1195,6 +1299,19 @@
     "transportation": "Tramway de Nice",
     "transportationFact": "Nice's modern tramway has three lines connecting the old town, the port, the airport, and the university districts. Line 1's cross-city route connects the main train station to the seafront. The city's extensive pedestrian zones along the waterfront and through the Vieux-Nice (old town) make the city extremely walkable. Ferries connect the old port to Corsica and Sardinia."
   },
+  "Oak Park": {
+    "airportCode": "ORD",
+    "airportInfo": "奥克帕克紧邻芝加哥市界西侧，奥黑尔国际机场是游客前往这里的主要门户。连接芝加哥与奥克帕克的主干道艾森豪威尔高速公路也可直通机场。",
+    "airportName": "O'Hare Int'l",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "奥克帕克拥有世界上数量最多的弗兰克·劳埃德·赖特设计住宅，因为赖特于 1889 年定居于此，并在这里度过了职业生涯的前 20 年。这里自建村起便是“禁酒”之地：酒类销售一直被禁止，直到 1973 年餐厅和酒店才获准在用餐时供应酒水。",
+    "language": "英语",
+    "languageInfo": "这座紧邻芝加哥、绿树成荫的村庄通行英语，口音与大城市一样带有宽广的中西部特色。奥克帕克也以其文学渊源为荣：欧内斯特·海明威出生于此，《人猿泰山》的作者埃德加·赖斯·巴勒斯曾先后住过村里的三栋房子。",
+    "nickname": "村庄",
+    "transportation": "CTA 'L' 与 Metra",
+    "transportationFact": "CTA“L”的绿线和蓝线两条线路将奥克帕克与芝加哥市中心直接相连。Metra 的联合太平洋西线停靠位于村中心的奥克帕克站。CTA 和 Pace 巴士则承担村内线路以及通往周边郊区的交通。"
+  },
   "Orlando": {
     "airportCode": "MCO",
     "airportInfo": "该机场以其巨大的室内热带中庭和自动单轨列车车队而闻名，这些单轨列车将乘客从主要枢纽运送到空侧航站楼。 MCO 代表麦考伊空军基地，致敬该基地在成为全球旅游门户之前的军事设施。",
@@ -1233,6 +1350,19 @@
     "nickname": "The Tiger City",
     "transportation": "T-bane & Trams",
     "transportationFact": "Oslo's T-bane (metro) has six lines that converge in the city center and fan out to the suburbs. The Ruter transit authority integrates the metro, trams, buses, and ferries to the Oslofjord islands under a single ticketing system. Oslo's electric trams are among the oldest continuously operating tram lines in the world. The city has invested heavily in cycling infrastructure and electric vehicles — Oslo has more EVs per capita than almost any city on Earth."
+  },
+  "Palm Springs": {
+    "airportCode": "PSP",
+    "airportInfo": "棕榈泉国际机场距市中心以东仅约三公里，落地后很快就能到泳池边。机场前身是二战时期的陆军机场，以登机口之间的露天走廊著称，并在 2011 年“美国压力最小机场”榜单中排名第三。",
+    "airportName": "Palm Springs Int'l",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "棕榈泉空中缆车是世界上最大的旋转式空中缆车，沿奇诺峡谷将乘客送往海拔 8,516 英尺的山顶站。每年二月，这座城市都会举办为期 11 天的“现代主义周”，通过导览、电影和讲座来庆祝其著名的中世纪现代建筑。",
+    "language": "英语",
+    "languageInfo": "英语是这座沙漠度假城市的日常语言，但山谷中最古老的声音属于约 2,000 年前定居于此、讲伊维柳阿特语的卡惠拉人。冬季“候鸟”游客纷至沓来，人口几乎增至三倍，其中大多数来自加拿大。",
+    "nickname": "沙漠现代主义之都",
+    "transportation": "SunLine 公交",
+    "transportationFact": "SunLine 公交署负责运营棕榈泉及整个科切拉谷的公交网络。美铁的日落特快和德州之鹰联挂列车每周三次停靠棕榈泉站。美铁 Thruway 巴士将市中心和机场与里弗赛德、帕萨迪纳等城市相连。"
   },
   "Paris": {
     "airportCode": "CDG",
@@ -1429,6 +1559,19 @@
     "transportation": "ATAC地铁",
     "transportationFact": "罗马地铁的扩建经常被推迟，因为施工人员经常发现古代遗迹。高频有轨电车为许多地铁无法到达的历史街区提供服务。莱昂纳多特快列车是连接机场和特米尼中央车站的专用直达列车。"
   },
+  "Rotterdam": {
+    "airportCode": "RTM",
+    "airportInfo": "鹿特丹海牙机场距市区约5.5公里，同时服务鹿特丹和海牙两座城市。这座机场曾长期被称为泽斯蒂恩霍芬机场，于1956年10月正式启用，2019年旅客吞吐量超过200万人次。",
+    "airportName": "Rotterdam The Hague",
+    "currencyCode": "EUR",
+    "currencyInfo": "欧元 (€)",
+    "funFact": "鹿特丹的历史始于1270年前后在鹿特河上修筑的一座水坝，城市也因此得名。1940年德军轰炸摧毁了大部分老城区后，这座城市以大胆的现代建筑重获新生，如今还拥有欧洲最大的海港。",
+    "language": "荷兰语",
+    "languageInfo": "荷兰语是官方语言，在商店、电车和市场里听到的也都是荷兰语。这里也是一座非常国际化的城市，居民来自180多个国家和地区。",
+    "nickname": "欧洲门户",
+    "transportation": "RET地铁",
+    "transportationFact": "1968年，鹿特丹开通了荷兰第一条地铁线路，全长仅5.9公里，以隧道方式穿越新马斯河。如今RET在整个地区运营地铁、有轨电车和公交车，有轨电车甚至与汽车、自行车和行人一同驶过伊拉斯谟桥。"
+  },
   "Salzburg": {
     "airportCode": "SZG",
     "airportInfo": "Salzburg Airport Wolfgang Amadeus Mozart, named after the city's most famous son, is one of Austria's most scenic airports, with the Alps rising directly behind the runways. It is Austria's second largest airport and serves as a winter gateway for skiers heading to the nearby Salzburg ski region. A direct bus connects the terminal to the city center in 15 minutes.",
@@ -1441,6 +1584,19 @@
     "nickname": "北方的罗马",
     "transportation": "Salzburg Buses & Trolleybuses",
     "transportationFact": "Salzburg's city center is compact and highly walkable — the old town can be crossed on foot in about 20 minutes. The city's bus network and electric trolleybuses (O-Buses) serve the broader metropolitan area. Funicular railways connect the riverside old town to the fortress above and the Mönchsberg plateau. Many visitors rent bicycles to follow the riverside paths and explore the surrounding Salzach Valley."
+  },
+  "San Diego": {
+    "airportCode": "SAN",
+    "airportInfo": "圣地亚哥国际机场距市中心西北仅 3 英里，是美国最繁忙的单跑道机场。它于 1928 年以纪念飞行家查尔斯·林德伯格的“林德伯格机场”之名启用。飞机低空掠过城市降落，也正因为离市中心太近，美国联邦航空管理局限制了圣地亚哥摩天大楼的高度。",
+    "airportName": "San Diego Int'l",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "圣地亚哥自称“加州的发源地”：1769 年，修士胡尼佩罗·塞拉在这里创建了圣地亚哥德阿尔卡拉传教站，这是上加利福尼亚的第一座传教站。巴尔博亚公园里还有斯普雷克尔斯管风琴，它是世界上位于完全露天场地中最大的管风琴。",
+    "language": "英语",
+    "languageInfo": "英语是主要语言，但这座边境城市的西班牙传统体现在许多地名中。“圣地亚哥”这个名字本身就来自西班牙圣人阿尔卡拉的迪达库斯（圣迭戈），当地人自豪地称这里为“美国最好的城市”。",
+    "nickname": "美国最好的城市",
+    "transportation": "圣地亚哥有轨电车",
+    "transportationFact": "圣地亚哥有轨电车于 1981 年开通，是美国第二代轻轨系统中历史最悠久的。蓝线、橙线、绿线和铜线每天运营，蓝线终点站圣伊西德罗紧邻通往墨西哥的边境口岸。它隶属于同时运营市内公交的圣地亚哥都市交通系统（MTS）。"
   },
   "San Francisco": {
     "airportCode": "SFO",
@@ -1480,6 +1636,19 @@
     "nickname": "岛上的城市",
     "transportation": "圣地亚哥地铁",
     "transportationFact": "圣地亚哥地铁被广泛认为是拉丁美洲最现代化、最高效的地铁系统。该网络拥有七条线路，并使用橡胶轮胎和钢轮火车的混合方式在城市中行驶。 Red（原 Transantiago）运营着庞大的电动巴士车队，使圣地亚哥成为绿色城市交通的领导者。"
+  },
+  "Savannah": {
+    "airportCode": "SAV",
+    "airportInfo": "萨凡纳/希尔顿黑德国际机场位于城市西北的普勒附近，紧邻95号州际公路。顾名思义，它同时服务前往萨凡纳和希尔顿黑德的旅客，自1948年起也是萨凡纳官方气象记录的观测地点。",
+    "airportName": "Savannah/Hilton Head",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "萨凡纳由詹姆斯·奥格尔索普于1733年创建，他以网格状排列的绿树成荫的公共广场来规划这座城市，其中22座广场保留至今。市中心于1966年被列为美国最大的国家历史地标区之一。",
+    "language": "英语",
+    "languageInfo": "萨凡纳人说话带着从容优雅的南方腔调，与这座城市热情好客的名声十分相称。陌生人会友好地向你打招呼，“y'all”随处可闻，当地人也很乐意给你讲讲眼前这栋房子的故事。",
+    "nickname": "南方的女主人之城",
+    "transportation": "查塔姆地区公交 (CAT)",
+    "transportationFact": "查塔姆地区公交在该地区运营17条固定公交线路。其市中心免费服务“dot”包括福赛斯环线和市中心环线。萨凡纳美女渡轮在河街与哈钦森岛之间提供免费摆渡。"
   },
   "Seattle": {
     "airportCode": "SEA",
@@ -1701,6 +1870,19 @@
     "nickname": "6ix",
     "transportation": "电讯委员会",
     "transportationFact": "多伦多交通委员会运营着美洲最大、最繁忙的有轨电车网络。地铁系统由两条主线组成，构成城市交通的核心。 GO Transit 提供庞大的火车和巴士区域网络，将多伦多与安大略省其他地区连接起来。"
+  },
+  "Valencia": {
+    "airportCode": "VLC",
+    "airportInfo": "瓦伦西亚机场又称马尼塞斯机场，位于市区以西约8公里的马尼塞斯。2025年，该机场通过飞往欧洲、加拿大和北非的140条航线接待了1180万人次旅客，其中大部分为国际旅客。它是瓦伦西亚自治区仅次于阿利坎特的第二繁忙机场。",
+    "airportName": "Valencia Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "欧元 (€)",
+    "funFact": "瓦伦西亚由罗马人于公元前138年以“Valentia Edetanorum”之名建立，是西班牙最古老的城市之一。这里是西班牙海鲜饭（paella）和冰镇油莎豆饮品“欧治塔”（orxata）的发源地。1957年一场毁灭性的洪水之后，图里亚河被改道绕城而过，旧河床变成了图里亚花园——一条一直延伸到艺术科学城的绿色长廊。",
+    "language": "西班牙语和巴伦西亚语",
+    "languageInfo": "西班牙语和巴伦西亚语都是官方语言，市内所有学生都必须学习巴伦西亚语。不过日常生活中以西班牙语为主：根据市政府2019年的调查，76%的居民只使用西班牙语，约18%的居民两种语言都用。城市及周边地区使用的巴伦西亚语变体被称为“apitxat”。",
+    "nickname": "欢乐之城",
+    "transportation": "瓦伦西亚地铁",
+    "transportationFact": "瓦伦西亚地铁（Metrovalencia）由地铁、轻轨和有轨电车线路组成，线网总长超过161公里，其中约30公里位于地下。最繁忙的车站是紧邻北站的Xàtiva站，2012年全年客流最高的一天是法雅节的最后一天。该系统由窄轨铁路“Trenet”发展而来，其第一段于1888年开通。"
   },
   "Vancouver": {
     "airportCode": "YVR",
