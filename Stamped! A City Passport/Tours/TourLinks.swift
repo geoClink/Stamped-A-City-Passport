@@ -19,6 +19,12 @@ enum TourPartner {
 
     /// Labels these clicks in GetYourGuide's reports; the website's links use "website".
     static let campaign = "app"
+
+    /// Viator partner ID and campaign number (Viator Partner Program, approved 30 Oct 2026),
+    /// from a link its dashboard made. Not secrets: they're in every link a user opens.
+    /// nil hides the Viator link.
+    static let viatorPartnerID: String? = "P00329078"
+    static let viatorCampaignNumber = "42383"
 }
 
 // MARK: - URL building
@@ -69,6 +75,29 @@ struct TourLinkBuilder {
     }
 }
 
+/// Viator's search for "<landmark>, <place>", a second tours site next to GetYourGuide, with
+/// Viator's partner tracking (checked against the live site 30 Oct 2026: "Colosseum, Rome"
+/// returns 200+ tours).
+///
+/// https://www.viator.com/searchResults/all?text=<landmark, place>&pid=<id>&mcid=<n>&medium=link&campaign=<campaign>
+struct ViatorLinkBuilder {
+    var partnerID: String? = TourPartner.viatorPartnerID
+    var campaignNumber: String = TourPartner.viatorCampaignNumber
+    var campaign: String = TourPartner.campaign
+
+    func url(landmark: String, place: String) -> URL? {
+        guard let id = partnerID?.trimmingCharacters(in: .whitespacesAndNewlines), !id.isEmpty else { return nil }
+        let query = [landmark, place]
+            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+            .filter { !$0.isEmpty }
+            .joined(separator: ", ")
+        guard !query.isEmpty else { return nil }
+        let items = [("text", query), ("pid", id), ("mcid", campaignNumber), ("medium", "link"), ("campaign", campaign)]
+        let encoded = items.map { "\(HotelLinkBuilder.encode($0.0))=\(HotelLinkBuilder.encode($0.1))" }.joined(separator: "&")
+        return URL(string: "https://www.viator.com/searchResults/all?\(encoded)")
+    }
+}
+
 // MARK: - Button
 
 /// "Tours & Tickets on GetYourGuide" for a landmark, with the commission note under it.
@@ -97,6 +126,20 @@ struct ToursButton: View {
                     landmark
                 ))
                 .accessibilityHint(NSLocalizedString("Opens GetYourGuide. Stamped! doesn't handle bookings or payments.", comment: "Tours button, VoiceOver hint"))
+
+                // A second tours site: Viator sometimes has tours GetYourGuide doesn't
+                if let viatorURL = ViatorLinkBuilder().url(landmark: landmark, place: place) {
+                    Button {
+                        browserLink = BrowserLink(url: viatorURL)
+                    } label: {
+                        Label(NSLocalizedString("More tours on Viator", comment: "Landmark page: link under Tours & Tickets that opens Viator's tours for this landmark"),
+                              systemImage: "arrow.up.right.square")
+                            .font(.subheadline.weight(.semibold))
+                    }
+                    .buttonStyle(.plain)
+                    .foregroundStyle(DS.Palette.accent)
+                    .accessibilityHint(NSLocalizedString("Opens Viator. Stamped! doesn't handle bookings or payments.", comment: "Viator link, VoiceOver hint"))
+                }
 
                 if builder.earnsCommission {
                     HotelCommissionNote()

@@ -763,3 +763,9 @@
 /* Audio story on a landmark page */
 "Listen" = "듣기";
 "Reads this landmark's story aloud in English" = "이 랜드마크의 이야기를 영어로 읽어 줍니다";
+
+/* Vrbo and Viator links */
+"Vacation Rentals on Vrbo" = "Vrbo에서 휴가용 숙소";
+"Opens Vrbo. Stamped! doesn't handle bookings or payments." = "Vrbo를 엽니다. Stamped!는 예약이나 결제를 처리하지 않습니다.";
+"More tours on Viator" = "Viator에서 더 많은 투어";
+"Opens Viator. Stamped! doesn't handle bookings or payments." = "Viator를 엽니다. Stamped!는 예약이나 결제를 처리하지 않습니다.";

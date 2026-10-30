@@ -763,3 +763,9 @@
 /* Audio story on a landmark page */
 "Listen" = "聴く";
 "Reads this landmark's story aloud in English" = "この名建築の物語を英語で読み上げます";
+
+/* Vrbo and Viator links */
+"Vacation Rentals on Vrbo" = "Vrboでバケーションレンタル";
+"Opens Vrbo. Stamped! doesn't handle bookings or payments." = "Vrboを開きます。Stamped!は予約や支払いを扱いません。";
+"More tours on Viator" = "Viatorでほかのツアー";
+"Opens Viator. Stamped! doesn't handle bookings or payments." = "Viatorを開きます。Stamped!は予約や支払いを扱いません。";

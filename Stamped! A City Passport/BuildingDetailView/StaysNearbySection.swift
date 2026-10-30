@@ -24,6 +24,8 @@ struct StaysNearbySection: View {
     let building: Building
     /// The Stamped city a hotel is saved under if the user taps Want to Visit on its card.
     let cityName: String
+    /// What Vrbo searches for: "Athens, Greece", not just "Athens" (City.hotelSearchName)
+    var rentalSearchName: String? = nil
     let isHighContrast: Bool
 
     @AppStorage("use_metric_units") private var useMetric = true
@@ -60,6 +62,10 @@ struct StaysNearbySection: View {
                         }
                         .padding(.horizontal, 2)
                     }
+                    // Whole homes nearby, for families and groups
+                    VrboButton(search: HotelSearch(destination: rentalSearchName ?? cityName, coordinate: coordinate))
+                        .font(.subheadline.weight(.semibold))
+                        .tint(isHighContrast ? .primary : DS.Palette.accent)
                     VStack(alignment: .leading, spacing: 2) {
                         Text(NSLocalizedString("Hotel data from Apple Maps.", comment: "Building page, Stays Near Here: data source note under the hotel cards"))
                             .font(.caption2)

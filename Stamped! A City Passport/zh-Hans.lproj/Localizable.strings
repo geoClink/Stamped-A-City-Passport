@@ -763,3 +763,9 @@
 /* Audio story on a landmark page */
 "Listen" = "收听";
 "Reads this landmark's story aloud in English" = "用英语朗读这座地标的故事";
+
+/* Vrbo and Viator links */
+"Vacation Rentals on Vrbo" = "在 Vrbo 上找度假租赁";
+"Opens Vrbo. Stamped! doesn't handle bookings or payments." = "打开 Vrbo。Stamped! 不处理预订或付款。";
+"More tours on Viator" = "在 Viator 上查看更多游览";
+"Opens Viator. Stamped! doesn't handle bookings or payments." = "打开 Viator。Stamped! 不处理预订或付款。";

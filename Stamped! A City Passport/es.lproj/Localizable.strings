@@ -763,3 +763,9 @@
 /* Audio story on a landmark page */
 "Listen" = "Escuchar";
 "Reads this landmark's story aloud in English" = "Lee en voz alta la historia de este monumento en inglés";
+
+/* Vrbo and Viator links */
+"Vacation Rentals on Vrbo" = "Alquileres vacacionales en Vrbo";
+"Opens Vrbo. Stamped! doesn't handle bookings or payments." = "Abre Vrbo. Stamped! no gestiona reservas ni pagos.";
+"More tours on Viator" = "Más tours en Viator";
+"Opens Viator. Stamped! doesn't handle bookings or payments." = "Abre Viator. Stamped! no gestiona reservas ni pagos.";
