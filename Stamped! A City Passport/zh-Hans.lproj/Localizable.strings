@@ -635,3 +635,12 @@
 "Plan" = "规划";
 "Local" = "当地";
 "Section" = "部分";
+
+// MARK: - Historic Photos & Drawings (Library of Congress)
+"Historic Photos & Drawings" = "历史照片与图纸";
+"Drawing" = "图纸";
+"Shows the image larger" = "放大显示图片";
+"View on loc.gov" = "在 loc.gov 上查看";
+"Image unavailable" = "图片无法显示";
+"Measured drawing" = "测绘图";
+"Historic photo" = "历史照片";

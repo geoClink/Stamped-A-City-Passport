@@ -417,6 +417,8 @@ extension BuildingDetailView {
                 BuildingNoteField(buildingID: building.id, noteText: $noteText, isHighContrast: isHighContrast)
             }
             aboutSection
+            // US landmarks only; hidden when the Library of Congress has nothing for it
+            HistoricPhotosSection(building: building, city: viewModel.city, isHighContrast: isHighContrast)
             threeDModelSection
             localFlavorsSection
             reportIssueButton

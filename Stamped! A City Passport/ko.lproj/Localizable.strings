@@ -635,3 +635,12 @@
 "Plan" = "계획";
 "Local" = "현지 정보";
 "Section" = "섹션";
+
+// MARK: - Historic Photos & Drawings (Library of Congress)
+"Historic Photos & Drawings" = "역사적 사진과 도면";
+"Drawing" = "도면";
+"Shows the image larger" = "이미지를 크게 표시합니다";
+"View on loc.gov" = "loc.gov에서 보기";
+"Image unavailable" = "이미지를 사용할 수 없음";
+"Measured drawing" = "실측 도면";
+"Historic photo" = "역사적 사진";

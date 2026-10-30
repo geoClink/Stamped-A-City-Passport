@@ -635,3 +635,12 @@
 "Plan" = "Pianifica";
 "Local" = "Sul posto";
 "Section" = "Sezione";
+
+// MARK: - Historic Photos & Drawings (Library of Congress)
+"Historic Photos & Drawings" = "Foto e disegni storici";
+"Drawing" = "Disegno";
+"Shows the image larger" = "Mostra l’immagine più grande";
+"View on loc.gov" = "Vedi su loc.gov";
+"Image unavailable" = "Immagine non disponibile";
+"Measured drawing" = "Rilievo architettonico";
+"Historic photo" = "Foto storica";

@@ -635,3 +635,12 @@
 "Plan" = "計画";
 "Local" = "周辺情報";
 "Section" = "セクション";
+
+// MARK: - Historic Photos & Drawings (Library of Congress)
+"Historic Photos & Drawings" = "歴史的な写真と図面";
+"Drawing" = "図面";
+"Shows the image larger" = "画像を拡大して表示します";
+"View on loc.gov" = "loc.govで見る";
+"Image unavailable" = "画像を表示できません";
+"Measured drawing" = "実測図";
+"Historic photo" = "歴史的な写真";
