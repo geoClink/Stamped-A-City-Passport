@@ -72,7 +72,7 @@ final class CampusEventsService: ObservableObject {
 
     func fetchEvents(for campus: CityLocation.City) async {
         self.campus = campus
-        guard let feed = campus.campusEventFeed else {
+        guard let feed = campus.eventFeed else {
             events = []
             isLoading = false
             return

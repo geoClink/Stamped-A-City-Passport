@@ -746,3 +746,7 @@
 "Men's gymnastics" = "男子体操";
 "Men's soccer" = "男子サッカー";
 "Wrestling" = "レスリング";
+
+/* Local Calendar: a city's library, museum or city hall events */
+"Local Calendar" = "地域のカレンダー";
+"Finding local events…" = "地域のイベントを検索中…";

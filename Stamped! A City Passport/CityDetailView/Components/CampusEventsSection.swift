@@ -3,7 +3,8 @@
 //  Stamped! A City Passport
 //
 //  "Campus Events" on a campus page: the next few weeks from the school's own public calendar
-//  (CampusEventsService). Shows nothing for campuses without a feed or with no events.
+//  (CampusEventsService). On a city page the same section is "Local Calendar", from a library,
+//  museum or city hall calendar (CityEventFeeds.swift). Shows nothing without a feed or events.
 //  Factual fields only and no photos; each card opens the school's event page.
 //
 
@@ -19,20 +20,27 @@ struct CampusEventsSection: View {
 
     /// Only this campus's events, never the list left over from the last campus opened
     private var isShowing: Bool {
-        campus.campusEventFeed != nil && service.campus == campus && (service.isLoading || !service.events.isEmpty)
+        campus.eventFeed != nil && service.campus == campus && (service.isLoading || !service.events.isEmpty)
     }
 
     var body: some View {
-        if isShowing, let feed = campus.campusEventFeed {
+        if isShowing, let feed = campus.eventFeed {
             VStack(alignment: .leading, spacing: DS.Space.m) {
-                DSSectionHeader("Campus Events", systemImage: "graduationcap.fill", isHighContrast: isHighContrast)
-                    .dsPageMargin()
+                // A city's calendar is a library, museum or city hall's, so it isn't "Campus Events"
+                if campus.isCampus {
+                    DSSectionHeader("Campus Events", systemImage: "graduationcap.fill", isHighContrast: isHighContrast)
+                        .dsPageMargin()
+                } else {
+                    DSSectionHeader("Local Calendar", systemImage: "building.columns.fill", isHighContrast: isHighContrast)
+                        .dsPageMargin()
+                }
 
                 VStack(alignment: .leading, spacing: 0) {
                     if service.isLoading {
                         HStack(spacing: DS.Space.s) {
                             ProgressView().scaleEffect(0.7)
-                            Text("Finding campus events…")
+                            // LocalizedStringKey on one side, so the pair is translated rather than shown as a String
+                            Text(campus.isCampus ? LocalizedStringKey("Finding campus events…") : "Finding local events…")
                                 .font(.caption).foregroundColor(.secondary)
                         }
                         .padding(DS.Space.l)

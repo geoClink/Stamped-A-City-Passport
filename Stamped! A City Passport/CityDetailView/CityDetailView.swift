@@ -150,8 +150,9 @@ struct CityDetailView: View {
                         EventsSection(service: events, isHighContrast: isHighContrast)
                     }
 
-                    // Campuses only: the school's own calendar (hides itself when there's nothing)
-                    if viewModel.city.campusEventFeed != nil {
+                    // The school's own calendar, or a city's library, museum or city hall calendar
+                    // (hides itself when there's nothing)
+                    if viewModel.city.eventFeed != nil {
                         CampusEventsSection(service: CampusEventsService.shared, campus: viewModel.city, isHighContrast: isHighContrast)
                     }
 

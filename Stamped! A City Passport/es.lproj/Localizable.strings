@@ -746,3 +746,7 @@
 "Men's gymnastics" = "Gimnasia masculina";
 "Men's soccer" = "Fútbol masculino";
 "Wrestling" = "Lucha";
+
+/* Local Calendar: a city's library, museum or city hall events */
+"Local Calendar" = "Calendario local";
+"Finding local events…" = "Buscando eventos locales…";

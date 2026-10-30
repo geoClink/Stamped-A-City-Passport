@@ -159,6 +159,16 @@ final class CampusEventsTests: XCTestCase {
         XCTAssertLessThanOrEqual(summary.count, CampusEventsService.summaryLength + 1)
     }
 
+    // City calendars are for real cities only, are https, and each city's page finds its own
+    func testCityFeedsAreHTTPSCities() {
+        for (city, feed) in CityLocation.City.cityEventFeeds {
+            XCTAssertFalse(city.isCampus, city.name)
+            XCTAssertNil(CityLocation.City.campusEventFeeds[city], "\(city.name) is in both lists")
+            XCTAssertEqual(city.eventFeed, feed, city.name)
+            if case .ical(let url) = feed.source { XCTAssertEqual(url.scheme, "https", city.name) }
+        }
+    }
+
     // Every feed is https, so App Transport Security needs no exceptions
     func testAllFeedsAreHTTPSCampuses() {
         for (campus, feed) in CityLocation.City.campusEventFeeds {
