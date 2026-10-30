@@ -98,6 +98,8 @@ extension CityLocation.City {
         case .bilbao:           return (43.2631, -2.9350)
         case .valencia:         return (39.4700, -0.3764)
         case .rotterdam:        return (51.9200, 4.4800)
+        case .munich:           return (48.1375, 11.5750)
+        case .hamburg:          return (53.5500, 10.0000)
         // MARK: Central / Eastern Europe
         case .rome:             return (41.9028, 12.4964)
         case .milan:            return (45.4642, 9.1900)

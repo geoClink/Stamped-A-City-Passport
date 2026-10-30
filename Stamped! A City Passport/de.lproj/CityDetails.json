@@ -792,6 +792,19 @@
     "transportation": "Tren Ligero & Macrobús",
     "transportationFact": "Guadalajara's Tren Ligero (light rail) has two lines crossing the metropolitan area. The Macrobús — a Bus Rapid Transit system on dedicated lanes — handles the busiest corridors. A new Line 3 of the light rail opened in 2020, significantly expanding coverage. The city is investing heavily in cycling infrastructure, and a bike-sharing system (MiBici) has made cycling a realistic urban option. Uber operates widely in Guadalajara."
   },
+  "Hamburg": {
+    "airportCode": "HAM",
+    "airportInfo": "Der Hamburger Flughafen wurde im Januar 1911 eröffnet und ist damit der älteste noch betriebene internationale Flughafen der Welt. Er liegt rund 8,5 km nördlich der Innenstadt in Fuhlsbüttel, trägt seit 2016 den Namen des früheren Bundeskanzlers Helmut Schmidt und ist über eine eigene S-Bahn-Linie an die Stadt angebunden.",
+    "airportName": "Hamburg Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "Euro (€)",
+    "funFact": "Über Hamburgs Flüsse und Kanäle führen rund 2.500 Brücken – mehr als in London, Amsterdam und Venedig zusammen. Zudem stehen hier fünf der höchsten Kirchen der Welt, und in den 1870er-Jahren war der Turm von St. Nikolai zwei Jahre lang das höchste Bauwerk der Erde.",
+    "language": "Deutsch",
+    "languageInfo": "Hochdeutsch wird überall gesprochen, doch die ursprüngliche Sprache Hamburgs ist das Niederdeutsche, hier „Hamborger Platt“ genannt. Seine Spuren finden sich bis heute in vielen Straßen- und Ortsnamen und in alten Seemannsliedern wie „Hamborger Veermaster“.",
+    "nickname": "Tor zur Welt",
+    "transportation": "U-Bahn, S-Bahn und Hafenfähren",
+    "transportationFact": "Bahnen, Busse und Hafenfähren fahren alle im HVV, dem weltweit ersten Verkehrsverbund seiner Art – ein Ticket gilt bei allen Unternehmen. Nur etwa 41 der 101 Kilometer des U-Bahn-Netzes verlaufen unterirdisch, weshalb ältere Hamburger sie noch immer „Hochbahn“ nennen."
+  },
   "Havana": {
     "airportCode": "HAV",
     "airportInfo": "José Martí International Airport is named after Cuba's national hero and independence poet. It has four terminals serving different types of traffic, with Terminal 3 handling most international arrivals. The airport is located about 18km southwest of the city center. Given Cuba's unique relationship with the United States — and restricted American travel to the island — the airport sees a distinctive mix of passengers from Latin America, Canada, Europe, and increasingly from the United States.",
@@ -1194,6 +1207,19 @@
     "nickname": "Stadt der Träume",
     "transportation": "Nahverkehrszüge",
     "transportationFact": "Die Mumbai Suburban Railway gilt als „Lebensader Mumbais“ und ist für das Funktionieren der Stadt von entscheidender Bedeutung. Die Mumbai Metro ist eine neue und schnell wachsende Ergänzung, die den Pendlern klimatisierten Komfort bietet. Die ikonischen schwarz-gelben „Kaali-Peeli“-Taxis und Autorikschas bieten für die meisten Einwohner die Anbindung auf die letzte Meile."
+  },
+  "Munich": {
+    "airportCode": "MUC",
+    "airportInfo": "Der Flughafen München wurde 1992 rund 28,5 km nordöstlich der Stadt bei Freising eröffnet und trägt den Namen des früheren bayerischen Ministerpräsidenten Franz Josef Strauß. Das große Lufthansa-Drehkreuz mit zwei Passagierterminals hat einen eigenen S-Bahnhof mit direkter Verbindung in die Innenstadt.",
+    "airportName": "Munich Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "Euro (€)",
+    "funFact": "München ist die Heimat des Oktoberfests, des größten Volksfests der Welt, das aus einer Feier zu einer königlichen Hochzeit im Oktober 1810 hervorging. Mit rund 4.800 Einwohnern pro Quadratkilometer ist es zudem die am dichtesten besiedelte Gemeinde Deutschlands.",
+    "language": "Deutsch",
+    "languageInfo": "Hochdeutsch wird überall gesprochen, doch München ist nach Wien die zweitgrößte Stadt im bairischen Sprachraum. Die bairischen Dialekte sind als Regionalsprachen anerkannt – statt „Hallo“ hört man daher oft ein freundliches „Servus“ oder „Grüß Gott“.",
+    "nickname": "Isar-Athen",
+    "transportation": "U-Bahn und S-Bahn",
+    "transportationFact": "U-Bahn, S-Bahn, Trambahn und Busse fahren alle unter einem gemeinsamen Tarifsystem, dem MVV. Die U-Bahn wurde für die Olympischen Spiele 1972 rasch ausgebaut, während die Trambahn als ältestes öffentliches Verkehrsmittel der Stadt bereits seit 1876 fährt."
   },
   "Muscat": {
     "airportCode": "MCT",

@@ -404,6 +404,14 @@ extension WikimediaService {
         // Guadalajara
         "mx_guadalajara_cathedral": "Guadalajara Cathedral",         // Guadalajara Metropolitan Cathedral
 
+        // Hamburg
+        "hamburg_st_michaels_church": "St. Michael's Church, Hamburg", // St. Michael's Church
+        "hamburg_st_nicholas_church": "St. Nicholas' Church, Hamburg", // St. Nicholas Church
+        "hamburg_st_peters_church": "St. Peter's Church, Hamburg",   // St. Peter's Church
+        "hamburg_st_catherines_church": "St. Catherine's Church, Hamburg", // St. Catherine's Church
+        "hamburg_dammtor_station": "Hamburg Dammtor station",        // Hamburg Dammtor
+        "hamburg_old_elbe_tunnel": "St. Pauli Elbe Tunnel",          // Old Elbe Tunnel
+
         // Havana
         "havana-morro-castle": "Castillo de los Tres Reyes Del Morro", // Morro Castle
 
@@ -493,6 +501,16 @@ extension WikimediaService {
         // Mumbai
         "bom_t2_terminal": "Chhatrapati Shivaji Maharaj International Airport", // Chhatrapati Shivaji Maharaj T2
         "bom_national_gallery": "National Gallery of Modern Art, Mumbai", // NGMA (Sir Cowasji Jehangir Hall)
+
+        // Munich
+        "munich_frauenkirche": "Frauenkirche, Munich",               // Frauenkirche
+        "munich_new_town_hall": "New Town Hall (Munich)",            // New Town Hall
+        "munich_st_peters_church": "St. Peter's Church, Munich",     // St. Peter's Church
+        "munich_asam_church": "Asam Church, Munich",                 // Asam Church
+        "munich_theatine_church": "Theatine Church, Munich",         // Theatine Church
+        "munich_st_michaels_church": "St. Michael's Church, Munich", // St. Michael's Church
+        "munich_national_theatre": "National Theatre (Munich)",      // National Theatre
+        "munich_olympiastadion": "Olympiastadion (Munich)",          // Olympiastadion
 
         // Nairobi
         "gtc-office-tower": "Nairobi GTC Office Tower",              // GTC Office Tower

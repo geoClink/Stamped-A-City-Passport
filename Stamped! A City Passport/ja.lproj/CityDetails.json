@@ -792,6 +792,19 @@
     "transportation": "Tren Ligero & Macrobús",
     "transportationFact": "Guadalajara's Tren Ligero (light rail) has two lines crossing the metropolitan area. The Macrobús — a Bus Rapid Transit system on dedicated lanes — handles the busiest corridors. A new Line 3 of the light rail opened in 2020, significantly expanding coverage. The city is investing heavily in cycling infrastructure, and a bike-sharing system (MiBici) has made cycling a realistic urban option. Uber operates widely in Guadalajara."
   },
+  "Hamburg": {
+    "airportCode": "HAM",
+    "airportInfo": "ハンブルク空港は1911年1月に開港した、現在も運用されている世界最古の国際空港です。市中心部から北へ約8.5kmのフールスビュッテルにあり、2016年からは元首相ヘルムート・シュミットの名を冠し、専用のSバーン路線で市内と結ばれています。",
+    "airportName": "Hamburg Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "ユーロ (€)",
+    "funFact": "ハンブルクの川や運河には約2,500本もの橋が架かり、その数はロンドン、アムステルダム、ヴェネツィアを合わせたよりも多いほどです。世界でも有数の高さを誇る教会が5つもあり、1870年代には聖ニコライ教会の尖塔が2年間、世界一高い建物でした。",
+    "language": "ドイツ語",
+    "languageInfo": "標準ドイツ語はどこでも通じますが、ハンブルク本来の言葉は低地ドイツ語で、地元では「ハンボーガー・プラット」と呼ばれます。その名残は今も多くの通りや地名、そして「ハンボーガー・フェールマスター」のような古い船乗りの歌に残っています。",
+    "nickname": "世界への玄関口",
+    "transportation": "Uバーン、Sバーンとフェリー",
+    "transportationFact": "鉄道、バス、港のフェリーはすべてHVVのもとで運行されており、HVVはこの種の運輸連合として世界初の組織です。1枚の切符でどの会社の路線にも乗れます。Uバーンは全長101kmのうち地下区間が約41kmしかないため、年配の人々は今も「ホーホバーン（高架鉄道）」と呼んでいます。"
+  },
   "Havana": {
     "airportCode": "HAV",
     "airportInfo": "José Martí International Airport is named after Cuba's national hero and independence poet. It has four terminals serving different types of traffic, with Terminal 3 handling most international arrivals. The airport is located about 18km southwest of the city center. Given Cuba's unique relationship with the United States — and restricted American travel to the island — the airport sees a distinctive mix of passengers from Latin America, Canada, Europe, and increasingly from the United States.",
@@ -1194,6 +1207,19 @@
     "nickname": "シティ・オブ・ドリームス",
     "transportation": "普通列車",
     "transportationFact": "ムンバイ郊外鉄道は「ムンバイのライフライン」として知られ、都市の機能に不可欠です。ムンバイ メトロは、通勤者にエアコン完備の快適さを提供する、新しく急速に成長している地下鉄です。象徴的な黒と黄色の「カーリ ピーリ」タクシーと自動人力車は、ほとんどの住民にラストワンマイルの接続を提供します。"
+  },
+  "Munich": {
+    "airportCode": "MUC",
+    "airportInfo": "ミュンヘン空港は1992年、市の北東約28.5km、フライジング近郊に開港し、元バイエルン州首相フランツ・ヨーゼフ・シュトラウスにちなんで名付けられました。2つの旅客ターミナルを持つルフトハンザの主要ハブで、空港内のSバーン駅から市中心部へ直行できます。",
+    "airportName": "Munich Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "ユーロ (€)",
+    "funFact": "ミュンヘンは世界最大の民衆祭（フォルクスフェスト）であるオクトーバーフェストの本場で、その起源は1810年10月の王室の結婚祝いにさかのぼります。1平方キロメートルあたり約4,800人という人口密度は、ドイツの自治体の中で最も高い数字です。",
+    "language": "ドイツ語",
+    "languageInfo": "標準ドイツ語はどこでも通じますが、ミュンヘンはウィーンに次ぐバイエルン方言圏第2の都市です。バイエルン方言は地域言語として認められており、「ハロー」の代わりに親しみを込めた「セルヴス」や「グリュース・ゴット」を耳にすることもあります。",
+    "nickname": "イーザル河畔のアテネ",
+    "transportation": "U バーンと S バーン",
+    "transportationFact": "地下鉄（Uバーン）、近郊電車のSバーン、トラム、バスはすべてMVVという共通の運賃制度で利用できます。Uバーンは1972年のオリンピックに向けて急速に整備され、トラムは1876年から走る市内最古の公共交通機関です。"
   },
   "Muscat": {
     "airportCode": "MCT",

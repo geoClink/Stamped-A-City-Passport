@@ -792,6 +792,19 @@
     "transportation": "Tren Ligero & Macrobús",
     "transportationFact": "Guadalajara's Tren Ligero (light rail) has two lines crossing the metropolitan area. The Macrobús — a Bus Rapid Transit system on dedicated lanes — handles the busiest corridors. A new Line 3 of the light rail opened in 2020, significantly expanding coverage. The city is investing heavily in cycling infrastructure, and a bike-sharing system (MiBici) has made cycling a realistic urban option. Uber operates widely in Guadalajara."
   },
+  "Hamburg": {
+    "airportCode": "HAM",
+    "airportInfo": "汉堡机场于 1911 年 1 月启用，是世界上仍在运营的最古老的国际机场。机场位于市中心以北约 8.5 公里的富尔斯比特尔，自 2016 年起以前总理赫尔穆特·施密特命名，并有专属 S-Bahn 线路连接市区。",
+    "airportName": "Hamburg Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "欧元 (€)",
+    "funFact": "汉堡的河流与运河上横跨着约 2,500 座桥梁，比伦敦、阿姆斯特丹和威尼斯加起来还多。这座城市还拥有五座世界最高的教堂之一，在 19 世纪 70 年代，圣尼古拉教堂的尖塔曾有两年是地球上最高的建筑。",
+    "language": "德语",
+    "languageInfo": "标准德语随处通用，但汉堡的本土语言是低地德语，当地称为“Hamborger Platt”。它的痕迹至今仍保留在许多街道名、地名以及《Hamborger Veermaster》等古老的水手歌谣中。",
+    "nickname": "通往世界的门户",
+    "transportation": "地铁、轻轨和渡轮",
+    "transportationFact": "火车、公交车和港口渡轮都隶属于 HVV，它是世界上第一个此类交通联合体，一张车票即可乘坐所有公司的线路。汉堡地铁（U-Bahn）全长 101 公里，其中只有约 41 公里在地下，因此老一辈居民至今仍称它为“Hochbahn”（高架铁路）。"
+  },
   "Havana": {
     "airportCode": "HAV",
     "airportInfo": "José Martí International Airport is named after Cuba's national hero and independence poet. It has four terminals serving different types of traffic, with Terminal 3 handling most international arrivals. The airport is located about 18km southwest of the city center. Given Cuba's unique relationship with the United States — and restricted American travel to the island — the airport sees a distinctive mix of passengers from Latin America, Canada, Europe, and increasingly from the United States.",
@@ -1194,6 +1207,19 @@
     "nickname": "新濠天地",
     "transportation": "本地列车",
     "transportationFact": "孟买市郊铁路被称为“孟买的生命线”，对于城市的运作至关重要。孟买地铁是一个快速增长的新设施，为通勤者提供舒适的空调服务。标志性的黑黄相间的“Kaali-Peeli”出租车和自动人力车为大多数居民提供最后一英里的交通服务。"
+  },
+  "Munich": {
+    "airportCode": "MUC",
+    "airportInfo": "慕尼黑机场于 1992 年启用，位于市区东北约 28.5 公里的弗赖辛附近，以巴伐利亚州前州长弗朗茨·约瑟夫·施特劳斯命名。机场是汉莎航空的主要枢纽，拥有两座客运航站楼，并设有 S-Bahn 车站，可直达市中心。",
+    "airportName": "Munich Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "欧元 (€)",
+    "funFact": "慕尼黑是世界最大民间节庆——啤酒节（Oktoberfest）的故乡，这一节日起源于 1810 年 10 月的一场王室婚礼庆典。慕尼黑每平方公里约有 4,800 人，也是德国人口密度最高的市镇。",
+    "language": "德语",
+    "languageInfo": "标准德语在这里随处通用，但慕尼黑是仅次于维也纳的巴伐利亚方言区第二大城市。巴伐利亚方言被认定为地区语言，所以你可能会听到亲切的“Servus”或“Grüß Gott”，而不是“Hallo”。",
+    "nickname": "伊萨尔河畔的雅典",
+    "transportation": "地铁和轻轨",
+    "transportationFact": "地铁（U-Bahn）、城郊列车（S-Bahn）、有轨电车和公交车都采用统一的 MVV 票务系统。地铁为 1972 年奥运会而迅速扩建，而有轨电车自 1876 年起运营，是城内历史最悠久的公共交通。"
   },
   "Muscat": {
     "airportCode": "MCT",
