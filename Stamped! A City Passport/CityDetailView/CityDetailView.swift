@@ -124,6 +124,7 @@ struct CityDetailView: View {
                     LandmarkSection(viewModel: viewModel, isHighContrast: isHighContrast)
 
                     BuildingTimelineSection(
+                        viewModel: viewModel,
                         buildings: viewModel.city.buildings,
                         visitedIDs: GlobalProgressManager.shared.visitedIDs,
                         isHighContrast: isHighContrast
