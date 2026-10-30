@@ -644,3 +644,11 @@
 "dining.winery" = "Vinícola";
 "dining.market" = "Mercado";
 "dining.bar" = "Bar";
+
+// MARK: - Campus events
+"Campus Events" = "Eventos do campus";
+"Finding campus events…" = "Procurando eventos do campus…";
+"From the %@ calendar" = "Do calendário %@";
+"Opens the event page" = "Abre a página do evento";
+"Event Details" = "Detalhes do evento";
+"All day" = "Dia inteiro";

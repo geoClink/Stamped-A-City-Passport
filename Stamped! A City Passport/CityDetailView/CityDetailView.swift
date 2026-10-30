@@ -139,6 +139,11 @@ struct CityDetailView: View {
                         EventsSection(service: events, isHighContrast: isHighContrast)
                     }
 
+                    // Campuses only: the school's own calendar (hides itself when there's nothing)
+                    if viewModel.city.campusEventFeed != nil {
+                        CampusEventsSection(service: CampusEventsService.shared, campus: viewModel.city, isHighContrast: isHighContrast)
+                    }
+
                     TravelInfoSection(viewModel: viewModel, isHighContrast: isHighContrast)
 
                 case .local:
@@ -176,7 +181,8 @@ struct CityDetailView: View {
                 cityName: viewModel.city.name,
                 buildings: viewModel.city.buildings
             )
-            _ = await (w, e, f)
+            async let c: () = CampusEventsService.shared.fetchEvents(for: viewModel.city)
+            _ = await (w, e, f, c)
         }
         .onAppear {
             ProximityManager.shared.startMonitoring(
@@ -200,6 +206,9 @@ struct CityDetailView: View {
                     cityName: viewModel.city.name,
                     buildings: viewModel.city.buildings
                 )
+            }
+            Task {
+                await CampusEventsService.shared.fetchEvents(for: viewModel.city)
             }
         }
         .onDisappear {

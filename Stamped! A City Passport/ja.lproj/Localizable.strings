@@ -644,3 +644,11 @@
 "dining.winery" = "ワイナリー";
 "dining.market" = "マーケット";
 "dining.bar" = "バー";
+
+// MARK: - Campus events
+"Campus Events" = "キャンパスのイベント";
+"Finding campus events…" = "キャンパスのイベントを検索中…";
+"From the %@ calendar" = "出典：%@ カレンダー";
+"Opens the event page" = "イベントのページを開きます";
+"Event Details" = "イベントの詳細";
+"All day" = "終日";
