@@ -792,6 +792,19 @@
     "transportation": "Tren Ligero & Macrobús",
     "transportationFact": "Guadalajara's Tren Ligero (light rail) has two lines crossing the metropolitan area. The Macrobús — a Bus Rapid Transit system on dedicated lanes — handles the busiest corridors. A new Line 3 of the light rail opened in 2020, significantly expanding coverage. The city is investing heavily in cycling infrastructure, and a bike-sharing system (MiBici) has made cycling a realistic urban option. Uber operates widely in Guadalajara."
   },
+  "Hamburg": {
+    "airportCode": "HAM",
+    "airportInfo": "L'aéroport de Hambourg a ouvert en janvier 1911, ce qui en fait le plus ancien aéroport international du monde encore en service. Situé à environ 8,5 km au nord du centre, à Fuhlsbüttel, il porte depuis 2016 le nom de l'ancien chancelier Helmut Schmidt et est relié à la ville par sa propre ligne de S-Bahn.",
+    "airportName": "Hamburg Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "euros (€)",
+    "funFact": "Les rivières et canaux de Hambourg sont franchis par quelque 2 500 ponts, plus que Londres, Amsterdam et Venise réunies. La ville compte aussi cinq des plus hautes églises du monde, et pendant deux ans, dans les années 1870, la flèche de Saint-Nicolas fut le plus haut bâtiment de la planète.",
+    "language": "Allemand",
+    "languageInfo": "L'allemand standard est parlé partout, mais la langue d'origine de Hambourg est le bas allemand, appelé ici « Hamborger Platt ». On en retrouve la trace dans de nombreux noms de rues et de lieux, ainsi que dans de vieux chants de marins comme « Hamborger Veermaster ».",
+    "nickname": "Porte du monde",
+    "transportation": "U-Bahn, S-Bahn et ferries",
+    "transportationFact": "Trains, bus et ferries du port relèvent tous du HVV, première communauté de transport de ce type au monde : un seul billet est valable auprès de toutes les compagnies. Seuls 41 des 101 km du réseau de métro (U-Bahn) sont souterrains, c'est pourquoi les anciens l'appellent encore « Hochbahn » (métro aérien)."
+  },
   "Havana": {
     "airportCode": "HAV",
     "airportInfo": "José Martí International Airport is named after Cuba's national hero and independence poet. It has four terminals serving different types of traffic, with Terminal 3 handling most international arrivals. The airport is located about 18km southwest of the city center. Given Cuba's unique relationship with the United States — and restricted American travel to the island — the airport sees a distinctive mix of passengers from Latin America, Canada, Europe, and increasingly from the United States.",
@@ -1194,6 +1207,19 @@
     "nickname": "Ville de rêves",
     "transportation": "Trains locaux",
     "transportationFact": "Le chemin de fer de banlieue de Mumbai est connu comme la « bouée de sauvetage de Mumbai » et est essentiel au fonctionnement de la ville. Le métro de Mumbai est un nouvel ajout en croissance rapide qui offre un confort climatisé aux navetteurs. Les taxis et pousse-pousse automatiques emblématiques « Kaali-Peeli » noirs et jaunes assurent la connectivité du dernier kilomètre pour la plupart des résidents."
+  },
+  "Munich": {
+    "airportCode": "MUC",
+    "airportInfo": "L'aéroport de Munich a ouvert en 1992 à environ 28,5 km au nord-est de la ville, près de Freising, et porte le nom de l'ancien ministre-président de Bavière Franz Josef Strauss. Grand hub de Lufthansa doté de deux terminaux passagers, il possède sa propre gare de S-Bahn reliée directement au centre-ville.",
+    "airportName": "Munich Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "euros (€)",
+    "funFact": "Munich accueille l'Oktoberfest, la plus grande fête populaire (Volksfest) du monde, née des célébrations d'un mariage royal en octobre 1810. Avec environ 4 800 habitants au kilomètre carré, c'est aussi la commune la plus densément peuplée d'Allemagne.",
+    "language": "Allemand",
+    "languageInfo": "L'allemand standard est parlé partout, mais Munich est la deuxième plus grande ville de l'aire du dialecte bavarois, après Vienne. Les dialectes bavarois sont reconnus comme langues régionales : vous entendrez peut-être un chaleureux « Servus » ou « Grüß Gott » au lieu de « Hallo ».",
+    "nickname": "Athènes sur l'Isar",
+    "transportation": "U-Bahn et S-Bahn",
+    "transportationFact": "Le métro (U-Bahn), les trains de banlieue S-Bahn, les tramways et les bus fonctionnent tous avec une même billetterie, le MVV. Le U-Bahn a été rapidement étendu pour les Jeux olympiques de 1972, tandis que le tramway, plus ancien transport public de la ville, circule depuis 1876."
   },
   "Muscat": {
     "airportCode": "MCT",

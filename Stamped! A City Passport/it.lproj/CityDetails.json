@@ -792,6 +792,19 @@
     "transportation": "Tren Ligero & Macrobús",
     "transportationFact": "Guadalajara's Tren Ligero (light rail) has two lines crossing the metropolitan area. The Macrobús — a Bus Rapid Transit system on dedicated lanes — handles the busiest corridors. A new Line 3 of the light rail opened in 2020, significantly expanding coverage. The city is investing heavily in cycling infrastructure, and a bike-sharing system (MiBici) has made cycling a realistic urban option. Uber operates widely in Guadalajara."
   },
+  "Hamburg": {
+    "airportCode": "HAM",
+    "airportInfo": "L'aeroporto di Amburgo è stato inaugurato nel gennaio 1911 ed è quindi il più antico aeroporto internazionale del mondo ancora in funzione. Si trova a circa 8,5 km a nord del centro, a Fuhlsbüttel, dal 2016 porta il nome dell'ex cancelliere Helmut Schmidt ed è collegato alla città da una propria linea della S-Bahn.",
+    "airportName": "Hamburg Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "Euro (€)",
+    "funFact": "Fiumi e canali di Amburgo sono attraversati da circa 2.500 ponti, più di Londra, Amsterdam e Venezia messe insieme. La città ospita anche cinque delle chiese più alte del mondo e, per due anni negli anni Settanta dell'Ottocento, la guglia di San Nicola fu l'edificio più alto della Terra.",
+    "language": "tedesco",
+    "languageInfo": "Il tedesco standard si parla ovunque, ma la lingua originaria di Amburgo è il basso tedesco, chiamato qui \"Hamborger Platt\". Le sue tracce sopravvivono in molti nomi di strade e luoghi e in vecchi canti marinareschi come \"Hamborger Veermaster\".",
+    "nickname": "Porta sul mondo",
+    "transportation": "Metropolitana, S-Bahn e traghetti",
+    "transportationFact": "Treni, autobus e traghetti del porto fanno tutti capo all'HVV, la prima associazione di trasporto di questo tipo al mondo: un solo biglietto vale per tutte le compagnie. Solo circa 41 dei 101 km della metropolitana (U-Bahn) sono sotterranei, ed è per questo che gli anziani la chiamano ancora \"Hochbahn\" (ferrovia sopraelevata)."
+  },
   "Havana": {
     "airportCode": "HAV",
     "airportInfo": "José Martí International Airport is named after Cuba's national hero and independence poet. It has four terminals serving different types of traffic, with Terminal 3 handling most international arrivals. The airport is located about 18km southwest of the city center. Given Cuba's unique relationship with the United States — and restricted American travel to the island — the airport sees a distinctive mix of passengers from Latin America, Canada, Europe, and increasingly from the United States.",
@@ -1194,6 +1207,19 @@
     "nickname": "Città dei sogni",
     "transportation": "Treni locali",
     "transportationFact": "The Mumbai Suburban Railway is known as the 'Lifeline of Mumbai' and is essential for the city's functioning. The Mumbai Metro is a new and rapidly growing addition that provides air-conditioned comfort to commuters. Iconic black-and-yellow 'Kaali-Peeli' taxis and auto-rickshaws provide the last-mile connectivity for most residents."
+  },
+  "Munich": {
+    "airportCode": "MUC",
+    "airportInfo": "L'aeroporto di Monaco è stato inaugurato nel 1992 a circa 28,5 km a nord-est della città, vicino a Frisinga, e porta il nome dell'ex ministro-presidente bavarese Franz Josef Strauss. Grande hub della Lufthansa con due terminal passeggeri, ha una propria stazione della S-Bahn collegata direttamente al centro.",
+    "airportName": "Munich Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "Euro (€)",
+    "funFact": "Monaco ospita l'Oktoberfest, la più grande festa popolare (Volksfest) del mondo, nata dai festeggiamenti per un matrimonio reale nell'ottobre del 1810. Con circa 4.800 abitanti per chilometro quadrato, è anche il comune più densamente popolato della Germania.",
+    "language": "tedesco",
+    "languageInfo": "Il tedesco standard si parla ovunque, ma Monaco è la seconda città più grande dell'area del dialetto bavarese dopo Vienna. I dialetti bavaresi sono riconosciuti come lingue regionali, quindi potresti sentire un cordiale \"Servus\" o \"Grüß Gott\" al posto di \"Hallo\".",
+    "nickname": "Atene sull'Isar",
+    "transportation": "Metropolitana e S-Bahn",
+    "transportationFact": "Metropolitana (U-Bahn), treni suburbani S-Bahn, tram e autobus funzionano tutti con un unico sistema tariffario, l'MVV. La U-Bahn è stata ampliata rapidamente per le Olimpiadi del 1972, mentre il tram è il mezzo pubblico più antico della città, in servizio dal 1876."
   },
   "Muscat": {
     "airportCode": "MCT",

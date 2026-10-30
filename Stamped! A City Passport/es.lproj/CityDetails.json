@@ -792,6 +792,19 @@
     "transportation": "Tren Ligero & Macrobús",
     "transportationFact": "Guadalajara's Tren Ligero (light rail) has two lines crossing the metropolitan area. The Macrobús — a Bus Rapid Transit system on dedicated lanes — handles the busiest corridors. A new Line 3 of the light rail opened in 2020, significantly expanding coverage. The city is investing heavily in cycling infrastructure, and a bike-sharing system (MiBici) has made cycling a realistic urban option. Uber operates widely in Guadalajara."
   },
+  "Hamburg": {
+    "airportCode": "HAM",
+    "airportInfo": "El aeropuerto de Hamburgo abrió en enero de 1911, lo que lo convierte en el aeropuerto internacional más antiguo del mundo que sigue en funcionamiento. Está a unos 8,5 km al norte del centro, en Fuhlsbüttel, lleva desde 2016 el nombre del excanciller Helmut Schmidt y tiene su propia línea de S-Bahn hasta la ciudad.",
+    "airportName": "Hamburg Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "euros (€)",
+    "funFact": "Los ríos y canales de Hamburgo están cruzados por unos 2.500 puentes, más que Londres, Ámsterdam y Venecia juntas. La ciudad alberga además cinco de las iglesias más altas del mundo, y durante dos años, en la década de 1870, la aguja de San Nicolás fue el edificio más alto del planeta.",
+    "language": "Alemán",
+    "languageInfo": "El alemán estándar se habla en todas partes, pero la lengua original de Hamburgo es el bajo alemán, conocido aquí como 'Hamborger Platt'. Su huella sigue viva en muchos nombres de calles y lugares, y en antiguas canciones marineras como 'Hamborger Veermaster'.",
+    "nickname": "la Puerta al Mundo",
+    "transportation": "Metro, S-Bahn y ferris",
+    "transportationFact": "Trenes, autobuses y ferris del puerto funcionan dentro del HVV, la primera asociación de transporte de este tipo en el mundo: un mismo billete sirve en todas las compañías. Solo unos 41 de los 101 km del metro (U-Bahn) son subterráneos, por eso los mayores aún lo llaman 'Hochbahn' (tren elevado)."
+  },
   "Havana": {
     "airportCode": "HAV",
     "airportInfo": "El Aeropuerto Internacional José Martí lleva el nombre del héroe nacional e independentista cubano. Tiene cuatro terminales, con la Terminal 3 manejando la mayoría de los vuelos internacionales.",
@@ -1194,6 +1207,19 @@
     "nickname": "ciudad de los sueños",
     "transportation": "Local Trains",
     "transportationFact": "The Mumbai Suburban Railway is known as the 'Lifeline of Mumbai' and is essential for the city's functioning. The Mumbai Metro is a new and rapidly growing addition that provides air-conditioned comfort to commuters. Iconic black-and-yellow 'Kaali-Peeli' taxis and auto-rickshaws provide the last-mile connectivity for most residents."
+  },
+  "Munich": {
+    "airportCode": "MUC",
+    "airportInfo": "El aeropuerto de Múnich abrió en 1992 a unos 28,5 km al noreste de la ciudad, cerca de Freising, y lleva el nombre del antiguo ministro-presidente bávaro Franz Josef Strauss. Es un gran centro de operaciones de Lufthansa con dos terminales de pasajeros y tiene su propia estación de S-Bahn con conexión directa al centro.",
+    "airportName": "Munich Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "euros (€)",
+    "funFact": "Múnich es la sede del Oktoberfest, la mayor fiesta popular (Volksfest) del mundo, que nació de la celebración de una boda real en octubre de 1810. Con unos 4.800 habitantes por kilómetro cuadrado, es además el municipio más densamente poblado de Alemania.",
+    "language": "Alemán",
+    "languageInfo": "El alemán estándar se habla en todas partes, pero Múnich es la segunda ciudad más grande del área del dialecto bávaro, después de Viena. Los dialectos bávaros están reconocidos como lenguas regionales, así que quizá oigas un amable 'Servus' o 'Grüß Gott' en lugar de 'Hallo'.",
+    "nickname": "la Atenas del Isar",
+    "transportation": "Metro y S-Bahn",
+    "transportationFact": "El metro (U-Bahn), los trenes de cercanías S-Bahn, los tranvías y los autobuses funcionan con un único sistema de billetes, el MVV. El U-Bahn se amplió rápidamente para los Juegos Olímpicos de 1972, mientras que el tranvía es el transporte público más antiguo de la ciudad y circula desde 1876."
   },
   "Muscat": {
     "airportCode": "MCT",

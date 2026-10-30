@@ -792,6 +792,19 @@
     "transportation": "Tren Ligero & Macrobús",
     "transportationFact": "Guadalajara's Tren Ligero (light rail) has two lines crossing the metropolitan area. The Macrobús — a Bus Rapid Transit system on dedicated lanes — handles the busiest corridors. A new Line 3 of the light rail opened in 2020, significantly expanding coverage. The city is investing heavily in cycling infrastructure, and a bike-sharing system (MiBici) has made cycling a realistic urban option. Uber operates widely in Guadalajara."
   },
+  "Hamburg": {
+    "airportCode": "HAM",
+    "airportInfo": "함부르크 공항은 1911년 1월에 문을 열어, 현재도 운영 중인 세계에서 가장 오래된 국제공항입니다. 도심에서 북쪽으로 약 8.5km 떨어진 풀스뷔텔에 있으며, 2016년부터 전 총리 헬무트 슈미트의 이름을 사용하고 있고 전용 S반 노선으로 시내와 연결됩니다.",
+    "airportName": "Hamburg Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "유로(€)",
+    "funFact": "함부르크의 강과 운하에는 약 2,500개의 다리가 놓여 있어 런던, 암스테르담, 베네치아를 합친 것보다 많습니다. 세계에서 가장 높은 교회 다섯 곳도 이곳에 있으며, 1870년대에는 성 니콜라이 교회의 첨탑이 2년 동안 세계에서 가장 높은 건물이었습니다.",
+    "language": "독일어",
+    "languageInfo": "표준 독일어는 어디서나 쓰이지만, 함부르크의 본래 언어는 이곳에서 '함보거 플라트'라고 부르는 저지 독일어입니다. 그 흔적은 지금도 많은 거리 이름과 지명, 그리고 '함보거 페어마스터' 같은 옛 뱃노래에 남아 있습니다.",
+    "nickname": "세계로 가는 관문",
+    "transportation": "U반, S반 및 페리",
+    "transportationFact": "기차, 버스, 항구 페리는 모두 HVV 아래에서 운행되며, HVV는 이런 형태의 교통 연합으로는 세계 최초입니다. 표 한 장으로 모든 회사의 노선을 이용할 수 있습니다. U반은 전체 101km 중 약 41km만 지하 구간이어서, 나이 든 주민들은 지금도 '호흐반(고가 철도)'이라고 부릅니다."
+  },
   "Havana": {
     "airportCode": "HAV",
     "airportInfo": "José Martí International Airport is named after Cuba's national hero and independence poet. It has four terminals serving different types of traffic, with Terminal 3 handling most international arrivals. The airport is located about 18km southwest of the city center. Given Cuba's unique relationship with the United States — and restricted American travel to the island — the airport sees a distinctive mix of passengers from Latin America, Canada, Europe, and increasingly from the United States.",
@@ -1194,6 +1207,19 @@
     "nickname": "시티 오브 드림스",
     "transportation": "지역 열차",
     "transportationFact": "뭄바이 교외 철도는 '뭄바이의 생명선'으로 알려져 있으며 도시 기능에 필수적입니다. Mumbai Metro는 통근자들에게 냉방 시설이 갖춰진 편안함을 제공하는 새롭고 빠르게 성장하는 추가 시설입니다. 상징적인 검정색과 노란색의 'Kaali-Peeli' 택시와 자동 인력거는 대부분의 주민들에게 마지막 연결을 제공합니다."
+  },
+  "Munich": {
+    "airportCode": "MUC",
+    "airportInfo": "뮌헨 공항은 1992년 도시 북동쪽 약 28.5km, 프라이징 근처에 개항했으며 전 바이에른주 총리 프란츠 요제프 슈트라우스의 이름을 따왔습니다. 두 개의 여객 터미널을 갖춘 루프트한자의 주요 허브로, 공항 내 S반 역에서 도심까지 바로 연결됩니다.",
+    "airportName": "Munich Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "유로(€)",
+    "funFact": "뮌헨은 세계 최대의 민속 축제(폴크스페스트)인 옥토버페스트의 본고장으로, 이 축제는 1810년 10월 왕실 결혼 축하 행사에서 시작되었습니다. 제곱킬로미터당 약 4,800명이 사는 뮌헨은 독일에서 인구 밀도가 가장 높은 지방자치단체이기도 합니다.",
+    "language": "독일어",
+    "languageInfo": "표준 독일어는 어디서나 통하지만, 뮌헨은 빈에 이어 바이에른 방언권에서 두 번째로 큰 도시입니다. 바이에른 방언은 지역 언어로 인정받고 있어 '할로' 대신 정겨운 '세르부스'나 '그뤼스 고트'라는 인사를 듣게 될지도 모릅니다.",
+    "nickname": "이자르강의 아테네",
+    "transportation": "U반 및 S반",
+    "transportationFact": "지하철(U반), 통근 열차 S반, 트램, 버스는 모두 MVV라는 하나의 요금 체계로 운영됩니다. U반은 1972년 올림픽을 앞두고 빠르게 확장되었고, 트램은 1876년부터 운행된 도시에서 가장 오래된 대중교통입니다."
   },
   "Muscat": {
     "airportCode": "MCT",
