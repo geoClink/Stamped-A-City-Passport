@@ -309,6 +309,9 @@ private struct LandmarkCard: View {
     var onListen: () -> Void = {}
     let onClose: () -> Void
 
+    /// Apple's street-level imagery at the landmark, or nil where Apple has none
+    @State private var lookAroundScene: MKLookAroundScene?
+
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(alignment: .top) {
@@ -359,10 +362,29 @@ private struct LandmarkCard: View {
                     .font(.callout)
                     .foregroundStyle(.secondary)
             }
+
+            // Stand on the street in front of it: drag to look around, tap to open it big.
+            // Only shown where Apple has driven its cameras.
+            if lookAroundScene != nil {
+                LookAroundPreview(initialScene: lookAroundScene)
+                    .frame(height: 200)
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                    .accessibilityLabel(Text("Look Around"))
+            }
         }
         .padding(24)
         .frame(width: 420)
         .glassBackgroundEffect(in: RoundedRectangle(cornerRadius: 28))
+        .task(id: building.id) { await fetchLookAroundScene() }
+    }
+
+    private func fetchLookAroundScene() async {
+        lookAroundScene = nil
+        guard let latitude = building.latitude, let longitude = building.longitude else { return }
+        let request = MKLookAroundSceneRequest(
+            coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        )
+        lookAroundScene = try? await request.scene
     }
 }
 
