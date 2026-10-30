@@ -635,3 +635,11 @@
 "Plan" = "Planear";
 "Local" = "Local";
 "Section" = "Sección";
+
+// MARK: - Campus events
+"Campus Events" = "Eventos del campus";
+"Finding campus events…" = "Buscando eventos del campus…";
+"From the %@ calendar" = "Del calendario de %@";
+"Opens the event page" = "Abre la página del evento";
+"Event Details" = "Detalles del evento";
+"All day" = "Todo el día";

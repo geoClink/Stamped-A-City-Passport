@@ -635,3 +635,11 @@
 "Plan" = "规划";
 "Local" = "当地";
 "Section" = "部分";
+
+// MARK: - Campus events
+"Campus Events" = "校园活动";
+"Finding campus events…" = "正在查找校园活动…";
+"From the %@ calendar" = "来源：%@ 日历";
+"Opens the event page" = "打开活动页面";
+"Event Details" = "活动详情";
+"All day" = "全天";
