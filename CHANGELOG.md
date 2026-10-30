@@ -23,6 +23,14 @@ How to use this file:
 - Adrian Smith buildings: Burj Khalifa (Dubai) and Trump International Hotel & Tower (Chicago). Jin Mao Tower (Shanghai) is now credited to Adrian Smith (SOM).
 - Tours & Tickets on every city landmark page: a GetYourGuide search for that landmark (partner ID PBXFUP9), with a commission note. Campus buildings don't get it.
 - Events also come from SeatGeek, merged with Ticketmaster, so cities Ticketmaster covers thinly get a fuller list. Needs `SEATGEEK_CLIENT_ID` in the API-key plist; without it the app uses Ticketmaster only.
+- 11 new campuses (92 landmarks, traditions in every language): Wayne State, Western Michigan, Grand Valley State, Caltech, Johns Hopkins, Rice, Emory, Tulane, NYU, Carnegie Mellon and WashU. 112 campuses and 1,974 landmarks in all. (#45)
+- Campus pages: a History card (founding year and a few lines from Wikipedia) on every campus (#41); College Facts from the College Scorecard on 92 US campuses: undergraduates, acceptance and graduation rates, tuition and earnings (#40, needs `COLLEGE_SCORECARD_API_KEY` in the API-key plist, hidden without it); Game Day with upcoming home games and a link to the athletics site for live scores, plus stadium photos and NCAA titles for Michigan State (#42); Student Life for Michigan State: residence halls, the union, study spots and dining halls (#38).
+- Campus Events from 11 schools' own public calendars (#32), and a Local Calendar of library, museum and city events on 9 city pages (#46).
+- Upcoming Events looks 6 months ahead with 50 events from each seller, keeps any one kind to 4 of the 12 cards so games don't crowd out shows, and has a See all list by month that loads more as you scroll (#44).
+- Architect pages: tap "Designed by" on a building for the architect's photo, a short bio and all their landmarks in the app (#33).
+- Building photo gallery on every landmark page (#34), and Historic Photos & Drawings from the Library of Congress on US landmarks that have them (#35). The chronology shows each building's photo and opens it on tap (#29).
+- Local Flavors restaurants open Apple's place card and show the walk time, nearest first (#31). Stays Near Here lists hotels near the landmark, and Food Tours opens GetYourGuide (#37). Both card rows show a Look Around street photo, or an icon for the kind of place (#30, #39).
+- Architecture quiz: photo questions, an explanation after each answer, and smarter wrong answers (#36).
 
 ### Changed
 - Cleaner home screen: pick a continent (or Campuses) from a row of chips and its cities show right away, grouped by country, instead of opening continent, then country. My College List now leads the Campuses chip.
@@ -31,8 +39,12 @@ How to use this file:
 - Passport has a search bar: find a city, country or campus, including ones not stamped yet.
 - Find Hotels and Check Prices open Expedia, through Expedia's affiliate program (Partnerize), with a "may earn a commission" note. Booking.com stays supported for when its affiliate application is approved.
 
+- 3D building scans are turned off for now (`BuildingScanService.isEnabled`), so the app has no user-uploaded content (#28).
+
 ### Fixed
 - City map pins show as soon as the map opens, instead of only after the map is moved.
+- Wrong Wikipedia photos on some landmarks (#34).
+- An event both Ticketmaster and SeatGeek list shows once, even when they title it differently (#43). Past-dated listings, like exhibits dated the day they opened, are left out (#44).
 
 ## [2.6] (build 11) – 2026-10-27
 
