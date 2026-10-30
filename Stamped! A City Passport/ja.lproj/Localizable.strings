@@ -760,6 +760,16 @@
 /* Game Day: a game whose start time isn't announced yet */
 "Time TBA" = "時間未定";
 
+/* Audio story on a landmark page */
+"Listen" = "聴く";
+"Reads this landmark's story aloud in English" = "この名建築の物語を英語で読み上げます";
+
+/* Vrbo and Viator links */
+"Vacation Rentals on Vrbo" = "Vrboでバケーションレンタル";
+"Opens Vrbo. Stamped! doesn't handle bookings or payments." = "Vrboを開きます。Stamped!は予約や支払いを扱いません。";
+"More tours on Viator" = "Viatorでほかのツアー";
+"Opens Viator. Stamped! doesn't handle bookings or payments." = "Viatorを開きます。Stamped!は予約や支払いを扱いません。";
+
 /* Save for Offline: city page card and Settings list */
 "Offline Use" = "オフライン利用";
 "Save the landmark photos and Wikipedia text to use without a connection, like on a flight." = "名所の写真とWikipediaの説明を保存して、機内など接続がない場所でも使えるようにします。";

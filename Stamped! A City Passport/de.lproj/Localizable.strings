@@ -760,6 +760,16 @@
 /* Game Day: a game whose start time isn't announced yet */
 "Time TBA" = "Uhrzeit folgt";
 
+/* Audio story on a landmark page */
+"Listen" = "Anhören";
+"Reads this landmark's story aloud in English" = "Liest die Geschichte dieses Bauwerks auf Englisch vor";
+
+/* Vrbo and Viator links */
+"Vacation Rentals on Vrbo" = "Ferienunterkünfte auf Vrbo";
+"Opens Vrbo. Stamped! doesn't handle bookings or payments." = "Öffnet Vrbo. Stamped! wickelt keine Buchungen oder Zahlungen ab.";
+"More tours on Viator" = "Mehr Touren auf Viator";
+"Opens Viator. Stamped! doesn't handle bookings or payments." = "Öffnet Viator. Stamped! wickelt keine Buchungen oder Zahlungen ab.";
+
 /* Save for Offline: city page card and Settings list */
 "Offline Use" = "Offline-Nutzung";
 "Save the landmark photos and Wikipedia text to use without a connection, like on a flight." = "Speichere die Fotos und Wikipedia-Texte der Sehenswürdigkeiten, um sie ohne Verbindung zu nutzen, zum Beispiel im Flugzeug.";

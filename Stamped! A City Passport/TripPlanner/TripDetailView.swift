@@ -110,6 +110,8 @@ struct TripDetailView: View {
                 Section {
                     FindHotelsButton(search: search, opensInApp: false)
                         .tint(DS.Palette.accent)
+                    VrboButton(search: search, opensInApp: false)
+                        .tint(DS.Palette.accent)
                 }
             }
 
