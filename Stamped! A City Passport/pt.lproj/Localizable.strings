@@ -752,3 +752,7 @@
 "Loading more events…" = "Carregando mais eventos…";
 "Date to be announced" = "Data a anunciar";
 "Shows every upcoming event, by month" = "Mostra todos os próximos eventos, por mês";
+
+/* Local Calendar: a city's library, museum or city hall events */
+"Local Calendar" = "Agenda local";
+"Finding local events…" = "Procurando eventos locais…";

@@ -752,3 +752,7 @@
 "Loading more events…" = "이벤트를 더 불러오는 중…";
 "Date to be announced" = "날짜 미정";
 "Shows every upcoming event, by month" = "다가오는 모든 이벤트를 월별로 보여줍니다";
+
+/* Local Calendar: a city's library, museum or city hall events */
+"Local Calendar" = "지역 캘린더";
+"Finding local events…" = "지역 이벤트를 찾는 중…";

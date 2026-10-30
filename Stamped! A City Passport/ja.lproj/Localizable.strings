@@ -752,3 +752,7 @@
 "Loading more events…" = "イベントをさらに読み込み中…";
 "Date to be announced" = "日程未定";
 "Shows every upcoming event, by month" = "今後のイベントを月別にすべて表示します";
+
+/* Local Calendar: a city's library, museum or city hall events */
+"Local Calendar" = "地域のカレンダー";
+"Finding local events…" = "地域のイベントを検索中…";

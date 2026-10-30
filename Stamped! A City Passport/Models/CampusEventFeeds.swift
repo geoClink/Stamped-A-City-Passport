@@ -27,8 +27,9 @@ struct CampusEventFeed: Equatable {
 }
 
 extension CityLocation.City {
-    /// The campus's public events calendar, or nil when it has none the app can read.
-    var campusEventFeed: CampusEventFeed? { Self.campusEventFeeds[self] }
+    /// The public events calendar for a campus (campusEventFeeds) or a city (cityEventFeeds),
+    /// or nil when there's none the app can read.
+    var eventFeed: CampusEventFeed? { Self.campusEventFeeds[self] ?? Self.cityEventFeeds[self] }
 
     /// Campus → events calendar. Every feed is https and needs no API key.
     static let campusEventFeeds: [CityLocation.City: CampusEventFeed] = [
