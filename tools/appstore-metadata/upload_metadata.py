@@ -176,10 +176,13 @@ def changed_attributes(current: dict, wanted: dict) -> dict:
     return {name: value for name, value in wanted.items() if (current.get(name) or "") != value}
 
 
-def wanted_version_attributes(contents: dict, marketing_url: str | None) -> dict:
+def wanted_version_attributes(contents: dict, marketing_url: str | None, support_url: str | None = None) -> dict:
     attributes = {api_name: contents[json_field] for json_field, (api_name, _) in VERSION_FIELDS.items()}
     if marketing_url:
         attributes["marketingUrl"] = marketing_url
+    # Apple requires a Support URL in every language; we reuse the English one
+    if support_url:
+        attributes["supportUrl"] = support_url
     return attributes
 
 
@@ -256,6 +259,8 @@ def main() -> int:
         print("Note: App Information isn't editable right now, so subtitles and new languages there will be skipped.")
     # New languages copy the app name and privacy policy URL from English
     source_app_info = existing_app_info_records.get("en-US") or next(iter(existing_app_info_records.values()), None)
+    english_version = existing_version_records.get("en-US")
+    support_url = english_version["attributes"].get("supportUrl") if english_version else None
 
     mode = "Sending" if args.apply else "Dry run (nothing is sent; add --apply to send)"
     print(f"\n{mode}\n")
@@ -288,7 +293,7 @@ def main() -> int:
                         api.request("PATCH", f"/appInfoLocalizations/{app_info_record['id']}", json=body)
 
             # Version page text
-            wanted = wanted_version_attributes(contents, args.marketing_url)
+            wanted = wanted_version_attributes(contents, args.marketing_url, support_url)
             record = existing_version_records.get(locale)
             if record is None:
                 # This language isn't on the version yet, so add it
