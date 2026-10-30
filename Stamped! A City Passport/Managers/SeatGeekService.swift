@@ -31,8 +31,8 @@ enum SeatGeekService {
     static var isConfigured: Bool { clientID != nil }
 
     /// Upcoming events within `radius` (e.g. "25mi", "1km") of a point, soonest first.
-    /// Returns nil when the request failed, and [] when there's no client ID.
-    static func events(near coordinate: CLLocationCoordinate2D, radius: String, days: Int, limit: Int) async -> [TicketmasterEvent]? {
+    /// `page` counts from 1. Returns nil when the request failed, and [] when there's no client ID.
+    static func events(near coordinate: CLLocationCoordinate2D, radius: String, days: Int, limit: Int, page: Int = 1) async -> [TicketmasterEvent]? {
         guard let clientID else { return [] }
 
         let now = Date()
@@ -49,6 +49,7 @@ enum SeatGeekService {
             URLQueryItem(name: "lon", value: "\(coordinate.longitude)"),
             URLQueryItem(name: "range", value: radius),
             URLQueryItem(name: "per_page", value: "\(limit)"),
+            URLQueryItem(name: "page", value: "\(page)"),
             URLQueryItem(name: "sort", value: "datetime_utc.asc"),
             URLQueryItem(name: "datetime_utc.gte", value: utc.string(from: now)),
             URLQueryItem(name: "datetime_utc.lte", value: utc.string(from: future)),

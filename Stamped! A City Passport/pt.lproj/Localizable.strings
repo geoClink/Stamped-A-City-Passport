@@ -746,3 +746,9 @@
 "Men's gymnastics" = "Ginástica masculina";
 "Men's soccer" = "Futebol masculino";
 "Wrestling" = "Luta olímpica";
+
+/* Upcoming Events: See all list */
+"See all events" = "Ver todos os eventos";
+"Loading more events…" = "Carregando mais eventos…";
+"Date to be announced" = "Data a anunciar";
+"Shows every upcoming event, by month" = "Mostra todos os próximos eventos, por mês";

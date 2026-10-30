@@ -746,3 +746,9 @@
 "Men's gymnastics" = "男子体操";
 "Men's soccer" = "男子足球";
 "Wrestling" = "摔跤";
+
+/* Upcoming Events: See all list */
+"See all events" = "查看全部活动";
+"Loading more events…" = "正在加载更多活动…";
+"Date to be announced" = "日期待定";
+"Shows every upcoming event, by month" = "按月份显示所有即将举行的活动";

@@ -746,3 +746,9 @@
 "Men's gymnastics" = "男子体操";
 "Men's soccer" = "男子サッカー";
 "Wrestling" = "レスリング";
+
+/* Upcoming Events: See all list */
+"See all events" = "すべてのイベントを見る";
+"Loading more events…" = "イベントをさらに読み込み中…";
+"Date to be announced" = "日程未定";
+"Shows every upcoming event, by month" = "今後のイベントを月別にすべて表示します";

@@ -69,9 +69,27 @@ struct TicketmasterEvent: Identifiable {
 final class TicketmasterService: ObservableObject {
     static let shared = TicketmasterService()
 
+    /// The short row on the city page, picked from `loadedEvents` by `highlights`
     @Published var events: [TicketmasterEvent] = []
+    /// Every event loaded so far from both sellers, soonest first, for See all
+    @Published var loadedEvents: [TicketmasterEvent] = []
     @Published var isLoading = false
+    @Published var isLoadingMore = false
+    @Published var canLoadMore = false
     @Published var failed = false
+
+    /// Events per request from each seller. One request costs the same at 8 or 50.
+    static let pageSize = 50
+    /// How far ahead the city list looks; shows often go on sale months ahead
+    static let daysAhead = 180
+    /// Cards in the short row, and the most any one kind of event may take
+    static let rowLimit = 12
+    static let perCategoryLimit = 4
+
+    private var searchCenter: CLLocationCoordinate2D?
+    private var ticketmasterLoaded: [TicketmasterEvent] = []
+    private var seatGeekLoaded: [TicketmasterEvent] = []
+    private var nextPage = 0
 
     private var cachedCityName = ""
     private var cacheTimestamp: Date?
@@ -101,75 +119,139 @@ final class TicketmasterService: ObservableObject {
         let lon = coords.map { $0.longitude }.reduce(0, +) / Double(coords.count)
         let center = CLLocationCoordinate2D(latitude: lat, longitude: lon)
 
-        guard let key = apiKey, !key.isEmpty else {
+        let hasTicketmasterKey = !(apiKey ?? "").isEmpty
+        if !hasTicketmasterKey {
             print("[Ticketmaster] API key missing from Info.plist")
             // SeatGeek alone still fills the list when it's set up
             guard SeatGeekService.isConfigured else { return }
-            isLoading = true
-            failed = false
-            let seatGeek = await SeatGeekService.events(near: center, radius: "25mi", days: 60, limit: 8)
-            events = seatGeek ?? []
-            failed = seatGeek == nil
-            if !failed {
-                cachedCityName = cityName
-                cacheTimestamp = Date()
-            }
-            isLoading = false
-            return
         }
 
-        // Date window: today → 60 days out
+        isLoading = true
+        failed = false
+        searchCenter = center
+        ticketmasterLoaded = []
+        seatGeekLoaded = []
+        nextPage = 0
+        loadedEvents = []
+        events = []
+        canLoadMore = false
+
+        if await loadNextPage() {
+            cachedCityName = cityName
+            cacheTimestamp = Date()
+            print("[Ticketmaster] Loaded \(loadedEvents.count) events for \(cityName)")
+        } else {
+            failed = true
+        }
+
+        isLoading = false
+    }
+
+    /// The next page from both sellers, for See all. Does nothing while a load is running
+    /// or when both sellers have run out.
+    func loadMore() async {
+        guard canLoadMore, !isLoading, !isLoadingMore else { return }
+        isLoadingMore = true
+        _ = await loadNextPage()
+        isLoadingMore = false
+    }
+
+    /// Fetches page `nextPage` from both sellers and merges it into `loadedEvents`, then
+    /// picks the short row (`events`) again. False when neither seller answered.
+    private func loadNextPage() async -> Bool {
+        guard let center = searchCenter else { return false }
+        let page = nextPage
+
+        // SeatGeek counts pages from 1, Ticketmaster from 0
+        async let seatGeekRequest = SeatGeekService.events(near: center, radius: "25mi", days: Self.daysAhead,
+                                                           limit: Self.pageSize, page: page + 1)
+        let ticketmaster = await ticketmasterCityPage(near: center, page: page)
+        let seatGeek = await seatGeekRequest
+
+        // Failed only when neither seller answered
+        guard ticketmaster != nil || (seatGeek != nil && SeatGeekService.isConfigured) else { return false }
+
+        ticketmasterLoaded += (ticketmaster?.events ?? []).filter { Self.isUpcoming($0) }
+        seatGeekLoaded += (seatGeek ?? []).filter { Self.isUpcoming($0) }
+        nextPage += 1
+        loadedEvents = Self.merged(ticketmasterLoaded, seatGeekLoaded, limit: .max)
+        events = Self.highlights(from: loadedEvents, limit: Self.rowLimit, perCategory: Self.perCategoryLimit)
+
+        // A full page means that seller may have more. Ticketmaster only pages through its
+        // first 1,000 results, so it stops there.
+        let ticketmasterHasMore = (ticketmaster?.rawCount ?? 0) == Self.pageSize
+            && (nextPage + 1) * Self.pageSize <= 1000
+        let seatGeekHasMore = (seatGeek?.count ?? 0) == Self.pageSize
+        canLoadMore = ticketmasterHasMore || seatGeekHasMore
+        return true
+    }
+
+    /// One page of Ticketmaster's events within 25 miles over the next `daysAhead` days,
+    /// soonest first. `rawCount` is how many the page held before any were dropped, so a
+    /// full page is still known to be full. Nil without a key or when the request failed.
+    private func ticketmasterCityPage(near center: CLLocationCoordinate2D, page: Int) async -> (events: [TicketmasterEvent], rawCount: Int)? {
+        guard let key = apiKey, !key.isEmpty else { return nil }
+
         let now = Date()
-        let future = Calendar.current.date(byAdding: .day, value: 60, to: now) ?? now
+        let future = Calendar.current.date(byAdding: .day, value: Self.daysAhead, to: now) ?? now
         let iso = ISO8601DateFormatter()
         iso.formatOptions = [.withInternetDateTime]
-        let startStr = iso.string(from: now)
-        let endStr = iso.string(from: future)
 
         var comps = URLComponents(string: "https://app.ticketmaster.com/discovery/v2/events.json")!
         comps.queryItems = [
             URLQueryItem(name: "apikey", value: key),
-            URLQueryItem(name: "latlong", value: "\(lat),\(lon)"),
+            URLQueryItem(name: "latlong", value: "\(center.latitude),\(center.longitude)"),
             URLQueryItem(name: "radius", value: "25"),
             URLQueryItem(name: "unit", value: "miles"),
-            URLQueryItem(name: "size", value: "8"),
+            URLQueryItem(name: "size", value: "\(Self.pageSize)"),
+            URLQueryItem(name: "page", value: "\(page)"),
             URLQueryItem(name: "sort", value: "date,asc"),
-            URLQueryItem(name: "startDateTime", value: startStr),
-            URLQueryItem(name: "endDateTime", value: endStr),
+            URLQueryItem(name: "startDateTime", value: iso.string(from: now)),
+            URLQueryItem(name: "endDateTime", value: iso.string(from: future)),
         ]
+        guard let url = comps.url else { return nil }
 
-        guard let url = comps.url else { return }
-
-        isLoading = true
-        failed = false
-
-        async let seatGeekRequest = SeatGeekService.events(near: center, radius: "25mi", days: 60, limit: 8)
-
-        var ticketmasterEvents: [TicketmasterEvent]? = nil
         do {
             let (data, response) = try await URLSession.shared.data(from: url)
-            if (response as? HTTPURLResponse)?.statusCode == 200 {
-                let decoded = try JSONDecoder().decode(TMResponse.self, from: data)
-                ticketmasterEvents = (decoded._embedded?.events ?? []).compactMap(makeEvent)
-            } else {
+            guard (response as? HTTPURLResponse)?.statusCode == 200 else {
                 print("[Ticketmaster] Bad status: \((response as? HTTPURLResponse)?.statusCode ?? -1)")
+                return nil
             }
+            let raw = try JSONDecoder().decode(TMResponse.self, from: data)._embedded?.events ?? []
+            return (raw.compactMap(makeEvent), raw.count)
         } catch {
             print("[Ticketmaster] Error: \(error.localizedDescription)")
+            return nil
         }
-        let seatGeekEvents = await seatGeekRequest
+    }
 
-        // Failed only when neither seller answered
-        if ticketmasterEvents == nil && (seatGeekEvents == nil || !SeatGeekService.isConfigured) {
-            failed = true
-        } else {
-            events = Self.merged(ticketmasterEvents ?? [], seatGeekEvents ?? [], limit: 12)
-            cachedCityName = cityName
-            cacheTimestamp = Date()
-            print("[Ticketmaster] Loaded \(events.count) events for \(cityName)")
+    /// False for an event whose date has passed. Long-running exhibits come back dated the
+    /// day they opened ("Sat, Sep 12"), and a past date on the card reads as a mistake.
+    /// Events without a date are kept.
+    static func isUpcoming(_ event: TicketmasterEvent, now: Date = Date()) -> Bool {
+        guard let start = event.startDate else { return true }
+        return start >= Calendar.current.startOfDay(for: now)
+    }
+
+    /// The short row on the city page: the soonest events, but no more than `perCategory`
+    /// of any one kind, so a week of games can't push every show and concert out.
+    /// When there aren't enough other kinds to fill it, the soonest skipped events fill the rest.
+    static func highlights(from events: [TicketmasterEvent], limit: Int, perCategory: Int) -> [TicketmasterEvent] {
+        var countByCategory: [TicketmasterEvent.EventCategory: Int] = [:]
+        var pickedIndices: [Int] = []
+        var skippedIndices: [Int] = []
+        for (index, event) in events.enumerated() {
+            guard pickedIndices.count < limit else { break }
+            if countByCategory[event.category, default: 0] < perCategory {
+                countByCategory[event.category, default: 0] += 1
+                pickedIndices.append(index)
+            } else {
+                skippedIndices.append(index)
+            }
         }
-
-        isLoading = false
+        let fill = skippedIndices.prefix(max(0, limit - pickedIndices.count))
+        // Back into date order
+        return (pickedIndices + fill).sorted().map { events[$0] }
     }
 
     /// Both sellers' events in date order. An event both sell (same name, same day)
@@ -190,7 +272,7 @@ final class TicketmasterService: ObservableObject {
         let extra = seatGeek.filter { event in
             !taken.contains(key(event)) && !ticketmaster.contains { isSameSlot(event, $0) }
         }
-        guard !extra.isEmpty else { return ticketmaster }
+        guard !extra.isEmpty else { return Array(ticketmaster.prefix(limit)) }
         let all = (ticketmaster + extra).enumerated().sorted { a, b in
             switch (a.element.startDate, b.element.startDate) {
             case let (x?, y?): return x < y
