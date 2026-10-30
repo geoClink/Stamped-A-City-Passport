@@ -39,3 +39,13 @@ enum QuestionType: CaseIterable {
         }
     }
 }
+
+// MARK: - Photo Questions
+
+// A photo question is a `.name` question that shows the building's photo instead
+// of its data. It isn't its own case because the Vision Pro quiz switches over
+// every case and has no photo question.
+extension QuestionType {
+    static var photoPrompt: String { String(localized: "Which building is this?") }
+    static var photoVoicePrompt: String { String(localized: "Say the name of the building in the photo...") }
+}

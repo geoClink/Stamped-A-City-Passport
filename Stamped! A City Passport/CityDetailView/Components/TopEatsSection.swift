@@ -7,8 +7,13 @@ import SwiftUI
 
 struct TopEatsSection: View {
     @ObservedObject var service: FoursquareService
+    /// The Stamped city, so a restaurant saved from its place card shows on this city's map.
+    let cityName: String
     let isHighContrast: Bool
     var brandColor: Color { isHighContrast ? .primary : Color.adventureOrange }
+
+    /// The restaurant whose Apple place card is open.
+    @State private var tappedPlace: TappedApplePlace?
 
     var body: some View {
         VStack(alignment: .leading, spacing: DS.Space.m) {
@@ -42,7 +47,9 @@ struct TopEatsSection: View {
                     .padding(DS.Space.l)
                 } else {
                     ForEach(Array(service.venues.enumerated()), id: \.element.id) { index, venue in
-                        VenueRow(venue: venue, rank: index + 1, brandColor: brandColor, isHighContrast: isHighContrast)
+                        VenueRow(venue: venue, rank: index + 1, brandColor: brandColor, isHighContrast: isHighContrast) {
+                            tappedPlace = TappedApplePlace(mapItem: venue.mapItem)
+                        }
                         if index < service.venues.count - 1 {
                             Divider().padding(.leading, DS.Space.l)
                         }
@@ -59,6 +66,9 @@ struct TopEatsSection: View {
             }
         }
         .dsPageMargin()
+        .sheet(item: $tappedPlace) { place in
+            ApplePlaceSheet(mapItem: place.mapItem, cityName: cityName)
+        }
     }
 }
 
@@ -69,20 +79,26 @@ private struct VenueRow: View {
     let rank: Int
     let brandColor: Color
     let isHighContrast: Bool
+    /// Opens Apple's place card for this restaurant.
+    let onTap: () -> Void
 
     @ScaledMetric(relativeTo: .caption) private var rankBadgeSize: CGFloat = 30
+    /// The units setting (meters vs feet) from Settings.
+    @AppStorage("use_metric_units") private var useMetric = true
+
+    /// "4 min walk" or "1.2 km" from the city's center.
+    private var distance: String {
+        DiningPlaceLabel.distanceText(meters: venue.distanceMeters, useMetric: useMetric)
+    }
 
     var body: some View {
-        if let url = venue.mapsURL {
-            Link(destination: url) {
-                rowContent
-            }
-            .simultaneousGesture(TapGesture().onEnded {
-                HapticManager.shared.trigger(.selection)
-            })
-        } else {
+        Button {
+            HapticManager.shared.trigger(.selection)
+            onTap()
+        } label: {
             rowContent
         }
+        .buttonStyle(.plain)
     }
 
     private var rowContent: some View {
@@ -100,19 +116,19 @@ private struct VenueRow: View {
             VStack(alignment: .leading, spacing: DS.Space.xs) {
                 Text(venue.name)
                     .font(.subheadline).fontWeight(.semibold).foregroundColor(.primary)
-                Text(venue.categoryName)
+                Text("\(distance) · \(venue.categoryName)")
                     .font(.caption).foregroundColor(isHighContrast ? .primary : .secondary)
             }
 
             Spacer()
 
-            Image(systemName: "arrow.up.right")
+            Image(systemName: "chevron.right")
                 .font(.caption2).foregroundColor(.secondary)
         }
         .padding(.horizontal, DS.Space.l)
         .padding(.vertical, DS.Space.m)
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("Rank \(rank), \(venue.name), \(venue.categoryName)")
-        .accessibilityHint("Opens in Apple Maps")
+        .accessibilityLabel("Rank \(rank), \(venue.name), \(venue.categoryName), \(distance)")
+        .accessibilityHint("Shows photos, hours and ratings")
     }
 }

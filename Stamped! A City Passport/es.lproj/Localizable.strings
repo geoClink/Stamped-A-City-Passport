@@ -318,6 +318,14 @@
 "Double tap to check this tradition off." = "Toca dos veces para marcar esta tradición.";
 "Show %@ in Maps" = "Ver %@ en Mapas";
 
+// MARK: - Campus Student Life
+"STUDENT LIFE" = "VIDA ESTUDIANTIL";
+"Where Students Live" = "Dónde viven los estudiantes";
+"Student Union" = "Centro estudiantil";
+"Study Spots" = "Lugares para estudiar";
+"Dining Halls" = "Comedores";
+"Hangouts" = "Lugares de encuentro";
+
 // MARK: - College List & Road Trip
 "My College List" = "Mi lista de universidades";
 "Add to My College List" = "Añadir a Mi lista de universidades";
@@ -369,6 +377,14 @@
 "Find Tours & Tickets" = "Buscar tours y entradas";
 "Find tours and tickets for %@ on GetYourGuide" = "Buscar tours y entradas para %@ en GetYourGuide";
 "Opens GetYourGuide. Stamped! doesn't handle bookings or payments." = "Abre GetYourGuide. Stamped! no gestiona reservas ni pagos.";
+
+// MARK: - Building page: food tours & nearby stays
+"Find Food Tours & Cooking Classes" = "Buscar tours gastronómicos y clases de cocina";
+"Find food tours and cooking classes in %@ on GetYourGuide" = "Buscar tours gastronómicos y clases de cocina en %@ en GetYourGuide";
+"Stays Near Here" = "Alojamiento cerca";
+"%lld min walk" = "%lld min a pie";
+"Hotel data from Apple Maps." = "Datos de hoteles de Apple Maps.";
+"Shows this hotel's details and prices." = "Muestra los detalles y precios de este hotel.";
 
 // MARK: - City page tiles & home shortcuts
 "Quiz Mastered" = "Quiz dominado";
@@ -635,3 +651,98 @@
 "Plan" = "Planear";
 "Local" = "Local";
 "Section" = "Sección";
+
+// Restaurant cards: category labels from Apple Maps
+"dining.restaurant" = "Restaurante";
+"dining.cafe" = "Cafetería";
+"dining.bakery" = "Panadería";
+"dining.brewery" = "Cervecería";
+"dining.winery" = "Bodega";
+"dining.market" = "Mercado";
+"dining.bar" = "Bar";
+
+// MARK: - Campus events
+"Campus Events" = "Eventos del campus";
+"Finding campus events…" = "Buscando eventos del campus…";
+"From the %@ calendar" = "Del calendario de %@";
+"Opens the event page" = "Abre la página del evento";
+"Event Details" = "Detalles del evento";
+"All day" = "Todo el día";
+
+// Architect page
+"architect.landmarks" = "Sus edificios en Stamped!";
+"architect.openHint" = "Abre la página del arquitecto";
+"architect.fromWikipedia" = "De Wikipedia";
+"architect.readOnWikipedia" = "Leer en Wikipedia";
+"architect.photoCredit" = "Foto: Wikimedia Commons";
+
+// MARK: - Building photo gallery (Wikimedia Commons)
+"More Photos" = "Más fotos";
+"Photo of %@" = "Foto de %@";
+"Opens the photo full screen" = "Abre la foto a pantalla completa";
+"View on Wikimedia Commons" = "Ver en Wikimedia Commons";
+"Shows the photo's author and license" = "Muestra el autor y la licencia de la foto";
+
+// MARK: - Historic Photos & Drawings (Library of Congress)
+"Historic Photos & Drawings" = "Fotos y planos históricos";
+"Drawing" = "Plano";
+"Shows the image larger" = "Muestra la imagen más grande";
+"View on loc.gov" = "Ver en loc.gov";
+"Image unavailable" = "Imagen no disponible";
+"Measured drawing" = "Plano arquitectónico";
+"Historic photo" = "Foto histórica";
+
+// MARK: - Quiz: photo questions, facts after each answer, review your misses
+"Which building is this?" = "¿Qué edificio es este?";
+"Say the name of the building in the photo..." = "Di el nombre del edificio de la foto...";
+"Photo of the building in question" = "Foto del edificio en cuestión";
+"No photo available" = "No hay foto disponible";
+"Next Question" = "Siguiente pregunta";
+"See Results" = "Ver resultados";
+"Review your misses" = "Repasa tus fallos";
+"Correct answer: %@" = "Respuesta correcta: %@";
+"Your answer: %@" = "Tu respuesta: %@";
+"Designed by %@ and completed in %@." = "Diseñado por %1$@ y terminado en %2$@.";
+"Designed by %@." = "Diseñado por %@.";
+"Completed in %@." = "Terminado en %@.";
+"A fine example of %@ design." = "Un buen ejemplo del estilo %@.";
+"This landmark is in %@." = "Este monumento está en %@.";
+
+// MARK: - College Facts (College Scorecard)
+"COLLEGE FACTS" = "DATOS DE LA UNIVERSIDAD";
+"Acceptance rate" = "Tasa de admisión";
+"Undergraduates" = "Estudiantes de grado";
+"In-state tuition" = "Matrícula para residentes";
+"Out-of-state tuition" = "Matrícula para no residentes";
+"Graduation rate" = "Tasa de graduación";
+"Median earnings after 10 years" = "Ingreso mediano a los 10 años";
+"Tuition and fees are per year. Graduation is within 6 years; earnings are the median 10 years after starting." = "Matrícula y tasas por año. Graduación en un plazo de 6 años; ingresos medianos 10 años después de empezar.";
+"Source: U.S. Department of Education College Scorecard" = "Fuente: College Scorecard del Departamento de Educación de EE. UU.";
+"Opens the College Scorecard website" = "Abre el sitio web de College Scorecard";
+
+// MARK: - Campus History (Wikipedia)
+"HISTORY" = "HISTORIA";
+"Founded %@" = "Fundada en %@";
+"From Wikipedia" = "De Wikipedia";
+"Read more on Wikipedia" = "Leer más en Wikipedia";
+"Opens the full article on Wikipedia" = "Abre el artículo completo en Wikipedia";
+
+// MARK: - Campus Game Day
+"GAME DAY" = "DÍA DE PARTIDO";
+"Upcoming home games" = "Próximos partidos en casa";
+"Live scores & schedule" = "Resultados en directo y calendario";
+"Opens the official athletics website" = "Abre el sitio web oficial de deportes";
+"Photo: %@, %@" = "Foto: %@, %@";
+"Opens the photo on Wikimedia Commons" = "Abre la foto en Wikimedia Commons";
+"NCAA team championships" = "Campeonatos nacionales de la NCAA";
+"%d titles" = "%d títulos";
+"Source: %@" = "Fuente: %@";
+"%@ (shared)" = "%@ (compartido)";
+"Men's basketball" = "Baloncesto masculino";
+"Men's ice hockey" = "Hockey sobre hielo masculino";
+"Men's cross country" = "Campo a través masculino";
+"Women's cross country" = "Campo a través femenino";
+"Boxing" = "Boxeo";
+"Men's gymnastics" = "Gimnasia masculina";
+"Men's soccer" = "Fútbol masculino";
+"Wrestling" = "Lucha";

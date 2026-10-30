@@ -16,6 +16,8 @@ import Foundation
 struct WikiSummary {
     let photoURL: URL?
     let extract: String?     // First paragraph from Wikipedia article
+    /// The article the photo came from, so the photo gallery can look in the same one
+    var articleTitle: String? = nil
 }
 
 // MARK: - Service
@@ -100,7 +102,7 @@ actor WikimediaService {
 
             let extract = decoded.extract?.isEmpty == false ? decoded.extract : nil
 
-            return WikiSummary(photoURL: photoURL, extract: extract)
+            return WikiSummary(photoURL: photoURL, extract: extract, articleTitle: decoded.title)
         } catch {
             return nil
         }
@@ -208,6 +210,8 @@ extension WikimediaService {
         "ams_eye_film": "Eye Filmmuseum",                            // Eye Film Institute
         "ams_scheepvaartmuseum": "Het Scheepvaartmuseum",            // National Maritime Museum
         "ams_nemo": "NEMO (museum)",                                 // NEMO Science Museum
+        "ams_black_diamond": "The Rock (building)",                  // The Rock (Zuidas)
+        "ams_royal_palace": "Royal Palace of Amsterdam",             // Royal Palace
 
         // Asheville
         "nc_basilica_st_lawrence": "Basilica of St. Lawrence, Asheville", // Basilica of Saint Lawrence
@@ -223,6 +227,8 @@ extension WikimediaService {
 
         // Austin
         "atx-09": "St. Mary's Cathedral (Austin, Texas)",            // St. Mary's Cathedral
+        "atx-08": "Austin City Hall (Austin, Texas)",                // Austin City Hall
+        "atx-12": "Waterline (Austin)",                              // Waterline
 
         // Bali
         "bali-ulun-danu": "Pura Ulun Danu Bratan",                   // Pura Ulun Danu Beratan
@@ -247,6 +253,7 @@ extension WikimediaService {
         "pek_citic_tower": "China Zun",                              // CITIC Tower (China Zun)
         "pek_national_theatre": "National Centre for the Performing Arts (China)", // National Centre for the Performing Arts
         "pek_white_pagoda": "Miaoying Temple",                       // White Dagoba (Miaoying Temple)
+        "pek_birds_nest": "Beijing National Stadium",                // National Stadium
 
         // Berlin
         "ber_chancellery": "Federal Chancellery of Germany",         // Federal Chancellery
@@ -281,6 +288,9 @@ extension WikimediaService {
         // Cairo
         "cai_iconic_tower": "Iconic Tower (Egypt)",                  // Iconic Tower
 
+        // Campinas
+        "cpq-metropolitan-cathedral": "Our Lady of the Conception Cathedral, Campinas", // Catedral Metropolitana
+
         // Cape Town
         "groot-constantia-manor": "Groot Constantia",                // Groot Constantia Manor House
 
@@ -289,6 +299,7 @@ extension WikimediaService {
 
         // Central Jakarta
         "jakarta-istiqlal": "Istiqlal Mosque, Jakarta",              // Istiqlal Mosque
+        "jakarta-national-museum": "National Museum of Indonesia",   // National Museum (Gedung Gajah)
 
         // Chengdu
         "cn_jinli_ancient_street": "Jinli",                          // Jinli Ancient Street
@@ -341,6 +352,7 @@ extension WikimediaService {
         "detroit_lafayette_towers": "Lafayette Towers Apartments East", // Lafayette Towers
         "detroit_michigan_central": "Michigan Central Station",      // Michigan Central
         "detroit_book_cadillac": "Westin Book Cadillac Hotel",       // Westin Book Cadillac
+        "detroit_masonic_temple": "Detroit Masonic Temple",          // Masonic Temple
 
         // Dhaka
         "bd_shaheed_minar": "Shaheed Minar, Dhaka",                  // Shaheed Minar
@@ -408,6 +420,7 @@ extension WikimediaService {
 
         // Manaus
         "mao-rio-negro-palace": "Palácio Rio Negro, Manaus",         // Palácio Rio Negro
+        "mao-justice-palace": "Palace of Justice, Manaus",           // Palace of Justice
 
         // Manila
         "manila-national-museum-fine-arts": "National Museum of Fine Arts (Manila)", // National Museum of Fine Arts (Philippines)
@@ -436,6 +449,7 @@ extension WikimediaService {
         // Montreal
         "notre-dame-basilica": "Notre-Dame Basilica (Montreal)",     // Notre-Dame Basilica
         "montreal_schwartzs_deli": "Schwartz's",                     // Schwartz’s Deli
+        "the-biosphere": "Montreal Biosphere",                       // The Biosphere (the name alone leads to Vernadsky's book)
 
         // Mumbai
         "bom_t2_terminal": "Chhatrapati Shivaji Maharaj International Airport", // Chhatrapati Shivaji Maharaj T2
@@ -443,14 +457,17 @@ extension WikimediaService {
 
         // Nairobi
         "gtc-office-tower": "Nairobi GTC Office Tower",              // GTC Office Tower
+        "all-saints-cathedral": "All Saints' Cathedral, Nairobi",    // All Saints' Cathedral
 
         // Naples
         "nap-10": "Santa Chiara, Naples",                            // Basilica di Santa Chiara
         "nap-06": "Toledo station (Naples)",                         // Toledo Metro Station
+        "nap-07": "Royal Palace of Naples",                          // Palazzo Reale (Royal Palace of Naples)
 
         // Nashville
         "nsh_batman_building": "AT&T Building (Nashville)",          // AT&T Building
         "nsh_belmont_mansion": "Belmont Mansion (Tennessee)",        // Belmont Mansion
+        "nsh_customs_house": "Customs House (Nashville, Tennessee)", // U.S. Customs House
         "nsh_pinnacle_tower": "Symphony Place",                      // Pinnacle at Symphony Place
         "nsh_the_parthenon": "Parthenon (Nashville)",                // The Parthenon
         "nsh_union_station": "Union Station (Nashville)",            // Union Station Hotel
@@ -463,6 +480,7 @@ extension WikimediaService {
         // New York
         "nyc_oculus": "World Trade Center station (PATH)",           // The Oculus
         "nyc-09": "Vessel (structure)",                              // The Vessel (Hudson Yards)
+        "nyc-07": "Solomon R. Guggenheim Museum",                    // The Guggenheim Museum
 
         // Nice
         "fr_matisse_museum_nice": "Musée Matisse (Nice)",            // Matisse Museum
@@ -541,7 +559,7 @@ extension WikimediaService {
         "es_real_alcazar_seville": "Alcázar of Seville",             // Real Alcázar of Seville
 
         // Shanghai
-        "sha_china_art": "China Art Museum (Shanghai)",              // China Art Museum
+        "sha_china_art": "China Art Museum, Shanghai",               // China Art Museum
         "sha_customs_house": "Custom House, Shanghai",               // Customs House
         "sha_peace_hotel": "Peace Hotel",                            // Fairmont Peace Hotel
         "sha_jingan_temple": "Jing'an Temple",                       // Jing’an Temple
@@ -555,6 +573,7 @@ extension WikimediaService {
         "stl-07": "Fox Theatre (St. Louis)",                         // The Fox Theatre
         "stl-13": "Jewel Box (St. Louis)",                           // The Jewel Box
         "stl-11": "Old Courthouse (St. Louis)",                      // The Old Courthouse
+        "stl-08": "One Hundred Above the Park",                      // One Hundred (100 Above Park)
 
         // Surabaya
         "sub-cheng-hoo-mosque": "Cheng Ho Mosque (Surabaya)",        // Cheng Hoo Mosque
@@ -570,6 +589,7 @@ extension WikimediaService {
         // São Paulo
         "br_altino_arantes": "Altino Arantes Building",              // Farol Santander (Altino Arantes Building)
         "br_masp": "São Paulo Museum of Art",                        // MASP (São Paulo Museum of Art)
+        "br_mosteiro_sao_bento": "Mosteiro de São Bento (São Paulo)", // Saint Benedict Monastery
         "br_sesc_pompeia": "SESC Pompeia",                           // SESC Pompéia
 
         // Taipei
@@ -596,6 +616,8 @@ extension WikimediaService {
         // Vancouver
         "yvr-15": "Westcoast Building",                              // The Qube
         "yvr-14": "Woodward's Building",                             // Woodward’s Building
+        "yvr-06": "Museum of Anthropology at UBC",                   // Museum of Anthropology (MOA)
+        "yvr-07": "BC Electric Building",                            // The Electra (B.C. Electric Building)
 
         // Victoria
         "vic-11": "Christ Church Cathedral (Victoria, British Columbia)", // Christ Church Cathedral
@@ -623,7 +645,12 @@ extension WikimediaService {
     /// Building IDs whose name only matches a *different* place on Wikipedia, and that
     /// have no article of their own. The app shows its placeholder instead of the wrong photo.
     nonisolated static let skipWikipedia: Set<String> = [
+        "bcn_mercado",          // Barcelona / Mercat de Santa Caterina: redirects to a list with a Boqueria photo
+        "cai_apple_tradeline_cfc", // Cairo / Apple Tradeline: Wikipedia has the fruit
+        "campus_syracuse_carnegie_library", // Syracuse University / Carnegie Library: a portrait of Andrew Carnegie
+        "dxb_opus",             // Dubai / The Opus: Wikipedia has the hip hop group
         "for-estoril",          // Fortaleza / Estoril: Wikipedia has Estoril, Portugal
+        "johannesburg-vilakazi-street", // Johannesburg / Vilakazi Street: redirects to the poet it is named after
         "mia-03",               // Miami / The Carlyle: Wikipedia has the New York hotel
         "orl_suntrust_center",  // Orlando / Truist Plaza (SunTrust Center): Wikipedia has Atlanta's
         "vic-10",               // Victoria / Mayfair Shopping Centre: falls back to the city article
@@ -641,6 +668,8 @@ extension WikimediaService {
 nonisolated private struct WikiAPIResponse: Decodable {
     /// "standard" for a normal article, "disambiguation" for a "may refer to" list
     let type: String?
+    /// The article's title after redirects, e.g. "Montreal Biosphère" → "Montreal Biosphere"
+    let title: String?
     let thumbnail: WikiImage?
     let originalimage: WikiImage?
     let extract: String?
