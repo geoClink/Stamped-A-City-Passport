@@ -1561,6 +1561,126 @@
       "longitude": -85.894756
     }
   ],
+  "Eastern Michigan University": [
+    {
+      "id": "trad_emu_water_tower",
+      "name": "입실랜티 급수탑",
+      "description": "1890년 입실랜티에서 가장 높은 곳에 세워진 이 석조 급수탑은 캠퍼스와 맞닿아 있으며 도시에서 가장 유명한 명소입니다. 주민들이 길을 안내할 때 기준으로 삼으니 함께 사진을 찍어 보세요.",
+      "latitude": 42.245552,
+      "longitude": -83.62469
+    },
+    {
+      "id": "trad_emu_kiosk",
+      "name": "프레이-해럴드 키오스크",
+      "description": "프레이-해럴드 건물 앞 키오스크를 캠퍼스 행사 전단으로 덮는 것은 이스턴의 오랜 전통입니다. 들러서 이번 주에 무슨 일이 있는지 읽어 보세요.",
+      "latitude": 42.249577,
+      "longitude": -83.62259
+    },
+    {
+      "id": "trad_emu_pease_organ",
+      "name": "피스 오디토리엄 콘서트",
+      "description": "피스 오디토리엄은 1915년부터 캠퍼스의 콘서트홀입니다. 공연을 보러 가서 81스톱의 에올리언-스키너 파이프 오르간 소리에 귀 기울여 보세요.",
+      "latitude": 42.246433,
+      "longitude": -83.621446
+    },
+    {
+      "id": "trad_emu_starkweather_ghost",
+      "name": "스타크웨더 홀의 유령",
+      "description": "캠퍼스 전설에 따르면 건물을 지을 돈을 낸 메리 앤 스타크웨더가, 건물이 그녀가 원한 종교적 목적으로 더 이상 쓰이지 않아 이곳에 나타난다고 합니다. 캠퍼스에서 가장 오래된 건물 앞을 지나며 탑을 올려다보세요.",
+      "latitude": 42.246508,
+      "longitude": -83.624681
+    }
+  ],
+  "Michigan Technological University": [
+    {
+      "id": "trad_mtu_snow_statues",
+      "name": "윈터 카니발 눈 조각",
+      "description": "1930년대부터 매년 2월, 학생들은 1922년에 시작된 윈터 카니발을 위해 그해의 주제에 맞춰 눈을 쌓고 다지고 깎아 거대한 눈 조각을 만듭니다. 캠퍼스를 걸으며 구경해 보세요.",
+      "latitude": 47.119075,
+      "longitude": -88.547552
+    },
+    {
+      "id": "trad_mtu_pep_band",
+      "name": "하키 경기의 허스키스 펩 밴드",
+      "description": "1928년에 결성된 허스키스 펩 밴드는 모든 하키 홈경기에서 연주합니다. 관중과 팔짱을 끼고 코퍼 컨트리의 노래 '블루 스커트 왈츠'에 맞춰 몸을 흔들어 보세요.",
+      "latitude": 47.112465,
+      "longitude": -88.545851
+    },
+    {
+      "id": "trad_mtu_copper_boulder",
+      "name": "거대한 구리 덩어리",
+      "description": "A. E. 시먼 광물 박물관 밖의 코퍼 파빌리온에는 슈피리어호 바닥에서 끌어올린 19톤짜리 구리 덩어리가 있으며, 기네스 세계 기록을 가지고 있습니다. 얼마나 큰지 직접 보러 가세요.",
+      "latitude": 47.110802,
+      "longitude": -88.552384
+    },
+    {
+      "id": "trad_mtu_rozsa",
+      "name": "로자 센터 공연",
+      "description": "로자 공연예술센터에서는 파인 마운틴 음악 축제와 41 North 영화제 등 영화제와 음악 축제가 일 년 내내 열립니다. 일정을 확인하고 공연을 보러 가세요.",
+      "latitude": 47.117527,
+      "longitude": -88.54196
+    }
+  ],
+  "Oakland University": [
+    {
+      "id": "trad_oakland_carillon",
+      "name": "여름 카리용 콘서트",
+      "description": "매년 여름 여섯 번의 금요일에 세계 각지의 카리용 연주자들이 엘리엇 타워의 종 49개로 무료 콘서트를 엽니다. 탑 주변 잔디밭에서 들어 보세요.",
+      "latitude": 42.673542,
+      "longitude": -83.215527
+    },
+    {
+      "id": "trad_oakland_grizz",
+      "name": "그리즈 문지르기",
+      "description": "학생들은 큰 시험을 앞두고 오레나 앞에 있는 높이 약 2.4m의 청동 회색곰 동상의 배를 문지르며 행운을 빕니다. 문지르고 사진도 찍어 보세요.",
+      "latitude": 42.674293,
+      "longitude": -83.214225
+    },
+    {
+      "id": "trad_oakland_holiday_walk",
+      "name": "메도브룩 홀의 홀리데이 워크",
+      "description": "매년 연말연시에 메도브룩 홀은 홀리데이 워크를 위해 장식되고, 밤에는 윈터 원더 라이츠가 정원을 밝힙니다. 시즌 장식으로 꾸민 저택을 보러 갈 계획을 세워 보세요.",
+      "latitude": 42.67223,
+      "longitude": -83.20146
+    },
+    {
+      "id": "trad_oakland_amphitheatre",
+      "name": "메도브룩 여름 콘서트",
+      "description": "메도브룩 원형극장은 1964년부터 캠퍼스에서 여름 콘서트를 열어 왔습니다. 지붕 아래 좌석이나 잔디밭에서 공연을 즐겨 보세요.",
+      "latitude": 42.676282,
+      "longitude": -83.202996
+    }
+  ],
+  "Central Michigan University": [
+    {
+      "id": "trad_cmich_fire_up_chips",
+      "name": "Fire Up, Chips!",
+      "description": "'Fire Up, Chips!'는 센트럴의 인사이자 응원 구호입니다. 켈리/쇼츠 스타디움의 풋볼 경기에서 중요한 플레이 전에 열쇠를 짤랑거리고, 관중과 함께 상상의 심벌즈를 쳐 보세요.",
+      "latitude": 43.57757,
+      "longitude": -84.77105
+    },
+    {
+      "id": "trad_cmich_warriner_chimes",
+      "name": "워리너 홀의 차임",
+      "description": "워리너 홀에서는 1939년부터 차임이 울렸고, 지금은 녹음된 종소리가 매시 정각을 알립니다. 정각에 워리너 몰에 서서 들어 보세요.",
+      "latitude": 43.592425,
+      "longitude": -84.775515
+    },
+    {
+      "id": "trad_cmich_boat_race",
+      "name": "골판지 보트 경주",
+      "description": "홈커밍 날 아침, 공학과 학생들이 골판지로 만든 보트를 저어 로즈 폰즈를 건너려고 합니다. 물가에 자리를 잡고 응원해 보세요.",
+      "latitude": 43.581132,
+      "longitude": -84.770682
+    },
+    {
+      "id": "trad_cmich_pow_wow",
+      "name": "셀러브레이팅 라이프 파우와우",
+      "description": "매년 3월 센트럴은 맥거크 아레나에서 전통 춤과 북 연주, 공예품, 음식이 어우러진 셀러브레이팅 라이프 파우와우를 엽니다. 누구나 참석할 수 있으니 구경하러 오세요.",
+      "latitude": 43.581566,
+      "longitude": -84.774189
+    }
+  ],
   "Yale University": [
     {
       "id": "trad_yale_woolsey_foot",
@@ -2419,6 +2539,36 @@
       "description": "캠퍼스 남쪽 토너먼트 파크의 운동장에서 초창기 로즈볼 경기가 열렸습니다. 트랙을 따라 걸으며 그 유명한 경기가 시작된 곳을 둘러보세요.",
       "latitude": 34.132928,
       "longitude": -118.125456
+    }
+  ],
+  "Colorado State University": [
+    {
+      "id": "trad_colostate_oval",
+      "name": "오벌 산책",
+      "description": "1909년 캠퍼스의 주요 건물을 잇기 위해 설계된 오벌은 미국느릅나무 65그루로 둘러싸여 있습니다. 캠퍼스의 역사적인 중심을 따라 산책해 보세요.",
+      "latitude": 40.576189,
+      "longitude": -105.080783
+    },
+    {
+      "id": "trad_colostate_ram_clock",
+      "name": "시계 아래에서 만나요",
+      "description": "여러 세대에 걸쳐 학생들은 로리 학생회관의 '시계 아래'에서 만나기로 약속해 왔습니다. 푸드코트 위의 램 시계를 찾아 매시 정각의 종소리를 들어 보세요.",
+      "latitude": 40.574788,
+      "longitude": -105.084724
+    },
+    {
+      "id": "trad_colostate_game_day",
+      "name": "CAM the Ram과 함께하는 경기 날",
+      "description": "콜로라도 A&M에서 이름을 딴 살아 있는 마스코트 CAM the Ram은 램스가 터치다운할 때마다 엔드존을 가로질러 달립니다. 1919년에 도난당했다가 2016년에 돌아온 올드 메인 종은 지금 경기장의 탑에 걸려 있습니다. 캔버스 스타디움에서 홈경기를 관람해 보세요.",
+      "latitude": 40.569831,
+      "longitude": -105.088506
+    },
+    {
+      "id": "trad_colostate_trial_garden",
+      "name": "애뉴얼 플라워 트라이얼 가든",
+      "description": "CSU가 새로운 꽃 품종을 시험하는 이 정원은 무료이며 매일 낮 동안 열려 있습니다. 화단에 꽃이 가득한 5월 말부터 10월 사이에 방문해 보세요.",
+      "latitude": 40.569381,
+      "longitude": -105.07615
     }
   ]
 }

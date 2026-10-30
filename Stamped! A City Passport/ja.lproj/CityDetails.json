@@ -3080,6 +3080,58 @@
     "transportation": "徒歩 / レイカー・ライン バス",
     "transportationFact": "The Rapid が運行するレイカー・ラインのバスが、レイク・ミシガン・ドライブ経由でアレンデールのキャンパスとグランドラピッズ中心部の GVSU キャンパスを結んでおり、誰でも利用できます。"
   },
+  "Eastern Michigan University": {
+    "airportCode": "DTW",
+    "airportInfo": "イプシランティの東、ロミュラスにあるデトロイト・メトロポリタン・ウェイン・カウンティ空港が最寄りの大きな空港です。",
+    "airportName": "Detroit Metropolitan Wayne County Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "米ドル ($)",
+    "funFact": "イースタンは 1849 年にミシガン州立師範学校として創立され、アメリカで 4 番目、ニューイングランド以外では初めての教員養成校でした。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはグリーンとホワイトで、チームの名前はイーグルスです。",
+    "nickname": "イーグルスの本拠地",
+    "transportation": "徒歩 / TheRide バス",
+    "transportationFact": "メインキャンパスはコンパクトで歩きやすい広さです。TheRide のバスがイプシランティとキャンパスをアナーバーと結んでいます。"
+  },
+  "Michigan Technological University": {
+    "airportCode": "CMX",
+    "airportInfo": "ポーテージ湖の対岸、ハンコックの北にあるホートン・カウンティ・メモリアル空港が、定期便のある最寄りの空港です。",
+    "airportName": "Houghton County Memorial Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "米ドル ($)",
+    "funFact": "ミシガン・テックは 1885 年にミシガン鉱山学校として創立され、ミシガン州アッパー半島で最初の大学になりました。ホートンでは平年で約 5.5 m の雪が降ります。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはブラックとゴールドで、チームの名前はハスキーズです。",
+    "nickname": "ハスキーズの本拠地",
+    "transportation": "徒歩",
+    "transportationFact": "キャンパスの中心部は US-41 沿い、ポーテージ湖を見下ろす高台にあり、徒歩約 10 分で横断できます。"
+  },
+  "Oakland University": {
+    "airportCode": "DTW",
+    "airportInfo": "デトロイト南西のロミュラスにあるデトロイト・メトロポリタン・ウェイン・カウンティ空港がこの地域の主要空港で、キャンパスから車で約 1 時間です。",
+    "airportName": "Detroit Metropolitan Wayne County Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "米ドル ($)",
+    "funFact": "オークランドは 1957 年、マチルダ・ダッジ・ウィルソンと夫アルフレッドの寄付で創立されました。寄付には二人のメドウブルックの地所も含まれ、110 室の邸宅メドウブルック・ホールは今もキャンパスに建っています。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはブラックとゴールドで、チームの名前はゴールデン・グリズリーズです。",
+    "nickname": "ゴールデン・グリズリーズの本拠地",
+    "transportation": "徒歩 / 車",
+    "transportationFact": "メインキャンパスはオーバーンヒルズとロチェスターヒルズにまたがっています。メドウブルック・ホールとジョン・ダッジ・ハウスは東側にあり、エリオット・タワーから 1〜2 km ほどです。"
+  },
+  "Central Michigan University": {
+    "airportCode": "MBS",
+    "airportInfo": "マウントプレザントの東、フリーランドにある MBS 国際空港が、定期便のある最寄りの空港です。",
+    "airportName": "MBS International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "米ドル ($)",
+    "funFact": "35,127 席のケリー/ショーツ・スタジアムは、ミッドアメリカン・カンファレンスでキャンパス内にある最大のスタジアムです。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはマルーンとゴールドで、チームの名前はチペワズです。",
+    "nickname": "Fire Up, Chips!",
+    "transportation": "徒歩",
+    "transportationFact": "キャンパスは歩いて回れます。北側のウォリナー・ホールから南東のケリー/ショーツ・スタジアムまでは約 1.5 km です。"
+  },
   "Yale University": {
     "airportCode": "BDL",
     "airportInfo": "ハートフォード近郊のブラッドリー空港は、ニューヘイブンから車で北へ約 1 時間です。ニューヨークに飛び、メトロノース鉄道のニューヘイブン線でユニオン駅まで直行する人も多くいます。",
@@ -3482,5 +3534,18 @@
     "nickname": "真理はあなたたちを自由にする",
     "transportation": "徒歩 / メトロ A ライン",
     "transportationFact": "コンパクトなキャンパスは徒歩で回れます。ライトレールのメトロ A ラインが、キャンパスの北約1.6キロのレイク駅とアレン駅に停車します。"
+  },
+  "Colorado State University": {
+    "airportCode": "DEN",
+    "airportInfo": "フォートコリンズの南東にあるデンバー国際空港が、コロラド州北部の主要な空港です。",
+    "airportName": "Denver International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "米ドル ($)",
+    "funFact": "キャンパスの中心にあるオーバルは 1909 年に設計され、65 本のアメリカニレの並木に囲まれています。周回路の長さは 629 m です。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはグリーンとゴールドで、チームの名前はラムズです。",
+    "nickname": "ラムズの本拠地",
+    "transportation": "徒歩 / Transfort MAX / Around the Horn",
+    "transportationFact": "Transfort のバス高速輸送路線 MAX がキャンパスに停まり、Around the Horn のバスがローリー・スチューデント・センター隣の CSU トランジット・センターからキャンパスを周回します。"
   }
 }

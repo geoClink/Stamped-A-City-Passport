@@ -92,6 +92,10 @@ extension CityLocation.City {
         .wayneState,
         .westernMichigan,
         .grandValleyState,
+        .easternMichigan,
+        .michiganTech,
+        .oaklandUniversity,
+        .centralMichigan,
         .yale,
         .harvard,
         .mit,
@@ -123,6 +127,7 @@ extension CityLocation.City {
         .ubc,
         .unam,
         .caltech,
+        .coloradoState,
     ]
 
     /// Athletic conference of each US campus; US campuses not listed show under "Other".
@@ -283,6 +288,10 @@ extension CityLocation.City {
         .wayneState: ["WSU", "Wayne State", "Wayne", "Warriors"],
         .westernMichigan: ["WMU", "Western Michigan", "Western", "Broncos"],
         .grandValleyState: ["GVSU", "Grand Valley", "GV", "Lakers"],
+        .easternMichigan: ["EMU", "Eastern Michigan", "Eastern"],
+        .michiganTech: ["Michigan Tech", "MTU"],
+        .oaklandUniversity: ["Oakland", "Golden Grizzlies", "Grizzlies"],
+        .centralMichigan: ["CMich", "Central Michigan", "Central", "Chippewas", "Chips"],
         .yale: ["Yale", "Bulldogs"],
         .harvard: ["Harvard", "Crimson"],
         .mit: ["MIT"],
@@ -314,6 +323,7 @@ extension CityLocation.City {
         .ubc: ["UBC"],
         .unam: ["UNAM"],
         .caltech: ["Caltech", "Cal Tech", "Beavers"],
+        .coloradoState: ["CSU", "Colorado State", "Rams"],
     ]
 
     /// Official school colors as hex, primary first; they tint the campus stamp.
@@ -399,6 +409,10 @@ extension CityLocation.City {
         .wayneState: ["#0C5449", "#FFCC33"],
         .westernMichigan: ["#F1C500", "#532E1F"],
         .grandValleyState: ["#0032A0", "#000000", "#FFFFFF"],
+        .easternMichigan: ["#046A38", "#FFFFFF"],
+        .michiganTech: ["#FFCD00", "#000000"],
+        .oaklandUniversity: ["#BC945B", "#000000"],
+        .centralMichigan: ["#6A0032", "#FFC82E"],
         .yale: ["#00356B", "#FFFFFF"],
         .harvard: ["#A51C30", "#FFFFFF"],
         .mit: ["#750014", "#8B959E"],
@@ -430,6 +444,7 @@ extension CityLocation.City {
         .ubc: ["#002145", "#FFFFFF"],
         .unam: ["#013B75", "#D9A500"],
         .caltech: ["#FF6C0C", "#FFFFFF"],
+        .coloradoState: ["#1E4D2B", "#C8C372"],
     ]
 }
 
@@ -559,6 +574,8 @@ extension WikimediaService {
         "campus_wmu_heritage_hall": "East Campus (Western Michigan University)",
         "campus_wmu_university_arena": "University Arena (Western Michigan University)",
         "campus_gvsu_fieldhouse": "GVSU Fieldhouse",
+        "campus_mtu_memorial_union": "Memorial Union Building (MTU)",
+        "campus_cmich_park_library": "Central Michigan University Libraries",
         "campus_yale_beinecke_library": "Beinecke Rare Book and Manuscript Library",
         "campus_yale_ingalls_rink": "Ingalls Rink",
         "campus_harvard_massachusetts_hall": "Massachusetts Hall (Harvard University)",
@@ -605,5 +622,7 @@ extension WikimediaService {
         "campus_unam_central_library": "Central Library (UNAM)",
         "campus_caltech_athenaeum": "Athenaeum at Caltech",
         "campus_caltech_beckman_institute": "Beckman Institute at Caltech",
+        "campus_colostate_routt_hall": "Botanical and Horticultural Laboratory",
+        "campus_colostate_morgan_library": "Morgan Library (Colorado State University)",
     ]
 }

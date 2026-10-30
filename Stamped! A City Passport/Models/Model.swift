@@ -328,6 +328,10 @@ struct CityLocation: Hashable, Sendable {
         case wayneState = "Wayne State University"
         case westernMichigan = "Western Michigan University"
         case grandValleyState = "Grand Valley State University"
+        case easternMichigan = "Eastern Michigan University"
+        case michiganTech = "Michigan Technological University"
+        case oaklandUniversity = "Oakland University"
+        case centralMichigan = "Central Michigan University"
         case yale = "Yale University"
         case harvard = "Harvard University"
         case mit = "Massachusetts Institute of Technology"
@@ -359,6 +363,7 @@ struct CityLocation: Hashable, Sendable {
         case ubc = "University of British Columbia"
         case unam = "National Autonomous University of Mexico"
         case caltech = "California Institute of Technology"
+        case coloradoState = "Colorado State University"
         // END CAMPUSES
 
         var id: String { self.rawValue }
@@ -472,7 +477,7 @@ struct CityLocation: Hashable, Sendable {
             case .uniSydney: return .newSouthWales
             case .stAndrews, .uniGlasgow, .uniEdinburgh: return .scotland
             case .uppsala: return .sweden
-            case .utAustin, .floridaSouthern, .bostonCollege, .clemson, .duke, .floridaState, .georgiaTech, .uLouisville, .uMiami, .ncState, .uncChapelHill, .uPittsburgh, .smu, .syracuse, .virginiaTech, .wakeForest, .uArizona, .arizonaState, .byu, .uHouston, .iowaState, .uKansas, .kansasState, .oklahomaState, .texasTech, .westVirginia, .baylor, .uCincinnati, .cuBoulder, .tcu, .ucf, .uUtah, .uIllinois, .uIndiana, .uIowa, .uMaryland, .michiganState, .uMinnesota, .uNebraska, .northwestern, .ohioState, .pennState, .purdue, .rutgers, .uWisconsin, .uOregon, .uSouthernCalifornia, .uAlabama, .uArkansas, .auburn, .uFlorida, .uGeorgia, .lsu, .olemiss, .mizzou, .uOklahoma, .uSouthCarolina, .vanderbilt, .uKentucky, .msState, .uTennessee, .texasAM, .wayneState, .westernMichigan, .grandValleyState, .yale, .harvard, .mit, .princeton, .cornell, .columbia, .upenn, .brown, .dartmouth, .georgetown, .johnsHopkins, .nyu, .carnegieMellon, .uChicago, .notreDame, .uMichigan, .illinoisTech, .uVirginia, .rice, .emory, .tulane, .washU, .stanford, .berkeley, .ucla, .uWashington, .caltech: return .unitedStates
+            case .utAustin, .floridaSouthern, .bostonCollege, .clemson, .duke, .floridaState, .georgiaTech, .uLouisville, .uMiami, .ncState, .uncChapelHill, .uPittsburgh, .smu, .syracuse, .virginiaTech, .wakeForest, .uArizona, .arizonaState, .byu, .uHouston, .iowaState, .uKansas, .kansasState, .oklahomaState, .texasTech, .westVirginia, .baylor, .uCincinnati, .cuBoulder, .tcu, .ucf, .uUtah, .uIllinois, .uIndiana, .uIowa, .uMaryland, .michiganState, .uMinnesota, .uNebraska, .northwestern, .ohioState, .pennState, .purdue, .rutgers, .uWisconsin, .uOregon, .uSouthernCalifornia, .uAlabama, .uArkansas, .auburn, .uFlorida, .uGeorgia, .lsu, .olemiss, .mizzou, .uOklahoma, .uSouthCarolina, .vanderbilt, .uKentucky, .msState, .uTennessee, .texasAM, .wayneState, .westernMichigan, .grandValleyState, .easternMichigan, .michiganTech, .oaklandUniversity, .centralMichigan, .yale, .harvard, .mit, .princeton, .cornell, .columbia, .upenn, .brown, .dartmouth, .georgetown, .johnsHopkins, .nyu, .carnegieMellon, .uChicago, .notreDame, .uMichigan, .illinoisTech, .uVirginia, .rice, .emory, .tulane, .washU, .stanford, .berkeley, .ucla, .uWashington, .caltech, .coloradoState: return .unitedStates
             case .uniMelbourne: return .victoria
             // END CAMPUSES
             }

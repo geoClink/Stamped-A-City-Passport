@@ -1118,5 +1118,55 @@
     "currencyInfo": "미국 달러($)",
     "transportation": "도보 / 캠퍼스 서큘레이터 / 메트로링크",
     "transportationFact": "무료 셔틀 캠퍼스 서큘레이터가 댄포스 캠퍼스를 순환하고, 메트로링크 블루 라인 열차가 바로 옆 스킨커역에 정차합니다."
+  },
+  "Colorado State University": {
+    "nickname": "램스의 본거지",
+    "airportInfo": "포트콜린스 남동쪽의 덴버 국제공항이 콜로라도 북부의 주요 공항입니다.",
+    "funFact": "캠퍼스 중심의 오벌은 1909년에 설계되었으며 미국느릅나무 65그루가 둘러싸고 있습니다. 오벌을 도는 길의 길이는 629m입니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 그린과 골드이고, 팀 이름은 램스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / Transfort MAX / Around the Horn",
+    "transportationFact": "Transfort의 간선급행버스 MAX가 캠퍼스에 정차하고, Around the Horn 버스가 로리 학생회관 옆 CSU 환승센터에서 출발해 캠퍼스를 순환합니다."
+  },
+  "Eastern Michigan University": {
+    "nickname": "이글스의 본거지",
+    "airportInfo": "입실랜티 동쪽 로물루스에 있는 디트로이트 메트로폴리탄 웨인 카운티 공항이 가장 가까운 대형 공항입니다.",
+    "funFact": "이스턴은 1849년 미시간 주립 사범학교로 설립되었으며, 미국에서 네 번째, 뉴잉글랜드 밖에서는 처음 세워진 교사 양성 학교였습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 그린과 화이트이고, 팀 이름은 이글스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / TheRide 버스",
+    "transportationFact": "메인 캠퍼스는 아담해서 걸어 다니기 쉽습니다. TheRide 버스가 입실랜티와 캠퍼스를 앤아버와 연결합니다."
+  },
+  "Michigan Technological University": {
+    "nickname": "허스키스의 본거지",
+    "airportInfo": "포티지 호수 건너편, 핸콕 북쪽의 호튼 카운티 메모리얼 공항이 정기 항공편이 있는 가장 가까운 공항입니다.",
+    "funFact": "미시간 테크는 1885년 미시간 광산학교로 설립되었으며, 미시간주 어퍼 반도 최초의 대학이었습니다. 호튼에는 평년에 약 5.5m의 눈이 내립니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 블랙과 골드이고, 팀 이름은 허스키스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보",
+    "transportationFact": "캠퍼스 중심부는 US-41 도로를 따라 포티지 호수를 내려다보는 언덕 위에 있으며, 걸어서 약 10분이면 가로지를 수 있습니다."
+  },
+  "Oakland University": {
+    "nickname": "골든 그리즐리스의 본거지",
+    "airportInfo": "디트로이트 남서쪽 로물루스의 디트로이트 메트로폴리탄 웨인 카운티 공항이 이 지역의 주요 공항으로, 캠퍼스에서 차로 약 1시간 거리입니다.",
+    "funFact": "오클랜드는 1957년 마틸다 닷지 윌슨과 남편 앨프리드의 기부로 설립되었고, 기부에는 두 사람의 메도브룩 영지도 포함되었습니다. 방이 110개인 저택 메도브룩 홀은 지금도 캠퍼스에 있습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 블랙과 골드이고, 팀 이름은 골든 그리즐리스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보 / 자동차",
+    "transportationFact": "메인 캠퍼스는 오번힐스와 로체스터힐스에 걸쳐 있습니다. 메도브룩 홀과 존 닷지 하우스는 동쪽에 있으며, 엘리엇 타워에서 1~2km 정도 떨어져 있습니다."
+  },
+  "Central Michigan University": {
+    "nickname": "Fire Up, Chips!",
+    "airportInfo": "마운트플레전트 동쪽 프리랜드에 있는 MBS 국제공항이 정기 항공편이 있는 가장 가까운 공항입니다.",
+    "funFact": "35,127석의 켈리/쇼츠 스타디움은 미드아메리칸 콘퍼런스에서 캠퍼스 안에 있는 가장 큰 경기장입니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 머룬과 골드이고, 팀 이름은 치페와스입니다.",
+    "currencyInfo": "미국 달러($)",
+    "transportation": "도보",
+    "transportationFact": "캠퍼스는 걸어 다니기 쉽습니다. 북쪽의 워리너 홀에서 남동쪽의 켈리/쇼츠 스타디움까지 약 1.5km입니다."
   }
 }

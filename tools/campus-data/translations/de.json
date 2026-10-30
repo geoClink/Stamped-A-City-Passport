@@ -1118,5 +1118,55 @@
     "currencyInfo": "US-Dollar ($)",
     "transportation": "Zu Fuß / Campus Circulator / MetroLink",
     "transportationFact": "Ein kostenloser Campus-Circulator-Shuttle fährt Runden über den Danforth Campus, und Züge der MetroLink Blue Line halten an der Station Skinker direkt daneben."
+  },
+  "Colorado State University": {
+    "nickname": "Heimat der Rams",
+    "airportInfo": "Der Denver International Airport südöstlich von Fort Collins ist der wichtigste Flughafen für das nördliche Colorado.",
+    "funFact": "Das Oval im Herzen des Campus wurde 1909 angelegt und ist von 65 Amerikanischen Ulmen gesäumt. Der Rundweg um das Oval ist 629 m lang.",
+    "language": "Englisch",
+    "languageInfo": "Die Farben der Universität sind Grün und Gold, und die Sportteams heißen Rams.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß / Transfort MAX / Around the Horn",
+    "transportationFact": "Die Schnellbuslinie MAX von Transfort hält am Campus, und der Bus Around the Horn fährt vom CSU Transit Center neben dem Lory Student Center eine Runde über den Campus."
+  },
+  "Eastern Michigan University": {
+    "nickname": "Heimat der Eagles",
+    "airportInfo": "Der Detroit Metropolitan Wayne County Airport in Romulus, östlich von Ypsilanti, ist der nächste große Flughafen.",
+    "funFact": "Eastern wurde 1849 als Michigan State Normal School gegründet und war die vierte Lehrerbildungsanstalt der USA und die erste außerhalb Neuenglands.",
+    "language": "Englisch",
+    "languageInfo": "Die Farben der Universität sind Grün und Weiß, und die Sportteams heißen Eagles.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß / TheRide-Busse",
+    "transportationFact": "Der Hauptcampus ist kompakt und gut zu Fuß zu erkunden. Busse von TheRide verbinden Ypsilanti und den Campus mit Ann Arbor."
+  },
+  "Michigan Technological University": {
+    "nickname": "Heimat der Huskies",
+    "airportInfo": "Der Houghton County Memorial Airport nördlich von Hancock, auf der anderen Seite des Portage Lake, ist der nächste Flughafen mit Linienflügen.",
+    "funFact": "Michigan Tech wurde 1885 als Michigan Mining School gegründet und war die erste Hochschule auf der Oberen Halbinsel Michigans. In Houghton fallen in einem normalen Jahr etwa 5,5 m Schnee.",
+    "language": "Englisch",
+    "languageInfo": "Die Farben der Universität sind Schwarz und Gold, und die Sportteams heißen Huskies.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß",
+    "transportationFact": "Der Kern des Campus liegt an der US-41 auf einer Anhöhe über dem Portage Lake und lässt sich in etwa 10 Minuten zu Fuß durchqueren."
+  },
+  "Oakland University": {
+    "nickname": "Heimat der Golden Grizzlies",
+    "airportInfo": "Der Detroit Metropolitan Wayne County Airport in Romulus, südwestlich von Detroit, ist der wichtigste Flughafen der Region, etwa eine Autostunde vom Campus entfernt.",
+    "funFact": "Oakland wurde 1957 mit einer Schenkung von Matilda Dodge Wilson und ihrem Mann Alfred gegründet, zu der auch ihr Anwesen Meadow Brook gehörte. Ihr Herrenhaus mit 110 Zimmern, die Meadow Brook Hall, steht noch heute auf dem Campus.",
+    "language": "Englisch",
+    "languageInfo": "Die Farben der Universität sind Schwarz und Gold, und die Sportteams heißen Golden Grizzlies.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß / Auto",
+    "transportationFact": "Der Hauptcampus erstreckt sich über Auburn Hills und Rochester Hills. Meadow Brook Hall und das John Dodge House liegen auf der Ostseite, etwa 1 bis 2 km vom Elliott Tower entfernt."
+  },
+  "Central Michigan University": {
+    "nickname": "Fire Up, Chips!",
+    "airportInfo": "Der MBS International Airport in Freeland, östlich von Mount Pleasant, ist der nächste Flughafen mit Linienflügen.",
+    "funFact": "Das Kelly/Shorts Stadium ist mit 35.127 Plätzen das größte Stadion auf einem Campus in der Mid-American Conference.",
+    "language": "Englisch",
+    "languageInfo": "Die Farben der Universität sind Kastanienrot und Gold, und die Sportteams heißen Chippewas.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß",
+    "transportationFact": "Der Campus ist gut zu Fuß zu erkunden: Die Warriner Hall im Norden liegt etwa 1,5 km vom Kelly/Shorts Stadium im Südosten entfernt."
   }
 }

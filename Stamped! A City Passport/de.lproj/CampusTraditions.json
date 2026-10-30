@@ -1561,6 +1561,126 @@
       "longitude": -85.894756
     }
   ],
+  "Eastern Michigan University": [
+    {
+      "id": "trad_emu_water_tower",
+      "name": "Ypsilanti Water Tower",
+      "description": "Der steinerne Wasserturm wurde 1890 auf dem höchsten Punkt von Ypsilanti gebaut, grenzt an den Campus und ist das bekannteste Wahrzeichen der Stadt. Die Einheimischen beschreiben Wege anhand des Turms, also machen Sie ein Foto mit ihm.",
+      "latitude": 42.245552,
+      "longitude": -83.62469
+    },
+    {
+      "id": "trad_emu_kiosk",
+      "name": "Der Kiosk vor Pray-Harrold",
+      "description": "Den Kiosk vor dem Pray-Harrold-Gebäude mit Plakaten für Campusveranstaltungen zu bekleben, ist eine alte Tradition in Eastern. Schauen Sie vorbei und lesen Sie, was diese Woche los ist.",
+      "latitude": 42.249577,
+      "longitude": -83.62259
+    },
+    {
+      "id": "trad_emu_pease_organ",
+      "name": "Konzert im Pease Auditorium",
+      "description": "Das Pease Auditorium ist seit 1915 der Konzertsaal des Campus. Besuchen Sie eine Aufführung und hören Sie die Aeolian-Skinner-Orgel mit 81 Registern.",
+      "latitude": 42.246433,
+      "longitude": -83.621446
+    },
+    {
+      "id": "trad_emu_starkweather_ghost",
+      "name": "Der Geist der Starkweather Hall",
+      "description": "Laut Campuslegende spukt Mary Ann Starkweather, die den Bau bezahlte, in der Hall, weil sie nicht mehr dem religiösen Zweck dient, den sie sich gewünscht hatte. Gehen Sie am ältesten Gebäude des Campus vorbei und schauen Sie zu seinem Turm hinauf.",
+      "latitude": 42.246508,
+      "longitude": -83.624681
+    }
+  ],
+  "Michigan Technological University": [
+    {
+      "id": "trad_mtu_snow_statues",
+      "name": "Schneeskulpturen beim Winter Carnival",
+      "description": "Seit den 1930er-Jahren türmen, stampfen und schnitzen Studierende jeden Februar Schnee zu riesigen Skulpturen nach einem Jahresthema für den Winter Carnival, den es seit 1922 gibt. Spazieren Sie über den Campus und sehen Sie sie sich an.",
+      "latitude": 47.119075,
+      "longitude": -88.547552
+    },
+    {
+      "id": "trad_mtu_pep_band",
+      "name": "Huskies Pep Band beim Eishockey",
+      "description": "Die 1928 gegründete Huskies Pep Band spielt bei jedem Eishockey-Heimspiel. Haken Sie sich mit dem Publikum unter und schunkeln Sie zum „Blue Skirt Waltz“, der Hymne des Copper Country.",
+      "latitude": 47.112465,
+      "longitude": -88.545851
+    },
+    {
+      "id": "trad_mtu_copper_boulder",
+      "name": "Der riesige Kupferbrocken",
+      "description": "Im Copper Pavilion vor dem A. E. Seaman Mineral Museum liegt ein 19 Tonnen schwerer Kupferbrocken, der vom Grund des Oberen Sees geborgen wurde und einen Guinness-Weltrekord hält. Sehen Sie selbst, wie groß er ist.",
+      "latitude": 47.110802,
+      "longitude": -88.552384
+    },
+    {
+      "id": "trad_mtu_rozsa",
+      "name": "Eine Vorstellung im Rozsa Center",
+      "description": "Das Rozsa Center for the Performing Arts zeigt das ganze Jahr über Film- und Musikfestivals, darunter das Pine Mountain Music Festival und das 41 North Film Festival. Werfen Sie einen Blick ins Programm und besuchen Sie eine Vorstellung.",
+      "latitude": 47.117527,
+      "longitude": -88.54196
+    }
+  ],
+  "Oakland University": [
+    {
+      "id": "trad_oakland_carillon",
+      "name": "Carillonkonzerte im Sommer",
+      "description": "An sechs Freitagen im Sommer spielen Carillonneure aus aller Welt kostenlose Konzerte auf den 49 Glocken des Elliott Tower. Hören Sie vom Rasen rund um den Turm zu.",
+      "latitude": 42.673542,
+      "longitude": -83.215527
+    },
+    {
+      "id": "trad_oakland_grizz",
+      "name": "Den Grizz reiben",
+      "description": "Vor einer großen Prüfung reiben Studierende den Bauch des 2,4 m hohen Bronzegrizzlys vor der O'rena, weil das Glück bringen soll. Reiben Sie ihn auch und machen Sie ein Foto.",
+      "latitude": 42.674293,
+      "longitude": -83.214225
+    },
+    {
+      "id": "trad_oakland_holiday_walk",
+      "name": "Holiday Walk in der Meadow Brook Hall",
+      "description": "Zur Weihnachtszeit wird die Meadow Brook Hall für den Holiday Walk geschmückt, und abends leuchten die Winter Wonder Lights auf dem Gelände. Planen Sie einen Besuch, um das festlich dekorierte Herrenhaus zu sehen.",
+      "latitude": 42.67223,
+      "longitude": -83.20146
+    },
+    {
+      "id": "trad_oakland_amphitheatre",
+      "name": "Sommerkonzert in Meadow Brook",
+      "description": "Das Meadow Brook Amphitheatre veranstaltet seit 1964 Sommerkonzerte auf dem Campus. Erleben Sie eine Show von einem Platz unter dem Dach oder vom Rasen aus.",
+      "latitude": 42.676282,
+      "longitude": -83.202996
+    }
+  ],
+  "Central Michigan University": [
+    {
+      "id": "trad_cmich_fire_up_chips",
+      "name": "Fire Up, Chips!",
+      "description": "„Fire Up, Chips!“ ist Gruß und Schlachtruf von Central. Klimpern Sie bei einem Footballspiel im Kelly/Shorts Stadium vor wichtigen Spielzügen mit den Schlüsseln und schlagen Sie mit dem Publikum unsichtbare Becken.",
+      "latitude": 43.57757,
+      "longitude": -84.77105
+    },
+    {
+      "id": "trad_cmich_warriner_chimes",
+      "name": "Das Glockenspiel der Warriner Hall",
+      "description": "Seit 1939 erklingt ein Glockenspiel aus der Warriner Hall, und heute begrüßen aufgezeichnete Glocken jede neue Stunde. Stellen Sie sich zur vollen Stunde auf die Warriner Mall und hören Sie zu.",
+      "latitude": 43.592425,
+      "longitude": -84.775515
+    },
+    {
+      "id": "trad_cmich_boat_race",
+      "name": "Pappbootrennen",
+      "description": "Am Morgen des Homecoming versuchen Ingenieurstudierende, Boote aus Pappe über die Rose Ponds zu paddeln. Suchen Sie sich einen Platz am Ufer und feuern Sie sie an.",
+      "latitude": 43.581132,
+      "longitude": -84.770682
+    },
+    {
+      "id": "trad_cmich_pow_wow",
+      "name": "Celebrating Life Pow Wow",
+      "description": "Jeden März veranstaltet Central in der McGuirk Arena das Celebrating Life Pow Wow mit traditionellen Tänzen, Trommeln, Kunsthandwerk und Essen. Es ist öffentlich, also kommen Sie und schauen Sie zu.",
+      "latitude": 43.581566,
+      "longitude": -84.774189
+    }
+  ],
   "Yale University": [
     {
       "id": "trad_yale_woolsey_foot",
@@ -2419,6 +2539,36 @@
       "description": "Auf dem Sportplatz im Tournament Park an der Südseite des Campus fanden die ersten Rose-Bowl-Spiele statt. Geh an der Laufbahn entlang und sieh, wo das berühmte Spiel begann.",
       "latitude": 34.132928,
       "longitude": -118.125456
+    }
+  ],
+  "Colorado State University": [
+    {
+      "id": "trad_colostate_oval",
+      "name": "Ein Spaziergang ums Oval",
+      "description": "Das Oval wurde 1909 angelegt, um die Hauptgebäude des Campus zu verbinden, und ist von 65 Amerikanischen Ulmen gesäumt. Spazieren Sie um das historische Herz des Campus.",
+      "latitude": 40.576189,
+      "longitude": -105.080783
+    },
+    {
+      "id": "trad_colostate_ram_clock",
+      "name": "Treffpunkt unter der Uhr",
+      "description": "Seit Generationen verabreden sich Studierende „unter der Uhr“ im Lory Student Center. Suchen Sie die Ram Clock über dem Food Court und hören Sie auf ihren stündlichen Glockenschlag.",
+      "latitude": 40.574788,
+      "longitude": -105.084724
+    },
+    {
+      "id": "trad_colostate_game_day",
+      "name": "Spieltag mit CAM the Ram",
+      "description": "CAM the Ram, das lebende Maskottchen, benannt nach Colorado A&M, rennt nach jedem Touchdown der Rams durch die Endzone. Die Old Main Bell, 1919 gestohlen und 2016 zurückgegeben, hängt heute in einem Turm am Stadion. Besuchen Sie ein Heimspiel im Canvas Stadium.",
+      "latitude": 40.569831,
+      "longitude": -105.088506
+    },
+    {
+      "id": "trad_colostate_trial_garden",
+      "name": "Annual Flower Trial Garden",
+      "description": "In diesem Garten testet die CSU neue Blumensorten; er ist kostenlos und täglich bei Tageslicht geöffnet. Kommen Sie zwischen Ende Mai und Oktober, wenn die Beete blühen.",
+      "latitude": 40.569381,
+      "longitude": -105.07615
     }
   ]
 }

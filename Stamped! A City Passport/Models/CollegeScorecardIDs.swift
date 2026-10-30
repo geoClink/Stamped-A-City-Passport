@@ -113,5 +113,12 @@ extension CityLocation.City {
         .nyu: 193900,                 // New York University
         .carnegieMellon: 211440,      // Carnegie Mellon University
         .washU: 179867,               // Washington University in St Louis
+        // Added with Colorado State and four Michigan campuses on 2026-10-30, from Wikidata (P1771),
+        // and checked against the Scorecard the same day: each returned the same school in the right city.
+        .coloradoState: 126818,       // Colorado State University-Fort Collins
+        .easternMichigan: 169798,     // Eastern Michigan University
+        .michiganTech: 171128,        // Michigan Technological University
+        .oaklandUniversity: 171571,   // Oakland University
+        .centralMichigan: 169248,     // Central Michigan University
     ]
 }

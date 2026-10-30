@@ -3080,6 +3080,58 @@
     "transportation": "步行 / Laker Line 公交",
     "transportationFact": "由 The Rapid 运营的 Laker Line 公交车沿密歇根湖大道连接阿伦代尔校园和大急流城市中心的 GVSU 校区，并向公众开放。"
   },
+  "Eastern Michigan University": {
+    "airportCode": "DTW",
+    "airportInfo": "位于伊普西兰蒂以东罗穆卢斯的底特律大都会韦恩县机场是最近的大型机场。",
+    "airportName": "Detroit Metropolitan Wayne County Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "东密歇根大学于 1849 年创立，前身是密歇根州立师范学校，是美国第四所、也是新英格兰以外第一所师范学校。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是绿色和白色，运动队叫 Eagles。",
+    "nickname": "Eagles 之家",
+    "transportation": "步行 / TheRide 公交",
+    "transportationFact": "主校区紧凑，步行很方便。TheRide 公交把伊普西兰蒂和校园与安娜堡连接起来。"
+  },
+  "Michigan Technological University": {
+    "airportCode": "CMX",
+    "airportInfo": "位于波蒂奇湖对岸、汉考克以北的霍顿县纪念机场是最近的有定期航班的机场。",
+    "airportName": "Houghton County Memorial Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "密歇根理工大学于 1885 年创立，前身是密歇根矿业学校，是密歇根上半岛的第一所高等院校。霍顿一年通常会下约 5.5 米的雪。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是黑色和金色，运动队叫 Huskies。",
+    "nickname": "Huskies 之家",
+    "transportation": "步行",
+    "transportationFact": "校园主体位于 US-41 公路旁、俯瞰波蒂奇湖的高地上，步行约 10 分钟即可穿过。"
+  },
+  "Oakland University": {
+    "airportCode": "DTW",
+    "airportInfo": "位于底特律西南罗穆卢斯的底特律大都会韦恩县机场是该地区的主要机场，距校园约一小时车程。",
+    "airportName": "Detroit Metropolitan Wayne County Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "奥克兰大学于 1957 年由马蒂尔达·道奇·威尔逊和丈夫阿尔弗雷德捐赠创立，捐赠中包括他们的 Meadow Brook 庄园。两人那座有 110 个房间的宅邸 Meadow Brook Hall 至今仍矗立在校园里。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是黑色和金色，运动队叫 Golden Grizzlies。",
+    "nickname": "Golden Grizzlies 之家",
+    "transportation": "步行 / 开车",
+    "transportationFact": "主校区横跨奥本山和罗切斯特山。Meadow Brook Hall 和 John Dodge House 位于东侧，距 Elliott Tower 约 1 到 2 公里。"
+  },
+  "Central Michigan University": {
+    "airportCode": "MBS",
+    "airportInfo": "位于芒特普莱森特以东弗里兰的 MBS 国际机场是最近的有定期航班的机场。",
+    "airportName": "MBS International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "拥有 35,127 个座位的 Kelly/Shorts 体育场是中美洲联盟中最大的校内体育场。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是栗色和金色，运动队叫 Chippewas。",
+    "nickname": "Fire Up, Chips!",
+    "transportation": "步行",
+    "transportationFact": "校园步行就能逛完：北边的 Warriner Hall 距东南边的 Kelly/Shorts 体育场约 1.5 公里。"
+  },
   "Yale University": {
     "airportCode": "BDL",
     "airportInfo": "哈特福德附近的布拉德利机场在纽黑文以北约一小时车程处。许多游客也会飞到纽约，再乘 Metro-North 的 New Haven Line 直达 Union Station。",
@@ -3482,5 +3534,18 @@
     "nickname": "真理必叫你们得以自由",
     "transportation": "步行 / 地铁 A 线",
     "transportationFact": "校园紧凑，步行即可游览。轻轨地铁 A 线停靠校园以北约 1.6 公里的 Lake 站和 Allen 站。"
+  },
+  "Colorado State University": {
+    "airportCode": "DEN",
+    "airportInfo": "位于柯林斯堡东南的丹佛国际机场是科罗拉多州北部的主要机场。",
+    "airportName": "Denver International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "校园中心的 Oval 于 1909 年设计，周围种着 65 棵美国榆树。环绕它的步道全长 629 米。",
+    "language": "英语",
+    "languageInfo": "学校的代表色是绿色和金色，运动队叫 Rams。",
+    "nickname": "Rams 之家",
+    "transportation": "步行 / Transfort MAX / Around the Horn",
+    "transportationFact": "Transfort 的 MAX 快速公交线路经过校园，Around the Horn 公交从 Lory 学生中心旁的 CSU 交通中心出发，环绕校园行驶。"
   }
 }

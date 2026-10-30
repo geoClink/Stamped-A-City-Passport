@@ -3080,6 +3080,58 @@
     "transportation": "A piedi / autobus Laker Line",
     "transportationFact": "L'autobus Laker Line, gestito da The Rapid, collega il campus di Allendale ai campus della GVSU nel centro di Grand Rapids lungo Lake Michigan Drive ed è aperto a tutti."
   },
+  "Eastern Michigan University": {
+    "airportCode": "DTW",
+    "airportInfo": "L'aeroporto metropolitano di Detroit a Romulus, a est di Ypsilanti, è il grande aeroporto più vicino.",
+    "airportName": "Detroit Metropolitan Wayne County Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "Dollaro statunitense ($)",
+    "funFact": "Fondata nel 1849 come Michigan State Normal School, Eastern fu la quarta scuola per insegnanti degli Stati Uniti e la prima fuori dal New England.",
+    "language": "Inglese",
+    "languageInfo": "I colori dell'università sono il verde e il bianco, e le squadre si chiamano Eagles.",
+    "nickname": "La casa degli Eagles",
+    "transportation": "A piedi / autobus TheRide",
+    "transportationFact": "Il campus principale è compatto e facile da girare a piedi. Gli autobus TheRide collegano Ypsilanti e il campus con Ann Arbor."
+  },
+  "Michigan Technological University": {
+    "airportCode": "CMX",
+    "airportInfo": "L'Houghton County Memorial Airport, a nord di Hancock, dall'altra parte del lago Portage, è l'aeroporto più vicino con voli di linea.",
+    "airportName": "Houghton County Memorial Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "Dollaro statunitense ($)",
+    "funFact": "Fondata nel 1885 come Michigan Mining School, Michigan Tech fu il primo istituto universitario della Penisola Superiore del Michigan. A Houghton cadono circa 5,5 m di neve in un anno normale.",
+    "language": "Inglese",
+    "languageInfo": "I colori dell'università sono il nero e l'oro, e le squadre si chiamano Huskies.",
+    "nickname": "La casa degli Huskies",
+    "transportation": "A piedi",
+    "transportationFact": "La parte principale del campus si trova su un'altura sopra il lago Portage, lungo la US-41, e si attraversa a piedi in circa 10 minuti."
+  },
+  "Oakland University": {
+    "airportCode": "DTW",
+    "airportInfo": "L'aeroporto metropolitano di Detroit a Romulus, a sud-ovest di Detroit, è il principale aeroporto della zona, a circa un'ora di auto dal campus.",
+    "airportName": "Detroit Metropolitan Wayne County Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "Dollaro statunitense ($)",
+    "funFact": "Oakland fu fondata nel 1957 grazie a una donazione di Matilda Dodge Wilson e di suo marito Alfred, che comprendeva la loro tenuta di Meadow Brook. La loro villa di 110 stanze, Meadow Brook Hall, si trova ancora nel campus.",
+    "language": "Inglese",
+    "languageInfo": "I colori dell'università sono il nero e l'oro, e le squadre si chiamano Golden Grizzlies.",
+    "nickname": "La casa dei Golden Grizzlies",
+    "transportation": "A piedi / in auto",
+    "transportationFact": "Il campus principale si estende tra Auburn Hills e Rochester Hills. Meadow Brook Hall e la John Dodge House sono sul lato est, a 1-2 km dall'Elliott Tower."
+  },
+  "Central Michigan University": {
+    "airportCode": "MBS",
+    "airportInfo": "L'aeroporto internazionale MBS di Freeland, a est di Mount Pleasant, è l'aeroporto più vicino con voli di linea.",
+    "airportName": "MBS International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "Dollaro statunitense ($)",
+    "funFact": "Con 35.127 posti, il Kelly/Shorts Stadium è il più grande stadio all'interno di un campus della Mid-American Conference.",
+    "language": "Inglese",
+    "languageInfo": "I colori dell'università sono il granata e l'oro, e le squadre si chiamano Chippewas.",
+    "nickname": "Fire Up, Chips!",
+    "transportation": "A piedi",
+    "transportationFact": "Il campus è facile da girare a piedi: Warriner Hall, a nord, dista circa 1,5 km dal Kelly/Shorts Stadium, a sud-est."
+  },
   "Yale University": {
     "airportCode": "BDL",
     "airportInfo": "Bradley, vicino a Hartford, si trova a circa un'ora d'auto a nord di New Haven. Molti visitatori arrivano anche in volo a New York e prendono la New Haven Line della Metro-North fino a Union Station.",
@@ -3482,5 +3534,18 @@
     "nickname": "La verità vi farà liberi",
     "transportation": "A piedi / Metro A Line",
     "transportationFact": "Il campus compatto si gira facilmente a piedi. La metropolitana leggera Metro A Line ferma alle stazioni Lake e Allen, circa un chilometro e mezzo a nord del campus."
+  },
+  "Colorado State University": {
+    "airportCode": "DEN",
+    "airportInfo": "L'aeroporto internazionale di Denver, a sud-est di Fort Collins, è il principale aeroporto del Colorado settentrionale.",
+    "airportName": "Denver International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "Dollaro statunitense ($)",
+    "funFact": "L'Oval, nel cuore del campus, fu progettato nel 1909 ed è circondato da 65 olmi americani. Il percorso che lo circonda è lungo 629 m.",
+    "language": "Inglese",
+    "languageInfo": "I colori dell'università sono il verde e l'oro, e le squadre si chiamano Rams.",
+    "nickname": "La casa dei Rams",
+    "transportation": "A piedi / Transfort MAX / Around the Horn",
+    "transportationFact": "La linea di autobus rapidi MAX di Transfort serve il campus, e l'autobus Around the Horn fa il giro del campus partendo dal CSU Transit Center, accanto al Lory Student Center."
   }
 }

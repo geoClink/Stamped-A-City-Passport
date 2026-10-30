@@ -54,3 +54,26 @@ students-only events, hazing, mocking another school, and Syracuse's Saltine War
   Emory Coke Toast and Dooley's Week, Tulane Ivy Day.
 - No article of their own and the bare name leads elsewhere, so these skip the photo (`WikimediaService.skipWikipedia`):
   JHU Gilman Hall and Eisenhower Library, CMU Baker Hall and Gates and Hillman Centers.
+
+### New campuses (Colorado State, Eastern Michigan, Michigan Tech, Oakland, Central Michigan)
+- [ ] Colors: CSU, Michigan Tech, Oakland and Central Michigan come from each school's brand page. Eastern Michigan's
+      brand page wouldn't load, so its green #046A38 (PMS 349 C) comes from third-party color sites.
+- [ ] Shared-article buildings (OSM coordinates, no photo): CSU Ammons Hall and Central Michigan's Warriner Hall. Warriner
+      Hall's year is 1928 (some CMU sources say it was finished in 1927). Ammons Hall's facts come from History Colorado and
+      sources found by search, not Wikipedia.
+- [ ] Michigan Tech has only 4 buildings: Sherman Field has an article but no opening year, and the Rozsa Center and Van Pelt
+      Library have no article.
+- [ ] Starkweather Hall (EMU): current use uncertain (Wikipedia says the Graduate Office in 2013; a search result says EMU
+      wasn't using it in 2024). New use is written as "University Offices".
+- [ ] Traditions to look at: Warriner Hall chimes (source is from 2013), the Starkweather Hall ghost story, the Pray-Harrold
+      kiosk (the map point is the building, not the kiosk), Michigan Tech snow statues (map point is Husky Plaza; statues
+      are all over campus), game-day-only items (CSU Game Day, CMU Fire Up Chips, Michigan Tech Pep Band) and seasonal ones
+      (Winter Carnival, Meadow Brook Holiday Walk, CMU Pow Wow in March, Oakland summer carillon concerts).
+- [ ] Transport text: "TheRide buses link Ypsilanti with Ann Arbor" (EMU) and "Around the Horn loops around campus" (CSU)
+      are from general knowledge and the CSU Wikipedia article, not checked against a current route map.
+- Left out on purpose: CSU painting the Aggie "A" (students only, and the hillside is far from campus), Michigan Tech's
+  Mont Ripley (about 2 km away, across the lake) and K-Day, Oakland's Meadow Brook Theatre (no article), CMU Gentle Friday.
+- Skipped for now (fewer than 4 on-campus buildings with their own article): Northern Michigan (Superior Dome, Berry Events
+  Center; Longyear Hall is gone), Ferris State, Saginaw Valley State (the Ryder Center's Wikipedia point is 5 km off),
+  Lake Superior State, UM-Dearborn, UM-Flint, Detroit Mercy, Kettering, Lawrence Tech, Calvin, Hope, Kalamazoo, Albion,
+  Hillsdale (Christ Chapel has no coordinates; stadium and arboretum only), Alma and Andrews.

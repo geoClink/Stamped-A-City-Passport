@@ -1561,6 +1561,126 @@
       "longitude": -85.894756
     }
   ],
+  "Eastern Michigan University": [
+    {
+      "id": "trad_emu_water_tower",
+      "name": "Ypsilanti Water Tower",
+      "description": "Bâti en 1890 sur le point le plus haut d'Ypsilanti, le château d'eau en pierre borde le campus et c'est le monument le plus connu de la ville. Les habitants s'en servent pour indiquer le chemin, alors prenez une photo avec lui.",
+      "latitude": 42.245552,
+      "longitude": -83.62469
+    },
+    {
+      "id": "trad_emu_kiosk",
+      "name": "Le kiosque de Pray-Harrold",
+      "description": "Couvrir d'affiches d'événements le kiosque devant le bâtiment Pray-Harrold est une vieille tradition d'Eastern. Passez voir ce qui se prépare cette semaine.",
+      "latitude": 42.249577,
+      "longitude": -83.62259
+    },
+    {
+      "id": "trad_emu_pease_organ",
+      "name": "Concert au Pease Auditorium",
+      "description": "Le Pease Auditorium est la salle de concert du campus depuis 1915. Assistez à un spectacle et écoutez son orgue Aeolian-Skinner de 81 jeux.",
+      "latitude": 42.246433,
+      "longitude": -83.621446
+    },
+    {
+      "id": "trad_emu_starkweather_ghost",
+      "name": "Le fantôme de Starkweather Hall",
+      "description": "Selon une légende du campus, Mary Ann Starkweather, qui a financé le bâtiment, le hante parce qu'il ne sert plus le but religieux qu'elle voulait. Passez devant le plus vieux bâtiment du campus et levez les yeux vers sa tour.",
+      "latitude": 42.246508,
+      "longitude": -83.624681
+    }
+  ],
+  "Michigan Technological University": [
+    {
+      "id": "trad_mtu_snow_statues",
+      "name": "Les statues de neige du Winter Carnival",
+      "description": "Chaque mois de février depuis les années 1930, les étudiants entassent, tassent et sculptent la neige en statues géantes sur un thème annuel pour le Winter Carnival, né en 1922. Promenez-vous sur le campus pour les voir.",
+      "latitude": 47.119075,
+      "longitude": -88.547552
+    },
+    {
+      "id": "trad_mtu_pep_band",
+      "name": "La Huskies Pep Band à un match de hockey",
+      "description": "La Huskies Pep Band, créée en 1928, joue à chaque match de hockey à domicile. Prenez le bras de vos voisins et balancez-vous avec le public sur le « Blue Skirt Waltz », l'hymne du Copper Country.",
+      "latitude": 47.112465,
+      "longitude": -88.545851
+    },
+    {
+      "id": "trad_mtu_copper_boulder",
+      "name": "Le bloc de cuivre géant",
+      "description": "Le Copper Pavilion, devant le A. E. Seaman Mineral Museum, abrite un bloc de cuivre de 19 tonnes remonté du fond du lac Supérieur, détenteur d'un record Guinness. Venez voir sa taille.",
+      "latitude": 47.110802,
+      "longitude": -88.552384
+    },
+    {
+      "id": "trad_mtu_rozsa",
+      "name": "Un spectacle au Rozsa Center",
+      "description": "Le Rozsa Center for the Performing Arts accueille toute l'année des festivals de cinéma et de musique, dont le Pine Mountain Music Festival et le 41 North Film Festival. Consultez le programme et allez voir un spectacle.",
+      "latitude": 47.117527,
+      "longitude": -88.54196
+    }
+  ],
+  "Oakland University": [
+    {
+      "id": "trad_oakland_carillon",
+      "name": "Concerts de carillon en été",
+      "description": "Six vendredis chaque été, des carillonneurs du monde entier donnent des concerts gratuits sur les 49 cloches de l'Elliott Tower. Venez écouter depuis la pelouse autour de la tour.",
+      "latitude": 42.673542,
+      "longitude": -83.215527
+    },
+    {
+      "id": "trad_oakland_grizz",
+      "name": "Frotter le Grizz",
+      "description": "Avant un examen important, les étudiants frottent le ventre du grizzly en bronze de 2,4 m devant l'O'rena pour avoir de la chance. Frottez-le à votre tour et prenez une photo.",
+      "latitude": 42.674293,
+      "longitude": -83.214225
+    },
+    {
+      "id": "trad_oakland_holiday_walk",
+      "name": "Holiday Walk à Meadow Brook Hall",
+      "description": "À chaque période des fêtes, Meadow Brook Hall est décoré pour son Holiday Walk, et les Winter Wonder Lights illuminent le parc le soir. Prévoyez une visite pour voir le manoir habillé pour la saison.",
+      "latitude": 42.67223,
+      "longitude": -83.20146
+    },
+    {
+      "id": "trad_oakland_amphitheatre",
+      "name": "Concert d'été à Meadow Brook",
+      "description": "Le Meadow Brook Amphitheatre accueille des concerts d'été sur le campus depuis 1964. Profitez d'un spectacle sous le toit ou sur la pelouse.",
+      "latitude": 42.676282,
+      "longitude": -83.202996
+    }
+  ],
+  "Central Michigan University": [
+    {
+      "id": "trad_cmich_fire_up_chips",
+      "name": "Fire Up, Chips!",
+      "description": "« Fire Up, Chips! » est le salut et le cri de ralliement de Central. Lors d'un match de football américain au Kelly/Shorts Stadium, faites tinter vos clés avant les actions importantes et mimez des coups de cymbales avec le public.",
+      "latitude": 43.57757,
+      "longitude": -84.77105
+    },
+    {
+      "id": "trad_cmich_warriner_chimes",
+      "name": "Le carillon de Warriner Hall",
+      "description": "Un carillon sonne à Warriner Hall depuis 1939, et aujourd'hui des cloches enregistrées saluent chaque nouvelle heure. Placez-vous sur le Warriner Mall à l'heure pile pour l'écouter.",
+      "latitude": 43.592425,
+      "longitude": -84.775515
+    },
+    {
+      "id": "trad_cmich_boat_race",
+      "name": "Course de bateaux en carton",
+      "description": "Le matin du Homecoming, des étudiants en ingénierie tentent de traverser les Rose Ponds à la pagaie dans des bateaux en carton. Trouvez une place sur la rive et encouragez-les.",
+      "latitude": 43.581132,
+      "longitude": -84.770682
+    },
+    {
+      "id": "trad_cmich_pow_wow",
+      "name": "Celebrating Life Pow Wow",
+      "description": "Chaque mois de mars, Central accueille le Celebrating Life Pow Wow à la McGuirk Arena, avec danses traditionnelles, tambours, artisanat et cuisine. L'événement est ouvert au public, alors venez y assister.",
+      "latitude": 43.581566,
+      "longitude": -84.774189
+    }
+  ],
   "Yale University": [
     {
       "id": "trad_yale_woolsey_foot",
@@ -2419,6 +2539,36 @@
       "description": "Le terrain de sport de Tournament Park, au sud du campus, a accueilli les premiers matchs du Rose Bowl. Longez la piste pour voir où ce match célèbre a commencé.",
       "latitude": 34.132928,
       "longitude": -118.125456
+    }
+  ],
+  "Colorado State University": [
+    {
+      "id": "trad_colostate_oval",
+      "name": "Une promenade autour de l'Oval",
+      "description": "Dessiné en 1909 pour relier les principaux bâtiments du campus, l'Oval est bordé de 65 ormes d'Amérique. Faites le tour du cœur historique du campus.",
+      "latitude": 40.576189,
+      "longitude": -105.080783
+    },
+    {
+      "id": "trad_colostate_ram_clock",
+      "name": "Rendez-vous sous l'horloge",
+      "description": "Depuis des générations, les étudiants se donnent rendez-vous « sous l'horloge » du Lory Student Center. Cherchez la Ram Clock au-dessus de l'espace restauration et écoutez-la sonner chaque heure.",
+      "latitude": 40.574788,
+      "longitude": -105.084724
+    },
+    {
+      "id": "trad_colostate_game_day",
+      "name": "Jour de match avec CAM the Ram",
+      "description": "CAM the Ram, la mascotte vivante dont le nom vient de Colorado A&M, traverse la zone d'en-but en courant après chaque touchdown des Rams. La Old Main Bell, volée en 1919 et rendue en 2016, est aujourd'hui suspendue dans une tour près du stade. Assistez à un match à domicile au Canvas Stadium.",
+      "latitude": 40.569831,
+      "longitude": -105.088506
+    },
+    {
+      "id": "trad_colostate_trial_garden",
+      "name": "Annual Flower Trial Garden",
+      "description": "La CSU teste de nouvelles variétés de fleurs dans ce jardin, gratuit et ouvert tous les jours à la lumière du jour. Venez entre la fin mai et octobre, quand les massifs sont en fleurs.",
+      "latitude": 40.569381,
+      "longitude": -105.07615
     }
   ]
 }

@@ -3080,6 +3080,58 @@
     "transportation": "Walking / Laker Line bus",
     "transportationFact": "The Laker Line bus, run by The Rapid, links the Allendale campus with GVSU's campuses in downtown Grand Rapids along Lake Michigan Drive, and it is open to the public."
   },
+  "Eastern Michigan University": {
+    "airportCode": "DTW",
+    "airportInfo": "Detroit Metropolitan Wayne County Airport in Romulus, east of Ypsilanti, is the nearest major airport.",
+    "airportName": "Detroit Metropolitan Wayne County Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "US Dollar ($)",
+    "funFact": "Founded in 1849 as the Michigan State Normal School, Eastern was the fourth teachers' college in the United States and the first outside New England.",
+    "language": "English",
+    "languageInfo": "The school colors are green and white, and the teams are the Eagles.",
+    "nickname": "Home of the Eagles",
+    "transportation": "Walking / TheRide buses",
+    "transportationFact": "The main campus is compact and easy to walk. TheRide buses link Ypsilanti and the campus with Ann Arbor."
+  },
+  "Michigan Technological University": {
+    "airportCode": "CMX",
+    "airportInfo": "Houghton County Memorial Airport, north of Hancock across Portage Lake, is the nearest airport with airline service.",
+    "airportName": "Houghton County Memorial Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "US Dollar ($)",
+    "funFact": "Founded in 1885 as the Michigan Mining School, Michigan Tech was the first college in Michigan's Upper Peninsula. Houghton gets about 218 inches (5.5 m) of snow in an average year.",
+    "language": "English",
+    "languageInfo": "The school colors are black and gold, and the teams are the Huskies.",
+    "nickname": "Home of the Huskies",
+    "transportation": "Walking",
+    "transportationFact": "The main part of campus sits on a bluff above Portage Lake along US-41 and can be crossed on foot in about 10 minutes."
+  },
+  "Oakland University": {
+    "airportCode": "DTW",
+    "airportInfo": "Detroit Metropolitan Wayne County Airport in Romulus, southwest of Detroit, is the main airport for the area, about an hour's drive from campus.",
+    "airportName": "Detroit Metropolitan Wayne County Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "US Dollar ($)",
+    "funFact": "Oakland was founded in 1957 with a gift from Matilda Dodge Wilson and her husband Alfred, including their Meadow Brook estate. Their 110-room mansion, Meadow Brook Hall, still stands on campus.",
+    "language": "English",
+    "languageInfo": "The school colors are black and gold, and the teams are the Golden Grizzlies.",
+    "nickname": "Home of the Golden Grizzlies",
+    "transportation": "Walking / Car",
+    "transportationFact": "The main campus spans Auburn Hills and Rochester Hills. Meadow Brook Hall and the John Dodge House are on the east side, about 1 to 2 km from Elliott Tower."
+  },
+  "Central Michigan University": {
+    "airportCode": "MBS",
+    "airportInfo": "MBS International Airport in Freeland, east of Mount Pleasant, is the nearest airport with airline service.",
+    "airportName": "MBS International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "US Dollar ($)",
+    "funFact": "Kelly/Shorts Stadium, with 35,127 seats, is the largest on-campus stadium in the Mid-American Conference.",
+    "language": "English",
+    "languageInfo": "The school colors are maroon and gold, and the teams are the Chippewas.",
+    "nickname": "Fire Up, Chips!",
+    "transportation": "Walking",
+    "transportationFact": "The campus is easy to walk: Warriner Hall on the north side is about 1.5 km from Kelly/Shorts Stadium in the southeast."
+  },
   "Yale University": {
     "airportCode": "BDL",
     "airportInfo": "Bradley, near Hartford, is about an hour's drive north of New Haven. Many visitors also fly into New York and take Metro-North's New Haven Line straight to Union Station.",
@@ -3482,5 +3534,18 @@
     "nickname": "The truth shall make you free",
     "transportation": "Walking / Metro A Line",
     "transportationFact": "The compact campus is easy to walk. Metro A Line light rail stops at Lake and Allen stations, about a mile north of campus."
+  },
+  "Colorado State University": {
+    "airportCode": "DEN",
+    "airportInfo": "Denver International Airport, southeast of Fort Collins, is the main airport for northern Colorado.",
+    "airportName": "Denver International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "US Dollar ($)",
+    "funFact": "The Oval at the heart of campus was designed in 1909 and is lined with 65 American elm trees. The loop around it is 2,065 feet (629 m) long.",
+    "language": "English",
+    "languageInfo": "The school colors are green and gold, and the teams are the Rams.",
+    "nickname": "Home of the Rams",
+    "transportation": "Walking / Transfort MAX / Around the Horn",
+    "transportationFact": "Transfort's MAX bus rapid transit line serves the campus, and the Around the Horn bus loops around campus from the CSU Transit Center next to the Lory Student Center."
   }
 }
