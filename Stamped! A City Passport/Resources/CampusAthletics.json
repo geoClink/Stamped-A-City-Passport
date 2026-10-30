@@ -1,0 +1,357 @@
+{
+  "about": "Game Day data for campus pages. athleticsURL: each school's official athletics site, checked to load on 2026-10-29. venues: where home games are looked for, with a free-licence Wikimedia Commons photo and its credit. championships: NCAA team national titles only, with their source; schools whose titles couldn't be checked have none. No team logos, mascots or wordmarks.",
+  "campuses": {
+    "Arizona State University": {
+      "athleticsURL": "https://sundevils.com"
+    },
+    "Auburn University": {
+      "athleticsURL": "https://auburntigers.com"
+    },
+    "Baylor University": {
+      "athleticsURL": "https://baylorbears.com"
+    },
+    "Boston College": {
+      "athleticsURL": "https://bceagles.com"
+    },
+    "Brigham Young University": {
+      "athleticsURL": "https://byucougars.com"
+    },
+    "Brown University": {
+      "athleticsURL": "https://brownbears.com"
+    },
+    "Clemson University": {
+      "athleticsURL": "https://clemsontigers.com"
+    },
+    "Columbia University": {
+      "athleticsURL": "https://gocolumbialions.com"
+    },
+    "Cornell University": {
+      "athleticsURL": "https://cornellbigred.com"
+    },
+    "Dartmouth College": {
+      "athleticsURL": "https://dartmouthsports.com"
+    },
+    "Duke University": {
+      "athleticsURL": "https://goduke.com"
+    },
+    "Florida Southern College": {
+      "athleticsURL": "https://fscmocs.com"
+    },
+    "Florida State University": {
+      "athleticsURL": "https://seminoles.com"
+    },
+    "Georgetown University": {
+      "athleticsURL": "https://guhoyas.com"
+    },
+    "Georgia Institute of Technology": {
+      "athleticsURL": "https://ramblinwreck.com"
+    },
+    "Harvard University": {
+      "athleticsURL": "https://gocrimson.com"
+    },
+    "Illinois Institute of Technology": {
+      "athleticsURL": "https://illinoistechathletics.com"
+    },
+    "Indiana University Bloomington": {
+      "athleticsURL": "https://iuhoosiers.com"
+    },
+    "Iowa State University": {
+      "athleticsURL": "https://cyclones.com"
+    },
+    "Kansas State University": {
+      "athleticsURL": "https://kstatesports.com"
+    },
+    "Louisiana State University": {
+      "athleticsURL": "https://lsusports.net"
+    },
+    "Massachusetts Institute of Technology": {
+      "athleticsURL": "https://mitathletics.com"
+    },
+    "Michigan State University": {
+      "athleticsURL": "https://msuspartans.com",
+      "venues": [
+        {
+          "buildingID": "campus_michstate_spartan_stadium",
+          "name": "Spartan Stadium",
+          "photo": {
+            "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/MSU_Spartan_Stadium_Facade.jpg/1280px-MSU_Spartan_Stadium_Facade.jpg",
+            "filePageURL": "https://commons.wikimedia.org/wiki/File:MSU_Spartan_Stadium_Facade.jpg",
+            "author": "Jeffness",
+            "license": "CC BY-SA 2.5",
+            "licenseURL": "https://creativecommons.org/licenses/by-sa/2.5"
+          }
+        },
+        {
+          "buildingID": "campus_michstate_breslin_center",
+          "name": "Breslin Student Events Center",
+          "photo": {
+            "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/BreslinCenterA.jpg/1280px-BreslinCenterA.jpg",
+            "filePageURL": "https://commons.wikimedia.org/wiki/File:BreslinCenterA.jpg",
+            "author": "Greenstrat",
+            "license": "Public domain",
+            "licenseURL": null
+          }
+        },
+        {
+          "buildingID": "campus_michstate_munn_ice_arena",
+          "name": "Munn Ice Arena",
+          "photo": {
+            "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Munn.png/1280px-Munn.png",
+            "filePageURL": "https://commons.wikimedia.org/wiki/File:Munn.png",
+            "author": "Ryan48820",
+            "license": "CC BY-SA 4.0",
+            "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0"
+          }
+        }
+      ],
+      "championships": {
+        "source": "Wikipedia, “Michigan State Spartans”, citing the NCAA championships summary",
+        "sourceURL": "https://en.wikipedia.org/wiki/Michigan_State_Spartans#NCAA_team_championships",
+        "checked": "2026-10-29",
+        "titles": [
+          {
+            "sport": "Men's basketball",
+            "years": [
+              1979,
+              2000
+            ]
+          },
+          {
+            "sport": "Men's ice hockey",
+            "years": [
+              1966,
+              1986,
+              2007
+            ]
+          },
+          {
+            "sport": "Men's cross country",
+            "years": [
+              1939,
+              1948,
+              1949,
+              1952,
+              1955,
+              1956,
+              1958,
+              1959
+            ]
+          },
+          {
+            "sport": "Women's cross country",
+            "years": [
+              2014
+            ]
+          },
+          {
+            "sport": "Boxing",
+            "years": [
+              1951,
+              1955
+            ]
+          },
+          {
+            "sport": "Men's gymnastics",
+            "years": [
+              1958
+            ],
+            "sharedYears": [
+              1958
+            ]
+          },
+          {
+            "sport": "Men's soccer",
+            "years": [
+              1967,
+              1968
+            ],
+            "sharedYears": [
+              1967,
+              1968
+            ]
+          },
+          {
+            "sport": "Wrestling",
+            "years": [
+              1967
+            ]
+          }
+        ]
+      }
+    },
+    "Mississippi State University": {
+      "athleticsURL": "https://hailstate.com"
+    },
+    "North Carolina State University": {
+      "athleticsURL": "https://gopack.com"
+    },
+    "Northwestern University": {
+      "athleticsURL": "https://nusports.com"
+    },
+    "Ohio State University": {
+      "athleticsURL": "https://ohiostatebuckeyes.com"
+    },
+    "Oklahoma State University": {
+      "athleticsURL": "https://okstate.com"
+    },
+    "Pennsylvania State University": {
+      "athleticsURL": "https://gopsusports.com"
+    },
+    "Princeton University": {
+      "athleticsURL": "https://goprincetontigers.com"
+    },
+    "Purdue University": {
+      "athleticsURL": "https://purduesports.com"
+    },
+    "Rutgers University–New Brunswick": {
+      "athleticsURL": "https://scarletknights.com"
+    },
+    "Southern Methodist University": {
+      "athleticsURL": "https://smumustangs.com"
+    },
+    "Stanford University": {
+      "athleticsURL": "https://gostanford.com"
+    },
+    "Syracuse University": {
+      "athleticsURL": "https://cuse.com"
+    },
+    "Texas A&M University": {
+      "athleticsURL": "https://12thman.com"
+    },
+    "Texas Christian University": {
+      "athleticsURL": "https://gofrogs.com"
+    },
+    "Texas Tech University": {
+      "athleticsURL": "https://texastech.com"
+    },
+    "University of Alabama": {
+      "athleticsURL": "https://rolltide.com"
+    },
+    "University of Arizona": {
+      "athleticsURL": "https://arizonawildcats.com"
+    },
+    "University of Arkansas": {
+      "athleticsURL": "https://arkansasrazorbacks.com"
+    },
+    "University of California, Berkeley": {
+      "athleticsURL": "https://calbears.com"
+    },
+    "University of California, Los Angeles": {
+      "athleticsURL": "https://uclabruins.com"
+    },
+    "University of Central Florida": {
+      "athleticsURL": "https://ucfknights.com"
+    },
+    "University of Chicago": {
+      "athleticsURL": "https://athletics.uchicago.edu"
+    },
+    "University of Cincinnati": {
+      "athleticsURL": "https://gobearcats.com"
+    },
+    "University of Colorado Boulder": {
+      "athleticsURL": "https://cubuffs.com"
+    },
+    "University of Florida": {
+      "athleticsURL": "https://floridagators.com"
+    },
+    "University of Georgia": {
+      "athleticsURL": "https://georgiadogs.com"
+    },
+    "University of Houston": {
+      "athleticsURL": "https://uhcougars.com"
+    },
+    "University of Illinois Urbana-Champaign": {
+      "athleticsURL": "https://fightingillini.com"
+    },
+    "University of Iowa": {
+      "athleticsURL": "https://hawkeyesports.com"
+    },
+    "University of Kansas": {
+      "athleticsURL": "https://kuathletics.com"
+    },
+    "University of Kentucky": {
+      "athleticsURL": "https://ukathletics.com"
+    },
+    "University of Louisville": {
+      "athleticsURL": "https://gocards.com"
+    },
+    "University of Maryland, College Park": {
+      "athleticsURL": "https://umterps.com"
+    },
+    "University of Miami": {
+      "athleticsURL": "https://miamihurricanes.com"
+    },
+    "University of Michigan": {
+      "athleticsURL": "https://mgoblue.com"
+    },
+    "University of Minnesota Twin Cities": {
+      "athleticsURL": "https://gophersports.com"
+    },
+    "University of Mississippi": {
+      "athleticsURL": "https://olemisssports.com"
+    },
+    "University of Missouri": {
+      "athleticsURL": "https://mutigers.com"
+    },
+    "University of Nebraska–Lincoln": {
+      "athleticsURL": "https://huskers.com"
+    },
+    "University of North Carolina at Chapel Hill": {
+      "athleticsURL": "https://goheels.com"
+    },
+    "University of Notre Dame": {
+      "athleticsURL": "https://fightingirish.com"
+    },
+    "University of Oklahoma": {
+      "athleticsURL": "https://soonersports.com"
+    },
+    "University of Oregon": {
+      "athleticsURL": "https://goducks.com"
+    },
+    "University of Pennsylvania": {
+      "athleticsURL": "https://pennathletics.com"
+    },
+    "University of Pittsburgh": {
+      "athleticsURL": "https://pittsburghpanthers.com"
+    },
+    "University of South Carolina": {
+      "athleticsURL": "https://gamecocksonline.com"
+    },
+    "University of Southern California": {
+      "athleticsURL": "https://usctrojans.com"
+    },
+    "University of Tennessee": {
+      "athleticsURL": "https://utsports.com"
+    },
+    "University of Texas at Austin": {
+      "athleticsURL": "https://texaslonghorns.com"
+    },
+    "University of Utah": {
+      "athleticsURL": "https://utahutes.com"
+    },
+    "University of Virginia": {
+      "athleticsURL": "https://virginiasports.com"
+    },
+    "University of Washington": {
+      "athleticsURL": "https://gohuskies.com"
+    },
+    "University of Wisconsin–Madison": {
+      "athleticsURL": "https://uwbadgers.com"
+    },
+    "Vanderbilt University": {
+      "athleticsURL": "https://vucommodores.com"
+    },
+    "Virginia Tech": {
+      "athleticsURL": "https://hokiesports.com"
+    },
+    "Wake Forest University": {
+      "athleticsURL": "https://godeacs.com"
+    },
+    "West Virginia University": {
+      "athleticsURL": "https://wvusports.com"
+    },
+    "Yale University": {
+      "athleticsURL": "https://yalebulldogs.com"
+    }
+  }
+}

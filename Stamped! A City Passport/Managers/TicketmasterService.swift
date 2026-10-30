@@ -374,3 +374,43 @@ private struct TMEventEmbedded: Decodable {
 private struct TMVenue: Decodable {
     let name: String?
 }
+
+// MARK: - Every event around a point (Game Day)
+
+extension TicketmasterService {
+    /// Both sellers' events within `radiusKm` of a point over the next `days`, soonest first,
+    /// with nothing filtered out (unlike `events(near:placeName:)`), so the campus Game Day
+    /// section can pick the home games itself. Sellers place a campus's venues at slightly
+    /// different points, so one wider search finds them more reliably than one per venue.
+    func allEvents(near coordinate: CLLocationCoordinate2D, radiusKm: Int, days: Int) async -> [TicketmasterEvent] {
+        async let seatGeekRequest = SeatGeekService.events(near: coordinate, radius: "\(radiusKm)km", days: days, limit: 50)
+
+        var ticketmaster: [TicketmasterEvent] = []
+        if let key = apiKey, !key.isEmpty {
+            let now = Date()
+            let future = Calendar.current.date(byAdding: .day, value: days, to: now) ?? now
+            let iso = ISO8601DateFormatter()
+            iso.formatOptions = [.withInternetDateTime]
+
+            var comps = URLComponents(string: "https://app.ticketmaster.com/discovery/v2/events.json")!
+            comps.queryItems = [
+                URLQueryItem(name: "apikey", value: key),
+                URLQueryItem(name: "latlong", value: "\(coordinate.latitude),\(coordinate.longitude)"),
+                URLQueryItem(name: "radius", value: "\(radiusKm)"),
+                URLQueryItem(name: "unit", value: "km"),
+                URLQueryItem(name: "size", value: "50"),
+                URLQueryItem(name: "sort", value: "date,asc"),
+                URLQueryItem(name: "startDateTime", value: iso.string(from: now)),
+                URLQueryItem(name: "endDateTime", value: iso.string(from: future)),
+            ]
+            if let url = comps.url,
+               let (data, response) = try? await URLSession.shared.data(from: url),
+               (response as? HTTPURLResponse)?.statusCode == 200,
+               let decoded = try? JSONDecoder().decode(TMResponse.self, from: data) {
+                ticketmaster = (decoded._embedded?.events ?? []).compactMap(makeEvent)
+            }
+        }
+
+        return Self.merged(ticketmaster, await seatGeekRequest ?? [], limit: 100)
+    }
+}

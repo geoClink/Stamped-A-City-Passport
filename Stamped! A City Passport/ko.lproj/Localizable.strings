@@ -726,3 +726,23 @@
 "From Wikipedia" = "위키백과 발췌";
 "Read more on Wikipedia" = "위키백과에서 더 읽기";
 "Opens the full article on Wikipedia" = "위키백과에서 전체 문서를 엽니다";
+
+// MARK: - Campus Game Day
+"GAME DAY" = "경기일";
+"Upcoming home games" = "다가오는 홈 경기";
+"Live scores & schedule" = "실시간 점수 및 일정";
+"Opens the official athletics website" = "공식 체육 웹사이트를 엽니다";
+"Photo: %@, %@" = "사진: %@, %@";
+"Opens the photo on Wikimedia Commons" = "Wikimedia Commons에서 사진을 엽니다";
+"NCAA team championships" = "NCAA 단체 우승";
+"%d titles" = "우승 %d회";
+"Source: %@" = "출처: %@";
+"%@ (shared)" = "%@ (공동 우승)";
+"Men's basketball" = "남자 농구";
+"Men's ice hockey" = "남자 아이스하키";
+"Men's cross country" = "남자 크로스컨트리";
+"Women's cross country" = "여자 크로스컨트리";
+"Boxing" = "복싱";
+"Men's gymnastics" = "남자 체조";
+"Men's soccer" = "남자 축구";
+"Wrestling" = "레슬링";

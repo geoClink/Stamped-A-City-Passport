@@ -726,3 +726,23 @@
 "From Wikipedia" = "Da Wikipédia";
 "Read more on Wikipedia" = "Leia mais na Wikipédia";
 "Opens the full article on Wikipedia" = "Abre o artigo completo na Wikipédia";
+
+// MARK: - Campus Game Day
+"GAME DAY" = "DIA DE JOGO";
+"Upcoming home games" = "Próximos jogos em casa";
+"Live scores & schedule" = "Placares ao vivo e calendário";
+"Opens the official athletics website" = "Abre o site oficial de esportes";
+"Photo: %@, %@" = "Foto: %@, %@";
+"Opens the photo on Wikimedia Commons" = "Abre a foto no Wikimedia Commons";
+"NCAA team championships" = "Títulos nacionais da NCAA por equipe";
+"%d titles" = "%d títulos";
+"Source: %@" = "Fonte: %@";
+"%@ (shared)" = "%@ (dividido)";
+"Men's basketball" = "Basquete masculino";
+"Men's ice hockey" = "Hóquei no gelo masculino";
+"Men's cross country" = "Cross-country masculino";
+"Women's cross country" = "Cross-country feminino";
+"Boxing" = "Boxe";
+"Men's gymnastics" = "Ginástica masculina";
+"Men's soccer" = "Futebol masculino";
+"Wrestling" = "Luta olímpica";

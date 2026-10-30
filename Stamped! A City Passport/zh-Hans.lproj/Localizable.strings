@@ -726,3 +726,23 @@
 "From Wikipedia" = "摘自维基百科";
 "Read more on Wikipedia" = "在维基百科上阅读更多";
 "Opens the full article on Wikipedia" = "在维基百科上打开完整文章";
+
+// MARK: - Campus Game Day
+"GAME DAY" = "比赛日";
+"Upcoming home games" = "即将进行的主场比赛";
+"Live scores & schedule" = "实时比分和赛程";
+"Opens the official athletics website" = "打开官方体育网站";
+"Photo: %@, %@" = "照片：%@，%@";
+"Opens the photo on Wikimedia Commons" = "在维基共享资源上打开照片";
+"NCAA team championships" = "NCAA 团体冠军";
+"%d titles" = "%d 个冠军";
+"Source: %@" = "来源：%@";
+"%@ (shared)" = "%@（并列）";
+"Men's basketball" = "男子篮球";
+"Men's ice hockey" = "男子冰球";
+"Men's cross country" = "男子越野跑";
+"Women's cross country" = "女子越野跑";
+"Boxing" = "拳击";
+"Men's gymnastics" = "男子体操";
+"Men's soccer" = "男子足球";
+"Wrestling" = "摔跤";
