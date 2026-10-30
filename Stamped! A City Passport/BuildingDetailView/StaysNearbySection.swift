@@ -29,13 +29,13 @@ struct StaysNearbySection: View {
     @AppStorage("use_metric_units") private var useMetric = true
     @AppStorage("haptics_enabled") private var hapticsEnabled = true
     @ScaledMetric(relativeTo: .subheadline) private var cardWidth: CGFloat = 160
-    @ScaledMetric(relativeTo: .subheadline) private var iconSize: CGFloat = 40
+    /// Street photo (or bed icon) at the top of each hotel card
+    @ScaledMetric(relativeTo: .body) private var thumbnailHeight: CGFloat = 72
 
     @State private var hotels: [NearbyHotel] = []
     @State private var tappedHotel: TappedApplePlace?
 
     private let hotelLinks = HotelLinkBuilder()
-    private var brandColor: Color { DS.Palette.accent }
 
     /// The building's location; no search without one.
     private var coordinate: CLLocationCoordinate2D? {
@@ -82,7 +82,7 @@ struct StaysNearbySection: View {
 
     // MARK: - Card
 
-    /// Same surface, size and badge as the Local Flavors cards, with a bed instead of a fork.
+    /// Same surface, size and thumbnail as the Local Flavors cards.
     private func hotelCard(_ hotel: NearbyHotel) -> some View {
         let distance = NearbyDistance.text(meters: hotel.meters, useMetric: useMetric)
         return Button {
@@ -90,14 +90,9 @@ struct StaysNearbySection: View {
             tappedHotel = TappedApplePlace(mapItem: hotel.mapItem)
         } label: {
             VStack(alignment: .leading, spacing: DS.Space.s) {
-                ZStack {
-                    Circle()
-                        .fill(isHighContrast ? Color.primary.opacity(0.1) : brandColor.opacity(0.15))
-                        .frame(width: iconSize, height: iconSize)
-                    Image(systemName: "bed.double.fill")
-                        .font(.subheadline.bold())
-                        .foregroundColor(isHighContrast ? .primary : brandColor)
-                }
+                // Apple's street photo of the hotel, or a bed icon when there isn't one
+                PlaceThumbnail(mapItem: hotel.mapItem, category: hotel.mapItem.pointOfInterestCategory ?? .hotel,
+                               height: thumbnailHeight, isHighContrast: isHighContrast)
 
                 Text(hotel.name)
                     .font(.subheadline).fontWeight(.bold)

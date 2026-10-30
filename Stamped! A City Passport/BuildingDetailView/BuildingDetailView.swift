@@ -63,6 +63,8 @@ struct BuildingDetailView: View {
     // Food cards and their icon grow with the text size so names don't clip
     @ScaledMetric(relativeTo: .subheadline) var flavorCardWidth: CGFloat = 160
     @ScaledMetric(relativeTo: .subheadline) var flavorIconSize: CGFloat = 40
+    /// Street photo (or type icon) at the top of each nearby-restaurant card
+    @ScaledMetric(relativeTo: .body) private var placeThumbnailHeight: CGFloat = 72
     @ScaledMetric(relativeTo: .largeTitle) var placeholderIconSize: CGFloat = 60
     
     // MARK: - Computed States
@@ -543,7 +545,7 @@ extension BuildingDetailView {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(alignment: .top, spacing: DS.Space.m) {
                         ForEach(nearbyVenues, id: \.name) { venue in
-                            localFlavorCard(name: venue.name, category: venue.category, meters: venue.meters) {
+                            localFlavorCard(name: venue.name, category: venue.category, meters: venue.meters, mapItem: venue.mapItem) {
                                 tappedPlace = TappedApplePlace(mapItem: venue.mapItem)
                             }
                         }
@@ -588,11 +590,13 @@ extension BuildingDetailView {
     }
 
     /// A nearby restaurant card; a tap opens Apple's place card (photos, hours, ratings) in the app.
-    private func localFlavorCard(name: String, category: String, meters: CLLocationDistance, onTap: @escaping () -> Void) -> some View {
+    private func localFlavorCard(name: String, category: String, meters: CLLocationDistance, mapItem: MKMapItem, onTap: @escaping () -> Void) -> some View {
         // "4 min walk" or "1.2 km", formatted here so it follows the units setting live.
         let distance = DiningPlaceLabel.distanceText(meters: meters, useMetric: useMetric)
         let card = flavorCardStyle(VStack(alignment: .leading, spacing: DS.Space.s) {
-            flavorIcon
+            // Apple's street photo of the place, or an icon for its type (café, bakery, bar…)
+            PlaceThumbnail(mapItem: mapItem, category: mapItem.pointOfInterestCategory,
+                           height: placeThumbnailHeight, isHighContrast: isHighContrast)
 
             Text(name)
                 .font(.subheadline).fontWeight(.bold)
