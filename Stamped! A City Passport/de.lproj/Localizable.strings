@@ -318,6 +318,14 @@
 "Double tap to check this tradition off." = "Zum Abhaken doppelt tippen.";
 "Show %@ in Maps" = "%@ in Karten zeigen";
 
+// MARK: - Campus Student Life
+"STUDENT LIFE" = "STUDENTENLEBEN";
+"Where Students Live" = "Wo Studierende wohnen";
+"Student Union" = "Studierendenzentrum";
+"Study Spots" = "Lernorte";
+"Dining Halls" = "Speisesäle";
+"Hangouts" = "Treffpunkte";
+
 // MARK: - College List & Road Trip
 "My College List" = "Meine College-Liste";
 "Add to My College List" = "Zu meiner College-Liste hinzufügen";
@@ -369,6 +377,14 @@
 "Find Tours & Tickets" = "Touren & Tickets finden";
 "Find tours and tickets for %@ on GetYourGuide" = "Touren und Tickets für %@ auf GetYourGuide finden";
 "Opens GetYourGuide. Stamped! doesn't handle bookings or payments." = "Öffnet GetYourGuide. Stamped! wickelt keine Buchungen oder Zahlungen ab.";
+
+// MARK: - Building page: food tours & nearby stays
+"Find Food Tours & Cooking Classes" = "Essenstouren & Kochkurse finden";
+"Find food tours and cooking classes in %@ on GetYourGuide" = "Essenstouren und Kochkurse in %@ auf GetYourGuide finden";
+"Stays Near Here" = "Unterkünfte in der Nähe";
+"%lld min walk" = "%lld Min. zu Fuß";
+"Hotel data from Apple Maps." = "Hoteldaten von Apple Karten.";
+"Shows this hotel's details and prices." = "Zeigt Details und Preise dieses Hotels.";
 
 // MARK: - City page tiles & home shortcuts
 "Quiz Mastered" = "Quiz gemeistert";
@@ -635,6 +651,62 @@
 "Plan" = "Planen";
 "Local" = "Vor Ort";
 "Section" = "Bereich";
+
+// Restaurant cards: category labels from Apple Maps
+"dining.restaurant" = "Restaurant";
+"dining.cafe" = "Café";
+"dining.bakery" = "Bäckerei";
+"dining.brewery" = "Brauerei";
+"dining.winery" = "Weingut";
+"dining.market" = "Markt";
+"dining.bar" = "Bar";
+
+// MARK: - Campus events
+"Campus Events" = "Campus-Events";
+"Finding campus events…" = "Campus-Events werden gesucht…";
+"From the %@ calendar" = "Aus dem Kalender „%@“";
+"Opens the event page" = "Öffnet die Seite der Veranstaltung";
+"Event Details" = "Details zur Veranstaltung";
+"All day" = "Ganztägig";
+
+// Architect page
+"architect.landmarks" = "Ihre Bauwerke in Stamped!";
+"architect.openHint" = "Öffnet die Seite des Architekten";
+"architect.fromWikipedia" = "Aus Wikipedia";
+"architect.readOnWikipedia" = "Auf Wikipedia lesen";
+"architect.photoCredit" = "Foto: Wikimedia Commons";
+
+// MARK: - Building photo gallery (Wikimedia Commons)
+"More Photos" = "Weitere Fotos";
+"Photo of %@" = "Foto von %@";
+"Opens the photo full screen" = "Öffnet das Foto im Vollbild";
+"View on Wikimedia Commons" = "Auf Wikimedia Commons ansehen";
+"Shows the photo's author and license" = "Zeigt Urheber und Lizenz des Fotos";
+
+// MARK: - Historic Photos & Drawings (Library of Congress)
+"Historic Photos & Drawings" = "Historische Fotos & Zeichnungen";
+"Drawing" = "Zeichnung";
+"Shows the image larger" = "Zeigt das Bild größer";
+"View on loc.gov" = "Auf loc.gov ansehen";
+"Image unavailable" = "Bild nicht verfügbar";
+"Measured drawing" = "Bauaufnahme";
+"Historic photo" = "Historisches Foto";
+
+// MARK: - Quiz: photo questions, facts after each answer, review your misses
+"Which building is this?" = "Welches Gebäude ist das?";
+"Say the name of the building in the photo..." = "Sag den Namen des Gebäudes auf dem Foto...";
+"Photo of the building in question" = "Foto des gesuchten Gebäudes";
+"No photo available" = "Kein Foto verfügbar";
+"Next Question" = "Nächste Frage";
+"See Results" = "Ergebnis ansehen";
+"Review your misses" = "Deine Fehler im Überblick";
+"Correct answer: %@" = "Richtige Antwort: %@";
+"Your answer: %@" = "Deine Antwort: %@";
+"Designed by %@ and completed in %@." = "Entworfen von %1$@ und fertiggestellt %2$@.";
+"Designed by %@." = "Entworfen von %@.";
+"Completed in %@." = "Fertiggestellt %@.";
+"A fine example of %@ design." = "Ein schönes Beispiel für den Stil %@.";
+"This landmark is in %@." = "Dieses Wahrzeichen steht in %@.";
 
 // MARK: - College Facts (College Scorecard)
 "COLLEGE FACTS" = "HOCHSCHULDATEN";

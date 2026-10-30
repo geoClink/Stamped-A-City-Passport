@@ -318,6 +318,14 @@
 "Double tap to check this tradition off." = "Touchez deux fois pour cocher cette tradition.";
 "Show %@ in Maps" = "Afficher %@ dans Plans";
 
+// MARK: - Campus Student Life
+"STUDENT LIFE" = "VIE ÉTUDIANTE";
+"Where Students Live" = "Où vivent les étudiants";
+"Student Union" = "Maison des étudiants";
+"Study Spots" = "Lieux pour réviser";
+"Dining Halls" = "Restaurants universitaires";
+"Hangouts" = "Lieux de rendez-vous";
+
 // MARK: - College List & Road Trip
 "My College List" = "Ma liste d'universités";
 "Add to My College List" = "Ajouter à Ma liste d'universités";
@@ -369,6 +377,14 @@
 "Find Tours & Tickets" = "Trouver des visites et billets";
 "Find tours and tickets for %@ on GetYourGuide" = "Trouver des visites et billets pour %@ sur GetYourGuide";
 "Opens GetYourGuide. Stamped! doesn't handle bookings or payments." = "Ouvre GetYourGuide. Stamped! ne gère ni les réservations ni les paiements.";
+
+// MARK: - Building page: food tours & nearby stays
+"Find Food Tours & Cooking Classes" = "Trouver des visites gourmandes et cours de cuisine";
+"Find food tours and cooking classes in %@ on GetYourGuide" = "Trouver des visites gourmandes et des cours de cuisine à %@ sur GetYourGuide";
+"Stays Near Here" = "Hébergements à proximité";
+"%lld min walk" = "%lld min à pied";
+"Hotel data from Apple Maps." = "Données hôtelières d’Apple Plans.";
+"Shows this hotel's details and prices." = "Affiche les détails et les prix de cet hôtel.";
 
 // MARK: - City page tiles & home shortcuts
 "Quiz Mastered" = "Quiz maîtrisé";
@@ -635,6 +651,62 @@
 "Plan" = "Planifier";
 "Local" = "Sur place";
 "Section" = "Section";
+
+// Restaurant cards: category labels from Apple Maps
+"dining.restaurant" = "Restaurant";
+"dining.cafe" = "Café";
+"dining.bakery" = "Boulangerie";
+"dining.brewery" = "Brasserie";
+"dining.winery" = "Vignoble";
+"dining.market" = "Marché";
+"dining.bar" = "Bar";
+
+// MARK: - Campus events
+"Campus Events" = "Événements du campus";
+"Finding campus events…" = "Recherche d’événements du campus…";
+"From the %@ calendar" = "Source : calendrier %@";
+"Opens the event page" = "Ouvre la page de l’événement";
+"Event Details" = "Détails de l’événement";
+"All day" = "Toute la journée";
+
+// Architect page
+"architect.landmarks" = "Ses monuments dans Stamped!";
+"architect.openHint" = "Ouvre la page de l'architecte";
+"architect.fromWikipedia" = "Extrait de Wikipédia";
+"architect.readOnWikipedia" = "Lire sur Wikipédia";
+"architect.photoCredit" = "Photo : Wikimedia Commons";
+
+// MARK: - Building photo gallery (Wikimedia Commons)
+"More Photos" = "Plus de photos";
+"Photo of %@" = "Photo de %@";
+"Opens the photo full screen" = "Ouvre la photo en plein écran";
+"View on Wikimedia Commons" = "Voir sur Wikimedia Commons";
+"Shows the photo's author and license" = "Affiche l’auteur et la licence de la photo";
+
+// MARK: - Historic Photos & Drawings (Library of Congress)
+"Historic Photos & Drawings" = "Photos et relevés historiques";
+"Drawing" = "Relevé";
+"Shows the image larger" = "Affiche l’image en plus grand";
+"View on loc.gov" = "Voir sur loc.gov";
+"Image unavailable" = "Image indisponible";
+"Measured drawing" = "Relevé architectural";
+"Historic photo" = "Photo historique";
+
+// MARK: - Quiz: photo questions, facts after each answer, review your misses
+"Which building is this?" = "Quel est ce bâtiment ?";
+"Say the name of the building in the photo..." = "Dites le nom du bâtiment sur la photo...";
+"Photo of the building in question" = "Photo du bâtiment en question";
+"No photo available" = "Aucune photo disponible";
+"Next Question" = "Question suivante";
+"See Results" = "Voir les résultats";
+"Review your misses" = "Revoir vos erreurs";
+"Correct answer: %@" = "Bonne réponse : %@";
+"Your answer: %@" = "Votre réponse : %@";
+"Designed by %@ and completed in %@." = "Conçu par %1$@ et achevé en %2$@.";
+"Designed by %@." = "Conçu par %@.";
+"Completed in %@." = "Achevé en %@.";
+"A fine example of %@ design." = "Un bel exemple du style %@.";
+"This landmark is in %@." = "Ce monument se trouve à %@.";
 
 // MARK: - College Facts (College Scorecard)
 "COLLEGE FACTS" = "CHIFFRES CLÉS";

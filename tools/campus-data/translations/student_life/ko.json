@@ -1,0 +1,40 @@
+{
+  "Michigan State University": {
+    "life_michstate_brody_neighborhood": {
+      "description": "캠퍼스 서쪽의 Brody Hall을 둘러싼 기숙사 6곳(Armstrong, Bailey, Bryan, Butterfield, Emmons, Rather)입니다. 식사는 Brody Square에서 하며, 캠퍼스 중심까지는 동쪽으로 걸어서 약 15분입니다."
+    },
+    "life_michstate_north_neighborhood": {
+      "description": "Mayo, Landon, Campbell, Snyder, Phillips 등 기숙사 10곳이 나무가 우거진 캠퍼스 북쪽, Union과 Main Library, Grand River Avenue 가까이에 있습니다. 식사는 Landon의 Heritage Commons나 Snyder-Phillips의 The Gallery에서 합니다."
+    },
+    "life_michstate_river_trail_neighborhood": {
+      "description": "McDonel, Owen, Shaw, Van Hoosen은 Red Cedar 강과 강변 산책로를 따라 자리하고 있습니다. 식사는 Shaw Hall의 The Vista에서 하며, Owen Hall에는 알레르기를 배려한 Thrive도 있습니다."
+    },
+    "life_michstate_east_neighborhood": {
+      "description": "캠퍼스의 조용한 동쪽 끝에 있는 큰 기숙사 세 곳, Akers, Holmes, Hubbard입니다. 식사는 가까운 Akers의 The Edge나 Holmes의 식당에서 합니다."
+    },
+    "life_michstate_south_neighborhood": {
+      "description": "Case, Holden, Wilson, Wonders는 Spartan Stadium과 Breslin Center에서 걸어서 금방이라 경기 날의 열기를 가까이에서 느낄 수 있습니다. 식사는 Case의 South Pointe나 Holden의 식당에서 합니다."
+    },
+    "life_michstate_union": {
+      "description": "1925년 제1차 세계대전에 참전한 동문을 기리기 위해 Grand River와 Abbot 모퉁이에 문을 연 Union은 지금도 학생들이 모여 식사하고, 공부하고, MSU 굿즈를 사는 곳입니다. 저녁에는 MSU 학생증이 있는 학생을 위해 더 늦게까지 문을 엽니다."
+    },
+    "life_michstate_main_library": {
+      "description": "공부 스타일에 맞게 고르세요. 동관은 조용히 집중하는 곳이고, 서관은 그룹 프로젝트를 위한 곳입니다. 기말고사 기간에는 24시간 문을 엽니다."
+    },
+    "life_michstate_stem_facility": {
+      "description": "2021년 Spartan Stadium 옆에 문을 열었고 옛 Shaw Lane 발전소와 연결된 건물로, 수업 사이에 공부하거나 그룹 작업을 할 수 있는 좌석이 약 1,200석 있습니다."
+    },
+    "life_michstate_brody_square": {
+      "description": "Brody Hall 안에 있는 큰 식당으로 아침, 점심, 저녁을 제공합니다. 학기 중 평일 저녁에 코셔 식사를 제공하는 두 식당 중 하나입니다."
+    },
+    "life_michstate_the_gallery": {
+      "description": "Snyder Hall과 Phillips Hall 사이에 있는 North Neighborhood의 식당입니다. Brody Square처럼 학기 중 평일 저녁에 코셔 식사를 제공합니다."
+    },
+    "life_michstate_the_vista": {
+      "description": "Red Cedar 강에서 몇 걸음 떨어진 Shaw Hall에 있는 River Trail Neighborhood의 식당입니다. 대부분의 날에 아침, 점심, 저녁을 제공합니다."
+    },
+    "life_michstate_grand_river_avenue": {
+      "description": "East Lansing 시내의 가로수 늘어선 중심가로, 캠퍼스 북쪽 경계를 따라 이어집니다. 학생들은 커피와 식사, 쇼핑을 하러 길을 건너고, 근처에서는 여름 콘서트와 야외 영화 상영도 열립니다."
+    }
+  }
+}

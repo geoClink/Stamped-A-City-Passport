@@ -1,0 +1,40 @@
+{
+  "Michigan State University": {
+    "life_michstate_brody_neighborhood": {
+      "description": "位于校园西侧、围绕 Brody Hall 的六栋宿舍楼（Armstrong、Bailey、Bryan、Butterfield、Emmons 和 Rather）。在 Brody Square 用餐，向东步行约 15 分钟即可到达校园中心。"
+    },
+    "life_michstate_north_neighborhood": {
+      "description": "包括 Mayo、Landon、Campbell、Snyder 和 Phillips 在内的十栋宿舍楼，位于绿树成荫的校园北部，靠近 Union、Main Library 和 Grand River Avenue。住户在 Landon 的 Heritage Commons 或 Snyder-Phillips 的 The Gallery 用餐。"
+    },
+    "life_michstate_river_trail_neighborhood": {
+      "description": "McDonel、Owen、Shaw 和 Van Hoosen 坐落在 Red Cedar 河及其沿河步道旁。在 Shaw Hall 的 The Vista 用餐，Owen Hall 还有照顾过敏人群的 Thrive。"
+    },
+    "life_michstate_east_neighborhood": {
+      "description": "Akers、Holmes 和 Hubbard 三栋大型宿舍楼，位于校园较安静的东端。住户就近在 Akers 的 The Edge 或 Holmes 的餐厅用餐。"
+    },
+    "life_michstate_south_neighborhood": {
+      "description": "Case、Holden、Wilson 和 Wonders 距离 Spartan Stadium 和 Breslin Center 只有几步之遥，比赛日的热闹近在身边。住户在 Case 的 South Pointe 或 Holden 的餐厅用餐。"
+    },
+    "life_michstate_union": {
+      "description": "Union 于 1925 年在 Grand River 与 Abbot 路口落成，用以纪念参加第一次世界大战的校友。如今学生们仍在这里聚会、用餐、学习和选购 MSU 周边。晚上它为持 MSU 学生证的学生延长开放。"
+    },
+    "life_michstate_main_library": {
+      "description": "按你的学习方式选择：东翼供安静自习，西翼适合小组项目。期末考试期间，图书馆 24 小时开放。"
+    },
+    "life_michstate_stem_facility": {
+      "description": "这栋楼于 2021 年在 Spartan Stadium 旁启用，与旧 Shaw Lane 发电厂相连，提供约 1,200 个座位，供课间自习和小组合作。"
+    },
+    "life_michstate_brody_square": {
+      "description": "Brody Hall 内的大型餐厅，供应早餐、午餐和晚餐。它是学期内工作日晚上提供犹太洁食晚餐的两家餐厅之一。"
+    },
+    "life_michstate_the_gallery": {
+      "description": "North Neighborhood 的餐厅，位于 Snyder Hall 和 Phillips Hall 之间。和 Brody Square 一样，学期内工作日晚上提供犹太洁食晚餐。"
+    },
+    "life_michstate_the_vista": {
+      "description": "River Trail Neighborhood 的餐厅，位于 Shaw Hall，离 Red Cedar 河只有几步路。大多数日子供应早餐、午餐和晚餐。"
+    },
+    "life_michstate_grand_river_avenue": {
+      "description": "East Lansing 市中心绿树成荫的主街，沿校园北缘延伸。学生们常过街去喝咖啡、吃饭和购物，附近还有夏季音乐会和露天电影。"
+    }
+  }
+}

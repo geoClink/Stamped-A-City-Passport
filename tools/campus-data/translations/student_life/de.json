@@ -1,0 +1,40 @@
+{
+  "Michigan State University": {
+    "life_michstate_brody_neighborhood": {
+      "description": "Sechs Wohnheime (Armstrong, Bailey, Bryan, Butterfield, Emmons und Rather) rund um die Brody Hall im Westen des Campus. Gegessen wird im Brody Square, und bis zum zentralen Campus sind es etwa 15 Minuten zu Fuß nach Osten."
+    },
+    "life_michstate_north_neighborhood": {
+      "description": "Zehn Wohnheime, darunter Mayo, Landon, Campbell, Snyder und Phillips, im grünen Norden des Campus nahe der Union, der Main Library und der Grand River Avenue. Gegessen wird in den Heritage Commons in Landon oder in The Gallery in Snyder-Phillips."
+    },
+    "life_michstate_river_trail_neighborhood": {
+      "description": "McDonel, Owen, Shaw und Van Hoosen liegen am Red Cedar River und seinem Uferweg. Gegessen wird in The Vista in der Shaw Hall, dazu kommt das allergikerfreundliche Thrive in der Owen Hall."
+    },
+    "life_michstate_east_neighborhood": {
+      "description": "Drei große Wohnheime, Akers, Holmes und Hubbard, am ruhigeren Ostrand des Campus. Gegessen wird gleich nebenan in The Edge in Akers oder im Speisesaal von Holmes."
+    },
+    "life_michstate_south_neighborhood": {
+      "description": "Case, Holden, Wilson und Wonders liegen nur ein paar Gehminuten vom Spartan Stadium und vom Breslin Center entfernt, an Spieltagen ist man also mittendrin. Gegessen wird im South Pointe in Case oder im Speisesaal von Holden."
+    },
+    "life_michstate_union": {
+      "description": "Die Union wurde 1925 an der Ecke Grand River und Abbot als Denkmal für Absolventen eröffnet, die im Ersten Weltkrieg gedient hatten. Bis heute treffen sich Studierende hier zum Essen, Lernen und Einkaufen von MSU-Artikeln; abends bleibt sie für Studierende mit MSU-Ausweis länger geöffnet."
+    },
+    "life_michstate_main_library": {
+      "description": "Hier wählen Sie Ihren Lernstil: Der Ostflügel ist für ruhiges Arbeiten da, der Westflügel für Gruppenprojekte. In der Prüfungszeit ist die Bibliothek rund um die Uhr geöffnet."
+    },
+    "life_michstate_stem_facility": {
+      "description": "Das 2021 eröffnete Gebäude neben dem Spartan Stadium ist mit dem alten Shaw-Lane-Kraftwerk verbunden und bietet rund 1.200 Plätze zum Lernen und für Gruppenarbeit zwischen den Vorlesungen."
+    },
+    "life_michstate_brody_square": {
+      "description": "Der große Speisesaal in der Brody Hall serviert Frühstück, Mittag- und Abendessen. Er ist einer von zwei Speisesälen, die während des Semesters werktags koschere Abendessen anbieten."
+    },
+    "life_michstate_the_gallery": {
+      "description": "Der Speisesaal der North Neighborhood liegt zwischen der Snyder Hall und der Phillips Hall. Wie im Brody Square gibt es hier während des Semesters werktags koschere Abendessen."
+    },
+    "life_michstate_the_vista": {
+      "description": "Der Speisesaal der River Trail Neighborhood in der Shaw Hall, nur wenige Schritte vom Red Cedar River entfernt. An den meisten Tagen gibt es Frühstück, Mittag- und Abendessen."
+    },
+    "life_michstate_grand_river_avenue": {
+      "description": "Die baumgesäumte Hauptstraße der Innenstadt von East Lansing verläuft direkt am Nordrand des Campus. Studierende gehen hier zu Kaffee, Essen und Einkaufen, und die Stadt veranstaltet ganz in der Nähe Sommerkonzerte und Freiluftkino."
+    }
+  }
+}

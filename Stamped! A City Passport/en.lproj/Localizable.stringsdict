@@ -34,5 +34,21 @@
 			<string>%d floors</string>
 		</dict>
 	</dict>
+	<key>dining.minWalk</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@minutes@</string>
+		<key>minutes</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>%d min walk</string>
+			<key>other</key>
+			<string>%d min walk</string>
+		</dict>
+	</dict>
 </dict>
 </plist>
