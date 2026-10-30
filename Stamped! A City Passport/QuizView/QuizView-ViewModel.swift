@@ -25,6 +25,10 @@ class QuizViewModel: ObservableObject {
     @Published var streakMilestone = 0
     @Published var shakeTrigger: CGFloat = 0
     @Published var brokeHighScore = false
+    /// A `.name` question that shows the building's photo instead of its data
+    @Published var isPhotoQuestion = false
+    /// Every wrong answer this round, for "Review your misses" at the end
+    @Published var misses: [QuizMiss] = []
 
     @Published var isListening = false
     private let speechManager = SpeechManager()
@@ -35,6 +39,9 @@ class QuizViewModel: ObservableObject {
     let cityName: String
     let maxQuestions = 10
     private var buildingQueue: [Building] = []
+    /// IDs of buildings Wikipedia has a photo for. Only these get photo questions.
+    private var buildingsWithPhotos: Set<String> = []
+    private var generator = SystemRandomNumberGenerator()
 
     @AppStorage("is_sound_enabled") var isSoundEnabled = true
 
@@ -43,6 +50,34 @@ class QuizViewModel: ObservableObject {
         self.buildings = buildings
         self.cityName = cityName
         generateQuestion()
+        checkPhotos()
+    }
+
+    // MARK: - Photo Check
+
+    /// Looks up which buildings have a Wikipedia photo, the next ones in the
+    /// queue first. Until a building is checked it simply gets no photo question.
+    private func checkPhotos() {
+        let upcoming = buildingQueue + [currentBuilding].compactMap { $0 }
+        Task { [weak self] in
+            for building in upcoming {
+                // Cached by WikimediaService, so buildings seen on the city page are instant
+                let summary = await WikimediaService.shared.summary(for: building.name, buildingID: building.id)
+                guard let self else { return }
+                if summary.photoURL != nil {
+                    self.buildingsWithPhotos.insert(building.id)
+                }
+            }
+        }
+    }
+
+    /// The photo failed to load: never show a photo question for this building
+    /// again, and if it's on screen now, ask something else about it instead.
+    func photoUnavailable(for buildingID: String) {
+        buildingsWithPhotos.remove(buildingID)
+        guard isPhotoQuestion, selectedOption == nil,
+              let building = currentBuilding, building.id == buildingID else { return }
+        apply(QuizLogic.pick(from: QuizLogic.choices(for: building, hasPhoto: false), using: &generator))
     }
 
     // MARK: - Voice Input Logic
@@ -54,33 +89,14 @@ class QuizViewModel: ObservableObject {
             Task { @MainActor in
                 guard let self = self else { return }
                 self.transcribedText = text
-                let spoken = text.lowercased()
-
-                for option in self.options {
-                    let cleanOption = option.lowercased()
-                    var isMatch = spoken.contains(cleanOption)
-
-                    if let digit = Int(cleanOption.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()) {
-                        let wordVersion = self.numberToWord(digit)
-                        if spoken.contains(wordVersion) {
-                            isMatch = true
-                        }
-                    }
-
-                    if isMatch {
-                        self.stopVoiceInput()
-                        self.processAnswer(option, reduceMotion: reduceMotion)
-                        break
-                    }
+                // Year and floor answers must match the number said; names match by words
+                let isNumeric = self.currentQuestionType == .year || self.currentQuestionType == .stories
+                if let option = QuizLogic.voiceMatch(spoken: text, options: self.options, isNumeric: isNumeric) {
+                    self.stopVoiceInput()
+                    self.processAnswer(option, reduceMotion: reduceMotion)
                 }
             }
         }
-    }
-
-    private func numberToWord(_ number: Int) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .spellOut
-        return formatter.string(from: NSNumber(value: number)) ?? ""
     }
 
     func stopVoiceInput() {
@@ -104,24 +120,14 @@ class QuizViewModel: ObservableObject {
         set { UserDefaults.standard.set(newValue, forKey: "perfect_\(cityName)") }
     }
 
-    // MARK: - Question Type Filtering
+    // MARK: - Prompts
 
-    private func validQuestionTypes(for building: Building) -> [QuestionType] {
-        var types: [QuestionType] = [.name]
-        if building.knownStyle != nil {
-            types.append(.style)
-        }
-        // "When was this lake built?" has no answer, so skip year questions there.
-        if building.hasKnownYear {
-            types.append(.year)
-        }
-        if building.knownArchitect != nil {
-            types.append(.architect)
-        }
-        if building.numberOfStories > 0 {
-            types.append(.stories)
-        }
-        return types
+    var promptText: String {
+        isPhotoQuestion ? QuestionType.photoPrompt : currentQuestionType.prompt
+    }
+
+    var voicePromptText: String {
+        isPhotoQuestion ? QuestionType.photoVoicePrompt : currentQuestionType.voicePrompt
     }
 
     // MARK: - Quiz Logic
@@ -138,34 +144,46 @@ class QuizViewModel: ObservableObject {
         }
         let building = buildingQueue.removeFirst()
         currentBuilding = building
-        currentQuestionType = validQuestionTypes(for: building).randomElement() ?? .name
+        // Only questions with a real answer; floors come up less often (see QuizLogic)
+        let choices = QuizLogic.choices(for: building, hasPhoto: buildingsWithPhotos.contains(building.id))
         questionCount += 1
+        apply(QuizLogic.pick(from: choices, using: &generator))
+    }
+
+    private func apply(_ choice: QuizLogic.Choice) {
+        currentQuestionType = choice.type
+        isPhotoQuestion = choice.showsPhoto
         setupOptions()
     }
 
     func setupOptions() {
+        guard let building = currentBuilding else { return }
         let correct = getCorrectAnswer()
-        let allDistractors = buildings
-            // Keep "0" from showing up as a wrong answer in year questions.
-            .filter { currentQuestionType != .year || $0.hasKnownYear }
-            // "Unknown" is never offered as a wrong answer either
-            .filter { currentQuestionType != .style || $0.knownStyle != nil }
-            .filter { currentQuestionType != .architect || $0.knownArchitect != nil }
-            .map { b in
-                switch currentQuestionType {
-                case .name: return b.name
-                case .architect: return b.architect
-                case .year: return "\(b.yearBuilt)"
-                case .style: return b.buildingStyle
-                case .stories: return L.QuizExtra.floors(b.numberOfStories)
-                }
-            }
-            .filter { $0 != correct }
+        let knownYear = building.hasKnownYear ? building.yearBuilt : nil
 
-        let distractors = Array(Set(allDistractors)).shuffled().prefix(3)
-        var newOptions = Array(distractors)
-        newOptions.append(correct)
-        options = newOptions.shuffled()
+        // Three wrong answers, never repeated and never the right one.
+        // A small city may have fewer, so the question just shows fewer options.
+        let distractors: [String]
+        switch currentQuestionType {
+        case .name:
+            distractors = QuizLogic.uniqueDistractors(for: correct, from: buildings.map(\.name), using: &generator)
+        case .architect:
+            // "Unknown" is never offered as a wrong answer
+            distractors = QuizLogic.uniqueDistractors(for: correct, from: buildings.compactMap(\.knownArchitect), using: &generator)
+        case .year:
+            // Years close to the real one, not other buildings' years from other centuries
+            distractors = QuizLogic.yearDistractors(for: building.yearBuilt, using: &generator).map(String.init)
+        case .style:
+            // Styles from a similar era first, so "Brutalist" isn't an easy miss for a 1600s church
+            let pool = buildings.compactMap { other in
+                other.knownStyle.map { (style: $0, year: other.hasKnownYear ? Optional(other.yearBuilt) : nil) }
+            }
+            distractors = QuizLogic.styleDistractors(for: correct, answerYear: knownYear, pool: pool, using: &generator)
+        case .stories:
+            distractors = QuizLogic.floorDistractors(for: building.numberOfStories, using: &generator).map { L.QuizExtra.floors($0) }
+        }
+
+        options = (distractors + [correct]).shuffled(using: &generator)
     }
 
     func getCorrectAnswer() -> String {
@@ -180,10 +198,16 @@ class QuizViewModel: ObservableObject {
     }
 
     func processAnswer(_ selected: String, reduceMotion: Bool) {
+        // A late voice result can't answer the same question twice
+        guard selectedOption == nil else { return }
+        if isListening { stopVoiceInput() }
         selectedOption = selected
-        let isCorrect = (selected == getCorrectAnswer())
+        let correct = getCorrectAnswer()
+        let isCorrect = (selected == correct)
 
-        UIAccessibility.post(notification: .announcement, argument: isCorrect ? "Correct!" : "Incorrect. The answer was \(getCorrectAnswer()).")
+        // Read the verdict and the building's facts, the same line shown on screen
+        let verdict = isCorrect ? L.QuizExtra.correct : L.QuizExtra.incorrect(correct)
+        UIAccessibility.post(notification: .announcement, argument: "\(verdict) \(factLine)")
 
         if isCorrect {
             score += 1
@@ -208,6 +232,10 @@ class QuizViewModel: ObservableObject {
             }
         } else {
             currentStreak = 0
+            if let building = currentBuilding {
+                misses.append(QuizMiss(buildingName: building.name, questionType: currentQuestionType,
+                                       isPhoto: isPhotoQuestion, correctAnswer: correct, givenAnswer: selected))
+            }
 
             HapticManager.shared.trigger(.error)
 
@@ -215,19 +243,27 @@ class QuizViewModel: ObservableObject {
                 withAnimation(.default) { shakeTrigger += 1 }
             }
         }
+        // No auto-advance: the player reads the facts line, then taps Next.
+    }
 
-        let waitTime = (currentStreak == 5 || currentStreak == 10) ? 2.5 : (reduceMotion ? 0.4 : 0.8)
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + waitTime) {
-            withAnimation(reduceMotion ? .none : .easeInOut) {
-                self.selectedOption = nil
-                self.generateQuestion()
-            }
+    /// Moves on from an answered question (to the results after the last one).
+    func nextQuestion(reduceMotion: Bool) {
+        withAnimation(reduceMotion ? .none : .easeInOut) {
+            selectedOption = nil
+            generateQuestion()
         }
+    }
+
+    var isLastQuestion: Bool { questionCount >= maxQuestions }
+
+    /// Shown after each answer: "Notre-Dame Basilica · Gothic Revival · 1829 · James O'Donnell"
+    var factLine: String {
+        currentBuilding.map(QuizLogic.factLine) ?? ""
     }
 
     func getHintText() -> String {
         guard let b = currentBuilding else { return "" }
+        if isPhotoQuestion { return photoHint(for: b) }
         switch currentQuestionType {
         case .name:
             return "This landmark is in \(cityName) and is a prime example of \(b.buildingStyle) design."
@@ -248,6 +284,25 @@ class QuizViewModel: ObservableObject {
         case .stories:
             return "With its \(b.buildingStyle) design, this building was considered tall for its time."
         }
+    }
+
+    /// Era or architect, never the name (that's the answer)
+    private func photoHint(for b: Building) -> String {
+        // String(year) so the year never gets a thousands separator ("1,829")
+        let year = String(b.yearBuilt)
+        if let architect = b.knownArchitect, b.hasKnownYear {
+            return String(localized: "Designed by \(architect) and completed in \(year).")
+        }
+        if let architect = b.knownArchitect {
+            return String(localized: "Designed by \(architect).")
+        }
+        if b.hasKnownYear {
+            return String(localized: "Completed in \(year).")
+        }
+        if let style = b.knownStyle {
+            return String(localized: "A fine example of \(style) design.")
+        }
+        return String(localized: "This landmark is in \(cityName).")
     }
 
     // MARK: - Results Helpers
@@ -273,4 +328,16 @@ class QuizViewModel: ObservableObject {
         guard isSoundEnabled else { return }
         AudioServicesPlaySystemSound(id)
     }
+}
+
+// MARK: - Missed Question
+
+/// One wrong answer, listed under "Review your misses" on the results screen.
+struct QuizMiss: Identifiable {
+    let id = UUID()
+    let buildingName: String
+    let questionType: QuestionType
+    let isPhoto: Bool
+    let correctAnswer: String
+    let givenAnswer: String
 }

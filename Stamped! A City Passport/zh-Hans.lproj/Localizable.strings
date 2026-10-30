@@ -378,6 +378,14 @@
 "Find tours and tickets for %@ on GetYourGuide" = "在 GetYourGuide 上查找%@的游览和门票";
 "Opens GetYourGuide. Stamped! doesn't handle bookings or payments." = "打开 GetYourGuide。Stamped! 不处理预订或付款。";
 
+// MARK: - Building page: food tours & nearby stays
+"Find Food Tours & Cooking Classes" = "查找美食之旅和烹饪课程";
+"Find food tours and cooking classes in %@ on GetYourGuide" = "在 GetYourGuide 上查找%@的美食之旅和烹饪课程";
+"Stays Near Here" = "附近住宿";
+"%lld min walk" = "步行 %lld 分钟";
+"Hotel data from Apple Maps." = "酒店数据来自 Apple 地图。";
+"Shows this hotel's details and prices." = "显示此酒店的详细信息和价格。";
+
 // MARK: - City page tiles & home shortcuts
 "Quiz Mastered" = "测验已掌握";
 "Architecture Quiz" = "建筑测验";
@@ -643,3 +651,59 @@
 "Plan" = "规划";
 "Local" = "当地";
 "Section" = "部分";
+
+// Restaurant cards: category labels from Apple Maps
+"dining.restaurant" = "餐厅";
+"dining.cafe" = "咖啡馆";
+"dining.bakery" = "面包店";
+"dining.brewery" = "精酿酒厂";
+"dining.winery" = "酒庄";
+"dining.market" = "市场";
+"dining.bar" = "酒吧";
+
+// MARK: - Campus events
+"Campus Events" = "校园活动";
+"Finding campus events…" = "正在查找校园活动…";
+"From the %@ calendar" = "来源：%@ 日历";
+"Opens the event page" = "打开活动页面";
+"Event Details" = "活动详情";
+"All day" = "全天";
+
+// Architect page
+"architect.landmarks" = "Stamped!中的作品";
+"architect.openHint" = "打开建筑师页面";
+"architect.fromWikipedia" = "来自维基百科";
+"architect.readOnWikipedia" = "在维基百科上阅读";
+"architect.photoCredit" = "照片：Wikimedia Commons";
+
+// MARK: - Building photo gallery (Wikimedia Commons)
+"More Photos" = "更多照片";
+"Photo of %@" = "%@的照片";
+"Opens the photo full screen" = "全屏打开照片";
+"View on Wikimedia Commons" = "在维基共享资源上查看";
+"Shows the photo's author and license" = "显示照片的作者和许可协议";
+
+// MARK: - Historic Photos & Drawings (Library of Congress)
+"Historic Photos & Drawings" = "历史照片与图纸";
+"Drawing" = "图纸";
+"Shows the image larger" = "放大显示图片";
+"View on loc.gov" = "在 loc.gov 上查看";
+"Image unavailable" = "图片无法显示";
+"Measured drawing" = "测绘图";
+"Historic photo" = "历史照片";
+
+// MARK: - Quiz: photo questions, facts after each answer, review your misses
+"Which building is this?" = "这是哪座建筑？";
+"Say the name of the building in the photo..." = "说出照片中建筑的名称...";
+"Photo of the building in question" = "题目中建筑的照片";
+"No photo available" = "暂无照片";
+"Next Question" = "下一题";
+"See Results" = "查看结果";
+"Review your misses" = "回顾答错的题";
+"Correct answer: %@" = "正确答案：%@";
+"Your answer: %@" = "你的答案：%@";
+"Designed by %@ and completed in %@." = "由%1$@设计，于%2$@年建成。";
+"Designed by %@." = "由%@设计。";
+"Completed in %@." = "于%@年建成。";
+"A fine example of %@ design." = "%@风格的优秀范例。";
+"This landmark is in %@." = "这座地标位于%@。";

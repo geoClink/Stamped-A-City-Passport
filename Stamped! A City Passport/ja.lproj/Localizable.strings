@@ -378,6 +378,14 @@
 "Find tours and tickets for %@ on GetYourGuide" = "GetYourGuide で %@ のツアーとチケットを探す";
 "Opens GetYourGuide. Stamped! doesn't handle bookings or payments." = "GetYourGuide を開きます。Stamped! は予約や支払いを扱いません。";
 
+// MARK: - Building page: food tours & nearby stays
+"Find Food Tours & Cooking Classes" = "フードツアーと料理教室を探す";
+"Find food tours and cooking classes in %@ on GetYourGuide" = "GetYourGuide で %@ のフードツアーと料理教室を探す";
+"Stays Near Here" = "近くの宿泊先";
+"%lld min walk" = "徒歩%lld分";
+"Hotel data from Apple Maps." = "ホテルのデータは Apple マップによるものです。";
+"Shows this hotel's details and prices." = "このホテルの詳細と料金を表示します。";
+
 // MARK: - City page tiles & home shortcuts
 "Quiz Mastered" = "クイズ制覇";
 "Architecture Quiz" = "建築クイズ";
@@ -643,3 +651,59 @@
 "Plan" = "計画";
 "Local" = "周辺情報";
 "Section" = "セクション";
+
+// Restaurant cards: category labels from Apple Maps
+"dining.restaurant" = "レストラン";
+"dining.cafe" = "カフェ";
+"dining.bakery" = "ベーカリー";
+"dining.brewery" = "ブルワリー";
+"dining.winery" = "ワイナリー";
+"dining.market" = "マーケット";
+"dining.bar" = "バー";
+
+// MARK: - Campus events
+"Campus Events" = "キャンパスのイベント";
+"Finding campus events…" = "キャンパスのイベントを検索中…";
+"From the %@ calendar" = "出典：%@ カレンダー";
+"Opens the event page" = "イベントのページを開きます";
+"Event Details" = "イベントの詳細";
+"All day" = "終日";
+
+// Architect page
+"architect.landmarks" = "Stamped!にある作品";
+"architect.openHint" = "建築家のページを開きます";
+"architect.fromWikipedia" = "Wikipediaより";
+"architect.readOnWikipedia" = "Wikipediaで読む";
+"architect.photoCredit" = "写真: Wikimedia Commons";
+
+// MARK: - Building photo gallery (Wikimedia Commons)
+"More Photos" = "その他の写真";
+"Photo of %@" = "%@の写真";
+"Opens the photo full screen" = "写真を全画面で表示します";
+"View on Wikimedia Commons" = "ウィキメディア・コモンズで見る";
+"Shows the photo's author and license" = "写真の作者とライセンスを表示します";
+
+// MARK: - Historic Photos & Drawings (Library of Congress)
+"Historic Photos & Drawings" = "歴史的な写真と図面";
+"Drawing" = "図面";
+"Shows the image larger" = "画像を拡大して表示します";
+"View on loc.gov" = "loc.govで見る";
+"Image unavailable" = "画像を表示できません";
+"Measured drawing" = "実測図";
+"Historic photo" = "歴史的な写真";
+
+// MARK: - Quiz: photo questions, facts after each answer, review your misses
+"Which building is this?" = "この建物はどれ？";
+"Say the name of the building in the photo..." = "写真の建物の名前を言ってください...";
+"Photo of the building in question" = "問題の建物の写真";
+"No photo available" = "写真がありません";
+"Next Question" = "次の問題";
+"See Results" = "結果を見る";
+"Review your misses" = "間違えた問題を復習";
+"Correct answer: %@" = "正解：%@";
+"Your answer: %@" = "あなたの答え：%@";
+"Designed by %@ and completed in %@." = "%1$@の設計で、%2$@年に完成。";
+"Designed by %@." = "%@の設計。";
+"Completed in %@." = "%@年に完成。";
+"A fine example of %@ design." = "%@様式の好例です。";
+"This landmark is in %@." = "このランドマークは%@にあります。";

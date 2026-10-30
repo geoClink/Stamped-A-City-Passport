@@ -378,6 +378,14 @@
 "Find tours and tickets for %@ on GetYourGuide" = "Trova tour e biglietti per %@ su GetYourGuide";
 "Opens GetYourGuide. Stamped! doesn't handle bookings or payments." = "Apre GetYourGuide. Stamped! non gestisce prenotazioni né pagamenti.";
 
+// MARK: - Building page: food tours & nearby stays
+"Find Food Tours & Cooking Classes" = "Trova tour gastronomici e corsi di cucina";
+"Find food tours and cooking classes in %@ on GetYourGuide" = "Trova tour gastronomici e corsi di cucina a %@ su GetYourGuide";
+"Stays Near Here" = "Alloggi qui vicino";
+"%lld min walk" = "%lld min a piedi";
+"Hotel data from Apple Maps." = "Dati degli hotel da Mappe di Apple.";
+"Shows this hotel's details and prices." = "Mostra i dettagli e i prezzi di questo hotel.";
+
 // MARK: - City page tiles & home shortcuts
 "Quiz Mastered" = "Quiz superato";
 "Architecture Quiz" = "Quiz di architettura";
@@ -643,3 +651,59 @@
 "Plan" = "Pianifica";
 "Local" = "Sul posto";
 "Section" = "Sezione";
+
+// Restaurant cards: category labels from Apple Maps
+"dining.restaurant" = "Ristorante";
+"dining.cafe" = "Caffè";
+"dining.bakery" = "Panetteria";
+"dining.brewery" = "Birrificio";
+"dining.winery" = "Cantina";
+"dining.market" = "Mercato";
+"dining.bar" = "Bar";
+
+// MARK: - Campus events
+"Campus Events" = "Eventi del campus";
+"Finding campus events…" = "Ricerca eventi del campus…";
+"From the %@ calendar" = "Dal calendario %@";
+"Opens the event page" = "Apre la pagina dell’evento";
+"Event Details" = "Dettagli dell’evento";
+"All day" = "Tutto il giorno";
+
+// Architect page
+"architect.landmarks" = "I suoi edifici in Stamped!";
+"architect.openHint" = "Apre la pagina dell'architetto";
+"architect.fromWikipedia" = "Da Wikipedia";
+"architect.readOnWikipedia" = "Leggi su Wikipedia";
+"architect.photoCredit" = "Foto: Wikimedia Commons";
+
+// MARK: - Building photo gallery (Wikimedia Commons)
+"More Photos" = "Altre foto";
+"Photo of %@" = "Foto di %@";
+"Opens the photo full screen" = "Apre la foto a schermo intero";
+"View on Wikimedia Commons" = "Visualizza su Wikimedia Commons";
+"Shows the photo's author and license" = "Mostra l’autore e la licenza della foto";
+
+// MARK: - Historic Photos & Drawings (Library of Congress)
+"Historic Photos & Drawings" = "Foto e disegni storici";
+"Drawing" = "Disegno";
+"Shows the image larger" = "Mostra l’immagine più grande";
+"View on loc.gov" = "Vedi su loc.gov";
+"Image unavailable" = "Immagine non disponibile";
+"Measured drawing" = "Rilievo architettonico";
+"Historic photo" = "Foto storica";
+
+// MARK: - Quiz: photo questions, facts after each answer, review your misses
+"Which building is this?" = "Che edificio è questo?";
+"Say the name of the building in the photo..." = "Di' il nome dell'edificio nella foto...";
+"Photo of the building in question" = "Foto dell'edificio in questione";
+"No photo available" = "Nessuna foto disponibile";
+"Next Question" = "Prossima domanda";
+"See Results" = "Vedi i risultati";
+"Review your misses" = "Rivedi i tuoi errori";
+"Correct answer: %@" = "Risposta corretta: %@";
+"Your answer: %@" = "La tua risposta: %@";
+"Designed by %@ and completed in %@." = "Progettato da %1$@ e completato nel %2$@.";
+"Designed by %@." = "Progettato da %@.";
+"Completed in %@." = "Completato nel %@.";
+"A fine example of %@ design." = "Un bell'esempio di stile %@.";
+"This landmark is in %@." = "Questo monumento si trova a %@.";

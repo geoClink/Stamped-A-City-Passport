@@ -30,5 +30,19 @@
 			<string>%d층</string>
 		</dict>
 	</dict>
+	<key>dining.minWalk</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@minutes@</string>
+		<key>minutes</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>other</key>
+			<string>도보 %d분</string>
+		</dict>
+	</dict>
 </dict>
 </plist>
