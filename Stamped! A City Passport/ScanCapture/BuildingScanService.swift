@@ -7,10 +7,16 @@ import Foundation
 class BuildingScanService {
     static let shared = BuildingScanService()
 
+    /// Off for now: scans are shared with every user, which Apple treats as user-generated
+    /// content (it needs reporting, blocking and filtering, which this feature doesn't have).
+    /// While off, no scan UI shows and no other user's scan is fetched. Set to true to bring it back.
+    static let isEnabled = false
+
     private let db = CKContainer(identifier: "iCloud.com.georgeclinkscales.Stamped").publicCloudDatabase
 
     // Fetch the scan for a building by its record ID (buildingID is the record name — no index needed).
     func fetchLatestScan(buildingID: String) async -> CKRecord? {
+        guard Self.isEnabled else { return nil }
         print("[CloudKit] Fetching scan for buildingID: \(buildingID)")
         let recordID = CKRecord.ID(recordName: buildingID)
         do {

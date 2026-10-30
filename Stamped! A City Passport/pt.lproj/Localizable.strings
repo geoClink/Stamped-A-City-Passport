@@ -636,6 +636,37 @@
 "Local" = "Local";
 "Section" = "Seção";
 
+// Restaurant cards: category labels from Apple Maps
+"dining.restaurant" = "Restaurante";
+"dining.cafe" = "Café";
+"dining.bakery" = "Padaria";
+"dining.brewery" = "Cervejaria";
+"dining.winery" = "Vinícola";
+"dining.market" = "Mercado";
+"dining.bar" = "Bar";
+
+// MARK: - Campus events
+"Campus Events" = "Eventos do campus";
+"Finding campus events…" = "Procurando eventos do campus…";
+"From the %@ calendar" = "Do calendário %@";
+"Opens the event page" = "Abre a página do evento";
+"Event Details" = "Detalhes do evento";
+"All day" = "Dia inteiro";
+
+// Architect page
+"architect.landmarks" = "Seus edifícios no Stamped!";
+"architect.openHint" = "Abre a página do arquiteto";
+"architect.fromWikipedia" = "Da Wikipédia";
+"architect.readOnWikipedia" = "Ler na Wikipédia";
+"architect.photoCredit" = "Foto: Wikimedia Commons";
+
+// MARK: - Building photo gallery (Wikimedia Commons)
+"More Photos" = "Mais fotos";
+"Photo of %@" = "Foto de %@";
+"Opens the photo full screen" = "Abre a foto em tela cheia";
+"View on Wikimedia Commons" = "Ver no Wikimedia Commons";
+"Shows the photo's author and license" = "Mostra o autor e a licença da foto";
+
 // MARK: - Historic Photos & Drawings (Library of Congress)
 "Historic Photos & Drawings" = "Fotos e desenhos históricos";
 "Drawing" = "Desenho";
