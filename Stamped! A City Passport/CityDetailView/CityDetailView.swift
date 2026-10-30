@@ -138,6 +138,9 @@ struct CityDetailView: View {
                         EventsSection(service: events, isHighContrast: isHighContrast)
                     }
 
+                    // Campuses only: home games, stadium photos, titles and the athletics site
+                    GameDaySection(campus: viewModel.city, isHighContrast: isHighContrast)
+
                     TravelInfoSection(viewModel: viewModel, isHighContrast: isHighContrast)
 
                 case .local:

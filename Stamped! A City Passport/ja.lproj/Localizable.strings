@@ -635,3 +635,24 @@
 "Plan" = "計画";
 "Local" = "周辺情報";
 "Section" = "セクション";
+
+// MARK: - Campus Game Day
+"GAME DAY" = "試合の日";
+"Upcoming home games" = "今後のホームゲーム";
+"Live scores & schedule" = "ライブスコアと日程";
+"Opens the official athletics website" = "公式アスレチックサイトを開きます";
+"Photo of %@" = "%@ の写真";
+"Photo: %@, %@" = "写真：%@、%@";
+"Opens the photo on Wikimedia Commons" = "Wikimedia Commons で写真を開きます";
+"NCAA team championships" = "NCAA 団体優勝";
+"%d titles" = "%d回優勝";
+"Source: %@" = "出典：%@";
+"%@ (shared)" = "%@（同時優勝）";
+"Men's basketball" = "男子バスケットボール";
+"Men's ice hockey" = "男子アイスホッケー";
+"Men's cross country" = "男子クロスカントリー";
+"Women's cross country" = "女子クロスカントリー";
+"Boxing" = "ボクシング";
+"Men's gymnastics" = "男子体操";
+"Men's soccer" = "男子サッカー";
+"Wrestling" = "レスリング";
