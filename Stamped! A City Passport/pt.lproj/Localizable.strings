@@ -636,6 +636,15 @@
 "Local" = "Local";
 "Section" = "Seção";
 
+// Restaurant cards: category labels from Apple Maps
+"dining.restaurant" = "Restaurante";
+"dining.cafe" = "Café";
+"dining.bakery" = "Padaria";
+"dining.brewery" = "Cervejaria";
+"dining.winery" = "Vinícola";
+"dining.market" = "Mercado";
+"dining.bar" = "Bar";
+
 // MARK: - Campus events
 "Campus Events" = "Eventos do campus";
 "Finding campus events…" = "Procurando eventos do campus…";

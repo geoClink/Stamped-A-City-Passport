@@ -124,6 +124,7 @@ struct CityDetailView: View {
                     LandmarkSection(viewModel: viewModel, isHighContrast: isHighContrast)
 
                     BuildingTimelineSection(
+                        viewModel: viewModel,
                         buildings: viewModel.city.buildings,
                         visitedIDs: GlobalProgressManager.shared.visitedIDs,
                         isHighContrast: isHighContrast
@@ -155,7 +156,7 @@ struct CityDetailView: View {
                     // Top Eats — hidden when failed so we don't show "Couldn't load"
                     let eats = FoursquareService.shared
                     if eats.isLoading || !eats.venues.isEmpty {
-                        TopEatsSection(service: eats, isHighContrast: isHighContrast)
+                        TopEatsSection(service: eats, cityName: viewModel.city.name, isHighContrast: isHighContrast)
                     }
                 }
             }
