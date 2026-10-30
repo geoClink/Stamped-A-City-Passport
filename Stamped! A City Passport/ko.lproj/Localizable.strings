@@ -635,3 +635,12 @@
 "Plan" = "계획";
 "Local" = "현지 정보";
 "Section" = "섹션";
+
+// Restaurant cards: category labels from Apple Maps
+"dining.restaurant" = "레스토랑";
+"dining.cafe" = "카페";
+"dining.bakery" = "베이커리";
+"dining.brewery" = "양조장";
+"dining.winery" = "와이너리";
+"dining.market" = "마켓";
+"dining.bar" = "바";

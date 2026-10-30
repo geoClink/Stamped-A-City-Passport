@@ -635,3 +635,12 @@
 "Plan" = "规划";
 "Local" = "当地";
 "Section" = "部分";
+
+// Restaurant cards: category labels from Apple Maps
+"dining.restaurant" = "餐厅";
+"dining.cafe" = "咖啡馆";
+"dining.bakery" = "面包店";
+"dining.brewery" = "精酿酒厂";
+"dining.winery" = "酒庄";
+"dining.market" = "市场";
+"dining.bar" = "酒吧";

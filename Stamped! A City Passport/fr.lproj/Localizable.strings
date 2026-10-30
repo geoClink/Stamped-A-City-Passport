@@ -635,3 +635,12 @@
 "Plan" = "Planifier";
 "Local" = "Sur place";
 "Section" = "Section";
+
+// Restaurant cards: category labels from Apple Maps
+"dining.restaurant" = "Restaurant";
+"dining.cafe" = "Café";
+"dining.bakery" = "Boulangerie";
+"dining.brewery" = "Brasserie";
+"dining.winery" = "Vignoble";
+"dining.market" = "Marché";
+"dining.bar" = "Bar";

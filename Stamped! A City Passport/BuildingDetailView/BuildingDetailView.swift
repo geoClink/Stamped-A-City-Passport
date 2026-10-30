@@ -38,7 +38,10 @@ struct BuildingDetailView: View {
     @State private var geocodeErrorMessage: String = ""
     @State private var showingReportMenu = false
     @State private var noteText: String = ""
-    @State private var nearbyVenues: [(name: String, category: String)] = []
+    /// Nearby restaurants, nearest first; `meters` is the straight-line distance from this building.
+    @State private var nearbyVenues: [(name: String, category: String, meters: CLLocationDistance, mapItem: MKMapItem)] = []
+    /// The nearby restaurant whose Apple place card is open.
+    @State private var tappedPlace: TappedApplePlace?
     @State private var isLoadingVenues = false
     @State private var lookAroundScene: MKLookAroundScene? = nil
     @State private var showingLookAround = false
@@ -130,6 +133,9 @@ struct BuildingDetailView: View {
             }
         }
         #endif
+        .sheet(item: $tappedPlace) { place in
+            ApplePlaceSheet(mapItem: place.mapItem, cityName: viewModel.city.name)
+        }
         .sheet(isPresented: $showingModelViewer) {
             if let url = localModelURL {
                 BuildingModelViewer(modelURL: url, buildingName: building.name)
@@ -169,22 +175,18 @@ struct BuildingDetailView: View {
         )
         request.resultTypes = .pointOfInterest
         request.pointOfInterestFilter = MKPointOfInterestFilter(including: [
-            .restaurant, .cafe, .bakery, .brewery, .foodMarket, .nightlife
+            .restaurant, .cafe, .bakery, .brewery, .winery, .foodMarket, .nightlife
         ])
         if let response = try? await MKLocalSearch(request: request).start() {
+            let origin = CLLocationCoordinate2D(latitude: lat, longitude: lon)
             nearbyVenues = response.mapItems.prefix(6).compactMap { item in
                 guard let name = item.name else { return nil }
-                let cat: String
-                switch item.pointOfInterestCategory {
-                case .cafe:       cat = "Café"
-                case .bakery:     cat = "Bakery"
-                case .brewery:    cat = "Brewery"
-                case .foodMarket: cat = "Market"
-                case .nightlife:  cat = "Bar"
-                default:          cat = "Restaurant"
-                }
-                return (name: name, category: cat)
+                return (name: name,
+                        category: DiningPlaceLabel.category(for: item),
+                        meters: DiningPlaceLabel.distance(from: origin, to: item),
+                        mapItem: item)
             }
+            .sorted { $0.meters < $1.meters }
         }
         isLoadingVenues = false
     }
@@ -537,7 +539,9 @@ extension BuildingDetailView {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(alignment: .top, spacing: DS.Space.m) {
                         ForEach(nearbyVenues, id: \.name) { venue in
-                            localFlavorCard(name: venue.name, category: venue.category)
+                            localFlavorCard(name: venue.name, category: venue.category, meters: venue.meters) {
+                                tappedPlace = TappedApplePlace(mapItem: venue.mapItem)
+                            }
                         }
                     }
                     .padding(.horizontal, 2)
@@ -579,15 +583,10 @@ extension BuildingDetailView {
             )
     }
 
-    private func localFlavorCard(name: String, category: String) -> some View {
-        let mapsURL: URL? = {
-            let encoded = name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-            if let lat = building.latitude, let lon = building.longitude {
-                return URL(string: "maps://?q=\(encoded)&near=\(lat),\(lon)")
-            }
-            return URL(string: "maps://?q=\(encoded)")
-        }()
-
+    /// A nearby restaurant card; a tap opens Apple's place card (photos, hours, ratings) in the app.
+    private func localFlavorCard(name: String, category: String, meters: CLLocationDistance, onTap: @escaping () -> Void) -> some View {
+        // "4 min walk" or "1.2 km", formatted here so it follows the units setting live.
+        let distance = DiningPlaceLabel.distanceText(meters: meters, useMetric: useMetric)
         let card = flavorCardStyle(VStack(alignment: .leading, spacing: DS.Space.s) {
             flavorIcon
 
@@ -599,32 +598,34 @@ extension BuildingDetailView {
 
             Spacer(minLength: DS.Space.xs)
 
-            HStack(spacing: DS.Space.xs) {
-                Text(category)
-                    .font(.caption2.monospaced()).fontWeight(.semibold)
-                    .foregroundColor(isHighContrast ? .primary : .secondary)
-                    .textCase(.uppercase)
-                    .lineLimit(2)
-                    .minimumScaleFactor(0.8)
+            HStack(alignment: .bottom, spacing: DS.Space.xs) {
+                // Category above distance, each on its own line, so the narrow card never
+                // wraps mid-label (a joined "4 min walk · CAFÉ" broke at the dot)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(category.localizedUppercase)
+                        .font(.caption2.monospaced()).fontWeight(.semibold)
+                    Text(distance)
+                        .font(.caption2)
+                }
+                .foregroundColor(isHighContrast ? .primary : .secondary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
                 Spacer()
-                Image(systemName: "arrow.up.right")
+                Image(systemName: "chevron.right")
                     .font(.caption2)
                     .foregroundColor(isHighContrast ? .primary : .secondary)
             }
         })
 
-        return Group {
-            if let url = mapsURL {
-                Link(destination: url) { card }
-                    .simultaneousGesture(TapGesture().onEnded {
-                        HapticManager.shared.trigger(.selection)
-                    })
-                    .accessibilityLabel("\(name), \(category)")
-                    .accessibilityHint("Opens in Apple Maps")
-            } else {
-                card
-            }
+        return Button {
+            HapticManager.shared.trigger(.selection)
+            onTap()
+        } label: {
+            card
         }
+        .buttonStyle(.plain)
+        .accessibilityLabel("\(name), \(category), \(distance)")
+        .accessibilityHint("Shows photos, hours and ratings")
     }
 
     func foodSpotsSection(spots: [String]) -> some View {

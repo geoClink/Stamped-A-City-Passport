@@ -635,3 +635,12 @@
 "Plan" = "Planen";
 "Local" = "Vor Ort";
 "Section" = "Bereich";
+
+// Restaurant cards: category labels from Apple Maps
+"dining.restaurant" = "Restaurant";
+"dining.cafe" = "Café";
+"dining.bakery" = "Bäckerei";
+"dining.brewery" = "Brauerei";
+"dining.winery" = "Weingut";
+"dining.market" = "Markt";
+"dining.bar" = "Bar";

@@ -301,3 +301,12 @@
 "%lld places" = "%lld places";
 "Zooms in on these places" = "Zooms in on these places";
 "Stops %@" = "Stops %@";
+
+// Restaurant cards: category labels from Apple Maps
+"dining.restaurant" = "Restaurant";
+"dining.cafe" = "Café";
+"dining.bakery" = "Bakery";
+"dining.brewery" = "Brewery";
+"dining.winery" = "Winery";
+"dining.market" = "Market";
+"dining.bar" = "Bar";

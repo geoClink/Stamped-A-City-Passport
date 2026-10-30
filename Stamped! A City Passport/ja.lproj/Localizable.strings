@@ -635,3 +635,12 @@
 "Plan" = "計画";
 "Local" = "周辺情報";
 "Section" = "セクション";
+
+// Restaurant cards: category labels from Apple Maps
+"dining.restaurant" = "レストラン";
+"dining.cafe" = "カフェ";
+"dining.bakery" = "ベーカリー";
+"dining.brewery" = "ブルワリー";
+"dining.winery" = "ワイナリー";
+"dining.market" = "マーケット";
+"dining.bar" = "バー";
