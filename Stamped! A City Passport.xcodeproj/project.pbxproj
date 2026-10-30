@@ -80,6 +80,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				CityExplore/CitySceneConfig.swift,
+				Managers/AudioStoryPlayer.swift,
 				Models/Building.swift,
 				Models/CityAudioManager.swift,
 				Models/CustomPlace.swift,

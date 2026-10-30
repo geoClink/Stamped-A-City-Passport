@@ -25,6 +25,9 @@ struct CityMapVisionView: View {
     @State private var showsPlaces = false
     /// The Apple Maps place the user tapped; MapKit shows its place card.
     @State private var selectedFeature: MapFeature?
+    /// The guided tour: flies to each landmark in turn and reads its story aloud
+    @State private var tourTask: Task<Void, Never>?
+    @ObservedObject private var storyPlayer = AudioStoryPlayer.shared
 
     private var mappableBuildings: [Building] {
         store.buildings(for: cityName).filter { $0.latitude != nil && $0.longitude != nil }
@@ -79,6 +82,20 @@ struct CityMapVisionView: View {
         .navigationTitle(cityName)
         .toolbar {
             ToolbarItem {
+                // The narrated tour: every landmark in a short walking order, each story read aloud
+                Button {
+                    if tourTask == nil { startTour() } else { stopTour() }
+                } label: {
+                    if tourTask == nil {
+                        Label("Play Tour", systemImage: "play.fill")
+                    } else {
+                        Label("Stop Tour", systemImage: "stop.fill")
+                    }
+                }
+                .help("Fly to each landmark and hear its story")
+                .disabled(mappableBuildings.isEmpty)
+            }
+            ToolbarItem {
                 Toggle(isOn: $showsPlaces) {
                     Label("Places", systemImage: "mappin.and.ellipse")
                 }
@@ -114,7 +131,11 @@ struct CityMapVisionView: View {
                 LandmarkCard(building: building,
                              isVisited: store.visitedIDs.contains(building.id),
                              isWishlisted: store.isWishlisted(building.id),
-                             onWishlist: { store.toggleWishlist(building.id) }) {
+                             isPlaying: storyPlayer.isPlaying(building),
+                             onWishlist: { store.toggleWishlist(building.id) },
+                             onListen: { storyPlayer.toggle(building) }) {
+                    stopTour()
+                    storyPlayer.stop()
                     selectedBuilding = nil
                 }
                 .padding(24)
@@ -123,6 +144,11 @@ struct CityMapVisionView: View {
         }
         .animation(.spring(duration: 0.35), value: selectedBuilding?.id)
         .onAppear { fitCamera() }
+        // Leaving the city ends the tour and the story
+        .onDisappear {
+            stopTour()
+            storyPlayer.stop()
+        }
         // Turning Places off also closes any open place card
         .onChange(of: showsPlaces) { _, isOn in
             if !isOn { selectedFeature = nil }
@@ -181,6 +207,57 @@ struct CityMapVisionView: View {
         position = .camera(MapCamera(centerCoordinate: center, distance: distance, heading: 0, pitch: 60))
     }
 
+    // MARK: - Guided tour
+
+    /// Flies to each landmark in walking order, shows its card and reads its story; the next
+    /// stop starts when the story ends. Stop Tour, closing the card or leaving ends it.
+    private func startTour() {
+        let stops = Self.tourOrder(mappableBuildings)
+        tourTask = Task {
+            for building in stops {
+                guard !Task.isCancelled, let lat = building.latitude, let lon = building.longitude else { break }
+                flyTo(building, at: CLLocationCoordinate2D(latitude: lat, longitude: lon))
+                // Let the camera arrive before the story starts
+                try? await Task.sleep(for: .seconds(1.8))
+                guard !Task.isCancelled else { break }
+                await storyPlayer.playAndWait(building)
+                guard !Task.isCancelled else { break }
+                try? await Task.sleep(for: .seconds(1))
+            }
+            tourTask = nil
+        }
+    }
+
+    private func stopTour() {
+        tourTask?.cancel()
+        tourTask = nil
+        storyPlayer.stop()
+    }
+
+    /// A short walking order: start at the landmark nearest the middle of the city, then always
+    /// go to the nearest landmark not yet visited.
+    static func tourOrder(_ buildings: [Building]) -> [Building] {
+        var remaining = buildings.filter { $0.latitude != nil && $0.longitude != nil }
+        guard !remaining.isEmpty else { return [] }
+        func distance(_ a: Building, _ lat: Double, _ lon: Double) -> Double {
+            let dx = (a.longitude! - lon) * cos(lat * .pi / 180)
+            let dy = a.latitude! - lat
+            return dx * dx + dy * dy
+        }
+        let midLat = remaining.map { $0.latitude! }.reduce(0, +) / Double(remaining.count)
+        let midLon = remaining.map { $0.longitude! }.reduce(0, +) / Double(remaining.count)
+        var current = remaining.min { distance($0, midLat, midLon) < distance($1, midLat, midLon) }!
+        var order = [current]
+        remaining.removeAll { $0.id == current.id }
+        while !remaining.isEmpty {
+            let next = remaining.min { distance($0, current.latitude!, current.longitude!) < distance($1, current.latitude!, current.longitude!) }!
+            order.append(next)
+            remaining.removeAll { $0.id == next.id }
+            current = next
+        }
+        return order
+    }
+
     /// Swoops the camera down to a landmark and shows its card.
     private func flyTo(_ building: Building, at coordinate: CLLocationCoordinate2D) {
         selectedFeature = nil
@@ -227,7 +304,9 @@ private struct LandmarkCard: View {
     let building: Building
     let isVisited: Bool
     let isWishlisted: Bool
+    var isPlaying = false
     let onWishlist: () -> Void
+    var onListen: () -> Void = {}
     let onClose: () -> Void
 
     var body: some View {
@@ -254,6 +333,12 @@ private struct LandmarkCard: View {
                         .foregroundStyle(.orange)
                 }
                 Spacer()
+                // Hear the story read aloud while looking at the building in 3D
+                Button(action: onListen) {
+                    let title: LocalizedStringKey = isPlaying ? "Stop" : "Listen"
+                    Label(title, systemImage: isPlaying ? "stop.fill" : "speaker.wave.2.fill")
+                }
+                .tint(.orange)
                 Button(action: onWishlist) {
                     // Typed as LocalizedStringKey so both titles get translated
                     let title: LocalizedStringKey = isWishlisted ? "Saved" : "Want to Go"
