@@ -21,6 +21,7 @@ struct CityVolumeView: View {
     let cityName: String
 
     @Environment(\.openImmersiveSpace) private var openImmersiveSpace
+    @Environment(\.dismissImmersiveSpace) private var dismissImmersiveSpace
     @Environment(\.dismissWindow)      private var dismissWindow
 
     @AppStorage("currentImmersiveCity") private var currentImmersiveCity = "Detroit"
@@ -81,6 +82,8 @@ struct CityVolumeView: View {
                     isOpeningSpace = true
                     currentImmersiveCity = cityName
                     Task {
+                        // Only one immersive space can be open: close a 360° landmark view first
+                        await dismissImmersiveSpace()
                         await openImmersiveSpace(id: "city-immersive")
                         isOpeningSpace = false
                     }
