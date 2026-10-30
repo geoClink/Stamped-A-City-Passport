@@ -318,6 +318,14 @@
 "Double tap to check this tradition off." = "Tocca due volte per spuntare questa tradizione.";
 "Show %@ in Maps" = "Mostra %@ in Mappe";
 
+// MARK: - Campus Student Life
+"STUDENT LIFE" = "VITA STUDENTESCA";
+"Where Students Live" = "Dove vivono gli studenti";
+"Student Union" = "Centro studentesco";
+"Study Spots" = "Luoghi per studiare";
+"Dining Halls" = "Mense";
+"Hangouts" = "Ritrovi";
+
 // MARK: - College List & Road Trip
 "My College List" = "La mia lista di università";
 "Add to My College List" = "Aggiungi alla mia lista di università";
@@ -369,6 +377,14 @@
 "Find Tours & Tickets" = "Trova tour e biglietti";
 "Find tours and tickets for %@ on GetYourGuide" = "Trova tour e biglietti per %@ su GetYourGuide";
 "Opens GetYourGuide. Stamped! doesn't handle bookings or payments." = "Apre GetYourGuide. Stamped! non gestisce prenotazioni né pagamenti.";
+
+// MARK: - Building page: food tours & nearby stays
+"Find Food Tours & Cooking Classes" = "Trova tour gastronomici e corsi di cucina";
+"Find food tours and cooking classes in %@ on GetYourGuide" = "Trova tour gastronomici e corsi di cucina a %@ su GetYourGuide";
+"Stays Near Here" = "Alloggi qui vicino";
+"%lld min walk" = "%lld min a piedi";
+"Hotel data from Apple Maps." = "Dati degli hotel da Mappe di Apple.";
+"Shows this hotel's details and prices." = "Mostra i dettagli e i prezzi di questo hotel.";
 
 // MARK: - City page tiles & home shortcuts
 "Quiz Mastered" = "Quiz superato";
@@ -635,6 +651,74 @@
 "Plan" = "Pianifica";
 "Local" = "Sul posto";
 "Section" = "Sezione";
+
+// Restaurant cards: category labels from Apple Maps
+"dining.restaurant" = "Ristorante";
+"dining.cafe" = "Caffè";
+"dining.bakery" = "Panetteria";
+"dining.brewery" = "Birrificio";
+"dining.winery" = "Cantina";
+"dining.market" = "Mercato";
+"dining.bar" = "Bar";
+
+// MARK: - Campus events
+"Campus Events" = "Eventi del campus";
+"Finding campus events…" = "Ricerca eventi del campus…";
+"From the %@ calendar" = "Dal calendario %@";
+"Opens the event page" = "Apre la pagina dell’evento";
+"Event Details" = "Dettagli dell’evento";
+"All day" = "Tutto il giorno";
+
+// Architect page
+"architect.landmarks" = "I suoi edifici in Stamped!";
+"architect.openHint" = "Apre la pagina dell'architetto";
+"architect.fromWikipedia" = "Da Wikipedia";
+"architect.readOnWikipedia" = "Leggi su Wikipedia";
+"architect.photoCredit" = "Foto: Wikimedia Commons";
+
+// MARK: - Building photo gallery (Wikimedia Commons)
+"More Photos" = "Altre foto";
+"Photo of %@" = "Foto di %@";
+"Opens the photo full screen" = "Apre la foto a schermo intero";
+"View on Wikimedia Commons" = "Visualizza su Wikimedia Commons";
+"Shows the photo's author and license" = "Mostra l’autore e la licenza della foto";
+
+// MARK: - Historic Photos & Drawings (Library of Congress)
+"Historic Photos & Drawings" = "Foto e disegni storici";
+"Drawing" = "Disegno";
+"Shows the image larger" = "Mostra l’immagine più grande";
+"View on loc.gov" = "Vedi su loc.gov";
+"Image unavailable" = "Immagine non disponibile";
+"Measured drawing" = "Rilievo architettonico";
+"Historic photo" = "Foto storica";
+
+// MARK: - Quiz: photo questions, facts after each answer, review your misses
+"Which building is this?" = "Che edificio è questo?";
+"Say the name of the building in the photo..." = "Di' il nome dell'edificio nella foto...";
+"Photo of the building in question" = "Foto dell'edificio in questione";
+"No photo available" = "Nessuna foto disponibile";
+"Next Question" = "Prossima domanda";
+"See Results" = "Vedi i risultati";
+"Review your misses" = "Rivedi i tuoi errori";
+"Correct answer: %@" = "Risposta corretta: %@";
+"Your answer: %@" = "La tua risposta: %@";
+"Designed by %@ and completed in %@." = "Progettato da %1$@ e completato nel %2$@.";
+"Designed by %@." = "Progettato da %@.";
+"Completed in %@." = "Completato nel %@.";
+"A fine example of %@ design." = "Un bell'esempio di stile %@.";
+"This landmark is in %@." = "Questo monumento si trova a %@.";
+
+// MARK: - College Facts (College Scorecard)
+"COLLEGE FACTS" = "DATI DELL'UNIVERSITÀ";
+"Acceptance rate" = "Tasso di ammissione";
+"Undergraduates" = "Studenti undergraduate";
+"In-state tuition" = "Retta per residenti";
+"Out-of-state tuition" = "Retta per non residenti";
+"Graduation rate" = "Tasso di laurea";
+"Median earnings after 10 years" = "Reddito mediano dopo 10 anni";
+"Tuition and fees are per year. Graduation is within 6 years; earnings are the median 10 years after starting." = "Rette e tasse annuali. Laurea entro 6 anni; reddito mediano 10 anni dopo l'iscrizione.";
+"Source: U.S. Department of Education College Scorecard" = "Fonte: College Scorecard del Dipartimento dell'Istruzione degli Stati Uniti";
+"Opens the College Scorecard website" = "Apre il sito di College Scorecard";
 
 // MARK: - Campus History (Wikipedia)
 "HISTORY" = "STORIA";

@@ -12,6 +12,11 @@ struct WikiBuildingPhoto: View {
     let building: Building
     let height: CGFloat
     var contentMode: ContentMode = .fill  // .fit shows full image; .fill crops to fill frame
+    /// Replaces "Photo of <name>" for VoiceOver. The quiz uses this so the label
+    /// doesn't give away the answer.
+    var accessibilityLabelText: String? = nil
+    /// Called when there's no photo to show (none on Wikipedia, or it failed to load)
+    var onUnavailable: (() -> Void)? = nil
 
     @State private var photoURL: URL? = nil
     @State private var loaded = false
@@ -30,7 +35,7 @@ struct WikiBuildingPhoto: View {
                             .frame(maxWidth: .infinity)
                             .frame(height: height)
                             .clipped()
-                            .accessibilityLabel("Photo of \(building.name)")
+                            .accessibilityLabel(accessibilityLabelText ?? String(localized: "Photo of \(building.name)"))
                     case .failure:
                         assetFallback
                     case .empty:
@@ -63,17 +68,21 @@ struct WikiBuildingPhoto: View {
     private var assetFallback: some View {
         VStack(spacing: DS.Space.s) {
             Image(systemName: "photo.slash")
-                .font(.system(size: fallbackIconSize))
+                // Small thumbnails (like the Chronology strip) get a smaller icon and no caption
+                .font(.system(size: min(fallbackIconSize, height * 0.4)))
                 .foregroundStyle(.secondary)
-            Text("No photo available")
-                .font(.caption)
-                .foregroundStyle(.secondary)
+            if height >= 100 {
+                Text("No photo available")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
         }
         .frame(maxWidth: .infinity)
         .frame(height: height)
         .background(DS.Palette.cardBackground)
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("No photo available for \(building.name)")
+        .accessibilityLabel(accessibilityLabelText == nil ? String(localized: "No photo available for \(building.name)") : String(localized: "No photo available"))
+        .onAppear { onUnavailable?() }
     }
 
     private var shimmerPlaceholder: some View {

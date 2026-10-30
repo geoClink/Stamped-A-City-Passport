@@ -318,6 +318,14 @@
 "Double tap to check this tradition off." = "두 번 탭하여 이 전통을 체크하세요.";
 "Show %@ in Maps" = "지도에서 %@ 보기";
 
+// MARK: - Campus Student Life
+"STUDENT LIFE" = "학생 생활";
+"Where Students Live" = "학생들이 사는 곳";
+"Student Union" = "학생회관";
+"Study Spots" = "공부하기 좋은 곳";
+"Dining Halls" = "학생 식당";
+"Hangouts" = "모임 장소";
+
 // MARK: - College List & Road Trip
 "My College List" = "나의 대학 목록";
 "Add to My College List" = "나의 대학 목록에 추가";
@@ -369,6 +377,14 @@
 "Find Tours & Tickets" = "투어 및 티켓 찾기";
 "Find tours and tickets for %@ on GetYourGuide" = "GetYourGuide에서 %@ 투어 및 티켓 찾기";
 "Opens GetYourGuide. Stamped! doesn't handle bookings or payments." = "GetYourGuide를 엽니다. Stamped!는 예약이나 결제를 처리하지 않습니다.";
+
+// MARK: - Building page: food tours & nearby stays
+"Find Food Tours & Cooking Classes" = "푸드 투어 및 쿠킹 클래스 찾기";
+"Find food tours and cooking classes in %@ on GetYourGuide" = "GetYourGuide에서 %@의 푸드 투어 및 쿠킹 클래스 찾기";
+"Stays Near Here" = "근처 숙소";
+"%lld min walk" = "도보 %lld분";
+"Hotel data from Apple Maps." = "호텔 데이터 제공: Apple 지도.";
+"Shows this hotel's details and prices." = "이 호텔의 세부 정보와 가격을 보여줍니다.";
 
 // MARK: - City page tiles & home shortcuts
 "Quiz Mastered" = "퀴즈 마스터";
@@ -635,6 +651,74 @@
 "Plan" = "계획";
 "Local" = "현지 정보";
 "Section" = "섹션";
+
+// Restaurant cards: category labels from Apple Maps
+"dining.restaurant" = "레스토랑";
+"dining.cafe" = "카페";
+"dining.bakery" = "베이커리";
+"dining.brewery" = "양조장";
+"dining.winery" = "와이너리";
+"dining.market" = "마켓";
+"dining.bar" = "바";
+
+// MARK: - Campus events
+"Campus Events" = "캠퍼스 행사";
+"Finding campus events…" = "캠퍼스 행사를 찾는 중…";
+"From the %@ calendar" = "출처: %@ 캘린더";
+"Opens the event page" = "행사 페이지를 엽니다";
+"Event Details" = "행사 세부 정보";
+"All day" = "하루 종일";
+
+// Architect page
+"architect.landmarks" = "Stamped!에 있는 작품";
+"architect.openHint" = "건축가 페이지를 엽니다";
+"architect.fromWikipedia" = "위키백과 발췌";
+"architect.readOnWikipedia" = "위키백과에서 읽기";
+"architect.photoCredit" = "사진: Wikimedia Commons";
+
+// MARK: - Building photo gallery (Wikimedia Commons)
+"More Photos" = "사진 더 보기";
+"Photo of %@" = "%@ 사진";
+"Opens the photo full screen" = "사진을 전체 화면으로 엽니다";
+"View on Wikimedia Commons" = "위키미디어 공용에서 보기";
+"Shows the photo's author and license" = "사진의 작성자와 라이선스를 표시합니다";
+
+// MARK: - Historic Photos & Drawings (Library of Congress)
+"Historic Photos & Drawings" = "역사적 사진과 도면";
+"Drawing" = "도면";
+"Shows the image larger" = "이미지를 크게 표시합니다";
+"View on loc.gov" = "loc.gov에서 보기";
+"Image unavailable" = "이미지를 사용할 수 없음";
+"Measured drawing" = "실측 도면";
+"Historic photo" = "역사적 사진";
+
+// MARK: - Quiz: photo questions, facts after each answer, review your misses
+"Which building is this?" = "이 건물은 무엇일까요?";
+"Say the name of the building in the photo..." = "사진 속 건물의 이름을 말하세요...";
+"Photo of the building in question" = "문제의 건물 사진";
+"No photo available" = "사진 없음";
+"Next Question" = "다음 문제";
+"See Results" = "결과 보기";
+"Review your misses" = "틀린 문제 다시 보기";
+"Correct answer: %@" = "정답: %@";
+"Your answer: %@" = "내 답: %@";
+"Designed by %@ and completed in %@." = "%1$@이(가) 설계했으며 %2$@년에 완공되었습니다.";
+"Designed by %@." = "%@이(가) 설계했습니다.";
+"Completed in %@." = "%@년에 완공되었습니다.";
+"A fine example of %@ design." = "%@ 양식의 훌륭한 예입니다.";
+"This landmark is in %@." = "이 랜드마크는 %@에 있습니다.";
+
+// MARK: - College Facts (College Scorecard)
+"COLLEGE FACTS" = "대학 정보";
+"Acceptance rate" = "합격률";
+"Undergraduates" = "학부생 수";
+"In-state tuition" = "주내 학비";
+"Out-of-state tuition" = "주외 학비";
+"Graduation rate" = "졸업률";
+"Median earnings after 10 years" = "10년 후 소득 중앙값";
+"Tuition and fees are per year. Graduation is within 6 years; earnings are the median 10 years after starting." = "학비는 연간 기준(수수료 포함)입니다. 졸업률은 6년 이내 기준, 소득은 입학 10년 후 중앙값입니다.";
+"Source: U.S. Department of Education College Scorecard" = "출처: 미국 교육부 College Scorecard";
+"Opens the College Scorecard website" = "College Scorecard 웹사이트를 엽니다";
 
 // MARK: - Campus History (Wikipedia)
 "HISTORY" = "역사";

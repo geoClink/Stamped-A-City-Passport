@@ -59,6 +59,14 @@ struct TourLinkBuilder {
             .joined(separator: "&")
         return URL(string: "https://www.getyourguide.com/s/?\(encoded)")
     }
+
+    /// GetYourGuide's search for "food tour, <place>": food tours, tastings and cooking
+    /// classes there, for the building page's Local Flavors. Same link as a landmark's,
+    /// with "food tour" in the landmark's spot.
+    func foodToursURL(place: String) -> URL? {
+        guard !place.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return nil }
+        return url(landmark: "food tour", place: place)
+    }
 }
 
 // MARK: - Button
