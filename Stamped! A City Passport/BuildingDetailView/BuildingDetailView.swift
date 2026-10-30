@@ -417,7 +417,9 @@ extension BuildingDetailView {
                 BuildingNoteField(buildingID: building.id, noteText: $noteText, isHighContrast: isHighContrast)
             }
             aboutSection
-            threeDModelSection
+            if BuildingScanService.isEnabled {
+                threeDModelSection
+            }
             localFlavorsSection
             reportIssueButton
         }
@@ -831,7 +833,7 @@ extension BuildingDetailView {
         // Show scan nudge after the stamp animation plays, but only when:
         // - user just stamped (wasn't visited before)
         // - no community scan exists yet
-        if wasUnvisited && existingScanRecord == nil && !isCheckingScan {
+        if BuildingScanService.isEnabled && wasUnvisited && existingScanRecord == nil && !isCheckingScan {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
                 showingScanNudge = true
             }
