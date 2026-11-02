@@ -55,6 +55,8 @@ struct QuizView: View {
                 }
                 .navigationTitle("\(viewModel.cityName) Expert")
                 .navigationBarTitleDisplayMode(.inline)
+                #if !os(macOS)
+                // On the Mac the quiz is its own window, closed with the window's close button
                 .toolbar {
                     ToolbarItem(placement: .closeSheet) {
                         Button("Exit") { dismiss() }
@@ -62,6 +64,7 @@ struct QuizView: View {
                             .foregroundColor(brandColor)
                     }
                 }
+                #endif
             }
         }
     }
