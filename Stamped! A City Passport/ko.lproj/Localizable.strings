@@ -790,3 +790,7 @@
 "No cities saved yet. Open a city or campus and tap Save for Offline in its Plan tab." = "아직 저장한 도시가 없습니다. 도시나 캠퍼스를 열고 계획 탭에서 오프라인용으로 저장을 탭하세요.";
 "Remove %@" = "%@ 제거";
 "Maps aren't saved. For an offline map, download the area in Apple Maps (Offline Maps)." = "지도는 저장되지 않습니다. 오프라인 지도가 필요하면 Apple 지도에서 지역을 다운로드하세요(오프라인 지도).";
+
+/* Booking.com button next to the main hotel button */
+"Compare on Booking.com" = "Booking.com에서 비교";
+"Opens Booking.com. Stamped! doesn't handle bookings or payments." = "Booking.com을 엽니다. Stamped!는 예약이나 결제를 처리하지 않습니다.";

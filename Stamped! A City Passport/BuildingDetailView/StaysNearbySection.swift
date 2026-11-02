@@ -62,6 +62,10 @@ struct StaysNearbySection: View {
                         }
                         .padding(.horizontal, 2)
                     }
+                    // Hotels around here on a second site, so people can compare
+                    BookingButton(search: HotelSearch(destination: cityName, coordinate: coordinate))
+                        .font(.subheadline.weight(.semibold))
+                        .tint(isHighContrast ? .primary : DS.Palette.accent)
                     // Whole homes nearby, for families and groups
                     VrboButton(search: HotelSearch(destination: rentalSearchName ?? cityName, coordinate: coordinate))
                         .font(.subheadline.weight(.semibold))

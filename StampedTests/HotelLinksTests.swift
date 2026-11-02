@@ -55,17 +55,24 @@ final class HotelLinksTests: XCTestCase {
                        "https://www.booking.com/searchresults.html?ss=Duke%20University&latitude=36.00140&longitude=-78.93820&checkin=2026-11-10&checkout=2026-11-12")
     }
 
-    func testBookingAffiliateIDIsAddedOnlyWhenSet() throws {
+    func testBookingPublisherIDWrapsTheSearchInACJDeepLink() throws {
         let search = HotelSearch(destination: "Paris, France")
-        XCTAssertNil(try query(builder(.booking).url(for: search))["aid"])
+        // No ID: a plain Booking.com search, no tracking
+        let plain = try XCTUnwrap(builder(.booking).url(for: search))
+        XCTAssertEqual(plain.host, "www.booking.com")
         XCTAssertFalse(builder(.booking).earnsCommission)
 
-        let withID = builder(.booking, affiliateID: " 1234567 ")
-        XCTAssertEqual(try query(withID.url(for: search))["aid"], "1234567")
+        // With our CJ publisher ID: a CJ click link through the deep-linkable ad,
+        // carrying the whole Booking.com search as "url"
+        let withID = builder(.booking, affiliateID: " 101916315 ")
+        let tracked = try XCTUnwrap(withID.url(for: search))
+        XCTAssertEqual(tracked.host, "www.tkqlhce.com")
+        XCTAssertEqual(tracked.path, "/click-101916315-\(HotelPartner.bookingCJAdID)")
+        XCTAssertEqual(try query(tracked)["url"], plain.absoluteString)
         XCTAssertTrue(withID.earnsCommission)
 
         // An empty ID counts as no ID
-        XCTAssertNil(try query(builder(.booking, affiliateID: "  ").url(for: search))["aid"])
+        XCTAssertEqual(try XCTUnwrap(builder(.booking, affiliateID: "  ").url(for: search)).host, "www.booking.com")
         XCTAssertFalse(builder(.booking, affiliateID: "").earnsCommission)
     }
 

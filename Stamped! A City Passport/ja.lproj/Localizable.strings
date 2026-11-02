@@ -790,3 +790,7 @@
 "No cities saved yet. Open a city or campus and tap Save for Offline in its Plan tab." = "保存した都市はまだありません。都市またはキャンパスを開き、「計画」タブで「オフライン用に保存」をタップしてください。";
 "Remove %@" = "%@ を削除";
 "Maps aren't saved. For an offline map, download the area in Apple Maps (Offline Maps)." = "地図は保存されません。オフラインで地図を使うには、Appleマップでエリアをダウンロードしてください（オフラインマップ）。";
+
+/* Booking.com button next to the main hotel button */
+"Compare on Booking.com" = "Booking.comで比較";
+"Opens Booking.com. Stamped! doesn't handle bookings or payments." = "Booking.comを開きます。Stamped!は予約や支払いを扱いません。";
