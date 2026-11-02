@@ -317,9 +317,11 @@ private struct LandmarkCard: View {
             HStack(alignment: .top) {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(building.name).font(.title2.bold())
-                    Text("\(building.buildingStyle) · Built \(String(building.yearBuilt))")
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                    if let subtitle = building.styleAndYear {
+                        Text(subtitle)
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                    }
                     if isVisited {
                         Label("Stamped", systemImage: "checkmark.seal.fill")
                             .font(.callout.bold())
