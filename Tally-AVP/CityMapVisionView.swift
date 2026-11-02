@@ -320,6 +320,11 @@ private struct LandmarkCard: View {
                     Text("\(building.buildingStyle) · Built \(String(building.yearBuilt))")
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
+                    if isVisited {
+                        Label("Stamped", systemImage: "checkmark.seal.fill")
+                            .font(.callout.bold())
+                            .foregroundStyle(.orange)
+                    }
                 }
                 Spacer()
                 Button(action: onClose) {
@@ -329,26 +334,14 @@ private struct LandmarkCard: View {
                 .accessibilityLabel("Close")
             }
 
-            HStack {
-                if isVisited {
-                    Label("Stamped", systemImage: "checkmark.seal.fill")
-                        .font(.callout.bold())
-                        .foregroundStyle(.orange)
-                }
-                Spacer()
-                // Hear the story read aloud while looking at the building in 3D
-                Button(action: onListen) {
-                    let title: LocalizedStringKey = isPlaying ? "Stop" : "Listen"
-                    Label(title, systemImage: isPlaying ? "stop.fill" : "speaker.wave.2.fill")
-                }
-                .tint(.orange)
-                PanoramaButton(building: building)
-                Button(action: onWishlist) {
-                    // Typed as LocalizedStringKey so both titles get translated
-                    let title: LocalizedStringKey = isWishlisted ? "Saved" : "Want to Go"
-                    Label(title, systemImage: isWishlisted ? "heart.fill" : "heart")
-                }
-                .tint(.pink)
+            // Full labels on one line when they fit; icons only when they don't
+            // (longer languages), instead of wrapping each button onto two lines.
+            ViewThatFits(in: .horizontal) {
+                actionButtons
+                    .labelStyle(.titleAndIcon)
+                    .fixedSize()
+                actionButtons
+                    .labelStyle(.iconOnly)
             }
 
             ScrollView {
@@ -374,9 +367,27 @@ private struct LandmarkCard: View {
             }
         }
         .padding(24)
-        .frame(width: 420)
+        .frame(width: 480)
         .glassBackgroundEffect(in: RoundedRectangle(cornerRadius: 28))
         .task(id: building.id) { await fetchLookAroundScene() }
+    }
+
+    private var actionButtons: some View {
+        HStack {
+            // Hear the story read aloud while looking at the building in 3D
+            Button(action: onListen) {
+                let title: LocalizedStringKey = isPlaying ? "Stop" : "Listen"
+                Label(title, systemImage: isPlaying ? "stop.fill" : "speaker.wave.2.fill")
+            }
+            .tint(.orange)
+            PanoramaButton(building: building)
+            Button(action: onWishlist) {
+                // Typed as LocalizedStringKey so both titles get translated
+                let title: LocalizedStringKey = isWishlisted ? "Saved" : "Want to Go"
+                Label(title, systemImage: isWishlisted ? "heart.fill" : "heart")
+            }
+            .tint(.pink)
+        }
     }
 
     private func fetchLookAroundScene() async {
