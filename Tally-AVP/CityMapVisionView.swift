@@ -382,10 +382,37 @@ private struct LandmarkCard: View {
     private func fetchLookAroundScene() async {
         lookAroundScene = nil
         guard let latitude = building.latitude, let longitude = building.longitude else { return }
-        let request = MKLookAroundSceneRequest(
-            coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        )
-        lookAroundScene = try? await request.scene
+        let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+
+        // Asking with Apple Maps' own place for the landmark makes Look Around face
+        // the building. Asking with just the pin gives the nearest street spot,
+        // which can face a wall or a café instead.
+        if let place = await appleMapsPlace(near: coordinate) {
+            lookAroundScene = try? await MKLookAroundSceneRequest(mapItem: place).scene
+        }
+        if lookAroundScene == nil {
+            lookAroundScene = try? await MKLookAroundSceneRequest(coordinate: coordinate).scene
+        }
+    }
+
+    /// Apple Maps' place for this landmark: a search for its name around the pin,
+    /// keeping the closest result within 300 m so we never jump to a namesake elsewhere.
+    private func appleMapsPlace(near coordinate: CLLocationCoordinate2D) async -> MKMapItem? {
+        let request = MKLocalSearch.Request()
+        request.naturalLanguageQuery = building.name
+        request.region = MKCoordinateRegion(center: coordinate,
+                                            latitudinalMeters: 1000,
+                                            longitudinalMeters: 1000)
+        guard let response = try? await MKLocalSearch(request: request).start() else { return nil }
+
+        let pin = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        let nearest = response.mapItems.min { first, second in
+            first.placemark.location?.distance(from: pin) ?? .infinity
+                < second.placemark.location?.distance(from: pin) ?? .infinity
+        }
+        guard let nearest, let location = nearest.placemark.location,
+              location.distance(from: pin) <= 300 else { return nil }
+        return nearest
     }
 }
 
