@@ -118,7 +118,8 @@ struct MyTripsView: View {
         .toolbar {
             #if !os(macOS)
             // On the Mac My Trips is its own window, closed with the window's close button
-            ToolbarItem(placement: .cancellationAction) {
+            // Trailing, like the other modals' Done buttons
+            ToolbarItem(placement: .confirmationAction) {
                 Button("Done") { dismiss() }
             }
             #endif

@@ -60,19 +60,11 @@ private extension SettingsView {
         }
     }
 
-    /// Top-left on iPad. A Mac sheet doesn't show the leading spot, so there it goes with the sheet's buttons.
-    static var backButtonPlacement: ToolbarItemPlacement {
-        #if os(macOS)
-        .confirmationAction
-        #else
-        .navigationBarLeading
-        #endif
-    }
-
     var ipadLayout: some View {
         NavigationSplitView {
             List(selection: $selectedTab) {
-                Section(L.Settings.title) {
+                // No header here: the navigation title already says "Settings"
+                Section {
                     Label(L.Settings.experience, systemImage: "hand.tap").tag(SettingsTab.experience)
                     Label("Saved for Offline", systemImage: "arrow.down.circle").tag(SettingsTab.offline)
                 }
@@ -85,8 +77,10 @@ private extension SettingsView {
             }
             .navigationTitle(L.Settings.title)
             .toolbar {
-                ToolbarItem(placement: Self.backButtonPlacement) {
-                    Button(L.Settings.back) { dismiss() }
+                // "Done" on the trailing side, like the app's other full-screen modals
+                // (.confirmationAction is also where a Mac sheet puts its buttons)
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Done") { dismiss() }
                         .fontWeight(viewModel.highContrast ? .black : .bold)
                         .foregroundColor(viewModel.highContrast ? .primary : DS.Palette.accent)
                 }
@@ -94,6 +88,9 @@ private extension SettingsView {
         } detail: {
             detailView
         }
+        // Tinting the whole split view (not just one section) makes the
+        // selected sidebar row brand orange instead of system blue
+        .tint(viewModel.highContrast ? .primary : viewModel.brandColor)
     }
 
     private var detailTitle: String {

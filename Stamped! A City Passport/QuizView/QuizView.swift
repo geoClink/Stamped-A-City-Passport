@@ -58,7 +58,8 @@ struct QuizView: View {
                 #if !os(macOS)
                 // On the Mac the quiz is its own window, closed with the window's close button
                 .toolbar {
-                    ToolbarItem(placement: .closeSheet) {
+                    // Trailing, like the other modals' Done buttons
+                    ToolbarItem(placement: .confirmationAction) {
                         Button("Exit") { dismiss() }
                             .fontWeight(isHighContrast ? .black : .bold)
                             .foregroundColor(brandColor)
@@ -92,21 +93,24 @@ private extension QuizView {
                     ProgressView(value: Double(viewModel.questionCount), total: Double(viewModel.maxQuestions))
                         .tint(brandColor)
                         .scaleEffect(x: 1, y: 1.5)
-                        .padding(.horizontal, isIPad ? 100 : 20)
+                        .padding(.horizontal, 20)
 
                     dossierCard(building)
-                        .padding(.horizontal, isIPad ? 100 : 20)
+                        .padding(.horizontal, 20)
                 
                     voiceControlSection(useSideBySide: false)
-                        .padding(.horizontal, isIPad ? 100 : 20)
+                        .padding(.horizontal, 20)
                 
                     interactionArea(useSideBySide: false, isPortrait: isPortrait)
-                        .padding(.horizontal, isIPad ? 100 : 0)
 
 
                     Spacer(minLength: 40)
                 }
                 .padding(.top)
+                // One shared width for the card, voice button and answers, centered.
+                // An iPhone is narrower than this, so it only kicks in on iPad.
+                .frame(maxWidth: Self.stackedMaxWidth)
+                .frame(maxWidth: .infinity)
             }
             // After an answer the facts line and Next button can sit below the fold on
             // iPhone, so bring them up; a new question starts back at the top.
@@ -123,6 +127,9 @@ private extension QuizView {
             }
         }
     }
+
+    /// The widest the stacked (portrait) quiz gets, so nothing stretches across an iPad
+    static let stackedMaxWidth: CGFloat = 720
 
     /// Spots the stacked layout scrolls to
     enum ScrollTarget: Hashable {
@@ -179,7 +186,7 @@ private extension QuizView {
 
             if viewModel.selectedOption != nil {
                 answerFollowUp
-                    .padding(.horizontal, (useSideBySide || !isIPad) ? 20 : 100)
+                    .padding(.horizontal, 20)
                     .transition(.opacity)
             }
 
@@ -213,7 +220,7 @@ private extension QuizView {
                 streakBadge
             }
         }
-        .padding(.horizontal, (useSideBySide || !isIPad) ? 20 : 100)
+        .padding(.horizontal, 20)
     }
 
     var streakBadge: some View {
@@ -243,7 +250,7 @@ private extension QuizView {
             }
         }
         .modifier(ShakeEffect(animatableData: viewModel.shakeTrigger))
-        .padding(.horizontal, (useSideBySide || !isIPad) ? 20 : 100)
+        .padding(.horizontal, 20)
     }
 
     @ViewBuilder
@@ -573,7 +580,7 @@ private extension QuizView {
                 Text(viewModel.getHintText())
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 12).fill(brandColor.opacity(0.15)))
-                    .padding(.horizontal, isIPad ? 100 : 20)
+                    .padding(.horizontal, 20)
             }
         }
     }
@@ -608,7 +615,8 @@ private extension QuizView {
                     .transition(.opacity)
             }
         }
-        .padding(.horizontal, useSideBySide ? 0 : (isIPad ? 100 : 20))
+        // The iPhone keeps a little extra inset; on iPad the button matches the card's width
+        .padding(.horizontal, (useSideBySide || isIPad) ? 0 : 20)
     }
     
     var streakCelebrationOverlay: some View {

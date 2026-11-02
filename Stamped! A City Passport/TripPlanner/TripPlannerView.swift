@@ -18,6 +18,8 @@ struct TripPlannerView: View {
 
     @ObservedObject private var store = TripStore.shared
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+    @AppStorage("high_contrast_mode") private var isHighContrast = false
 
     @State private var selectedTripID: String?
     @State private var columnVisibility: NavigationSplitViewVisibility = .all
@@ -43,6 +45,8 @@ struct TripPlannerView: View {
                 TripDetailView(tripID: selectedTripID, viewModel: viewModel)
                     // A fresh view per trip, so edit mode and sheets don't carry over
                     .id(selectedTripID)
+            } else if cityTrips.isEmpty && showsEmptyStateInDetail {
+                emptyState
             } else {
                 ContentUnavailableView(
                     "No Trip Selected",
@@ -67,30 +71,34 @@ struct TripPlannerView: View {
     private var tripList: some View {
         List(selection: $selectedTripID) {
             if cityTrips.isEmpty {
-                ContentUnavailableView {
-                    Label("No Trips Yet", systemImage: "suitcase")
-                } description: {
-                    Text("Plan your days in \(city.name): pick landmarks and saved places, then put them in walking order.")
-                } actions: {
-                    Button("Plan a Trip") { promptNewTrip() }
-                        .buttonStyle(.borderedProminent)
-                        .controlSize(.large)
+                // On iPad the empty state moves to the wide detail column instead
+                if !showsEmptyStateInDetail {
+                    emptyState
+                        .listRowBackground(Color.clear)
                 }
-                .listRowBackground(Color.clear)
             } else {
-                ForEach(cityTrips) { trip in
-                    NavigationLink(value: trip.id) {
-                        TripSummaryRow(trip: trip)
+                Section {
+                    ForEach(cityTrips) { trip in
+                        NavigationLink(value: trip.id) {
+                            TripSummaryRow(trip: trip)
+                        }
                     }
-                }
-                .onDelete { offsets in
-                    for index in offsets {
-                        deleteTrip(cityTrips[index].id)
+                    .onDelete { offsets in
+                        for index in offsets {
+                            deleteTrip(cityTrips[index].id)
+                        }
                     }
+                } header: {
+                    cityHeader
                 }
             }
         }
+        #if os(macOS)
         .navigationTitle("\(city.name) Trips")
+        #else
+        // A short title that fits the sidebar; the city name shows in the section header
+        .navigationTitle("Your Trips")
+        #endif
         .navigationBarTitleDisplayMode(.inline)
         #if os(macOS)
         // The Mac's default sidebar is too narrow for trip names and their days and stops
@@ -99,7 +107,7 @@ struct TripPlannerView: View {
         .toolbar {
             #if !os(macOS)
             // On the Mac the planner is its own window, closed with the window's close button
-            ToolbarItem(placement: .cancellationAction) {
+            ToolbarItem(placement: .confirmationAction) {
                 Button("Done") { dismiss() }
             }
             #endif
@@ -111,6 +119,40 @@ struct TripPlannerView: View {
                 }
             }
         }
+    }
+
+    /// Shown when the city has no trips yet, with the "Plan a Trip" button.
+    private var emptyState: some View {
+        ContentUnavailableView {
+            Label("No Trips Yet", systemImage: "suitcase")
+        } description: {
+            Text("Plan your days in \(city.name): pick landmarks and saved places, then put them in walking order.")
+        } actions: {
+            Button("Plan a Trip") { promptNewTrip() }
+                .buttonStyle(.borderedProminent)
+                .controlSize(.large)
+        }
+    }
+
+    /// iPad at full width: the empty state goes in the roomy detail column, not the
+    /// narrow sidebar. iPhone (and iPad in a narrow split) keeps it in the list.
+    private var showsEmptyStateInDetail: Bool {
+        #if os(macOS)
+        false // the Mac window keeps its own layout
+        #else
+        horizontalSizeClass == .regular
+        #endif
+    }
+
+    /// The city name above the trips, since the title is now just "Your Trips"
+    @ViewBuilder
+    private var cityHeader: some View {
+        #if os(macOS)
+        EmptyView() // the Mac window's title already names the city
+        #else
+        // Interpolated so the city name shows as is, not looked up as a key
+        DSSectionHeader("\(city.name)", systemImage: "building.2.fill", isHighContrast: isHighContrast)
+        #endif
     }
 
     // MARK: - Actions
@@ -142,6 +184,22 @@ struct TripSummaryRow: View {
     @AppStorage("high_contrast_mode") private var isHighContrast = false
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @ScaledMetric(relativeTo: .headline) private var iconSize: CGFloat = 40
+    /// `.increased` while the row is selected and sits on the solid orange highlight
+    @Environment(\.backgroundProminence) private var backgroundProminence
+
+    private var isOnHighlight: Bool { backgroundProminence == .increased }
+
+    /// Orange on the orange highlight disappears, so the icon turns white there
+    private var iconColor: Color {
+        if isHighContrast { return .primary }
+        return isOnHighlight ? .white : DS.Palette.accent
+    }
+
+    /// Plain gray reads well on a normal row, but pale on orange. White is easy to read there.
+    private var detailStyle: Color {
+        if isHighContrast { return .primary }
+        return isOnHighlight ? .white : .secondary
+    }
 
     /// Road trips drive, anywhere trips go worldwide, city trips follow a map route
     private var systemImage: String {
@@ -154,11 +212,11 @@ struct TripSummaryRow: View {
         HStack(alignment: .top, spacing: DS.Space.m) {
             Image(systemName: systemImage)
                 .font(.body.weight(.semibold))
-                .foregroundStyle(isHighContrast ? Color.primary : DS.Palette.accent)
+                .foregroundStyle(iconColor)
                 .frame(width: iconSize, height: iconSize)
                 .background(
                     RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
-                        .fill(isHighContrast ? Color.clear : DS.Palette.accent.opacity(0.15))
+                        .fill(isHighContrast ? Color.clear : iconColor.opacity(0.15))
                 )
                 .overlay(
                     RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
@@ -189,7 +247,7 @@ struct TripSummaryRow: View {
                     }
                 }
                 .font(.subheadline)
-                .foregroundStyle(isHighContrast ? .primary : .secondary)
+                .foregroundStyle(detailStyle)
             }
             // Side by side normally; one fact per line at accessibility sizes so nothing breaks mid-word
             let layout = dynamicTypeSize.isAccessibilitySize
@@ -205,7 +263,7 @@ struct TripSummaryRow: View {
                 }
             }
             .font(.subheadline)
-            .foregroundStyle(isHighContrast ? .primary : .secondary)
+            .foregroundStyle(detailStyle)
         }
     }
 
