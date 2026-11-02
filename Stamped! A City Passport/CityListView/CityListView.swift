@@ -172,15 +172,11 @@ struct CityListView: View {
                     MacCityWorkspace(city: city)
                         .id(city.id)
                     #else
-                    ScrollView {
-                        VStack(alignment: .leading, spacing: 0) {
-                            // The itinerary is in the city page's Plan tab
-                            CityDetailView(city: city)
-                        }
-                    }
-                    .id(city.id)
-                    .background(Color(UIColor.systemGroupedBackground))
-                    .navigationBarBackButtonHidden(horizontalSizeClass == .regular)
+                    // CityDetailView scrolls by itself (wrapping it in a second ScrollView
+                    // stopped the top bar from turning solid when the page scrolled)
+                    CityDetailView(city: city)
+                        .id(city.id)
+                        .navigationBarBackButtonHidden(horizontalSizeClass == .regular)
                     #endif
                 } else {
                     welcomePlaceholder
