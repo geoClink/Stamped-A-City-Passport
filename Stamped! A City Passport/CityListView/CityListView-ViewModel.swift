@@ -315,11 +315,13 @@ extension CityListView {
         }
     }
     
-    /// Picks sheet or full screen for My Trips, so only one of them is ever shown.
-    func myTripsPresented(fullScreen: Bool) -> Binding<Bool> {
+    /// One flag drives two presentations, a sheet (iPhone) and full screen (iPad, regular width).
+    /// Each binding only "sees" the flag on its own size class, so only one of them is ever shown.
+    /// Used for My Trips and the World Map.
+    func presented(_ isShowing: Binding<Bool>, fullScreen: Bool) -> Binding<Bool> {
         Binding(
-            get: { showingMyTrips && (horizontalSizeClass == .regular) == fullScreen },
-            set: { showingMyTrips = $0 }
+            get: { isShowing.wrappedValue && (horizontalSizeClass == .regular) == fullScreen },
+            set: { isShowing.wrappedValue = $0 }
         )
     }
 
