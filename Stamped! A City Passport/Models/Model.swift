@@ -539,8 +539,10 @@ extension CityLocation.Country {
     /// The name shown on screen: iOS supplies country names in every language from the
     /// ISO code; England, Scotland and the Australian states come from Localizable.strings.
     /// English keeps the raw value, so English screens read exactly as before.
+    /// Hong Kong is the exception: its raw value ("Special Administration Region") is how
+    /// stamps are saved, so it can't change, but on screen it should read "Hong Kong".
     var localizedName: String {
-        guard !Self.isEnglish else { return rawValue }
+        guard !Self.isEnglish || self == .sar else { return rawValue }
         if let regionCode, let name = Self.appLocale.localizedString(forRegionCode: regionCode) {
             return name
         }
@@ -551,6 +553,20 @@ extension CityLocation.Country {
     static func localizedRegion(_ code: String, english: String) -> String {
         guard !isEnglish else { return english }
         return appLocale.localizedString(forRegionCode: code) ?? english
+    }
+
+    /// The Passport shows the three Australian states together on one "Australia" page.
+    /// New South Wales stands in for the group; each city still keeps its own state.
+    var passportGroup: CityLocation.Country {
+        switch self {
+        case .victoria, .queensland: return .newSouthWales
+        default: return self
+        }
+    }
+
+    /// The page name in the Passport: "Australia" for the states, otherwise the country's name
+    var passportName: String {
+        passportGroup == .newSouthWales ? Self.localizedRegion("AU", english: "Australia") : localizedName
     }
 
     /// The language the app is actually showing, which can differ from the device's region.
