@@ -139,14 +139,19 @@ struct HotelSearch: Hashable {
                   checkIn: checkIn, checkOut: checkOut)
     }
 
+    // The Vision Pro app shares this file but not the city list (CityLocation),
+    // so it builds its searches from a name and a coordinate instead.
+    #if !os(visionOS)
     /// Hotels for a Stamped city or campus.
     init(city: CityLocation.City, checkIn: Date? = nil, checkOut: Date? = nil) {
         self.init(destination: city.hotelSearchName,
                   latitude: city.coordinate.lat, longitude: city.coordinate.lon,
                   checkIn: checkIn, checkOut: checkOut)
     }
+    #endif
 }
 
+#if !os(visionOS)
 extension CityLocation.City {
     /// The search-box text for hotels here. A campus name works on its own (the sites
     /// know "Duke University" as a landmark; adding "Durham, NC" made Booking.com match a
@@ -160,6 +165,7 @@ extension CityLocation.City {
         return "\(cityName), \(country.rawValue)"
     }
 }
+#endif
 
 // MARK: - URL building
 
@@ -170,14 +176,19 @@ struct HotelLinkBuilder {
     /// device's calendar (local midnight), so the same calendar turns them back into the
     /// same day numbers; converting to the destination's time zone could shift a day.
     var calendar: Calendar
+    /// Labels tracked clicks in the partner's reports (Partnerize "pubref", CJ "sid"), e.g.
+    /// "vision" for the Vision Pro app. nil (the iPhone, iPad and Mac app) adds nothing.
+    var clickLabel: String?
 
     /// The app's configuration. Tests pass their own provider and ID instead.
     init(provider: HotelProvider = HotelPartner.provider,
          affiliateID: String? = HotelPartner.affiliateID,
-         calendar: Calendar = HotelLinkBuilder.defaultCalendar) {
+         calendar: Calendar = HotelLinkBuilder.defaultCalendar,
+         clickLabel: String? = nil) {
         self.provider = provider
         self.affiliateID = affiliateID
         self.calendar = calendar
+        self.clickLabel = clickLabel
     }
 
     /// Gregorian, so "2026-11-10" is right even when the phone uses another calendar.
@@ -265,12 +276,27 @@ struct HotelLinkBuilder {
         let searchLink = "\(provider.searchEndpoint)?\(query)"
 
         if let id, provider.affiliateTracking == .partnerize {
-            return URL(string: "https://prf.hn/click/camref:\(Self.encode(id))/destination:\(Self.encode(searchLink))")
+            return Self.partnerizeURL(camref: id, clickLabel: clickLabel, destination: searchLink)
         }
         if let id, case .cj(let adID) = provider.affiliateTracking {
-            return URL(string: "https://www.tkqlhce.com/click-\(Self.encode(id))-\(Self.encode(adID))?url=\(Self.encode(searchLink))")
+            // CJ reads "sid" as the click's label; "url" stays last
+            let sid = Self.trimmedLabel(clickLabel).map { "sid=\(Self.encode($0))&" } ?? ""
+            return URL(string: "https://www.tkqlhce.com/click-\(Self.encode(id))-\(Self.encode(adID))?\(sid)url=\(Self.encode(searchLink))")
         }
         return URL(string: searchLink)
+    }
+
+    /// A Partnerize click link around `destination`:
+    /// https://prf.hn/click/camref:<id>[/pubref:<label>]/destination:<encoded link>
+    static func partnerizeURL(camref: String, clickLabel: String?, destination: String) -> URL? {
+        let pubref = trimmedLabel(clickLabel).map { "/pubref:\(encode($0))" } ?? ""
+        return URL(string: "https://prf.hn/click/camref:\(encode(camref))\(pubref)/destination:\(encode(destination))")
+    }
+
+    /// The label without spaces around it, or nil when there isn't one.
+    private static func trimmedLabel(_ label: String?) -> String? {
+        guard let label = label?.trimmingCharacters(in: .whitespacesAndNewlines), !label.isEmpty else { return nil }
+        return label
     }
 
     /// Five decimals is about a metre, plenty for "hotels near here".
@@ -355,6 +381,8 @@ struct FindHotelsButton: View {
 struct VrboLinkBuilder {
     var camref: String? = HotelPartner.vrboCamref
     var hotelLinks = HotelLinkBuilder()
+    /// Partnerize "pubref" label, e.g. "vision" for the Vision Pro app; nil adds nothing.
+    var clickLabel: String? = nil
 
     func url(for search: HotelSearch) -> URL? {
         guard let camref = camref?.trimmingCharacters(in: .whitespacesAndNewlines), !camref.isEmpty else { return nil }
@@ -367,7 +395,7 @@ struct VrboLinkBuilder {
         }
         let query = items.map { "\(HotelLinkBuilder.encode($0.0))=\(HotelLinkBuilder.encode($0.1))" }.joined(separator: "&")
         let searchLink = "https://www.vrbo.com/search?\(query)"
-        return URL(string: "https://prf.hn/click/camref:\(HotelLinkBuilder.encode(camref))/destination:\(HotelLinkBuilder.encode(searchLink))")
+        return HotelLinkBuilder.partnerizeURL(camref: camref, clickLabel: clickLabel, destination: searchLink)
     }
 }
 
