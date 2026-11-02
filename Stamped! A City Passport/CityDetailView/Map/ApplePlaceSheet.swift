@@ -79,6 +79,10 @@ struct ApplePlaceSheet: View {
                 // For a hotel, prices are the main action; the other two step back
                 .buttonStyle(.borderedProminent)
                 .tint(.adventureOrange)
+                // The same hotel's prices on a second site
+                BookingButton(search: hotelSearch)
+                    .font(.subheadline.weight(.semibold))
+                    .tint(.adventureOrange)
             }
             // Side by side when they fit; stacked with large text instead of wrapping inside the buttons
             ViewThatFits(in: .horizontal) {

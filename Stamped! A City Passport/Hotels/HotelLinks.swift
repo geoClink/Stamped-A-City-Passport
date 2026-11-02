@@ -44,6 +44,15 @@ enum HotelPartner {
     /// Vrbo USA's Partnerize camref (Creator Hub → Search widgets → vrbo.com, 30 Oct 2026).
     /// A separate campaign from Expedia's, so it has its own code. nil hides the Vrbo button.
     static let vrboCamref: String? = "1100l6yuA7"
+
+    /// Our CJ publisher ID (PID), for the "Compare on Booking.com" button shown next to the
+    /// Expedia one. Booking.com approved the app through CJ on 2 Nov 2026. nil hides the button.
+    static let bookingAffiliateID: String? = "101916315"
+
+    /// The Booking.com North America ad on CJ that our links go through: "Accommodation
+    /// Banners - V1", one that allows deep links. Checked 2 Nov 2026: a hotel search sent
+    /// through it lands on the same search with Booking's CJ tracking (aid, utm_source=affnetcj).
+    static let bookingCJAdID = "17370148"
 }
 
 /// How a provider's affiliate links carry the affiliate ID.
@@ -55,6 +64,9 @@ enum AffiliateTracking: Equatable {
     /// Checked 29 Oct 2026: it lands on the same Expedia search with the affiliate's
     /// tracking (affcid, clickref) added.
     case partnerize
+    /// The search link is wrapped in a CJ deep link through one of the advertiser's ads:
+    /// https://www.tkqlhce.com/click-<publisher ID>-<ad ID>?url=<encoded search link>.
+    case cj(adID: String)
 }
 
 /// The hotel sites Stamped can link to.
@@ -86,10 +98,8 @@ enum HotelProvider: String, CaseIterable, Identifiable {
     var affiliateTracking: AffiliateTracking? {
         switch self {
         case .booking:
-            // Booking.com affiliate links carry the affiliate ID as "aid"
-            // (e.g. https://www.booking.com/?aid=XXXXXXX). Booking now signs affiliates up
-            // through CJ, so double-check against a link CJ generates once approved.
-            .queryParameter("aid")
+            // Booking.com's affiliate program runs through CJ, so its links are CJ deep links
+            .cj(adID: HotelPartner.bookingCJAdID)
         case .expedia:
             .partnerize
         case .hotelsCom:
@@ -212,7 +222,8 @@ struct HotelLinkBuilder {
 
     /// The provider's public search URL for `search`.
     ///
-    /// Booking.com:  searchresults.html?ss=<text>&latitude=<lat>&longitude=<lon>&checkin=yyyy-MM-dd&checkout=yyyy-MM-dd[&aid=<id>]
+    /// Booking.com:  searchresults.html?ss=<text>&latitude=<lat>&longitude=<lon>&checkin=yyyy-MM-dd&checkout=yyyy-MM-dd
+    /// With a CJ publisher ID, that search link is wrapped in a CJ deep link.
     /// Expedia / Hotels.com:  Hotel-Search?destination=<text>&latLong=<lat>,<lon>&startDate=yyyy-MM-dd&endDate=yyyy-MM-dd
     /// With an Expedia camref, that search link is wrapped in a Partnerize click link.
     func url(for search: HotelSearch) -> URL? {
@@ -255,6 +266,9 @@ struct HotelLinkBuilder {
 
         if let id, provider.affiliateTracking == .partnerize {
             return URL(string: "https://prf.hn/click/camref:\(Self.encode(id))/destination:\(Self.encode(searchLink))")
+        }
+        if let id, case .cj(let adID) = provider.affiliateTracking {
+            return URL(string: "https://www.tkqlhce.com/click-\(Self.encode(id))-\(Self.encode(adID))?url=\(Self.encode(searchLink))")
         }
         return URL(string: searchLink)
     }
@@ -377,6 +391,34 @@ struct VrboButton: View {
                       systemImage: "house.fill")
             }
             .accessibilityHint(NSLocalizedString("Opens Vrbo. Stamped! doesn't handle bookings or payments.", comment: "Vrbo button, VoiceOver hint"))
+            .inAppBrowser(item: $browserLink)
+        }
+    }
+}
+
+// MARK: - Booking.com
+
+/// "Compare on Booking.com": a second hotel site next to the main (Expedia) button, so people
+/// can pick the one they like. Same place and dates. Hidden until Booking.com's ID is set.
+struct BookingButton: View {
+    let search: HotelSearch
+    /// true: the in-app browser; false: hand the link to the system (Safari or the Booking.com app)
+    var opensInApp = true
+
+    private let builder = HotelLinkBuilder(provider: .booking, affiliateID: HotelPartner.bookingAffiliateID)
+    @State private var browserLink: BrowserLink?
+    @Environment(\.openURL) private var openURL
+
+    var body: some View {
+        // Only with an affiliate ID: an untracked link would send people away for nothing
+        if builder.earnsCommission, let url = builder.url(for: search) {
+            Button {
+                if opensInApp { browserLink = BrowserLink(url: url) } else { openURL(url) }
+            } label: {
+                Label(NSLocalizedString("Compare on Booking.com", comment: "Hotel links: opens Booking.com's hotel search for the same place and dates, next to the main hotel button"),
+                      systemImage: "magnifyingglass")
+            }
+            .accessibilityHint(NSLocalizedString("Opens Booking.com. Stamped! doesn't handle bookings or payments.", comment: "Booking.com button, VoiceOver hint"))
             .inAppBrowser(item: $browserLink)
         }
     }

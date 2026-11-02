@@ -790,3 +790,7 @@
 "No cities saved yet. Open a city or campus and tap Save for Offline in its Plan tab." = "Aún no hay ciudades guardadas. Abre una ciudad o un campus y toca Guardar sin conexión en la pestaña Planear.";
 "Remove %@" = "Eliminar %@";
 "Maps aren't saved. For an offline map, download the area in Apple Maps (Offline Maps)." = "Los mapas no se guardan. Para tener un mapa sin conexión, descarga la zona en Mapas de Apple (Mapas sin conexión).";
+
+/* Booking.com button next to the main hotel button */
+"Compare on Booking.com" = "Comparar en Booking.com";
+"Opens Booking.com. Stamped! doesn't handle bookings or payments." = "Abre Booking.com. Stamped! no gestiona reservas ni pagos.";
