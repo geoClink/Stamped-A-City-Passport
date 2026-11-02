@@ -322,6 +322,11 @@ private struct LandmarkCard: View {
                             .font(.subheadline)
                             .foregroundStyle(.secondary)
                     }
+                    if isVisited {
+                        Label("Stamped", systemImage: "checkmark.seal.fill")
+                            .font(.callout.bold())
+                            .foregroundStyle(.orange)
+                    }
                 }
                 Spacer()
                 Button(action: onClose) {
@@ -331,26 +336,14 @@ private struct LandmarkCard: View {
                 .accessibilityLabel("Close")
             }
 
-            HStack {
-                if isVisited {
-                    Label("Stamped", systemImage: "checkmark.seal.fill")
-                        .font(.callout.bold())
-                        .foregroundStyle(.orange)
-                }
-                Spacer()
-                // Hear the story read aloud while looking at the building in 3D
-                Button(action: onListen) {
-                    let title: LocalizedStringKey = isPlaying ? "Stop" : "Listen"
-                    Label(title, systemImage: isPlaying ? "stop.fill" : "speaker.wave.2.fill")
-                }
-                .tint(.orange)
-                PanoramaButton(building: building)
-                Button(action: onWishlist) {
-                    // Typed as LocalizedStringKey so both titles get translated
-                    let title: LocalizedStringKey = isWishlisted ? "Saved" : "Want to Go"
-                    Label(title, systemImage: isWishlisted ? "heart.fill" : "heart")
-                }
-                .tint(.pink)
+            // Full labels on one line when they fit; icons only when they don't
+            // (longer languages), instead of wrapping each button onto two lines.
+            ViewThatFits(in: .horizontal) {
+                actionButtons
+                    .labelStyle(.titleAndIcon)
+                    .fixedSize()
+                actionButtons
+                    .labelStyle(.iconOnly)
             }
 
             ScrollView {
@@ -376,18 +369,63 @@ private struct LandmarkCard: View {
             }
         }
         .padding(24)
-        .frame(width: 420)
+        .frame(width: 480)
         .glassBackgroundEffect(in: RoundedRectangle(cornerRadius: 28))
         .task(id: building.id) { await fetchLookAroundScene() }
+    }
+
+    private var actionButtons: some View {
+        HStack {
+            // Hear the story read aloud while looking at the building in 3D
+            Button(action: onListen) {
+                let title: LocalizedStringKey = isPlaying ? "Stop" : "Listen"
+                Label(title, systemImage: isPlaying ? "stop.fill" : "speaker.wave.2.fill")
+            }
+            .tint(.orange)
+            PanoramaButton(building: building)
+            Button(action: onWishlist) {
+                // Typed as LocalizedStringKey so both titles get translated
+                let title: LocalizedStringKey = isWishlisted ? "Saved" : "Want to Go"
+                Label(title, systemImage: isWishlisted ? "heart.fill" : "heart")
+            }
+            .tint(.pink)
+        }
     }
 
     private func fetchLookAroundScene() async {
         lookAroundScene = nil
         guard let latitude = building.latitude, let longitude = building.longitude else { return }
-        let request = MKLookAroundSceneRequest(
-            coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        )
-        lookAroundScene = try? await request.scene
+        let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+
+        // Asking with Apple Maps' own place for the landmark makes Look Around face
+        // the building. Asking with just the pin gives the nearest street spot,
+        // which can face a wall or a café instead.
+        if let place = await appleMapsPlace(near: coordinate) {
+            lookAroundScene = try? await MKLookAroundSceneRequest(mapItem: place).scene
+        }
+        if lookAroundScene == nil {
+            lookAroundScene = try? await MKLookAroundSceneRequest(coordinate: coordinate).scene
+        }
+    }
+
+    /// Apple Maps' place for this landmark: a search for its name around the pin,
+    /// keeping the closest result within 300 m so we never jump to a namesake elsewhere.
+    private func appleMapsPlace(near coordinate: CLLocationCoordinate2D) async -> MKMapItem? {
+        let request = MKLocalSearch.Request()
+        request.naturalLanguageQuery = building.name
+        request.region = MKCoordinateRegion(center: coordinate,
+                                            latitudinalMeters: 1000,
+                                            longitudinalMeters: 1000)
+        guard let response = try? await MKLocalSearch(request: request).start() else { return nil }
+
+        let pin = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        let nearest = response.mapItems.min { first, second in
+            first.placemark.location?.distance(from: pin) ?? .infinity
+                < second.placemark.location?.distance(from: pin) ?? .infinity
+        }
+        guard let nearest, let location = nearest.placemark.location,
+              location.distance(from: pin) <= 300 else { return nil }
+        return nearest
     }
 }
 

@@ -76,6 +76,35 @@ extension View {
     func dsPageMargin() -> some View {
         padding(.horizontal, DS.Space.page)
     }
+
+    /// A solid bar behind the status bar and the top buttons once the page scrolls under them.
+    /// Put it on the page's ScrollView.
+    func dsSolidTopScrollEdge() -> some View {
+        modifier(DSSolidTopScrollEdge())
+    }
+}
+
+/// iOS 26's default "soft" scroll edge only fades content a little, so text stayed readable
+/// under the clock and the floating buttons. The "hard" edge draws a solid bar, but it also
+/// shows while the page is at rest, so we switch to it only after the page has scrolled.
+/// Before iOS 26 the navigation bar already turns solid on scroll, so nothing changes there.
+struct DSSolidTopScrollEdge: ViewModifier {
+    @State private var isScrolled = false
+
+    func body(content: Content) -> some View {
+        if #available(iOS 26.0, macOS 26.0, *) {
+            content
+                .onScrollGeometryChange(for: Bool.self) { geometry in
+                    // True once the content has moved up from its resting spot
+                    geometry.contentOffset.y + geometry.contentInsets.top > 1
+                } action: { _, scrolled in
+                    isScrolled = scrolled
+                }
+                .scrollEdgeEffectStyle(isScrolled ? .hard : .soft, for: .top)
+        } else {
+            content
+        }
+    }
 }
 
 // MARK: - Section header

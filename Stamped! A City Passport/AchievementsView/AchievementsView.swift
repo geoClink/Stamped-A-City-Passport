@@ -24,6 +24,10 @@ struct AchievementsView: View {
 
     // Fewer, wider cards at accessibility sizes so titles don't break mid-word
     private var columns: [GridItem] {
+        #if os(macOS)
+        // Mac: as many columns as the window has room for, so a wider window shows more cards
+        return [GridItem(.adaptive(minimum: 180), spacing: DS.Space.m)]
+        #else
         let count: Int
         if dynamicTypeSize.isAccessibilitySize {
             count = sizeClass == .regular ? 2 : 1
@@ -31,6 +35,7 @@ struct AchievementsView: View {
             count = sizeClass == .regular ? 4 : 2
         }
         return Array(repeating: GridItem(.flexible(), spacing: DS.Space.m), count: count)
+        #endif
     }
 
     var body: some View {
@@ -47,6 +52,8 @@ struct AchievementsView: View {
             .background(DS.Palette.pageBackground)
             .navigationTitle("Achievements")
             .navigationBarTitleDisplayMode(.large)
+            #if !os(macOS)
+            // On the Mac this is its own window, closed with the window's close button
             .toolbar {
                 ToolbarItem(placement: .closeSheet) {
                     Button("Done") { dismiss() }
@@ -54,6 +61,7 @@ struct AchievementsView: View {
                         .foregroundStyle(isHighContrast ? Color.primary : DS.Palette.accent)
                 }
             }
+            #endif
         }
     }
 
