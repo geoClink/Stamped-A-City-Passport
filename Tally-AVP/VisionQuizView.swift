@@ -184,7 +184,9 @@ struct QuizRound {
 
     /// Only ask about things this building actually has data for (same rule as iPhone).
     private static func types(for building: Building) -> [QuestionType] {
-        var types: [QuestionType] = [.name, .style, .year]
+        var types: [QuestionType] = [.name]
+        if building.knownStyle != nil { types.append(.style) }
+        if building.hasKnownYear { types.append(.year) }
         let architect = building.architect.trimmingCharacters(in: .whitespaces)
         if !architect.isEmpty && architect.lowercased() != "unknown" { types.append(.architect) }
         if building.numberOfStories > 0 { types.append(.stories) }
@@ -194,8 +196,9 @@ struct QuizRound {
     private static func answer(_ type: QuestionType, for building: Building) -> String {
         switch type {
         case .name: building.name
-        case .style: building.localizedStyle  // shown in the user's language
-        case .year: String(building.yearBuilt)
+        // "" for unrecorded values, so they never show up as wrong choices either
+        case .style: building.knownStyle == nil ? "" : building.localizedStyle  // in the user's language
+        case .year: building.hasKnownYear ? String(building.yearBuilt) : ""
         case .architect: building.architect
         case .stories: String(localized: "\(building.numberOfStories) floors")
         }

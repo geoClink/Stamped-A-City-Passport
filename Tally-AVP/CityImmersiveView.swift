@@ -384,8 +384,10 @@ struct CityImmersiveView: View {
                 }
                 Text(building.name).font(.title3.bold()).lineLimit(2)
             }
-            Text("\(String(building.yearBuilt)) · \(building.localizedStyle)")
-                .font(.subheadline).foregroundStyle(.secondary)
+            if let subtitle = building.styleAndYear {
+                Text(subtitle)
+                    .font(.subheadline).foregroundStyle(.secondary)
+            }
             Text(building.address)
                 .font(.caption).foregroundStyle(.tertiary)
             if !building.description.isEmpty {
