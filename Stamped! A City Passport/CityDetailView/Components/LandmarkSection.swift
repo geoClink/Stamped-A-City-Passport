@@ -116,7 +116,9 @@ struct LandmarkSection: View {
         .inAppBrowser(item: $browserLink)
         .sheet(isPresented: $showingAddPlace) {
             if let center = cityCenter {
+                // A search with a long list of results: a big sheet on iPad
                 AddPlaceSheet(cityName: viewModel.city.name, cityCenter: center)
+                    .dsLargeSheet()
             }
         }
     }

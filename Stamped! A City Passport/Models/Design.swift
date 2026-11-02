@@ -82,6 +82,18 @@ extension View {
     func dsSolidTopScrollEdge() -> some View {
         modifier(DSSolidTopScrollEdge())
     }
+
+    /// A big sheet on iPad, for a sheet that holds a whole page, a map or a picture.
+    /// A plain iPad sheet is a small centered window; `.page` makes it nearly fill the screen.
+    /// On iPhone a sheet already fills the screen, so nothing changes there.
+    /// Put it on the sheet's content. The Mac and Vision Pro keep their own sheet sizes.
+    func dsLargeSheet() -> some View {
+        #if os(iOS)
+        presentationSizing(.page)
+        #else
+        self
+        #endif
+    }
 }
 
 /// iOS 26's default "soft" scroll edge only fades content a little, so text stayed readable
