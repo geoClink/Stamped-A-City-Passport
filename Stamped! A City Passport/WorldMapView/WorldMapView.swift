@@ -3,6 +3,7 @@ import MapKit
 
 struct WorldMapView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.horizontalSizeClass) private var sizeClass
     #if os(macOS)
     // The main window's navigation, so "View City" can open the city there
     @EnvironmentObject private var navManager: NavigationManager
@@ -89,20 +90,49 @@ struct WorldMapView: View {
                 }
             }
             #endif
-            .sheet(item: $cityDetailToShow) { city in
-                NavigationStack {
-                    ScrollView {
-                        VStack(alignment: .leading, spacing: 0) {
-                            CityDetailView(city: city)
-                        }
-                    }
-                    .background(Color(UIColor.systemGroupedBackground))
-                    .navigationTitle(city.name)
-                    .navigationBarTitleDisplayMode(.inline)
-                }
-            }
+            #if os(iOS)
+            // A whole city page: a sheet on iPhone, full screen on iPad
+            // (in an iPad sheet it was squeezed into a small centered window)
+            .sheet(item: cityPageBinding(fullScreen: false)) { cityPage($0) }
+            .fullScreenCover(item: cityPageBinding(fullScreen: true)) { cityPage($0) }
+            #else
+            .sheet(item: $cityDetailToShow) { cityPage($0) }
+            #endif
         }
     }
+
+    private func cityPage(_ city: CityLocation.City) -> some View {
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 0) {
+                    CityDetailView(city: city)
+                }
+            }
+            .background(Color(UIColor.systemGroupedBackground))
+            .navigationTitle(city.name)
+            .navigationBarTitleDisplayMode(.inline)
+            #if os(iOS)
+            // Full screen can't be swiped away, so it needs a way back to the map
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button("Done") { cityDetailToShow = nil }
+                        .fontWeight(.semibold)
+                        .foregroundStyle(Color.adventureOrange)
+                }
+            }
+            #endif
+        }
+    }
+
+    #if os(iOS)
+    /// Shows the city page in the sheet (iPhone) or the full-screen cover (iPad), never both.
+    private func cityPageBinding(fullScreen: Bool) -> Binding<CityLocation.City?> {
+        Binding(
+            get: { (sizeClass == .regular) == fullScreen ? cityDetailToShow : nil },
+            set: { cityDetailToShow = $0 }
+        )
+    }
+    #endif
 
     // MARK: - Map
 

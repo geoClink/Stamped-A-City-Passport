@@ -140,7 +140,9 @@ struct BuildingDetailView: View {
         }
         .sheet(isPresented: $showingModelViewer) {
             if let url = localModelURL {
+                // A 3D model you turn with a drag: a big sheet on iPad gives it room
                 BuildingModelViewer(modelURL: url, buildingName: building.name)
+                    .dsLargeSheet()
             }
         }
         // The story stops when you leave the landmark, so it never keeps talking on another page
