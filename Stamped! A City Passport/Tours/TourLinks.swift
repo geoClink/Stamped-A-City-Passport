@@ -100,6 +100,9 @@ struct ViatorLinkBuilder {
 
 // MARK: - Button
 
+// The Vision Pro app shares this file but not the iPhone design tokens (DS),
+// so it has its own tour links on the landmark card.
+#if !os(visionOS)
 /// "Tours & Tickets on GetYourGuide" for a landmark, with the commission note under it.
 struct ToursButton: View {
     let landmark: String
@@ -149,3 +152,4 @@ struct ToursButton: View {
         }
     }
 }
+#endif

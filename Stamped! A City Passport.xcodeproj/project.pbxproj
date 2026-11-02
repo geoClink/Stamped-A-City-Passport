@@ -79,7 +79,9 @@
 		DE008D56305262410003C067 /* Exceptions for "Stamped! A City Passport" folder in "Tally-AVP" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				CityDetailView/Components/InAppBrowser.swift,
 				CityExplore/CitySceneConfig.swift,
+				Hotels/HotelLinks.swift,
 				Managers/AudioStoryPlayer.swift,
 				Models/Building.swift,
 				Models/CityAudioManager.swift,
@@ -96,6 +98,7 @@
 				Resources/LandmarkPanoramas.json,
 				Resources/night_crickets.m4a,
 				Resources/rain_loop.m4a,
+				Tours/TourLinks.swift,
 			);
 			target = DEA370BD3050AE24004BA2BB /* Tally-AVP */;
 		};
