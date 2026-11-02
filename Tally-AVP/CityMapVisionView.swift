@@ -317,7 +317,7 @@ private struct LandmarkCard: View {
             HStack(alignment: .top) {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(building.name).font(.title2.bold())
-                    Text("\(building.buildingStyle) · Built \(String(building.yearBuilt))")
+                    Text("\(building.localizedStyle) · Built \(String(building.yearBuilt))")
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                 }

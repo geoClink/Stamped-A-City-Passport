@@ -384,7 +384,7 @@ struct CityImmersiveView: View {
                 }
                 Text(building.name).font(.title3.bold()).lineLimit(2)
             }
-            Text("\(String(building.yearBuilt)) · \(building.buildingStyle)")
+            Text("\(String(building.yearBuilt)) · \(building.localizedStyle)")
                 .font(.subheadline).foregroundStyle(.secondary)
             Text(building.address)
                 .font(.caption).foregroundStyle(.tertiary)

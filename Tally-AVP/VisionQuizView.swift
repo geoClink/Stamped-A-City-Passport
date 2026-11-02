@@ -194,7 +194,7 @@ struct QuizRound {
     private static func answer(_ type: QuestionType, for building: Building) -> String {
         switch type {
         case .name: building.name
-        case .style: building.buildingStyle
+        case .style: building.localizedStyle  // shown in the user's language
         case .year: String(building.yearBuilt)
         case .architect: building.architect
         case .stories: String(localized: "\(building.numberOfStories) floors")
