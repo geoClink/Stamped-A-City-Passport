@@ -183,6 +183,8 @@ struct CityDetailView: View {
             .frame(maxWidth: 800)
             .frame(maxWidth: .infinity)
         }
+        // Solid bar under the clock and top buttons once the page scrolls under them
+        .dsSolidTopScrollEdge()
         .navigationBarTitleDisplayMode(.inline)
         .toolbar { toolbarContent }
         .background(isHighContrast ? Color(UIColor.systemBackground) : Color(UIColor.systemGroupedBackground))

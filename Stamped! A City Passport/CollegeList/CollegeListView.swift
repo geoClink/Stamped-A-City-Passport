@@ -70,10 +70,8 @@ struct CollegeListView: View {
                 }
             }
             .navigationDestination(for: CityLocation.City.self) { campus in
-                ScrollView {
-                    CityDetailView(city: campus)
-                }
-                .background(DS.Palette.pageBackground)
+                // CityDetailView scrolls by itself and draws its own page background
+                CityDetailView(city: campus)
             }
         }
         .tint(DS.Palette.accent)
