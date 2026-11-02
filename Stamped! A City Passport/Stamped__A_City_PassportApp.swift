@@ -82,5 +82,10 @@ struct GlobalDiscoveryApp: App {
             StampedCommands(navManager: navManager)
         }
         #endif
+
+        #if os(macOS)
+        // World Map, My Journey, trips, the quiz...: their own windows on the Mac, not sheets
+        MacPanelWindows(navManager: navManager)
+        #endif
     }
 }

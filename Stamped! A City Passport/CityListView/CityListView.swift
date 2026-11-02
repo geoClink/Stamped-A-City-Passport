@@ -185,28 +185,27 @@ struct CityListView: View {
         }
         .accentColor(brandColor)
         .fullScreenCover(isPresented: $showingSettings) { SettingsView() }
+        #if os(macOS)
+        // Mac: each of these opens in its own resizable window (MacPanelWindows), not a sheet
+        .opensWindow(id: MacWindowID.myJourney, when: $showingMyJourney)
+        .opensWindow(id: MacWindowID.achievements, when: $showingAchievements)
+        .opensWindow(id: MacWindowID.worldMap, when: $showingWorldMap)
+        .opensWindow(id: MacWindowID.collegeList, when: $showingCollegeList)
+        .opensWindow(id: MacWindowID.myTrips, value: MyTripsWindowValue(), when: $showingMyTrips)
+        #else
         .fullScreenCover(isPresented: $showingMyJourney) { MyJourneyView() }
         .sheet(isPresented: $showingAchievements) { AchievementsView() }
-        .sheet(isPresented: $showingWorldMap) {
-            WorldMapView()
-            #if os(macOS)
-                // The map has no natural size, so without this the Mac sheet collapses to a thin strip.
-                .frame(minWidth: 1100, minHeight: 760)
-            #endif
-        }
+        .sheet(isPresented: $showingWorldMap) { WorldMapView() }
         // Like the trip planner: a sheet on iPhone, full screen on iPad (room for its split view)
         .sheet(isPresented: $showingCollegeList) {
             CollegeListView(onOpenCampus: { campus in
                 showingCollegeList = false
                 selectedCity = campus
             })
-            #if os(macOS)
-            // Like the World Map, the list has no natural size, so the Mac sheet collapsed without this.
-            .frame(minWidth: 900, minHeight: 700)
-            #endif
         }
         .sheet(isPresented: myTripsPresented(fullScreen: false)) { MyTripsView() }
         .fullScreenCover(isPresented: myTripsPresented(fullScreen: true)) { MyTripsView() }
+        #endif
         .fullScreenCover(isPresented: $showingPassport) {
             PassportGalleryView(cities: viewModel.allCities)
         }

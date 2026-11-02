@@ -90,16 +90,20 @@ struct MyJourneyView: View {
                 .dsPageMargin()
                 .padding(.top, DS.Space.l)
                 .padding(.bottom, DS.Space.section)
+                .macReadableWidth(860)
             }
             .background(DS.Palette.pageBackground)
             .navigationTitle("My Journey")
             .navigationBarTitleDisplayMode(.large)
+            #if !os(macOS)
+            // On the Mac this is its own window, closed with the window's close button
             .toolbar {
                 ToolbarItem(placement: .closeSheet) {
                     Button("Done") { dismiss() }
                         .fontWeight(.semibold)
                 }
             }
+            #endif
         }
     }
 
@@ -166,7 +170,12 @@ struct MyJourneyView: View {
 
     // One column at accessibility sizes so labels don't break mid-word
     private var statColumns: [GridItem] {
+        #if os(macOS)
+        // A Mac window has room for all four stats in one row
+        let count = 4
+        #else
         let count = dynamicTypeSize.isAccessibilitySize ? 1 : 2
+        #endif
         return Array(repeating: GridItem(.flexible(), spacing: DS.Space.m), count: count)
     }
 

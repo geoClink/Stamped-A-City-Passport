@@ -240,3 +240,16 @@ enum DeviceInfo {
         #endif
     }
 }
+
+extension View {
+    /// Mac: keeps content to a comfortable width, centered, however wide the window gets,
+    /// so cards and lines of text don't stretch across a big screen. No change on iPhone/iPad.
+    func macReadableWidth(_ maxWidth: CGFloat) -> some View {
+        #if os(macOS)
+        frame(maxWidth: maxWidth)
+            .frame(maxWidth: .infinity)
+        #else
+        self
+        #endif
+    }
+}

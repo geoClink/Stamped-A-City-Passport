@@ -249,21 +249,28 @@ struct CityDetailView: View {
         .fullScreenCover(isPresented: $showingCelebration) {
             celebrationCover
         }
+        #if os(macOS)
+        // Mac: the quiz opens in its own window (MacPanelWindows), one per city
+        .opensWindow(id: MacWindowID.quiz, value: viewModel.city, when: $showingQuiz)
+        #else
         .fullScreenCover(isPresented: $showingQuiz) {
             NavigationStack {
                 QuizView(buildings: viewModel.city.buildings, cityName: viewModel.city.name)
             }
-            #if os(macOS)
-            // On the Mac a full-screen cover becomes a sheet sized to its content; the quiz's
-            // side-by-side layout needs room or the answer buttons collapse to nothing.
-            .frame(minWidth: 1100, idealWidth: 1200, minHeight: 760, idealHeight: 820)
-            #endif
         }
+        #endif
         // iPhone: swipe-down sheet. iPad: full screen, since an iPad sheet is a small centered window.
         .sheet(isPresented: mapPresented(fullScreen: false)) { cityMap }
         .fullScreenCover(isPresented: mapPresented(fullScreen: true)) { cityMap }
+        #if os(macOS)
+        // Mac: the trip planner opens in its own window, on the chosen trip (Campus Visit) if there is one
+        .opensWindow(id: MacWindowID.tripPlanner,
+                     value: TripPlannerWindowValue(city: viewModel.city, tripID: tripPlannerTripID),
+                     when: $showingTripPlanner)
+        #else
         .sheet(isPresented: tripPlannerPresented(fullScreen: false)) { TripPlannerView(viewModel: viewModel, initialTripID: tripPlannerTripID) }
         .fullScreenCover(isPresented: tripPlannerPresented(fullScreen: true)) { TripPlannerView(viewModel: viewModel, initialTripID: tripPlannerTripID) }
+        #endif
         #if os(iOS)
         .fullScreenCover(isPresented: $showingExplore) {
             CityExploreView(

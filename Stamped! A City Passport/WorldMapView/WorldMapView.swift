@@ -3,6 +3,10 @@ import MapKit
 
 struct WorldMapView: View {
     @Environment(\.dismiss) private var dismiss
+    #if os(macOS)
+    // The main window's navigation, so "View City" can open the city there
+    @EnvironmentObject private var navManager: NavigationManager
+    #endif
     @ObservedObject private var progress = GlobalProgressManager.shared
     @StateObject private var cityVM = CityViewModel()
 
@@ -75,6 +79,8 @@ struct WorldMapView: View {
             .ignoresSafeArea(edges: .bottom)
             .navigationTitle("World Map")
             .navigationBarTitleDisplayMode(.inline)
+            #if !os(macOS)
+            // On the Mac the map is its own window, closed with the window's close button
             .toolbar {
                 ToolbarItem(placement: .closeSheet) {
                     Button("Done") { dismiss() }
@@ -82,6 +88,7 @@ struct WorldMapView: View {
                         .foregroundStyle(Color.adventureOrange)
                 }
             }
+            #endif
             .sheet(item: $cityDetailToShow) { city in
                 NavigationStack {
                     ScrollView {
@@ -195,7 +202,14 @@ struct WorldMapView: View {
 
             Button {
                 HapticManager.shared.trigger(.selection)
+                #if os(macOS)
+                // Mac: show the city in the main window, like picking it in the sidebar,
+                // and close the map so the main window comes forward
+                navManager.spotlightCity = city
+                dismiss()
+                #else
                 cityDetailToShow = city
+                #endif
             } label: {
                 HStack {
                     Text("View City")
@@ -212,6 +226,7 @@ struct WorldMapView: View {
         .background(Color(UIColor.secondarySystemBackground))
         .cornerRadius(16)
         .shadow(color: .black.opacity(0.12), radius: 12, x: 0, y: 4)
+        .macReadableWidth(560)
         .padding(.horizontal, 16)
         .padding(.bottom, 8)
     }
