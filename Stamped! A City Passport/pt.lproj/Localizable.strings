@@ -778,6 +778,13 @@
 "Saving %d of %d…" = "Salvando %d de %d…";
 "Stops saving. What's saved so far is kept for next time." = "Interrompe o salvamento. O que já foi salvo fica guardado para a próxima vez.";
 "Saved for Offline" = "Salvo para uso offline";
+/* Settings section headers */
+"Preferences" = "Preferências";
+"Offline" = "Offline";
+"Feedback" = "Feedback";
+"About" = "Sobre";
+"Privacy Policy" = "Política de Privacidade";
+"How Stamped! handles your data" = "Como o Stamped! trata seus dados";
 "%1$@, saved %2$@" = "%1$@, salvo em %2$@";
 "Remove Offline Copy" = "Remover cópia offline";
 "Deletes the saved photos and text from this device." = "Apaga deste dispositivo as fotos e textos salvos.";
