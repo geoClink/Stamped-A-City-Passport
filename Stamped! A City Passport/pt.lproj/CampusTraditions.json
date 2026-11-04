@@ -52,6 +52,29 @@
       "longitude": 151.187482
     }
   ],
+  "University of Tokyo": [
+    {
+      "id": "trad_utokyo_sanshiro_pond",
+      "name": "O lago de Sanshirō",
+      "description": "O lago e seu jardim foram criados em 1638 para os Maeda, senhores do domínio de Kaga. O apelido vem do romance Sanshirō, de Natsume Sōseki, cujo protagonista conhece ali a mulher que admira; é uma parada tranquila num passeio pelo campus.",
+      "latitude": 35.7121128,
+      "longitude": 139.7620971
+    },
+    {
+      "id": "trad_utokyo_ginkgo_avenue",
+      "name": "A avenida dourada dos ginkgos",
+      "description": "No fim do outono, os ginkgos da avenida que vai do portão principal ao Yasuda Auditorium ficam amarelo-vivo. É uma das paisagens de outono mais queridas de Tóquio, e a folha de ginkgo é o emblema da universidade.",
+      "latitude": 35.7130391,
+      "longitude": 139.7601885
+    },
+    {
+      "id": "trad_utokyo_hachiko",
+      "name": "Hachikō reencontra o dono",
+      "description": "No terreno da Faculdade de Agricultura, uma estátua de bronze inaugurada em 2015 mostra o fiel cão Hachikō pulando para receber seu dono, o professor Hidesaburō Ueno. Ela fica logo depois do portão principal da faculdade.",
+      "latitude": 35.7164006,
+      "longitude": 139.7588764
+    }
+  ],
   "University of Texas at Austin": [
     {
       "id": "trad_ut_austin_tower_lighting",
@@ -234,6 +257,52 @@
       "description": "Sob a cúpula de cobre do Gustavianum, o museu da universidade preserva o teatro anatômico que Olof Rudbeck, o Velho, construiu na década de 1660. Os visitantes podem entrar nele durante a visita ao museu.",
       "latitude": 59.857943,
       "longitude": 17.631724
+    }
+  ],
+  "University of Coimbra": [
+    {
+      "id": "trad_coimbra_cabra",
+      "name": "A Cabra, o sino da torre",
+      "description": "O mais conhecido dos quatro sinos da Torre da Universidade tem o apelido de «a Cabra» e antigamente chamava os estudantes para as aulas. Dá para subir as escadas estreitas da torre e apreciar a vista sobre Coimbra e o rio Mondego.",
+      "latitude": 40.2077954,
+      "longitude": -8.4264793
+    },
+    {
+      "id": "trad_coimbra_joanina_bats",
+      "name": "Os morcegos da biblioteca",
+      "description": "Duas colônias de pequenos morcegos vivem na Biblioteca Joanina há cerca de dois séculos e meio e comem os insetos que estragariam os livros. Todas as noites, os funcionários cobrem as mesas com couro para protegê-las.",
+      "latitude": 40.2071225,
+      "longitude": -8.4265219
+    },
+    {
+      "id": "trad_coimbra_serenata",
+      "name": "A serenata nas escadas da Sé Velha",
+      "description": "À meia-noite, no início da Queima das Fitas em maio, os estudantes cantam fado de Coimbra nas escadas da Sé Velha. Milhares de pessoas se reúnem no largo para ouvir em silêncio.",
+      "latitude": 40.2088222,
+      "longitude": -8.4273851
+    }
+  ],
+  "University of Salamanca": [
+    {
+      "id": "trad_salamanca_frog",
+      "name": "Encontre a rã",
+      "description": "Entre os relevos da fachada plateresca da universidade se esconde uma pequena rã sobre uma caveira. Diz a lenda que quem a encontra passa nos exames, por isso os visitantes a procuram a partir do Patio de Escuelas.",
+      "latitude": 40.9614677,
+      "longitude": -5.6673272
+    },
+    {
+      "id": "trad_salamanca_cielo",
+      "name": "O Céu de Salamanca",
+      "description": "Nas Escuelas Menores é possível ver o «Cielo de Salamanca» de Fernando Gallego, um céu pintado com constelações e signos do zodíaco que cobria parte da abóbada da antiga biblioteca universitária.",
+      "latitude": 40.961403,
+      "longitude": -5.6679573
+    },
+    {
+      "id": "trad_salamanca_vitores",
+      "name": "Procure os vítores",
+      "description": "Os vítores, monogramas vermelhos formados pelas letras da palavra «victor», são pintados nos muros da universidade em homenagem a quem conquista o doutorado. Procure-os no Patio de Escuelas e nas ruas do centro histórico.",
+      "latitude": 40.9615887,
+      "longitude": -5.6675931
     }
   ],
   "Florida Southern College": [
@@ -1681,6 +1750,29 @@
       "longitude": -84.774189
     }
   ],
+  "Cranbrook Academy of Art": [
+    {
+      "id": "trad_cranbrook_orpheus_fountain",
+      "name": "A Fonte de Orfeu de Carl Milles",
+      "description": "Diante do Art Museum, oito figuras de bronze do escultor sueco Carl Milles se inclinam como se ouvissem a música de Orfeu, embora só se escute a água. Instalada em 1938, é uma das muitas esculturas de Milles que se descobrem num passeio pelo campus.",
+      "latitude": 42.5691956,
+      "longitude": -83.2503662
+    },
+    {
+      "id": "trad_cranbrook_steggy",
+      "name": "Diga oi para o Steggy",
+      "description": "Um estegossauro em tamanho real chamado Steggy, mascote do Cranbrook Institute of Science, fica em frente ao museu. Os visitantes param para uma selfie com ele antes de entrar.",
+      "latitude": 42.5729846,
+      "longitude": -83.2500741
+    },
+    {
+      "id": "trad_cranbrook_carillon",
+      "name": "Recitais de carrilhão no verão",
+      "description": "Todo verão desde 1928, carrilhonistas tocam recitais gratuitos nos 50 sinos da torre da Christ Church Cranbrook. Leve uma cadeira dobrável ou uma manta e ouça do gramado da igreja.",
+      "latitude": 42.5668569,
+      "longitude": -83.243949
+    }
+  ],
   "Yale University": [
     {
       "id": "trad_yale_woolsey_foot",
@@ -2569,6 +2661,29 @@
       "description": "Neste jardim a CSU testa novas variedades de flores; a entrada é gratuita e ele abre todos os dias durante o dia. Visite entre o fim de maio e outubro, quando os canteiros estão floridos.",
       "latitude": 40.569381,
       "longitude": -105.07615
+    }
+  ],
+  "University of California, San Diego": [
+    {
+      "id": "trad_ucsd_sun_god",
+      "name": "Encontro no Sun God",
+      "description": "O pássaro colorido de Niki de Saint Phalle sobre um arco de concreto foi a primeira obra da Stuart Collection, instalada em 1983. Os estudantes marcam encontros ali e o fantasiam em ocasiões especiais, e ele é o mascote do Sun God Festival, no fim das aulas da primavera.",
+      "latitude": 32.8785722,
+      "longitude": -117.239735
+    },
+    {
+      "id": "trad_ucsd_snake_path",
+      "name": "Percorra o Snake Path",
+      "description": "O caminho de Alexis Smith, com cerca de 170 metros e escamas de ardósia, serpenteia morro acima do Warren Mall até a Geisel Library. No trajeto você passa por um livro de granito com um verso de O Paraíso Perdido, de Milton, e por um pequeno pomar.",
+      "latitude": 32.8811785,
+      "longitude": -117.2366135
+    },
+    {
+      "id": "trad_ucsd_seuss_statue",
+      "name": "Dr. Seuss e o Gatola da Cartola",
+      "description": "No nível do fórum da Geisel Library, uma estátua de bronze em tamanho real mostra Theodor Seuss Geisel com o Gatola da Cartola debruçado sobre seu ombro. É a foto preferida de quem visita a biblioteca que leva seu nome.",
+      "latitude": 32.8811393,
+      "longitude": -117.2375798
     }
   ]
 }

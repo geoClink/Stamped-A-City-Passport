@@ -181,6 +181,10 @@
     36.12002,
     -97.067704
   ],
+  "Biblioteca Joanina": [
+    40.2071,
+    -8.4265
+  ],
   "Bing Concert Hall": [
     37.43194444,
     -122.16611111
@@ -339,6 +343,10 @@
     40.8075,
     -73.96027778
   ],
+  "Casa de las Conchas": [
+    40.962931,
+    -5.665814
+  ],
   "Cassell Coliseum": [
     37.22222222,
     -80.41888889
@@ -375,6 +383,10 @@
   "Chapel of King's College London": [
     51.51187,
     -0.11506
+  ],
+  "Chapel of São Miguel": [
+    40.207414,
+    -8.42645
   ],
   "Charles Deering Memorial Library": [
     42.0532,
@@ -440,6 +452,7 @@
     44.9727,
     -93.2354
   ],
+  "Colegio Mayor de San Bartolomé, Salamanca": null,
   "College Club House and Gymnasium": [
     47.12,
     -88.54944444
@@ -460,6 +473,10 @@
     43.03766198,
     -76.13400936
   ],
+  "Conrad Prebys Music Center": [
+    32.87782,
+    -117.234556
+  ],
   "Convocation Hall": [
     43.6608,
     -79.3954
@@ -479,6 +496,14 @@
   "Cowles House (East Lansing, Michigan)": [
     42.7334,
     -84.4845
+  ],
+  "Cranbrook Educational Community": [
+    42.56761111,
+    -83.24358333
+  ],
+  "Cranbrook Schools": [
+    42.57266667,
+    -83.249
   ],
   "Crouse College": [
     43.038475,
@@ -725,6 +750,10 @@
     42.966837,
     -85.889794
   ],
+  "Galbraith Hall": [
+    32.874,
+    -117.240932
+  ],
   "Garrison Hall": [
     30.2852,
     -97.7385
@@ -732,6 +761,10 @@
   "Gasson Hall": [
     42.3356,
     -71.1705
+  ],
+  "Geisel Library": [
+    32.88116,
+    -117.237651
   ],
   "General Winfield Scott House": [
     40.735,
@@ -899,6 +932,10 @@
   "Homewood Museum": [
     39.32944444,
     -76.61916667
+  ],
+  "Hongō campus": [
+    35.71269444,
+    139.76177778
   ],
   "Hood Museum of Art": [
     43.70222222,
@@ -1121,6 +1158,7 @@
     30.6099,
     -96.3405
   ],
+  "La Clerecía, Salamanca": null,
   "La Specola, Padua": [
     45.401879,
     11.868568
@@ -1570,6 +1608,10 @@
     33.99833333,
     -81.02861111
   ],
+  "Old Cathedral of Coimbra": [
+    40.20877778,
+    -8.42708333
+  ],
   "Old Central": [
     36.12082983,
     -97.06663883
@@ -1685,6 +1727,10 @@
     33.20888889,
     -87.54638889
   ],
+  "Price Center": [
+    32.88,
+    -117.237
+  ],
   "Princeton University": [
     40.34527778,
     -74.65611111
@@ -1724,6 +1770,10 @@
   "Purinton House": [
     39.63472222,
     -79.95555556
+  ],
+  "RIMAC": [
+    32.885278,
+    -117.239223
   ],
   "Radcliffe Camera": [
     51.7534,
@@ -1833,6 +1883,10 @@
   "Sainte-Geneviève Library": [
     48.84708333,
     2.34583333
+  ],
+  "Salk Institute for Biological Studies": [
+    32.8875,
+    -117.24638889
   ],
   "Samford Hall": [
     32.604738,
@@ -2191,6 +2245,10 @@
     34.0722,
     -118.4427
   ],
+  "University of California, San Diego": [
+    32.8801,
+    -117.234
+  ],
   "University of Cambridge": [
     52.20527778,
     0.11722222
@@ -2215,6 +2273,11 @@
     39.13455,
     -84.5187
   ],
+  "University of Coimbra": [
+    40.2074,
+    -8.4265
+  ],
+  "University of Coimbra General Library": null,
   "University of Colorado Boulder": [
     40.0073,
     -105.2678
@@ -2349,6 +2412,10 @@
     40.4446,
     -79.9533
   ],
+  "University of Salamanca": [
+    40.96138889,
+    -5.66666667
+  ],
   "University of South Carolina": [
     33.9975,
     -81.02527778
@@ -2373,6 +2440,14 @@
   "University of Texas at Austin": [
     30.285,
     -97.735
+  ],
+  "University of Tokyo": [
+    35.71333333,
+    139.76222222
+  ],
+  "University of Tokyo Library": [
+    35.7113954,
+    139.7608459
   ],
   "University of Toronto": [
     43.66166667,
@@ -2586,6 +2661,10 @@
   "Yale University Art Gallery": [
     41.308459,
     -72.930985
+  ],
+  "Yasuda Auditorium": [
+    35.71333306,
+    139.76194417
   ],
   "Younger Hall": [
     56.3412414,
