@@ -58,6 +58,13 @@ struct BuildingModelViewer: View {
                     }
                     .onEnded { _ in prevDragWidth = 0 }
             )
+            // The drag is the only way to turn the model, so VoiceOver gets named actions
+            // that turn it a twelfth of a circle each time
+            .accessibilityElement()
+            .accessibilityLabel(Text("3D model of \(buildingName)"))
+            .accessibilityAddTraits(.isImage)
+            .accessibilityAction(named: Text("Turn Left")) { rotationY -= .pi / 6 }
+            .accessibilityAction(named: Text("Turn Right")) { rotationY += .pi / 6 }
             .navigationTitle(buildingName)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

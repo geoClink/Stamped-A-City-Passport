@@ -4,7 +4,8 @@
 //
 //  The quiz, Plan a Trip and (on campuses) Plan a Campus Visit as one row of tiles,
 //  instead of three full-width cards stacked down the page. With very large text the
-//  tiles become full-width rows, so titles never get squeezed into hyphenated pieces.
+//  tiles become full-width rows with the icon on top, so titles never get squeezed
+//  into hyphenated pieces.
 //
 
 import SwiftUI
@@ -45,14 +46,14 @@ struct CityActionTiles: View {
         } label: {
             Group {
                 if wide {
-                    HStack(spacing: DS.Space.m) {
+                    // Icon above the words: beside them, "Architecture" still broke
+                    // as "Architec-ture" at the largest text sizes
+                    VStack(alignment: .leading, spacing: DS.Space.xs) {
                         icon(tile)
-                        VStack(alignment: .leading, spacing: DS.Space.xs) {
-                            title(tile)
-                            detail(tile)
-                        }
-                        Spacer(minLength: 0)
+                        title(tile, lineLimit: nil)
+                        detail(tile, lineLimit: nil)
                     }
+                    .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(DS.Space.l)
                 } else {
                     VStack(alignment: .leading, spacing: DS.Space.s) {
@@ -86,20 +87,20 @@ struct CityActionTiles: View {
             .frame(width: iconWidth, alignment: .leading)
     }
 
-    private func title(_ tile: CityActionTile) -> some View {
+    private func title(_ tile: CityActionTile, lineLimit: Int? = 2) -> some View {
         Text(tile.title)
             .font(.subheadline)
             .fontWeight(isHighContrast ? .black : .semibold)
             .foregroundColor(.primary)
-            .lineLimit(2)
+            .lineLimit(lineLimit)
             .fixedSize(horizontal: false, vertical: true)
     }
 
-    private func detail(_ tile: CityActionTile) -> some View {
+    private func detail(_ tile: CityActionTile, lineLimit: Int? = 2) -> some View {
         Text(tile.detail)
             .font(.caption.monospacedDigit())
             .fontWeight(isHighContrast ? .bold : .regular)
             .foregroundColor(isHighContrast ? .primary : .secondary)
-            .lineLimit(2)
+            .lineLimit(lineLimit)
     }
 }

@@ -84,6 +84,7 @@ struct CityItineraryIntelligenceView: View {
                             .font(.caption2)
                             .foregroundColor(brandColor)
                     }
+                    .accessibilityElement(children: .combine)
                 } else if narrativeService.generationFailed {
                     Label("AI unavailable", systemImage: "exclamationmark.triangle.fill")
                         .font(.caption2)
@@ -227,6 +228,7 @@ struct ItineraryErrorView: View {
                 Image(systemName: "exclamationmark.triangle")
                     .font(.system(size: 28))
                     .foregroundColor(.secondary)
+                    .accessibilityHidden(true)
                 Text("Couldn't load itinerary")
                     .font(.subheadline).fontWeight(.semibold)
                 Text(message)
@@ -259,6 +261,12 @@ struct BasicDaySection: View {
     let isLast: Bool
 
     @State private var isExpanded: Bool
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    /// Rows slide down as a day opens, or just fade in with Reduce Motion.
+    private var rowTransition: AnyTransition {
+        reduceMotion ? .opacity : .opacity.combined(with: .move(edge: .top))
+    }
 
     init(dayIndex: Int, stops: [PlannedStop], service: ItineraryService, mealService: MealRecommendationService, brandColor: Color, isLast: Bool) {
         self.dayIndex = dayIndex
@@ -330,15 +338,18 @@ struct BasicDaySection: View {
                         Text("\(dayIndex + 1)")
                             .font(.headline).fontWeight(.bold).foregroundColor(.white)
                     }
+                    // "Day 1" right beside it already says the number
+                    .accessibilityHidden(true)
                     VStack(alignment: .leading, spacing: 3) {
                         Text("Day \(dayIndex + 1)")
                             .font(.headline).fontWeight(.bold).foregroundColor(.primary)
                         HStack(spacing: 6) {
                             Text("\(stops.count) stops").font(.caption).foregroundColor(.secondary)
-                            Text("·").font(.caption).foregroundColor(.secondary)
+                            Text("·").font(.caption).foregroundColor(.secondary).accessibilityHidden(true)
                             Text("\(totalDayMins / 60)h \(totalDayMins % 60)m").font(.caption).foregroundColor(.secondary)
+                                .accessibilityLabel(Text(spokenDuration(minutes: totalDayMins)))
                             if !dominantEra.isEmpty {
-                                Text("·").font(.caption).foregroundColor(.secondary)
+                                Text("·").font(.caption).foregroundColor(.secondary).accessibilityHidden(true)
                                 Text(dominantEra).font(.caption).fontWeight(.medium).foregroundColor(brandColor)
                             }
                         }
@@ -347,11 +358,13 @@ struct BasicDaySection: View {
                     Image(systemName: "chevron.right")
                         .font(.system(size: 12, weight: .semibold)).foregroundColor(.secondary)
                         .rotationEffect(.degrees(isExpanded ? 90 : 0))
-                        .animation(.spring(response: 0.35, dampingFraction: 0.8), value: isExpanded)
+                        .animation(reduceMotion ? nil : .spring(response: 0.35, dampingFraction: 0.8), value: isExpanded)
+                        .accessibilityHidden(true)
                 }
                 .padding(.horizontal, 16).padding(.vertical, 14)
             }
             .buttonStyle(.plain)
+            .accessibilityValue(isExpanded ? Text("Expanded") : Text("Collapsed"))
 
             if isExpanded {
                 HStack(spacing: 8) {
@@ -361,11 +374,11 @@ struct BasicDaySection: View {
                     InfoPill(icon: "clock.fill", text: "Starts 9:00 AM", brandColor: brandColor)
                 }
                 .padding(.horizontal, 16).padding(.bottom, 10)
-                .transition(.opacity.combined(with: .move(edge: .top)))
+                .transition(rowTransition)
 
                 TimelineBar(stops: stops, service: service, brandColor: brandColor)
                     .padding(.horizontal, 16).padding(.bottom, 12)
-                    .transition(.opacity.combined(with: .move(edge: .top)))
+                    .transition(rowTransition)
 
                 Divider().padding(.leading, 16)
 
@@ -379,17 +392,22 @@ struct BasicDaySection: View {
                             isLast: stop.id == stops.last?.id,
                             isLunchStop: building.id == lunchStop?.id
                         )
-                        .transition(.opacity.combined(with: .move(edge: .top)))
+                        .transition(rowTransition)
                     }
                 }
 
                 LiveMealsRow(dayMeals: dayMeals, isLoading: mealService.isLoading, brandColor: brandColor)
-                    .transition(.opacity.combined(with: .move(edge: .top)))
+                    .transition(rowTransition)
             }
         }
 
         if !isLast { Divider() }
     }
+}
+
+/// "2 hours, 30 minutes" for VoiceOver, instead of "2h 30m" (read as "2 h 30 m").
+private func spokenDuration(minutes: Int) -> String {
+    Duration.seconds(minutes * 60).formatted(.units(allowed: [.hours, .minutes], width: .wide))
 }
 
 // MARK: - Info Pill
@@ -402,6 +420,7 @@ struct InfoPill: View {
     var body: some View {
         HStack(spacing: 4) {
             Image(systemName: icon).font(.caption2.weight(.semibold)).foregroundColor(brandColor)
+                .accessibilityHidden(true)
             Text(text).font(.caption2.weight(.medium)).foregroundColor(.secondary)
         }
         .padding(.horizontal, 8).padding(.vertical, 4)
@@ -418,6 +437,9 @@ struct BasicStopRow: View {
     let brandColor: Color
     let isLast: Bool
     let isLunchStop: Bool
+
+    /// The directions button grows with the text size
+    @ScaledMetric(relativeTo: .title3) private var directionsIconSize: CGFloat = 22
 
     var buildingTypeIcon: String {
         let use = building.newUse.lowercased()
@@ -460,6 +482,9 @@ struct BasicStopRow: View {
                         .lineLimit(1).fixedSize()
                 }
                 .frame(minWidth: 60, alignment: .leading)
+                // "Arrive 10:15 AM, stay 45 minutes" rather than "45 m" (read as metres)
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel(Text("Arrive \(arrivalTime), stay \(stop.visitDurationMins) minutes"))
                 .padding(.top, 3)
 
                 ZStack {
@@ -469,12 +494,14 @@ struct BasicStopRow: View {
                         .font(.system(size: 13, weight: .semibold)).foregroundColor(brandColor)
                 }
                 .padding(.top, 2)
+                .accessibilityHidden(true)
 
                 VStack(alignment: .leading, spacing: 4) {
                     HStack(spacing: 6) {
                         Text(building.name).font(.subheadline).fontWeight(.semibold).foregroundColor(.primary)
                         if isLunchStop {
                             Image(systemName: "fork.knife").font(.caption2).foregroundColor(brandColor)
+                                .accessibilityLabel("Lunch stop")
                         }
                     }
                     Text(shortDescription).font(.caption).foregroundColor(.secondary)
@@ -491,16 +518,19 @@ struct BasicStopRow: View {
                         .padding(.top, 2)
                     }
                 }
+                // Name, description and walk time read as one stop
+                .accessibilityElement(children: .combine)
 
                 Spacer()
 
                 if let url = mapsURL {
                     Link(destination: url) {
                         Image(systemName: "arrow.triangle.turn.up.right.circle.fill")
-                            .font(.system(size: 22))
+                            .font(.system(size: directionsIconSize))
                             .foregroundColor(brandColor.opacity(0.7))
                     }
                     .padding(.top, 2)
+                    .accessibilityLabel(Text("Walking directions to \(building.name)"))
                 }
             }
             .padding(.horizontal, 16).padding(.vertical, 12)
@@ -526,6 +556,10 @@ struct TimelineBar: View {
     }
 
     @State private var selectedIndex: Int = 0
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+    /// The tiny 9 pt labels still grow with the text size
+    @ScaledMetric(relativeTo: .caption2) private var labelSize: CGFloat = 9
 
     private var selected: Building? {
         guard !sorted.isEmpty, sorted.indices.contains(selectedIndex) else { return nil }
@@ -546,7 +580,8 @@ struct TimelineBar: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             Text("TIMELINE")
-                .font(.system(size: 9, weight: .semibold)).foregroundColor(.secondary).kerning(1.0)
+                .font(.system(size: labelSize, weight: .semibold)).foregroundColor(.secondary).kerning(1.0)
+                .accessibilityAddTraits(.isHeader)
 
             // Dot track — dots are visual indicators; tapping still works where spacing allows
             GeometryReader { geo in
@@ -575,7 +610,7 @@ struct TimelineBar: View {
                         }
                         .buttonStyle(.plain)
                         .offset(x: x - (isSelected ? 6 : 4), y: isSelected ? -4 : -2)
-                        .animation(.spring(response: 0.25, dampingFraction: 0.7), value: isSelected)
+                        .animation(reduceMotion ? nil : .spring(response: 0.25, dampingFraction: 0.7), value: isSelected)
                         .accessibilityLabel("\(String(building.yearBuilt)), \(building.name)")
                         .accessibilityAddTraits(isSelected ? [.isButton, .isSelected] : .isButton)
                     }
@@ -585,10 +620,12 @@ struct TimelineBar: View {
             .frame(height: 16)
 
             HStack {
-                Text(String(yearRange.min)).font(.system(size: 9)).foregroundColor(.secondary)
+                Text(String(yearRange.min)).font(.system(size: labelSize)).foregroundColor(.secondary)
                 Spacer()
-                Text(String(yearRange.max)).font(.system(size: 9)).foregroundColor(.secondary)
+                Text(String(yearRange.max)).font(.system(size: labelSize)).foregroundColor(.secondary)
             }
+            // The dots above already give every year
+            .accessibilityHidden(true)
 
             // Callout + prev/next navigation
             if let building = selected {
@@ -616,11 +653,13 @@ struct TimelineBar: View {
                         Text("\(String(building.yearBuilt)) · \(building.name)")
                             .font(.caption2).fontWeight(.semibold)
                             .foregroundColor(.primary)
-                            .lineLimit(1)
+                            // Wraps instead of cutting the name off with very large text
+                            .lineLimit(dynamicTypeSize.isAccessibilitySize ? nil : 1)
                         Spacer()
                         Text("\(selectedIndex + 1) of \(sorted.count)")
                             .font(.caption2).foregroundColor(.secondary)
                     }
+                    .accessibilityElement(children: .combine)
                     .padding(.horizontal, 10)
                     .padding(.vertical, 6)
                     .background(RoundedRectangle(cornerRadius: 8).fill(brandColor.opacity(0.1)))
@@ -642,7 +681,7 @@ struct TimelineBar: View {
                     .disabled(selectedIndex == sorted.count - 1)
                     .accessibilityLabel("Next building")
                 }
-                .transition(.move(edge: .top).combined(with: .opacity))
+                .transition(reduceMotion ? .opacity : .move(edge: .top).combined(with: .opacity))
             }
         }
         .onAppear {
@@ -673,6 +712,7 @@ struct LiveMealsRow: View {
                 VStack(alignment: .leading, spacing: 10) {
                     Label("Eat & Drink", systemImage: "fork.knife.circle.fill")
                         .font(.caption).fontWeight(.semibold).foregroundColor(brandColor)
+                        .accessibilityAddTraits(.isHeader)
                     MealTypeRow(label: "Breakfast", meals: meals.breakfast, brandColor: brandColor)
                     MealTypeRow(label: "Lunch", meals: meals.lunch, brandColor: brandColor)
                     MealTypeRow(label: "Dinner", meals: meals.dinner, brandColor: brandColor)
@@ -687,12 +727,14 @@ private struct MealTypeRow: View {
     let label: String
     let meals: [MealRecommendation]
     let brandColor: Color
+    /// The small 10 pt meal names still grow with the text size
+    @ScaledMetric(relativeTo: .caption2) private var labelSize: CGFloat = 10
 
     var body: some View {
         if !meals.isEmpty {
             VStack(alignment: .leading, spacing: 4) {
                 Text(label)
-                    .font(.system(size: 10, weight: .semibold))
+                    .font(.system(size: labelSize, weight: .semibold))
                     .foregroundColor(.secondary)
                     .kerning(0.5)
                 ForEach(meals.prefix(2)) { meal in
@@ -701,14 +743,16 @@ private struct MealTypeRow: View {
                             HStack(spacing: 6) {
                                 Image(systemName: "mappin.circle.fill")
                                     .font(.system(size: 11)).foregroundColor(brandColor.opacity(0.7))
+                                    .accessibilityHidden(true)
                                 Text(meal.name)
                                     .font(.caption).foregroundColor(.primary)
-                                Text("·").font(.caption).foregroundColor(.secondary)
+                                Text("·").font(.caption).foregroundColor(.secondary).accessibilityHidden(true)
                                 Text(meal.category)
                                     .font(.caption2).foregroundColor(.secondary)
                                 Spacer()
                                 Image(systemName: "arrow.up.right")
                                     .font(.system(size: 9)).foregroundColor(.secondary)
+                                    .accessibilityHidden(true)
                             }
                         }
                     }
@@ -731,6 +775,12 @@ struct ItineraryDaySection: View {
     let brandColor: Color
 
     @State private var isExpanded: Bool
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    /// Rows slide down as a day opens, or just fade in with Reduce Motion.
+    private var rowTransition: AnyTransition {
+        reduceMotion ? .opacity : .opacity.combined(with: .move(edge: .top))
+    }
 
     init(dayIndex: Int, stops: [PlannedStop], service: ItineraryService, narrativeService: ItineraryNarrativeService, mealService: MealRecommendationService, isLast: Bool, brandColor: Color) {
         self.dayIndex = dayIndex
@@ -776,24 +826,29 @@ struct ItineraryDaySection: View {
                         Text("\(dayIndex + 1)")
                             .font(.subheadline).fontWeight(.bold).foregroundColor(.white)
                     }
+                    // "Day 1" right beside it already says the number
+                    .accessibilityHidden(true)
                     VStack(alignment: .leading, spacing: 2) {
                         Text("Day \(dayIndex + 1)")
                             .font(.headline).fontWeight(.bold).foregroundColor(.primary)
                         HStack(spacing: 6) {
                             Text("\(stops.count) stops").font(.caption).foregroundColor(.secondary)
-                            Text("·").font(.caption).foregroundColor(.secondary)
+                            Text("·").font(.caption).foregroundColor(.secondary).accessibilityHidden(true)
                             Text("\(totalDayMins / 60)h \(totalDayMins % 60)m").font(.caption).foregroundColor(.secondary)
+                                .accessibilityLabel(Text(spokenDuration(minutes: totalDayMins)))
                         }
                     }
                     Spacer()
                     Image(systemName: "chevron.right")
                         .font(.system(size: 12, weight: .semibold)).foregroundColor(.secondary)
                         .rotationEffect(.degrees(isExpanded ? 90 : 0))
-                        .animation(.spring(response: 0.35, dampingFraction: 0.8), value: isExpanded)
+                        .animation(reduceMotion ? nil : .spring(response: 0.35, dampingFraction: 0.8), value: isExpanded)
+                        .accessibilityHidden(true)
                 }
                 .padding(.horizontal, 16).padding(.vertical, 14)
             }
             .buttonStyle(.plain)
+            .accessibilityValue(isExpanded ? Text("Expanded") : Text("Collapsed"))
 
             if isExpanded {
                 if let narrative = narrativeService.dayNarratives[dayIndex + 1] {
@@ -802,7 +857,7 @@ struct ItineraryDaySection: View {
                         .padding(14).frame(maxWidth: .infinity, alignment: .leading)
                         .background(Color(UIColor.tertiarySystemBackground)).cornerRadius(12)
                         .padding(.horizontal, 16).padding(.bottom, 10)
-                        .transition(.opacity.combined(with: .move(edge: .top)))
+                        .transition(rowTransition)
                 } else if narrativeService.isGenerating {
                     RoundedRectangle(cornerRadius: 12)
                         .fill(Color(UIColor.tertiarySystemBackground)).frame(height: 60)
@@ -813,15 +868,16 @@ struct ItineraryDaySection: View {
                 if let spotlight = architectSpotlight {
                     HStack(spacing: 8) {
                         Image(systemName: "pencil.and.ruler.fill").font(.caption).foregroundColor(brandColor)
+                            .accessibilityHidden(true)
                         Text(spotlight).font(.caption).foregroundColor(.secondary)
                     }
                     .padding(.horizontal, 16).padding(.bottom, 10)
-                    .transition(.opacity.combined(with: .move(edge: .top)))
+                    .transition(rowTransition)
                 }
 
                 TimelineBar(stops: stops, service: service, brandColor: brandColor)
                     .padding(.horizontal, 16).padding(.bottom, 12)
-                    .transition(.opacity.combined(with: .move(edge: .top)))
+                    .transition(rowTransition)
 
                 Divider().padding(.leading, 66)
 
@@ -836,12 +892,12 @@ struct ItineraryDaySection: View {
                             brandColor: brandColor,
                             isLast: stop.id == stops.last?.id
                         )
-                        .transition(.opacity.combined(with: .move(edge: .top)))
+                        .transition(rowTransition)
                     }
                 }
 
                 LiveMealsRow(dayMeals: dayMeals, isLoading: mealService.isLoading, brandColor: brandColor)
-                    .transition(.opacity.combined(with: .move(edge: .top)))
+                    .transition(rowTransition)
             }
         }
 
@@ -860,6 +916,9 @@ struct ItineraryStopRow: View {
     let isGenerating: Bool
     let brandColor: Color
     let isLast: Bool
+
+    /// The directions button grows with the text size
+    @ScaledMetric(relativeTo: .title3) private var directionsIconSize: CGFloat = 22
 
     var mapsURL: URL? {
         guard let lat = building.latitude, let lon = building.longitude else { return nil }
@@ -881,6 +940,9 @@ struct ItineraryStopRow: View {
                         .lineLimit(1).fixedSize()
                 }
                 .frame(minWidth: 60, alignment: .leading)
+                // "Arrive 10:15 AM, stay 45 minutes" rather than "45 m" (read as metres)
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel(Text("Arrive \(arrivalTime), stay \(stop.visitDurationMins) minutes"))
                 .padding(.top, 2)
 
                 VStack(alignment: .leading, spacing: 4) {
@@ -901,16 +963,19 @@ struct ItineraryStopRow: View {
                         .padding(.top, 2)
                     }
                 }
+                // Name, description and walk time read as one stop
+                .accessibilityElement(children: .combine)
 
                 Spacer()
 
                 if let url = mapsURL {
                     Link(destination: url) {
                         Image(systemName: "arrow.triangle.turn.up.right.circle.fill")
-                            .font(.system(size: 22))
+                            .font(.system(size: directionsIconSize))
                             .foregroundColor(brandColor.opacity(0.7))
                     }
                     .padding(.top, 2)
+                    .accessibilityLabel(Text("Walking directions to \(building.name)"))
                 }
             }
             .padding(.horizontal, 16).padding(.vertical, 12)
@@ -928,6 +993,7 @@ extension View {
 
 struct ShimmerModifier: ViewModifier {
     @State private var phase: CGFloat = 0
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     func body(content: Content) -> some View {
         content
@@ -943,6 +1009,8 @@ struct ShimmerModifier: ViewModifier {
                 .blendMode(.screen)
             }
             .onAppear {
+                // With Reduce Motion the placeholder stays still instead of sweeping forever
+                guard !reduceMotion else { return }
                 withAnimation(.linear(duration: 1.4).repeatForever(autoreverses: false)) { phase = 1.3 }
             }
     }

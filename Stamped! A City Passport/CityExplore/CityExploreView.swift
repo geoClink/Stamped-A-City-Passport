@@ -38,6 +38,12 @@ struct CityExploreView: View {
     @State private var showingLookAround = false
     @State private var isRaining = false
     @State private var showingCredits = false
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    /// Landmarks VoiceOver can pick from the 3D view's actions, since tapping the model needs sight.
+    private var selectableBuildings: [Building] {
+        buildings.filter { $0.latitude != nil && $0.longitude != nil }
+    }
 
     init(buildings: [Building], visitedIDs: Set<String>, cityName: String) {
         self.buildings = buildings
@@ -63,6 +69,10 @@ struct CityExploreView: View {
                         onBuildingSelected: { vm.selectedBuilding = $0 }
                     )
                     .ignoresSafeArea()
+                    .accessibilityElement(children: .ignore)
+                    .accessibilityLabel(Text("3D model of \(cityName)"))
+                    .accessibilityHint("Use the actions to show a landmark's card")
+                    .accessibilityActions { landmarkActions }
                 } else {
                     Text("No 3D model available for \(cityName) yet.")
                         .foregroundStyle(.secondary)
@@ -82,7 +92,8 @@ struct CityExploreView: View {
             if let building = vm.selectedBuilding {
                 buildingCard(building)
                     .padding(.bottom, 100)
-                    .transition(.move(edge: .bottom).combined(with: .opacity))
+                    // Slides up, or just fades in with Reduce Motion
+                    .transition(reduceMotion ? .opacity : .move(edge: .bottom).combined(with: .opacity))
             }
 
             header
@@ -116,6 +127,14 @@ struct CityExploreView: View {
         }
     }
 
+    /// One VoiceOver action per landmark, the only way to select one without tapping the model.
+    @ViewBuilder
+    private var landmarkActions: some View {
+        ForEach(selectableBuildings) { building in
+            Button(building.name) { vm.selectedBuilding = building }
+        }
+    }
+
     // MARK: - Header
 
     private var header: some View {
@@ -134,12 +153,15 @@ struct CityExploreView: View {
                 Text(cityName)
                     .font(.subheadline.bold())
                     .foregroundStyle(.white)
+                    .accessibilityAddTraits(.isHeader)
 
                 Spacer()
 
+                // Invisible twin of the close button, to keep the title centred
                 Image(systemName: "xmark.circle.fill")
                     .font(.title2)
                     .opacity(0)
+                    .accessibilityHidden(true)
             }
             .padding(.horizontal, 20)
             .padding(.top, 60)
@@ -163,6 +185,9 @@ struct CityExploreView: View {
                         .foregroundStyle(isRaining ? .blue : .yellow)
                 }
                 .buttonStyle(.plain)
+                .accessibilityLabel("Weather")
+                .accessibilityValue(isRaining ? Text("Rain") : Text("Sunny"))
+                .accessibilityHint("Switches between sunny and rainy weather and sounds")
 
                 // Credits
                 Button {
@@ -173,6 +198,7 @@ struct CityExploreView: View {
                         .foregroundStyle(.white.opacity(0.7))
                 }
                 .buttonStyle(.plain)
+                .accessibilityLabel("Sound Credits")
             }
             .padding(.bottom, 12)
         }
@@ -190,6 +216,7 @@ struct CityExploreView: View {
                             Image(systemName: "checkmark.seal.fill")
                                 .foregroundStyle(Color.adventureOrange)
                                 .font(.caption)
+                                .accessibilityLabel("Stamped")
                         }
                         Text(building.name)
                             .font(.headline)
@@ -213,6 +240,7 @@ struct CityExploreView: View {
                         .foregroundStyle(.white.opacity(0.6))
                         .padding(4)
                 }
+                .accessibilityLabel("Close")
             }
 
             // Look Around — only shown when Apple has street imagery for this location
@@ -525,6 +553,17 @@ struct CityARView: View {
                         vm.handleTap(on: hit.entity, scenePoint: hit.position)
                     }
             )
+            // The camera view can't be explored by VoiceOver; offer the landmarks as actions once the model is placed
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel(Text("3D model of \(cityName)"))
+            .accessibilityHint("Use the actions to show a landmark's card")
+            .accessibilityActions {
+                if vm.cityLoaded {
+                    ForEach(buildings.filter { $0.latitude != nil && $0.longitude != nil }) { building in
+                        Button(building.name) { vm.selectedBuilding = building }
+                    }
+                }
+            }
 
             if !vm.cityLoaded {
                 statusBadge.padding(.bottom, 48).transition(.opacity)
@@ -566,6 +605,7 @@ struct CityARView: View {
                 ProgressView().tint(.white).scaleEffect(0.85)
                 Text("Loading…").font(.subheadline).foregroundStyle(.white)
             }
+            .accessibilityElement(children: .combine)
             .padding(.horizontal, 20).padding(.vertical, 12)
             .background(.ultraThinMaterial, in: Capsule())
         } else {

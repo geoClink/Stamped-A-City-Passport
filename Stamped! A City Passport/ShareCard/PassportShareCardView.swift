@@ -57,6 +57,10 @@ struct PassportShareCardView: View {
         // Kept on purpose: the preview reads as a printed card you're about to hand over
         .shadow(color: .black.opacity(0.3), radius: 20, x: 0, y: 8)
         .padding(.horizontal, DS.Space.xl)
+        // One element for VoiceOver: the card's tiny printed labels read as a summary
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(Text("Passport card. Stamps: \(progress.visitedIDs.count). Cities: \(visitedCities.count). Countries: \(countryCount)."))
+        .accessibilityAddTraits(.isImage)
     }
 
     // MARK: - Share Button
@@ -136,6 +140,9 @@ struct PassportCard: View {
         }
         .frame(width: Self.cardWidth, height: Self.cardHeight)
         .background(Color.white)
+        // A printed card at the standard text size, like CityStampShareCard: the
+        // brand bar's .headline would otherwise grow off the fixed-size card
+        .dynamicTypeSize(.large)
     }
 
     // MARK: - Orange top band

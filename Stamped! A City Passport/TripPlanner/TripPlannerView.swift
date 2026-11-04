@@ -244,10 +244,12 @@ struct TripSummaryRow: View {
                     if trip.isRoadTrip {
                         // A road trip's campuses, in driving order
                         Image(systemName: "graduationcap.fill")
+                            .accessibilityHidden(true)
                         Text(ListFormatter.localizedString(byJoining: trip.roadTripCampuses.map(\.campusVisitShortName)))
                             .lineLimit(2)
                     } else {
                         Image(systemName: "mappin.and.ellipse")
+                            .accessibilityHidden(true)
                         Text(trip.area?.name ?? trip.cityName)
                     }
                 }
@@ -275,7 +277,9 @@ struct TripSummaryRow: View {
     @ViewBuilder
     private var separator: some View {
         if !dynamicTypeSize.isAccessibilitySize {
+            // Visual only; VoiceOver would read it as "middle dot"
             Text("·")
+                .accessibilityHidden(true)
         }
     }
 }

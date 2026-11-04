@@ -7,6 +7,7 @@ struct AchievementsView: View {
 
     @Environment(\.horizontalSizeClass) private var sizeClass
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @AppStorage("high_contrast_mode") private var isHighContrast = false
     @State private var selectedCategory: Achievement.Category = .all
 
@@ -100,12 +101,16 @@ struct AchievementsView: View {
                     Capsule()
                         .fill(isHighContrast ? Color.primary : DS.Palette.accent)
                         .frame(width: geo.size.width * CGFloat(earnedCount) / CGFloat(Achievement.allAchievements.count), height: 8)
-                        .animation(.spring(response: 0.6, dampingFraction: 0.8), value: earnedCount)
+                        .animation(reduceMotion ? nil : .spring(response: 0.6, dampingFraction: 0.8), value: earnedCount)
                 }
             }
             .frame(height: 8)
         }
         .dsCard(isHighContrast: isHighContrast)
+        // One element: "Achievements, 3 of 30" instead of "3", "/ 30" and the bar
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Achievements")
+        .accessibilityValue(Text("\(earnedCount) of \(Achievement.allAchievements.count)"))
     }
 
     private var achievementsLabel: some View {
@@ -124,13 +129,14 @@ struct AchievementsView: View {
                 ForEach(Achievement.Category.allCases) { category in
                     let isSelected = selectedCategory == category
                     Button {
-                        withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
+                        withAnimation(reduceMotion ? nil : .spring(response: 0.3, dampingFraction: 0.7)) {
                             selectedCategory = category
                         }
                     } label: {
                         HStack(spacing: DS.Space.xs) {
                             Image(systemName: category.systemIcon)
                                 .font(.caption)
+                                .accessibilityHidden(true)
                             Text(category.localizedName)
                                 .font(.subheadline.weight(.medium))
                                 .lineLimit(1)
@@ -149,6 +155,8 @@ struct AchievementsView: View {
                         )
                         .foregroundStyle(isSelected ? (isHighContrast ? Color(UIColor.systemBackground) : .white) : .primary)
                     }
+                    // The filled chip is the chosen filter; say so, not just show it
+                    .accessibilityAddTraits(isSelected ? .isSelected : [])
                 }
             }
             .padding(.horizontal, 1)
@@ -175,6 +183,7 @@ private struct AchievementCard: View {
     var isHighContrast = false
 
     @ScaledMetric(relativeTo: .title3) private var badgeSize: CGFloat = 44
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     // Each badge keeps its own color once earned; locked badges stay gray
     private var badgeColor: Color {
@@ -199,6 +208,8 @@ private struct AchievementCard: View {
                         .foregroundStyle(isHighContrast ? Color.primary : DS.Palette.gold)
                 }
             }
+            // The badge and check are read as "Earned" / "Locked" below
+            .accessibilityHidden(true)
 
             Text(achievement.localizedTitle)
                 .font(.subheadline.weight(.bold))
@@ -209,8 +220,9 @@ private struct AchievementCard: View {
             Text(achievement.localizedDescription)
                 .font(.caption)
                 .foregroundStyle(isHighContrast ? .primary : .secondary)
-                // Three lines: German and French goals run longer than English
-                .lineLimit(3)
+                // Three lines: German and French goals run longer than English.
+                // No limit at accessibility sizes, where the card is a full-width row.
+                .lineLimit(dynamicTypeSize.isAccessibilitySize ? nil : 3)
                 .fixedSize(horizontal: false, vertical: true)
 
             Text(achievement.category.localizedName.localizedUppercase)
@@ -222,5 +234,7 @@ private struct AchievementCard: View {
         .dsCard(padding: DS.Space.m, isHighContrast: isHighContrast)
         // Dimming would undo high contrast, so locked cards only fade in standard mode
         .opacity(earned || isHighContrast ? 1.0 : 0.85)  // quiet, but the goal text stays readable
+        .accessibilityElement(children: .combine)
+        .accessibilityValue(earned ? Text("Earned") : Text("Locked"))
     }
 }

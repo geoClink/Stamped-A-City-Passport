@@ -156,6 +156,7 @@ struct GameDaySection: View {
                 HStack(spacing: 2) {
                     Text("Get Tickets")
                     Image(systemName: "arrow.up.right")
+                        .accessibilityHidden(true)
                 }
                 .font(.caption.bold())
                 .foregroundColor(accent)

@@ -12,6 +12,8 @@ struct SettingsView: View {
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.dynamicTypeSize) var dynamicTypeSize
+    /// The system's Reduce Motion, on top of the app's own setting below
+    @Environment(\.accessibilityReduceMotion) var systemReduceMotion
 
     @State private var moveRight = false
     @State private var showingFirstAlert = false
@@ -56,6 +58,8 @@ private extension SettingsView {
                             .fontWeight(viewModel.highContrast ? .black : .medium)
                             .foregroundColor(viewModel.highContrast ? .primary : DS.Palette.accent)
                     }
+                    // Icon-only, so VoiceOver needs the word
+                    .accessibilityLabel(L.Settings.back)
                 }
             }
         }
@@ -167,7 +171,8 @@ private extension SettingsView {
                 }
                 Spacer(minLength: 0)
                 if viewModel.hasBirthday {
-                    DatePicker("", selection: Binding(
+                    // Labelled (then hidden) so VoiceOver says what the date is for
+                    DatePicker("Birthday", selection: Binding(
                         get: { viewModel.birthday },
                         set: { viewModel.birthday = $0 }
                     ), displayedComponents: .date)
@@ -204,6 +209,8 @@ private extension SettingsView {
                             .foregroundColor(viewModel.highContrast ? .primary : DS.Palette.accent)
                             .padding(.horizontal, DS.Space.m)
                     }
+                    // A visual demo of the animation; the Test Motion button below is what VoiceOver needs
+                    .accessibilityHidden(true)
                 }
 
                 // Side by side normally, stacked at accessibility sizes
@@ -212,7 +219,7 @@ private extension SettingsView {
                     : AnyLayout(HStackLayout(spacing: DS.Space.m))
                 buttonLayout {
                     Button(L.Settings.testMotion) {
-                        withAnimation(viewModel.reduceMotion ? .none : .spring(response: 0.4, dampingFraction: 0.6)) {
+                        withAnimation(viewModel.reduceMotion || systemReduceMotion ? .none : .spring(response: 0.4, dampingFraction: 0.6)) {
                             moveRight.toggle()
                         }
                     }
@@ -340,6 +347,7 @@ private extension SettingsView {
             Image(systemName: "chevron.right")
                 .font(.caption)
                 .foregroundColor(.secondary)
+                .accessibilityHidden(true)
         }
         .padding(.vertical, DS.Space.xs)
     }

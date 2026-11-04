@@ -15,8 +15,22 @@ struct ScanNudgeSheet: View {
     let onScanNow: () -> Void
 
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     var body: some View {
+        // Fits the short sheet at normal text sizes; scrolls when large text makes it taller
+        ViewThatFits(in: .vertical) {
+            content
+            ScrollView { content }
+        }
+        // A fixed 420 pt sheet would cut off large text, so accessibility sizes get the full height
+        .presentationDetents(dynamicTypeSize.isAccessibilitySize
+                             ? Set([PresentationDetent.large])
+                             : Set([PresentationDetent.height(420)]))
+        .presentationDragIndicator(.hidden)
+    }
+
+    private var content: some View {
         VStack(spacing: 0) {
             // Handle
             Capsule()
@@ -24,15 +38,18 @@ struct ScanNudgeSheet: View {
                 .frame(width: 36, height: 4)
                 .padding(.top, 12)
                 .padding(.bottom, 24)
+                .accessibilityHidden(true)
 
             Image(systemName: "camera.viewfinder")
                 .font(.system(size: 52))
                 .foregroundStyle(Color.adventureOrange)
                 .padding(.bottom, 16)
+                .accessibilityHidden(true)
 
             Text("Help Build \(cityName) in 3D")
                 .font(.title3.bold())
                 .multilineTextAlignment(.center)
+                .accessibilityAddTraits(.isHeader)
 
             Text("\(building.name) doesn't have a community 3D scan yet. If you're nearby, take 20–40 photos and we'll build the model — it'll appear for every Stamped user who explores this city.")
                 .font(.subheadline)
@@ -69,8 +86,6 @@ struct ScanNudgeSheet: View {
             .padding(.top, 28)
             .padding(.bottom, 16)
         }
-        .presentationDetents([.height(420)])
-        .presentationDragIndicator(.hidden)
     }
 }
 #endif

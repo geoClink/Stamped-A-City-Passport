@@ -39,6 +39,7 @@ struct AreaSearchSheet: View {
                         Image(systemName: "mappin.circle.fill")
                             .font(.title2)
                             .foregroundStyle(DS.Palette.accent)
+                            .accessibilityHidden(true)
                         VStack(alignment: .leading, spacing: DS.Space.xs) {
                             Text(item.name ?? "Unnamed place")
                                 // Serif, the style guide's type for destinations

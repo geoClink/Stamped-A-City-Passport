@@ -15,6 +15,7 @@ struct CityStampDetailView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.horizontalSizeClass) var sizeClass
     @AppStorage("reduce_motion") var manualReduceMotion = false
+    @Environment(\.accessibilityReduceMotion) private var systemReduceMotion
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     
     @State private var stampScale: CGFloat = 0.5
@@ -91,9 +92,15 @@ struct CityStampDetailView: View {
         }
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.7, blendDuration: 0)) {
+            // Reduce Motion: show the stamp at full size, no scale-up
+            if manualReduceMotion || systemReduceMotion {
                 stampScale = 1.0
                 stampOpacity = 1.0
+            } else {
+                withAnimation(.spring(response: 0.6, dampingFraction: 0.7, blendDuration: 0)) {
+                    stampScale = 1.0
+                    stampOpacity = 1.0
+                }
             }
         }
     }

@@ -15,6 +15,7 @@ struct CampusTraditionsSection: View {
     @ObservedObject private var progressManager = GlobalProgressManager.shared
     @Environment(\.openURL) private var openURL
     @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     /// Traditions whose full description is showing
     @State private var expandedIDs: Set<String> = []
     @ScaledMetric(relativeTo: .body) private var mapButtonSize: CGFloat = 36
@@ -39,7 +40,7 @@ struct CampusTraditionsSection: View {
                             .trim(from: 0, to: traditions.isEmpty ? 0 : CGFloat(doneCount) / CGFloat(traditions.count))
                             .stroke(accent, style: StrokeStyle(lineWidth: 3, lineCap: .round))
                             .rotationEffect(.degrees(-90))
-                            .animation(.spring(), value: doneCount)
+                            .animation(reduceMotion ? nil : .spring(), value: doneCount)
                     }
                     .frame(width: 18, height: 18)
                     Text("\(doneCount)/\(traditions.count)")
@@ -61,7 +62,7 @@ struct CampusTraditionsSection: View {
                     .clipShape(Capsule())
                     .overlay(Capsule().stroke(isHighContrast ? Color.primary : .clear, lineWidth: 1))
                     .dsPageMargin()
-                    .transition(.scale.combined(with: .opacity))
+                    .transition(reduceMotion ? .opacity : .scale.combined(with: .opacity))
             }
 
             // Same list card as Landmarks: hairline dividers, or bordered rows in high contrast
@@ -100,7 +101,7 @@ struct CampusTraditionsSection: View {
         let isExpanded = expandedIDs.contains(tradition.id)
         return HStack(alignment: .top, spacing: DS.Space.m) {
             Button {
-                withAnimation(.spring()) { progressManager.toggleTradition(tradition.id) }
+                withAnimation(reduceMotion ? nil : .spring()) { progressManager.toggleTradition(tradition.id) }
                 HapticManager.shared.trigger(isDone ? .selection : .success)
             } label: {
                 Image(systemName: isDone ? "checkmark.circle.fill" : "circle")
@@ -108,7 +109,9 @@ struct CampusTraditionsSection: View {
                     .foregroundColor(isDone ? accent : .secondary)
             }
             .buttonStyle(.plain)
-            .accessibilityLabel(isDone
+            // Named after the tradition, so the checkbox makes sense on its own; done or not is its value
+            .accessibilityLabel(Text(tradition.name))
+            .accessibilityValue(isDone
                 ? NSLocalizedString("Done", comment: "Campus tradition: VoiceOver state when completed")
                 : NSLocalizedString("Not done", comment: "Campus tradition: VoiceOver state when not completed"))
             .accessibilityHint(NSLocalizedString("Double tap to check this tradition off.", comment: "Campus tradition: VoiceOver hint for the checkbox"))
@@ -132,6 +135,7 @@ struct CampusTraditionsSection: View {
                 }
             }
             .accessibilityElement(children: .combine)
+            .accessibilityAddTraits(.isButton)
             .accessibilityHint(isExpanded ? "" : NSLocalizedString("Double tap to read more.", comment: "Campus tradition row: VoiceOver hint to expand the description"))
 
             Spacer(minLength: 0)
