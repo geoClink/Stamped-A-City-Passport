@@ -72,6 +72,8 @@ struct HistoricPhotosSection: View {
         }
         .sheet(item: $selected) { image in
             HistoricImageViewer(image: image, buildingName: building.name, isHighContrast: isHighContrast)
+                // A photo viewer: a big sheet on iPad, so the picture is shown large
+                .dsLargeSheet()
         }
         .inAppBrowser(item: $browserLink)
     }

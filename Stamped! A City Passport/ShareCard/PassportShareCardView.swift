@@ -61,11 +61,23 @@ struct PassportShareCardView: View {
 
     // MARK: - Share Button
 
+    /// The App Store link that goes with a shared passport. pt is our App Store Connect provider
+    /// token and ct the campaign, so App Analytics → Campaigns counts downloads from shares.
+    private static let appStoreShareLink = "https://apps.apple.com/app/apple-store/id6759680336?pt=128288066&ct=app-share&mt=8"
+
+    /// Sent with the picture (in Messages, Mail and most apps), so friends can tap straight to the app
+    private var shareMessage: String {
+        String(format: NSLocalizedString("My Stamped! passport. Get the app: %@",
+                                         comment: "Text sent with a shared passport picture; %@ is the App Store link"),
+               Self.appStoreShareLink)
+    }
+
     @ViewBuilder
     private var shareButton: some View {
         if let image = renderedImage {
             ShareLink(
                 item: image,
+                message: Text(shareMessage),
                 preview: SharePreview("My Stamped! Passport", image: image)
             ) {
                 Label("Share Passport", systemImage: "square.and.arrow.up")
@@ -253,7 +265,8 @@ struct PassportCard: View {
                 Image(systemName: "checkmark.seal.fill")
                     .font(.caption2)
                     .foregroundStyle(Self.orange.opacity(0.4))
-                Text("stamped-app.com")
+                // Not a web address: stamped-app.com belongs to someone else
+                Text("ON THE APP STORE")
                     .font(.system(size: 8, weight: .medium))
                     .foregroundStyle(Self.orange.opacity(0.4))
                     .tracking(1)

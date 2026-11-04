@@ -57,6 +57,26 @@ Useful flags:
 - `--create-version` creates the version (e.g. 2.5) in App Store Connect if you haven't yet. Needs `--apply`.
 - `--skip-subtitle` leaves the subtitle alone.
 
+### Mac and Vision Pro
+
+Mac and Vision Pro have their own version pages on the same app, with their own text folders
+(`2.8-macos`, `2.8-visionos`). Pick the page with `--platform` and the folder with `--texts`:
+
+```
+./venv/bin/python upload_metadata.py 2.8 --platform macos --texts 2.8-macos
+./venv/bin/python upload_metadata.py 2.8 --platform visionos --texts 2.8-visionos
+```
+
+The subtitle belongs to the whole app, so it's set from the iPhone run; the Mac and Vision Pro
+folders don't include one.
+
+### Screenshots
+
+`--screenshots <folder>` uploads the PNGs in that folder (01.png, 02.png, ... in App Store order) to
+the platform's usual slot (iPhone 6.9", Mac, or Apple Vision Pro; change it with `--display-type`).
+A slot that already has screenshots is left alone unless you add `--replace-screenshots`.
+`--skip-text` does screenshots only.
+
 The script only sends text that's different from what's already there, and keeps going if one language fails, then lists the failures at the end.
 
 ## Tests

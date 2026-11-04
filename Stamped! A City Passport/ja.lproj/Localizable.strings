@@ -794,3 +794,6 @@
 /* Booking.com button next to the main hotel button */
 "Compare on Booking.com" = "Booking.comで比較";
 "Opens Booking.com. Stamped! doesn't handle bookings or payments." = "Booking.comを開きます。Stamped!は予約や支払いを扱いません。";
+
+/* Text sent with a shared passport picture; %@ is the App Store link */
+"My Stamped! passport. Get the app: %@" = "私のStamped!パスポート。アプリはこちら：%@";

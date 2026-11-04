@@ -794,3 +794,6 @@
 /* Booking.com button next to the main hotel button */
 "Compare on Booking.com" = "Confronta su Booking.com";
 "Opens Booking.com. Stamped! doesn't handle bookings or payments." = "Apre Booking.com. Stamped! non gestisce prenotazioni né pagamenti.";
+
+/* Text sent with a shared passport picture; %@ is the App Store link */
+"My Stamped! passport. Get the app: %@" = "Il mio passaporto Stamped!. Scarica l’app: %@";

@@ -15,7 +15,6 @@ struct CityMapVisionView: View {
 
     let cityName: String
 
-    @Environment(\.openWindow) private var openWindow
     private let store = VisionStore.shared
     @State private var position: MapCameraPosition = .automatic
     @State private var selectedBuilding: Building?
@@ -33,9 +32,14 @@ struct CityMapVisionView: View {
         store.buildings(for: cityName).filter { $0.latitude != nil && $0.longitude != nil }
     }
 
-    /// Only cities run through tools/city-generator have a bundled 3D model.
+    /// Only cities run through tools/city-generator have a 3D model. It's
+    /// either in the app bundle or downloaded as an asset pack (CityModelStore).
+    private let models = CityModelStore.shared
     private var hasCityModel: Bool {
-        Bundle.main.url(forResource: cityName.lowercased(), withExtension: "usdz") != nil
+        switch models.state(for: cityName) {
+        case .checking, .unavailable: false
+        default: true
+        }
     }
 
     var body: some View {
@@ -80,6 +84,8 @@ struct CityMapVisionView: View {
             MapPitchToggle()
         }
         .navigationTitle(cityName)
+        // Is the 3D model on this device, downloadable, or missing?
+        .task(id: cityName) { await models.refresh(cityName) }
         .toolbar {
             ToolbarItem {
                 // The narrated tour: every landmark in a short walking order, each story read aloud
@@ -118,17 +124,15 @@ struct CityMapVisionView: View {
             }
             if hasCityModel {
                 ToolbarItem {
-                    Button {
-                        openWindow(id: "city-volume", value: cityName)
-                    } label: {
-                        Label("Open 3D Model", systemImage: "cube.transparent")
-                    }
+                    // Open 3D Model, or Download … in 3D with progress and Cancel
+                    CityModelButton(cityName: cityName)
                 }
             }
         }
         .overlay(alignment: .bottomLeading) {
             if let building = selectedBuilding {
                 LandmarkCard(building: building,
+                             cityName: cityName,
                              isVisited: store.visitedIDs.contains(building.id),
                              isWishlisted: store.isWishlisted(building.id),
                              isPlaying: storyPlayer.isPlaying(building),
@@ -302,6 +306,7 @@ private struct LandmarkPin: View {
 
 private struct LandmarkCard: View {
     let building: Building
+    let cityName: String
     let isVisited: Bool
     let isWishlisted: Bool
     var isPlaying = false
@@ -367,6 +372,10 @@ private struct LandmarkCard: View {
                     .clipShape(RoundedRectangle(cornerRadius: 16))
                     .accessibilityLabel(Text("Look Around"))
             }
+
+            // Hotels and tours, kept apart from the buttons above
+            Divider()
+            PartnerLinksRow(building: building, cityName: cityName)
         }
         .padding(24)
         .frame(width: 480)
@@ -426,6 +435,96 @@ private struct LandmarkCard: View {
         guard let nearest, let location = nearest.placemark.location,
               location.distance(from: pin) <= 300 else { return nil }
         return nearest
+    }
+}
+
+// MARK: - Hotel and tour links
+
+/// Where to stay and which tours to book near a landmark, from the same partner links as
+/// the iPhone app. Two menus keep the card short; each choice opens the partner's site in
+/// Safari. Stamped never books or takes payment.
+private struct PartnerLinksRow: View {
+    let building: Building
+    let cityName: String
+
+    /// Labels clicks from Vision Pro in the partners' reports, apart from the iPhone app's
+    private static let clickLabel = "vision"
+
+    private let expedia = HotelLinkBuilder(clickLabel: Self.clickLabel)
+    private let booking = HotelLinkBuilder(provider: .booking,
+                                           affiliateID: HotelPartner.bookingAffiliateID,
+                                           clickLabel: Self.clickLabel)
+    private let vrbo = VrboLinkBuilder(clickLabel: Self.clickLabel)
+    private let getYourGuide = TourLinkBuilder(campaign: Self.clickLabel)
+    private let viator = ViatorLinkBuilder(campaign: Self.clickLabel)
+
+    @Environment(\.openURL) private var openURL
+
+    /// "Colosseum, Rome", centred on the landmark's pin so the site searches around it
+    private var hotelSearch: HotelSearch {
+        let destination = building.name.localizedCaseInsensitiveContains(cityName)
+            ? building.name
+            : "\(building.name), \(cityName)"
+        return HotelSearch(destination: destination, latitude: building.latitude, longitude: building.longitude)
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack {
+                staysMenu
+                toursMenu
+            }
+            // Only when the links carry our partner IDs
+            if expedia.earnsCommission || getYourGuide.earnsCommission {
+                HotelCommissionNote()
+            }
+        }
+    }
+
+    private var staysMenu: some View {
+        Menu {
+            if let url = expedia.url(for: hotelSearch) {
+                linkButton("Find Hotels", systemImage: "bed.double.fill", url: url,
+                           hint: "Opens the hotel website. Stamped! doesn't handle bookings or payments.")
+            }
+            // Like the iPhone's Booking.com button: only with our ID, never an untracked link
+            if booking.earnsCommission, let url = booking.url(for: hotelSearch) {
+                linkButton("Compare on Booking.com", systemImage: "magnifyingglass", url: url,
+                           hint: "Opens Booking.com. Stamped! doesn't handle bookings or payments.")
+            }
+            if let url = vrbo.url(for: hotelSearch) {
+                linkButton("Vacation Rentals on Vrbo", systemImage: "house.fill", url: url,
+                           hint: "Opens Vrbo. Stamped! doesn't handle bookings or payments.")
+            }
+        } label: {
+            Label("Stay", systemImage: "bed.double.fill")
+        }
+    }
+
+    private var toursMenu: some View {
+        Menu {
+            if let url = getYourGuide.url(landmark: building.name, place: cityName) {
+                linkButton("Find Tours & Tickets", systemImage: "ticket.fill", url: url,
+                           hint: "Opens GetYourGuide. Stamped! doesn't handle bookings or payments.")
+            }
+            if let url = viator.url(landmark: building.name, place: cityName) {
+                linkButton("More tours on Viator", systemImage: "arrow.up.right.square", url: url,
+                           hint: "Opens Viator. Stamped! doesn't handle bookings or payments.")
+            }
+        } label: {
+            Label("Tours & Tickets", systemImage: "ticket.fill")
+        }
+    }
+
+    /// One menu choice that opens a partner's site in Safari.
+    private func linkButton(_ title: LocalizedStringKey, systemImage: String, url: URL,
+                            hint: LocalizedStringKey) -> some View {
+        Button {
+            openURL(url)
+        } label: {
+            Label(title, systemImage: systemImage)
+        }
+        .accessibilityHint(Text(hint))
     }
 }
 
