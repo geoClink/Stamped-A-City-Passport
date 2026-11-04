@@ -778,6 +778,13 @@
 "Saving %d of %d…" = "%d / %d を保存中…";
 "Stops saving. What's saved so far is kept for next time." = "保存を中止します。保存済みの分は次回のために残ります。";
 "Saved for Offline" = "オフライン用に保存済み";
+/* Settings section headers */
+"Preferences" = "環境設定";
+"Offline" = "オフライン";
+"Feedback" = "フィードバック";
+"About" = "情報";
+"Privacy Policy" = "プライバシーポリシー";
+"How Stamped! handles your data" = "Stamped!によるデータの取り扱い";
 "%1$@, saved %2$@" = "%1$@、%2$@ に保存";
 "Remove Offline Copy" = "オフラインコピーを削除";
 "Deletes the saved photos and text from this device." = "保存した写真と説明をこのデバイスから削除します。";

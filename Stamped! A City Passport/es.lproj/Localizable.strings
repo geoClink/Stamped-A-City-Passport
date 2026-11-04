@@ -778,6 +778,13 @@
 "Saving %d of %d…" = "Guardando %d de %d…";
 "Stops saving. What's saved so far is kept for next time." = "Detiene la descarga. Lo guardado hasta ahora se conserva para la próxima vez.";
 "Saved for Offline" = "Guardado sin conexión";
+/* Settings section headers */
+"Preferences" = "Preferencias";
+"Offline" = "Sin conexión";
+"Feedback" = "Comentarios";
+"About" = "Información";
+"Privacy Policy" = "Política de privacidad";
+"How Stamped! handles your data" = "Cómo trata Stamped! tus datos";
 "%1$@, saved %2$@" = "%1$@, guardado el %2$@";
 "Remove Offline Copy" = "Eliminar copia sin conexión";
 "Deletes the saved photos and text from this device." = "Elimina de este dispositivo las fotos y textos guardados.";

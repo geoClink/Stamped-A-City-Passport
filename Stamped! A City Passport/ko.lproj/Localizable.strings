@@ -778,6 +778,13 @@
 "Saving %d of %d…" = "%d/%d 저장 중…";
 "Stops saving. What's saved so far is kept for next time." = "저장을 멈춥니다. 지금까지 저장한 내용은 다음을 위해 남겨 둡니다.";
 "Saved for Offline" = "오프라인용으로 저장됨";
+/* Settings section headers */
+"Preferences" = "환경설정";
+"Offline" = "오프라인";
+"Feedback" = "피드백";
+"About" = "정보";
+"Privacy Policy" = "개인정보 처리방침";
+"How Stamped! handles your data" = "Stamped!의 데이터 처리 방식";
 "%1$@, saved %2$@" = "%1$@, %2$@에 저장";
 "Remove Offline Copy" = "오프라인 사본 제거";
 "Deletes the saved photos and text from this device." = "저장한 사진과 설명을 이 기기에서 삭제합니다.";
