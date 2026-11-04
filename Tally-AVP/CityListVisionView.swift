@@ -14,6 +14,8 @@ struct CityListVisionView: View {
     @State private var selectedCity: String?
     @State private var searchText = ""
     @State private var showingTipJar = false
+    /// Explore Together keeps everyone in a SharePlay session on the same city
+    private let sharePlay = SharePlayExplorer.shared
     @Environment(\.openWindow) private var openWindow
     /// Set by the globe's "Show in Main Window" button (see GlobeVolumeView).
     @AppStorage("globeRequestedCity") private var globeRequestedCity = ""
@@ -83,7 +85,16 @@ struct CityListVisionView: View {
         }
         .onChange(of: selectedCity) { _, city in
             globeHighlightedCity = city ?? ""
+            sharePlay.cityChanged(to: city)    // in SharePlay, everyone follows
         }
+        // Joined a friend's SharePlay, or a friend picked another city
+        .onChange(of: sharePlay.sharedCity) { _, city in
+            guard let city, store.cityNames.contains(city) else { return }
+            searchText = ""
+            selectedCity = city
+        }
+        // Listens for Explore Together sessions, started here or by a friend
+        .task { await sharePlay.listenForSessions() }
     }
 }
 

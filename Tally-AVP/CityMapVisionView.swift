@@ -27,6 +27,8 @@ struct CityMapVisionView: View {
     /// The guided tour: flies to each landmark in turn and reads its story aloud
     @State private var tourTask: Task<Void, Never>?
     @ObservedObject private var storyPlayer = AudioStoryPlayer.shared
+    /// Explore Together: shares the open landmark with friends on FaceTime
+    private let sharePlay = SharePlayExplorer.shared
 
     private var mappableBuildings: [Building] {
         store.buildings(for: cityName).filter { $0.latitude != nil && $0.longitude != nil }
@@ -87,7 +89,9 @@ struct CityMapVisionView: View {
         // Is the 3D model on this device, downloadable, or missing?
         .task(id: cityName) { await models.refresh(cityName) }
         .toolbar {
-            ToolbarItem {
+            // The map's main controls float in an ornament under the window,
+            // where visionOS puts a window's everyday controls.
+            ToolbarItemGroup(placement: .bottomOrnament) {
                 // The narrated tour: every landmark in a short walking order, each story read aloud
                 Button {
                     if tourTask == nil { startTour() } else { stopTour() }
@@ -100,27 +104,27 @@ struct CityMapVisionView: View {
                 }
                 .help("Fly to each landmark and hear its story")
                 .disabled(mappableBuildings.isEmpty)
-            }
-            ToolbarItem {
+
                 Toggle(isOn: $showsPlaces) {
                     Label("Places", systemImage: "mappin.and.ellipse")
                 }
                 .help("Show restaurants, cafés, museums and more from Apple Maps")
-            }
-            ToolbarItem {
+
                 Button {
                     showingWishlist = true
                 } label: {
                     Label("Want to Visit", systemImage: "heart")
                 }
-            }
-            ToolbarItem {
+
                 Button {
                     showingQuiz = true
                 } label: {
                     Label("Quiz", systemImage: "questionmark.bubble")
                 }
                 .disabled(mappableBuildings.count < 4)
+
+                // Explore this city together with friends on FaceTime
+                SharePlayButton(cityName: cityName)
             }
             if hasCityModel {
                 ToolbarItem {
@@ -141,13 +145,21 @@ struct CityMapVisionView: View {
                     stopTour()
                     storyPlayer.stop()
                     selectedBuilding = nil
+                    sharePlay.landmarkOpened(nil, in: cityName)
                 }
                 .padding(24)
                 .transition(.move(edge: .bottom).combined(with: .opacity))
             }
         }
         .animation(.spring(duration: 0.35), value: selectedBuilding?.id)
-        .onAppear { fitCamera() }
+        .onAppear {
+            fitCamera()
+            // Joining a friend's session switches city; open what they're looking at
+            showFriendsLandmark(sharePlay.remoteLandmark)
+        }
+        .onChange(of: sharePlay.remoteLandmark) { _, remote in
+            showFriendsLandmark(remote)
+        }
         // Leaving the city ends the tour and the story
         .onDisappear {
             stopTour()
@@ -262,13 +274,36 @@ struct CityMapVisionView: View {
         return order
     }
 
-    /// Swoops the camera down to a landmark and shows its card.
-    private func flyTo(_ building: Building, at coordinate: CLLocationCoordinate2D) {
+    /// Swoops the camera down to a landmark and shows its card. In SharePlay it also
+    /// opens the landmark for everyone, unless the tap came from a friend already.
+    private func flyTo(_ building: Building, at coordinate: CLLocationCoordinate2D,
+                       shareWithGroup: Bool = true) {
         selectedFeature = nil
         withAnimation(.easeInOut(duration: 1.5)) {
             position = .camera(MapCamera(centerCoordinate: coordinate, distance: 700, heading: 0, pitch: 65))
         }
         selectedBuilding = building
+        if shareWithGroup {
+            sharePlay.landmarkOpened(building.id, in: cityName)
+        }
+    }
+
+    // MARK: - SharePlay
+
+    /// A friend in SharePlay opened (or closed) a landmark: do the same here.
+    private func showFriendsLandmark(_ remote: SharePlayExplorer.RemoteLandmark?) {
+        guard let message = remote?.message, message.cityName == cityName else { return }
+        // A friend took the lead, so this device's own tour stops
+        if tourTask != nil { stopTour() }
+        if let landmarkID = message.landmarkID {
+            guard let building = mappableBuildings.first(where: { $0.id == landmarkID }),
+                  let latitude = building.latitude, let longitude = building.longitude else { return }
+            flyTo(building, at: CLLocationCoordinate2D(latitude: latitude, longitude: longitude),
+                  shareWithGroup: false)
+        } else {
+            storyPlayer.stop()
+            selectedBuilding = nil
+        }
     }
 }
 
