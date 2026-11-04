@@ -103,6 +103,13 @@
 			);
 			target = DED7D0013060000000A1B006 /* DetroitDownloader */;
 		};
+		DE2C6FB1304CB5B000F657DA /* Exceptions for "Stamped! A City Passport" folder in "PassportWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/BuildingRegistry.json,
+			);
+			target = DE2C6F87304CB5AF00F657DA /* PassportWidgetExtension */;
+		};
 		DE008D56305262410003C067 /* Exceptions for "Stamped! A City Passport" folder in "Tally-AVP" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -173,6 +180,7 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				DE008D56305262410003C067 /* Exceptions for "Stamped! A City Passport" folder in "Tally-AVP" target */,
+				DE2C6FB1304CB5B000F657DA /* Exceptions for "Stamped! A City Passport" folder in "PassportWidgetExtension" target */,
 			);
 			path = "Stamped! A City Passport";
 			sourceTree = "<group>";
