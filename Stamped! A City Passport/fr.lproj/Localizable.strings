@@ -246,7 +246,7 @@
 "settings.testMotion" = "Tester le mouvement";
 "settings.testSound" = "Tester le son";
 "settings.resetAllContent" = "Réinitialiser tout le contenu";
-"settings.version" = "Version 1.0 (version 2026)";
+"settings.version" = "Version %1$@ (build %2$@)";
 "settings.reset.firstAlert.title" = "Réinitialiser toute la progression ?";
 "settings.reset.firstAlert.message" = "Effacez les bâtiments visités, les tampons de passeport et les résultats des quiz.";
 "settings.reset.firstAlert.continue" = "Continuer";

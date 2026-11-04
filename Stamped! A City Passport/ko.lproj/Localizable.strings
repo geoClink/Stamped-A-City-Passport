@@ -246,7 +246,7 @@
 "settings.testMotion" = "테스트 모션";
 "settings.testSound" = "테스트 사운드";
 "settings.resetAllContent" = "모든 콘텐츠 재설정";
-"settings.version" = "버전 1.0(빌드 2026)";
+"settings.version" = "버전 %1$@(빌드 %2$@)";
 "settings.reset.firstAlert.title" = "모든 진행 상황을 재설정하시겠습니까?";
 "settings.reset.firstAlert.message" = "방문한 건물, 여권 스탬프, 퀴즈 점수를 닦아냅니다.";
 "settings.reset.firstAlert.continue" = "계속하다";

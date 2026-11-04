@@ -246,7 +246,7 @@
 "settings.testMotion" = "测试运动";
 "settings.testSound" = "测试声音";
 "settings.resetAllContent" = "重置所有内容";
-"settings.version" = "版本 1.0（构建 2026）";
+"settings.version" = "版本 %1$@（构建 %2$@）";
 "settings.reset.firstAlert.title" = "重置所有进度？";
 "settings.reset.firstAlert.message" = "擦除参观过的建筑物、护照印章和测验分数。";
 "settings.reset.firstAlert.continue" = "继续";

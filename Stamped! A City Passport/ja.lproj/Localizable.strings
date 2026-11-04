@@ -246,7 +246,7 @@
 "settings.testMotion" = "テストモーション";
 "settings.testSound" = "テストサウンド";
 "settings.resetAllContent" = "すべてのコンテンツをリセット";
-"settings.version" = "バージョン 1.0 (ビルド 2026)";
+"settings.version" = "バージョン %1$@ (ビルド %2$@)";
 "settings.reset.firstAlert.title" = "すべての進行状況をリセットしますか?";
 "settings.reset.firstAlert.message" = "訪問した建物、パスポートのスタンプ、クイズの得点を消去します。";
 "settings.reset.firstAlert.continue" = "続く";

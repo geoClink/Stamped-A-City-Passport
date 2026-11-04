@@ -246,7 +246,7 @@
 "settings.testMotion" = "Test Motion";
 "settings.testSound" = "Test Sound";
 "settings.resetAllContent" = "Reset All Content";
-"settings.version" = "Version 1.0 (Build 2026)";
+"settings.version" = "Version %1$@ (Build %2$@)";
 "settings.reset.firstAlert.title" = "Reset All Progress?";
 "settings.reset.firstAlert.message" = "Wipe visited buildings, passport stamps, and quiz scores.";
 "settings.reset.firstAlert.continue" = "Continue";
