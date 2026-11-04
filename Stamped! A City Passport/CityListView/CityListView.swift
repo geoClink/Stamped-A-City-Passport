@@ -229,13 +229,15 @@ struct CityListView: View {
         .fullScreenCover(isPresented: $showingPassport) {
             PassportGalleryView(cities: viewModel.allCities)
         }
-        #if os(macOS)
+        // Menu commands from a panel window (Mac), which has no main window in front
         .onChange(of: navManager.menuCommand) { _, command in
             guard let command else { return }
             navManager.menuCommand = nil
             handleMenuCommand(command)
         }
-        #endif
+        // While this window is frontmost, the menu bar's commands act on it (AppCommands.swift).
+        // Not while one of its own sheets is up (iPad), which would open behind it.
+        .focusedSceneValue(\.mainWindowCommands, isShowingSheet ? nil : MainWindowCommands(perform: handleMenuCommand))
         .onChange(of: navManager.spotlightCity) { _, city in
             if let city { openRequestedCity(city) }
         }
@@ -357,6 +359,7 @@ struct CityListView: View {
             )
             .overlay(Capsule().stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2))
             .contentShape(Capsule())
+            .hoverEffect(.lift)
             .onTapGesture {
                 guard !isSelected else { return }
                 HapticManager.shared.trigger(.selection)
@@ -392,6 +395,7 @@ struct CityListView: View {
             .padding(.vertical, 6)
         }
         .buttonStyle(.plain)
+        .hoverEffect(.highlight)
     }
 
     @ViewBuilder
@@ -425,8 +429,7 @@ struct CityListView: View {
     }
 }
 
-#if os(macOS)
-// MARK: - Mac menu bar commands
+// MARK: - Menu bar commands (Mac, and iPad with a keyboard)
 extension CityListView {
     func handleMenuCommand(_ command: MenuCommand) {
         switch command {
@@ -440,7 +443,40 @@ extension CityListView {
         case .achievements: showingAchievements = true
         case .collegeList: showingCollegeList = true
         case .settings: showingSettings = true
+        case .newTrip:
+            // My Trips opens and asks where; a city's name there offers that city's planner
+            navManager.newTripRequested = true
+            showingMyTrips = true
+        case .nextCity: showCity(offsetBy: 1)
+        case .previousCity: showCity(offsetBy: -1)
+        }
+    }
+
+    /// True while this screen shows a sheet or full-screen cover (iPhone and iPad).
+    /// On the Mac those screens are windows, and the flags turn straight back to false.
+    var isShowingSheet: Bool {
+        showingSettings || showingPassport || showingMyJourney || showingMyTrips
+            || showingWorldMap || showingAchievements || showingCollegeList
+    }
+
+    /// The cities in the order the sidebar lists them now: the chosen continent's, or the campuses
+    private var sidebarCities: [CityLocation.City] {
+        if exploreFilter == Self.campusFilter {
+            return viewModel.campusGroups.flatMap(\.campuses)
+        }
+        return selectedContinentGroup?.countries.flatMap(\.cities) ?? []
+    }
+
+    /// Next City / Previous City. Stops at the ends of the list; with no city
+    /// (or one from search that isn't in the list) it starts from the top or bottom.
+    private func showCity(offsetBy offset: Int) {
+        let cities = sidebarCities
+        guard !cities.isEmpty else { return }
+        if let selectedCity, let index = cities.firstIndex(of: selectedCity) {
+            let newIndex = min(max(index + offset, 0), cities.count - 1)
+            self.selectedCity = cities[newIndex]
+        } else {
+            selectedCity = offset > 0 ? cities.first : cities.last
         }
     }
 }
-#endif

@@ -83,6 +83,7 @@ struct AddTripStopSheet: View {
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Done") { dismiss() }
+                        .closesWithCommandW()
                 }
             }
         }

@@ -68,6 +68,7 @@ struct CollegeListView: View {
                 // On the Mac the list is its own window, closed with the window's close button
                 ToolbarItem(placement: .cancellationAction) {
                     Button(NSLocalizedString("Done", comment: "College list: closes the screen")) { dismiss() }
+                        .closesWithCommandW()
                 }
                 #endif
                 if !store.isEmpty {

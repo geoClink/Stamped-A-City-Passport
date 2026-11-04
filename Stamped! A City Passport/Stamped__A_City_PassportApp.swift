@@ -39,7 +39,8 @@ struct GlobalDiscoveryApp: App {
     }
     
     var body: some Scene {
-        WindowGroup {
+        // The id lets File > New Window (Option-Command-N on the Mac) open another one
+        WindowGroup(id: StampedCommands.mainWindowID) {
             ZStack {
                 if hasSeenOnboarding {
                     CityListView()
@@ -84,9 +85,12 @@ struct GlobalDiscoveryApp: App {
         .commands {
             SidebarCommands()
             InspectorCommands()
-            StampedCommands(navManager: navManager)
         }
         #endif
+        // Menu bar and keyboard shortcuts, on the Mac and on iPad with a keyboard
+        .commands {
+            StampedCommands(navManager: navManager)
+        }
 
         #if os(macOS)
         // World Map, My Journey, trips, the quiz...: their own windows on the Mac, not sheets

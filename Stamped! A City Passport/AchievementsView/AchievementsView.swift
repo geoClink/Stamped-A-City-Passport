@@ -57,6 +57,7 @@ struct AchievementsView: View {
             .toolbar {
                 ToolbarItem(placement: .closeSheet) {
                     Button("Done") { dismiss() }
+                        .closesWithCommandW()
                         .fontWeight(.semibold)
                         .foregroundStyle(isHighContrast ? Color.primary : DS.Palette.accent)
                 }

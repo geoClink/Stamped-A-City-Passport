@@ -837,3 +837,11 @@
 "Opens a city or campus page in Stamped!." = "Stamped!에서 도시 또는 캠퍼스 페이지를 엽니다.";
 "Which city or campus?" = "어느 도시 또는 캠퍼스인가요?";
 "Open ${city}" = "${city} 열기";
+
+/* Menu bar and keyboard shortcuts (Mac, iPad with a keyboard) */
+"New Trip" = "새 여행";
+"New Window" = "새로운 윈도우";
+"Next City" = "다음 도시";
+"Previous City" = "이전 도시";
+"Stamped! Help" = "Stamped! 도움말";
+"Passport" = "여권";

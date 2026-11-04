@@ -99,6 +99,8 @@ struct LandmarkSection: View {
                         .buttonStyle(.plain)
                         .hoverEffect(.highlight)
                         .contentShape(Rectangle())
+                        // Mac and iPad: drag onto a trip day to add it as a stop
+                        .landmarkDraggable(building)
                         .accessibilityIdentifier("LandmarkLink_\(building.name)")
 
                         if !isHighContrast && building.id != viewModel.city.buildings.last?.id {
@@ -190,7 +192,9 @@ struct LandmarkSection: View {
                         )
                     }
                     .buttonStyle(.plain)
+                    .hoverEffect(.highlight)
                     .contentShape(Rectangle())
+                    .landmarkDraggable(building)
 
                     if !isHighContrast {
                         Divider().padding(.leading, dividerInset)

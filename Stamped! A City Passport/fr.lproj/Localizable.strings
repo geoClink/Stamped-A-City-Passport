@@ -837,3 +837,11 @@
 "Opens a city or campus page in Stamped!." = "Ouvre la page d’une ville ou d’un campus dans Stamped!.";
 "Which city or campus?" = "Quelle ville ou quel campus ?";
 "Open ${city}" = "Ouvrir ${city}";
+
+/* Menu bar and keyboard shortcuts (Mac, iPad with a keyboard) */
+"New Trip" = "Nouveau voyage";
+"New Window" = "Nouvelle fenêtre";
+"Next City" = "Ville suivante";
+"Previous City" = "Ville précédente";
+"Stamped! Help" = "Aide de Stamped!";
+"Passport" = "Passeport";

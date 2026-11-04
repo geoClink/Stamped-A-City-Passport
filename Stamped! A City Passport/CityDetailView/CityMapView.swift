@@ -527,6 +527,7 @@ struct CityMapView: View {
                     stopTour()
                     dismiss()
                 }
+                .closesWithCommandW()
             }
         }
         // Filters, Add a Place and the satellite switch share one menu, so the title has room

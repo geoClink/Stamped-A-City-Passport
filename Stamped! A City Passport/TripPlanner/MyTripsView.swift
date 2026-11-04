@@ -12,6 +12,7 @@ import SwiftUI
 
 struct MyTripsView: View {
     @ObservedObject private var store = TripStore.shared
+    @ObservedObject private var navManager = NavigationManager.shared
     @Environment(\.dismiss) private var dismiss
     @AppStorage("high_contrast_mode") private var isHighContrast = false
 
@@ -65,6 +66,19 @@ struct MyTripsView: View {
             // A search with a long list of results: a big sheet on iPad
             .dsLargeSheet()
         }
+        // File > New Trip (Command-N): a new trip anywhere while My Trips is frontmost
+        .focusedSceneValue(\.newTripAction, NewTripAction { showingAreaSearch = true })
+        // New Trip from the main window opens My Trips first, then asks for the place here
+        .onAppear(perform: startRequestedNewTrip)
+        .onChange(of: navManager.newTripRequested) { _, requested in
+            if requested { startRequestedNewTrip() }
+        }
+    }
+
+    private func startRequestedNewTrip() {
+        guard navManager.newTripRequested else { return }
+        navManager.newTripRequested = false
+        showingAreaSearch = true
     }
 
     // MARK: - Trip list
@@ -123,6 +137,7 @@ struct MyTripsView: View {
             // Trailing, like the other modals' Done buttons
             ToolbarItem(placement: .confirmationAction) {
                 Button("Done") { dismiss() }
+                    .closesWithCommandW()
             }
             #endif
             ToolbarItem(placement: .primaryAction) {
@@ -140,6 +155,8 @@ struct MyTripsView: View {
             NavigationLink(value: trip.id) {
                 TripSummaryRow(trip: trip, showsPlace: showsPlace)
             }
+            // Mac and iPad: drop a landmark here to add it to the trip's last day
+            .acceptsLandmarkDrops(onto: trip)
         }
         .onDelete { offsets in
             for index in offsets {
