@@ -28,6 +28,8 @@ final class ProximityManager: NSObject, ObservableObject {
     private let locationManager = CLLocationManager()
     // Maps region identifier (building.id) → Building so delegate callbacks can look up the name
     private var monitoredBuildings: [String: Building] = [:]
+    // Ask at most once per launch; iOS itself never shows the same prompt twice
+    private var hasRequestedPermissions = false
 
     private override init() {
         super.init()
@@ -36,6 +38,15 @@ final class ProximityManager: NSObject, ObservableObject {
     }
 
     // MARK: - Permissions
+
+    /// Called the first time nearby-landmark alerts start (opening a city page), not at launch,
+    /// so the location prompt shows up while the person is looking at landmarks (guideline 5.1.1).
+    /// People who already answered see nothing: iOS skips prompts that were already shown.
+    private func requestPermissionsIfNeeded() {
+        guard !hasRequestedPermissions else { return }
+        hasRequestedPermissions = true
+        requestPermissions()
+    }
 
     func requestPermissions() {
         #if !os(visionOS)
@@ -50,6 +61,8 @@ final class ProximityManager: NSObject, ObservableObject {
 
     func startMonitoring(buildings: [Building], visitedIDs: Set<String>, userLocation: CLLocation? = nil) {
         #if !os(visionOS)
+        requestPermissionsIfNeeded()
+
         // Clear any previously monitored regions
         for region in locationManager.monitoredRegions {
             locationManager.stopMonitoring(for: region)
