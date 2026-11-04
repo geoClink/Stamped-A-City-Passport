@@ -102,6 +102,8 @@ struct CityHeroHeader: View {
                     .textCase(.uppercase)
                     .foregroundStyle(.white.opacity(0.85))
                     .lineLimit(1)
+                    // Shrinks a little at the largest text sizes instead of cutting off the nickname
+                    .minimumScaleFactor(0.7)
                 Text(city.name)
                     .font(.system(.largeTitle, design: .serif).bold())
                     .foregroundStyle(.white)

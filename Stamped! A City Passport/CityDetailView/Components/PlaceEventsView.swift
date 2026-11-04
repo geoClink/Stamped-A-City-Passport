@@ -54,11 +54,12 @@ struct PlaceEventsView: View {
                     .font(.callout)
                     .foregroundStyle(DS.Palette.accent)
                     .frame(width: iconColumnWidth)
+                    .accessibilityHidden(true)
                 VStack(alignment: .leading, spacing: 2) {
                     Text(event.name)
                         .font(.subheadline.weight(.semibold))
                         .foregroundStyle(.primary)
-                        .lineLimit(1)
+                        .lineLimit(2)
                     Text([event.date, event.time, isAtVenue ? nil : event.venueName]
                             .compactMap { $0 }.filter { !$0.isEmpty }.joined(separator: " · "))
                         .font(.caption)

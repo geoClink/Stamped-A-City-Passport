@@ -132,11 +132,37 @@ extension ToolbarPlacement {
 
 // MARK: - Pointer and accessibility
 
-// The Mac already highlights controls under the pointer.
+// iPad draws these with the system pointer. The Mac has no hover effect for custom
+// cards and rows, so the same calls draw one with `.onHover`: a light tint for
+// `.highlight` (rows), a small lift for `.lift` and `.automatic` (tiles and buttons).
 enum HoverEffect { case automatic, highlight, lift }
 
 extension View {
-    func hoverEffect(_ effect: HoverEffect) -> some View { self }
+    func hoverEffect(_ effect: HoverEffect) -> some View {
+        modifier(MacHoverEffect(effect: effect))
+    }
+}
+
+private struct MacHoverEffect: ViewModifier {
+    let effect: HoverEffect
+    @State private var isHovering = false
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    func body(content: Content) -> some View {
+        content
+            .overlay {
+                if isHovering && effect == .highlight {
+                    RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
+                        .fill(Color.primary.opacity(0.06))
+                        .allowsHitTesting(false)
+                }
+            }
+            // With Reduce Motion on, a lift brightens instead of growing
+            .scaleEffect(isHovering && effect != .highlight && !reduceMotion ? 1.03 : 1)
+            .brightness(isHovering && effect != .highlight && reduceMotion ? 0.04 : 0)
+            .animation(.easeOut(duration: 0.15), value: isHovering)
+            .onHover { isHovering = $0 }
+    }
 }
 
 enum UIAccessibility {
@@ -242,6 +268,12 @@ enum DeviceInfo {
 }
 
 extension View {
+    /// Command-W on a sheet's Done button, so a keyboard closes the sheet the way it
+    /// closes a window (iPad, and sheets on the Mac, which Command-W doesn't close by itself).
+    func closesWithCommandW() -> some View {
+        keyboardShortcut("w", modifiers: .command)
+    }
+
     /// Mac: keeps content to a comfortable width, centered, however wide the window gets,
     /// so cards and lines of text don't stretch across a big screen. No change on iPhone/iPad.
     func macReadableWidth(_ maxWidth: CGFloat) -> some View {

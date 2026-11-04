@@ -48,6 +48,14 @@ struct GlobeVolumeView: View {
     @State private var dragStartTilt: Float?
     @State private var updateSubscription: EventSubscription?
 
+    /// Reduce Motion stops the auto-spin and the pulsing halo. The per-frame
+    /// closure below keeps the copy of this view it was made with, so it reads
+    /// the setting through @State (always current) rather than @Environment.
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @State private var isMotionReduced = false
+    /// VoiceOver can't see or tap the pins, so it gets a city menu instead
+    @Environment(\.accessibilityVoiceOverEnabled) private var voiceOverEnabled
+
     private let globeRadius: Float = 0.2             // metres (the volume is 0.6 m wide)
     private let autoSpinSpeed: Float = 0.12          // radians per second (~52 s per turn)
     private let maxTilt: Float = .pi / 4             // 45°, so the globe can't flip over
@@ -79,10 +87,10 @@ struct GlobeVolumeView: View {
                 elapsed += Float(event.deltaTime)
                 // sin() swings between -1 and 1, so the halo's scale swings
                 // between 0.7 and 1.3, about once a second (2π / 6 ≈ 1 s).
-                let pulse = 1 + 0.3 * sin(elapsed * 6)
+                let pulse = isMotionReduced ? 1 : 1 + 0.3 * sin(elapsed * 6)
                 highlightHalo?.scale = SIMD3(repeating: pulse)
 
-                guard dragStartAngle == nil, selectedCityName == nil else { return }
+                guard !isMotionReduced, dragStartAngle == nil, selectedCityName == nil else { return }
                 spinAngle += autoSpinSpeed * Float(event.deltaTime)
                 spinner.orientation = simd_quatf(angle: spinAngle, axis: [0, 1, 0])
             }
@@ -104,6 +112,15 @@ struct GlobeVolumeView: View {
         }
         .gesture(tapGesture)
         .gesture(dragGesture)
+        // Shown only with VoiceOver on: picking a city here does what tapping its pin does
+        .ornament(
+            visibility: voiceOverEnabled ? .visible : .hidden,
+            attachmentAnchor: .scene(.bottom),
+            contentAlignment: .top
+        ) {
+            voiceOverCityMenu
+        }
+        .onChange(of: reduceMotion, initial: true) { _, isOn in isMotionReduced = isOn }
         // Pins are built once in the make closure above, so rebuild them when
         // a stamp syncs in from iPhone or the main window picks another city.
         .onChange(of: store.visitedIDs) { rebuildPins() }
@@ -170,7 +187,32 @@ struct GlobeVolumeView: View {
 
         var transform = spinner.transform
         transform.rotation = simd_quatf(angle: spinAngle, axis: [0, 1, 0])
-        spinner.move(to: transform, relativeTo: spinner.parent, duration: 0.8, timingFunction: .easeInOut)
+        if isMotionReduced {
+            spinner.transform = transform
+        } else {
+            spinner.move(to: transform, relativeTo: spinner.parent, duration: 0.8, timingFunction: .easeInOut)
+        }
+    }
+
+    // MARK: - VoiceOver
+
+    /// Every city on the globe; choosing one opens its card and turns it toward you
+    private var voiceOverCityMenu: some View {
+        let cities = GlobeMath.cities(from: store)
+        let stampedCount = cities.filter(\.isStamped).count
+        return Menu {
+            ForEach(cities) { city in
+                Button(city.name) {
+                    selectedCityName = city.name
+                    turnToFace(city)
+                }
+            }
+        } label: {
+            Label("Pick a City", systemImage: "globe.americas.fill")
+        }
+        .accessibilityValue(Text("\(stampedCount) of \(cities.count) cities stamped"))
+        .padding(12)
+        .glassBackgroundEffect()
     }
 
     // MARK: - Entities
@@ -261,6 +303,7 @@ private struct GlobeCityCard: View {
         VStack(spacing: 10) {
             HStack {
                 Text(cityName).font(.title2.bold())
+                    .accessibilityAddTraits(.isHeader)
                 Spacer()
                 Button("Close", systemImage: "xmark", action: onClose)
                     .labelStyle(.iconOnly)
@@ -268,6 +311,8 @@ private struct GlobeCityCard: View {
             Text("\(stampedCount) / \(total) stamped")
                 .font(.headline)
                 .foregroundStyle(stampedCount > 0 ? .orange : .secondary)
+                // VoiceOver would read the slash; say it in words instead
+                .accessibilityLabel(Text("\(stampedCount) of \(total) landmarks stamped"))
             Button("Show in Main Window", systemImage: "map", action: onShow)
         }
         .padding(20)

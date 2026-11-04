@@ -4,6 +4,8 @@ import MapKit
 struct WorldMapView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.horizontalSizeClass) private var sizeClass
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     #if os(macOS)
     // The main window's navigation, so "View City" can open the city there
     @EnvironmentObject private var navManager: NavigationManager
@@ -72,7 +74,8 @@ struct WorldMapView: View {
                     Spacer()
                     if let city = selectedCity {
                         cityCallout(city: city)
-                            .transition(.move(edge: .bottom).combined(with: .opacity))
+                            // Slides up, or just fades in with Reduce Motion
+                            .transition(reduceMotion ? .opacity : .move(edge: .bottom).combined(with: .opacity))
                     }
                     statsBar
                 }
@@ -85,6 +88,7 @@ struct WorldMapView: View {
             .toolbar {
                 ToolbarItem(placement: .closeSheet) {
                     Button("Done") { dismiss() }
+                        .closesWithCommandW()
                         .fontWeight(.semibold)
                         .foregroundStyle(Color.adventureOrange)
                 }
@@ -158,6 +162,11 @@ struct WorldMapView: View {
                                     selectedCity = (selectedCity == city) ? nil : city
                                 }
                             }
+                            // The pin is only shapes and its title is hidden, so VoiceOver needs the name here
+                            .accessibilityLabel(Text(city.name))
+                            .accessibilityValue(visited ? Text("Visited") : Text("Not yet visited"))
+                            .accessibilityHint(isSelected ? Text("Hides this city's card") : Text("Shows this city's card"))
+                            .accessibilityAddTraits(isSelected ? [.isButton, .isSelected] : .isButton)
                     }
                     .annotationTitles(.hidden)
                 }
@@ -180,7 +189,8 @@ struct WorldMapView: View {
     private func zoom(into cluster: MapCluster<CityLocation.City>) {
         HapticManager.shared.trigger(.selection)
         let region = cluster.zoomRegion(coordinateOf: Self.coordinate(of:), minimumSpan: 0.6)
-        withAnimation(.easeInOut(duration: 0.6)) {
+        // With Reduce Motion the map jumps straight there
+        withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.6)) {
             cameraPosition = .region(region)
         }
     }
@@ -194,7 +204,7 @@ struct WorldMapView: View {
         let total = city.buildings.count
 
         VStack(spacing: 0) {
-            HStack(spacing: 16) {
+            calloutHeaderLayout {
                 ZStack {
                     Circle()
                         .fill(visited ? Color.adventureOrange.opacity(0.15) : Color(UIColor.tertiarySystemFill))
@@ -203,6 +213,8 @@ struct WorldMapView: View {
                         .font(.system(size: 20, weight: .semibold))
                         .foregroundStyle(visited ? Color.adventureOrange : Color.secondary)
                 }
+                // The stamp count below already says whether the city is visited
+                .accessibilityHidden(true)
 
                 VStack(alignment: .leading, spacing: 3) {
                     Text(city.name)
@@ -213,9 +225,12 @@ struct WorldMapView: View {
                         .foregroundStyle(.secondary)
                 }
 
-                Spacer()
+                // No Spacer when stacked: a vertical one would stretch the card up the screen
+                if !dynamicTypeSize.isAccessibilitySize {
+                    Spacer()
+                }
 
-                VStack(alignment: .trailing, spacing: 2) {
+                VStack(alignment: dynamicTypeSize.isAccessibilitySize ? .leading : .trailing, spacing: 2) {
                     Text("\(stamped)/\(total)")
                         .font(.title3.bold())
                         .foregroundStyle(visited ? Color.adventureOrange : Color.secondary)
@@ -223,7 +238,11 @@ struct WorldMapView: View {
                         .font(.caption2)
                         .foregroundStyle(.secondary)
                 }
+                // "3 of 12 stamps" rather than "3 slash 12, stamps"
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel(Text("\(stamped) of \(total)") + Text(verbatim: " ") + Text("stamps"))
             }
+            .accessibilityElement(children: .combine)
             .padding(.horizontal, 20)
             .padding(.top, 14)
             .padding(.bottom, 10)
@@ -247,6 +266,7 @@ struct WorldMapView: View {
                     Spacer()
                     Image(systemName: "chevron.right")
                         .font(.caption.weight(.semibold))
+                        .accessibilityHidden(true)
                 }
                 .foregroundStyle(Color.adventureOrange)
                 .padding(.horizontal, 20)
@@ -259,6 +279,18 @@ struct WorldMapView: View {
         .macReadableWidth(560)
         .padding(.horizontal, 16)
         .padding(.bottom, 8)
+        // Tapping the map closes the card; VoiceOver's two-finger scrub does the same
+        .accessibilityAction(.escape) {
+            withAnimation { selectedCity = nil }
+        }
+    }
+
+    /// Icon, name and stamp count side by side; stacked at accessibility text sizes,
+    /// where the name would otherwise be squeezed to a word per line.
+    private var calloutHeaderLayout: AnyLayout {
+        dynamicTypeSize.isAccessibilitySize
+            ? AnyLayout(VStackLayout(alignment: .leading, spacing: 8))
+            : AnyLayout(HStackLayout(spacing: 16))
     }
 
     // MARK: - Stats Bar
@@ -277,16 +309,27 @@ struct WorldMapView: View {
                 .font(.caption)
                 .foregroundStyle(.secondary)
         }
+        // One element: "cities visited, 12 of 140"
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(Text(label))
+        .accessibilityValue(Text("\(visited) of \(total)"))
+    }
+
+    /// The two counts side by side, or stacked at accessibility text sizes.
+    private var statsLayout: AnyLayout {
+        dynamicTypeSize.isAccessibilitySize
+            ? AnyLayout(VStackLayout(alignment: .leading, spacing: 8))
+            : AnyLayout(HStackLayout(spacing: 24))
     }
 
     private var statsBar: some View {
         // Counts on top, the pin key underneath, so neither gets squeezed
         VStack(alignment: .leading, spacing: 10) {
-            HStack(spacing: 24) {
+            statsLayout {
                 statCount(visitedCityCount, of: CityLocation.City.cityCases.count, label: "cities visited")
                 statCount(visitedCampusCount, of: CityLocation.City.campusCases.count, label: "campuses visited")
-                Spacer(minLength: 0)
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
             HStack(spacing: 16) {
                 pinLegend(visited: true, label: "Visited")
                 pinLegend(visited: false, label: "Not yet")
@@ -324,6 +367,7 @@ struct WorldMapView: View {
 private struct CityMapPin: View {
     let visited: Bool
     let isSelected: Bool
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
         ZStack {
@@ -354,6 +398,8 @@ private struct CityMapPin: View {
                     .opacity(0.5)
             }
         }
-        .animation(.spring(response: 0.3, dampingFraction: 0.7), value: isSelected)
+        .animation(reduceMotion ? nil : .spring(response: 0.3, dampingFraction: 0.7), value: isSelected)
+        // Only shapes inside, so make the pin itself the VoiceOver element (labelled where it's used)
+        .accessibilityElement()
     }
 }

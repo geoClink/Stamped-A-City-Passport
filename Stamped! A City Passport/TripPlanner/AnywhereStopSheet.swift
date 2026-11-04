@@ -106,6 +106,7 @@ struct AnywhereStopSheet: View {
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Done") { dismiss() }
+                        .closesWithCommandW()
                 }
             }
             .task(id: query) {

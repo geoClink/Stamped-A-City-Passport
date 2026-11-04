@@ -19,6 +19,8 @@ struct CityDetailView: View {
     
     @AppStorage("high_contrast_mode") var appHighContrast = false
     @AppStorage("reduce_motion") var reduceMotion = false
+    /// The system Reduce Motion setting, honored alongside the app's own switch
+    @Environment(\.accessibilityReduceMotion) private var systemReduceMotion
     @AppStorage var highScore: Int
     
     @State private var showingQuiz = false
@@ -102,7 +104,7 @@ struct CityDetailView: View {
                         isHighContrast: isHighContrast
                     )
                     .padding(.horizontal)
-                    .transition(reduceMotion ? .opacity : .asymmetric(insertion: .scale.combined(with: .opacity), removal: .opacity))
+                    .transition(reduceMotion || systemReduceMotion ? .opacity : .asymmetric(insertion: .scale.combined(with: .opacity), removal: .opacity))
                 }
                 
                 Picker(NSLocalizedString("Section", comment: "City page: picker between Landmarks, Plan and Local"), selection: $selectedTab) {

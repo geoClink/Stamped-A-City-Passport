@@ -10,6 +10,10 @@ How to use this file:
 
 ## [Unreleased]
 
+### Added
+- 10 new architecture cities: Porto, Kraków, Granada, Marseille, Antwerp, Riga, Hiroshima, Hanoi, Milwaukee and Tulsa, with 15 landmarks each. 166 cities in all. Latvia is a new country in the Passport.
+- 5 new campuses: Cranbrook Academy of Art, UC San Diego, University of Coimbra, University of Salamanca and University of Tokyo. 122 campuses in all.
+
 ## [2.9] (build 14) – 2026-11-04 (iPhone, iPad, Mac and Vision Pro)
 
 ### Added

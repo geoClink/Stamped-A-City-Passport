@@ -99,7 +99,16 @@ struct LandmarkSection: View {
                         .buttonStyle(.plain)
                         .hoverEffect(.highlight)
                         .contentShape(Rectangle())
+                        // Mac and iPad: drag onto a trip day to add it as a stop
+                        .landmarkDraggable(building)
                         .accessibilityIdentifier("LandmarkLink_\(building.name)")
+                        // The long-press menu's main actions, straight from the VoiceOver actions rotor
+                        .accessibilityAction(named: isVisited ? "Remove Stamp" : "Mark as Visited") {
+                            viewModel.toggleVisited(for: building)
+                        }
+                        .accessibilityAction(named: progressManager.isWishlisted(building.id) ? "Remove from Want to Visit" : "Want to Visit") {
+                            progressManager.toggleWishlist(building.id)
+                        }
 
                         if !isHighContrast && building.id != viewModel.city.buildings.last?.id {
                             Divider().padding(.leading, dividerInset)
@@ -139,15 +148,17 @@ struct LandmarkSection: View {
                     .foregroundStyle(isHighContrast ? Color(UIColor.systemBackground) : .white)
                     .frame(width: placeIconSize, height: placeIconSize)
                     .background(isHighContrast ? Color.primary : DS.Palette.wishlist, in: Circle())
+                    .accessibilityHidden(true)
                 VStack(alignment: .leading, spacing: 2) {
                     Text(place.name).font(.headline).foregroundStyle(.primary)
                     if let address = place.address {
-                        Text(address).font(.caption).foregroundStyle(isHighContrast ? .primary : .secondary).lineLimit(1)
+                        Text(address).font(.caption).foregroundStyle(isHighContrast ? .primary : .secondary).lineLimit(2)
                     }
                 }
                 Spacer()
                 Image(systemName: "arrow.up.right.square")
                     .foregroundStyle(isHighContrast ? .primary : .secondary)
+                    .accessibilityHidden(true)
             }
             .padding(DS.Space.l)
             .contentShape(Rectangle())
@@ -164,6 +175,15 @@ struct LandmarkSection: View {
             }
         }
         .accessibilityHint("Opens in Maps. Long-press for more options.")
+        // The long-press menu, as VoiceOver actions
+        .accessibilityAction(named: "Remove from Want to Visit") {
+            progressManager.removeCustomPlace(place.id)
+        }
+        .accessibilityActions {
+            if let website = place.websiteURL {
+                Button("Website") { browserLink = BrowserLink(url: website) }
+            }
+        }
     }
 
     /// Landmarks saved for a future trip, shown above the full list.
@@ -190,7 +210,9 @@ struct LandmarkSection: View {
                         )
                     }
                     .buttonStyle(.plain)
+                    .hoverEffect(.highlight)
                     .contentShape(Rectangle())
+                    .landmarkDraggable(building)
 
                     if !isHighContrast {
                         Divider().padding(.leading, dividerInset)

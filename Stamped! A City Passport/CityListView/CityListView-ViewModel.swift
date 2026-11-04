@@ -112,6 +112,7 @@ extension CityListView {
             Image(systemName: "mappin.slash.circle.fill")
                 .font(.system(size: 40))
                 .accessibleSecondary(isHighContrast: isHighContrast).opacity(0.6)
+                .accessibilityHidden(true)
             Text("No Cities Found")
                 .font(.headline)
             Text("Try searching for a different country or city.")
@@ -197,6 +198,8 @@ extension CityListView {
             HapticManager.shared.trigger(.selection)
             selectedCity = city
         }
+        // A tap gesture, not a Button, so VoiceOver needs telling that the row opens something
+        .accessibilityAddTraits(.isButton)
     }
 
     var headerSection: some View {
@@ -247,6 +250,7 @@ extension CityListView {
             Image(systemName: systemImage)
                 .font(.title3)
                 .foregroundStyle(brandColor)
+                .accessibilityHidden(true)
             Text(title)
                 .font(.caption.weight(.semibold))
                 .foregroundStyle(.primary)
@@ -265,6 +269,8 @@ extension CityListView {
                 .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
         )
         .contentShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+        // Lifts under the iPad pointer and the Mac's mouse
+        .hoverEffect(.lift)
         .onTapGesture {
             HapticManager.shared.trigger(.selection)
             action()
@@ -287,6 +293,7 @@ extension CityListView {
                     .font(.system(size: 60))
                     .foregroundColor(isHighContrast ? .primary : Color.adventureOrange.opacity(0.8))
             }
+            .accessibilityHidden(true)
             
             VStack(spacing: 8) {
                 Text("Start Exploring")
@@ -350,6 +357,7 @@ extension CityListView {
         }) {
             HStack(spacing: 12) {
                 Image(systemName: passportStampCount > 0 ? "book.pages.fill" : "book.closed.fill")
+                    .accessibilityHidden(true)
                 Text("My Passport").fontWeight(.bold)
                 Text("\(passportStampCount)")
                     .font(.caption2.bold())
@@ -357,6 +365,8 @@ extension CityListView {
                     .background(isHighContrast ? Color(UIColor.systemBackground) : .white.opacity(0.2))
                     .foregroundColor(isHighContrast ? .primary : .white)
                     .clipShape(Circle())
+                    // Read as the button's value instead of a bare number
+                    .accessibilityHidden(true)
             }
             .padding(.vertical, isIPad ? 18 : 14)
             .padding(.horizontal, isIPad ? 32 : 24)
@@ -368,6 +378,13 @@ extension CityListView {
                     .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
             )
         }
+        .hoverEffect(.lift)
+        // The button floats over the list, so at the largest text sizes it would
+        // cover half the screen and split "Pass-port". Cap its growth instead;
+        // a long press shows it full size in the Large Content Viewer
+        .dynamicTypeSize(...DynamicTypeSize.accessibility1)
+        .accessibilityShowsLargeContentViewer()
+        .accessibilityValue(Text("\(passportStampCount) stamps"))
         .frame(maxWidth: .infinity)
         .fixedSize(horizontal: false, vertical: true)
     }
@@ -382,7 +399,7 @@ extension CityListView {
                 expandedContinents: $expandedContinents,
                 expandedCountries: $expandedCountries
             )
-            .transition(.opacity.combined(with: .scale(scale: 1.1)))
+            .transition(reduceMotion ? .opacity : .opacity.combined(with: .scale(scale: 1.1)))
         }
     }
     
@@ -425,7 +442,8 @@ struct CountryHeaderLabel: View {
         VStack(alignment: .leading, spacing: 6) {
             if isMastered {
                 Text(congratsMessage)
-                    .font(.system(size: 10, weight: .black, design: .rounded))
+                    // A text style, so it grows with Dynamic Type (was a fixed 10 pt)
+                    .font(.system(.caption2, design: .rounded, weight: .black))
                     .foregroundColor(isHighContrast ? .primary : .adventureOrange)
                     .tracking(1)
             }
@@ -440,12 +458,13 @@ struct CountryHeaderLabel: View {
                     Image(systemName: "trophy.fill")
                         .font(.caption2)
                         .foregroundColor(isHighContrast ? .primary : Color.adventureOrange)
+                        .accessibilityHidden(true) // The master badge below says it
                 }
             }
             
             if isMastered {
                 Text(masterBadge)
-                    .font(.system(size: 10, weight: .black))
+                    .font(.caption2.weight(.black))
                     .padding(.horizontal, 8)
                     .padding(.vertical, 4)
                     .background(isHighContrast ? Color.primary : Color.adventureOrange.opacity(0.15))
@@ -539,6 +558,8 @@ struct ProgressHeaderView: View {
     let viewModel: CityViewModel
     let isHighContrast: Bool
     let action: () -> Void
+
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     
     private var progressRatio: Double {
         guard viewModel.totalCities > 0 else { return 0 }
@@ -592,9 +613,14 @@ struct ProgressHeaderView: View {
                         }
                     }
                     .frame(height: 12)
+                    .accessibilityHidden(true) // The text above already says the progress
                     
                     if progressPercentage < 100 {
-                        HStack {
+                        // Stacked at accessibility text sizes so the city and campus counts don't squeeze
+                        let countsLayout = dynamicTypeSize.isAccessibilitySize
+                            ? AnyLayout(VStackLayout(alignment: .leading, spacing: 4))
+                            : AnyLayout(HStackLayout())
+                        countsLayout {
                             Text("Only: \(viewModel.totalCities - viewModel.masteredCount) more cities")
                                 .font(.caption2)
                                 .foregroundColor(.secondary)
@@ -610,6 +636,7 @@ struct ProgressHeaderView: View {
                             Image(systemName: "flag.checkered")
                                 .font(.caption2)
                                 .foregroundColor(.secondary.opacity(0.5))
+                                .accessibilityHidden(true)
                         }
                     } else {
                         Label("Global Master Achieved!", systemImage: "checkmark.seal.fill")
@@ -634,10 +661,13 @@ struct ProgressHeaderView: View {
     }
 }
 struct ScaledButtonStyle: ButtonStyle {
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .scaleEffect(configuration.isPressed ? 0.97 : 1.0)
-            .animation(.spring(response: 0.3, dampingFraction: 0.6), value: configuration.isPressed)
+            // With Reduce Motion on, the card doesn't shrink and spring back when pressed
+            .scaleEffect(configuration.isPressed && !reduceMotion ? 0.97 : 1.0)
+            .animation(reduceMotion ? nil : .spring(response: 0.3, dampingFraction: 0.6), value: configuration.isPressed)
     }
 }
 
@@ -648,9 +678,15 @@ struct CityRow: View {
     @Environment(\.colorScheme) private var colorScheme
     
     @ScaledMetric(relativeTo: .body) private var stampSize: CGFloat = 44
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     
     var body: some View {
-        HStack(spacing: 12) {
+        // At accessibility sizes the code circle sits above the name, so "Montreal"
+        // gets the full width instead of breaking as "Mont-real"
+        let layout = dynamicTypeSize.isAccessibilitySize
+            ? AnyLayout(VStackLayout(alignment: .leading, spacing: 8))
+            : AnyLayout(HStackLayout(spacing: 12))
+        layout {
             ZStack {
                 Circle()
                     .fill(isCompleted ? Color.adventureOrange.opacity(0.2) : Color.gray.opacity(0.1))
@@ -673,13 +709,15 @@ struct CityRow: View {
                     .accessibleSecondary(isHighContrast: isHighContrast)
                     .italic()
             }
-            Spacer()
+            if !dynamicTypeSize.isAccessibilitySize { Spacer() }
         }
+        .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.vertical, 8)
         .contentShape(Rectangle())
         .hoverEffect(.highlight)
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("\(city.name), \(isCompleted ? "Completed" : "Not visited")")
+        // Two whole phrases, so "Completed" and "Not visited" get translated too
+        .accessibilityLabel(isCompleted ? Text("\(city.name), Completed") : Text("\(city.name), Not visited"))
         .accessibilityHint("Shows architectural details for \(city.name)")
     }
 }
@@ -754,8 +792,10 @@ struct PassportHintOverlayView: View {
     private func headerTextSection(isCentered: Bool) -> some View {
         VStack(alignment: isCentered ? .center : .leading, spacing: 12) {
             Text("Unlock Your Collection")
-                .font(.system(size: horizontalClass == .regular ? 36 : 24, weight: .black, design: .rounded))
+                // Text styles (about the old 34 / 22 pt), so the title grows with Dynamic Type
+                .font(.system(horizontalClass == .regular ? .largeTitle : .title2, design: .rounded, weight: .black))
                 .multilineTextAlignment(isCentered ? .center : .leading)
+                .accessibilityAddTraits(.isHeader)
             
             Text("Every city mastered is a stamp earned.")
                 .font(horizontalClass == .regular ? .title2 : .subheadline)
@@ -771,10 +811,11 @@ struct PassportHintOverlayView: View {
                 .font(.system(size: isWide ? 80 : 54))
                 .foregroundColor(isHighContrast ? .primary : .adventureOrange)
                 .modifier(PulseEffectModifier(isActive: true))
+                .accessibilityHidden(true)
 
             VStack(spacing: 8) {
                 Text("PASSPORT STAMPED")
-                    .font(.system(size: isWide ? 14 : 11, weight: .black))
+                    .font(.system(isWide ? .subheadline : .caption2, weight: .black))
                     .tracking(2)
                     .foregroundColor(isHighContrast ? .primary : .adventureOrange)
                 
@@ -782,17 +823,17 @@ struct PassportHintOverlayView: View {
                     .font(.system(isWide ? .title : .title2, design: .serif)).bold()
                 
                 Text("DATE: \(internalDate)")
-                    .font(.system(size: isWide ? 14 : 12, weight: .bold, design: .monospaced))
+                    .font(.system(isWide ? .subheadline : .caption, design: .monospaced, weight: .bold))
                     .foregroundColor(isHighContrast ? .primary : .secondary)
             }
 
             VStack(spacing: 6) {
                 Text("DID YOU KNOW?")
-                    .font(.system(size: isWide ? 12 : 10, weight: .heavy))
+                    .font(.system(isWide ? .caption : .caption2, weight: .heavy))
                     .foregroundColor(isHighContrast ? .primary : .adventureOrange)
                 
                 Text("While originally intended only as a protective sealant, the bridge’s signature ‘International Orange’ was made permanent when the architect realized its vibrant hue served as a perfect, high-contrast beacon against the San Francisco fog.")
-                    .font(.system(size: isWide ? 15 : 13, design: .serif)).italic()
+                    .font(.system(isWide ? .subheadline : .footnote, design: .serif)).italic()
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
             }
@@ -802,6 +843,8 @@ struct PassportHintOverlayView: View {
         .frame(width: isWide ? 400 : 300)
         .background(stampBackground)
         .rotationEffect(.degrees(isHighContrast ? 0 : -2.5))
+        // The sample stamp reads as one item, not five
+        .accessibilityElement(children: .combine)
     }
 
     private var stampBackground: some View {
@@ -855,12 +898,14 @@ struct PassportHintOverlayView: View {
                 Image(systemName: icon).font(.system(size: 20, weight: .bold))
                     .foregroundColor(isHighContrast ? Color(UIColor.systemBackground) : Color.adventureOrange)
             }
+            .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 4) {
                 Text(title).font(.headline.bold())
                 Text(detail).font(.footnote).accessibleSecondary(isHighContrast: isHighContrast)
                      .fixedSize(horizontal: false, vertical: true)
             }
         }
+        .accessibilityElement(children: .combine)
     }
     
     private var backgroundDimmer: some View {

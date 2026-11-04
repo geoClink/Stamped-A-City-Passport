@@ -274,5 +274,180 @@
         "foodSpots": []
       }
     ]
+  },
+  {
+    "name": "University of Tokyo",
+    "enumCase": "uTokyo",
+    "country": "japan",
+    "colors": [
+      "#0B8BEE",
+      "#FFCD00"
+    ],
+    "traditions": [
+      {
+        "id": "trad_utokyo_sanshiro_pond",
+        "name": "Sanshirō Pond",
+        "description": "This pond and garden were laid out in 1638 for the Maeda lords of the Kaga Domain. It took its nickname from Natsume Sōseki's novel Sanshirō, whose hero first meets the woman he admires here, and it makes a quiet stop on a walk around campus.",
+        "coordinates": [
+          35.7121128,
+          139.7620971
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/53208162",
+        "source": "https://www.u-tokyo.ac.jp/en/whyutokyo/hongo_hi_006.html"
+      },
+      {
+        "id": "trad_utokyo_ginkgo_avenue",
+        "name": "Golden Ginkgo Avenue",
+        "description": "In late autumn the ginkgo trees lining the avenue from the Main Gate to Yasuda Auditorium turn bright yellow. It is one of the most loved autumn views in Tokyo, and the ginkgo leaf is the university's emblem.",
+        "coordinates": [
+          35.7130391,
+          139.7601885
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/33050411",
+        "source": "https://www.u-tokyo.ac.jp/en/whyutokyo/1km_of_campus.html"
+      },
+      {
+        "id": "trad_utokyo_hachiko",
+        "name": "Hachikō Reunited",
+        "description": "On the Faculty of Agriculture grounds, a bronze statue unveiled in 2015 shows the loyal dog Hachikō leaping up to greet his owner, Professor Hidesaburō Ueno. It stands just inside the faculty's main gate.",
+        "coordinates": [
+          35.7164006,
+          139.7588764
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/4848845022",
+        "source": "https://japantoday.com/category/national/hachikos-new-statue-now-open-to-public-at-univ-of-tokyo-campus"
+      }
+    ],
+    "wiki": "University of Tokyo",
+    "currency": "JPY (¥)",
+    "details": {
+      "nickname": "Tōdai",
+      "airportName": "Tokyo Haneda Airport",
+      "airportCode": "HND",
+      "airportInfo": "Haneda and Narita both serve Tokyo; Haneda is the closer of the two to the city centre. Trains and the subway connect both airports with stations near the Hongō campus.",
+      "funFact": "The Hongō campus stands on the former Edo residence of the Maeda lords of Kaga. Its famous Red Gate, the Akamon, was built in 1827 to welcome a shōgun's daughter who married into the family.",
+      "language": "Japanese",
+      "languageInfo": "Japanese is the language of daily life. Students call the university Tōdai, short for Tōkyō Daigaku, and the Akamon has long been a nickname for the university itself.",
+      "currencyInfo": "Japanese Yen (¥)",
+      "currencyCode": "JPY",
+      "transportation": "Walking / Tokyo Metro",
+      "transportationFact": "Tōdai-mae station on the Namboku Line is about three minutes' walk from campus. Hongō-sanchōme, Nezu and Yushima stations are each about eight minutes away."
+    },
+    "buildings": [
+      {
+        "id": "campus_utokyo_yasuda_auditorium",
+        "wiki": "Yasuda Auditorium",
+        "name": "Yasuda Auditorium",
+        "description": "Businessman Yasuda Zenjirō paid for this red-brick clock tower, designed by Yoshikazu Uchida and Hideto Kishida and completed in 1925. It is the symbol of the campus and was the center of the 1968–69 student protests.",
+        "architect": "Yoshikazu Uchida; Hideto Kishida",
+        "yearBuilt": 1925,
+        "address": "7-3-1 Hongō, Bunkyō, Tokyo 113-8654",
+        "oldUse": "Auditorium",
+        "newUse": "Auditorium and university offices",
+        "buildingStyle": "Gothic Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_utokyo_akamon",
+        "wiki": "Hongō campus",
+        "name": "Akamon",
+        "description": "Lord Maeda Nariyasu of the Kaga Domain built this vermilion gate in 1827 to welcome Yōhime, daughter of shōgun Tokugawa Ienari, as his bride. It is a gabled yakuimon gate with a guardhouse on each side and a national Important Cultural Property.",
+        "architect": "Unknown",
+        "yearBuilt": 1827,
+        "address": "7-3-1 Hongō, Bunkyō, Tokyo 113-8654",
+        "oldUse": "Gate of the Kaga Domain's Edo residence",
+        "newUse": "Campus gate",
+        "buildingStyle": "Yakuimon (Edo-period gate)",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          35.7106033,
+          139.7603542
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/240891310"
+      },
+      {
+        "id": "campus_utokyo_main_gate",
+        "wiki": "Hongō campus",
+        "name": "Main Gate (University of Tokyo)",
+        "description": "Itō Chūta designed the campus's official main gate on Hongō-dōri, completed in 1912. From here the ginkgo avenue leads straight to Yasuda Auditorium.",
+        "architect": "Itō Chūta",
+        "yearBuilt": 1912,
+        "address": "7-3-1 Hongō, Bunkyō, Tokyo 113-8654",
+        "oldUse": "Campus gate",
+        "newUse": "Campus gate",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          35.7129409,
+          139.7596604
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/1623971579"
+      },
+      {
+        "id": "campus_utokyo_general_library",
+        "wiki": "University of Tokyo Library",
+        "name": "General Library (University of Tokyo)",
+        "description": "The library's earlier building burned in the 1923 Great Kantō Earthquake along with 750,000 books. John D. Rockefeller paid for this replacement by Yoshikazu Uchida, completed in 1928, whose front looks like a row of books.",
+        "architect": "Yoshikazu Uchida",
+        "yearBuilt": 1928,
+        "address": "7-3-1 Hongō, Bunkyō, Tokyo 113-8654",
+        "oldUse": "University library",
+        "newUse": "General Library",
+        "buildingStyle": "Gothic Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_utokyo_fukutake_hall",
+        "wiki": "Hongō campus",
+        "name": "Fukutake Hall",
+        "description": "Tadao Ando's first building at the university was finished in 2008 near the Akamon, funded by Benesse chairman Sōichirō Fukutake. Almost half of the building lies underground so it sits lightly among its older neighbours.",
+        "architect": "Tadao Ando",
+        "yearBuilt": 2008,
+        "address": "7-3-1 Hongō, Bunkyō, Tokyo 113-8654",
+        "oldUse": "Interfaculty Initiative in Information Studies",
+        "newUse": "Interfaculty Initiative in Information Studies",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          35.711472,
+          139.7600436
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/240756007"
+      },
+      {
+        "id": "campus_utokyo_daiwa_ubiquitous",
+        "wiki": "Hongō campus",
+        "name": "Daiwa Ubiquitous Computing Research Building",
+        "description": "Kengo Kuma designed this research building, funded by Daiwa House and finished in 2014. Staggered strips of cedar wrap its façade, and hundreds of sensors manage the temperature, humidity and air inside.",
+        "architect": "Kengo Kuma & Associates",
+        "yearBuilt": 2014,
+        "address": "7-3-1 Hongō, Bunkyō, Tokyo 113-8654",
+        "oldUse": "Ubiquitous computing research",
+        "newUse": "Ubiquitous computing research",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 5,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          35.7081989,
+          139.7626602
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/224475201"
+      }
+    ]
   }
 ]

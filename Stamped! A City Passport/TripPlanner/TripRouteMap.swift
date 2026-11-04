@@ -19,6 +19,7 @@ struct TripRouteMap: View {
     /// Where each stop's badge sat on screen when the camera last stopped (for grouping badges that overlap).
     @State private var stopScreenPoints: [String: CGPoint] = [:]
     @ScaledMetric(relativeTo: .caption) private var clusterSize: CGFloat = 26
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     init(stops: [ResolvedTripStop], cityCenter: CLLocationCoordinate2D?) {
         self.stops = stops
@@ -125,7 +126,8 @@ struct TripRouteMap: View {
     /// Tapping a bubble zooms in until its stops come apart.
     private func zoom(into cluster: MapCluster<NumberedStop>) {
         let camera = cluster.zoomCamera(coordinateOf: \.coordinate, minimumDistance: 300, pitch: 0)
-        withAnimation(.easeInOut(duration: 0.8)) {
+        // Reduce Motion: jump straight there instead of flying the camera
+        withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.8)) {
             position = .camera(camera)
         }
     }
