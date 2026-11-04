@@ -798,6 +798,10 @@
 /* Text sent with a shared passport picture; %@ is the App Store link */
 "My Stamped! passport. Get the app: %@" = "Mon passeport Stamped!. Télécharge l’app : %@";
 
+/* Audio story: tip when only the basic voice is installed */
+"Got it" = "Compris";
+"For a more natural voice, download a Premium English voice in Settings > Accessibility > Read & Speak > Voices." = "Pour une voix plus naturelle, téléchargez une voix anglaise Premium dans Réglages > Accessibilité > Lecture et parole > Voix.";
+"For a more natural voice, download a Premium English voice in System Settings > Accessibility > Spoken Content > System Voice > Manage Voices." = "Pour une voix plus naturelle, téléchargez une voix anglaise Premium dans Réglages Système > Accessibilité > Contenu énoncé > Voix du système > Gérer les voix.";
 /* Tip jar (Support Stamped!) */
 "Support Stamped!" = "Soutenir Stamped!";
 "Tips help keep new cities coming" = "Les pourboires font venir de nouvelles villes";

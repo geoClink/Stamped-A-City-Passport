@@ -89,14 +89,36 @@ final class AudioStoryPlayer: NSObject, ObservableObject, AVSpeechSynthesizerDel
         return "\(building.name).\(factsSentence) \(building.description)"
     }
 
-    /// An enhanced (higher quality) English voice if one is installed, else the standard one
+    /// The most natural English voice on the device: Premium, then Enhanced, then the basic
+    /// (Compact) one every device has. Within the same quality, the person's own English
+    /// (en-GB, en-AU…) wins over en-US. Better voices are free downloads in Settings.
     private static func bestEnglishVoice() -> AVSpeechSynthesisVoice? {
         let english = AVSpeechSynthesisVoice.speechVoices().filter { $0.language.hasPrefix("en") }
         let preferred = Locale.current.language.languageCode?.identifier == "en" ? Locale.current.identifier.replacingOccurrences(of: "_", with: "-") : "en-US"
-        return english.first { $0.language == preferred && $0.quality != .default }
-            ?? english.first { $0.quality != .default }
+        // Novelty voices (Bells, Bubbles…) and Personal Voice are left out
+        let natural = english.filter { !$0.voiceTraits.contains(.isNoveltyVoice) && !$0.voiceTraits.contains(.isPersonalVoice) }
+        let best = natural.max { first, second in
+            if first.quality != second.quality { return rank(first.quality) < rank(second.quality) }
+            return first.language != preferred && second.language == preferred
+        }
+        return best
             ?? AVSpeechSynthesisVoice(language: preferred)
             ?? AVSpeechSynthesisVoice(language: "en-US")
+    }
+
+    /// True when only the basic, robotic-sounding English voice is installed, so the Listen
+    /// button can suggest downloading a better one
+    static var hasOnlyBasicVoice: Bool {
+        guard let voice = bestEnglishVoice() else { return true }
+        return voice.quality == .default
+    }
+
+    private static func rank(_ quality: AVSpeechSynthesisVoiceQuality) -> Int {
+        switch quality {
+        case .premium: return 2
+        case .enhanced: return 1
+        default: return 0
+        }
     }
 
     // MARK: - AVSpeechSynthesizerDelegate
