@@ -821,3 +821,14 @@
 "No worries, the tip was cancelled. You weren't charged." = "괜찮아요. 팁이 취소되었으며 요금은 청구되지 않았습니다.";
 "That tip didn't go through. Please try again." = "팁이 결제되지 않았습니다. 다시 시도해 주세요.";
 "Payments go through your Apple Account. Tips are one-time and don't renew." = "결제는 Apple 계정을 통해 이루어집니다. 팁은 일회성이며 갱신되지 않습니다.";
+
+/* Siri and Shortcuts actions (Intents/StampedShortcuts.swift) */
+"City or Campus" = "도시 또는 캠퍼스";
+"Campus" = "캠퍼스";
+"City" = "도시";
+"Open My Passport" = "내 여권 열기";
+"Opens your passport of collected stamps in Stamped!." = "Stamped!에서 모은 스탬프가 담긴 여권을 엽니다.";
+"Open a City" = "도시 열기";
+"Opens a city or campus page in Stamped!." = "Stamped!에서 도시 또는 캠퍼스 페이지를 엽니다.";
+"Which city or campus?" = "어느 도시 또는 캠퍼스인가요?";
+"Open ${city}" = "${city} 열기";

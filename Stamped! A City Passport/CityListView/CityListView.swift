@@ -237,11 +237,15 @@ struct CityListView: View {
         }
         #endif
         .onChange(of: navManager.spotlightCity) { _, city in
-            if let city {
-                selectedCity = city
-                // Clear it so opening the same city again (from Spotlight or a link) still works
-                navManager.spotlightCity = nil
-            }
+            if let city { openRequestedCity(city) }
+        }
+        .onChange(of: navManager.passportRequested) { _, requested in
+            if requested { openRequestedPassport() }
+        }
+        // A Siri or Shortcuts action can launch the app before this list is on screen
+        .onAppear {
+            if let city = navManager.spotlightCity { openRequestedCity(city) }
+            if navManager.passportRequested { openRequestedPassport() }
         }
         .overlay {
             if !hasSeenPassportHint {
@@ -250,6 +254,23 @@ struct CityListView: View {
         }
         // Last, so the sheets and full-screen covers above see it too
         .environment(\.isWideWindow, horizontalSizeClass == .regular)
+    }
+
+    // MARK: - Opening from outside the app
+
+    /// A city from Spotlight, a website link, the Mac's College List window, or Siri / Shortcuts
+    private func openRequestedCity(_ city: CityLocation.City) {
+        // The passport covers the whole screen, so close it or the city opens out of sight
+        showingPassport = false
+        selectedCity = city
+        // Clear it so opening the same city again still works
+        navManager.spotlightCity = nil
+    }
+
+    /// The "Open My Passport" Siri / Shortcuts action
+    private func openRequestedPassport() {
+        showingPassport = true
+        navManager.passportRequested = false
     }
 
     // MARK: - List Sections

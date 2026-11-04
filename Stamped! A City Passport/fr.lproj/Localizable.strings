@@ -821,3 +821,14 @@
 "No worries, the tip was cancelled. You weren't charged." = "Pas de souci, le pourboire a été annulé. Aucun montant n’a été débité.";
 "That tip didn't go through. Please try again." = "Le pourboire n’a pas abouti. Veuillez réessayer.";
 "Payments go through your Apple Account. Tips are one-time and don't renew." = "Le paiement passe par votre compte Apple. Les pourboires sont ponctuels et ne se renouvellent pas.";
+
+/* Siri and Shortcuts actions (Intents/StampedShortcuts.swift) */
+"City or Campus" = "Ville ou campus";
+"Campus" = "Campus";
+"City" = "Ville";
+"Open My Passport" = "Ouvrir mon passeport";
+"Opens your passport of collected stamps in Stamped!." = "Ouvre votre passeport et les tampons que vous avez collectés dans Stamped!.";
+"Open a City" = "Ouvrir une ville";
+"Opens a city or campus page in Stamped!." = "Ouvre la page d’une ville ou d’un campus dans Stamped!.";
+"Which city or campus?" = "Quelle ville ou quel campus ?";
+"Open ${city}" = "Ouvrir ${city}";
