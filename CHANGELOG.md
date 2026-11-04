@@ -29,6 +29,9 @@ How to use this file:
 - 268 older app strings translated into all 8 other languages. (#96)
 - Mac: ⌘N is now New Trip; New Window moved to ⌥⌘N. (#92)
 
+### Fixed
+- Walking tours: 50 landmarks that shared one map spot now sit at their real locations, and a test checks every tour. (#105)
+
 ## [2.9] (build 14) – 2026-11-04 (iPhone, iPad, Mac and Vision Pro)
 
 ### Added
