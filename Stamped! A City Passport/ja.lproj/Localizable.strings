@@ -827,3 +827,14 @@
 "No worries, the tip was cancelled. You weren't charged." = "大丈夫です。チップはキャンセルされ、請求は発生していません。";
 "That tip didn't go through. Please try again." = "チップを送信できませんでした。もう一度お試しください。";
 "Payments go through your Apple Account. Tips are one-time and don't renew." = "支払いは Apple アカウントを通じて行われます。チップは1回限りで、自動更新されません。";
+
+/* Siri and Shortcuts actions (Intents/StampedShortcuts.swift) */
+"City or Campus" = "都市またはキャンパス";
+"Campus" = "キャンパス";
+"City" = "都市";
+"Open My Passport" = "マイパスポートを開く";
+"Opens your passport of collected stamps in Stamped!." = "Stamped!で集めたスタンプのパスポートを開きます。";
+"Open a City" = "都市を開く";
+"Opens a city or campus page in Stamped!." = "Stamped!で都市やキャンパスのページを開きます。";
+"Which city or campus?" = "どの都市またはキャンパスですか？";
+"Open ${city}" = "${city}を開く";

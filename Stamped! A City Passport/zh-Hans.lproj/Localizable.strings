@@ -827,3 +827,14 @@
 "No worries, the tip was cancelled. You weren't charged." = "没关系，打赏已取消，你没有被扣款。";
 "That tip didn't go through. Please try again." = "打赏未能完成，请再试一次。";
 "Payments go through your Apple Account. Tips are one-time and don't renew." = "付款通过你的 Apple 账户完成。打赏为一次性付款，不会续订。";
+
+/* Siri and Shortcuts actions (Intents/StampedShortcuts.swift) */
+"City or Campus" = "城市或校园";
+"Campus" = "校园";
+"City" = "城市";
+"Open My Passport" = "打开我的护照";
+"Opens your passport of collected stamps in Stamped!." = "在 Stamped! 中打开收集了印章的护照。";
+"Open a City" = "打开城市";
+"Opens a city or campus page in Stamped!." = "在 Stamped! 中打开城市或校园页面。";
+"Which city or campus?" = "哪个城市或校园？";
+"Open ${city}" = "打开${city}";

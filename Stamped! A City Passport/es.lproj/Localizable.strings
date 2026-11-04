@@ -827,3 +827,14 @@
 "No worries, the tip was cancelled. You weren't charged." = "No pasa nada, la propina se canceló. No se te ha cobrado nada.";
 "That tip didn't go through. Please try again." = "La propina no se completó. Vuelve a intentarlo.";
 "Payments go through your Apple Account. Tips are one-time and don't renew." = "Los pagos se hacen con tu Cuenta de Apple. Las propinas son únicas y no se renuevan.";
+
+/* Siri and Shortcuts actions (Intents/StampedShortcuts.swift) */
+"City or Campus" = "Ciudad o campus";
+"Campus" = "Campus";
+"City" = "Ciudad";
+"Open My Passport" = "Abrir mi pasaporte";
+"Opens your passport of collected stamps in Stamped!." = "Abre tu pasaporte con los sellos que has reunido en Stamped!.";
+"Open a City" = "Abrir una ciudad";
+"Opens a city or campus page in Stamped!." = "Abre la página de una ciudad o un campus en Stamped!.";
+"Which city or campus?" = "¿Qué ciudad o campus?";
+"Open ${city}" = "Abrir ${city}";

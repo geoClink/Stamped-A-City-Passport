@@ -350,3 +350,14 @@
 "No worries, the tip was cancelled. You weren't charged." = "No worries, the tip was cancelled. You weren't charged.";
 "That tip didn't go through. Please try again." = "That tip didn't go through. Please try again.";
 "Payments go through your Apple Account. Tips are one-time and don't renew." = "Payments go through your Apple Account. Tips are one-time and don't renew.";
+
+/* Siri and Shortcuts actions (Intents/StampedShortcuts.swift) */
+"City or Campus" = "City or Campus";
+"Campus" = "Campus";
+"City" = "City";
+"Open My Passport" = "Open My Passport";
+"Opens your passport of collected stamps in Stamped!." = "Opens your passport of collected stamps in Stamped!.";
+"Open a City" = "Open a City";
+"Opens a city or campus page in Stamped!." = "Opens a city or campus page in Stamped!.";
+"Which city or campus?" = "Which city or campus?";
+"Open ${city}" = "Open ${city}";

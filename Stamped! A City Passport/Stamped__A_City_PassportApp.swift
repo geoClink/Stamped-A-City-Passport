@@ -31,7 +31,7 @@ struct GlobalDiscoveryApp: App {
     #endif
     
     @AppStorage("hasSeenOnboarding") var hasSeenOnboarding: Bool = false
-    @StateObject private var navManager = NavigationManager()
+    @StateObject private var navManager = NavigationManager.shared
 
     init() {
         // Finish any tip that completed while the app was closed (or after Ask to Buy)
