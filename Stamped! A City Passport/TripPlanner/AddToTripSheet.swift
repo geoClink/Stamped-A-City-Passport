@@ -21,6 +21,7 @@ struct AddToTripSheet: View {
     @AppStorage("haptics_enabled") private var hapticsEnabled = true
     @AppStorage("high_contrast_mode") private var isHighContrast = false
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var addedTo: String?
 
     private var trips: [Trip] { store.trips(in: cityName) }
@@ -50,6 +51,7 @@ struct AddToTripSheet: View {
                                     if dynamicTypeSize.isAccessibilitySize { Spacer() }
                                     Image(systemName: "plus.circle.fill")
                                         .foregroundStyle(DS.Palette.accent)
+                                        .accessibilityHidden(true)
                                 }
                             }
                         }
@@ -101,7 +103,8 @@ struct AddToTripSheet: View {
                         .font(.headline)
                         .padding(DS.Space.l)
                         .background(.regularMaterial, in: Capsule())
-                        .transition(.scale.combined(with: .opacity))
+                        // Reduce Motion: fade in without the grow
+                        .transition(reduceMotion ? .opacity : .scale.combined(with: .opacity))
                 }
             }
         }
@@ -120,7 +123,10 @@ struct AddToTripSheet: View {
     private func add(to dayID: String, in trip: Trip, dayNumber: Int) {
         store.addStop(stop, toDay: dayID, in: trip.id)
         if hapticsEnabled { HapticManager.shared.trigger(.success) }
-        withAnimation(.spring) { addedTo = "\(trip.name), Day \(dayNumber)" }
+        let destination = String(localized: "\(trip.name), Day \(dayNumber)")
+        withAnimation(reduceMotion ? .easeInOut : .spring) { addedTo = destination }
+        // The confirmation is only on screen briefly, so VoiceOver says it out loud
+        AccessibilityNotification.Announcement(String(localized: "Added to \(destination)")).post()
         Task {
             try? await Task.sleep(for: .seconds(0.9))
             dismiss()

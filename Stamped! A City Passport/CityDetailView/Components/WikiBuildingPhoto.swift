@@ -118,6 +118,7 @@ struct WikiDescriptionCard: View {
                     HStack(spacing: DS.Space.xs) {
                         Image(systemName: "w.circle.fill")
                             .font(.caption)
+                            .accessibilityHidden(true)
                         Text("From Wikipedia")
                             .font(.caption2.monospaced().weight(.semibold))
                     }

@@ -29,6 +29,8 @@ struct BuildingDetailView: View {
     @AppStorage("use_metric_units") var useMetric = true
 
     @Environment(\.accessibilityReduceTransparency) var reduceTransparency
+    // Reduce Motion: state changes happen without the spring
+    @Environment(\.accessibilityReduceMotion) var reduceMotion
     
     // MARK: - State
     @State private var showCamera = false
@@ -229,6 +231,7 @@ extension BuildingDetailView {
                             .scaledToFill()
                             .scaleEffect(photoScale)
                             .offset(photoOffset)
+                            .accessibilityLabel(Text("Your photo of \(building.name)"))
                     } else {
                         // WikiBuildingPhoto tries Wikipedia first, falls back to asset catalog
                         WikiBuildingPhoto(building: building, height: height)
@@ -316,7 +319,7 @@ extension BuildingDetailView {
         return HStack(spacing: 0) {
             if userImage != nil {
                 Button {
-                    withAnimation(.spring()) {
+                    withAnimation(reduceMotion ? nil : .spring()) {
                         isEditingPhoto.toggle()
                     }
                     if hapticsEnabled { HapticManager.shared.trigger(.selection) }
@@ -325,7 +328,7 @@ extension BuildingDetailView {
                         .frame(width: 44, height: 44)
                         .foregroundColor(isEditingPhoto ? brandColor : .primary)
                 }
-                .accessibilityLabel(isEditingPhoto ? "Lock photo" : "Unlock photo for editing")
+                .accessibilityLabel(isEditingPhoto ? Text("Lock photo") : Text("Unlock photo for editing"))
                 Divider().frame(height: 20)
             }
 
@@ -363,7 +366,7 @@ extension BuildingDetailView {
                 if photoScale != 1.0 || photoOffset != .zero {
                     Divider().frame(height: 20)
                     Button {
-                        withAnimation(.spring()) {
+                        withAnimation(reduceMotion ? nil : .spring()) {
                             resetManipulation()
                         }
                     } label: {
@@ -546,6 +549,7 @@ extension BuildingDetailView {
                 Text("Finding nearby spots…")
                     .font(.caption).foregroundColor(.secondary)
             }
+            .accessibilityElement(children: .combine)
         } else if !nearbyVenues.isEmpty {
             VStack(alignment: .leading, spacing: DS.Space.m) {
                 DSSectionHeader("building.localFlavors", systemImage: "fork.knife", isHighContrast: isHighContrast)
@@ -683,7 +687,8 @@ extension BuildingDetailView {
     private func secondaryButtonStyle<Content: View>(_ content: Content, tint: Color) -> some View {
         content
             .font(.subheadline.weight(.semibold))
-            .lineLimit(2)
+            // Two lines at normal sizes; as many as needed at accessibility sizes
+            .lineLimit(dynamicType.isAccessibilitySize ? nil : 2)
             .minimumScaleFactor(0.8)
             .multilineTextAlignment(.center)
             .foregroundColor(isHighContrast ? .primary : tint)
@@ -704,7 +709,7 @@ extension BuildingDetailView {
     var wishlistButton: some View {
         let isSaved = progressManager.isWishlisted(building.id)
         return Button {
-            withAnimation(.spring()) { progressManager.toggleWishlist(building.id) }
+            withAnimation(reduceMotion ? nil : .spring()) { progressManager.toggleWishlist(building.id) }
             if hapticsEnabled { HapticManager.shared.trigger(.selection) }
         } label: {
             secondaryButtonStyle(
@@ -718,7 +723,7 @@ extension BuildingDetailView {
             )
         }
         .buttonStyle(.plain)
-        .accessibilityLabel(isSaved ? "Remove from Want to Visit" : "Add to Want to Visit")
+        .accessibilityLabel(isSaved ? Text("Remove from Want to Visit") : Text("Add to Want to Visit"))
     }
 
     /// The page's one primary action: filled orange until stamped, then a green "Visited" state.
@@ -745,7 +750,7 @@ extension BuildingDetailView {
                 )
         }
         .buttonStyle(.plain)
-        .accessibilityHint(isVisited ? "Tap to remove stamp from this building" : "Marks this building as visited and stamps your passport")
+        .accessibilityHint(isVisited ? Text("Tap to remove stamp from this building") : Text("Marks this building as visited and stamps your passport"))
     }
  
     func specCard(label: String, value: String, icon: String) -> some View {
@@ -753,6 +758,7 @@ extension BuildingDetailView {
             Image(systemName: icon)
                 .foregroundColor(isHighContrast ? .primary : brandColor)
                 .font(.body.weight(isHighContrast ? .bold : .regular))
+                .accessibilityHidden(true)
             
             VStack(alignment: .leading, spacing: 2) {
                 Text(label)
@@ -771,6 +777,7 @@ extension BuildingDetailView {
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
                     .buttonStyle(.plain)
+                    .accessibilityHint(Text("Opens in Maps"))
                     .alert(L.Building.mapErrorTitle, isPresented: $showGeocodeError, actions: {
                         Button(L.Building.mapOK, role: .cancel) { showGeocodeError = false }
                     }, message: {
@@ -787,6 +794,7 @@ extension BuildingDetailView {
                 Image(systemName: "arrow.up.right.square")
                     .font(.body)
                     .foregroundColor(isHighContrast ? .primary : .secondary)
+                    .accessibilityHidden(true)
             }
         }
         .dsCard(isHighContrast: isHighContrast)
@@ -840,7 +848,7 @@ extension BuildingDetailView {
     
     func handleActionTap() {
         let wasUnvisited = !isVisited
-        withAnimation(.spring()) { viewModel.toggleVisited(for: building) }
+        withAnimation(reduceMotion ? nil : .spring()) { viewModel.toggleVisited(for: building) }
         if hapticsEnabled { HapticManager.shared.trigger(isVisited ? .success : .warning) }
         if noteText.isEmpty {
             noteText = GlobalProgressManager.shared.buildingNotes[building.id] ?? ""
@@ -865,6 +873,7 @@ extension BuildingDetailView {
             Image(systemName: icon)
                 .font(.title3)
                 .foregroundStyle(isHighContrast ? Color.primary : brandColor)
+                .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 2) {
                 Text(title)
                     .font(.subheadline).fontWeight(.semibold).foregroundStyle(.primary)
@@ -874,6 +883,7 @@ extension BuildingDetailView {
             Spacer(minLength: 0)
             Image(systemName: "chevron.right")
                 .font(.caption).foregroundStyle(isHighContrast ? Color.primary : Color.secondary)
+                .accessibilityHidden(true)
         }
         .dsCard(isHighContrast: isHighContrast)
         .contentShape(Rectangle())
@@ -889,6 +899,7 @@ extension BuildingDetailView {
                     Text("Checking for 3D model…")
                         .font(.caption).foregroundStyle(.secondary)
                 }
+                .accessibilityElement(children: .combine)
 
             } else if let record = existingScanRecord {
                 // A scan exists — show View button

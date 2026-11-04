@@ -14,12 +14,14 @@ struct CollegeListButton: View {
 
     @ObservedObject private var store = CollegeListStore.shared
     @AppStorage("high_contrast_mode") private var isHighContrast = false
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var isOnList: Bool { store.contains(campus) }
 
     var body: some View {
         Button {
-            withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
+            // Reduce Motion: no bounce
+            withAnimation(reduceMotion ? .default : .spring(response: 0.3, dampingFraction: 0.6)) {
                 store.toggle(campus)
             }
             HapticManager.shared.trigger(isOnList ? .success : .selection)

@@ -14,6 +14,7 @@ struct QuizView: View {
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @Environment(\.colorSchemeContrast) private var systemContrast
     @Environment(\.accessibilityReduceMotion) private var systemReduceMotion
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     
     @AppStorage("high_contrast_mode") var manualHighContrast = false
     @AppStorage("reduce_motion") var manualReduceMotion = false
@@ -25,6 +26,9 @@ struct QuizView: View {
 
     @ScaledMetric(relativeTo: .subheadline) private var factIconSize: CGFloat = 20
     @ScaledMetric(relativeTo: .headline) private var missIconSize: CGFloat = 16
+    /// The tiny "FIELD DATA" / "STYLE" tags were a fixed 10pt; now they grow with Dynamic Type
+    @ScaledMetric(relativeTo: .caption2) private var tagLabelSize: CGFloat = 10
+    @ScaledMetric(relativeTo: .largeTitle) private var resultScoreSize: CGFloat = 72
 
     init(buildings: [Building], cityName: String) {
         _viewModel = StateObject(wrappedValue: QuizViewModel(buildings: buildings, cityName: cityName))
@@ -94,6 +98,7 @@ private extension QuizView {
                     ProgressView(value: Double(viewModel.questionCount), total: Double(viewModel.maxQuestions))
                         .tint(brandColor)
                         .scaleEffect(x: 1, y: 1.5)
+                        .accessibilityValue(Text("\(viewModel.questionCount) of \(viewModel.maxQuestions)"))
                         .padding(.horizontal, 20)
 
                     dossierCard(building)
@@ -145,6 +150,7 @@ private extension QuizView {
                 ProgressView(value: Double(viewModel.questionCount), total: Double(viewModel.maxQuestions))
                     .tint(brandColor)
                     .scaleEffect(x: 1, y: 2)
+                    .accessibilityValue(Text("\(viewModel.questionCount) of \(viewModel.maxQuestions)"))
                 
                 dossierCard(building)
                 
@@ -216,6 +222,7 @@ private extension QuizView {
                     .font(.title3.bold())
                     .foregroundColor(brandColor)
             }
+            .accessibilityElement(children: .combine)
             Spacer()
             if viewModel.currentStreak > 1 {
                 streakBadge
@@ -227,8 +234,12 @@ private extension QuizView {
     var streakBadge: some View {
         HStack(spacing: 6) {
             Image(systemName: "flame.fill")
+                .accessibilityHidden(true)
             Text("\(viewModel.currentStreak)")
         }
+        // A bare number with a flame means nothing when read aloud
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(Text("\(viewModel.currentStreak) correct in a row"))
         .font(.headline.bold()).foregroundColor(.white)
         .padding(.horizontal, 16).padding(.vertical, 8)
         .background(
@@ -258,7 +269,7 @@ private extension QuizView {
     var buttonsContent: some View {
         ForEach(viewModel.options, id: \.self) { option in
             Button {
-                withAnimation(.spring(response: 0.3)) {
+                withAnimation(reduceMotion ? nil : .spring(response: 0.3)) {
                     viewModel.processAnswer(option, reduceMotion: reduceMotion)
                 }
             } label: {
@@ -267,7 +278,8 @@ private extension QuizView {
                         .font(.system(isIPad ? .title3 : .body, design: .rounded))
                         .fontWeight(isHighContrast ? .black : .bold)
                         .multilineTextAlignment(.leading)
-                        .lineLimit(2)
+                        // At accessibility sizes the answer wraps instead of being cut off
+                        .lineLimit(dynamicTypeSize.isAccessibilitySize ? nil : 2)
                         .minimumScaleFactor(0.85)
                     
                     Spacer()
@@ -277,7 +289,8 @@ private extension QuizView {
                 .padding(.horizontal, 24)
                 .padding(.vertical, 18)
                 .frame(maxWidth: .infinity)
-                .frame(height: isIPad ? 80 : 70)
+                // Fixed height normally; grows with the text at accessibility sizes
+                .frame(height: dynamicTypeSize.isAccessibilitySize ? nil : (isIPad ? 80 : 70))
                 .background(
                     RoundedRectangle(cornerRadius: 16)
                         .fill(buttonBackgroundColor(for: option))
@@ -289,7 +302,18 @@ private extension QuizView {
                 )
             }
             .disabled(viewModel.selectedOption != nil || viewModel.showingStreakCelebration)
+            // The green/red colors and check/cross icons, in words
+            .accessibilityValue(answerAccessibilityValue(for: option))
+            .accessibilityAddTraits(viewModel.selectedOption == option ? .isSelected : [])
         }
+    }
+
+    /// After answering: "Correct answer" on the right option, "Incorrect" on a wrong pick
+    func answerAccessibilityValue(for option: String) -> Text {
+        guard let selected = viewModel.selectedOption else { return Text(verbatim: "") }
+        if option == viewModel.getCorrectAnswer() { return Text("Correct answer") }
+        if option == selected { return Text("Incorrect") }
+        return Text(verbatim: "")
     }
 
     func selectionIcon(for option: String) -> some View {
@@ -307,6 +331,7 @@ private extension QuizView {
             }
         }
         .font(.title3)
+        .accessibilityHidden(true) // read as the button's value instead
     }
 
     func buttonBackgroundColor(for option: String) -> Color {
@@ -333,13 +358,14 @@ private extension QuizView {
         VStack(alignment: .leading, spacing: 18) {
                 HStack {
                     Label("FIELD DATA", systemImage: "antenna.radiowaves.left.and.right")
-                        .font(.system(size: 10, weight: .black))
+                        .font(.system(size: tagLabelSize, weight: .black))
                         .foregroundColor(brandColor)
                     Spacer()
                     Circle()
                         .fill(Color.green)
                         .frame(width: 8, height: 8)
                         .opacity(viewModel.selectedOption == nil ? 1.0 : 0.3)
+                        .accessibilityHidden(true) // decorative status light
                 }
                 
                 Text(viewModel.currentQuestionType == .name ? "IDENTIFICATION REQUIRED" : building.name.uppercased())
@@ -396,14 +422,17 @@ private extension QuizView {
                 .background(brandColor.opacity(0.15))
                 .foregroundColor(brandColor)
                 .clipShape(Circle())
+                .accessibilityHidden(true)
             
             VStack(alignment: .leading, spacing: 2) {
-                Text(label).font(.system(size: 10, weight: .black)).foregroundColor(.secondary)
+                Text(label).font(.system(size: tagLabelSize, weight: .black)).foregroundColor(.secondary)
                 Text(hide ? "CLASSIFIED" : value)
                     .font(.system(isIPad ? .headline : .subheadline, design: .rounded).bold())
                     .foregroundColor(hide ? brandColor.opacity(0.6) : .primary)
             }
         }
+        // "STYLE, Art Deco" as one element
+        .accessibilityElement(children: .combine)
     }
 
     var resultsView: some View {
@@ -424,12 +453,20 @@ private extension QuizView {
                             .frame(width: 44, height: 44)
                     }
                 }
+                // Three shapes VoiceOver can't describe; say the count instead
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel(Text("\(viewModel.starCount) of 3 stars"))
 
                 // Score
                 VStack(spacing: 6) {
                     Text("\(viewModel.score)/\(viewModel.maxQuestions)")
-                        .font(.system(size: 72, weight: .black, design: .rounded))
+                        .font(.system(size: resultScoreSize, weight: .black, design: .rounded))
                         .foregroundColor(brandColor)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
+                        // "7 of 10", not "7 slash 10"
+                        .accessibilityLabel(Text("\(viewModel.score) of \(viewModel.maxQuestions)"))
+                        .accessibilityAddTraits(.isHeader)
                     Text(viewModel.resultMessage)
                         .font(.title3.bold())
                         .foregroundColor(.secondary)
@@ -569,7 +606,7 @@ private extension QuizView {
 
     var hintSection: some View {
         VStack(spacing: 16) {
-            Button(action: { withAnimation { viewModel.showHint.toggle() } }) {
+            Button(action: { withAnimation(reduceMotion ? nil : .default) { viewModel.showHint.toggle() } }) {
                 Label(viewModel.showHint ? "Conceal Hint" : "Request Hint", systemImage: "lightbulb.fill")
                     .font(.caption.bold())
                     .padding(.horizontal, 20).padding(.vertical, 10)
@@ -595,6 +632,7 @@ private extension QuizView {
                 HStack {
                     Image(systemName: viewModel.isListening ? "waveform" : "mic.fill")
                         .font(.system(size: 18, weight: .bold))
+                        .accessibilityHidden(true)
                     
                     Text(viewModel.isListening ? "LISTENING..." : "ANSWER VIA VOICE")
                         .font(.system(.caption, design: .monospaced).bold())
@@ -626,6 +664,7 @@ private extension QuizView {
             VStack(spacing: 30) {
                 Image(systemName: "flame.fill").font(.system(size: 120))
                     .foregroundStyle(LinearGradient(colors: [.orange, .red], startPoint: .top, endPoint: .bottom))
+                    .accessibilityHidden(true)
                 Text("\(viewModel.streakMilestone) IN A ROW").font(.system(size: 44, weight: .black)).foregroundColor(.white)
             }
         }

@@ -27,6 +27,8 @@ struct CityMapVisionView: View {
     /// The guided tour: flies to each landmark in turn and reads its story aloud
     @State private var tourTask: Task<Void, Never>?
     @ObservedObject private var storyPlayer = AudioStoryPlayer.shared
+    /// Reduce Motion: the camera jumps instead of swooping, and the card fades in
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var mappableBuildings: [Building] {
         store.buildings(for: cityName).filter { $0.latitude != nil && $0.longitude != nil }
@@ -56,6 +58,8 @@ struct CityMapVisionView: View {
                         .hoverEffect()
                         .accessibilityLabel(building.name)
                         .accessibilityAddTraits(.isButton)
+                        // The tap is a gesture, so give VoiceOver's double-tap the same action
+                        .accessibilityAction { flyTo(building, at: coordinate) }
                 }
             }
             // Places saved from Apple Maps search on iPhone
@@ -70,6 +74,8 @@ struct CityMapVisionView: View {
                         .onTapGesture { flyTo(place.coordinate) }
                         .hoverEffect()
                         .accessibilityLabel("\(place.name), your saved place")
+                        .accessibilityAddTraits(.isButton)
+                        .accessibilityAction { flyTo(place.coordinate) }
                 }
             }
         }
@@ -143,7 +149,7 @@ struct CityMapVisionView: View {
                     selectedBuilding = nil
                 }
                 .padding(24)
-                .transition(.move(edge: .bottom).combined(with: .opacity))
+                .transition(reduceMotion ? AnyTransition.opacity : AnyTransition.move(edge: .bottom).combined(with: .opacity))
             }
         }
         .animation(.spring(duration: 0.35), value: selectedBuilding?.id)
@@ -181,7 +187,7 @@ struct CityMapVisionView: View {
     private func flyTo(_ coordinate: CLLocationCoordinate2D) {
         selectedBuilding = nil
         selectedFeature = nil
-        withAnimation(.easeInOut(duration: 1.5)) {
+        withAnimation(reduceMotion ? nil : .easeInOut(duration: 1.5)) {
             position = .camera(MapCamera(centerCoordinate: coordinate, distance: 700, heading: 0, pitch: 65))
         }
     }
@@ -265,7 +271,7 @@ struct CityMapVisionView: View {
     /// Swoops the camera down to a landmark and shows its card.
     private func flyTo(_ building: Building, at coordinate: CLLocationCoordinate2D) {
         selectedFeature = nil
-        withAnimation(.easeInOut(duration: 1.5)) {
+        withAnimation(reduceMotion ? nil : .easeInOut(duration: 1.5)) {
             position = .camera(MapCamera(centerCoordinate: coordinate, distance: 700, heading: 0, pitch: 65))
         }
         selectedBuilding = building
@@ -299,6 +305,20 @@ private struct LandmarkPin: View {
                     .offset(x: 6, y: -6)
             }
         }
+        // One element; the map gives it the landmark's name as its label
+        .accessibilityElement(children: .ignore)
+        .accessibilityValue(accessibilityStatus)
+        .accessibilityAddTraits(isSelected ? .isSelected : [])
+    }
+
+    /// What the pin's colour and heart show, in words
+    private var accessibilityStatus: Text {
+        switch (isVisited, isWishlisted) {
+        case (true, true): Text("Stamped, Want to Visit")
+        case (true, false): Text("Stamped")
+        case (false, true): Text("Want to Visit")
+        case (false, false): Text(verbatim: "")
+        }
     }
 }
 
@@ -322,6 +342,7 @@ private struct LandmarkCard: View {
             HStack(alignment: .top) {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(building.name).font(.title2.bold())
+                        .accessibilityAddTraits(.isHeader)
                     if let subtitle = building.styleAndYear {
                         Text(subtitle)
                             .font(.subheadline)

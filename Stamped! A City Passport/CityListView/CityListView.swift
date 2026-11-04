@@ -35,6 +35,7 @@ struct CityListView: View {
     /// Which part of the world the home list shows: a continent's raw value, or "campuses"
     @AppStorage("home_explore_filter") var exploreFilter = CityLocation.Continent.northAmerica.rawValue
     @Environment(\.dynamicTypeSize) var dynamicTypeSize
+    @Environment(\.accessibilityReduceMotion) var reduceMotion
     @State var searchText = ""
     /// Results for `searchedText`, worked out shortly after typing stops
     @State private var searchResults: [MixedSearchResult] = []
@@ -174,7 +175,8 @@ struct CityListView: View {
             // so city names don't show through between them
             .dsSolidTopScrollEdge()
             #endif
-            .animation(.spring(response: 0.35, dampingFraction: 0.8), value: searchText.isEmpty)
+            // No bounce with Reduce Motion on
+            .animation(reduceMotion ? nil : .spring(response: 0.35, dampingFraction: 0.8), value: searchText.isEmpty)
 
         } detail: {
             NavigationStack {
@@ -303,7 +305,11 @@ struct CityListView: View {
     private var exploreFilterBar: some View {
         let continents = viewModel.groupedByContinent.map(\.id).sorted()
         let selected = exploreFilter == Self.campusFilter ? Self.campusFilter : (selectedContinentGroup?.id.rawValue ?? "")
-        return HStack(spacing: DS.Space.s) {
+        // At accessibility sizes Campuses gets its own line; side by side, both got cut off
+        let layout = dynamicTypeSize.isAccessibilitySize
+            ? AnyLayout(VStackLayout(alignment: .leading, spacing: DS.Space.s))
+            : AnyLayout(HStackLayout(spacing: DS.Space.s))
+        return layout {
             if !viewModel.campusGroups.isEmpty {
                 filterChip(NSLocalizedString("Campuses", comment: "Home filter chip: show campuses instead of a continent's cities"),
                            systemImage: "graduationcap.fill",
@@ -379,6 +385,7 @@ struct CityListView: View {
             HStack(spacing: 12) {
                 Image(systemName: "heart.fill")
                     .foregroundColor(isHighContrast ? .primary : brandColor)
+                    .accessibilityHidden(true)
                 Text(NSLocalizedString("My College List", comment: "City list: row that opens the user's list of campuses"))
                     .font(.subheadline.bold())
                     .foregroundColor(.primary)
@@ -391,6 +398,7 @@ struct CityListView: View {
                 Image(systemName: "chevron.right")
                     .font(.caption.bold())
                     .foregroundColor(.secondary)
+                    .accessibilityHidden(true)
             }
             .padding(.vertical, 6)
         }
@@ -413,6 +421,8 @@ struct CityListView: View {
                 .frame(width: 32, height: 32)
                 .background(brandColor.opacity(0.1))
                 .clipShape(Circle())
+                // The subtitle already says city, landmark or architect
+                .accessibilityHidden(true)
             
             VStack(alignment: .leading, spacing: 2) {
                 Text(result.title)

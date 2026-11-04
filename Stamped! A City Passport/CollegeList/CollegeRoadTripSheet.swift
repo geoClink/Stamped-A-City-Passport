@@ -105,6 +105,8 @@ struct CollegeRoadTripSheet: View {
                 Image(systemName: isOn ? "checkmark.circle.fill" : "circle")
                     .font(.title3)
                     .foregroundStyle(isOn ? (isHighContrast ? Color.primary : DS.Palette.accent) : Color.secondary)
+                    // The Selected trait below says whether it's checked
+                    .accessibilityHidden(true)
                 VStack(alignment: .leading, spacing: DS.Space.xs) {
                     Text(campus.name)
                         // Serif, the style guide's type for destinations
@@ -127,6 +129,8 @@ struct CollegeRoadTripSheet: View {
     private func routeRow(_ campus: CityLocation.City, index: Int) -> some View {
         HStack(spacing: DS.Space.m) {
             StopNumberBadge(number: index + 1, isLandmark: true)
+                // "Day 2: …" already says the number
+                .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: DS.Space.xs) {
                 Text(String(
                     format: NSLocalizedString("Day %1$d: %2$@", comment: "College road trip planner: one day of the route, e.g. \"Day 2: Duke University\""),

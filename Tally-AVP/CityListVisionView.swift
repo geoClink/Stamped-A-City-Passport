@@ -41,6 +41,7 @@ struct CityListVisionView: View {
                     Button("Globe", systemImage: "globe.americas.fill") {
                         openWindow(id: "globe")
                     }
+                    .accessibilityHint("Opens a 3D globe of every city in its own window")
                 }
                 ToolbarItem {
                     Button("Support Stamped!", systemImage: "heart") {
@@ -100,16 +101,23 @@ private struct CityRow: View {
                 Text(cityName).font(.headline)
                 Spacer()
                 if total > 0 && visitedCount == total {
+                    // The count below already says every landmark is stamped
                     Image(systemName: "checkmark.seal.fill").foregroundStyle(.orange)
+                        .accessibilityHidden(true)
                 }
             }
             Text("\(visitedCount) / \(total) stamped")
                 .font(.caption)
                 .foregroundStyle(.secondary)
+                // VoiceOver would read the slash; say it in words instead
+                .accessibilityLabel(Text("\(visitedCount) of \(total) landmarks stamped"))
             ProgressView(value: total == 0 ? 0 : Double(visitedCount) / Double(total))
                 .tint(.orange)
+                .accessibilityHidden(true)   // same number as the text above
         }
         .padding(.vertical, 4)
+        // One row reads "Chicago, 3 of 12 landmarks stamped"
+        .accessibilityElement(children: .combine)
     }
 }
 

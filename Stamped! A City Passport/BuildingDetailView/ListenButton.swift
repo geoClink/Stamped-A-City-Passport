@@ -56,6 +56,7 @@ private struct VoiceTip: View {
         HStack(alignment: .top, spacing: DS.Space.s) {
             Image(systemName: "waveform")
                 .foregroundColor(tint)
+                .accessibilityHidden(true)
             Text(Self.message)
                 .font(.footnote)
                 .foregroundStyle(.secondary)
