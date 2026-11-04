@@ -398,7 +398,7 @@ private extension QuizView {
                         }
                         // 0 means the story count isn't known (common for campus buildings)
                         if building.numberOfStories > 0 {
-                            dossierRow(label: "STORIES", value: "\(building.numberOfStories) Stories", icon: "building.2", hide: viewModel.currentQuestionType == .stories)
+                            dossierRow(label: "STORIES", value: String(localized: "\(building.numberOfStories) Stories"), icon: "building.2", hide: viewModel.currentQuestionType == .stories)
                         }
                         if let architect = building.knownArchitect {
                             dossierRow(label: "ARCHITECT", value: architect, icon: "person.text.rectangle", hide: viewModel.currentQuestionType == .architect)
@@ -414,7 +414,7 @@ private extension QuizView {
         .shadow(color: Color.black.opacity(isHighContrast ? 0 : 0.05), radius: 15, y: 5)
     }
 
-    func dossierRow(label: String, value: String, icon: String, hide: Bool) -> some View {
+    func dossierRow(label: LocalizedStringKey, value: String, icon: String, hide: Bool) -> some View {
         HStack(spacing: 12) {
             Image(systemName: icon)
                 .font(.footnote)
