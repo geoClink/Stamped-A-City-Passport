@@ -11,6 +11,11 @@ struct Tally_AVPApp: App {
     @State private var immersionStyle: ImmersionStyle = .mixed
     @State private var panoramaImmersionStyle: ImmersionStyle = .full
 
+    init() {
+        // Finish any tip that completed while the app was closed (or after Ask to Buy)
+        TipJarStore.shared.listenForTransactions()
+    }
+
     var body: some Scene {
 
         // ── Main window: city list + photoreal 3D map ─────────────────────────

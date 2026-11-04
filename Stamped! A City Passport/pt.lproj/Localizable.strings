@@ -797,3 +797,23 @@
 
 /* Text sent with a shared passport picture; %@ is the App Store link */
 "My Stamped! passport. Get the app: %@" = "Meu passaporte do Stamped!. Baixe o app: %@";
+
+/* Tip jar (Support Stamped!) */
+"Support Stamped!" = "Apoie o Stamped!";
+"Tips help keep new cities coming" = "As gorjetas trazem novas cidades";
+"Hi, I'm George! I make Stamped! on my own as an indie developer. The app is free, and tips help me keep adding new cities and landmarks." = "Oi, eu sou o George! Eu crio o Stamped! sozinho, como desenvolvedor independente. O app é gratuito, e as gorjetas me ajudam a continuar adicionando novas cidades e pontos turísticos.";
+"Tips are just a thank-you. They don't unlock anything, and everything in the app stays free." = "As gorjetas são só um agradecimento. Elas não desbloqueiam nada, e tudo no app continua gratuito.";
+"Small Tip" = "Gorjeta pequena";
+"Medium Tip" = "Gorjeta média";
+"Large Tip" = "Gorjeta grande";
+"Loading tips…" = "Carregando gorjetas…";
+"Tips aren't available right now" = "As gorjetas não estão disponíveis no momento";
+"Please check your connection and try again later." = "Verifique sua conexão e tente novamente mais tarde.";
+"Try Again" = "Tentar novamente";
+"Thank you!" = "Obrigado!";
+"Your tip means a lot. It helps bring the next city to Stamped!" = "Sua gorjeta significa muito. Ela ajuda a trazer a próxima cidade para o Stamped!";
+"Waiting for approval" = "Aguardando aprovação";
+"Your tip will go through once a family organizer approves it." = "Sua gorjeta será concluída assim que um organizador familiar aprová-la.";
+"No worries, the tip was cancelled. You weren't charged." = "Tudo bem, a gorjeta foi cancelada. Você não foi cobrado.";
+"That tip didn't go through. Please try again." = "A gorjeta não foi concluída. Tente novamente.";
+"Payments go through your Apple Account. Tips are one-time and don't renew." = "Os pagamentos são feitos pela sua Conta Apple. As gorjetas são únicas e não se renovam.";

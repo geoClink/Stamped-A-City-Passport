@@ -6394,6 +6394,854 @@
         }
       }
     },
+    "Support Stamped!" : {
+      "comment" : "Tip jar: title, Settings row and Vision Pro button",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stamped! unterstützen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apoya Stamped!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Soutenir Stamped!"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sostieni Stamped!"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stamped!を応援"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stamped! 후원하기"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apoie o Stamped!"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支持 Stamped!"
+          }
+        }
+      }
+    },
+    "Hi, I'm George! I make Stamped! on my own as an indie developer. The app is free, and tips help me keep adding new cities and landmarks." : {
+      "comment" : "Tip jar: note from the developer",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hallo, ich bin George! Ich entwickle Stamped! allein als Indie-Entwickler. Die App ist kostenlos, und Trinkgelder helfen mir, weitere Städte und Wahrzeichen hinzuzufügen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Hola, soy George! Creo Stamped! yo solo como desarrollador independiente. La app es gratis y las propinas me ayudan a seguir añadiendo ciudades y monumentos."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bonjour, je suis George ! Je crée Stamped! seul, en tant que développeur indépendant. L’app est gratuite, et les pourboires m’aident à ajouter de nouvelles villes et de nouveaux monuments."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ciao, sono George! Creo Stamped! da solo come sviluppatore indipendente. L’app è gratuita e le mance mi aiutano ad aggiungere nuove città e nuovi monumenti."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "こんにちは、George です！Stamped! は個人開発者の私がひとりで作っています。アプリは無料で、チップは新しい都市やランドマークを追加し続ける力になります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "안녕하세요, George입니다! Stamped!는 인디 개발자인 제가 혼자 만들고 있어요. 앱은 무료이며, 팁은 새로운 도시와 랜드마크를 계속 추가하는 데 도움이 됩니다."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oi, eu sou o George! Eu crio o Stamped! sozinho, como desenvolvedor independente. O app é gratuito, e as gorjetas me ajudam a continuar adicionando novas cidades e pontos turísticos."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你好，我是 George！Stamped! 由我这位独立开发者一人打造。App 免费使用，你的打赏能帮助我继续添加新的城市和地标。"
+          }
+        }
+      }
+    },
+    "Tips are just a thank-you. They don't unlock anything, and everything in the app stays free." : {
+      "comment" : "Tip jar: tips unlock nothing",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trinkgeld ist einfach ein Dankeschön. Es schaltet nichts frei, und alles in der App bleibt kostenlos."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las propinas son solo un agradecimiento. No desbloquean nada y todo en la app sigue siendo gratis."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les pourboires sont un simple merci. Ils ne débloquent rien, et toute l’app reste gratuite."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le mance sono solo un ringraziamento. Non sbloccano nulla e tutta l’app resta gratuita."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "チップは感謝の気持ちです。何もロック解除されず、アプリのすべての機能は引き続き無料です。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "팁은 감사의 표시일 뿐이에요. 잠금 해제되는 기능은 없으며, 앱의 모든 기능은 계속 무료입니다."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "As gorjetas são só um agradecimento. Elas não desbloqueiam nada, e tudo no app continua gratuito."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打赏只是一份心意，不会解锁任何内容，App 中的所有功能都将保持免费。"
+          }
+        }
+      }
+    },
+    "Small Tip" : {
+      "comment" : "Tip jar: $0.99 tip button",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kleines Trinkgeld"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Propina pequeña"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Petit pourboire"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mancia piccola"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小さなチップ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "작은 팁"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gorjeta pequena"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小额打赏"
+          }
+        }
+      }
+    },
+    "Medium Tip" : {
+      "comment" : "Tip jar: $2.99 tip button",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mittleres Trinkgeld"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Propina mediana"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pourboire moyen"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mancia media"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中くらいのチップ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "중간 팁"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gorjeta média"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中额打赏"
+          }
+        }
+      }
+    },
+    "Large Tip" : {
+      "comment" : "Tip jar: $4.99 tip button",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Großes Trinkgeld"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Propina grande"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gros pourboire"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mancia grande"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大きなチップ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "큰 팁"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gorjeta grande"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大额打赏"
+          }
+        }
+      }
+    },
+    "Loading tips…" : {
+      "comment" : "Tip jar: while products load",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trinkgelder werden geladen …"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cargando propinas…"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chargement des pourboires…"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Caricamento delle mance…"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "チップを読み込み中…"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "팁 불러오는 중…"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Carregando gorjetas…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在载入打赏选项…"
+          }
+        }
+      }
+    },
+    "Tips aren't available right now" : {
+      "comment" : "Tip jar: no products from the App Store",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trinkgeld ist gerade nicht verfügbar"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las propinas no están disponibles ahora"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les pourboires ne sont pas disponibles pour le moment"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le mance non sono disponibili al momento"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "現在チップはご利用いただけません"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지금은 팁을 이용할 수 없습니다"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "As gorjetas não estão disponíveis no momento"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "目前无法打赏"
+          }
+        }
+      }
+    },
+    "Please check your connection and try again later." : {
+      "comment" : "Tip jar: no products from the App Store",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bitte prüfe deine Verbindung und versuche es später erneut."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comprueba tu conexión y vuelve a intentarlo más tarde."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vérifiez votre connexion et réessayez plus tard."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Controlla la connessione e riprova più tardi."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "接続を確認して、しばらくしてからもう一度お試しください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연결 상태를 확인한 후 나중에 다시 시도해 주세요."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verifique sua conexão e tente novamente mais tarde."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请检查网络连接，稍后再试。"
+          }
+        }
+      }
+    },
+    "Thank you!" : {
+      "comment" : "Tip jar: after a tip",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Danke!"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Gracias!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Merci !"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grazie!"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ありがとうございます！"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "감사합니다!"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obrigado!"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "谢谢你！"
+          }
+        }
+      }
+    },
+    "Your tip means a lot. It helps bring the next city to Stamped!" : {
+      "comment" : "Tip jar: after a tip",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein Trinkgeld bedeutet mir viel. Es hilft, die nächste Stadt zu Stamped! zu bringen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu propina significa mucho. Ayuda a traer la próxima ciudad a Stamped!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Votre pourboire compte beaucoup. Il aide à ajouter la prochaine ville à Stamped!"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La tua mancia conta molto. Aiuta a portare la prossima città su Stamped!"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "チップをありがとうございます。次の都市を Stamped! に追加する力になります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보내주신 팁은 큰 힘이 됩니다. 다음 도시를 Stamped!에 추가하는 데 쓰일 거예요."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sua gorjeta significa muito. Ela ajuda a trazer a próxima cidade para o Stamped!"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你的打赏对我意义重大，它将帮助下一座城市加入 Stamped!。"
+          }
+        }
+      }
+    },
+    "Waiting for approval" : {
+      "comment" : "Tip jar: Ask to Buy",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Warten auf Zustimmung"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esperando aprobación"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En attente d’approbation"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In attesa di approvazione"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "承認待ち"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "승인 대기 중"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aguardando aprovação"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "等待批准"
+          }
+        }
+      }
+    },
+    "Your tip will go through once a family organizer approves it." : {
+      "comment" : "Tip jar: Ask to Buy",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein Trinkgeld wird ausgeführt, sobald ein Familienorganisator zustimmt."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu propina se completará cuando un organizador familiar la apruebe."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Votre pourboire sera effectué dès qu’un organisateur familial l’aura approuvé."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La tua mancia verrà completata quando un organizzatore della famiglia la approverà."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ファミリーの管理者が承認すると、チップが送信されます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가족 관리자가 승인하면 팁이 결제됩니다."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sua gorjeta será concluída assim que um organizador familiar aprová-la."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "家庭组织者批准后，你的打赏就会完成。"
+          }
+        }
+      }
+    },
+    "No worries, the tip was cancelled. You weren't charged." : {
+      "comment" : "Tip jar: purchase cancelled",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kein Problem, das Trinkgeld wurde abgebrochen. Dir wurde nichts berechnet."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No pasa nada, la propina se canceló. No se te ha cobrado nada."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pas de souci, le pourboire a été annulé. Aucun montant n’a été débité."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nessun problema, la mancia è stata annullata. Non ti è stato addebitato nulla."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大丈夫です。チップはキャンセルされ、請求は発生していません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "괜찮아요. 팁이 취소되었으며 요금은 청구되지 않았습니다."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tudo bem, a gorjeta foi cancelada. Você não foi cobrado."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没关系，打赏已取消，你没有被扣款。"
+          }
+        }
+      }
+    },
+    "That tip didn't go through. Please try again." : {
+      "comment" : "Tip jar: purchase failed",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das Trinkgeld hat nicht geklappt. Bitte versuche es erneut."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La propina no se completó. Vuelve a intentarlo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le pourboire n’a pas abouti. Veuillez réessayer."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La mancia non è andata a buon fine. Riprova."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "チップを送信できませんでした。もう一度お試しください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "팁이 결제되지 않았습니다. 다시 시도해 주세요."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A gorjeta não foi concluída. Tente novamente."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打赏未能完成，请再试一次。"
+          }
+        }
+      }
+    },
+    "Payments go through your Apple Account. Tips are one-time and don't renew." : {
+      "comment" : "Tip jar: footnote",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Zahlung läuft über deinen Apple Account. Trinkgelder sind einmalig und verlängern sich nicht."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los pagos se hacen con tu Cuenta de Apple. Las propinas son únicas y no se renuevan."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le paiement passe par votre compte Apple. Les pourboires sont ponctuels et ne se renouvellent pas."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I pagamenti avvengono tramite il tuo Account Apple. Le mance sono una tantum e non si rinnovano."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支払いは Apple アカウントを通じて行われます。チップは1回限りで、自動更新されません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "결제는 Apple 계정을 통해 이루어집니다. 팁은 일회성이며 갱신되지 않습니다."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Os pagamentos são feitos pela sua Conta Apple. As gorjetas são únicas e não se renovam."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "付款通过你的 Apple 账户完成。打赏为一次性付款，不会续订。"
+          }
+        }
+      }
+    },
     "Download %@ in 3D" : {
       "comment" : "City map toolbar (Vision Pro): button that downloads the city's 3D model. %@ is the city.",
       "localizations" : {

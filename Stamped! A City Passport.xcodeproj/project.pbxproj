@@ -110,6 +110,7 @@
 				CityExplore/CitySceneConfig.swift,
 				Hotels/HotelLinks.swift,
 				Managers/AudioStoryPlayer.swift,
+				Managers/TipJarStore.swift,
 				Models/Building.swift,
 				Models/CityAudioManager.swift,
 				Models/CustomPlace.swift,
@@ -125,6 +126,7 @@
 				Resources/LandmarkPanoramas.json,
 				Resources/night_crickets.m4a,
 				Resources/rain_loop.m4a,
+				SettingsView/TipJarView.swift,
 				Tours/TourLinks.swift,
 			);
 			target = DEA370BD3050AE24004BA2BB /* Tally-AVP */;

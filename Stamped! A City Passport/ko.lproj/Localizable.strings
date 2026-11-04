@@ -797,3 +797,23 @@
 
 /* Text sent with a shared passport picture; %@ is the App Store link */
 "My Stamped! passport. Get the app: %@" = "나의 Stamped! 여권. 앱 받기: %@";
+
+/* Tip jar (Support Stamped!) */
+"Support Stamped!" = "Stamped! 후원하기";
+"Tips help keep new cities coming" = "팁은 새로운 도시 추가에 힘이 됩니다";
+"Hi, I'm George! I make Stamped! on my own as an indie developer. The app is free, and tips help me keep adding new cities and landmarks." = "안녕하세요, George입니다! Stamped!는 인디 개발자인 제가 혼자 만들고 있어요. 앱은 무료이며, 팁은 새로운 도시와 랜드마크를 계속 추가하는 데 도움이 됩니다.";
+"Tips are just a thank-you. They don't unlock anything, and everything in the app stays free." = "팁은 감사의 표시일 뿐이에요. 잠금 해제되는 기능은 없으며, 앱의 모든 기능은 계속 무료입니다.";
+"Small Tip" = "작은 팁";
+"Medium Tip" = "중간 팁";
+"Large Tip" = "큰 팁";
+"Loading tips…" = "팁 불러오는 중…";
+"Tips aren't available right now" = "지금은 팁을 이용할 수 없습니다";
+"Please check your connection and try again later." = "연결 상태를 확인한 후 나중에 다시 시도해 주세요.";
+"Try Again" = "다시 시도";
+"Thank you!" = "감사합니다!";
+"Your tip means a lot. It helps bring the next city to Stamped!" = "보내주신 팁은 큰 힘이 됩니다. 다음 도시를 Stamped!에 추가하는 데 쓰일 거예요.";
+"Waiting for approval" = "승인 대기 중";
+"Your tip will go through once a family organizer approves it." = "가족 관리자가 승인하면 팁이 결제됩니다.";
+"No worries, the tip was cancelled. You weren't charged." = "괜찮아요. 팁이 취소되었으며 요금은 청구되지 않았습니다.";
+"That tip didn't go through. Please try again." = "팁이 결제되지 않았습니다. 다시 시도해 주세요.";
+"Payments go through your Apple Account. Tips are one-time and don't renew." = "결제는 Apple 계정을 통해 이루어집니다. 팁은 일회성이며 갱신되지 않습니다.";

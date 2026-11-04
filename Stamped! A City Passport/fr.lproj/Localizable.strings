@@ -797,3 +797,23 @@
 
 /* Text sent with a shared passport picture; %@ is the App Store link */
 "My Stamped! passport. Get the app: %@" = "Mon passeport Stamped!. Télécharge l’app : %@";
+
+/* Tip jar (Support Stamped!) */
+"Support Stamped!" = "Soutenir Stamped!";
+"Tips help keep new cities coming" = "Les pourboires font venir de nouvelles villes";
+"Hi, I'm George! I make Stamped! on my own as an indie developer. The app is free, and tips help me keep adding new cities and landmarks." = "Bonjour, je suis George ! Je crée Stamped! seul, en tant que développeur indépendant. L’app est gratuite, et les pourboires m’aident à ajouter de nouvelles villes et de nouveaux monuments.";
+"Tips are just a thank-you. They don't unlock anything, and everything in the app stays free." = "Les pourboires sont un simple merci. Ils ne débloquent rien, et toute l’app reste gratuite.";
+"Small Tip" = "Petit pourboire";
+"Medium Tip" = "Pourboire moyen";
+"Large Tip" = "Gros pourboire";
+"Loading tips…" = "Chargement des pourboires…";
+"Tips aren't available right now" = "Les pourboires ne sont pas disponibles pour le moment";
+"Please check your connection and try again later." = "Vérifiez votre connexion et réessayez plus tard.";
+"Try Again" = "Réessayer";
+"Thank you!" = "Merci !";
+"Your tip means a lot. It helps bring the next city to Stamped!" = "Votre pourboire compte beaucoup. Il aide à ajouter la prochaine ville à Stamped!";
+"Waiting for approval" = "En attente d’approbation";
+"Your tip will go through once a family organizer approves it." = "Votre pourboire sera effectué dès qu’un organisateur familial l’aura approuvé.";
+"No worries, the tip was cancelled. You weren't charged." = "Pas de souci, le pourboire a été annulé. Aucun montant n’a été débité.";
+"That tip didn't go through. Please try again." = "Le pourboire n’a pas abouti. Veuillez réessayer.";
+"Payments go through your Apple Account. Tips are one-time and don't renew." = "Le paiement passe par votre compte Apple. Les pourboires sont ponctuels et ne se renouvellent pas.";
