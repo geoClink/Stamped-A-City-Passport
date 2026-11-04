@@ -44,3 +44,6 @@ Packages/output/
 
 # App Store screenshot sources and finals
 screenshots/
+
+# Detroit asset pack build output (the shrunk model and the .aar uploaded to App Store Connect)
+tools/detroit-model/output/

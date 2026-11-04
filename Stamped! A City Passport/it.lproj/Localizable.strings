@@ -802,3 +802,22 @@
 "Got it" = "Ho capito";
 "For a more natural voice, download a Premium English voice in Settings > Accessibility > Read & Speak > Voices." = "Per una voce più naturale, scarica una voce inglese Premium in Impostazioni > Accessibilità > Leggi e parla > Voci.";
 "For a more natural voice, download a Premium English voice in System Settings > Accessibility > Spoken Content > System Voice > Manage Voices." = "Per una voce più naturale, scarica una voce inglese Premium in Impostazioni di Sistema > Accessibilità > Contenuto letto ad alta voce > Voce di sistema > Gestisci voci.";
+/* Tip jar (Support Stamped!) */
+"Support Stamped!" = "Sostieni Stamped!";
+"Tips help keep new cities coming" = "Le mance portano nuove città";
+"Hi, I'm George! I make Stamped! on my own as an indie developer. The app is free, and tips help me keep adding new cities and landmarks." = "Ciao, sono George! Creo Stamped! da solo come sviluppatore indipendente. L’app è gratuita e le mance mi aiutano ad aggiungere nuove città e nuovi monumenti.";
+"Tips are just a thank-you. They don't unlock anything, and everything in the app stays free." = "Le mance sono solo un ringraziamento. Non sbloccano nulla e tutta l’app resta gratuita.";
+"Small Tip" = "Mancia piccola";
+"Medium Tip" = "Mancia media";
+"Large Tip" = "Mancia grande";
+"Loading tips…" = "Caricamento delle mance…";
+"Tips aren't available right now" = "Le mance non sono disponibili al momento";
+"Please check your connection and try again later." = "Controlla la connessione e riprova più tardi.";
+"Try Again" = "Riprova";
+"Thank you!" = "Grazie!";
+"Your tip means a lot. It helps bring the next city to Stamped!" = "La tua mancia conta molto. Aiuta a portare la prossima città su Stamped!";
+"Waiting for approval" = "In attesa di approvazione";
+"Your tip will go through once a family organizer approves it." = "La tua mancia verrà completata quando un organizzatore della famiglia la approverà.";
+"No worries, the tip was cancelled. You weren't charged." = "Nessun problema, la mancia è stata annullata. Non ti è stato addebitato nulla.";
+"That tip didn't go through. Please try again." = "La mancia non è andata a buon fine. Riprova.";
+"Payments go through your Apple Account. Tips are one-time and don't renew." = "I pagamenti avvengono tramite il tuo Account Apple. Le mance sono una tantum e non si rinnovano.";

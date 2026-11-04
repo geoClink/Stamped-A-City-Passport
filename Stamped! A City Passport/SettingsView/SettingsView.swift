@@ -20,7 +20,7 @@ struct SettingsView: View {
     @ObservedObject private var offline = OfflineDownloader.shared
 
     enum SettingsTab: Hashable {
-        case experience, offline, danger
+        case experience, offline, support, danger
     }
 
     var body: some View {
@@ -44,6 +44,7 @@ private extension SettingsView {
                 experienceSection
                 offlineSection
                 feedbackSection
+                supportSection
                 dangerZoneSection
             }
             .navigationTitle(L.Settings.title)
@@ -67,6 +68,7 @@ private extension SettingsView {
                 Section {
                     Label(L.Settings.experience, systemImage: "hand.tap").tag(SettingsTab.experience)
                     Label("Saved for Offline", systemImage: "arrow.down.circle").tag(SettingsTab.offline)
+                    Label("Support Stamped!", systemImage: "heart").tag(SettingsTab.support)
                 }
 
                 Section(L.Settings.maintenance) {
@@ -97,17 +99,29 @@ private extension SettingsView {
         switch selectedTab {
         case .danger: return L.Settings.resetProgress
         case .offline: return NSLocalizedString("Saved for Offline", comment: "Settings: list of cities saved for offline use")
+        case .support: return NSLocalizedString("Support Stamped!", comment: "Settings: tip jar")
         default: return L.Settings.experience
         }
     }
 
     @ViewBuilder
     private var detailView: some View {
+        if selectedTab == .support {
+            // The tip jar has its own scrolling layout (not a Form) and its own title
+            TipJarView()
+                .tint(viewModel.highContrast ? .primary : viewModel.brandColor)
+        } else {
+            settingsForm
+        }
+    }
+
+    private var settingsForm: some View {
         Form {
             switch selectedTab {
             case .experience: experienceSection
             case .offline: offlineSection
             case .danger: dangerZoneSection
+            case .support: EmptyView()   // shown by detailView instead
             case .none: Text(L.Settings.selectSetting).foregroundColor(.secondary)
             }
         }
@@ -276,6 +290,23 @@ private extension SettingsView {
                 body: "",
                 isSuggestion: false
             )
+        }
+    }
+
+    /// iPhone: opens the tip jar (iPad and Mac show it from the sidebar instead)
+    var supportSection: some View {
+        Section {
+            NavigationLink {
+                TipJarView()
+                    .tint(viewModel.highContrast ? .primary : viewModel.brandColor)
+            } label: {
+                Label {
+                    rowText(title: Text("Support Stamped!"), subtitle: Text("Tips help keep new cities coming"))
+                } icon: {
+                    rowIcon("heart.fill")
+                }
+                .padding(.vertical, DS.Space.xs)
+            }
         }
     }
 

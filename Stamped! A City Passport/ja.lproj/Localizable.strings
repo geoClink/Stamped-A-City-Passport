@@ -802,3 +802,22 @@
 "Got it" = "了解";
 "For a more natural voice, download a Premium English voice in Settings > Accessibility > Read & Speak > Voices." = "より自然な声にするには、「設定」>「アクセシビリティ」>「読み上げと発話」>「声」で英語のプレミアム音声をダウンロードしてください。";
 "For a more natural voice, download a Premium English voice in System Settings > Accessibility > Spoken Content > System Voice > Manage Voices." = "より自然な声にするには、「システム設定」>「アクセシビリティ」>「読み上げコンテンツ」>「システムの声」>「声を管理」で英語のプレミアム音声をダウンロードしてください。";
+/* Tip jar (Support Stamped!) */
+"Support Stamped!" = "Stamped!を応援";
+"Tips help keep new cities coming" = "チップが新しい都市の追加を支えます";
+"Hi, I'm George! I make Stamped! on my own as an indie developer. The app is free, and tips help me keep adding new cities and landmarks." = "こんにちは、George です！Stamped! は個人開発者の私がひとりで作っています。アプリは無料で、チップは新しい都市やランドマークを追加し続ける力になります。";
+"Tips are just a thank-you. They don't unlock anything, and everything in the app stays free." = "チップは感謝の気持ちです。何もロック解除されず、アプリのすべての機能は引き続き無料です。";
+"Small Tip" = "小さなチップ";
+"Medium Tip" = "中くらいのチップ";
+"Large Tip" = "大きなチップ";
+"Loading tips…" = "チップを読み込み中…";
+"Tips aren't available right now" = "現在チップはご利用いただけません";
+"Please check your connection and try again later." = "接続を確認して、しばらくしてからもう一度お試しください。";
+"Try Again" = "もう一度試す";
+"Thank you!" = "ありがとうございます！";
+"Your tip means a lot. It helps bring the next city to Stamped!" = "チップをありがとうございます。次の都市を Stamped! に追加する力になります。";
+"Waiting for approval" = "承認待ち";
+"Your tip will go through once a family organizer approves it." = "ファミリーの管理者が承認すると、チップが送信されます。";
+"No worries, the tip was cancelled. You weren't charged." = "大丈夫です。チップはキャンセルされ、請求は発生していません。";
+"That tip didn't go through. Please try again." = "チップを送信できませんでした。もう一度お試しください。";
+"Payments go through your Apple Account. Tips are one-time and don't renew." = "支払いは Apple アカウントを通じて行われます。チップは1回限りで、自動更新されません。";

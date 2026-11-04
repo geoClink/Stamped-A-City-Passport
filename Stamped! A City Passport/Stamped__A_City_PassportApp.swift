@@ -31,6 +31,11 @@ struct GlobalDiscoveryApp: App {
     
     @AppStorage("hasSeenOnboarding") var hasSeenOnboarding: Bool = false
     @StateObject private var navManager = NavigationManager()
+
+    init() {
+        // Finish any tip that completed while the app was closed (or after Ask to Buy)
+        TipJarStore.shared.listenForTransactions()
+    }
     
     var body: some Scene {
         WindowGroup {
