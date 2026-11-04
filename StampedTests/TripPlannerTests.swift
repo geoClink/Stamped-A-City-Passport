@@ -313,23 +313,23 @@ final class TripAnywhereTests: XCTestCase {
 
     // Checks the 2.4 app can still read trips saved by 2.5, including anywhere trips
     func testOldAppCanReadNewTrips() throws {
-        let krakow = Trip(name: "Kraków Trip", cityName: "Kraków",
-                          area: TripArea(name: "Kraków", latitude: 50.06, longitude: 19.94))
-        let data = try JSONEncoder().encode([krakow, Trip(name: "Boston Trip", cityName: "Boston")])
+        let ulaanbaatar = Trip(name: "Ulaanbaatar Trip", cityName: "Ulaanbaatar",
+                               area: TripArea(name: "Ulaanbaatar", latitude: 47.92, longitude: 106.92))
+        let data = try JSONEncoder().encode([ulaanbaatar, Trip(name: "Boston Trip", cityName: "Boston")])
 
         let oldTrips = try JSONDecoder().decode([OldTrip].self, from: data)
 
-        XCTAssertEqual(oldTrips.map(\.cityName), ["Kraków", "Boston"])
+        XCTAssertEqual(oldTrips.map(\.cityName), ["Ulaanbaatar", "Boston"])
     }
 
     // Checks an anywhere trip keeps its area through saving and loading
     func testAnywhereTripRoundTrip() throws {
-        let trip = Trip(name: "Kraków Trip", cityName: "Kraków",
-                        area: TripArea(name: "Kraków", latitude: 50.06, longitude: 19.94))
+        let trip = Trip(name: "Ulaanbaatar Trip", cityName: "Ulaanbaatar",
+                        area: TripArea(name: "Ulaanbaatar", latitude: 47.92, longitude: 106.92))
         let decoded = try JSONDecoder().decode(Trip.self, from: JSONEncoder().encode(trip))
 
         XCTAssertEqual(decoded, trip)
-        XCTAssertEqual(decoded.area?.name, "Kraków")
+        XCTAssertEqual(decoded.area?.name, "Ulaanbaatar")
     }
 
     // Checks anywhere trips stay out of a Stamped city's planner and show in anywhereTrips
@@ -340,22 +340,22 @@ final class TripAnywhereTests: XCTestCase {
         defer { defaults.removePersistentDomain(forName: suiteName) }
         let store = TripStore(defaults: defaults, iCloud: nil)
         store.createTrip(name: "Boston Trip", cityName: "Boston")
-        store.createTrip(name: "Kraków Trip", cityName: "Kraków",
-                         area: TripArea(name: "Kraków", latitude: 50.06, longitude: 19.94))
+        store.createTrip(name: "Ulaanbaatar Trip", cityName: "Ulaanbaatar",
+                         area: TripArea(name: "Ulaanbaatar", latitude: 47.92, longitude: 106.92))
 
         XCTAssertEqual(store.trips(in: "Boston").map(\.name), ["Boston Trip"])
-        XCTAssertEqual(store.anywhereTrips.map(\.name), ["Kraków Trip"])
+        XCTAssertEqual(store.anywhereTrips.map(\.name), ["Ulaanbaatar Trip"])
     }
 
     // Checks listedCity finds Stamped cities by name and is nil for anywhere else
     func testListedCity() {
         XCTAssertEqual(Trip(name: "A", cityName: "Boston").listedCity, .boston)
-        XCTAssertNil(Trip(name: "B", cityName: "Kraków").listedCity)
+        XCTAssertNil(Trip(name: "B", cityName: "Ulaanbaatar").listedCity)
     }
 
     // Checks an area named like a Stamped city (Paris, Texas) gets a different cityName
     func testAnywhereCityNameAvoidsListedNames() {
-        XCTAssertEqual(Trip.anywhereCityName(for: "Kraków", context: "Kraków, Poland"), "Kraków")
+        XCTAssertEqual(Trip.anywhereCityName(for: "Ulaanbaatar", context: "Ulaanbaatar, Mongolia"), "Ulaanbaatar")
         XCTAssertEqual(Trip.anywhereCityName(for: "Paris", context: "Paris, TX"), "Paris, TX")
         XCTAssertEqual(Trip.anywhereCityName(for: "Paris", context: nil), "Paris (Anywhere)")
         XCTAssertEqual(Trip.anywhereCityName(for: "Paris", context: "Paris"), "Paris (Anywhere)")
@@ -365,7 +365,7 @@ final class TripAnywhereTests: XCTestCase {
     func testListedCityNearCoordinate() {
         // About 2 km from central London
         XCTAssertEqual(CityLocation.City.listed(near: CLLocationCoordinate2D(latitude: 51.52, longitude: -0.10)), .london)
-        // Kraków: hundreds of km from any Stamped city
-        XCTAssertNil(CityLocation.City.listed(near: CLLocationCoordinate2D(latitude: 50.06, longitude: 19.94)))
+        // Ulaanbaatar: far from any Stamped city
+        XCTAssertNil(CityLocation.City.listed(near: CLLocationCoordinate2D(latitude: 47.92, longitude: 106.92)))
     }
 }
