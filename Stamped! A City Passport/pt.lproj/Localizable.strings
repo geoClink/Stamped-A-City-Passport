@@ -246,7 +246,7 @@
 "settings.testMotion" = "Teste de movimento";
 "settings.testSound" = "Teste de som";
 "settings.resetAllContent" = "Redefinir todo o conteúdo";
-"settings.version" = "Versão 1.0 (compilação 2026)";
+"settings.version" = "Versão %1$@ (compilação %2$@)";
 "settings.reset.firstAlert.title" = "Redefinir todo o progresso?";
 "settings.reset.firstAlert.message" = "Limpe edifícios visitados, carimbos de passaporte e pontuações de questionários.";
 "settings.reset.firstAlert.continue" = "Continuar";

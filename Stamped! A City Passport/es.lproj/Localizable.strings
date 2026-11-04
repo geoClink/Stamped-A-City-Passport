@@ -246,7 +246,7 @@
 "settings.testMotion" = "Movimiento de prueba";
 "settings.testSound" = "Sonido de prueba";
 "settings.resetAllContent" = "Restablecer todo el contenido";
-"settings.version" = "Versión 1.0 (compilación 2026)";
+"settings.version" = "Versión %1$@ (compilación %2$@)";
 "settings.reset.firstAlert.title" = "¿Restablecer todo el progreso?";
 "settings.reset.firstAlert.message" = "Borre los edificios visitados, los sellos de pasaportes y las puntuaciones de los exámenes.";
 "settings.reset.firstAlert.continue" = "Continuar";

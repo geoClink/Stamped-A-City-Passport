@@ -246,7 +246,7 @@
 "settings.testMotion" = "Prova movimento";
 "settings.testSound" = "Prova il suono";
 "settings.resetAllContent" = "Reimposta tutto il contenuto";
-"settings.version" = "Versione 1.0 (build 2026)";
+"settings.version" = "Versione %1$@ (build %2$@)";
 "settings.reset.firstAlert.title" = "Reimpostare tutti i progressi?";
 "settings.reset.firstAlert.message" = "Cancella gli edifici visitati, i timbri sui passaporti e i punteggi dei quiz.";
 "settings.reset.firstAlert.continue" = "Continuare";

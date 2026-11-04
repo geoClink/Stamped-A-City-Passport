@@ -246,7 +246,7 @@
 "settings.testMotion" = "Testen Sie die Bewegung";
 "settings.testSound" = "Ton testen";
 "settings.resetAllContent" = "Alle Inhalte zurücksetzen";
-"settings.version" = "Version 1.0 (Build 2026)";
+"settings.version" = "Version %1$@ (Build %2$@)";
 "settings.reset.firstAlert.title" = "Alle Fortschritte zurücksetzen?";
 "settings.reset.firstAlert.message" = "Wischen Sie besuchte Gebäude, Passstempel und Quizergebnisse ab.";
 "settings.reset.firstAlert.continue" = "Weitermachen";
