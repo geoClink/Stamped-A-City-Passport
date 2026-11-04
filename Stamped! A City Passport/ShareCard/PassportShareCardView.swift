@@ -61,9 +61,8 @@ struct PassportShareCardView: View {
 
     // MARK: - Share Button
 
-    /// The App Store link that goes with a shared passport. pt is our App Store Connect provider
-    /// token and ct the campaign, so App Analytics → Campaigns counts downloads from shares.
-    private static let appStoreShareLink = "https://apps.apple.com/app/apple-store/id6759680336?pt=128288066&ct=app-share&mt=8"
+    /// The App Store link that goes with a shared passport (campaign "app-share")
+    private static let appStoreShareLink = ShareCardLink.appStore(campaign: "app-share")
 
     /// Sent with the picture (in Messages, Mail and most apps), so friends can tap straight to the app
     private var shareMessage: String {
@@ -108,17 +107,7 @@ struct PassportShareCardView: View {
             countryCount: countryCount,
             visitedCities: visitedCities
         )
-        let renderer = ImageRenderer(content: card)
-        #if os(visionOS)
-        renderer.scale = 2.0
-        #elseif os(macOS)
-        renderer.scale = NSScreen.main?.backingScaleFactor ?? 2.0
-        #else
-        renderer.scale = UIScreen.main.scale
-        #endif
-        if let uiImage = renderer.uiImage {
-            renderedImage = Image(uiImage: uiImage)
-        }
+        renderedImage = ShareCardRenderer.image(of: card)
     }
 }
 
@@ -153,31 +142,7 @@ struct PassportCard: View {
 
     private var topBand: some View {
         VStack(spacing: 0) {
-            // App bar
-            HStack {
-                HStack(spacing: DS.Space.s) {
-                    Image(systemName: "globe.americas.fill")
-                        .font(.system(size: 20, weight: .bold))
-                        .foregroundStyle(.white)
-                    VStack(alignment: .leading, spacing: 0) {
-                        Text("STAMPED!")
-                            .font(.system(.headline, design: .rounded))
-                            .fontWeight(.black)
-                            .foregroundStyle(.white)
-                        Text("A CITY PASSPORT")
-                            .font(.system(size: 7, weight: .semibold))
-                            .foregroundStyle(.white.opacity(0.75))
-                            .tracking(2)
-                    }
-                }
-                Spacer()
-                Text(Date().formatted(.dateTime.month(.abbreviated).year()))
-                    .font(.system(size: 9, weight: .medium))
-                    .foregroundStyle(.white.opacity(0.7))
-            }
-            .padding(.horizontal, DS.Space.xl)
-            .padding(.top, DS.Space.xl)
-            .padding(.bottom, DS.Space.l)
+            ShareCardBrandBar()
 
             // Big stamp count
             VStack(spacing: 6) {
@@ -260,19 +225,7 @@ struct PassportCard: View {
 
             Spacer(minLength: 0)
 
-            // Footer
-            HStack {
-                Image(systemName: "checkmark.seal.fill")
-                    .font(.caption2)
-                    .foregroundStyle(Self.orange.opacity(0.4))
-                // Not a web address: stamped-app.com belongs to someone else
-                Text("ON THE APP STORE")
-                    .font(.system(size: 8, weight: .medium))
-                    .foregroundStyle(Self.orange.opacity(0.4))
-                    .tracking(1)
-            }
-            .padding(.horizontal, DS.Space.l)
-            .padding(.bottom, DS.Space.l)
+            ShareCardFooter()
         }
         .frame(maxWidth: .infinity, alignment: .leading)
     }

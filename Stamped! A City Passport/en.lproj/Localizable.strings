@@ -325,6 +325,12 @@
 /* Text sent with a shared passport picture; %@ is the App Store link */
 "My Stamped! passport. Get the app: %@" = "My Stamped! passport. Get the app: %@";
 
+/* City stamp share picture; %1$d is landmarks visited, %2$d is landmarks in the city */
+"%1$d of %2$d landmarks stamped" = "%1$d of %2$d landmarks stamped";
+
+/* Text sent with a shared city stamp picture; %1$@ is the city, %2$@ is the App Store link */
+"I just unlocked the %1$@ stamp on Stamped! 🏛️ Get the app: %2$@" = "I just unlocked the %1$@ stamp on Stamped! 🏛️ Get the app: %2$@";
+
 /* Tip jar (Support Stamped!) */
 "Support Stamped!" = "Support Stamped!";
 "Tips help keep new cities coming" = "Tips help keep new cities coming";
