@@ -1168,5 +1168,55 @@
     "currencyInfo": "美元 ($)",
     "transportation": "步行",
     "transportationFact": "校园步行就能逛完：北边的 Warriner Hall 距东南边的 Kelly/Shorts 体育场约 1.5 公里。"
+  },
+  "Cranbrook Academy of Art": {
+    "nickname": "Cranbrook",
+    "airportInfo": "位于底特律西南罗穆卢斯的底特律大都会韦恩县机场是该地区的主要机场。从那里驾车向北前往布卢姆菲尔德希尔斯，即可到达克兰布鲁克。",
+    "funFact": "报业出版人乔治·高夫·布斯和妻子埃伦·斯克里普斯·布斯在 1904 年买下的农场上建起克兰布鲁克，并以乔治父亲的出生地英格兰克兰布鲁克为它命名。校园大部分由埃利尔·沙里宁设计，1989 年被列为美国国家历史地标。",
+    "language": "英语",
+    "languageInfo": "克兰布鲁克的标志是一只鹤，标志的官方颜色是铜色和金色。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "汽车 / 步行",
+    "transportationFact": "克兰布鲁克位于底特律以北布卢姆菲尔德希尔斯的伍德沃德大道旁，大多数游客开车前来。园区内的步道连接着艺术博物馆、沙里宁故居、科学研究所和克兰布鲁克庄园的花园。"
+  },
+  "University of California, San Diego": {
+    "nickname": "UC San Diego",
+    "airportInfo": "圣迭戈国际机场位于校园以南约 22 公里。免费的 San Diego Flyer 接驳车连接机场与 Old Town 交通中心，从那里换乘 UC San Diego 蓝线电车向北即可到达校园。",
+    "funFact": "盖泽尔图书馆以奥德丽和西奥多·苏斯·盖泽尔命名，后者更广为人知的名字是苏斯博士。馆内收藏着苏斯博士特藏，包括他的原画、草图和手稿。",
+    "language": "英语",
+    "languageInfo": "学校代表色是蓝色和金色，运动队名为 Tritons（特里同）。",
+    "currencyInfo": "美元 ($)",
+    "transportation": "步行 / 蓝线电车",
+    "transportationFact": "UC San Diego 蓝线电车停靠 UC San Diego Central Campus 站和 UC San Diego Health La Jolla 站。校园班车和步行道连接着各学院、Price Center 和盖泽尔图书馆。"
+  },
+  "University of Coimbra": {
+    "nickname": "UC",
+    "airportInfo": "最近的大型机场是波尔图的弗朗西斯科·萨·卡内罗机场和里斯本的温贝托·德尔加多机场。从这两座城市出发，里斯本—波尔图线的列车都停靠科英布拉-B 站。",
+    "funFact": "迪尼斯国王于 1290 年创立了这所大学，1537 年大学永久迁到科英布拉，入驻山顶的旧王宫。“科英布拉大学——阿尔塔与索菲亚”于 2013 年被列入联合国教科文组织世界遗产名录。",
+    "language": "葡萄牙语",
+    "languageInfo": "上课和日常生活都使用葡萄牙语。直到 1772 年大学改革之前，拉丁语一直是官方教学语言，因此王宫那条长长的柱廊阳台被称为“拉丁之路”（Via Latina）。",
+    "currencyInfo": "欧元 (€)",
+    "transportation": "步行 / 市内公交",
+    "transportationFact": "老校区位于下城（Baixa）上方一座陡峭的山顶，沿途多台阶和窄巷。市内公交可开上上城，而上城（Alta）内处处步行可达。"
+  },
+  "University of Salamanca": {
+    "nickname": "USAL",
+    "airportInfo": "马德里-巴拉哈斯机场是前往萨拉曼卡的主要国际门户。从马德里可乘火车或大巴向西前往萨拉曼卡。",
+    "funFact": "萨拉曼卡大学创立于 1218 年，是西班牙至今仍在运行的最古老的大学。它的主楼“大学院”（Escuelas Mayores）围绕大教堂旁的回廊而建，于 1533 年完工。",
+    "language": "西班牙语",
+    "languageInfo": "上课和日常生活都使用西班牙语，萨拉曼卡也是西班牙最受欢迎的西班牙语学习城市之一。",
+    "currencyInfo": "欧元 (€)",
+    "transportation": "步行",
+    "transportationFact": "老城区小巧紧凑，大部分是步行区。马约尔广场、贝壳之家、克莱雷西亚和学院广场彼此之间步行只需几分钟。"
+  },
+  "University of Tokyo": {
+    "nickname": "东大",
+    "airportInfo": "东京有羽田和成田两座机场，其中羽田离市中心更近。两座机场都可乘电车和地铁到达本乡校区附近的车站。",
+    "funFact": "本乡校区坐落在加贺藩主前田家江户宅邸的旧址上。著名的赤门建于 1827 年，是为迎接嫁入前田家的将军之女而建。",
+    "language": "日语",
+    "languageInfo": "日常生活使用日语。学生把东京大学简称为“东大”（Tōdai），而赤门长久以来也是这所大学本身的代称。",
+    "currencyInfo": "日元 (¥)",
+    "transportation": "步行 / 东京地铁",
+    "transportationFact": "从东京地铁南北线东大前站步行到校园约 3 分钟。从本乡三丁目站、根津站和汤岛站步行各约 8 分钟。"
   }
 }

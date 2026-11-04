@@ -23,6 +23,7 @@ struct CityVolumeView: View {
     @Environment(\.openImmersiveSpace) private var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) private var dismissImmersiveSpace
     @Environment(\.dismissWindow)      private var dismissWindow
+    @Environment(\.dynamicTypeSize)    private var dynamicTypeSize
 
     @AppStorage("currentImmersiveCity") private var currentImmersiveCity = "Detroit"
     @State private var isOpeningSpace = false
@@ -80,6 +81,14 @@ struct CityVolumeView: View {
                 Text(cityName)
                     .font(.headline)
                     .foregroundStyle(.primary)
+                    // VoiceOver can't reach the 3D model, so its drag, pinch and tap
+                    // gestures are offered as actions here instead
+                    .accessibilityAddTraits(.isHeader)
+                    .accessibilityAction(named: "Show Next Landmark") { selectNextLandmark() }
+                    .accessibilityAction(named: "Rotate Left") { rotate(by: -.pi / 8) }
+                    .accessibilityAction(named: "Rotate Right") { rotate(by: .pi / 8) }
+                    .accessibilityAction(named: "Zoom In") { zoom(by: 1.25) }
+                    .accessibilityAction(named: "Zoom Out") { zoom(by: 0.8) }
 
                 Divider().frame(height: 20)
 
@@ -100,6 +109,7 @@ struct CityVolumeView: View {
                 .buttonStyle(.bordered)
                 .tint(.orange)
                 .disabled(isOpeningSpace)
+                .accessibilityHint("Opens the city around you at room scale")
 
                 Button {
                     selectedBuilding = nil
@@ -108,6 +118,9 @@ struct CityVolumeView: View {
                 }
                 .buttonStyle(.plain)
                 .opacity(selectedBuilding != nil ? 1 : 0)
+                .accessibilityLabel("Close")
+                // Invisible without a card, so keep VoiceOver from landing on it
+                .accessibilityHidden(selectedBuilding == nil)
             }
             .padding(.horizontal, 20)
             .padding(.vertical, 12)
@@ -205,6 +218,26 @@ struct CityVolumeView: View {
             .onEnded { _ in prevDragX = 0 }
     }
 
+    // MARK: - VoiceOver actions (the same changes the gestures make)
+
+    /// Steps through the landmarks in order, since VoiceOver can't tap the model
+    private func selectNextLandmark() {
+        let mappable = buildings.filter { $0.latitude != nil && $0.longitude != nil }
+        guard !mappable.isEmpty else { return }
+        let currentIndex = mappable.firstIndex { $0.id == selectedBuilding?.id } ?? -1
+        selectedBuilding = mappable[(currentIndex + 1) % mappable.count]
+    }
+
+    private func rotate(by angle: Float) {
+        yRotation += angle
+        cityEntity?.transform.rotation = simd_quatf(angle: yRotation, axis: [0, 1, 0])
+    }
+
+    private func zoom(by factor: Float) {
+        currentScale = (currentScale * factor).clamped(to: (baseScale * 0.4)...(baseScale * 8))
+        cityEntity?.scale = SIMD3(repeating: currentScale)
+    }
+
     private var magnifyGesture: some Gesture {
         MagnifyGesture()
             .onChanged { value in
@@ -224,6 +257,7 @@ struct CityVolumeView: View {
                 if visitedIDs.contains(building.id) {
                     Image(systemName: "checkmark.seal.fill")
                         .foregroundStyle(.orange)
+                        .accessibilityLabel("Stamped")
                 }
                 Text(building.name)
                     .font(.headline)
@@ -240,7 +274,8 @@ struct CityVolumeView: View {
             if !building.description.isEmpty {
                 Text(building.description)
                     .font(.caption)
-                    .lineLimit(3)
+                    // Three lines is a preview; at the largest text sizes that's only a few words
+                    .lineLimit(dynamicTypeSize.isAccessibilitySize ? 8 : 3)
                     .foregroundStyle(.secondary)
                     .padding(.top, 2)
             }
@@ -248,6 +283,7 @@ struct CityVolumeView: View {
         .padding(20)
         .frame(minWidth: 300, maxWidth: 380)
         .glassBackgroundEffect(in: RoundedRectangle(cornerRadius: 16))
+        .accessibilityElement(children: .combine)
     }
 }
 

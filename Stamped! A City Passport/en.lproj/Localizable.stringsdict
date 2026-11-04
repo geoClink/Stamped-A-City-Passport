@@ -50,5 +50,21 @@
 			<string>%d min walk</string>
 		</dict>
 	</dict>
+	<key>%lld stamps</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@stamps@</string>
+		<key>stamps</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%lld stamp</string>
+			<key>other</key>
+			<string>%lld stamps</string>
+		</dict>
+	</dict>
 </dict>
 </plist>

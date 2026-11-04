@@ -48,6 +48,7 @@ struct EventsSection: View {
                         Image(systemName: "ticket.fill")
                             .font(.title2)
                             .foregroundColor(.secondary.opacity(0.5))
+                            .accessibilityHidden(true)
                         VStack(alignment: .leading, spacing: 2) {
                             Text("No Upcoming Events")
                                 .font(.subheadline).fontWeight(.semibold)
@@ -56,6 +57,7 @@ struct EventsSection: View {
                         }
                     }
                     .padding(DS.Space.l)
+                    .accessibilityElement(children: .combine)
                 } else {
                     // Filter chips
                     if presentCategories.count > 1 {
@@ -111,6 +113,7 @@ struct EventsSection: View {
                                 Spacer()
                                 Image(systemName: "chevron.right")
                                     .font(.caption.weight(.semibold))
+                                    .accessibilityHidden(true)
                             }
                             .foregroundColor(brandColor)
                             .padding(DS.Space.l)
@@ -295,7 +298,7 @@ private struct EventRow: View {
                     Text(event.venueName)
                         .font(.caption)
                         .foregroundColor(.secondary)
-                        .lineLimit(1)
+                        .lineLimit(2)
                 }
             }
 
@@ -343,6 +346,7 @@ private struct FilterChip: View {
             HStack(spacing: DS.Space.xs) {
                 if let icon {
                     Image(systemName: icon).font(.caption.weight(.medium))
+                        .accessibilityHidden(true)
                 }
                 Text(label).font(.caption.bold()).lineLimit(1)
             }
@@ -354,7 +358,7 @@ private struct FilterChip: View {
         }
         .buttonStyle(.plain)
         .animation(.easeInOut(duration: 0.15), value: isSelected)
-        .accessibilityLabel(isSelected ? "\(label), selected" : label)
+        // The label is the chip's own text; the .isSelected trait already says "Selected"
         .accessibilityAddTraits(isSelected ? [.isButton, .isSelected] : .isButton)
     }
 }
@@ -469,8 +473,8 @@ private struct EventCard: View {
     private var accessibilityLabel: String {
         var parts = [event.name, event.category.rawValue]
         if !event.date.isEmpty { parts.append(event.date) }
-        if !event.time.isEmpty { parts.append("at \(event.time)") }
-        if !event.venueName.isEmpty { parts.append("at \(event.venueName)") }
+        if !event.time.isEmpty { parts.append(String(localized: "at \(event.time)", comment: "Event card: VoiceOver, the start time, e.g. at 7:30 PM")) }
+        if !event.venueName.isEmpty { parts.append(String(localized: "event.card.atVenue", defaultValue: "at \(event.venueName)", comment: "Event card: VoiceOver, the venue, e.g. at Madison Square Garden (own key: \"at\" a time and \"at\" a place translate differently)")) }
         if let price = event.priceRange { parts.append(price) }
         return parts.joined(separator: ", ")
     }

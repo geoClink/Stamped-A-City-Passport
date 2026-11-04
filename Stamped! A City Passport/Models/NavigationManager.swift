@@ -19,4 +19,6 @@ class NavigationManager: ObservableObject {
     @Published var menuCommand: MenuCommand? = nil
     /// Set by the "Open My Passport" Siri / Shortcuts action
     @Published var passportRequested = false
+    /// Set by File > New Trip in the main window; My Trips opens and asks where the trip is
+    @Published var newTripRequested = false
 }

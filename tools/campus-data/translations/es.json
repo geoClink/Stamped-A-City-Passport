@@ -1168,5 +1168,55 @@
     "currencyInfo": "Dólar estadounidense ($)",
     "transportation": "A pie",
     "transportationFact": "El campus es fácil de recorrer a pie: Warriner Hall, en el norte, está a unos 1,5 km del Kelly/Shorts Stadium, en el sureste."
+  },
+  "Cranbrook Academy of Art": {
+    "nickname": "Cranbrook",
+    "airportInfo": "El Aeropuerto Metropolitano de Detroit, en Romulus, al suroeste de Detroit, es el principal de la región. Desde allí se llega a Cranbrook en coche, hacia el norte hasta Bloomfield Hills.",
+    "funFact": "El editor de periódicos George Gough Booth y su esposa Ellen Scripps Booth construyeron Cranbrook en una granja que compraron en 1904 y le pusieron el nombre de Cranbrook, en Inglaterra, ciudad natal del padre de George. Eliel Saarinen diseñó gran parte del campus, declarado National Historic Landmark en 1989.",
+    "language": "Inglés",
+    "languageInfo": "El emblema de Cranbrook es una grulla, y los colores oficiales de su logotipo son el cobre y el oro.",
+    "currencyInfo": "Dólar estadounidense ($)",
+    "transportation": "Coche / A pie",
+    "transportationFact": "Cranbrook está en Woodward Avenue, en Bloomfield Hills, al norte de Detroit, y la mayoría de los visitantes llega en coche. Dentro del recinto, senderos peatonales unen el Art Museum, la Saarinen House, el Institute of Science y los jardines de Cranbrook House."
+  },
+  "University of California, San Diego": {
+    "nickname": "UC San Diego",
+    "airportInfo": "El Aeropuerto Internacional de San Diego está a unos 22 km al sur del campus. El autobús gratuito San Diego Flyer une el aeropuerto con el Old Town Transit Center, donde el tranvía UC San Diego Blue Line sube hacia el campus.",
+    "funFact": "La Geisel Library lleva el nombre de Audrey y Theodor Seuss Geisel, más conocido como Dr. Seuss. Guarda la Dr. Seuss Collection, con sus dibujos, bocetos y manuscritos.",
+    "language": "Inglés",
+    "languageInfo": "Los colores de la universidad son el azul y el dorado, y sus equipos son los Tritons.",
+    "currencyInfo": "Dólar estadounidense ($)",
+    "transportation": "A pie / tranvía Blue Line",
+    "transportationFact": "El tranvía UC San Diego Blue Line para en las estaciones UC San Diego Central Campus y UC San Diego Health La Jolla. Lanzaderas y paseos peatonales conectan los colleges, el Price Center y la Geisel Library."
+  },
+  "University of Coimbra": {
+    "nickname": "UC",
+    "airportInfo": "Los grandes aeropuertos más cercanos son el Francisco Sá Carneiro de Oporto y el Humberto Delgado de Lisboa. Desde ambas ciudades, los trenes de la línea Lisboa–Oporto paran en la estación de Coimbra-B.",
+    "funFact": "El rey Dionisio fundó la universidad en 1290, y en 1537 se trasladó definitivamente a Coímbra, al antiguo palacio real en lo alto de la colina. La Universidad de Coímbra – Alta y Sofía es Patrimonio de la Humanidad de la UNESCO desde 2013.",
+    "language": "Portugués",
+    "languageInfo": "Las clases y la vida diaria son en portugués. El latín fue la lengua oficial de la enseñanza hasta la reforma de 1772, y por eso el largo balcón con columnas del palacio se llama Via Latina.",
+    "currencyInfo": "Euro (€)",
+    "transportation": "A pie / autobuses urbanos",
+    "transportationFact": "La vieja universidad está en lo alto de una colina empinada sobre la Baixa (ciudad baja), así que hay escaleras y calles estrechas. Los autobuses urbanos suben a la ciudad alta, y en la Alta todo queda a poca distancia a pie."
+  },
+  "University of Salamanca": {
+    "nickname": "USAL",
+    "airportInfo": "Madrid-Barajas es la principal puerta de entrada internacional a Salamanca. Desde Madrid salen trenes y autobuses hacia el oeste hasta Salamanca.",
+    "funFact": "La Universidad de Salamanca se fundó en 1218 y es la universidad más antigua de España que sigue en funcionamiento. Su edificio principal, las Escuelas Mayores, se terminó en 1533 en torno a un claustro junto a las catedrales.",
+    "language": "Español",
+    "languageInfo": "Las clases y la vida diaria son en español, y Salamanca es una de las ciudades de España más populares para aprenderlo.",
+    "currencyInfo": "Euro (€)",
+    "transportation": "A pie",
+    "transportationFact": "El casco antiguo es compacto y en gran parte peatonal. La Plaza Mayor, la Casa de las Conchas, la Clerecía y el Patio de Escuelas están a pocos minutos a pie unos de otros."
+  },
+  "University of Tokyo": {
+    "nickname": "Tōdai",
+    "airportInfo": "Haneda y Narita dan servicio a Tokio; Haneda es el más cercano al centro. Trenes y metro conectan ambos aeropuertos con estaciones cercanas al campus de Hongō.",
+    "funFact": "El campus de Hongō ocupa la antigua residencia en Edo de los Maeda, señores de Kaga. Su famosa Puerta Roja, el Akamon, se construyó en 1827 para recibir a una hija del shōgun que se casó con un miembro de la familia.",
+    "language": "Japonés",
+    "languageInfo": "El japonés es la lengua de la vida diaria. Los estudiantes llaman a la universidad Tōdai, abreviatura de Tōkyō Daigaku, y el Akamon es desde hace mucho un apodo de la propia universidad.",
+    "currencyInfo": "Yen japonés (¥)",
+    "transportation": "A pie / Tokyo Metro",
+    "transportationFact": "La estación Tōdai-mae de la línea Namboku está a unos tres minutos a pie del campus. Las estaciones de Hongō-sanchōme, Nezu y Yushima están a unos ocho minutos cada una."
   }
 }

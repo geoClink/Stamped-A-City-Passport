@@ -35,6 +35,7 @@ struct CityListView: View {
     /// Which part of the world the home list shows: a continent's raw value, or "campuses"
     @AppStorage("home_explore_filter") var exploreFilter = CityLocation.Continent.northAmerica.rawValue
     @Environment(\.dynamicTypeSize) var dynamicTypeSize
+    @Environment(\.accessibilityReduceMotion) var reduceMotion
     @State var searchText = ""
     /// Results for `searchedText`, worked out shortly after typing stops
     @State private var searchResults: [MixedSearchResult] = []
@@ -174,7 +175,8 @@ struct CityListView: View {
             // so city names don't show through between them
             .dsSolidTopScrollEdge()
             #endif
-            .animation(.spring(response: 0.35, dampingFraction: 0.8), value: searchText.isEmpty)
+            // No bounce with Reduce Motion on
+            .animation(reduceMotion ? nil : .spring(response: 0.35, dampingFraction: 0.8), value: searchText.isEmpty)
 
         } detail: {
             NavigationStack {
@@ -229,13 +231,15 @@ struct CityListView: View {
         .fullScreenCover(isPresented: $showingPassport) {
             PassportGalleryView(cities: viewModel.allCities)
         }
-        #if os(macOS)
+        // Menu commands from a panel window (Mac), which has no main window in front
         .onChange(of: navManager.menuCommand) { _, command in
             guard let command else { return }
             navManager.menuCommand = nil
             handleMenuCommand(command)
         }
-        #endif
+        // While this window is frontmost, the menu bar's commands act on it (AppCommands.swift).
+        // Not while one of its own sheets is up (iPad), which would open behind it.
+        .focusedSceneValue(\.mainWindowCommands, isShowingSheet ? nil : MainWindowCommands(perform: handleMenuCommand))
         .onChange(of: navManager.spotlightCity) { _, city in
             if let city { openRequestedCity(city) }
         }
@@ -301,7 +305,11 @@ struct CityListView: View {
     private var exploreFilterBar: some View {
         let continents = viewModel.groupedByContinent.map(\.id).sorted()
         let selected = exploreFilter == Self.campusFilter ? Self.campusFilter : (selectedContinentGroup?.id.rawValue ?? "")
-        return HStack(spacing: DS.Space.s) {
+        // At accessibility sizes Campuses gets its own line; side by side, both got cut off
+        let layout = dynamicTypeSize.isAccessibilitySize
+            ? AnyLayout(VStackLayout(alignment: .leading, spacing: DS.Space.s))
+            : AnyLayout(HStackLayout(spacing: DS.Space.s))
+        return layout {
             if !viewModel.campusGroups.isEmpty {
                 filterChip(NSLocalizedString("Campuses", comment: "Home filter chip: show campuses instead of a continent's cities"),
                            systemImage: "graduationcap.fill",
@@ -357,6 +365,7 @@ struct CityListView: View {
             )
             .overlay(Capsule().stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2))
             .contentShape(Capsule())
+            .hoverEffect(.lift)
             .onTapGesture {
                 guard !isSelected else { return }
                 HapticManager.shared.trigger(.selection)
@@ -376,6 +385,7 @@ struct CityListView: View {
             HStack(spacing: 12) {
                 Image(systemName: "heart.fill")
                     .foregroundColor(isHighContrast ? .primary : brandColor)
+                    .accessibilityHidden(true)
                 Text(NSLocalizedString("My College List", comment: "City list: row that opens the user's list of campuses"))
                     .font(.subheadline.bold())
                     .foregroundColor(.primary)
@@ -388,10 +398,12 @@ struct CityListView: View {
                 Image(systemName: "chevron.right")
                     .font(.caption.bold())
                     .foregroundColor(.secondary)
+                    .accessibilityHidden(true)
             }
             .padding(.vertical, 6)
         }
         .buttonStyle(.plain)
+        .hoverEffect(.highlight)
     }
 
     @ViewBuilder
@@ -409,6 +421,8 @@ struct CityListView: View {
                 .frame(width: 32, height: 32)
                 .background(brandColor.opacity(0.1))
                 .clipShape(Circle())
+                // The subtitle already says city, landmark or architect
+                .accessibilityHidden(true)
             
             VStack(alignment: .leading, spacing: 2) {
                 Text(result.title)
@@ -425,8 +439,7 @@ struct CityListView: View {
     }
 }
 
-#if os(macOS)
-// MARK: - Mac menu bar commands
+// MARK: - Menu bar commands (Mac, and iPad with a keyboard)
 extension CityListView {
     func handleMenuCommand(_ command: MenuCommand) {
         switch command {
@@ -440,7 +453,40 @@ extension CityListView {
         case .achievements: showingAchievements = true
         case .collegeList: showingCollegeList = true
         case .settings: showingSettings = true
+        case .newTrip:
+            // My Trips opens and asks where; a city's name there offers that city's planner
+            navManager.newTripRequested = true
+            showingMyTrips = true
+        case .nextCity: showCity(offsetBy: 1)
+        case .previousCity: showCity(offsetBy: -1)
+        }
+    }
+
+    /// True while this screen shows a sheet or full-screen cover (iPhone and iPad).
+    /// On the Mac those screens are windows, and the flags turn straight back to false.
+    var isShowingSheet: Bool {
+        showingSettings || showingPassport || showingMyJourney || showingMyTrips
+            || showingWorldMap || showingAchievements || showingCollegeList
+    }
+
+    /// The cities in the order the sidebar lists them now: the chosen continent's, or the campuses
+    private var sidebarCities: [CityLocation.City] {
+        if exploreFilter == Self.campusFilter {
+            return viewModel.campusGroups.flatMap(\.campuses)
+        }
+        return selectedContinentGroup?.countries.flatMap(\.cities) ?? []
+    }
+
+    /// Next City / Previous City. Stops at the ends of the list; with no city
+    /// (or one from search that isn't in the list) it starts from the top or bottom.
+    private func showCity(offsetBy offset: Int) {
+        let cities = sidebarCities
+        guard !cities.isEmpty else { return }
+        if let selectedCity, let index = cities.firstIndex(of: selectedCity) {
+            let newIndex = min(max(index + offset, 0), cities.count - 1)
+            self.selectedCity = cities[newIndex]
+        } else {
+            selectedCity = offset > 0 ? cities.first : cities.last
         }
     }
 }
-#endif

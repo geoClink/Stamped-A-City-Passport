@@ -30,6 +30,7 @@ struct PassportGalleryView: View {
     /// Decorative icons scale with the text around them
     @ScaledMetric(relativeTo: .largeTitle) private var trophySize: CGFloat = 70
     @ScaledMetric(relativeTo: .largeTitle) private var emptyIconSize: CGFloat = 80
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     
     // MARK: - Platform Detection & Adaptive Colors
     private var isIPad: Bool { DeviceInfo.isLargeScreen }
@@ -108,6 +109,7 @@ struct PassportGalleryView: View {
                         }
                         ToolbarItem(placement: .confirmationAction) {
                             Button("Done") { dismiss() }
+                                .closesWithCommandW()
                                 .fontWeight(highContrast ? .black : .bold)
                                 .foregroundColor(brandColor)
                         }
@@ -135,9 +137,10 @@ private extension PassportGalleryView {
         return colorScheme == .dark ? Color(.secondarySystemBackground) : Color(.systemGray5)
     }
 
-    /// Two stamps per row on iPhone
+    /// Two stamps per row on iPhone; one at accessibility sizes so names aren't crushed
     var stampColumns: [GridItem] {
-        [GridItem(.flexible(), spacing: DS.Space.m), GridItem(.flexible(), spacing: DS.Space.m)]
+        let count = dynamicTypeSize.isAccessibilitySize ? 1 : 2
+        return Array(repeating: GridItem(.flexible(), spacing: DS.Space.m), count: count)
     }
 }
 
@@ -192,6 +195,8 @@ private extension PassportGalleryView {
                             Text("\(stampedCampuses.count)/\(allCampuses.count)")
                                 .font(.caption.monospaced())
                                 .foregroundStyle(.secondary)
+                                // Read as "3 of 101", not "3 slash 101"
+                                .accessibilityLabel(Text("\(stampedCampuses.count) of \(allCampuses.count)"))
                         }
                     }
                     .listRowBackground(showingCampusPage ? brandColor.opacity(0.1) : Color.clear)
@@ -219,6 +224,7 @@ private extension PassportGalleryView {
                     if isCountryComplete(country) {
                         Image(systemName: "checkmark.seal.fill")
                             .foregroundColor(masteryColor)
+                            .accessibilityLabel("All cities stamped")
                     }
                 }
             }
@@ -241,12 +247,14 @@ private extension PassportGalleryView {
                             .foregroundColor(brandColor)
                             .lineLimit(2)
                             .minimumScaleFactor(0.6)
+                            .accessibilityAddTraits(.isHeader)
                     }
                     Spacer(minLength: DS.Space.l)
                     if isCountryComplete(country) {
                         Image(systemName: "trophy.circle.fill")
                             .font(.system(size: trophySize))
                             .foregroundColor(masteryColor)
+                            .accessibilityLabel("All cities stamped")
                     }
                 }
                 
@@ -264,6 +272,7 @@ private extension PassportGalleryView {
                                     if hapticsEnabled { HapticManager.shared.trigger(.selection) }
                                     selectedCity = city
                                 }
+                                .accessibilityAddTraits(.isButton)
                         } else {
                             LockedStampView(cityName: city.name, isHighContrast: highContrast)
                         }
@@ -288,6 +297,7 @@ private extension PassportGalleryView {
             Image(systemName: "magnifyingglass")
                 .font(.largeTitle)
                 .foregroundStyle(.secondary)
+                .accessibilityHidden(true)
             Text(String(format: NSLocalizedString("No stamps match \u{201C}%@\u{201D}", comment: "Passport search: nothing matches, e.g. No stamps match “Paris”"), searchQuery))
                 .font(.headline)
                 .multilineTextAlignment(.center)
@@ -301,6 +311,7 @@ private extension PassportGalleryView {
             Image(systemName: "map.fill")
                 .font(.system(size: emptyIconSize))
                 .foregroundStyle(brandColor)
+                .accessibilityHidden(true)
             Text("Select a country to view your stamps")
                 .font(.title2.bold())
                 .foregroundColor(highContrast ? brandColor : .secondary)
@@ -365,6 +376,7 @@ private extension PassportGalleryView {
                     if isCountryComplete(country) {
                         Image(systemName: "checkmark.seal.fill")
                             .foregroundColor(masteryColor)
+                            .accessibilityLabel("All cities stamped")
                     }
                 }
                 
@@ -378,6 +390,7 @@ private extension PassportGalleryView {
                                     if hapticsEnabled { HapticManager.shared.trigger(.selection) }
                                     selectedCity = city
                                 }
+                                .accessibilityAddTraits(.isButton)
                         } else {
                             LockedStampView(cityName: city.name, isHighContrast: highContrast)
                         }
@@ -408,6 +421,7 @@ private extension PassportGalleryView {
                                         if hapticsEnabled { HapticManager.shared.trigger(.selection) }
                                         selectedCity = campus
                                     }
+                                    .accessibilityAddTraits(.isButton)
                             } else {
                                 LockedStampView(cityName: campus.name, isHighContrast: highContrast)
                             }
@@ -426,6 +440,7 @@ private extension PassportGalleryView {
                 Text("\(stampedCampuses.count)/\(allCampuses.count)")
                     .font(.caption.monospaced().bold())
                     .foregroundColor(brandColor)
+                    .accessibilityLabel(Text("\(stampedCampuses.count) of \(allCampuses.count)"))
             }
             if stampedCampuses.isEmpty {
                 Text(NSLocalizedString("Stamp every landmark on a campus to add its stamp here, in school colors.", comment: "Passport: empty campus section"))
@@ -441,6 +456,7 @@ private extension PassportGalleryView {
                                 if hapticsEnabled { HapticManager.shared.trigger(.selection) }
                                 selectedCity = campus
                             }
+                            .accessibilityAddTraits(.isButton)
                     }
                 }
             }
@@ -555,6 +571,10 @@ struct MiniPassportStamp: View {
                 .stroke(accent, lineWidth: highContrast ? 3 : 1.5)
         )
         .rotationEffect(.degrees(highContrast ? 0 : -2))
+        // One element: "PARIS, Stamped" rather than the seal and the name separately
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(Text(city.name))
+        .accessibilityValue(Text("Stamped"))
     }
 }
 
@@ -592,6 +612,10 @@ struct LockedStampView: View {
                     style: StrokeStyle(lineWidth: isHighContrast ? 2 : 1, dash: isHighContrast ? [] : [4, 3])
                 )
         )
+        // One element: the name, then that it isn't stamped (the lock icon isn't read)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(Text(cityName))
+        .accessibilityValue(Text("Not yet stamped"))
     }
 }
 
@@ -615,7 +639,8 @@ struct ZoomedStampView: View {
                         cityName: city.name,
                         dateCompleted: "OFFICIAL",
                         funFact: city.details.funFact,
-                        isHighContrast: passedHighContrast
+                        isHighContrast: passedHighContrast,
+                        speaksDate: false
                     )
                     .padding(DS.Space.l)
 

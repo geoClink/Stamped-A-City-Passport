@@ -73,6 +73,7 @@ CITY_LOOKUP_OVERRIDES: dict[str, tuple[str, str]] = {
     "São Paulo": ("São Paulo", "BR"),
     "Mexico City": ("Mexico City", "MX"),
     "Melbourne": ("Melbourne", "AU"),
+    "Porto": ("Porto", "PT"),
     "Florence": ("Florence", "IT"),
     "Venice": ("Venice", "IT"),
     "Athens": ("Athens", "GR"),

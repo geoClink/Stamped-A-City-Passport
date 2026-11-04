@@ -77,3 +77,20 @@ students-only events, hazing, mocking another school, and Syracuse's Saltine War
   Center; Longyear Hall is gone), Ferris State, Saginaw Valley State (the Ryder Center's Wikipedia point is 5 km off),
   Lake Superior State, UM-Dearborn, UM-Flint, Detroit Mercy, Kettering, Lawrence Tech, Calvin, Hope, Kalamazoo, Albion,
   Hillsdale (Christ Chapel has no coordinates; stadium and arboretum only), Alma and Andrews.
+
+### New campuses (Cranbrook, UC San Diego, Coimbra, Salamanca, Tokyo)
+- [ ] Colors: Cranbrook, UC San Diego, Salamanca and Tokyo come from each school's style guide. Coimbra has none: its
+      visual identity page wouldn't load, and no official hex values were found.
+- [ ] Cranbrook is named "Cranbrook Academy of Art" (the degree-granting school, Scorecard 169424), but its map article is
+      "Cranbrook Educational Community", and Christ Church, Kingswood, Cranbrook House and the Institute of Science belong to
+      the wider community. All 7 Cranbrook buildings are shared-article with OSM points and use the 39221 Woodward Ave address.
+- [ ] Not strictly university buildings: Salk Institute (independent, next to UC San Diego), La Clerecía (Pontifical
+      University of Salamanca), Casa de las Conchas (a public library), Old Cathedral of Coimbra (a church in the UNESCO area).
+- [ ] yearBuilt judgement calls: Old Cathedral of Coimbra 1162 (main construction under way), Anaya Palace 1760
+      (construction start; completion undocumented), Cranbrook School 1927 (built 1926–31), Chapel of São Miguel 1522,
+      Escuelas Mayores 1533 (with the façade).
+- [ ] Coimbra and Salamanca addresses are street-level only, with no postcodes.
+- Christ Church Cranbrook and the Institute of Science skip the photo (`WikimediaService.skipWikipedia`): both redirect to
+  the community article, whose photo is the Art Museum.
+- Left out on purpose: UC San Diego's Fallen Star (closed for restoration until early 2027). UC San Diego has no conference
+  case (Big West), so it shows under "Other U.S. Campuses".

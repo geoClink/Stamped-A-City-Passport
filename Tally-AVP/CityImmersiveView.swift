@@ -18,6 +18,9 @@ struct CityImmersiveView: View {
 
     @AppStorage("currentImmersiveCity") private var cityName = "Detroit"
     @Environment(\.dismissImmersiveSpace) private var dismissImmersiveSpace
+    /// Reduce Motion: Street View jumps instead of sliding the whole city around you
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     @State private var cityEntity:  Entity?
     @State private var sunEntity:   Entity?
@@ -233,7 +236,28 @@ struct CityImmersiveView: View {
         var t = entity.transform
         t.scale       = SIMD3(repeating: cityBaseScale)
         t.translation = cityBasePos
-        entity.move(to: t, relativeTo: nil, duration: 0.6, timingFunction: .easeInOut)
+        if reduceMotion {
+            entity.transform = t
+        } else {
+            entity.move(to: t, relativeTo: nil, duration: 0.6, timingFunction: .easeInOut)
+        }
+    }
+
+    // MARK: - VoiceOver actions (the same changes the gestures make)
+
+    /// Steps through the landmarks in order, since VoiceOver can't tap the model
+    private func selectNextLandmark() {
+        let mappable = buildings.filter { $0.latitude != nil && $0.longitude != nil }
+        guard !mappable.isEmpty else { return }
+        let currentIndex = mappable.firstIndex { $0.id == selectedBuilding?.id } ?? -1
+        selectedBuilding = mappable[(currentIndex + 1) % mappable.count]
+    }
+
+    /// Same limits as the pinch gesture
+    private func zoom(by factor: Float) {
+        guard let entity = cityEntity else { return }
+        cityBaseScale = max(overviewScale * 0.5, min(overviewScale * 10, cityBaseScale * factor))
+        entity.scale = SIMD3(repeating: cityBaseScale)
     }
 
     // MARK: - Sun / day-night
@@ -299,6 +323,12 @@ struct CityImmersiveView: View {
                 // Row 1: navigation
                 HStack(spacing: 14) {
                     Text(cityName).font(.headline)
+                        // VoiceOver can't reach the 3D city, so its tap and pinch
+                        // gestures are offered as actions here instead
+                        .accessibilityAddTraits(.isHeader)
+                        .accessibilityAction(named: "Show Next Landmark") { selectNextLandmark() }
+                        .accessibilityAction(named: "Zoom In") { zoom(by: 1.25) }
+                        .accessibilityAction(named: "Zoom Out") { zoom(by: 0.8) }
 
                     Divider().frame(height: 20)
 
@@ -382,6 +412,7 @@ struct CityImmersiveView: View {
                 if visitedIDs.contains(building.id) {
                     Image(systemName: "checkmark.seal.fill")
                         .foregroundStyle(.orange).font(.title3)
+                        .accessibilityLabel("Stamped")
                 }
                 Text(building.name).font(.title3.bold()).lineLimit(2)
             }
@@ -394,11 +425,14 @@ struct CityImmersiveView: View {
             if !building.description.isEmpty {
                 Divider()
                 Text(building.description)
-                    .font(.caption).foregroundStyle(.secondary).lineLimit(5)
+                    .font(.caption).foregroundStyle(.secondary)
+                    // Five lines is a preview; at the largest text sizes that's only a few words
+                    .lineLimit(dynamicTypeSize.isAccessibilitySize ? 10 : 5)
             }
         }
         .padding(20)
         .frame(minWidth: 300, maxWidth: 380)
         .glassBackgroundEffect(in: RoundedRectangle(cornerRadius: 18))
+        .accessibilityElement(children: .combine)
     }
 }

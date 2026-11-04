@@ -35,6 +35,7 @@ struct CityModelButton: View {
             } label: {
                 Label("Open 3D Model", systemImage: "cube.transparent")
             }
+            .accessibilityHint("Opens a 3D model of the city in its own window")
 
         case .notDownloaded(let bytes):
             Button {

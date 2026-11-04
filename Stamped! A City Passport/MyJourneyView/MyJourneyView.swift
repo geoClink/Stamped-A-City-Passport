@@ -16,6 +16,7 @@ struct MyJourneyView: View {
 
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @AppStorage("high_contrast_mode") private var isHighContrast = false
     @ScaledMetric(relativeTo: .largeTitle) private var ringSize: CGFloat = 140
     @ScaledMetric(relativeTo: .title2) private var architectIconSize: CGFloat = 56
@@ -108,6 +109,7 @@ struct MyJourneyView: View {
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Done") { dismiss() }
+                        .closesWithCommandW()
                         .fontWeight(.semibold)
                 }
             }
@@ -133,7 +135,7 @@ struct MyJourneyView: View {
                     .stroke(isHighContrast ? Color.primary : DS.Palette.accent, style: StrokeStyle(lineWidth: 16, lineCap: .round))
                     .frame(width: ring, height: ring)
                     .rotationEffect(.degrees(-90))
-                    .animation(.spring(duration: 1.0), value: totalStamped)
+                    .animation(reduceMotion ? nil : .spring(duration: 1.0), value: totalStamped)
 
                 VStack(spacing: 2) {
                     Text("\(totalStamped)")
@@ -246,6 +248,7 @@ struct MyJourneyView: View {
                         .font(.title2.weight(.semibold))
                         .foregroundColor(isHighContrast ? .primary : DS.Palette.accent)
                 }
+                .accessibilityHidden(true)
 
                 VStack(alignment: .leading, spacing: DS.Space.xs) {
                     Text(arch.name)
@@ -264,6 +267,8 @@ struct MyJourneyView: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
+            // Name and count read together
+            .accessibilityElement(children: .combine)
         }
         .dsCard(isHighContrast: isHighContrast)
     }
@@ -307,6 +312,7 @@ struct MyJourneyView: View {
                 .font(.title3)
                 .foregroundColor(isHighContrast ? .primary : color)
                 .frame(width: milestoneIconWidth)
+                .accessibilityHidden(true)
             // Value moves under the title at accessibility sizes
             let layout = dynamicTypeSize.isAccessibilitySize
                 ? AnyLayout(VStackLayout(alignment: .leading, spacing: DS.Space.xs))
@@ -323,5 +329,7 @@ struct MyJourneyView: View {
                     .foregroundColor(isHighContrast ? .primary : .secondary)
             }
         }
+        // "First Stamp, Mar 3, 2026" as one element
+        .accessibilityElement(children: .combine)
     }
 }

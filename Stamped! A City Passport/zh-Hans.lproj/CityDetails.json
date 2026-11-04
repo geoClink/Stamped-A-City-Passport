@@ -64,6 +64,19 @@
     "transportation": "GVB 有轨电车",
     "transportationFact": "阿姆斯特丹的历史中心主要由广泛的蓝色和白色 GVB 有轨电车网络提供服务。这座城市因拥有比居民还多的自行车而闻名于世，几乎每条街道都设有专用道路。中央车站后面的渡轮为行人和骑自行车的人提供跨越 IJ 河的免费交通。"
   },
+  "Antwerp": {
+    "airportCode": "BRU",
+    "airportInfo": "安特卫普本地的安特卫普国际机场是位于市区以南约5公里的小型机场，因此大多数游客会选择比利时最主要的国际枢纽——位于扎芬特姆的布鲁塞尔机场。自2012年起，Diabolo铁路线将机场与梅赫伦和安特卫普直接相连。",
+    "airportName": "Brussels Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "欧元 (€)",
+    "funFact": "传说这座城市的名字源自“抛手”：英雄西尔维乌斯·布拉博砍下一个残暴巨人的手，把它扔进了斯海尔德河。安特卫普还是全球钻石贸易的中心，世界上约85%的毛坯钻石每年都会经过这里的钻石区。",
+    "language": "荷兰语",
+    "languageInfo": "安特卫普位于比利时佛兰德大区，官方语言是荷兰语，街头也能听到当地的安特卫普方言。安特卫普人被昵称为“Sinjoren”，源自西班牙语“señor”（先生），这是17世纪西班牙贵族统治这座城市留下的印记。",
+    "nickname": "'t Stad（“城”）",
+    "transportation": "有轨电车和准地铁",
+    "transportationFact": "安特卫普的有轨电车网络由De Lijn运营，14条线路中有8条部分驶入地下，穿行于被称为“安特卫普准地铁”的隧道中。城市第一条马拉有轨电车于1873年5月25日开通，连接贝尔赫姆的教堂与梅尔大街。"
+  },
   "Asheville": {
     "airportCode": "AVL",
     "airportInfo": "Asheville Regional (AVL) is the primary gateway to the Blue Ridge Mountains. It is currently undergoing the 'AVL Forward' expansion, a massive project to build a brand-new terminal and modernized gates to accommodate its status as one of the fastest-growing regional airports in the U.S.",
@@ -779,6 +792,19 @@
     "transportation": "格拉斯哥地铁与火车",
     "transportationFact": "格拉斯哥地铁是继伦敦地铁和布达佩斯地铁之后世界上第三古老的地下铁路，也是英国唯一一条完全在地下运行的地铁。地铁由地区交通管理机构 SPT 运营，此外还有庞大的郊区铁路网。格拉斯哥与爱丁堡之间有四条直达铁路线。"
   },
+  "Granada": {
+    "airportCode": "GRX",
+    "airportInfo": "费德里科·加西亚·洛尔卡格拉纳达机场位于市区以西约15公里的乔奇纳和圣菲附近。机场于1970年开工，1972年以格拉纳达机场之名启用，2006年改以安达卢西亚诗人费德里科·加西亚·洛尔卡命名。",
+    "airportName": "Federico García Lorca Granada Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "欧元 (€)",
+    "funFact": "1492年1月2日，被西班牙人称为“博阿卜迪勒”的埃米尔穆罕默德十一世将格拉纳达交给斐迪南和伊莎贝拉，伊比利亚半岛最后一个穆斯林国家就此终结。西班牙语中“granada”意为石榴，石榴是这座城市的纹章图案，“石榴门”也因此得名。",
+    "language": "西班牙语",
+    "languageInfo": "格拉纳达通用西班牙语（卡斯蒂利亚语），使用拉丁字母书写，并有 ñ 等字母。打招呼可以说“Hola”或“Buenos días”（早上好），道谢则说“Gracias”。",
+    "nickname": "石榴之城",
+    "transportation": "地铁（轻轨）和公交",
+    "transportationFact": "格拉纳达地铁是一条于2017年9月21日开通的轻轨线路。它在市中心走地下，前往阿尔沃洛特、马拉塞纳和阿尔米利亚的路段则在地面运行，共设26座车站，2025年客运量约1730万人次。"
+  },
   "Guadalajara": {
     "airportCode": "GDL",
     "airportInfo": "Miguel Hidalgo y Costilla International Airport, named after the priest who launched Mexico's independence movement, is Mexico's second busiest airport. Its location near the Tequila region means some international visitors arrive specifically for Jalisco's agave landscape, also a UNESCO World Heritage Site. The airport connects directly to North American cities and several European hubs.",
@@ -805,6 +831,19 @@
     "transportation": "地铁、轻轨和渡轮",
     "transportationFact": "火车、公交车和港口渡轮都隶属于 HVV，它是世界上第一个此类交通联合体，一张车票即可乘坐所有公司的线路。汉堡地铁（U-Bahn）全长 101 公里，其中只有约 41 公里在地下，因此老一辈居民至今仍称它为“Hochbahn”（高架铁路）。"
   },
+  "Hanoi": {
+    "airportCode": "HAN",
+    "airportInfo": "内排国际机场位于河内市中心东北约35公里处，是仅次于胡志明市新山一机场的越南第二繁忙机场。2015年1月4日与通往市区的新日新大桥同时启用的2号航站楼负责全部国际航班，这里也是越南航空的主要枢纽。",
+    "airportName": "Noi Bai International Airport",
+    "currencyCode": "VND",
+    "currencyInfo": "越南盾 (₫)",
+    "funFact": "1010年，李太祖将都城迁至此地，并声称看到一条巨龙从红河上腾空而起，因此将其命名为“升龙”。河内还有文庙，自1076年起这里曾是越南第一所国立大学。",
+    "language": "越南语",
+    "languageInfo": "越南语使用以拉丁字母为基础的文字，源自亚历山大·德·罗德1651年编纂的词典，记录了当时河内的发音。1975年以后，全国的语言逐渐向首都所说的北方方言靠拢。",
+    "nickname": "升龙之城",
+    "transportation": "河内地铁和摩托车",
+    "transportationFact": "2021年11月6日2A号线开通后，河内地铁成为越南第一个投入运营的城市轨道交通系统，2024年8月3号线首段也已通车。不过街头的主角依然是摩托车，许多游客会坐上被称为“xe ôm”（意为“抱抱车”）的摩托出租车，在城中快速穿行。"
+  },
   "Havana": {
     "airportCode": "HAV",
     "airportInfo": "José Martí International Airport is named after Cuba's national hero and independence poet. It has four terminals serving different types of traffic, with Terminal 3 handling most international arrivals. The airport is located about 18km southwest of the city center. Given Cuba's unique relationship with the United States — and restricted American travel to the island — the airport sees a distinctive mix of passengers from Latin America, Canada, Europe, and increasingly from the United States.",
@@ -830,6 +869,19 @@
     "nickname": "The Daughter of the Baltic",
     "transportation": "Metro & Trams",
     "transportationFact": "Helsinki operates a compact but highly efficient transit system under the HSL authority, integrating the metro, trams, buses, commuter rail, and ferries to the islands. The historic orange trams that run through the city center have been operating since 1891 and remain a charming way to navigate. The city is also extremely walkable and bikeable in summer, with a city bike network available from April to November. In winter, many Helsinkians cross-country ski in the city's extensive parklands."
+  },
+  "Hiroshima": {
+    "airportCode": "HIJ",
+    "airportInfo": "广岛机场于1993年在广岛以东约50公里的三原市启用，取代了无法起降宽体客机的海滨旧机场。它是中国·四国地区最大的机场，约80%的国内航班往返东京羽田。",
+    "airportName": "Hiroshima Airport",
+    "currencyCode": "JPY",
+    "currencyInfo": "日元 (¥)",
+    "funFact": "广岛于1589年作为城下町建于太田川三角洲，其名意为“宽阔的岛屿”。1949年，日本国会宣布其为和平纪念都市。这里还以独具一格的广岛风味御好烧闻名，食材在铁板上层层叠起煎制而成。",
+    "language": "日语",
+    "languageInfo": "标准日语处处通用，但当地人之间常说亲切的广岛方言。和平纪念公园、车站及主要景点周边都有不少英文标识。",
+    "nickname": "和平之城",
+    "transportation": "广电路面电车",
+    "transportationFact": "广岛电铁运营着日本最长的路面电车网络，全长35.1公里，车辆种类丰富，因而被称为“行驶中的路面电车博物馆”。1945年原子弹爆炸后仅三天电车便恢复运行，部分幸存下来的车辆至今仍在服役。"
   },
   "Ho Chi Minh City": {
     "airportCode": "SGN",
@@ -947,6 +999,19 @@
     "nickname": "寺庙之城",
     "transportation": "小型三轮车 & 小型巴士",
     "transportationFact": "Kathmandu's public transport is famously chaotic — the city lacks a metro or reliable formal transit system. Shared tempos (electric three-wheelers) and microbuses follow unofficial routes and can be hailed anywhere. Taxis are widely available and inexpensive, though negotiating the fare before boarding is advisable. A proposed metro railway for Kathmandu has been in planning for years. Walking and cycling are popular in the old city around Thamel and Durbar Square, where narrow streets exclude larger vehicles."
+  },
+  "Kraków": {
+    "airportCode": "KRK",
+    "airportInfo": "克拉科夫-巴利采约翰·保罗二世国际机场位于市中心以西约 11 公里的巴利采村，以教宗约翰·保罗二世命名。它是波兰仅次于华沙肖邦机场的第二繁忙机场，2024 年旅客量超过 1,100 万人次。乘火车从航站楼到克拉科夫中央火车站约需 17 分钟。",
+    "airportName": "John Paul II Kraków-Balice International Airport",
+    "currencyCode": "PLN",
+    "currencyInfo": "波兰兹罗提 (zł)",
+    "funFact": "克拉科夫曾是波兰的王都，直到 1596 年国王齐格蒙特三世·瓦萨将王廷迁往华沙；其中央集市广场是欧洲最大的中世纪集市广场。贝果和它的“亲戚”——环形面包克拉科夫圈饼（obwarzanek krakowski）都起源于克拉科夫。",
+    "language": "波兰语",
+    "languageInfo": "波兰语属于西斯拉夫语支，使用拉丁字母书写，并增加了 ł、ż、ś 等字母。打招呼时可以说“Dzień dobry”（你好），朋友之间则常说随意的“Cześć”。",
+    "nickname": "王都",
+    "transportation": "有轨电车和公交车",
+    "transportationFact": "公共交通以市属公司运营的密集有轨电车和公交网络为主，电动有轨电车自 1901 年起投入运营。老城大部分区域是步行区，因此有轨电车绕老城外围行驶，而不是穿城而过。"
   },
   "Kuala Lumpur": {
     "airportCode": "KUL",
@@ -1104,6 +1169,19 @@
     "transportation": "阿尔萨电气",
     "transportationFact": "马拉喀什在其主要路线上引入了高科技电动巴士，以促进环境可持续发展。当地的“小出租车”是城市内流行的出行方式，每辆车都必须是标志性的赭色。马车“Caleches”仍然是游览历史城墙和麦地那的传统且风景优美的方式。"
   },
+  "Marseille": {
+    "airportCode": "MRS",
+    "airportInfo": "马赛普罗旺斯机场位于市区西北约27公里的马里尼亚讷，按客流量计是法国第五繁忙的机场。20世纪二三十年代，这里曾是水上飞机的基地；2024年6月，新的1号航站楼正式启用。机场有巴士连接附近的维特罗勒-马赛普罗旺斯机场火车站。",
+    "airportName": "Marseille Provence Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "欧元 (€)",
+    "funFact": "马赛约在公元前600年由来自福西亚的希腊移民建立，是法国最古老的城市，也是欧洲有人连续居住历史最悠久的聚落之一。法国国歌也以它命名：《马赛曲》之所以得名，是因为1792年最早在巴黎唱响这首歌的正是来自马赛的志愿兵。",
+    "language": "法语",
+    "languageInfo": "法语在这里通行无阻，但不妨留意一下马赛方言——一种深受普罗旺斯语影响、富有旋律感的法语变体。马赛的奥克语名称是Marselha，在这座繁忙的地中海港口城市里，阿拉伯语和奥克语也是常能听到的语言。",
+    "nickname": "福西亚之城",
+    "transportation": "地铁和有轨电车",
+    "transportationFact": "马赛地铁共有两条线路、31座车站：1号线于1977年开通，2号线于1984年开通；与巴黎部分线路一样，其列车采用胶轮行驶。2007年，现代化有轨电车加入公共交通网络，两者均由RTM运营。"
+  },
   "Medellín": {
     "airportCode": "MDE",
     "airportInfo": "José María Córdova International Airport is the primary airport serving the Medellín metropolitan area and the second busiest in Colombia. It is located in the mountains above the Aburrá Valley, and its high altitude approach through mountain terrain makes landing here one of the more technically demanding in South America. A metro cable car system (Metrocable) connects the airport area to the city below.",
@@ -1168,6 +1246,19 @@
     "nickname": "时尚之都",
     "transportation": "米兰有轨电车",
     "transportationFact": "米兰仍然运营着一支“1928 型”有轨电车车队，这些电车配备了原来的木制长椅。米兰地铁由 5 条线路组成，其中包括最新的全自动 M4 线。特雷诺通勤列车将市中心与美丽的意大利湖区和伦巴第郊区连接起来。"
+  },
+  "Milwaukee": {
+    "airportCode": "MKE",
+    "airportInfo": "密尔沃基米切尔国际机场位于市中心以南约 9 公里处，占地 2,314 英亩，拥有五条跑道。机场于 1920 年以“汉密尔顿机场”起步，以在密尔沃基长大、常被誉为“美国空军之父”的比利·米切尔将军命名。",
+    "airportName": "Milwaukee Mitchell International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "密尔沃基曾是喜立滋、布拉茨、蓝带和米勒这四家世界顶级啤酒厂的所在地，多年来啤酒产量居世界城市之首，因此得名“啤酒之城”。每年夏天，湖畔还会举办为期 11 天的夏日音乐节，它被认为是世界上规模最大的音乐节之一。",
+    "language": "英语",
+    "languageInfo": "这里通行带有亲切中西部口音的英语。德裔传统根深蒂固：1900 年前后约三分之一的居民有德国血统，密尔沃基也因此被称为“美国最具德国风情的城市”。",
+    "nickname": "啤酒之城",
+    "transportation": "The Hop 有轨电车",
+    "transportationFact": "The Hop 有轨电车于 2018 年 11 月 2 日开通，2.1 英里长的 M 线连接密尔沃基联运站与市中心、下东区和历史第三区。2024 年又增开了通往湖滨的短途 L 线，目前乘车依然免费。"
   },
   "Minnesota": {
     "airportCode": "MSP",
@@ -1468,6 +1559,19 @@
     "transportation": "MAX轻轨",
     "transportationFact": "MAX 轻轨系统包括北美最深的中转站，位于地下 260 英尺处。波特兰有轨电车频繁地环绕中心城区和创新的珍珠区。 TriMet 巴士和 WES 通勤铁路完善了该地区强大的公共交通网络。"
   },
+  "Porto": {
+    "airportCode": "OPO",
+    "airportInfo": "弗朗西斯科·萨·卡内罗机场旧称佩德拉斯鲁布拉斯机场，于1945年启用，位于牧师塔西北约11公里处。2025年旅客吞吐量接近1700万人次，也是易捷航空和瑞安航空的基地。乘坐地铁E线可从航站楼直达市中心。",
+    "airportName": "Francisco Sá Carneiro Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "欧元 (€)",
+    "funFact": "波尔图在罗马时代的名字“Portus Cale”常被认为是“葡萄牙”国名的由来。当地人被戏称为“tripeiros”（吃牛肚的人），据说是因为这座城市把最好的肉送给了航海远征队，自己只留下内脏；炖牛肚“Tripas à moda do Porto”至今仍是这里的招牌菜。",
+    "language": "葡萄牙语",
+    "languageInfo": "葡萄牙语属于罗曼语族，使用拉丁字母书写，并带有 ã、ç 等符号。打招呼可以说“Bom dia”（早上好）或简单的“Olá”，道谢则说“Obrigado”（女性说“Obrigada”）。",
+    "nickname": "不败之城",
+    "transportation": "地铁（轻轨）",
+    "transportationFact": "波尔图地铁于2002年12月开通，是一套在市中心走地下、在郊区走地面的轻轨系统。如今6条线路覆盖约70公里、85座车站，并于2013年获得哈佛大学的维罗妮卡·拉奇·格林城市设计奖。"
+  },
   "Porto Alegre": {
     "airportCode": "GRU",
     "airportInfo": "作为通往巴西的主要国际门户，瓜鲁柳斯机场是南美洲客运量最繁忙的机场。这是一座大型综合体，为世界杯和奥运会而进行了大幅现代化改造，设有长途国际航班专用航站楼和各种豪华设施。",
@@ -1545,6 +1649,19 @@
     "nickname": "烟雾湾",
     "transportation": "Straeto Buses & Taxis",
     "transportationFact": "Reykjavik has a bus system (Straeto) covering the city and surrounding suburbs, but the city is small enough that many residents walk or cycle much of the time. Car rental is almost essential for exploring Iceland's dramatic landscapes beyond the city. In winter, geothermally heated outdoor swimming pools are a central part of Reykjavik social life — the public pools operate year-round regardless of weather and are as much community centers as exercise facilities."
+  },
+  "Riga": {
+    "airportCode": "RIX",
+    "airportInfo": "里加 RIX 机场位于市中心以西约 10 公里的马鲁佩市，是波罗的海三国最大的机场，截至 2024 年 9 月有直飞航线通往 107 个目的地。机场建于 1973 年，用以取代老旧的斯皮尔韦机场，是国家航空公司波罗的海航空（airBaltic）的枢纽。",
+    "airportName": "RIX Riga Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "欧元 (€)",
+    "funFact": "新艺术运动风格的建筑约占里加市中心全部建筑的三分之一，历史学家亚尼斯·克拉斯廷什认为这是世界上该风格建筑最密集的城市。里加曾是 2014 年欧洲文化之都。",
+    "language": "拉脱维亚语",
+    "languageInfo": "拉脱维亚语属于波罗的语族，使用拉丁字母书写，并增加了 ā、č、ļ 等字母。打招呼说“Sveiki”，表示祝贺则说“Apsveicam”。",
+    "nickname": "新艺术运动之都",
+    "transportation": "有轨电车、无轨电车和公交车",
+    "transportationFact": "公共交通由里加交通公司（Rīgas Satiksme）运营，有轨电车、公交车和无轨电车组成覆盖全城的庞大线路网。自 2012 年起，过去由私人经营的小巴也统一交由一家市属公司运营。"
   },
   "Rio de Janeiro": {
     "airportCode": "GRU",
@@ -1897,6 +2014,19 @@
     "transportation": "电讯委员会",
     "transportationFact": "多伦多交通委员会运营着美洲最大、最繁忙的有轨电车网络。地铁系统由两条主线组成，构成城市交通的核心。 GO Transit 提供庞大的火车和巴士区域网络，将多伦多与安大略省其他地区连接起来。"
   },
+  "Tulsa": {
+    "airportCode": "TUL",
+    "airportInfo": "塔尔萨国际机场位于市中心东北约 8 公里处，当地商人集资购买土地修建市营机场后，于 1928 年启用。1929 年由市政府收购，1963 年更名为现名，如今是美国航空公司的全球维修基地。",
+    "airportName": "Tulsa International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "20 世纪的大部分时间里，塔尔萨被称为“世界石油之都”，石油财富催生了一批装饰艺术风格的高楼和教堂，至今仍是市中心的标志。20 世纪初，格林伍德区还是“黑人华尔街”的所在地，那里曾是美国最繁荣的黑人社区之一。",
+    "language": "英语",
+    "languageInfo": "这里通行带有悠闲俄克拉何马口音的英语。城市名称源自马斯科吉语中的“Tallasi”一词，塔尔萨的大部分地区至今仍位于马斯科吉（克里克）部落的领地内，部分地区属于奥塞奇部落和切罗基部落。",
+    "nickname": "世界石油之都",
+    "transportation": "MetroLink Tulsa 公交",
+    "transportationFact": "MetroLink Tulsa 在 2024 年前名为 Tulsa Transit，以市中心和中城的枢纽站为中心运营 18 条公交线路。首条快速公交线路 Aero 于 2019 年沿皮奥里亚大道开通，另一条以 66 号公路命名的快速线路计划沿东 11 街修建。"
+  },
   "Valencia": {
     "airportCode": "VLC",
     "airportInfo": "瓦伦西亚机场又称马尼塞斯机场，位于市区以西约8公里的马尼塞斯。2025年，该机场通过飞往欧洲、加拿大和北非的140条航线接待了1180万人次旅客，其中大部分为国际旅客。它是瓦伦西亚自治区仅次于阿利坎特的第二繁忙机场。",
@@ -2053,6 +2183,19 @@
     "transportation": "步行 / 火车至 Redfern / 公交",
     "transportationFact": "Redfern 车站离校园步行不远，公交车从市中心沿 Parramatta Road 和 City Road 开来。"
   },
+  "University of Tokyo": {
+    "airportCode": "HND",
+    "airportInfo": "东京有羽田和成田两座机场，其中羽田离市中心更近。两座机场都可乘电车和地铁到达本乡校区附近的车站。",
+    "airportName": "Tokyo Haneda Airport",
+    "currencyCode": "JPY",
+    "currencyInfo": "日元 (¥)",
+    "funFact": "本乡校区坐落在加贺藩主前田家江户宅邸的旧址上。著名的赤门建于 1827 年，是为迎接嫁入前田家的将军之女而建。",
+    "language": "日语",
+    "languageInfo": "日常生活使用日语。学生把东京大学简称为“东大”（Tōdai），而赤门长久以来也是这所大学本身的代称。",
+    "nickname": "东大",
+    "transportation": "步行 / 东京地铁",
+    "transportationFact": "从东京地铁南北线东大前站步行到校园约 3 分钟。从本乡三丁目站、根津站和汤岛站步行各约 8 分钟。"
+  },
   "University of Texas at Austin": {
     "airportCode": "AUS",
     "airportInfo": "奥斯汀–伯格斯特罗姆机场位于奥斯汀市中心东南。校园就在市中心北边，从机场开车或乘公交都不远。",
@@ -2156,6 +2299,32 @@
     "nickname": "林奈的大学",
     "transportation": "步行 / 自行车",
     "transportationFact": "大学的历史建筑集中在大教堂和大学公园（University Park）周围，彼此步行几分钟即到。乌普萨拉也是出了名的自行车友好城市。"
+  },
+  "University of Coimbra": {
+    "airportCode": "OPO",
+    "airportInfo": "最近的大型机场是波尔图的弗朗西斯科·萨·卡内罗机场和里斯本的温贝托·德尔加多机场。从这两座城市出发，里斯本—波尔图线的列车都停靠科英布拉-B 站。",
+    "airportName": "Porto Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "欧元 (€)",
+    "funFact": "迪尼斯国王于 1290 年创立了这所大学，1537 年大学永久迁到科英布拉，入驻山顶的旧王宫。“科英布拉大学——阿尔塔与索菲亚”于 2013 年被列入联合国教科文组织世界遗产名录。",
+    "language": "葡萄牙语",
+    "languageInfo": "上课和日常生活都使用葡萄牙语。直到 1772 年大学改革之前，拉丁语一直是官方教学语言，因此王宫那条长长的柱廊阳台被称为“拉丁之路”（Via Latina）。",
+    "nickname": "UC",
+    "transportation": "步行 / 市内公交",
+    "transportationFact": "老校区位于下城（Baixa）上方一座陡峭的山顶，沿途多台阶和窄巷。市内公交可开上上城，而上城（Alta）内处处步行可达。"
+  },
+  "University of Salamanca": {
+    "airportCode": "MAD",
+    "airportInfo": "马德里-巴拉哈斯机场是前往萨拉曼卡的主要国际门户。从马德里可乘火车或大巴向西前往萨拉曼卡。",
+    "airportName": "Adolfo Suárez Madrid–Barajas Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "欧元 (€)",
+    "funFact": "萨拉曼卡大学创立于 1218 年，是西班牙至今仍在运行的最古老的大学。它的主楼“大学院”（Escuelas Mayores）围绕大教堂旁的回廊而建，于 1533 年完工。",
+    "language": "西班牙语",
+    "languageInfo": "上课和日常生活都使用西班牙语，萨拉曼卡也是西班牙最受欢迎的西班牙语学习城市之一。",
+    "nickname": "USAL",
+    "transportation": "步行",
+    "transportationFact": "老城区小巧紧凑，大部分是步行区。马约尔广场、贝壳之家、克莱雷西亚和学院广场彼此之间步行只需几分钟。"
   },
   "Florida Southern College": {
     "airportCode": "TPA",
@@ -3132,6 +3301,19 @@
     "transportation": "步行",
     "transportationFact": "校园步行就能逛完：北边的 Warriner Hall 距东南边的 Kelly/Shorts 体育场约 1.5 公里。"
   },
+  "Cranbrook Academy of Art": {
+    "airportCode": "DTW",
+    "airportInfo": "位于底特律西南罗穆卢斯的底特律大都会韦恩县机场是该地区的主要机场。从那里驾车向北前往布卢姆菲尔德希尔斯，即可到达克兰布鲁克。",
+    "airportName": "Detroit Metropolitan Wayne County Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "报业出版人乔治·高夫·布斯和妻子埃伦·斯克里普斯·布斯在 1904 年买下的农场上建起克兰布鲁克，并以乔治父亲的出生地英格兰克兰布鲁克为它命名。校园大部分由埃利尔·沙里宁设计，1989 年被列为美国国家历史地标。",
+    "language": "英语",
+    "languageInfo": "克兰布鲁克的标志是一只鹤，标志的官方颜色是铜色和金色。",
+    "nickname": "Cranbrook",
+    "transportation": "汽车 / 步行",
+    "transportationFact": "克兰布鲁克位于底特律以北布卢姆菲尔德希尔斯的伍德沃德大道旁，大多数游客开车前来。园区内的步道连接着艺术博物馆、沙里宁故居、科学研究所和克兰布鲁克庄园的花园。"
+  },
   "Yale University": {
     "airportCode": "BDL",
     "airportInfo": "哈特福德附近的布拉德利机场在纽黑文以北约一小时车程处。许多游客也会飞到纽约，再乘 Metro-North 的 New Haven Line 直达 Union Station。",
@@ -3547,5 +3729,18 @@
     "nickname": "Rams 之家",
     "transportation": "步行 / Transfort MAX / Around the Horn",
     "transportationFact": "Transfort 的 MAX 快速公交线路经过校园，Around the Horn 公交从 Lory 学生中心旁的 CSU 交通中心出发，环绕校园行驶。"
+  },
+  "University of California, San Diego": {
+    "airportCode": "SAN",
+    "airportInfo": "圣迭戈国际机场位于校园以南约 22 公里。免费的 San Diego Flyer 接驳车连接机场与 Old Town 交通中心，从那里换乘 UC San Diego 蓝线电车向北即可到达校园。",
+    "airportName": "San Diego International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "美元 ($)",
+    "funFact": "盖泽尔图书馆以奥德丽和西奥多·苏斯·盖泽尔命名，后者更广为人知的名字是苏斯博士。馆内收藏着苏斯博士特藏，包括他的原画、草图和手稿。",
+    "language": "英语",
+    "languageInfo": "学校代表色是蓝色和金色，运动队名为 Tritons（特里同）。",
+    "nickname": "UC San Diego",
+    "transportation": "步行 / 蓝线电车",
+    "transportationFact": "UC San Diego 蓝线电车停靠 UC San Diego Central Campus 站和 UC San Diego Health La Jolla 站。校园班车和步行道连接着各学院、Price Center 和盖泽尔图书馆。"
   }
 }

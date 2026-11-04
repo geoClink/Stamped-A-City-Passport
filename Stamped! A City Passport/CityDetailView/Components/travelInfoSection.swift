@@ -108,6 +108,7 @@ struct TravelInfoSection: View {
                 Image(systemName: icon)
                     .font(.title)
                     .foregroundColor(accentColor)
+                    .accessibilityHidden(true)
             }
             .padding(.bottom, DS.Space.l)
             
@@ -126,6 +127,7 @@ struct TravelInfoSection: View {
                         }
                         .foregroundColor(accentColor)
                         .buttonStyle(.plain)
+                        .accessibilityLabel("Hear Greeting")
                     }
                 }
                 .padding(.bottom, DS.Space.m)
@@ -170,6 +172,7 @@ struct TravelInfoSection: View {
         } label: {
             HStack(spacing: DS.Space.l) {
                 Image(systemName: icon).font(.title3.bold()).foregroundColor(accentColor).frame(width: 24)
+                    .accessibilityHidden(true)
                 VStack(alignment: .leading, spacing: 2) {
                     Text(title).font(.caption.bold()).foregroundColor(descriptiveText)
                     Text(value).font(.body.bold()).foregroundColor(primaryText)
@@ -179,6 +182,7 @@ struct TravelInfoSection: View {
                             if isLanguage {
                                 Button { handleSpeechAction() } label: { Image(systemName: "speaker.wave.2.circle.fill") }
                                     .buttonStyle(.plain)
+                                    .accessibilityLabel("Hear Greeting")
                             }
                         }
                     }
@@ -188,6 +192,12 @@ struct TravelInfoSection: View {
             .padding(.vertical, DS.Space.m)
         }
         .padding(.horizontal, DS.Space.l)
+        // The speaker button sits inside the row's label, where VoiceOver can't always reach it
+        .accessibilityActions {
+            if isLanguage {
+                Button("Hear Greeting") { handleSpeechAction() }
+            }
+        }
     }
 
     private var customDivider: some View {

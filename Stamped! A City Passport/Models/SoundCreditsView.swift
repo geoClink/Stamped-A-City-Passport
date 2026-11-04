@@ -40,6 +40,7 @@ struct SoundCreditsView: View {
     ]
 
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     var body: some View {
         NavigationStack {
@@ -54,20 +55,26 @@ struct SoundCreditsView: View {
                     Text("by \(credit.author)")
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
-                    HStack {
+                    // License and link side by side; stacked at accessibility sizes so the link isn't squeezed
+                    let layout = dynamicTypeSize.isAccessibilitySize
+                        ? AnyLayout(VStackLayout(alignment: .leading, spacing: 2))
+                        : AnyLayout(HStackLayout())
+                    layout {
                         Text(credit.license)
                             .font(.caption)
                             .foregroundStyle(credit.license.hasPrefix("CC0") ? .green : .orange)
-                        Spacer()
+                        if !dynamicTypeSize.isAccessibilitySize { Spacer() }
                         Text(credit.url)
                             .font(.caption2)
                             .foregroundStyle(.tertiary)
-                            .lineLimit(1)
+                            .lineLimit(dynamicTypeSize.isAccessibilitySize ? 3 : 1)
                             .truncationMode(.middle)
                     }
                     .padding(.top, 2)
                 }
                 .padding(.vertical, 4)
+                // One stop per credit for VoiceOver instead of five
+                .accessibilityElement(children: .combine)
             }
             .navigationTitle("Sound Credits")
             #if os(iOS)
