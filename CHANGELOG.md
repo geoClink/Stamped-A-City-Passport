@@ -10,6 +10,23 @@ How to use this file:
 
 ## [Unreleased]
 
+## [2.9] (build 14) – 2026-11-04 (iPhone, iPad, Mac and Vision Pro)
+
+### Added
+- Tip jar: Settings > Support Stamped! (heart button in the city list on Vision Pro) offers three optional tips ($0.99, $2.99, $4.99) with In-App Purchase. Tips unlock nothing; a thank-you card appears after a tip.
+- Share a city or campus stamp as a picture card (stamp art, city name, landmarks stamped) with the App Store link.
+- Siri and Shortcuts: "Open My Passport" and "Open a City", e.g. "Open Paris in Stamped!".
+- Vision Pro: the Detroit 3D model downloads on demand (Background Assets, about 38 MB) instead of shipping inside the app, which stays about 26 MB.
+
+### Changed
+- Listen uses the most natural English voice installed (Premium, then Enhanced), and suggests downloading one when only the basic voice is on the device.
+- iPad: every page rotates to portrait as well as landscape.
+- Location permission is asked for when the first city page opens, instead of at launch.
+- The home screen widget refreshes as soon as a landmark is stamped.
+
+### Removed
+- The widget's unused Control Center timer and Live Activity (Xcode template leftovers).
+
 ## [2.8] (build 13) – 2026-11-03 (iPhone, iPad, Mac and Vision Pro)
 
 ### Added
