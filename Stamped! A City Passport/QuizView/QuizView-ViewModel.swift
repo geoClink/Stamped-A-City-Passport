@@ -318,10 +318,10 @@ class QuizViewModel: ObservableObject {
 
     var resultMessage: String {
         switch starCount {
-        case 3: return score == 10 ? "Perfect Score!" : "Outstanding!"
-        case 2: return "Well Done!"
-        case 1: return "Keep Practicing!"
-        default: return "Try Again!"
+        case 3: return score == 10 ? String(localized: "Perfect Score!") : String(localized: "Outstanding!")
+        case 2: return String(localized: "Well Done!")
+        case 1: return String(localized: "Keep Practicing!")
+        default: return String(localized: "Try Again!")
         }
     }
 
