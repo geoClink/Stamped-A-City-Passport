@@ -63,6 +63,9 @@ private extension SettingsView {
                         Image(systemName: "chevron.left")
                             .fontWeight(viewModel.highContrast ? .black : .medium)
                             .foregroundColor(viewModel.highContrast ? .primary : DS.Palette.accent)
+                            // The chevron alone is 18 pt wide; 44 is Apple's smallest comfortable tap target
+                            .frame(minWidth: 44, minHeight: 44)
+                            .contentShape(Rectangle())
                     }
                     // Icon-only, so VoiceOver needs the word
                     .accessibilityLabel(L.Settings.back)
@@ -432,16 +435,27 @@ struct SettingsToggleRow: View {
     let icon: String
     @Binding var isOn: Bool
     let isHighContrast: Bool
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     var body: some View {
         Toggle(isOn: $isOn) {
-            Label {
-                Text(title).fontWeight(isHighContrast ? .bold : .medium)
-            } icon: {
-                Image(systemName: icon)
-                    .foregroundColor(isHighContrast ? .primary : DS.Palette.accent)
+            // At the largest text sizes the icon and the switch left the words too little room
+            // ("Haptics" broke in the middle), so the words get the whole row
+            if dynamicTypeSize.isAccessibilitySize {
+                titleText
+            } else {
+                Label {
+                    titleText
+                } icon: {
+                    Image(systemName: icon)
+                        .foregroundColor(isHighContrast ? .primary : DS.Palette.accent)
+                }
             }
         }
+    }
+
+    private var titleText: some View {
+        Text(title).fontWeight(isHighContrast ? .bold : .medium)
     }
 }
 

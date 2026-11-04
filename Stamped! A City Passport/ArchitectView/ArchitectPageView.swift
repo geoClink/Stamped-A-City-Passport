@@ -68,6 +68,8 @@ struct ArchitectLink: View {
         }
         .foregroundColor(isHighContrast ? .primary : DS.Palette.accent)
         .underline(isHighContrast)
+        // At least 44 pt tall, Apple's smallest comfortable tap target (one line of text is 18)
+        .frame(minHeight: 44, alignment: .leading)
         .contentShape(Rectangle())
         .accessibilityHint(L.Architect.openHint)
     }

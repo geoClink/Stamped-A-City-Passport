@@ -41,6 +41,17 @@
                ReferencedContainer = "container:Stamped! A City Passport.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1E3D1F5AFDCC2A1893C32DAC"
+               BuildableName = "StampedUITests.xctest"
+               BlueprintName = "StampedUITests"
+               ReferencedContainer = "container:Stamped! A City Passport.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

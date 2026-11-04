@@ -38,8 +38,13 @@ struct CityHeroHeader: View {
                         .font(.subheadline)
                         .foregroundColor(isHighContrast ? .primary : .secondary)
                         .lineLimit(isExpanded ? nil : 3)
-                    Button(isExpanded ? "Show less" : "Read more") {
+                    Button {
                         withAnimation(.easeInOut(duration: 0.2)) { isExpanded.toggle() }
+                    } label: {
+                        Text(isExpanded ? "Show less" : "Read more")
+                            // 44 pt tall, Apple's smallest comfortable tap target (the text alone is 18)
+                            .frame(minHeight: 44, alignment: .leading)
+                            .contentShape(Rectangle())
                     }
                     .font(.subheadline.weight(.semibold))
                     .foregroundStyle(isHighContrast ? Color.primary : DS.Palette.accent)
@@ -101,8 +106,8 @@ struct CityHeroHeader: View {
                     .tracking(1.5)
                     .textCase(.uppercase)
                     .foregroundStyle(.white.opacity(0.85))
-                    .lineLimit(1)
-                    // Shrinks a little at the largest text sizes instead of cutting off the nickname
+                    // A second line at the largest text sizes: on one line it was still cut off
+                    .lineLimit(2)
                     .minimumScaleFactor(0.7)
                 Text(city.name)
                     .font(.system(.largeTitle, design: .serif).bold())
