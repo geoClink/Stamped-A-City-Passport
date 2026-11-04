@@ -794,3 +794,26 @@
 /* Booking.com button next to the main hotel button */
 "Compare on Booking.com" = "Comparar en Booking.com";
 "Opens Booking.com. Stamped! doesn't handle bookings or payments." = "Abre Booking.com. Stamped! no gestiona reservas ni pagos.";
+
+/* Text sent with a shared passport picture; %@ is the App Store link */
+"My Stamped! passport. Get the app: %@" = "Mi pasaporte de Stamped!. Descarga la app: %@";
+
+/* Tip jar (Support Stamped!) */
+"Support Stamped!" = "Apoya Stamped!";
+"Tips help keep new cities coming" = "Las propinas traen nuevas ciudades";
+"Hi, I'm George! I make Stamped! on my own as an indie developer. The app is free, and tips help me keep adding new cities and landmarks." = "¡Hola, soy George! Creo Stamped! yo solo como desarrollador independiente. La app es gratis y las propinas me ayudan a seguir añadiendo ciudades y monumentos.";
+"Tips are just a thank-you. They don't unlock anything, and everything in the app stays free." = "Las propinas son solo un agradecimiento. No desbloquean nada y todo en la app sigue siendo gratis.";
+"Small Tip" = "Propina pequeña";
+"Medium Tip" = "Propina mediana";
+"Large Tip" = "Propina grande";
+"Loading tips…" = "Cargando propinas…";
+"Tips aren't available right now" = "Las propinas no están disponibles ahora";
+"Please check your connection and try again later." = "Comprueba tu conexión y vuelve a intentarlo más tarde.";
+"Try Again" = "Reintentar";
+"Thank you!" = "¡Gracias!";
+"Your tip means a lot. It helps bring the next city to Stamped!" = "Tu propina significa mucho. Ayuda a traer la próxima ciudad a Stamped!";
+"Waiting for approval" = "Esperando aprobación";
+"Your tip will go through once a family organizer approves it." = "Tu propina se completará cuando un organizador familiar la apruebe.";
+"No worries, the tip was cancelled. You weren't charged." = "No pasa nada, la propina se canceló. No se te ha cobrado nada.";
+"That tip didn't go through. Please try again." = "La propina no se completó. Vuelve a intentarlo.";
+"Payments go through your Apple Account. Tips are one-time and don't renew." = "Los pagos se hacen con tu Cuenta de Apple. Las propinas son únicas y no se renuevan.";

@@ -86,6 +86,8 @@ struct CollegeListView: View {
             CollegeRoadTripSheet(campuses: store.campuses) { trip in
                 createdTripID = trip.id
             }
+            // A planner with a list of schools: a big sheet on iPad, not the small default one
+            .dsLargeSheet()
         }
         // Like the city list's My Trips: a sheet on iPhone, full screen on iPad
         .sheet(item: openTripBinding(fullScreen: false)) { MyTripsView(initialTripID: $0.id) }

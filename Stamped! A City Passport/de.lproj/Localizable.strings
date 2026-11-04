@@ -794,3 +794,26 @@
 /* Booking.com button next to the main hotel button */
 "Compare on Booking.com" = "Auf Booking.com vergleichen";
 "Opens Booking.com. Stamped! doesn't handle bookings or payments." = "Öffnet Booking.com. Stamped! wickelt keine Buchungen oder Zahlungen ab.";
+
+/* Text sent with a shared passport picture; %@ is the App Store link */
+"My Stamped! passport. Get the app: %@" = "Mein Stamped!-Reisepass. Hol dir die App: %@";
+
+/* Tip jar (Support Stamped!) */
+"Support Stamped!" = "Stamped! unterstützen";
+"Tips help keep new cities coming" = "Trinkgelder bringen neue Städte";
+"Hi, I'm George! I make Stamped! on my own as an indie developer. The app is free, and tips help me keep adding new cities and landmarks." = "Hallo, ich bin George! Ich entwickle Stamped! allein als Indie-Entwickler. Die App ist kostenlos, und Trinkgelder helfen mir, weitere Städte und Wahrzeichen hinzuzufügen.";
+"Tips are just a thank-you. They don't unlock anything, and everything in the app stays free." = "Trinkgeld ist einfach ein Dankeschön. Es schaltet nichts frei, und alles in der App bleibt kostenlos.";
+"Small Tip" = "Kleines Trinkgeld";
+"Medium Tip" = "Mittleres Trinkgeld";
+"Large Tip" = "Großes Trinkgeld";
+"Loading tips…" = "Trinkgelder werden geladen …";
+"Tips aren't available right now" = "Trinkgeld ist gerade nicht verfügbar";
+"Please check your connection and try again later." = "Bitte prüfe deine Verbindung und versuche es später erneut.";
+"Try Again" = "Erneut versuchen";
+"Thank you!" = "Danke!";
+"Your tip means a lot. It helps bring the next city to Stamped!" = "Dein Trinkgeld bedeutet mir viel. Es hilft, die nächste Stadt zu Stamped! zu bringen.";
+"Waiting for approval" = "Warten auf Zustimmung";
+"Your tip will go through once a family organizer approves it." = "Dein Trinkgeld wird ausgeführt, sobald ein Familienorganisator zustimmt.";
+"No worries, the tip was cancelled. You weren't charged." = "Kein Problem, das Trinkgeld wurde abgebrochen. Dir wurde nichts berechnet.";
+"That tip didn't go through. Please try again." = "Das Trinkgeld hat nicht geklappt. Bitte versuche es erneut.";
+"Payments go through your Apple Account. Tips are one-time and don't renew." = "Die Zahlung läuft über deinen Apple Account. Trinkgelder sind einmalig und verlängern sich nicht.";

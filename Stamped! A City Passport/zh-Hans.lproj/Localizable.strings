@@ -794,3 +794,26 @@
 /* Booking.com button next to the main hotel button */
 "Compare on Booking.com" = "在 Booking.com 上比较";
 "Opens Booking.com. Stamped! doesn't handle bookings or payments." = "打开 Booking.com。Stamped! 不处理预订或付款。";
+
+/* Text sent with a shared passport picture; %@ is the App Store link */
+"My Stamped! passport. Get the app: %@" = "我的 Stamped! 护照。下载 App：%@";
+
+/* Tip jar (Support Stamped!) */
+"Support Stamped!" = "支持 Stamped!";
+"Tips help keep new cities coming" = "打赏助力更多新城市上线";
+"Hi, I'm George! I make Stamped! on my own as an indie developer. The app is free, and tips help me keep adding new cities and landmarks." = "你好，我是 George！Stamped! 由我这位独立开发者一人打造。App 免费使用，你的打赏能帮助我继续添加新的城市和地标。";
+"Tips are just a thank-you. They don't unlock anything, and everything in the app stays free." = "打赏只是一份心意，不会解锁任何内容，App 中的所有功能都将保持免费。";
+"Small Tip" = "小额打赏";
+"Medium Tip" = "中额打赏";
+"Large Tip" = "大额打赏";
+"Loading tips…" = "正在载入打赏选项…";
+"Tips aren't available right now" = "目前无法打赏";
+"Please check your connection and try again later." = "请检查网络连接，稍后再试。";
+"Try Again" = "重试";
+"Thank you!" = "谢谢你！";
+"Your tip means a lot. It helps bring the next city to Stamped!" = "你的打赏对我意义重大，它将帮助下一座城市加入 Stamped!。";
+"Waiting for approval" = "等待批准";
+"Your tip will go through once a family organizer approves it." = "家庭组织者批准后，你的打赏就会完成。";
+"No worries, the tip was cancelled. You weren't charged." = "没关系，打赏已取消，你没有被扣款。";
+"That tip didn't go through. Please try again." = "打赏未能完成，请再试一次。";
+"Payments go through your Apple Account. Tips are one-time and don't renew." = "付款通过你的 Apple 账户完成。打赏为一次性付款，不会续订。";

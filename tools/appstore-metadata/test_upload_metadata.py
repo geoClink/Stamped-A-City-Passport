@@ -79,3 +79,20 @@ def test_support_url_is_copied_to_every_language() -> None:
     # Apple rejects a language with no Support URL, so the English one is reused
     attributes = upload_metadata.wanted_version_attributes(make_locale_text(), None, "https://example.com/support")
     assert attributes["supportUrl"] == "https://example.com/support"
+
+
+# --- Mac and Vision Pro pages, and screenshots ---
+
+def test_every_platform_maps_to_an_app_store_connect_name_and_screenshot_slot():
+    # Each --platform choice needs both Apple's platform name and a default screenshot slot
+    assert upload_metadata.PLATFORMS == {"ios": "IOS", "macos": "MAC_OS", "visionos": "VISION_OS"}
+    assert set(upload_metadata.DEFAULT_DISPLAY_TYPES) == set(upload_metadata.PLATFORMS)
+
+
+def test_existing_screenshots_are_kept_unless_replacing():
+    # Without --replace-screenshots an already-filled slot is left alone
+    assert upload_metadata.screenshot_plan(["old.png"], ["01.png"], replace=False) == ([], [])
+    # With it, the old ones go and the new ones come in
+    assert upload_metadata.screenshot_plan(["old.png"], ["01.png"], replace=True) == (["old.png"], ["01.png"])
+    # An empty slot is always filled
+    assert upload_metadata.screenshot_plan([], ["01.png", "02.png"], replace=False) == ([], ["01.png", "02.png"])

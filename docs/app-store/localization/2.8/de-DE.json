@@ -1,0 +1,66 @@
+{
+  "locale": "de-DE",
+  "version": "2.8",
+  "subtitle": "Wahrzeichen & Campus-Touren",
+  "promotional_text": "Entdecke 2.200 berühmte Gebäude in 156 Städten auf einer 3D-Karte, speichere Städte offline, plane deine Reise und sammle Stempel. Dazu 117 Hochschulcampusse.",
+  "keywords": "Architektur,Sehenswürdigkeiten,Stadtführer,Reiseplaner,Audioguide,offline,Universität,3D,Karte",
+  "whats_new": "Neu in 2.8\n• Offline speichern: Behalte die Fotos und Wikipedia-Geschichten der Wahrzeichen einer Stadt auf deinem Gerät, für Flüge und Reisen ins Ausland. Karten und Veranstaltungen brauchen weiterhin eine Verbindung.\n• Anhören: Lass dir die Geschichte jedes Wahrzeichens vorlesen, das Handy in der Tasche. Die Geschichten werden auf Englisch vorgelesen.\n• 16 neue Architekturstädte: München, Hamburg, Glasgow, Bilbao, Valencia, Rotterdam, Chandigarh, San Diego, Savannah, Charleston, Baltimore, Kansas City, Fort Worth, Palm Springs, Oak Park und Columbus (Indiana). Insgesamt 156 Städte.\n• 5 neue Campusse: Colorado State, Eastern Michigan, Michigan Tech, Oakland und Central Michigan. Insgesamt 117 Campusse.\n• Mehr Unterkünfte: Vergleiche Hotels auf Booking.com neben Expedia und finde Ferienunterkünfte auf Vrbo, im Reiseplaner und auf den Seiten der Wahrzeichen.\n• Mehr Touren: Viator neben GetYourGuide bei jedem Wahrzeichen einer Stadt.\n• Veranstaltungen von Bibliotheken, Museen und Städten jetzt in 11 Städten, neu dabei Honolulu und Miami.\n• iPad: eine breitere Seitenleiste, die Weltkarte im Vollbild, größere Fenster und ein Reisepass, der bei einem Land mit Stempeln öffnet.\n\nFehlerbehebungen\n• Große Fotos laden schnell, statt „Kein Foto verfügbar“ anzuzeigen.\n• Veranstaltungen mit vielen Terminen erscheinen nur einmal.\n• Klarere Titel am Spieltag und „Uhrzeit folgt“, wenn ein Spiel noch keine Anstoßzeit hat.\n• Deine Bestleistung im Quiz wird gespeichert, wenn du das Quiz beendest.\n• Auf dem iPhone scheint beim Scrollen kein Text mehr durch die obere Leiste.",
+  "description": "Stamped! macht die großen Bauwerke der Welt zu einem Reisepass, den du füllst. Entdecke mehr als 2.200 Wahrzeichen der Architektur in 156 Städten und auf 117 Universitätscampussen, sammle für jedes besuchte Gebäude einen Stempel und fliege auf einer fotorealistischen 3D-Karte durch echte Städte.\n\nPLANE DEINE HOCHSCHULBESUCHE\n• 117 Campusse: jede Hochschule der Big Ten, SEC, ACC und Big 12, die Ivy League und großartige Campusse weltweit\n• Speichere Hochschulen, die dich interessieren, in Meine College-Liste\n• Erstelle einen College-Roadtrip: ein Tag pro Hochschule, in einer Reihenfolge mit kurzen Fahrten\n• Campusbesuch planen: ein eintägiger Rundgang zu den Wahrzeichen eines Campus\n• Finde Hotels in Campusnähe für jede Nacht deiner Reise\n\nCAMPUS-TRADITIONEN\n• Über 250 Campus-Traditionen zum Mitmachen oder Ansehen, von Glücksstatuen bis zu Glocken und berühmten Toren\n• Hake sie unterwegs ab und verdiene das Abzeichen Hüter der Traditionen\n• Campus-Stempel in Schulfarben\n\nPLANE JEDE REISE\n• Plane mehrere Tage mit Wahrzeichen und deinen eigenen gespeicherten Orten\n• Ordne Stopps neu, sieh Gehzeiten und optimiere deine Route\n• Überfliege deine Reise Tag für Tag auf der 3D-Karte\n• Deine Reisen und deine College-Liste werden mit iCloud synchronisiert\n• Restaurants, Hotels, Touren und Veranstaltungen rund um deine Stopps\n• Vergleiche Hotels auf Expedia und Booking.com oder finde eine Ferienunterkunft auf Vrbo\n• Speichere eine Stadt offline: Fotos und Geschichten ihrer Wahrzeichen bleiben auf deinem Gerät\n\nENTDECKE IN 3D\n• Fotorealistische 3D-Karten von Städten und Campussen mit Satellitenbildern\n• Eine geführte Tour, die zwischen allen Wahrzeichen fliegt\n• Umsehen-Vorschauen der Straßen, bevor du losgehst\n• Kartenfilter für Essen, Kaffee, Kultur und Übernachten\n\nSAMMLE STEMPEL\n• Erhalte für jedes besuchte Wahrzeichen einen Passstempel\n• Verfolge deinen Fortschritt auf der Weltkarte, nach Stadt, Land und Conference\n• Schalte Erfolge frei und teile deinen Pass\n• Sieh deinen Fortschritt auf einen Blick mit dem Home-Bildschirm-Widget\n\nENTDECKE DIE GESCHICHTEN\n• Architekten, Baujahre, Stile und Geschichte zu jedem Gebäude\n• Anhören: Lass dir die Geschichte jedes Wahrzeichens vorlesen (auf Englisch)\n• Ein Architekturquiz mit 10 Fragen für jede Stadt und jeden Campus\n• Suche nach Name, Architekt oder Campus-Spitzname\n• Architektenseiten, Fotogalerien und historische Fotos der Library of Congress\n\nVerfügbar in 9 Sprachen, mit Optionen für hohen Kontrast und reduzierte Bewegung.\n\nStamped! ist mit keiner Universität verbunden und wird von keiner unterstützt. Namen und Farben der Hochschulen dienen nur zu ihrer Kennzeichnung.",
+  "screenshot_headlines": [
+    {
+      "file": "01-college-list",
+      "verb": "BESUCHE",
+      "lines": [
+        "101 CAMPUSSE",
+        "AUF EINEM ROADTRIP"
+      ]
+    },
+    {
+      "file": "02-traditions",
+      "verb": "ERLEBE",
+      "lines": [
+        "DIE CAMPUS-",
+        "TRADITIONEN"
+      ]
+    },
+    {
+      "file": "03-school-stamps",
+      "verb": "SAMMLE",
+      "lines": [
+        "STEMPEL IN",
+        "SCHULFARBEN"
+      ]
+    },
+    {
+      "file": "04-fly-3d",
+      "verb": "FLIEGE",
+      "lines": [
+        "ÜBER DEN CAMPUS",
+        "IN 3D"
+      ]
+    },
+    {
+      "file": "05-plan-trips",
+      "verb": "PLANE",
+      "lines": [
+        "DEINE REISE,",
+        "TAG FÜR TAG"
+      ]
+    },
+    {
+      "file": "06-test-smarts",
+      "verb": "TESTE",
+      "lines": [
+        "DEIN WISSEN ÜBER",
+        "ARCHITEKTUR"
+      ]
+    }
+  ],
+  "banner": {
+    "verb": "PLANE",
+    "lines": [
+      "DEINEN COLLEGE-",
+      "ROADTRIP"
+    ]
+  }
+}

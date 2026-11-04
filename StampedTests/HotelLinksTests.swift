@@ -118,6 +118,52 @@ final class HotelLinksTests: XCTestCase {
         XCTAssertFalse(builder(.hotelsCom, affiliateID: "abc").earnsCommission)
     }
 
+    // MARK: Click labels (Vision Pro)
+
+    /// The Vision Pro app labels its Expedia clicks "vision" with Partnerize's pubref,
+    /// placed before the destination so the search link itself is unchanged.
+    func testClickLabelAddsPartnerizePubref() throws {
+        let search = HotelSearch(destination: "Colosseum, Rome", latitude: 41.8902, longitude: 12.4922)
+        let plain = try XCTUnwrap(builder(.expedia).url(for: search))
+        let labelled = HotelLinkBuilder(provider: .expedia, affiliateID: "1110lStp6", calendar: calendar, clickLabel: "vision")
+        XCTAssertEqual(try XCTUnwrap(labelled.url(for: search)).absoluteString,
+                       "https://prf.hn/click/camref:1110lStp6/pubref:vision/destination:" + HotelLinkBuilder.encode(plain.absoluteString))
+    }
+
+    /// The Booking.com (CJ) link carries the label as "sid", and still the whole search as "url".
+    func testClickLabelAddsCJSid() throws {
+        let search = HotelSearch(destination: "Colosseum, Rome")
+        let plain = try XCTUnwrap(builder(.booking).url(for: search))
+        let labelled = HotelLinkBuilder(provider: .booking, affiliateID: "101916315", calendar: calendar, clickLabel: "vision")
+        let url = try XCTUnwrap(labelled.url(for: search))
+        XCTAssertEqual(url.path, "/click-101916315-\(HotelPartner.bookingCJAdID)")
+        XCTAssertEqual(try query(url)["sid"], "vision")
+        XCTAssertEqual(try query(url)["url"], plain.absoluteString)
+    }
+
+    /// Vrbo's Partnerize link gets the same pubref.
+    func testVrboClickLabelAddsPubref() throws {
+        let search = HotelSearch(destination: "Colosseum, Rome")
+        let plain = try XCTUnwrap(VrboLinkBuilder(camref: "1100l6yuA7").url(for: search)).absoluteString
+        let labelled = try XCTUnwrap(VrboLinkBuilder(camref: "1100l6yuA7", clickLabel: "vision").url(for: search)).absoluteString
+        XCTAssertTrue(plain.hasPrefix("https://prf.hn/click/camref:1100l6yuA7/destination:"))
+        XCTAssertEqual(labelled, plain.replacingOccurrences(of: "/destination:", with: "/pubref:vision/destination:"))
+    }
+
+    /// No label (the iPhone, iPad and Mac app) or a blank one leaves every link exactly as before.
+    func testNoClickLabelLeavesLinksUnchanged() throws {
+        let search = HotelSearch(destination: "Paris, France")
+        for provider in [HotelProvider.expedia, .booking] {
+            let id = provider == .expedia ? "1110lStp6" : "101916315"
+            let unlabelled = HotelLinkBuilder(provider: provider, affiliateID: id, calendar: calendar)
+            let blank = HotelLinkBuilder(provider: provider, affiliateID: id, calendar: calendar, clickLabel: "  ")
+            let url = try XCTUnwrap(unlabelled.url(for: search)).absoluteString
+            XCTAssertFalse(url.contains("pubref"))
+            XCTAssertFalse(url.contains("sid="))
+            XCTAssertEqual(blank.url(for: search)?.absoluteString, url)
+        }
+    }
+
     // MARK: Encoding
 
     func testDestinationIsPercentEncoded() throws {

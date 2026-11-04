@@ -62,6 +62,8 @@ struct MyTripsView: View {
             AreaSearchSheet { trip in
                 selectedTripID = trip.id
             }
+            // A search with a long list of results: a big sheet on iPad
+            .dsLargeSheet()
         }
     }
 

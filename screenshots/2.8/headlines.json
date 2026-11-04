@@ -1,0 +1,312 @@
+{
+  "en-US": {
+    "iphone": [
+      {"verb": "VISIT", "lines": ["117 CAMPUSES", "ON ONE ROAD TRIP"]},
+      {"verb": "DO", "lines": ["THE CAMPUS", "TRADITIONS"]},
+      {"verb": "COLLECT", "lines": ["STAMPS IN", "SCHOOL COLORS"]},
+      {"verb": "FLY", "lines": ["THROUGH CAMPUSES", "IN 3D"]},
+      {"verb": "PLAN", "lines": ["YOUR CAMPUS VISIT"]},
+      {"verb": "TEST", "lines": ["YOUR ARCHITECTURE", "SMARTS"]}
+    ],
+    "ipad": [
+      {"verb": "VISIT", "lines": ["156 CITIES AND", "117 CAMPUSES"]},
+      {"verb": "SEE", "lines": ["EVERY STAMP ON", "ONE WORLD MAP"]},
+      {"verb": "COLLECT", "lines": ["A PASSPORT PAGE", "FOR EVERY COUNTRY"]},
+      {"verb": "LISTEN", "lines": ["TO THE STORY BEHIND", "EVERY BUILDING"]},
+      {"verb": "STAY", "lines": ["STEPS FROM", "THE LANDMARKS"]},
+      {"verb": "PLAN", "lines": ["YOUR WHOLE TRIP,", "DAY BY DAY"]}
+    ],
+    "mac": [
+      {"verb": "FLY", "lines": ["THROUGH 156 CITIES IN 3D"]},
+      {"verb": "SEE", "lines": ["YOUR STAMPS ON A WORLD MAP"]},
+      {"verb": "PLAN", "lines": ["YOUR WHOLE TRIP, DAY BY DAY"]},
+      {"verb": "COLLECT", "lines": ["STAMPS AND ACHIEVEMENTS"]},
+      {"verb": "TEST", "lines": ["YOUR ARCHITECTURE SMARTS"]}
+    ],
+    "vision": [
+      {"verb": "EXPLORE", "lines": ["EVERY LANDMARK IN 3D"]},
+      {"verb": "STEP", "lines": ["INSIDE LANDMARKS IN 360°"]},
+      {"verb": "TOUR", "lines": ["A CITY WITH A NARRATED FLYOVER"]},
+      {"verb": "VISIT", "lines": ["156 CITIES AND 117 CAMPUSES"]}
+    ]
+  },
+  "de-DE": {
+    "iphone": [
+      {"verb": "BESUCHE", "lines": ["117 CAMPUS AUF", "EINEM ROADTRIP"]},
+      {"verb": "ERLEBE", "lines": ["DIE TRADITIONEN", "DES CAMPUS"]},
+      {"verb": "SAMMLE", "lines": ["STEMPEL IN", "DEN UNI-FARBEN"]},
+      {"verb": "FLIEG", "lines": ["ÜBER DEN CAMPUS", "IN 3D"]},
+      {"verb": "PLANE", "lines": ["DEINEN CAMPUSBESUCH"]},
+      {"verb": "TESTE", "lines": ["DEIN WISSEN ÜBER", "ARCHITEKTUR"]}
+    ],
+    "ipad": [
+      {"verb": "ENTDECKE", "lines": ["156 STÄDTE UND", "117 CAMPUS"]},
+      {"verb": "SIEH", "lines": ["JEDEN STEMPEL AUF", "EINER WELTKARTE"]},
+      {"verb": "SAMMLE", "lines": ["EINE PASSSEITE", "FÜR JEDES LAND"]},
+      {"verb": "HÖR ZU", "lines": ["DIE GESCHICHTE", "JEDES GEBÄUDES"]},
+      {"verb": "SCHLAF", "lines": ["GLEICH NEBEN DEN", "WAHRZEICHEN"]},
+      {"verb": "PLANE", "lines": ["DEINE GANZE REISE,", "TAG FÜR TAG"]}
+    ],
+    "mac": [
+      {"verb": "FLIEG", "lines": ["DURCH 156 STÄDTE IN 3D"]},
+      {"verb": "SIEH", "lines": ["DEINE STEMPEL AUF DER WELTKARTE"]},
+      {"verb": "PLANE", "lines": ["DEINE REISE TAG FÜR TAG"]},
+      {"verb": "SAMMLE", "lines": ["STEMPEL UND ERFOLGE"]},
+      {"verb": "TESTE", "lines": ["DEIN WISSEN ÜBER ARCHITEKTUR"]}
+    ],
+    "vision": [
+      {"verb": "ENTDECKE", "lines": ["JEDES WAHRZEICHEN IN 3D"]},
+      {"verb": "TRITT EIN", "lines": ["IN WAHRZEICHEN IN 360°"]},
+      {"verb": "FLIEG", "lines": ["MIT ERZÄHLER ÜBER DIE STADT"]},
+      {"verb": "BESUCHE", "lines": ["156 STÄDTE UND 117 CAMPUS"]}
+    ]
+  },
+  "es-ES": {
+    "iphone": [
+      {"verb": "VISITA", "lines": ["117 CAMPUS", "EN UN SOLO VIAJE"]},
+      {"verb": "VIVE", "lines": ["LAS TRADICIONES", "DEL CAMPUS"]},
+      {"verb": "COLECCIONA", "lines": ["SELLOS CON LOS", "COLORES DEL CAMPUS"]},
+      {"verb": "VUELA", "lines": ["SOBRE LOS CAMPUS", "EN 3D"]},
+      {"verb": "PLANIFICA", "lines": ["TU VISITA AL CAMPUS"]},
+      {"verb": "DEMUESTRA", "lines": ["CUÁNTO SABES", "DE ARQUITECTURA"]}
+    ],
+    "ipad": [
+      {"verb": "VISITA", "lines": ["156 CIUDADES Y", "117 CAMPUS"]},
+      {"verb": "MIRA", "lines": ["CADA SELLO EN UN", "MAPA DEL MUNDO"]},
+      {"verb": "COLECCIONA", "lines": ["UNA PÁGINA DEL", "PASAPORTE POR PAÍS"]},
+      {"verb": "ESCUCHA", "lines": ["LA HISTORIA DE", "CADA EDIFICIO"]},
+      {"verb": "ALÓJATE", "lines": ["A UN PASO DE", "LOS MONUMENTOS"]},
+      {"verb": "PLANIFICA", "lines": ["TODO TU VIAJE,", "DÍA A DÍA"]}
+    ],
+    "mac": [
+      {"verb": "VUELA", "lines": ["POR 156 CIUDADES EN 3D"]},
+      {"verb": "MIRA", "lines": ["TUS SELLOS EN UN MAPA DEL MUNDO"]},
+      {"verb": "PLANIFICA", "lines": ["TODO TU VIAJE, DÍA A DÍA"]},
+      {"verb": "COLECCIONA", "lines": ["SELLOS Y LOGROS"]},
+      {"verb": "DEMUESTRA", "lines": ["CUÁNTO SABES DE ARQUITECTURA"]}
+    ],
+    "vision": [
+      {"verb": "EXPLORA", "lines": ["CADA MONUMENTO EN 3D"]},
+      {"verb": "ENTRA", "lines": ["EN LOS MONUMENTOS EN 360°"]},
+      {"verb": "SOBREVUELA", "lines": ["UNA CIUDAD CON NARRACIÓN"]},
+      {"verb": "VISITA", "lines": ["156 CIUDADES Y 117 CAMPUS"]}
+    ]
+  },
+  "es-MX": {
+    "iphone": [
+      {"verb": "VISITA", "lines": ["117 CAMPUS", "EN UN SOLO VIAJE"]},
+      {"verb": "VIVE", "lines": ["LAS TRADICIONES", "DEL CAMPUS"]},
+      {"verb": "COLECCIONA", "lines": ["SELLOS CON LOS", "COLORES DEL CAMPUS"]},
+      {"verb": "VUELA", "lines": ["SOBRE LOS CAMPUS", "EN 3D"]},
+      {"verb": "PLANEA", "lines": ["TU VISITA AL CAMPUS"]},
+      {"verb": "DEMUESTRA", "lines": ["CUÁNTO SABES", "DE ARQUITECTURA"]}
+    ],
+    "ipad": [
+      {"verb": "VISITA", "lines": ["156 CIUDADES Y", "117 CAMPUS"]},
+      {"verb": "MIRA", "lines": ["CADA SELLO EN UN", "MAPA MUNDIAL"]},
+      {"verb": "COLECCIONA", "lines": ["UNA PÁGINA DEL", "PASAPORTE POR PAÍS"]},
+      {"verb": "ESCUCHA", "lines": ["LA HISTORIA DE", "CADA EDIFICIO"]},
+      {"verb": "HOSPÉDATE", "lines": ["A UNOS PASOS DE", "LOS MONUMENTOS"]},
+      {"verb": "PLANEA", "lines": ["TODO TU VIAJE,", "DÍA POR DÍA"]}
+    ],
+    "mac": [
+      {"verb": "VUELA", "lines": ["POR 156 CIUDADES EN 3D"]},
+      {"verb": "MIRA", "lines": ["TUS SELLOS EN UN MAPA MUNDIAL"]},
+      {"verb": "PLANEA", "lines": ["TODO TU VIAJE, DÍA POR DÍA"]},
+      {"verb": "COLECCIONA", "lines": ["SELLOS Y LOGROS"]},
+      {"verb": "DEMUESTRA", "lines": ["CUÁNTO SABES DE ARQUITECTURA"]}
+    ],
+    "vision": [
+      {"verb": "EXPLORA", "lines": ["CADA MONUMENTO EN 3D"]},
+      {"verb": "ENTRA", "lines": ["A LOS MONUMENTOS EN 360°"]},
+      {"verb": "SOBREVUELA", "lines": ["UNA CIUDAD CON NARRACIÓN"]},
+      {"verb": "VISITA", "lines": ["156 CIUDADES Y 117 CAMPUS"]}
+    ]
+  },
+  "fr-FR": {
+    "iphone": [
+      {"verb": "VISITEZ", "lines": ["117 CAMPUS EN", "UN SEUL ROAD TRIP"]},
+      {"verb": "VIVEZ", "lines": ["LES TRADITIONS", "DU CAMPUS"]},
+      {"verb": "COLLECTIONNEZ", "lines": ["DES TAMPONS AUX", "COULEURS DU CAMPUS"]},
+      {"verb": "SURVOLEZ", "lines": ["LES CAMPUS", "EN 3D"]},
+      {"verb": "PRÉPAREZ", "lines": ["VOTRE VISITE DU CAMPUS"]},
+      {"verb": "TESTEZ", "lines": ["VOS CONNAISSANCES", "EN ARCHITECTURE"]}
+    ],
+    "ipad": [
+      {"verb": "VISITEZ", "lines": ["156 VILLES ET", "117 CAMPUS"]},
+      {"verb": "VOYEZ", "lines": ["CHAQUE TAMPON SUR", "UNE CARTE DU MONDE"]},
+      {"verb": "COLLECTIONNEZ", "lines": ["UNE PAGE DE PASSEPORT", "PAR PAYS"]},
+      {"verb": "ÉCOUTEZ", "lines": ["L'HISTOIRE DE", "CHAQUE BÂTIMENT"]},
+      {"verb": "DORMEZ", "lines": ["À DEUX PAS", "DES MONUMENTS"]},
+      {"verb": "PLANIFIEZ", "lines": ["TOUT VOTRE VOYAGE,", "JOUR PAR JOUR"]}
+    ],
+    "mac": [
+      {"verb": "SURVOLEZ", "lines": ["156 VILLES EN 3D"]},
+      {"verb": "VOYEZ", "lines": ["VOS TAMPONS SUR UNE CARTE DU MONDE"]},
+      {"verb": "PLANIFIEZ", "lines": ["VOTRE VOYAGE JOUR PAR JOUR"]},
+      {"verb": "COLLECTIONNEZ", "lines": ["TAMPONS ET TROPHÉES"]},
+      {"verb": "TESTEZ", "lines": ["VOS CONNAISSANCES EN ARCHITECTURE"]}
+    ],
+    "vision": [
+      {"verb": "EXPLOREZ", "lines": ["CHAQUE MONUMENT EN 3D"]},
+      {"verb": "ENTREZ", "lines": ["DANS LES MONUMENTS EN 360°"]},
+      {"verb": "SURVOLEZ", "lines": ["UNE VILLE, AVEC NARRATION"]},
+      {"verb": "VISITEZ", "lines": ["156 VILLES ET 117 CAMPUS"]}
+    ]
+  },
+  "it": {
+    "iphone": [
+      {"verb": "VISITA", "lines": ["117 CAMPUS", "IN UN SOLO VIAGGIO"]},
+      {"verb": "VIVI", "lines": ["LE TRADIZIONI", "DEL CAMPUS"]},
+      {"verb": "COLLEZIONA", "lines": ["TIMBRI CON I", "COLORI DEL CAMPUS"]},
+      {"verb": "VOLA", "lines": ["SUI CAMPUS", "IN 3D"]},
+      {"verb": "PIANIFICA", "lines": ["LA VISITA AL CAMPUS"]},
+      {"verb": "SCOPRI", "lines": ["QUANTO SAI", "DI ARCHITETTURA"]}
+    ],
+    "ipad": [
+      {"verb": "VISITA", "lines": ["156 CITTÀ E", "117 CAMPUS"]},
+      {"verb": "GUARDA", "lines": ["OGNI TIMBRO SU", "UNA MAPPA DEL MONDO"]},
+      {"verb": "COLLEZIONA", "lines": ["UNA PAGINA DEL", "PASSAPORTO PER PAESE"]},
+      {"verb": "ASCOLTA", "lines": ["LA STORIA DI", "OGNI EDIFICIO"]},
+      {"verb": "DORMI", "lines": ["A DUE PASSI", "DAI MONUMENTI"]},
+      {"verb": "PIANIFICA", "lines": ["TUTTO IL VIAGGIO,", "GIORNO PER GIORNO"]}
+    ],
+    "mac": [
+      {"verb": "VOLA", "lines": ["TRA 156 CITTÀ IN 3D"]},
+      {"verb": "GUARDA", "lines": ["I TUOI TIMBRI SULLA MAPPA DEL MONDO"]},
+      {"verb": "PIANIFICA", "lines": ["IL VIAGGIO GIORNO PER GIORNO"]},
+      {"verb": "COLLEZIONA", "lines": ["TIMBRI E TRAGUARDI"]},
+      {"verb": "SCOPRI", "lines": ["QUANTO SAI DI ARCHITETTURA"]}
+    ],
+    "vision": [
+      {"verb": "ESPLORA", "lines": ["OGNI MONUMENTO IN 3D"]},
+      {"verb": "ENTRA", "lines": ["NEI MONUMENTI A 360°"]},
+      {"verb": "SORVOLA", "lines": ["UNA CITTÀ CON LA VOCE NARRANTE"]},
+      {"verb": "VISITA", "lines": ["156 CITTÀ E 117 CAMPUS"]}
+    ]
+  },
+  "ja": {
+    "iphone": [
+      {"verb": "めぐろう", "lines": ["117のキャンパスを", "ひとつの旅で"]},
+      {"verb": "体験しよう", "lines": ["キャンパスの", "伝統行事"]},
+      {"verb": "集めよう", "lines": ["スクールカラーの", "スタンプ"]},
+      {"verb": "飛ぼう", "lines": ["キャンパスの上を", "3Dで"]},
+      {"verb": "計画しよう", "lines": ["キャンパス見学"]},
+      {"verb": "腕試し", "lines": ["あなたの", "建築の知識"]}
+    ],
+    "ipad": [
+      {"verb": "めぐろう", "lines": ["156の都市と", "117のキャンパス"]},
+      {"verb": "見渡そう", "lines": ["すべてのスタンプを", "ひとつの世界地図で"]},
+      {"verb": "集めよう", "lines": ["国ごとの", "パスポートページ"]},
+      {"verb": "聴こう", "lines": ["建物それぞれの", "ストーリー"]},
+      {"verb": "泊まろう", "lines": ["ランドマークの", "すぐそばに"]},
+      {"verb": "計画しよう", "lines": ["旅のすべてを", "1日ずつ"]}
+    ],
+    "mac": [
+      {"verb": "飛ぼう", "lines": ["156の都市を3Dで"]},
+      {"verb": "見渡そう", "lines": ["世界地図で自分のスタンプを"]},
+      {"verb": "計画しよう", "lines": ["旅のすべてを1日ずつ"]},
+      {"verb": "集めよう", "lines": ["スタンプと実績"]},
+      {"verb": "腕試し", "lines": ["あなたの建築の知識"]}
+    ],
+    "vision": [
+      {"verb": "探検しよう", "lines": ["すべてのランドマークを3Dで"]},
+      {"verb": "入り込もう", "lines": ["360°のランドマークの中へ"]},
+      {"verb": "空から巡ろう", "lines": ["ナレーション付きで街を"]},
+      {"verb": "めぐろう", "lines": ["156の都市と117のキャンパス"]}
+    ]
+  },
+  "ko": {
+    "iphone": [
+      {"verb": "방문", "lines": ["117개 캠퍼스를", "한 번의 로드 트립으로"]},
+      {"verb": "체험", "lines": ["캠퍼스의", "전통"]},
+      {"verb": "수집", "lines": ["학교 상징색의", "스탬프"]},
+      {"verb": "비행", "lines": ["캠퍼스 위를", "3D로"]},
+      {"verb": "계획", "lines": ["나만의 캠퍼스 투어"]},
+      {"verb": "도전", "lines": ["나의", "건축 지식"]}
+    ],
+    "ipad": [
+      {"verb": "방문", "lines": ["156개 도시와", "117개 캠퍼스"]},
+      {"verb": "한눈에", "lines": ["모든 스탬프를", "하나의 세계 지도에"]},
+      {"verb": "수집", "lines": ["나라마다", "여권 한 페이지"]},
+      {"verb": "듣기", "lines": ["모든 건물에 담긴", "이야기"]},
+      {"verb": "숙박", "lines": ["랜드마크", "바로 옆에서"]},
+      {"verb": "계획", "lines": ["여행 전체를", "하루 단위로"]}
+    ],
+    "mac": [
+      {"verb": "비행", "lines": ["156개 도시를 3D로"]},
+      {"verb": "한눈에", "lines": ["세계 지도 위의 내 스탬프"]},
+      {"verb": "계획", "lines": ["여행 전체를 하루 단위로"]},
+      {"verb": "수집", "lines": ["스탬프와 업적"]},
+      {"verb": "도전", "lines": ["나의 건축 지식"]}
+    ],
+    "vision": [
+      {"verb": "탐험", "lines": ["모든 랜드마크를 3D로"]},
+      {"verb": "입장", "lines": ["360° 랜드마크 속으로"]},
+      {"verb": "투어", "lines": ["내레이션과 함께 도시 위를 비행"]},
+      {"verb": "방문", "lines": ["156개 도시와 117개 캠퍼스"]}
+    ]
+  },
+  "pt-BR": {
+    "iphone": [
+      {"verb": "VISITE", "lines": ["117 CAMPUS EM", "UMA SÓ VIAGEM"]},
+      {"verb": "VIVA", "lines": ["AS TRADIÇÕES", "DO CAMPUS"]},
+      {"verb": "COLECIONE", "lines": ["CARIMBOS NAS", "CORES DO CAMPUS"]},
+      {"verb": "VOE", "lines": ["SOBRE OS CAMPUS", "EM 3D"]},
+      {"verb": "PLANEJE", "lines": ["SUA VISITA AO CAMPUS"]},
+      {"verb": "TESTE", "lines": ["SEU CONHECIMENTO", "DE ARQUITETURA"]}
+    ],
+    "ipad": [
+      {"verb": "VISITE", "lines": ["156 CIDADES E", "117 CAMPUS"]},
+      {"verb": "VEJA", "lines": ["CADA CARIMBO EM", "UM MAPA-MÚNDI"]},
+      {"verb": "COLECIONE", "lines": ["UMA PÁGINA DO", "PASSAPORTE POR PAÍS"]},
+      {"verb": "OUÇA", "lines": ["A HISTÓRIA DE", "CADA PRÉDIO"]},
+      {"verb": "HOSPEDE-SE", "lines": ["PERTINHO DOS", "PONTOS TURÍSTICOS"]},
+      {"verb": "PLANEJE", "lines": ["A VIAGEM INTEIRA,", "DIA A DIA"]}
+    ],
+    "mac": [
+      {"verb": "VOE", "lines": ["POR 156 CIDADES EM 3D"]},
+      {"verb": "VEJA", "lines": ["SEUS CARIMBOS NO MAPA-MÚNDI"]},
+      {"verb": "PLANEJE", "lines": ["A VIAGEM INTEIRA, DIA A DIA"]},
+      {"verb": "COLECIONE", "lines": ["CARIMBOS E CONQUISTAS"]},
+      {"verb": "TESTE", "lines": ["SEU CONHECIMENTO DE ARQUITETURA"]}
+    ],
+    "vision": [
+      {"verb": "EXPLORE", "lines": ["CADA MONUMENTO EM 3D"]},
+      {"verb": "ENTRE", "lines": ["NOS MONUMENTOS EM 360°"]},
+      {"verb": "SOBREVOE", "lines": ["UMA CIDADE COM NARRAÇÃO"]},
+      {"verb": "VISITE", "lines": ["156 CIDADES E 117 CAMPUS"]}
+    ]
+  },
+  "zh-Hans": {
+    "iphone": [
+      {"verb": "畅游", "lines": ["117 所大学校园", "一次公路旅行"]},
+      {"verb": "体验", "lines": ["校园的", "传统活动"]},
+      {"verb": "收集", "lines": ["学校代表色的", "印章"]},
+      {"verb": "飞越", "lines": ["大学校园", "3D 视角"]},
+      {"verb": "规划", "lines": ["你的校园参观"]},
+      {"verb": "挑战", "lines": ["你的", "建筑知识"]}
+    ],
+    "ipad": [
+      {"verb": "畅游", "lines": ["156 座城市和", "117 所大学"]},
+      {"verb": "一览", "lines": ["所有印章", "尽在一张世界地图"]},
+      {"verb": "收集", "lines": ["每个国家", "一页护照"]},
+      {"verb": "聆听", "lines": ["每座建筑", "背后的故事"]},
+      {"verb": "入住", "lines": ["地标就在", "咫尺之间"]},
+      {"verb": "规划", "lines": ["整个旅程", "按天安排"]}
+    ],
+    "mac": [
+      {"verb": "飞越", "lines": ["156 座城市的 3D 景观"]},
+      {"verb": "一览", "lines": ["你的印章尽在世界地图"]},
+      {"verb": "规划", "lines": ["按天安排你的整个旅程"]},
+      {"verb": "收集", "lines": ["印章与成就"]},
+      {"verb": "挑战", "lines": ["你的建筑知识"]}
+    ],
+    "vision": [
+      {"verb": "探索", "lines": ["3D 呈现的每座地标"]},
+      {"verb": "走进", "lines": ["360° 地标全景"]},
+      {"verb": "漫游", "lines": ["带解说的城市飞行之旅"]},
+      {"verb": "畅游", "lines": ["156 座城市和 117 所大学"]}
+    ]
+  }
+}
