@@ -799,7 +799,6 @@
 "My Stamped! passport. Get the app: %@" = "私のStamped!パスポート。アプリはこちら：%@";
 
 /* City stamp share picture; %1$d is landmarks visited, %2$d is landmarks in the city */
-"%1$d of %2$d landmarks stamped" = "%2$d か所中 %1$d か所のランドマークをスタンプ済み";
 
 /* Text sent with a shared city stamp picture; %1$@ is the city, %2$@ is the App Store link */
 "I just unlocked the %1$@ stamp on Stamped! 🏛️ Get the app: %2$@" = "Stamped!で%1$@のスタンプを獲得しました！🏛️ アプリはこちら：%2$@";
