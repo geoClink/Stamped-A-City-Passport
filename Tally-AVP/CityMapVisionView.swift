@@ -15,7 +15,6 @@ struct CityMapVisionView: View {
 
     let cityName: String
 
-    @Environment(\.openWindow) private var openWindow
     private let store = VisionStore.shared
     @State private var position: MapCameraPosition = .automatic
     @State private var selectedBuilding: Building?
@@ -33,9 +32,14 @@ struct CityMapVisionView: View {
         store.buildings(for: cityName).filter { $0.latitude != nil && $0.longitude != nil }
     }
 
-    /// Only cities run through tools/city-generator have a bundled 3D model.
+    /// Only cities run through tools/city-generator have a 3D model. It's
+    /// either in the app bundle or downloaded as an asset pack (CityModelStore).
+    private let models = CityModelStore.shared
     private var hasCityModel: Bool {
-        Bundle.main.url(forResource: cityName.lowercased(), withExtension: "usdz") != nil
+        switch models.state(for: cityName) {
+        case .checking, .unavailable: false
+        default: true
+        }
     }
 
     var body: some View {
@@ -80,6 +84,8 @@ struct CityMapVisionView: View {
             MapPitchToggle()
         }
         .navigationTitle(cityName)
+        // Is the 3D model on this device, downloadable, or missing?
+        .task(id: cityName) { await models.refresh(cityName) }
         .toolbar {
             ToolbarItem {
                 // The narrated tour: every landmark in a short walking order, each story read aloud
@@ -118,11 +124,8 @@ struct CityMapVisionView: View {
             }
             if hasCityModel {
                 ToolbarItem {
-                    Button {
-                        openWindow(id: "city-volume", value: cityName)
-                    } label: {
-                        Label("Open 3D Model", systemImage: "cube.transparent")
-                    }
+                    // Open 3D Model, or Download … in 3D with progress and Cancel
+                    CityModelButton(cityName: cityName)
                 }
             }
         }
