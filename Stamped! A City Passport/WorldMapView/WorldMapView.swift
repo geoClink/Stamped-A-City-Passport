@@ -85,6 +85,7 @@ struct WorldMapView: View {
             .toolbar {
                 ToolbarItem(placement: .closeSheet) {
                     Button("Done") { dismiss() }
+                        .closesWithCommandW()
                         .fontWeight(.semibold)
                         .foregroundStyle(Color.adventureOrange)
                 }

@@ -108,6 +108,7 @@ struct MyJourneyView: View {
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Done") { dismiss() }
+                        .closesWithCommandW()
                         .fontWeight(.semibold)
                 }
             }

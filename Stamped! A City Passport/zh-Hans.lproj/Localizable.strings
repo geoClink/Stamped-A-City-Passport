@@ -837,3 +837,11 @@
 "Opens a city or campus page in Stamped!." = "在 Stamped! 中打开城市或校园页面。";
 "Which city or campus?" = "哪个城市或校园？";
 "Open ${city}" = "打开${city}";
+
+/* Menu bar and keyboard shortcuts (Mac, iPad with a keyboard) */
+"New Trip" = "新建行程";
+"New Window" = "新建窗口";
+"Next City" = "下一个城市";
+"Previous City" = "上一个城市";
+"Stamped! Help" = "Stamped! 帮助";
+"Passport" = "护照";

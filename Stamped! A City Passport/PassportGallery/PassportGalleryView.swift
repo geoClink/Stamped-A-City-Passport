@@ -108,6 +108,7 @@ struct PassportGalleryView: View {
                         }
                         ToolbarItem(placement: .confirmationAction) {
                             Button("Done") { dismiss() }
+                                .closesWithCommandW()
                                 .fontWeight(highContrast ? .black : .bold)
                                 .foregroundColor(brandColor)
                         }

@@ -64,6 +64,8 @@ struct TripPlannerView: View {
         } message: {
             Text("Give your \(city.name) trip a name.")
         }
+        // File > New Trip (Command-N) starts a trip in this city while the planner is frontmost
+        .focusedSceneValue(\.newTripAction, NewTripAction(perform: promptNewTrip))
     }
 
     // MARK: - Trip list
@@ -82,6 +84,8 @@ struct TripPlannerView: View {
                         NavigationLink(value: trip.id) {
                             TripSummaryRow(trip: trip)
                         }
+                        // Mac and iPad: drop a landmark here to add it to the trip's last day
+                        .acceptsLandmarkDrops(onto: trip)
                     }
                     .onDelete { offsets in
                         for index in offsets {
@@ -109,6 +113,7 @@ struct TripPlannerView: View {
             // On the Mac the planner is its own window, closed with the window's close button
             ToolbarItem(placement: .confirmationAction) {
                 Button("Done") { dismiss() }
+                    .closesWithCommandW()
             }
             #endif
             ToolbarItem(placement: .primaryAction) {

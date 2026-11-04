@@ -61,6 +61,7 @@ struct QuizView: View {
                     // Trailing, like the other modals' Done buttons
                     ToolbarItem(placement: .confirmationAction) {
                         Button("Exit") { dismiss() }
+                            .closesWithCommandW()
                             .fontWeight(isHighContrast ? .black : .bold)
                             .foregroundColor(brandColor)
                     }

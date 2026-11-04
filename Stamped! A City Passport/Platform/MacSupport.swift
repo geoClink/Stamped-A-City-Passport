@@ -4,15 +4,10 @@
 //
 //  The Mac-only pieces of the app: the city workspace (3D map + details
 //  inspector), the panel windows (World Map, My Journey, trips, quiz...) and
-//  the menu bar commands. iPhone and iPad never use these.
+//  window ids. iPhone and iPad never use these. (The menu bar is in AppCommands.swift.)
 //
 
 import SwiftUI
-
-/// Menu bar commands, passed to the main window through NavigationManager.
-enum MenuCommand: Equatable {
-    case search, passport, myJourney, myTrips, worldMap, achievements, collegeList, settings
-}
 
 #if os(macOS)
 
@@ -225,46 +220,4 @@ private struct OpenWindowWhenTrue: ViewModifier {
     }
 }
 
-// MARK: - Menu bar
-
-struct StampedCommands: Commands {
-    let navManager: NavigationManager
-    @AppStorage("mac_shows_city_details") private var showingDetails = true
-
-    var body: some Commands {
-        CommandGroup(replacing: .appSettings) {
-            Button("Settings…") { send(.settings) }
-                .keyboardShortcut(",", modifiers: .command)
-        }
-        CommandGroup(after: .textEditing) {
-            Button("Search Cities and Landmarks") { send(.search) }
-                .keyboardShortcut("f", modifiers: .command)
-        }
-        CommandGroup(after: .sidebar) {
-            Button(showingDetails ? "Hide City Details" : "Show City Details") {
-                withAnimation { showingDetails.toggle() }
-            }
-            .keyboardShortcut("i", modifiers: [.command, .option])
-        }
-        CommandMenu("Passport") {
-            Button("My Passport") { send(.passport) }
-                .keyboardShortcut("p", modifiers: [.command, .shift])
-            Button("My Journey") { send(.myJourney) }
-                .keyboardShortcut("j", modifiers: [.command, .shift])
-            Button("Achievements") { send(.achievements) }
-                .keyboardShortcut("a", modifiers: [.command, .shift])
-            Divider()
-            Button("My Trips") { send(.myTrips) }
-                .keyboardShortcut("t", modifiers: [.command, .shift])
-            Button("My College List") { send(.collegeList) }
-                .keyboardShortcut("l", modifiers: [.command, .shift])
-            Button("World Map") { send(.worldMap) }
-                .keyboardShortcut("m", modifiers: [.command, .shift])
-        }
-    }
-
-    private func send(_ command: MenuCommand) {
-        navManager.menuCommand = command
-    }
-}
 #endif

@@ -265,6 +265,8 @@ extension CityListView {
                 .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
         )
         .contentShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+        // Lifts under the iPad pointer and the Mac's mouse
+        .hoverEffect(.lift)
         .onTapGesture {
             HapticManager.shared.trigger(.selection)
             action()
@@ -368,6 +370,7 @@ extension CityListView {
                     .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
             )
         }
+        .hoverEffect(.lift)
         .frame(maxWidth: .infinity)
         .fixedSize(horizontal: false, vertical: true)
     }

@@ -15,6 +15,8 @@
 //  "Add Stop" offers the day's campus landmarks, and the 3D tour flies through
 //  the campus of the day shown on the map.
 //
+//  Mac and iPad: a landmark dragged from a city page drops onto a day (LandmarkDragDrop.swift).
+//
 //  Hotels: a road trip day gets "Hotels near <campus>" for that night; any other
 //  trip gets one "Find Hotels" for its city and dates (see Hotels/HotelLinks.swift).
 //
@@ -47,6 +49,8 @@ struct TripDetailView: View {
     @State private var renameText = ""
     /// The stop the "Move to Day" dialog is open for.
     @State private var movingStop: MovingStop?
+    /// The day whose Add Stop row a dragged landmark is over, to highlight it
+    @State private var dropTargetDayID: String?
 
     private struct MovingStop: Identifiable {
         let stopID: String
@@ -391,6 +395,10 @@ struct TripDetailView: View {
                     store.removeStop(stops[offset].id, fromDay: day.id, in: trip.id)
                 }
             }
+            // Mac and iPad: a landmark dragged from a city page drops in between stops
+            .dropDestination(for: LandmarkDragItem.self) { items, offset in
+                store.addDroppedLandmarks(items, toDay: day.id, at: offset, in: trip.id)
+            }
 
             Button {
                 addingToDay = day
@@ -398,6 +406,13 @@ struct TripDetailView: View {
                 Label("Add Stop", systemImage: "plus.circle.fill")
                     .foregroundStyle(DS.Palette.accent)
             }
+            // An empty day has no stops to drop between, so the Add Stop row takes drops too
+            .dropDestination(for: LandmarkDragItem.self) { items, _ in
+                store.addDroppedLandmarks(items, toDay: day.id, in: trip.id)
+            } isTargeted: { isOver in
+                dropTargetDayID = isOver ? day.id : nil
+            }
+            .listRowBackground(dropTargetDayID == day.id ? DS.Palette.accent.opacity(0.15) : nil)
 
             roadTripHotelsButton(dayAt: index, in: trip)
         } header: {
