@@ -17,6 +17,7 @@
 		DE2C6FE8304D222900F657DA /* WeatherKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2C6FE7304D222900F657DA /* WeatherKit.framework */; };
 		DE57C156305351770036884C /* detroit.usdz in Resources */ = {isa = PBXBuildFile; fileRef = DE57C155305351770036884C /* detroit.usdz */; };
 		DEA370C33050AE24004BA2BB /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = DEA370C23050AE24004BA2BB /* RealityKitContent */; };
+		DED7D0013060000000A1B002 /* DetroitDownloader.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = DED7D0013060000000A1B001 /* DetroitDownloader.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,13 @@
 			remoteGlobalIDString = DEA370BD3050AE24004BA2BB;
 			remoteInfo = "Tally-AVP";
 		};
+		DED7D0013060000000A1B00A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE4ECE242F4F65D600D107CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DED7D0013060000000A1B006;
+			remoteInfo = DetroitDownloader;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,6 +61,17 @@
 				DE2C6F9C304CB5B000F657DA /* PassportWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DED7D0013060000000A1B003 /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				DED7D0013060000000A1B002 /* DetroitDownloader.appex in Embed ExtensionKit Extensions */,
+			);
+			name = "Embed ExtensionKit Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -73,9 +92,17 @@
 		DEA370BE3050AE24004BA2BB /* Tally-AVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tally-AVP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA370C13050AE24004BA2BB /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = folder; path = RealityKitContent; sourceTree = "<group>"; };
 		DEA370CF3050AE53004BA2BB /* Tally-AVPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tally-AVPTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DED7D0013060000000A1B001 /* DetroitDownloader.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = DetroitDownloader.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		DED7D0013060000000A1B005 /* Exceptions for "DetroitDownloader" folder in "DetroitDownloader" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = DED7D0013060000000A1B006 /* DetroitDownloader */;
+		};
 		DE008D56305262410003C067 /* Exceptions for "Stamped! A City Passport" folder in "Tally-AVP" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -121,6 +148,14 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		DED7D0013060000000A1B004 /* DetroitDownloader */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				DED7D0013060000000A1B005 /* Exceptions for "DetroitDownloader" folder in "DetroitDownloader" target */,
+			);
+			path = DetroitDownloader;
+			sourceTree = "<group>";
+		};
 		DE2C6F8E304CB5AF00F657DA /* PassportWidget */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -197,6 +232,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DED7D0013060000000A1B008 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -247,6 +289,7 @@
 				DE2C6FC3304D06E700F657DA /* StampedTests */,
 				DEA370BF3050AE24004BA2BB /* Tally-AVP */,
 				DEA370D23050AE53004BA2BB /* Tally-AVPTests */,
+				DED7D0013060000000A1B004 /* DetroitDownloader */,
 				DE2C6F89304CB5AF00F657DA /* Frameworks */,
 				DEA370C03050AE24004BA2BB /* Packages */,
 				DE4ECE2D2F4F65D600D107CF /* Products */,
@@ -261,6 +304,7 @@
 				DE2C6FC2304D06E700F657DA /* StampedTests.xctest */,
 				DEA370BE3050AE24004BA2BB /* Tally-AVP.app */,
 				DEA370CF3050AE53004BA2BB /* Tally-AVPTests.xctest */,
+				DED7D0013060000000A1B001 /* DetroitDownloader.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -353,10 +397,12 @@
 				DEA370BA3050AE24004BA2BB /* Sources */,
 				DEA370BB3050AE24004BA2BB /* Frameworks */,
 				DEA370BC3050AE24004BA2BB /* Resources */,
+				DED7D0013060000000A1B003 /* Embed ExtensionKit Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DED7D0013060000000A1B00B /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				DEA370BF3050AE24004BA2BB /* Tally-AVP */,
@@ -392,6 +438,28 @@
 			productReference = DEA370CF3050AE53004BA2BB /* Tally-AVPTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		DED7D0013060000000A1B006 /* DetroitDownloader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DED7D0013060000000A1B00C /* Build configuration list for PBXNativeTarget "DetroitDownloader" */;
+			buildPhases = (
+				DED7D0013060000000A1B007 /* Sources */,
+				DED7D0013060000000A1B008 /* Frameworks */,
+				DED7D0013060000000A1B009 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DED7D0013060000000A1B004 /* DetroitDownloader */,
+			);
+			name = DetroitDownloader;
+			packageProductDependencies = (
+			);
+			productName = DetroitDownloader;
+			productReference = DED7D0013060000000A1B001 /* DetroitDownloader.appex */;
+			productType = "com.apple.product-type.extensionkit-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -418,6 +486,9 @@
 					DEA370CE3050AE53004BA2BB = {
 						CreatedOnToolsVersion = 26.6;
 						TestTargetID = DEA370BD3050AE24004BA2BB;
+					};
+					DED7D0013060000000A1B006 = {
+						CreatedOnToolsVersion = 27.1;
 					};
 				};
 			};
@@ -448,6 +519,7 @@
 				DE2C6FC1304D06E700F657DA /* StampedTests */,
 				DEA370BD3050AE24004BA2BB /* Tally-AVP */,
 				DEA370CE3050AE53004BA2BB /* Tally-AVPTests */,
+				DED7D0013060000000A1B006 /* DetroitDownloader */,
 			);
 		};
 /* End PBXProject section */
@@ -484,6 +556,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DEA370CD3050AE53004BA2BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DED7D0013060000000A1B009 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -531,6 +610,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DED7D0013060000000A1B007 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -549,6 +635,11 @@
 			isa = PBXTargetDependency;
 			target = DEA370BD3050AE24004BA2BB /* Tally-AVP */;
 			targetProxy = DEA370D03050AE53004BA2BB /* PBXContainerItemProxy */;
+		};
+		DED7D0013060000000A1B00B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DED7D0013060000000A1B006 /* DetroitDownloader */;
+			targetProxy = DED7D0013060000000A1B00A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1028,6 +1119,70 @@
 			};
 			name = Release;
 		};
+		DED7D0013060000000A1B00D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DetroitDownloader/DetroitDownloader.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 13;
+				DEVELOPMENT_TEAM = S4RSN4KFD3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DetroitDownloader/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DetroitDownloader;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.8;
+				PRODUCT_BUNDLE_IDENTIFIER = "name.GeorgeClinkscales.Stamped--A-City-Passport.DetroitDownloader";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
+				XROS_DEPLOYMENT_TARGET = 26.5;
+			};
+			name = Debug;
+		};
+		DED7D0013060000000A1B00E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DetroitDownloader/DetroitDownloader.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 13;
+				DEVELOPMENT_TEAM = S4RSN4KFD3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DetroitDownloader/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DetroitDownloader;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.8;
+				PRODUCT_BUNDLE_IDENTIFIER = "name.GeorgeClinkscales.Stamped--A-City-Passport.DetroitDownloader";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
+				XROS_DEPLOYMENT_TARGET = 26.5;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1081,6 +1236,15 @@
 			buildConfigurations = (
 				DEA370DA3050AE53004BA2BB /* Debug */,
 				DEA370DB3050AE53004BA2BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DED7D0013060000000A1B00C /* Build configuration list for PBXNativeTarget "DetroitDownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DED7D0013060000000A1B00D /* Debug */,
+				DED7D0013060000000A1B00E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -6,9 +6,9 @@ so the same three products work on every platform.
 
 | Product ID | Reference name | Price (US) |
 |---|---|---|
-| `name.GeorgeClinkscales.Stamped--A-City-Passport.tip.small` | Small Tip | $0.99 |
-| `name.GeorgeClinkscales.Stamped--A-City-Passport.tip.medium` | Medium Tip | $2.99 |
-| `name.GeorgeClinkscales.Stamped--A-City-Passport.tip.large` | Large Tip | $4.99 |
+| `name.GeorgeClinkscales.Stamped.tip.small` | Small Tip | $0.99 |
+| `name.GeorgeClinkscales.Stamped.tip.medium` | Medium Tip | $2.99 |
+| `name.GeorgeClinkscales.Stamped.tip.large` | Large Tip | $4.99 |
 
 Prices in the app always come from the App Store (`Product.displayPrice`), so they show
 in each buyer's currency. Until the products exist in App Store Connect, the app shows

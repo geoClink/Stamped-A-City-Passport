@@ -1,0 +1,15 @@
+{
+	"assetPackID": "Detroit3D",
+	"downloadPolicy": {
+		"onDemand": {}
+	},
+	"fileSelectors": [
+		{
+			"fileSource": "output/detroit.usdz",
+			"fileDestination": "detroit.usdz"
+		}
+	],
+	"platforms": [
+		"visionOS"
+	]
+}

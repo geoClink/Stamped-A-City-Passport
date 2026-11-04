@@ -19,7 +19,7 @@ final class TipJarStore {
 
     /// Product IDs, exactly as they are set up in App Store Connect (and in TipJar.storekit)
     enum TipID {
-        static let prefix = "name.GeorgeClinkscales.Stamped--A-City-Passport.tip."
+        static let prefix = "name.GeorgeClinkscales.Stamped.tip."
         static let small = prefix + "small"
         static let medium = prefix + "medium"
         static let large = prefix + "large"

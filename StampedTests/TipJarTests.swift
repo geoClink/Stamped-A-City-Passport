@@ -25,15 +25,16 @@ final class TipJarTests: XCTestCase {
 
     // MARK: - No App Store needed
 
-    // Three tips, no duplicates, all under the app's bundle ID (App Store Connect requires a
-    // unique ID per product; using the bundle ID as a prefix keeps them grouped)
-    func testProductIDsUseTheBundleID() throws {
+    // Three tips, no duplicates, and only characters App Store Connect accepts in a product ID
+    // (letters, numbers, underscores and periods). The bundle ID can't be the prefix: it has hyphens.
+    func testProductIDsAreValidForTheAppStore() {
         let ids = TipJarStore.TipID.all
         XCTAssertEqual(ids.count, 3)
         XCTAssertEqual(Set(ids).count, 3)
-        let bundleID = try XCTUnwrap(Bundle.main.bundleIdentifier)
+        let allowed = CharacterSet.alphanumerics.union(CharacterSet(charactersIn: "_."))
         for id in ids {
-            XCTAssertTrue(id.hasPrefix(bundleID + ".tip."), id)
+            XCTAssertTrue(id.unicodeScalars.allSatisfy { allowed.contains($0) }, id)
+            XCTAssertTrue(id.hasPrefix(TipJarStore.TipID.prefix), id)
         }
     }
 
