@@ -24,7 +24,7 @@ How to use this file:
 - Accessibility audit UI tests: `performAccessibilityAudit()` on 11 screens at the default and the largest text size (StampedUITests). (#101)
 
 ### Changed
-- iCloud: trips, My College List and saved places merge item by item between devices instead of the last device to save winning. Newer edits win and removals stick. Want to Visit landmarks still use the old behavior. (#95)
+- iCloud: trips, My College List, saved places and Want to Visit merge item by item between devices instead of the last device to save winning. Newer edits win and removals stick. (#95, #104)
 - Settings are grouped into Preferences, Your Passport, Offline, Support Stamped!, Feedback and About. (#94)
 - 268 older app strings translated into all 8 other languages. (#96)
 - Mac: ⌘N is now New Trip; New Window moved to ⌥⌘N. (#92)
