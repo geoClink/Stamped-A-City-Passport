@@ -212,3 +212,62 @@ final class CollegeListSyncTests: XCTestCase {
         XCTAssertEqual(Set(store.campuses), [mine, theirs])
     }
 }
+
+// MARK: - Want to Visit
+
+/// Want to Visit hearts, merged landmark by landmark (GlobalProgressManager.mergedWishlist).
+final class WishlistSyncTests: XCTestCase {
+    private let earlier = Date(timeIntervalSince1970: 1_000)
+    private let later = Date(timeIntervalSince1970: 2_000)
+
+    private func merge(
+        local: Set<String>, localLog: ListChangeLog = [:],
+        cloud: Set<String>, cloudLog: ListChangeLog = [:]
+    ) -> (ids: Set<String>, log: ListChangeLog) {
+        GlobalProgressManager.mergedWishlist(local: local, localLog: localLog, cloud: cloud, cloudLog: cloudLog)
+    }
+
+    // The bug this fixes: a heart on the iPhone and a different heart on the iPad, before
+    // either synced. The old "iCloud's list wins" lost one; now both are kept.
+    func testHeartsOnTwoDevicesAreBothKept() {
+        let result = merge(
+            local: ["eiffel"], localLog: ["eiffel": ListChange(date: earlier, isRemoved: false)],
+            cloud: ["colosseum"], cloudLog: ["colosseum": ListChange(date: later, isRemoved: false)]
+        )
+        XCTAssertEqual(result.ids, ["eiffel", "colosseum"])
+    }
+
+    // Un-hearting on another device removes the landmark here too
+    func testUnheartOnOtherDeviceSticks() {
+        let result = merge(
+            local: ["eiffel", "colosseum"],
+            cloud: ["eiffel"], cloudLog: ["colosseum": ListChange(date: later, isRemoved: true)]
+        )
+        XCTAssertEqual(result.ids, ["eiffel"])
+    }
+
+    // Hearting a landmark again here after another device un-hearted it wins, because it's newer
+    func testHeartAgainAfterUnheartWins() {
+        let result = merge(
+            local: ["eiffel"], localLog: ["eiffel": ListChange(date: later, isRemoved: false)],
+            cloud: [], cloudLog: ["eiffel": ListChange(date: earlier, isRemoved: true)]
+        )
+        XCTAssertEqual(result.ids, ["eiffel"])
+        XCTAssertEqual(result.log["eiffel"]?.isRemoved, false)
+    }
+
+    // Lists saved by 2.9 have no change log: the first merge keeps every heart from both sides
+    func testListsFromBeforeTheLogAreCombined() {
+        let result = merge(local: ["eiffel", "pantheon"], cloud: ["pantheon", "colosseum"])
+        XCTAssertEqual(result.ids, ["eiffel", "pantheon", "colosseum"])
+    }
+
+    // Both devices' logs end up in the merged log, so the next merge on any device agrees
+    func testLogsFromBothDevicesAreCombined() {
+        let result = merge(
+            local: ["eiffel"], localLog: ["eiffel": ListChange(date: earlier, isRemoved: false)],
+            cloud: [], cloudLog: ["colosseum": ListChange(date: later, isRemoved: true)]
+        )
+        XCTAssertEqual(Set(result.log.keys), ["eiffel", "colosseum"])
+    }
+}
