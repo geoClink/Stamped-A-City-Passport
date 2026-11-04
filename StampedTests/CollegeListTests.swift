@@ -209,13 +209,13 @@ final class CollegeRoadTripTests: XCTestCase {
 
     // Checks road trips get their own list in My Trips, apart from anywhere and city trips
     func testRoadTripsAreSeparateFromOtherTrips() throws {
-        store.createTrip(name: "Kraków Trip", cityName: "Kraków",
-                         area: TripArea(name: "Kraków", latitude: 50.06, longitude: 19.94))
+        store.createTrip(name: "Ulaanbaatar Trip", cityName: "Ulaanbaatar",
+                         area: TripArea(name: "Ulaanbaatar", latitude: 47.92, longitude: 106.92))
         store.createTrip(name: "Duke Weekend", cityName: CityLocation.City.duke.name)
         let roadTrip = try XCTUnwrap(store.collegeRoadTrip(for: [.duke, .uGeorgia]))
 
         XCTAssertEqual(store.collegeRoadTrips.map(\.id), [roadTrip.id])
-        XCTAssertEqual(store.anywhereTrips.map(\.name), ["Kraków Trip"])
+        XCTAssertEqual(store.anywhereTrips.map(\.name), ["Ulaanbaatar Trip"])
         XCTAssertEqual(store.trips(in: CityLocation.City.duke.name).map(\.name), ["Duke Weekend"])
     }
 
