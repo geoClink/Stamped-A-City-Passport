@@ -15,7 +15,6 @@ struct CityMapVisionView: View {
 
     let cityName: String
 
-    @Environment(\.openWindow) private var openWindow
     private let store = VisionStore.shared
     @State private var position: MapCameraPosition = .automatic
     @State private var selectedBuilding: Building?
@@ -25,14 +24,22 @@ struct CityMapVisionView: View {
     @State private var showsPlaces = false
     /// The Apple Maps place the user tapped; MapKit shows its place card.
     @State private var selectedFeature: MapFeature?
+    /// The guided tour: flies to each landmark in turn and reads its story aloud
+    @State private var tourTask: Task<Void, Never>?
+    @ObservedObject private var storyPlayer = AudioStoryPlayer.shared
 
     private var mappableBuildings: [Building] {
         store.buildings(for: cityName).filter { $0.latitude != nil && $0.longitude != nil }
     }
 
-    /// Only cities run through tools/city-generator have a bundled 3D model.
+    /// Only cities run through tools/city-generator have a 3D model. It's
+    /// either in the app bundle or downloaded as an asset pack (CityModelStore).
+    private let models = CityModelStore.shared
     private var hasCityModel: Bool {
-        Bundle.main.url(forResource: cityName.lowercased(), withExtension: "usdz") != nil
+        switch models.state(for: cityName) {
+        case .checking, .unavailable: false
+        default: true
+        }
     }
 
     var body: some View {
@@ -77,7 +84,23 @@ struct CityMapVisionView: View {
             MapPitchToggle()
         }
         .navigationTitle(cityName)
+        // Is the 3D model on this device, downloadable, or missing?
+        .task(id: cityName) { await models.refresh(cityName) }
         .toolbar {
+            ToolbarItem {
+                // The narrated tour: every landmark in a short walking order, each story read aloud
+                Button {
+                    if tourTask == nil { startTour() } else { stopTour() }
+                } label: {
+                    if tourTask == nil {
+                        Label("Play Tour", systemImage: "play.fill")
+                    } else {
+                        Label("Stop Tour", systemImage: "stop.fill")
+                    }
+                }
+                .help("Fly to each landmark and hear its story")
+                .disabled(mappableBuildings.isEmpty)
+            }
             ToolbarItem {
                 Toggle(isOn: $showsPlaces) {
                     Label("Places", systemImage: "mappin.and.ellipse")
@@ -101,20 +124,22 @@ struct CityMapVisionView: View {
             }
             if hasCityModel {
                 ToolbarItem {
-                    Button {
-                        openWindow(id: "city-volume", value: cityName)
-                    } label: {
-                        Label("Open 3D Model", systemImage: "cube.transparent")
-                    }
+                    // Open 3D Model, or Download … in 3D with progress and Cancel
+                    CityModelButton(cityName: cityName)
                 }
             }
         }
         .overlay(alignment: .bottomLeading) {
             if let building = selectedBuilding {
                 LandmarkCard(building: building,
+                             cityName: cityName,
                              isVisited: store.visitedIDs.contains(building.id),
                              isWishlisted: store.isWishlisted(building.id),
-                             onWishlist: { store.toggleWishlist(building.id) }) {
+                             isPlaying: storyPlayer.isPlaying(building),
+                             onWishlist: { store.toggleWishlist(building.id) },
+                             onListen: { storyPlayer.toggle(building) }) {
+                    stopTour()
+                    storyPlayer.stop()
                     selectedBuilding = nil
                 }
                 .padding(24)
@@ -123,6 +148,11 @@ struct CityMapVisionView: View {
         }
         .animation(.spring(duration: 0.35), value: selectedBuilding?.id)
         .onAppear { fitCamera() }
+        // Leaving the city ends the tour and the story
+        .onDisappear {
+            stopTour()
+            storyPlayer.stop()
+        }
         // Turning Places off also closes any open place card
         .onChange(of: showsPlaces) { _, isOn in
             if !isOn { selectedFeature = nil }
@@ -181,6 +211,57 @@ struct CityMapVisionView: View {
         position = .camera(MapCamera(centerCoordinate: center, distance: distance, heading: 0, pitch: 60))
     }
 
+    // MARK: - Guided tour
+
+    /// Flies to each landmark in walking order, shows its card and reads its story; the next
+    /// stop starts when the story ends. Stop Tour, closing the card or leaving ends it.
+    private func startTour() {
+        let stops = Self.tourOrder(mappableBuildings)
+        tourTask = Task {
+            for building in stops {
+                guard !Task.isCancelled, let lat = building.latitude, let lon = building.longitude else { break }
+                flyTo(building, at: CLLocationCoordinate2D(latitude: lat, longitude: lon))
+                // Let the camera arrive before the story starts
+                try? await Task.sleep(for: .seconds(1.8))
+                guard !Task.isCancelled else { break }
+                await storyPlayer.playAndWait(building)
+                guard !Task.isCancelled else { break }
+                try? await Task.sleep(for: .seconds(1))
+            }
+            tourTask = nil
+        }
+    }
+
+    private func stopTour() {
+        tourTask?.cancel()
+        tourTask = nil
+        storyPlayer.stop()
+    }
+
+    /// A short walking order: start at the landmark nearest the middle of the city, then always
+    /// go to the nearest landmark not yet visited.
+    static func tourOrder(_ buildings: [Building]) -> [Building] {
+        var remaining = buildings.filter { $0.latitude != nil && $0.longitude != nil }
+        guard !remaining.isEmpty else { return [] }
+        func distance(_ a: Building, _ lat: Double, _ lon: Double) -> Double {
+            let dx = (a.longitude! - lon) * cos(lat * .pi / 180)
+            let dy = a.latitude! - lat
+            return dx * dx + dy * dy
+        }
+        let midLat = remaining.map { $0.latitude! }.reduce(0, +) / Double(remaining.count)
+        let midLon = remaining.map { $0.longitude! }.reduce(0, +) / Double(remaining.count)
+        var current = remaining.min { distance($0, midLat, midLon) < distance($1, midLat, midLon) }!
+        var order = [current]
+        remaining.removeAll { $0.id == current.id }
+        while !remaining.isEmpty {
+            let next = remaining.min { distance($0, current.latitude!, current.longitude!) < distance($1, current.latitude!, current.longitude!) }!
+            order.append(next)
+            remaining.removeAll { $0.id == next.id }
+            current = next
+        }
+        return order
+    }
+
     /// Swoops the camera down to a landmark and shows its card.
     private func flyTo(_ building: Building, at coordinate: CLLocationCoordinate2D) {
         selectedFeature = nil
@@ -225,19 +306,32 @@ private struct LandmarkPin: View {
 
 private struct LandmarkCard: View {
     let building: Building
+    let cityName: String
     let isVisited: Bool
     let isWishlisted: Bool
+    var isPlaying = false
     let onWishlist: () -> Void
+    var onListen: () -> Void = {}
     let onClose: () -> Void
+
+    /// Apple's street-level imagery at the landmark, or nil where Apple has none
+    @State private var lookAroundScene: MKLookAroundScene?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(alignment: .top) {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(building.name).font(.title2.bold())
-                    Text("\(building.buildingStyle) · Built \(String(building.yearBuilt))")
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                    if let subtitle = building.styleAndYear {
+                        Text(subtitle)
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                    }
+                    if isVisited {
+                        Label("Stamped", systemImage: "checkmark.seal.fill")
+                            .font(.callout.bold())
+                            .foregroundStyle(.orange)
+                    }
                 }
                 Spacer()
                 Button(action: onClose) {
@@ -247,19 +341,14 @@ private struct LandmarkCard: View {
                 .accessibilityLabel("Close")
             }
 
-            HStack {
-                if isVisited {
-                    Label("Stamped", systemImage: "checkmark.seal.fill")
-                        .font(.callout.bold())
-                        .foregroundStyle(.orange)
-                }
-                Spacer()
-                Button(action: onWishlist) {
-                    // Typed as LocalizedStringKey so both titles get translated
-                    let title: LocalizedStringKey = isWishlisted ? "Saved" : "Want to Go"
-                    Label(title, systemImage: isWishlisted ? "heart.fill" : "heart")
-                }
-                .tint(.pink)
+            // Full labels on one line when they fit; icons only when they don't
+            // (longer languages), instead of wrapping each button onto two lines.
+            ViewThatFits(in: .horizontal) {
+                actionButtons
+                    .labelStyle(.titleAndIcon)
+                    .fixedSize()
+                actionButtons
+                    .labelStyle(.iconOnly)
             }
 
             ScrollView {
@@ -274,10 +363,168 @@ private struct LandmarkCard: View {
                     .font(.callout)
                     .foregroundStyle(.secondary)
             }
+
+            // Stand on the street in front of it: drag to look around, tap to open it big.
+            // Only shown where Apple has driven its cameras.
+            if lookAroundScene != nil {
+                LookAroundPreview(initialScene: lookAroundScene)
+                    .frame(height: 200)
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                    .accessibilityLabel(Text("Look Around"))
+            }
+
+            // Hotels and tours, kept apart from the buttons above
+            Divider()
+            PartnerLinksRow(building: building, cityName: cityName)
         }
         .padding(24)
-        .frame(width: 420)
+        .frame(width: 480)
         .glassBackgroundEffect(in: RoundedRectangle(cornerRadius: 28))
+        .task(id: building.id) { await fetchLookAroundScene() }
+    }
+
+    private var actionButtons: some View {
+        HStack {
+            // Hear the story read aloud while looking at the building in 3D
+            Button(action: onListen) {
+                let title: LocalizedStringKey = isPlaying ? "Stop" : "Listen"
+                Label(title, systemImage: isPlaying ? "stop.fill" : "speaker.wave.2.fill")
+            }
+            .tint(.orange)
+            PanoramaButton(building: building)
+            Button(action: onWishlist) {
+                // Typed as LocalizedStringKey so both titles get translated
+                let title: LocalizedStringKey = isWishlisted ? "Saved" : "Want to Go"
+                Label(title, systemImage: isWishlisted ? "heart.fill" : "heart")
+            }
+            .tint(.pink)
+        }
+    }
+
+    private func fetchLookAroundScene() async {
+        lookAroundScene = nil
+        guard let latitude = building.latitude, let longitude = building.longitude else { return }
+        let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+
+        // Asking with Apple Maps' own place for the landmark makes Look Around face
+        // the building. Asking with just the pin gives the nearest street spot,
+        // which can face a wall or a café instead.
+        if let place = await appleMapsPlace(near: coordinate) {
+            lookAroundScene = try? await MKLookAroundSceneRequest(mapItem: place).scene
+        }
+        if lookAroundScene == nil {
+            lookAroundScene = try? await MKLookAroundSceneRequest(coordinate: coordinate).scene
+        }
+    }
+
+    /// Apple Maps' place for this landmark: a search for its name around the pin,
+    /// keeping the closest result within 300 m so we never jump to a namesake elsewhere.
+    private func appleMapsPlace(near coordinate: CLLocationCoordinate2D) async -> MKMapItem? {
+        let request = MKLocalSearch.Request()
+        request.naturalLanguageQuery = building.name
+        request.region = MKCoordinateRegion(center: coordinate,
+                                            latitudinalMeters: 1000,
+                                            longitudinalMeters: 1000)
+        guard let response = try? await MKLocalSearch(request: request).start() else { return nil }
+
+        let pin = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        let nearest = response.mapItems.min { first, second in
+            first.placemark.location?.distance(from: pin) ?? .infinity
+                < second.placemark.location?.distance(from: pin) ?? .infinity
+        }
+        guard let nearest, let location = nearest.placemark.location,
+              location.distance(from: pin) <= 300 else { return nil }
+        return nearest
+    }
+}
+
+// MARK: - Hotel and tour links
+
+/// Where to stay and which tours to book near a landmark, from the same partner links as
+/// the iPhone app. Two menus keep the card short; each choice opens the partner's site in
+/// Safari. Stamped never books or takes payment.
+private struct PartnerLinksRow: View {
+    let building: Building
+    let cityName: String
+
+    /// Labels clicks from Vision Pro in the partners' reports, apart from the iPhone app's
+    private static let clickLabel = "vision"
+
+    private let expedia = HotelLinkBuilder(clickLabel: Self.clickLabel)
+    private let booking = HotelLinkBuilder(provider: .booking,
+                                           affiliateID: HotelPartner.bookingAffiliateID,
+                                           clickLabel: Self.clickLabel)
+    private let vrbo = VrboLinkBuilder(clickLabel: Self.clickLabel)
+    private let getYourGuide = TourLinkBuilder(campaign: Self.clickLabel)
+    private let viator = ViatorLinkBuilder(campaign: Self.clickLabel)
+
+    @Environment(\.openURL) private var openURL
+
+    /// "Colosseum, Rome", centred on the landmark's pin so the site searches around it
+    private var hotelSearch: HotelSearch {
+        let destination = building.name.localizedCaseInsensitiveContains(cityName)
+            ? building.name
+            : "\(building.name), \(cityName)"
+        return HotelSearch(destination: destination, latitude: building.latitude, longitude: building.longitude)
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack {
+                staysMenu
+                toursMenu
+            }
+            // Only when the links carry our partner IDs
+            if expedia.earnsCommission || getYourGuide.earnsCommission {
+                HotelCommissionNote()
+            }
+        }
+    }
+
+    private var staysMenu: some View {
+        Menu {
+            if let url = expedia.url(for: hotelSearch) {
+                linkButton("Find Hotels", systemImage: "bed.double.fill", url: url,
+                           hint: "Opens the hotel website. Stamped! doesn't handle bookings or payments.")
+            }
+            // Like the iPhone's Booking.com button: only with our ID, never an untracked link
+            if booking.earnsCommission, let url = booking.url(for: hotelSearch) {
+                linkButton("Compare on Booking.com", systemImage: "magnifyingglass", url: url,
+                           hint: "Opens Booking.com. Stamped! doesn't handle bookings or payments.")
+            }
+            if let url = vrbo.url(for: hotelSearch) {
+                linkButton("Vacation Rentals on Vrbo", systemImage: "house.fill", url: url,
+                           hint: "Opens Vrbo. Stamped! doesn't handle bookings or payments.")
+            }
+        } label: {
+            Label("Stay", systemImage: "bed.double.fill")
+        }
+    }
+
+    private var toursMenu: some View {
+        Menu {
+            if let url = getYourGuide.url(landmark: building.name, place: cityName) {
+                linkButton("Find Tours & Tickets", systemImage: "ticket.fill", url: url,
+                           hint: "Opens GetYourGuide. Stamped! doesn't handle bookings or payments.")
+            }
+            if let url = viator.url(landmark: building.name, place: cityName) {
+                linkButton("More tours on Viator", systemImage: "arrow.up.right.square", url: url,
+                           hint: "Opens Viator. Stamped! doesn't handle bookings or payments.")
+            }
+        } label: {
+            Label("Tours & Tickets", systemImage: "ticket.fill")
+        }
+    }
+
+    /// One menu choice that opens a partner's site in Safari.
+    private func linkButton(_ title: LocalizedStringKey, systemImage: String, url: URL,
+                            hint: LocalizedStringKey) -> some View {
+        Button {
+            openURL(url)
+        } label: {
+            Label(title, systemImage: systemImage)
+        }
+        .accessibilityHint(Text(hint))
     }
 }
 

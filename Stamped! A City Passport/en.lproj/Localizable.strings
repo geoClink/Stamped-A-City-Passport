@@ -246,7 +246,7 @@
 "settings.testMotion" = "Test Motion";
 "settings.testSound" = "Test Sound";
 "settings.resetAllContent" = "Reset All Content";
-"settings.version" = "Version 1.0 (Build 2026)";
+"settings.version" = "Version %1$@ (Build %2$@)";
 "settings.reset.firstAlert.title" = "Reset All Progress?";
 "settings.reset.firstAlert.message" = "Wipe visited buildings, passport stamps, and quiz scores.";
 "settings.reset.firstAlert.continue" = "Continue";
@@ -317,3 +317,47 @@
 "architect.fromWikipedia" = "From Wikipedia";
 "architect.readOnWikipedia" = "Read on Wikipedia";
 "architect.photoCredit" = "Photo: Wikimedia Commons";
+
+/* Booking.com button next to the main hotel button */
+"Compare on Booking.com" = "Compare on Booking.com";
+"Opens Booking.com. Stamped! doesn't handle bookings or payments." = "Opens Booking.com. Stamped! doesn't handle bookings or payments.";
+
+/* Text sent with a shared passport picture; %@ is the App Store link */
+"My Stamped! passport. Get the app: %@" = "My Stamped! passport. Get the app: %@";
+
+/* City stamp share picture; %1$d is landmarks visited, %2$d is landmarks in the city */
+"%1$d of %2$d landmarks stamped" = "%1$d of %2$d landmarks stamped";
+
+/* Text sent with a shared city stamp picture; %1$@ is the city, %2$@ is the App Store link */
+"I just unlocked the %1$@ stamp on Stamped! 🏛️ Get the app: %2$@" = "I just unlocked the %1$@ stamp on Stamped! 🏛️ Get the app: %2$@";
+
+/* Tip jar (Support Stamped!) */
+"Support Stamped!" = "Support Stamped!";
+"Tips help keep new cities coming" = "Tips help keep new cities coming";
+"Hi, I'm George! I make Stamped! on my own as an indie developer. The app is free, and tips help me keep adding new cities and landmarks." = "Hi, I'm George! I make Stamped! on my own as an indie developer. The app is free, and tips help me keep adding new cities and landmarks.";
+"Tips are just a thank-you. They don't unlock anything, and everything in the app stays free." = "Tips are just a thank-you. They don't unlock anything, and everything in the app stays free.";
+"Small Tip" = "Small Tip";
+"Medium Tip" = "Medium Tip";
+"Large Tip" = "Large Tip";
+"Loading tips…" = "Loading tips…";
+"Tips aren't available right now" = "Tips aren't available right now";
+"Please check your connection and try again later." = "Please check your connection and try again later.";
+"Try Again" = "Try Again";
+"Thank you!" = "Thank you!";
+"Your tip means a lot. It helps bring the next city to Stamped!" = "Your tip means a lot. It helps bring the next city to Stamped!";
+"Waiting for approval" = "Waiting for approval";
+"Your tip will go through once a family organizer approves it." = "Your tip will go through once a family organizer approves it.";
+"No worries, the tip was cancelled. You weren't charged." = "No worries, the tip was cancelled. You weren't charged.";
+"That tip didn't go through. Please try again." = "That tip didn't go through. Please try again.";
+"Payments go through your Apple Account. Tips are one-time and don't renew." = "Payments go through your Apple Account. Tips are one-time and don't renew.";
+
+/* Siri and Shortcuts actions (Intents/StampedShortcuts.swift) */
+"City or Campus" = "City or Campus";
+"Campus" = "Campus";
+"City" = "City";
+"Open My Passport" = "Open My Passport";
+"Opens your passport of collected stamps in Stamped!." = "Opens your passport of collected stamps in Stamped!.";
+"Open a City" = "Open a City";
+"Opens a city or campus page in Stamped!." = "Opens a city or campus page in Stamped!.";
+"Which city or campus?" = "Which city or campus?";
+"Open ${city}" = "Open ${city}";

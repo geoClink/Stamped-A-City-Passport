@@ -21,6 +21,7 @@ struct CityVolumeView: View {
     let cityName: String
 
     @Environment(\.openImmersiveSpace) private var openImmersiveSpace
+    @Environment(\.dismissImmersiveSpace) private var dismissImmersiveSpace
     @Environment(\.dismissWindow)      private var dismissWindow
 
     @AppStorage("currentImmersiveCity") private var currentImmersiveCity = "Detroit"
@@ -29,6 +30,8 @@ struct CityVolumeView: View {
     @State private var cityEntity: Entity?
     @State private var selectedBuilding: Building?
     @State private var isLoading = true
+    /// The model is missing or couldn't be read: show a message instead of an empty box.
+    @State private var loadFailed = false
     @State private var yRotation: Float = 0
     @State private var currentScale: Float = 1
     @State private var baseScale:    Float = 1
@@ -49,6 +52,10 @@ struct CityVolumeView: View {
 
             if isLoading {
                 ProgressView("Loading \(cityName)…")
+                    .padding(20)
+                    .glassBackgroundEffect(in: RoundedRectangle(cornerRadius: 12))
+            } else if loadFailed {
+                Label("Couldn't open the 3D model of \(cityName).", systemImage: "exclamationmark.triangle")
                     .padding(20)
                     .glassBackgroundEffect(in: RoundedRectangle(cornerRadius: 12))
             }
@@ -81,6 +88,8 @@ struct CityVolumeView: View {
                     isOpeningSpace = true
                     currentImmersiveCity = cityName
                     Task {
+                        // Only one immersive space can be open: close a 360° landmark view first
+                        await dismissImmersiveSpace()
                         await openImmersiveSpace(id: "city-immersive")
                         isOpeningSpace = false
                     }
@@ -109,7 +118,10 @@ struct CityVolumeView: View {
     // MARK: - Load city model
 
     private func loadCity(into content: RealityViewContent) async {
-        guard let url = Bundle.main.url(forResource: cityName.lowercased(), withExtension: "usdz") else {
+        // From the app bundle, or from the downloaded asset pack
+        guard let url = CityModelStore.shared.modelURL(for: cityName) else {
+            print("[CityVolume] No 3D model for \(cityName) on this device")
+            loadFailed = true
             isLoading = false
             return
         }
@@ -144,6 +156,7 @@ struct CityVolumeView: View {
             isLoading = false
         } catch {
             print("[CityVolume] Failed to load \(cityName): \(error)")
+            loadFailed = true
             isLoading = false
         }
     }
@@ -215,9 +228,11 @@ struct CityVolumeView: View {
                 Text(building.name)
                     .font(.headline)
             }
-            Text("\(String(building.yearBuilt)) · \(building.buildingStyle)")
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
+            if let subtitle = building.styleAndYear {
+                Text(subtitle)
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+            }
             Text(building.address)
                 .font(.caption)
                 .foregroundStyle(.tertiary)

@@ -51,7 +51,6 @@ struct PassportGalleryView: View {
                     sidebarList
                         .navigationTitle("Countries")
                         .searchable(text: $searchText, placement: .sidebar, prompt: searchPrompt)
-                        .background(brandColor.opacity(highContrast ? 0 : 0.03))
                 } detail: {
                     if showingCampusPage {
                         ScrollView { campusSection(columns: [GridItem(.adaptive(minimum: 220))]).padding(DS.Space.section) }
@@ -63,7 +62,13 @@ struct PassportGalleryView: View {
                     }
                 }
                 .onAppear {
-                    if selectedCountry == nil {
+                    guard selectedCountry == nil, !showingCampusPage else { return }
+                    // Open on a page with stamps, not on the alphabetically first country
+                    if let stampedCountry = sortedCountries.first(where: hasStamps) {
+                        selectedCountry = stampedCountry
+                    } else if !stampedCampuses.isEmpty {
+                        showingCampusPage = true
+                    } else {
                         selectedCountry = sortedCountries.first
                     }
                 }
@@ -124,9 +129,47 @@ private extension PassportGalleryView {
         highContrast ? (colorScheme == .dark ? .black : .white) : DS.Palette.pageBackground
     }
 
+    /// iPad sidebar color: a solid gray a shade off the page, so the two columns stay apart
+    var sidebarBackground: Color {
+        if highContrast { return pageBackground }
+        return colorScheme == .dark ? Color(.secondarySystemBackground) : Color(.systemGray5)
+    }
+
     /// Two stamps per row on iPhone
     var stampColumns: [GridItem] {
         [GridItem(.flexible(), spacing: DS.Space.m), GridItem(.flexible(), spacing: DS.Space.m)]
+    }
+}
+
+private extension View {
+    /// iPad: a solid sidebar, plus a strip of the same color behind "Countries" and the
+    /// search field. iOS 26's bar is see-through, so country names showed through it
+    /// when the list scrolled. The Mac keeps its native sidebar.
+    @ViewBuilder
+    func solidSidebarBackground(_ color: Color) -> some View {
+        #if os(macOS)
+        self
+        #else
+        let solid = self
+            .scrollContentBackground(.hidden)
+            .background(color)
+            .overlay {
+                // The bar's height is the list's top safe-area inset, so fill exactly that
+                GeometryReader { proxy in
+                    color
+                        .frame(height: proxy.safeAreaInsets.top)
+                        .ignoresSafeArea(edges: .top)
+                }
+                .allowsHitTesting(false)
+            }
+        if #available(iOS 26.0, *) {
+            // iOS 26 also draws a blurred copy of the rows into the bar (the "scroll edge
+            // effect"), on top of our strip. The strip already hides the rows, so turn it off.
+            solid.scrollEdgeEffectHidden(true, for: .top)
+        } else {
+            solid
+        }
+        #endif
     }
 }
 
@@ -134,11 +177,7 @@ private extension PassportGalleryView {
 private extension PassportGalleryView {
     var sidebarList: some View {
         List(selection: $selectedCountry) {
-            Section {
-                ForEach(visibleCountries, id: \.self) { country in
-                    countryRow(country)
-                }
-            }
+            // Campuses first, like on iPhone, so they aren't buried below 60+ countries
             if !allCampuses.isEmpty && (!isSearching || !campusesToShow.isEmpty) {
                 Section {
                     Button {
@@ -158,7 +197,13 @@ private extension PassportGalleryView {
                     .listRowBackground(showingCampusPage ? brandColor.opacity(0.1) : Color.clear)
                 }
             }
+            Section {
+                ForEach(visibleCountries, id: \.self) { country in
+                    countryRow(country)
+                }
+            }
         }
+        .solidSidebarBackground(sidebarBackground)
         .onChange(of: selectedCountry) { _, country in
             if country != nil { showingCampusPage = false }
         }
@@ -167,7 +212,7 @@ private extension PassportGalleryView {
     func countryRow(_ country: CityLocation.Country) -> some View {
             NavigationLink(value: country) {
                 HStack {
-                    Text(country.localizedName.localizedUppercase)
+                    Text(country.passportName.localizedUppercase)
                         .font(.system(.headline, design: .rounded))
                         .fontWeight(highContrast ? .black : .bold)
                     Spacer()
@@ -191,7 +236,7 @@ private extension PassportGalleryView {
                             .tracking(2)
                         
                         // Shrinks rather than breaking a long name mid-word
-                        Text(country.localizedName.localizedUppercase)
+                        Text(country.passportName.localizedUppercase)
                             .font(.system(.largeTitle, design: .serif).weight(.black))
                             .foregroundColor(brandColor)
                             .lineLimit(2)
@@ -316,7 +361,7 @@ private extension PassportGalleryView {
             VStack(alignment: .leading, spacing: DS.Space.m) {
                 // One line, shrinking to fit, so long names like ARGENTINA never break mid-word.
                 // Country names aren't translated, so the key just shows as written.
-                DSSectionHeader(title: LocalizedStringKey(country.localizedName), isHighContrast: highContrast) {
+                DSSectionHeader(title: LocalizedStringKey(country.passportName), isHighContrast: highContrast) {
                     if isCountryComplete(country) {
                         Image(systemName: "checkmark.seal.fill")
                             .foregroundColor(masteryColor)
@@ -405,9 +450,10 @@ private extension PassportGalleryView {
 
 // MARK: - Logic Helpers
 extension PassportGalleryView {
-    /// Real cities by country; campuses get their own section, not a country page
+    /// Real cities by country page; campuses get their own section, not a country page.
+    /// The Australian states share one page (see `passportGroup`).
     var groupedCities: [CityLocation.Country: [CityLocation.City]] {
-        Dictionary(grouping: cities.filter { !$0.isCampus }, by: { $0.country })
+        Dictionary(grouping: cities.filter { !$0.isCampus }, by: { $0.country.passportGroup })
     }
 
     var allCampuses: [CityLocation.City] { cities.filter(\.isCampus) }
@@ -418,7 +464,7 @@ extension PassportGalleryView {
     }
     
     var sortedCountries: [CityLocation.Country] {
-        groupedCities.keys.sorted { $0.localizedName.localizedStandardCompare($1.localizedName) == .orderedAscending }
+        groupedCities.keys.sorted { $0.passportName.localizedStandardCompare($1.passportName) == .orderedAscending }
     }
     
     var searchPrompt: String {
@@ -428,11 +474,12 @@ extension PassportGalleryView {
     var searchQuery: String { searchText.trimmingCharacters(in: .whitespacesAndNewlines) }
     var isSearching: Bool { !searchQuery.isEmpty }
 
-    /// A city matches by its own name or its country's
+    /// A city matches by its own name, its country's, or its page's ("Australia")
     func matchesSearch(_ city: CityLocation.City) -> Bool {
         !isSearching
             || city.name.localizedCaseInsensitiveContains(searchQuery)
             || city.country.localizedName.localizedCaseInsensitiveContains(searchQuery)
+            || city.country.passportName.localizedCaseInsensitiveContains(searchQuery)
     }
 
     func visibleCities(in country: CityLocation.Country) -> [CityLocation.City] {
@@ -458,6 +505,11 @@ extension PassportGalleryView {
     
     func isCityCompleted(_ city: CityLocation.City) -> Bool {
         return !city.buildings.isEmpty && city.buildings.allSatisfy { progressManager.visitedIDs.contains($0.id) }
+    }
+
+    /// True if at least one city on this country's page is stamped
+    func hasStamps(_ country: CityLocation.Country) -> Bool {
+        (groupedCities[country] ?? []).contains { isCityCompleted($0) }
     }
 
     func isCountryComplete(_ country: CityLocation.Country) -> Bool {
@@ -516,14 +568,16 @@ struct LockedStampView: View {
     var body: some View {
         let fgColor: Color = isHighContrast ? (colorScheme == .dark ? .white : .black) : .secondary
 
+        // .secondary is already a soft gray in both light and dark mode, so it's used at
+        // full strength; fading it further made locked stamps vanish on a black page.
         VStack(spacing: DS.Space.xs) {
             Image(systemName: "lock.fill")
                 .font(.caption)
-                .foregroundColor(fgColor.opacity(isHighContrast ? 1.0 : 0.5))
+                .foregroundColor(fgColor)
             // Shrinks to fit rather than breaking a name mid-word ("COPEN-HAGEN")
             Text(cityName.uppercased())
                 .font(.system(.caption, design: .serif).weight(.semibold))
-                .foregroundColor(fgColor.opacity(isHighContrast ? 1.0 : 0.8))
+                .foregroundColor(fgColor)
                 .lineLimit(2)
                 .minimumScaleFactor(0.6)
                 .multilineTextAlignment(.center)
@@ -534,7 +588,7 @@ struct LockedStampView: View {
         .overlay(
             RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
                 .strokeBorder(
-                    isHighContrast ? fgColor : Color.primary.opacity(0.15),
+                    isHighContrast ? fgColor : Color.secondary.opacity(0.6),
                     style: StrokeStyle(lineWidth: isHighContrast ? 2 : 1, dash: isHighContrast ? [] : [4, 3])
                 )
         )
@@ -564,6 +618,18 @@ struct ZoomedStampView: View {
                         isHighContrast: passedHighContrast
                     )
                     .padding(DS.Space.l)
+
+                    // Shares the stamp as a picture with the App Store link
+                    CityStampShareButton(city: city) {
+                        Label("Share Achievement", systemImage: "square.and.arrow.up")
+                            .font(.headline)
+                            .foregroundStyle(passedHighContrast ? adaptiveBg : .white)
+                            .padding(.vertical, DS.Space.l)
+                            .padding(.horizontal, DS.Space.section)
+                            .background(Capsule().fill(adaptiveFg))
+                    }
+                    .buttonStyle(.plain)
+                    .padding(.top, DS.Space.l)
                     Spacer()
                 }
             }

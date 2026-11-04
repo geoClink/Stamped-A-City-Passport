@@ -9,8 +9,8 @@ import WidgetKit
 import SwiftUI
 
 // MARK: - Data bridge
-// Reads the same UserDefaults key that GlobalProgressManager writes.
-// Replace the suiteName with your actual App Group ID once you've set one up.
+// Reads the same App Group UserDefaults key that GlobalProgressManager writes.
+// The app reloads this widget after each save, so the count updates right away.
 
 struct PassportProgress {
     let visitedCount: Int
@@ -19,7 +19,6 @@ struct PassportProgress {
 
     static func load() -> PassportProgress {
         // Use App Group defaults so widget and app share the same store.
-        // Replace "group.com.yourname.stamped" with your App Group identifier.
         let defaults = UserDefaults(suiteName: "group.stamped.passport") ?? .standard
         let ids = (defaults.array(forKey: "GlobalVisitedBuildingsKey") as? [String]) ?? []
         return PassportProgress(visitedCount: ids.count)

@@ -401,8 +401,8 @@ struct InfoPill: View {
 
     var body: some View {
         HStack(spacing: 4) {
-            Image(systemName: icon).font(.system(size: 9, weight: .semibold)).foregroundColor(brandColor)
-            Text(text).font(.system(size: 10, weight: .medium)).foregroundColor(.secondary)
+            Image(systemName: icon).font(.caption2.weight(.semibold)).foregroundColor(brandColor)
+            Text(text).font(.caption2.weight(.medium)).foregroundColor(.secondary)
         }
         .padding(.horizontal, 8).padding(.vertical, 4)
         .background(brandColor.opacity(0.08)).cornerRadius(8)
@@ -449,12 +449,17 @@ struct BasicStopRow: View {
     var body: some View {
         VStack(spacing: 0) {
             HStack(alignment: .top, spacing: 14) {
+                // Time column: fixedSize keeps "10:15 AM" on one line, and the
+                // min width lines the rows up while still growing with Dynamic Type
                 VStack(alignment: .leading, spacing: 2) {
                     Text(arrivalTime)
-                        .font(.caption).fontWeight(.bold).foregroundColor(brandColor).frame(width: 56, alignment: .leading)
+                        .font(.caption).fontWeight(.bold).foregroundColor(brandColor)
+                        .lineLimit(1).fixedSize()
                     Text("\(stop.visitDurationMins)m")
-                        .font(.system(size: 10)).foregroundColor(.secondary).frame(width: 56, alignment: .leading)
+                        .font(.caption2).foregroundColor(.secondary)
+                        .lineLimit(1).fixedSize()
                 }
+                .frame(minWidth: 60, alignment: .leading)
                 .padding(.top, 3)
 
                 ZStack {
@@ -469,7 +474,7 @@ struct BasicStopRow: View {
                     HStack(spacing: 6) {
                         Text(building.name).font(.subheadline).fontWeight(.semibold).foregroundColor(.primary)
                         if isLunchStop {
-                            Image(systemName: "fork.knife").font(.system(size: 9)).foregroundColor(brandColor)
+                            Image(systemName: "fork.knife").font(.caption2).foregroundColor(brandColor)
                         }
                     }
                     Text(shortDescription).font(.caption).foregroundColor(.secondary)
@@ -865,12 +870,17 @@ struct ItineraryStopRow: View {
     var body: some View {
         VStack(spacing: 0) {
             HStack(alignment: .top, spacing: 14) {
+                // Time column: fixedSize keeps "10:15 AM" on one line, and the
+                // min width lines the rows up while still growing with Dynamic Type
                 VStack(alignment: .leading, spacing: 2) {
                     Text(arrivalTime)
-                        .font(.caption).fontWeight(.semibold).foregroundColor(brandColor).frame(width: 52, alignment: .leading)
+                        .font(.caption).fontWeight(.semibold).foregroundColor(brandColor)
+                        .lineLimit(1).fixedSize()
                     Text("\(stop.visitDurationMins)m")
-                        .font(.system(size: 9)).foregroundColor(.secondary).frame(width: 52, alignment: .leading)
+                        .font(.caption2).foregroundColor(.secondary)
+                        .lineLimit(1).fixedSize()
                 }
+                .frame(minWidth: 60, alignment: .leading)
                 .padding(.top, 2)
 
                 VStack(alignment: .leading, spacing: 4) {

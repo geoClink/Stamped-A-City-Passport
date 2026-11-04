@@ -246,7 +246,7 @@
 "settings.testMotion" = "テストモーション";
 "settings.testSound" = "テストサウンド";
 "settings.resetAllContent" = "すべてのコンテンツをリセット";
-"settings.version" = "バージョン 1.0 (ビルド 2026)";
+"settings.version" = "バージョン %1$@ (ビルド %2$@)";
 "settings.reset.firstAlert.title" = "すべての進行状況をリセットしますか?";
 "settings.reset.firstAlert.message" = "訪問した建物、パスポートのスタンプ、クイズの得点を消去します。";
 "settings.reset.firstAlert.continue" = "続く";
@@ -759,3 +759,92 @@
 
 /* Game Day: a game whose start time isn't announced yet */
 "Time TBA" = "時間未定";
+
+/* Audio story on a landmark page */
+"Listen" = "聴く";
+"Reads this landmark's story aloud in English" = "この名建築の物語を英語で読み上げます";
+
+/* Vrbo and Viator links */
+"Vacation Rentals on Vrbo" = "Vrboでバケーションレンタル";
+"Opens Vrbo. Stamped! doesn't handle bookings or payments." = "Vrboを開きます。Stamped!は予約や支払いを扱いません。";
+"More tours on Viator" = "Viatorでほかのツアー";
+"Opens Viator. Stamped! doesn't handle bookings or payments." = "Viatorを開きます。Stamped!は予約や支払いを扱いません。";
+
+/* Save for Offline: city page card and Settings list */
+"Offline Use" = "オフライン利用";
+"Save the landmark photos and Wikipedia text to use without a connection, like on a flight." = "名所の写真とWikipediaの説明を保存して、機内など接続がない場所でも使えるようにします。";
+"Save for Offline" = "オフライン用に保存";
+"Downloads photos and text for %d landmarks." = "%d か所の名所の写真と説明をダウンロードします。";
+"Saving %d of %d…" = "%d / %d を保存中…";
+"Stops saving. What's saved so far is kept for next time." = "保存を中止します。保存済みの分は次回のために残ります。";
+"Saved for Offline" = "オフライン用に保存済み";
+"%1$@, saved %2$@" = "%1$@、%2$@ に保存";
+"Remove Offline Copy" = "オフラインコピーを削除";
+"Deletes the saved photos and text from this device." = "保存した写真と説明をこのデバイスから削除します。";
+"Remove the offline copy of %@?" = "%@ のオフラインコピーを削除しますか？";
+"Remove" = "削除";
+"Couldn't finish saving. Check your connection and try again; what's saved so far is kept." = "保存を完了できませんでした。接続を確認してもう一度お試しください。保存済みの分は残ります。";
+"Low Data Mode is on. Turn it off in Settings to save photos." = "省データモードがオンです。写真を保存するには設定でオフにしてください。";
+"Couldn't save to this device. Check that there's free storage." = "このデバイスに保存できませんでした。空き容量を確認してください。";
+"Maps, weather, events and photo galleries still need a connection. For an offline map, download this area in Apple Maps (Offline Maps)." = "地図、天気、イベント、フォトギャラリーには引き続き接続が必要です。オフラインで地図を使うには、Appleマップでこのエリアをダウンロードしてください（オフラインマップ）。";
+"No cities saved yet. Open a city or campus and tap Save for Offline in its Plan tab." = "保存した都市はまだありません。都市またはキャンパスを開き、「計画」タブで「オフライン用に保存」をタップしてください。";
+"Remove %@" = "%@ を削除";
+"Maps aren't saved. For an offline map, download the area in Apple Maps (Offline Maps)." = "地図は保存されません。オフラインで地図を使うには、Appleマップでエリアをダウンロードしてください（オフラインマップ）。";
+
+/* Booking.com button next to the main hotel button */
+"Compare on Booking.com" = "Booking.comで比較";
+"Opens Booking.com. Stamped! doesn't handle bookings or payments." = "Booking.comを開きます。Stamped!は予約や支払いを扱いません。";
+
+/* Text sent with a shared passport picture; %@ is the App Store link */
+"My Stamped! passport. Get the app: %@" = "私のStamped!パスポート。アプリはこちら：%@";
+
+/* City stamp share picture; %1$d is landmarks visited, %2$d is landmarks in the city */
+
+/* Text sent with a shared city stamp picture; %1$@ is the city, %2$@ is the App Store link */
+"I just unlocked the %1$@ stamp on Stamped! 🏛️ Get the app: %2$@" = "Stamped!で%1$@のスタンプを獲得しました！🏛️ アプリはこちら：%2$@";
+
+/* Audio story: tip when only the basic voice is installed */
+"Got it" = "了解";
+"For a more natural voice, download a Premium English voice in Settings > Accessibility > Read & Speak > Voices." = "より自然な声にするには、「設定」>「アクセシビリティ」>「読み上げと発話」>「声」で英語のプレミアム音声をダウンロードしてください。";
+"For a more natural voice, download a Premium English voice in System Settings > Accessibility > Spoken Content > System Voice > Manage Voices." = "より自然な声にするには、「システム設定」>「アクセシビリティ」>「読み上げコンテンツ」>「システムの声」>「声を管理」で英語のプレミアム音声をダウンロードしてください。";
+/* Tip jar (Support Stamped!) */
+"Support Stamped!" = "Stamped!を応援";
+"Tips help keep new cities coming" = "チップが新しい都市の追加を支えます";
+"Hi, I'm George! I make Stamped! on my own as an indie developer. The app is free, and tips help me keep adding new cities and landmarks." = "こんにちは、George です！Stamped! は個人開発者の私がひとりで作っています。アプリは無料で、チップは新しい都市やランドマークを追加し続ける力になります。";
+"Tips are just a thank-you. They don't unlock anything, and everything in the app stays free." = "チップは感謝の気持ちです。何もロック解除されず、アプリのすべての機能は引き続き無料です。";
+"Small Tip" = "小さなチップ";
+"Medium Tip" = "中くらいのチップ";
+"Large Tip" = "大きなチップ";
+"Loading tips…" = "チップを読み込み中…";
+"Tips aren't available right now" = "現在チップはご利用いただけません";
+"Please check your connection and try again later." = "接続を確認して、しばらくしてからもう一度お試しください。";
+"Try Again" = "もう一度試す";
+"Thank you!" = "ありがとうございます！";
+"Your tip means a lot. It helps bring the next city to Stamped!" = "チップをありがとうございます。次の都市を Stamped! に追加する力になります。";
+"Waiting for approval" = "承認待ち";
+"Your tip will go through once a family organizer approves it." = "ファミリーの管理者が承認すると、チップが送信されます。";
+"No worries, the tip was cancelled. You weren't charged." = "大丈夫です。チップはキャンセルされ、請求は発生していません。";
+"That tip didn't go through. Please try again." = "チップを送信できませんでした。もう一度お試しください。";
+"Payments go through your Apple Account. Tips are one-time and don't renew." = "支払いは Apple アカウントを通じて行われます。チップは1回限りで、自動更新されません。";
+
+/* Siri and Shortcuts actions (Intents/StampedShortcuts.swift) */
+"City or Campus" = "都市またはキャンパス";
+"Campus" = "キャンパス";
+"City" = "都市";
+"Open My Passport" = "マイパスポートを開く";
+"Opens your passport of collected stamps in Stamped!." = "Stamped!で集めたスタンプのパスポートを開きます。";
+"Open a City" = "都市を開く";
+"Opens a city or campus page in Stamped!." = "Stamped!で都市やキャンパスのページを開きます。";
+"Which city or campus?" = "どの都市またはキャンパスですか？";
+"Open ${city}" = "${city}を開く";
+
+/* Accessibility on a landmark's page: step-free access from OpenStreetMap */
+"Accessibility" = "バリアフリー";
+"Step-free access" = "段差のないアクセス";
+"Accessible toilets" = "車いす対応トイレ";
+"Yes" = "はい";
+"Partly" = "一部のみ";
+"No" = "いいえ";
+"Mapped by OpenStreetMap volunteers and may be out of date. Check with the venue before you go." = "OpenStreetMapのボランティアが登録した情報のため、最新でない場合があります。訪問前に施設へご確認ください。";
+"View on OpenStreetMap" = "OpenStreetMapで見る";
+"Opens this place on openstreetmap.org" = "この場所をopenstreetmap.orgで開きます";

@@ -10,13 +10,63 @@ How to use this file:
 
 ## [Unreleased]
 
+## [2.9] (build 14) – 2026-11-04 (iPhone, iPad, Mac and Vision Pro)
+
+### Added
+- Tip jar: Settings > Support Stamped! (heart button in the city list on Vision Pro) offers three optional tips ($0.99, $2.99, $4.99) with In-App Purchase. Tips unlock nothing; a thank-you card appears after a tip.
+- Share a city or campus stamp as a picture card (stamp art, city name, landmarks stamped) with the App Store link.
+- Siri and Shortcuts: "Open My Passport" and "Open a City", e.g. "Open Paris in Stamped!".
+- Vision Pro: the Detroit 3D model downloads on demand (Background Assets, about 38 MB) instead of shipping inside the app, which stays about 26 MB.
+
+### Changed
+- Listen uses the most natural English voice installed (Premium, then Enhanced), and suggests downloading one when only the basic voice is on the device.
+- iPad: every page rotates to portrait as well as landscape.
+- Location permission is asked for when the first city page opens, instead of at launch.
+- The home screen widget refreshes as soon as a landmark is stamped.
+
+### Removed
+- The widget's unused Control Center timer and Live Activity (Xcode template leftovers).
+
+## [2.8] (build 13) – 2026-11-03 (iPhone, iPad, Mac and Vision Pro)
+
+### Added
+- Save for Offline: keep a city's landmark photos and Wikipedia stories on the device for flights and trips abroad. Maps and events still need a connection.
+- Listen: any landmark's story read aloud by the device's voice.
+- 16 new architecture cities: Munich, Hamburg, Glasgow, Bilbao, Valencia, Rotterdam, Chandigarh, San Diego, Savannah, Charleston, Baltimore, Kansas City, Fort Worth, Palm Springs, Oak Park and Columbus (IN). 156 cities in all. Every city's language name is translated in all 8 languages.
+- 5 new campuses: Colorado State, Eastern Michigan, Michigan Tech, Oakland and Central Michigan. 117 campuses in all. College Scorecard IDs checked for the 11 campuses added in 2.7.
+- Hotels: Compare on Booking.com next to Expedia, through CJ deep links. Vacation rentals on Vrbo and more tours on Viator, from the trip planner and landmark pages.
+- Local Calendar: adults and all-ages Denver events, plus Honolulu and Miami (11 cities).
+- An App Store rating prompt after a city or campus is fully stamped.
+- Mac: World Map, My Journey, Achievements, My College List, trips and the quiz open in their own windows.
+- Vision Pro: 360° panoramas to stand inside 26 landmarks; Play Tour, a narrated flight from landmark to landmark; Listen on landmark cards; Look Around aimed at the landmark, not the nearest street.
+- Vision Pro: hotel and tour partner links on the landmark card, with clicks labelled `vision`.
+
+### Changed
+- iPad: wider sidebar, full-screen World Map, larger sheets, and search closes after picking a result. City pages from the World Map open full screen.
+- iPad Passport: opens on a stamped country, Campuses on top, and locked stamps are easier to read.
+- iPad polish: one-line itinerary times, orange Settings with Done, 4-column My Journey, trip planner title and quiz width.
+- Vision Pro: building styles show in the user's language; unknown style and year are hidden on cards and in the quiz; landmark card buttons fit on one line.
+- Share card: App Store link with a campaign tag instead of stamped-app.com.
+- App Store: new 2.8 text and screenshots for iPhone, iPad, Mac and Vision Pro in all 10 languages; the uploader handles Mac and Vision Pro pages (`--platform`, `--texts`, `--screenshots`).
+
+### Fixed
+- Large photos load quickly instead of showing "No photo available".
+- Events with many time slots show once.
+- Cleaner Game Day titles, and "Time TBA" when a game has no start time yet.
+- The best quiz score is saved when the quiz is finished.
+- Itinerary text fixes.
+- iPhone: page text no longer shows through behind the top bar when city and campus pages scroll under the clock.
+- iPad: Hong Kong and Australia names in the Passport.
+
+## [Vision Pro 2.6] – 2026-10-30 (first Vision Pro release)
+
 ### Added
 - Vision Pro app: every city on a photoreal 3D map, landmark cards, and stamps synced from iPhone. Shares the iPhone app's App Store listing.
 - Vision Pro: layered app icon, a 10-question architecture quiz per city, and the Want to Visit list (landmarks and saved places synced with iPhone). Download size cut from 355 MB to about 24 MB by leaving out the Detroit 3D model.
 - Vision Pro: a 3D globe of every city with live stamp pins; drag to spin and tilt, tap to turn a city toward you.
 - Vision Pro: available in all 9 of the app's languages.
 
-## [2.7] (build 12) – not yet uploaded
+## [2.7] (build 12) – 2026-10-30 (iPhone only; Mac and Vision Pro went on to 2.8)
 
 ### Added
 - Map pins group into numbered bubbles when zoomed out and split apart as you zoom in; tapping a bubble zooms in. On city maps (landmarks and saved places) and trip route maps.

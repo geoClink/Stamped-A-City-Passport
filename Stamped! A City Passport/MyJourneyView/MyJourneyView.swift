@@ -15,6 +15,7 @@ struct MyJourneyView: View {
     @StateObject private var cityVM = CityViewModel()
 
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     @AppStorage("high_contrast_mode") private var isHighContrast = false
     @ScaledMetric(relativeTo: .largeTitle) private var ringSize: CGFloat = 140
     @ScaledMetric(relativeTo: .title2) private var architectIconSize: CGFloat = 56
@@ -90,16 +91,29 @@ struct MyJourneyView: View {
                 .dsPageMargin()
                 .padding(.top, DS.Space.l)
                 .padding(.bottom, DS.Space.section)
+                #if os(macOS)
+                .macReadableWidth(860)
+                #else
+                // iPad: keep the cards to a readable width, centered, instead of
+                // stretching edge to edge. An iPhone is narrower, so nothing changes there.
+                .frame(maxWidth: 800)
+                .frame(maxWidth: .infinity)
+                #endif
             }
             .background(DS.Palette.pageBackground)
             .navigationTitle("My Journey")
             .navigationBarTitleDisplayMode(.large)
+            #if !os(macOS)
+            // On the Mac this is its own window, closed with the window's close button
             .toolbar {
-                ToolbarItem(placement: .closeSheet) {
+                ToolbarItem(placement: .confirmationAction) {
                     Button("Done") { dismiss() }
                         .fontWeight(.semibold)
                 }
             }
+            // Brand orange for Done, like the app's other modals (it was black)
+            .tint(isHighContrast ? .primary : DS.Palette.accent)
+            #endif
         }
     }
 
@@ -166,7 +180,20 @@ struct MyJourneyView: View {
 
     // One column at accessibility sizes so labels don't break mid-word
     private var statColumns: [GridItem] {
-        let count = dynamicTypeSize.isAccessibilitySize ? 1 : 2
+        #if os(macOS)
+        // A Mac window has room for all four stats in one row
+        let count = 4
+        #else
+        let count: Int
+        if dynamicTypeSize.isAccessibilitySize {
+            count = 1
+        } else if horizontalSizeClass == .regular {
+            // iPad has room for all four stats in one row, like the Mac
+            count = 4
+        } else {
+            count = 2
+        }
+        #endif
         return Array(repeating: GridItem(.flexible(), spacing: DS.Space.m), count: count)
     }
 

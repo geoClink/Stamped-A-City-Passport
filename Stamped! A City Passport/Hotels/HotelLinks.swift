@@ -40,6 +40,19 @@ enum HotelPartner {
     /// code the Creator Hub's Search widgets page generates (data-camref). Set
     /// `affiliateID` to this when `provider` is `.expedia`.
     static let expediaCamref = "1110lStp6"
+
+    /// Vrbo USA's Partnerize camref (Creator Hub → Search widgets → vrbo.com, 30 Oct 2026).
+    /// A separate campaign from Expedia's, so it has its own code. nil hides the Vrbo button.
+    static let vrboCamref: String? = "1100l6yuA7"
+
+    /// Our CJ publisher ID (PID), for the "Compare on Booking.com" button shown next to the
+    /// Expedia one. Booking.com approved the app through CJ on 2 Nov 2026. nil hides the button.
+    static let bookingAffiliateID: String? = "101916315"
+
+    /// The Booking.com North America ad on CJ that our links go through: "Accommodation
+    /// Banners - V1", one that allows deep links. Checked 2 Nov 2026: a hotel search sent
+    /// through it lands on the same search with Booking's CJ tracking (aid, utm_source=affnetcj).
+    static let bookingCJAdID = "17370148"
 }
 
 /// How a provider's affiliate links carry the affiliate ID.
@@ -51,6 +64,9 @@ enum AffiliateTracking: Equatable {
     /// Checked 29 Oct 2026: it lands on the same Expedia search with the affiliate's
     /// tracking (affcid, clickref) added.
     case partnerize
+    /// The search link is wrapped in a CJ deep link through one of the advertiser's ads:
+    /// https://www.tkqlhce.com/click-<publisher ID>-<ad ID>?url=<encoded search link>.
+    case cj(adID: String)
 }
 
 /// The hotel sites Stamped can link to.
@@ -82,10 +98,8 @@ enum HotelProvider: String, CaseIterable, Identifiable {
     var affiliateTracking: AffiliateTracking? {
         switch self {
         case .booking:
-            // Booking.com affiliate links carry the affiliate ID as "aid"
-            // (e.g. https://www.booking.com/?aid=XXXXXXX). Booking now signs affiliates up
-            // through CJ, so double-check against a link CJ generates once approved.
-            .queryParameter("aid")
+            // Booking.com's affiliate program runs through CJ, so its links are CJ deep links
+            .cj(adID: HotelPartner.bookingCJAdID)
         case .expedia:
             .partnerize
         case .hotelsCom:
@@ -125,14 +139,19 @@ struct HotelSearch: Hashable {
                   checkIn: checkIn, checkOut: checkOut)
     }
 
+    // The Vision Pro app shares this file but not the city list (CityLocation),
+    // so it builds its searches from a name and a coordinate instead.
+    #if !os(visionOS)
     /// Hotels for a Stamped city or campus.
     init(city: CityLocation.City, checkIn: Date? = nil, checkOut: Date? = nil) {
         self.init(destination: city.hotelSearchName,
                   latitude: city.coordinate.lat, longitude: city.coordinate.lon,
                   checkIn: checkIn, checkOut: checkOut)
     }
+    #endif
 }
 
+#if !os(visionOS)
 extension CityLocation.City {
     /// The search-box text for hotels here. A campus name works on its own (the sites
     /// know "Duke University" as a landmark; adding "Durham, NC" made Booking.com match a
@@ -146,6 +165,7 @@ extension CityLocation.City {
         return "\(cityName), \(country.rawValue)"
     }
 }
+#endif
 
 // MARK: - URL building
 
@@ -156,14 +176,19 @@ struct HotelLinkBuilder {
     /// device's calendar (local midnight), so the same calendar turns them back into the
     /// same day numbers; converting to the destination's time zone could shift a day.
     var calendar: Calendar
+    /// Labels tracked clicks in the partner's reports (Partnerize "pubref", CJ "sid"), e.g.
+    /// "vision" for the Vision Pro app. nil (the iPhone, iPad and Mac app) adds nothing.
+    var clickLabel: String?
 
     /// The app's configuration. Tests pass their own provider and ID instead.
     init(provider: HotelProvider = HotelPartner.provider,
          affiliateID: String? = HotelPartner.affiliateID,
-         calendar: Calendar = HotelLinkBuilder.defaultCalendar) {
+         calendar: Calendar = HotelLinkBuilder.defaultCalendar,
+         clickLabel: String? = nil) {
         self.provider = provider
         self.affiliateID = affiliateID
         self.calendar = calendar
+        self.clickLabel = clickLabel
     }
 
     /// Gregorian, so "2026-11-10" is right even when the phone uses another calendar.
@@ -208,7 +233,8 @@ struct HotelLinkBuilder {
 
     /// The provider's public search URL for `search`.
     ///
-    /// Booking.com:  searchresults.html?ss=<text>&latitude=<lat>&longitude=<lon>&checkin=yyyy-MM-dd&checkout=yyyy-MM-dd[&aid=<id>]
+    /// Booking.com:  searchresults.html?ss=<text>&latitude=<lat>&longitude=<lon>&checkin=yyyy-MM-dd&checkout=yyyy-MM-dd
+    /// With a CJ publisher ID, that search link is wrapped in a CJ deep link.
     /// Expedia / Hotels.com:  Hotel-Search?destination=<text>&latLong=<lat>,<lon>&startDate=yyyy-MM-dd&endDate=yyyy-MM-dd
     /// With an Expedia camref, that search link is wrapped in a Partnerize click link.
     func url(for search: HotelSearch) -> URL? {
@@ -250,9 +276,27 @@ struct HotelLinkBuilder {
         let searchLink = "\(provider.searchEndpoint)?\(query)"
 
         if let id, provider.affiliateTracking == .partnerize {
-            return URL(string: "https://prf.hn/click/camref:\(Self.encode(id))/destination:\(Self.encode(searchLink))")
+            return Self.partnerizeURL(camref: id, clickLabel: clickLabel, destination: searchLink)
+        }
+        if let id, case .cj(let adID) = provider.affiliateTracking {
+            // CJ reads "sid" as the click's label; "url" stays last
+            let sid = Self.trimmedLabel(clickLabel).map { "sid=\(Self.encode($0))&" } ?? ""
+            return URL(string: "https://www.tkqlhce.com/click-\(Self.encode(id))-\(Self.encode(adID))?\(sid)url=\(Self.encode(searchLink))")
         }
         return URL(string: searchLink)
+    }
+
+    /// A Partnerize click link around `destination`:
+    /// https://prf.hn/click/camref:<id>[/pubref:<label>]/destination:<encoded link>
+    static func partnerizeURL(camref: String, clickLabel: String?, destination: String) -> URL? {
+        let pubref = trimmedLabel(clickLabel).map { "/pubref:\(encode($0))" } ?? ""
+        return URL(string: "https://prf.hn/click/camref:\(encode(camref))\(pubref)/destination:\(encode(destination))")
+    }
+
+    /// The label without spaces around it, or nil when there isn't one.
+    private static func trimmedLabel(_ label: String?) -> String? {
+        guard let label = label?.trimmingCharacters(in: .whitespacesAndNewlines), !label.isEmpty else { return nil }
+        return label
     }
 
     /// Five decimals is about a metre, plenty for "hotels near here".
@@ -323,6 +367,86 @@ struct FindHotelsButton: View {
                     HotelCommissionNote()
                 }
             }
+            .inAppBrowser(item: $browserLink)
+        }
+    }
+}
+
+// MARK: - Vrbo
+
+/// Vacation rentals on Vrbo for the same place and dates as a hotel search, wrapped in Vrbo's
+/// Partnerize click link (checked 30 Oct 2026: it lands on Vrbo's search with the camref).
+///
+/// https://prf.hn/click/camref:<id>/destination:<https://www.vrbo.com/search?destination=…&startDate=…&endDate=…>
+struct VrboLinkBuilder {
+    var camref: String? = HotelPartner.vrboCamref
+    var hotelLinks = HotelLinkBuilder()
+    /// Partnerize "pubref" label, e.g. "vision" for the Vision Pro app; nil adds nothing.
+    var clickLabel: String? = nil
+
+    func url(for search: HotelSearch) -> URL? {
+        guard let camref = camref?.trimmingCharacters(in: .whitespacesAndNewlines), !camref.isEmpty else { return nil }
+        let destination = search.destination.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !destination.isEmpty else { return nil }
+        var items = [("destination", destination)]
+        if let dates = hotelLinks.stayDates(for: search) {
+            items.append(("startDate", dates.checkIn))
+            items.append(("endDate", dates.checkOut))
+        }
+        let query = items.map { "\(HotelLinkBuilder.encode($0.0))=\(HotelLinkBuilder.encode($0.1))" }.joined(separator: "&")
+        let searchLink = "https://www.vrbo.com/search?\(query)"
+        return HotelLinkBuilder.partnerizeURL(camref: camref, clickLabel: clickLabel, destination: searchLink)
+    }
+}
+
+/// "Vacation Rentals on Vrbo": a smaller link next to Find Hotels, for families and groups
+/// who'd rather have a whole place. Hidden when no Vrbo camref is set.
+struct VrboButton: View {
+    let search: HotelSearch
+    /// true: the in-app browser; false: hand the link to the system (Safari or the Vrbo app)
+    var opensInApp = true
+
+    private let builder = VrboLinkBuilder()
+    @State private var browserLink: BrowserLink?
+    @Environment(\.openURL) private var openURL
+
+    var body: some View {
+        if let url = builder.url(for: search) {
+            Button {
+                if opensInApp { browserLink = BrowserLink(url: url) } else { openURL(url) }
+            } label: {
+                Label(NSLocalizedString("Vacation Rentals on Vrbo", comment: "Hotel links: opens Vrbo's vacation rental search for the same place and dates"),
+                      systemImage: "house.fill")
+            }
+            .accessibilityHint(NSLocalizedString("Opens Vrbo. Stamped! doesn't handle bookings or payments.", comment: "Vrbo button, VoiceOver hint"))
+            .inAppBrowser(item: $browserLink)
+        }
+    }
+}
+
+// MARK: - Booking.com
+
+/// "Compare on Booking.com": a second hotel site next to the main (Expedia) button, so people
+/// can pick the one they like. Same place and dates. Hidden until Booking.com's ID is set.
+struct BookingButton: View {
+    let search: HotelSearch
+    /// true: the in-app browser; false: hand the link to the system (Safari or the Booking.com app)
+    var opensInApp = true
+
+    private let builder = HotelLinkBuilder(provider: .booking, affiliateID: HotelPartner.bookingAffiliateID)
+    @State private var browserLink: BrowserLink?
+    @Environment(\.openURL) private var openURL
+
+    var body: some View {
+        // Only with an affiliate ID: an untracked link would send people away for nothing
+        if builder.earnsCommission, let url = builder.url(for: search) {
+            Button {
+                if opensInApp { browserLink = BrowserLink(url: url) } else { openURL(url) }
+            } label: {
+                Label(NSLocalizedString("Compare on Booking.com", comment: "Hotel links: opens Booking.com's hotel search for the same place and dates, next to the main hotel button"),
+                      systemImage: "magnifyingglass")
+            }
+            .accessibilityHint(NSLocalizedString("Opens Booking.com. Stamped! doesn't handle bookings or payments.", comment: "Booking.com button, VoiceOver hint"))
             .inAppBrowser(item: $browserLink)
         }
     }

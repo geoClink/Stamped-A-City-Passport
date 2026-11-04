@@ -124,7 +124,8 @@ struct CityImmersiveView: View {
     // MARK: - Place city + collision + spatial audio
 
     private func placeCity(in content: RealityViewContent) async {
-        guard let url = Bundle.main.url(forResource: cityName.lowercased(), withExtension: "usdz") else {
+        // From the app bundle, or from the downloaded asset pack
+        guard let url = CityModelStore.shared.modelURL(for: cityName) else {
             print("[City] Missing \(cityName.lowercased()).usdz")
             isLoading = false
             return
@@ -384,8 +385,10 @@ struct CityImmersiveView: View {
                 }
                 Text(building.name).font(.title3.bold()).lineLimit(2)
             }
-            Text("\(String(building.yearBuilt)) · \(building.buildingStyle)")
-                .font(.subheadline).foregroundStyle(.secondary)
+            if let subtitle = building.styleAndYear {
+                Text(subtitle)
+                    .font(.subheadline).foregroundStyle(.secondary)
+            }
             Text(building.address)
                 .font(.caption).foregroundStyle(.tertiary)
             if !building.description.isEmpty {

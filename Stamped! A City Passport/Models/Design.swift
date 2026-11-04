@@ -76,6 +76,47 @@ extension View {
     func dsPageMargin() -> some View {
         padding(.horizontal, DS.Space.page)
     }
+
+    /// A solid bar behind the status bar and the top buttons once the page scrolls under them.
+    /// Put it on the page's ScrollView.
+    func dsSolidTopScrollEdge() -> some View {
+        modifier(DSSolidTopScrollEdge())
+    }
+
+    /// A big sheet on iPad, for a sheet that holds a whole page, a map or a picture.
+    /// A plain iPad sheet is a small centered window; `.page` makes it nearly fill the screen.
+    /// On iPhone a sheet already fills the screen, so nothing changes there.
+    /// Put it on the sheet's content. The Mac and Vision Pro keep their own sheet sizes.
+    func dsLargeSheet() -> some View {
+        #if os(iOS)
+        presentationSizing(.page)
+        #else
+        self
+        #endif
+    }
+}
+
+/// iOS 26's default "soft" scroll edge only fades content a little, so text stayed readable
+/// under the clock and the floating buttons. The "hard" edge draws a solid bar, but it also
+/// shows while the page is at rest, so we switch to it only after the page has scrolled.
+/// Before iOS 26 the navigation bar already turns solid on scroll, so nothing changes there.
+struct DSSolidTopScrollEdge: ViewModifier {
+    @State private var isScrolled = false
+
+    func body(content: Content) -> some View {
+        if #available(iOS 26.0, macOS 26.0, *) {
+            content
+                .onScrollGeometryChange(for: Bool.self) { geometry in
+                    // True once the content has moved up from its resting spot
+                    geometry.contentOffset.y + geometry.contentInsets.top > 1
+                } action: { _, scrolled in
+                    isScrolled = scrolled
+                }
+                .scrollEdgeEffectStyle(isScrolled ? .hard : .soft, for: .top)
+        } else {
+            content
+        }
+    }
 }
 
 // MARK: - Section header
@@ -93,6 +134,8 @@ struct DSSectionHeader<Trailing: View>: View {
             if let systemImage {
                 Image(systemName: systemImage)
                     .foregroundStyle(isHighContrast ? Color.primary : DS.Palette.accent)
+                    // Decorative: VoiceOver reads only the title, not the symbol's name
+                    .accessibilityHidden(true)
             }
             Text(title)
                 .tracking(1.2)

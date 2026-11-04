@@ -62,6 +62,8 @@ struct MyTripsView: View {
             AreaSearchSheet { trip in
                 selectedTripID = trip.id
             }
+            // A search with a long list of results: a big sheet on iPad
+            .dsLargeSheet()
         }
     }
 
@@ -111,10 +113,18 @@ struct MyTripsView: View {
         }
         .navigationTitle("My Trips")
         .navigationBarTitleDisplayMode(.inline)
+        #if os(macOS)
+        // The Mac's default sidebar is too narrow for trip names and their days and stops
+        .navigationSplitViewColumnWidth(min: 280, ideal: 320, max: 440)
+        #endif
         .toolbar {
-            ToolbarItem(placement: .cancellationAction) {
+            #if !os(macOS)
+            // On the Mac My Trips is its own window, closed with the window's close button
+            // Trailing, like the other modals' Done buttons
+            ToolbarItem(placement: .confirmationAction) {
                 Button("Done") { dismiss() }
             }
+            #endif
             ToolbarItem(placement: .primaryAction) {
                 Button {
                     showingAreaSearch = true

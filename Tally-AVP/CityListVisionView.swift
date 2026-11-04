@@ -13,6 +13,7 @@ struct CityListVisionView: View {
     private let store = VisionStore.shared
     @State private var selectedCity: String?
     @State private var searchText = ""
+    @State private var showingTipJar = false
     @Environment(\.openWindow) private var openWindow
     /// Set by the globe's "Show in Main Window" button (see GlobeVolumeView).
     @AppStorage("globeRequestedCity") private var globeRequestedCity = ""
@@ -41,6 +42,11 @@ struct CityListVisionView: View {
                         openWindow(id: "globe")
                     }
                 }
+                ToolbarItem {
+                    Button("Support Stamped!", systemImage: "heart") {
+                        showingTipJar = true
+                    }
+                }
             }
         } detail: {
             if let city = selectedCity {
@@ -53,6 +59,18 @@ struct CityListVisionView: View {
                     description: Text("Fly through \(store.cityNames.count) cities in 3D and explore their landmarks.")
                 )
             }
+        }
+        .sheet(isPresented: $showingTipJar) {
+            NavigationStack {
+                TipJarView()
+                    .toolbar {
+                        ToolbarItem(placement: .confirmationAction) {
+                            Button("Done") { showingTipJar = false }
+                        }
+                    }
+            }
+            .tint(.orange)
+            .frame(minWidth: 560, minHeight: 640)
         }
         .onAppear {
             if selectedCity == nil { selectedCity = store.cityNames.contains("New York") ? "New York" : store.cityNames.first }

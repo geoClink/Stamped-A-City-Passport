@@ -17,9 +17,10 @@ struct SettingsView: View {
     @State private var showingFirstAlert = false
     @State private var showingFinalAlert = false
     @State private var selectedTab: SettingsTab? = .experience
+    @ObservedObject private var offline = OfflineDownloader.shared
 
     enum SettingsTab: Hashable {
-        case experience, danger
+        case experience, offline, support, danger
     }
 
     var body: some View {
@@ -41,7 +42,9 @@ private extension SettingsView {
         NavigationStack {
             List {
                 experienceSection
+                offlineSection
                 feedbackSection
+                supportSection
                 dangerZoneSection
             }
             .navigationTitle(L.Settings.title)
@@ -58,20 +61,14 @@ private extension SettingsView {
         }
     }
 
-    /// Top-left on iPad. A Mac sheet doesn't show the leading spot, so there it goes with the sheet's buttons.
-    static var backButtonPlacement: ToolbarItemPlacement {
-        #if os(macOS)
-        .confirmationAction
-        #else
-        .navigationBarLeading
-        #endif
-    }
-
     var ipadLayout: some View {
         NavigationSplitView {
             List(selection: $selectedTab) {
-                Section(L.Settings.title) {
+                // No header here: the navigation title already says "Settings"
+                Section {
                     Label(L.Settings.experience, systemImage: "hand.tap").tag(SettingsTab.experience)
+                    Label("Saved for Offline", systemImage: "arrow.down.circle").tag(SettingsTab.offline)
+                    Label("Support Stamped!", systemImage: "heart").tag(SettingsTab.support)
                 }
 
                 Section(L.Settings.maintenance) {
@@ -82,8 +79,10 @@ private extension SettingsView {
             }
             .navigationTitle(L.Settings.title)
             .toolbar {
-                ToolbarItem(placement: Self.backButtonPlacement) {
-                    Button(L.Settings.back) { dismiss() }
+                // "Done" on the trailing side, like the app's other full-screen modals
+                // (.confirmationAction is also where a Mac sheet puts its buttons)
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Done") { dismiss() }
                         .fontWeight(viewModel.highContrast ? .black : .bold)
                         .foregroundColor(viewModel.highContrast ? .primary : DS.Palette.accent)
                 }
@@ -91,18 +90,42 @@ private extension SettingsView {
         } detail: {
             detailView
         }
+        // Tinting the whole split view (not just one section) makes the
+        // selected sidebar row brand orange instead of system blue
+        .tint(viewModel.highContrast ? .primary : viewModel.brandColor)
+    }
+
+    private var detailTitle: String {
+        switch selectedTab {
+        case .danger: return L.Settings.resetProgress
+        case .offline: return NSLocalizedString("Saved for Offline", comment: "Settings: list of cities saved for offline use")
+        case .support: return NSLocalizedString("Support Stamped!", comment: "Settings: tip jar")
+        default: return L.Settings.experience
+        }
     }
 
     @ViewBuilder
     private var detailView: some View {
+        if selectedTab == .support {
+            // The tip jar has its own scrolling layout (not a Form) and its own title
+            TipJarView()
+                .tint(viewModel.highContrast ? .primary : viewModel.brandColor)
+        } else {
+            settingsForm
+        }
+    }
+
+    private var settingsForm: some View {
         Form {
             switch selectedTab {
             case .experience: experienceSection
+            case .offline: offlineSection
             case .danger: dangerZoneSection
+            case .support: EmptyView()   // shown by detailView instead
             case .none: Text(L.Settings.selectSetting).foregroundColor(.secondary)
             }
         }
-        .navigationTitle(selectedTab == .danger ? L.Settings.resetProgress : L.Settings.experience)
+        .navigationTitle(detailTitle)
     }
 }
 
@@ -206,6 +229,40 @@ private extension SettingsView {
         .tint(viewModel.highContrast ? .primary : viewModel.brandColor)
     }
 
+    /// Cities saved with "Save for Offline" on their page, with their size and Remove
+    var offlineSection: some View {
+        Section {
+            if offline.savedCities.isEmpty {
+                Text("No cities saved yet. Open a city or campus and tap Save for Offline in its Plan tab.")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                    .padding(.vertical, DS.Space.xs)
+            } else {
+                ForEach(offline.savedCities) { record in
+                    rowLayout {
+                        Label {
+                            rowText(title: Text(record.cityName), subtitle: Text(OfflineSaveSection.detail(for: record)))
+                        } icon: {
+                            rowIcon("checkmark.circle.fill")
+                        }
+                        Spacer(minLength: 0)
+                        Button("Remove", role: .destructive) {
+                            offline.remove(cityID: record.cityID)
+                        }
+                        .buttonStyle(.borderless)
+                        .foregroundColor(viewModel.highContrast ? .primary : .red)
+                        .accessibilityLabel(Text(String(format: NSLocalizedString("Remove %@", comment: "Settings, Saved for Offline: VoiceOver label for removing a city's offline copy"), record.cityName)))
+                    }
+                    .padding(.vertical, DS.Space.xs)
+                }
+            }
+        } header: {
+            Text("Saved for Offline").fontWeight(viewModel.highContrast ? .bold : .regular)
+        } footer: {
+            Text("Maps aren't saved. For an offline map, download the area in Apple Maps (Offline Maps).")
+        }
+    }
+
     var feedbackSection: some View {
         Section(
             header: Text("Feedback & Support").fontWeight(viewModel.highContrast ? .bold : .regular),
@@ -233,6 +290,23 @@ private extension SettingsView {
                 body: "",
                 isSuggestion: false
             )
+        }
+    }
+
+    /// iPhone: opens the tip jar (iPad and Mac show it from the sidebar instead)
+    var supportSection: some View {
+        Section {
+            NavigationLink {
+                TipJarView()
+                    .tint(viewModel.highContrast ? .primary : viewModel.brandColor)
+            } label: {
+                Label {
+                    rowText(title: Text("Support Stamped!"), subtitle: Text("Tips help keep new cities coming"))
+                } icon: {
+                    rowIcon("heart.fill")
+                }
+                .padding(.vertical, DS.Space.xs)
+            }
         }
     }
 

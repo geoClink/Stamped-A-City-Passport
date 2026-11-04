@@ -57,7 +57,7 @@ struct CityStampDetailView: View {
                         ? AnyLayout(VStackLayout(spacing: DS.Space.m))
                         : AnyLayout(HStackLayout(spacing: DS.Space.l))
                     buttons {
-                        ShareLink(item: "I just unlocked the \(city.name) Architecture Stamp! 🏛️") {
+                        CityStampShareButton(city: city) {
                             Label("Share Achievement", systemImage: "square.and.arrow.up")
                                 .font(.headline)
                                 .padding(DS.Space.l)

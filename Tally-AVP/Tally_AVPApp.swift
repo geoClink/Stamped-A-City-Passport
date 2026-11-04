@@ -9,6 +9,12 @@ import SwiftUI
 struct Tally_AVPApp: App {
 
     @State private var immersionStyle: ImmersionStyle = .mixed
+    @State private var panoramaImmersionStyle: ImmersionStyle = .full
+
+    init() {
+        // Finish any tip that completed while the app was closed (or after Ask to Buy)
+        TipJarStore.shared.listenForTransactions()
+    }
 
     var body: some Scene {
 
@@ -39,5 +45,14 @@ struct Tally_AVPApp: App {
             CityImmersiveView()
         }
         .immersionStyle(selection: $immersionStyle, in: .mixed)
+
+        // ── 360° landmark photo: opened from a landmark card's "360° View" ────
+        // Receives the building ID. Full immersion: the photo surrounds you.
+        ImmersiveSpace(id: PanoramaImmersiveView.spaceID, for: String.self) { $buildingID in
+            if let buildingID {
+                PanoramaImmersiveView(buildingID: buildingID)
+            }
+        }
+        .immersionStyle(selection: $panoramaImmersionStyle, in: .full)
     }
 }

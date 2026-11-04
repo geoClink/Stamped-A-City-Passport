@@ -310,7 +310,9 @@ struct CityMapView: View {
         }
         .sheet(isPresented: $showingAddPlace) {
             if let center = cityCenter {
+                // A search with a long list of results: a big sheet on iPad
                 AddPlaceSheet(cityName: cityName, cityCenter: center)
+                    .dsLargeSheet()
             }
         }
         .fullScreenCover(isPresented: $showingLookAround) {

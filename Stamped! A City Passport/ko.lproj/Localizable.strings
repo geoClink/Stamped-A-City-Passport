@@ -246,7 +246,7 @@
 "settings.testMotion" = "테스트 모션";
 "settings.testSound" = "테스트 사운드";
 "settings.resetAllContent" = "모든 콘텐츠 재설정";
-"settings.version" = "버전 1.0(빌드 2026)";
+"settings.version" = "버전 %1$@(빌드 %2$@)";
 "settings.reset.firstAlert.title" = "모든 진행 상황을 재설정하시겠습니까?";
 "settings.reset.firstAlert.message" = "방문한 건물, 여권 스탬프, 퀴즈 점수를 닦아냅니다.";
 "settings.reset.firstAlert.continue" = "계속하다";
@@ -759,3 +759,92 @@
 
 /* Game Day: a game whose start time isn't announced yet */
 "Time TBA" = "시간 미정";
+
+/* Audio story on a landmark page */
+"Listen" = "듣기";
+"Reads this landmark's story aloud in English" = "이 랜드마크의 이야기를 영어로 읽어 줍니다";
+
+/* Vrbo and Viator links */
+"Vacation Rentals on Vrbo" = "Vrbo에서 휴가용 숙소";
+"Opens Vrbo. Stamped! doesn't handle bookings or payments." = "Vrbo를 엽니다. Stamped!는 예약이나 결제를 처리하지 않습니다.";
+"More tours on Viator" = "Viator에서 더 많은 투어";
+"Opens Viator. Stamped! doesn't handle bookings or payments." = "Viator를 엽니다. Stamped!는 예약이나 결제를 처리하지 않습니다.";
+
+/* Save for Offline: city page card and Settings list */
+"Offline Use" = "오프라인 사용";
+"Save the landmark photos and Wikipedia text to use without a connection, like on a flight." = "명소 사진과 위키백과 설명을 저장해 비행기 안처럼 연결이 없는 곳에서도 사용하세요.";
+"Save for Offline" = "오프라인용으로 저장";
+"Downloads photos and text for %d landmarks." = "명소 %d곳의 사진과 설명을 다운로드합니다.";
+"Saving %d of %d…" = "%d/%d 저장 중…";
+"Stops saving. What's saved so far is kept for next time." = "저장을 멈춥니다. 지금까지 저장한 내용은 다음을 위해 남겨 둡니다.";
+"Saved for Offline" = "오프라인용으로 저장됨";
+"%1$@, saved %2$@" = "%1$@, %2$@에 저장";
+"Remove Offline Copy" = "오프라인 사본 제거";
+"Deletes the saved photos and text from this device." = "저장한 사진과 설명을 이 기기에서 삭제합니다.";
+"Remove the offline copy of %@?" = "%@의 오프라인 사본을 제거할까요?";
+"Remove" = "제거";
+"Couldn't finish saving. Check your connection and try again; what's saved so far is kept." = "저장을 완료하지 못했습니다. 연결을 확인한 후 다시 시도하세요. 지금까지 저장한 내용은 유지됩니다.";
+"Low Data Mode is on. Turn it off in Settings to save photos." = "저데이터 모드가 켜져 있습니다. 사진을 저장하려면 설정에서 끄세요.";
+"Couldn't save to this device. Check that there's free storage." = "이 기기에 저장할 수 없습니다. 여유 공간이 있는지 확인하세요.";
+"Maps, weather, events and photo galleries still need a connection. For an offline map, download this area in Apple Maps (Offline Maps)." = "지도, 날씨, 이벤트, 사진 갤러리는 여전히 연결이 필요합니다. 오프라인 지도가 필요하면 Apple 지도에서 이 지역을 다운로드하세요(오프라인 지도).";
+"No cities saved yet. Open a city or campus and tap Save for Offline in its Plan tab." = "아직 저장한 도시가 없습니다. 도시나 캠퍼스를 열고 계획 탭에서 오프라인용으로 저장을 탭하세요.";
+"Remove %@" = "%@ 제거";
+"Maps aren't saved. For an offline map, download the area in Apple Maps (Offline Maps)." = "지도는 저장되지 않습니다. 오프라인 지도가 필요하면 Apple 지도에서 지역을 다운로드하세요(오프라인 지도).";
+
+/* Booking.com button next to the main hotel button */
+"Compare on Booking.com" = "Booking.com에서 비교";
+"Opens Booking.com. Stamped! doesn't handle bookings or payments." = "Booking.com을 엽니다. Stamped!는 예약이나 결제를 처리하지 않습니다.";
+
+/* Text sent with a shared passport picture; %@ is the App Store link */
+"My Stamped! passport. Get the app: %@" = "나의 Stamped! 여권. 앱 받기: %@";
+
+/* City stamp share picture; %1$d is landmarks visited, %2$d is landmarks in the city */
+
+/* Text sent with a shared city stamp picture; %1$@ is the city, %2$@ is the App Store link */
+"I just unlocked the %1$@ stamp on Stamped! 🏛️ Get the app: %2$@" = "Stamped!에서 %1$@ 스탬프를 획득했어요! 🏛️ 앱 받기: %2$@";
+
+/* Audio story: tip when only the basic voice is installed */
+"Got it" = "확인";
+"For a more natural voice, download a Premium English voice in Settings > Accessibility > Read & Speak > Voices." = "더 자연스러운 음성을 원하면 설정 > 손쉬운 사용 > 읽기 및 말하기 > 음성에서 영어 프리미엄 음성을 다운로드하세요.";
+"For a more natural voice, download a Premium English voice in System Settings > Accessibility > Spoken Content > System Voice > Manage Voices." = "더 자연스러운 음성을 원하면 시스템 설정 > 손쉬운 사용 > 말하기 콘텐츠 > 시스템 음성 > 음성 관리에서 영어 프리미엄 음성을 다운로드하세요.";
+/* Tip jar (Support Stamped!) */
+"Support Stamped!" = "Stamped! 후원하기";
+"Tips help keep new cities coming" = "팁은 새로운 도시 추가에 힘이 됩니다";
+"Hi, I'm George! I make Stamped! on my own as an indie developer. The app is free, and tips help me keep adding new cities and landmarks." = "안녕하세요, George입니다! Stamped!는 인디 개발자인 제가 혼자 만들고 있어요. 앱은 무료이며, 팁은 새로운 도시와 랜드마크를 계속 추가하는 데 도움이 됩니다.";
+"Tips are just a thank-you. They don't unlock anything, and everything in the app stays free." = "팁은 감사의 표시일 뿐이에요. 잠금 해제되는 기능은 없으며, 앱의 모든 기능은 계속 무료입니다.";
+"Small Tip" = "작은 팁";
+"Medium Tip" = "중간 팁";
+"Large Tip" = "큰 팁";
+"Loading tips…" = "팁 불러오는 중…";
+"Tips aren't available right now" = "지금은 팁을 이용할 수 없습니다";
+"Please check your connection and try again later." = "연결 상태를 확인한 후 나중에 다시 시도해 주세요.";
+"Try Again" = "다시 시도";
+"Thank you!" = "감사합니다!";
+"Your tip means a lot. It helps bring the next city to Stamped!" = "보내주신 팁은 큰 힘이 됩니다. 다음 도시를 Stamped!에 추가하는 데 쓰일 거예요.";
+"Waiting for approval" = "승인 대기 중";
+"Your tip will go through once a family organizer approves it." = "가족 관리자가 승인하면 팁이 결제됩니다.";
+"No worries, the tip was cancelled. You weren't charged." = "괜찮아요. 팁이 취소되었으며 요금은 청구되지 않았습니다.";
+"That tip didn't go through. Please try again." = "팁이 결제되지 않았습니다. 다시 시도해 주세요.";
+"Payments go through your Apple Account. Tips are one-time and don't renew." = "결제는 Apple 계정을 통해 이루어집니다. 팁은 일회성이며 갱신되지 않습니다.";
+
+/* Siri and Shortcuts actions (Intents/StampedShortcuts.swift) */
+"City or Campus" = "도시 또는 캠퍼스";
+"Campus" = "캠퍼스";
+"City" = "도시";
+"Open My Passport" = "내 여권 열기";
+"Opens your passport of collected stamps in Stamped!." = "Stamped!에서 모은 스탬프가 담긴 여권을 엽니다.";
+"Open a City" = "도시 열기";
+"Opens a city or campus page in Stamped!." = "Stamped!에서 도시 또는 캠퍼스 페이지를 엽니다.";
+"Which city or campus?" = "어느 도시 또는 캠퍼스인가요?";
+"Open ${city}" = "${city} 열기";
+
+/* Accessibility on a landmark's page: step-free access from OpenStreetMap */
+"Accessibility" = "접근성";
+"Step-free access" = "계단 없는 출입";
+"Accessible toilets" = "장애인 화장실";
+"Yes" = "예";
+"Partly" = "일부";
+"No" = "아니요";
+"Mapped by OpenStreetMap volunteers and may be out of date. Check with the venue before you go." = "OpenStreetMap 자원봉사자가 입력한 정보로, 최신이 아닐 수 있습니다. 방문 전에 장소에 확인하세요.";
+"View on OpenStreetMap" = "OpenStreetMap에서 보기";
+"Opens this place on openstreetmap.org" = "openstreetmap.org에서 이 장소를 엽니다";

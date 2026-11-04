@@ -110,6 +110,10 @@ struct TripDetailView: View {
                 Section {
                     FindHotelsButton(search: search, opensInApp: false)
                         .tint(DS.Palette.accent)
+                    BookingButton(search: search, opensInApp: false)
+                        .tint(DS.Palette.accent)
+                    VrboButton(search: search, opensInApp: false)
+                        .tint(DS.Palette.accent)
                 }
             }
 
@@ -151,14 +155,18 @@ struct TripDetailView: View {
         .sheet(isPresented: tourPresented(fullScreen: false)) { tourMap }
         .fullScreenCover(isPresented: tourPresented(fullScreen: true)) { tourMap }
         .sheet(item: $addingToDay) { day in
-            if let viewModel {
-                AddTripStopSheet(city: viewModel.city, tripID: trip.id, dayID: day.id)
-            } else if trip.isRoadTrip, let campus = roadTripCity(ofDay: day.id, in: trip) {
-                // A road trip day adds from its own campus's landmarks
-                AddTripStopSheet(city: campus, tripID: trip.id, dayID: day.id)
-            } else {
-                AnywhereStopSheet(trip: trip, dayID: day.id)
+            Group {
+                if let viewModel {
+                    AddTripStopSheet(city: viewModel.city, tripID: trip.id, dayID: day.id)
+                } else if trip.isRoadTrip, let campus = roadTripCity(ofDay: day.id, in: trip) {
+                    // A road trip day adds from its own campus's landmarks
+                    AddTripStopSheet(city: campus, tripID: trip.id, dayID: day.id)
+                } else {
+                    AnywhereStopSheet(trip: trip, dayID: day.id)
+                }
             }
+            // A long list of landmarks or a place search: a big sheet on iPad
+            .dsLargeSheet()
         }
         .confirmationDialog(
             "Move \(movingStop?.name ?? "stop") to…",

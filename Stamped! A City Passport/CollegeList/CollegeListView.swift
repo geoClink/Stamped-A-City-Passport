@@ -9,6 +9,7 @@
 //  then opens in My Trips.
 //
 //  Present it as a sheet; it has its own NavigationStack and Done button.
+//  On the Mac it is its own window instead (MacPanelWindows), with no Done button.
 //
 
 import SwiftUI
@@ -22,6 +23,9 @@ struct CollegeListView: View {
     @ObservedObject private var progress = GlobalProgressManager.shared
     @Environment(\.dismiss) private var dismiss
     @Environment(\.horizontalSizeClass) private var sizeClass
+    #if os(macOS)
+    @Environment(\.openWindow) private var openWindow
+    #endif
     @AppStorage("high_contrast_mode") private var isHighContrast = false
 
     @State private var showingRoadTripPlanner = false
@@ -60,9 +64,12 @@ struct CollegeListView: View {
             .navigationTitle(NSLocalizedString("My College List", comment: "College list: screen title"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
+                #if !os(macOS)
+                // On the Mac the list is its own window, closed with the window's close button
                 ToolbarItem(placement: .cancellationAction) {
                     Button(NSLocalizedString("Done", comment: "College list: closes the screen")) { dismiss() }
                 }
+                #endif
                 if !store.isEmpty {
                     ToolbarItem(placement: .primaryAction) {
                         EditButton()
@@ -70,10 +77,8 @@ struct CollegeListView: View {
                 }
             }
             .navigationDestination(for: CityLocation.City.self) { campus in
-                ScrollView {
-                    CityDetailView(city: campus)
-                }
-                .background(DS.Palette.pageBackground)
+                // CityDetailView scrolls by itself and draws its own page background
+                CityDetailView(city: campus)
             }
         }
         .tint(DS.Palette.accent)
@@ -81,6 +86,8 @@ struct CollegeListView: View {
             CollegeRoadTripSheet(campuses: store.campuses) { trip in
                 createdTripID = trip.id
             }
+            // A planner with a list of schools: a big sheet on iPad, not the small default one
+            .dsLargeSheet()
         }
         // Like the city list's My Trips: a sheet on iPhone, full screen on iPad
         .sheet(item: openTripBinding(fullScreen: false)) { MyTripsView(initialTripID: $0.id) }
@@ -150,7 +157,12 @@ struct CollegeListView: View {
     private func openCreatedTrip() {
         guard let createdTripID else { return }
         self.createdTripID = nil
+        #if os(macOS)
+        // Mac: the new trip opens in a My Trips window
+        openWindow(id: MacWindowID.myTrips, value: MyTripsWindowValue(tripID: createdTripID))
+        #else
         openTrip = OpenTrip(id: createdTripID)
+        #endif
     }
 
     private func openTripBinding(fullScreen: Bool) -> Binding<OpenTrip?> {

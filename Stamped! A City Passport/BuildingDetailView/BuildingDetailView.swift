@@ -140,9 +140,13 @@ struct BuildingDetailView: View {
         }
         .sheet(isPresented: $showingModelViewer) {
             if let url = localModelURL {
+                // A 3D model you turn with a drag: a big sheet on iPad gives it room
                 BuildingModelViewer(modelURL: url, buildingName: building.name)
+                    .dsLargeSheet()
             }
         }
+        // The story stops when you leave the landmark, so it never keeps talking on another page
+        .onDisappear { AudioStoryPlayer.shared.stop() }
         .task(id: building.id) {
             async let venues: () = fetchNearbyVenues()
             async let lookAround: () = fetchLookAroundScene()
@@ -421,6 +425,8 @@ extension BuildingDetailView {
                 BuildingNoteField(buildingID: building.id, noteText: $noteText, isHighContrast: isHighContrast)
             }
             aboutSection
+            // Step-free access from OpenStreetMap; hidden when OSM doesn't say
+            LandmarkAccessibilitySection(building: building, isHighContrast: isHighContrast)
             BuildingPhotoGallery(building: building, isHighContrast: isHighContrast)
             // US landmarks only; hidden when the Library of Congress has nothing for it
             HistoricPhotosSection(building: building, city: viewModel.city, isHighContrast: isHighContrast)
@@ -431,7 +437,8 @@ extension BuildingDetailView {
             // Food tours on GetYourGuide (cities only), styled like Tours & Tickets
             FoodToursButton(city: viewModel.city) { AnyView(secondaryButtonStyle($0, tint: brandColor)) }
                 .buttonStyle(.plain)
-            StaysNearbySection(building: building, cityName: viewModel.city.name, isHighContrast: isHighContrast)
+            StaysNearbySection(building: building, cityName: viewModel.city.name,
+                               rentalSearchName: viewModel.city.hotelSearchName, isHighContrast: isHighContrast)
             reportIssueButton
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -503,6 +510,8 @@ extension BuildingDetailView {
     var aboutSection: some View {
         VStack(alignment: .leading, spacing: DS.Space.m) {
             DSSectionHeader("building.historicalSignificance", systemImage: "book.closed", isHighContrast: isHighContrast)
+            // Hear the story read aloud, e.g. while standing in front of the building
+            ListenButton(building: building, tint: brandColor)
             Text(building.description)
                 .font(.body)
                 .lineSpacing(DS.Space.xs)

@@ -1,0 +1,1591 @@
+{
+  "ams_arcam": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "2741083668"
+  },
+  "ams_beurs_van_berlage": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "4263177293",
+    "toiletsWheelchair": "yes"
+  },
+  "ams_centraal": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "57856845"
+  },
+  "ams_nemo": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "2741083161",
+    "toiletsWheelchair": "yes"
+  },
+  "ams_rijksmuseum": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "29989787",
+    "toiletsWheelchair": "yes"
+  },
+  "ams_scheepvaartmuseum": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "1287492683"
+  },
+  "ams_westerkerk": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "99205257"
+  },
+  "at_hohensalzburg": {
+    "wheelchair": "no",
+    "osmType": "way",
+    "osmID": "58379993"
+  },
+  "athens-acropolis-museum": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "983921252",
+    "toiletsWheelchair": "yes"
+  },
+  "athens-parthenon": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "910010406"
+  },
+  "atl-02": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "40808010"
+  },
+  "atl-03": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "184803195"
+  },
+  "atl-04": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "28961738"
+  },
+  "atl-06": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "536744534"
+  },
+  "atl-07": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "208355446"
+  },
+  "atx-05": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "27397894"
+  },
+  "atx-06": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "516271467"
+  },
+  "atx-08": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "204413180"
+  },
+  "auckland-museum": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "23906678"
+  },
+  "bcn_casa_mila": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "8974896"
+  },
+  "bcn_mercado": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "31957078"
+  },
+  "bcn_pabellon": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "67917935"
+  },
+  "bcn_palau_musica": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "377216661"
+  },
+  "bcn_sagrada_familia": {
+    "wheelchair": "limited",
+    "osmType": "relation",
+    "osmID": "9194723",
+    "toiletsWheelchair": "yes"
+  },
+  "ber_chancellery": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "157390075"
+  },
+  "ber_humboldt_forum": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "8413352835",
+    "toiletsWheelchair": "yes"
+  },
+  "ber_jewish_museum": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "302942554",
+    "toiletsWheelchair": "yes"
+  },
+  "ber_kaiser_wilhelm": {
+    "wheelchair": "limited",
+    "osmType": "relation",
+    "osmID": "2198410"
+  },
+  "ber_neue_national": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "25652321"
+  },
+  "ber_reichstag": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "2201742",
+    "toiletsWheelchair": "yes"
+  },
+  "ber_tv_tower": {
+    "wheelchair": "no",
+    "osmType": "way",
+    "osmID": "556435241",
+    "toiletsWheelchair": "no"
+  },
+  "ber_unite_d_habitation": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "8080757"
+  },
+  "bilbao_azkuna_zentroa": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "96337695"
+  },
+  "bilbao_fine_arts_museum": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "28211432"
+  },
+  "bilbao_guggenheim_museum": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "118499485",
+    "toiletsWheelchair": "yes"
+  },
+  "bkk_apple_iconsiam": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "10100732387"
+  },
+  "bkk_baur_museum": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "48966995"
+  },
+  "bkk_icon_siam": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "680735864"
+  },
+  "bogota-gold-museum": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "3638090405"
+  },
+  "bos-01": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "405843558"
+  },
+  "bos-05": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "788015166"
+  },
+  "bos-12": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "29718019"
+  },
+  "br_cathedral_brasilia": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "66379902"
+  },
+  "br_japan_house": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "4896103322"
+  },
+  "br_mercadao": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "4602996",
+    "toiletsWheelchair": "yes"
+  },
+  "br_tv_tower": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "41648342"
+  },
+  "buckingham-palace": {
+    "wheelchair": "limited",
+    "osmType": "relation",
+    "osmID": "5208404"
+  },
+  "budapest-fishermans-bastion": {
+    "wheelchair": "no",
+    "osmType": "relation",
+    "osmID": "17948384"
+  },
+  "budapest-st-stephens": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "20593057"
+  },
+  "campus_berkeley_sather_gate": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "288992419"
+  },
+  "campus_brown_rockefeller_library": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "142012560"
+  },
+  "campus_caltech_beckman_auditorium": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "30086742"
+  },
+  "campus_cambridge_kings_college_chapel": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "164848633"
+  },
+  "campus_cambridge_university_library": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "166274631"
+  },
+  "campus_cmu_walking_to_the_sky": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "1704446281"
+  },
+  "campus_edinburgh_main_library": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "4308724"
+  },
+  "campus_edinburgh_old_college": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "33710"
+  },
+  "campus_edinburgh_teviot_row_house": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "5326815"
+  },
+  "campus_emory_candler_library": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "43317371"
+  },
+  "campus_emory_carlos_museum": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "51284602"
+  },
+  "campus_emory_woodruff_library": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "41169862"
+  },
+  "campus_harvard_memorial_hall": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "29530473"
+  },
+  "campus_harvard_sever_hall": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "29530656"
+  },
+  "campus_illinois_foellinger_auditorium": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "49898803"
+  },
+  "campus_indiana_lilly_library": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "174418525"
+  },
+  "campus_ku_dyche_hall": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "134806460"
+  },
+  "campus_mcgill_mclennan_library": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "19912993"
+  },
+  "campus_mcgill_redpath_hall": {
+    "wheelchair": "limited",
+    "osmType": "node",
+    "osmID": "936816434"
+  },
+  "campus_michstate_broad_art_museum": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "224318338"
+  },
+  "campus_mit_chapel": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "24562763"
+  },
+  "campus_mit_green_building": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "24493983"
+  },
+  "campus_msstate_mitchell_library": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "200661865"
+  },
+  "campus_nyu_bobst_library": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "248166208"
+  },
+  "campus_ohiostate_ohio_stadium": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "119153498"
+  },
+  "campus_olemiss_lyceum": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "187869639"
+  },
+  "campus_oxford_museum_natural_history": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "25999883"
+  },
+  "campus_oxford_radcliffe_camera": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "4884600"
+  },
+  "campus_padua_palazzo_maldura": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "131976968"
+  },
+  "campus_penn_college_hall": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "51367353"
+  },
+  "campus_penn_fisher_fine_arts_library": {
+    "wheelchair": "limited",
+    "osmType": "node",
+    "osmID": "12593090249"
+  },
+  "campus_pitt_cathedral_of_learning": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "30678664"
+  },
+  "campus_pitt_heinz_chapel": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "30678681"
+  },
+  "campus_princeton_chapel": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "27341319"
+  },
+  "campus_princeton_firestone_library": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "27341305"
+  },
+  "campus_st_andrews_st_marys_college": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "54827269",
+    "toiletsWheelchair": "yes"
+  },
+  "campus_syracuse_hendricks_chapel": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "156759756"
+  },
+  "campus_tamu_bush_library": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "52723782"
+  },
+  "campus_tulane_howard_tilton_library": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "327443277"
+  },
+  "campus_ua_smith_hall": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "235762941"
+  },
+  "campus_ubc_brock_commons": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "517623349"
+  },
+  "campus_ubc_chan_centre": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "6769649"
+  },
+  "campus_ubc_museum_of_anthropology": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "33176178"
+  },
+  "campus_ucl_cruciform_building": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "11790454"
+  },
+  "campus_ucl_senate_house": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "11948662",
+    "toiletsWheelchair": "yes"
+  },
+  "campus_ucla_powell_library": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "422876626"
+  },
+  "campus_ucla_young_research_library": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "422876535"
+  },
+  "campus_uky_memorial_hall": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "130062032"
+  },
+  "campus_umn_coffman_union": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "30056874",
+    "toiletsWheelchair": "yes"
+  },
+  "campus_umn_walter_library": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "23014165"
+  },
+  "campus_unc_bell_tower": {
+    "wheelchair": "no",
+    "osmType": "way",
+    "osmID": "44341889"
+  },
+  "campus_unc_old_east": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "44342593"
+  },
+  "campus_unimelbourne_baillieu_library": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "22871257"
+  },
+  "campus_unimelbourne_chemistry_building": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "23717106"
+  },
+  "campus_unimelbourne_john_medley_building": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "448595287"
+  },
+  "campus_unisydney_chau_chak_wing_museum": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "1079380690"
+  },
+  "campus_uofl_ekstrom_library": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "334900733"
+  },
+  "campus_uoft_hart_house": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "1989"
+  },
+  "campus_uoft_robarts_library": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "7991747"
+  },
+  "campus_uppsala_gustavianum": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "32119036"
+  },
+  "campus_utk_hodges_library": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "155024530"
+  },
+  "campus_utk_mcclung_museum": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "155024535"
+  },
+  "campus_uutah_huntsman_center": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "33633100"
+  },
+  "campus_uutah_natural_history": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "154223785"
+  },
+  "campus_uw_quad": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "253552729"
+  },
+  "campus_wayne_undergraduate_library": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "68961676"
+  },
+  "campus_wmu_miller_auditorium": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "257629401"
+  },
+  "campus_wmu_richmond_center": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "245649811"
+  },
+  "campus_yale_center_british_art": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "139753883",
+    "toiletsWheelchair": "yes"
+  },
+  "casa-loma": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "198471666"
+  },
+  "casablanca-hassan-ii": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "6002963"
+  },
+  "chandigarh_open_hand_monument": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "1431104888"
+  },
+  "charles-bridge": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "119016167"
+  },
+  "charleston_county_courthouse": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "114185100"
+  },
+  "chi-16": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "64594680"
+  },
+  "cle-01": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "10703171"
+  },
+  "cle-06": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "109114109"
+  },
+  "cn-tower": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "32742038"
+  },
+  "columbus_in_bartholomew_county_courthouse": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "279673433"
+  },
+  "cph_opera": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "1088494374"
+  },
+  "cph_round_tower": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "1011492033"
+  },
+  "cph_tivoli_nimb": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "314752241"
+  },
+  "cpq-mercado-municipal": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "147770688",
+    "toiletsWheelchair": "yes"
+  },
+  "cpq-palacio-dos-jequitibas": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "147988771"
+  },
+  "cpq-torre-do-castelo": {
+    "wheelchair": "no",
+    "osmType": "way",
+    "osmID": "331944751"
+  },
+  "crk-01": {
+    "wheelchair": "no",
+    "osmType": "way",
+    "osmID": "129462199",
+    "toiletsWheelchair": "no"
+  },
+  "crk-03": {
+    "wheelchair": "no",
+    "osmType": "node",
+    "osmID": "461963319"
+  },
+  "crk-10": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "2397506394"
+  },
+  "dancing-house": {
+    "wheelchair": "no",
+    "osmType": "relation",
+    "osmID": "6751056"
+  },
+  "dc-01": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "66418809"
+  },
+  "dc-02": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "19761182"
+  },
+  "den-02": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "35205743",
+    "toiletsWheelchair": "yes"
+  },
+  "den-03": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "25650822",
+    "toiletsWheelchair": "yes"
+  },
+  "detroit_dia": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "1553447"
+  },
+  "detroit_guardian": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "330839648"
+  },
+  "doha-souq-waqif": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "3424940793"
+  },
+  "dublin-castle": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "350242806"
+  },
+  "dublin-guinness-storehouse": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "44597908",
+    "toiletsWheelchair": "yes"
+  },
+  "dublin-ha-penny-bridge": {
+    "wheelchair": "no",
+    "osmType": "node",
+    "osmID": "5376912544"
+  },
+  "dublin-st-patricks": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "43981182"
+  },
+  "dublin-trinity-college": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "311466843"
+  },
+  "dxb_burj_khalifa": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "446646206"
+  },
+  "edinburgh-castle": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "4301292",
+    "toiletsWheelchair": "yes"
+  },
+  "edinburgh-national-museum": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "467226683",
+    "toiletsWheelchair": "yes"
+  },
+  "es_torre_del_oro": {
+    "wheelchair": "no",
+    "osmType": "node",
+    "osmID": "4345258294"
+  },
+  "florence-ponte-vecchio": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "5342094"
+  },
+  "for-cine-sao-luiz": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "7313731406"
+  },
+  "for-jose-de-alencar": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "15829061"
+  },
+  "fort_worth_modern_art_museum": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "141506526",
+    "toiletsWheelchair": "yes"
+  },
+  "gabriela-mistral-cultural-center": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "37356526"
+  },
+  "glbl_apple_fifth_ave": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "156958129"
+  },
+  "hamburg_elbphilharmonie": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "24981342",
+    "toiletsWheelchair": "yes"
+  },
+  "hamburg_kunsthalle": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "142944355",
+    "toiletsWheelchair": "yes"
+  },
+  "hcmc-ben-thanh-market": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "39514795"
+  },
+  "helsinki-temppeliaukio": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "124143121"
+  },
+  "hk_taikwun": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "591035975",
+    "toiletsWheelchair": "yes"
+  },
+  "hou-04": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "54358731"
+  },
+  "hundertwasserhaus": {
+    "wheelchair": "limited",
+    "osmType": "node",
+    "osmID": "76469807"
+  },
+  "in_india_gate": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "361709652"
+  },
+  "in_red_fort": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "264863907"
+  },
+  "is_hallgrimskirkja": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "6184378"
+  },
+  "ist_dolmabahce_palace": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "24826707"
+  },
+  "ist_suleymaniye": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "1564032"
+  },
+  "jakarta-apple-plaza-indo": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "538319726"
+  },
+  "kansas_city_city_hall": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "118650979"
+  },
+  "kansas_city_jackson_county_courthouse": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "118650981"
+  },
+  "kansas_city_liberty_memorial": {
+    "wheelchair": "limited",
+    "osmType": "node",
+    "osmID": "1458132824"
+  },
+  "kansas_city_union_station": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "23770231"
+  },
+  "kl-petronas": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "279944536"
+  },
+  "kyo_apple_kyoto": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "5872465072"
+  },
+  "kyo_fushimi_inari": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "96291583"
+  },
+  "kyo_kiyomizu_dera": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "336641107"
+  },
+  "kyo_nijo_castle": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "57111281",
+    "toiletsWheelchair": "yes"
+  },
+  "la_griffith_observatory": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "422130705",
+    "toiletsWheelchair": "yes"
+  },
+  "la_union_station": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "1483140"
+  },
+  "lv_luxor": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "27858544"
+  },
+  "madrid-prado": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "7726080",
+    "toiletsWheelchair": "yes"
+  },
+  "madrid-reina-sofia": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "991444051"
+  },
+  "madrid-royal-palace": {
+    "wheelchair": "limited",
+    "osmType": "node",
+    "osmID": "4451986389"
+  },
+  "mao-rio-negro-palace": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "1812729522"
+  },
+  "marche-bonsecours": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "87389029"
+  },
+  "mil_apple_liberty": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "491367824"
+  },
+  "mil_bosco": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "2456061019"
+  },
+  "mil_duomo": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "18017026",
+    "toiletsWheelchair": "yes"
+  },
+  "mil_prada": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "425004880"
+  },
+  "mil_villa_necchi": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "138750066"
+  },
+  "montreal_cca": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "12670489944"
+  },
+  "msp-04": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "129937715"
+  },
+  "msp-07": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "157035918"
+  },
+  "msp-08": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "43386059"
+  },
+  "munich_allianz_arena": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "1257847557"
+  },
+  "munich_bmw_welt": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "15804929",
+    "toiletsWheelchair": "yes"
+  },
+  "munich_feldherrnhalle": {
+    "wheelchair": "no",
+    "osmType": "way",
+    "osmID": "25505402"
+  },
+  "munich_frauenkirche": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "225698612",
+    "toiletsWheelchair": "no"
+  },
+  "munich_glyptothek": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "532621",
+    "toiletsWheelchair": "yes"
+  },
+  "munich_new_town_hall": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "147095"
+  },
+  "munich_nymphenburg_palace": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "3189375851",
+    "toiletsWheelchair": "yes"
+  },
+  "munich_pinakothek_der_moderne": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "10053440",
+    "toiletsWheelchair": "yes"
+  },
+  "munich_st_michaels_church": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "36943165"
+  },
+  "nap-11": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "123977918"
+  },
+  "nola_commanders_palace": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "328640841"
+  },
+  "nola_contemporary_arts_center": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "1434881683"
+  },
+  "nola_superdome": {
+    "wheelchair": "limited",
+    "osmType": "relation",
+    "osmID": "4598860"
+  },
+  "notre-dame-basilica": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "4320792"
+  },
+  "nsh_frist_art": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "130905893"
+  },
+  "nyc-01": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "34633854"
+  },
+  "nyc-06": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "18351439"
+  },
+  "nyc-07": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "170149134"
+  },
+  "nyc-10": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "265947358",
+    "toiletsWheelchair": "yes"
+  },
+  "nyc_oculus": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "278033606"
+  },
+  "nyc_un_hq": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "48869328",
+    "toiletsWheelchair": "yes"
+  },
+  "oak_park_village_hall": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "304320607"
+  },
+  "orl_orlando_public_library": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "47026385"
+  },
+  "osaka-castle": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "1550234049"
+  },
+  "osaka-sumiyoshi-taisha": {
+    "wheelchair": "no",
+    "osmType": "way",
+    "osmID": "186423245"
+  },
+  "oslo-opera-house": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "810259696",
+    "toiletsWheelchair": "yes"
+  },
+  "oslo-royal-palace": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "12267199"
+  },
+  "paris-centre-pompidou": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "55503397"
+  },
+  "paris-fondation-lv": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "309626332",
+    "toiletsWheelchair": "yes"
+  },
+  "paris-louvre-pyramid": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "7515426"
+  },
+  "paris-palais-garnier": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "3462104314"
+  },
+  "pdx_pioneer_courthouse": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "31732583",
+    "toiletsWheelchair": "yes"
+  },
+  "phi-03": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "28533972"
+  },
+  "phi-08": {
+    "wheelchair": "limited",
+    "osmType": "node",
+    "osmID": "12593090249"
+  },
+  "phi-14": {
+    "wheelchair": "no",
+    "osmType": "node",
+    "osmID": "7977031964"
+  },
+  "phx-03": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "35421843"
+  },
+  "pit-04": {
+    "wheelchair": "no",
+    "osmType": "way",
+    "osmID": "354728127"
+  },
+  "pit-10": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "367967595"
+  },
+  "rec-apple-shopping-recife": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "131642035"
+  },
+  "rec-paco-alfandega": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "51816217"
+  },
+  "rio-christ-redeemer": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "4919986733"
+  },
+  "rio-copacabana-palace": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "18369001",
+    "toiletsWheelchair": "yes"
+  },
+  "rio-museum-tomorrow": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "372720167"
+  },
+  "rom_castel_sant": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "8035487"
+  },
+  "rom_doria_pamphilj": {
+    "wheelchair": "limited",
+    "osmType": "node",
+    "osmID": "706793341"
+  },
+  "rom_villa_borghese": {
+    "wheelchair": "limited",
+    "osmType": "node",
+    "osmID": "1440405490",
+    "toiletsWheelchair": "no"
+  },
+  "rotterdam_centraal_station": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "1912221471"
+  },
+  "rotterdam_depot_boijmans": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "4879969842"
+  },
+  "rotterdam_euromast": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "238220164",
+    "toiletsWheelchair": "yes"
+  },
+  "rotterdam_kunsthal": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "998773832"
+  },
+  "rotterdam_markthal": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "4355663292"
+  },
+  "royal-ontario-museum": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "4942687",
+    "toiletsWheelchair": "yes"
+  },
+  "san_diego_petco_park": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "24616919"
+  },
+  "sea_central_library": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "37056442"
+  },
+  "sea_columbia_center": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "107124288"
+  },
+  "sea_pacific_science_arches": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "394955903"
+  },
+  "sea_pike_place": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "363400641"
+  },
+  "sea_space_needle": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "12903132",
+    "toiletsWheelchair": "yes"
+  },
+  "seoul-city-hall": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "198561926"
+  },
+  "sf-01": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "24222973"
+  },
+  "sf-02": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "431972186"
+  },
+  "sf-11": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "21407754"
+  },
+  "sf-15": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "7325085",
+    "toiletsWheelchair": "yes"
+  },
+  "sf-18": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "621529017"
+  },
+  "sg-apple-mbs": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "821764692"
+  },
+  "sg_jewel_changi": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "744520551"
+  },
+  "sha_jingan_temple": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "13981430",
+    "toiletsWheelchair": "no"
+  },
+  "st-vitus-cathedral": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "1568419039"
+  },
+  "stephansdom": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "212496461"
+  },
+  "stl-01": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "12813920"
+  },
+  "stl-02": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "109152488"
+  },
+  "stockholm-city-hall": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "29368"
+  },
+  "stockholm-gamla-stan": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "29775128"
+  },
+  "stockholm-skansen": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "377977591"
+  },
+  "stockholm-vasa-museum": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "27288534",
+    "toiletsWheelchair": "yes"
+  },
+  "sub-tunjungan-plaza": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "6664927"
+  },
+  "syd_art_gallery": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "1265404795",
+    "toiletsWheelchair": "yes"
+  },
+  "syd_customs_house": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "351374509"
+  },
+  "syd_harbour_bridge": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "3178788"
+  },
+  "syd_mca": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "16599528"
+  },
+  "syd_opera_house": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "9596872"
+  },
+  "syd_qvb": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "40717424"
+  },
+  "syd_tower_eye": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "197801072"
+  },
+  "taipei-101": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "248210267",
+    "toiletsWheelchair": "yes"
+  },
+  "tate-modern": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "4880465178"
+  },
+  "th_wat_chedi_luang": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "243018795"
+  },
+  "the-barbican": {
+    "wheelchair": "no",
+    "osmType": "node",
+    "osmID": "1319881926"
+  },
+  "the-biosphere": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "26288030"
+  },
+  "the-gherkin": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "4959489"
+  },
+  "the-shard": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "31110737"
+  },
+  "tlv_museum_art": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "15690216"
+  },
+  "toronto-city-hall": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "198500761",
+    "toiletsWheelchair": "yes"
+  },
+  "uk_bath_abbey": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "39333604"
+  },
+  "valencia_cathedral": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "135630267",
+    "toiletsWheelchair": "yes"
+  },
+  "valencia_mercado_de_colon": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "10120283"
+  },
+  "valencia_torres_de_serranos": {
+    "wheelchair": "no",
+    "osmType": "node",
+    "osmID": "11366807086"
+  },
+  "venice-doges-palace": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "138803915",
+    "toiletsWheelchair": "yes"
+  },
+  "venice-rialto-bridge": {
+    "wheelchair": "no",
+    "osmType": "relation",
+    "osmID": "2289364"
+  },
+  "walkie-talkie": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "201247295"
+  },
+  "warsaw-royal-castle": {
+    "wheelchair": "limited",
+    "osmType": "relation",
+    "osmID": "64436"
+  },
+  "warsaw-uprising-museum": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "167109428",
+    "toiletsWheelchair": "yes"
+  },
+  "yvr-02": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "12620960872"
+  },
+  "yvr-03": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "223635729"
+  },
+  "yvr-04": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "37111640"
+  },
+  "yvr-06": {
+    "wheelchair": "yes",
+    "osmType": "way",
+    "osmID": "33176178"
+  },
+  "yvr-12": {
+    "wheelchair": "yes",
+    "osmType": "node",
+    "osmID": "703754423"
+  },
+  "zurich-grossmunster": {
+    "wheelchair": "limited",
+    "osmType": "way",
+    "osmID": "36916418"
+  },
+  "zurich-kunsthaus": {
+    "wheelchair": "yes",
+    "osmType": "relation",
+    "osmID": "3768127"
+  }
+}

@@ -12,9 +12,5 @@ import SwiftUI
 struct PassportWidgetBundle: WidgetBundle {
     var body: some Widget {
         PassportWidget()
-        PassportWidgetControl()
-        #if os(iOS)
-        PassportWidgetLiveActivity()
-        #endif
     }
 }

@@ -395,7 +395,13 @@ extension L {
         static let testMotion = String(localized: "settings.testMotion")
         static let testSound = String(localized: "settings.testSound")
         static let resetAllContent = String(localized: "settings.resetAllContent")
-        static let version = String(localized: "settings.version")
+        /// "Version 2.9 (Build 14)", read from the app itself so it never goes stale
+        static var version: String {
+            let info = Bundle.main.infoDictionary
+            let number = info?["CFBundleShortVersionString"] as? String ?? "?"
+            let build = info?["CFBundleVersion"] as? String ?? "?"
+            return String(format: String(localized: "settings.version"), number, build)
+        }
         static let resetFirstTitle = String(localized: "settings.reset.firstAlert.title")
         static let resetFirstMessage = String(localized: "settings.reset.firstAlert.message")
         static let resetFirstContinue = String(localized: "settings.reset.firstAlert.continue")

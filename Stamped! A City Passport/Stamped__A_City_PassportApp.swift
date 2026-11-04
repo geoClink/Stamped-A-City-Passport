@@ -14,8 +14,9 @@ import CoreSpotlight
 #if os(iOS)
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        // iPad turns to any orientation (and resizes in Split View / Stage Manager); iPhone stays portrait
         if UIDevice.current.userInterfaceIdiom == .pad {
-            return .landscape
+            return .all
         } else {
             return .portrait
         }
@@ -30,7 +31,12 @@ struct GlobalDiscoveryApp: App {
     #endif
     
     @AppStorage("hasSeenOnboarding") var hasSeenOnboarding: Bool = false
-    @StateObject private var navManager = NavigationManager()
+    @StateObject private var navManager = NavigationManager.shared
+
+    init() {
+        // Finish any tip that completed while the app was closed (or after Ask to Buy)
+        TipJarStore.shared.listenForTransactions()
+    }
     
     var body: some Scene {
         WindowGroup {
@@ -52,7 +58,6 @@ struct GlobalDiscoveryApp: App {
             // Finishing a city or campus is when to ask for an App Store rating
             .reviewPromptAfterCompletingCity()
             .task {
-                ProximityManager.shared.requestPermissions()
                 SpotlightManager.indexAll(cities: CityLocation.City.allCases)
             }
             .onContinueUserActivity(CSSearchableItemActionType) { activity in
@@ -81,6 +86,11 @@ struct GlobalDiscoveryApp: App {
             InspectorCommands()
             StampedCommands(navManager: navManager)
         }
+        #endif
+
+        #if os(macOS)
+        // World Map, My Journey, trips, the quiz...: their own windows on the Mac, not sheets
+        MacPanelWindows(navManager: navManager)
         #endif
     }
 }

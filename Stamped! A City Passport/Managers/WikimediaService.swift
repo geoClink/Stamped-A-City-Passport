@@ -36,6 +36,29 @@ actor WikimediaService {
         let cacheKey = buildingID ?? buildingName
         if let cached = cache[cacheKey] { return cached }
 
+        // A city saved for offline use (OfflineStore): its saved copy, without the network
+        if let saved = OfflineStore.shared.summary(forKey: cacheKey) {
+            let result = WikiSummary(photoURL: saved.photoURL, extract: saved.extract, articleTitle: saved.articleTitle)
+            cache[cacheKey] = result
+            return result
+        }
+
+        // No connection or not found: no photo or text (the views show their placeholders)
+        let result = (try? await lookUp(buildingName, buildingID: buildingID)) ?? WikiSummary(photoURL: nil, extract: nil)
+        cache[cacheKey] = result
+        return result
+    }
+
+    /// A fresh copy for "Save for Offline": skips both caches, and throws when the
+    /// connection fails, so a dropped connection isn't saved as "no article".
+    func summaryForSaving(for buildingName: String, buildingID: String? = nil) async throws -> WikiSummary {
+        let result = try await lookUp(buildingName, buildingID: buildingID)
+        cache[buildingID ?? buildingName] = result
+        return result
+    }
+
+    /// The Wikipedia lookup itself. Throws only on a network error (URLError).
+    private func lookUp(_ buildingName: String, buildingID: String?) async throws -> WikiSummary {
         // Wikipedia only has a different place with this name: show nothing rather than the wrong photo
         if let buildingID, Self.skipWikipedia.contains(buildingID) {
             return WikiSummary(photoURL: nil, extract: nil)
@@ -43,9 +66,7 @@ actor WikimediaService {
 
         // No Wikipedia article, but Wikimedia Commons has a free photo of it
         if let buildingID, let photo = Self.commonsPhotos[buildingID] {
-            let result = WikiSummary(photoURL: URL(string: photo), extract: nil)
-            cache[cacheKey] = result
-            return result
+            return WikiSummary(photoURL: URL(string: photo), extract: nil)
         }
 
         // Try the most specific title first, then looser versions of the name
@@ -58,13 +79,11 @@ actor WikimediaService {
         var tried = Set<String>()
         for title in candidates where !tried.contains(title) {
             tried.insert(title)
-            if let found = await fetch(title: title) {
+            if let found = try await fetch(title: title) {
                 result = found
                 break
             }
         }
-
-        cache[cacheKey] = result
         return result
     }
 
@@ -76,7 +95,8 @@ actor WikimediaService {
 
     // MARK: - Private
 
-    private func fetch(title: String) async -> WikiSummary? {
+    /// nil when there's no usable article; throws when the connection fails
+    private func fetch(title: String) async throws -> WikiSummary? {
         let encoded = encodedTitle(title)
         guard let url = URL(string: "https://en.wikipedia.org/api/rest_v1/page/summary/\(encoded)") else {
             return nil
@@ -86,7 +106,7 @@ actor WikimediaService {
             let (data, response) = try await URLSession.shared.data(for: wikiRequest(url))
             guard (response as? HTTPURLResponse)?.statusCode == 200 else { return nil }
 
-            let decoded = try JSONDecoder().decode(WikiAPIResponse.self, from: data)
+            guard let decoded = try? JSONDecoder().decode(WikiAPIResponse.self, from: data) else { return nil }
             // A "may refer to" list of other articles, not the place itself: try the next title
             if decoded.type == "disambiguation" { return nil }
 
@@ -102,6 +122,8 @@ actor WikimediaService {
             let extract = decoded.extract?.isEmpty == false ? decoded.extract : nil
 
             return WikiSummary(photoURL: photoURL, extract: extract, articleTitle: decoded.title)
+        } catch let error as URLError {
+            throw error
         } catch {
             return nil
         }

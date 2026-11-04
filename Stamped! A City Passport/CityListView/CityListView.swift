@@ -114,6 +114,11 @@ struct CityListView: View {
                             .simultaneousGesture(TapGesture().onEnded {
                                 HapticManager.shared.trigger(.selection)
                                 selectedCity = result.city
+                                // iPad: the detail opens beside the list, so put the keyboard away
+                                // and show the place in the sidebar (on iPhone the page pushes over it)
+                                if horizontalSizeClass == .regular {
+                                    finishSearch(showing: result.city)
+                                }
                             })
                             #endif
                         }
@@ -161,6 +166,13 @@ struct CityListView: View {
             .toolbar { sidebarToolbar }
             #if os(macOS)
             .navigationSplitViewColumnWidth(min: 280, ideal: 340, max: 460)
+            #else
+            // iPad: wider than the system's ~320 pt default, so the four tiles' labels,
+            // the filter chips and long campus names fit (iPhone shows one column and ignores it)
+            .navigationSplitViewColumnWidth(min: 320, ideal: 375, max: 420)
+            // A solid bar behind Settings and the search field once the list scrolls,
+            // so city names don't show through between them
+            .dsSolidTopScrollEdge()
             #endif
             .animation(.spring(response: 0.35, dampingFraction: 0.8), value: searchText.isEmpty)
 
@@ -172,15 +184,11 @@ struct CityListView: View {
                     MacCityWorkspace(city: city)
                         .id(city.id)
                     #else
-                    ScrollView {
-                        VStack(alignment: .leading, spacing: 0) {
-                            // The itinerary is in the city page's Plan tab
-                            CityDetailView(city: city)
-                        }
-                    }
-                    .id(city.id)
-                    .background(Color(UIColor.systemGroupedBackground))
-                    .navigationBarBackButtonHidden(horizontalSizeClass == .regular)
+                    // CityDetailView scrolls by itself (wrapping it in a second ScrollView
+                    // stopped the top bar from turning solid when the page scrolled)
+                    CityDetailView(city: city)
+                        .id(city.id)
+                        .navigationBarBackButtonHidden(horizontalSizeClass == .regular)
                     #endif
                 } else {
                     welcomePlaceholder
@@ -189,28 +197,35 @@ struct CityListView: View {
         }
         .accentColor(brandColor)
         .fullScreenCover(isPresented: $showingSettings) { SettingsView() }
+        #if os(macOS)
+        // Mac: each of these opens in its own resizable window (MacPanelWindows), not a sheet
+        .opensWindow(id: MacWindowID.myJourney, when: $showingMyJourney)
+        .opensWindow(id: MacWindowID.achievements, when: $showingAchievements)
+        .opensWindow(id: MacWindowID.worldMap, when: $showingWorldMap)
+        .opensWindow(id: MacWindowID.collegeList, when: $showingCollegeList)
+        .opensWindow(id: MacWindowID.myTrips, value: MyTripsWindowValue(), when: $showingMyTrips)
+        #else
         .fullScreenCover(isPresented: $showingMyJourney) { MyJourneyView() }
-        .sheet(isPresented: $showingAchievements) { AchievementsView() }
-        .sheet(isPresented: $showingWorldMap) {
-            WorldMapView()
-            #if os(macOS)
-                // The map has no natural size, so without this the Mac sheet collapses to a thin strip.
-                .frame(minWidth: 1100, minHeight: 760)
-            #endif
+        // `.page` makes the sheet much larger on iPad (the default form sheet is small);
+        // on iPhone a sheet already fills the screen, so nothing changes there
+        .sheet(isPresented: $showingAchievements) {
+            AchievementsView()
+                .presentationSizing(.page)
         }
-        // Like the trip planner: a sheet on iPhone, full screen on iPad (room for its split view)
+        // The map: a sheet on iPhone, full screen on iPad (in a small sheet the legend covered it)
+        .sheet(isPresented: presented($showingWorldMap, fullScreen: false)) { WorldMapView() }
+        .fullScreenCover(isPresented: presented($showingWorldMap, fullScreen: true)) { WorldMapView() }
+        // A sheet everywhere; on iPad the larger page size gives the list room
         .sheet(isPresented: $showingCollegeList) {
             CollegeListView(onOpenCampus: { campus in
                 showingCollegeList = false
                 selectedCity = campus
             })
-            #if os(macOS)
-            // Like the World Map, the list has no natural size, so the Mac sheet collapsed without this.
-            .frame(minWidth: 900, minHeight: 700)
-            #endif
+            .presentationSizing(.page)
         }
-        .sheet(isPresented: myTripsPresented(fullScreen: false)) { MyTripsView() }
-        .fullScreenCover(isPresented: myTripsPresented(fullScreen: true)) { MyTripsView() }
+        .sheet(isPresented: presented($showingMyTrips, fullScreen: false)) { MyTripsView() }
+        .fullScreenCover(isPresented: presented($showingMyTrips, fullScreen: true)) { MyTripsView() }
+        #endif
         .fullScreenCover(isPresented: $showingPassport) {
             PassportGalleryView(cities: viewModel.allCities)
         }
@@ -222,11 +237,15 @@ struct CityListView: View {
         }
         #endif
         .onChange(of: navManager.spotlightCity) { _, city in
-            if let city {
-                selectedCity = city
-                // Clear it so opening the same city again (from Spotlight or a link) still works
-                navManager.spotlightCity = nil
-            }
+            if let city { openRequestedCity(city) }
+        }
+        .onChange(of: navManager.passportRequested) { _, requested in
+            if requested { openRequestedPassport() }
+        }
+        // A Siri or Shortcuts action can launch the app before this list is on screen
+        .onAppear {
+            if let city = navManager.spotlightCity { openRequestedCity(city) }
+            if navManager.passportRequested { openRequestedPassport() }
         }
         .overlay {
             if !hasSeenPassportHint {
@@ -235,6 +254,23 @@ struct CityListView: View {
         }
         // Last, so the sheets and full-screen covers above see it too
         .environment(\.isWideWindow, horizontalSizeClass == .regular)
+    }
+
+    // MARK: - Opening from outside the app
+
+    /// A city from Spotlight, a website link, the Mac's College List window, or Siri / Shortcuts
+    private func openRequestedCity(_ city: CityLocation.City) {
+        // The passport covers the whole screen, so close it or the city opens out of sight
+        showingPassport = false
+        selectedCity = city
+        // Clear it so opening the same city again still works
+        navManager.spotlightCity = nil
+    }
+
+    /// The "Open My Passport" Siri / Shortcuts action
+    private func openRequestedPassport() {
+        showingPassport = true
+        navManager.passportRequested = false
     }
 
     // MARK: - List Sections
@@ -260,33 +296,43 @@ struct CityListView: View {
             ?? viewModel.groupedByContinent.sorted { $0.id < $1.id }.first
     }
 
-    /// Continents, then Campuses, as a row of chips that scrolls sideways
+    /// A Campuses chip that always stays in view, then the continents as chips that scroll sideways.
+    /// (Campuses used to be the last chip, hidden off the end of the row.)
     private var exploreFilterBar: some View {
         let continents = viewModel.groupedByContinent.map(\.id).sorted()
         let selected = exploreFilter == Self.campusFilter ? Self.campusFilter : (selectedContinentGroup?.id.rawValue ?? "")
-        return ScrollViewReader { proxy in
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: DS.Space.s) {
-                    ForEach(continents, id: \.self) { continent in
-                        filterChip(continent.localizedName, systemImage: continent.iconName,
-                                   isSelected: selected == continent.rawValue) {
-                            exploreFilter = continent.rawValue
-                        }
-                        .id(continent.rawValue)
-                    }
-                    if !viewModel.campusGroups.isEmpty {
-                        filterChip(NSLocalizedString("Campuses", comment: "Home filter chip: show campuses instead of a continent's cities"),
-                                   systemImage: "graduationcap.fill",
-                                   isSelected: selected == Self.campusFilter) {
-                            exploreFilter = Self.campusFilter
-                        }
-                        .id(Self.campusFilter)
-                    }
+        return HStack(spacing: DS.Space.s) {
+            if !viewModel.campusGroups.isEmpty {
+                filterChip(NSLocalizedString("Campuses", comment: "Home filter chip: show campuses instead of a continent's cities"),
+                           systemImage: "graduationcap.fill",
+                           isSelected: selected == Self.campusFilter) {
+                    exploreFilter = Self.campusFilter
                 }
             }
-            // The chosen chip may be off the right edge (North America, Campuses): bring it into view
-            .onAppear { proxy.scrollTo(selected, anchor: .center) }
+            ScrollViewReader { proxy in
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: DS.Space.s) {
+                        ForEach(continents, id: \.self) { continent in
+                            filterChip(continent.localizedName, systemImage: continent.iconName,
+                                       isSelected: selected == continent.rawValue) {
+                                exploreFilter = continent.rawValue
+                            }
+                            .id(continent.rawValue)
+                        }
+                    }
+                }
+                // The chosen continent may be off the right edge (North America): bring it into view
+                .onAppear { proxy.scrollTo(selected, anchor: .center) }
+            }
         }
+    }
+
+    /// Ends the search (keyboard down, list back to browsing) and switches the filter
+    /// to the picked place's continent, or Campuses, so it shows highlighted in the sidebar.
+    private func finishSearch(showing city: CityLocation.City) {
+        isSearchActive = false
+        searchText = ""
+        exploreFilter = city.isCampus ? Self.campusFilter : city.country.continent.rawValue
     }
 
     private func filterChip(_ title: String, systemImage: String, isSelected: Bool,

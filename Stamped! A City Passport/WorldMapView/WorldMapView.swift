@@ -3,6 +3,11 @@ import MapKit
 
 struct WorldMapView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.horizontalSizeClass) private var sizeClass
+    #if os(macOS)
+    // The main window's navigation, so "View City" can open the city there
+    @EnvironmentObject private var navManager: NavigationManager
+    #endif
     @ObservedObject private var progress = GlobalProgressManager.shared
     @StateObject private var cityVM = CityViewModel()
 
@@ -75,6 +80,8 @@ struct WorldMapView: View {
             .ignoresSafeArea(edges: .bottom)
             .navigationTitle("World Map")
             .navigationBarTitleDisplayMode(.inline)
+            #if !os(macOS)
+            // On the Mac the map is its own window, closed with the window's close button
             .toolbar {
                 ToolbarItem(placement: .closeSheet) {
                     Button("Done") { dismiss() }
@@ -82,20 +89,50 @@ struct WorldMapView: View {
                         .foregroundStyle(Color.adventureOrange)
                 }
             }
-            .sheet(item: $cityDetailToShow) { city in
-                NavigationStack {
-                    ScrollView {
-                        VStack(alignment: .leading, spacing: 0) {
-                            CityDetailView(city: city)
-                        }
-                    }
-                    .background(Color(UIColor.systemGroupedBackground))
-                    .navigationTitle(city.name)
-                    .navigationBarTitleDisplayMode(.inline)
-                }
-            }
+            #endif
+            #if os(iOS)
+            // A whole city page: a sheet on iPhone, full screen on iPad
+            // (in an iPad sheet it was squeezed into a small centered window)
+            .sheet(item: cityPageBinding(fullScreen: false)) { cityPage($0) }
+            .fullScreenCover(item: cityPageBinding(fullScreen: true)) { cityPage($0) }
+            #else
+            .sheet(item: $cityDetailToShow) { cityPage($0) }
+            #endif
         }
     }
+
+    private func cityPage(_ city: CityLocation.City) -> some View {
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 0) {
+                    CityDetailView(city: city)
+                }
+            }
+            .background(Color(UIColor.systemGroupedBackground))
+            .navigationTitle(city.name)
+            .navigationBarTitleDisplayMode(.inline)
+            #if os(iOS)
+            // Full screen can't be swiped away, so it needs a way back to the map
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button("Done") { cityDetailToShow = nil }
+                        .fontWeight(.semibold)
+                        .foregroundStyle(Color.adventureOrange)
+                }
+            }
+            #endif
+        }
+    }
+
+    #if os(iOS)
+    /// Shows the city page in the sheet (iPhone) or the full-screen cover (iPad), never both.
+    private func cityPageBinding(fullScreen: Bool) -> Binding<CityLocation.City?> {
+        Binding(
+            get: { (sizeClass == .regular) == fullScreen ? cityDetailToShow : nil },
+            set: { cityDetailToShow = $0 }
+        )
+    }
+    #endif
 
     // MARK: - Map
 
@@ -195,7 +232,14 @@ struct WorldMapView: View {
 
             Button {
                 HapticManager.shared.trigger(.selection)
+                #if os(macOS)
+                // Mac: show the city in the main window, like picking it in the sidebar,
+                // and close the map so the main window comes forward
+                navManager.spotlightCity = city
+                dismiss()
+                #else
                 cityDetailToShow = city
+                #endif
             } label: {
                 HStack {
                     Text("View City")
@@ -212,6 +256,7 @@ struct WorldMapView: View {
         .background(Color(UIColor.secondarySystemBackground))
         .cornerRadius(16)
         .shadow(color: .black.opacity(0.12), radius: 12, x: 0, y: 4)
+        .macReadableWidth(560)
         .padding(.horizontal, 16)
         .padding(.bottom, 8)
     }

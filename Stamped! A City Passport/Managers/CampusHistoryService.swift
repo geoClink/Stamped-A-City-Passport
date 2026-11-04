@@ -14,7 +14,7 @@ import NaturalLanguage
 
 // MARK: - Result model
 
-nonisolated struct CampusHistory: Equatable {
+nonisolated struct CampusHistory: Equatable, Codable {
     /// e.g. 1855; nil when Wikidata has no single, clear founding year
     let foundedYear: Int?
     /// 2–4 sentences from the article's introduction
@@ -36,6 +36,12 @@ actor CampusHistoryService {
     /// The History card for a campus's article (`historyArticleTitle`), or nil when Wikipedia has nothing.
     func history(forArticle title: String) async -> CampusHistory? {
         if let cached = cache[title] { return cached }
+
+        // A campus saved for offline use: its saved copy, without the network
+        if let saved = OfflineStore.shared.history(forArticle: title) {
+            cache[title] = saved
+            return saved
+        }
 
         guard let summary = await fetchSummary(title: title) else { return nil }
         let text = Self.historySentences(from: summary.extract)

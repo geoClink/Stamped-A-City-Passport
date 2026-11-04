@@ -246,7 +246,7 @@
 "settings.testMotion" = "Movimiento de prueba";
 "settings.testSound" = "Sonido de prueba";
 "settings.resetAllContent" = "Restablecer todo el contenido";
-"settings.version" = "Versión 1.0 (compilación 2026)";
+"settings.version" = "Versión %1$@ (compilación %2$@)";
 "settings.reset.firstAlert.title" = "¿Restablecer todo el progreso?";
 "settings.reset.firstAlert.message" = "Borre los edificios visitados, los sellos de pasaportes y las puntuaciones de los exámenes.";
 "settings.reset.firstAlert.continue" = "Continuar";
@@ -759,3 +759,92 @@
 
 /* Game Day: a game whose start time isn't announced yet */
 "Time TBA" = "Hora por confirmar";
+
+/* Audio story on a landmark page */
+"Listen" = "Escuchar";
+"Reads this landmark's story aloud in English" = "Lee en voz alta la historia de este monumento en inglés";
+
+/* Vrbo and Viator links */
+"Vacation Rentals on Vrbo" = "Alquileres vacacionales en Vrbo";
+"Opens Vrbo. Stamped! doesn't handle bookings or payments." = "Abre Vrbo. Stamped! no gestiona reservas ni pagos.";
+"More tours on Viator" = "Más tours en Viator";
+"Opens Viator. Stamped! doesn't handle bookings or payments." = "Abre Viator. Stamped! no gestiona reservas ni pagos.";
+
+/* Save for Offline: city page card and Settings list */
+"Offline Use" = "Uso sin conexión";
+"Save the landmark photos and Wikipedia text to use without a connection, like on a flight." = "Guarda las fotos y los textos de Wikipedia de los lugares emblemáticos para usarlos sin conexión, por ejemplo en un vuelo.";
+"Save for Offline" = "Guardar sin conexión";
+"Downloads photos and text for %d landmarks." = "Descarga fotos y textos de %d lugares emblemáticos.";
+"Saving %d of %d…" = "Guardando %d de %d…";
+"Stops saving. What's saved so far is kept for next time." = "Detiene la descarga. Lo guardado hasta ahora se conserva para la próxima vez.";
+"Saved for Offline" = "Guardado sin conexión";
+"%1$@, saved %2$@" = "%1$@, guardado el %2$@";
+"Remove Offline Copy" = "Eliminar copia sin conexión";
+"Deletes the saved photos and text from this device." = "Elimina de este dispositivo las fotos y textos guardados.";
+"Remove the offline copy of %@?" = "¿Eliminar la copia sin conexión de %@?";
+"Remove" = "Eliminar";
+"Couldn't finish saving. Check your connection and try again; what's saved so far is kept." = "No se pudo terminar de guardar. Revisa tu conexión e inténtalo de nuevo; lo guardado hasta ahora se conserva.";
+"Low Data Mode is on. Turn it off in Settings to save photos." = "El modo de datos reducidos está activado. Desactívalo en Ajustes para guardar fotos.";
+"Couldn't save to this device. Check that there's free storage." = "No se pudo guardar en este dispositivo. Comprueba que haya espacio libre.";
+"Maps, weather, events and photo galleries still need a connection. For an offline map, download this area in Apple Maps (Offline Maps)." = "Los mapas, el tiempo, los eventos y las galerías de fotos siguen necesitando conexión. Para tener un mapa sin conexión, descarga esta zona en Mapas de Apple (Mapas sin conexión).";
+"No cities saved yet. Open a city or campus and tap Save for Offline in its Plan tab." = "Aún no hay ciudades guardadas. Abre una ciudad o un campus y toca Guardar sin conexión en la pestaña Planear.";
+"Remove %@" = "Eliminar %@";
+"Maps aren't saved. For an offline map, download the area in Apple Maps (Offline Maps)." = "Los mapas no se guardan. Para tener un mapa sin conexión, descarga la zona en Mapas de Apple (Mapas sin conexión).";
+
+/* Booking.com button next to the main hotel button */
+"Compare on Booking.com" = "Comparar en Booking.com";
+"Opens Booking.com. Stamped! doesn't handle bookings or payments." = "Abre Booking.com. Stamped! no gestiona reservas ni pagos.";
+
+/* Text sent with a shared passport picture; %@ is the App Store link */
+"My Stamped! passport. Get the app: %@" = "Mi pasaporte de Stamped!. Descarga la app: %@";
+
+/* City stamp share picture; %1$d is landmarks visited, %2$d is landmarks in the city */
+
+/* Text sent with a shared city stamp picture; %1$@ is the city, %2$@ is the App Store link */
+"I just unlocked the %1$@ stamp on Stamped! 🏛️ Get the app: %2$@" = "¡Acabo de desbloquear el sello de %1$@ en Stamped! 🏛️ Descarga la app: %2$@";
+
+/* Audio story: tip when only the basic voice is installed */
+"Got it" = "Entendido";
+"For a more natural voice, download a Premium English voice in Settings > Accessibility > Read & Speak > Voices." = "Para una voz más natural, descarga una voz Premium en inglés en Ajustes > Accesibilidad > Leer y hablar > Voces.";
+"For a more natural voice, download a Premium English voice in System Settings > Accessibility > Spoken Content > System Voice > Manage Voices." = "Para una voz más natural, descarga una voz Premium en inglés en Ajustes del Sistema > Accesibilidad > Contenido leído > Voz del sistema > Gestionar voces.";
+/* Tip jar (Support Stamped!) */
+"Support Stamped!" = "Apoya Stamped!";
+"Tips help keep new cities coming" = "Las propinas traen nuevas ciudades";
+"Hi, I'm George! I make Stamped! on my own as an indie developer. The app is free, and tips help me keep adding new cities and landmarks." = "¡Hola, soy George! Creo Stamped! yo solo como desarrollador independiente. La app es gratis y las propinas me ayudan a seguir añadiendo ciudades y monumentos.";
+"Tips are just a thank-you. They don't unlock anything, and everything in the app stays free." = "Las propinas son solo un agradecimiento. No desbloquean nada y todo en la app sigue siendo gratis.";
+"Small Tip" = "Propina pequeña";
+"Medium Tip" = "Propina mediana";
+"Large Tip" = "Propina grande";
+"Loading tips…" = "Cargando propinas…";
+"Tips aren't available right now" = "Las propinas no están disponibles ahora";
+"Please check your connection and try again later." = "Comprueba tu conexión y vuelve a intentarlo más tarde.";
+"Try Again" = "Reintentar";
+"Thank you!" = "¡Gracias!";
+"Your tip means a lot. It helps bring the next city to Stamped!" = "Tu propina significa mucho. Ayuda a traer la próxima ciudad a Stamped!";
+"Waiting for approval" = "Esperando aprobación";
+"Your tip will go through once a family organizer approves it." = "Tu propina se completará cuando un organizador familiar la apruebe.";
+"No worries, the tip was cancelled. You weren't charged." = "No pasa nada, la propina se canceló. No se te ha cobrado nada.";
+"That tip didn't go through. Please try again." = "La propina no se completó. Vuelve a intentarlo.";
+"Payments go through your Apple Account. Tips are one-time and don't renew." = "Los pagos se hacen con tu Cuenta de Apple. Las propinas son únicas y no se renuevan.";
+
+/* Siri and Shortcuts actions (Intents/StampedShortcuts.swift) */
+"City or Campus" = "Ciudad o campus";
+"Campus" = "Campus";
+"City" = "Ciudad";
+"Open My Passport" = "Abrir mi pasaporte";
+"Opens your passport of collected stamps in Stamped!." = "Abre tu pasaporte con los sellos que has reunido en Stamped!.";
+"Open a City" = "Abrir una ciudad";
+"Opens a city or campus page in Stamped!." = "Abre la página de una ciudad o un campus en Stamped!.";
+"Which city or campus?" = "¿Qué ciudad o campus?";
+"Open ${city}" = "Abrir ${city}";
+
+/* Accessibility on a landmark's page: step-free access from OpenStreetMap */
+"Accessibility" = "Accesibilidad";
+"Step-free access" = "Acceso sin escalones";
+"Accessible toilets" = "Baños accesibles";
+"Yes" = "Sí";
+"Partly" = "En parte";
+"No" = "No";
+"Mapped by OpenStreetMap volunteers and may be out of date. Check with the venue before you go." = "Datos de voluntarios de OpenStreetMap que pueden estar desactualizados. Consulta con el lugar antes de ir.";
+"View on OpenStreetMap" = "Ver en OpenStreetMap";
+"Opens this place on openstreetmap.org" = "Abre este lugar en openstreetmap.org";
