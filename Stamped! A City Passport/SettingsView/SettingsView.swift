@@ -16,12 +16,16 @@ struct SettingsView: View {
     @State private var moveRight = false
     @State private var showingFirstAlert = false
     @State private var showingFinalAlert = false
-    @State private var selectedTab: SettingsTab? = .experience
+    @State private var selectedTab: SettingsTab? = .preferences
     @ObservedObject private var offline = OfflineDownloader.shared
 
+    /// The iPad and Mac sidebar rows, in the same order as the iPhone list's sections
     enum SettingsTab: Hashable {
-        case experience, offline, support, danger
+        case preferences, passport, offline, support, feedback, about, danger
     }
+
+    /// The Stamped! privacy policy on the website (the same page the App Store listing links to)
+    private static let privacyPolicyURL = URL(string: "https://georgeclinkscalesdev.com/stamped-privacy.html")!
 
     var body: some View {
         ZStack {
@@ -41,10 +45,12 @@ private extension SettingsView {
     var iphoneLayout: some View {
         NavigationStack {
             List {
-                experienceSection
+                preferencesSection
+                passportSection
                 offlineSection
-                feedbackSection
                 supportSection
+                feedbackSection
+                aboutSection
                 dangerZoneSection
             }
             .navigationTitle(L.Settings.title)
@@ -66,9 +72,12 @@ private extension SettingsView {
             List(selection: $selectedTab) {
                 // No header here: the navigation title already says "Settings"
                 Section {
-                    Label(L.Settings.experience, systemImage: "hand.tap").tag(SettingsTab.experience)
-                    Label("Saved for Offline", systemImage: "arrow.down.circle").tag(SettingsTab.offline)
+                    Label("Preferences", systemImage: "slider.horizontal.3").tag(SettingsTab.preferences)
+                    Label("Your Passport", systemImage: "person.text.rectangle").tag(SettingsTab.passport)
+                    Label("Offline", systemImage: "arrow.down.circle").tag(SettingsTab.offline)
                     Label("Support Stamped!", systemImage: "heart").tag(SettingsTab.support)
+                    Label("Feedback", systemImage: "envelope").tag(SettingsTab.feedback)
+                    Label("About", systemImage: "info.circle").tag(SettingsTab.about)
                 }
 
                 Section(L.Settings.maintenance) {
@@ -98,9 +107,12 @@ private extension SettingsView {
     private var detailTitle: String {
         switch selectedTab {
         case .danger: return L.Settings.resetProgress
-        case .offline: return NSLocalizedString("Saved for Offline", comment: "Settings: list of cities saved for offline use")
+        case .passport: return NSLocalizedString("Your Passport", comment: "Settings: section with the traveler's birthday")
+        case .offline: return NSLocalizedString("Offline", comment: "Settings: section listing cities saved for offline use")
         case .support: return NSLocalizedString("Support Stamped!", comment: "Settings: tip jar")
-        default: return L.Settings.experience
+        case .feedback: return NSLocalizedString("Feedback", comment: "Settings: section with email links for corrections, suggestions and feedback")
+        case .about: return NSLocalizedString("About", comment: "Settings: section with the app version, disclaimer and privacy policy")
+        default: return NSLocalizedString("Preferences", comment: "Settings: section with units, sound, haptics, contrast and motion")
         }
     }
 
@@ -118,8 +130,11 @@ private extension SettingsView {
     private var settingsForm: some View {
         Form {
             switch selectedTab {
-            case .experience: experienceSection
+            case .preferences: preferencesSection
+            case .passport: passportSection
             case .offline: offlineSection
+            case .feedback: feedbackSection
+            case .about: aboutSection
             case .danger: dangerZoneSection
             case .support: EmptyView()   // shown by detailView instead
             case .none: Text(L.Settings.selectSetting).foregroundColor(.secondary)
@@ -132,8 +147,9 @@ private extension SettingsView {
 // MARK: - Sub-Sections
 private extension SettingsView {
 
-    var experienceSection: some View {
-        Section(header: Text(L.Settings.appExperience).fontWeight(viewModel.highContrast ? .bold : .regular)) {
+    /// Units, sound, haptics, contrast and motion, with Test Motion and Test Sound right below them
+    var preferencesSection: some View {
+        Section(header: Text("Preferences").fontWeight(viewModel.highContrast ? .bold : .regular)) {
 
             VStack(alignment: .leading, spacing: DS.Space.s) {
                 Label {
@@ -157,36 +173,6 @@ private extension SettingsView {
                 SettingsToggleRow(title: L.Settings.highContrast, icon: "circle.lefthalf.filled", isOn: $viewModel.highContrast, isHighContrast: viewModel.highContrast)
                 SettingsToggleRow(title: L.Settings.reduceMotion, icon: "slowmo", isOn: $viewModel.reduceMotion, isHighContrast: viewModel.highContrast)
             }
-
-            // The date picker drops below the label at accessibility sizes
-            rowLayout {
-                Label {
-                    rowText(title: Text("Birthday"), subtitle: Text("Used for the Birthday Stamp achievement"))
-                } icon: {
-                    rowIcon("gift.fill")
-                }
-                Spacer(minLength: 0)
-                if viewModel.hasBirthday {
-                    DatePicker("", selection: Binding(
-                        get: { viewModel.birthday },
-                        set: { viewModel.birthday = $0 }
-                    ), displayedComponents: .date)
-                    .labelsHidden()
-                    .datePickerStyle(.compact)
-                } else {
-                    Button("Set") { viewModel.birthday = Date() }
-                        .foregroundStyle(viewModel.brandColor)
-                        .fontWeight(.semibold)
-                }
-            }
-            .padding(.vertical, DS.Space.xs)
-
-            Label {
-                rowText(title: Text(L.Settings.offlineReady), subtitle: Text(L.Settings.offlineReadyBody))
-            } icon: {
-                rowIcon("wifi.slash")
-            }
-            .padding(.vertical, DS.Space.xs)
 
             VStack(spacing: DS.Space.l) {
                 VStack(alignment: .leading, spacing: DS.Space.m) {
@@ -229,6 +215,35 @@ private extension SettingsView {
         .tint(viewModel.highContrast ? .primary : viewModel.brandColor)
     }
 
+    /// About the traveler: the birthday that unlocks the Birthday Stamp achievement
+    var passportSection: some View {
+        Section(header: Text("Your Passport").fontWeight(viewModel.highContrast ? .bold : .regular)) {
+            // The date picker drops below the label at accessibility sizes
+            rowLayout {
+                Label {
+                    rowText(title: Text("Birthday"), subtitle: Text("Used for the Birthday Stamp achievement"))
+                } icon: {
+                    rowIcon("gift.fill")
+                }
+                Spacer(minLength: 0)
+                if viewModel.hasBirthday {
+                    DatePicker("", selection: Binding(
+                        get: { viewModel.birthday },
+                        set: { viewModel.birthday = $0 }
+                    ), displayedComponents: .date)
+                    .labelsHidden()
+                    .datePickerStyle(.compact)
+                } else {
+                    Button("Set") { viewModel.birthday = Date() }
+                        .foregroundStyle(viewModel.brandColor)
+                        .fontWeight(.semibold)
+                }
+            }
+            .padding(.vertical, DS.Space.xs)
+        }
+        .tint(viewModel.highContrast ? .primary : viewModel.brandColor)
+    }
+
     /// Cities saved with "Save for Offline" on their page, with their size and Remove
     var offlineSection: some View {
         Section {
@@ -257,17 +272,14 @@ private extension SettingsView {
                 }
             }
         } header: {
-            Text("Saved for Offline").fontWeight(viewModel.highContrast ? .bold : .regular)
+            Text("Offline").fontWeight(viewModel.highContrast ? .bold : .regular)
         } footer: {
             Text("Maps aren't saved. For an offline map, download the area in Apple Maps (Offline Maps).")
         }
     }
 
     var feedbackSection: some View {
-        Section(
-            header: Text("Feedback & Support").fontWeight(viewModel.highContrast ? .bold : .regular),
-            footer: Text(CampusDisclaimer.text)
-        ) {
+        Section(header: Text("Feedback").fontWeight(viewModel.highContrast ? .bold : .regular)) {
             feedbackLink(
                 title: "Report Incorrect Info",
                 subtitle: "Wrong building details, photos, or descriptions",
@@ -307,6 +319,28 @@ private extension SettingsView {
                 }
                 .padding(.vertical, DS.Space.xs)
             }
+        }
+    }
+
+    /// The app version and privacy policy, with the university disclaimer underneath
+    var aboutSection: some View {
+        Section {
+            Label {
+                Text(L.Settings.version)
+                    .fontWeight(viewModel.highContrast ? .bold : .medium)
+            } icon: {
+                rowIcon("info.circle.fill")
+            }
+            .padding(.vertical, DS.Space.xs)
+
+            Link(destination: Self.privacyPolicyURL) {
+                feedbackRow(title: "Privacy Policy", subtitle: "How Stamped! handles your data", icon: "hand.raised.fill")
+            }
+            .foregroundColor(.primary)
+        } header: {
+            Text("About").fontWeight(viewModel.highContrast ? .bold : .regular)
+        } footer: {
+            Text(CampusDisclaimer.text)
         }
     }
 
@@ -380,10 +414,6 @@ private extension SettingsView {
                     .foregroundColor(viewModel.highContrast ? .primary : .red)
                     .frame(maxWidth: .infinity)
             }
-        } footer: {
-            Text(L.Settings.version)
-                .font(.caption2)
-                .foregroundColor(viewModel.highContrast ? .primary : .secondary)
         }
     }
 }

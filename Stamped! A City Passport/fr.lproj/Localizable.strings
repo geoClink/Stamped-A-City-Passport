@@ -778,6 +778,13 @@
 "Saving %d of %d…" = "Enregistrement %d sur %d…";
 "Stops saving. What's saved so far is kept for next time." = "Arrête l’enregistrement. Ce qui est déjà enregistré est conservé pour la prochaine fois.";
 "Saved for Offline" = "Enregistré hors ligne";
+/* Settings section headers */
+"Preferences" = "Préférences";
+"Offline" = "Hors ligne";
+"Feedback" = "Commentaires";
+"About" = "Informations";
+"Privacy Policy" = "Politique de confidentialité";
+"How Stamped! handles your data" = "Comment Stamped! traite vos données";
 "%1$@, saved %2$@" = "%1$@, enregistré le %2$@";
 "Remove Offline Copy" = "Supprimer la copie hors ligne";
 "Deletes the saved photos and text from this device." = "Supprime les photos et textes enregistrés de cet appareil.";

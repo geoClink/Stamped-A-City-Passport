@@ -778,6 +778,13 @@
 "Saving %d of %d…" = "正在保存第 %d 个，共 %d 个…";
 "Stops saving. What's saved so far is kept for next time." = "停止保存。已保存的内容会保留，下次继续。";
 "Saved for Offline" = "已保存以供离线使用";
+/* Settings section headers */
+"Preferences" = "偏好设置";
+"Offline" = "离线";
+"Feedback" = "反馈";
+"About" = "关于";
+"Privacy Policy" = "隐私政策";
+"How Stamped! handles your data" = "Stamped! 如何处理你的数据";
 "%1$@, saved %2$@" = "%1$@，保存于 %2$@";
 "Remove Offline Copy" = "移除离线副本";
 "Deletes the saved photos and text from this device." = "从此设备删除已保存的照片和简介。";
