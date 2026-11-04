@@ -618,6 +618,18 @@ struct ZoomedStampView: View {
                         isHighContrast: passedHighContrast
                     )
                     .padding(DS.Space.l)
+
+                    // Shares the stamp as a picture with the App Store link
+                    CityStampShareButton(city: city) {
+                        Label("Share Achievement", systemImage: "square.and.arrow.up")
+                            .font(.headline)
+                            .foregroundStyle(passedHighContrast ? adaptiveBg : .white)
+                            .padding(.vertical, DS.Space.l)
+                            .padding(.horizontal, DS.Space.section)
+                            .background(Capsule().fill(adaptiveFg))
+                    }
+                    .buttonStyle(.plain)
+                    .padding(.top, DS.Space.l)
                     Spacer()
                 }
             }

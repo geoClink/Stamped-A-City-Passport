@@ -798,6 +798,12 @@
 /* Text sent with a shared passport picture; %@ is the App Store link */
 "My Stamped! passport. Get the app: %@" = "Il mio passaporto Stamped!. Scarica l’app: %@";
 
+/* City stamp share picture; %1$d is landmarks visited, %2$d is landmarks in the city */
+"%1$d of %2$d landmarks stamped" = "%1$d di %2$d monumenti timbrati";
+
+/* Text sent with a shared city stamp picture; %1$@ is the city, %2$@ is the App Store link */
+"I just unlocked the %1$@ stamp on Stamped! 🏛️ Get the app: %2$@" = "Ho appena sbloccato il timbro di %1$@ su Stamped! 🏛️ Scarica l’app: %2$@";
+
 /* Audio story: tip when only the basic voice is installed */
 "Got it" = "Ho capito";
 "For a more natural voice, download a Premium English voice in Settings > Accessibility > Read & Speak > Voices." = "Per una voce più naturale, scarica una voce inglese Premium in Impostazioni > Accessibilità > Leggi e parla > Voci.";

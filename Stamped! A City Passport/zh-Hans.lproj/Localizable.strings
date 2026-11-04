@@ -798,6 +798,12 @@
 /* Text sent with a shared passport picture; %@ is the App Store link */
 "My Stamped! passport. Get the app: %@" = "我的 Stamped! 护照。下载 App：%@";
 
+/* City stamp share picture; %1$d is landmarks visited, %2$d is landmarks in the city */
+"%1$d of %2$d landmarks stamped" = "已盖章 %1$d / %2$d 个地标";
+
+/* Text sent with a shared city stamp picture; %1$@ is the city, %2$@ is the App Store link */
+"I just unlocked the %1$@ stamp on Stamped! 🏛️ Get the app: %2$@" = "我刚在 Stamped! 解锁了%1$@图章！🏛️ 下载 App：%2$@";
+
 /* Audio story: tip when only the basic voice is installed */
 "Got it" = "知道了";
 "For a more natural voice, download a Premium English voice in Settings > Accessibility > Read & Speak > Voices." = "若想要更自然的声音，请前往“设置”>“辅助功能”>“朗读与说话”>“声音”下载英文高级音质声音。";

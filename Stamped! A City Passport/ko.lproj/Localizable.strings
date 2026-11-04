@@ -798,6 +798,12 @@
 /* Text sent with a shared passport picture; %@ is the App Store link */
 "My Stamped! passport. Get the app: %@" = "나의 Stamped! 여권. 앱 받기: %@";
 
+/* City stamp share picture; %1$d is landmarks visited, %2$d is landmarks in the city */
+"%1$d of %2$d landmarks stamped" = "랜드마크 %2$d곳 중 %1$d곳 스탬프 완료";
+
+/* Text sent with a shared city stamp picture; %1$@ is the city, %2$@ is the App Store link */
+"I just unlocked the %1$@ stamp on Stamped! 🏛️ Get the app: %2$@" = "Stamped!에서 %1$@ 스탬프를 획득했어요! 🏛️ 앱 받기: %2$@";
+
 /* Audio story: tip when only the basic voice is installed */
 "Got it" = "확인";
 "For a more natural voice, download a Premium English voice in Settings > Accessibility > Read & Speak > Voices." = "더 자연스러운 음성을 원하면 설정 > 손쉬운 사용 > 읽기 및 말하기 > 음성에서 영어 프리미엄 음성을 다운로드하세요.";

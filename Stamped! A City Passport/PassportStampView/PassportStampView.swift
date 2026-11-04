@@ -13,6 +13,9 @@ struct PassportStampView: View {
     let dateCompleted: String
     let funFact: String
     var isHighContrast: Bool = false
+    /// False for a still picture (the share card): ImageRenderer never runs onAppear,
+    /// so the stamp would stay at its starting opacity of 0
+    var animatesIn: Bool = true
     
     @Environment(\.accessibilityReduceMotion) var reduceMotion
     @Environment(\.colorSchemeContrast) var systemContrast
@@ -54,8 +57,8 @@ struct PassportStampView: View {
         )
         // Subtle tilt for a "hand-stamped" look, disabled in reduce motion
         .rotationEffect(.degrees(reduceMotion ? 0 : -3))
-        .scaleEffect(internalScale)
-        .opacity(internalOpacity)
+        .scaleEffect(animatesIn ? internalScale : 1)
+        .opacity(animatesIn ? internalOpacity : 1)
         // Kept on purpose: the stamp is a sheet of paper lifted off the page, not an ordinary card
         .shadow(color: .black.opacity(isHighContrast ? 0 : 0.1), radius: 10, x: 0, y: 5)
         .accessibilityElement(children: .combine)
