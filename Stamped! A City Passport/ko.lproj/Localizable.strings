@@ -797,3 +797,8 @@
 
 /* Text sent with a shared passport picture; %@ is the App Store link */
 "My Stamped! passport. Get the app: %@" = "나의 Stamped! 여권. 앱 받기: %@";
+
+/* Audio story: tip when only the basic voice is installed */
+"Got it" = "확인";
+"For a more natural voice, download a Premium English voice in Settings > Accessibility > Read & Speak > Voices." = "더 자연스러운 음성을 원하면 설정 > 손쉬운 사용 > 읽기 및 말하기 > 음성에서 영어 프리미엄 음성을 다운로드하세요.";
+"For a more natural voice, download a Premium English voice in System Settings > Accessibility > Spoken Content > System Voice > Manage Voices." = "더 자연스러운 음성을 원하면 시스템 설정 > 손쉬운 사용 > 말하기 콘텐츠 > 시스템 음성 > 음성 관리에서 영어 프리미엄 음성을 다운로드하세요.";

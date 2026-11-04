@@ -797,3 +797,8 @@
 
 /* Text sent with a shared passport picture; %@ is the App Store link */
 "My Stamped! passport. Get the app: %@" = "Mein Stamped!-Reisepass. Hol dir die App: %@";
+
+/* Audio story: tip when only the basic voice is installed */
+"Got it" = "Verstanden";
+"For a more natural voice, download a Premium English voice in Settings > Accessibility > Read & Speak > Voices." = "Für eine natürlichere Stimme lade eine englische Premium-Stimme unter Einstellungen > Bedienungshilfen > Vorlesen & Sprechen > Stimmen.";
+"For a more natural voice, download a Premium English voice in System Settings > Accessibility > Spoken Content > System Voice > Manage Voices." = "Für eine natürlichere Stimme lade eine englische Premium-Stimme unter Systemeinstellungen > Bedienungshilfen > Gesprochene Inhalte > Systemstimme > Stimmen verwalten.";

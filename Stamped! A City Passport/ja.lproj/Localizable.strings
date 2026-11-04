@@ -797,3 +797,8 @@
 
 /* Text sent with a shared passport picture; %@ is the App Store link */
 "My Stamped! passport. Get the app: %@" = "私のStamped!パスポート。アプリはこちら：%@";
+
+/* Audio story: tip when only the basic voice is installed */
+"Got it" = "了解";
+"For a more natural voice, download a Premium English voice in Settings > Accessibility > Read & Speak > Voices." = "より自然な声にするには、「設定」>「アクセシビリティ」>「読み上げと発話」>「声」で英語のプレミアム音声をダウンロードしてください。";
+"For a more natural voice, download a Premium English voice in System Settings > Accessibility > Spoken Content > System Voice > Manage Voices." = "より自然な声にするには、「システム設定」>「アクセシビリティ」>「読み上げコンテンツ」>「システムの声」>「声を管理」で英語のプレミアム音声をダウンロードしてください。";

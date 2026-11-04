@@ -797,3 +797,8 @@
 
 /* Text sent with a shared passport picture; %@ is the App Store link */
 "My Stamped! passport. Get the app: %@" = "我的 Stamped! 护照。下载 App：%@";
+
+/* Audio story: tip when only the basic voice is installed */
+"Got it" = "知道了";
+"For a more natural voice, download a Premium English voice in Settings > Accessibility > Read & Speak > Voices." = "若想要更自然的声音，请前往“设置”>“辅助功能”>“朗读与说话”>“声音”下载英文高级音质声音。";
+"For a more natural voice, download a Premium English voice in System Settings > Accessibility > Spoken Content > System Voice > Manage Voices." = "若想要更自然的声音，请前往“系统设置”>“辅助功能”>“朗读内容”>“系统声音”>“管理声音”下载英文高级音质声音。";
