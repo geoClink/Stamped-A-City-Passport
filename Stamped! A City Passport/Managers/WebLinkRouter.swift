@@ -16,6 +16,14 @@ enum WebLinkRouter {
 
     /// The city or campus a website link points at, or nil for any other page.
     static func city(from url: URL) -> CityLocation.City? {
+        // The home screen widget opens its latest city with stamped://city/{rawValue},
+        // the same form Spotlight uses (SpotlightManager)
+        if url.scheme == "stamped" {
+            guard url.host == "city" else { return nil }
+            // url.path is already percent-decoded ("/St. Louis"); drop the leading slash
+            return CityLocation.City(rawValue: String(url.path.dropFirst()))
+        }
+
         guard let urlHost = url.host?.lowercased(),
               urlHost == host || urlHost == "www." + host
         else { return nil }

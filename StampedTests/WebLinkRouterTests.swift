@@ -54,4 +54,18 @@ final class WebLinkRouterTests: XCTestCase {
             XCTAssertNil(WebLinkRouter.city(from: URL(string: link)!), link)
         }
     }
+
+    // The home screen widget builds these with URLComponents (WidgetStamp.cityURL), so names
+    // with spaces, accents, commas and apostrophes arrive percent-encoded
+    func testWidgetLinksOpenTheirCity() {
+        for city in [CityLocation.City.chicago, .stLouis, .sãoPaulo, .columbusIndiana, .sanaa, .michiganState] {
+            var components = URLComponents()
+            components.scheme = "stamped"
+            components.host = "city"
+            components.path = "/" + city.rawValue
+            XCTAssertEqual(WebLinkRouter.city(from: components.url!), city, city.rawValue)
+        }
+        XCTAssertNil(WebLinkRouter.city(from: URL(string: "stamped://city/Atlantis")!))
+        XCTAssertNil(WebLinkRouter.city(from: URL(string: "stamped://building/Chicago")!))
+    }
 }
