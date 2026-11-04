@@ -845,6 +845,30 @@
 "Which city or campus?" = "Qual cidade ou campus?";
 "Open ${city}" = "Abrir ${city}";
 
+/* Siri and Shortcuts actions added in 2.10 (Intents folder) */
+"Landmark" = "Ponto turístico";
+"Show My Progress" = "Mostrar meu progresso";
+"Tells you how many landmarks you've stamped and how many cities you've visited, without opening Stamped!." = "Diz quantos pontos turísticos você carimbou e quantas cidades visitou, sem abrir o Stamped!.";
+"You haven't stamped any landmarks yet. Open a city in Stamped! to collect your first stamp." = "Você ainda não carimbou nenhum ponto turístico. Abra uma cidade no Stamped! para ganhar seu primeiro carimbo.";
+"Landmarks stamped: %lld of %lld. Cities and campuses visited: %lld. Completed: %lld." = "Pontos turísticos carimbados: %1$lld de %2$lld. Cidades e campi visitados: %3$lld. Concluídos: %4$lld.";
+"Landmarks stamped" = "Pontos turísticos carimbados";
+"Cities and campuses visited" = "Cidades e campi visitados";
+"Completed" = "Concluídos";
+"My Progress" = "Meu progresso";
+"What's Near Me" = "O que tem perto de mim";
+"Opens the landmark closest to you in Stamped!, or the nearest city or campus when no landmark is close by." = "Abre no Stamped! o ponto turístico mais perto de você, ou a cidade ou o campus mais próximo quando não há nenhum por perto.";
+"%@ is %@ away." = "%1$@ fica a %2$@.";
+"The closest place in Stamped! is %@, %@ away." = "O lugar mais próximo no Stamped! é %1$@, a %2$@.";
+"Stamped! needs your location to find what's near you. You can turn it on in Settings, under Privacy & Security, Location Services." = "O Stamped! precisa da sua localização para encontrar o que tem por perto. Você pode ativá-la em Ajustes, em Privacidade e Segurança > Serviços de Localização.";
+"Stamped! couldn't find your location. Try again in a moment." = "O Stamped! não conseguiu encontrar sua localização. Tente de novo daqui a pouco.";
+"Open a Landmark" = "Abrir um ponto turístico";
+"Opens a landmark's page in Stamped!." = "Abre a página de um ponto turístico no Stamped!.";
+"Which landmark?" = "Qual ponto turístico?";
+"Open ${landmark}" = "Abrir ${landmark}";
+"Start a Walking Tour" = "Começar um passeio a pé";
+"Opens a city's map in Stamped! and starts the tour of its landmarks, in walking order." = "Abre o mapa de uma cidade no Stamped! e começa o passeio pelos pontos turísticos, na ordem de uma caminhada.";
+"Start a walking tour of ${city}" = "Começar um passeio a pé por ${city}";
+"Walking Tour" = "Passeio a pé";
 /* Accessibility on a landmark's page: step-free access from OpenStreetMap */
 "Accessibility" = "Acessibilidade";
 "Step-free access" = "Acesso sem degraus";

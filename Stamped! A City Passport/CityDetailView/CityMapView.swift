@@ -29,6 +29,8 @@ struct CityMapView: View {
     // Watched live so pins and the card update the moment something is stamped or saved
     @ObservedObject private var progress = GlobalProgressManager.shared
     @ObservedObject private var tripStore = TripStore.shared
+    /// For Siri and Shortcuts: "Start a Walking Tour", and on Mac "Open a Landmark"
+    @ObservedObject private var navManager = NavigationManager.shared
 
     @State private var position: MapCameraPosition = .automatic
     @State private var selectedBuilding: Building?
@@ -207,7 +209,15 @@ struct CityMapView: View {
                     startTour(of: trip)
                 }
             }
+            startRequestedTour()
+            #if os(macOS)
+            openRequestedLandmark()
+            #endif
         }
+        .onChange(of: navManager.tourRequestCity) { _, _ in startRequestedTour() }
+        #if os(macOS)
+        .onChange(of: navManager.landmarkRequest) { _, _ in openRequestedLandmark() }
+        #endif
         .onDisappear { stopTour() }
         .overlay(alignment: .bottom) {
             if let building = selectedBuilding {
@@ -726,6 +736,30 @@ struct CityMapView: View {
         guard let index = stops.firstIndex(where: { $0.id == building.id }) else { return nil }
         return "Stop \(index + 1) of \(stops.count)"
     }
+
+    /// "Start a Walking Tour" from Siri or Shortcuts, if it's for this city
+    private func startRequestedTour() {
+        guard let city = navManager.tourRequestCity, city.name == cityName else { return }
+        navManager.tourRequestCity = nil
+        stopTour()
+        // Give the city a moment to appear first, like a trip's Tour button
+        Task {
+            try? await Task.sleep(for: .seconds(1))
+            startTour()
+        }
+    }
+
+    #if os(macOS)
+    /// Mac: "Open a Landmark" flies to it and opens its page, since the map is the city's main view
+    private func openRequestedLandmark() {
+        guard let request = navManager.landmarkRequest, request.city.name == cityName,
+              let building = buildings.first(where: { $0.id == request.buildingID })
+        else { return }
+        navManager.landmarkRequest = nil
+        flyTo(building)
+        detailBuilding = building
+    }
+    #endif
 
     /// Flies to each landmark in walking order, pausing on each so its card can be read.
     private func startTour() {

@@ -2,10 +2,12 @@
 //  StampedShortcuts.swift
 //  Stamped! A City Passport
 //
-//  Siri and Shortcuts actions: "Open my passport" and "Open a city". Both open the app and
-//  go through NavigationManager, the same way a website link or a Spotlight result does.
-//  The spoken phrases are translated in each language's AppShortcuts.strings; titles and
-//  descriptions are in Localizable.strings.
+//  Siri and Shortcuts actions. "Open my passport", "Open a city", "Open a landmark",
+//  "Start a walking tour" and "What's near me" (OpenNearbyIntent.swift) open the app and go
+//  through NavigationManager, the same way a website link or a Spotlight result does.
+//  "Show my progress" (ShowProgressIntent.swift) answers without opening the app.
+//  The spoken phrases are translated in AppShortcuts.xcstrings; titles, descriptions and
+//  dialogs are in Localizable.strings.
 //
 //  iPhone, iPad and Mac only: the Vision Pro app has its own city list (no CityLocation.City),
 //  so these files aren't part of the Tally-AVP target.
@@ -95,6 +97,49 @@ struct OpenCityIntent: AppIntent {
     }
 }
 
+struct OpenLandmarkIntent: AppIntent {
+    static let title: LocalizedStringResource = "Open a Landmark"
+    static let description = IntentDescription("Opens a landmark's page in Stamped!.")
+    static let openAppWhenRun = true
+
+    @Parameter(title: "Landmark", requestValueDialog: "Which landmark?")
+    var landmark: LandmarkEntity
+
+    static var parameterSummary: some ParameterSummary {
+        Summary("Open \(\.$landmark)")
+    }
+
+    @MainActor func perform() async throws -> some IntentResult {
+        guard let city = landmark.city else { return .result() }
+        // The city opens first; its page (or on Mac its map) then opens the landmark
+        NavigationManager.shared.landmarkRequest = LandmarkRequest(city: city, buildingID: landmark.buildingID)
+        NavigationManager.shared.spotlightCity = city
+        return .result()
+    }
+}
+
+/// The city map's Tour: it flies from landmark to landmark in walking order.
+struct StartWalkingTourIntent: AppIntent {
+    static let title: LocalizedStringResource = "Start a Walking Tour"
+    static let description = IntentDescription("Opens a city's map in Stamped! and starts the tour of its landmarks, in walking order.")
+    static let openAppWhenRun = true
+
+    @Parameter(title: "City or Campus", requestValueDialog: "Which city or campus?")
+    var city: CityEntity
+
+    static var parameterSummary: some ParameterSummary {
+        Summary("Start a walking tour of \(\.$city)")
+    }
+
+    @MainActor func perform() async throws -> some IntentResult {
+        guard let place = city.city else { return .result() }
+        // The city page opens its map, and the map starts the tour (CityDetailView, CityMapView)
+        NavigationManager.shared.tourRequestCity = place
+        NavigationManager.shared.spotlightCity = place
+        return .result()
+    }
+}
+
 // MARK: - Siri phrases
 
 /// The phrases Siri and Spotlight know without any setup. Each must name the app.
@@ -120,6 +165,46 @@ struct StampedShortcuts: AppShortcutsProvider {
             ],
             shortTitle: "Open a City",
             systemImageName: "building.2.fill"
+        )
+        AppShortcut(
+            intent: ShowProgressIntent(),
+            phrases: [
+                "Show my progress in \(.applicationName)",
+                "How many stamps do I have in \(.applicationName)",
+                "Show my \(.applicationName) progress",
+            ],
+            shortTitle: "My Progress",
+            systemImageName: "chart.pie.fill"
+        )
+        AppShortcut(
+            intent: OpenNearbyIntent(),
+            phrases: [
+                "What's near me in \(.applicationName)",
+                "Show what's nearby in \(.applicationName)",
+            ],
+            shortTitle: "What's Near Me",
+            systemImageName: "location.fill"
+        )
+        AppShortcut(
+            intent: StartWalkingTourIntent(),
+            phrases: [
+                "Start a walking tour of \(\.$city) in \(.applicationName)",
+                "Tour \(\.$city) in \(.applicationName)",
+                // No city named: Siri asks "Which city or campus?"
+                "Start a walking tour in \(.applicationName)",
+            ],
+            shortTitle: "Walking Tour",
+            systemImageName: "figure.walk"
+        )
+        AppShortcut(
+            intent: OpenLandmarkIntent(),
+            phrases: [
+                // Siri asks "Which landmark?" (LandmarkEntityQuery says why there's no name here)
+                "Open a landmark in \(.applicationName)",
+                "Find a landmark in \(.applicationName)",
+            ],
+            shortTitle: "Open a Landmark",
+            systemImageName: "building.columns.fill"
         )
     }
 }

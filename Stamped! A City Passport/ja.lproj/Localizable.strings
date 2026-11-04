@@ -845,6 +845,30 @@
 "Which city or campus?" = "どの都市またはキャンパスですか？";
 "Open ${city}" = "${city}を開く";
 
+/* Siri and Shortcuts actions added in 2.10 (Intents folder) */
+"Landmark" = "ランドマーク";
+"Show My Progress" = "進捗を表示";
+"Tells you how many landmarks you've stamped and how many cities you've visited, without opening Stamped!." = "Stamped!を開かずに、スタンプを押したランドマークの数と訪れた都市の数を教えます。";
+"You haven't stamped any landmarks yet. Open a city in Stamped! to collect your first stamp." = "まだランドマークにスタンプを押していません。Stamped!で都市を開いて、最初のスタンプを集めましょう。";
+"Landmarks stamped: %lld of %lld. Cities and campuses visited: %lld. Completed: %lld." = "スタンプを押したランドマーク：%2$lld件中%1$lld件。訪れた都市とキャンパス：%3$lld。制覇：%4$lld。";
+"Landmarks stamped" = "スタンプ済みランドマーク";
+"Cities and campuses visited" = "訪れた都市とキャンパス";
+"Completed" = "制覇";
+"My Progress" = "進捗";
+"What's Near Me" = "近くにあるもの";
+"Opens the landmark closest to you in Stamped!, or the nearest city or campus when no landmark is close by." = "Stamped!で一番近いランドマークを開きます。近くにランドマークがない場合は、一番近い都市かキャンパスを開きます。";
+"%@ is %@ away." = "%1$@まで%2$@です。";
+"The closest place in Stamped! is %@, %@ away." = "Stamped!で一番近い場所は%1$@（%2$@先）です。";
+"Stamped! needs your location to find what's near you. You can turn it on in Settings, under Privacy & Security, Location Services." = "近くの場所を探すには、Stamped!に位置情報の使用を許可してください。「設定」の「プライバシーとセキュリティ」>「位置情報サービス」でオンにできます。";
+"Stamped! couldn't find your location. Try again in a moment." = "Stamped!で現在地を取得できませんでした。少し待ってからもう一度お試しください。";
+"Open a Landmark" = "ランドマークを開く";
+"Opens a landmark's page in Stamped!." = "Stamped!でランドマークのページを開きます。";
+"Which landmark?" = "どのランドマークですか？";
+"Open ${landmark}" = "${landmark}を開く";
+"Start a Walking Tour" = "ウォーキングツアーを開始";
+"Opens a city's map in Stamped! and starts the tour of its landmarks, in walking order." = "Stamped!で都市の地図を開き、歩く順番でランドマークを巡るツアーを始めます。";
+"Start a walking tour of ${city}" = "${city}のウォーキングツアーを開始";
+"Walking Tour" = "ウォーキングツアー";
 /* Accessibility on a landmark's page: step-free access from OpenStreetMap */
 "Accessibility" = "バリアフリー";
 "Step-free access" = "段差のないアクセス";

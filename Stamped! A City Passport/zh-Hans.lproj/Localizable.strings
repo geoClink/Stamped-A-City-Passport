@@ -845,6 +845,30 @@
 "Which city or campus?" = "哪个城市或校园？";
 "Open ${city}" = "打开${city}";
 
+/* Siri and Shortcuts actions added in 2.10 (Intents folder) */
+"Landmark" = "地标";
+"Show My Progress" = "显示我的进度";
+"Tells you how many landmarks you've stamped and how many cities you've visited, without opening Stamped!." = "无需打开 Stamped!，即可告诉你已盖章的地标数量和到访过的城市数量。";
+"You haven't stamped any landmarks yet. Open a city in Stamped! to collect your first stamp." = "你还没有为任何地标盖章。在 Stamped! 中打开一个城市，收集你的第一个印章吧。";
+"Landmarks stamped: %lld of %lld. Cities and campuses visited: %lld. Completed: %lld." = "已盖章地标：%1$lld / %2$lld。到访城市和校园：%3$lld。已完成：%4$lld。";
+"Landmarks stamped" = "已盖章地标";
+"Cities and campuses visited" = "到访城市和校园";
+"Completed" = "已完成";
+"My Progress" = "我的进度";
+"What's Near Me" = "我附近有什么";
+"Opens the landmark closest to you in Stamped!, or the nearest city or campus when no landmark is close by." = "在 Stamped! 中打开离你最近的地标；如果附近没有地标，则打开最近的城市或校园。";
+"%@ is %@ away." = "%1$@距离你%2$@。";
+"The closest place in Stamped! is %@, %@ away." = "Stamped! 中离你最近的地方是%1$@，距离%2$@。";
+"Stamped! needs your location to find what's near you. You can turn it on in Settings, under Privacy & Security, Location Services." = "Stamped! 需要你的位置才能查找附近的地方。你可以在“设置”的“隐私与安全性” > “定位服务”中打开。";
+"Stamped! couldn't find your location. Try again in a moment." = "Stamped! 无法获取你的位置。请稍后再试。";
+"Open a Landmark" = "打开地标";
+"Opens a landmark's page in Stamped!." = "在 Stamped! 中打开地标页面。";
+"Which landmark?" = "哪个地标？";
+"Open ${landmark}" = "打开${landmark}";
+"Start a Walking Tour" = "开始步行导览";
+"Opens a city's map in Stamped! and starts the tour of its landmarks, in walking order." = "在 Stamped! 中打开城市地图，按步行顺序开始游览其地标。";
+"Start a walking tour of ${city}" = "开始${city}步行导览";
+"Walking Tour" = "步行导览";
 /* Accessibility on a landmark's page: step-free access from OpenStreetMap */
 "Accessibility" = "无障碍";
 "Step-free access" = "无台阶通道";
