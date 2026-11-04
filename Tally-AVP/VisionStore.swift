@@ -30,6 +30,7 @@ final class VisionStore {
     private let visitedKey = "GlobalVisitedBuildingsKey"
     private let wishlistKey = "GlobalWishlistKey"
     private let customPlacesKey = "GlobalCustomPlacesKey"
+    private let customPlaceChangesKey = "GlobalCustomPlacesChangesKey"
     private let iCloud = NSUbiquitousKeyValueStore.default
 
     private init() {
@@ -82,6 +83,11 @@ final class VisionStore {
         if let data = try? JSONEncoder().encode(customPlaces) {
             iCloud.set(data, forKey: customPlacesKey)
         }
+        // Since 2.10 iPhone and Mac merge saved places one by one, so the removal
+        // has to be logged too, or they'd put the place back (see ICloudListMerge)
+        let changes = ICloudListMerge.decodeLog(iCloud.data(forKey: customPlaceChangesKey))
+        let updated = ICloudListMerge.recording(id, removed: true, in: changes)
+        iCloud.set(ICloudListMerge.encodeLog(updated), forKey: customPlaceChangesKey)
     }
 
     // Named loadVisited for history; it now refreshes everything synced from iPhone.

@@ -5,8 +5,9 @@
 //  "My College List": the campuses a prospective student is considering,
 //  in the order they put them. Saved on this device and in iCloud the same
 //  way TripStore saves trips: the app-group UserDefaults plus iCloud
-//  key-value storage, and the latest saved list wins when another device
-//  changes it (people remove and reorder schools as well as add them).
+//  key-value storage. Since 2.10 another device's changes are merged school
+//  by school (see ICloudListMerge): a school added on either device is kept,
+//  a removal sticks, and the order from the latest reorder wins.
 //
 //  Campuses are saved by `CityLocation.City.rawValue` ("Duke University"),
 //  as a plain string array, so a name an older or newer app doesn't know
@@ -26,7 +27,11 @@ final class CollegeListStore: ObservableObject {
         didSet { save() }
     }
 
+    /// When each campus was last added or removed (and the last reorder), for merging.
+    private var changes: ListChangeLog = [:]
+
     private let listKey = "GlobalCollegeListKey"
+    private let changesKey = "GlobalCollegeListChangesKey"
     private let defaults: UserDefaults
     /// nil in unit tests, so tests never touch the real iCloud store.
     private let iCloud: NSUbiquitousKeyValueStore?
@@ -46,6 +51,8 @@ final class CollegeListStore: ObservableObject {
         if let saved = defaults.array(forKey: listKey) as? [String] {
             self.campusNames = saved
         }
+        // Lists saved before 2.10 have no log yet; they're simply kept
+        changes = ICloudListMerge.decodeLog(defaults.data(forKey: changesKey))
 
         guard let iCloud else { return }
 
@@ -58,24 +65,65 @@ final class CollegeListStore: ObservableObject {
             forName: NSUbiquitousKeyValueStore.didChangeExternallyNotification,
             object: iCloud,
             queue: .main
-        ) { [weak self] _ in
-            Task { @MainActor in self?.mergeFromICloud() }
+        ) { [weak self] notification in
+            let accountChanged = ICloudListMerge.isAccountChange(notification)
+            Task { @MainActor [weak self] in self?.mergeFromICloud(accountChanged: accountChanged) }
         }
     }
 
     // MARK: - iCloud Merge
 
-    /// The latest saved list wins (same rule as trips and the wishlist).
-    private func mergeFromICloud() {
-        if let cloudNames = iCloud?.array(forKey: listKey) as? [String],
-           cloudNames != campusNames {
+    private func mergeFromICloud(accountChanged: Bool = false) {
+        guard let iCloud else { return }
+        mergeCloud(
+            names: iCloud.array(forKey: listKey) as? [String],
+            changesData: iCloud.data(forKey: changesKey),
+            accountChanged: accountChanged
+        )
+    }
+
+    /// Merges iCloud's list into this device's, then saves the result back so
+    /// iCloud gets any schools only this device had. Not private so tests can
+    /// pass iCloud's data in. Same steps as TripStore.mergeCloud.
+    func mergeCloud(names cloudNames: [String]?, changesData: Data?, accountChanged: Bool = false) {
+        let cloudChanges = ICloudListMerge.decodeLog(changesData)
+
+        guard let cloudNames else {
+            // Nothing in iCloud yet: share this device's list
+            if !campusNames.isEmpty || !changes.isEmpty { save() }
+            return
+        }
+
+        if accountChanged {
+            changes = cloudChanges
             campusNames = cloudNames
+            return
+        }
+
+        let merged = ICloudListMerge.merge(
+            local: campusNames, localLog: changes,
+            cloud: cloudNames, cloudLog: cloudChanges,
+            id: { $0 }
+        )
+        changes = merged.log
+        if merged.items != campusNames {
+            campusNames = merged.items // saves via didSet
+        } else if merged.items != cloudNames || merged.log != cloudChanges {
+            save()
         }
     }
 
     private func save() {
+        let changesData = ICloudListMerge.encodeLog(changes)
         defaults.set(campusNames, forKey: listKey)
+        defaults.set(changesData, forKey: changesKey)
         iCloud?.set(campusNames, forKey: listKey)
+        iCloud?.set(changesData, forKey: changesKey)
+    }
+
+    /// Notes a change before `campusNames` is set, so the save that follows includes it.
+    private func recordChange(_ itemID: String, removed: Bool = false) {
+        changes = ICloudListMerge.recording(itemID, removed: removed, in: changes)
     }
 
     // MARK: - Reading
@@ -97,10 +145,13 @@ final class CollegeListStore: ObservableObject {
     /// campuses already on the list, are ignored.
     func add(_ campus: CityLocation.City) {
         guard campus.isCampus, !contains(campus) else { return }
+        recordChange(campus.rawValue)
         campusNames.append(campus.rawValue)
     }
 
     func remove(_ campus: CityLocation.City) {
+        guard contains(campus) else { return }
+        recordChange(campus.rawValue, removed: true)
         campusNames.removeAll { $0 == campus.rawValue }
     }
 
@@ -117,6 +168,9 @@ final class CollegeListStore: ObservableObject {
     func remove(atOffsets offsets: IndexSet) {
         let shown = campuses
         let names = Set(offsets.filter { shown.indices.contains($0) }.map { shown[$0].rawValue })
+        for name in names {
+            recordChange(name, removed: true)
+        }
         campusNames.removeAll { names.contains($0) }
     }
 
@@ -126,6 +180,7 @@ final class CollegeListStore: ObservableObject {
         var shown = campuses.map(\.rawValue)
         shown.move(fromOffsets: source, toOffset: destination)
         let hidden = campusNames.filter { !shown.contains($0) }
+        recordChange(ICloudListMerge.orderID)
         campusNames = shown + hidden
     }
 }

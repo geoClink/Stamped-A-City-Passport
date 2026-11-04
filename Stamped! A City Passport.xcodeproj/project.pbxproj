@@ -117,6 +117,7 @@
 				CityExplore/CitySceneConfig.swift,
 				Hotels/HotelLinks.swift,
 				Managers/AudioStoryPlayer.swift,
+				Managers/ICloudListMerge.swift,
 				Managers/TipJarStore.swift,
 				Models/Building.swift,
 				Models/CityAudioManager.swift,
