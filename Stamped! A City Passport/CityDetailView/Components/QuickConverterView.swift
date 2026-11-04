@@ -11,6 +11,8 @@ struct QuickConverterView: View {
     @Binding var userAmount: String
     @State private var showingCurrencyInfo = false
     @AppStorage("reduce_motion") var reduceMotion = false
+    /// The system Reduce Motion setting, honored alongside the app's own switch
+    @Environment(\.accessibilityReduceMotion) private var systemReduceMotion
 
     @AppStorage("high_contrast_mode") var isHighContrast = false
     
@@ -49,7 +51,7 @@ struct QuickConverterView: View {
                 }
                 
                 Button {
-                    withAnimation(reduceMotion ? .none : .spring(response: 0.3, dampingFraction: 0.6)) {
+                    withAnimation(reduceMotion || systemReduceMotion ? .none : .spring(response: 0.3, dampingFraction: 0.6)) {
                         viewModel.isSwapped.toggle()
                         HapticManager.shared.trigger(.impact)
                     }
@@ -65,7 +67,10 @@ struct QuickConverterView: View {
                         .contentShape(Rectangle())
                 }
                 .accessibilityLabel("Swap conversion direction")
-                .accessibilityHint("Currently converting from \(viewModel.isSwapped ? "Local" : "Home") to \(viewModel.isSwapped ? "Home" : "Local") currency.")
+                // Whole sentences, so "Local" and "Home" get translated too
+                .accessibilityHint(viewModel.isSwapped
+                    ? Text("Currently converting from Local to Home currency.")
+                    : Text("Currently converting from Home to Local currency."))
                 
                 VStack(alignment: .trailing, spacing: DS.Space.s) {
                     headerLabel(isInput: false)
@@ -74,7 +79,8 @@ struct QuickConverterView: View {
                         .font(.title3.bold())
                         .foregroundColor(accentColor)
                         .frame(maxWidth: .infinity, alignment: .trailing)
-                        .frame(height: 44)
+                        // A minimum, so the amount isn't clipped at large text sizes
+                        .frame(minHeight: 44)
                         .padding(.horizontal, DS.Space.xs)
                         .accessibilityElement(children: .combine)
                         .accessibilityLabel("Converted amount")
@@ -184,6 +190,7 @@ struct QuickConverterView: View {
                     Text("Home (\(viewModel.selectedHomeCurrency))")
                     Image(systemName: "chevron.up.chevron.down")
                         .font(.caption2.weight(.bold))
+                        .accessibilityHidden(true)
                 }
                 .font(.caption2.bold())
                 .fontWeight(isHighContrast ? .black : .bold)

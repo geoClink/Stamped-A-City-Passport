@@ -16,6 +16,8 @@ struct PassportStampView: View {
     /// False for a still picture (the share card): ImageRenderer never runs onAppear,
     /// so the stamp would stay at its starting opacity of 0
     var animatesIn: Bool = true
+    /// False when dateCompleted is decoration (the gallery's "OFFICIAL"), so VoiceOver skips it
+    var speaksDate: Bool = true
     
     @Environment(\.accessibilityReduceMotion) var reduceMotion
     @Environment(\.colorSchemeContrast) var systemContrast
@@ -62,8 +64,11 @@ struct PassportStampView: View {
         // Kept on purpose: the stamp is a sheet of paper lifted off the page, not an ordinary card
         .shadow(color: .black.opacity(isHighContrast ? 0 : 0.1), radius: 10, x: 0, y: 5)
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("Official Passport Stamp for \(cityName)")
-        .accessibilityValue("Completed on \(dateCompleted). Did you know? \(funFact)")
+        // The translated stamp.accessibility keys; the English sentences had no translations
+        .accessibilityLabel(L.Stamp.accessibilityLabel(cityName))
+        .accessibilityValue(speaksDate
+            ? Text(L.Stamp.accessibilityValue(date: dateCompleted, fact: funFact))
+            : Text("Did you know? \(funFact)"))
         .onAppear(perform: handleAppearance)
     }
 }

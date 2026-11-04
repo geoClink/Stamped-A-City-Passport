@@ -22,12 +22,15 @@ struct OnboardingStep: View {
     @ScaledMetric(relativeTo: .largeTitle) private var iconSize: CGFloat = 100
 
     var body: some View {
-        // Centered when it fits; scrolls when large text makes the page too tall
-        ViewThatFits(in: .vertical) {
-            content
+        // Centered when it fits; scrolls when large text makes the page too tall.
+        // (ViewThatFits picked the unscrolled page at the largest text sizes and
+        // cut the description off under the page dots.)
+        GeometryReader { proxy in
             ScrollView {
                 content
+                    .frame(minHeight: proxy.size.height)
             }
+            .scrollBounceBehavior(.basedOnSize)
         }
         .onAppear {
             if manualReduceMotion || systemReduceMotion {

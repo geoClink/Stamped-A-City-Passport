@@ -134,6 +134,8 @@ struct DSSectionHeader<Trailing: View>: View {
             if let systemImage {
                 Image(systemName: systemImage)
                     .foregroundStyle(isHighContrast ? Color.primary : DS.Palette.accent)
+                    // Decorative: the title says it; otherwise VoiceOver reads the symbol's name first
+                    .accessibilityHidden(true)
             }
             Text(title)
                 .tracking(1.2)
@@ -169,7 +171,7 @@ struct DSChip: View {
 
     var body: some View {
         HStack(spacing: DS.Space.xs) {
-            if let systemImage { Image(systemName: systemImage) }
+            if let systemImage { Image(systemName: systemImage).accessibilityHidden(true) }
             Text(text).lineLimit(1)
         }
         .font(.caption.weight(.semibold))

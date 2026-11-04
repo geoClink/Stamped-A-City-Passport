@@ -30,6 +30,7 @@ struct BuildingPhotoGallery: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         LazyHStack(alignment: .top, spacing: DS.Space.m) {
                             ForEach(photos) { photo in
+                                let number = (photos.firstIndex(of: photo) ?? 0) + 1
                                 Button {
                                     selectedPhoto = photo
                                 } label: {
@@ -37,7 +38,8 @@ struct BuildingPhotoGallery: View {
                                 }
                                 .buttonStyle(.plain)
                                 .accessibilityLabel(Text("Photo of \(building.name)"))
-                                .accessibilityValue(photo.credit)
+                                // "Photo 2 of 5", then the credit
+                                .accessibilityValue(Text("Photo \(number) of \(photos.count)") + Text(verbatim: ", \(photo.credit)"))
                                 .accessibilityHint(Text("Opens the photo full screen"))
                             }
                         }
@@ -150,7 +152,8 @@ private struct GalleryFullScreenView: View {
     }
 
     private func page(for photo: WikiGalleryPhoto) -> some View {
-        VStack(spacing: DS.Space.m) {
+        let number = (photos.firstIndex(of: photo) ?? 0) + 1
+        return VStack(spacing: DS.Space.m) {
             Spacer(minLength: 0)
 
             AsyncImage(url: photo.largeURL) { phase in
@@ -160,10 +163,12 @@ private struct GalleryFullScreenView: View {
                         .resizable()
                         .scaledToFit()
                         .accessibilityLabel(Text("Photo of \(buildingName)"))
+                        .accessibilityValue(Text("Photo \(number) of \(photos.count)"))
                 case .failure:
                     Image(systemName: "photo.slash")
                         .font(.largeTitle)
                         .foregroundStyle(.white.opacity(0.7))
+                        .accessibilityLabel(Text("Image unavailable"))
                 default:
                     ProgressView()
                         .tint(.white)
@@ -175,7 +180,6 @@ private struct GalleryFullScreenView: View {
 
             // The full credit, never truncated
             VStack(spacing: DS.Space.xs) {
-                let number = (photos.firstIndex(of: photo) ?? 0) + 1
                 Text(verbatim: "\(number) / \(photos.count)")
                     .font(.caption.monospacedDigit())
                     .foregroundStyle(.white.opacity(0.7))

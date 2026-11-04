@@ -84,6 +84,8 @@ struct SmallPassportView: View {
             Spacer(minLength: 4)
             Text(progress.landmarkCount, format: .number)
                 .font(.system(.largeTitle, design: .rounded, weight: .bold))
+                .lineLimit(1)
+                .minimumScaleFactor(0.6)
                 .contentTransition(.numericText())
                 .widgetAccentable()
             // Two strings, not a plural: a plural form has to show the number, and it's above
@@ -93,9 +95,10 @@ struct SmallPassportView: View {
                 .font(.caption)
                 .foregroundStyle(.secondary)
                 .lineLimit(2)
+                .minimumScaleFactor(0.8)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-        .accessibilityElement(children: .combine)
+        .modifier(PassportAccessibilitySummary(progress: progress))
     }
 }
 
@@ -126,7 +129,7 @@ struct MediumPassportView: View {
             }
             .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .accessibilityElement(children: .combine)
+        .modifier(PassportAccessibilitySummary(progress: progress))
     }
 }
 
@@ -145,6 +148,9 @@ struct LargePassportView: View {
                 Spacer()
                 StampBadge(cityName: progress.latestStamp?.cityName, size: 64)
             }
+            // The header is the summary sentence; each recent stamp below stays its
+            // own element so VoiceOver can still open its city
+            .modifier(PassportAccessibilitySummary(progress: progress))
 
             Divider()
 
@@ -156,6 +162,7 @@ struct LargePassportView: View {
                     .font(.caption.weight(.semibold))
                     .foregroundStyle(.secondary)
                     .textCase(.uppercase)
+                    .accessibilityAddTraits(.isHeader)
                 ForEach(progress.recentStamps, id: \.self) { stamp in
                     RecentStampRow(stamp: stamp)
                 }
@@ -166,6 +173,25 @@ struct LargePassportView: View {
 }
 
 // MARK: - Pieces
+
+/// VoiceOver reads the widget as one sentence, e.g.
+/// "Stamped! passport: 42 landmarks, 7 cities. Latest stamp: Willis Tower, Chicago"
+struct PassportAccessibilitySummary: ViewModifier {
+    let progress: PassportProgress
+
+    func body(content: Content) -> some View {
+        content
+            .accessibilityElement(children: .ignore)
+            // Reuses the plural keys from ProgressTotals, so "1 city" reads right
+            .accessibilityLabel(Text("Stamped! passport: \(Text("widget.landmarkCount \(progress.landmarkCount)")), \(Text("widget.cityCount \(progress.cityCount)"))"))
+            .accessibilityValue(latestStampText)
+    }
+
+    private var latestStampText: Text {
+        guard let latest = progress.latestStamp else { return Text("No stamps yet") }
+        return Text("Latest stamp: \(latest.landmarkName), \(latest.cityName)")
+    }
+}
 
 /// A round, dashed passport stamp with the city's name, tilted like it was stamped by hand.
 /// With no city yet it shows an empty stamp outline.
@@ -239,6 +265,7 @@ struct StampDetailLine: View {
         HStack(spacing: 4) {
             Text(stamp.landmarkName)
                 .lineLimit(1)
+                .minimumScaleFactor(0.8)
             if let date = stamp.date {
                 Text(verbatim: "·")
                 Text(date, format: .dateTime.month(.abbreviated).day())
@@ -273,10 +300,12 @@ struct RecentStampRowContent: View {
                 .font(.title3)
                 .foregroundStyle(Color("AccentColor"))
                 .widgetAccentable()
+                .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 1) {
                 Text(stamp.landmarkName)
                     .font(.subheadline.weight(.semibold))
                     .lineLimit(1)
+                    .minimumScaleFactor(0.8)
                 HStack(spacing: 4) {
                     Text(stamp.cityName)
                     if let date = stamp.date {
@@ -287,9 +316,12 @@ struct RecentStampRowContent: View {
                 .font(.caption)
                 .foregroundStyle(.secondary)
                 .lineLimit(1)
+                .minimumScaleFactor(0.8)
             }
             Spacer(minLength: 0)
         }
+        // "Willis Tower, Chicago, Nov 4" as one element
+        .accessibilityElement(children: .combine)
     }
 }
 
@@ -302,6 +334,8 @@ struct EmptyPassportMessage: View {
                 .font(.caption)
                 .foregroundStyle(.secondary)
         }
+        .minimumScaleFactor(0.8)
+        .accessibilityElement(children: .combine)
     }
 }
 

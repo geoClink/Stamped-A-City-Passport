@@ -13,6 +13,7 @@ struct VisionQuizView: View {
     let buildings: [Building]
 
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @State private var quiz: QuizRound
 
     init(cityName: String, buildings: [Building]) {
@@ -55,9 +56,12 @@ struct VisionQuizView: View {
                 Label("\(quiz.score)", systemImage: "star.fill")
                     .font(.headline)
                     .foregroundStyle(.orange)
+                    // The star alone doesn't say it's the score
+                    .accessibilityLabel(Text("Score: \(quiz.score)"))
             }
             ProgressView(value: Double(quiz.questionNumber - 1), total: Double(QuizRound.length))
                 .tint(.orange)
+                .accessibilityHidden(true)   // "Question 3 of 10" above says the same
 
             // A clue card about the building (hides whatever is being asked)
             VStack(alignment: .leading, spacing: 8) {
@@ -65,7 +69,8 @@ struct VisionQuizView: View {
                 Text(building.description)
                     .font(.body)
                     .foregroundStyle(.secondary)
-                    .lineLimit(4)
+                    // At the largest text sizes four lines cut the clue short
+                    .lineLimit(dynamicTypeSize.isAccessibilitySize ? nil : 4)
             }
             .padding(24)
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -75,6 +80,7 @@ struct VisionQuizView: View {
             // LocalizedStringKey to look it up in Localizable.xcstrings.
             Text(LocalizedStringKey(quiz.type.prompt))
                 .font(.title.bold())
+                .accessibilityAddTraits(.isHeader)
 
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
                 ForEach(quiz.options, id: \.self) { option in
@@ -93,6 +99,8 @@ struct VisionQuizView: View {
                     }
                     .tint(tint(for: option))
                     .disabled(quiz.selected != nil)
+                    // Green and red say right or wrong; VoiceOver says it in words
+                    .accessibilityValue(answerResult(for: option))
                 }
             }
         }
@@ -106,6 +114,14 @@ struct VisionQuizView: View {
         return nil
     }
 
+    /// "Correct" for the right answer and "Wrong" for a wrong pick, once answered
+    private func answerResult(for option: String) -> Text {
+        guard let selected = quiz.selected else { return Text(verbatim: "") }
+        if option == quiz.correctAnswer { return Text("Correct") }
+        if option == selected { return Text("Wrong") }
+        return Text(verbatim: "")
+    }
+
     // MARK: - Results
 
     private var results: some View {
@@ -113,6 +129,7 @@ struct VisionQuizView: View {
             Image(systemName: quiz.score >= 8 ? "rosette" : "checkmark.seal")
                 .font(.system(size: 80))
                 .foregroundStyle(.orange)
+                .accessibilityHidden(true)   // decoration; the score is read below
             Text("\(quiz.score) out of \(QuizRound.length)")
                 .font(.extraLargeTitle)
             Text(resultMessage)

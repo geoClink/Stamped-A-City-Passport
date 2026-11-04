@@ -250,6 +250,7 @@ struct TripDetailView: View {
             // HStack rather than Label: inside a List row, Label can drop its icon
             HStack(spacing: DS.Space.s) {
                 Image(systemName: "play.fill")
+                    .accessibilityHidden(true)
                 title
                     .lineLimit(2)
                     .minimumScaleFactor(0.8)
@@ -384,6 +385,21 @@ struct TripDetailView: View {
                             store.removeStop(stop.id, fromDay: day.id, in: trip.id)
                         } label: {
                             Label("Remove", systemImage: "trash")
+                        }
+                    }
+                    // Drag-to-reorder needs sight, so VoiceOver gets Move Up / Move Down.
+                    // (The swipe actions above already show up in VoiceOver's Actions.)
+                    .accessibilityActions {
+                        if stopIndex > 0 {
+                            Button("Move Up") {
+                                store.moveStops(inDay: day.id, in: trip.id, fromOffsets: IndexSet(integer: stopIndex), toOffset: stopIndex - 1)
+                            }
+                        }
+                        if stopIndex < stops.count - 1 {
+                            // onMove offsets point past the item, so one place down is +2
+                            Button("Move Down") {
+                                store.moveStops(inDay: day.id, in: trip.id, fromOffsets: IndexSet(integer: stopIndex), toOffset: stopIndex + 2)
+                            }
                         }
                     }
             }

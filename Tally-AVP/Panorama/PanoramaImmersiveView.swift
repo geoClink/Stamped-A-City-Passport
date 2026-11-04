@@ -83,6 +83,7 @@ struct PanoramaImmersiveView: View {
             Text(panorama?.landmarkName ?? "")
                 .font(.title2.bold())
                 .multilineTextAlignment(.center)
+                .accessibilityAddTraits(.isHeader)
 
             switch loadState {
             case .loading:
@@ -90,6 +91,7 @@ struct PanoramaImmersiveView: View {
                     ProgressView()
                     Text("Loading 360° view…").font(.subheadline)
                 }
+                .accessibilityElement(children: .combine)
             case .failed:
                 Label("Couldn't load the 360° view.", systemImage: "exclamationmark.triangle")
                     .font(.subheadline)
