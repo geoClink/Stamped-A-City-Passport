@@ -10,9 +10,27 @@ How to use this file:
 
 ## [Unreleased]
 
+## [2.10] (build 15) – not yet submitted (iPhone, iPad, Mac and Vision Pro)
+
 ### Added
 - 10 new architecture cities: Porto, Kraków, Granada, Marseille, Antwerp, Riga, Hiroshima, Hanoi, Milwaukee and Tulsa, with 15 landmarks each. 166 cities in all. Latvia is a new country in the Passport.
 - 5 new campuses: Cranbrook Academy of Art, UC San Diego, University of Coimbra, University of Salamanca and University of Tokyo. 122 campuses in all.
+- Accessibility pass on iPhone, iPad, Mac, Vision Pro and the widget: VoiceOver labels on every control, layouts that stack at the largest Dynamic Type sizes, and Reduce Motion respected everywhere. 74 new strings in all 9 languages. (#98)
+- Step-free access on the landmark page: step-free entrances and accessible toilets for 307 landmarks, from OpenStreetMap, with a credit and link. iPhone, iPad and Mac. (#97)
+- Home Screen widget in small (stamp count), medium (latest city) and large (five most recent stamps) sizes; tapping opens the city. iPhone and iPad. (#90)
+- Siri and Shortcuts: Show My Progress, What's Near Me, Start a Walking Tour and Open a Landmark, in 9 languages. iPhone, iPad and Mac. (#93)
+- Vision Pro: Explore Together with SharePlay. On a FaceTime call, the city and the landmark one person picks open for everyone. Map controls moved into a bottom ornament. (#99)
+- Mac: drag a landmark onto a trip day, real hover effects, menu commands with keyboard shortcuts (⌘N New Trip, ⌥⌘→ / ⌥⌘← next and previous city) and a Help menu. iPad gets the keyboard shortcuts. (#92)
+- Accessibility audit UI tests: `performAccessibilityAudit()` on 11 screens at the default and the largest text size (StampedUITests). (#101)
+
+### Changed
+- iCloud: trips, My College List, saved places and Want to Visit merge item by item between devices instead of the last device to save winning. Newer edits win and removals stick. (#95, #104)
+- Settings are grouped into Preferences, Your Passport, Offline, Support Stamped!, Feedback and About. (#94)
+- 268 older app strings translated into all 8 other languages. (#96)
+- Mac: ⌘N is now New Trip; New Window moved to ⌥⌘N. (#92)
+
+### Fixed
+- Walking tours: 50 landmarks that shared one map spot now sit at their real locations, and a test checks every tour. (#105)
 
 ## [2.9] (build 14) – 2026-11-04 (iPhone, iPad, Mac and Vision Pro)
 
