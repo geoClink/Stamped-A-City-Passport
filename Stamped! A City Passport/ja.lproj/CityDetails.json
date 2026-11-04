@@ -64,6 +64,19 @@
     "transportation": "GVB トラム",
     "transportationFact": "アムステルダムの歴史的中心部には、主に青と白の GVB トラムの広範なネットワークが運行しています。この都市は住民よりも自転車の台数が多いことで世界的に有名で、ほぼすべての通りを専用道路がカバーしています。中央駅の後ろにあるフェリーは、歩行者と自転車にアイ川を無料で渡らせます。"
   },
+  "Antwerp": {
+    "airportCode": "BRU",
+    "airportInfo": "アントワープにも市の南約5kmに小さなアントワープ国際空港がありますが、多くの旅行者はベルギー最大の国際ハブであるザベンテムのブリュッセル空港を利用します。2012年からはディアボロ線により、空港からメヘレンとアントワープへ直通列車が走っています。",
+    "airportName": "Brussels Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "ユーロ (€)",
+    "funFact": "伝説によると、街の名は「手を投げる」に由来します。英雄シルウィウス・ブラボーが残酷な巨人の手を切り落とし、スヘルデ川に投げ込んだというのです。アントワープは世界のダイヤモンド取引の中心地でもあり、世界の原石の約85％が毎年そのダイヤモンド地区を通過します。",
+    "language": "オランダ語",
+    "languageInfo": "ベルギーのフランデレン地域にあるアントワープの公用語はオランダ語で、地元のアントワープ方言も耳にします。アントワープの人々は「シニョーレン」と呼ばれますが、これはスペイン語の「セニョール」に由来し、17世紀に街を治めたスペイン貴族の名残です。",
+    "nickname": "ト・スタット（街）",
+    "transportation": "トラムとプレメトロ",
+    "transportationFact": "アントワープのトラム網はデ・レインが運行しており、14路線のうち8路線が「アントワープ・プレメトロ」と呼ばれるトンネルで一部地下を走ります。街初の馬車鉄道は1873年5月25日に開業し、ベルヘムの教会とメール通りを結んでいました。"
+  },
   "Asheville": {
     "airportCode": "AVL",
     "airportInfo": "アッシュビル地域 (AVL) は、ブルー リッジ山脈への主要な玄関口です。現在、米国で最も急速に成長している地方空港の 1 つとしての地位に対応するために、真新しいターミナルと近代化されたゲートを建設する大規模プロジェクトである「AVL フォワード」拡張工事が進行中です。",
@@ -779,6 +792,19 @@
     "transportation": "グラスゴー地下鉄と鉄道",
     "transportationFact": "グラスゴー地下鉄は、ロンドン地下鉄、ブダペスト地下鉄に次ぐ世界で 3 番目に古い地下鉄で、英国で唯一の完全地下式メトロです。地下鉄は地域交通局 SPT が運営しており、ほかに広い近郊鉄道網もあります。グラスゴーとエディンバラの間には 4 本の直通鉄道路線があります。"
   },
+  "Granada": {
+    "airportCode": "GRX",
+    "airportInfo": "フェデリコ・ガルシア・ロルカ・グラナダ空港は市の西約15km、チャウチナとサンタ・フェの近くにあります。1970年に建設が始まり、1972年にグラナダ空港として開港しました。2006年に、アンダルシアの詩人フェデリコ・ガルシア・ロルカの名が付けられました。",
+    "airportName": "Federico García Lorca Granada Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "ユーロ (€)",
+    "funFact": "1492年1月2日、スペイン人にボアブディルと呼ばれたムハンマド11世がグラナダをフェルナンド王とイサベル女王に明け渡し、イベリア半島最後のイスラム国家が終わりを迎えました。スペイン語で「グラナダ」はザクロのことで、ザクロは街の紋章であり、「ザクロの門」の名の由来にもなっています。",
+    "language": "スペイン語",
+    "languageInfo": "グラナダではスペイン語（カスティーリャ語）が話され、ラテン文字に ñ などの文字を加えて書きます。あいさつは「オラ」や「ブエノス・ディアス」（おはよう）、お礼は「グラシアス」です。",
+    "nickname": "ザクロの街",
+    "transportation": "メトロ（ライトレール）とバス",
+    "transportationFact": "グラナダ・メトロは2017年9月21日に開業したライトレール1路線です。中心部では地下を、アルボローテ、マラセナ、アルミージャへ向かう区間では地上を走って26駅を結び、2025年には約1,730万人が利用しました。"
+  },
   "Guadalajara": {
     "airportCode": "GDL",
     "airportInfo": "Miguel Hidalgo y Costilla International Airport, named after the priest who launched Mexico's independence movement, is Mexico's second busiest airport. Its location near the Tequila region means some international visitors arrive specifically for Jalisco's agave landscape, also a UNESCO World Heritage Site. The airport connects directly to North American cities and several European hubs.",
@@ -805,6 +831,19 @@
     "transportation": "Uバーン、Sバーンとフェリー",
     "transportationFact": "鉄道、バス、港のフェリーはすべてHVVのもとで運行されており、HVVはこの種の運輸連合として世界初の組織です。1枚の切符でどの会社の路線にも乗れます。Uバーンは全長101kmのうち地下区間が約41kmしかないため、年配の人々は今も「ホーホバーン（高架鉄道）」と呼んでいます。"
   },
+  "Hanoi": {
+    "airportCode": "HAN",
+    "airportInfo": "ノイバイ国際空港はハノイ中心部の北東約35kmに位置し、ホーチミン市のタンソンニャット空港に次いでベトナムで2番目に利用者の多い空港です。2015年1月4日に市内へ通じる新しいニャッタン橋と同時に開業した第2ターミナルが国際線をすべて扱い、ベトナム航空の主要拠点となっています。",
+    "airportName": "Noi Bai International Airport",
+    "currencyCode": "VND",
+    "currencyInfo": "ベトナムドン (₫)",
+    "funFact": "1010年、李太祖(リー・タイ・トー)はこの地に都を移し、紅河の上に龍が昇るのを見たとして「昇龍(タンロン)」と名付けました。ハノイには、1076年からベトナム初の国立大学が置かれた文廟もあります。",
+    "language": "ベトナム語",
+    "languageInfo": "ベトナム語はラテン文字を基にした文字で書かれます。これは当時のハノイの発音を記録したアレクサンドル・ド・ロードの1651年の辞書に由来します。1975年以降、国全体の言葉は首都で話される北部方言へと少しずつ近づいています。",
+    "nickname": "昇龍の都",
+    "transportation": "ハノイメトロとバイク",
+    "transportationFact": "2021年11月6日に2A号線が開業し、ハノイメトロはベトナム初の都市高速鉄道となりました。2024年8月には3号線の最初の区間も開業しています。それでも街の主役はバイクで、多くの旅行者が「セオム」(「抱きつきバイク」の意味)と呼ばれるバイクタクシーで手軽に移動しています。"
+  },
   "Havana": {
     "airportCode": "HAV",
     "airportInfo": "José Martí International Airport is named after Cuba's national hero and independence poet. It has four terminals serving different types of traffic, with Terminal 3 handling most international arrivals. The airport is located about 18km southwest of the city center. Given Cuba's unique relationship with the United States — and restricted American travel to the island — the airport sees a distinctive mix of passengers from Latin America, Canada, Europe, and increasingly from the United States.",
@@ -830,6 +869,19 @@
     "nickname": "The Daughter of the Baltic",
     "transportation": "Metro & Trams",
     "transportationFact": "Helsinki operates a compact but highly efficient transit system under the HSL authority, integrating the metro, trams, buses, commuter rail, and ferries to the islands. The historic orange trams that run through the city center have been operating since 1891 and remain a charming way to navigate. The city is also extremely walkable and bikeable in summer, with a city bike network available from April to November. In winter, many Helsinkians cross-country ski in the city's extensive parklands."
+  },
+  "Hiroshima": {
+    "airportCode": "HIJ",
+    "airportInfo": "広島空港は1993年、広島市の東約50kmにある三原市に開港しました。ワイドボディ機に対応できなかった海沿いの旧空港に代わるもので、中国・四国地方で最大の空港です。国内線の約80%が東京・羽田との間を結んでいます。",
+    "airportName": "Hiroshima Airport",
+    "currencyCode": "JPY",
+    "currencyInfo": "日本円(¥)",
+    "funFact": "広島は1589年に太田川のデルタに城下町として築かれ、その名は「広い島」を意味します。1949年には国会によって平和記念都市と定められました。鉄板の上で具材を重ねて焼く、広島ならではのお好み焼きでも有名です。",
+    "language": "日本語",
+    "languageInfo": "どこでも標準語が通じますが、地元の人同士では親しみやすい広島弁がよく使われます。平和記念公園や駅、主な観光地の周辺には英語の案内表示も多くあります。",
+    "nickname": "平和都市",
+    "transportation": "広島電鉄(広電)の路面電車",
+    "transportationFact": "広電は総延長35.1kmと日本最長の路面電車網を運行し、多彩な車両がそろうことから「動く路面電車の博物館」と呼ばれています。1945年の原爆投下からわずか3日後に運行を再開し、その日を生き延びた車両の一部は今も走り続けています。"
   },
   "Ho Chi Minh City": {
     "airportCode": "SGN",
@@ -947,6 +999,19 @@
     "nickname": "寺院の都市",
     "transportation": "テンポ & マイクロバス",
     "transportationFact": "Kathmandu's public transport is famously chaotic — the city lacks a metro or reliable formal transit system. Shared tempos (electric three-wheelers) and microbuses follow unofficial routes and can be hailed anywhere. Taxis are widely available and inexpensive, though negotiating the fare before boarding is advisable. A proposed metro railway for Kathmandu has been in planning for years. Walking and cycling are popular in the old city around Thamel and Durbar Square, where narrow streets exclude larger vehicles."
+  },
+  "Kraków": {
+    "airportCode": "KRK",
+    "airportInfo": "ヨハネ・パウロ2世クラクフ・バリツェ国際空港は市中心部の西約11kmのバリツェ村にあり、教皇ヨハネ・パウロ2世にちなんで名付けられました。ワルシャワ・ショパン空港に次ぐポーランド第2の空港で、2024年には1,100万人以上が利用しました。ターミナルからクラクフ中央駅まで列車で約17分です。",
+    "airportName": "John Paul II Kraków-Balice International Airport",
+    "currencyCode": "PLN",
+    "currencyInfo": "ポーランド・ズウォティ (zł)",
+    "funFact": "クラクフは1596年に国王ジグムント3世ヴァーサが宮廷をワルシャワへ移すまでポーランドの王都で、中央市場広場はヨーロッパ最大の中世の市場広場です。ベーグルと、その親戚にあたる輪の形のパン「オブヴァジャネク・クラコフスキ」は、どちらもクラクフ生まれです。",
+    "language": "ポーランド語",
+    "languageInfo": "ポーランド語は西スラヴ語派の言語で、ラテン文字に ł、ż、ś などの文字を加えて書きます。あいさつは「ジェン・ドブリ」（こんにちは）、親しい間柄なら気軽な「チェシチ」が使われます。",
+    "nickname": "王都",
+    "transportation": "トラムとバス",
+    "transportationFact": "公共交通は市営会社が運行するトラムとバスの密なネットワークが中心で、電気トラムは1901年から走っています。旧市街の大部分は歩行者専用区域のため、トラムは旧市街を通り抜けずにその周囲を走ります。"
   },
   "Kuala Lumpur": {
     "airportCode": "KUL",
@@ -1104,6 +1169,19 @@
     "transportation": "ALSAエレクトリック",
     "transportationFact": "マラケシュは、環境の持続可能性を促進するために、主要路線にハイテク電気バスを導入しました。地元の「プチ タクシー」は市内の移動手段として人気があり、各車両は特徴的な黄土色であることが義務付けられています。馬に引かれる「カレチェ」は、歴史的な城壁やメディナを巡る伝統的で美しい景色を楽しむ手段として今も残っています。"
   },
+  "Marseille": {
+    "airportCode": "MRS",
+    "airportInfo": "マルセイユ・プロヴァンス空港は市の北西約27kmのマリニャーヌにあり、旅客数でフランス第5位の空港です。1920〜30年代には飛行艇の基地として使われ、2024年6月には新しい第1ターミナルが開業しました。近くのヴィトロール・マルセイユ・プロヴァンス空港駅とはバスで結ばれています。",
+    "airportName": "Marseille Provence Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "ユーロ (€)",
+    "funFact": "マルセイユは紀元前600年頃にフォカイアから来たギリシャ人入植者によって築かれた、フランス最古の都市であり、ヨーロッパで最も古くから人が住み続けている街のひとつです。フランス国歌にもその名が残っています。「ラ・マルセイエーズ」という名は、1792年にパリで初めてこの歌を歌ったのがマルセイユの義勇兵だったことに由来します。",
+    "language": "フランス語",
+    "languageInfo": "どこでもフランス語が通じますが、プロヴァンス語の影響を受けた歌うような響きのマルセイユ方言にも耳を傾けてみてください。オック語では街の名はマルセリャ（Marselha）といい、この活気ある地中海の港町ではアラビア語やオック語など多くの言語が聞こえてきます。",
+    "nickname": "フォカイアの街",
+    "transportation": "地下鉄とトラム",
+    "transportationFact": "マルセイユ地下鉄は2路線・31駅で、1号線は1977年、2号線は1984年に開業しました。パリの一部路線と同じく、車両はゴムタイヤで走ります。2007年には近代的なトラムも加わり、いずれもRTMが運行しています。"
+  },
   "Medellín": {
     "airportCode": "MDE",
     "airportInfo": "José María Córdova International Airport is the primary airport serving the Medellín metropolitan area and the second busiest in Colombia. It is located in the mountains above the Aburrá Valley, and its high altitude approach through mountain terrain makes landing here one of the more technically demanding in South America. A metro cable car system (Metrocable) connects the airport area to the city below.",
@@ -1168,6 +1246,19 @@
     "nickname": "ファッションキャピタル",
     "transportation": "ミラノのトラム",
     "transportationFact": "ミラノでは、オリジナルの木製ベンチ座席を備えた「タイプ 1928」路面電車が現在も運行されています。ミラノの地下鉄は、最新の全自動化された M4 路線を含む 5 つの路線で構成されています。トレノルドの通勤列車は、市内中心部と美しいイタリアの湖水地方やロンバルディア州郊外を結んでいます。"
+  },
+  "Milwaukee": {
+    "airportCode": "MKE",
+    "airportInfo": "ミルウォーキー・ミッチェル国際空港はダウンタウンの南約9kmにあり、2,314エーカーの敷地に5本の滑走路を備えています。1920年にハミルトン空港として始まり、ミルウォーキーで育ち「アメリカ空軍の父」とも呼ばれるビリー・ミッチェル将軍にちなんで名付けられました。",
+    "airportName": "Milwaukee Mitchell International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "米ドル ($)",
+    "funFact": "ミルウォーキーにはかつてシュリッツ、ブラッツ、パブスト、ミラーという世界有数の4大ビール醸造所があり、長年にわたり世界一のビール生産都市だったことから「ブルー・シティ（ビールの街）」と呼ばれています。毎年夏には湖畔で、世界最大級の音楽祭のひとつである11日間のサマーフェストも開かれます。",
+    "language": "英語",
+    "languageInfo": "話されているのは、親しみやすい中西部なまりの英語です。ドイツ系の伝統が色濃く、1900年頃には住民の約3分の1がドイツ系で、ミルウォーキーは「アメリカで最もドイツ的な都市」として知られるようになりました。",
+    "nickname": "ブルー・シティ",
+    "transportation": "路面電車ザ・ホップ",
+    "transportationFact": "路面電車ザ・ホップは2018年11月2日に運行を開始し、全長2.1マイルのMラインでミルウォーキー・インターモーダル駅とダウンタウン、ロウワー・イーストサイド、ヒストリック・サード・ワードを結んでいます。2024年には湖畔への短いLラインも加わり、運賃は今も無料です。"
   },
   "Minnesota": {
     "airportCode": "MSP",
@@ -1468,6 +1559,19 @@
     "transportation": "MAX ライトレール",
     "transportationFact": "MAX ライト レール システムには、地下 80 フィートにある北米で最も深い駅が含まれています。ポートランドの路面電車は、市の中心部と革新的なパール地区を頻繁に巡回しています。 TriMet バスと WES Commuter Rail により、この地域の堅牢な公共交通ネットワークが完成しました。"
   },
+  "Porto": {
+    "airportCode": "OPO",
+    "airportInfo": "フランシスコ・サ・カルネイロ空港はかつてペドラス・ルブラス空港と呼ばれ、1945年に開港しました。クレリゴスの塔から北西に約11kmの場所にあり、2025年にはおよそ1,700万人が利用し、イージージェットとライアンエアーの拠点にもなっています。メトロE線でターミナルから市中心部まで直通です。",
+    "airportName": "Francisco Sá Carneiro Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "ユーロ (€)",
+    "funFact": "ポルトのローマ時代の名「ポルトゥス・カレ」は、ポルトガルという国名の由来としてよく知られています。市民は「トリペイロス」（もつを食べる人）と呼ばれますが、これは街が上等な肉を航海の遠征隊に送り出し、もつを手元に残したという言い伝えから。もつ煮込み「トリパス・ア・モダ・ド・ポルト」は今も街を代表する料理です。",
+    "language": "ポルトガル語",
+    "languageInfo": "ポルトガル語はロマンス語のひとつで、ラテン文字に ã や ç などの記号を加えて書きます。あいさつは「ボン・ディア」（おはよう）や気軽な「オラ」、お礼は「オブリガード」（女性なら「オブリガーダ」）です。",
+    "nickname": "不屈の街",
+    "transportation": "メトロ（ライトレール）",
+    "transportationFact": "ポルト・メトロは2002年12月に開業したライトレールで、中心部では地下を、郊外では地上を走ります。現在は6路線が約70kmにわたって85駅を結び、2013年にはハーバード大学のベロニカ・ラッジ・グリーン都市デザイン賞を受賞しました。"
+  },
   "Porto Alegre": {
     "airportCode": "GRU",
     "airportInfo": "グアルーリョスはブラジルへの主要な国際玄関口であり、旅客数で南米で最も利用者の多い空港です。これは、ワールドカップとオリンピックのために大幅に近代化された大規模な複合施設で、豊富な豪華アメニティを備えた長距離国際線専用ターミナルを備えています。",
@@ -1545,6 +1649,19 @@
     "nickname": "烟の山の湾",
     "transportation": "Straeto Buses & Taxis",
     "transportationFact": "Reykjavik has a bus system (Straeto) covering the city and surrounding suburbs, but the city is small enough that many residents walk or cycle much of the time. Car rental is almost essential for exploring Iceland's dramatic landscapes beyond the city. In winter, geothermally heated outdoor swimming pools are a central part of Reykjavik social life — the public pools operate year-round regardless of weather and are as much community centers as exercise facilities."
+  },
+  "Riga": {
+    "airportCode": "RIX",
+    "airportInfo": "RIXリガ空港は市中心部の西約10kmのマールペ自治体にあり、バルト三国最大の空港で、2024年9月時点で107都市へ直行便があります。老朽化したスピルヴェ空港に代わって1973年に建設され、国営航空会社エア・バルティックの拠点となっています。",
+    "airportName": "RIX Riga Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "ユーロ (€)",
+    "funFact": "リガ中心部の建物の約3分の1はアール・ヌーヴォー建築で、歴史家ヤーニス・クラスティンシュによれば、この様式の建物が世界で最も集中している都市です。リガは2014年に欧州文化首都に選ばれました。",
+    "language": "ラトビア語",
+    "languageInfo": "ラトビア語はバルト語派の言語で、ラテン文字に ā、č、ļ などの文字を加えて書きます。あいさつは「スヴェイキ」、お祝いの言葉は「アプスヴェイツァム」です。",
+    "nickname": "アール・ヌーヴォーの都",
+    "transportation": "トラム、トロリーバス、バス",
+    "transportationFact": "公共交通はリーガス・サティクスメが運営し、トラム、バス、トロリーバスが市内全域に広い路線網を持っています。2012年からは、以前は民間業者が走らせていたミニバスも市の会社1社が運行しています。"
   },
   "Rio de Janeiro": {
     "airportCode": "GRU",
@@ -1897,6 +2014,19 @@
     "transportation": "TTC",
     "transportationFact": "トロント交通委員会は、アメリカ大陸で最大かつ最も利用者の多い路面電車ネットワークを運営しています。地下鉄システムは、市内の交通移動の中核を形成する 2 つの主要な路線で構成されています。 GO Transit は、トロントとオンタリオ州の他の地域を結ぶ鉄道とバスの大規模な地域ネットワークを提供しています。"
   },
+  "Tulsa": {
+    "airportCode": "TUL",
+    "airportInfo": "タルサ国際空港はダウンタウンの北東約8kmにあり、地元の実業家たちが市営飛行場の用地購入資金を集めたことで1928年に開港しました。1929年に市が買い取り、1963年に現在の名称となり、現在はアメリカン航空の世界的な整備拠点となっています。",
+    "airportName": "Tulsa International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "米ドル ($)",
+    "funFact": "タルサは20世紀の大半を通じて「世界の石油首都」として知られ、石油で得た富によって建てられたアール・デコ様式の高層ビルや教会が、今もダウンタウンの景観を形づくっています。20世紀初頭にはグリーンウッド地区に、全米で最も繁栄した黒人コミュニティのひとつ「ブラック・ウォール街」もありました。",
+    "language": "英語",
+    "languageInfo": "話されているのは、のんびりとしたオクラホマなまりの英語です。市名はマスコギー語の「タラシ」に由来し、タルサの大部分は今もマスコギー（クリーク）ネーションの領域内にあり、一部はオセージ・ネーションとチェロキー・ネーションに属しています。",
+    "nickname": "世界の石油首都",
+    "transportation": "メトロリンク・タルサのバス",
+    "transportationFact": "2024年までタルサ・トランジットと呼ばれていたメトロリンク・タルサは、ダウンタウンとミッドタウンの拠点から18のバス路線を運行しています。初のバス高速輸送路線「エアロ」は2019年にピオリア・アベニューで運行を開始し、ルート66にちなんで名付けられた2本目の高速路線がイースト11番街沿いに計画されています。"
+  },
   "Valencia": {
     "airportCode": "VLC",
     "airportInfo": "バレンシア空港はマニセス空港とも呼ばれ、市の西約8kmのマニセスにあります。2025年にはヨーロッパ、カナダ、北アフリカへの140路線で1,180万人の旅客を扱い、その大半が国際線でした。バレンシア州ではアリカンテに次いで2番目に利用者の多い空港です。",
@@ -2053,6 +2183,19 @@
     "transportation": "徒歩 / 電車(レッドファーン駅)/ バス",
     "transportationFact": "レッドファーン駅からキャンパスまでは徒歩ですぐです。市中心部からはパラマタ・ロードやシティ・ロード沿いにバスも走っています。"
   },
+  "University of Tokyo": {
+    "airportCode": "HND",
+    "airportInfo": "東京には羽田空港と成田空港があり、都心に近いのは羽田です。どちらの空港からも電車と地下鉄で本郷キャンパス近くの駅まで行けます。",
+    "airportName": "Tokyo Haneda Airport",
+    "currencyCode": "JPY",
+    "currencyInfo": "日本円 (¥)",
+    "funFact": "本郷キャンパスは、加賀藩主前田家の江戸上屋敷の跡地にあります。有名な赤門は、将軍の娘が前田家に嫁ぐ際の迎え入れのために 1827 年に建てられました。",
+    "language": "日本語",
+    "languageInfo": "日常生活の言語は日本語です。学生は東京大学を略して「東大」と呼び、赤門は古くから大学そのものの呼び名にもなっています。",
+    "nickname": "東大",
+    "transportation": "徒歩 / 東京メトロ",
+    "transportationFact": "東京メトロ南北線の東大前駅からキャンパスまでは徒歩約 3 分です。本郷三丁目駅、根津駅、湯島駅からはそれぞれ徒歩約 8 分です。"
+  },
   "University of Texas at Austin": {
     "airportCode": "AUS",
     "airportInfo": "オースティン・バーグストロム空港はオースティンのダウンタウンの南東にあります。キャンパスはダウンタウンのすぐ北にあり、空港から車やバスですぐの距離です。",
@@ -2156,6 +2299,32 @@
     "nickname": "リンネの大学",
     "transportation": "徒歩 / 自転車",
     "transportationFact": "大学の歴史的建物は大聖堂と大学公園の周りに集まっており、どれも歩いてすぐの距離です。ウプサラは自転車に優しい街としても有名です。"
+  },
+  "University of Coimbra": {
+    "airportCode": "OPO",
+    "airportInfo": "最寄りの主要空港はポルトのフランシスコ・サ・カルネイロ空港とリスボンのウンベルト・デルガード空港です。どちらの都市からも、リスボン〜ポルト線の列車がコインブラB駅に停車します。",
+    "airportName": "Porto Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "ユーロ (€)",
+    "funFact": "大学は 1290 年にディニス王によって創設され、1537 年に丘の上の旧王宮へ移ってコインブラに定着しました。「コインブラ大学――アルタとソフィア」は 2013 年にユネスコ世界遺産に登録されています。",
+    "language": "ポルトガル語",
+    "languageInfo": "授業も日常生活もポルトガル語です。1772 年の大学改革まではラテン語が公式の教授言語で、王宮の長い列柱バルコニーが「ヴィア・ラティーナ」と呼ばれるのはそのためです。",
+    "nickname": "UC",
+    "transportation": "徒歩 / 市バス",
+    "transportationFact": "旧大学はバイシャ(下町)を見下ろす急な丘の上にあり、階段や細い路地が続きます。市バスが上町まで上り、アルタ地区の中はどこへでも歩いて行けます。"
+  },
+  "University of Salamanca": {
+    "airportCode": "MAD",
+    "airportInfo": "サラマンカへの主な国際玄関口はマドリード=バラハス空港です。マドリードからは列車やバスが西へ走り、サラマンカに着きます。",
+    "airportName": "Adolfo Suárez Madrid–Barajas Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "ユーロ (€)",
+    "funFact": "サラマンカ大学は 1218 年に創設された、現存するスペイン最古の大学です。本館エスクエラス・マヨーレスは、大聖堂の隣の回廊を囲んで 1533 年に完成しました。",
+    "language": "スペイン語",
+    "languageInfo": "授業も日常生活もスペイン語で、サラマンカはスペイン語を学ぶ街としてスペインでも特に人気があります。",
+    "nickname": "USAL",
+    "transportation": "徒歩",
+    "transportationFact": "旧市街はコンパクトで、ほとんどが歩行者エリアです。マヨール広場、貝の家(カサ・デ・ラス・コンチャス)、クレレシア、エスクエラス広場は、互いに歩いて数分の距離です。"
   },
   "Florida Southern College": {
     "airportCode": "TPA",
@@ -3132,6 +3301,19 @@
     "transportation": "徒歩",
     "transportationFact": "キャンパスは歩いて回れます。北側のウォリナー・ホールから南東のケリー/ショーツ・スタジアムまでは約 1.5 km です。"
   },
+  "Cranbrook Academy of Art": {
+    "airportCode": "DTW",
+    "airportInfo": "デトロイト南西のロミュラスにあるデトロイト・メトロポリタン・ウェイン・カウンティ空港が、この地域の主要空港です。そこから車で北へ向かうとブルームフィールド・ヒルズのクランブルックに着きます。",
+    "airportName": "Detroit Metropolitan Wayne County Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "米ドル ($)",
+    "funFact": "新聞発行人ジョージ・ゴフ・ブースと妻エレン・スクリップス・ブースは、1904 年に購入した農場にクランブルックを築き、ジョージの父の出身地であるイングランドのクランブルックにちなんで名付けました。キャンパスの多くはエリエル・サーリネンの設計で、1989 年に国定歴史建造物に指定されました。",
+    "language": "英語",
+    "languageInfo": "クランブルックのシンボルは鶴(クレーン)で、ロゴの公式カラーは銅色と金色です。",
+    "nickname": "Cranbrook",
+    "transportation": "車 / 徒歩",
+    "transportationFact": "クランブルックはデトロイトの北、ブルームフィールド・ヒルズのウッドワード・アベニュー沿いにあり、ほとんどの来訪者は車で訪れます。敷地内では遊歩道がアート・ミュージアム、サーリネン・ハウス、科学研究所、クランブルック・ハウスの庭園を結んでいます。"
+  },
   "Yale University": {
     "airportCode": "BDL",
     "airportInfo": "ハートフォード近郊のブラッドリー空港は、ニューヘイブンから車で北へ約 1 時間です。ニューヨークに飛び、メトロノース鉄道のニューヘイブン線でユニオン駅まで直行する人も多くいます。",
@@ -3547,5 +3729,18 @@
     "nickname": "ラムズの本拠地",
     "transportation": "徒歩 / Transfort MAX / Around the Horn",
     "transportationFact": "Transfort のバス高速輸送路線 MAX がキャンパスに停まり、Around the Horn のバスがローリー・スチューデント・センター隣の CSU トランジット・センターからキャンパスを周回します。"
+  },
+  "University of California, San Diego": {
+    "airportCode": "SAN",
+    "airportInfo": "サンディエゴ国際空港はキャンパスの南約 22 km にあります。無料シャトル「San Diego Flyer」で空港からオールドタウン・トランジットセンターへ行き、UC San Diego ブルーラインのトロリーに乗り換えるとキャンパスまで北上できます。",
+    "airportName": "San Diego International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "米ドル ($)",
+    "funFact": "ガイゼル図書館は、ドクター・スースの名で知られるセオドア・スース・ガイゼルと妻オードリーにちなんで名付けられました。館内には彼の原画やスケッチ、原稿を集めたドクター・スース・コレクションがあります。",
+    "language": "英語",
+    "languageInfo": "スクールカラーはブルーとゴールドで、チームの名前はトライトンズです。",
+    "nickname": "UC San Diego",
+    "transportation": "徒歩 / ブルーライン・トロリー",
+    "transportationFact": "UC San Diego ブルーラインのトロリーは UC San Diego Central Campus 駅と UC San Diego Health La Jolla 駅に停車します。学内シャトルと歩道が各カレッジ、プライス・センター、ガイゼル図書館を結んでいます。"
   }
 }

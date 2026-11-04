@@ -52,6 +52,29 @@
       "longitude": 151.187482
     }
   ],
+  "University of Tokyo": [
+    {
+      "id": "trad_utokyo_sanshiro_pond",
+      "name": "Sanshirō Pond",
+      "description": "This pond and garden were laid out in 1638 for the Maeda lords of the Kaga Domain. It took its nickname from Natsume Sōseki's novel Sanshirō, whose hero first meets the woman he admires here, and it makes a quiet stop on a walk around campus.",
+      "latitude": 35.7121128,
+      "longitude": 139.7620971
+    },
+    {
+      "id": "trad_utokyo_ginkgo_avenue",
+      "name": "Golden Ginkgo Avenue",
+      "description": "In late autumn the ginkgo trees lining the avenue from the Main Gate to Yasuda Auditorium turn bright yellow. It is one of the most loved autumn views in Tokyo, and the ginkgo leaf is the university's emblem.",
+      "latitude": 35.7130391,
+      "longitude": 139.7601885
+    },
+    {
+      "id": "trad_utokyo_hachiko",
+      "name": "Hachikō Reunited",
+      "description": "On the Faculty of Agriculture grounds, a bronze statue unveiled in 2015 shows the loyal dog Hachikō leaping up to greet his owner, Professor Hidesaburō Ueno. It stands just inside the faculty's main gate.",
+      "latitude": 35.7164006,
+      "longitude": 139.7588764
+    }
+  ],
   "University of Texas at Austin": [
     {
       "id": "trad_ut_austin_tower_lighting",
@@ -234,6 +257,52 @@
       "description": "Under the copper cupola of the Gustavianum, the university museum preserves the anatomical theatre Olof Rudbeck the Elder built in the 1660s. Visitors can step inside it as part of a museum visit.",
       "latitude": 59.857943,
       "longitude": 17.631724
+    }
+  ],
+  "University of Coimbra": [
+    {
+      "id": "trad_coimbra_cabra",
+      "name": "A Cabra, the Tower Bell",
+      "description": "The best-known of the University Tower's four bells is nicknamed \"a Cabra\" (the goat), and it once called students to class. You can climb the tower's narrow stairs for a view over Coimbra and the Mondego River.",
+      "latitude": 40.2077954,
+      "longitude": -8.4264793
+    },
+    {
+      "id": "trad_coimbra_joanina_bats",
+      "name": "The Library Bats",
+      "description": "Two colonies of small bats have lived in the Joanina Library for about two and a half centuries and eat the insects that would damage the books. Staff cover the tables with leather each evening to protect them.",
+      "latitude": 40.2071225,
+      "longitude": -8.4265219
+    },
+    {
+      "id": "trad_coimbra_serenata",
+      "name": "Serenade on the Old Cathedral Steps",
+      "description": "At midnight at the start of the Queima das Fitas in May, students sing Coimbra fado on the steps of the Old Cathedral. Thousands gather in the square to listen in silence.",
+      "latitude": 40.2088222,
+      "longitude": -8.4273851
+    }
+  ],
+  "University of Salamanca": [
+    {
+      "id": "trad_salamanca_frog",
+      "name": "Find the Frog",
+      "description": "Hidden among the carvings of the university's Plateresque façade is a small frog sitting on a skull. Legend says a student who spots it will pass their exams, so visitors crowd the Patio de Escuelas searching for it.",
+      "latitude": 40.9614677,
+      "longitude": -5.6673272
+    },
+    {
+      "id": "trad_salamanca_cielo",
+      "name": "The Sky of Salamanca",
+      "description": "In the Escuelas Menores you can see Fernando Gallego's \"Cielo de Salamanca\", a painted sky of constellations and zodiac signs that once covered part of the vault of the old university library.",
+      "latitude": 40.961403,
+      "longitude": -5.6679573
+    },
+    {
+      "id": "trad_salamanca_vitores",
+      "name": "Spot the Vítores",
+      "description": "Red monograms called vítores, made from the letters of the word \"victor\", are painted on university walls to honor people who earned a doctorate. Look for them around the Patio de Escuelas and the streets of the old town.",
+      "latitude": 40.9615887,
+      "longitude": -5.6675931
     }
   ],
   "Florida Southern College": [
@@ -1681,6 +1750,29 @@
       "longitude": -84.774189
     }
   ],
+  "Cranbrook Academy of Art": [
+    {
+      "id": "trad_cranbrook_orpheus_fountain",
+      "name": "Carl Milles's Orpheus Fountain",
+      "description": "In front of the Art Museum, eight bronze figures by Swedish sculptor Carl Milles lean in as if listening for Orpheus's music, with only the splashing water to hear. Installed in 1938, it is one of many Milles sculptures you can find on a walk around campus.",
+      "latitude": 42.5691956,
+      "longitude": -83.2503662
+    },
+    {
+      "id": "trad_cranbrook_steggy",
+      "name": "Say Hi to Steggy",
+      "description": "A life-sized stegosaurus named Steggy stands outside the Cranbrook Institute of Science as its mascot. Visitors stop for a selfie with him before heading inside.",
+      "latitude": 42.5729846,
+      "longitude": -83.2500741
+    },
+    {
+      "id": "trad_cranbrook_carillon",
+      "name": "Summer Carillon Recitals",
+      "description": "Every summer since 1928, carillonneurs have played free recitals on the 50 bells in Christ Church Cranbrook's tower. Bring a lawn chair or blanket and listen from the church grounds.",
+      "latitude": 42.5668569,
+      "longitude": -83.243949
+    }
+  ],
   "Yale University": [
     {
       "id": "trad_yale_woolsey_foot",
@@ -2569,6 +2661,29 @@
       "description": "CSU tests new flower varieties in this garden, which is free and open every day during daylight hours. Visit between late May and October, when the beds are in bloom.",
       "latitude": 40.569381,
       "longitude": -105.07615
+    }
+  ],
+  "University of California, San Diego": [
+    {
+      "id": "trad_ucsd_sun_god",
+      "name": "Meet You at the Sun God",
+      "description": "Niki de Saint Phalle's colorful bird on a concrete arch was the first Stuart Collection work, installed in 1983. Students use it as a meeting spot and dress it up for special occasions, and it is the mascot of the Sun God Festival held at the end of spring classes.",
+      "latitude": 32.8785722,
+      "longitude": -117.239735
+    },
+    {
+      "id": "trad_ucsd_snake_path",
+      "name": "Walk the Snake Path",
+      "description": "Alexis Smith's 560-foot path of slate scales winds up the hill from Warren Mall to Geisel Library. Along the way you pass a granite book carved with a line from Milton's Paradise Lost and a small garden of fruit trees.",
+      "latitude": 32.8811785,
+      "longitude": -117.2366135
+    },
+    {
+      "id": "trad_ucsd_seuss_statue",
+      "name": "Dr. Seuss and the Cat in the Hat",
+      "description": "On the forum level of Geisel Library, a life-size bronze statue shows Theodor Seuss Geisel with the Cat in the Hat at his shoulder. It is a favorite photo stop for visitors to the library named after him.",
+      "latitude": 32.8811393,
+      "longitude": -117.2375798
     }
   ]
 }

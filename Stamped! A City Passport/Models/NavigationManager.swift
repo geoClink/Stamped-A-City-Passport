@@ -23,6 +23,8 @@ class NavigationManager: ObservableObject {
     @Published var landmarkRequest: LandmarkRequest? = nil
     /// Set by "Start a Walking Tour": the city's map opens and its Tour starts
     @Published var tourRequestCity: CityLocation.City? = nil
+    /// Set by File > New Trip in the main window; My Trips opens and asks where the trip is
+    @Published var newTripRequested = false
 }
 
 /// A landmark page a Siri or Shortcuts action wants open

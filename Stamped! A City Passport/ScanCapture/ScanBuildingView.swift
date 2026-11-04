@@ -54,10 +54,12 @@ struct ScanBuildingView: View {
                 Image(systemName: "camera.aperture")
                     .font(.system(size: 64))
                     .foregroundStyle(Color.adventureOrange)
+                    .accessibilityHidden(true)
 
                 VStack(spacing: 10) {
                     Text("Create a 3D Model")
                         .font(.title2.bold())
+                        .accessibilityAddTraits(.isHeader)
                     Text("Take 20–40 photos of \(building.name) from all angles, then select them here. Your model will be shared with all Stamped users.")
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
@@ -68,10 +70,12 @@ struct ScanBuildingView: View {
                 // Tips card
                 VStack(alignment: .leading, spacing: 6) {
                     Text("HOW TO GET A GOOD SCAN")
-                        .font(.system(size: 10, weight: .black))
+                        // A text style, so it grows with Dynamic Type
+                        .font(.caption2.weight(.black))
                         .foregroundStyle(Color.adventureOrange)
                         .tracking(2)
                         .padding(.bottom, 4)
+                        .accessibilityAddTraits(.isHeader)
 
                     tipRow(icon: "1.circle.fill",         text: "Walk slowly around the building — one full circle per level")
                     tipRow(icon: "2.circle.fill",         text: "Do 2–3 passes: shoot low, then chest height, then tilted up")
@@ -113,6 +117,7 @@ struct ScanBuildingView: View {
                 .font(.body)
                 .foregroundStyle(Color.adventureOrange)
                 .frame(width: 26)
+                .accessibilityHidden(true)
             Text(text)
                 .font(.subheadline)
         }
@@ -127,10 +132,12 @@ struct ScanBuildingView: View {
             Image(systemName: "checkmark.circle.fill")
                 .font(.system(size: 64))
                 .foregroundStyle(Color.adventureOrange)
+                .accessibilityHidden(true)
 
             VStack(spacing: 8) {
                 Text("\(vm.selectedCount) Photos Selected")
                     .font(.title2.bold())
+                    .accessibilityAddTraits(.isHeader)
                 Text(vm.selectedCount < 20
                      ? "Try to select at least 20 for best results."
                      : "Ready to build your 3D model.")
@@ -181,6 +188,7 @@ struct ScanBuildingView: View {
             VStack(spacing: 6) {
                 Text("Building 3D Model")
                     .font(.title3.bold())
+                    .accessibilityAddTraits(.isHeader)
                 Text("\(Int(vm.processingProgress * 100))% complete")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
@@ -205,6 +213,7 @@ struct ScanBuildingView: View {
                 .scaleEffect(1.4)
             Text("Uploading to Stamped…")
                 .font(.title3.bold())
+                .accessibilityAddTraits(.isHeader)
             Text("Your model will be available to all users once uploaded.")
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
@@ -223,10 +232,12 @@ struct ScanBuildingView: View {
             Image(systemName: "checkmark.seal.fill")
                 .font(.system(size: 64))
                 .foregroundStyle(Color.adventureOrange)
+                .accessibilityHidden(true)
 
             VStack(spacing: 8) {
                 Text("Scan Uploaded!")
                     .font(.title2.bold())
+                    .accessibilityAddTraits(.isHeader)
                 Text("\(building.name) is now available in 3D for every Stamped user.")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
@@ -255,10 +266,12 @@ struct ScanBuildingView: View {
             Image(systemName: "iphone.slash")
                 .font(.system(size: 64))
                 .foregroundStyle(.secondary)
+                .accessibilityHidden(true)
 
             VStack(spacing: 8) {
                 Text("LiDAR Required")
                     .font(.title2.bold())
+                    .accessibilityAddTraits(.isHeader)
                 Text("3D scanning needs a LiDAR sensor. Try an iPhone 12 Pro or later Pro model, or an iPad Pro with LiDAR.")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
@@ -287,9 +300,11 @@ struct ScanBuildingView: View {
             Image(systemName: "xmark.circle.fill")
                 .font(.system(size: 64))
                 .foregroundStyle(.red)
+                .accessibilityHidden(true)
 
             Text("Processing Failed")
                 .font(.title2.bold())
+                .accessibilityAddTraits(.isHeader)
 
             Text(message)
                 .font(.subheadline)

@@ -13,6 +13,7 @@ extension CityLocation.City {
     static let campuses: Set<CityLocation.City> = [
         .uniMelbourne,
         .uniSydney,
+        .uTokyo,
         .utAustin,
         .ucl,
         .kingsLondon,
@@ -21,6 +22,8 @@ extension CityLocation.City {
         .kuLeuven,
         .aalto,
         .uppsala,
+        .uniCoimbra,
+        .uniSalamanca,
         .floridaSouthern,
         .bostonCollege,
         .clemson,
@@ -96,6 +99,7 @@ extension CityLocation.City {
         .michiganTech,
         .oaklandUniversity,
         .centralMichigan,
+        .cranbrook,
         .yale,
         .harvard,
         .mit,
@@ -128,6 +132,7 @@ extension CityLocation.City {
         .unam,
         .caltech,
         .coloradoState,
+        .ucsd,
     ]
 
     /// Athletic conference of each US campus; US campuses not listed show under "Other".
@@ -292,6 +297,7 @@ extension CityLocation.City {
         .michiganTech: ["Michigan Tech", "MTU"],
         .oaklandUniversity: ["Oakland", "Golden Grizzlies", "Grizzlies"],
         .centralMichigan: ["CMich", "Central Michigan", "Central", "Chippewas", "Chips"],
+        .cranbrook: ["Cranbrook", "Cranbrook Academy", "Cranbrook Educational Community"],
         .yale: ["Yale", "Bulldogs"],
         .harvard: ["Harvard", "Crimson"],
         .mit: ["MIT"],
@@ -324,12 +330,14 @@ extension CityLocation.City {
         .unam: ["UNAM"],
         .caltech: ["Caltech", "Cal Tech", "Beavers"],
         .coloradoState: ["CSU", "Colorado State", "Rams"],
+        .ucsd: ["UCSD", "UC San Diego", "Tritons"],
     ]
 
     /// Official school colors as hex, primary first; they tint the campus stamp.
     static let campusColors: [CityLocation.City: [String]] = [
         .uniMelbourne: ["#000F46", "#FFFFFF"],
         .uniSydney: ["#E64626", "#424242"],
+        .uTokyo: ["#0B8BEE", "#FFCD00"],
         .utAustin: ["#BF5700", "#FFFFFF"],
         .ucl: ["#361A54", "#FFFFFF"],
         .kingsLondon: ["#003C7A", "#E2231A"],
@@ -338,6 +346,7 @@ extension CityLocation.City {
         .kuLeuven: ["#00407A", "#52BDEC"],
         .aalto: ["#46A5FF", "#F7E159"],
         .uppsala: ["#990000", "#FFFFFF"],
+        .uniSalamanca: ["#D22020", "#385E9D"],
         .floridaSouthern: ["#C1002A", "#FFFFFF"],
         .bostonCollege: ["#8C2232", "#DBCCA6"],
         .clemson: ["#F56600", "#522D80"],
@@ -413,6 +422,7 @@ extension CityLocation.City {
         .michiganTech: ["#FFCD00", "#000000"],
         .oaklandUniversity: ["#BC945B", "#000000"],
         .centralMichigan: ["#6A0032", "#FFC82E"],
+        .cranbrook: ["#9B6A45", "#AD8800"],
         .yale: ["#00356B", "#FFFFFF"],
         .harvard: ["#A51C30", "#FFFFFF"],
         .mit: ["#750014", "#8B959E"],
@@ -445,6 +455,7 @@ extension CityLocation.City {
         .unam: ["#013B75", "#D9A500"],
         .caltech: ["#FF6C0C", "#FFFFFF"],
         .coloradoState: ["#1E4D2B", "#C8C372"],
+        .ucsd: ["#182B49", "#FFCD00"],
     ]
 }
 
@@ -455,6 +466,7 @@ extension WikimediaService {
         "campus_unimelbourne_old_pathology_building": "Old Pathology Building Melbourne University",
         "campus_unimelbourne_newman_college": "Newman College, Melbourne",
         "campus_unimelbourne_chemistry_building": "Chemistry Building, University of Melbourne",
+        "campus_utokyo_general_library": "University of Tokyo Library",
         "campus_ut_austin_main_building": "Main Building (University of Texas at Austin)",
         "campus_ut_austin_texas_memorial_museum": "Texas Science and Natural History Museum",
         "campus_ucl_senate_house": "Senate House, London",
@@ -468,6 +480,8 @@ extension WikimediaService {
         "campus_aalto_vare": "Väre (building)",
         "campus_aalto_harald_herlin_learning_centre": "Aalto University Library",
         "campus_uppsala_university_hall": "University Hall (Uppsala University)",
+        "campus_salamanca_anaya_palace": "Colegio Mayor de San Bartolomé, Salamanca",
+        "campus_salamanca_clerecia": "La Clerecía, Salamanca",
         "campus_clemson_tillman_hall": "Tillman Hall at Clemson University",
         "campus_clemson_fort_hill": "Fort Hill (Clemson, South Carolina)",
         "campus_clemson_hanover_house": "Hanover House (Clemson University)",

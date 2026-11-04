@@ -101,6 +101,7 @@ struct StampCelebrationView: View {
                             .font(.system(.largeTitle, design: .serif))
                             .bold()
                             .foregroundColor(.white)
+                            .accessibilityAddTraits(.isHeader)
                         
                         Text(cityName.uppercased())
                             .font(.system(.subheadline, design: .monospaced))
@@ -178,11 +179,13 @@ extension StampCelebrationView {
             SoundManager.shared.playStampSound()
         }
 
-        UIAccessibility.post(notification: .screenChanged, argument: "Congratulations! You've explored \(cityName).")
+        // Translated: the English sentence used before had no translations
+        UIAccessibility.post(notification: .screenChanged, argument: L.Celebration.accessibility(cityName))
         
         let delay = reduceMotion ? 0.2 : 1.0
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
+            // A plain fade under Reduce Motion instead of the spring
+            withAnimation(reduceMotion ? .easeInOut(duration: 0.2) : .spring(response: 0.6, dampingFraction: 0.8)) {
                 showButton = true
             }
         }

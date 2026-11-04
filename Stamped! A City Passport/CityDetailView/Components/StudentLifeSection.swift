@@ -84,6 +84,7 @@ struct StudentLifeSection: View {
                 }
             }
             .accessibilityElement(children: .combine)
+            .accessibilityAddTraits(.isButton)
             .accessibilityHint(isExpanded ? "" : NSLocalizedString("Double tap to read more.", comment: "Campus tradition row: VoiceOver hint to expand the description"))
 
             Spacer(minLength: 0)

@@ -14,6 +14,8 @@ struct CityListVisionView: View {
     @State private var selectedCity: String?
     @State private var searchText = ""
     @State private var showingTipJar = false
+    /// Explore Together keeps everyone in a SharePlay session on the same city
+    private let sharePlay = SharePlayExplorer.shared
     @Environment(\.openWindow) private var openWindow
     /// Set by the globe's "Show in Main Window" button (see GlobeVolumeView).
     @AppStorage("globeRequestedCity") private var globeRequestedCity = ""
@@ -41,6 +43,7 @@ struct CityListVisionView: View {
                     Button("Globe", systemImage: "globe.americas.fill") {
                         openWindow(id: "globe")
                     }
+                    .accessibilityHint("Opens a 3D globe of every city in its own window")
                 }
                 ToolbarItem {
                     Button("Support Stamped!", systemImage: "heart") {
@@ -83,7 +86,16 @@ struct CityListVisionView: View {
         }
         .onChange(of: selectedCity) { _, city in
             globeHighlightedCity = city ?? ""
+            sharePlay.cityChanged(to: city)    // in SharePlay, everyone follows
         }
+        // Joined a friend's SharePlay, or a friend picked another city
+        .onChange(of: sharePlay.sharedCity) { _, city in
+            guard let city, store.cityNames.contains(city) else { return }
+            searchText = ""
+            selectedCity = city
+        }
+        // Listens for Explore Together sessions, started here or by a friend
+        .task { await sharePlay.listenForSessions() }
     }
 }
 
@@ -100,16 +112,23 @@ private struct CityRow: View {
                 Text(cityName).font(.headline)
                 Spacer()
                 if total > 0 && visitedCount == total {
+                    // The count below already says every landmark is stamped
                     Image(systemName: "checkmark.seal.fill").foregroundStyle(.orange)
+                        .accessibilityHidden(true)
                 }
             }
             Text("\(visitedCount) / \(total) stamped")
                 .font(.caption)
                 .foregroundStyle(.secondary)
+                // VoiceOver would read the slash; say it in words instead
+                .accessibilityLabel(Text("\(visitedCount) of \(total) landmarks stamped"))
             ProgressView(value: total == 0 ? 0 : Double(visitedCount) / Double(total))
                 .tint(.orange)
+                .accessibilityHidden(true)   // same number as the text above
         }
         .padding(.vertical, 4)
+        // One row reads "Chicago, 3 of 12 landmarks stamped"
+        .accessibilityElement(children: .combine)
     }
 }
 

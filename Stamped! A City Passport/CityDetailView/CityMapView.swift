@@ -88,6 +88,8 @@ struct CityMapView: View {
     @AppStorage("map_legend_seen") private var hasSeenMapLegend = false
     @State private var showingLegend = false
     @Environment(\.accessibilityReduceTransparency) private var reduceTransparency
+    /// With Reduce Motion on, the camera jumps instead of flying and cards fade instead of sliding.
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @Environment(\.horizontalSizeClass) private var sizeClass
     @Environment(\.dismiss) private var dismiss
 
@@ -172,6 +174,16 @@ struct CityMapView: View {
 
     private var isTouring: Bool { tourTask != nil }
 
+    /// Cards slide up from the bottom, or just fade in with Reduce Motion.
+    private var cardTransition: AnyTransition {
+        reduceMotion ? .opacity : .move(edge: .bottom).combined(with: .opacity)
+    }
+
+    /// The camera's fly-to animation, or none (an instant jump) with Reduce Motion.
+    private func cameraAnimation(duration: Double) -> Animation? {
+        reduceMotion ? nil : .easeInOut(duration: duration)
+    }
+
     private var cityTrips: [Trip] { tripStore.trips(in: cityName) }
 
     // MARK: - Body
@@ -237,7 +249,7 @@ struct CityMapView: View {
                 )
                 .padding(.horizontal, 12)
                 .padding(.bottom, 8)
-                .transition(.move(edge: .bottom).combined(with: .opacity))
+                .transition(cardTransition)
             } else if let place = selectedPlace {
                 CustomPlaceCard(
                     place: place,
@@ -256,7 +268,7 @@ struct CityMapView: View {
                 )
                 .padding(.horizontal, 12)
                 .padding(.bottom, 8)
-                .transition(.move(edge: .bottom).combined(with: .opacity))
+                .transition(cardTransition)
             } else {
                 legendButton
                     .frame(maxWidth: .infinity, alignment: .trailing)
@@ -285,7 +297,7 @@ struct CityMapView: View {
                 .padding(.vertical, 10)
                 .background(.regularMaterial, in: Capsule())
                 .padding(.top, 12)
-                .transition(.move(edge: .top).combined(with: .opacity))
+                .transition(reduceMotion ? .opacity : .move(edge: .top).combined(with: .opacity))
                 .accessibilityElement(children: .combine)
             }
         }
@@ -482,7 +494,7 @@ struct CityMapView: View {
             heading: lastCamera?.heading ?? 0,
             pitch: 60
         )
-        withAnimation(.easeInOut(duration: 1.2)) {
+        withAnimation(cameraAnimation(duration: 1.2)) {
             position = .camera(camera)
         }
     }
@@ -490,11 +502,13 @@ struct CityMapView: View {
     @MapContentBuilder
     private func landmarkAnnotation(_ building: Building) -> some MapContent {
         let isVisited = progress.isVisited(building.id)
+        // Worked out once: `upNext` walks the whole route
+        let isUpNext = building.id == upNext?.id
         Annotation(building.name, coordinate: coordinate(of: building), anchor: .bottom) {
             PinView(
                 isVisited: isVisited,
                 isWishlisted: progress.isWishlisted(building.id),
-                isUpNext: building.id == upNext?.id,
+                isUpNext: isUpNext,
                 isSelected: building.id == selectedBuilding?.id
             )
             .onTapGesture {
@@ -502,8 +516,20 @@ struct CityMapView: View {
                 flyTo(building)
             }
             .accessibilityLabel(isVisited ? "\(building.name), stamped" : "\(building.name), not yet visited")
+            .accessibilityValue(pinAccessibilityValue(for: building, isUpNext: isUpNext))
             .accessibilityHint("Shows this landmark's card")
-            .accessibilityAddTraits(.isButton)
+            .accessibilityAddTraits(building.id == selectedBuilding?.id ? [.isButton, .isSelected] : .isButton)
+        }
+    }
+
+    /// The pin states VoiceOver reads after the name: the heart badge and the pulsing "up next" ring.
+    private func pinAccessibilityValue(for building: Building, isUpNext: Bool) -> Text {
+        let isWishlisted = progress.isWishlisted(building.id)
+        switch (isWishlisted, isUpNext) {
+        case (true, true):   return Text("Want to Visit, up next")
+        case (true, false):  return Text("Want to Visit")
+        case (false, true):  return Text("Up next")
+        case (false, false): return Text(verbatim: "")
         }
     }
 
@@ -516,7 +542,7 @@ struct CityMapView: View {
                     flyTo(place)
                 }
                 .accessibilityLabel("\(place.name), your saved place")
-                .accessibilityAddTraits(.isButton)
+                .accessibilityAddTraits(place.id == selectedPlace?.id ? [.isButton, .isSelected] : .isButton)
         }
     }
 
@@ -537,6 +563,7 @@ struct CityMapView: View {
                     stopTour()
                     dismiss()
                 }
+                .closesWithCommandW()
             }
         }
         // Filters, Add a Place and the satellite switch share one menu, so the title has room
@@ -576,6 +603,7 @@ struct CityMapView: View {
                       : "line.3.horizontal.decrease.circle.fill")
             }
             .accessibilityLabel("Map options")
+            .accessibilityValue(filter == .all && styleFilter == nil ? Text(verbatim: "") : Text("Filter on"))
             .accessibilityHint("Filter landmarks, switch to satellite view or add a place")
         }
         ToolbarItem(placement: .topBarTrailing) {
@@ -747,7 +775,7 @@ struct CityMapView: View {
             // here too could wipe out a new tour that started in the meantime.
             if !Task.isCancelled {
                 selectedBuilding = nil
-                withAnimation(.easeInOut(duration: 3)) { fitCamera() }
+                withAnimation(cameraAnimation(duration: 3)) { fitCamera() }
                 tourTask = nil
             }
         }
@@ -793,7 +821,7 @@ struct CityMapView: View {
                 selectedBuilding = nil
                 selectedPlace = nil
                 endTripTour()
-                withAnimation(.easeInOut(duration: 3)) { fitCamera() }
+                withAnimation(cameraAnimation(duration: 3)) { fitCamera() }
                 tourTask = nil
             }
         }
@@ -827,7 +855,7 @@ struct CityMapView: View {
         let minimumMargin = 500 * MKMapPointsPerMeterAtLatitude(dayRoute[0].latitude)
         let margin = max(max(box.width, box.height) * 0.35, minimumMargin)
         box = box.insetBy(dx: -margin, dy: -margin)
-        withAnimation(.easeInOut(duration: 2.5)) {
+        withAnimation(cameraAnimation(duration: 2.5)) {
             position = .rect(box)
         }
     }
@@ -870,7 +898,7 @@ struct CityMapView: View {
         // The card covers the bottom of the screen. Aiming the camera slightly
         // south of the building pushes the building up into the visible area.
         let aimPoint = CLLocationCoordinate2D(latitude: target.latitude - 0.0015, longitude: target.longitude)
-        withAnimation(.easeInOut(duration: duration)) {
+        withAnimation(cameraAnimation(duration: duration)) {
             position = .camera(MapCamera(centerCoordinate: aimPoint, distance: 700, heading: 0, pitch: 65))
         }
         selectedPlace = nil
@@ -880,7 +908,7 @@ struct CityMapView: View {
     /// Same swoop for a place the user saved themselves.
     private func flyTo(_ place: CustomPlace, duration: Double = 1.5) {
         let aimPoint = CLLocationCoordinate2D(latitude: place.latitude - 0.0015, longitude: place.longitude)
-        withAnimation(.easeInOut(duration: duration)) {
+        withAnimation(cameraAnimation(duration: duration)) {
             position = .camera(MapCamera(centerCoordinate: aimPoint, distance: 700, heading: 0, pitch: 65))
         }
         selectedBuilding = nil
@@ -985,7 +1013,9 @@ private struct PinView: View {
             }
         }
         .scaleEffect(isSelected ? 1.3 : 1)
-        .animation(.spring(duration: 0.3), value: isSelected)
+        .animation(reduceMotion ? nil : .spring(duration: 0.3), value: isSelected)
+        // One VoiceOver element per pin (not the tick and the heart separately); the label is set where it's used
+        .accessibilityElement(children: .ignore)
     }
 }
 
@@ -1009,6 +1039,8 @@ private struct MapLandmarkCard: View {
     let onAddToTrip: () -> Void
     let onClose: () -> Void
 
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(alignment: .top, spacing: 12) {
@@ -1022,7 +1054,8 @@ private struct MapLandmarkCard: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(building.name)
                         .font(.headline)
-                        .lineLimit(2)
+                        // Long names need more lines with very large text
+                        .lineLimit(dynamicTypeSize.isAccessibilitySize ? 4 : 2)
                         .minimumScaleFactor(0.85)
                     Text([building.knownStyle, building.hasKnownYear ? "Built \(String(building.yearBuilt))" : nil]
                             .compactMap { $0 }
@@ -1059,8 +1092,8 @@ private struct MapLandmarkCard: View {
                     .accessibilityAddTraits(.isButton)
             }
 
-            // Quick actions
-            HStack(spacing: 8) {
+            // Quick actions: four across, or two by two with very large text
+            QuickActionRow {
                 QuickAction(title: isVisited ? "Stamped" : "Stamp",
                             systemImage: isVisited ? "checkmark.seal.fill" : "checkmark.seal",
                             isOn: isVisited, action: onStamp)
@@ -1085,7 +1118,8 @@ private struct MapLandmarkCard: View {
                 Button(action: onViewDetails) {
                     Label("View Details", systemImage: "building.columns")
                         .frame(maxWidth: .infinity)
-                        .frame(height: 28)
+                        // minHeight, so the label can grow with large text
+                        .frame(minHeight: 28)
                 }
                 .buttonStyle(.borderedProminent)
                 .accessibilityHint("Opens the full page for \(building.name)")
@@ -1126,15 +1160,19 @@ private struct QuickAction: View {
     let isOn: Bool
     let action: () -> Void
 
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+
     var body: some View {
         Button(action: action) {
             VStack(spacing: 4) {
                 Image(systemName: systemImage)
                     .font(.title3)
                     .contentTransition(.symbolEffect(.replace))
+                    // The title says it; VoiceOver shouldn't read the symbol's name too
+                    .accessibilityHidden(true)
                 Text(title)
                     .font(.caption2.weight(.semibold))
-                    .lineLimit(1)
+                    .lineLimit(dynamicTypeSize.isAccessibilitySize ? 2 : 1)
                     .minimumScaleFactor(0.8)
             }
             .frame(maxWidth: .infinity)
@@ -1143,6 +1181,25 @@ private struct QuickAction: View {
         .buttonStyle(.bordered)
         .foregroundStyle(isOn ? Color.white : Color.adventureOrange)
         .background(isOn ? Color.adventureOrange : Color.clear, in: RoundedRectangle(cornerRadius: 12))
+        .accessibilityAddTraits(isOn ? .isSelected : [])
+    }
+}
+
+/// The cards' quick action buttons: one row normally, a two-column grid at
+/// accessibility text sizes, where four across would squash every title.
+private struct QuickActionRow<Content: View>: View {
+    @ViewBuilder let content: () -> Content
+
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+
+    var body: some View {
+        if dynamicTypeSize.isAccessibilitySize {
+            LazyVGrid(columns: [GridItem(.flexible(), spacing: 8), GridItem(.flexible(), spacing: 8)], spacing: 8) {
+                content()
+            }
+        } else {
+            HStack(spacing: 8) { content() }
+        }
     }
 }
 
@@ -1200,6 +1257,7 @@ private struct CustomPlacePin: View {
     let isSelected: Bool
     @ScaledMetric(relativeTo: .callout) private var pinSize: CGFloat = 32
     @ScaledMetric(relativeTo: .caption) private var pinIconSize: CGFloat = 13
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
         Image(systemName: CustomPlace.icon(forCategory: category))
@@ -1210,7 +1268,7 @@ private struct CustomPlacePin: View {
             .overlay(Circle().stroke(.white, lineWidth: 2))
             .shadow(radius: 3)
             .scaleEffect(isSelected ? 1.3 : 1)
-            .animation(.spring(duration: 0.3), value: isSelected)
+            .animation(reduceMotion ? nil : .spring(duration: 0.3), value: isSelected)
     }
 }
 
@@ -1245,6 +1303,7 @@ private struct CustomPlaceCard: View {
                     .foregroundStyle(.white)
                     .frame(width: 52, height: 52)
                     .background(DS.Palette.wishlist, in: RoundedRectangle(cornerRadius: 12))
+                    .accessibilityHidden(true)
                 VStack(alignment: .leading, spacing: 4) {
                     Text(place.name).font(.headline).lineLimit(2)
                     if let address = place.address {
@@ -1264,7 +1323,7 @@ private struct CustomPlaceCard: View {
                 .accessibilityLabel("Close")
             }
 
-            HStack(spacing: 8) {
+            QuickActionRow {
                 QuickAction(title: "Look Around", systemImage: "binoculars", isOn: false, action: onLookAround)
                     .disabled(!hasLookAround)
                     .opacity(hasLookAround ? 1 : 0.4)

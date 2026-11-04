@@ -4,8 +4,9 @@
 //
 //  Saves the user's planned trips on this device and in iCloud.
 //  Follows the same pattern as GlobalProgressManager's custom places:
-//  JSON data in the app-group UserDefaults plus iCloud key-value storage,
-//  and the latest saved list wins when another device changes it.
+//  JSON data in the app-group UserDefaults plus iCloud key-value storage.
+//  Since 2.10 another device's changes are merged trip by trip (see
+//  ICloudListMerge), so trips made on two devices are both kept.
 //
 
 import Foundation
@@ -21,7 +22,11 @@ final class TripStore: ObservableObject {
         didSet { save() }
     }
 
+    /// When each trip was last created, edited or deleted, for merging with other devices.
+    private var changes: ListChangeLog = [:]
+
     private let tripsKey = "GlobalTripsKey"
+    private let changesKey = "GlobalTripsChangesKey"
     private let defaults: UserDefaults
     /// nil in unit tests, so tests never touch the real iCloud store.
     private let iCloud: NSUbiquitousKeyValueStore?
@@ -43,6 +48,8 @@ final class TripStore: ObservableObject {
            let saved = try? JSONDecoder().decode([Trip].self, from: data) {
             self.trips = saved
         }
+        // Trips saved before 2.10 have no log yet; they're simply kept
+        changes = ICloudListMerge.decodeLog(defaults.data(forKey: changesKey))
 
         guard let iCloud else { return }
 
@@ -55,27 +62,68 @@ final class TripStore: ObservableObject {
             forName: NSUbiquitousKeyValueStore.didChangeExternallyNotification,
             object: iCloud,
             queue: .main
-        ) { [weak self] _ in
-            Task { @MainActor in self?.mergeFromICloud() }
+        ) { [weak self] notification in
+            let accountChanged = ICloudListMerge.isAccountChange(notification)
+            Task { @MainActor [weak self] in self?.mergeFromICloud(accountChanged: accountChanged) }
         }
     }
 
     // MARK: - iCloud Merge
 
-    /// People delete and reorder as well as add, so the latest saved list wins
-    /// (same rule as the wishlist and custom places).
-    private func mergeFromICloud() {
-        if let data = iCloud?.data(forKey: tripsKey),
-           let cloudTrips = try? JSONDecoder().decode([Trip].self, from: data),
-           cloudTrips != trips {
+    private func mergeFromICloud(accountChanged: Bool = false) {
+        guard let iCloud else { return }
+        mergeCloud(
+            tripsData: iCloud.data(forKey: tripsKey),
+            changesData: iCloud.data(forKey: changesKey),
+            accountChanged: accountChanged
+        )
+    }
+
+    /// Merges what iCloud has into this device's trips, then saves the result
+    /// back so iCloud gets any trips only this device had (e.g. trips made
+    /// before 2.10, or while offline). Not private so tests can pass iCloud's data in.
+    func mergeCloud(tripsData: Data?, changesData: Data?, accountChanged: Bool = false) {
+        let cloudTrips = tripsData.flatMap { try? JSONDecoder().decode([Trip].self, from: $0) }
+        let cloudChanges = ICloudListMerge.decodeLog(changesData)
+
+        guard let cloudTrips else {
+            // Nothing in iCloud yet: share this device's trips
+            if !trips.isEmpty || !changes.isEmpty { save() }
+            return
+        }
+
+        if accountChanged {
+            // A different person's iCloud: show their trips, don't mix them with these
+            changes = cloudChanges
             trips = cloudTrips
+            return
+        }
+
+        let merged = ICloudListMerge.merge(
+            local: trips, localLog: changes,
+            cloud: cloudTrips, cloudLog: cloudChanges,
+            id: \.id
+        )
+        changes = merged.log
+        if merged.items != trips {
+            trips = merged.items // saves via didSet
+        } else if merged.items != cloudTrips || merged.log != cloudChanges {
+            save()
         }
     }
 
     private func save() {
         guard let data = try? JSONEncoder().encode(trips) else { return }
+        let changesData = ICloudListMerge.encodeLog(changes)
         defaults.set(data, forKey: tripsKey)
+        defaults.set(changesData, forKey: changesKey)
         iCloud?.set(data, forKey: tripsKey)
+        iCloud?.set(changesData, forKey: changesKey)
+    }
+
+    /// Notes a change before `trips` is set, so the save that follows includes it.
+    private func recordChange(_ tripID: String, removed: Bool = false) {
+        changes = ICloudListMerge.recording(tripID, removed: removed, in: changes)
     }
 
     // MARK: - Reading
@@ -112,11 +160,14 @@ final class TripStore: ObservableObject {
             startDate: startDate,
             area: area
         )
+        recordChange(trip.id)
         trips.append(trip)
         return trip
     }
 
     func deleteTrip(_ tripID: String) {
+        guard trips.contains(where: { $0.id == tripID }) else { return }
+        recordChange(tripID, removed: true)
         trips.removeAll { $0.id == tripID }
     }
 
@@ -163,6 +214,7 @@ final class TripStore: ObservableObject {
 
         // Built whole and appended once, so it's one save rather than one per stop
         let trip = Trip(name: Self.campusVisitName(for: campus), cityName: campus.name, days: [Self.walkingDay(for: campus)], isCampusVisit: true)
+        recordChange(trip.id)
         trips.append(trip)
         return trip
     }
@@ -240,6 +292,7 @@ final class TripStore: ObservableObject {
             area: TripArea(name: first.name, latitude: first.coordinate.lat, longitude: first.coordinate.lon),
             isCollegeRoadTrip: true
         )
+        recordChange(trip.id)
         trips.append(trip)
         return trip
     }
@@ -325,6 +378,7 @@ final class TripStore: ObservableObject {
         var trip = trips[index]
         change(&trip)
         if trip != trips[index] {
+            recordChange(tripID)
             trips[index] = trip
         }
     }

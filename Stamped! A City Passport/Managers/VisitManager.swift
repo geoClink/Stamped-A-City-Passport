@@ -38,6 +38,8 @@ class GlobalProgressManager: ObservableObject {
     @Published var customPlaces: [CustomPlace] = [] {
         didSet { saveCustomPlaces() }
     }
+    /// When each saved place was last added or removed, for merging with other devices.
+    private var customPlaceChanges: ListChangeLog = [:]
 
     /// Campus traditions the user has done ("Rub John Harvard's foot"), by tradition id.
     @Published var completedTraditionIDs: Set<String> = [] {
@@ -48,6 +50,7 @@ class GlobalProgressManager: ObservableObject {
     private let wishlistKey = "GlobalWishlistKey"
     private let traditionsKey = "GlobalCompletedTraditionsKey"
     private let customPlacesKey = "GlobalCustomPlacesKey"
+    private let customPlaceChangesKey = "GlobalCustomPlacesChangesKey"
     private let visitDatesKey = "GlobalVisitDatesKey"
     private let buildingNotesKey = "BuildingNotesKey"
     private let defaults = UserDefaults(suiteName: "group.stamped.passport") ?? .standard
@@ -82,6 +85,7 @@ class GlobalProgressManager: ObservableObject {
            let places = try? JSONDecoder().decode([CustomPlace].self, from: data) {
             self.customPlaces = places
         }
+        customPlaceChanges = ICloudListMerge.decodeLog(defaults.data(forKey: customPlaceChangesKey))
 
         loadImagesFromDisk()
 
@@ -94,14 +98,15 @@ class GlobalProgressManager: ObservableObject {
             forName: NSUbiquitousKeyValueStore.didChangeExternallyNotification,
             object: iCloud,
             queue: .main
-        ) { [weak self] _ in
-            Task { @MainActor in self?.mergeFromICloud() }
+        ) { [weak self] notification in
+            let accountChanged = ICloudListMerge.isAccountChange(notification)
+            Task { @MainActor [weak self] in self?.mergeFromICloud(accountChanged: accountChanged) }
         }
     }
 
     // MARK: - iCloud Merge
 
-    private func mergeFromICloud() {
+    private func mergeFromICloud(accountChanged: Bool = false) {
         // visitedIDs: take the union — never remove stamps from a cloud merge
         if let cloudIDs = iCloud.array(forKey: saveKey) as? [String] {
             let merged = visitedIDs.union(Set(cloudIDs))
@@ -139,12 +144,13 @@ class GlobalProgressManager: ObservableObject {
             wishlistIDs = Set(cloudWishlist)
         }
 
-        // custom places: same rule as the wishlist — the latest saved list wins
-        if let data = iCloud.data(forKey: customPlacesKey),
-           let cloudPlaces = try? JSONDecoder().decode([CustomPlace].self, from: data),
-           cloudPlaces != customPlaces {
-            customPlaces = cloudPlaces
-        }
+        // custom places: merged place by place since 2.10, so places saved on
+        // two devices are both kept and a removal sticks (see ICloudListMerge)
+        mergeCustomPlaces(
+            placesData: iCloud.data(forKey: customPlacesKey),
+            changesData: iCloud.data(forKey: customPlaceChangesKey),
+            accountChanged: accountChanged
+        )
 
         // buildingNotes: adopt cloud note only if there is no local note
         if let cloudNotes = iCloud.dictionary(forKey: buildingNotesKey) as? [String: String] {
@@ -345,17 +351,60 @@ class GlobalProgressManager: ObservableObject {
     /// Saves a place unless the same one is already on the list.
     func addCustomPlace(_ place: CustomPlace) {
         guard !hasCustomPlace(name: place.name, latitude: place.latitude, longitude: place.longitude) else { return }
+        recordCustomPlaceChange(place.id)
         customPlaces.append(place)
     }
 
     func removeCustomPlace(_ id: String) {
+        guard customPlaces.contains(where: { $0.id == id }) else { return }
+        recordCustomPlaceChange(id, removed: true)
         customPlaces.removeAll { $0.id == id }
+    }
+
+    /// Merges iCloud's saved places into this device's, then saves the result
+    /// back so iCloud gets any places only this device had. Same steps as
+    /// TripStore.mergeCloud. Not private so tests can pass iCloud's data in.
+    func mergeCustomPlaces(placesData: Data?, changesData: Data?, accountChanged: Bool = false) {
+        let cloudPlaces = placesData.flatMap { try? JSONDecoder().decode([CustomPlace].self, from: $0) }
+        let cloudChanges = ICloudListMerge.decodeLog(changesData)
+
+        guard let cloudPlaces else {
+            // Nothing in iCloud yet: share this device's places
+            if !customPlaces.isEmpty || !customPlaceChanges.isEmpty { saveCustomPlaces() }
+            return
+        }
+
+        if accountChanged {
+            customPlaceChanges = cloudChanges
+            customPlaces = cloudPlaces
+            return
+        }
+
+        let merged = ICloudListMerge.merge(
+            local: customPlaces, localLog: customPlaceChanges,
+            cloud: cloudPlaces, cloudLog: cloudChanges,
+            id: \.id
+        )
+        customPlaceChanges = merged.log
+        if merged.items != customPlaces {
+            customPlaces = merged.items // saves via didSet
+        } else if merged.items != cloudPlaces || merged.log != cloudChanges {
+            saveCustomPlaces()
+        }
+    }
+
+    /// Notes a change before `customPlaces` is set, so the save that follows includes it.
+    private func recordCustomPlaceChange(_ placeID: String, removed: Bool = false) {
+        customPlaceChanges = ICloudListMerge.recording(placeID, removed: removed, in: customPlaceChanges)
     }
 
     private func saveCustomPlaces() {
         guard let data = try? JSONEncoder().encode(customPlaces) else { return }
+        let changesData = ICloudListMerge.encodeLog(customPlaceChanges)
         defaults.set(data, forKey: customPlacesKey)
+        defaults.set(changesData, forKey: customPlaceChangesKey)
         iCloud.set(data, forKey: customPlacesKey)
+        iCloud.set(changesData, forKey: customPlaceChangesKey)
     }
 
     private func saveWishlist() {
@@ -387,8 +436,11 @@ class GlobalProgressManager: ObservableObject {
         iCloud.removeObject(forKey: wishlistKey)
         completedTraditionIDs.removeAll()
         iCloud.removeObject(forKey: traditionsKey)
+        // Logged as removals (not just cleared) so other devices remove them too
+        for place in customPlaces {
+            recordCustomPlaceChange(place.id, removed: true)
+        }
         customPlaces.removeAll()
-        iCloud.removeObject(forKey: customPlacesKey)
         userImages.removeAll()
         
         let documents = getDocumentsDirectory()

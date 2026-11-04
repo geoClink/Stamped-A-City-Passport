@@ -64,6 +64,8 @@ struct TripPlannerView: View {
         } message: {
             Text("Give your \(city.name) trip a name.")
         }
+        // File > New Trip (Command-N) starts a trip in this city while the planner is frontmost
+        .focusedSceneValue(\.newTripAction, NewTripAction(perform: promptNewTrip))
     }
 
     // MARK: - Trip list
@@ -82,6 +84,8 @@ struct TripPlannerView: View {
                         NavigationLink(value: trip.id) {
                             TripSummaryRow(trip: trip)
                         }
+                        // Mac and iPad: drop a landmark here to add it to the trip's last day
+                        .acceptsLandmarkDrops(onto: trip)
                     }
                     .onDelete { offsets in
                         for index in offsets {
@@ -109,6 +113,7 @@ struct TripPlannerView: View {
             // On the Mac the planner is its own window, closed with the window's close button
             ToolbarItem(placement: .confirmationAction) {
                 Button("Done") { dismiss() }
+                    .closesWithCommandW()
             }
             #endif
             ToolbarItem(placement: .primaryAction) {
@@ -239,10 +244,12 @@ struct TripSummaryRow: View {
                     if trip.isRoadTrip {
                         // A road trip's campuses, in driving order
                         Image(systemName: "graduationcap.fill")
+                            .accessibilityHidden(true)
                         Text(ListFormatter.localizedString(byJoining: trip.roadTripCampuses.map(\.campusVisitShortName)))
                             .lineLimit(2)
                     } else {
                         Image(systemName: "mappin.and.ellipse")
+                            .accessibilityHidden(true)
                         Text(trip.area?.name ?? trip.cityName)
                     }
                 }
@@ -270,7 +277,9 @@ struct TripSummaryRow: View {
     @ViewBuilder
     private var separator: some View {
         if !dynamicTypeSize.isAccessibilitySize {
+            // Visual only; VoiceOver would read it as "middle dot"
             Text("·")
+                .accessibilityHidden(true)
         }
     }
 }

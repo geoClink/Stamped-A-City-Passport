@@ -42,7 +42,7 @@ struct PassportView: View {
                             
                             if showingProgressDetails {
                                 globalProgressHeader
-                                    .transition(.move(edge: .top).combined(with: .opacity))
+                                    .transition(reduceMotion ? .opacity : .move(edge: .top).combined(with: .opacity))
                             }
                         }
                         .dsPageMargin()
@@ -68,7 +68,7 @@ struct PassportView: View {
                 ToolbarItem(placement: .primaryAction) {
                     Button {
                         HapticManager.shared.trigger(.selection) // Add this
-                        withAnimation(.spring()) { showingProgressDetails.toggle() }
+                        withAnimation(reduceMotion ? nil : .spring()) { showingProgressDetails.toggle() }
                     } label: {
                         Label("Stats", systemImage: showingProgressDetails ? "chart.pie.fill" : "chart.pie")
                     }

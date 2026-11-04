@@ -48,8 +48,22 @@ struct CollegeListView: View {
                     }
 
                     Section {
-                        ForEach(store.campuses) { campus in
+                        ForEach(Array(store.campuses.enumerated()), id: \.element) { index, campus in
                             campusRow(campus)
+                                // Edit-mode dragging needs sight, so VoiceOver gets Move Up / Move Down
+                                .accessibilityActions {
+                                    if index > 0 {
+                                        Button(NSLocalizedString("Move Up", comment: "VoiceOver action: moves an item one place up in a list")) {
+                                            store.move(fromOffsets: IndexSet(integer: index), toOffset: index - 1)
+                                        }
+                                    }
+                                    if index < store.campuses.count - 1 {
+                                        // onMove offsets point past the item, so one place down is +2
+                                        Button(NSLocalizedString("Move Down", comment: "VoiceOver action: moves an item one place down in a list")) {
+                                            store.move(fromOffsets: IndexSet(integer: index), toOffset: index + 2)
+                                        }
+                                    }
+                                }
                         }
                         .onDelete { store.remove(atOffsets: $0) }
                         .onMove { store.move(fromOffsets: $0, toOffset: $1) }
@@ -68,6 +82,7 @@ struct CollegeListView: View {
                 // On the Mac the list is its own window, closed with the window's close button
                 ToolbarItem(placement: .cancellationAction) {
                     Button(NSLocalizedString("Done", comment: "College list: closes the screen")) { dismiss() }
+                        .closesWithCommandW()
                 }
                 #endif
                 if !store.isEmpty {
@@ -120,6 +135,7 @@ struct CollegeListView: View {
             // HStack rather than Label: inside a List row, Label can drop its icon
             HStack(spacing: DS.Space.s) {
                 Image(systemName: "car.fill")
+                    .accessibilityHidden(true)
                 Text(NSLocalizedString("Plan a College Road Trip", comment: "College list: button that makes one trip visiting the saved schools"))
                     .lineLimit(2)
                     .minimumScaleFactor(0.8)

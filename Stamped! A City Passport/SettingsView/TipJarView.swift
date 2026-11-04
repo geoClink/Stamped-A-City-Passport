@@ -14,6 +14,9 @@ struct TipJarView: View {
     private let store = TipJarStore.shared
     /// Shows Apple's payment sheet for a product (see TipJarStore.buy)
     @Environment(\.purchase) private var purchase
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+    /// The heart grows with the text instead of staying 56 points
+    @ScaledMetric(relativeTo: .largeTitle) private var heartSize: CGFloat = 56
 
     var body: some View {
         ScrollView {
@@ -35,6 +38,28 @@ struct TipJarView: View {
             store.resetMessage()
             await store.loadTips()
         }
+        // The status card appears without moving VoiceOver's focus, so read it out
+        .onChange(of: store.purchaseState) { _, newState in
+            if let message = announcement(for: newState) {
+                AccessibilityNotification.Announcement(message).post()
+            }
+        }
+    }
+
+    /// What VoiceOver says when a purchase finishes (same words as the status card)
+    private func announcement(for state: TipJarStore.PurchaseState) -> String? {
+        switch state {
+        case .thanks:
+            return String(localized: "Thank you!") + " " + String(localized: "Your tip means a lot. It helps bring the next city to Stamped!")
+        case .pending:
+            return String(localized: "Waiting for approval") + " " + String(localized: "Your tip will go through once a family organizer approves it.")
+        case .cancelled:
+            return String(localized: "No worries, the tip was cancelled. You weren't charged.")
+        case .failed:
+            return String(localized: "That tip didn't go through. Please try again.")
+        case .idle, .purchasing:
+            return nil
+        }
     }
 
     // MARK: - Pieces
@@ -42,7 +67,7 @@ struct TipJarView: View {
     private var header: some View {
         VStack(spacing: 12) {
             Image(systemName: "heart.circle.fill")
-                .font(.system(size: 56))
+                .font(.system(size: heartSize))
                 .foregroundStyle(.tint)
                 .accessibilityHidden(true)
             Text("Hi, I'm George! I make Stamped! on my own as an indie developer. The app is free, and tips help me keep adding new cities and landmarks.")
@@ -114,10 +139,14 @@ struct TipJarView: View {
         return Button {
             Task { await store.buy(product, using: purchase) }
         } label: {
-            HStack {
+            // Name and price side by side; stacked at accessibility sizes so neither gets cut off
+            let layout = dynamicTypeSize.isAccessibilitySize
+                ? AnyLayout(VStackLayout(alignment: .leading, spacing: 4))
+                : AnyLayout(HStackLayout())
+            layout {
                 Text(tipName(for: product))
                     .fontWeight(.semibold)
-                Spacer()
+                if !dynamicTypeSize.isAccessibilitySize { Spacer() }
                 if isBuyingThis {
                     ProgressView()
                 } else {
@@ -128,10 +157,12 @@ struct TipJarView: View {
                 }
             }
             .padding(.vertical, 8)
-            .frame(maxWidth: .infinity)
+            .frame(maxWidth: .infinity, alignment: dynamicTypeSize.isAccessibilitySize ? .leading : .center)
         }
         .buttonStyle(.bordered)
         .disabled(isBuyingAny)
+        // VoiceOver hears the name and price from the label; while buying, say so
+        .accessibilityValue(isBuyingThis ? Text("Purchasing") : Text(verbatim: ""))
     }
 
     /// The app's own translated name for each tip, so it doesn't depend on App Store Connect

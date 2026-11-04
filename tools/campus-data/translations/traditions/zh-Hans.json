@@ -1568,5 +1568,75 @@
       "name": "Celebrating Life 帕瓦节",
       "description": "每年 3 月，中密歇根大学都会在 McGuirk 体育馆举办 Celebrating Life 帕瓦节，有传统舞蹈、鼓乐、手工艺品和美食。活动向公众开放，欢迎来观看。"
     }
+  },
+  "Cranbrook Academy of Art": {
+    "trad_cranbrook_orpheus_fountain": {
+      "name": "卡尔·米勒斯的俄耳甫斯喷泉",
+      "description": "艺术博物馆前，瑞典雕塑家卡尔·米勒斯的八尊青铜像微微倾身，仿佛在聆听俄耳甫斯的音乐，耳边却只有潺潺水声。喷泉于 1938 年落成，在校园里散步还能看到许多米勒斯的雕塑。"
+    },
+    "trad_cranbrook_steggy": {
+      "name": "和 Steggy 打个招呼",
+      "description": "克兰布鲁克科学研究所门前站着一只名叫 Steggy 的等身大剑龙，它是研究所的吉祥物。进馆前别忘了和它合个影。"
+    },
+    "trad_cranbrook_carillon": {
+      "name": "夏季钟琴演奏会",
+      "description": "自 1928 年起，每年夏天都有钟琴师在克兰布鲁克基督教堂塔楼的 50 口钟上举办免费演奏会。带上折叠椅或毯子，在教堂草地上静静聆听吧。"
+    }
+  },
+  "University of California, San Diego": {
+    "trad_ucsd_sun_god": {
+      "name": "太阳神下见",
+      "description": "妮基·桑法勒创作的彩色大鸟栖在混凝土拱门上，是 1983 年落成的斯图尔特收藏首件作品。学生们常约在这里见面，逢特别日子还会给它穿上装扮；它也是春季课程结束时太阳神音乐节的吉祥物。"
+    },
+    "trad_ucsd_snake_path": {
+      "name": "走一走蛇形小径",
+      "description": "亚历克西斯·史密斯创作的这条约 170 米长的小径铺着板岩鳞片，从 Warren Mall 蜿蜒上坡直到盖泽尔图书馆。沿途会经过一本刻有弥尔顿《失乐园》诗句的花岗岩巨书和一座小果园。"
+    },
+    "trad_ucsd_seuss_statue": {
+      "name": "苏斯博士与戴帽子的猫",
+      "description": "在盖泽尔图书馆的论坛层，一座真人大小的青铜像呈现了西奥多·苏斯·盖泽尔，以及趴在他肩头的“戴帽子的猫”。这是参观以他命名的图书馆时最受欢迎的拍照点。"
+    }
+  },
+  "University of Coimbra": {
+    "trad_coimbra_cabra": {
+      "name": "塔楼之钟“山羊”",
+      "description": "大学钟楼的四口钟里，最有名的一口被昵称为“a Cabra”（山羊），过去用来召唤学生上课。沿着狭窄的楼梯登上塔顶，可以俯瞰科英布拉城和蒙德古河。"
+    },
+    "trad_coimbra_joanina_bats": {
+      "name": "图书馆里的蝙蝠",
+      "description": "两群小蝙蝠在若昂尼娜图书馆里已生活了约两个半世纪，专吃会损坏书籍的昆虫。工作人员每天傍晚都会用皮革盖住书桌加以保护。"
+    },
+    "trad_coimbra_serenata": {
+      "name": "老教堂台阶上的小夜曲",
+      "description": "每年五月“烧丝带节”开幕的午夜，学生们在老教堂的台阶上演唱科英布拉法朵。成千上万的人聚在广场上，静静聆听。"
+    }
+  },
+  "University of Salamanca": {
+    "trad_salamanca_frog": {
+      "name": "找青蛙",
+      "description": "大学银匠式立面的繁复雕刻中，藏着一只蹲在骷髅头上的小青蛙。传说找到它的学生就能通过考试，所以学院广场上总有游客仰头寻找。"
+    },
+    "trad_salamanca_cielo": {
+      "name": "萨拉曼卡的天空",
+      "description": "在小学院（Escuelas Menores）可以看到费尔南多·加列戈的《萨拉曼卡的天空》。这幅绘有星座和黄道十二宫的天顶画，曾覆盖旧大学图书馆穹顶的一部分。"
+    },
+    "trad_salamanca_vitores": {
+      "name": "寻找 Vítor 字符",
+      "description": "用“victor”一词的字母组合而成的红色花押字“Vítor”，会被画在大学的墙上，以表彰获得博士学位的人。在学院广场和老城街巷里找找看吧。"
+    }
+  },
+  "University of Tokyo": {
+    "trad_utokyo_sanshiro_pond": {
+      "name": "三四郎池",
+      "description": "这座池塘和庭园于 1638 年为加贺藩主前田家修建。夏目漱石的小说《三四郎》中，主人公在这里初遇心仪的女子，池塘因此得名，是校园散步时安静的歇脚处。"
+    },
+    "trad_utokyo_ginkgo_avenue": {
+      "name": "金色银杏大道",
+      "description": "深秋时节，从正门通往安田讲堂的大道两旁的银杏树会变成一片明亮的金黄。这是东京最受喜爱的秋景之一，而银杏叶正是东京大学的标志。"
+    },
+    "trad_utokyo_hachiko": {
+      "name": "忠犬八公重逢",
+      "description": "农学部园区内有一座 2015 年揭幕的青铜像，描绘忠犬八公扑向主人上野英三郎教授的欢喜情景。它就在农学部正门内不远处。"
+    }
   }
 }

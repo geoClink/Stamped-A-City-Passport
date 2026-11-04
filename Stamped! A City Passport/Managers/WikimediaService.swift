@@ -222,6 +222,7 @@ extension WikimediaService {
         "Portland": "Portland, Oregon",
         "Queenstown": "Queenstown, New Zealand",
         "Savannah": "Savannah, Georgia",
+        "Tulsa": "Tulsa, Oklahoma",
         "Victoria": "Victoria, British Columbia",
     ]
 
@@ -256,6 +257,14 @@ extension WikimediaService {
         "ams_nemo": "NEMO (museum)",                                 // NEMO Science Museum
         "ams_black_diamond": "The Rock (building)",                  // The Rock (Zuidas)
         "ams_royal_palace": "Royal Palace of Amsterdam",             // Royal Palace
+
+        // Antwerp
+        "antwerp_central_station": "Antwerpen-Centraal railway station", // Antwerp-Central Station
+        "antwerp_port_house": "Port Authority Building (Antwerp)",   // Port House
+        "antwerp_cathedral_of_our_lady": "Cathedral of Our Lady (Antwerp)", // Cathedral of Our Lady
+        "antwerp_st_charles_borromeo_church": "St. Charles Borromeo Church, Antwerp", // St. Charles Borromeo Church
+        "antwerp_st_james_church": "St. James' Church, Antwerp",     // St. James' Church
+        "antwerp_st_pauls_church": "St. Paul's Church, Antwerp",     // St. Paul's Church
 
         // Asheville
         "nc_basilica_st_lawrence": "Basilica of St. Lawrence, Asheville", // Basilica of Saint Lawrence
@@ -442,6 +451,13 @@ extension WikimediaService {
         "glasgow_queens_cross_church": "Queen's Cross Church, Glasgow", // Queen's Cross Church
         "glasgow_peoples_palace": "People's Palace, Glasgow",        // People's Palace
 
+        // Granada
+        "granada_royal_chapel": "Royal Chapel of Granada",           // Royal Chapel
+        "granada_san_juan_de_dios_hospital": "San Juan de Dios Hospital (Granada)", // San Juan de Dios Hospital
+        "granada_church_of_san_salvador": "Church of San Salvador (Granada)", // Church of San Salvador
+        "granada_monastery_of_san_jeronimo": "Monasterio de San Jerónimo, Granada", // Monastery of San Jerónimo
+        "granada_parque_de_las_ciencias": "Parque de las Ciencias (Granada)", // Parque de las Ciencias
+
         // Guadalajara
         "mx_guadalajara_cathedral": "Guadalajara Cathedral",         // Guadalajara Metropolitan Cathedral
 
@@ -453,8 +469,20 @@ extension WikimediaService {
         "hamburg_dammtor_station": "Hamburg Dammtor station",        // Hamburg Dammtor
         "hamburg_old_elbe_tunnel": "St. Pauli Elbe Tunnel",          // Old Elbe Tunnel
 
+        // Hanoi
+        "hanoi_temple_of_literature": "Temple of Literature, Hanoi", // Temple of Literature
+        "hanoi_st_josephs_cathedral": "St. Joseph's Cathedral, Hanoi", // St. Joseph's Cathedral
+        "hanoi_presidential_palace": "Presidential Palace, Hanoi",   // Presidential Palace
+        "hanoi_keangnam_landmark_tower": "Landmark 72",              // Keangnam Hanoi Landmark Tower
+
         // Havana
         "havana-morro-castle": "Castillo de los Tres Reyes Del Morro", // Morro Castle
+
+        // Hiroshima
+        "hiroshima_atomic_bomb_dome": "Hiroshima Peace Memorial",    // Atomic Bomb Dome
+        "hiroshima_memorial_cenotaph": "Hiroshima Peace Memorial Park", // Memorial Cenotaph
+        "hiroshima_national_peace_memorial_hall": "Hiroshima National Peace Memorial Hall for the Atomic Bomb Victims", // Hiroshima National Peace Memorial Hall
+        "hiroshima_world_peace_memorial_cathedral": "Assumption of Mary Cathedral, Hiroshima", // World Peace Memorial Cathedral
 
         // Hong Kong
         "hk_bank_of_china": "Bank of China Tower (Hong Kong)",       // Bank of China Tower
@@ -478,6 +506,15 @@ extension WikimediaService {
 
         // Kathmandu
         "np_garden_of_dreams": "Garden of Dreams",                   // Garden of Dreams, Kathmandu
+
+        // Kraków
+        "krakow_st_marys_basilica": "St. Mary's Basilica, Kraków",   // St. Mary's Basilica
+        "krakow_cloth_hall": "Kraków Cloth Hall",                    // Cloth Hall
+        "krakow_manggha_museum": "Manggha",                          // Manggha Museum
+        "krakow_barbican": "Kraków Barbican",                        // Barbican
+        "krakow_collegium_maius": "Collegium Maius, Kraków",         // Collegium Maius
+        "krakow_church_of_saints_peter_and_paul": "Church of Saints Apostles Peter and Paul, Kraków", // Church of Saints Peter and Paul
+        "krakow_ark_of_the_lord_church": "Church of Our Lady Queen of Poland, Kraków", // Ark of the Lord Church
 
         // Kyoto
         "kyo_heian_shrine": "Heian Shrine",                          // Heian Jingu Shrine
@@ -516,6 +553,14 @@ extension WikimediaService {
         // Marrakech
         "yves-saint-laurent-museum": "Yves Saint Laurent Museum in Marrakesh", // Musée Yves Saint Laurent
 
+        // Marseille
+        "marseille_unite_d_habitation": "Unité d'habitation",        // Unité d'Habitation
+        "marseille_vieux_port_pavilion": "Old Port of Marseille",    // Vieux-Port Pavilion
+        "marseille_fort_saint_jean": "Fort Saint-Jean (Marseille)",  // Fort Saint-Jean
+        "marseille_abbey_of_saint_victor": "Abbey of St Victor, Marseille", // Abbey of Saint-Victor
+        "marseille_city_hall": "Hôtel de Ville, Marseille",          // Marseille City Hall
+        "marseille_saint_charles_station": "Marseille-Saint-Charles station", // Marseille-Saint-Charles Station
+
         // Medellín
         "co_jardin_botanico_medellin": "Botanical Garden of Medellín", // Jardín Botánico de Medellín
         "co_metrocable_medellin": "Metrocable (Medellín)",           // Metrocable Medellín
@@ -528,6 +573,15 @@ extension WikimediaService {
         // Milan
         "mil_feltrinelli": "Feltrinelli Porta Volta",                // Fondazione Feltrinelli
         "mil_triennale": "Triennale di Milano",                      // Palazzo dell'Arte (Triennale)
+
+        // Milwaukee
+        "milwaukee_art_museum": "Quadracci Pavilion",                // Milwaukee Art Museum
+        "milwaukee_war_memorial_center": "Milwaukee County War Memorial", // Milwaukee County War Memorial Center
+        "milwaukee_mitchell_park_domes": "Mitchell Park Horticultural Conservatory", // Mitchell Park Domes
+        "milwaukee_allen_bradley_clock_tower": "Rockwell Automation Headquarters and Allen-Bradley Clock Tower", // Allen-Bradley Clock Tower
+        "milwaukee_pfister_hotel": "The Pfister Hotel",              // Pfister Hotel
+        "milwaukee_iron_block_building": "Iron Block Building (Milwaukee, Wisconsin)", // Iron Block Building
+        "milwaukee_villa_terrace": "Villa Terrace Museum and Gardens", // Villa Terrace
 
         // Minnesota
         "msp-13": "Basilica of Saint Mary (Minneapolis)",            // Basilica of Saint Mary
@@ -612,6 +666,15 @@ extension WikimediaService {
         "pdx_union_station": "Portland Union Station",               // Union Station
         "pdx_wells_fargo": "Wells Fargo Center (Portland, Oregon)",  // Wells Fargo Center
 
+        // Porto
+        "porto_clerigos_tower": "Clérigos Church",                   // Clérigos Tower
+        "porto_sao_bento_station": "São Bento railway station",      // São Bento Station
+        "porto_serralves_museum": "Serralves",                       // Serralves Museum
+        "porto_church_of_sao_francisco": "Church of São Francisco (Porto)", // Church of São Francisco
+        "porto_capela_das_almas": "Chapel of Santa Catarina",        // Capela das Almas
+        "porto_leca_swimming_pools": "Tidal pools of Leça de Palmeira", // Leça Swimming Pools
+        "porto_faculty_of_architecture": "Faculty of Architecture of the University of Porto", // Faculty of Architecture (FAUP)
+
         // Porto Alegre
         "poa-farol-santander": "Farol Santander Porto Alegre",       // Farol Santander (Old Guardianship Bank)
         "poa-piratini": "Piratini Palace",                           // Palácio Piratini
@@ -623,6 +686,14 @@ extension WikimediaService {
 
         // Reykjavik
         "is_blue_lagoon_iceland": "Blue Lagoon (geothermal spa)",    // Blue Lagoon Iceland
+
+        // Riga
+        "riga_house_of_the_blackheads": "House of the Blackheads (Riga)", // House of the Blackheads
+        "riga_st_peters_church": "St. Peter's Church, Riga",         // St. Peter's Church
+        "riga_three_brothers": "Three Brothers, Riga",               // Three Brothers
+        "riga_nativity_cathedral": "Cathedral of the Nativity of Christ, Riga", // Nativity Cathedral
+        "riga_cat_house": "Cat House, Riga",                         // Cat House
+        "riga_albert_street": "Albert Street, Riga",                 // Albert Street
 
         // Rio de Janeiro
         "rio-christ-redeemer": "Christ the Redeemer (statue)",       // Christ the Redeemer
@@ -780,6 +851,8 @@ extension WikimediaService {
         "campus_jhu_eisenhower_library", // Johns Hopkins / Eisenhower Library: redirects to the Homewood campus article
         "campus_cmu_baker_hall",         // Carnegie Mellon / Baker Hall: redirects to another school's Baker Memorial Hall
         "campus_cmu_gates_hillman",      // Carnegie Mellon / Gates and Hillman Centers: redirects to the computer science school
+        "campus_cranbrook_christ_church", // Cranbrook / Christ Church Cranbrook: redirects to the whole community's article (an Art Museum photo)
+        "campus_cranbrook_institute_of_science", // Cranbrook / Institute of Science: redirects to the whole community's article
     ]
 }
 

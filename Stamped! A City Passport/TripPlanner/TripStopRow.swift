@@ -62,11 +62,18 @@ struct TripStopRow: View {
         .accessibilityLabel(accessibilityText)
     }
 
-    private var accessibilityText: String {
-        var text = "Stop \(number), \(stop.name), \(stop.isLandmark ? "landmark" : "saved place")"
-        if let walkMinutesToNext {
-            text += ", \(walkMinutesToNext) minute walk to next stop"
+    /// Text rather than a String, so VoiceOver reads it in the user's language.
+    /// Four whole sentences instead of pieces glued together, which translate badly.
+    private var accessibilityText: Text {
+        switch (stop.isLandmark, walkMinutesToNext) {
+        case (true, let minutes?):
+            Text("Stop \(number), \(stop.name), landmark, \(minutes) minute walk to next stop")
+        case (false, let minutes?):
+            Text("Stop \(number), \(stop.name), saved place, \(minutes) minute walk to next stop")
+        case (true, nil):
+            Text("Stop \(number), \(stop.name), landmark")
+        case (false, nil):
+            Text("Stop \(number), \(stop.name), saved place")
         }
-        return text
     }
 }

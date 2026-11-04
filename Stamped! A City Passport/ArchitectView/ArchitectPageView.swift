@@ -79,6 +79,7 @@ struct ArchitectPageView: View {
     let architect: ArchitectName
 
     @Environment(\.colorSchemeContrast) var contrast
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @AppStorage("high_contrast_mode") var appHighContrast = false
     @ObservedObject private var progressManager = GlobalProgressManager.shared
 
@@ -118,9 +119,13 @@ struct ArchitectPageView: View {
 
     // MARK: Header
 
-    /// The portrait (only when Wikipedia has one) beside the name
+    /// The portrait (only when Wikipedia has one) beside the name; the name goes under
+    /// the portrait at accessibility text sizes, where both won't fit side by side
     private var header: some View {
-        HStack(alignment: .center, spacing: DS.Space.l) {
+        let layout = dynamicTypeSize.isAccessibilitySize
+            ? AnyLayout(VStackLayout(alignment: .leading, spacing: DS.Space.l))
+            : AnyLayout(HStackLayout(alignment: .center, spacing: DS.Space.l))
+        return layout {
             if let url = summary?.photoURL {
                 VStack(alignment: .leading, spacing: DS.Space.xs) {
                     AsyncImage(url: url) { phase in
@@ -167,11 +172,13 @@ struct ArchitectPageView: View {
                 .fill(DS.Palette.cardBackground)
                 .frame(height: 90)
                 .shimmering()
+                .accessibilityHidden(true)
         } else if let summary {
             VStack(alignment: .leading, spacing: DS.Space.s) {
                 HStack(spacing: DS.Space.xs) {
                     Image(systemName: "w.circle.fill")
                         .font(.caption)
+                        .accessibilityHidden(true)
                     Text(L.Architect.fromWikipedia)
                         .font(.caption2.monospaced().weight(.semibold))
                 }
@@ -262,7 +269,7 @@ private struct ArchitectLandmarkRow: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .contentShape(Rectangle())
         .accessibilityElement(children: .combine)
-        .accessibilityLabel(isVisited ? "Visited, \(building.name)" : "Not visited, \(building.name)")
+        .accessibilityLabel(isVisited ? L.Landmarks.visited(building.name) : L.Landmarks.notVisited(building.name))
         .accessibilityValue(cityName)
         .accessibilityAddTraits(.isButton)
     }

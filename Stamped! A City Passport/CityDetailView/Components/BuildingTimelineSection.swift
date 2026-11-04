@@ -120,7 +120,10 @@ private struct TimelineCell: View {
                 .stroke(isVisited ? accent.opacity(0.3) : Color.clear, lineWidth: 1)
         )
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("\(String(building.yearBuilt)), \(building.name), \(isVisited ? "stamped" : "not yet visited")")
+        // Two whole phrases, so "stamped" and "not yet visited" get translated too
+        .accessibilityLabel(isVisited
+            ? Text("\(String(building.yearBuilt)), \(building.name), stamped")
+            : Text("\(String(building.yearBuilt)), \(building.name), not yet visited"))
         .accessibilityHint("Opens the building")
     }
 }

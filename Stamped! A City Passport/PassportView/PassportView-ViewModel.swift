@@ -21,6 +21,7 @@ extension PassportView {
                     Image(systemName: "medal.fill")
                         .foregroundColor(brandColor)
                 }
+                .accessibilityHidden(true)
                 
                 VStack(alignment: .leading, spacing: 2) {
                     Text(discoveryRank.uppercased())
@@ -38,6 +39,7 @@ extension PassportView {
                 Image(systemName: "chevron.down")
                     .font(.caption.bold())
                     .rotationEffect(.degrees(showingProgressDetails ? 180 : 0))
+                    .accessibilityHidden(true)
             }
             .passportCard(isHighContrast: isHighContrast, brandColor: brandColor)
         }
@@ -69,6 +71,8 @@ extension PassportView {
                 }
             }
             .frame(width: 140, height: 140)
+            // "42%, COMPLETE" as one element
+            .accessibilityElement(children: .combine)
             
             Text("\(totalVisitedInApp) of \(totalBuildingsInApp) Landmarks Discovered")
                 .font(.headline)
@@ -108,9 +112,12 @@ extension PassportView {
                             .matchedGeometryEffect(id: city.id, in: stampAnimation)
                     }
                     .buttonStyle(.plain)
+                    // Icon-only link: name the stamp it opens
+                    .accessibilityLabel(L.Stamp.accessibilityLabel(city.name))
                 } else {
                     Image(systemName: visitedCount > 0 ? "hourglass" : "lock.fill")
                         .foregroundColor(.secondary.opacity(0.4))
+                        .accessibilityHidden(true) // the "x / y Collected" line says it
                 }
             }
             
@@ -127,8 +134,10 @@ extension PassportView {
             Image(systemName: "passport")
                 .font(.system(size: emptyIconSize))
                 .foregroundColor(.secondary.opacity(0.3))
+                .accessibilityHidden(true)
             Text("Begin Your Journey")
                 .font(.title.bold())
+                .accessibilityAddTraits(.isHeader)
             Text("Visit buildings in the city guide to start collecting official stamps.")
                 .multilineTextAlignment(.center)
                 .foregroundColor(.secondary)
