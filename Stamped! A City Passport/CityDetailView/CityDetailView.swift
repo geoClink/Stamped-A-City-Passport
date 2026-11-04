@@ -30,6 +30,9 @@ struct CityDetailView: View {
     /// The trip the planner opens on, set by "Plan a Campus Visit". nil opens the trip list.
     @State private var tripPlannerTripID: String?
     @State private var resetType: CityDetailViewModel.ResetType = .none
+    /// A landmark page opened by "Open a Landmark" or "What's Near Me"
+    @State private var requestedBuilding: Building?
+    @ObservedObject private var navManager = NavigationManager.shared
     /// Which part of the city page shows under the tiles; kept between cities
     @AppStorage("city_page_tab") private var selectedTab: CityPageTab = .landmarks
 
@@ -286,6 +289,37 @@ struct CityDetailView: View {
         } message: {
             Text(viewModel.getConfirmationMessage(for: resetType))
         }
+        #if !os(macOS)
+        // Siri and Shortcuts (Intents folder). The Mac's map handles these itself (CityMapView).
+        .navigationDestination(item: $requestedBuilding) { building in
+            BuildingDetailView(building: building, viewModel: viewModel)
+        }
+        .onChange(of: navManager.landmarkRequest) { _, _ in openRequestedLandmark() }
+        .onChange(of: navManager.tourRequestCity) { _, _ in openRequestedTour() }
+        // The action may have run before this city's page was on screen
+        .onAppear {
+            openRequestedLandmark()
+            openRequestedTour()
+        }
+        #endif
+    }
+
+    // MARK: - Opening from Siri and Shortcuts
+
+    /// Pushes the requested landmark's page, if it's in this city
+    private func openRequestedLandmark() {
+        guard let request = navManager.landmarkRequest, request.city == viewModel.city,
+              let building = viewModel.city.buildings.first(where: { $0.id == request.buildingID })
+        else { return }
+        navManager.landmarkRequest = nil
+        requestedBuilding = building
+    }
+
+    /// Opens the map for "Start a Walking Tour". The map clears the request when it starts the tour.
+    private func openRequestedTour() {
+        guard navManager.tourRequestCity == viewModel.city else { return }
+        requestedBuilding = nil
+        showingMap = true
     }
     
     // MARK: - Toolbar

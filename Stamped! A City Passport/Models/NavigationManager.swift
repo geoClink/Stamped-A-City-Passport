@@ -19,4 +19,14 @@ class NavigationManager: ObservableObject {
     @Published var menuCommand: MenuCommand? = nil
     /// Set by the "Open My Passport" Siri / Shortcuts action
     @Published var passportRequested = false
+    /// Set by "Open a Landmark" and "What's Near Me": the landmark's page opens once its city is on screen
+    @Published var landmarkRequest: LandmarkRequest? = nil
+    /// Set by "Start a Walking Tour": the city's map opens and its Tour starts
+    @Published var tourRequestCity: CityLocation.City? = nil
+}
+
+/// A landmark page a Siri or Shortcuts action wants open
+struct LandmarkRequest: Equatable {
+    let city: CityLocation.City
+    let buildingID: String
 }

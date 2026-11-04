@@ -837,3 +837,28 @@
 "Opens a city or campus page in Stamped!." = "Stamped!에서 도시 또는 캠퍼스 페이지를 엽니다.";
 "Which city or campus?" = "어느 도시 또는 캠퍼스인가요?";
 "Open ${city}" = "${city} 열기";
+
+/* Siri and Shortcuts actions added in 2.10 (Intents folder) */
+"Landmark" = "랜드마크";
+"Show My Progress" = "내 진행 상황 보기";
+"Tells you how many landmarks you've stamped and how many cities you've visited, without opening Stamped!." = "Stamped!를 열지 않고 스탬프를 찍은 랜드마크 수와 방문한 도시 수를 알려줍니다.";
+"You haven't stamped any landmarks yet. Open a city in Stamped! to collect your first stamp." = "아직 스탬프를 찍은 랜드마크가 없어요. Stamped!에서 도시를 열고 첫 스탬프를 모아 보세요.";
+"Landmarks stamped: %lld of %lld. Cities and campuses visited: %lld. Completed: %lld." = "스탬프 찍은 랜드마크: %2$lld개 중 %1$lld개. 방문한 도시와 캠퍼스: %3$lld곳. 완료: %4$lld곳.";
+"Landmarks stamped" = "스탬프 찍은 랜드마크";
+"Cities and campuses visited" = "방문한 도시와 캠퍼스";
+"Completed" = "완료";
+"My Progress" = "내 진행 상황";
+"What's Near Me" = "내 주변";
+"Opens the landmark closest to you in Stamped!, or the nearest city or campus when no landmark is close by." = "Stamped!에서 가장 가까운 랜드마크를 엽니다. 근처에 랜드마크가 없으면 가장 가까운 도시나 캠퍼스를 엽니다.";
+"%@ is %@ away." = "%1$@까지 %2$@ 거리예요.";
+"The closest place in Stamped! is %@, %@ away." = "Stamped!에서 가장 가까운 곳: %1$@, %2$@ 거리.";
+"Stamped! needs your location to find what's near you. You can turn it on in Settings, under Privacy & Security, Location Services." = "주변 장소를 찾으려면 Stamped!에 위치 정보가 필요해요. 설정 > 개인정보 보호 및 보안 > 위치 서비스에서 켤 수 있어요.";
+"Stamped! couldn't find your location. Try again in a moment." = "Stamped!가 위치를 찾지 못했어요. 잠시 후 다시 시도해 주세요.";
+"Open a Landmark" = "랜드마크 열기";
+"Opens a landmark's page in Stamped!." = "Stamped!에서 랜드마크 페이지를 엽니다.";
+"Which landmark?" = "어떤 랜드마크인가요?";
+"Open ${landmark}" = "${landmark} 열기";
+"Start a Walking Tour" = "도보 투어 시작";
+"Opens a city's map in Stamped! and starts the tour of its landmarks, in walking order." = "Stamped!에서 도시 지도를 열고 걷는 순서대로 랜드마크 투어를 시작합니다.";
+"Start a walking tour of ${city}" = "${city} 도보 투어 시작";
+"Walking Tour" = "도보 투어";

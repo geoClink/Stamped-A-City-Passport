@@ -837,3 +837,28 @@
 "Opens a city or campus page in Stamped!." = "Ouvre la page d’une ville ou d’un campus dans Stamped!.";
 "Which city or campus?" = "Quelle ville ou quel campus ?";
 "Open ${city}" = "Ouvrir ${city}";
+
+/* Siri and Shortcuts actions added in 2.10 (Intents folder) */
+"Landmark" = "Monument";
+"Show My Progress" = "Afficher ma progression";
+"Tells you how many landmarks you've stamped and how many cities you've visited, without opening Stamped!." = "Vous indique combien de monuments vous avez tamponnés et combien de villes vous avez visitées, sans ouvrir Stamped!.";
+"You haven't stamped any landmarks yet. Open a city in Stamped! to collect your first stamp." = "Vous n’avez encore tamponné aucun monument. Ouvrez une ville dans Stamped! pour obtenir votre premier tampon.";
+"Landmarks stamped: %lld of %lld. Cities and campuses visited: %lld. Completed: %lld." = "Monuments tamponnés : %1$lld sur %2$lld. Villes et campus visités : %3$lld. Terminés : %4$lld.";
+"Landmarks stamped" = "Monuments tamponnés";
+"Cities and campuses visited" = "Villes et campus visités";
+"Completed" = "Terminés";
+"My Progress" = "Ma progression";
+"What's Near Me" = "Autour de moi";
+"Opens the landmark closest to you in Stamped!, or the nearest city or campus when no landmark is close by." = "Ouvre dans Stamped! le monument le plus proche de vous, ou la ville ou le campus le plus proche s’il n’y a aucun monument à proximité.";
+"%@ is %@ away." = "%1$@ est à %2$@.";
+"The closest place in Stamped! is %@, %@ away." = "Le lieu le plus proche dans Stamped! est %1$@, à %2$@.";
+"Stamped! needs your location to find what's near you. You can turn it on in Settings, under Privacy & Security, Location Services." = "Stamped! a besoin de votre position pour trouver ce qui se trouve près de vous. Vous pouvez l’activer dans Réglages, sous Confidentialité et sécurité > Service de localisation.";
+"Stamped! couldn't find your location. Try again in a moment." = "Stamped! n’a pas pu trouver votre position. Réessayez dans un instant.";
+"Open a Landmark" = "Ouvrir un monument";
+"Opens a landmark's page in Stamped!." = "Ouvre la page d’un monument dans Stamped!.";
+"Which landmark?" = "Quel monument ?";
+"Open ${landmark}" = "Ouvrir ${landmark}";
+"Start a Walking Tour" = "Lancer une visite à pied";
+"Opens a city's map in Stamped! and starts the tour of its landmarks, in walking order." = "Ouvre la carte d’une ville dans Stamped! et lance la visite de ses monuments, dans l’ordre d’un parcours à pied.";
+"Start a walking tour of ${city}" = "Lancer une visite à pied de ${city}";
+"Walking Tour" = "Visite à pied";
