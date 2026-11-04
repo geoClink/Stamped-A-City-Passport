@@ -437,6 +437,9 @@ extension BuildingDetailView {
                 threeDModelSection
             }
             localFlavorsSection
+            // Restaurant search on OpenTable near this building; hidden until the camref is set
+            OpenTableButton(latitude: building.latitude, longitude: building.longitude) { AnyView(secondaryButtonStyle($0, tint: brandColor)) }
+                .buttonStyle(.plain)
             // Food tours on GetYourGuide (cities only), styled like Tours & Tickets
             FoodToursButton(city: viewModel.city) { AnyView(secondaryButtonStyle($0, tint: brandColor)) }
                 .buttonStyle(.plain)
