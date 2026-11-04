@@ -29,6 +29,7 @@ final class VisionStore {
     // Same keys the iPhone app's GlobalProgressManager uses.
     private let visitedKey = "GlobalVisitedBuildingsKey"
     private let wishlistKey = "GlobalWishlistKey"
+    private let wishlistChangesKey = "GlobalWishlistChangesKey"
     private let customPlacesKey = "GlobalCustomPlacesKey"
     private let customPlaceChangesKey = "GlobalCustomPlacesChangesKey"
     private let iCloud = NSUbiquitousKeyValueStore.default
@@ -66,8 +67,14 @@ final class VisionStore {
     func isWishlisted(_ id: String) -> Bool { wishlistIDs.contains(id) }
 
     func toggleWishlist(_ id: String) {
-        if wishlistIDs.contains(id) { wishlistIDs.remove(id) } else { wishlistIDs.insert(id) }
+        let removing = wishlistIDs.contains(id)
+        if removing { wishlistIDs.remove(id) } else { wishlistIDs.insert(id) }
         iCloud.set(Array(wishlistIDs), forKey: wishlistKey)
+        // Since 2.10 iPhone and Mac merge Want to Visit landmark by landmark, so each
+        // heart and un-heart is logged too, or they'd undo it (see ICloudListMerge)
+        let changes = ICloudListMerge.decodeLog(iCloud.data(forKey: wishlistChangesKey))
+        let updated = ICloudListMerge.recording(id, removed: removing, in: changes)
+        iCloud.set(ICloudListMerge.encodeLog(updated), forKey: wishlistChangesKey)
     }
 
     func wishlistBuildings(in city: String) -> [Building] {

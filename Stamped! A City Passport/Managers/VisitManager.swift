@@ -33,6 +33,8 @@ class GlobalProgressManager: ObservableObject {
     @Published var wishlistIDs: Set<String> = [] {
         didSet { saveWishlist() }
     }
+    /// When each landmark was last added to or removed from Want to Visit, for merging with other devices.
+    private var wishlistChanges: ListChangeLog = [:]
 
     /// Places saved from Apple Maps search that aren't built-in landmarks.
     @Published var customPlaces: [CustomPlace] = [] {
@@ -48,6 +50,7 @@ class GlobalProgressManager: ObservableObject {
 
     private let saveKey = "GlobalVisitedBuildingsKey"
     private let wishlistKey = "GlobalWishlistKey"
+    private let wishlistChangesKey = "GlobalWishlistChangesKey"
     private let traditionsKey = "GlobalCompletedTraditionsKey"
     private let customPlacesKey = "GlobalCustomPlacesKey"
     private let customPlaceChangesKey = "GlobalCustomPlacesChangesKey"
@@ -75,6 +78,7 @@ class GlobalProgressManager: ObservableObject {
         if let wishlist = defaults.array(forKey: wishlistKey) as? [String] {
             self.wishlistIDs = Set(wishlist)
         }
+        wishlistChanges = ICloudListMerge.decodeLog(defaults.data(forKey: wishlistChangesKey))
 
         if let traditions = defaults.array(forKey: traditionsKey) as? [String] {
             self.completedTraditionIDs = Set(traditions)
@@ -137,12 +141,13 @@ class GlobalProgressManager: ObservableObject {
             }
         }
 
-        // wishlist: people remove places as well as add them, so the latest saved
-        // list wins (unlike stamps, where a union keeps every stamp ever earned)
-        if let cloudWishlist = iCloud.array(forKey: wishlistKey) as? [String],
-           Set(cloudWishlist) != wishlistIDs {
-            wishlistIDs = Set(cloudWishlist)
-        }
+        // wishlist: merged landmark by landmark since 2.10, so hearts added on two
+        // devices are both kept and an un-heart sticks (see ICloudListMerge)
+        mergeWishlist(
+            cloudIDs: iCloud.array(forKey: wishlistKey) as? [String],
+            changesData: iCloud.data(forKey: wishlistChangesKey),
+            accountChanged: accountChanged
+        )
 
         // custom places: merged place by place since 2.10, so places saved on
         // two devices are both kept and a removal sticks (see ICloudListMerge)
@@ -311,11 +316,53 @@ class GlobalProgressManager: ObservableObject {
     }
 
     func toggleWishlist(_ id: String) {
-        if wishlistIDs.contains(id) {
+        let removing = wishlistIDs.contains(id)
+        // Logged before the set changes, so the save its didSet triggers includes it
+        wishlistChanges = ICloudListMerge.recording(id, removed: removing, in: wishlistChanges)
+        if removing {
             wishlistIDs.remove(id)
         } else {
             wishlistIDs.insert(id)
         }
+    }
+
+    /// Merges iCloud's Want to Visit list into this device's, then saves the result
+    /// back so iCloud gets any hearts only this device had. Same steps as mergeCustomPlaces.
+    private func mergeWishlist(cloudIDs: [String]?, changesData: Data?, accountChanged: Bool) {
+        let cloudChanges = ICloudListMerge.decodeLog(changesData)
+
+        guard let cloudIDs else {
+            // Nothing in iCloud yet: share this device's list
+            if !wishlistIDs.isEmpty || !wishlistChanges.isEmpty { saveWishlist() }
+            return
+        }
+
+        if accountChanged {
+            // A different iCloud account: use its list, don't mix the two people's
+            wishlistChanges = cloudChanges
+            wishlistIDs = Set(cloudIDs)
+            return
+        }
+
+        let merged = Self.mergedWishlist(local: wishlistIDs, localLog: wishlistChanges,
+                                         cloud: Set(cloudIDs), cloudLog: cloudChanges)
+        wishlistChanges = merged.log
+        if merged.ids != wishlistIDs {
+            wishlistIDs = merged.ids // saves via didSet
+        } else if merged.ids != Set(cloudIDs) || merged.log != cloudChanges {
+            saveWishlist()
+        }
+    }
+
+    /// The merge itself, with no iCloud or UserDefaults, so tests can check it directly.
+    /// Want to Visit has no order, so items are sorted only to make the merge repeatable.
+    nonisolated static func mergedWishlist(local: Set<String>, localLog: ListChangeLog,
+                                           cloud: Set<String>, cloudLog: ListChangeLog)
+        -> (ids: Set<String>, log: ListChangeLog) {
+        let result = ICloudListMerge.merge(local: local.sorted(), localLog: localLog,
+                                           cloud: cloud.sorted(), cloudLog: cloudLog,
+                                           id: { $0 })
+        return (Set(result.items), result.log)
     }
 
     // MARK: - Campus traditions
@@ -409,8 +456,11 @@ class GlobalProgressManager: ObservableObject {
 
     private func saveWishlist() {
         let arr = Array(wishlistIDs)
+        let changesData = ICloudListMerge.encodeLog(wishlistChanges)
         defaults.set(arr, forKey: wishlistKey)
+        defaults.set(changesData, forKey: wishlistChangesKey)
         iCloud.set(arr, forKey: wishlistKey)
+        iCloud.set(changesData, forKey: wishlistChangesKey)
     }
 
     private func save() {
@@ -432,8 +482,11 @@ class GlobalProgressManager: ObservableObject {
         iCloud.removeObject(forKey: saveKey)
         iCloud.removeObject(forKey: visitDatesKey)
         iCloud.removeObject(forKey: buildingNotesKey)
+        // Logged as removals (not just cleared) so other devices remove them too
+        for id in wishlistIDs {
+            wishlistChanges = ICloudListMerge.recording(id, removed: true, in: wishlistChanges)
+        }
         wishlistIDs.removeAll()
-        iCloud.removeObject(forKey: wishlistKey)
         completedTraditionIDs.removeAll()
         iCloud.removeObject(forKey: traditionsKey)
         // Logged as removals (not just cleared) so other devices remove them too
