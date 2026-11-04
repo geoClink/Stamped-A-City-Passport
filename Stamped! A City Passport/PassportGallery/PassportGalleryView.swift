@@ -331,7 +331,8 @@ private extension PassportGalleryView {
                         .font(.caption2.monospaced().weight(.black))
                         .tracking(1)
                         .foregroundColor(highContrast ? brandColor : .white.opacity(0.8))
-                        .lineLimit(1)
+                        // Two lines at the largest text sizes, where one was cut off
+                        .lineLimit(2)
                         .minimumScaleFactor(0.7)
                     
                     Text(String(format: NSLocalizedString("%d Cities Stamped", comment: "Passport header: completed cities"), completedCount))

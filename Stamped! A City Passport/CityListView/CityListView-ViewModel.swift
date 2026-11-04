@@ -190,6 +190,9 @@ extension CityListView {
     func cityRowWrapper(city: CityLocation.City) -> some View {
         ZStack {
             NavigationLink(value: city) { EmptyView() }.opacity(0)
+                // Invisible (a tap anywhere on the row opens the city), so VoiceOver skips it too;
+                // otherwise it was an extra, unlabeled button at the edge of every city row
+                .accessibilityHidden(true)
             CityRow(city: city,
                         isCompleted: viewModel.isCityCompleted(city),
                         isHighContrast: isHighContrast)

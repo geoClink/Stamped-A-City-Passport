@@ -44,6 +44,8 @@ final class ProximityManager: NSObject, ObservableObject {
     /// People who already answered see nothing: iOS skips prompts that were already shown.
     private func requestPermissionsIfNeeded() {
         guard !hasRequestedPermissions else { return }
+        // The UI tests (StampedUITests) launch with -UITesting: a system alert would cover the screen being checked
+        guard !ProcessInfo.processInfo.arguments.contains("-UITesting") else { return }
         hasRequestedPermissions = true
         requestPermissions()
     }

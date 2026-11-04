@@ -78,6 +78,8 @@ struct CityActionTiles: View {
         .accessibilityElement(children: .combine)
         .accessibilityLabel("\(tile.title). \(tile.detail)")
         .accessibilityHint(tile.accessibilityHint)
+        // For the UI tests (StampedUITests): the title changes with the quiz score, the id doesn't
+        .accessibilityIdentifier("CityAction_\(tile.id)")
     }
 
     private func icon(_ tile: CityActionTile) -> some View {
