@@ -799,7 +799,6 @@
 "My Stamped! passport. Get the app: %@" = "Mi pasaporte de Stamped!. Descarga la app: %@";
 
 /* City stamp share picture; %1$d is landmarks visited, %2$d is landmarks in the city */
-"%1$d of %2$d landmarks stamped" = "%1$d de %2$d monumentos sellados";
 
 /* Text sent with a shared city stamp picture; %1$@ is the city, %2$@ is the App Store link */
 "I just unlocked the %1$@ stamp on Stamped! 🏛️ Get the app: %2$@" = "¡Acabo de desbloquear el sello de %1$@ en Stamped! 🏛️ Descarga la app: %2$@";
