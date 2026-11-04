@@ -11,6 +11,7 @@ import SwiftUI
 import UIKit
 #endif
 import Combine
+import WidgetKit
 
 @MainActor
 class GlobalProgressManager: ObservableObject {
@@ -367,8 +368,11 @@ class GlobalProgressManager: ObservableObject {
         let arr = Array(visitedIDs)
         defaults.set(arr, forKey: saveKey)
         iCloud.set(arr, forKey: saveKey)
+        // The home screen widget reads this key from the App Group; ask it to redraw now
+        // instead of waiting for its hourly refresh. Runs for stamps, iCloud merges and reset.
+        WidgetCenter.shared.reloadTimelines(ofKind: "PassportWidget")
     }
-    
+
     func resetAllProgress() {
         visitedIDs.removeAll()
         objectWillChange.send()
