@@ -1168,5 +1168,55 @@
     "currencyInfo": "US-Dollar ($)",
     "transportation": "Zu Fuß",
     "transportationFact": "Der Campus ist gut zu Fuß zu erkunden: Die Warriner Hall im Norden liegt etwa 1,5 km vom Kelly/Shorts Stadium im Südosten entfernt."
+  },
+  "Cranbrook Academy of Art": {
+    "nickname": "Cranbrook",
+    "airportInfo": "Der Detroit Metropolitan Wayne County Airport in Romulus, südwestlich von Detroit, ist der wichtigste Flughafen der Region. Von dort fährt man mit dem Auto nach Norden bis Bloomfield Hills.",
+    "funFact": "Der Zeitungsverleger George Gough Booth und seine Frau Ellen Scripps Booth bauten Cranbrook auf einer 1904 gekauften Farm und benannten es nach Cranbrook in England, dem Geburtsort von Georges Vater. Eliel Saarinen entwarf einen Großteil des Campus, der 1989 zum National Historic Landmark wurde.",
+    "language": "Englisch",
+    "languageInfo": "Das Wahrzeichen von Cranbrook ist ein Kranich, und die offiziellen Logofarben sind Kupfer und Gold.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Auto / Zu Fuß",
+    "transportationFact": "Cranbrook liegt an der Woodward Avenue in Bloomfield Hills, nördlich von Detroit, und die meisten Besucher kommen mit dem Auto. Auf dem Gelände verbinden Fußwege das Art Museum, das Saarinen House, das Institute of Science und die Gärten des Cranbrook House."
+  },
+  "University of California, San Diego": {
+    "nickname": "UC San Diego",
+    "airportInfo": "Der San Diego International Airport liegt etwa 14 Meilen südlich des Campus. Der kostenlose San Diego Flyer fährt vom Flughafen zum Old Town Transit Center, wo die Straßenbahn der UC San Diego Blue Line nach Norden zum Campus abfährt.",
+    "funFact": "Die Geisel Library ist nach Audrey und Theodor Seuss Geisel benannt, besser bekannt als Dr. Seuss. Die Bibliothek bewahrt die Dr. Seuss Collection mit seinen Zeichnungen, Skizzen und Manuskripten.",
+    "language": "Englisch",
+    "languageInfo": "Die Schulfarben sind Blau und Gold, und die Teams heißen Tritons.",
+    "currencyInfo": "US-Dollar ($)",
+    "transportation": "Zu Fuß / Blue-Line-Straßenbahn",
+    "transportationFact": "Die Straßenbahn der UC San Diego Blue Line hält an den Stationen UC San Diego Central Campus und UC San Diego Health La Jolla. Campus-Shuttles und Fußwege verbinden die Colleges, das Price Center und die Geisel Library."
+  },
+  "University of Coimbra": {
+    "nickname": "UC",
+    "airportInfo": "Die nächsten großen Flughäfen sind der Flughafen Francisco Sá Carneiro in Porto und der Flughafen Humberto Delgado in Lissabon. Von beiden Städten halten Züge der Strecke Lissabon–Porto im Bahnhof Coimbra-B.",
+    "funFact": "König Dinis gründete die Universität 1290, und 1537 zog sie endgültig nach Coimbra, in den alten Königspalast oben auf dem Hügel. Die Universität Coimbra – Alta und Sofia wurde 2013 UNESCO-Welterbe.",
+    "language": "Portugiesisch",
+    "languageInfo": "Unterricht und Alltag sind auf Portugiesisch. Bis zur Universitätsreform von 1772 war Latein die offizielle Unterrichtssprache, deshalb heißt der lange Säulenbalkon des Palastes Via Latina.",
+    "currencyInfo": "Euro (€)",
+    "transportation": "Zu Fuß / Stadtbusse",
+    "transportationFact": "Die alte Universität liegt oben auf einem steilen Hügel über der Baixa (Unterstadt), also rechnen Sie mit Treppen und engen Gassen. Stadtbusse fahren hinauf in die Oberstadt, und in der Alta ist alles zu Fuß erreichbar."
+  },
+  "University of Salamanca": {
+    "nickname": "USAL",
+    "airportInfo": "Madrid–Barajas ist das wichtigste internationale Tor nach Salamanca. Von Madrid fahren Züge und Busse nach Westen bis Salamanca.",
+    "funFact": "Die Universität Salamanca wurde 1218 gegründet und ist die älteste noch bestehende Universität Spaniens. Ihr Hauptgebäude, die Escuelas Mayores, wurde 1533 um einen Kreuzgang neben den Kathedralen vollendet.",
+    "language": "Spanisch",
+    "languageInfo": "Unterricht und Alltag sind auf Spanisch, und Salamanca ist eine der beliebtesten Städte Spaniens zum Spanischlernen.",
+    "currencyInfo": "Euro (€)",
+    "transportation": "Zu Fuß",
+    "transportationFact": "Die Altstadt ist kompakt und größtenteils Fußgängerzone. Plaza Mayor, Casa de las Conchas, Clerecía und Patio de Escuelas liegen nur wenige Gehminuten auseinander."
+  },
+  "University of Tokyo": {
+    "nickname": "Tōdai",
+    "airportInfo": "Haneda und Narita bedienen beide Tokio; Haneda liegt näher am Stadtzentrum. Züge und U-Bahn verbinden beide Flughäfen mit Stationen in der Nähe des Hongō-Campus.",
+    "funFact": "Der Hongō-Campus liegt auf dem ehemaligen Edo-Anwesen der Maeda, der Fürsten von Kaga. Sein berühmtes Rotes Tor, das Akamon, wurde 1827 gebaut, um eine Shōgun-Tochter zu empfangen, die in die Familie einheiratete.",
+    "language": "Japanisch",
+    "languageInfo": "Im Alltag spricht man Japanisch. Studierende nennen die Universität Tōdai, kurz für Tōkyō Daigaku, und das Akamon ist seit Langem ein Spitzname für die Universität selbst.",
+    "currencyInfo": "Japanischer Yen (¥)",
+    "transportation": "Zu Fuß / Tokyo Metro",
+    "transportationFact": "Die Station Tōdai-mae der Namboku-Linie liegt etwa drei Gehminuten vom Campus entfernt. Die Stationen Hongō-sanchōme, Nezu und Yushima sind jeweils etwa acht Minuten entfernt."
   }
 }

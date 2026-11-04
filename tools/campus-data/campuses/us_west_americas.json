@@ -1619,5 +1619,161 @@
         "foodSpots": []
       }
     ]
+  },
+  {
+    "name": "University of California, San Diego",
+    "enumCase": "ucsd",
+    "country": "unitedStates",
+    "aliases": [
+      "UCSD",
+      "UC San Diego",
+      "Tritons"
+    ],
+    "colors": [
+      "#182B49",
+      "#FFCD00"
+    ],
+    "traditions": [
+      {
+        "id": "trad_ucsd_sun_god",
+        "name": "Meet You at the Sun God",
+        "description": "Niki de Saint Phalle's colorful bird on a concrete arch was the first Stuart Collection work, installed in 1983. Students use it as a meeting spot and dress it up for special occasions, and it is the mascot of the Sun God Festival held at the end of spring classes.",
+        "coordinates": [
+          32.8785722,
+          -117.239735
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/node/1533689136",
+        "source": "https://stuartcollection.ucsd.edu/artist/de-saint-phalle.html"
+      },
+      {
+        "id": "trad_ucsd_snake_path",
+        "name": "Walk the Snake Path",
+        "description": "Alexis Smith's 560-foot path of slate scales winds up the hill from Warren Mall to Geisel Library. Along the way you pass a granite book carved with a line from Milton's Paradise Lost and a small garden of fruit trees.",
+        "coordinates": [
+          32.8811785,
+          -117.2366135
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/585289589",
+        "source": "https://stuartcollection.ucsd.edu/artist/smith-a.html"
+      },
+      {
+        "id": "trad_ucsd_seuss_statue",
+        "name": "Dr. Seuss and the Cat in the Hat",
+        "description": "On the forum level of Geisel Library, a life-size bronze statue shows Theodor Seuss Geisel with the Cat in the Hat at his shoulder. It is a favorite photo stop for visitors to the library named after him.",
+        "coordinates": [
+          32.8811393,
+          -117.2375798
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/159385495",
+        "source": "https://en.wikipedia.org/wiki/Geisel_Library"
+      }
+    ],
+    "wiki": "University of California, San Diego",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "UC San Diego",
+      "airportName": "San Diego International Airport",
+      "airportCode": "SAN",
+      "airportInfo": "San Diego International Airport is about 14 miles south of campus. The free San Diego Flyer shuttle links the airport with Old Town Transit Center, where the UC San Diego Blue Line trolley heads north to campus.",
+      "funFact": "Geisel Library is named for Audrey and Theodor Seuss Geisel, better known as Dr. Seuss. Its library holds the Dr. Seuss Collection of his drawings, sketches and manuscripts.",
+      "language": "English",
+      "languageInfo": "The school colors are blue and gold, and the teams are the Tritons.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Walking / Blue Line trolley",
+      "transportationFact": "The UC San Diego Blue Line trolley stops at the UC San Diego Central Campus and UC San Diego Health La Jolla stations. Campus shuttles and walkways connect the colleges, Price Center and Geisel Library."
+    },
+    "buildings": [
+      {
+        "id": "campus_ucsd_geisel_library",
+        "wiki": "Geisel Library",
+        "name": "Geisel Library",
+        "description": "William Pereira designed the library's concrete tower to look like hands holding up a stack of books, and it opened in 1970. Its upper floors are numbered 4 to 8: the missing third floor is the open-air forum outside.",
+        "architect": "William Pereira; Gunnar Birkerts (1993 expansion)",
+        "yearBuilt": 1970,
+        "address": "9500 Gilman Dr, La Jolla, CA 92093",
+        "oldUse": "Central Library",
+        "newUse": "Main university library",
+        "buildingStyle": "Brutalist",
+        "numberOfStories": 8,
+        "height": 33.5,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ucsd_salk_institute",
+        "wiki": "Salk Institute for Biological Studies",
+        "name": "Salk Institute for Biological Studies",
+        "description": "Jonas Salk and Louis Kahn created this research institute on the mesa next to campus, finished in 1965. Two concrete laboratory wings frame a travertine plaza and a thin stream of water that points to the Pacific.",
+        "architect": "Louis Kahn",
+        "yearBuilt": 1965,
+        "address": "10010 N Torrey Pines Rd, La Jolla, CA 92037",
+        "oldUse": "Research institute",
+        "newUse": "Research institute",
+        "buildingStyle": "Brutalist",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ucsd_price_center",
+        "wiki": "Price Center",
+        "name": "Price Center",
+        "description": "Named for retailer Sol Price, the student center opened in 1989 and is one of the largest in the country. Mehrdad Yazdani's Price Center East added a four-story atrium in 2008.",
+        "architect": "Kaplan McLaughlin Diaz; Mehrdad Yazdani (2008 expansion)",
+        "yearBuilt": 1989,
+        "address": "9500 Gilman Dr, La Jolla, CA 92093",
+        "oldUse": "Student center",
+        "newUse": "Student center",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ucsd_conrad_prebys_music_center",
+        "wiki": "Conrad Prebys Music Center",
+        "name": "Conrad Prebys Music Center",
+        "description": "LMN Architects designed this music center from the inside out with acoustician Cyril M. Harris, and it opened in 2009. Its 380-seat concert hall is lined with folded wood and plaster surfaces that scatter sound around the room.",
+        "architect": "LMN Architects (Mark Reddington and Wendy Pautz)",
+        "yearBuilt": 2009,
+        "address": "9500 Gilman Dr, La Jolla, CA 92093",
+        "oldUse": "Music department",
+        "newUse": "Music department and concert hall",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ucsd_galbraith_hall",
+        "wiki": "Galbraith Hall",
+        "name": "Galbraith Hall",
+        "description": "Opened in 1965 as a library for Revelle College, the first college at UC San Diego, this is one of the campus's oldest buildings. It is now home to the Department of Theatre and Dance.",
+        "architect": "Deems Lewis Martin",
+        "yearBuilt": 1965,
+        "address": "9500 Gilman Dr, La Jolla, CA 92093",
+        "oldUse": "Library",
+        "newUse": "Theatre and Dance department",
+        "buildingStyle": "Brutalist",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      },
+      {
+        "id": "campus_ucsd_rimac",
+        "wiki": "RIMAC",
+        "name": "RIMAC",
+        "description": "The Recreation, Intramural and Athletic Complex opened in 1995 on the north side of campus. Its arena, renamed LionTree Arena in 2022, is home to Triton basketball and volleyball and seats 4,200 fans.",
+        "architect": "Parkin Architects",
+        "yearBuilt": 1995,
+        "address": "Hopkins Dr, La Jolla, CA 92093",
+        "oldUse": "Athletic complex",
+        "newUse": "Athletic complex",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": []
+      }
+    ]
   }
 ]

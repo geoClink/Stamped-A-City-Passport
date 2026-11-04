@@ -552,5 +552,328 @@
     "foodSpots": []
    }
   ]
+ },
+ {
+  "name": "University of Coimbra",
+  "enumCase": "uniCoimbra",
+  "country": "portugal",
+  "colors": [],
+  "traditions": [
+   {
+    "id": "trad_coimbra_cabra",
+    "name": "A Cabra, the Tower Bell",
+    "description": "The best-known of the University Tower's four bells is nicknamed \"a Cabra\" (the goat), and it once called students to class. You can climb the tower's narrow stairs for a view over Coimbra and the Mondego River.",
+    "coordinates": [
+     40.2077954,
+     -8.4264793
+    ],
+    "coordinatesSource": "https://www.openstreetmap.org/way/115574903",
+    "source": "https://pt.wikipedia.org/wiki/Pa%C3%A7o_das_Escolas"
+   },
+   {
+    "id": "trad_coimbra_joanina_bats",
+    "name": "The Library Bats",
+    "description": "Two colonies of small bats have lived in the Joanina Library for about two and a half centuries and eat the insects that would damage the books. Staff cover the tables with leather each evening to protect them.",
+    "coordinates": [
+     40.2071225,
+     -8.4265219
+    ],
+    "coordinatesSource": "https://www.openstreetmap.org/way/51293313",
+    "source": "https://visit.uc.pt/en/space-list/joanina"
+   },
+   {
+    "id": "trad_coimbra_serenata",
+    "name": "Serenade on the Old Cathedral Steps",
+    "description": "At midnight at the start of the Queima das Fitas in May, students sing Coimbra fado on the steps of the Old Cathedral. Thousands gather in the square to listen in silence.",
+    "coordinates": [
+     40.2088222,
+     -8.4273851
+    ],
+    "coordinatesSource": "https://www.openstreetmap.org/way/201639837",
+    "source": "https://www.practiceportuguese.com/blog/queima-das-fitas/"
+   }
+  ],
+  "wiki": "University of Coimbra",
+  "currency": "EUR (€)",
+  "details": {
+   "nickname": "UC",
+   "airportName": "Porto Airport",
+   "airportCode": "OPO",
+   "airportInfo": "Porto's Francisco Sá Carneiro Airport and Lisbon's Humberto Delgado Airport are the nearest major airports. From either city, trains on the Lisbon–Porto line stop at Coimbra-B station.",
+   "funFact": "King Denis chartered the university in 1290, and it moved for good to Coimbra in 1537, into the old royal palace on top of the hill. The University of Coimbra – Alta and Sofia became a UNESCO World Heritage Site in 2013.",
+   "language": "Portuguese",
+   "languageInfo": "Portuguese is the language of classes and daily life. Latin was the official language of teaching until the university's reform in 1772, which is why the palace's long colonnaded balcony is called the Via Latina.",
+   "currencyInfo": "Euro (€)",
+   "currencyCode": "EUR",
+   "transportation": "Walking / City buses",
+   "transportationFact": "The old university sits at the top of a steep hill above the Baixa (lower town), so expect stairs and narrow streets. City buses climb to the upper town, and everything in the Alta is within walking distance."
+  },
+  "buildings": [
+   {
+    "id": "campus_coimbra_joanina_library",
+    "wiki": "Biblioteca Joanina",
+    "name": "Biblioteca Joanina",
+    "description": "Built between 1717 and 1728 and named after King John V, this library is a showpiece of Portuguese Baroque. Its gilded shelves are decorated with Chinese motifs, and a 1725 portrait of the king hangs in the last room.",
+    "architect": "Gaspar Ferreira (master builder)",
+    "yearBuilt": 1728,
+    "address": "Paço das Escolas, Coimbra",
+    "oldUse": "University library",
+    "newUse": "Historic library and museum",
+    "buildingStyle": "Baroque",
+    "numberOfStories": 3,
+    "height": 0,
+    "foodSpots": []
+   },
+   {
+    "id": "campus_coimbra_chapel_sao_miguel",
+    "wiki": "Chapel of São Miguel",
+    "name": "Chapel of São Miguel",
+    "description": "This chapel of the old royal palace was planned by Marcos Pires from 1517 and finished by Diogo de Castilho after his death. Inside are tiled walls and a Baroque organ with nearly 2,000 pipes, a gift of King John V.",
+    "architect": "Marcos Pires; Diogo de Castilho",
+    "yearBuilt": 1522,
+    "address": "Paço das Escolas, Coimbra",
+    "oldUse": "Royal palace chapel",
+    "newUse": "University chapel",
+    "buildingStyle": "Manueline",
+    "numberOfStories": 0,
+    "height": 0,
+    "foodSpots": []
+   },
+   {
+    "id": "campus_coimbra_university_tower",
+    "wiki": "University of Coimbra",
+    "name": "Coimbra University Tower",
+    "description": "Italian architect António Canevari built the clock tower between 1728 and 1733, replacing an older tower. Its bells set the rhythm of university life, and visitors can now climb to the top.",
+    "architect": "António Canevari",
+    "yearBuilt": 1733,
+    "address": "Paço das Escolas, Coimbra",
+    "oldUse": "Clock and bell tower",
+    "newUse": "Clock tower and viewpoint",
+    "buildingStyle": "Baroque",
+    "numberOfStories": 0,
+    "height": 0,
+    "foodSpots": [],
+    "sharedArticle": true,
+    "coordinates": [
+     40.2077954,
+     -8.4264793
+    ],
+    "coordinatesSource": "https://www.openstreetmap.org/way/115574903"
+   },
+   {
+    "id": "campus_coimbra_porta_ferrea",
+    "wiki": "University of Coimbra",
+    "name": "Porta Férrea",
+    "description": "Built in 1634, the Iron Gate was the first major work after the university bought the royal palace. António Tavares designed it as a two-sided triumphal arch with statues of King Denis and King John III.",
+    "architect": "António Tavares",
+    "yearBuilt": 1634,
+    "address": "Largo da Porta Férrea, Coimbra",
+    "oldUse": "Ceremonial gate",
+    "newUse": "Main entrance to the Paço das Escolas",
+    "buildingStyle": "Mannerist",
+    "numberOfStories": 0,
+    "height": 0,
+    "foodSpots": [],
+    "sharedArticle": true,
+    "coordinates": [
+     40.2077855,
+     -8.425668
+    ],
+    "coordinatesSource": "https://www.openstreetmap.org/node/3496226629"
+   },
+   {
+    "id": "campus_coimbra_general_library",
+    "wiki": "University of Coimbra General Library",
+    "name": "University of Coimbra General Library",
+    "description": "The university's main library opened its Edifício Novo in 1962, in buildings adapted from the old Faculty of Letters. It holds more than a million volumes and received the European Heritage Label in 2021.",
+    "architect": "Unknown",
+    "yearBuilt": 1962,
+    "address": "Largo da Porta Férrea, Coimbra",
+    "oldUse": "Faculty of Letters",
+    "newUse": "General Library",
+    "buildingStyle": "Unknown",
+    "numberOfStories": 0,
+    "height": 0,
+    "foodSpots": [],
+    "coordinates": [
+     40.2074641,
+     -8.4251378
+    ],
+    "coordinatesSource": "https://www.openstreetmap.org/relation/10809526"
+   },
+   {
+    "id": "campus_coimbra_old_cathedral",
+    "wiki": "Old Cathedral of Coimbra",
+    "name": "Old Cathedral of Coimbra",
+    "description": "Work on this fortress-like Romanesque cathedral gained momentum in 1162, and Sancho I was crowned here in 1185. Its steps are where students sing the midnight serenade that opens the Queima das Fitas.",
+    "architect": "Master Robert (attributed)",
+    "yearBuilt": 1162,
+    "address": "Largo da Sé Velha, Coimbra",
+    "oldUse": "Cathedral",
+    "newUse": "Church",
+    "buildingStyle": "Romanesque",
+    "numberOfStories": 0,
+    "height": 0,
+    "foodSpots": []
+   }
+  ]
+ },
+ {
+  "name": "University of Salamanca",
+  "enumCase": "uniSalamanca",
+  "country": "spain",
+  "colors": [
+   "#D22020",
+   "#385E9D"
+  ],
+  "traditions": [
+   {
+    "id": "trad_salamanca_frog",
+    "name": "Find the Frog",
+    "description": "Hidden among the carvings of the university's Plateresque façade is a small frog sitting on a skull. Legend says a student who spots it will pass their exams, so visitors crowd the Patio de Escuelas searching for it.",
+    "coordinates": [
+     40.9614677,
+     -5.6673272
+    ],
+    "coordinatesSource": "https://www.openstreetmap.org/node/954663116",
+    "source": "https://es.wikipedia.org/wiki/Rana_de_Salamanca"
+   },
+   {
+    "id": "trad_salamanca_cielo",
+    "name": "The Sky of Salamanca",
+    "description": "In the Escuelas Menores you can see Fernando Gallego's \"Cielo de Salamanca\", a painted sky of constellations and zodiac signs that once covered part of the vault of the old university library.",
+    "coordinates": [
+     40.961403,
+     -5.6679573
+    ],
+    "coordinatesSource": "https://www.openstreetmap.org/relation/394490",
+    "source": "https://www.turismocastillayleon.com/en/heritage-culture/museum-university-salamanca"
+   },
+   {
+    "id": "trad_salamanca_vitores",
+    "name": "Spot the Vítores",
+    "description": "Red monograms called vítores, made from the letters of the word \"victor\", are painted on university walls to honor people who earned a doctorate. Look for them around the Patio de Escuelas and the streets of the old town.",
+    "coordinates": [
+     40.9615887,
+     -5.6675931
+    ],
+    "coordinatesSource": "https://www.openstreetmap.org/way/48871729",
+    "source": "https://en.wikipedia.org/wiki/Victor_(symbol)"
+   }
+  ],
+  "wiki": "University of Salamanca",
+  "currency": "EUR (€)",
+  "details": {
+   "nickname": "USAL",
+   "airportName": "Adolfo Suárez Madrid–Barajas Airport",
+   "airportCode": "MAD",
+   "airportInfo": "Madrid–Barajas is the main international gateway for Salamanca. From Madrid, trains and buses run west to Salamanca.",
+   "funFact": "The University of Salamanca was founded in 1218 and is the oldest university in Spain still in operation. Its main building, the Escuelas Mayores, was finished in 1533 around a cloister next to the cathedrals.",
+   "language": "Spanish",
+   "languageInfo": "Spanish is the language of classes and daily life, and Salamanca is one of Spain's most popular cities for learning it.",
+   "currencyInfo": "Euro (€)",
+   "currencyCode": "EUR",
+   "transportation": "Walking",
+   "transportationFact": "The old town is compact and largely pedestrian. The Plaza Mayor, the Casa de las Conchas, the Clerecía and the Patio de Escuelas are all a few minutes' walk apart."
+  },
+  "buildings": [
+   {
+    "id": "campus_salamanca_escuelas_mayores",
+    "wiki": "University of Salamanca",
+    "name": "Escuelas Mayores",
+    "description": "The university's main building grew around a cloister from the early 1400s and was finished in 1533. Its Plateresque west façade, carved in the early 16th century, shows the Catholic Monarchs and is the most famous image of the university.",
+    "architect": "Unknown (façade attributed to Juan de Talavera)",
+    "yearBuilt": 1533,
+    "address": "Patio de Escuelas 1, 37008 Salamanca",
+    "oldUse": "University lecture halls and library",
+    "newUse": "Historic university building",
+    "buildingStyle": "Plateresque",
+    "numberOfStories": 0,
+    "height": 0,
+    "foodSpots": [],
+    "sharedArticle": true,
+    "coordinates": [
+     40.9613268,
+     -5.6672043
+    ],
+    "coordinatesSource": "https://www.openstreetmap.org/relation/1229115"
+   },
+   {
+    "id": "campus_salamanca_fonseca",
+    "wiki": "University of Salamanca",
+    "name": "Colegio del Arzobispo Fonseca",
+    "description": "Archbishop Alonso de Fonseca founded this college in 1519 for students from Galicia, and its building was finished in 1578 around a Renaissance cloister. It is the only one of Salamanca's old colegios mayores still standing, and its courtyard hosts summer concerts.",
+    "architect": "Diego de Siloé; Rodrigo Gil de Hontañón; Juan de Álava",
+    "yearBuilt": 1578,
+    "address": "Calle Fonseca, Salamanca",
+    "oldUse": "Colegio Mayor de Santiago el Zebedeo",
+    "newUse": "Postgraduate residence and cultural venue",
+    "buildingStyle": "Plateresque",
+    "numberOfStories": 0,
+    "height": 0,
+    "foodSpots": [],
+    "sharedArticle": true,
+    "coordinates": [
+     40.9654659,
+     -5.6699676
+    ],
+    "coordinatesSource": "https://www.openstreetmap.org/relation/408281"
+   },
+   {
+    "id": "campus_salamanca_anaya_palace",
+    "wiki": "Colegio Mayor de San Bartolomé, Salamanca",
+    "name": "Anaya Palace",
+    "description": "After the 1755 Lisbon earthquake damaged the old Colegio de San Bartolomé, founded in 1401, this Neoclassical building replaced it from 1760. Its columned portico and grand staircase now lead to the Faculty of Philology.",
+    "architect": "José de Hermosilla; Juan de Sagarvinaga",
+    "yearBuilt": 1760,
+    "address": "Plaza de Anaya, Salamanca",
+    "oldUse": "Colegio Mayor de San Bartolomé",
+    "newUse": "Faculty of Philology",
+    "buildingStyle": "Neoclassical",
+    "numberOfStories": 0,
+    "height": 0,
+    "foodSpots": [],
+    "coordinates": [
+     40.9616683,
+     -5.6651533
+    ],
+    "coordinatesSource": "https://www.openstreetmap.org/relation/394492"
+   },
+   {
+    "id": "campus_salamanca_clerecia",
+    "wiki": "La Clerecía, Salamanca",
+    "name": "La Clerecía",
+    "description": "Queen Margaret of Austria sponsored this huge Jesuit college, begun in 1617 and finished in 1754. Its Baroque towers rise over the old town, and the building is now the seat of the Pontifical University of Salamanca.",
+    "architect": "Juan Gómez de Mora; Andrés García de Quiñones",
+    "yearBuilt": 1754,
+    "address": "Calle de la Compañía, Salamanca",
+    "oldUse": "Real Colegio del Espíritu Santo (Jesuit college)",
+    "newUse": "Pontifical University of Salamanca",
+    "buildingStyle": "Baroque",
+    "numberOfStories": 0,
+    "height": 0,
+    "foodSpots": [],
+    "coordinates": [
+     40.9627383,
+     -5.6664661
+    ],
+    "coordinatesSource": "https://www.openstreetmap.org/way/466919455"
+   },
+   {
+    "id": "campus_salamanca_casa_conchas",
+    "wiki": "Casa de las Conchas",
+    "name": "Casa de las Conchas",
+    "description": "University professor Rodrigo Arias de Maldonado built this house between 1493 and 1517 and covered its façade with more than 300 scallop shells, the symbol of the Order of Santiago. It now houses a public library.",
+    "architect": "Unknown",
+    "yearBuilt": 1517,
+    "address": "Calle de la Compañía, Salamanca",
+    "oldUse": "Residence of Rodrigo Arias de Maldonado",
+    "newUse": "Public library",
+    "buildingStyle": "Late Gothic / Plateresque",
+    "numberOfStories": 0,
+    "height": 0,
+    "foodSpots": []
+   }
+  ]
  }
 ]

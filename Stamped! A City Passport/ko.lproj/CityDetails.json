@@ -64,6 +64,19 @@
     "transportation": "GVB 트램",
     "transportationFact": "암스테르담의 역사적인 중심지는 주로 파란색과 흰색의 GVB 트램으로 구성된 광범위한 네트워크를 통해 운행됩니다. 이 도시는 주민보다 자전거가 더 많은 것으로 세계적으로 유명하며 거의 모든 거리를 전용 도로로 덮고 있습니다. 중앙역 뒤에 있는 페리는 보행자와 자전거 이용자가 아이강을 건너는 무료 환승 서비스를 제공합니다."
   },
+  "Antwerp": {
+    "airportCode": "BRU",
+    "airportInfo": "앤트워프에도 시내에서 남쪽으로 약 5km 떨어진 작은 앤트워프 국제공항이 있지만, 대부분의 방문객은 벨기에의 주요 국제 허브인 자벤템의 브뤼셀 공항을 이용합니다. 2012년부터는 디아볼로 철도 노선이 공항과 메헬렌, 앤트워프를 직접 연결하고 있습니다.",
+    "airportName": "Brussels Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "유로(€)",
+    "funFact": "전설에 따르면 도시 이름은 '손 던지기'에서 유래했습니다. 영웅 실비우스 브라보가 잔인한 거인의 손을 잘라 스헬더강에 던졌다는 이야기입니다. 앤트워프는 세계 다이아몬드 거래의 중심지이기도 해서, 매년 전 세계 원석 다이아몬드의 약 85%가 이곳 다이아몬드 지구를 거쳐 갑니다.",
+    "language": "네덜란드어",
+    "languageInfo": "벨기에 플랑드르 지역에 있는 앤트워프의 공용어는 네덜란드어이며, 현지 앤트워프 방언도 들을 수 있습니다. 앤트워프 사람들은 '시뇨렌'이라는 별명으로 불리는데, 이는 스페인어 '세뇨르'에서 온 말로 17세기에 도시를 다스린 스페인 귀족들의 흔적입니다.",
+    "nickname": "트 스타트(도시)",
+    "transportation": "트램 및 프리메트로",
+    "transportationFact": "앤트워프의 트램망은 데 레인이 운영하며, 14개 노선 중 8개 노선이 '앤트워프 프리메트로'라 불리는 터널을 통해 일부 구간을 지하로 달립니다. 도시 최초의 마차 철도는 1873년 5월 25일에 운행을 시작해 베르헴의 교회와 메이르 거리를 연결했습니다."
+  },
   "Asheville": {
     "airportCode": "AVL",
     "airportInfo": "애슈빌 지역(AVL)은 블루리지 산맥으로 향하는 주요 관문입니다. 현재 미국에서 가장 빠르게 성장하는 지역 공항 중 하나라는 위상에 맞게 새로운 터미널과 현대화된 게이트를 건설하는 대규모 프로젝트인 'AVL Forward' 확장이 진행 중입니다.",
@@ -779,6 +792,19 @@
     "transportation": "글래스고 지하철 & 기차",
     "transportationFact": "글래스고 지하철은 런던 지하철과 부다페스트 지하철에 이어 세계에서 세 번째로 오래된 지하철이며, 영국에서 유일하게 완전히 지하로만 다니는 메트로입니다. 지하철은 지역 교통 당국인 SPT가 운영하며, 이와 함께 넓은 근교 철도망이 있습니다. 글래스고와 에든버러 사이에는 직통 철도 노선이 4개 있습니다."
   },
+  "Granada": {
+    "airportCode": "GRX",
+    "airportInfo": "페데리코 가르시아 로르카 그라나다 공항은 시내에서 서쪽으로 약 15km 떨어진 차우치나와 산타페 근처에 있습니다. 1970년에 공사를 시작해 1972년 그라나다 공항으로 문을 열었으며, 2006년에 안달루시아의 시인 페데리코 가르시아 로르카의 이름을 얻었습니다.",
+    "airportName": "Federico García Lorca Granada Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "유로(€)",
+    "funFact": "1492년 1월 2일, 스페인 사람들이 보아브딜이라 부른 무함마드 11세가 그라나다를 페르난도 왕과 이사벨 여왕에게 넘겨주면서 이베리아반도의 마지막 이슬람 국가가 막을 내렸습니다. 스페인어로 '그라나다'는 석류를 뜻하며, 석류는 도시의 문장이자 '석류의 문'이라는 이름의 유래이기도 합니다.",
+    "language": "스페인어",
+    "languageInfo": "그라나다에서는 스페인어(카스티야어)를 사용하며, 라틴 문자에 ñ 같은 글자를 더해 씁니다. 인사는 '올라' 또는 '부에노스 디아스'(좋은 아침), 감사 인사는 '그라시아스'라고 합니다.",
+    "nickname": "석류의 도시",
+    "transportation": "메트로(경전철) 및 버스",
+    "transportationFact": "그라나다 메트로는 2017년 9월 21일에 개통한 단일 경전철 노선입니다. 도심에서는 지하로, 알볼로테·마라세나·아르미야 방면으로는 지상으로 달리며 26개 역을 잇고, 2025년에는 약 1,730만 명이 이용했습니다."
+  },
   "Guadalajara": {
     "airportCode": "GDL",
     "airportInfo": "Miguel Hidalgo y Costilla International Airport, named after the priest who launched Mexico's independence movement, is Mexico's second busiest airport. Its location near the Tequila region means some international visitors arrive specifically for Jalisco's agave landscape, also a UNESCO World Heritage Site. The airport connects directly to North American cities and several European hubs.",
@@ -805,6 +831,19 @@
     "transportation": "U반, S반 및 페리",
     "transportationFact": "기차, 버스, 항구 페리는 모두 HVV 아래에서 운행되며, HVV는 이런 형태의 교통 연합으로는 세계 최초입니다. 표 한 장으로 모든 회사의 노선을 이용할 수 있습니다. U반은 전체 101km 중 약 41km만 지하 구간이어서, 나이 든 주민들은 지금도 '호흐반(고가 철도)'이라고 부릅니다."
   },
+  "Hanoi": {
+    "airportCode": "HAN",
+    "airportInfo": "노이바이 국제공항은 하노이 도심에서 북동쪽으로 약 35km 떨어져 있으며, 호찌민시의 떤선녓 공항에 이어 베트남에서 두 번째로 붐비는 공항입니다. 2015년 1월 4일 시내로 이어지는 새 녓떤 대교와 함께 문을 연 제2터미널이 모든 국제선을 담당하며, 베트남항공의 주요 허브입니다.",
+    "airportName": "Noi Bai International Airport",
+    "currencyCode": "VND",
+    "currencyInfo": "베트남 동(₫)",
+    "funFact": "1010년 리타이또 황제는 이곳으로 도읍을 옮기고, 홍강 위로 용이 솟아오르는 것을 보았다며 '오르는 용'이라는 뜻의 탕롱이라 이름 붙였습니다. 하노이에는 1076년부터 베트남 최초의 국립대학이 자리했던 문묘도 있습니다.",
+    "language": "베트남어",
+    "languageInfo": "베트남어는 라틴 문자를 바탕으로 한 알파벳으로 쓰이는데, 이는 당시 하노이 발음을 기록한 알렉상드르 드 로드의 1651년 사전에서 비롯되었습니다. 1975년 이후 전국의 언어는 수도에서 쓰는 북부 방언 쪽으로 점차 가까워졌습니다.",
+    "nickname": "승룡의 도시",
+    "transportation": "하노이 메트로와 오토바이",
+    "transportationFact": "하노이 메트로는 2021년 11월 6일 2A호선이 개통하면서 베트남 최초의 도시철도가 되었고, 2024년 8월에는 3호선 첫 구간이 문을 열었습니다. 그래도 거리의 주인공은 여전히 오토바이여서, 많은 여행자가 '쎄옴'('껴안는 바이크')이라 불리는 오토바이 택시로 시내를 빠르게 오갑니다."
+  },
   "Havana": {
     "airportCode": "HAV",
     "airportInfo": "José Martí International Airport is named after Cuba's national hero and independence poet. It has four terminals serving different types of traffic, with Terminal 3 handling most international arrivals. The airport is located about 18km southwest of the city center. Given Cuba's unique relationship with the United States — and restricted American travel to the island — the airport sees a distinctive mix of passengers from Latin America, Canada, Europe, and increasingly from the United States.",
@@ -830,6 +869,19 @@
     "nickname": "The Daughter of the Baltic",
     "transportation": "Metro & Trams",
     "transportationFact": "Helsinki operates a compact but highly efficient transit system under the HSL authority, integrating the metro, trams, buses, commuter rail, and ferries to the islands. The historic orange trams that run through the city center have been operating since 1891 and remain a charming way to navigate. The city is also extremely walkable and bikeable in summer, with a city bike network available from April to November. In winter, many Helsinkians cross-country ski in the city's extensive parklands."
+  },
+  "Hiroshima": {
+    "airportCode": "HIJ",
+    "airportInfo": "히로시마 공항은 1993년 히로시마에서 동쪽으로 약 50km 떨어진 미하라시에 문을 열었으며, 광동체 항공기를 수용할 수 없던 해안가의 작은 옛 공항을 대신했습니다. 주고쿠·시코쿠 지방에서 가장 큰 공항으로, 국내선 이용객의 약 80%가 도쿄 하네다를 오갑니다.",
+    "airportName": "Hiroshima Airport",
+    "currencyCode": "JPY",
+    "currencyInfo": "일본 엔(¥)",
+    "funFact": "히로시마는 1589년 오타강 삼각주에 성시로 세워졌으며, 이름은 '넓은 섬'이라는 뜻입니다. 1949년 일본 국회는 이곳을 평화 도시로 선포했습니다. 철판 위에서 재료를 층층이 쌓아 굽는 히로시마식 오코노미야키로도 유명합니다.",
+    "language": "일본어",
+    "languageInfo": "어디서나 표준 일본어가 통하지만, 현지인들끼리는 정겨운 히로시마 사투리를 자주 씁니다. 평화기념공원과 역, 주요 명소 주변에는 영어 안내판도 많습니다.",
+    "nickname": "평화의 도시",
+    "transportation": "히로덴 노면전차",
+    "transportationFact": "히로덴은 총연장 35.1km로 일본에서 가장 긴 노면전차망을 운영하며, 차량이 워낙 다양해 '움직이는 노면전차 박물관'이라는 별명이 붙었습니다. 1945년 원폭 투하 후 불과 사흘 만에 운행을 재개했고, 그날을 견뎌 낸 일부 차량은 지금도 달리고 있습니다."
   },
   "Ho Chi Minh City": {
     "airportCode": "SGN",
@@ -947,6 +999,19 @@
     "nickname": "사원의 도시",
     "transportation": "텔포 & 멸마이크로버스",
     "transportationFact": "Kathmandu's public transport is famously chaotic — the city lacks a metro or reliable formal transit system. Shared tempos (electric three-wheelers) and microbuses follow unofficial routes and can be hailed anywhere. Taxis are widely available and inexpensive, though negotiating the fare before boarding is advisable. A proposed metro railway for Kathmandu has been in planning for years. Walking and cycling are popular in the old city around Thamel and Durbar Square, where narrow streets exclude larger vehicles."
+  },
+  "Kraków": {
+    "airportCode": "KRK",
+    "airportInfo": "요한 바오로 2세 크라쿠프 발리체 국제공항은 도심에서 서쪽으로 약 11km 떨어진 발리체 마을에 있으며, 교황 요한 바오로 2세의 이름을 따왔습니다. 바르샤바 쇼팽 공항에 이어 폴란드에서 두 번째로 붐비는 공항으로, 2024년에 1,100만 명이 넘는 승객이 이용했습니다. 터미널에서 크라쿠프 중앙역까지 기차로 약 17분이 걸립니다.",
+    "airportName": "John Paul II Kraków-Balice International Airport",
+    "currencyCode": "PLN",
+    "currencyInfo": "폴란드 즈워티(zł)",
+    "funFact": "크라쿠프는 1596년 지그문트 3세 바사 국왕이 궁정을 바르샤바로 옮기기 전까지 폴란드의 왕도였으며, 중앙 시장 광장은 유럽에서 가장 큰 중세 시장 광장입니다. 베이글과 그 사촌 격인 고리 모양의 빵 '오브바자네크 크라코프스키'는 모두 크라쿠프에서 탄생했습니다.",
+    "language": "폴란드어",
+    "languageInfo": "폴란드어는 서슬라브어군에 속하는 언어로, 라틴 문자에 ł, ż, ś 같은 글자를 더해 씁니다. 인사는 '젠 도브리'(안녕하세요)라고 하고, 친구 사이에서는 가볍게 '체시치'라고 합니다.",
+    "nickname": "왕실의 수도",
+    "transportation": "트램 및 버스",
+    "transportationFact": "대중교통은 시영 회사가 운영하는 촘촘한 트램과 버스 노선망을 중심으로 하며, 전기 트램은 1901년부터 운행되었습니다. 구시가지 대부분이 보행자 전용 구역이라 트램은 구시가지를 가로지르지 않고 그 둘레를 달립니다."
   },
   "Kuala Lumpur": {
     "airportCode": "KUL",
@@ -1104,6 +1169,19 @@
     "transportation": "ALSA 일렉트릭",
     "transportationFact": "마라케시는 환경 지속가능성을 촉진하기 위해 주요 노선에 첨단 전기 버스를 도입했습니다. 지역 '쁘띠 택시'는 도시 내에서 이동하는 인기 있는 방법으로, 각 차량은 시그니처 황토색이어야 합니다. 말이 끄는 '칼레체스(Caleches)'는 역사적인 성벽과 메디나를 여행하는 전통적이고 경치 좋은 방법으로 남아 있습니다."
   },
+  "Marseille": {
+    "airportCode": "MRS",
+    "airportInfo": "마르세유 프로방스 공항은 시내에서 북서쪽으로 약 27km 떨어진 마리냔에 있으며, 여객 수 기준으로 프랑스에서 다섯 번째로 붐비는 공항입니다. 1920~30년대에는 비행정 기지로 쓰였고, 2024년 6월에는 새 제1터미널이 문을 열었습니다. 인근 비트롤 마르세유 프로방스 공항역과는 버스로 연결됩니다.",
+    "airportName": "Marseille Provence Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "유로(€)",
+    "funFact": "마르세유는 기원전 600년경 포카이아에서 온 그리스 정착민들이 세운 도시로, 프랑스에서 가장 오래된 도시이자 유럽에서 가장 오랫동안 사람이 살아온 정착지 중 하나입니다. 프랑스 국가에도 이 도시의 이름이 담겨 있습니다. '라 마르세예즈'라는 이름은 1792년 파리에서 이 노래를 처음 부른 이들이 마르세유 의용병이었기 때문에 붙여졌습니다.",
+    "language": "프랑스어",
+    "languageInfo": "어디서나 프랑스어가 쓰이지만, 프로방스어의 영향을 받은 노래하듯 부드러운 마르세유 방언에도 귀 기울여 보세요. 오크어로 도시 이름은 마르셀랴(Marselha)이며, 이 활기찬 지중해 항구 도시에서는 아랍어와 오크어 등 다양한 언어를 들을 수 있습니다.",
+    "nickname": "포카이아의 도시",
+    "transportation": "지하철 및 트램",
+    "transportationFact": "마르세유 지하철은 2개 노선, 31개 역으로 이루어져 있으며 1호선은 1977년, 2호선은 1984년에 개통했습니다. 파리의 일부 노선처럼 고무 타이어 차량이 달립니다. 2007년에는 현대식 트램도 더해졌으며, 모두 RTM이 운영합니다."
+  },
   "Medellín": {
     "airportCode": "MDE",
     "airportInfo": "José María Córdova International Airport is the primary airport serving the Medellín metropolitan area and the second busiest in Colombia. It is located in the mountains above the Aburrá Valley, and its high altitude approach through mountain terrain makes landing here one of the more technically demanding in South America. A metro cable car system (Metrocable) connects the airport area to the city below.",
@@ -1168,6 +1246,19 @@
     "nickname": "패션 캐피탈",
     "transportation": "밀라노 트램",
     "transportationFact": "밀라노는 여전히 원래의 목재 벤치 좌석을 갖춘 'Type 1928' 트램을 운영하고 있습니다. 밀라노 지하철은 완전 자동화된 최신 M4 노선을 포함해 5개 노선으로 구성되어 있습니다. 트레노드 통근 열차는 도심과 아름다운 이탈리아 호수 지구 및 교외 롬바르디아를 연결합니다."
+  },
+  "Milwaukee": {
+    "airportCode": "MKE",
+    "airportInfo": "밀워키 미첼 국제공항은 도심에서 남쪽으로 약 9km 떨어져 있으며, 2,314에이커 부지에 활주로 5개를 갖추고 있습니다. 1920년 해밀턴 공항으로 출발했으며, 밀워키에서 자라 '미 공군의 아버지'로 불리는 빌리 미첼 장군의 이름을 따왔습니다.",
+    "airportName": "Milwaukee Mitchell International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "미국 달러($)",
+    "funFact": "밀워키는 한때 슐리츠, 블라츠, 팹스트, 밀러 등 세계 최대 맥주 양조장 네 곳의 본거지였고, 오랫동안 세계에서 맥주를 가장 많이 생산한 도시여서 '브루 시티'라는 별명을 얻었습니다. 매년 여름 호숫가에서는 세계 최대 규모의 음악 축제 중 하나로 꼽히는 11일간의 서머페스트도 열립니다.",
+    "language": "영어",
+    "languageInfo": "친근한 중서부 억양의 영어를 사용합니다. 독일계 전통이 깊어 1900년 무렵에는 주민의 약 3분의 1이 독일계였으며, 밀워키는 '미국에서 가장 독일적인 도시'로 알려지게 되었습니다.",
+    "nickname": "브루 시티",
+    "transportation": "더 홉 노면전차",
+    "transportationFact": "더 홉 노면전차는 2018년 11월 2일 운행을 시작했으며, 2.1마일 길이의 M라인이 밀워키 인터모달역과 도심, 로어 이스트사이드, 히스토릭 서드 워드를 연결합니다. 2024년에는 호숫가로 가는 짧은 L라인이 더해졌고, 요금은 여전히 무료입니다."
   },
   "Minnesota": {
     "airportCode": "MSP",
@@ -1468,6 +1559,19 @@
     "transportation": "MAX 라이트 레일",
     "transportationFact": "MAX 경전철 시스템에는 지하 260피트에 북미에서 가장 깊은 환승역이 포함되어 있습니다. 포틀랜드 전차는 중심 도시와 혁신적인 펄 지구 주변을 자주 순환합니다. TriMet 버스와 WES 통근 열차는 이 지역의 강력한 대중 교통 네트워크를 완성합니다."
   },
+  "Porto": {
+    "airportCode": "OPO",
+    "airportInfo": "프란시스쿠 사 카르네이루 공항은 예전에 페드라스 루브라스 공항으로 불렸으며 1945년에 문을 열었습니다. 클레리구스 탑에서 북서쪽으로 약 11km 떨어져 있고, 2025년에는 약 1,700만 명이 이용했으며 이지젯과 라이언에어의 거점이기도 합니다. 메트로 E선을 타면 터미널에서 시내 중심까지 바로 갈 수 있습니다.",
+    "airportName": "Francisco Sá Carneiro Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "유로(€)",
+    "funFact": "포르투의 로마 시대 이름인 '포르투스 칼레'는 포르투갈이라는 국명의 기원으로 자주 언급됩니다. 주민들은 '트리페이루스(내장을 먹는 사람들)'라는 별명으로 불리는데, 도시가 좋은 고기는 해상 원정대에 보내고 내장만 남겨 먹었다는 이야기에서 유래했습니다. 내장 스튜 '트리파스 아 모다 두 포르투'는 지금도 이 도시의 대표 요리입니다.",
+    "language": "포르투갈어",
+    "languageInfo": "포르투갈어는 로망스어의 하나로, 라틴 문자에 ã, ç 같은 기호를 더해 씁니다. 인사는 '봉 디아'(좋은 아침) 또는 간단히 '올라'라고 하고, 감사 인사는 '오브리가두'(여성은 '오브리가다')라고 합니다.",
+    "nickname": "패배하지 않은 도시",
+    "transportation": "메트로(경전철)",
+    "transportationFact": "포르투 메트로는 2002년 12월에 개통한 경전철로, 도심에서는 지하로, 교외로 나가면 지상으로 달립니다. 현재 6개 노선이 약 70km에 걸쳐 85개 역을 잇고 있으며, 2013년에는 하버드 대학교의 베로니카 러지 그린 도시디자인상을 받았습니다."
+  },
   "Porto Alegre": {
     "airportCode": "GRU",
     "airportInfo": "브라질의 주요 국제 관문인 과룰류스는 남미에서 승객 수 기준으로 가장 분주한 공항입니다. 월드컵과 올림픽을 위해 대폭 현대화한 대규모 복합 단지로, 다양한 고급 편의시설을 갖춘 장거리 국제선 전용 터미널을 갖추고 있습니다.",
@@ -1545,6 +1649,19 @@
     "nickname": "연기의 만",
     "transportation": "Straeto Buses & Taxis",
     "transportationFact": "Reykjavik has a bus system (Straeto) covering the city and surrounding suburbs, but the city is small enough that many residents walk or cycle much of the time. Car rental is almost essential for exploring Iceland's dramatic landscapes beyond the city. In winter, geothermally heated outdoor swimming pools are a central part of Reykjavik social life — the public pools operate year-round regardless of weather and are as much community centers as exercise facilities."
+  },
+  "Riga": {
+    "airportCode": "RIX",
+    "airportInfo": "RIX 리가 공항은 도심에서 서쪽으로 약 10km 떨어진 마루페 자치구에 있으며, 2024년 9월 기준 107개 도시로 직항편을 운항하는 발트 3국 최대의 공항입니다. 낡은 스필베 공항을 대신하기 위해 1973년에 지어졌고, 국적 항공사 에어발틱의 허브입니다.",
+    "airportName": "RIX Riga Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "유로(€)",
+    "funFact": "리가 도심 건물의 약 3분의 1이 아르누보 건축물로, 역사학자 야니스 크라스틴시에 따르면 세계에서 이 양식이 가장 밀집한 도시입니다. 리가는 2014년 유럽 문화 수도였습니다.",
+    "language": "라트비아어",
+    "languageInfo": "라트비아어는 발트어군에 속하는 언어로, 라틴 문자에 ā, č, ļ 같은 글자를 더해 씁니다. 인사할 때는 '스베이키', 축하할 때는 '압스베이참'이라고 합니다.",
+    "nickname": "아르누보의 수도",
+    "transportation": "트램, 트롤리버스 및 버스",
+    "transportationFact": "대중교통은 리가스 사티크스메가 운영하며, 트램과 버스, 트롤리버스가 도시 전역에 넓은 노선망을 갖추고 있습니다. 2012년부터는 예전에 민간 업체들이 운행하던 미니버스도 시영 회사 한 곳이 운영합니다."
   },
   "Rio de Janeiro": {
     "airportCode": "GRU",
@@ -1897,6 +2014,19 @@
     "transportation": "TTC",
     "transportationFact": "토론토 교통 위원회(Toronto Transit Commission)는 아메리카 대륙에서 가장 크고 가장 바쁜 전차 네트워크를 운영하고 있습니다. 지하철 시스템은 도시 대중교통의 핵심을 형성하는 두 개의 주요 노선으로 구성됩니다. GO Transit은 토론토와 온타리오의 나머지 지역을 연결하는 대규모 지역 기차 및 버스 네트워크를 제공합니다."
   },
+  "Tulsa": {
+    "airportCode": "TUL",
+    "airportInfo": "털사 국제공항은 도심에서 북동쪽으로 약 8km 떨어져 있으며, 지역 사업가들이 시영 비행장 부지 매입 자금을 모은 뒤 1928년에 문을 열었습니다. 1929년 시가 인수했고 1963년 현재의 이름을 얻었으며, 오늘날에는 아메리칸 항공의 세계 정비 거점입니다.",
+    "airportName": "Tulsa International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "미국 달러($)",
+    "funFact": "털사는 20세기 대부분 동안 '세계의 석유 수도'로 불렸으며, 석유로 번 돈으로 지은 아르데코 양식의 고층 건물과 교회들이 지금도 도심의 풍경을 이룹니다. 20세기 초 그린우드 지구에는 미국에서 가장 번영한 흑인 공동체 중 하나인 '블랙 월스트리트'도 있었습니다.",
+    "language": "영어",
+    "languageInfo": "느긋한 오클라호마 억양의 영어를 사용합니다. 도시 이름은 머스코기어 단어 '탈라시'에서 유래했으며, 털사의 대부분은 지금도 머스코기(크리크) 네이션의 영역에 속하고 일부는 오세이지 네이션과 체로키 네이션에 걸쳐 있습니다.",
+    "nickname": "세계의 석유 수도",
+    "transportation": "메트로링크 털사 버스",
+    "transportationFact": "2024년까지 털사 트랜짓으로 불렸던 메트로링크 털사는 도심과 미드타운의 환승 거점에서 18개 버스 노선을 운행합니다. 첫 간선급행버스 노선인 에어로는 2019년 피오리아 애비뉴에서 운행을 시작했으며, 루트 66의 이름을 딴 두 번째 급행 노선이 이스트 11번가를 따라 계획되어 있습니다."
+  },
   "Valencia": {
     "airportCode": "VLC",
     "airportInfo": "마니세스 공항이라고도 불리는 발렌시아 공항은 시내에서 서쪽으로 약 8km 떨어진 마니세스에 있습니다. 2025년에는 유럽, 캐나다, 북아프리카를 잇는 140개 노선에서 1,180만 명의 승객을 처리했으며 대부분이 국제선 승객이었습니다. 발렌시아 지방에서는 알리칸테에 이어 두 번째로 붐비는 공항입니다.",
@@ -2053,6 +2183,19 @@
     "transportation": "도보 / 레드펀행 기차 / 버스",
     "transportationFact": "레드펀역에서 캠퍼스까지는 걸어서 금방이며, 시내 중심에서 파라마타 로드와 시티 로드를 따라 버스도 운행합니다."
   },
+  "University of Tokyo": {
+    "airportCode": "HND",
+    "airportInfo": "도쿄에는 하네다와 나리타 두 공항이 있으며, 도심에서 더 가까운 곳은 하네다입니다. 두 공항 모두 전철과 지하철로 혼고 캠퍼스 근처 역까지 연결됩니다.",
+    "airportName": "Tokyo Haneda Airport",
+    "currencyCode": "JPY",
+    "currencyInfo": "일본 엔(¥)",
+    "funFact": "혼고 캠퍼스는 가가번 영주 마에다 가문의 에도 저택 터에 자리하고 있습니다. 유명한 붉은 문 아카몬은 쇼군의 딸이 마에다 가문으로 시집올 때 맞이하기 위해 1827년에 세워졌습니다.",
+    "language": "일본어",
+    "languageInfo": "일상 언어는 일본어입니다. 학생들은 도쿄 다이가쿠를 줄여 '도다이'라고 부르며, 아카몬은 오래전부터 대학 자체를 가리키는 별칭이기도 합니다.",
+    "nickname": "도다이",
+    "transportation": "도보 / 도쿄 메트로",
+    "transportationFact": "도쿄 메트로 난보쿠선 도다이마에 역에서 캠퍼스까지 걸어서 약 3분입니다. 혼고산초메, 네즈, 유시마 역에서는 각각 약 8분 걸립니다."
+  },
   "University of Texas at Austin": {
     "airportCode": "AUS",
     "airportInfo": "오스틴-버그스트롬 공항은 오스틴 다운타운 남동쪽에 있습니다. 캠퍼스는 다운타운 바로 북쪽에 있어 공항에서 차나 버스로 금방입니다.",
@@ -2156,6 +2299,32 @@
     "nickname": "린네의 대학",
     "transportation": "도보 / 자전거",
     "transportationFact": "대학의 역사적인 건물들은 대성당과 대학 공원 주변에 모여 있어 모두 걸어서 금방입니다. 웁살라는 자전거 타기 좋은 도시로도 유명합니다."
+  },
+  "University of Coimbra": {
+    "airportCode": "OPO",
+    "airportInfo": "가장 가까운 주요 공항은 포르투의 프란시스쿠 사 카르네이루 공항과 리스본의 움베르투 델가두 공항입니다. 두 도시 모두에서 리스본–포르투 노선 열차가 코임브라-B 역에 정차합니다.",
+    "airportName": "Porto Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "유로(€)",
+    "funFact": "디니스 왕이 1290년에 대학을 세웠고, 대학은 1537년 언덕 위의 옛 왕궁으로 옮겨 코임브라에 완전히 자리 잡았습니다. '코임브라 대학교 – 알타와 소피아'는 2013년 유네스코 세계유산에 등재되었습니다.",
+    "language": "포르투갈어",
+    "languageInfo": "수업과 일상생활은 포르투갈어로 이루어집니다. 1772년 대학 개혁 전까지는 라틴어가 공식 교육 언어였기 때문에 왕궁의 긴 열주 발코니를 '비아 라티나'라고 부릅니다.",
+    "nickname": "UC",
+    "transportation": "도보 / 시내버스",
+    "transportationFact": "옛 대학은 바이샤(아랫마을) 위 가파른 언덕 꼭대기에 있어 계단과 좁은 골목이 많습니다. 시내버스가 윗마을까지 올라가며, 알타 지구 안은 모두 걸어서 다닐 수 있습니다."
+  },
+  "University of Salamanca": {
+    "airportCode": "MAD",
+    "airportInfo": "살라망카로 가는 주요 국제 관문은 마드리드-바라하스 공항입니다. 마드리드에서 기차와 버스가 서쪽 살라망카까지 운행합니다.",
+    "airportName": "Adolfo Suárez Madrid–Barajas Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "유로(€)",
+    "funFact": "살라망카 대학교는 1218년에 세워졌으며, 지금도 운영 중인 스페인에서 가장 오래된 대학입니다. 본관인 에스쿠엘라스 마요레스는 대성당 옆 회랑을 둘러싸고 1533년에 완성되었습니다.",
+    "language": "스페인어",
+    "languageInfo": "수업과 일상생활은 스페인어로 이루어지며, 살라망카는 스페인에서 스페인어를 배우기에 가장 인기 있는 도시 중 하나입니다.",
+    "nickname": "USAL",
+    "transportation": "도보",
+    "transportationFact": "구시가지는 아담하고 대부분 보행자 구역입니다. 마요르 광장, 조개의 집(카사 데 라스 콘차스), 클레레시아, 에스쿠엘라스 광장은 서로 걸어서 몇 분 거리입니다."
   },
   "Florida Southern College": {
     "airportCode": "TPA",
@@ -3132,6 +3301,19 @@
     "transportation": "도보",
     "transportationFact": "캠퍼스는 걸어 다니기 쉽습니다. 북쪽의 워리너 홀에서 남동쪽의 켈리/쇼츠 스타디움까지 약 1.5km입니다."
   },
+  "Cranbrook Academy of Art": {
+    "airportCode": "DTW",
+    "airportInfo": "디트로이트 남서쪽 로뮬러스에 있는 디트로이트 메트로폴리탄 웨인 카운티 공항이 이 지역의 주요 공항입니다. 공항에서 차로 북쪽 블룸필드힐스까지 가면 크랜브룩입니다.",
+    "airportName": "Detroit Metropolitan Wayne County Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "미국 달러($)",
+    "funFact": "신문 발행인 조지 고프 부스와 아내 엘런 스크립스 부스는 1904년에 사들인 농장에 크랜브룩을 세우고, 조지의 아버지가 태어난 영국 크랜브룩의 이름을 붙였습니다. 캠퍼스의 상당 부분은 엘리엘 사리넨이 설계했으며, 1989년 국가 사적지(National Historic Landmark)로 지정되었습니다.",
+    "language": "영어",
+    "languageInfo": "크랜브룩의 상징은 두루미(크레인)이며, 로고의 공식 색상은 구리색과 금색입니다.",
+    "nickname": "Cranbrook",
+    "transportation": "자동차 / 도보",
+    "transportationFact": "크랜브룩은 디트로이트 북쪽 블룸필드힐스의 우드워드 애비뉴에 있으며, 대부분의 방문객이 차로 옵니다. 부지 안에서는 산책로가 아트 뮤지엄, 사리넨 하우스, 과학 연구소, 크랜브룩 하우스 정원을 이어 줍니다."
+  },
   "Yale University": {
     "airportCode": "BDL",
     "airportInfo": "하트퍼드 근처의 브래들리 공항은 뉴헤이븐에서 차로 북쪽으로 약 1시간 거리입니다. 많은 방문객이 뉴욕으로 와서 메트로노스 뉴헤이븐 라인을 타고 유니언역까지 바로 오기도 합니다.",
@@ -3547,5 +3729,18 @@
     "nickname": "램스의 본거지",
     "transportation": "도보 / Transfort MAX / Around the Horn",
     "transportationFact": "Transfort의 간선급행버스 MAX가 캠퍼스에 정차하고, Around the Horn 버스가 로리 학생회관 옆 CSU 환승센터에서 출발해 캠퍼스를 순환합니다."
+  },
+  "University of California, San Diego": {
+    "airportCode": "SAN",
+    "airportInfo": "샌디에이고 국제공항은 캠퍼스에서 남쪽으로 약 22km 떨어져 있습니다. 무료 셔틀 San Diego Flyer로 올드타운 환승센터까지 간 뒤 UC San Diego 블루라인 트롤리를 타면 북쪽 캠퍼스로 갈 수 있습니다.",
+    "airportName": "San Diego International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "미국 달러($)",
+    "funFact": "가이젤 도서관은 닥터 수스로 더 잘 알려진 시어도어 수스 가이젤과 아내 오드리의 이름을 땄습니다. 도서관에는 그의 그림, 스케치, 원고를 모은 닥터 수스 컬렉션이 있습니다.",
+    "language": "영어",
+    "languageInfo": "학교 색은 파란색과 금색이며, 운동부 이름은 트라이턴스입니다.",
+    "nickname": "UC San Diego",
+    "transportation": "도보 / 블루라인 트롤리",
+    "transportationFact": "UC San Diego 블루라인 트롤리는 UC San Diego Central Campus 역과 UC San Diego Health La Jolla 역에 정차합니다. 캠퍼스 셔틀과 보행로가 각 칼리지, 프라이스 센터, 가이젤 도서관을 연결합니다."
   }
 }

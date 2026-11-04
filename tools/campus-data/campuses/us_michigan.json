@@ -1220,5 +1220,218 @@
         "foodSpots": []
       }
     ]
+  },
+  {
+    "name": "Cranbrook Academy of Art",
+    "enumCase": "cranbrook",
+    "country": "unitedStates",
+    "aliases": [
+      "Cranbrook",
+      "Cranbrook Academy",
+      "Cranbrook Educational Community"
+    ],
+    "colors": [
+      "#9B6A45",
+      "#AD8800"
+    ],
+    "traditions": [
+      {
+        "id": "trad_cranbrook_orpheus_fountain",
+        "name": "Carl Milles's Orpheus Fountain",
+        "description": "In front of the Art Museum, eight bronze figures by Swedish sculptor Carl Milles lean in as if listening for Orpheus's music, with only the splashing water to hear. Installed in 1938, it is one of many Milles sculptures you can find on a walk around campus.",
+        "coordinates": [
+          42.5691956,
+          -83.2503662
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/586106001",
+        "source": "https://www.cranbrookartmuseum.org/wp-content/uploads/2016/05/Milles-Carl-Facts.pdf"
+      },
+      {
+        "id": "trad_cranbrook_steggy",
+        "name": "Say Hi to Steggy",
+        "description": "A life-sized stegosaurus named Steggy stands outside the Cranbrook Institute of Science as its mascot. Visitors stop for a selfie with him before heading inside.",
+        "coordinates": [
+          42.5729846,
+          -83.2500741
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/13289334",
+        "source": "https://fox2detroit.com/mornings/free-first-fridays-at-cranbrook-institute-of-science"
+      },
+      {
+        "id": "trad_cranbrook_carillon",
+        "name": "Summer Carillon Recitals",
+        "description": "Every summer since 1928, carillonneurs have played free recitals on the 50 bells in Christ Church Cranbrook's tower. Bring a lawn chair or blanket and listen from the church grounds.",
+        "coordinates": [
+          42.5668569,
+          -83.243949
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/586101305",
+        "source": "https://christchurchcranbrook.org/a-silver-bell-anniversary/"
+      }
+    ],
+    "wiki": "Cranbrook Educational Community",
+    "currency": "USD ($)",
+    "details": {
+      "nickname": "Cranbrook",
+      "airportName": "Detroit Metropolitan Wayne County Airport",
+      "airportCode": "DTW",
+      "airportInfo": "Detroit Metropolitan Wayne County Airport in Romulus, southwest of Detroit, is the main airport for the region. From there, Cranbrook is a drive north to Bloomfield Hills.",
+      "funFact": "Newspaper publisher George Gough Booth and his wife Ellen Scripps Booth built Cranbrook on a farm they bought in 1904, and named it after Cranbrook, England, the birthplace of George's father. Eliel Saarinen designed much of the campus, which became a National Historic Landmark in 1989.",
+      "language": "English",
+      "languageInfo": "Cranbrook's emblem is a crane, and its official logo colors are copper and gold.",
+      "currencyInfo": "US Dollar ($)",
+      "currencyCode": "USD",
+      "transportation": "Car / Walking",
+      "transportationFact": "Cranbrook sits on Woodward Avenue in Bloomfield Hills, north of Detroit, and most visitors arrive by car. On campus, walking paths link the Art Museum, Saarinen House, the Institute of Science and the gardens of Cranbrook House."
+    },
+    "buildings": [
+      {
+        "id": "campus_cranbrook_saarinen_house",
+        "wiki": "Cranbrook Educational Community",
+        "name": "Saarinen House",
+        "description": "Eliel Saarinen designed this house and studio in the late 1920s and lived here with his wife Loja from 1930 to 1950. Its restored rooms hold his furniture and her textiles, and the Art Museum runs tours from spring to fall.",
+        "architect": "Eliel Saarinen",
+        "yearBuilt": 1930,
+        "address": "39221 Woodward Ave, Bloomfield Hills, MI 48304",
+        "oldUse": "Home and studio of Eliel and Loja Saarinen",
+        "newUse": "Historic house museum",
+        "buildingStyle": "Art Deco",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          42.5679334,
+          -83.2510196
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/664400136"
+      },
+      {
+        "id": "campus_cranbrook_art_museum",
+        "wiki": "Cranbrook Educational Community",
+        "name": "Cranbrook Art Museum",
+        "description": "Completed in 1942, the museum and the Academy library are joined by a tall peristyle, the last major part of Saarinen's plan for the Academy of Art. It is one of America's first museums of contemporary art and holds work by Charles and Ray Eames and Harry Bertoia.",
+        "architect": "Eliel Saarinen",
+        "yearBuilt": 1942,
+        "address": "39221 Woodward Ave, Bloomfield Hills, MI 48304",
+        "oldUse": "Art museum and Academy of Art library",
+        "newUse": "Art museum and library",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          42.5690806,
+          -83.2495834
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/562637428"
+      },
+      {
+        "id": "campus_cranbrook_house",
+        "wiki": "Cranbrook Educational Community",
+        "name": "Cranbrook House",
+        "description": "Albert Kahn designed this 1908 Arts and Crafts manor for the Booths, Cranbrook's founders. Volunteers lead tours of the first-floor rooms, and its 40 acres of gardens open to the public from May through October.",
+        "architect": "Albert Kahn",
+        "yearBuilt": 1908,
+        "address": "380 Lone Pine Rd, Bloomfield Hills, MI 48304",
+        "oldUse": "Home of George and Ellen Scripps Booth",
+        "newUse": "House museum, gardens and offices",
+        "buildingStyle": "English Arts and Crafts",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          42.569376,
+          -83.2455596
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/562909986"
+      },
+      {
+        "id": "campus_cranbrook_christ_church",
+        "wiki": "Cranbrook Educational Community",
+        "name": "Christ Church Cranbrook",
+        "description": "George Booth paid for this towered stone church, consecrated in 1928 as the focal point of Cranbrook. It was designed by the successor firm of Bertram Goodhue, with Oscar H. Murray as chief designer, and it is still an Episcopal parish.",
+        "architect": "Bertram Grosvenor Goodhue Associates (Oscar H. Murray)",
+        "yearBuilt": 1928,
+        "address": "470 Church Rd, Bloomfield Hills, MI 48304",
+        "oldUse": "Church",
+        "newUse": "Episcopal church",
+        "buildingStyle": "Gothic Revival",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          42.5668569,
+          -83.243949
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/way/586101305"
+      },
+      {
+        "id": "campus_cranbrook_kingswood_school",
+        "wiki": "Cranbrook Schools",
+        "name": "Kingswood School Cranbrook",
+        "description": "Eliel Saarinen designed every detail of this girls' school, from its copper roofs to its furniture, with help from Loja, Eero and Pipsan Saarinen. Classes began here in 1931, and it is often called his masterpiece at Cranbrook.",
+        "architect": "Eliel Saarinen",
+        "yearBuilt": 1931,
+        "address": "39221 Woodward Ave, Bloomfield Hills, MI 48304",
+        "oldUse": "Kingswood School for Girls",
+        "newUse": "Cranbrook Kingswood Upper School",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          42.5724786,
+          -83.2439147
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/7399469"
+      },
+      {
+        "id": "campus_cranbrook_school",
+        "wiki": "Cranbrook Schools",
+        "name": "Cranbrook School",
+        "description": "Built between 1926 and 1931 for Cranbrook School for Boys, these buildings are set around a quadrangle and dominated by the octagonal tower of Hoey Hall. Saarinen mixed Collegiate Gothic forms with Arts and Crafts, Scandinavian and Art Deco details.",
+        "architect": "Eliel Saarinen with Henry Scripps Booth and J. Robert F. Swanson",
+        "yearBuilt": 1927,
+        "address": "39221 Woodward Ave, Bloomfield Hills, MI 48304",
+        "oldUse": "Cranbrook School for Boys",
+        "newUse": "Cranbrook Kingswood Upper School",
+        "buildingStyle": "Collegiate Gothic",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          42.5677399,
+          -83.2541642
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/12519150"
+      },
+      {
+        "id": "campus_cranbrook_institute_of_science",
+        "wiki": "Cranbrook Educational Community",
+        "name": "Cranbrook Institute of Science",
+        "description": "The science museum moved into Eliel Saarinen's building in 1938. Steven Holl added a new entrance and exhibit wing in 1998, and the museum has a planetarium and a 20-inch telescope for public viewing nights.",
+        "architect": "Eliel Saarinen; Steven Holl (1998 addition)",
+        "yearBuilt": 1938,
+        "address": "39221 Woodward Ave, Bloomfield Hills, MI 48304",
+        "oldUse": "Science museum",
+        "newUse": "Science museum",
+        "buildingStyle": "Unknown",
+        "numberOfStories": 0,
+        "height": 0,
+        "foodSpots": [],
+        "sharedArticle": true,
+        "coordinates": [
+          42.5729846,
+          -83.2500741
+        ],
+        "coordinatesSource": "https://www.openstreetmap.org/relation/13289334"
+      }
+    ]
   }
 ]

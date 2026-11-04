@@ -120,5 +120,9 @@ extension CityLocation.City {
         .michiganTech: 171128,        // Michigan Technological University
         .oaklandUniversity: 171571,   // Oakland University
         .centralMichigan: 169248,     // Central Michigan University
+        // Added with UC San Diego and Cranbrook on 2026-11-04. UC San Diego's is from Wikidata (P1771); Cranbrook's
+        // Wikidata entry has none, so it was found by name in the Scorecard. Both returned the same school in the right city.
+        .ucsd: 110680,                // University of California-San Diego
+        .cranbrook: 169424,           // Cranbrook Academy of Art
     ]
 }

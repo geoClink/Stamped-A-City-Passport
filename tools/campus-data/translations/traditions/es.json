@@ -1568,5 +1568,75 @@
       "name": "Celebrating Life Pow Wow",
       "description": "Cada marzo, Central celebra el Celebrating Life Pow Wow en el McGuirk Arena, con danzas tradicionales, tambores, artesanía y comida. Está abierto al público, así que ven a verlo."
     }
+  },
+  "Cranbrook Academy of Art": {
+    "trad_cranbrook_orpheus_fountain": {
+      "name": "La fuente de Orfeo de Carl Milles",
+      "description": "Delante del Art Museum, ocho figuras de bronce del escultor sueco Carl Milles se inclinan como si escucharan la música de Orfeo, aunque solo se oye el agua. Instalada en 1938, es una de las muchas esculturas de Milles que se encuentran paseando por el campus."
+    },
+    "trad_cranbrook_steggy": {
+      "name": "Saluda a Steggy",
+      "description": "Un estegosaurio de tamaño real llamado Steggy, la mascota del Cranbrook Institute of Science, espera delante del museo. Los visitantes se hacen un selfi con él antes de entrar."
+    },
+    "trad_cranbrook_carillon": {
+      "name": "Recitales de carillón en verano",
+      "description": "Cada verano desde 1928, los carillonistas ofrecen recitales gratuitos con las 50 campanas de la torre de Christ Church Cranbrook. Lleva una silla plegable o una manta y escucha desde los jardines de la iglesia."
+    }
+  },
+  "University of California, San Diego": {
+    "trad_ucsd_sun_god": {
+      "name": "Nos vemos en el Sun God",
+      "description": "El colorido pájaro de Niki de Saint Phalle sobre un arco de hormigón fue la primera obra de la Stuart Collection, instalada en 1983. Los estudiantes quedan allí y lo disfrazan en ocasiones especiales, y es la mascota del Sun God Festival, al final de las clases de primavera."
+    },
+    "trad_ucsd_snake_path": {
+      "name": "Recorre el Snake Path",
+      "description": "El camino de Alexis Smith, de unos 170 metros y con escamas de pizarra, serpentea colina arriba desde el Warren Mall hasta la Geisel Library. Por el camino se pasa junto a un libro de granito con un verso de El paraíso perdido de Milton y un pequeño huerto de frutales."
+    },
+    "trad_ucsd_seuss_statue": {
+      "name": "Dr. Seuss y el Gato Ensombrerado",
+      "description": "En el nivel del foro de la Geisel Library, una estatua de bronce de tamaño natural muestra a Theodor Seuss Geisel con el Gato Ensombrerado asomado a su hombro. Es la foto favorita de quienes visitan la biblioteca que lleva su nombre."
+    }
+  },
+  "University of Coimbra": {
+    "trad_coimbra_cabra": {
+      "name": "A Cabra, la campana de la torre",
+      "description": "La más conocida de las cuatro campanas de la Torre de la Universidad se apoda «a Cabra» y antes llamaba a los estudiantes a clase. Puedes subir por las estrechas escaleras de la torre para ver Coímbra y el río Mondego."
+    },
+    "trad_coimbra_joanina_bats": {
+      "name": "Los murciélagos de la biblioteca",
+      "description": "Dos colonias de pequeños murciélagos viven en la Biblioteca Joanina desde hace unos dos siglos y medio y se comen los insectos que dañarían los libros. Cada tarde, el personal cubre las mesas con piel para protegerlas."
+    },
+    "trad_coimbra_serenata": {
+      "name": "La serenata en las escaleras de la Catedral Vieja",
+      "description": "A medianoche, al comienzo de la Queima das Fitas en mayo, los estudiantes cantan fado de Coímbra en las escaleras de la Catedral Vieja. Miles de personas se reúnen en la plaza para escuchar en silencio."
+    }
+  },
+  "University of Salamanca": {
+    "trad_salamanca_frog": {
+      "name": "Encuentra la rana",
+      "description": "Entre las tallas de la fachada plateresca de la universidad se esconde una pequeña rana sobre una calavera. Dice la leyenda que quien la encuentra aprobará los exámenes, así que los visitantes la buscan desde el Patio de Escuelas."
+    },
+    "trad_salamanca_cielo": {
+      "name": "El Cielo de Salamanca",
+      "description": "En las Escuelas Menores se puede ver el «Cielo de Salamanca» de Fernando Gallego, un cielo pintado con constelaciones y signos del zodiaco que cubría parte de la bóveda de la antigua biblioteca universitaria."
+    },
+    "trad_salamanca_vitores": {
+      "name": "Busca los vítores",
+      "description": "Los vítores, monogramas rojos formados con las letras de la palabra «victor», se pintan en los muros de la universidad para honrar a quienes se doctoran. Búscalos en el Patio de Escuelas y por las calles del casco antiguo."
+    }
+  },
+  "University of Tokyo": {
+    "trad_utokyo_sanshiro_pond": {
+      "name": "El estanque de Sanshirō",
+      "description": "Este estanque y su jardín se crearon en 1638 para los Maeda, señores del dominio de Kaga. Su apodo viene de la novela Sanshirō de Natsume Sōseki, cuyo protagonista conoce aquí a la mujer que admira; es una parada tranquila en un paseo por el campus."
+    },
+    "trad_utokyo_ginkgo_avenue": {
+      "name": "La avenida dorada de los ginkgos",
+      "description": "A finales de otoño, los ginkgos de la avenida que va de la puerta principal al Yasuda Auditorium se vuelven de un amarillo intenso. Es una de las vistas otoñales más queridas de Tokio, y la hoja de ginkgo es el emblema de la universidad."
+    },
+    "trad_utokyo_hachiko": {
+      "name": "El reencuentro de Hachikō",
+      "description": "En los terrenos de la Facultad de Agricultura, una estatua de bronce inaugurada en 2015 muestra al fiel perro Hachikō saltando para saludar a su dueño, el profesor Hidesaburō Ueno. Está justo después de la puerta principal de la facultad."
+    }
   }
 }

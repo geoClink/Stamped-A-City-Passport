@@ -64,6 +64,19 @@
     "transportation": "GVB Trams",
     "transportationFact": "El centro histórico de Ámsterdam cuenta principalmente con una extensa red de tranvías GVB azules y blancos. La ciudad es mundialmente famosa por tener más bicicletas que residentes, con senderos exclusivos que cubren casi todas las calles. Los ferries detrás de la Estación Central brindan tránsito gratuito a través del río IJ para peatones y ciclistas."
   },
+  "Antwerp": {
+    "airportCode": "BRU",
+    "airportInfo": "El aeropuerto propio de Amberes, Antwerp International, es un pequeño aeródromo a unos 5 km al sur de la ciudad, por lo que la mayoría de los visitantes vuela al aeropuerto de Bruselas, en Zaventem, el principal centro internacional de Bélgica. Desde 2012, la línea ferroviaria Diabolo une directamente el aeropuerto con Malinas y Amberes.",
+    "airportName": "Brussels Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "euros (€)",
+    "funFact": "Según la leyenda, el nombre de la ciudad viene de «lanzar la mano»: el héroe Silvio Brabo cortó la mano de un gigante cruel y la arrojó al Escalda. Amberes es además el centro del comercio mundial de diamantes: cerca del 85 % de los diamantes en bruto del mundo pasa cada año por su barrio de los diamantes.",
+    "language": "neerlandés",
+    "languageInfo": "El neerlandés es la lengua oficial de Amberes, situada en la región belga de Flandes, y también se oye el dialecto local amberino. A los habitantes de Amberes se les apoda «Sinjoren», del español «señor», un recuerdo de los nobles españoles que gobernaron la ciudad en el siglo XVII.",
+    "nickname": "'t Stad (La Ciudad)",
+    "transportation": "Tranvía y premetro",
+    "transportationFact": "De Lijn gestiona la red de tranvías de Amberes, y ocho de sus catorce líneas circulan en parte bajo tierra por los túneles del premetro de Amberes. El primer tranvía tirado por caballos de la ciudad empezó a funcionar el 25 de mayo de 1873 y unía la iglesia de Berchem con la avenida Meir."
+  },
   "Asheville": {
     "airportCode": "AVL",
     "airportInfo": "Asheville Regional (AVL) es la principal puerta de entrada a las montañas Blue Ridge. Actualmente se encuentra en la expansión 'AVL Forward', un proyecto masivo para construir una nueva terminal y puertas modernizadas para adaptarse a su estatus como uno de los aeropuertos regionales de más rápido crecimiento en los EE. UU.",
@@ -779,6 +792,19 @@
     "transportation": "Metro de Glasgow y trenes",
     "transportationFact": "El metro de Glasgow es el tercer ferrocarril subterráneo más antiguo del mundo, después del metro de Londres y el de Budapest, y el único metro totalmente subterráneo del Reino Unido. El metro lo gestiona la autoridad regional de transporte SPT, y además hay una amplia red de trenes de cercanías. Cuatro líneas ferroviarias directas unen Glasgow con Edimburgo."
   },
+  "Granada": {
+    "airportCode": "GRX",
+    "airportInfo": "El aeropuerto Federico García Lorca Granada-Jaén está junto a Chauchina y Santa Fe, a unos 15 km al oeste de la ciudad. Las obras comenzaron en 1970 y se inauguró como aeropuerto de Granada en 1972. En 2006 recibió el nombre del poeta andaluz Federico García Lorca.",
+    "airportName": "Federico García Lorca Granada Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "euros (€)",
+    "funFact": "El 2 de enero de 1492, el emir Muhammad XI, a quien los castellanos llamaban Boabdil, entregó Granada a Fernando e Isabel y puso fin al último estado musulmán de la península ibérica. La granada es el emblema heráldico de la ciudad y da nombre también a la Puerta de las Granadas.",
+    "language": "español",
+    "languageInfo": "En Granada se habla español (castellano), que se escribe con el alfabeto latino y letras como la ñ. Para saludar se dice «Hola» o «Buenos días», y para dar las gracias, «Gracias».",
+    "nickname": "La Ciudad de la Granada",
+    "transportation": "Metro (metro ligero) y autobús",
+    "transportationFact": "El Metro de Granada es una única línea de metro ligero inaugurada el 21 de septiembre de 2017. Circula bajo tierra por el centro y en superficie hasta Albolote, Maracena y Armilla, da servicio a 26 estaciones y transportó unos 17,3 millones de viajeros en 2025."
+  },
   "Guadalajara": {
     "airportCode": "GDL",
     "airportInfo": "Miguel Hidalgo y Costilla International Airport, named after the priest who launched Mexico's independence movement, is Mexico's second busiest airport. Its location near the Tequila region means some international visitors arrive specifically for Jalisco's agave landscape, also a UNESCO World Heritage Site. The airport connects directly to North American cities and several European hubs.",
@@ -805,6 +831,19 @@
     "transportation": "Metro, S-Bahn y ferris",
     "transportationFact": "Trenes, autobuses y ferris del puerto funcionan dentro del HVV, la primera asociación de transporte de este tipo en el mundo: un mismo billete sirve en todas las compañías. Solo unos 41 de los 101 km del metro (U-Bahn) son subterráneos, por eso los mayores aún lo llaman 'Hochbahn' (tren elevado)."
   },
+  "Hanoi": {
+    "airportCode": "HAN",
+    "airportInfo": "El Aeropuerto Internacional de Nội Bài está a unos 35 km al noreste del centro de Hanói y es el segundo más transitado de Vietnam, después de Tan Son Nhat en Ciudad Ho Chi Minh. Su Terminal 2, inaugurada el 4 de enero de 2015 junto con el nuevo puente Nhật Tân hacia la ciudad, atiende todos los vuelos internacionales, y es el principal centro de operaciones de Vietnam Airlines.",
+    "airportName": "Noi Bai International Airport",
+    "currencyCode": "VND",
+    "currencyInfo": "Dong vietnamita (₫)",
+    "funFact": "En 1010, el emperador Lý Thái Tổ trasladó aquí su capital y la llamó Thăng Long, «dragón ascendente», tras afirmar haber visto un dragón elevarse sobre el río Rojo. En Hanói también está el Templo de la Literatura, que albergó la primera universidad nacional de Vietnam desde 1076.",
+    "language": "Vietnamita",
+    "languageInfo": "El vietnamita se escribe con un alfabeto latino que nació del diccionario de Alexandre de Rhodes de 1651, que recogía la pronunciación de Hanói de la época. Desde 1975, el idioma en todo el país se ha ido acercando al dialecto del norte que se habla en la capital.",
+    "nickname": "Ciudad del Dragón Ascendente",
+    "transportation": "Metro de Hanói y motos",
+    "transportationFact": "El Metro de Hanói se convirtió en el primer sistema de transporte rápido de Vietnam cuando la Línea 2A abrió el 6 de noviembre de 2021, seguida por el primer tramo de la Línea 3 en agosto de 2024. Las motos siguen dominando las calles, y muchos visitantes se suben a un «xe ôm» («moto abrazo»), un mototaxi, para moverse rápido por la ciudad."
+  },
   "Havana": {
     "airportCode": "HAV",
     "airportInfo": "El Aeropuerto Internacional José Martí lleva el nombre del héroe nacional e independentista cubano. Tiene cuatro terminales, con la Terminal 3 manejando la mayoría de los vuelos internacionales.",
@@ -830,6 +869,19 @@
     "nickname": "La Hija del Báltico",
     "transportation": "Metro y Tranvías",
     "transportationFact": "Helsinki opera un sistema de tránsito compacto pero eficiente bajo la autoridad HSL, integrando metro, tranvías, autobuses y transbordadores. Los históricos tranvías naranjas circulan desde 1891."
+  },
+  "Hiroshima": {
+    "airportCode": "HIJ",
+    "airportInfo": "El aeropuerto de Hiroshima abrió en 1993 en la ciudad de Mihara, a unos 50 km al este de Hiroshima, y sustituyó a un aeropuerto costero más pequeño que no podía recibir aviones de fuselaje ancho. Es el mayor aeropuerto de las regiones de Chūgoku y Shikoku, y cerca del 80 % de su tráfico nacional vuela desde y hacia Tokio-Haneda.",
+    "airportName": "Hiroshima Airport",
+    "currencyCode": "JPY",
+    "currencyInfo": "Yen japonés (¥)",
+    "funFact": "Hiroshima se fundó en 1589 como ciudad castillo en el delta del río Ōta, y su nombre significa «isla ancha». En 1949 el Parlamento japonés la proclamó Ciudad de la Paz, y también es famosa por su propia versión en capas del okonomiyaki, una tortita salada que se cocina sobre una plancha de hierro.",
+    "language": "Japonés",
+    "languageInfo": "El japonés estándar se habla en todas partes, aunque entre ellos los vecinos suelen usar el simpático dialecto de Hiroshima. Hay muchos carteles en inglés en el Parque Memorial de la Paz, la estación y otros lugares de interés.",
+    "nickname": "Ciudad de la Paz",
+    "transportation": "Tranvías Hiroden",
+    "transportationFact": "Hiroden opera la red de tranvías más larga de Japón, con 35,1 km, y su flota es tan variada que la llaman «el museo rodante del tranvía». Sus tranvías volvieron a circular apenas tres días después del bombardeo de 1945, y algunos coches que sobrevivieron a aquel día siguen en servicio."
   },
   "Ho Chi Minh City": {
     "airportCode": "SGN",
@@ -947,6 +999,19 @@
     "nickname": "Ciudad de los Templos",
     "transportation": "Tempos y microbuses",
     "transportationFact": "Kathmandu's public transport is famously chaotic — the city lacks a metro or reliable formal transit system. Shared tempos (electric three-wheelers) and microbuses follow unofficial routes and can be hailed anywhere. Taxis are widely available and inexpensive, though negotiating the fare before boarding is advisable. A proposed metro railway for Kathmandu has been in planning for years. Walking and cycling are popular in the old city around Thamel and Durbar Square, where narrow streets exclude larger vehicles."
+  },
+  "Kraków": {
+    "airportCode": "KRK",
+    "airportInfo": "El Aeropuerto Internacional Juan Pablo II de Cracovia-Balice está en el pueblo de Balice, a unos 11 km al oeste del centro, y lleva el nombre del papa Juan Pablo II. Es el segundo aeropuerto con más tráfico de Polonia, después del de Varsovia-Chopin, y atendió a más de 11 millones de pasajeros en 2024. Un tren une la terminal con la estación Kraków Główny en unos 17 minutos.",
+    "airportName": "John Paul II Kraków-Balice International Airport",
+    "currencyCode": "PLN",
+    "currencyInfo": "esloti polaco (zł)",
+    "funFact": "Cracovia fue la capital real de Polonia hasta que el rey Segismundo III Vasa trasladó la corte a Varsovia en 1596, y su Plaza del Mercado es la plaza de mercado medieval más grande de Europa. Tanto el bagel como su pariente en forma de anillo, el obwarzanek krakowski, nacieron en Cracovia.",
+    "language": "Polaco",
+    "languageInfo": "El polaco es una lengua eslava occidental que se escribe con el alfabeto latino y letras adicionales como ł, ż y ś. Saluda con un 'Dzień dobry' (buenos días) o, entre amigos, con un informal 'Cześć'.",
+    "nickname": "la Capital Real",
+    "transportation": "Tranvías y autobuses",
+    "transportationFact": "El transporte público se basa en una densa red de tranvías y autobuses gestionada por una empresa municipal, y los tranvías eléctricos circulan desde 1901. Gran parte del casco antiguo es peatonal, así que los tranvías lo rodean en lugar de atravesarlo."
   },
   "Kuala Lumpur": {
     "airportCode": "KUL",
@@ -1104,6 +1169,19 @@
     "transportation": "ALSA Electrico",
     "transportationFact": "Marrakech ha introducido autobuses eléctricos de alta tecnología en sus principales rutas para promover la sostenibilidad medioambiental. Los 'Petit Taxis' locales son una forma popular de moverse dentro de la ciudad, y cada automóvil debe ser del color ocre característico. Los 'Caleches' tirados por caballos siguen siendo una forma tradicional y pintoresca de recorrer las murallas históricas de la ciudad y la Medina."
   },
+  "Marseille": {
+    "airportCode": "MRS",
+    "airportInfo": "El aeropuerto de Marsella Provenza está a unos 27 km al noroeste de la ciudad, en Marignane, y es el quinto aeropuerto de Francia por tráfico de pasajeros. En las décadas de 1920 y 1930 fue base de hidroaviones, y en junio de 2024 se inauguró una nueva Terminal 1. Un autobús lo conecta con la cercana estación de tren de Vitrolles Aéroport Marseille Provence.",
+    "airportName": "Marseille Provence Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "euros (€)",
+    "funFact": "Fundada hacia el año 600 a. C. por colonos griegos de Focea, Marsella es la ciudad más antigua de Francia y uno de los asentamientos habitados sin interrupción más antiguos de Europa. El himno nacional francés también lleva su nombre: «La Marsellesa» se llama así porque los voluntarios de Marsella fueron los primeros en cantarla en París en 1792.",
+    "language": "francés",
+    "languageInfo": "El francés se habla en todas partes, pero preste atención al dialecto marsellés, una variedad melodiosa del francés influida por el provenzal. En occitano la ciudad se llama Marselha, y el árabe y el occitano figuran entre las muchas lenguas que se oyen en este animado puerto mediterráneo.",
+    "nickname": "La Ciudad Focense",
+    "transportation": "Metro y tranvía",
+    "transportationFact": "El metro de Marsella tiene dos líneas y 31 estaciones: la línea 1 se inauguró en 1977 y la línea 2 en 1984, y, como algunas líneas de París, sus trenes circulan sobre neumáticos. En 2007 se sumó un tranvía moderno, y ambos sistemas los gestiona la RTM."
+  },
   "Medellín": {
     "airportCode": "MDE",
     "airportInfo": "José María Córdova International Airport is the primary airport serving the Medellín metropolitan area and the second busiest in Colombia. It is located in the mountains above the Aburrá Valley, and its high altitude approach through mountain terrain makes landing here one of the more technically demanding in South America. A metro cable car system (Metrocable) connects the airport area to the city below.",
@@ -1168,6 +1246,19 @@
     "nickname": "Capital de la moda",
     "transportation": "Tranvías de Milán",
     "transportationFact": "Milán todavía opera una flota de tranvías 'Tipo 1928' que cuentan con sus bancos de madera originales. El Metro de Milán consta de cinco líneas, incluida la línea M4 más nueva y totalmente automatizada. Los trenes de cercanías Trenord conectan el centro de la ciudad con el hermoso distrito italiano de los lagos y los suburbios de Lombardía."
+  },
+  "Milwaukee": {
+    "airportCode": "MKE",
+    "airportInfo": "El Milwaukee Mitchell International se encuentra a unos 9 km al sur del centro y ocupa 2.314 acres con cinco pistas. Nació en 1920 como Hamilton Airport y lleva el nombre del general Billy Mitchell, que creció en Milwaukee y a menudo es considerado el padre de la Fuerza Aérea de EE. UU.",
+    "airportName": "Milwaukee Mitchell International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "Dólar estadounidense ($)",
+    "funFact": "Milwaukee llegó a albergar cuatro de las mayores cervecerías del mundo, Schlitz, Blatz, Pabst y Miller, y durante muchos años produjo más cerveza que ninguna otra ciudad, lo que le valió el apodo de Brew City. Cada verano, su orilla del lago acoge además Summerfest, un festival de 11 días considerado uno de los mayores festivales de música del mundo.",
+    "language": "Inglés",
+    "languageInfo": "Se habla inglés con un amable acento del Medio Oeste. La herencia alemana es profunda: hacia 1900, cerca de un tercio de los habitantes tenía raíces alemanas, y Milwaukee llegó a ser conocida como la más alemana de las ciudades estadounidenses.",
+    "nickname": "Brew City",
+    "transportation": "Tranvía The Hop",
+    "transportationFact": "El tranvía The Hop empezó a funcionar el 2 de noviembre de 2018 y une la Milwaukee Intermodal Station con el centro, el Lower East Side y el Historic Third Ward a lo largo de su M-Line de 2,1 millas. En 2024 se sumó la corta L-Line del frente lacustre, y el viaje sigue siendo gratuito."
   },
   "Minnesota": {
     "airportCode": "MSP",
@@ -1468,6 +1559,19 @@
     "transportation": "Tren ligero MAX",
     "transportationFact": "El sistema de tren ligero MAX incluye la estación de tránsito más profunda de América del Norte a 260 pies bajo tierra. Los tranvías de Portland ofrecen un recorrido frecuente por el centro de la ciudad y el innovador Pearl District. Los autobuses TriMet y el tren de cercanías WES completan la sólida red de transporte público de la región."
   },
+  "Porto": {
+    "airportCode": "OPO",
+    "airportInfo": "El aeropuerto Francisco Sá Carneiro, antes llamado Pedras Rubras, se inauguró en 1945 y está a unos 11 km al noroeste de la Torre de los Clérigos. En 2025 atendió a casi 17 millones de pasajeros y es base de easyJet y Ryanair. La línea E del metro va directamente de la terminal al centro de la ciudad.",
+    "airportName": "Francisco Sá Carneiro Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "euros (€)",
+    "funFact": "El nombre romano de Oporto, Portus Cale, suele citarse como el origen del nombre de Portugal. A sus vecinos se les llama «tripeiros» (comedores de tripas) porque, según cuenta la tradición, la ciudad entregó su mejor carne a las expediciones navales y se quedó con las tripas; el guiso Tripas à moda do Porto sigue siendo su plato emblemático.",
+    "language": "portugués",
+    "languageInfo": "El portugués es una lengua romance que se escribe con el alfabeto latino y signos como la ã y la ç. Para saludar se dice «Bom dia» (buenos días) o un simple «Olá», y para dar las gracias, «Obrigado» (u «Obrigada» si eres mujer).",
+    "nickname": "La Ciudad Invicta",
+    "transportation": "Metro (metro ligero)",
+    "transportationFact": "El Metro de Oporto se inauguró en diciembre de 2002 como una red de metro ligero que circula bajo tierra en el centro y en superficie hacia las afueras. Hoy sus seis líneas dan servicio a 85 estaciones en unos 70 km, y en 2013 recibió el Premio Veronica Rudge Green de Diseño Urbano de la Universidad de Harvard."
+  },
   "Porto Alegre": {
     "airportCode": "GRU",
     "airportInfo": "Como principal puerta de entrada internacional a Brasil, Guarulhos es el aeropuerto más transitado de Sudamérica por volumen de pasajeros. Es un enorme complejo que se modernizó significativamente para la Copa del Mundo y los Juegos Olímpicos, y cuenta con una terminal exclusiva para vuelos internacionales de larga distancia con amplias comodidades de lujo.",
@@ -1545,6 +1649,19 @@
     "nickname": "Bahía de los Humos",
     "transportation": "Straeto Buses & Taxis",
     "transportationFact": "Reykjavik has a bus system (Straeto) covering the city and surrounding suburbs, but the city is small enough that many residents walk or cycle much of the time. Car rental is almost essential for exploring Iceland's dramatic landscapes beyond the city. In winter, geothermally heated outdoor swimming pools are a central part of Reykjavik social life — the public pools operate year-round regardless of weather and are as much community centers as exercise facilities."
+  },
+  "Riga": {
+    "airportCode": "RIX",
+    "airportInfo": "El aeropuerto RIX de Riga está en el municipio de Mārupe, a unos 10 km al oeste del centro, y es el mayor de los países bálticos, con vuelos directos a 107 destinos en septiembre de 2024. Se construyó en 1973 para sustituir al anticuado aeropuerto de Spilve y es la base principal de la aerolínea nacional airBaltic.",
+    "airportName": "RIX Riga Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "euro (€)",
+    "funFact": "Los edificios modernistas (Art Nouveau) suponen cerca de un tercio de todos los edificios del centro de Riga, la mayor concentración de este estilo del mundo según el historiador Jānis Krastiņš. Riga fue Capital Europea de la Cultura en 2014.",
+    "language": "Letón",
+    "languageInfo": "El letón es una lengua báltica que se escribe con el alfabeto latino y letras adicionales como ā, č y ļ. Para saludar se dice 'Sveiki' y para felicitar, 'Apsveicam'.",
+    "nickname": "la Capital del Art Nouveau",
+    "transportation": "Tranvías, trolebuses y autobuses",
+    "transportationFact": "El transporte público lo gestiona Rīgas Satiksme, con tranvías, autobuses y trolebuses en una amplia red de líneas por toda la ciudad. Desde 2012 una única empresa municipal opera también los microbuses que antes llevaban operadores privados."
   },
   "Rio de Janeiro": {
     "airportCode": "GRU",
@@ -1897,6 +2014,19 @@
     "transportation": "El TTC",
     "transportationFact": "La Comisión de Tránsito de Toronto opera la red de tranvías más grande y transitada de América. El sistema de metro consta de dos líneas principales que forman el núcleo de los movimientos de tránsito de la ciudad. GO Transit ofrece una enorme red regional de trenes y autobuses que conectan Toronto con el resto de Ontario."
   },
+  "Tulsa": {
+    "airportCode": "TUL",
+    "airportInfo": "El Tulsa International se encuentra a unos 8 km al noreste del centro y abrió en 1928, después de que empresarios locales reunieran dinero para comprar terrenos para un aeródromo municipal. La ciudad lo compró en 1929, adoptó su nombre actual en 1963 y hoy es la base mundial de mantenimiento de American Airlines.",
+    "airportName": "Tulsa International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "Dólar estadounidense ($)",
+    "funFact": "Durante gran parte del siglo XX, Tulsa fue conocida como la Capital Mundial del Petróleo, y el dinero del crudo financió una oleada de rascacielos e iglesias art déco que todavía definen el centro. A principios de siglo, el barrio de Greenwood fue además el hogar de Black Wall Street, una de las comunidades negras más prósperas de Estados Unidos.",
+    "language": "Inglés",
+    "languageInfo": "Se habla inglés con un relajado acento de Oklahoma. El nombre de la ciudad procede de Tallasi, una palabra de la lengua muscogee, y la mayor parte de Tulsa sigue estando dentro de la Nación Muscogee (Creek), con zonas en las naciones Osage y Cherokee.",
+    "nickname": "Capital Mundial del Petróleo",
+    "transportation": "Autobuses MetroLink Tulsa",
+    "transportationFact": "MetroLink Tulsa, llamada Tulsa Transit hasta 2024, opera 18 líneas de autobús desde centros de conexión en el centro y en Midtown. Su primera línea de autobús de tránsito rápido, la Aero, empezó a circular en 2019 por Peoria Avenue, y está prevista una segunda línea rápida, bautizada en honor a la Ruta 66, a lo largo de East 11th Street."
+  },
   "Valencia": {
     "airportCode": "VLC",
     "airportInfo": "El aeropuerto de Valencia, también conocido como aeropuerto de Manises, está a unos 8 km al oeste de la ciudad, en el municipio de Manises. En 2025 atendió a 11,8 millones de pasajeros en 140 rutas por Europa, Canadá y el norte de África, la mayoría internacionales. Es el segundo aeropuerto con más tráfico de la Comunidad Valenciana, después del de Alicante.",
@@ -2053,6 +2183,19 @@
     "transportation": "A pie / Tren a Redfern / Autobús",
     "transportationFact": "La estación de Redfern está a poca distancia a pie del campus, y los autobuses recorren Parramatta Road y City Road desde el centro de la ciudad."
   },
+  "University of Tokyo": {
+    "airportCode": "HND",
+    "airportInfo": "Haneda y Narita dan servicio a Tokio; Haneda es el más cercano al centro. Trenes y metro conectan ambos aeropuertos con estaciones cercanas al campus de Hongō.",
+    "airportName": "Tokyo Haneda Airport",
+    "currencyCode": "JPY",
+    "currencyInfo": "Yen japonés (¥)",
+    "funFact": "El campus de Hongō ocupa la antigua residencia en Edo de los Maeda, señores de Kaga. Su famosa Puerta Roja, el Akamon, se construyó en 1827 para recibir a una hija del shōgun que se casó con un miembro de la familia.",
+    "language": "Japonés",
+    "languageInfo": "El japonés es la lengua de la vida diaria. Los estudiantes llaman a la universidad Tōdai, abreviatura de Tōkyō Daigaku, y el Akamon es desde hace mucho un apodo de la propia universidad.",
+    "nickname": "Tōdai",
+    "transportation": "A pie / Tokyo Metro",
+    "transportationFact": "La estación Tōdai-mae de la línea Namboku está a unos tres minutos a pie del campus. Las estaciones de Hongō-sanchōme, Nezu y Yushima están a unos ocho minutos cada una."
+  },
   "University of Texas at Austin": {
     "airportCode": "AUS",
     "airportInfo": "Austin–Bergstrom está al sureste del centro de Austin. El campus queda justo al norte del centro, a un corto trayecto en coche o autobús desde el aeropuerto.",
@@ -2156,6 +2299,32 @@
     "nickname": "La universidad de Linneo",
     "transportation": "A pie / Bicicleta",
     "transportationFact": "Los edificios históricos de la universidad se agrupan alrededor de la catedral y del University Park, todos a poca distancia a pie unos de otros. Upsala es además una ciudad famosa por lo bien que se recorre en bicicleta."
+  },
+  "University of Coimbra": {
+    "airportCode": "OPO",
+    "airportInfo": "Los grandes aeropuertos más cercanos son el Francisco Sá Carneiro de Oporto y el Humberto Delgado de Lisboa. Desde ambas ciudades, los trenes de la línea Lisboa–Oporto paran en la estación de Coimbra-B.",
+    "airportName": "Porto Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "Euro (€)",
+    "funFact": "El rey Dionisio fundó la universidad en 1290, y en 1537 se trasladó definitivamente a Coímbra, al antiguo palacio real en lo alto de la colina. La Universidad de Coímbra – Alta y Sofía es Patrimonio de la Humanidad de la UNESCO desde 2013.",
+    "language": "Portugués",
+    "languageInfo": "Las clases y la vida diaria son en portugués. El latín fue la lengua oficial de la enseñanza hasta la reforma de 1772, y por eso el largo balcón con columnas del palacio se llama Via Latina.",
+    "nickname": "UC",
+    "transportation": "A pie / autobuses urbanos",
+    "transportationFact": "La vieja universidad está en lo alto de una colina empinada sobre la Baixa (ciudad baja), así que hay escaleras y calles estrechas. Los autobuses urbanos suben a la ciudad alta, y en la Alta todo queda a poca distancia a pie."
+  },
+  "University of Salamanca": {
+    "airportCode": "MAD",
+    "airportInfo": "Madrid-Barajas es la principal puerta de entrada internacional a Salamanca. Desde Madrid salen trenes y autobuses hacia el oeste hasta Salamanca.",
+    "airportName": "Adolfo Suárez Madrid–Barajas Airport",
+    "currencyCode": "EUR",
+    "currencyInfo": "Euro (€)",
+    "funFact": "La Universidad de Salamanca se fundó en 1218 y es la universidad más antigua de España que sigue en funcionamiento. Su edificio principal, las Escuelas Mayores, se terminó en 1533 en torno a un claustro junto a las catedrales.",
+    "language": "Español",
+    "languageInfo": "Las clases y la vida diaria son en español, y Salamanca es una de las ciudades de España más populares para aprenderlo.",
+    "nickname": "USAL",
+    "transportation": "A pie",
+    "transportationFact": "El casco antiguo es compacto y en gran parte peatonal. La Plaza Mayor, la Casa de las Conchas, la Clerecía y el Patio de Escuelas están a pocos minutos a pie unos de otros."
   },
   "Florida Southern College": {
     "airportCode": "TPA",
@@ -3132,6 +3301,19 @@
     "transportation": "A pie",
     "transportationFact": "El campus es fácil de recorrer a pie: Warriner Hall, en el norte, está a unos 1,5 km del Kelly/Shorts Stadium, en el sureste."
   },
+  "Cranbrook Academy of Art": {
+    "airportCode": "DTW",
+    "airportInfo": "El Aeropuerto Metropolitano de Detroit, en Romulus, al suroeste de Detroit, es el principal de la región. Desde allí se llega a Cranbrook en coche, hacia el norte hasta Bloomfield Hills.",
+    "airportName": "Detroit Metropolitan Wayne County Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "Dólar estadounidense ($)",
+    "funFact": "El editor de periódicos George Gough Booth y su esposa Ellen Scripps Booth construyeron Cranbrook en una granja que compraron en 1904 y le pusieron el nombre de Cranbrook, en Inglaterra, ciudad natal del padre de George. Eliel Saarinen diseñó gran parte del campus, declarado National Historic Landmark en 1989.",
+    "language": "Inglés",
+    "languageInfo": "El emblema de Cranbrook es una grulla, y los colores oficiales de su logotipo son el cobre y el oro.",
+    "nickname": "Cranbrook",
+    "transportation": "Coche / A pie",
+    "transportationFact": "Cranbrook está en Woodward Avenue, en Bloomfield Hills, al norte de Detroit, y la mayoría de los visitantes llega en coche. Dentro del recinto, senderos peatonales unen el Art Museum, la Saarinen House, el Institute of Science y los jardines de Cranbrook House."
+  },
   "Yale University": {
     "airportCode": "BDL",
     "airportInfo": "Bradley, cerca de Hartford, está a una hora en coche al norte de New Haven. Muchos visitantes también vuelan a Nueva York y toman la New Haven Line de Metro-North directamente hasta Union Station.",
@@ -3547,5 +3729,18 @@
     "nickname": "La casa de los Rams",
     "transportation": "A pie / Transfort MAX / Around the Horn",
     "transportationFact": "La línea de autobús rápido MAX de Transfort da servicio al campus, y el autobús Around the Horn recorre el campus desde el CSU Transit Center, junto al Lory Student Center."
+  },
+  "University of California, San Diego": {
+    "airportCode": "SAN",
+    "airportInfo": "El Aeropuerto Internacional de San Diego está a unos 22 km al sur del campus. El autobús gratuito San Diego Flyer une el aeropuerto con el Old Town Transit Center, donde el tranvía UC San Diego Blue Line sube hacia el campus.",
+    "airportName": "San Diego International Airport",
+    "currencyCode": "USD",
+    "currencyInfo": "Dólar estadounidense ($)",
+    "funFact": "La Geisel Library lleva el nombre de Audrey y Theodor Seuss Geisel, más conocido como Dr. Seuss. Guarda la Dr. Seuss Collection, con sus dibujos, bocetos y manuscritos.",
+    "language": "Inglés",
+    "languageInfo": "Los colores de la universidad son el azul y el dorado, y sus equipos son los Tritons.",
+    "nickname": "UC San Diego",
+    "transportation": "A pie / tranvía Blue Line",
+    "transportationFact": "El tranvía UC San Diego Blue Line para en las estaciones UC San Diego Central Campus y UC San Diego Health La Jolla. Lanzaderas y paseos peatonales conectan los colleges, el Price Center y la Geisel Library."
   }
 }
