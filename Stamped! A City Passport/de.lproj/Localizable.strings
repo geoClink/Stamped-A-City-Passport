@@ -845,6 +845,17 @@
 "Which city or campus?" = "Welche Stadt oder welcher Campus?";
 "Open ${city}" = "${city} öffnen";
 
+/* Accessibility on a landmark's page: step-free access from OpenStreetMap */
+"Accessibility" = "Barrierefreiheit";
+"Step-free access" = "Stufenloser Zugang";
+"Accessible toilets" = "Barrierefreie Toiletten";
+"Yes" = "Ja";
+"Partly" = "Teilweise";
+"No" = "Nein";
+"Mapped by OpenStreetMap volunteers and may be out of date. Check with the venue before you go." = "Von Freiwilligen in OpenStreetMap erfasst und vielleicht nicht mehr aktuell. Frag vor dem Besuch am besten direkt nach.";
+"View on OpenStreetMap" = "Auf OpenStreetMap ansehen";
+"Opens this place on openstreetmap.org" = "Öffnet diesen Ort auf openstreetmap.org";
+
 /* Menu bar and keyboard shortcuts (Mac, iPad with a keyboard) */
 "New Trip" = "Neue Reise";
 "New Window" = "Neues Fenster";

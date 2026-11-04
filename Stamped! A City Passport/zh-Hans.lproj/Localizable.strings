@@ -845,6 +845,17 @@
 "Which city or campus?" = "哪个城市或校园？";
 "Open ${city}" = "打开${city}";
 
+/* Accessibility on a landmark's page: step-free access from OpenStreetMap */
+"Accessibility" = "无障碍";
+"Step-free access" = "无台阶通道";
+"Accessible toilets" = "无障碍卫生间";
+"Yes" = "是";
+"Partly" = "部分";
+"No" = "否";
+"Mapped by OpenStreetMap volunteers and may be out of date. Check with the venue before you go." = "由 OpenStreetMap 志愿者标注，可能已过时。出行前请向场馆确认。";
+"View on OpenStreetMap" = "在 OpenStreetMap 上查看";
+"Opens this place on openstreetmap.org" = "在 openstreetmap.org 上打开此地点";
+
 /* Menu bar and keyboard shortcuts (Mac, iPad with a keyboard) */
 "New Trip" = "新建行程";
 "New Window" = "新建窗口";

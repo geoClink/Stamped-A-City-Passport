@@ -428,6 +428,8 @@ extension BuildingDetailView {
                 BuildingNoteField(buildingID: building.id, noteText: $noteText, isHighContrast: isHighContrast)
             }
             aboutSection
+            // Step-free access from OpenStreetMap; hidden when OSM doesn't say
+            LandmarkAccessibilitySection(building: building, isHighContrast: isHighContrast)
             BuildingPhotoGallery(building: building, isHighContrast: isHighContrast)
             // US landmarks only; hidden when the Library of Congress has nothing for it
             HistoricPhotosSection(building: building, city: viewModel.city, isHighContrast: isHighContrast)

@@ -845,6 +845,17 @@
 "Which city or campus?" = "어느 도시 또는 캠퍼스인가요?";
 "Open ${city}" = "${city} 열기";
 
+/* Accessibility on a landmark's page: step-free access from OpenStreetMap */
+"Accessibility" = "접근성";
+"Step-free access" = "계단 없는 출입";
+"Accessible toilets" = "장애인 화장실";
+"Yes" = "예";
+"Partly" = "일부";
+"No" = "아니요";
+"Mapped by OpenStreetMap volunteers and may be out of date. Check with the venue before you go." = "OpenStreetMap 자원봉사자가 입력한 정보로, 최신이 아닐 수 있습니다. 방문 전에 장소에 확인하세요.";
+"View on OpenStreetMap" = "OpenStreetMap에서 보기";
+"Opens this place on openstreetmap.org" = "openstreetmap.org에서 이 장소를 엽니다";
+
 /* Menu bar and keyboard shortcuts (Mac, iPad with a keyboard) */
 "New Trip" = "새 여행";
 "New Window" = "새로운 윈도우";

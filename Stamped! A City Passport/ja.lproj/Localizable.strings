@@ -845,6 +845,17 @@
 "Which city or campus?" = "どの都市またはキャンパスですか？";
 "Open ${city}" = "${city}を開く";
 
+/* Accessibility on a landmark's page: step-free access from OpenStreetMap */
+"Accessibility" = "バリアフリー";
+"Step-free access" = "段差のないアクセス";
+"Accessible toilets" = "車いす対応トイレ";
+"Yes" = "はい";
+"Partly" = "一部のみ";
+"No" = "いいえ";
+"Mapped by OpenStreetMap volunteers and may be out of date. Check with the venue before you go." = "OpenStreetMapのボランティアが登録した情報のため、最新でない場合があります。訪問前に施設へご確認ください。";
+"View on OpenStreetMap" = "OpenStreetMapで見る";
+"Opens this place on openstreetmap.org" = "この場所をopenstreetmap.orgで開きます";
+
 /* Menu bar and keyboard shortcuts (Mac, iPad with a keyboard) */
 "New Trip" = "新しいトリップ";
 "New Window" = "新規ウインドウ";
