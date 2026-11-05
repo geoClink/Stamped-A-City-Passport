@@ -6457,10 +6457,10 @@
     "paris-eiffel-tower": {
       "city": "Paris",
       "name": "Eiffel Tower",
-      "latitude": 48.856463,
-      "longitude": 2.3061652,
+      "latitude": 48.858222,
+      "longitude": 2.2945,
       "confidence": "high",
-      "reason": "ok"
+      "reason": "manual: geocoder returned the Champ de Mars centre, ~1 km from the tower"
     },
     "paris-louvre-pyramid": {
       "city": "Paris",
