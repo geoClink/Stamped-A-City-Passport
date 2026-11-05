@@ -52,7 +52,7 @@ actor CitySoundService {
             URLQueryItem(name: "filter", value: "license:\"Creative Commons 0\" duration:[30 TO 600]"),
             URLQueryItem(name: "sort", value: "rating_desc"),
             URLQueryItem(name: "fields", value: "id,name,username,license,previews"),
-            URLQueryItem(name: "page_size", value: "5"),
+            URLQueryItem(name: "page_size", value: "15"),
             URLQueryItem(name: "token", value: key),
         ]
         guard let url = components.url,
@@ -66,12 +66,18 @@ actor CitySoundService {
     /// sound's own licence is checked as well, since the app earns money.
     nonisolated static func firstSound(from data: Data) -> CitySound? {
         guard let result = try? JSONDecoder().decode(SearchResponse.self, from: data) else { return nil }
-        for sound in result.results where isCC0(sound.license) {
+        for sound in result.results where isCC0(sound.license) && isPlainStreetSound(sound.name) {
             guard let preview = URL(string: sound.previews.previewHQMP3),
                   let page = URL(string: "https://freesound.org/s/\(sound.id)/") else { continue }
             return CitySound(name: sound.name, author: sound.username, previewURL: preview, pageURL: page)
         }
         return nil
+    }
+
+    /// Sound designers' moody pieces rank highly too, but a tour wants an ordinary street
+    nonisolated static func isPlainStreetSound(_ name: String) -> Bool {
+        let moody = #"\b(dark|horror|scary|creepy|thriller|eerie|drone|tension|cinematic|experiment\w*)\b"#
+        return name.range(of: moody, options: [.regularExpression, .caseInsensitive]) == nil
     }
 
     /// Freesound names a licence by its URL or, in some responses, by its title
