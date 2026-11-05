@@ -10,6 +10,7 @@ struct Tally_AVPApp: App {
 
     @State private var immersionStyle: ImmersionStyle = .mixed
     @State private var panoramaImmersionStyle: ImmersionStyle = .full
+    @State private var pastImmersionStyle: ImmersionStyle = .full
 
     init() {
         // Finish any tip that completed while the app was closed (or after Ask to Buy)
@@ -75,5 +76,13 @@ struct Tally_AVPApp: App {
             }
         }
         .immersionStyle(selection: $panoramaImmersionStyle, in: .full)
+
+        // ── Step into the Past: an old film or photos of the landmark around you ──
+        ImmersiveSpace(id: PastImmersiveView.spaceID, for: String.self) { $buildingID in
+            if let buildingID {
+                PastImmersiveView(buildingID: buildingID)
+            }
+        }
+        .immersionStyle(selection: $pastImmersionStyle, in: .full)
     }
 }

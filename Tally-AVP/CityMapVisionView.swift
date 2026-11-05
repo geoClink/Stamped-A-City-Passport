@@ -43,6 +43,8 @@ struct CityMapVisionView: View {
     @State private var currentCamera: MapCamera?
     /// Camera moves for the old map, which isn't driven by `position`
     @State private var oldMapCameraRequest: HistoricMapView.CameraRequest?
+    /// Old Library of Congress photos floated over their landmarks on the old map
+    @State private var oldPhotos: [String: URL] = [:]
 
     private var mappableBuildings: [Building] {
         store.buildings(for: cityName).filter { $0.latitude != nil && $0.longitude != nil }
@@ -67,8 +69,10 @@ struct CityMapVisionView: View {
             }
         }
         .ornament(visibility: showsOldMap ? .visible : .hidden, attachmentAnchor: .scene(.top)) {
-            HistoricMapControls(year: $oldMapYear, opacity: $oldMapOpacity)
+            HistoricMapControls(year: $oldMapYear, opacity: $oldMapOpacity,
+                                showsPhotoCredit: !oldPhotos.isEmpty)
         }
+        .task(id: showsOldMap) { if showsOldMap { await loadOldPhotos() } }
         .navigationTitle(cityName)
         // Is the 3D model on this device, downloadable, or missing?
         .task(id: cityName) { await models.refresh(cityName) }
@@ -81,7 +85,12 @@ struct CityMapVisionView: View {
                     if tourTask == nil { startTour() } else { stopTour() }
                 } label: {
                     if tourTask == nil {
-                        Label("Play Tour", systemImage: "play.fill")
+                        // With the old map on, the tour is a time walk: each stop in its own year
+                        if showsOldMap {
+                            Label("Time Walk", systemImage: "figure.walk.motion")
+                        } else {
+                            Label("Play Tour", systemImage: "play.fill")
+                        }
                     } else {
                         Label("Stop Tour", systemImage: "stop.fill")
                     }
@@ -181,7 +190,8 @@ struct CityMapVisionView: View {
                 id: building.id, title: building.name,
                 coordinate: CLLocationCoordinate2D(latitude: building.latitude!, longitude: building.longitude!),
                 systemImage: visited ? "checkmark" : "building.columns",
-                color: visited ? .orange : .gray)
+                color: visited ? .orange : .gray,
+                photoURL: oldPhotos[building.id])
         }
         let placePins = store.customPlaces(in: cityName).map { place in
             HistoricMapView.Pin(id: "place:\(place.id)", title: place.name, coordinate: place.coordinate,
@@ -202,6 +212,21 @@ struct CityMapVisionView: View {
             },
             onCameraChange: { currentCamera = $0 }
         )
+    }
+
+    /// One old photo per US landmark (the Library of Congress surveys only cover the US),
+    /// fetched one at a time so loc.gov isn't flooded.
+    private func loadOldPhotos() async {
+        for building in mappableBuildings where oldPhotos[building.id] == nil {
+            guard !Task.isCancelled else { return }
+            guard LibraryOfCongressService.cityAndState(from: building.address) != nil else { continue }
+            let images = await LibraryOfCongressService.shared.images(
+                buildingID: building.id, name: building.name,
+                address: building.address, cityName: cityName)
+            if let photo = images.first(where: { !$0.isDrawing }) {
+                oldPhotos[building.id] = photo.thumbnailURL
+            }
+        }
     }
 
     private var liveMap: some View {
@@ -304,6 +329,10 @@ struct CityMapVisionView: View {
         tourTask = Task {
             for building in stops {
                 guard !Task.isCancelled, let lat = building.latitude, let lon = building.longitude else { break }
+                // Time walk: the old map turns to the year the landmark was built
+                if showsOldMap, building.hasKnownYear {
+                    oldMapYear = HistoricMap.clampedYear(building.yearBuilt)
+                }
                 flyTo(building, at: CLLocationCoordinate2D(latitude: lat, longitude: lon))
                 // Let the camera arrive before the story starts
                 try? await Task.sleep(for: .seconds(1.8))
@@ -442,6 +471,8 @@ struct LandmarkCard: View {
 
     /// Apple's street-level imagery at the landmark, or nil where Apple has none
     @State private var lookAroundScene: MKLookAroundScene?
+    @State private var showingAsk = false
+    @Environment(\.openImmersiveSpace) private var openImmersiveSpace
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -504,6 +535,9 @@ struct LandmarkCard: View {
         }
         .padding(24)
         .task(id: building.id) { await fetchLookAroundScene() }
+        .sheet(isPresented: $showingAsk) {
+            AskBuildingView(building: building, cityName: cityName)
+        }
     }
 
     private var actionButtons: some View {
@@ -515,6 +549,16 @@ struct LandmarkCard: View {
             }
             .tint(.orange)
             PanoramaButton(building: building)
+            // Ask the building a question; it answers from Stamped's facts
+            Button { showingAsk = true } label: {
+                Label("Ask", systemImage: "bubble.left.and.text.bubble.right")
+            }
+            // Old film or photos all around you, with the story read aloud
+            Button {
+                Task { await openImmersiveSpace(id: PastImmersiveView.spaceID, value: building.id) }
+            } label: {
+                Label("Step into the Past", systemImage: "film")
+            }
             Button(action: onWishlist) {
                 // Typed as LocalizedStringKey so both titles get translated
                 let title: LocalizedStringKey = isWishlisted ? "Saved" : "Want to Go"

@@ -22,6 +22,9 @@ import UniformTypeIdentifiers
 enum HistoricMap {
     static let years = [1850, 1900, 1925, 1950]
     static let defaultYear = 1900
+    /// The old map can show any year in this range (the time walk uses each landmark's own)
+    static let yearRange = 1800...2000
+    static func clampedYear(_ year: Int) -> Int { min(max(year, yearRange.lowerBound), yearRange.upperBound) }
     static let credit = "Old map: © OpenHistoricalMap contributors (CC0)"
     static let creditURL = URL(string: "https://www.openhistoricalmap.org/copyright")!
 }
@@ -37,9 +40,12 @@ struct HistoricMapView: UIViewRepresentable {
         let coordinate: CLLocationCoordinate2D
         let systemImage: String
         let color: UIColor
+        /// An old photo of the landmark, floated above its pin
+        var photoURL: URL?
 
         static func == (lhs: Pin, rhs: Pin) -> Bool {
             lhs.id == rhs.id && lhs.systemImage == rhs.systemImage && lhs.color == rhs.color
+                && lhs.photoURL == rhs.photoURL
         }
     }
 
@@ -70,6 +76,8 @@ struct HistoricMapView: UIViewRepresentable {
         mapView.delegate = context.coordinator
         mapView.register(MKMarkerAnnotationView.self,
                          forAnnotationViewWithReuseIdentifier: Coordinator.pinID)
+        mapView.register(PhotoAnnotationView.self,
+                         forAnnotationViewWithReuseIdentifier: Coordinator.photoID)
         mapView.setCamera(Self.mkCamera(initialCamera), animated: false)
         context.coordinator.showYear(year, on: mapView)
         context.coordinator.showPins(pins, on: mapView)
@@ -81,7 +89,7 @@ struct HistoricMapView: UIViewRepresentable {
         let coordinator = context.coordinator
         coordinator.parent = self
         if coordinator.year != year { coordinator.showYear(year, on: mapView) }
-        coordinator.setOpacity(opacity)
+        coordinator.setOpacity(opacity, on: mapView)
         if coordinator.pins != pins { coordinator.showPins(pins, on: mapView) }
         if let cameraRequest, cameraRequest != coordinator.lastRequest {
             coordinator.lastRequest = cameraRequest
@@ -96,6 +104,7 @@ struct HistoricMapView: UIViewRepresentable {
 
     final class Coordinator: NSObject, MKMapViewDelegate {
         static let pinID = "landmark"
+        static let photoID = "old-photo"
 
         var parent: HistoricMapView
         var year: Int?
@@ -115,7 +124,11 @@ struct HistoricMapView: UIViewRepresentable {
             mapView.addOverlay(newOverlay, level: .aboveLabels)
         }
 
-        func setOpacity(_ opacity: Double) {
+        func setOpacity(_ opacity: Double, on mapView: MKMapView) {
+            // Old photos fade with the old map
+            for annotation in mapView.annotations where annotation is PhotoAnnotation {
+                mapView.view(for: annotation)?.alpha = opacity
+            }
             guard let renderer, abs(renderer.alpha - opacity) > 0.001 else { return }
             renderer.alpha = opacity
             renderer.setNeedsDisplay()
@@ -123,8 +136,9 @@ struct HistoricMapView: UIViewRepresentable {
 
         func showPins(_ pins: [Pin], on mapView: MKMapView) {
             self.pins = pins
-            mapView.removeAnnotations(mapView.annotations.filter { $0 is PinAnnotation })
+            mapView.removeAnnotations(mapView.annotations.filter { $0 is PinAnnotation || $0 is PhotoAnnotation })
             mapView.addAnnotations(pins.map { PinAnnotation($0) })
+            mapView.addAnnotations(pins.compactMap { pin in pin.photoURL.map { PhotoAnnotation(pin: pin, url: $0) } })
         }
 
         func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
@@ -136,6 +150,12 @@ struct HistoricMapView: UIViewRepresentable {
         }
 
         func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+            if let photo = annotation as? PhotoAnnotation {
+                let view = mapView.dequeueReusableAnnotationView(withIdentifier: Self.photoID, for: photo)
+                (view as? PhotoAnnotationView)?.show(photo.url)
+                view.alpha = parent.opacity
+                return view
+            }
             guard let annotation = annotation as? PinAnnotation else { return nil }
             let view = mapView.dequeueReusableAnnotationView(withIdentifier: Self.pinID, for: annotation)
             if let marker = view as? MKMarkerAnnotationView {
@@ -148,6 +168,11 @@ struct HistoricMapView: UIViewRepresentable {
         }
 
         func mapView(_ mapView: MKMapView, didSelect annotation: MKAnnotation) {
+            if let photo = annotation as? PhotoAnnotation {
+                mapView.deselectAnnotation(photo, animated: false)
+                parent.onSelectPin(photo.pin.id)
+                return
+            }
             guard let annotation = annotation as? PinAnnotation else { return }
             mapView.deselectAnnotation(annotation, animated: false)
             parent.onSelectPin(annotation.pin.id)
@@ -158,6 +183,50 @@ struct HistoricMapView: UIViewRepresentable {
             parent.onCameraChange(MapCamera(centerCoordinate: camera.centerCoordinate,
                                             distance: camera.centerCoordinateDistance,
                                             heading: camera.heading, pitch: camera.pitch))
+        }
+    }
+
+    final class PhotoAnnotation: NSObject, MKAnnotation {
+        let pin: Pin
+        let url: URL
+        var coordinate: CLLocationCoordinate2D { pin.coordinate }
+        init(pin: Pin, url: URL) {
+            self.pin = pin
+            self.url = url
+        }
+    }
+
+    /// An old photo in a white print border, standing above the landmark's pin
+    final class PhotoAnnotationView: MKAnnotationView {
+        private let imageView = UIImageView()
+        private var loading: Task<Void, Never>?
+
+        override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
+            super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
+            frame = CGRect(x: 0, y: 0, width: 150, height: 112)
+            backgroundColor = .white
+            layer.cornerRadius = 4
+            imageView.frame = bounds.insetBy(dx: 5, dy: 5)
+            imageView.contentMode = .scaleAspectFill
+            imageView.clipsToBounds = true
+            imageView.backgroundColor = UIColor(white: 0.85, alpha: 1)
+            addSubview(imageView)
+            // Above the pin, not on top of it
+            centerOffset = CGPoint(x: 0, y: -100)
+            displayPriority = .required
+            collisionMode = .rectangle
+        }
+
+        required init?(coder: NSCoder) { fatalError("init(coder:) is not used") }
+
+        func show(_ url: URL) {
+            loading?.cancel()
+            imageView.image = nil
+            loading = Task { [weak self] in
+                guard let (data, _) = try? await URLSession.shared.data(from: url),
+                      !Task.isCancelled else { return }
+                self?.imageView.image = UIImage(data: data)
+            }
         }
     }
 
@@ -175,6 +244,8 @@ struct HistoricMapView: UIViewRepresentable {
 struct HistoricMapControls: View {
     @Binding var year: Int
     @Binding var opacity: Double
+    /// Old photos from the Library of Congress are on the map
+    var showsPhotoCredit = false
 
     var body: some View {
         VStack(spacing: 10) {
@@ -199,6 +270,11 @@ struct HistoricMapControls: View {
             Link(HistoricMap.credit, destination: HistoricMap.creditURL)
                 .font(.caption2)
                 .foregroundStyle(.secondary)
+            if showsPhotoCredit {
+                Text("Photos: Library of Congress, Historic American Buildings Survey")
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
+            }
         }
         .padding(.horizontal, 24)
         .padding(.vertical, 14)

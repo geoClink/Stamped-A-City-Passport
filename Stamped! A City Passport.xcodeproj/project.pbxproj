@@ -120,6 +120,7 @@
 				Managers/HapticManager.swift,
 				Managers/HistoryTimelineService.swift,
 				Managers/ICloudListMerge.swift,
+				Managers/LibraryOfCongressService.swift,
 				Managers/OfflineStore.swift,
 				Managers/TipJarStore.swift,
 				Managers/VisitManager.swift,
