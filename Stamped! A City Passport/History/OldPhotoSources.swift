@@ -210,6 +210,7 @@ actor ArchiveSearch {
 
     func dpla(name: String, city: String) async -> [HistoricImage] {
         guard let key = Secrets.dplaKey else { return [] }
+        let inUS = Locale.current.region == .unitedStates
         let cacheKey = "\(name)|\(city)"
         if let cached = dplaCache[cacheKey] { return cached }
 
@@ -218,10 +219,11 @@ actor ArchiveSearch {
             URLQueryItem(name: "api_key", value: key),
             URLQueryItem(name: "sourceResource.title", value: "\"\(name.replacingOccurrences(of: "\"", with: ""))\""),
             URLQueryItem(name: "sourceResource.type", value: "image"),
+            URLQueryItem(name: "rights", value: Self.dplaRights(inUnitedStates: inUS).map { "\"\($0)\"" }.joined(separator: " OR ")),
             URLQueryItem(name: "page_size", value: "30"),
         ]
         guard let url = components.url, let data = await get(url) else { return [] }
-        let photos = Self.dplaPhotos(from: data, name: name, city: city)
+        let photos = Self.dplaPhotos(from: data, name: name, city: city, inUnitedStates: inUS)
         dplaCache[cacheKey] = photos
         return photos
     }
@@ -229,7 +231,8 @@ actor ArchiveSearch {
     /// The openly licensed old photos in a DPLA result that are of this landmark. DPLA only
     /// holds thumbnails; the full picture stays on the library's own page, linked from the
     /// credit. An undated record is left out: it may not be old at all.
-    nonisolated static func dplaPhotos(from data: Data, name: String, city: String) -> [HistoricImage] {
+    nonisolated static func dplaPhotos(from data: Data, name: String, city: String,
+                                       inUnitedStates: Bool) -> [HistoricImage] {
         guard let response = try? JSONDecoder().decode(DPLAResponse.self, from: data) else { return [] }
         var photos: [HistoricImage] = []
         for doc in response.docs ?? [] where photos.count < Self.maxPhotos {
@@ -238,7 +241,8 @@ actor ArchiveSearch {
                   !nameIsAmbiguous(name) || names(title, landmark: city),
                   let date = source?.date?.displayDate, let year = HeritageService.year(in: date),
                   year < OldPhotoSources.oldBefore,
-                  let rights = doc.rights?.values.first, let licence = Self.licence(fromRightsURL: rights),
+                  let rights = doc.rights?.values.first,
+                  let licence = Self.dplaLicence(fromRightsURL: rights, inUnitedStates: inUnitedStates),
                   let image = doc.object.flatMap(URL.init), image.scheme == "https",
                   let page = doc.isShownAt.flatMap(URL.init)
             else { continue }
@@ -251,6 +255,23 @@ actor ArchiveSearch {
                                         isDrawing: false, credit: credit, itemURL: page))
         }
         return photos
+    }
+
+    /// Most of DPLA's free photos are "No Copyright - United States": free to use there but
+    /// perhaps not elsewhere, so they're only shown on devices set to the US region
+    nonisolated static let noCopyrightUS = "http://rightsstatements.org/vocab/NoC-US/1.0/"
+
+    nonisolated static func dplaRights(inUnitedStates: Bool) -> [String] {
+        let open = ["http://creativecommons.org/publicdomain/zero/1.0/",
+                    "http://creativecommons.org/publicdomain/mark/1.0/"]
+        return inUnitedStates ? open + [noCopyrightUS] : open
+    }
+
+    nonisolated static func dplaLicence(fromRightsURL url: String, inUnitedStates: Bool) -> String? {
+        if url.lowercased().contains("rightsstatements.org/vocab/noc-us/") {
+            return inUnitedStates ? "No Copyright - United States" : nil
+        }
+        return licence(fromRightsURL: url)
     }
 
     // MARK: Network

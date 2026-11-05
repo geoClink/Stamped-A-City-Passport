@@ -127,7 +127,19 @@ final class HistoryArchiveTests: XCTestCase {
     }
 
     private func dpla(_ docs: [[String: Any]], name: String = "Brooklyn Bridge", city: String = "New York") throws -> [HistoricImage] {
-        ArchiveSearch.dplaPhotos(from: try json(["docs": docs]), name: name, city: city)
+        ArchiveSearch.dplaPhotos(from: try json(["docs": docs]), name: name, city: city, inUnitedStates: false)
+    }
+
+    /// "No Copyright - United States" may not hold elsewhere, so only US devices show it
+    func testDPLANoCopyrightUSIsForUSDevicesOnly() throws {
+        let data = try json(["docs": [dplaDoc(rights: ArchiveSearch.noCopyrightUS)]])
+        XCTAssertTrue(ArchiveSearch.dplaPhotos(from: data, name: "Brooklyn Bridge", city: "New York", inUnitedStates: false).isEmpty)
+        let photo = try XCTUnwrap(ArchiveSearch.dplaPhotos(from: data, name: "Brooklyn Bridge", city: "New York", inUnitedStates: true).first)
+        XCTAssertEqual(photo.credit, "Boston Public Library · No Copyright - United States · DPLA")
+        // The label is about the US only, so its credit is never waived
+        XCTAssertFalse(OldPhotoSources.needsNoCredit(photo))
+        XCTAssertFalse(ArchiveSearch.dplaRights(inUnitedStates: false).contains(ArchiveSearch.noCopyrightUS))
+        XCTAssertTrue(ArchiveSearch.dplaRights(inUnitedStates: true).contains(ArchiveSearch.noCopyrightUS))
     }
 
     func testDPLAKeepsOldOpenPhotosOfTheLandmark() throws {
