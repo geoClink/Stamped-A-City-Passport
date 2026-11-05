@@ -36,6 +36,10 @@ struct CityListVisionView: View {
                     total: store.buildings(for: city).count
                 )
             }
+            // Today in history at the app's landmarks and cities
+            .safeAreaInset(edge: .top) {
+                OnThisDayCard { city in selectedCity = city }
+            }
             .navigationTitle("Stamped!")
             .searchable(text: $searchText, prompt: "Search cities")
             .toolbar {

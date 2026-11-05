@@ -59,6 +59,7 @@ actor HistoryTimelineService {
     // Building ID → results (empty when there are none)
     private var timelines: [String: [HistoryEvent]] = [:]
     private var clippingCache: [String: [NewspaperClipping]] = [:]
+    private var itemIDs: [String: String] = [:]
 
     private init() {}
 
@@ -70,8 +71,7 @@ actor HistoryTimelineService {
         if let cached = timelines[building.id] { return cached }
 
         var events: [HistoryEvent] = []
-        let summary = await WikimediaService.shared.summary(for: building.name, buildingID: building.id)
-        if let title = summary.articleTitle, let itemID = await wikidataItem(title: title) {
+        if let itemID = await wikidataItemID(for: building) {
             events = await wikidataEvents(itemID: itemID)
         }
         if building.hasKnownYear, !events.contains(where: { $0.kind == .built || $0.kind == .opened }) {
@@ -84,6 +84,16 @@ actor HistoryTimelineService {
             .sorted { ($0.year, $0.date ?? .distantPast) < ($1.year, $1.date ?? .distantPast) }
         timelines[building.id] = events
         return events
+    }
+
+    /// The landmark's Wikidata item ("Q9188"), found through its Wikipedia article.
+    /// Also used by `HeritageService` for listings and Commons photos.
+    func wikidataItemID(for building: Building) async -> String? {
+        if let cached = itemIDs[building.id] { return cached }
+        let summary = await WikimediaService.shared.summary(for: building.name, buildingID: building.id)
+        guard let title = summary.articleTitle, let itemID = await wikidataItem(title: title) else { return nil }
+        itemIDs[building.id] = itemID
+        return itemID
     }
 
     /// Article title → Wikidata item ID, e.g. "Q3079894"

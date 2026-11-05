@@ -1206,3 +1206,10 @@
 "Added to %@" = "已添加到 %@";
 "Purchasing" = "正在购买";
 "Did you know? %@" = "你知道吗？%@";
+
+/* Heritage listings (Timeline) */
+"UNESCO World Heritage Site since %@" = "自%@年起列入联合国教科文组织世界遗产";
+"UNESCO World Heritage Site" = "联合国教科文组织世界遗产";
+"Text: UNESCO World Heritage Centre, CC BY-SA 3.0 IGO" = "文字：联合国教科文组织世界遗产中心，CC BY-SA 3.0 IGO";
+"Listed on the National Register of Historic Places" = "列入美国国家史迹名录";
+"See the official listing and nomination" = "查看官方登录和提名文件";

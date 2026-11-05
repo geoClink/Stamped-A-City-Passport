@@ -118,6 +118,7 @@
 				Managers/AudioStoryPlayer.swift,
 				Managers/CampusHistoryService.swift,
 				Managers/HapticManager.swift,
+				Managers/HeritageService.swift,
 				Managers/HistoryTimelineService.swift,
 				Managers/ICloudListMerge.swift,
 				Managers/LibraryOfCongressService.swift,

@@ -20,10 +20,12 @@ struct HistoryTimelineSection: View {
     @State private var events: [HistoryEvent] = []
     @State private var clippings: [NewspaperClipping] = []
     @State private var searchingPapers = false
+    /// National Register and UNESCO World Heritage listings
+    @State private var heritage = Heritage()
 
     var body: some View {
         Group {
-            if !events.isEmpty {
+            if !events.isEmpty || !heritage.isEmpty {
                 section
             } else {
                 // Nothing to show yet: a zero-height view just to run the lookup
@@ -36,8 +38,10 @@ struct HistoryTimelineSection: View {
     private func load() async {
         events = []
         clippings = []
+        heritage = Heritage()
         let service = HistoryTimelineService.shared
         events = await service.timeline(for: building)
+        heritage = await HeritageService.shared.heritage(for: building)
         guard !events.isEmpty, building.hasKnownYear,
               HistoryTimelineService.newspaperYears.contains(building.yearBuilt) else { return }
         searchingPapers = true
@@ -48,6 +52,10 @@ struct HistoryTimelineSection: View {
     private var section: some View {
         VStack(alignment: .leading, spacing: DS.Space.m) {
             DSSectionHeader("Timeline", systemImage: "clock.arrow.circlepath", isHighContrast: isHighContrast)
+
+            if !heritage.isEmpty {
+                HeritageBadges(heritage: heritage, isHighContrast: isHighContrast)
+            }
 
             VStack(alignment: .leading, spacing: 0) {
                 ForEach(events) { event in
@@ -223,5 +231,53 @@ private struct ClippingCard: View {
         }
         .buttonStyle(.plain)
         .accessibilityHint(Text("Opens the newspaper page on loc.gov"))
+    }
+}
+
+// MARK: - Listings
+
+/// Why it matters: World Heritage and National Register listings, each linked to its record
+private struct HeritageBadges: View {
+    let heritage: Heritage
+    var isHighContrast = false
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: DS.Space.m) {
+            if let site = heritage.unesco {
+                VStack(alignment: .leading, spacing: DS.Space.xs) {
+                    Label {
+                        if let year = site.yearInscribed {
+                            Text("UNESCO World Heritage Site since \(String(year))")
+                        } else {
+                            Text("UNESCO World Heritage Site")
+                        }
+                    } icon: {
+                        Image(systemName: "globe.europe.africa.fill")
+                    }
+                    .font(.subheadline.bold())
+                    if !site.summary.isEmpty {
+                        Text(verbatim: site.summary)
+                            .font(.callout)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                    if let url = site.url {
+                        Link(destination: url) {
+                            Text(verbatim: site.name).font(.caption)
+                        }
+                    }
+                    Text("Text: UNESCO World Heritage Centre, CC BY-SA 3.0 IGO")
+                        .font(.caption2)
+                        .foregroundStyle(isHighContrast ? .primary : .secondary)
+                }
+            }
+            if let url = heritage.nrhpURL {
+                VStack(alignment: .leading, spacing: DS.Space.xs) {
+                    Label("Listed on the National Register of Historic Places", systemImage: "building.columns.fill")
+                        .font(.subheadline.bold())
+                    Link("See the official listing and nomination", destination: url)
+                        .font(.caption)
+                }
+            }
+        }
     }
 }

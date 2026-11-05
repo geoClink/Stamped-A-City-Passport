@@ -1206,3 +1206,10 @@
 "Added to %@" = "%@에 추가됨";
 "Purchasing" = "구매 중";
 "Did you know? %@" = "알고 계셨나요? %@";
+
+/* Heritage listings (Timeline) */
+"UNESCO World Heritage Site since %@" = "%@년부터 유네스코 세계유산";
+"UNESCO World Heritage Site" = "유네스코 세계유산";
+"Text: UNESCO World Heritage Centre, CC BY-SA 3.0 IGO" = "글: 유네스코 세계유산센터, CC BY-SA 3.0 IGO";
+"Listed on the National Register of Historic Places" = "미국 국가사적지에 등재";
+"See the official listing and nomination" = "공식 등재 정보와 지정 신청서 보기";

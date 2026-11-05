@@ -214,16 +214,24 @@ struct CityMapVisionView: View {
         )
     }
 
-    /// One old photo per US landmark (the Library of Congress surveys only cover the US),
-    /// fetched one at a time so loc.gov isn't flooded.
+    /// One old photo per landmark, fetched one at a time so the archives aren't flooded:
+    /// the Library of Congress surveys (US only), else Wikimedia Commons (anywhere).
     private func loadOldPhotos() async {
         for building in mappableBuildings where oldPhotos[building.id] == nil {
             guard !Task.isCancelled else { return }
-            guard LibraryOfCongressService.cityAndState(from: building.address) != nil else { continue }
-            let images = await LibraryOfCongressService.shared.images(
-                buildingID: building.id, name: building.name,
-                address: building.address, cityName: cityName)
-            if let photo = images.first(where: { !$0.isDrawing }) {
+            var images: [HistoricImage] = []
+            if LibraryOfCongressService.cityAndState(from: building.address) != nil {
+                images = await LibraryOfCongressService.shared.images(
+                    buildingID: building.id, name: building.name,
+                    address: building.address, cityName: cityName).filter { !$0.isDrawing }
+            }
+            if images.isEmpty {
+                // The map has no room for each author's name, so only photos that need none
+                images = await HeritageService.shared.oldPhotos(for: building).filter {
+                    $0.credit.localizedCaseInsensitiveContains("public domain") || $0.credit.contains("CC0")
+                }
+            }
+            if let photo = images.first {
                 oldPhotos[building.id] = photo.thumbnailURL
             }
         }

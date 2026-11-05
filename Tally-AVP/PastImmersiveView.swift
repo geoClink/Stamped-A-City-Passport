@@ -145,10 +145,12 @@ struct PastImmersiveView: View {
             buildingID: place.building.id, name: place.building.name,
             address: place.building.address, cityName: place.city
         ).filter { !$0.isDrawing }
-        if images.isEmpty {
+        // Anywhere else, or when the survey has none: old photos from Wikimedia Commons
+        let photos = images.isEmpty ? await HeritageService.shared.oldPhotos(for: place.building) : images
+        if photos.isEmpty {
             content = .nothing
         } else {
-            content = .photos(images)
+            content = .photos(photos)
         }
         // The photos are silent, so the story is read over them
         storyPlayer.play(place.building)

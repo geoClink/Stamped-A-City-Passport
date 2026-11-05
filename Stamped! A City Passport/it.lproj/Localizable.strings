@@ -1206,3 +1206,10 @@
 "Added to %@" = "Aggiunto a %@";
 "Purchasing" = "Acquisto in corso";
 "Did you know? %@" = "Lo sapevi? %@";
+
+/* Heritage listings (Timeline) */
+"UNESCO World Heritage Site since %@" = "Patrimonio dell'umanità UNESCO dal %@";
+"UNESCO World Heritage Site" = "Patrimonio dell'umanità UNESCO";
+"Text: UNESCO World Heritage Centre, CC BY-SA 3.0 IGO" = "Testo: Centro del Patrimonio Mondiale UNESCO, CC BY-SA 3.0 IGO";
+"Listed on the National Register of Historic Places" = "Iscritto al Registro nazionale dei luoghi storici";
+"See the official listing and nomination" = "Vedi l'iscrizione ufficiale e la candidatura";

@@ -1206,3 +1206,10 @@
 "Added to %@" = "%@ に追加しました";
 "Purchasing" = "購入中";
 "Did you know? %@" = "ご存知ですか？%@";
+
+/* Heritage listings (Timeline) */
+"UNESCO World Heritage Site since %@" = "%@年からユネスコ世界遺産";
+"UNESCO World Heritage Site" = "ユネスコ世界遺産";
+"Text: UNESCO World Heritage Centre, CC BY-SA 3.0 IGO" = "文：ユネスコ世界遺産センター、CC BY-SA 3.0 IGO";
+"Listed on the National Register of Historic Places" = "米国国家歴史登録財に登録";
+"See the official listing and nomination" = "公式の登録情報と推薦書を見る";
