@@ -50,7 +50,7 @@ actor OnThisDayService {
         guard let feed = try? JSONDecoder().decode(Feed.self, from: data) else { return [] }
         var landmarkEvents: [DayEvent] = []
         var cityEvents: [DayEvent] = []
-        for event in feed.events {
+        for event in feed.events where isSuitable(event.text) {
             let titles = Set(event.pages.map { $0.titles.normalized.lowercased() })
             let text = event.text.lowercased()
             // A landmark: one of the event's articles is it, or the text names it in full
@@ -62,6 +62,13 @@ actor OnThisDayService {
             }
         }
         return Array((landmarkEvents + cityEvents).prefix(Self.maxEvents))
+    }
+
+    /// This card is on a travel app's home screen, so wars and deaths are left out
+    nonisolated static func isSuitable(_ text: String) -> Bool {
+        let grim = #"\b(kill\w*|dead|deaths?|die[sd]?|massacre\w*|murder\w*|executed|execution|hanged|sentenced|"#
+            + #"rape\w*|bomb\w*|terror\w*|genocide|assassinat\w*|suicide|wars?|shot|shooting|attack\w*|crash\w*)\b"#
+        return text.range(of: grim, options: [.regularExpression, .caseInsensitive]) == nil
     }
 
     nonisolated private static func landmarkMatch(titles: Set<String>, text: String,

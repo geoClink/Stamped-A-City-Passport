@@ -297,6 +297,15 @@ final class HistoryArchiveTests: XCTestCase {
         XCTAssertTrue(OnThisDayService.matchingEvents(in: data, landmarks: ["New York": ["The Met"]], cities: []).isEmpty)
     }
 
+    func testOnThisDayLeavesOutGrimEvents() throws {
+        let data = try feed([(1862, "303 Dakota warriors are sentenced to death in Paris.", ["Paris"]),
+                             (1944, "A bomb explodes in Paris.", ["Paris"]),
+                             (1920, "The World War memorial in Paris opens.", ["Paris"]),
+                             (1889, "A new tower opens in Paris.", ["Paris"])])
+        let events = OnThisDayService.matchingEvents(in: data, landmarks: [:], cities: ["Paris"])
+        XCTAssertEqual(events.map(\.year), [1889])
+    }
+
     func testOnThisDayStopsAtTheLimitAndSurvivesBadData() throws {
         let data = try feed((0..<9).map { (1900 + $0, "x", ["Paris"]) })
         XCTAssertEqual(OnThisDayService.matchingEvents(in: data, landmarks: [:], cities: ["Paris"]).count, OnThisDayService.maxEvents)
@@ -310,6 +319,12 @@ final class HistoryArchiveTests: XCTestCase {
                                     "previews": ["preview-hq-mp3": "https://cdn.freesound.org/7.mp3"]]
         if let license { sound["license"] = license }
         return try json(["results": [sound]])
+    }
+
+    func testMoodySoundsAreSkipped() {
+        XCTAssertFalse(CitySoundService.isPlainStreetSound("Dark London Night Atmo Thriller Soundscape Experiment"))
+        XCTAssertFalse(CitySoundService.isPlainStreetSound("Horror drone"))
+        XCTAssertTrue(CitySoundService.isPlainStreetSound("Busy street ambience, Paris"))
     }
 
     func testCitySoundMustBeCC0() throws {

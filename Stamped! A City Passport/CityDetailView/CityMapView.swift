@@ -882,7 +882,8 @@ struct CityMapView: View {
 
     /// Moves the card to the previous/next landmark in walking order.
     /// While touring a trip, it moves to the trip's previous/next stop instead
-    /// and the tour carries on from there.
+    /// and the tour carries on from there. A landmark tour carries on the same way,
+    /// so a time walk keeps turning the old map to each stop's year.
     private func step(by offset: Int) {
         if let trip = touringTrip, let currentIndex = tripTourStepIndex {
             let steps = tourSteps(for: trip)
@@ -891,12 +892,17 @@ struct CityMapView: View {
             startTour(of: trip, from: nextIndex, currentDay: steps[currentIndex].dayNumber)
             return
         }
+        let wasTouring = isTouring
         stopTour()
         let stops = route
         guard !stops.isEmpty else { return }
         let currentIndex = stops.firstIndex { $0.id == selectedBuilding?.id } ?? -1
         let nextIndex = (currentIndex + offset + stops.count) % stops.count
-        flyTo(stops[nextIndex])
+        if wasTouring {
+            startTour(from: nextIndex)
+        } else {
+            flyTo(stops[nextIndex])
+        }
     }
 
     private func stopLabel(for building: Building) -> String? {
@@ -932,12 +938,12 @@ struct CityMapView: View {
     #endif
 
     /// Flies to each landmark in walking order, pausing on each so its card can be read.
-    private func startTour() {
+    private func startTour(from startIndex: Int = 0) {
         let stops = route
         guard !stops.isEmpty else { return }
         startCitySound()
         tourTask = Task { @MainActor in
-            for building in stops {
+            for building in stops.dropFirst(startIndex) {
                 if Task.isCancelled { break }
                 flyTo(building, duration: 2.5)
                 try? await Task.sleep(for: .seconds(7))
