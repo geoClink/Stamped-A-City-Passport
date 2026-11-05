@@ -48,3 +48,4 @@ screenshots/
 # Detroit asset pack build output (the shrunk model and the .aar uploaded to App Store Connect)
 tools/detroit-model/output/
 Tally-AVP/Secrets.plist
+Stamped! A City Passport/Resources/Secrets.plist

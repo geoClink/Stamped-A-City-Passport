@@ -5,6 +5,7 @@
 //  Checks the city map's Play Tour order and the landmark data the Vision app loads.
 //
 
+import Foundation
 import Testing
 @testable import Tally_AVP
 
@@ -68,5 +69,32 @@ struct VisionMapTests {
     @Test func unknownCityHasNoLandmarks() {
         #expect(VisionStore.shared.buildings(for: "Atlantis").isEmpty)
         #expect(VisionStore.shared.visitedCount(for: "Atlantis") == 0)
+    }
+}
+
+/// The history code the Vision Pro shares with the iPhone (the full set is in StampedTests).
+struct VisionHistoryTests {
+
+    /// A photo the app can't use must be refused on this platform too.
+    @Test func licenceFiltersRefuseClosedLicences() {
+        #expect(!HeritageService.isFreeForCommercialUse("CC BY-NC 4.0"))
+        #expect(!HeritageService.isFreeForCommercialUse("CC BY-ND 4.0"))
+        #expect(HeritageService.isFreeForCommercialUse("CC BY-SA 4.0"))
+        #expect(ArchiveSearch.licence(fromRightsURL: "http://rightsstatements.org/vocab/InC/1.0/") == nil)
+        #expect(ArchiveSearch.licence(fromRightsURL: "http://creativecommons.org/publicdomain/zero/1.0/") == "CC0")
+    }
+
+    /// The gallery shows each photo once, in archive order.
+    @Test func galleryDropsRepeats() throws {
+        let url = try #require(URL(string: "https://example.org/a.jpg"))
+        let photo = HistoricImage(thumbnailURL: url, largeURL: url, caption: nil, isDrawing: false,
+                                  credit: "Jane Doe · CC BY 4.0 · Wikimedia Commons", itemURL: url)
+        #expect(OldPhotoSources.merged([[photo], [photo]]).count == 1)
+        #expect(!OldPhotoSources.needsNoCredit(photo))
+    }
+
+    /// Junk from the tile server is survived.
+    @Test func junkTileIsEmpty() {
+        #expect(VectorTile(data: Data("<html>".utf8)).layers.isEmpty)
     }
 }

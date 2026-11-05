@@ -38,7 +38,8 @@ struct CityListVisionView: View {
             }
             // Today in history at the app's landmarks and cities
             .safeAreaInset(edge: .top) {
-                OnThisDayCard { city in selectedCity = city }
+                OnThisDayCard(landmarks: store.buildingsByCity.mapValues { $0.map(\.name) },
+                              cities: store.cityNames) { city in selectedCity = city }
             }
             .navigationTitle("Stamped!")
             .searchable(text: $searchText, prompt: "Search cities")

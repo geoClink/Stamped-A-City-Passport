@@ -1,6 +1,6 @@
 //
 //  AskBuildingView.swift
-//  Tally-AVP
+//  Stamped! A City Passport
 //
 //  Ask the building: type or dictate a question and the landmark answers, in the
 //  first person, using only the app's own facts about it (its description, dates,
@@ -13,6 +13,17 @@ import SwiftUI
 import FoundationModels
 import AVFoundation
 
+/// Whether this device can offer Ask the building at all. Ask needs iOS 26 and a device
+/// that can run Apple Intelligence; one that can, with it switched off, is told how to turn it on.
+enum AskBuilding {
+    static var canOffer: Bool {
+        guard #available(iOS 26.0, macOS 26.0, visionOS 26.0, *) else { return false }
+        if case .unavailable(.deviceNotEligible) = SystemLanguageModel.default.availability { return false }
+        return true
+    }
+}
+
+@available(iOS 26.0, macOS 26.0, visionOS 26.0, *)
 struct AskBuildingView: View {
     let building: Building
     let cityName: String
@@ -81,14 +92,20 @@ struct AskBuildingView: View {
                 }
             }
             .padding(24)
+            .tint(.orange)
             .navigationTitle(Text("Ask \(building.name)"))
+            #if os(iOS)
+            .navigationBarTitleDisplayMode(.inline)
+            #endif
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Done") { dismiss() }
                 }
             }
         }
+        #if !os(iOS)
         .frame(minWidth: 560, minHeight: 520)
+        #endif
         .task(id: building.id) { await startSession() }
         .onDisappear { speaker.stopSpeaking(at: .immediate) }
     }
@@ -115,6 +132,10 @@ struct AskBuildingView: View {
 
     private func speak(_ text: String) {
         speaker.stopSpeaking(at: .immediate)
+        #if os(iOS)
+        // Heard even with the ringer switch off, like the landmark's story
+        try? AVAudioSession.sharedInstance().setCategory(.playback, mode: .spokenAudio, options: [.duckOthers])
+        #endif
         let utterance = AVSpeechUtterance(string: text)
         utterance.voice = AVSpeechSynthesisVoice(language: Locale.current.language.minimalIdentifier)
         speaker.speak(utterance)

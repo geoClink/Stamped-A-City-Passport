@@ -1232,3 +1232,34 @@
 "Quotes are read automatically from old scans and may contain errors." = "Las citas se leen automáticamente de escaneos antiguos y pueden contener errores.";
 "Read the page" = "Leer la página";
 "Opens the newspaper page on loc.gov" = "Abre la página del periódico en loc.gov";
+
+/* History on the iPhone: Then & Now, Ask the building, old photos, On This Day, city sounds */
+"Year" = "Año";
+"Now" = "Ahora";
+"Old map" = "Mapa antiguo";
+"%lld percent" = "%lld por ciento";
+"Old photos: Library of Congress, Wikimedia Commons, Europeana, Smithsonian; public domain" = "Fotos antiguas: Library of Congress, Wikimedia Commons, Europeana, Smithsonian; dominio público";
+"On This Day" = "Tal día como hoy";
+"From Wikipedia (CC BY-SA)" = "De Wikipedia (CC BY-SA)";
+"Opens %@" = "Abre %@";
+"Then & Now" = "Antes y ahora";
+"Time Walk" = "Paseo en el tiempo";
+"Ask" = "Preguntar";
+"Ask %@" = "Preguntar a %@";
+"Ask %@ a question" = "Haz una pregunta a %@";
+"Apple Intelligence Is Off" = "Apple Intelligence está desactivado";
+"Turn on Apple Intelligence in Settings to ask landmarks questions." = "Activa Apple Intelligence en Ajustes para hacer preguntas a los monumentos.";
+"Answers come only from Stamped's facts about this landmark, written on your device." = "Las respuestas solo usan los datos de Stamped sobre este monumento y se escriben en tu dispositivo.";
+"When were you built?" = "¿Cuándo te construyeron?";
+"Who designed you?" = "¿Quién te diseñó?";
+"What were you used for?" = "¿Para qué se te usaba?";
+"What happened here?" = "¿Qué pasó aquí?";
+"Sorry, I couldn't answer that just now." = "Lo siento, ahora no puedo responder a eso.";
+"Sound: %@ by %@, CC0, Freesound" = "Sonido: %1$@ de %2$@, CC0, Freesound";
+"Old Photos" = "Fotos antiguas";
+"View Source" = "Ver la fuente";
+"Turn Off City Sounds" = "Desactivar sonidos de la ciudad";
+"Ask this landmark a question" = "Haz una pregunta a este monumento";
+"Step into the Past" = "Viaja al pasado";
+"Film: Prelinger Archives, Internet Archive · Public domain" = "Película: Prelinger Archives, Internet Archive · Dominio público";
+"No old film or photos of this landmark yet." = "Aún no hay películas ni fotos antiguas de este monumento.";

@@ -116,7 +116,7 @@ actor LibraryOfCongressService {
     /// True when a search result is this building: the title names it (as one of its
     /// comma-separated parts, so "Bellefontaine Cemetery, Wainwright Tomb" doesn't count as
     /// the Wainwright Building), ends in the same state, and is in the same town.
-    nonisolated private static func isMatch(_ result: LoCSearchResult, names: Set<String>, town: String, state: String?) -> Bool {
+    nonisolated static func isMatch(_ result: LoCSearchResult, names: Set<String>, town: String, state: String?) -> Bool {
         let parts = result.titleParts
         guard result.surveyID != nil, result.accessRestricted != true, parts.count >= 2 else { return false }
 
@@ -303,7 +303,7 @@ nonisolated private struct LoCSearchResponse: Decodable {
     }
 }
 
-nonisolated private struct LoCSearchResult: Decodable {
+nonisolated struct LoCSearchResult: Decodable {
     let title: String?
     /// "https://www.loc.gov/item/mo0297/" for surveys; essays and other pages have other URLs
     let url: String?

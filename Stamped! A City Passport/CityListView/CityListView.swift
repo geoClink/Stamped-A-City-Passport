@@ -337,6 +337,13 @@ struct CityListView: View {
 
     /// Ends the search (keyboard down, list back to browsing) and switches the filter
     /// to the picked place's continent, or Campuses, so it shows highlighted in the sidebar.
+    /// A city named by the On This Day card
+    func openCity(named name: String) {
+        guard let city = viewModel.allCities.first(where: { $0.name == name }) else { return }
+        selectedCity = city
+        finishSearch(showing: city)
+    }
+
     private func finishSearch(showing city: CityLocation.City) {
         isSearchActive = false
         searchText = ""

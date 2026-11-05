@@ -2,102 +2,80 @@
 //  HistoricPhotosSection.swift
 //  Stamped! A City Passport
 //
-//  "Historic Photos & Drawings" on a US landmark's page: survey photos and measured
-//  drawings from the Library of Congress (HABS/HAER). A row of thumbnails; tap one to
-//  see it large with its caption, credit and a link to the survey on loc.gov.
+//  Old photos of a landmark from every archive (see `OldPhotoSources`), on its page on
+//  iPhone and on its card on Vision Pro. A row of thumbnails, each with its own credit;
+//  tap one to see it large with its caption, credit and a link to its archive's page.
 //
-//  Shows nothing at all outside the US, while loading, or when no survey matches.
+//  Shows nothing at all while loading or when no archive has the landmark.
 //
 
 import SwiftUI
 
 struct HistoricPhotosSection: View {
     let building: Building
-    let city: CityLocation.City
+    let cityName: String
+    /// The Library of Congress only covers the US; nil lets the address decide
+    var inUnitedStates: Bool? = nil
+    /// The Library of Congress's measured drawings, as well as photos
+    var includesDrawings = true
     var isHighContrast = false
 
     @State private var images: [HistoricImage] = []
     @State private var loaded = false
     @State private var selected: HistoricImage?
-    @State private var browserLink: BrowserLink?
 
     // Thumbnails grow with the text size, like the food cards
     @ScaledMetric(relativeTo: .subheadline) private var thumbnailHeight: CGFloat = 140
 
     var body: some View {
-        // HABS/HAER only covers the United States (cities and campuses)
-        if city.country == .unitedStates {
-            if !images.isEmpty {
-                section
-            } else if !loaded {
-                // Nothing to show yet: a zero-height view just to run the lookup
-                Color.clear
-                    .frame(height: 0)
-                    .task(id: building.id) { await load() }
-            }
+        if !images.isEmpty {
+            section
+        } else if !loaded {
+            // Nothing to show yet: a zero-height view just to run the lookup
+            Color.clear
+                .frame(height: 0)
+                .task(id: building.id) { await load() }
         }
     }
 
     private func load() async {
-        images = await LibraryOfCongressService.shared.images(
-            buildingID: building.id,
-            name: building.name,
-            address: building.address,
-            cityName: city.name
-        )
+        images = await OldPhotoSources.gallery(for: building, cityName: cityName, inUnitedStates: inUnitedStates,
+                                               includingDrawings: includesDrawings)
         loaded = true
     }
 
     private var section: some View {
         VStack(alignment: .leading, spacing: DS.Space.m) {
-            DSSectionHeader("Historic Photos & Drawings", systemImage: "photo.on.rectangle.angled", isHighContrast: isHighContrast)
+            DSSectionHeader(includesDrawings ? "Historic Photos & Drawings" : "Old Photos", systemImage: "photo.on.rectangle.angled", isHighContrast: isHighContrast)
 
             ScrollView(.horizontal, showsIndicators: false) {
                 // Lazy, so thumbnails further along the row load only when scrolled to
-                LazyHStack(spacing: DS.Space.m) {
+                LazyHStack(alignment: .top, spacing: DS.Space.m) {
                     ForEach(images) { image in
-                        Button {
-                            selected = image
-                        } label: {
-                            HistoricThumbnail(image: image, height: thumbnailHeight, isHighContrast: isHighContrast)
+                        VStack(alignment: .leading, spacing: DS.Space.xs) {
+                            Button {
+                                selected = image
+                            } label: {
+                                HistoricThumbnail(image: image, height: thumbnailHeight, isHighContrast: isHighContrast)
+                            }
+                            .buttonStyle(.plain)
+                            .accessibilityLabel(image.accessibilityText)
+                            .accessibilityHint(Text("Shows the image larger"))
+                            // Every photo keeps its own credit in view; the large view has it in full
+                            Text(verbatim: image.credit)
+                                .font(.caption2)
+                                .foregroundStyle(isHighContrast ? Color.primary : Color.secondary)
+                                .lineLimit(2)
+                                .frame(width: thumbnailHeight * 1.3, alignment: .leading)
                         }
-                        .buttonStyle(.plain)
-                        .accessibilityLabel(image.accessibilityText)
-                        .accessibilityHint(Text("Shows the image larger"))
                     }
                 }
             }
-
-            creditLine
         }
         .sheet(item: $selected) { image in
             HistoricImageViewer(image: image, buildingName: building.name, isHighContrast: isHighContrast)
                 // A photo viewer: a big sheet on iPad, so the picture is shown large
                 .dsLargeSheet()
-        }
-        .inAppBrowser(item: $browserLink)
-    }
-
-    /// "Library of Congress, HABS MO-1140" and a link to the survey. Usually one survey;
-    /// a building documented in two lists both credits.
-    private var creditLine: some View {
-        let credits = images.map(\.credit).reduce(into: [String]()) { list, credit in
-            if !list.contains(credit) { list.append(credit) }
-        }
-        return VStack(alignment: .leading, spacing: DS.Space.xs) {
-            Text(credits.joined(separator: " · "))
-                .font(.caption)
-                .foregroundStyle(isHighContrast ? Color.primary : Color.secondary)
-                .fixedSize(horizontal: false, vertical: true)
-            if let itemURL = images.first?.itemURL {
-                Button {
-                    browserLink = BrowserLink(url: itemURL)
-                } label: {
-                    Label("View on loc.gov", systemImage: "arrow.up.right.square")
-                        .font(.caption.bold())
-                }
-                .foregroundStyle(isHighContrast ? Color.primary : DS.Palette.accent)
-            }
         }
     }
 }
@@ -153,7 +131,7 @@ private struct HistoricThumbnail: View {
 
 // MARK: - Large view
 
-private struct HistoricImageViewer: View {
+struct HistoricImageViewer: View {
     let image: HistoricImage
     let buildingName: String
     var isHighContrast = false
@@ -186,7 +164,7 @@ private struct HistoricImageViewer: View {
                     .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
 
                     VStack(alignment: .leading, spacing: DS.Space.s) {
-                        // Captions come from the survey itself, in English
+                        // Captions come from the archive itself, usually in English
                         if let caption = image.caption {
                             Text(caption)
                                 .font(.body)
@@ -198,7 +176,7 @@ private struct HistoricImageViewer: View {
                         Button {
                             browserLink = BrowserLink(url: image.itemURL)
                         } label: {
-                            Label("View on loc.gov", systemImage: "arrow.up.right.square")
+                            Label("View Source", systemImage: "arrow.up.right.square")
                                 .font(.subheadline.bold())
                         }
                         .foregroundStyle(isHighContrast ? Color.primary : DS.Palette.accent)

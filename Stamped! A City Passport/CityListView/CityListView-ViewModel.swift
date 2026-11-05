@@ -218,7 +218,16 @@ extension CityListView {
                 }
             }
             // My College List now leads the Campuses filter below, so it no longer has a card here
-            quickActions
+            VStack(spacing: 0) {
+                quickActions
+                // Hidden unless today's events involve one of the app's places
+                OnThisDayCard(landmarks: Dictionary(viewModel.allCities.map { ($0.name, $0.buildings.map(\.name)) },
+                                                    uniquingKeysWith: +),
+                              // Stamped's "Minnesota" is Minneapolis; the feed's article is the whole state
+                              cities: viewModel.allCities.filter { $0 != .minnesota }.map(\.name),
+                              topGap: DS.Space.m,
+                              onSelectCity: openCity(named:))
+            }
         }
     }
 

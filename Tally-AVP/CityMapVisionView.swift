@@ -30,6 +30,9 @@ struct CityMapVisionView: View {
     @State private var selectedFeature: MapFeature?
     /// The guided tour: flies to each landmark in turn and reads its story aloud
     @State private var tourTask: Task<Void, Never>?
+    /// The city's street sounds under the tour, named while they play
+    @State private var citySound: CitySound?
+    @State private var citySoundLoop = CitySoundLoop()
     @ObservedObject private var storyPlayer = AudioStoryPlayer.shared
     /// Explore Together: shares the open landmark with friends on FaceTime
     private let sharePlay = SharePlayExplorer.shared
@@ -73,6 +76,16 @@ struct CityMapVisionView: View {
                                 showsPhotoCredit: !oldPhotos.isEmpty)
         }
         .task(id: showsOldMap) { if showsOldMap { await loadOldPhotos() } }
+        .overlay(alignment: .bottom) {
+            if let citySound {
+                Text("Sound: \(citySound.name) by \(citySound.author), CC0, Freesound")
+                    .font(.caption2)
+                    .padding(.horizontal, 14)
+                    .padding(.vertical, 6)
+                    .background(.thinMaterial, in: Capsule())
+                    .padding(.bottom, 12)
+            }
+        }
         .navigationTitle(cityName)
         // Is the 3D model on this device, downloadable, or missing?
         .task(id: cityName) { await models.refresh(cityName) }
@@ -324,6 +337,7 @@ struct CityMapVisionView: View {
     /// stop starts when the story ends. Stop Tour, closing the card or leaving ends it.
     private func startTour() {
         let stops = Self.tourOrder(mappableBuildings)
+        startCitySound()
         tourTask = Task {
             for building in stops {
                 guard !Task.isCancelled, let lat = building.latitude, let lon = building.longitude else { break }
@@ -340,6 +354,7 @@ struct CityMapVisionView: View {
                 try? await Task.sleep(for: .seconds(1))
             }
             tourTask = nil
+            stopCitySound()
         }
     }
 
@@ -347,6 +362,23 @@ struct CityMapVisionView: View {
         tourTask?.cancel()
         tourTask = nil
         storyPlayer.stop()
+        stopCitySound()
+    }
+
+    /// A CC0 street ambience under the tour, when there's a Freesound key
+    private func startCitySound() {
+        Task {
+            guard let sound = await CitySoundService.shared.sound(for: cityName),
+                  let file = await CitySoundService.shared.localFile(for: sound),
+                  tourTask != nil else { return }
+            citySoundLoop.play(file)
+            citySound = sound
+        }
+    }
+
+    private func stopCitySound() {
+        citySoundLoop.stop()
+        citySound = nil
     }
 
     /// A short walking order: start at the landmark nearest the middle of the city, then always
@@ -523,6 +555,10 @@ struct LandmarkCard: View {
                     .clipShape(RoundedRectangle(cornerRadius: 16))
                     .accessibilityLabel(Text("Look Around"))
             }
+
+            // Old photos from every archive, each with its credit
+            HistoricPhotosSection(building: building, cityName: cityName, includesDrawings: false)
+                .id(building.id)
 
             // Built, opened, listed, and what the papers said at the time
             HistoryTimelineSection(building: building, cityName: cityName)

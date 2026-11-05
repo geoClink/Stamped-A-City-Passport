@@ -1,6 +1,6 @@
 //
 //  HistoricMap.swift
-//  Tally-AVP
+//  Stamped! A City Passport
 //
 //  Then vs. Now: an old-style map of the city in a chosen year, faded over today's
 //  3D map with a slider. The streets, buildings, parks and water come from
@@ -65,6 +65,8 @@ struct HistoricMapView: UIViewRepresentable {
     let initialCamera: MapCamera
     let cameraRequest: CameraRequest?
     let onSelectPin: (String) -> Void
+    /// An old photo above a pin was tapped; without this it acts like its pin
+    var onSelectPhoto: ((String) -> Void)? = nil
     let onCameraChange: (MapCamera) -> Void
 
     func makeCoordinator() -> Coordinator { Coordinator(self) }
@@ -110,6 +112,7 @@ struct HistoricMapView: UIViewRepresentable {
         var year: Int?
         var pins: [Pin] = []
         var lastRequest: CameraRequest?
+        private var pinsCanShow = false
         private var overlay: HistoricTileOverlay?
         private var renderer: MKTileOverlayRenderer?
 
@@ -127,15 +130,27 @@ struct HistoricMapView: UIViewRepresentable {
         func setOpacity(_ opacity: Double, on mapView: MKMapView) {
             // Old photos fade with the old map
             for annotation in mapView.annotations where annotation is PhotoAnnotation {
-                mapView.view(for: annotation)?.alpha = opacity
+                mapView.view(for: annotation)?.setOpacity(opacity)
             }
             guard let renderer, abs(renderer.alpha - opacity) > 0.001 else { return }
             renderer.alpha = opacity
-            renderer.setNeedsDisplay()
         }
+
+        /// The 3D map drops pins added before it has settled, so they wait for that
+        private func mapSettled(_ mapView: MKMapView) {
+            guard !pinsCanShow else { return }
+            pinsCanShow = true
+            Task { @MainActor in
+                try? await Task.sleep(for: .milliseconds(300))
+                self.showPins(self.pins, on: mapView)
+            }
+        }
+
+        func mapViewDidFinishRenderingMap(_ mapView: MKMapView, fullyRendered: Bool) { mapSettled(mapView) }
 
         func showPins(_ pins: [Pin], on mapView: MKMapView) {
             self.pins = pins
+            guard pinsCanShow else { return }
             mapView.removeAnnotations(mapView.annotations.filter { $0 is PinAnnotation || $0 is PhotoAnnotation })
             mapView.addAnnotations(pins.map { PinAnnotation($0) })
             mapView.addAnnotations(pins.compactMap { pin in pin.photoURL.map { PhotoAnnotation(pin: pin, url: $0) } })
@@ -153,13 +168,17 @@ struct HistoricMapView: UIViewRepresentable {
             if let photo = annotation as? PhotoAnnotation {
                 let view = mapView.dequeueReusableAnnotationView(withIdentifier: Self.photoID, for: photo)
                 (view as? PhotoAnnotationView)?.show(photo.url)
-                view.alpha = parent.opacity
+                view.setOpacity(parent.opacity)
                 return view
             }
             guard let annotation = annotation as? PinAnnotation else { return nil }
             let view = mapView.dequeueReusableAnnotationView(withIdentifier: Self.pinID, for: annotation)
             if let marker = view as? MKMarkerAnnotationView {
+                #if os(macOS)
+                marker.glyphImage = NSImage(systemSymbolName: annotation.pin.systemImage, accessibilityDescription: nil)
+                #else
                 marker.glyphImage = UIImage(systemName: annotation.pin.systemImage)
+                #endif
                 marker.markerTintColor = annotation.pin.color
                 marker.displayPriority = .required
                 marker.titleVisibility = .adaptive
@@ -167,10 +186,20 @@ struct HistoricMapView: UIViewRepresentable {
             return view
         }
 
+        #if os(macOS)
+        func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+            if let annotation = view.annotation { selected(annotation, on: mapView) }
+        }
+        #else
         func mapView(_ mapView: MKMapView, didSelect annotation: MKAnnotation) {
+            selected(annotation, on: mapView)
+        }
+        #endif
+
+        private func selected(_ annotation: MKAnnotation, on mapView: MKMapView) {
             if let photo = annotation as? PhotoAnnotation {
                 mapView.deselectAnnotation(photo, animated: false)
-                parent.onSelectPin(photo.pin.id)
+                (parent.onSelectPhoto ?? parent.onSelectPin)(photo.pin.id)
                 return
             }
             guard let annotation = annotation as? PinAnnotation else { return }
@@ -179,6 +208,7 @@ struct HistoricMapView: UIViewRepresentable {
         }
 
         func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+            mapSettled(mapView)
             let camera = mapView.camera
             parent.onCameraChange(MapCamera(centerCoordinate: camera.centerCoordinate,
                                             distance: camera.centerCoordinateDistance,
@@ -198,21 +228,43 @@ struct HistoricMapView: UIViewRepresentable {
 
     /// An old photo in a white print border, standing above the landmark's pin
     final class PhotoAnnotationView: MKAnnotationView {
+        #if os(macOS)
+        /// Lets clicks through to the annotation, which NSImageView would otherwise keep
+        private final class ClickThroughImageView: NSImageView {
+            override func hitTest(_ point: NSPoint) -> NSView? { nil }
+        }
+        private let imageView = ClickThroughImageView()
+        #else
         private let imageView = UIImageView()
+        #endif
         private var loading: Task<Void, Never>?
+
+        // A phone has less room for them
+        #if os(visionOS)
+        private static let size = CGSize(width: 150, height: 112)
+        #else
+        private static let size = CGSize(width: 96, height: 72)
+        #endif
 
         override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
             super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
-            frame = CGRect(x: 0, y: 0, width: 150, height: 112)
+            frame = CGRect(origin: .zero, size: Self.size)
+            imageView.frame = bounds.insetBy(dx: 4, dy: 4)
+            #if os(macOS)
+            wantsLayer = true
+            layer?.backgroundColor = NSColor.white.cgColor
+            layer?.cornerRadius = 4
+            imageView.imageScaling = .scaleProportionallyUpOrDown
+            #else
             backgroundColor = .white
             layer.cornerRadius = 4
-            imageView.frame = bounds.insetBy(dx: 5, dy: 5)
             imageView.contentMode = .scaleAspectFill
             imageView.clipsToBounds = true
             imageView.backgroundColor = UIColor(white: 0.85, alpha: 1)
+            #endif
             addSubview(imageView)
             // Above the pin, not on top of it
-            centerOffset = CGPoint(x: 0, y: -100)
+            centerOffset = CGPoint(x: 0, y: -(Self.size.height / 2 + 44))
             displayPriority = .required
             collisionMode = .rectangle
         }
@@ -238,6 +290,16 @@ struct HistoricMapView: UIViewRepresentable {
     }
 }
 
+private extension MKAnnotationView {
+    func setOpacity(_ opacity: Double) {
+        #if os(macOS)
+        alphaValue = opacity
+        #else
+        alpha = opacity
+        #endif
+    }
+}
+
 // MARK: - Year and fade controls
 
 /// Floats above the map while Then vs. Now is on: the year, the fade slider and the credit.
@@ -247,26 +309,20 @@ struct HistoricMapControls: View {
     /// Old photos from the Library of Congress are on the map
     var showsPhotoCredit = false
 
+    @Environment(\.accessibilityReduceTransparency) private var reduceTransparency
+
     var body: some View {
         VStack(spacing: 10) {
+            #if os(visionOS)
             HStack(spacing: 16) {
-                Picker("Year", selection: $year) {
-                    ForEach(HistoricMap.years, id: \.self) { year in
-                        Text(verbatim: String(year)).tag(year)
-                    }
-                }
-                .pickerStyle(.segmented)
-                .frame(width: 280)
-
-                HStack {
-                    Text("Now").font(.callout)
-                    Slider(value: $opacity, in: 0...1)
-                        .frame(width: 220)
-                        .accessibilityLabel(Text("Old map"))
-                        .accessibilityValue(Text("\(Int(opacity * 100)) percent"))
-                    Text(verbatim: String(year)).font(.callout).monospacedDigit()
-                }
+                yearPicker.frame(width: 280)
+                fadeSlider(width: 220)
             }
+            #else
+            // A phone is narrow: the years above the slider
+            yearPicker
+            fadeSlider(width: nil)
+            #endif
             Link(HistoricMap.credit, destination: HistoricMap.creditURL)
                 .font(.caption2)
                 .foregroundStyle(.secondary)
@@ -276,9 +332,39 @@ struct HistoricMapControls: View {
                     .foregroundStyle(.secondary)
             }
         }
+        #if os(visionOS)
         .padding(.horizontal, 24)
         .padding(.vertical, 14)
         .glassBackgroundEffect()
+        #else
+        .padding(12)
+        .background(reduceTransparency ? AnyShapeStyle(Color(UIColor.systemBackground)) : AnyShapeStyle(.regularMaterial),
+                    in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+        .padding(.horizontal, 12)
+        .padding(.top, 8)
+        #endif
+    }
+
+    private var yearPicker: some View {
+        Picker("Year", selection: $year) {
+            ForEach(HistoricMap.years, id: \.self) { year in
+                Text(verbatim: String(year)).tag(year)
+            }
+        }
+        .pickerStyle(.segmented)
+        .labelsHidden()
+    }
+
+    private func fadeSlider(width: CGFloat?) -> some View {
+        HStack {
+            Text("Now").font(.callout)
+            Slider(value: $opacity, in: 0...1)
+                .frame(width: width)
+                .tint(.orange)
+                .accessibilityLabel(Text("Old map"))
+                .accessibilityValue(Text("\(Int(opacity * 100)) percent"))
+            Text(verbatim: String(year)).font(.callout).monospacedDigit()
+        }
     }
 }
 
@@ -295,7 +381,7 @@ nonisolated final class HistoricTileOverlay: MKTileOverlay, @unchecked Sendable 
         let config = URLSessionConfiguration.default
         config.urlCache = URLCache(memoryCapacity: 20 << 20, diskCapacity: 200 << 20)
         config.requestCachePolicy = .returnCacheDataElseLoad
-        config.httpAdditionalHeaders = ["User-Agent": "Stamped! A City Passport (visionOS)"]
+        config.httpAdditionalHeaders = ["User-Agent": "Stamped! A City Passport"]
         return URLSession(configuration: config)
     }()
     /// Decoded source tiles, shared by the zoomed-in tiles drawn from them
@@ -429,6 +515,8 @@ nonisolated enum HistoricTilePainter {
             for (feature, t) in features("transport_lines") where feature.featureClass == "railway" {
                 stroke(feature, t, ink, width: 1.5)
                 cg.saveGState()
+                // Square ends: round ones would grow each tie until the gaps closed
+                cg.setLineCap(.butt)
                 cg.setLineDash(phase: 0, lengths: [1.5, 6])
                 stroke(feature, t, ink, width: 6)
                 cg.restoreGState()
@@ -627,9 +715,10 @@ nonisolated private struct ProtoReader {
     }
 
     mutating func lengthDelimited() -> Range<Int> {
-        let length = Int(varint())
+        // A corrupt tile can claim any length, even more than Int holds
+        let length = varint()
         let start = index
-        index = min(index + length, end)
+        index = length < UInt64(end - index) ? index + Int(length) : end
         return start..<index
     }
 

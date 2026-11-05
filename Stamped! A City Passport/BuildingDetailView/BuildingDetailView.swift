@@ -33,6 +33,8 @@ struct BuildingDetailView: View {
     @Environment(\.accessibilityReduceMotion) var reduceMotion
     
     // MARK: - State
+    @State private var showingAsk = false
+    @State private var showingPast = false
     @State private var showCamera = false
     @State private var showingDeleteConfirmation = false
     @State private var isEditingPhoto = false
@@ -149,6 +151,14 @@ struct BuildingDetailView: View {
         }
         // The story stops when you leave the landmark, so it never keeps talking on another page
         .onDisappear { AudioStoryPlayer.shared.stop() }
+        .fullScreenCover(isPresented: $showingPast) {
+            StepIntoPastView(building: building, cityName: viewModel.city.name)
+        }
+        .sheet(isPresented: $showingAsk) {
+            if #available(iOS 26.0, macOS 26.0, *) {
+                AskBuildingView(building: building, cityName: viewModel.city.name)
+            }
+        }
         .task(id: building.id) {
             async let venues: () = fetchNearbyVenues()
             async let lookAround: () = fetchLookAroundScene()
@@ -431,8 +441,10 @@ extension BuildingDetailView {
             // Step-free access from OpenStreetMap; hidden when OSM doesn't say
             LandmarkAccessibilitySection(building: building, isHighContrast: isHighContrast)
             BuildingPhotoGallery(building: building, isHighContrast: isHighContrast)
-            // US landmarks only; hidden when the Library of Congress has nothing for it
-            HistoricPhotosSection(building: building, city: viewModel.city, isHighContrast: isHighContrast)
+            // Hidden when no archive has anything for it
+            HistoricPhotosSection(building: building, cityName: viewModel.city.name,
+                                  inUnitedStates: viewModel.city.country == .unitedStates,
+                                  isHighContrast: isHighContrast)
             HistoryTimelineSection(building: building, cityName: viewModel.city.name, isHighContrast: isHighContrast)
             if BuildingScanService.isEnabled {
                 threeDModelSection
@@ -519,6 +531,33 @@ extension BuildingDetailView {
             DSSectionHeader("building.historicalSignificance", systemImage: "book.closed", isHighContrast: isHighContrast)
             // Hear the story read aloud, e.g. while standing in front of the building
             ListenButton(building: building, tint: brandColor)
+            // Ask it a question; it answers from Stamped's facts, on the device
+            if AskBuilding.canOffer {
+                Button {
+                    showingAsk = true
+                } label: {
+                    Label("Ask", systemImage: "bubble.left.and.text.bubble.right")
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(brandColor)
+                        .padding(.horizontal, DS.Space.m)
+                        .padding(.vertical, DS.Space.s)
+                        .background(Capsule().fill(brandColor.opacity(0.12)))
+                }
+                .buttonStyle(.plain)
+                .accessibilityHint(Text("Ask this landmark a question"))
+            }
+            // An old film of the city, or its old photos with the story read aloud
+            Button {
+                showingPast = true
+            } label: {
+                Label("Step into the Past", systemImage: "film")
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(brandColor)
+                    .padding(.horizontal, DS.Space.m)
+                    .padding(.vertical, DS.Space.s)
+                    .background(Capsule().fill(brandColor.opacity(0.12)))
+            }
+            .buttonStyle(.plain)
             Text(building.description)
                 .font(.body)
                 .lineSpacing(DS.Space.xs)

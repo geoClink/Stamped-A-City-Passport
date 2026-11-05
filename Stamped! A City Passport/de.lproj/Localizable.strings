@@ -1232,3 +1232,34 @@
 "Quotes are read automatically from old scans and may contain errors." = "Zitate werden automatisch aus alten Scans gelesen und können Fehler enthalten.";
 "Read the page" = "Seite lesen";
 "Opens the newspaper page on loc.gov" = "Öffnet die Zeitungsseite auf loc.gov";
+
+/* History on the iPhone: Then & Now, Ask the building, old photos, On This Day, city sounds */
+"Year" = "Jahr";
+"Now" = "Heute";
+"Old map" = "Alte Karte";
+"%lld percent" = "%lld Prozent";
+"Old photos: Library of Congress, Wikimedia Commons, Europeana, Smithsonian; public domain" = "Alte Fotos: Library of Congress, Wikimedia Commons, Europeana, Smithsonian; gemeinfrei";
+"On This Day" = "An diesem Tag";
+"From Wikipedia (CC BY-SA)" = "Aus Wikipedia (CC BY-SA)";
+"Opens %@" = "Öffnet %@";
+"Then & Now" = "Damals & heute";
+"Time Walk" = "Zeitreise";
+"Ask" = "Fragen";
+"Ask %@" = "%@ fragen";
+"Ask %@ a question" = "Stelle %@ eine Frage";
+"Apple Intelligence Is Off" = "Apple Intelligence ist aus";
+"Turn on Apple Intelligence in Settings to ask landmarks questions." = "Schalte Apple Intelligence in den Einstellungen ein, um Wahrzeichen Fragen zu stellen.";
+"Answers come only from Stamped's facts about this landmark, written on your device." = "Antworten stammen nur aus den Fakten von Stamped zu diesem Wahrzeichen und entstehen auf deinem Gerät.";
+"When were you built?" = "Wann wurdest du gebaut?";
+"Who designed you?" = "Wer hat dich entworfen?";
+"What were you used for?" = "Wofür wurdest du genutzt?";
+"What happened here?" = "Was ist hier passiert?";
+"Sorry, I couldn't answer that just now." = "Das kann ich gerade leider nicht beantworten.";
+"Sound: %@ by %@, CC0, Freesound" = "Ton: %1$@ von %2$@, CC0, Freesound";
+"Old Photos" = "Alte Fotos";
+"View Source" = "Quelle ansehen";
+"Turn Off City Sounds" = "Stadtgeräusche ausschalten";
+"Ask this landmark a question" = "Stelle diesem Wahrzeichen eine Frage";
+"Step into the Past" = "Zurück in die Vergangenheit";
+"Film: Prelinger Archives, Internet Archive · Public domain" = "Film: Prelinger Archives, Internet Archive · Gemeinfrei";
+"No old film or photos of this landmark yet." = "Noch keine alten Filme oder Fotos von diesem Wahrzeichen.";

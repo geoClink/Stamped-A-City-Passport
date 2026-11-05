@@ -1,13 +1,15 @@
 //
 //  CitySounds.swift
-//  Tally-AVP
+//  Stamped! A City Passport
 //
-//  City sounds for Step into the Past: a CC0 street ambience from Freesound, played
-//  softly all around the viewer while the old photos fade. CC0 needs no credit, but
-//  the sound and its author are named on the panel anyway. Key in Secrets.plist.
+//  City sounds: a CC0 street ambience from Freesound, played softly around the viewer
+//  in Step into the Past and under the map's tour. CC0 needs no
+//  credit, but the sound and its author are named on screen anyway. Key in Secrets.plist;
+//  without it there's simply no sound.
 //
 
 import Foundation
+import AVFoundation
 
 nonisolated struct CitySound: Sendable, Hashable {
     let name: String
@@ -49,22 +51,36 @@ actor CitySoundService {
             // CC0 only, long enough to loop without a noticeable repeat
             URLQueryItem(name: "filter", value: "license:\"Creative Commons 0\" duration:[30 TO 600]"),
             URLQueryItem(name: "sort", value: "rating_desc"),
-            URLQueryItem(name: "fields", value: "id,name,username,previews"),
+            URLQueryItem(name: "fields", value: "id,name,username,license,previews"),
             URLQueryItem(name: "page_size", value: "5"),
             URLQueryItem(name: "token", value: key),
         ]
         guard let url = components.url,
               let (data, response) = try? await URLSession.shared.data(from: url),
-              (response as? HTTPURLResponse)?.statusCode == 200,
-              let result = try? JSONDecoder().decode(SearchResponse.self, from: data),
-              let first = result.results.first,
-              let preview = URL(string: first.previews.previewHQMP3),
-              let page = URL(string: "https://freesound.org/s/\(first.id)/")
+              (response as? HTTPURLResponse)?.statusCode == 200
         else { return nil }
-        return CitySound(name: first.name, author: first.username, previewURL: preview, pageURL: page)
+        return Self.firstSound(from: data)
     }
 
-    private struct SearchResponse: Decodable {
+    /// The first CC0 sound in a search result. The search asks for CC0 only; each
+    /// sound's own licence is checked as well, since the app earns money.
+    nonisolated static func firstSound(from data: Data) -> CitySound? {
+        guard let result = try? JSONDecoder().decode(SearchResponse.self, from: data) else { return nil }
+        for sound in result.results where isCC0(sound.license) {
+            guard let preview = URL(string: sound.previews.previewHQMP3),
+                  let page = URL(string: "https://freesound.org/s/\(sound.id)/") else { continue }
+            return CitySound(name: sound.name, author: sound.username, previewURL: preview, pageURL: page)
+        }
+        return nil
+    }
+
+    /// Freesound names a licence by its URL or, in some responses, by its title
+    nonisolated private static func isCC0(_ license: String?) -> Bool {
+        guard let license else { return false }
+        return ArchiveSearch.licence(fromRightsURL: license) == "CC0" || license == "Creative Commons 0"
+    }
+
+    nonisolated private struct SearchResponse: Decodable {
         struct Sound: Decodable {
             struct Previews: Decodable {
                 let previewHQMP3: String
@@ -73,8 +89,34 @@ actor CitySoundService {
             let id: Int
             let name: String
             let username: String
+            let license: String?
             let previews: Previews
         }
         let results: [Sound]
+    }
+}
+
+/// The street ambience under a map tour or an old photo slideshow: quiet and looping.
+/// On iPhone it mixes with other apps' sound and obeys the ringer switch.
+@MainActor
+final class CitySoundLoop {
+    private var player: AVAudioPlayer?
+
+    func play(_ file: URL) {
+        stop()
+        guard let player = try? AVAudioPlayer(contentsOf: file) else { return }
+        #if os(iOS)
+        try? AVAudioSession.sharedInstance().setCategory(.ambient)
+        try? AVAudioSession.sharedInstance().setActive(true)
+        #endif
+        player.numberOfLoops = -1
+        player.volume = 0.3
+        player.play()
+        self.player = player
+    }
+
+    func stop() {
+        player?.stop()
+        player = nil
     }
 }

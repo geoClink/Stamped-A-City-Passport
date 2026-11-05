@@ -39,9 +39,9 @@ actor HeritageService {
     static let shared = HeritageService()
 
     /// The most Commons photos used for one landmark
-    static let maxPhotos = 6
+    nonisolated static let maxPhotos = 6
     /// Photos dated this year or later aren't "old"
-    static let oldBefore = 1960
+    nonisolated static let oldBefore = 1960
 
     private var heritageCache: [String: Heritage] = [:]
     private var categoryCache: [String: String?] = [:]
@@ -104,7 +104,18 @@ actor HeritageService {
             "iiextmetadatafilter": "DateTimeOriginal|LicenseShortName|Artist|ImageDescription",
         ].map { URLQueryItem(name: $0.key, value: $0.value) }
         guard let url = components.url, let response: CommonsResponse = await get(url) else { return [] }
+        let result = Self.commonsPhotos(from: response)
+        photoCache[building.id] = result
+        return result
+    }
 
+    /// The photos in a Commons search result that are old, free to use and creditable, oldest first
+    nonisolated static func commonsPhotos(from data: Data) -> [HistoricImage] {
+        guard let response = try? JSONDecoder().decode(CommonsResponse.self, from: data) else { return [] }
+        return commonsPhotos(from: response)
+    }
+
+    nonisolated private static func commonsPhotos(from response: CommonsResponse) -> [HistoricImage] {
         var photos: [(year: Int, image: HistoricImage)] = []
         for page in response.query?.pages ?? [] {
             guard let info = page.imageinfo?.first,
@@ -116,6 +127,8 @@ actor HeritageService {
                   let licence = meta["LicenseShortName"]?.value, Self.isFreeForCommercialUse(licence)
             else { continue }
             let artist = Self.plainText(meta["Artist"]?.value ?? "")
+            // CC BY and CC BY-SA require the author's name
+            if artist.isEmpty, licence.lowercased().hasPrefix("cc"), !licence.lowercased().contains("cc0") { continue }
             let credit = [artist.isEmpty ? nil : artist, licence, "Wikimedia Commons"]
                 .compactMap { $0 }.joined(separator: " · ")
             let caption = Self.plainText(meta["ImageDescription"]?.value ?? "")
@@ -123,9 +136,7 @@ actor HeritageService {
                                                caption: caption.isEmpty ? nil : String(caption.prefix(140)),
                                                isDrawing: false, credit: credit, itemURL: pageURL)))
         }
-        let result = photos.sorted { $0.year < $1.year }.prefix(Self.maxPhotos).map(\.image)
-        photoCache[building.id] = Array(result)
-        return Array(result)
+        return Array(photos.sorted { $0.year < $1.year }.prefix(Self.maxPhotos).map(\.image))
     }
 
     private func commonsCategory(for building: Building) async -> String? {
@@ -161,8 +172,9 @@ actor HeritageService {
     /// Public domain, CC0, CC BY and CC BY-SA allow use in an app that earns money
     nonisolated static func isFreeForCommercialUse(_ licence: String) -> Bool {
         let text = licence.lowercased()
-        // NonCommercial (NC) licences can't be used in a paid app
-        if text.range(of: #"\bnc\b"#, options: .regularExpression) != nil { return false }
+        // NonCommercial (NC) licences can't be used in a paid app, and NoDerivatives (ND)
+        // ones can't be cropped or faded. "Not public domain" is what it says.
+        if text.range(of: #"\b(nc|nd|not|non-?commercial)\b"#, options: .regularExpression) != nil { return false }
         return text.contains("public domain") || text.hasPrefix("pd") || text.contains("cc0")
             || text.hasPrefix("cc by") || text.hasPrefix("cc-by")
     }

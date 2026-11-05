@@ -1232,3 +1232,34 @@
 "Quotes are read automatically from old scans and may contain errors." = "引文由旧扫描件自动识别，可能有误。";
 "Read the page" = "阅读该版面";
 "Opens the newspaper page on loc.gov" = "在 loc.gov 打开该报纸版面";
+
+/* History on the iPhone: Then & Now, Ask the building, old photos, On This Day, city sounds */
+"Year" = "年份";
+"Now" = "现在";
+"Old map" = "旧地图";
+"%lld percent" = "百分之%lld";
+"Old photos: Library of Congress, Wikimedia Commons, Europeana, Smithsonian; public domain" = "老照片：美国国会图书馆、维基共享资源、Europeana、史密森学会；公有领域";
+"On This Day" = "历史上的今天";
+"From Wikipedia (CC BY-SA)" = "来自维基百科（CC BY-SA）";
+"Opens %@" = "打开%@";
+"Then & Now" = "今昔对比";
+"Time Walk" = "时光漫步";
+"Ask" = "提问";
+"Ask %@" = "向%@提问";
+"Ask %@ a question" = "向%@提问";
+"Apple Intelligence Is Off" = "Apple 智能已关闭";
+"Turn on Apple Intelligence in Settings to ask landmarks questions." = "请在“设置”中打开 Apple 智能，以向地标提问。";
+"Answers come only from Stamped's facts about this landmark, written on your device." = "回答仅基于 Stamped 关于此地标的资料，并在你的设备上生成。";
+"When were you built?" = "你是什么时候建成的？";
+"Who designed you?" = "谁设计了你？";
+"What were you used for?" = "你以前是做什么用的？";
+"What happened here?" = "这里发生过什么？";
+"Sorry, I couldn't answer that just now." = "抱歉，我现在无法回答。";
+"Sound: %@ by %@, CC0, Freesound" = "声音：%2$@ 录制的 %1$@，CC0，Freesound";
+"Old Photos" = "老照片";
+"View Source" = "查看来源";
+"Turn Off City Sounds" = "关闭城市声音";
+"Ask this landmark a question" = "向这座地标提问";
+"Step into the Past" = "走进过去";
+"Film: Prelinger Archives, Internet Archive · Public domain" = "影片：Prelinger Archives，Internet Archive · 公有领域";
+"No old film or photos of this landmark yet." = "暂无此地标的老电影或旧照片。";
