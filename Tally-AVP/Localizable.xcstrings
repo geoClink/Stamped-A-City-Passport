@@ -10108,60 +10108,6 @@
         }
       }
     },
-    "Photos: Library of Congress and Wikimedia Commons, public domain" : {
-      "comment" : "Credit for old photos on the old map.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fotos: Library of Congress und Wikimedia Commons, gemeinfrei"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fotos: Library of Congress y Wikimedia Commons, dominio público"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Photos : Library of Congress et Wikimedia Commons, domaine public"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Foto: Library of Congress e Wikimedia Commons, pubblico dominio"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "写真：米国議会図書館、ウィキメディア・コモンズ（パブリックドメイン）"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "사진: 미국 의회도서관, 위키미디어 공용, 퍼블릭 도메인"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fotos: Library of Congress e Wikimedia Commons, domínio público"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "照片：美国国会图书馆和维基共享资源，公有领域"
-          }
-        }
-      }
-    },
     "UNESCO World Heritage Site since %@" : {
       "comment" : "Heritage badge; %@ is the year inscribed.",
       "extractionState" : "manual",
@@ -10590,6 +10536,114 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "来自维基百科（CC BY-SA）"
+          }
+        }
+      }
+    },
+    "Old photos: Library of Congress, Wikimedia Commons, Europeana, Smithsonian; public domain" : {
+      "comment" : "Credit for old photos on the old map.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alte Fotos: Library of Congress, Wikimedia Commons, Europeana, Smithsonian; gemeinfrei"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotos antiguas: Library of Congress, Wikimedia Commons, Europeana, Smithsonian; dominio público"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Photos anciennes : Library of Congress, Wikimedia Commons, Europeana, Smithsonian ; domaine public"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto d'epoca: Library of Congress, Wikimedia Commons, Europeana, Smithsonian; pubblico dominio"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "古写真：米国議会図書館、ウィキメディア・コモンズ、Europeana、スミソニアン（パブリックドメイン）"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "옛 사진: 미국 의회도서관, 위키미디어 공용, Europeana, 스미스소니언; 퍼블릭 도메인"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotos antigas: Library of Congress, Wikimedia Commons, Europeana, Smithsonian; domínio público"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "老照片：美国国会图书馆、维基共享资源、Europeana、史密森学会；公有领域"
+          }
+        }
+      }
+    },
+    "Sound: %@ by %@, CC0, Freesound" : {
+      "comment" : "Step into the Past: credit for the city sound; first %@ is the recording's name, second its author.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ton: %1$@ von %2$@, CC0, Freesound"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonido: %1$@ de %2$@, CC0, Freesound"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Son : %1$@ par %2$@, CC0, Freesound"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suono: %1$@ di %2$@, CC0, Freesound"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "音：%1$@（%2$@）、CC0、Freesound"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "소리: %2$@의 %1$@, CC0, Freesound"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Som: %1$@ por %2$@, CC0, Freesound"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "声音：%2$@ 录制的 %1$@，CC0，Freesound"
           }
         }
       }

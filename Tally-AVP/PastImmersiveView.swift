@@ -29,6 +29,9 @@ struct PastImmersiveView: View {
     }
     @State private var content: Content = .loading
     @State private var photoIndex = 0
+    /// Plays the city's street sounds around the viewer
+    @State private var soundHolder = Entity()
+    @State private var citySound: CitySound?
 
     /// The landmark and its city
     private var place: (building: Building, city: String)? {
@@ -41,6 +44,7 @@ struct PastImmersiveView: View {
     var body: some View {
         RealityView { content, attachments in
             content.add(Self.makeDarkRoom())
+            content.add(soundHolder)
             if let screen = attachments.entity(for: "screen") {
                 screen.position = SIMD3(0, 1.5, -2.6)
                 screen.scale = SIMD3(repeating: 2.2)
@@ -112,6 +116,10 @@ struct PastImmersiveView: View {
                 }
                 Text(verbatim: images[photoIndex % images.count].credit)
                     .font(.caption).foregroundStyle(.secondary)
+                if let citySound {
+                    Text("Sound: \(citySound.name) by \(citySound.author), CC0, Freesound")
+                        .font(.caption2).foregroundStyle(.secondary)
+                }
             default:
                 EmptyView()
             }
@@ -139,21 +147,27 @@ struct PastImmersiveView: View {
             player.play()
             return
         }
-        // The Library of Congress surveys only cover US landmarks
-        let isUS = LibraryOfCongressService.cityAndState(from: place.building.address) != nil
-        let images = !isUS ? [] : await LibraryOfCongressService.shared.images(
-            buildingID: place.building.id, name: place.building.name,
-            address: place.building.address, cityName: place.city
-        ).filter { !$0.isDrawing }
-        // Anywhere else, or when the survey has none: old photos from Wikimedia Commons
-        let photos = images.isEmpty ? await HeritageService.shared.oldPhotos(for: place.building) : images
+        let photos = await OldPhotoSources.photos(for: place.building, cityName: place.city)
         if photos.isEmpty {
             content = .nothing
         } else {
             content = .photos(photos)
         }
-        // The photos are silent, so the story is read over them
+        // The photos are silent, so the story is read over them, with the city's street sounds
         storyPlayer.play(place.building)
+        await playCitySound(for: place.city)
+    }
+
+    /// A CC0 street ambience from Freesound, soft and all around, looping
+    private func playCitySound(for city: String) async {
+        guard let sound = await CitySoundService.shared.sound(for: city),
+              let file = await CitySoundService.shared.localFile(for: sound),
+              let resource = try? await AudioFileResource(contentsOf: file,
+                                                          configuration: .init(shouldLoop: true))
+        else { return }
+        soundHolder.components.set(AmbientAudioComponent(gain: -14))
+        soundHolder.playAudio(resource)
+        citySound = sound
     }
 
     /// A dark sepia sphere around the viewer, so only the past is in view
