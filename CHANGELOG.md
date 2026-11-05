@@ -10,6 +10,11 @@ How to use this file:
 
 ## [Unreleased]
 
+- History on every device: Then & Now old maps with a fade slider, Time Walk tours, old photos on the map, Step into the Past, Ask the building, On This Day and city street sounds now on iPhone, iPad, Mac and Vision Pro.
+- Old photos from the Library of Congress, Wikimedia Commons, Europeana and the Smithsonian, each with its credit, for landmarks anywhere in the world.
+- Vision Pro: a gallery of old photos on the landmark card.
+- Stricter licence checks: no-derivatives and non-commercial licences are refused, and CC BY photos must name their author.
+
 ## [2.10] (build 15) – not yet submitted (iPhone, iPad, Mac and Vision Pro)
 
 ### Added

@@ -1206,3 +1206,60 @@
 "Added to %@" = "已添加到 %@";
 "Purchasing" = "正在购买";
 "Did you know? %@" = "你知道吗？%@";
+
+/* Heritage listings (Timeline) */
+"UNESCO World Heritage Site since %@" = "自%@年起列入联合国教科文组织世界遗产";
+"UNESCO World Heritage Site" = "联合国教科文组织世界遗产";
+"Text: UNESCO World Heritage Centre, CC BY-SA 3.0 IGO" = "文字：联合国教科文组织世界遗产中心，CC BY-SA 3.0 IGO";
+"Listed on the National Register of Historic Places" = "列入美国国家史迹名录";
+"See the official listing and nomination" = "查看官方登录和提名文件";
+
+/* Timeline (Phase 1) */
+"Timeline" = "时间线";
+"Built" = "建成";
+"Opened" = "开放";
+"Demolished" = "拆除";
+"Listed: %@" = "列入：%@";
+"Replaced %@" = "取代了%@";
+"Replaced by %@" = "被%@取代";
+"%@ BC" = "公元前%@年";
+"%@s" = "%@年代";
+"c. %@" = "约%@年";
+"Dates from Wikidata" = "日期来自 Wikidata";
+"Dates from Wikidata · Newspapers from the Library of Congress, Chronicling America" = "日期来自 Wikidata · 报纸来自美国国会图书馆 Chronicling America";
+"What the Papers Said" = "当年报纸怎么说";
+"Searching old newspapers…" = "正在搜索旧报纸…";
+"Quotes are read automatically from old scans and may contain errors." = "引文由旧扫描件自动识别，可能有误。";
+"Read the page" = "阅读该版面";
+"Opens the newspaper page on loc.gov" = "在 loc.gov 打开该报纸版面";
+
+/* History on the iPhone: Then & Now, Ask the building, old photos, On This Day, city sounds */
+"Year" = "年份";
+"Now" = "现在";
+"Old map" = "旧地图";
+"%lld percent" = "百分之%lld";
+"Old photos: Library of Congress, Wikimedia Commons, Europeana, Smithsonian; public domain" = "老照片：美国国会图书馆、维基共享资源、Europeana、史密森学会；公有领域";
+"On This Day" = "历史上的今天";
+"From Wikipedia (CC BY-SA)" = "来自维基百科（CC BY-SA）";
+"Opens %@" = "打开%@";
+"Then & Now" = "今昔对比";
+"Time Walk" = "时光漫步";
+"Ask" = "提问";
+"Ask %@" = "向%@提问";
+"Ask %@ a question" = "向%@提问";
+"Apple Intelligence Is Off" = "Apple 智能已关闭";
+"Turn on Apple Intelligence in Settings to ask landmarks questions." = "请在“设置”中打开 Apple 智能，以向地标提问。";
+"Answers come only from Stamped's facts about this landmark, written on your device." = "回答仅基于 Stamped 关于此地标的资料，并在你的设备上生成。";
+"When were you built?" = "你是什么时候建成的？";
+"Who designed you?" = "谁设计了你？";
+"What were you used for?" = "你以前是做什么用的？";
+"What happened here?" = "这里发生过什么？";
+"Sorry, I couldn't answer that just now." = "抱歉，我现在无法回答。";
+"Sound: %@ by %@, CC0, Freesound" = "声音：%2$@ 录制的 %1$@，CC0，Freesound";
+"Old Photos" = "老照片";
+"View Source" = "查看来源";
+"Turn Off City Sounds" = "关闭城市声音";
+"Ask this landmark a question" = "向这座地标提问";
+"Step into the Past" = "走进过去";
+"Film: Prelinger Archives, Internet Archive · Public domain" = "影片：Prelinger Archives，Internet Archive · 公有领域";
+"No old film or photos of this landmark yet." = "暂无此地标的老电影或旧照片。";

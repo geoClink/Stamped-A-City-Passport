@@ -116,6 +116,7 @@ struct CityDetailView: View {
                     }
                 }
                 .pickerStyle(.segmented)
+                .labelsHidden()
                 .dsPageMargin()
                 .onChange(of: selectedTab) { _, _ in HapticManager.shared.trigger(.selection) }
 

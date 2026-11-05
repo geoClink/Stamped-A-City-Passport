@@ -317,6 +317,19 @@ struct CityListView: View {
                     exploreFilter = Self.campusFilter
                 }
             }
+            #if os(macOS)
+            // The sidebar is narrow and a mouse can't swipe, so the continents are a menu
+            Menu {
+                ForEach(continents, id: \.self) { continent in
+                    Button(continent.localizedName, systemImage: continent.iconName) {
+                        exploreFilter = continent.rawValue
+                    }
+                }
+            } label: {
+                Text((continents.first { $0.rawValue == selected } ?? continents.first)?.localizedName ?? "")
+            }
+            .fixedSize()
+            #else
             ScrollViewReader { proxy in
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: DS.Space.s) {
@@ -332,7 +345,15 @@ struct CityListView: View {
                 // The chosen continent may be off the right edge (North America): bring it into view
                 .onAppear { proxy.scrollTo(selected, anchor: .center) }
             }
+            #endif
         }
+    }
+
+    /// A city named by the On This Day card
+    func openCity(named name: String) {
+        guard let city = viewModel.allCities.first(where: { $0.name == name }) else { return }
+        selectedCity = city
+        finishSearch(showing: city)
     }
 
     /// Ends the search (keyboard down, list back to browsing) and switches the filter

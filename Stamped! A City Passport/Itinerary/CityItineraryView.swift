@@ -59,6 +59,7 @@ struct CityItineraryView: View {
                 ForEach(1...7, id: \.self) { n in Text("\(n)").tag(n) }
             }
             .pickerStyle(.segmented)
+            .labelsHidden()
         }
         .dsPageMargin()
     }
@@ -982,36 +983,5 @@ struct ItineraryStopRow: View {
 
             if !isLast { Divider().padding(.leading, 82) }
         }
-    }
-}
-
-// MARK: - Shimmer Effect
-
-extension View {
-    func shimmering() -> some View { self.modifier(ShimmerModifier()) }
-}
-
-struct ShimmerModifier: ViewModifier {
-    @State private var phase: CGFloat = 0
-    @Environment(\.accessibilityReduceMotion) private var reduceMotion
-
-    func body(content: Content) -> some View {
-        content
-            // Closure form: LinearGradient is both a View and a ShapeStyle, and
-            // both have .blendMode, so .overlay(...) can't tell which is meant.
-            // The @ViewBuilder closure only accepts Views, which settles it.
-            .overlay {
-                LinearGradient(
-                    gradient: Gradient(colors: [.clear, .white.opacity(0.4), .clear]),
-                    startPoint: .init(x: phase - 0.3, y: 0),
-                    endPoint: .init(x: phase, y: 0)
-                )
-                .blendMode(.screen)
-            }
-            .onAppear {
-                // With Reduce Motion the placeholder stays still instead of sweeping forever
-                guard !reduceMotion else { return }
-                withAnimation(.linear(duration: 1.4).repeatForever(autoreverses: false)) { phase = 1.3 }
-            }
     }
 }

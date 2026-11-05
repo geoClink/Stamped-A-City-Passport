@@ -43,9 +43,15 @@ actor WikimediaService {
             return result
         }
 
-        // No connection or not found: no photo or text (the views show their placeholders)
-        let result = (try? await lookUp(buildingName, buildingID: buildingID)) ?? WikiSummary(photoURL: nil, extract: nil)
-        cache[cacheKey] = result
+        // No connection or a cancelled load: no photo or text for now (the views show their
+        // placeholders), and nothing is cached, so the next view of this landmark tries again
+        guard let result = try? await lookUp(buildingName, buildingID: buildingID) else {
+            return WikiSummary(photoURL: nil, extract: nil)
+        }
+        // Leaving a page cancels its loads, which can cut the lookup short without throwing
+        if !Task.isCancelled {
+            cache[cacheKey] = result
+        }
         return result
     }
 
@@ -57,7 +63,8 @@ actor WikimediaService {
         return result
     }
 
-    /// The Wikipedia lookup itself. Throws only on a network error (URLError).
+    /// The Wikipedia lookup itself. Throws only on a network error or a server that
+    /// couldn't answer (URLError).
     private func lookUp(_ buildingName: String, buildingID: String?) async throws -> WikiSummary {
         // Wikipedia only has a different place with this name: show nothing rather than the wrong photo
         if let buildingID, Self.skipWikipedia.contains(buildingID) {
@@ -95,7 +102,8 @@ actor WikimediaService {
 
     // MARK: - Private
 
-    /// nil when there's no usable article; throws when the connection fails
+    /// nil when there's no usable article; throws when the connection fails or the
+    /// server can't answer right now (rate limited or down), which says nothing about the article
     private func fetch(title: String) async throws -> WikiSummary? {
         let encoded = encodedTitle(title)
         guard let url = URL(string: "https://en.wikipedia.org/api/rest_v1/page/summary/\(encoded)") else {
@@ -104,7 +112,9 @@ actor WikimediaService {
 
         do {
             let (data, response) = try await URLSession.shared.data(for: wikiRequest(url))
-            guard (response as? HTTPURLResponse)?.statusCode == 200 else { return nil }
+            let status = (response as? HTTPURLResponse)?.statusCode
+            if status == 429 || (status ?? 0) >= 500 { throw URLError(.badServerResponse) }
+            guard status == 200 else { return nil }
 
             guard let decoded = try? JSONDecoder().decode(WikiAPIResponse.self, from: data) else { return nil }
             // A "may refer to" list of other articles, not the place itself: try the next title

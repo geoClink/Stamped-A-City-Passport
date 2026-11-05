@@ -75,6 +75,24 @@ struct CityMapView: View {
     /// The current day's walking route, drawn as a dashed line while touring a trip.
     @State private var tripTourLine: [CLLocationCoordinate2D] = []
     @State private var userLocation: CLLocation?
+    /// Then & Now: an old map of the city (OpenHistoricalMap) faded over today's
+    @State private var showsOldMap = false
+    @State private var oldMapYear = HistoricMap.defaultYear
+    @State private var oldMapOpacity = 0.75
+    /// Camera moves for the old map, which isn't driven by `position`
+    @State private var oldMapCameraRequest: HistoricMapView.CameraRequest?
+    /// The city's street sounds under the tour, named while they play
+    @State private var citySound: CitySound?
+    @State private var citySoundTask: Task<Void, Never>?
+    @State private var citySoundLoop = CitySoundLoop()
+    /// Turned off for this visit to the map with the speaker button
+    @State private var citySoundMuted = false
+    @AppStorage("is_sound_enabled") private var isSoundEnabled = true
+    /// Old photos floated over their landmarks on the old map
+    @State private var oldPhotos: [String: HistoricImage] = [:]
+    /// The old photo opened large from the map, with its landmark's name
+    @State private var viewedOldPhoto: HistoricImage?
+    @State private var viewedOldPhotoName = ""
     /// Where the camera last stopped, and where each pin sat on screen then (for grouping pins that overlap).
     @State private var lastCamera: MapCamera?
     @State private var pinScreenPoints: [String: CGPoint] = [:]
@@ -189,9 +207,7 @@ struct CityMapView: View {
     // MARK: - Body
 
     var body: some View {
-        MapReader { proxy in
-            map(proxy)
-        }
+        currentMap
         // Orange, not system blue, for Apple's own map controls (the 2D/3D toggle, the compass)
         .tint(.adventureOrange)
         .navigationTitle(mapTitle)
@@ -219,6 +235,12 @@ struct CityMapView: View {
         .onChange(of: navManager.landmarkRequest) { _, _ in openRequestedLandmark() }
         #endif
         .onDisappear { stopTour() }
+        .onChange(of: position) { _, newPosition in moveOldMap(to: newPosition) }
+        // Back to today's map, looking at the same spot
+        .onChange(of: showsOldMap) { _, isOn in
+            if !isOn, let lastCamera { position = .camera(lastCamera) }
+        }
+        .task(id: showsOldMap) { if showsOldMap { await loadOldPhotos() } }
         .overlay(alignment: .bottom) {
             if let building = selectedBuilding {
                 MapLandmarkCard(
@@ -303,7 +325,7 @@ struct CityMapView: View {
         }
         // Category chips sit above the map, like Apple Maps; the compass moves down to make room
         .safeAreaInset(edge: .top, spacing: 0) {
-            MapCategoryChips(selection: $category)
+            topBar
         }
         .animation(.spring(duration: 0.35), value: selectionKey)
         // Fetch street-level imagery for the selected landmark or place, if Apple has it
@@ -360,6 +382,139 @@ struct CityMapView: View {
     }
 
     // MARK: - Map
+
+    @ViewBuilder
+    private var currentMap: some View {
+        if showsOldMap, let lastCamera {
+            oldMap(startingAt: lastCamera)
+        } else {
+            MapReader { proxy in map(proxy) }
+        }
+    }
+
+    /// The category chips, or the year and fade controls while the old map is on, and
+    /// the name of the sound playing under a tour
+    @ViewBuilder
+    private var topBar: some View {
+        VStack(spacing: 8) {
+            if showsOldMap {
+                HistoricMapControls(year: $oldMapYear, opacity: $oldMapOpacity,
+                                    showsPhotoCredit: !oldPhotos.isEmpty)
+            } else {
+                MapCategoryChips(selection: $category)
+            }
+            if let citySound { citySoundCredit(citySound) }
+        }
+    }
+
+    /// The same city with an old map on top, and the landmark and saved-place pins.
+    /// SwiftUI's Map can't draw tile overlays (see HistoricMap.swift).
+    private func oldMap(startingAt camera: MapCamera) -> some View {
+        let landmarkPins = filteredBuildings.map { building in
+            let visited = progress.isVisited(building.id)
+            return HistoricMapView.Pin(
+                id: building.id, title: building.name, coordinate: coordinate(of: building),
+                systemImage: visited ? "checkmark" : "building.columns",
+                color: visited ? .orange : .gray,
+                photoURL: oldPhotos[building.id]?.thumbnailURL)
+        }
+        let places = progress.customPlaces(in: cityName)
+        let placePins = places.map { place in
+            HistoricMapView.Pin(id: "place:\(place.id)", title: place.name, coordinate: place.coordinate,
+                                systemImage: CustomPlace.icon(forCategory: place.category), color: .systemPink)
+        }
+        return HistoricMapView(
+            year: oldMapYear,
+            opacity: oldMapOpacity,
+            pins: landmarkPins + placePins,
+            initialCamera: camera,
+            cameraRequest: oldMapCameraRequest,
+            onSelectPin: { id in
+                stopTour()
+                if let building = filteredBuildings.first(where: { $0.id == id }) {
+                    flyTo(building)
+                } else if let place = places.first(where: { "place:\($0.id)" == id }) {
+                    flyTo(place)
+                }
+            },
+            onSelectPhoto: { id in
+                viewedOldPhotoName = filteredBuildings.first { $0.id == id }?.name ?? ""
+                viewedOldPhoto = oldPhotos[id]
+            },
+            onCameraChange: { lastCamera = $0 }
+        )
+        .ignoresSafeArea(edges: .bottom)
+        .sheet(item: $viewedOldPhoto) { image in
+            HistoricImageViewer(image: image, buildingName: viewedOldPhotoName)
+                .dsLargeSheet()
+        }
+    }
+
+    /// `position` only drives SwiftUI's Map, so the old map is told of each move
+    private func moveOldMap(to newPosition: MapCameraPosition) {
+        guard showsOldMap else { return }
+        var camera = newPosition.camera
+        if camera == nil, let rect = newPosition.rect {
+            // A whole day's route: far enough back to see the box from above
+            let center = MKMapPoint(x: rect.midX, y: rect.midY).coordinate
+            let metres = max(rect.width, rect.height) / MKMapPointsPerMeterAtLatitude(center.latitude)
+            camera = MapCamera(centerCoordinate: center, distance: metres * 1.6)
+        }
+        guard let camera else { return }
+        oldMapCameraRequest = HistoricMapView.CameraRequest(camera: camera, animated: !reduceMotion)
+    }
+
+    private func citySoundCredit(_ sound: CitySound) -> some View {
+        HStack(spacing: 8) {
+            Text("Sound: \(sound.name) by \(sound.author), CC0, Freesound")
+                .font(.caption2)
+                .lineLimit(2)
+            Button {
+                citySoundMuted = true
+                stopCitySound()
+            } label: {
+                Image(systemName: "speaker.slash.fill").font(.caption)
+            }
+            .accessibilityLabel(Text("Turn Off City Sounds"))
+        }
+        .padding(.horizontal, 12)
+        .padding(.vertical, 6)
+        .background(.regularMaterial, in: Capsule())
+        .padding(.horizontal, 12)
+    }
+
+    /// One old photo per landmark (see OldPhotoSources), fetched one at a time so the
+    /// archives aren't flooded. The map has no room for each author's name, so only
+    /// photos that need none are floated here.
+    private func loadOldPhotos() async {
+        for building in mappableBuildings where oldPhotos[building.id] == nil {
+            guard !Task.isCancelled else { return }
+            let images = await OldPhotoSources.photos(for: building, cityName: cityName)
+            if let photo = images.first(where: OldPhotoSources.needsNoCredit) {
+                oldPhotos[building.id] = photo
+            }
+        }
+    }
+
+    /// A CC0 street ambience under the tour, when there's a Freesound key
+    private func startCitySound() {
+        guard isSoundEnabled, !citySoundMuted else { return }
+        citySoundTask?.cancel()
+        citySoundTask = Task { @MainActor in
+            guard let sound = await CitySoundService.shared.sound(for: cityName),
+                  let file = await CitySoundService.shared.localFile(for: sound),
+                  !Task.isCancelled else { return }
+            citySoundLoop.play(file)
+            citySound = sound
+        }
+    }
+
+    private func stopCitySound() {
+        citySoundTask?.cancel()
+        citySoundTask = nil
+        citySoundLoop.stop()
+        citySound = nil
+    }
 
     private func map(_ proxy: MapProxy) -> some View {
         mapBase
@@ -584,6 +739,11 @@ struct CityMapView: View {
                     .pickerStyle(.menu)
                 }
                 Section {
+                    // Then & Now: fade an old map of the city over today's
+                    Toggle(isOn: $showsOldMap) {
+                        Label("Then & Now", systemImage: "clock.arrow.circlepath")
+                    }
+                    .disabled(lastCamera == nil)
                     Button {
                         useSatellite.toggle()
                     } label: {
@@ -619,8 +779,7 @@ struct CityMapView: View {
                 Button {
                     startTour()
                 } label: {
-                    Label("Tour", systemImage: "play.fill")
-                        .labelStyle(.titleAndIcon)
+                    tourLabel
                 }
                 .disabled(route.isEmpty)
                 .accessibilityHint("Flies between every landmark automatically")
@@ -636,11 +795,22 @@ struct CityMapView: View {
                         }
                     }
                 } label: {
-                    Label("Tour", systemImage: "play.fill")
-                        .labelStyle(.titleAndIcon)
+                    tourLabel
                 }
                 .accessibilityHint("Choose every landmark or one of your trips to tour")
             }
+        }
+    }
+
+    /// With the old map on, the tour is a time walk: each stop in its own year
+    @ViewBuilder
+    private var tourLabel: some View {
+        if showsOldMap {
+            Label("Time Walk", systemImage: "figure.walk.motion")
+                .labelStyle(.titleAndIcon)
+        } else {
+            Label("Tour", systemImage: "play.fill")
+                .labelStyle(.titleAndIcon)
         }
     }
 
@@ -765,6 +935,7 @@ struct CityMapView: View {
     private func startTour() {
         let stops = route
         guard !stops.isEmpty else { return }
+        startCitySound()
         tourTask = Task { @MainActor in
             for building in stops {
                 if Task.isCancelled { break }
@@ -777,6 +948,7 @@ struct CityMapView: View {
                 selectedBuilding = nil
                 withAnimation(cameraAnimation(duration: 3)) { fitCamera() }
                 tourTask = nil
+                stopCitySound()
             }
         }
     }
@@ -797,6 +969,7 @@ struct CityMapView: View {
         filter = .all
         styleFilter = nil
         touringTrip = trip
+        startCitySound()
         tourTask = Task { @MainActor in
             var currentDay = startDay
             for (index, step) in steps.enumerated().dropFirst(startIndex) {
@@ -823,6 +996,7 @@ struct CityMapView: View {
                 endTripTour()
                 withAnimation(cameraAnimation(duration: 3)) { fitCamera() }
                 tourTask = nil
+                stopCitySound()
             }
         }
     }
@@ -864,6 +1038,7 @@ struct CityMapView: View {
         tourTask?.cancel()
         tourTask = nil
         endTripTour()
+        stopCitySound()
     }
 
     /// Clears the trip tour's banner, card numbering and route line.
@@ -894,6 +1069,10 @@ struct CityMapView: View {
 
     /// Swoops the camera down to a landmark and shows its card.
     private func flyTo(_ building: Building, duration: Double = 1.5) {
+        // Time walk: the old map turns to the year the landmark was built
+        if isTouring, showsOldMap, building.hasKnownYear {
+            oldMapYear = HistoricMap.clampedYear(building.yearBuilt)
+        }
         let target = coordinate(of: building)
         // The card covers the bottom of the screen. Aiming the camera slightly
         // south of the building pushes the building up into the visible area.

@@ -30,6 +30,13 @@
 
 import Foundation
 
+#if os(visionOS)
+/// The Vision Pro app has no `CityLocation`; its cities are the registry's city names.
+typealias ArchitectCity = String
+#else
+typealias ArchitectCity = CityLocation.City
+#endif
+
 /// One architect or firm, as the app groups them.
 struct ArchitectName: Identifiable, Hashable {
     /// The loose comparison key (see `ArchitectIndex.key(for:)`).
@@ -53,7 +60,7 @@ enum ArchitectIndex {
     }
 
     /// Every landmark by this architect, oldest first (undated ones last).
-    static func landmarks(by architect: ArchitectName) -> [(building: Building, city: CityLocation.City)] {
+    static func landmarks(by architect: ArchitectName) -> [(building: Building, city: ArchitectCity)] {
         (index.landmarks[architect.key] ?? []).sorted { first, second in
             // Year 0 means "no build date", so those go to the end
             let firstYear = first.building.hasKnownYear ? first.building.yearBuilt : Int.max
@@ -155,7 +162,7 @@ enum ArchitectIndex {
 
     private struct Index {
         /// Architect key → every landmark that names them
-        var landmarks: [String: [(building: Building, city: CityLocation.City)]] = [:]
+        var landmarks: [String: [(building: Building, city: ArchitectCity)]] = [:]
         /// Architect key → the spelling most landmarks use
         var displayNames: [String: String] = [:]
         /// Keys of whole architect strings, for rule 2
@@ -166,13 +173,22 @@ enum ArchitectIndex {
     /// a building id found in two cities counts once (the first city wins).
     private static let index: Index = {
         var result = Index()
-        var allLandmarks: [(building: Building, city: CityLocation.City)] = []
+        var allLandmarks: [(building: Building, city: ArchitectCity)] = []
         var seenIDs: Set<String> = []
+        #if os(visionOS)
+        let store = VisionStore.shared
+        for city in store.cityNames {
+            for building in store.buildings(for: city) where seenIDs.insert(building.id).inserted {
+                allLandmarks.append((building, city))
+            }
+        }
+        #else
         for city in CityLocation.City.allCases {
             for building in city.buildings where seenIDs.insert(building.id).inserted {
                 allLandmarks.append((building, city))
             }
         }
+        #endif
 
         for landmark in allLandmarks {
             if let architect = landmark.building.knownArchitect {

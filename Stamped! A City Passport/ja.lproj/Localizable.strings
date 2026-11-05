@@ -1206,3 +1206,60 @@
 "Added to %@" = "%@ に追加しました";
 "Purchasing" = "購入中";
 "Did you know? %@" = "ご存知ですか？%@";
+
+/* Heritage listings (Timeline) */
+"UNESCO World Heritage Site since %@" = "%@年からユネスコ世界遺産";
+"UNESCO World Heritage Site" = "ユネスコ世界遺産";
+"Text: UNESCO World Heritage Centre, CC BY-SA 3.0 IGO" = "文：ユネスコ世界遺産センター、CC BY-SA 3.0 IGO";
+"Listed on the National Register of Historic Places" = "米国国家歴史登録財に登録";
+"See the official listing and nomination" = "公式の登録情報と推薦書を見る";
+
+/* Timeline (Phase 1) */
+"Timeline" = "年表";
+"Built" = "建設";
+"Opened" = "開業";
+"Demolished" = "解体";
+"Listed: %@" = "登録：%@";
+"Replaced %@" = "%@の跡地に建設";
+"Replaced by %@" = "%@に建て替え";
+"%@ BC" = "紀元前%@年";
+"%@s" = "%@年代";
+"c. %@" = "%@年頃";
+"Dates from Wikidata" = "日付：Wikidata";
+"Dates from Wikidata · Newspapers from the Library of Congress, Chronicling America" = "日付：Wikidata・新聞：米国議会図書館 Chronicling America";
+"What the Papers Said" = "当時の新聞記事";
+"Searching old newspapers…" = "古い新聞を検索中…";
+"Quotes are read automatically from old scans and may contain errors." = "引用は古いスキャン画像から自動で読み取っているため、誤りを含むことがあります。";
+"Read the page" = "紙面を読む";
+"Opens the newspaper page on loc.gov" = "loc.govで新聞の紙面を開きます";
+
+/* History on the iPhone: Then & Now, Ask the building, old photos, On This Day, city sounds */
+"Year" = "年";
+"Now" = "現在";
+"Old map" = "古地図";
+"%lld percent" = "%lldパーセント";
+"Old photos: Library of Congress, Wikimedia Commons, Europeana, Smithsonian; public domain" = "古写真：米国議会図書館、ウィキメディア・コモンズ、Europeana、スミソニアン（パブリックドメイン）";
+"On This Day" = "今日は何の日";
+"From Wikipedia (CC BY-SA)" = "出典：ウィキペディア（CC BY-SA）";
+"Opens %@" = "%@を開きます";
+"Then & Now" = "今と昔";
+"Time Walk" = "タイムウォーク";
+"Ask" = "質問";
+"Ask %@" = "%@に質問";
+"Ask %@ a question" = "%@に質問する";
+"Apple Intelligence Is Off" = "Apple Intelligenceがオフです";
+"Turn on Apple Intelligence in Settings to ask landmarks questions." = "ランドマークに質問するには、設定でApple Intelligenceをオンにしてください。";
+"Answers come only from Stamped's facts about this landmark, written on your device." = "回答はこのランドマークに関するStampedの情報だけを使い、デバイス上で作成されます。";
+"When were you built?" = "いつ建てられたの？";
+"Who designed you?" = "誰が設計したの？";
+"What were you used for?" = "何に使われていたの？";
+"What happened here?" = "ここで何があったの？";
+"Sorry, I couldn't answer that just now." = "すみません、今は答えられません。";
+"Sound: %@ by %@, CC0, Freesound" = "音：%1$@（%2$@）、CC0、Freesound";
+"Old Photos" = "昔の写真";
+"View Source" = "出典を見る";
+"Turn Off City Sounds" = "街の音をオフにする";
+"Ask this landmark a question" = "このランドマークに質問します";
+"Step into the Past" = "過去へ入る";
+"Film: Prelinger Archives, Internet Archive · Public domain" = "映像：Prelinger Archives、Internet Archive・パブリックドメイン";
+"No old film or photos of this landmark yet." = "このランドマークの古い映像や写真はまだありません。";

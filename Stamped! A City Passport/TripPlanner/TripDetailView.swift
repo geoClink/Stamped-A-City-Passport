@@ -61,6 +61,7 @@ struct TripDetailView: View {
 
     private var trip: Trip? { store.trip(withID: tripID) }
 
+    #if !os(visionOS)
     /// The 3D map, flying through this trip. Opened by "Tour This Trip".
     @ViewBuilder
     private var tourMap: some View {
@@ -74,6 +75,7 @@ struct TripDetailView: View {
             RoadTripTourMap(city: campus, tripID: tripID)
         }
     }
+    #endif
 
     /// For a college road trip: the campus of the day shown on the route map,
     /// which is the campus the 3D tour opens.
@@ -156,8 +158,10 @@ struct TripDetailView: View {
                 }
             }
         }
+        #if !os(visionOS)
         .sheet(isPresented: tourPresented(fullScreen: false)) { tourMap }
         .fullScreenCover(isPresented: tourPresented(fullScreen: true)) { tourMap }
+        #endif
         .sheet(item: $addingToDay) { day in
             Group {
                 if let viewModel {
@@ -227,6 +231,8 @@ struct TripDetailView: View {
             }
 
             // The 3D tour needs a Stamped city's map, so anywhere trips skip it for now.
+            // Vision Pro has its own 3D city map, so the iPhone's tour isn't there.
+            #if !os(visionOS)
             // A college road trip tours the campus of the day on the map.
             if viewModel != nil {
                 tourButton(trip, title: Text("Tour This Trip in 3D"), buildings: buildings)
@@ -240,6 +246,7 @@ struct TripDetailView: View {
                     buildings: campus.buildings
                 )
             }
+            #endif
         }
     }
 
@@ -456,6 +463,7 @@ struct TripDetailView: View {
     }
 }
 
+#if !os(visionOS)
 /// The 3D map of one campus on a college road trip. Like My Trips' city trips,
 /// the city page normally owns the view model, so this view makes one and keeps it.
 private struct RoadTripTourMap: View {
@@ -475,6 +483,7 @@ private struct RoadTripTourMap: View {
         }
     }
 }
+#endif
 
 /// "Day 2 · Tue, Oct 24" with the Optimize button and a menu to remove the day.
 private struct TripDayHeader: View {

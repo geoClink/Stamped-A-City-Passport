@@ -10,6 +10,7 @@ struct Tally_AVPApp: App {
 
     @State private var immersionStyle: ImmersionStyle = .mixed
     @State private var panoramaImmersionStyle: ImmersionStyle = .full
+    @State private var pastImmersionStyle: ImmersionStyle = .full
 
     init() {
         // Finish any tip that completed while the app was closed (or after Ask to Buy)
@@ -23,6 +24,27 @@ struct Tally_AVPApp: App {
             CityListVisionView()
         }
         .defaultSize(width: 1400, height: 900)
+
+        // ── Landmark page: opens beside the map when a pin is tapped ─────────
+        // Its own window, so it never covers the map and can be moved and turned.
+        Window("Landmark", id: LandmarkWindowView.windowID) {
+            LandmarkWindowView()
+        }
+        .defaultSize(width: 520, height: 820)
+        .defaultWindowPlacement { _, context in
+            // Beside the main window, which is the first one open
+            if let main = context.windows.first {
+                WindowPlacement(.trailing(main))
+            } else {
+                WindowPlacement()
+            }
+        }
+
+        // ── My Trips: the iPhone app's trip planner, shared code ──────────────
+        Window("My Trips", id: "trips") {
+            MyTripsView()
+        }
+        .defaultSize(width: 900, height: 800)
 
         // ── Volumetric city model: opens when user selects a city ─────────────
         // Receives the city name as a String value.
@@ -54,5 +76,13 @@ struct Tally_AVPApp: App {
             }
         }
         .immersionStyle(selection: $panoramaImmersionStyle, in: .full)
+
+        // ── Step into the Past: an old film or photos of the landmark around you ──
+        ImmersiveSpace(id: PastImmersiveView.spaceID, for: String.self) { $buildingID in
+            if let buildingID {
+                PastImmersiveView(buildingID: buildingID)
+            }
+        }
+        .immersionStyle(selection: $pastImmersionStyle, in: .full)
     }
 }

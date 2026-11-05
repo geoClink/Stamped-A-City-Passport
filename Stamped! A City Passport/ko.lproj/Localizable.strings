@@ -1206,3 +1206,60 @@
 "Added to %@" = "%@에 추가됨";
 "Purchasing" = "구매 중";
 "Did you know? %@" = "알고 계셨나요? %@";
+
+/* Heritage listings (Timeline) */
+"UNESCO World Heritage Site since %@" = "%@년부터 유네스코 세계유산";
+"UNESCO World Heritage Site" = "유네스코 세계유산";
+"Text: UNESCO World Heritage Centre, CC BY-SA 3.0 IGO" = "글: 유네스코 세계유산센터, CC BY-SA 3.0 IGO";
+"Listed on the National Register of Historic Places" = "미국 국가사적지에 등재";
+"See the official listing and nomination" = "공식 등재 정보와 지정 신청서 보기";
+
+/* Timeline (Phase 1) */
+"Timeline" = "연표";
+"Built" = "건축";
+"Opened" = "개장";
+"Demolished" = "철거";
+"Listed: %@" = "지정: %@";
+"Replaced %@" = "%@ 자리에 건립";
+"Replaced by %@" = "%@(으)로 대체됨";
+"%@ BC" = "기원전 %@년";
+"%@s" = "%@년대";
+"c. %@" = "%@년경";
+"Dates from Wikidata" = "날짜 출처: Wikidata";
+"Dates from Wikidata · Newspapers from the Library of Congress, Chronicling America" = "날짜 출처: Wikidata · 신문: 미국 의회도서관 Chronicling America";
+"What the Papers Said" = "당시 신문 기사";
+"Searching old newspapers…" = "옛 신문 검색 중…";
+"Quotes are read automatically from old scans and may contain errors." = "인용문은 옛 스캔 이미지에서 자동으로 읽어 오류가 있을 수 있습니다.";
+"Read the page" = "지면 보기";
+"Opens the newspaper page on loc.gov" = "loc.gov에서 신문 지면을 엽니다";
+
+/* History on the iPhone: Then & Now, Ask the building, old photos, On This Day, city sounds */
+"Year" = "연도";
+"Now" = "현재";
+"Old map" = "옛 지도";
+"%lld percent" = "%lld퍼센트";
+"Old photos: Library of Congress, Wikimedia Commons, Europeana, Smithsonian; public domain" = "옛 사진: 미국 의회도서관, 위키미디어 공용, Europeana, 스미스소니언; 퍼블릭 도메인";
+"On This Day" = "오늘의 역사";
+"From Wikipedia (CC BY-SA)" = "출처: 위키백과 (CC BY-SA)";
+"Opens %@" = "%@ 열기";
+"Then & Now" = "그때와 지금";
+"Time Walk" = "시간 여행";
+"Ask" = "질문하기";
+"Ask %@" = "%@에게 질문";
+"Ask %@ a question" = "%@에게 질문하기";
+"Apple Intelligence Is Off" = "Apple Intelligence가 꺼져 있음";
+"Turn on Apple Intelligence in Settings to ask landmarks questions." = "랜드마크에 질문하려면 설정에서 Apple Intelligence를 켜세요.";
+"Answers come only from Stamped's facts about this landmark, written on your device." = "답변은 이 랜드마크에 대한 Stamped의 정보만 사용하며 기기에서 작성됩니다.";
+"When were you built?" = "언제 지어졌나요?";
+"Who designed you?" = "누가 설계했나요?";
+"What were you used for?" = "어떤 용도로 쓰였나요?";
+"What happened here?" = "여기서 무슨 일이 있었나요?";
+"Sorry, I couldn't answer that just now." = "죄송해요, 지금은 답할 수 없어요.";
+"Sound: %@ by %@, CC0, Freesound" = "소리: %2$@의 %1$@, CC0, Freesound";
+"Old Photos" = "옛 사진";
+"View Source" = "출처 보기";
+"Turn Off City Sounds" = "도시 소리 끄기";
+"Ask this landmark a question" = "이 랜드마크에 질문합니다";
+"Step into the Past" = "과거로 들어가기";
+"Film: Prelinger Archives, Internet Archive · Public domain" = "영상: Prelinger Archives, Internet Archive · 퍼블릭 도메인";
+"No old film or photos of this landmark yet." = "이 랜드마크의 옛 영상이나 사진이 아직 없어요.";

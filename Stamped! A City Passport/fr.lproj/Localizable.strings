@@ -1206,3 +1206,60 @@
 "Added to %@" = "Ajouté à %@";
 "Purchasing" = "Achat en cours";
 "Did you know? %@" = "Le saviez-vous ? %@";
+
+/* Heritage listings (Timeline) */
+"UNESCO World Heritage Site since %@" = "Patrimoine mondial de l'UNESCO depuis %@";
+"UNESCO World Heritage Site" = "Patrimoine mondial de l'UNESCO";
+"Text: UNESCO World Heritage Centre, CC BY-SA 3.0 IGO" = "Texte : Centre du patrimoine mondial de l'UNESCO, CC BY-SA 3.0 IGO";
+"Listed on the National Register of Historic Places" = "Inscrit au Registre national des lieux historiques";
+"See the official listing and nomination" = "Voir l'inscription officielle et le dossier";
+
+/* Timeline (Phase 1) */
+"Timeline" = "Chronologie";
+"Built" = "Construit";
+"Opened" = "Ouvert";
+"Demolished" = "Démoli";
+"Listed: %@" = "Classé : %@";
+"Replaced %@" = "A remplacé %@";
+"Replaced by %@" = "Remplacé par %@";
+"%@ BC" = "%@ av. J.-C.";
+"%@s" = "Années %@";
+"c. %@" = "v. %@";
+"Dates from Wikidata" = "Dates issues de Wikidata";
+"Dates from Wikidata · Newspapers from the Library of Congress, Chronicling America" = "Dates issues de Wikidata · Journaux de la Library of Congress, Chronicling America";
+"What the Papers Said" = "Ce qu'en disait la presse";
+"Searching old newspapers…" = "Recherche dans les vieux journaux…";
+"Quotes are read automatically from old scans and may contain errors." = "Les citations sont lues automatiquement sur d'anciens scans et peuvent contenir des erreurs.";
+"Read the page" = "Lire la page";
+"Opens the newspaper page on loc.gov" = "Ouvre la page du journal sur loc.gov";
+
+/* History on the iPhone: Then & Now, Ask the building, old photos, On This Day, city sounds */
+"Year" = "Année";
+"Now" = "Aujourd'hui";
+"Old map" = "Ancienne carte";
+"%lld percent" = "%lld pour cent";
+"Old photos: Library of Congress, Wikimedia Commons, Europeana, Smithsonian; public domain" = "Photos anciennes : Library of Congress, Wikimedia Commons, Europeana, Smithsonian ; domaine public";
+"On This Day" = "Ce jour-là";
+"From Wikipedia (CC BY-SA)" = "Depuis Wikipédia (CC BY-SA)";
+"Opens %@" = "Ouvre %@";
+"Then & Now" = "Hier et aujourd'hui";
+"Time Walk" = "Voyage dans le temps";
+"Ask" = "Demander";
+"Ask %@" = "Demander à %@";
+"Ask %@ a question" = "Posez une question à %@";
+"Apple Intelligence Is Off" = "Apple Intelligence est désactivé";
+"Turn on Apple Intelligence in Settings to ask landmarks questions." = "Activez Apple Intelligence dans Réglages pour poser des questions aux monuments.";
+"Answers come only from Stamped's facts about this landmark, written on your device." = "Les réponses s'appuient uniquement sur les informations de Stamped sur ce monument et sont rédigées sur votre appareil.";
+"When were you built?" = "Quand as-tu été construit ?";
+"Who designed you?" = "Qui t'a conçu ?";
+"What were you used for?" = "À quoi servais-tu ?";
+"What happened here?" = "Que s'est-il passé ici ?";
+"Sorry, I couldn't answer that just now." = "Désolé, je ne peux pas répondre pour l'instant.";
+"Sound: %@ by %@, CC0, Freesound" = "Son : %1$@ par %2$@, CC0, Freesound";
+"Old Photos" = "Photos anciennes";
+"View Source" = "Voir la source";
+"Turn Off City Sounds" = "Couper les sons de la ville";
+"Ask this landmark a question" = "Posez une question à ce monument";
+"Step into the Past" = "Plongez dans le passé";
+"Film: Prelinger Archives, Internet Archive · Public domain" = "Film : Prelinger Archives, Internet Archive · Domaine public";
+"No old film or photos of this landmark yet." = "Pas encore de film ni de photo ancienne de ce monument.";

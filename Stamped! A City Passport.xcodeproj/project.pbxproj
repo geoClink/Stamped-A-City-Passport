@@ -96,7 +96,7 @@
 		DE2C6FC2304D06E700F657DA /* StampedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StampedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2C6FE7304D222900F657DA /* WeatherKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WeatherKit.framework; path = System/Library/Frameworks/WeatherKit.framework; sourceTree = SDKROOT; };
 		DE4ECE2C2F4F65D600D107CF /* Stamped!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stamped!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE57C155305351770036884C /* detroit.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = detroit.usdz; sourceTree = "<group>"; };
+		DE57C155305351770036884C /* detroit.usdz */ = {isa = PBXFileReference; lastKnownFileType = text; path = detroit.usdz; sourceTree = "<group>"; };
 		DEA370BE3050AE24004BA2BB /* Tally-AVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tally-AVP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA370C13050AE24004BA2BB /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = folder; path = RealityKitContent; sourceTree = "<group>"; };
 		DEA370CF3050AE53004BA2BB /* Tally-AVPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tally-AVPTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,17 +107,52 @@
 		DE008D56305262410003C067 /* Exceptions for "Stamped! A City Passport" folder in "Tally-AVP" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				ArchitectView/ArchitectIndex.swift,
+				ArchitectView/ArchitectWikiService.swift,
+				BuildingDetailView/HistoryTimelineSection.swift,
+				"CityDetailView/CityDetailView-ViewModel.swift",
 				CityDetailView/Components/InAppBrowser.swift,
+				CityDetailView/Components/WikiBuildingPhoto.swift,
 				CityExplore/CitySceneConfig.swift,
+				History/AskBuildingView.swift,
+				History/CitySounds.swift,
+				History/HistoricMap.swift,
+				History/HistoricPhotosSection.swift,
+				History/OldFilms.swift,
+				History/OldPhotoSources.swift,
+				History/OnThisDay.swift,
+				History/Secrets.swift,
 				Hotels/HotelLinks.swift,
 				Managers/AudioStoryPlayer.swift,
+				Managers/CampusHistoryService.swift,
+				Managers/HapticManager.swift,
+				Managers/HeritageService.swift,
+				Managers/HistoryTimelineService.swift,
 				Managers/ICloudListMerge.swift,
+				Managers/LibraryOfCongressService.swift,
+				Managers/OfflineStore.swift,
 				Managers/TipJarStore.swift,
+				Managers/VisitManager.swift,
+				Managers/WebLinkRouter.swift,
+				Managers/WikimediaService.swift,
 				Models/Building.swift,
+				Models/BuildingRegistry.swift,
+				Models/Campus.swift,
+				Models/CampusExtras.swift,
+				Models/CampusList.swift,
+				Models/CampusStudentLife.swift,
 				Models/CityAudioManager.swift,
+				Models/CityCoordinates.swift,
+				Models/CityData.swift,
 				Models/CustomPlace.swift,
+				Models/Design.swift,
+				Models/Extensions.swift,
 				Models/LandmarkPanorama.swift,
+				Models/Model.swift,
+				Models/NavigationManager.swift,
 				Models/SoundCreditsView.swift,
+				Platform/AppCommands.swift,
+				Platform/MacCompat.swift,
 				PrivacyInfo.xcprivacy,
 				QuizView/Components/QuestionType.swift,
 				Resources/AudioCredits.json,
@@ -130,6 +165,23 @@
 				Resources/rain_loop.m4a,
 				SettingsView/TipJarView.swift,
 				Tours/TourLinks.swift,
+				TripPlanner/AddToTripSheet.swift,
+				TripPlanner/AddTripStopSheet.swift,
+				TripPlanner/AnywhereStopSheet.swift,
+				TripPlanner/AreaSearchSheet.swift,
+				TripPlanner/LandmarkDragDrop.swift,
+				TripPlanner/MapItemDetails.swift,
+				TripPlanner/MyTripsView.swift,
+				TripPlanner/ResolvedTripStop.swift,
+				TripPlanner/Trip.swift,
+				TripPlanner/TripDetailView.swift,
+				TripPlanner/TripPlannerView.swift,
+				TripPlanner/TripRouteMap.swift,
+				TripPlanner/TripStopRow.swift,
+				TripPlanner/TripStore.swift,
+				TripPlanner/TripTour.swift,
+				TripPlanner/WalkingRoute.swift,
+				WorldMapView/MapClustering.swift,
 			);
 			target = DEA370BD3050AE24004BA2BB /* Tally-AVP */;
 		};
@@ -174,16 +226,14 @@
 		};
 		DE2C6FC3304D06E700F657DA /* StampedTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = StampedTests;
 			sourceTree = "<group>";
 		};
 		DE4ECE2E2F4F65D600D107CF /* Stamped! A City Passport */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				DE008D56305262410003C067 /* Exceptions for "Stamped! A City Passport" folder in "Tally-AVP" target */,
 				DE2C6FB1304CB5B000F657DA /* Exceptions for "Stamped! A City Passport" folder in "PassportWidgetExtension" target */,
+				DE008D56305262410003C067 /* Exceptions for "Stamped! A City Passport" folder in "Tally-AVP" target */,
 			);
 			path = "Stamped! A City Passport";
 			sourceTree = "<group>";
@@ -198,8 +248,6 @@
 		};
 		DEA370D23050AE53004BA2BB /* Tally-AVPTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = "Tally-AVPTests";
 			sourceTree = "<group>";
 		};
@@ -213,8 +261,6 @@
 		};
 		E181FCB854BBF9AB89BD61D4 /* StampedUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = StampedUITests;
 			sourceTree = "<group>";
 		};

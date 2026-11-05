@@ -36,6 +36,11 @@ struct CityListVisionView: View {
                     total: store.buildings(for: city).count
                 )
             }
+            // Today in history at the app's landmarks and cities
+            .safeAreaInset(edge: .top) {
+                OnThisDayCard(landmarks: store.buildingsByCity.mapValues { $0.map(\.name) },
+                              cities: store.cityNames) { city in selectedCity = city }
+            }
             .navigationTitle("Stamped!")
             .searchable(text: $searchText, prompt: "Search cities")
             .toolbar {
@@ -44,6 +49,13 @@ struct CityListVisionView: View {
                         openWindow(id: "globe")
                     }
                     .accessibilityHint("Opens a 3D globe of every city in its own window")
+                }
+                ToolbarItem {
+                    // The iPhone app's trip planner, in its own window beside the map
+                    Button("My Trips", systemImage: "suitcase.fill") {
+                        openWindow(id: "trips")
+                    }
+                    .accessibilityHint("Opens your trips in their own window")
                 }
                 ToolbarItem {
                     Button("Support Stamped!", systemImage: "heart") {
