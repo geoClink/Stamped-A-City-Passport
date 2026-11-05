@@ -31,7 +31,7 @@ in each buyer's currency. Until the products exist in App Store Connect, the app
 
 ## Local testing (no App Store Connect needed)
 
-`StoreKit/TipJar.storekit` lists the three products. Both shared schemes
+`StampedTests/TipJar.storekit` lists the three products. Both shared schemes
 ("Stamped! A City Passport" and "Tally-AVP") use it under **Run → Options → StoreKit
 Configuration**, so pressing Run in Xcode shows fake tips with a test payment sheet.
 It only applies to Run from Xcode: Archive, TestFlight and App Store builds never use it.

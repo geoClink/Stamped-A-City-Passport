@@ -327,7 +327,7 @@ struct HistoricMapControls: View {
                 .font(.caption2)
                 .foregroundStyle(.secondary)
             if showsPhotoCredit {
-                Text("Old photos: Library of Congress, Wikimedia Commons, Europeana, Smithsonian; public domain")
+                Text("Old photos: Library of Congress, Wikimedia Commons, Europeana, Smithsonian, DPLA; public domain")
                     .font(.caption2)
                     .foregroundStyle(.secondary)
             }

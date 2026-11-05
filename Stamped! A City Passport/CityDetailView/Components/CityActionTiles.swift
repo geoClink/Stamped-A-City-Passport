@@ -21,6 +21,15 @@ struct CityActionTile: Identifiable {
 }
 
 struct CityActionTiles: View {
+    /// A Mac's page and tiles are nearly the same white, so its tiles get a thin edge
+    private var tileEdge: Color {
+        #if os(macOS)
+        Color(UIColor.separatorColor)
+        #else
+        Color.clear
+        #endif
+    }
+
     let tiles: [CityActionTile]
     let isHighContrast: Bool
 
@@ -70,7 +79,7 @@ struct CityActionTiles: View {
             .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
             .overlay(
                 RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                    .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
+                    .stroke(isHighContrast ? Color.primary : tileEdge, lineWidth: isHighContrast ? 2 : 1)
             )
         }
         .buttonStyle(RoundedButtonStyle())
