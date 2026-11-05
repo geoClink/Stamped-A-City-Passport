@@ -1213,3 +1213,22 @@
 "Text: UNESCO World Heritage Centre, CC BY-SA 3.0 IGO" = "文字：联合国教科文组织世界遗产中心，CC BY-SA 3.0 IGO";
 "Listed on the National Register of Historic Places" = "列入美国国家史迹名录";
 "See the official listing and nomination" = "查看官方登录和提名文件";
+
+/* Timeline (Phase 1) */
+"Timeline" = "时间线";
+"Built" = "建成";
+"Opened" = "开放";
+"Demolished" = "拆除";
+"Listed: %@" = "列入：%@";
+"Replaced %@" = "取代了%@";
+"Replaced by %@" = "被%@取代";
+"%@ BC" = "公元前%@年";
+"%@s" = "%@年代";
+"c. %@" = "约%@年";
+"Dates from Wikidata" = "日期来自 Wikidata";
+"Dates from Wikidata · Newspapers from the Library of Congress, Chronicling America" = "日期来自 Wikidata · 报纸来自美国国会图书馆 Chronicling America";
+"What the Papers Said" = "当年报纸怎么说";
+"Searching old newspapers…" = "正在搜索旧报纸…";
+"Quotes are read automatically from old scans and may contain errors." = "引文由旧扫描件自动识别，可能有误。";
+"Read the page" = "阅读该版面";
+"Opens the newspaper page on loc.gov" = "在 loc.gov 打开该报纸版面";

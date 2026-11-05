@@ -1213,3 +1213,22 @@
 "Text: UNESCO World Heritage Centre, CC BY-SA 3.0 IGO" = "Texto: Centro del Patrimonio Mundial de la UNESCO, CC BY-SA 3.0 IGO";
 "Listed on the National Register of Historic Places" = "Inscrito en el Registro Nacional de Lugares Históricos";
 "See the official listing and nomination" = "Ver la inscripción oficial y la nominación";
+
+/* Timeline (Phase 1) */
+"Timeline" = "Cronología";
+"Built" = "Construido";
+"Opened" = "Inaugurado";
+"Demolished" = "Demolido";
+"Listed: %@" = "Catalogado: %@";
+"Replaced %@" = "Reemplazó a %@";
+"Replaced by %@" = "Reemplazado por %@";
+"%@ BC" = "%@ a. C.";
+"%@s" = "Década de %@";
+"c. %@" = "c. %@";
+"Dates from Wikidata" = "Fechas de Wikidata";
+"Dates from Wikidata · Newspapers from the Library of Congress, Chronicling America" = "Fechas de Wikidata · Periódicos de la Library of Congress, Chronicling America";
+"What the Papers Said" = "Lo que dijeron los periódicos";
+"Searching old newspapers…" = "Buscando en periódicos antiguos…";
+"Quotes are read automatically from old scans and may contain errors." = "Las citas se leen automáticamente de escaneos antiguos y pueden contener errores.";
+"Read the page" = "Leer la página";
+"Opens the newspaper page on loc.gov" = "Abre la página del periódico en loc.gov";

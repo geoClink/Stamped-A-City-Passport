@@ -1213,3 +1213,22 @@
 "Text: UNESCO World Heritage Centre, CC BY-SA 3.0 IGO" = "文：ユネスコ世界遺産センター、CC BY-SA 3.0 IGO";
 "Listed on the National Register of Historic Places" = "米国国家歴史登録財に登録";
 "See the official listing and nomination" = "公式の登録情報と推薦書を見る";
+
+/* Timeline (Phase 1) */
+"Timeline" = "年表";
+"Built" = "建設";
+"Opened" = "開業";
+"Demolished" = "解体";
+"Listed: %@" = "登録：%@";
+"Replaced %@" = "%@の跡地に建設";
+"Replaced by %@" = "%@に建て替え";
+"%@ BC" = "紀元前%@年";
+"%@s" = "%@年代";
+"c. %@" = "%@年頃";
+"Dates from Wikidata" = "日付：Wikidata";
+"Dates from Wikidata · Newspapers from the Library of Congress, Chronicling America" = "日付：Wikidata・新聞：米国議会図書館 Chronicling America";
+"What the Papers Said" = "当時の新聞記事";
+"Searching old newspapers…" = "古い新聞を検索中…";
+"Quotes are read automatically from old scans and may contain errors." = "引用は古いスキャン画像から自動で読み取っているため、誤りを含むことがあります。";
+"Read the page" = "紙面を読む";
+"Opens the newspaper page on loc.gov" = "loc.govで新聞の紙面を開きます";

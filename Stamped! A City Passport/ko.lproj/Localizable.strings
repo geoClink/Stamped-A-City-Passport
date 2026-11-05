@@ -1213,3 +1213,22 @@
 "Text: UNESCO World Heritage Centre, CC BY-SA 3.0 IGO" = "글: 유네스코 세계유산센터, CC BY-SA 3.0 IGO";
 "Listed on the National Register of Historic Places" = "미국 국가사적지에 등재";
 "See the official listing and nomination" = "공식 등재 정보와 지정 신청서 보기";
+
+/* Timeline (Phase 1) */
+"Timeline" = "연표";
+"Built" = "건축";
+"Opened" = "개장";
+"Demolished" = "철거";
+"Listed: %@" = "지정: %@";
+"Replaced %@" = "%@ 자리에 건립";
+"Replaced by %@" = "%@(으)로 대체됨";
+"%@ BC" = "기원전 %@년";
+"%@s" = "%@년대";
+"c. %@" = "%@년경";
+"Dates from Wikidata" = "날짜 출처: Wikidata";
+"Dates from Wikidata · Newspapers from the Library of Congress, Chronicling America" = "날짜 출처: Wikidata · 신문: 미국 의회도서관 Chronicling America";
+"What the Papers Said" = "당시 신문 기사";
+"Searching old newspapers…" = "옛 신문 검색 중…";
+"Quotes are read automatically from old scans and may contain errors." = "인용문은 옛 스캔 이미지에서 자동으로 읽어 오류가 있을 수 있습니다.";
+"Read the page" = "지면 보기";
+"Opens the newspaper page on loc.gov" = "loc.gov에서 신문 지면을 엽니다";
