@@ -59,6 +59,7 @@ struct CityItineraryView: View {
                 ForEach(1...7, id: \.self) { n in Text("\(n)").tag(n) }
             }
             .pickerStyle(.segmented)
+            .labelsHidden()
         }
         .dsPageMargin()
     }

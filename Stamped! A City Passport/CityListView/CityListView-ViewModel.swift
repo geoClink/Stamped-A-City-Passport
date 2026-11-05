@@ -332,6 +332,10 @@ extension CityListView {
             }
             .foregroundStyle(isHighContrast ? Color.primary : Color.adventureOrange)
         }
+        #if os(macOS)
+        // The gear alone, without the glass pill Mac toolbars draw around it
+        .sharedBackgroundVisibility(.hidden)
+        #endif
     }
     
     /// One flag drives two presentations, a sheet (iPhone) and full screen (iPad, regular width).
