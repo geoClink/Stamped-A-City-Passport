@@ -433,6 +433,7 @@ extension BuildingDetailView {
             BuildingPhotoGallery(building: building, isHighContrast: isHighContrast)
             // US landmarks only; hidden when the Library of Congress has nothing for it
             HistoricPhotosSection(building: building, city: viewModel.city, isHighContrast: isHighContrast)
+            HistoryTimelineSection(building: building, cityName: viewModel.city.name, isHighContrast: isHighContrast)
             if BuildingScanService.isEnabled {
                 threeDModelSection
             }

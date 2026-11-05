@@ -24,6 +24,27 @@ struct Tally_AVPApp: App {
         }
         .defaultSize(width: 1400, height: 900)
 
+        // ── Landmark page: opens beside the map when a pin is tapped ─────────
+        // Its own window, so it never covers the map and can be moved and turned.
+        Window("Landmark", id: LandmarkWindowView.windowID) {
+            LandmarkWindowView()
+        }
+        .defaultSize(width: 520, height: 820)
+        .defaultWindowPlacement { _, context in
+            // Beside the main window, which is the first one open
+            if let main = context.windows.first {
+                WindowPlacement(.trailing(main))
+            } else {
+                WindowPlacement()
+            }
+        }
+
+        // ── My Trips: the iPhone app's trip planner, shared code ──────────────
+        Window("My Trips", id: "trips") {
+            MyTripsView()
+        }
+        .defaultSize(width: 900, height: 800)
+
         // ── Volumetric city model: opens when user selects a city ─────────────
         // Receives the city name as a String value.
         WindowGroup(id: "city-volume", for: String.self) { $cityName in

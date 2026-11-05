@@ -17,7 +17,11 @@ struct CityMapVisionView: View {
 
     private let store = VisionStore.shared
     @State private var position: MapCameraPosition = .automatic
-    @State private var selectedBuilding: Building?
+    /// The landmark shown in the landmark window (LandmarkWindowView)
+    private let selection = LandmarkSelection.shared
+    private var selectedBuilding: Building? { selection.building }
+    @Environment(\.openWindow) private var openWindow
+    @Environment(\.dismissWindow) private var dismissWindow
     @State private var showingQuiz = false
     @State private var showingWishlist = false
     /// Show Apple Maps' own places (restaurants, cafés, museums…) on the map.
@@ -31,6 +35,14 @@ struct CityMapVisionView: View {
     private let sharePlay = SharePlayExplorer.shared
     /// Reduce Motion: the camera jumps instead of swooping, and the card fades in
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    /// Then vs. Now: an old map of the city (OpenHistoricalMap) faded over today's
+    @State private var showsOldMap = false
+    @State private var oldMapYear = HistoricMap.defaultYear
+    @State private var oldMapOpacity = 0.75
+    /// Where the camera is, so switching maps keeps the view
+    @State private var currentCamera: MapCamera?
+    /// Camera moves for the old map, which isn't driven by `position`
+    @State private var oldMapCameraRequest: HistoricMapView.CameraRequest?
 
     private var mappableBuildings: [Building] {
         store.buildings(for: cityName).filter { $0.latitude != nil && $0.longitude != nil }
@@ -47,6 +59,152 @@ struct CityMapVisionView: View {
     }
 
     var body: some View {
+        Group {
+            if showsOldMap, let currentCamera {
+                oldMap(startingAt: currentCamera)
+            } else {
+                liveMap
+            }
+        }
+        .ornament(visibility: showsOldMap ? .visible : .hidden, attachmentAnchor: .scene(.top)) {
+            HistoricMapControls(year: $oldMapYear, opacity: $oldMapOpacity)
+        }
+        .navigationTitle(cityName)
+        // Is the 3D model on this device, downloadable, or missing?
+        .task(id: cityName) { await models.refresh(cityName) }
+        .toolbar {
+            // The map's main controls float in an ornament under the window,
+            // where visionOS puts a window's everyday controls.
+            ToolbarItemGroup(placement: .bottomOrnament) {
+                // The narrated tour: every landmark in a short walking order, each story read aloud
+                Button {
+                    if tourTask == nil { startTour() } else { stopTour() }
+                } label: {
+                    if tourTask == nil {
+                        Label("Play Tour", systemImage: "play.fill")
+                    } else {
+                        Label("Stop Tour", systemImage: "stop.fill")
+                    }
+                }
+                .help("Fly to each landmark and hear its story")
+                .disabled(mappableBuildings.isEmpty)
+
+                Toggle(isOn: $showsPlaces) {
+                    Label("Places", systemImage: "mappin.and.ellipse")
+                }
+                .help("Show restaurants, cafés, museums and more from Apple Maps")
+                .disabled(showsOldMap)
+
+                // Then vs. Now: fade an old map of the city over today's
+                Toggle(isOn: $showsOldMap) {
+                    Label("Then & Now", systemImage: "clock.arrow.circlepath")
+                }
+                .help("Fade an old map of the city over today's")
+                .disabled(currentCamera == nil)
+
+                Button {
+                    showingWishlist = true
+                } label: {
+                    Label("Want to Visit", systemImage: "heart")
+                }
+
+                Button {
+                    showingQuiz = true
+                } label: {
+                    Label("Quiz", systemImage: "questionmark.bubble")
+                }
+                .disabled(mappableBuildings.count < 4)
+
+                // Explore this city together with friends on FaceTime
+                SharePlayButton(cityName: cityName)
+            }
+            if hasCityModel {
+                ToolbarItem {
+                    // Open 3D Model, or Download … in 3D with progress and Cancel
+                    CityModelButton(cityName: cityName)
+                }
+            }
+        }
+        .onAppear {
+            fitCamera()
+            // Closing the landmark window ends the tour and the story, here and for friends
+            selection.onClose = {
+                stopTour()
+                storyPlayer.stop()
+                sharePlay.landmarkOpened(nil, in: cityName)
+            }
+            // Joining a friend's session switches city; open what they're looking at
+            showFriendsLandmark(sharePlay.remoteLandmark)
+        }
+        .onChange(of: sharePlay.remoteLandmark) { _, remote in
+            showFriendsLandmark(remote)
+        }
+        // Leaving the city ends the tour and the story
+        .onDisappear {
+            stopTour()
+            storyPlayer.stop()
+            closeLandmarkWindow()
+        }
+        // Turning Places off also closes any open place card
+        .onChange(of: showsPlaces) { _, isOn in
+            if !isOn { selectedFeature = nil }
+        }
+        // Back to today's map where the old map left off
+        .onChange(of: showsOldMap) { _, isOn in
+            if !isOn, let currentCamera { position = .camera(currentCamera) }
+        }
+        .sheet(isPresented: $showingQuiz) {
+            VisionQuizView(cityName: cityName, buildings: store.buildings(for: cityName))
+        }
+        .sheet(isPresented: $showingWishlist) {
+            WantToVisitList(
+                cityName: cityName,
+                onSelectBuilding: { building in
+                    showingWishlist = false
+                    if let lat = building.latitude, let lon = building.longitude {
+                        flyTo(building, at: CLLocationCoordinate2D(latitude: lat, longitude: lon))
+                    }
+                },
+                onSelectPlace: { place in
+                    showingWishlist = false
+                    flyTo(place.coordinate)
+                }
+            )
+        }
+    }
+
+    /// The same city with an old map on top, and the landmark pins
+    private func oldMap(startingAt camera: MapCamera) -> some View {
+        let landmarkPins = mappableBuildings.map { building in
+            let visited = store.visitedIDs.contains(building.id)
+            return HistoricMapView.Pin(
+                id: building.id, title: building.name,
+                coordinate: CLLocationCoordinate2D(latitude: building.latitude!, longitude: building.longitude!),
+                systemImage: visited ? "checkmark" : "building.columns",
+                color: visited ? .orange : .gray)
+        }
+        let placePins = store.customPlaces(in: cityName).map { place in
+            HistoricMapView.Pin(id: "place:\(place.id)", title: place.name, coordinate: place.coordinate,
+                                systemImage: CustomPlace.icon(forCategory: place.category), color: .systemPink)
+        }
+        return HistoricMapView(
+            year: oldMapYear,
+            opacity: oldMapOpacity,
+            pins: landmarkPins + placePins,
+            initialCamera: camera,
+            cameraRequest: oldMapCameraRequest,
+            onSelectPin: { id in
+                if let building = mappableBuildings.first(where: { $0.id == id }) {
+                    flyTo(building, at: CLLocationCoordinate2D(latitude: building.latitude!, longitude: building.longitude!))
+                } else if let place = store.customPlaces(in: cityName).first(where: { "place:\($0.id)" == id }) {
+                    flyTo(place.coordinate)
+                }
+            },
+            onCameraChange: { currentCamera = $0 }
+        )
+    }
+
+    private var liveMap: some View {
         // `selection` lets the user tap Apple's own places. Our landmark pins
         // handle their own taps, so they're unaffected.
         Map(position: $position, selection: $selectedFeature) {
@@ -91,120 +249,28 @@ struct CityMapVisionView: View {
             MapCompass()
             MapPitchToggle()
         }
-        .navigationTitle(cityName)
-        // Is the 3D model on this device, downloadable, or missing?
-        .task(id: cityName) { await models.refresh(cityName) }
-        .toolbar {
-            // The map's main controls float in an ornament under the window,
-            // where visionOS puts a window's everyday controls.
-            ToolbarItemGroup(placement: .bottomOrnament) {
-                // The narrated tour: every landmark in a short walking order, each story read aloud
-                Button {
-                    if tourTask == nil { startTour() } else { stopTour() }
-                } label: {
-                    if tourTask == nil {
-                        Label("Play Tour", systemImage: "play.fill")
-                    } else {
-                        Label("Stop Tour", systemImage: "stop.fill")
-                    }
-                }
-                .help("Fly to each landmark and hear its story")
-                .disabled(mappableBuildings.isEmpty)
-
-                Toggle(isOn: $showsPlaces) {
-                    Label("Places", systemImage: "mappin.and.ellipse")
-                }
-                .help("Show restaurants, cafés, museums and more from Apple Maps")
-
-                Button {
-                    showingWishlist = true
-                } label: {
-                    Label("Want to Visit", systemImage: "heart")
-                }
-
-                Button {
-                    showingQuiz = true
-                } label: {
-                    Label("Quiz", systemImage: "questionmark.bubble")
-                }
-                .disabled(mappableBuildings.count < 4)
-
-                // Explore this city together with friends on FaceTime
-                SharePlayButton(cityName: cityName)
-            }
-            if hasCityModel {
-                ToolbarItem {
-                    // Open 3D Model, or Download … in 3D with progress and Cancel
-                    CityModelButton(cityName: cityName)
-                }
-            }
-        }
-        .overlay(alignment: .bottomLeading) {
-            if let building = selectedBuilding {
-                LandmarkCard(building: building,
-                             cityName: cityName,
-                             isVisited: store.visitedIDs.contains(building.id),
-                             isWishlisted: store.isWishlisted(building.id),
-                             isPlaying: storyPlayer.isPlaying(building),
-                             onWishlist: { store.toggleWishlist(building.id) },
-                             onListen: { storyPlayer.toggle(building) }) {
-                    stopTour()
-                    storyPlayer.stop()
-                    selectedBuilding = nil
-                    sharePlay.landmarkOpened(nil, in: cityName)
-                }
-                .padding(24)
-                .transition(reduceMotion ? AnyTransition.opacity : AnyTransition.move(edge: .bottom).combined(with: .opacity))
-            }
-        }
-        .animation(.spring(duration: 0.35), value: selectedBuilding?.id)
-        .onAppear {
-            fitCamera()
-            // Joining a friend's session switches city; open what they're looking at
-            showFriendsLandmark(sharePlay.remoteLandmark)
-        }
-        .onChange(of: sharePlay.remoteLandmark) { _, remote in
-            showFriendsLandmark(remote)
-        }
-        // Leaving the city ends the tour and the story
-        .onDisappear {
-            stopTour()
-            storyPlayer.stop()
-        }
-        // Turning Places off also closes any open place card
-        .onChange(of: showsPlaces) { _, isOn in
-            if !isOn { selectedFeature = nil }
-        }
-        .sheet(isPresented: $showingQuiz) {
-            VisionQuizView(cityName: cityName, buildings: store.buildings(for: cityName))
-        }
-        .sheet(isPresented: $showingWishlist) {
-            WantToVisitList(
-                cityName: cityName,
-                onSelectBuilding: { building in
-                    showingWishlist = false
-                    if let lat = building.latitude, let lon = building.longitude {
-                        flyTo(building, at: CLLocationCoordinate2D(latitude: lat, longitude: lon))
-                    }
-                },
-                onSelectPlace: { place in
-                    showingWishlist = false
-                    flyTo(place.coordinate)
-                }
-            )
-        }
+        .onMapCameraChange(frequency: .onEnd) { context in currentCamera = context.camera }
     }
 
     /// Camera swoop for a saved place (no card, since it isn't a built-in landmark).
     private func flyTo(_ coordinate: CLLocationCoordinate2D) {
-        selectedBuilding = nil
+        closeLandmarkWindow()
         selectedFeature = nil
-        withAnimation(reduceMotion ? nil : .easeInOut(duration: 1.5)) {
-            position = .camera(MapCamera(centerCoordinate: coordinate, distance: 700, heading: 0, pitch: 65))
-        }
+        moveCamera(to: MapCamera(centerCoordinate: coordinate, distance: 700, heading: 0, pitch: 65))
     }
 
     // MARK: - Camera
+
+    /// Swoops whichever map is showing to `camera`
+    private func moveCamera(to camera: MapCamera) {
+        if showsOldMap {
+            oldMapCameraRequest = .init(camera: camera, animated: !reduceMotion)
+        } else {
+            withAnimation(reduceMotion ? nil : .easeInOut(duration: 1.5)) {
+                position = .camera(camera)
+            }
+        }
+    }
 
     /// Frames the city's landmarks with a tilted camera so the buildings stand up in 3D.
     /// Uses the median landmark as the centre, so one far-away landmark (an airport,
@@ -285,10 +351,9 @@ struct CityMapVisionView: View {
     private func flyTo(_ building: Building, at coordinate: CLLocationCoordinate2D,
                        shareWithGroup: Bool = true) {
         selectedFeature = nil
-        withAnimation(reduceMotion ? nil : .easeInOut(duration: 1.5)) {
-            position = .camera(MapCamera(centerCoordinate: coordinate, distance: 700, heading: 0, pitch: 65))
-        }
-        selectedBuilding = building
+        moveCamera(to: MapCamera(centerCoordinate: coordinate, distance: 700, heading: 0, pitch: 65))
+        selection.show(building, in: cityName)
+        openWindow(id: LandmarkWindowView.windowID)
         if shareWithGroup {
             sharePlay.landmarkOpened(building.id, in: cityName)
         }
@@ -308,8 +373,14 @@ struct CityMapVisionView: View {
                   shareWithGroup: false)
         } else {
             storyPlayer.stop()
-            selectedBuilding = nil
+            closeLandmarkWindow()
         }
+    }
+
+    /// Closes the landmark window without the close-button side effects (see `onClose`)
+    private func closeLandmarkWindow() {
+        selection.building = nil
+        dismissWindow(id: LandmarkWindowView.windowID)
     }
 }
 
@@ -359,7 +430,7 @@ private struct LandmarkPin: View {
 
 // MARK: - Landmark card
 
-private struct LandmarkCard: View {
+struct LandmarkCard: View {
     let building: Building
     let cityName: String
     let isVisited: Bool
@@ -407,17 +478,12 @@ private struct LandmarkCard: View {
                     .labelStyle(.iconOnly)
             }
 
-            ScrollView {
-                Text(building.description)
-                    .font(.body)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-            }
-            .frame(maxHeight: 160)
+            Text(building.description)
+                .font(.body)
+                .frame(maxWidth: .infinity, alignment: .leading)
 
             if !building.architect.isEmpty {
-                Label(building.architect, systemImage: "person.crop.square")
-                    .font(.callout)
-                    .foregroundStyle(.secondary)
+                VisionArchitectLink(building: building)
             }
 
             // Stand on the street in front of it: drag to look around, tap to open it big.
@@ -429,13 +495,14 @@ private struct LandmarkCard: View {
                     .accessibilityLabel(Text("Look Around"))
             }
 
+            // Built, opened, listed, and what the papers said at the time
+            HistoryTimelineSection(building: building, cityName: cityName)
+
             // Hotels and tours, kept apart from the buttons above
             Divider()
             PartnerLinksRow(building: building, cityName: cityName)
         }
         .padding(24)
-        .frame(width: 480)
-        .glassBackgroundEffect(in: RoundedRectangle(cornerRadius: 28))
         .task(id: building.id) { await fetchLookAroundScene() }
     }
 

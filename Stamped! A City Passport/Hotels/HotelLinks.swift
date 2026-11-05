@@ -139,19 +139,14 @@ struct HotelSearch: Hashable {
                   checkIn: checkIn, checkOut: checkOut)
     }
 
-    // The Vision Pro app shares this file but not the city list (CityLocation),
-    // so it builds its searches from a name and a coordinate instead.
-    #if !os(visionOS)
     /// Hotels for a Stamped city or campus.
     init(city: CityLocation.City, checkIn: Date? = nil, checkOut: Date? = nil) {
         self.init(destination: city.hotelSearchName,
                   latitude: city.coordinate.lat, longitude: city.coordinate.lon,
                   checkIn: checkIn, checkOut: checkOut)
     }
-    #endif
 }
 
-#if !os(visionOS)
 extension CityLocation.City {
     /// The search-box text for hotels here. A campus name works on its own (the sites
     /// know "Duke University" as a landmark; adding "Durham, NC" made Booking.com match a
@@ -165,7 +160,6 @@ extension CityLocation.City {
         return "\(cityName), \(country.rawValue)"
     }
 }
-#endif
 
 // MARK: - URL building
 

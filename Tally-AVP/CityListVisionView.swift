@@ -46,6 +46,13 @@ struct CityListVisionView: View {
                     .accessibilityHint("Opens a 3D globe of every city in its own window")
                 }
                 ToolbarItem {
+                    // The iPhone app's trip planner, in its own window beside the map
+                    Button("My Trips", systemImage: "suitcase.fill") {
+                        openWindow(id: "trips")
+                    }
+                    .accessibilityHint("Opens your trips in their own window")
+                }
+                ToolbarItem {
                     Button("Support Stamped!", systemImage: "heart") {
                         showingTipJar = true
                     }
