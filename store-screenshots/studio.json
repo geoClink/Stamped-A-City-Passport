@@ -67,6 +67,27 @@
       "w": 1320,
       "h": 2868,
       "statusbarCleaned": true
+    },
+    {
+      "file": "10-then-now.png",
+      "slug": "10-then-now",
+      "w": 1320,
+      "h": 2868,
+      "statusbarCleaned": true
+    },
+    {
+      "file": "11-time-walk.png",
+      "slug": "11-time-walk",
+      "w": 1320,
+      "h": 2868,
+      "statusbarCleaned": true
+    },
+    {
+      "file": "12-then-now-fade.png",
+      "slug": "12-then-now-fade",
+      "w": 1320,
+      "h": 2868,
+      "statusbarCleaned": true
     }
   ],
   "created": "2026-10-25T01:34:42.451Z"
