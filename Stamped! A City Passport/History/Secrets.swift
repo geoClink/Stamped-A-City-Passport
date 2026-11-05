@@ -21,6 +21,7 @@ nonisolated enum Secrets {
         #endif
     }()
     static let freesoundKey = value("FREESOUND_API_KEY")
+    static let dplaKey = value("DPLA_API_KEY")
     static let smithsonianKey = value("SMITHSONIAN_API_KEY")
 
     private static let values: [String: Any] = {

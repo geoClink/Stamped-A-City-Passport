@@ -7,6 +7,7 @@
 //  2. Wikimedia Commons (anywhere, no key; see HeritageService)
 //  3. Europeana (Europe's museums and libraries; key in Secrets.plist)
 //  4. Smithsonian Open Access (CC0; key in Secrets.plist)
+//  5. Digital Public Library of America (US libraries and museums; key in Secrets.plist)
 //  Only openly licensed photos: public domain, CC0, CC BY or CC BY-SA, each credited.
 //  A photo is used only when its title names the landmark.
 //
@@ -32,7 +33,9 @@ enum OldPhotoSources {
         if !commons.isEmpty { return commons }
         let europeana = await ArchiveSearch.shared.europeana(name: building.name, city: cityName)
         if !europeana.isEmpty { return europeana }
-        return await ArchiveSearch.shared.smithsonian(name: building.name, city: cityName)
+        let smithsonian = await ArchiveSearch.shared.smithsonian(name: building.name, city: cityName)
+        if !smithsonian.isEmpty { return smithsonian }
+        return await ArchiveSearch.shared.dpla(name: building.name, city: cityName)
     }
 
     /// Every archive at once, for a landmark's gallery. The Library of Congress only covers
@@ -48,8 +51,9 @@ enum OldPhotoSources {
         async let commons = HeritageService.shared.oldPhotos(for: building)
         async let europeana = ArchiveSearch.shared.europeana(name: building.name, city: cityName)
         async let smithsonian = ArchiveSearch.shared.smithsonian(name: building.name, city: cityName)
+        async let dpla = ArchiveSearch.shared.dpla(name: building.name, city: cityName)
         let surveyImages = await survey.filter { includingDrawings || !$0.isDrawing }
-        return await merged([surveyImages, commons, europeana, smithsonian])
+        return await merged([surveyImages, commons, europeana, smithsonian, dpla])
     }
 
     /// The lists in order, each photo once, up to the gallery's limit
@@ -75,6 +79,7 @@ actor ArchiveSearch {
 
     private var europeanaCache: [String: [HistoricImage]] = [:]
     private var smithsonianCache: [String: [HistoricImage]] = [:]
+    private var dplaCache: [String: [HistoricImage]] = [:]
 
     // MARK: Europeana
 
@@ -201,6 +206,53 @@ actor ArchiveSearch {
         return photos
     }
 
+    // MARK: Digital Public Library of America
+
+    func dpla(name: String, city: String) async -> [HistoricImage] {
+        guard let key = Secrets.dplaKey else { return [] }
+        let cacheKey = "\(name)|\(city)"
+        if let cached = dplaCache[cacheKey] { return cached }
+
+        var components = URLComponents(string: "https://api.dp.la/v2/items")!
+        components.queryItems = [
+            URLQueryItem(name: "api_key", value: key),
+            URLQueryItem(name: "sourceResource.title", value: "\"\(name.replacingOccurrences(of: "\"", with: ""))\""),
+            URLQueryItem(name: "sourceResource.type", value: "image"),
+            URLQueryItem(name: "page_size", value: "30"),
+        ]
+        guard let url = components.url, let data = await get(url) else { return [] }
+        let photos = Self.dplaPhotos(from: data, name: name, city: city)
+        dplaCache[cacheKey] = photos
+        return photos
+    }
+
+    /// The openly licensed old photos in a DPLA result that are of this landmark. DPLA only
+    /// holds thumbnails; the full picture stays on the library's own page, linked from the
+    /// credit. An undated record is left out: it may not be old at all.
+    nonisolated static func dplaPhotos(from data: Data, name: String, city: String) -> [HistoricImage] {
+        guard let response = try? JSONDecoder().decode(DPLAResponse.self, from: data) else { return [] }
+        var photos: [HistoricImage] = []
+        for doc in response.docs ?? [] where photos.count < Self.maxPhotos {
+            let source = doc.sourceResource
+            guard let title = source?.title?.values.first(where: { names($0, landmark: name) }),
+                  !nameIsAmbiguous(name) || names(title, landmark: city),
+                  let date = source?.date?.displayDate, let year = HeritageService.year(in: date),
+                  year < OldPhotoSources.oldBefore,
+                  let rights = doc.rights?.values.first, let licence = Self.licence(fromRightsURL: rights),
+                  let image = doc.object.flatMap(URL.init), image.scheme == "https",
+                  let page = doc.isShownAt.flatMap(URL.init)
+            else { continue }
+            let author = source?.creator?.values.first
+            // CC BY and CC BY-SA require the author's name
+            if author == nil, licence.hasPrefix("CC BY") { continue }
+            let credit = [author, doc.dataProvider?.name, licence, "DPLA"]
+                .compactMap { $0 }.joined(separator: " · ")
+            photos.append(HistoricImage(thumbnailURL: image, largeURL: image, caption: title,
+                                        isDrawing: false, credit: credit, itemURL: page))
+        }
+        return photos
+    }
+
     // MARK: Network
 
     private func get(_ url: URL) async -> Data? {
@@ -223,6 +275,59 @@ actor ArchiveSearch {
             let dcCreator: [String]?
         }
         let items: [Item]?
+    }
+
+    nonisolated private struct DPLAResponse: Decodable {
+        /// DPLA gives a field as one string or as a list, depending on the record
+        struct Strings: Decodable {
+            let values: [String]
+            init(from decoder: Decoder) throws {
+                let container = try decoder.singleValueContainer()
+                if let one = try? container.decode(String.self) {
+                    values = [one]
+                } else {
+                    values = (try? container.decode([String].self)) ?? []
+                }
+            }
+        }
+        /// The library, as a plain name or as {"name": ...}
+        struct Provider: Decodable {
+            let name: String?
+            private enum CodingKeys: String, CodingKey { case name }
+            init(from decoder: Decoder) throws {
+                if let text = try? decoder.singleValueContainer().decode(String.self) {
+                    name = text
+                } else {
+                    name = try? decoder.container(keyedBy: CodingKeys.self).decode(String.self, forKey: .name)
+                }
+            }
+        }
+        /// One date, or a list of them
+        struct DateField: Decodable {
+            struct One: Decodable { let displayDate: String? }
+            let displayDate: String?
+            init(from decoder: Decoder) throws {
+                let container = try decoder.singleValueContainer()
+                if let one = try? container.decode(One.self) {
+                    displayDate = one.displayDate
+                } else {
+                    displayDate = (try? container.decode([One].self))?.first?.displayDate
+                }
+            }
+        }
+        struct Source: Decodable {
+            let title: Strings?
+            let creator: Strings?
+            let date: DateField?
+        }
+        struct Doc: Decodable {
+            let object: String?
+            let isShownAt: String?
+            let rights: Strings?
+            let dataProvider: Provider?
+            let sourceResource: Source?
+        }
+        let docs: [Doc]?
     }
 
     nonisolated private struct SmithsonianResponse: Decodable {

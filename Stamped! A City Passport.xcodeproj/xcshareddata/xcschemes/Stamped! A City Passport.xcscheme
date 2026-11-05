@@ -76,7 +76,7 @@
          </BuildableReference>
       </BuildableProductRunnable>
       <StoreKitConfigurationFileReference
-         identifier = "../../StoreKit/TipJar.storekit">
+         identifier = "../../StampedTests/TipJar.storekit">
       </StoreKitConfigurationFileReference>
    </LaunchAction>
    <ProfileAction

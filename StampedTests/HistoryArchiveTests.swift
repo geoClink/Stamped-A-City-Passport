@@ -114,6 +114,54 @@ final class HistoryArchiveTests: XCTestCase {
                                        name: "Union Station", city: "St. Louis").count, 1)
     }
 
+    // MARK: DPLA
+
+    private func dplaDoc(title: Any = "Brooklyn Bridge, New York", date: Any = ["displayDate": "1910"],
+                         rights: String = "http://creativecommons.org/publicdomain/mark/1.0/",
+                         image: String = "https://dp.la/thumb/1.jpg", creator: Any? = nil,
+                         provider: Any = ["name": "Boston Public Library"]) -> [String: Any] {
+        var source: [String: Any] = ["title": title, "date": date]
+        if let creator { source["creator"] = creator }
+        return ["object": image, "isShownAt": "https://library.example/1", "rights": rights,
+                "dataProvider": provider, "sourceResource": source]
+    }
+
+    private func dpla(_ docs: [[String: Any]], name: String = "Brooklyn Bridge", city: String = "New York") throws -> [HistoricImage] {
+        ArchiveSearch.dplaPhotos(from: try json(["docs": docs]), name: name, city: city)
+    }
+
+    func testDPLAKeepsOldOpenPhotosOfTheLandmark() throws {
+        let photo = try XCTUnwrap(try dpla([dplaDoc()]).first)
+        XCTAssertEqual(photo.credit, "Boston Public Library · Public domain · DPLA")
+        XCTAssertEqual(photo.itemURL.absoluteString, "https://library.example/1")
+    }
+
+    /// DPLA fields come in more than one shape, depending on the library
+    func testDPLAReadsListsAndPlainStrings() throws {
+        let doc = dplaDoc(title: ["Other", "Brooklyn Bridge"], date: [["displayDate": "ca. 1905"]],
+                          rights: "http://creativecommons.org/licenses/by/4.0/",
+                          creator: ["Jane Doe"], provider: "A Library")
+        XCTAssertEqual(try dpla([doc]).first?.credit, "Jane Doe · A Library · CC BY · DPLA")
+    }
+
+    func testDPLADropsClosedNewUndatedAndInsecure() throws {
+        XCTAssertTrue(try dpla([
+            dplaDoc(rights: "http://rightsstatements.org/vocab/InC/1.0/"),
+            dplaDoc(rights: "http://rightsstatements.org/vocab/NoC-NC/1.0/"),
+            dplaDoc(rights: "http://creativecommons.org/licenses/by-nc/4.0/"),
+            dplaDoc(date: ["displayDate": "1975"]),
+            dplaDoc(date: ["displayDate": "unknown"]),
+            dplaDoc(image: "http://dp.la/thumb/1.jpg"),
+            dplaDoc(title: "Golden Gate Bridge"),
+        ]).isEmpty)
+    }
+
+    /// CC BY needs an author's name, and a short name needs the city
+    func testDPLADropsUncreditableAndAmbiguous() throws {
+        XCTAssertTrue(try dpla([dplaDoc(rights: "http://creativecommons.org/licenses/by/4.0/")]).isEmpty)
+        XCTAssertTrue(try dpla([dplaDoc(title: "Union Station, Denver")], name: "Union Station", city: "St. Louis").isEmpty)
+    }
+
     func testEverydayNamesAreAmbiguous() {
         for name in ["City Hall", "Union Station", "Old State House", "Grand Central Terminal", "The Met"] {
             XCTAssertTrue(ArchiveSearch.nameIsAmbiguous(name), name)
