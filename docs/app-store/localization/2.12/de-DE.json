@@ -1,0 +1,66 @@
+{
+  "locale": "de-DE",
+  "version": "2.12",
+  "subtitle": "Wahrzeichen & Campus-Touren",
+  "promotional_text": "Entdecke 2.400 berühmte Gebäude in 166 Städten auf einer 3D-Karte, hör dir ihre Geschichten an, prüfe den stufenlosen Zugang und sammle Stempel. Dazu 122 Campusse.",
+  "keywords": "historisch,Stadtrundgang,alte,Karte,Fotos,damals,heute,Geschichte,Architektur,Universität,3D,Stadt",
+  "whats_new": "Reise zurück in die Zeit. Blende mit Damals & heute einen alten Stadtplan über die Stadt von heute und mach eine Zeitreise-Tour, bei der die Karte in das Baujahr jedes Bauwerks springt. Sieh alte Fotos aus öffentlichen Archiven, tauche in alte Filme der Stadt ein, stelle einem Bauwerk eine Frage und entdecke An diesem Tag auf dem Startbildschirm. Auf Touren sind jetzt Straßengeräusche zu hören.",
+  "description": "Stamped! macht die großen Bauwerke der Welt zu einem Reisepass, den du füllst. Entdecke mehr als 2.400 Wahrzeichen der Architektur in 166 Städten und auf 122 Universitätscampussen, sammle für jedes besuchte Gebäude einen Stempel und fliege auf einer fotorealistischen 3D-Karte durch echte Städte.\n\nPLANE DEINE HOCHSCHULBESUCHE\n• 122 Campusse: jede Hochschule der Big Ten, SEC, ACC und Big 12, die Ivy League und großartige Campusse weltweit\n• Speichere Hochschulen, die dich interessieren, in Meine College-Liste\n• Erstelle einen College-Roadtrip: ein Tag pro Hochschule, in einer Reihenfolge mit kurzen Fahrten\n• Campusbesuch planen: ein eintägiger Rundgang zu den Wahrzeichen eines Campus\n• Finde Hotels in Campusnähe für jede Nacht deiner Reise\n\nCAMPUS-TRADITIONEN\n• Über 250 Campus-Traditionen zum Mitmachen oder Ansehen, von Glücksstatuen bis zu Glocken und berühmten Toren\n• Hake sie unterwegs ab und verdiene das Abzeichen Hüter der Traditionen\n• Campus-Stempel in Schulfarben\n\nPLANE JEDE REISE\n• Plane mehrere Tage mit Wahrzeichen und deinen eigenen gespeicherten Orten\n• Ordne Stopps neu, sieh Gehzeiten und optimiere deine Route\n• Überfliege deine Reise Tag für Tag auf der 3D-Karte\n• Deine Reisen, deine College-Liste, gespeicherten Orte und „Wunschziele“ werden mit iCloud synchronisiert\n• Restaurants, Hotels, Touren und Veranstaltungen rund um deine Stopps\n• Vergleiche Hotels auf Expedia und Booking.com oder finde eine Ferienunterkunft auf Vrbo\n• Speichere eine Stadt offline: Fotos und Geschichten ihrer Wahrzeichen bleiben auf deinem Gerät\n\nENTDECKE IN 3D\n• Fotorealistische 3D-Karten von Städten und Campussen mit Satellitenbildern\n• Eine geführte Tour, die zwischen allen Wahrzeichen fliegt\n• Umsehen-Vorschauen der Straßen, bevor du losgehst\n• Kartenfilter für Essen, Kaffee, Kultur und Übernachten\n\nSAMMLE STEMPEL\n• Erhalte für jedes besuchte Wahrzeichen einen Passstempel\n• Verfolge deinen Fortschritt auf der Weltkarte, nach Stadt, Land und Conference\n• Schalte Erfolge frei und teile deinen Pass\n• Sieh deinen Fortschritt auf einen Blick mit Home-Bildschirm-Widgets in klein, mittel und groß\n• Siri und Kurzbefehle: Öffne eine Stadt, prüfe deinen Fortschritt oder finde Wahrzeichen in deiner Nähe\n\nENTDECKE DIE GESCHICHTEN\n• Architekten, Baujahre, Stile und Geschichte zu jedem Gebäude\n• Anhören: Lass dir die Geschichte jedes Wahrzeichens vorlesen (auf Englisch)\n• Ein Architekturquiz mit 10 Fragen für jede Stadt und jeden Campus\n• Suche nach Name, Architekt oder Campus-Spitzname\n• Architektenseiten, Fotogalerien und historische Fotos der Library of Congress\n• Stufenloser Zugang und barrierefreie Toiletten für mehr als 300 Wahrzeichen\n\nVerfügbar in 9 Sprachen, mit Unterstützung für VoiceOver, Dynamic Type, hohen Kontrast und Bewegung reduzieren.\n\nStamped! ist mit keiner Universität verbunden und wird von keiner unterstützt. Namen und Farben der Hochschulen dienen nur zu ihrer Kennzeichnung.",
+  "screenshot_headlines": [
+    {
+      "file": "01-college-list",
+      "verb": "BESUCHE",
+      "lines": [
+        "101 CAMPUSSE",
+        "AUF EINEM ROADTRIP"
+      ]
+    },
+    {
+      "file": "02-traditions",
+      "verb": "ERLEBE",
+      "lines": [
+        "DIE CAMPUS-",
+        "TRADITIONEN"
+      ]
+    },
+    {
+      "file": "03-school-stamps",
+      "verb": "SAMMLE",
+      "lines": [
+        "STEMPEL IN",
+        "SCHULFARBEN"
+      ]
+    },
+    {
+      "file": "04-fly-3d",
+      "verb": "FLIEGE",
+      "lines": [
+        "ÜBER DEN CAMPUS",
+        "IN 3D"
+      ]
+    },
+    {
+      "file": "05-plan-trips",
+      "verb": "PLANE",
+      "lines": [
+        "DEINE REISE,",
+        "TAG FÜR TAG"
+      ]
+    },
+    {
+      "file": "06-test-smarts",
+      "verb": "TESTE",
+      "lines": [
+        "DEIN WISSEN ÜBER",
+        "ARCHITEKTUR"
+      ]
+    }
+  ],
+  "banner": {
+    "verb": "PLANE",
+    "lines": [
+      "DEINEN COLLEGE-",
+      "ROADTRIP"
+    ]
+  }
+}
