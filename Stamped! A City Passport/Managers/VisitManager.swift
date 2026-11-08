@@ -255,7 +255,25 @@ class GlobalProgressManager: ObservableObject {
                 defaults.set(Self.appVersion, forKey: reviewAskedVersionKey)
                 reviewMoment = Date()
             }
+            // A quiet moment after real use: never on top of a city's celebration
+            let finishedCity = !cityBuildings.isEmpty && cityBuildings.allSatisfy { visitedIDs.contains($0.id) }
+            if Self.shouldAskForTip(stampCount: visitedIDs.count, finishedCity: finishedCity,
+                                    alreadyAsked: defaults.bool(forKey: tipAskedKey)) {
+                defaults.set(true, forKey: tipAskedKey)
+                tipMoment = Date()
+            }
         }
+    }
+
+    // MARK: - Tip prompt
+
+    /// Set once ever, on a stamp at or past `tipPromptStampCount`. TipPromptModifier shows the tip jar.
+    @Published private(set) var tipMoment: Date?
+    private let tipAskedKey = "tipPromptAsked"
+    nonisolated static let tipPromptStampCount = 10
+
+    nonisolated static func shouldAskForTip(stampCount: Int, finishedCity: Bool, alreadyAsked: Bool) -> Bool {
+        !alreadyAsked && !finishedCity && stampCount >= tipPromptStampCount
     }
 
     // MARK: - Rating prompt

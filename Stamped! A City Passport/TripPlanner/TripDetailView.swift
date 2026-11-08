@@ -355,6 +355,14 @@ struct TripDetailView: View {
     @ViewBuilder
     private func roadTripHotelsButton(dayAt index: Int, in trip: Trip) -> some View {
         if trip.isRoadTrip, let campus = trip.city(ofDayAt: index) {
+            #if !os(visionOS)
+            if let visitURL = campus.officialVisitURL {
+                Link(destination: visitURL) {
+                    Label("Official Campus Tour", systemImage: "building.columns.fill")
+                }
+                .tint(DS.Palette.accent)
+            }
+            #endif
             FindHotelsButton(
                 search: HotelSearch(city: campus, checkIn: trip.date(ofDayAt: index), checkOut: trip.date(ofDayAt: index + 1)),
                 title: String(

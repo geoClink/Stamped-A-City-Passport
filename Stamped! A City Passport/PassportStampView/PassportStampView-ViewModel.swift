@@ -126,6 +126,17 @@ struct StampCelebrationView: View {
                     
                     if showButton {
                         actionButton
+                        #if !os(visionOS)
+                        if let city = CityLocation.City(rawValue: cityName), !city.isCampus {
+                            ToursButton(landmark: "", place: city.hotelSearchName)
+                                .font(.subheadline)
+                                .tint(isHighContrast ? .white : .white.opacity(0.8))
+                                .foregroundStyle(isHighContrast ? .white : .white.opacity(0.8))
+                                .environment(\.colorScheme, .dark)
+                                .padding(.horizontal, DS.Space.section)
+                                .transition(.opacity)
+                        }
+                        #endif
                     }
                 }
                 .padding(.bottom, DS.Space.section)

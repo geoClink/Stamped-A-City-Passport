@@ -1,336 +1,2512 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "%lld percent" : {
-      "comment" : "Accessibility value of the old-map slider, e.g. 75 percent.",
-      "extractionState" : "manual",
+    "Stamped! is an independent app and isn't connected with any school. Details can be wrong or out of date, so check the school's official website before you make plans or decisions." : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%lld Prozent"
+            "value" : "Stamped! ist eine unabhängige App ohne Verbindung zu einer Hochschule. Angaben können falsch oder veraltet sein. Prüfe daher vor Plänen oder Entscheidungen die offizielle Website der Hochschule."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%lld por ciento"
+            "value" : "Stamped! es una app independiente y no está vinculada a ninguna universidad. Los datos pueden ser incorrectos o estar desactualizados, así que consulta el sitio oficial de la universidad antes de hacer planes o tomar decisiones."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%lld pour cent"
+            "value" : "Stamped! est une application indépendante, sans lien avec aucun établissement. Les informations peuvent être erronées ou obsolètes : consultez le site officiel de l'établissement avant de faire des projets ou de prendre une décision."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%lld percento"
+            "value" : "Stamped! è un'app indipendente e non è collegata ad alcuna università. Le informazioni possono essere errate o non aggiornate: controlla il sito ufficiale dell'università prima di fare programmi o prendere decisioni."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%lldパーセント"
+            "value" : "Stamped!は独立したアプリで、どの学校とも提携していません。情報が誤っていたり古かったりする場合があるため、計画や決定の前に学校の公式サイトをご確認ください。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%lld퍼센트"
+            "value" : "Stamped!는 독립 앱이며 어떤 학교와도 관련이 없습니다. 정보가 틀리거나 오래되었을 수 있으니 계획이나 결정을 내리기 전에 학교 공식 웹사이트를 확인하세요."
           }
         },
         "pt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%lld por cento"
+            "value" : "Stamped! é um app independente, sem vínculo com nenhuma universidade. As informações podem estar erradas ou desatualizadas; confira o site oficial da universidade antes de fazer planos ou tomar decisões."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "百分之%lld"
+            "value" : "Stamped! 是一款独立应用，与任何学校均无关联。信息可能有误或已过时，请在制定计划或做决定前查看学校官网。"
           }
         }
       }
     },
-    "Fade an old map of the city over today's" : {
-      "comment" : "Hover help for the Then & Now toggle.",
-      "extractionState" : "manual",
+    "Average net price" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Einen alten Stadtplan über die heutige Karte blenden"
+            "value" : "Durchschnittlicher Nettopreis"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Superpone un mapa antiguo de la ciudad sobre el actual"
+            "value" : "Precio neto promedio"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Superposer un ancien plan de la ville à la carte actuelle"
+            "value" : "Prix net moyen"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sovrapponi una vecchia mappa della città a quella di oggi"
+            "value" : "Prezzo netto medio"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "街の古地図を今の地図に重ねて表示"
+            "value" : "平均実質費用"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "오늘의 지도 위에 도시의 옛 지도를 겹쳐 보기"
+            "value" : "평균 순비용"
           }
         },
         "pt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sobrepor um mapa antigo da cidade ao mapa atual"
+            "value" : "Preço líquido médio"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在今天的地图上叠加城市旧地图"
+            "value" : "平均净价"
           }
         }
       }
     },
-    "Now" : {
-      "comment" : "Slider end label: today's map (the other end shows the old map's year).",
-      "extractionState" : "manual",
+    "Top programs" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Heute"
+            "value" : "Beliebteste Fächer"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ahora"
+            "value" : "Programas principales"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Aujourd'hui"
+            "value" : "Principaux programmes"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Oggi"
+            "value" : "Corsi principali"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "現在"
+            "value" : "主な専攻"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "현재"
+            "value" : "주요 전공"
           }
         },
         "pt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Agora"
+            "value" : "Principais cursos"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "现在"
+            "value" : "热门专业"
           }
         }
       }
     },
-    "Old map" : {
-      "comment" : "Accessibility label of the slider that fades the old map in and out.",
-      "extractionState" : "manual",
+    "Average net price is what students with federal aid paid per year after grants and scholarships. Top programs are each field's share of degrees awarded. Figures are the latest the government has published." : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Alte Karte"
+            "value" : "Der durchschnittliche Nettopreis ist, was Studierende mit staatlicher Förderung pro Jahr nach Stipendien bezahlt haben. Die beliebtesten Fächer zeigen den Anteil an den vergebenen Abschlüssen. Es sind die neuesten von der Regierung veröffentlichten Zahlen."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mapa antiguo"
+            "value" : "El precio neto promedio es lo que pagaron al año los estudiantes con ayuda federal, después de becas y subvenciones. Los programas principales muestran el porcentaje de títulos otorgados. Son las cifras más recientes publicadas por el gobierno."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ancienne carte"
+            "value" : "Le prix net moyen correspond à ce que les étudiants bénéficiant d'une aide fédérale ont payé par an après bourses. Les principaux programmes indiquent la part des diplômes délivrés. Ce sont les derniers chiffres publiés par le gouvernement."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mappa antica"
+            "value" : "Il prezzo netto medio è quanto hanno pagato all'anno gli studenti con aiuti federali, dopo borse di studio e contributi. I corsi principali indicano la quota di titoli rilasciati. Sono gli ultimi dati pubblicati dal governo."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "古地図"
+            "value" : "平均実質費用は、連邦の支援を受ける学生が奨学金等を差し引いて年間に支払った額です。主な専攻は授与された学位に占める割合です。政府が公表した最新の数値です。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "옛 지도"
+            "value" : "평균 순비용은 연방 지원을 받는 학생이 장학금을 제외하고 연간 지불한 금액입니다. 주요 전공은 수여된 학위 중 비율입니다. 정부가 발표한 최신 수치입니다."
           }
         },
         "pt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mapa antigo"
+            "value" : "O preço líquido médio é o que estudantes com auxílio federal pagaram por ano após bolsas. Os principais cursos mostram a parcela dos diplomas concedidos. São os números mais recentes publicados pelo governo."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "旧地图"
+            "value" : "平均净价是获得联邦资助的学生在扣除助学金和奖学金后每年支付的金额。热门专业显示各领域在所授学位中的占比。数据为政府发布的最新数字。"
           }
         }
       }
     },
-    "Then & Now" : {
-      "comment" : "Toolbar toggle that fades an old map of the city over today's map.",
-      "extractionState" : "manual",
+    "Agriculture" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Damals & heute"
+            "value" : "Landwirtschaft"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Antes y ahora"
+            "value" : "Agricultura"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hier et aujourd'hui"
+            "value" : "Agriculture"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ieri e oggi"
+            "value" : "Agricoltura"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "今と昔"
+            "value" : "農学"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "그때와 지금"
+            "value" : "농업"
           }
         },
         "pt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Antes e agora"
+            "value" : "Agricultura"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "今昔对比"
+            "value" : "农业"
           }
         }
       }
     },
-    "Year" : {
-      "comment" : "Picker label: which year the old map shows.",
-      "extractionState" : "manual",
+    "Natural Resources" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Jahr"
+            "value" : "Natürliche Ressourcen"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Año"
+            "value" : "Recursos naturales"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Année"
+            "value" : "Ressources naturelles"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Anno"
+            "value" : "Risorse naturali"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "年"
+            "value" : "天然資源"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "연도"
+            "value" : "천연자원"
           }
         },
         "pt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ano"
+            "value" : "Recursos naturais"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "年份"
+            "value" : "自然资源"
           }
         }
       }
     },
-    "·" : {},
+    "Architecture" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Architektur"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arquitectura"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Architecture"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Architettura"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "建築"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "건축"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arquitetura"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "建筑学"
+          }
+        }
+      }
+    },
+    "Area and Gender Studies" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regional- und Geschlechterstudien"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estudios regionales y de género"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Études régionales et de genre"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Studi regionali e di genere"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地域・ジェンダー研究"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지역 및 젠더 연구"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estudos regionais e de gênero"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "区域与性别研究"
+          }
+        }
+      }
+    },
+    "Communication" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kommunikation"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comunicación"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Communication"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comunicazione"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コミュニケーション"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "커뮤니케이션"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comunicação"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "传播学"
+          }
+        }
+      }
+    },
+    "Communications Technology" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kommunikationstechnik"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tecnología de comunicaciones"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Technologies de la communication"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tecnologie della comunicazione"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通信技術"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "통신 기술"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tecnologia de comunicações"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通信技术"
+          }
+        }
+      }
+    },
+    "Computer Science" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Informatik"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Informática"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Informatique"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Informatica"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コンピュータ科学"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "컴퓨터 과학"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ciência da computação"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "计算机科学"
+          }
+        }
+      }
+    },
+    "Culinary and Personal Services" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kulinarik und persönliche Dienste"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cocina y servicios personales"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cuisine et services à la personne"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cucina e servizi alla persona"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "料理・対人サービス"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "요리 및 개인 서비스"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Culinária e serviços pessoais"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "烹饪与个人服务"
+          }
+        }
+      }
+    },
+    "Education" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pädagogik"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Educación"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Éducation"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scienze della formazione"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "教育学"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "교육학"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Educação"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "教育学"
+          }
+        }
+      }
+    },
+    "Engineering" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingenieurwesen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingeniería"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingénierie"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingegneria"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "工学"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "공학"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Engenharia"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "工程学"
+          }
+        }
+      }
+    },
+    "Engineering Technology" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingenieurtechnik"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tecnología de ingeniería"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Technologie de l'ingénierie"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tecnologia ingegneristica"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "工業技術"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "공학 기술"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tecnologia de engenharia"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "工程技术"
+          }
+        }
+      }
+    },
+    "Foreign Languages" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fremdsprachen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lenguas extranjeras"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Langues étrangères"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lingue straniere"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "外国語"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "외국어"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Línguas estrangeiras"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "外语"
+          }
+        }
+      }
+    },
+    "Family and Consumer Sciences" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haushalts- und Verbraucherwissenschaften"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ciencias de la familia y el consumo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sciences de la famille et de la consommation"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scienze della famiglia e del consumo"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "家政学"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가정 및 소비자학"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ciências da família e do consumo"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "家庭与消费科学"
+          }
+        }
+      }
+    },
+    "Legal Studies" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rechtswissenschaften"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estudios jurídicos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Études juridiques"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Studi giuridici"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "法学"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "법학"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estudos jurídicos"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "法律研究"
+          }
+        }
+      }
+    },
+    "English" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Englisch"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inglés"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anglais"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inglese"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "英語・英文学"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "영어영문학"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inglês"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "英语"
+          }
+        }
+      }
+    },
+    "Liberal Arts" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geisteswissenschaften"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Artes liberales"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arts libéraux"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arti liberali"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "教養"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "교양"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Artes liberais"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "文科"
+          }
+        }
+      }
+    },
+    "Library Science" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bibliothekswissenschaft"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biblioteconomía"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bibliothéconomie"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biblioteconomia"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "図書館学"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "문헌정보학"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biblioteconomia"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "图书馆学"
+          }
+        }
+      }
+    },
+    "Biology" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biologie"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biología"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biologie"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biologia"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "生物学"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "생물학"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biologia"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "生物学"
+          }
+        }
+      }
+    },
+    "Mathematics" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mathematik"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Matemáticas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mathématiques"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Matematica"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "数学"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "수학"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Matemática"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "数学"
+          }
+        }
+      }
+    },
+    "Military Science" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Militärwissenschaft"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ciencias militares"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sciences militaires"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scienze militari"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "軍事学"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "군사학"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ciências militares"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "军事科学"
+          }
+        }
+      }
+    },
+    "Interdisciplinary Studies" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Interdisziplinäre Studien"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estudios interdisciplinarios"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Études interdisciplinaires"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Studi interdisciplinari"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "学際研究"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "학제간 연구"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estudos interdisciplinares"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "跨学科研究"
+          }
+        }
+      }
+    },
+    "Parks, Recreation and Fitness" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Freizeit und Fitness"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Parques, recreación y fitness"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loisirs et fitness"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Parchi, ricreazione e fitness"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "公園・レクリエーション・フィットネス"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "공원, 여가 및 피트니스"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Parques, recreação e fitness"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "公园、休闲与健身"
+          }
+        }
+      }
+    },
+    "Philosophy and Religion" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Philosophie und Religion"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filosofía y religión"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Philosophie et religion"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filosofia e religione"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "哲学・宗教学"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "철학 및 종교학"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filosofia e religião"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "哲学与宗教"
+          }
+        }
+      }
+    },
+    "Theology" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Theologie"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teología"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Théologie"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teologia"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "神学"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "신학"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teologia"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "神学"
+          }
+        }
+      }
+    },
+    "Physical Sciences" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naturwissenschaften"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ciencias físicas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sciences physiques"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scienze fisiche"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "物理科学"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "물리과학"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ciências físicas"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "物理科学"
+          }
+        }
+      }
+    },
+    "Science Technology" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wissenschaftstechnik"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tecnología científica"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Technologies scientifiques"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tecnologie scientifiche"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "科学技術"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "과학 기술"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tecnologia científica"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "科学技术"
+          }
+        }
+      }
+    },
+    "Psychology" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Psychologie"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Psicología"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Psychologie"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Psicologia"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "心理学"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "심리학"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Psicologia"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "心理学"
+          }
+        }
+      }
+    },
+    "Criminal Justice" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Strafrechtspflege"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Justicia penal"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Justice pénale"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giustizia penale"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刑事司法"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "형사 사법"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Justiça criminal"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刑事司法"
+          }
+        }
+      }
+    },
+    "Public Administration" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öffentliche Verwaltung"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Administración pública"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Administration publique"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Amministrazione pubblica"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "行政学"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "행정학"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Administração pública"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "公共管理"
+          }
+        }
+      }
+    },
+    "Social Sciences" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sozialwissenschaften"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ciencias sociales"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sciences sociales"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scienze sociali"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "社会科学"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사회과학"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ciências sociais"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "社会科学"
+          }
+        }
+      }
+    },
+    "Construction" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bauwesen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Construcción"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Construction"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edilizia"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "建設"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "건설"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Construção"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "建筑施工"
+          }
+        }
+      }
+    },
+    "Mechanics and Repair" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mechanik und Reparatur"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mecánica y reparación"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mécanique et réparation"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meccanica e riparazione"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "機械・修理"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기계 및 수리"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mecânica e reparos"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "机械与维修"
+          }
+        }
+      }
+    },
+    "Precision Production" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Präzisionsfertigung"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Producción de precisión"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Production de précision"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Produzione di precisione"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "精密生産"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "정밀 생산"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Produção de precisão"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "精密制造"
+          }
+        }
+      }
+    },
+    "Transportation" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verkehrswesen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transporte"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transports"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trasporti"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "運輸"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "운송"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transportes"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "交通运输"
+          }
+        }
+      }
+    },
+    "Visual and Performing Arts" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bildende und darstellende Künste"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Artes visuales y escénicas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arts visuels et du spectacle"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arti visive e dello spettacolo"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "視覚・舞台芸術"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시각 및 공연 예술"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Artes visuais e cênicas"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "视觉与表演艺术"
+          }
+        }
+      }
+    },
+    "Health Professions" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gesundheitsberufe"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ciencias de la salud"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Professions de santé"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Professioni sanitarie"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "医療系"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보건 계열"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profissões da saúde"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "健康专业"
+          }
+        }
+      }
+    },
+    "Business" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wirtschaft"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Negocios"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Commerce"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Economia aziendale"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "経営学"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "경영학"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Negócios"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "商科"
+          }
+        }
+      }
+    },
+    "History" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geschichte"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historia"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Histoire"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Storia"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "歴史学"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "역사학"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "História"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "历史学"
+          }
+        }
+      }
+    },
+    "Official Campus Tour" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Offizielle Campusführung"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visita oficial al campus"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visite officielle du campus"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visita ufficiale del campus"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "公式キャンパスツアー"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "공식 캠퍼스 투어"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visita oficial ao campus"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "官方校园参观"
+          }
+        }
+      }
+    },
+    "Opens the school's own visit page" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öffnet die Besuchsseite der Hochschule"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abre la página de visitas de la universidad"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvre la page de visite de l'établissement"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apre la pagina visite dell'università"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "学校の公式見学ページを開きます"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "학교의 공식 방문 페이지를 엽니다"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abre a página de visitas da universidade"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开学校的官方参观页面"
+          }
+        }
+      }
+    },
+    "Staying overnight?" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bleibst du über Nacht?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Te quedas a dormir?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vous restez dormir sur place ?"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ti fermi a dormire?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "宿泊しますか？"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "하룻밤 묵으시나요?"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vai passar a noite?"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "要留宿吗？"
+          }
+        }
+      }
+    },
+    "Want to see %@ in person?" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Möchtest du %@ live erleben?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Quieres conocer %@ en persona?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Envie de découvrir %@ en vrai ?"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vuoi vedere %@ dal vivo?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@を実際に訪れてみませんか？"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@에 직접 가 보고 싶나요?"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quer conhecer %@ pessoalmente?"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "想亲自去看看%@吗？"
+          }
+        }
+      }
+    },
+    "Guided tours and tickets for your trip." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geführte Touren und Tickets für deine Reise."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visitas guiadas y entradas para tu viaje."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visites guidées et billets pour votre voyage."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visite guidate e biglietti per il tuo viaggio."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "旅行に使えるガイドツアーとチケット。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "여행에 맞는 가이드 투어와 티켓."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visitas guiadas e ingressos para sua viagem."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "适合你旅行的导览和门票。"
+          }
+        }
+      }
+    },
+    "Not Now" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nicht jetzt"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ahora no"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pas maintenant"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Non ora"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今はしない"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "나중에"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agora não"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "以后再说"
+          }
+        }
+      }
+    },
+    "·" : {
+
+    },
     "\"%@\"" : {
       "comment" : "Sound title in quotes (Sound Credits).",
       "shouldTranslate" : false
     },
-    "%@" : {},
+    "%@" : {
+
+    },
     "%@ · Built %@" : {
       "comment" : "Landmark card subtitle: architectural style · year built.",
       "localizations" : {
@@ -384,10 +2560,15 @@
         }
       }
     },
+    "%@ BC" : {
+      "comment" : "Timeline: a year before the common era"
+    },
     "%@ Campus Visit" : {
       "comment" : "Trip planner: name of a campus's ready-made one-day trip, e.g. \"Duke Campus Visit\""
     },
-    "%@ is a Stamped city" : {},
+    "%@ is a Stamped city" : {
+
+    },
     "%@ Quiz" : {
       "comment" : "Quiz window title. %@ = city name.",
       "localizations" : {
@@ -444,7 +2625,9 @@
     "%@ Road Trip" : {
       "comment" : "Trip planner: name of a college road trip, e.g. \"Duke, UNC and Wake Forest Road Trip\""
     },
-    "%@, added" : {},
+    "%@, added" : {
+
+    },
     "%@, Day %lld" : {
       "localizations" : {
         "en" : {
@@ -508,6 +2691,9 @@
         }
       }
     },
+    "%@s" : {
+      "comment" : "Timeline: a decade, e.g. \"1920s\""
+    },
     "%d-Campus Road Trip" : {
       "comment" : "Trip planner: name of a college road trip visiting many campuses, e.g. \"5-Campus Road Trip\""
     },
@@ -568,7 +2754,9 @@
         }
       }
     },
-    "%lld days" : {},
+    "%lld days" : {
+
+    },
     "%lld floors" : {
       "comment" : "Quiz answer for 'How many stories tall'. Reused from the iPhone app's Localizable.strings (quiz.floors). Plural forms added.",
       "localizations" : {
@@ -700,7 +2888,9 @@
         }
       }
     },
-    "%lld min walk to next" : {},
+    "%lld min walk to next" : {
+
+    },
     "%lld of %lld cities stamped" : {
       "comment" : "VoiceOver value of the globe's city menu: cities with at least one stamp out of all cities",
       "localizations" : {
@@ -860,10 +3050,72 @@
         }
       }
     },
-    "%lld places" : {},
-    "%lld stops" : {},
-    "1 day" : {},
-    "1 stop" : {},
+    "%lld percent" : {
+      "comment" : "Accessibility value of the old-map slider, e.g. 75 percent.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld Prozent"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld por ciento"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld pour cent"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld percento"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lldパーセント"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld퍼센트"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld por cento"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "百分之%lld"
+          }
+        }
+      }
+    },
+    "%lld places" : {
+
+    },
+    "%lld stops" : {
+
+    },
+    "1 day" : {
+
+    },
+    "1 stop" : {
+
+    },
     "360° View" : {
       "comment" : "Landmark card button: opens a 360° photo that surrounds you.",
       "localizations" : {
@@ -917,17 +3169,39 @@
         }
       }
     },
-    "Achievements" : {},
-    "Add %@" : {},
-    "Add a Place in %@" : {},
-    "Add Day" : {},
-    "Add Stop" : {},
-    "Add Stops" : {},
-    "Add stops to see your route" : {},
-    "Add to a New Day" : {},
-    "Add to Trip" : {},
-    "Added to %@" : {},
-    "All Landmarks" : {},
+    "Achievements" : {
+
+    },
+    "Add %@" : {
+
+    },
+    "Add a Place in %@" : {
+
+    },
+    "Add Day" : {
+
+    },
+    "Add Stop" : {
+
+    },
+    "Add Stops" : {
+
+    },
+    "Add stops to see your route" : {
+
+    },
+    "Add to a New Day" : {
+
+    },
+    "Add to Trip" : {
+
+    },
+    "Added to %@" : {
+
+    },
+    "All Landmarks" : {
+
+    },
     "Ancient Roman" : {
       "comment" : "Architectural style of a landmark (from BuildingRegistry.json buildingStyle).",
       "extractionState" : "manual",
@@ -982,8 +3256,120 @@
         }
       }
     },
-    "Anywhere" : {},
-    "Apple Maps" : {},
+    "Answers come only from Stamped's facts about this landmark, written on your device." : {
+      "comment" : "Ask the building: note under the question field.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Antworten stammen nur aus den Fakten von Stamped zu diesem Wahrzeichen und entstehen auf deinem Gerät."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las respuestas solo usan los datos de Stamped sobre este monumento y se escriben en tu dispositivo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les réponses s'appuient uniquement sur les informations de Stamped sur ce monument et sont rédigées sur votre appareil."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le risposte usano solo i dati di Stamped su questo monumento e sono scritte sul tuo dispositivo."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回答はこのランドマークに関するStampedの情報だけを使い、デバイス上で作成されます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "답변은 이 랜드마크에 대한 Stamped의 정보만 사용하며 기기에서 작성됩니다."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "As respostas usam apenas os dados do Stamped sobre este monumento e são escritas no seu dispositivo."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回答仅基于 Stamped 关于此地标的资料，并在你的设备上生成。"
+          }
+        }
+      }
+    },
+    "Anywhere" : {
+
+    },
+    "Apple Intelligence Is Off" : {
+      "comment" : "Ask the building: shown when the on-device model isn't available.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Intelligence ist aus"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Intelligence está desactivado"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Intelligence est désactivé"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Intelligence è disattivato"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Intelligenceがオフです"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Intelligence가 꺼져 있음"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Intelligence está desativado"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple 智能已关闭"
+          }
+        }
+      }
+    },
+    "Apple Maps" : {
+
+    },
     "Art Deco" : {
       "comment" : "Architectural style of a landmark (from BuildingRegistry.json buildingStyle).",
       "extractionState" : "manual",
@@ -1088,6 +3474,168 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "新艺术运动"
+          }
+        }
+      }
+    },
+    "Ask" : {
+      "comment" : "Landmark card button: ask the landmark a question.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fragen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preguntar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demander"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chiedi"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "質問"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "질문하기"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perguntar"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提问"
+          }
+        }
+      }
+    },
+    "Ask %@" : {
+      "comment" : "Ask the building: window title; %@ is the landmark name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ fragen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preguntar a %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demander à %@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chiedi a %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@に質問"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@에게 질문"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perguntar a %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "向%@提问"
+          }
+        }
+      }
+    },
+    "Ask %@ a question" : {
+      "comment" : "Ask the building: text field placeholder; %@ is the landmark name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stelle %@ eine Frage"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haz una pregunta a %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Posez une question à %@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fai una domanda a %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@に質問する"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@에게 질문하기"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Faça uma pergunta a %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "向%@提问"
           }
         }
       }
@@ -1468,6 +4016,9 @@
         }
       }
     },
+    "Built" : {
+      "comment" : "Timeline: the year a landmark was built"
+    },
     "Built %@" : {
       "comment" : "Landmark subtitle when the style is unknown: year built.",
       "extractionState" : "manual",
@@ -1574,6 +4125,9 @@
           }
         }
       }
+    },
+    "c. %@" : {
+      "comment" : "Timeline: an approximate year"
     },
     "Call friends on FaceTime and explore this city together" : {
       "comment" : "City map (Vision Pro): hover help for SharePlay when not on a call",
@@ -1684,7 +4238,9 @@
     "checking.rates" : {
       "comment" : "Short status shown while fetching currency rates"
     },
-    "City or region" : {},
+    "City or region" : {
+
+    },
     "City View" : {
       "comment" : "Immersive: switch back to the overhead view.",
       "localizations" : {
@@ -1901,7 +4457,9 @@
     "College Road Trip" : {
       "comment" : "Trip planner: place label for a trip that visits several campuses"
     },
-    "College Road Trips" : {},
+    "College Road Trips" : {
+
+    },
     "Collegiate Gothic" : {
       "comment" : "Architectural style of a landmark (from BuildingRegistry.json buildingStyle).",
       "extractionState" : "manual",
@@ -2222,7 +4780,9 @@
         }
       }
     },
-    "Create" : {},
+    "Create" : {
+
+    },
     "Credits" : {
       "comment" : "Immersive: opens the sound credits.",
       "localizations" : {
@@ -2275,6 +4835,12 @@
           }
         }
       }
+    },
+    "Dates from Wikidata" : {
+
+    },
+    "Dates from Wikidata · Newspapers from the Library of Congress, Chronicling America" : {
+
     },
     "Day" : {
       "comment" : "Immersive: lighting is locked to day.",
@@ -2329,9 +4895,15 @@
         }
       }
     },
-    "Day %lld" : {},
-    "Day %lld options" : {},
-    "Day on map" : {},
+    "Day %lld" : {
+
+    },
+    "Day %lld options" : {
+
+    },
+    "Day on map" : {
+
+    },
     "Deconstructivism" : {
       "comment" : "Architectural style of a landmark (from BuildingRegistry.json buildingStyle).",
       "extractionState" : "manual",
@@ -2385,6 +4957,9 @@
           }
         }
       }
+    },
+    "Demolished" : {
+      "comment" : "Timeline: the date a landmark was demolished or closed"
     },
     "Dining Halls" : {
       "comment" : "Campus student life: header for dining halls"
@@ -2707,7 +5282,63 @@
         }
       }
     },
-    "Empty" : {},
+    "Drawing" : {
+      "comment" : "Old photos section, shared with the iPhone app.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeichnung"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plano"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Relevé"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disegno"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "図面"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "도면"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desenho"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "图纸"
+          }
+        }
+      }
+    },
+    "Empty" : {
+
+    },
     "Enter City" : {
       "comment" : "Opens the immersive walk-through.",
       "localizations" : {
@@ -2814,7 +5445,9 @@
         }
       }
     },
-    "Expands the full Wikipedia description" : {},
+    "Expands the full Wikipedia description" : {
+
+    },
     "Explore %@ together" : {
       "comment" : "SharePlay activity title shown in FaceTime (Vision Pro)",
       "localizations" : {
@@ -2921,6 +5554,60 @@
         }
       }
     },
+    "Fade an old map of the city over today's" : {
+      "comment" : "Hover help for the Then & Now toggle.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einen alten Stadtplan über die heutige Karte blenden"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Superpone un mapa antiguo de la ciudad sobre el actual"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Superposer un ancien plan de la ville à la carte actuelle"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sovrapponi una vecchia mappa della città a quella di oggi"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "街の古地図を今の地図に重ねて表示"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오늘의 지도 위에 도시의 옛 지도를 겹쳐 보기"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sobrepor um mapa antigo da cidade ao mapa atual"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在今天的地图上叠加城市旧地图"
+          }
+        }
+      }
+    },
     "Federal" : {
       "comment" : "Architectural style of a landmark (from BuildingRegistry.json buildingStyle).",
       "extractionState" : "manual",
@@ -2971,6 +5658,60 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "联邦风格"
+          }
+        }
+      }
+    },
+    "Film: Prelinger Archives, Internet Archive · Public domain" : {
+      "comment" : "Step into the Past: film credit.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Film: Prelinger Archives, Internet Archive · Gemeinfrei"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Película: Prelinger Archives, Internet Archive · Dominio público"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Film : Prelinger Archives, Internet Archive · Domaine public"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Film: Prelinger Archives, Internet Archive · Pubblico dominio"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "映像：Prelinger Archives、Internet Archive・パブリックドメイン"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "영상: Prelinger Archives, Internet Archive · 퍼블릭 도메인"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filme: Prelinger Archives, Internet Archive · Domínio público"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "影片：Prelinger Archives，Internet Archive · 公有领域"
           }
         }
       }
@@ -3193,7 +5934,63 @@
         }
       }
     },
-    "From Wikipedia" : {},
+    "From Wikipedia" : {
+
+    },
+    "From Wikipedia (CC BY-SA)" : {
+      "comment" : "Credit for On This Day.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aus Wikipedia (CC BY-SA)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De Wikipedia (CC BY-SA)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Depuis Wikipédia (CC BY-SA)"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Da Wikipedia (CC BY-SA)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "出典：ウィキペディア（CC BY-SA）"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "출처: 위키백과 (CC BY-SA)"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Da Wikipédia (CC BY-SA)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "来自维基百科（CC BY-SA）"
+          }
+        }
+      }
+    },
     "Georgian" : {
       "comment" : "Architectural style of a landmark (from BuildingRegistry.json buildingStyle).",
       "extractionState" : "manual",
@@ -3248,7 +6045,9 @@
         }
       }
     },
-    "Give your %@ trip a name." : {},
+    "Give your %@ trip a name." : {
+
+    },
     "Globe" : {
       "comment" : "Toolbar button that opens the 3D globe window.",
       "localizations" : {
@@ -3574,6 +6373,114 @@
         }
       }
     },
+    "Historic photo" : {
+      "comment" : "Old photos section, shared with the iPhone app.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historisches Foto"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto histórica"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Photo historique"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto storica"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "歴史的な写真"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "역사적 사진"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto histórica"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "历史照片"
+          }
+        }
+      }
+    },
+    "Historic Photos & Drawings" : {
+      "comment" : "Old photos section, shared with the iPhone app.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historische Fotos & Zeichnungen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotos y planos históricos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Photos et relevés historiques"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto e disegni storici"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "歴史的な写真と図面"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "역사적 사진과 도면"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotos e desenhos históricos"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "历史照片与图纸"
+          }
+        }
+      }
+    },
     "Hotels near %@" : {
       "comment" : "College road trip: button that opens a hotel search for the night of one day's campus, e.g. \"Hotels near Duke\""
     },
@@ -3627,6 +6534,60 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "这个结构有多少层楼高？"
+          }
+        }
+      }
+    },
+    "Image unavailable" : {
+      "comment" : "Old photos section, shared with the iPhone app.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bild nicht verfügbar"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Imagen no disponible"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Image indisponible"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Immagine non disponibile"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "画像を表示できません"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이미지를 사용할 수 없음"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Imagem indisponível"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "图片无法显示"
           }
         }
       }
@@ -3846,7 +6807,9 @@
         }
       }
     },
-    "Landmark" : {},
+    "Landmark" : {
+
+    },
     "Landmarks" : {
       "comment" : "Section header in Want to Visit. REVIEW: iPhone 'landmarks.header' uses es 'HITO' (singular), fr 'REPÈRES', it 'PUNTI DI RIFERIMENTO'; 'monument' wording used here.",
       "localizations" : {
@@ -3900,7 +6863,9 @@
         }
       }
     },
-    "Landmarks (%lld)" : {},
+    "Landmarks (%lld)" : {
+
+    },
     "Large Tip" : {
       "comment" : "Tip jar: $4.99 tip button",
       "localizations" : {
@@ -4006,6 +6971,63 @@
           }
         }
       }
+    },
+    "Listed on the National Register of Historic Places" : {
+      "comment" : "Heritage badge for US landmarks.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Im National Register of Historic Places verzeichnet"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inscrito en el Registro Nacional de Lugares Históricos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inscrit au Registre national des lieux historiques"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Iscritto al Registro nazionale dei luoghi storici"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "米国国家歴史登録財に登録"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "미국 국가사적지에 등재"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inscrito no Registro Nacional de Lugares Históricos"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "列入美国国家史迹名录"
+          }
+        }
+      }
+    },
+    "Listed: %@" : {
+      "comment" : "Timeline: a heritage listing, e.g. \"Listed: National Historic Landmark\""
     },
     "Listen" : {
       "comment" : "Audio story on a landmark card: reads its story aloud",
@@ -4272,7 +7294,63 @@
         }
       }
     },
-    "Map of this day's route, %lld stops" : {},
+    "Map of this day's route, %lld stops" : {
+
+    },
+    "Measured drawing" : {
+      "comment" : "Old photos section, shared with the iPhone app.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bauaufnahme"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plano arquitectónico"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Relevé architectural"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rilievo architettonico"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "実測図"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "실측 도면"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Levantamento arquitetônico"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "测绘图"
+          }
+        }
+      }
+    },
     "Medium Tip" : {
       "comment" : "Tip jar: $2.99 tip button",
       "localizations" : {
@@ -4542,7 +7620,9 @@
         }
       }
     },
-    "More" : {},
+    "More" : {
+
+    },
     "More tours on Viator" : {
       "comment" : "Landmark page: link under Tours & Tickets that opens Viator's tours for this landmark",
       "localizations" : {
@@ -4596,14 +7676,30 @@
         }
       }
     },
-    "Move" : {},
-    "Move %@ to…" : {},
-    "Move Down" : {},
-    "Move Up" : {},
-    "My College List" : {},
-    "My Journey" : {},
-    "My Passport" : {},
-    "My Trips" : {},
+    "Move" : {
+
+    },
+    "Move %@ to…" : {
+
+    },
+    "Move Down" : {
+
+    },
+    "Move Up" : {
+
+    },
+    "My College List" : {
+
+    },
+    "My Journey" : {
+
+    },
+    "My Passport" : {
+
+    },
+    "My Trips" : {
+
+    },
     "Neo-Futurism" : {
       "comment" : "Architectural style of a landmark (from BuildingRegistry.json buildingStyle).",
       "extractionState" : "manual",
@@ -4820,9 +7916,15 @@
         }
       }
     },
-    "New Trip" : {},
-    "New Trip Anywhere" : {},
-    "Next City" : {},
+    "New Trip" : {
+
+    },
+    "New Trip Anywhere" : {
+
+    },
+    "Next City" : {
+
+    },
     "Night" : {
       "comment" : "Immersive: lighting is locked to night.",
       "localizations" : {
@@ -4876,10 +7978,72 @@
         }
       }
     },
-    "No photo available" : {},
-    "No photo available for %@" : {},
-    "No Trip Selected" : {},
-    "No Trips Yet" : {},
+    "No old film or photos of this landmark yet." : {
+      "comment" : "Step into the Past: nothing found.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noch keine alten Filme oder Fotos von diesem Wahrzeichen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aún no hay películas ni fotos antiguas de este monumento."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pas encore de film ni de photo ancienne de ce monument."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ancora nessun film o foto d'epoca di questo monumento."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このランドマークの古い映像や写真はまだありません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 랜드마크의 옛 영상이나 사진이 아직 없어요."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ainda não há filmes nem fotos antigas deste monumento."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暂无此地标的老电影或旧照片。"
+          }
+        }
+      }
+    },
+    "No photo available" : {
+
+    },
+    "No photo available for %@" : {
+
+    },
+    "No Trip Selected" : {
+
+    },
+    "No Trips Yet" : {
+
+    },
     "No worries, the tip was cancelled. You weren't charged." : {
       "comment" : "Tip jar: purchase cancelled",
       "localizations" : {
@@ -5039,6 +8203,276 @@
         }
       }
     },
+    "Now" : {
+      "comment" : "Slider end label: today's map (the other end shows the old map's year).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heute"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ahora"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aujourd'hui"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oggi"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "現在"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "현재"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agora"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "现在"
+          }
+        }
+      }
+    },
+    "Old map" : {
+      "comment" : "Accessibility label of the slider that fades the old map in and out.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alte Karte"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mapa antiguo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ancienne carte"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mappa antica"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "古地図"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "옛 지도"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mapa antigo"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "旧地图"
+          }
+        }
+      }
+    },
+    "Old Photos" : {
+      "comment" : "Landmark card: heading above the gallery of old photos.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alte Fotos"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotos antiguas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Photos anciennes"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto d'epoca"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "昔の写真"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "옛 사진"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotos antigas"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "老照片"
+          }
+        }
+      }
+    },
+    "Old photos: Library of Congress, Wikimedia Commons, Europeana, Smithsonian, DPLA; public domain" : {
+      "comment" : "Credit for old photos on the old map.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alte Fotos: Library of Congress, Wikimedia Commons, Europeana, Smithsonian, DPLA; gemeinfrei"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotos antiguas: Library of Congress, Wikimedia Commons, Europeana, Smithsonian, DPLA; dominio público"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Photos anciennes : Library of Congress, Wikimedia Commons, Europeana, Smithsonian, DPLA ; domaine public"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto d'epoca: Library of Congress, Wikimedia Commons, Europeana, Smithsonian, DPLA; pubblico dominio"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "古写真：米国議会図書館、ウィキメディア・コモンズ、Europeana、スミソニアン、DPLA（パブリックドメイン）"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "옛 사진: 미국 의회도서관, 위키미디어 공용, Europeana, 스미스소니언, DPLA; 퍼블릭 도메인"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotos antigas: Library of Congress, Wikimedia Commons, Europeana, Smithsonian, DPLA; domínio público"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "老照片：美国国会图书馆、维基共享资源、Europeana、史密森学会、DPLA；公有领域"
+          }
+        }
+      }
+    },
+    "On This Day" : {
+      "comment" : "Card at the top of the city list: today in history.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An diesem Tag"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tal día como hoy"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ce jour-là"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accadde oggi"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日は何の日"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오늘의 역사"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neste dia"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "历史上的今天"
+          }
+        }
+      }
+    },
     "Open 3D Model" : {
       "comment" : "Toolbar button that opens the city's 3D model volume.",
       "localizations" : {
@@ -5088,6 +8522,63 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "打开 3D 模型"
+          }
+        }
+      }
+    },
+    "Opened" : {
+      "comment" : "Timeline: the date a landmark opened"
+    },
+    "Opens %@" : {
+      "comment" : "Accessibility hint; %@ is a city name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öffnet %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abre %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvre %@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apre %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@を開きます"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 열기"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abre %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开%@"
           }
         }
       }
@@ -5304,7 +8795,9 @@
         }
       }
     },
-    "Opens the 3D map and flies through each day's stops in order" : {},
+    "Opens the 3D map and flies through each day's stops in order" : {
+
+    },
     "Opens the city around you at room scale" : {
       "comment" : "VoiceOver hint for the Enter City button, which opens the immersive walk-through",
       "localizations" : {
@@ -5410,6 +8903,9 @@
           }
         }
       }
+    },
+    "Opens the newspaper page on loc.gov" : {
+
     },
     "Opens Viator. Stamped! doesn't handle bookings or payments." : {
       "comment" : "Viator link, VoiceOver hint",
@@ -5517,12 +9013,18 @@
         }
       }
     },
-    "Opens your trips in their own window" : {},
-    "Optimize route" : {},
+    "Opens your trips in their own window" : {
+
+    },
+    "Optimize route" : {
+
+    },
     "OTHER U.S. CAMPUSES" : {
       "comment" : "City list: US campuses outside the listed athletic conferences"
     },
-    "Passport" : {},
+    "Passport" : {
+
+    },
     "Payments go through your Apple Account. Tips are one-time and don't renew." : {
       "comment" : "Tip jar: footnote",
       "localizations" : {
@@ -5682,7 +9184,9 @@
         }
       }
     },
-    "Photo of %@" : {},
+    "Photo of %@" : {
+
+    },
     "Photo: %@, %@, via Wikimedia Commons" : {
       "comment" : "360° view photo credit required by the licence. First %@ = photographer, second %@ = licence (e.g. CC BY-SA 4.0). Keep 'Wikimedia Commons' in English.",
       "localizations" : {
@@ -5736,7 +9240,9 @@
         }
       }
     },
-    "Photo: Wikimedia Commons" : {},
+    "Photo: Wikimedia Commons" : {
+
+    },
     "Pick a City" : {
       "comment" : "Shown when no city is selected.",
       "localizations" : {
@@ -5790,8 +9296,12 @@
         }
       }
     },
-    "Pick a trip or create a new one." : {},
-    "Pick a trip or plan a new one anywhere." : {},
+    "Pick a trip or create a new one." : {
+
+    },
+    "Pick a trip or plan a new one anywhere." : {
+
+    },
     "Places" : {
       "comment" : "Toolbar toggle that shows Apple Maps' own places on the map.",
       "localizations" : {
@@ -5845,13 +9355,27 @@
         }
       }
     },
-    "Plan a Trip" : {},
-    "Plan a Trip Anywhere" : {},
-    "Plan a trip in a Stamped city from its page, or anywhere in the world from here." : {},
-    "Plan Anywhere Trip" : {},
-    "Plan in %@" : {},
-    "Plan your days in %@: pick landmarks and saved places, then put them in walking order." : {},
-    "Planning in %@ adds its landmarks, stamps and quiz." : {},
+    "Plan a Trip" : {
+
+    },
+    "Plan a Trip Anywhere" : {
+
+    },
+    "Plan a trip in a Stamped city from its page, or anywhere in the world from here." : {
+
+    },
+    "Plan Anywhere Trip" : {
+
+    },
+    "Plan in %@" : {
+
+    },
+    "Plan your days in %@: pick landmarks and saved places, then put them in walking order." : {
+
+    },
+    "Planning in %@ adds its landmarks, stamps and quiz." : {
+
+    },
     "Play Again" : {
       "comment" : "Quiz results button.",
       "localizations" : {
@@ -6119,7 +9643,9 @@
         }
       }
     },
-    "Previous City" : {},
+    "Previous City" : {
+
+    },
     "Purchasing" : {
       "comment" : "Tip jar: VoiceOver value on a tip button while its purchase is in progress",
       "localizations" : {
@@ -6279,6 +9805,9 @@
         }
       }
     },
+    "Quotes are read automatically from old scans and may contain errors." : {
+
+    },
     "Raining" : {
       "comment" : "Immersive weather toggle: rain is on.",
       "localizations" : {
@@ -6335,13 +9864,30 @@
     "rates.updated" : {
       "comment" : "Status template: Rates updated <when> (<mode>)"
     },
-    "Read more" : {},
-    "Read more about %@" : {},
-    "Read on Wikipedia" : {},
-    "Remove" : {},
-    "Remove Day" : {},
-    "Remove Day %lld" : {},
-    "Remove Day %lld and its stops?" : {},
+    "Read more" : {
+
+    },
+    "Read more about %@" : {
+
+    },
+    "Read on Wikipedia" : {
+
+    },
+    "Read the page" : {
+
+    },
+    "Remove" : {
+
+    },
+    "Remove Day" : {
+
+    },
+    "Remove Day %lld" : {
+
+    },
+    "Remove Day %lld and its stops?" : {
+
+    },
     "Renaissance" : {
       "comment" : "Architectural style of a landmark (from BuildingRegistry.json buildingStyle).",
       "extractionState" : "manual",
@@ -6450,8 +9996,18 @@
         }
       }
     },
-    "Rename Trip" : {},
-    "Reorders this day's stops so each one is the closest to the last" : {},
+    "Rename Trip" : {
+
+    },
+    "Reorders this day's stops so each one is the closest to the last" : {
+
+    },
+    "Replaced %@" : {
+      "comment" : "Timeline: the building that stood here before"
+    },
+    "Replaced by %@" : {
+      "comment" : "Timeline: the building that took its place"
+    },
     "Richardsonian Romanesque" : {
       "comment" : "Architectural style of a landmark (from BuildingRegistry.json buildingStyle).",
       "extractionState" : "manual",
@@ -6720,7 +10276,9 @@
         }
       }
     },
-    "Save" : {},
+    "Save" : {
+
+    },
     "Saved" : {
       "comment" : "Same button once the landmark is saved.",
       "localizations" : {
@@ -6774,9 +10332,15 @@
         }
       }
     },
-    "Saved in %@" : {},
-    "Saved Places" : {},
-    "Say the name of the building in the photo..." : {},
+    "Saved in %@" : {
+
+    },
+    "Saved Places" : {
+
+    },
+    "Say the name of the building in the photo..." : {
+
+    },
     "Score: %lld" : {
       "comment" : "VoiceOver label for the quiz score shown as a star and a number",
       "localizations" : {
@@ -6830,7 +10394,9 @@
         }
       }
     },
-    "Search %@" : {},
+    "Search %@" : {
+
+    },
     "Search cities" : {
       "comment" : "Search field placeholder in the city list.",
       "localizations" : {
@@ -6884,9 +10450,18 @@
         }
       }
     },
-    "Search Cities and Landmarks" : {},
-    "Search for a city or region. Your stops will be places from Apple Maps." : {},
-    "Search for a restaurant, museum, park or anything else you want to visit." : {},
+    "Search Cities and Landmarks" : {
+
+    },
+    "Search for a city or region. Your stops will be places from Apple Maps." : {
+
+    },
+    "Search for a restaurant, museum, park or anything else you want to visit." : {
+
+    },
+    "Searching old newspapers…" : {
+
+    },
     "Second Empire" : {
       "comment" : "Architectural style of a landmark (from BuildingRegistry.json buildingStyle).",
       "extractionState" : "manual",
@@ -6994,8 +10569,66 @@
         }
       }
     },
-    "Set Start Date" : {},
-    "Settings…" : {},
+    "See the official listing and nomination" : {
+      "comment" : "Link to the National Register record.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Offiziellen Eintrag und Antrag ansehen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver la inscripción oficial y la nominación"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voir l'inscription officielle et le dossier"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vedi l'iscrizione ufficiale e la candidatura"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "公式の登録情報と推薦書を見る"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "공식 등재 정보와 지정 신청서 보기"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver o registro oficial e a indicação"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看官方登录和提名文件"
+          }
+        }
+      }
+    },
+    "Set Start Date" : {
+
+    },
+    "Settings…" : {
+
+    },
     "SharePlay" : {
       "comment" : "City map ornament (Vision Pro): starts Explore Together. Apple's feature name, kept as is (Apple uses 同播共享 in Simplified Chinese).",
       "localizations" : {
@@ -7208,7 +10841,63 @@
         }
       }
     },
-    "Shows the architect's other landmarks" : {},
+    "Shows the architect's other landmarks" : {
+
+    },
+    "Shows the image larger" : {
+      "comment" : "Old photos section, shared with the iPhone app.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeigt das Bild größer"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muestra la imagen más grande"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Affiche l’image en plus grand"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostra l’immagine più grande"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "画像を拡大して表示します"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이미지를 크게 표시합니다"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostra a imagem maior"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "放大显示图片"
+          }
+        }
+      }
+    },
     "Small Tip" : {
       "comment" : "Tip jar: $0.99 tip button",
       "localizations" : {
@@ -7262,6 +10951,60 @@
         }
       }
     },
+    "Sorry, I couldn't answer that just now." : {
+      "comment" : "Ask the building: shown when the model fails.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das kann ich gerade leider nicht beantworten."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lo siento, ahora no puedo responder a eso."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Désolé, je ne peux pas répondre pour l'instant."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mi dispiace, ora non riesco a rispondere."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "すみません、今は答えられません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "죄송해요, 지금은 답할 수 없어요."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desculpe, não consigo responder agora."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "抱歉，我现在无法回答。"
+          }
+        }
+      }
+    },
     "Sound Credits" : {
       "comment" : "Title of the shared SoundCreditsView.",
       "localizations" : {
@@ -7311,6 +11054,60 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "音效致谢"
+          }
+        }
+      }
+    },
+    "Sound: %@ by %@, CC0, Freesound" : {
+      "comment" : "Step into the Past: credit for the city sound; first %@ is the recording's name, second its author.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ton: %1$@ von %2$@, CC0, Freesound"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonido: %1$@ de %2$@, CC0, Freesound"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Son : %1$@ par %2$@, CC0, Freesound"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suono: %1$@ di %2$@, CC0, Freesound"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "音：%1$@（%2$@）、CC0、Freesound"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "소리: %2$@의 %1$@, CC0, Freesound"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Som: %1$@ por %2$@, CC0, Freesound"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "声音：%2$@ 录制的 %1$@，CC0，Freesound"
           }
         }
       }
@@ -7532,7 +11329,9 @@
         }
       }
     },
-    "Stamped! Help" : {},
+    "Stamped! Help" : {
+
+    },
     "Stamped! is not affiliated with or endorsed by any university. School names and colors are used only to identify them." : {
       "comment" : "Settings and campus pages: legal note that the app is independent of the universities it lists"
     },
@@ -7642,8 +11441,12 @@
         }
       }
     },
-    "Start a %@ Trip" : {},
-    "Starts" : {},
+    "Start a %@ Trip" : {
+
+    },
+    "Starts" : {
+
+    },
     "Stay" : {
       "comment" : "Landmark card (Vision Pro): menu of hotel and vacation rental links near the landmark",
       "localizations" : {
@@ -7693,6 +11496,60 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "住宿"
+          }
+        }
+      }
+    },
+    "Step into the Past" : {
+      "comment" : "Landmark card button: opens an old film or photos all around you.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zurück in die Vergangenheit"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Viaja al pasado"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plongez dans le passé"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entra nel passato"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "過去へ入る"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "과거로 들어가기"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entre no passado"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "走进过去"
           }
         }
       }
@@ -7896,7 +11753,9 @@
         }
       }
     },
-    "Stops %@" : {},
+    "Stops %@" : {
+
+    },
     "Street View" : {
       "comment" : "Immersive: walk at street level.",
       "localizations" : {
@@ -8062,6 +11921,60 @@
         }
       }
     },
+    "Text: UNESCO World Heritage Centre, CC BY-SA 3.0 IGO" : {
+      "comment" : "Credit for the UNESCO description.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Text: UNESCO-Welterbezentrum, CC BY-SA 3.0 IGO"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Texto: Centro del Patrimonio Mundial de la UNESCO, CC BY-SA 3.0 IGO"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Texte : Centre du patrimoine mondial de l'UNESCO, CC BY-SA 3.0 IGO"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Testo: Centro del Patrimonio Mondiale UNESCO, CC BY-SA 3.0 IGO"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "文：ユネスコ世界遺産センター、CC BY-SA 3.0 IGO"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "글: 유네스코 세계유산센터, CC BY-SA 3.0 IGO"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Texto: Centro do Patrimônio Mundial da UNESCO, CC BY-SA 3.0 IGO"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "文字：联合国教科文组织世界遗产中心，CC BY-SA 3.0 IGO"
+          }
+        }
+      }
+    },
     "Thank you!" : {
       "comment" : "Tip jar: after a tip",
       "localizations" : {
@@ -8167,6 +12080,117 @@
           }
         }
       }
+    },
+    "Then & Now" : {
+      "comment" : "Toolbar toggle that fades an old map of the city over today's map.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Damals & heute"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Antes y ahora"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hier et aujourd'hui"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ieri e oggi"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今と昔"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "그때와 지금"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Antes e agora"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今昔对比"
+          }
+        }
+      }
+    },
+    "Time Walk" : {
+      "comment" : "Tour button when the old map is on: each stop shows the city in the landmark's year.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeitreise"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paseo en el tiempo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voyage dans le temps"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passeggiata nel tempo"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "タイムウォーク"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시간 여행"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passeio no tempo"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "时光漫步"
+          }
+        }
+      }
+    },
+    "Timeline" : {
+
     },
     "Tips are just a thank-you. They don't unlock anything, and everything in the app stays free." : {
       "comment" : "Tip jar: tips unlock nothing",
@@ -8330,8 +12354,12 @@
         }
       }
     },
-    "Trip name" : {},
-    "Trip Not Found" : {},
+    "Trip name" : {
+
+    },
+    "Trip Not Found" : {
+
+    },
     "Try Again" : {
       "comment" : "360° view: retries the download after a failure.",
       "localizations" : {
@@ -8435,6 +12463,168 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "都铎复兴"
+          }
+        }
+      }
+    },
+    "Turn on Apple Intelligence in Settings to ask landmarks questions." : {
+      "comment" : "Ask the building: how to turn the model on.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schalte Apple Intelligence in den Einstellungen ein, um Wahrzeichen Fragen zu stellen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activa Apple Intelligence en Ajustes para hacer preguntas a los monumentos."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activez Apple Intelligence dans Réglages pour poser des questions aux monuments."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Attiva Apple Intelligence in Impostazioni per fare domande ai monumenti."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ランドマークに質問するには、設定でApple Intelligenceをオンにしてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "랜드마크에 질문하려면 설정에서 Apple Intelligence를 켜세요."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ative a Apple Intelligence nos Ajustes para fazer perguntas aos monumentos."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请在“设置”中打开 Apple 智能，以向地标提问。"
+          }
+        }
+      }
+    },
+    "UNESCO World Heritage Site" : {
+      "comment" : "Heritage badge.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "UNESCO-Welterbe"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Patrimonio de la Humanidad de la UNESCO"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Patrimoine mondial de l'UNESCO"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Patrimonio dell'umanità UNESCO"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ユネスコ世界遺産"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "유네스코 세계유산"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Patrimônio Mundial da UNESCO"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "联合国教科文组织世界遗产"
+          }
+        }
+      }
+    },
+    "UNESCO World Heritage Site since %@" : {
+      "comment" : "Heritage badge; %@ is the year inscribed.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "UNESCO-Welterbe seit %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Patrimonio de la Humanidad de la UNESCO desde %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Patrimoine mondial de l'UNESCO depuis %@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Patrimonio dell'umanità UNESCO dal %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@年からユネスコ世界遺産"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@년부터 유네스코 세계유산"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Patrimônio Mundial da UNESCO desde %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自%@年起列入联合国教科文组织世界遗产"
           }
         }
       }
@@ -8596,6 +12786,60 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "维多利亚风格"
+          }
+        }
+      }
+    },
+    "View Source" : {
+      "comment" : "Old photo viewer: button that opens the photo's page at its archive.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quelle ansehen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver la fuente"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voir la source"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vedi la fonte"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "出典を見る"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "출처 보기"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver fonte"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看来源"
           }
         }
       }
@@ -8865,6 +13109,60 @@
         }
       }
     },
+    "What happened here?" : {
+      "comment" : "Suggested question to a landmark.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Was ist hier passiert?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Qué pasó aquí?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Que s'est-il passé ici ?"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cosa è successo qui?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ここで何があったの？"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "여기서 무슨 일이 있었나요?"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O que aconteceu aqui?"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这里发生过什么？"
+          }
+        }
+      }
+    },
     "What is the architectural style of this building?" : {
       "comment" : "Quiz prompt (QuestionType.style). Reused from the iPhone app's Localizable.strings (question.style). REVIEW: es was untranslated on iPhone.",
       "extractionState" : "manual",
@@ -8915,6 +13213,117 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "这座建筑的建筑风格是什么？"
+          }
+        }
+      }
+    },
+    "What the Papers Said" : {
+
+    },
+    "What were you used for?" : {
+      "comment" : "Suggested question to a landmark.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wofür wurdest du genutzt?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Para qué se te usaba?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "À quoi servais-tu ?"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A cosa servivi?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "何に使われていたの？"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "어떤 용도로 쓰였나요?"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para que você era usado?"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你以前是做什么用的？"
+          }
+        }
+      }
+    },
+    "When were you built?" : {
+      "comment" : "Suggested question to a landmark.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wann wurdest du gebaut?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Cuándo te construyeron?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quand as-tu été construit ?"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quando sei stato costruito?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "いつ建てられたの？"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "언제 지어졌나요?"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quando você foi construído?"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你是什么时候建成的？"
           }
         }
       }
@@ -8976,8 +13385,66 @@
         }
       }
     },
-    "Which building is this?" : {},
-    "World Map" : {},
+    "Which building is this?" : {
+
+    },
+    "Who designed you?" : {
+      "comment" : "Suggested question to a landmark.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wer hat dich entworfen?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Quién te diseñó?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Qui t'a conçu ?"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chi ti ha progettato?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "誰が設計したの？"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "누가 설계했나요?"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quem projetou você?"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "谁设计了你？"
+          }
+        }
+      }
+    },
+    "World Map" : {
+
+    },
     "Wrong" : {
       "comment" : "VoiceOver value of the user's wrong quiz pick after answering (shown in red)",
       "localizations" : {
@@ -9027,6 +13494,60 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "错误"
+          }
+        }
+      }
+    },
+    "Year" : {
+      "comment" : "Picker label: which year the old map shows.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jahr"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Año"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Année"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anno"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "年"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연도"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ano"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "年份"
           }
         }
       }
@@ -9190,7 +13711,9 @@
         }
       }
     },
-    "Your Trips" : {},
+    "Your Trips" : {
+
+    },
     "Zoom In" : {
       "comment" : "VoiceOver action: makes the 3D city model bigger",
       "localizations" : {
@@ -9297,1788 +13820,8 @@
         }
       }
     },
-    "Zooms in on these places" : {},
-    "Time Walk" : {
-      "comment" : "Tour button when the old map is on: each stop shows the city in the landmark's year.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zeitreise"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Paseo en el tiempo"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Voyage dans le temps"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Passeggiata nel tempo"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "タイムウォーク"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "시간 여행"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Passeio no tempo"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "时光漫步"
-          }
-        }
-      }
-    },
-    "Ask" : {
-      "comment" : "Landmark card button: ask the landmark a question.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fragen"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Preguntar"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Demander"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Chiedi"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "質問"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "질문하기"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Perguntar"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "提问"
-          }
-        }
-      }
-    },
-    "Step into the Past" : {
-      "comment" : "Landmark card button: opens an old film or photos all around you.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zurück in die Vergangenheit"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Viaja al pasado"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Plongez dans le passé"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Entra nel passato"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "過去へ入る"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "과거로 들어가기"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Entre no passado"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "走进过去"
-          }
-        }
-      }
-    },
-    "When were you built?" : {
-      "comment" : "Suggested question to a landmark.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wann wurdest du gebaut?"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¿Cuándo te construyeron?"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Quand as-tu été construit ?"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Quando sei stato costruito?"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "いつ建てられたの？"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "언제 지어졌나요?"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Quando você foi construído?"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "你是什么时候建成的？"
-          }
-        }
-      }
-    },
-    "Who designed you?" : {
-      "comment" : "Suggested question to a landmark.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wer hat dich entworfen?"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¿Quién te diseñó?"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Qui t'a conçu ?"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Chi ti ha progettato?"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "誰が設計したの？"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "누가 설계했나요?"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Quem projetou você?"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "谁设计了你？"
-          }
-        }
-      }
-    },
-    "What were you used for?" : {
-      "comment" : "Suggested question to a landmark.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wofür wurdest du genutzt?"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¿Para qué se te usaba?"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "À quoi servais-tu ?"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "A cosa servivi?"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "何に使われていたの？"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "어떤 용도로 쓰였나요?"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Para que você era usado?"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "你以前是做什么用的？"
-          }
-        }
-      }
-    },
-    "What happened here?" : {
-      "comment" : "Suggested question to a landmark.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Was ist hier passiert?"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¿Qué pasó aquí?"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Que s'est-il passé ici ?"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cosa è successo qui?"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ここで何があったの？"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "여기서 무슨 일이 있었나요?"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "O que aconteceu aqui?"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "这里发生过什么？"
-          }
-        }
-      }
-    },
-    "Apple Intelligence Is Off" : {
-      "comment" : "Ask the building: shown when the on-device model isn't available.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple Intelligence ist aus"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple Intelligence está desactivado"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple Intelligence est désactivé"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple Intelligence è disattivato"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple Intelligenceがオフです"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple Intelligence가 꺼져 있음"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple Intelligence está desativado"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple 智能已关闭"
-          }
-        }
-      }
-    },
-    "Turn on Apple Intelligence in Settings to ask landmarks questions." : {
-      "comment" : "Ask the building: how to turn the model on.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Schalte Apple Intelligence in den Einstellungen ein, um Wahrzeichen Fragen zu stellen."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Activa Apple Intelligence en Ajustes para hacer preguntas a los monumentos."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Activez Apple Intelligence dans Réglages pour poser des questions aux monuments."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Attiva Apple Intelligence in Impostazioni per fare domande ai monumenti."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ランドマークに質問するには、設定でApple Intelligenceをオンにしてください。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "랜드마크에 질문하려면 설정에서 Apple Intelligence를 켜세요."
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ative a Apple Intelligence nos Ajustes para fazer perguntas aos monumentos."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "请在“设置”中打开 Apple 智能，以向地标提问。"
-          }
-        }
-      }
-    },
-    "Ask %@ a question" : {
-      "comment" : "Ask the building: text field placeholder; %@ is the landmark name.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Stelle %@ eine Frage"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Haz una pregunta a %@"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Posez une question à %@"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fai una domanda a %@"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@に質問する"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@에게 질문하기"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Faça uma pergunta a %@"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "向%@提问"
-          }
-        }
-      }
-    },
-    "Ask %@" : {
-      "comment" : "Ask the building: window title; %@ is the landmark name.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ fragen"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Preguntar a %@"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Demander à %@"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Chiedi a %@"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@に質問"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@에게 질문"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Perguntar a %@"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "向%@提问"
-          }
-        }
-      }
-    },
-    "Answers come only from Stamped's facts about this landmark, written on your device." : {
-      "comment" : "Ask the building: note under the question field.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Antworten stammen nur aus den Fakten von Stamped zu diesem Wahrzeichen und entstehen auf deinem Gerät."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Las respuestas solo usan los datos de Stamped sobre este monumento y se escriben en tu dispositivo."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Les réponses s'appuient uniquement sur les informations de Stamped sur ce monument et sont rédigées sur votre appareil."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Le risposte usano solo i dati di Stamped su questo monumento e sono scritte sul tuo dispositivo."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "回答はこのランドマークに関するStampedの情報だけを使い、デバイス上で作成されます。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "답변은 이 랜드마크에 대한 Stamped의 정보만 사용하며 기기에서 작성됩니다."
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "As respostas usam apenas os dados do Stamped sobre este monumento e são escritas no seu dispositivo."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "回答仅基于 Stamped 关于此地标的资料，并在你的设备上生成。"
-          }
-        }
-      }
-    },
-    "Sorry, I couldn't answer that just now." : {
-      "comment" : "Ask the building: shown when the model fails.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Das kann ich gerade leider nicht beantworten."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lo siento, ahora no puedo responder a eso."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Désolé, je ne peux pas répondre pour l'instant."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mi dispiace, ora non riesco a rispondere."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "すみません、今は答えられません。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "죄송해요, 지금은 답할 수 없어요."
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Desculpe, não consigo responder agora."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "抱歉，我现在无法回答。"
-          }
-        }
-      }
-    },
-    "No old film or photos of this landmark yet." : {
-      "comment" : "Step into the Past: nothing found.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Noch keine alten Filme oder Fotos von diesem Wahrzeichen."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aún no hay películas ni fotos antiguas de este monumento."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pas encore de film ni de photo ancienne de ce monument."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ancora nessun film o foto d'epoca di questo monumento."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "このランドマークの古い映像や写真はまだありません。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "이 랜드마크의 옛 영상이나 사진이 아직 없어요."
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ainda não há filmes nem fotos antigas deste monumento."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "暂无此地标的老电影或旧照片。"
-          }
-        }
-      }
-    },
-    "Film: Prelinger Archives, Internet Archive · Public domain" : {
-      "comment" : "Step into the Past: film credit.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Film: Prelinger Archives, Internet Archive · Gemeinfrei"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Película: Prelinger Archives, Internet Archive · Dominio público"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Film : Prelinger Archives, Internet Archive · Domaine public"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Film: Prelinger Archives, Internet Archive · Pubblico dominio"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "映像：Prelinger Archives、Internet Archive・パブリックドメイン"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "영상: Prelinger Archives, Internet Archive · 퍼블릭 도메인"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Filme: Prelinger Archives, Internet Archive · Domínio público"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "影片：Prelinger Archives，Internet Archive · 公有领域"
-          }
-        }
-      }
-    },
-    "UNESCO World Heritage Site since %@" : {
-      "comment" : "Heritage badge; %@ is the year inscribed.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "UNESCO-Welterbe seit %@"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Patrimonio de la Humanidad de la UNESCO desde %@"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Patrimoine mondial de l'UNESCO depuis %@"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Patrimonio dell'umanità UNESCO dal %@"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@年からユネスコ世界遺産"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@년부터 유네스코 세계유산"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Patrimônio Mundial da UNESCO desde %@"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "自%@年起列入联合国教科文组织世界遗产"
-          }
-        }
-      }
-    },
-    "UNESCO World Heritage Site" : {
-      "comment" : "Heritage badge.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "UNESCO-Welterbe"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Patrimonio de la Humanidad de la UNESCO"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Patrimoine mondial de l'UNESCO"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Patrimonio dell'umanità UNESCO"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ユネスコ世界遺産"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "유네스코 세계유산"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Patrimônio Mundial da UNESCO"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "联合国教科文组织世界遗产"
-          }
-        }
-      }
-    },
-    "Text: UNESCO World Heritage Centre, CC BY-SA 3.0 IGO" : {
-      "comment" : "Credit for the UNESCO description.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Text: UNESCO-Welterbezentrum, CC BY-SA 3.0 IGO"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Texto: Centro del Patrimonio Mundial de la UNESCO, CC BY-SA 3.0 IGO"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Texte : Centre du patrimoine mondial de l'UNESCO, CC BY-SA 3.0 IGO"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Testo: Centro del Patrimonio Mondiale UNESCO, CC BY-SA 3.0 IGO"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "文：ユネスコ世界遺産センター、CC BY-SA 3.0 IGO"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "글: 유네스코 세계유산센터, CC BY-SA 3.0 IGO"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Texto: Centro do Patrimônio Mundial da UNESCO, CC BY-SA 3.0 IGO"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "文字：联合国教科文组织世界遗产中心，CC BY-SA 3.0 IGO"
-          }
-        }
-      }
-    },
-    "Listed on the National Register of Historic Places" : {
-      "comment" : "Heritage badge for US landmarks.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Im National Register of Historic Places verzeichnet"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Inscrito en el Registro Nacional de Lugares Históricos"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Inscrit au Registre national des lieux historiques"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Iscritto al Registro nazionale dei luoghi storici"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "米国国家歴史登録財に登録"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "미국 국가사적지에 등재"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Inscrito no Registro Nacional de Lugares Históricos"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "列入美国国家史迹名录"
-          }
-        }
-      }
-    },
-    "See the official listing and nomination" : {
-      "comment" : "Link to the National Register record.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Offiziellen Eintrag und Antrag ansehen"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ver la inscripción oficial y la nominación"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Voir l'inscription officielle et le dossier"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vedi l'iscrizione ufficiale e la candidatura"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "公式の登録情報と推薦書を見る"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "공식 등재 정보와 지정 신청서 보기"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ver o registro oficial e a indicação"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "查看官方登录和提名文件"
-          }
-        }
-      }
-    },
-    "On This Day" : {
-      "comment" : "Card at the top of the city list: today in history.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "An diesem Tag"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tal día como hoy"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ce jour-là"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Accadde oggi"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "今日は何の日"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "오늘의 역사"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Neste dia"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "历史上的今天"
-          }
-        }
-      }
-    },
-    "Opens %@" : {
-      "comment" : "Accessibility hint; %@ is a city name.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Öffnet %@"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abre %@"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ouvre %@"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apre %@"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@を開きます"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ 열기"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abre %@"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "打开%@"
-          }
-        }
-      }
-    },
-    "From Wikipedia (CC BY-SA)" : {
-      "comment" : "Credit for On This Day.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aus Wikipedia (CC BY-SA)"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "De Wikipedia (CC BY-SA)"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Depuis Wikipédia (CC BY-SA)"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Da Wikipedia (CC BY-SA)"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "出典：ウィキペディア（CC BY-SA）"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "출처: 위키백과 (CC BY-SA)"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Da Wikipédia (CC BY-SA)"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "来自维基百科（CC BY-SA）"
-          }
-        }
-      }
-    },
-    "Sound: %@ by %@, CC0, Freesound" : {
-      "comment" : "Step into the Past: credit for the city sound; first %@ is the recording's name, second its author.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ton: %1$@ von %2$@, CC0, Freesound"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sonido: %1$@ de %2$@, CC0, Freesound"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Son : %1$@ par %2$@, CC0, Freesound"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Suono: %1$@ di %2$@, CC0, Freesound"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "音：%1$@（%2$@）、CC0、Freesound"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "소리: %2$@의 %1$@, CC0, Freesound"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Som: %1$@ por %2$@, CC0, Freesound"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "声音：%2$@ 录制的 %1$@，CC0，Freesound"
-          }
-        }
-      }
-    },
-    "Historic Photos & Drawings" : {
-      "comment" : "Old photos section, shared with the iPhone app.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Historische Fotos & Zeichnungen"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fotos y planos históricos"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Photos et relevés historiques"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Foto e disegni storici"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "歴史的な写真と図面"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "역사적 사진과 도면"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fotos e desenhos históricos"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "历史照片与图纸"
-          }
-        }
-      }
-    },
-    "Shows the image larger" : {
-      "comment" : "Old photos section, shared with the iPhone app.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zeigt das Bild größer"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Muestra la imagen más grande"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Affiche l’image en plus grand"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostra l’immagine più grande"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "画像を拡大して表示します"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "이미지를 크게 표시합니다"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostra a imagem maior"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "放大显示图片"
-          }
-        }
-      }
-    },
-    "Image unavailable" : {
-      "comment" : "Old photos section, shared with the iPhone app.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bild nicht verfügbar"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Imagen no disponible"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Image indisponible"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Immagine non disponibile"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "画像を表示できません"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "이미지를 사용할 수 없음"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Imagem indisponível"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "图片无法显示"
-          }
-        }
-      }
-    },
-    "Drawing" : {
-      "comment" : "Old photos section, shared with the iPhone app.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zeichnung"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Plano"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Relevé"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Disegno"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "図面"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "도면"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Desenho"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "图纸"
-          }
-        }
-      }
-    },
-    "Measured drawing" : {
-      "comment" : "Old photos section, shared with the iPhone app.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bauaufnahme"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Plano arquitectónico"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Relevé architectural"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rilievo architettonico"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "実測図"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "실측 도면"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Levantamento arquitetônico"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "测绘图"
-          }
-        }
-      }
-    },
-    "Historic photo" : {
-      "comment" : "Old photos section, shared with the iPhone app.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Historisches Foto"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Foto histórica"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Photo historique"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Foto storica"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "歴史的な写真"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "역사적 사진"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Foto histórica"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "历史照片"
-          }
-        }
-      }
-    },
-    "Old Photos" : {
-      "comment" : "Landmark card: heading above the gallery of old photos.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alte Fotos"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fotos antiguas"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Photos anciennes"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Foto d'epoca"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "昔の写真"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "옛 사진"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fotos antigas"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "老照片"
-          }
-        }
-      }
-    },
-    "View Source" : {
-      "comment" : "Old photo viewer: button that opens the photo's page at its archive.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Quelle ansehen"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ver la fuente"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Voir la source"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vedi la fonte"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "出典を見る"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "출처 보기"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ver fonte"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "查看来源"
-          }
-        }
-      }
-    },
-    "Old photos: Library of Congress, Wikimedia Commons, Europeana, Smithsonian, DPLA; public domain" : {
-      "comment" : "Credit for old photos on the old map.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alte Fotos: Library of Congress, Wikimedia Commons, Europeana, Smithsonian, DPLA; gemeinfrei"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fotos antiguas: Library of Congress, Wikimedia Commons, Europeana, Smithsonian, DPLA; dominio público"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Photos anciennes : Library of Congress, Wikimedia Commons, Europeana, Smithsonian, DPLA ; domaine public"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Foto d'epoca: Library of Congress, Wikimedia Commons, Europeana, Smithsonian, DPLA; pubblico dominio"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "古写真：米国議会図書館、ウィキメディア・コモンズ、Europeana、スミソニアン、DPLA（パブリックドメイン）"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "옛 사진: 미국 의회도서관, 위키미디어 공용, Europeana, 스미스소니언, DPLA; 퍼블릭 도메인"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fotos antigas: Library of Congress, Wikimedia Commons, Europeana, Smithsonian, DPLA; domínio público"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "老照片：美国国会图书馆、维基共享资源、Europeana、史密森学会、DPLA；公有领域"
-          }
-        }
-      }
+    "Zooms in on these places" : {
+
     }
   },
   "version" : "1.0"
