@@ -28,7 +28,39 @@ struct ReviewPromptModifier: ViewModifier {
     }
 }
 
+/// Shows the tip jar once, after someone has collected a good number of stamps.
+struct TipPromptModifier: ViewModifier {
+    @ObservedObject private var progress = GlobalProgressManager.shared
+    @State private var showsTipJar = false
+
+    func body(content: Content) -> some View {
+        content
+            .onChange(of: progress.tipMoment) { _, moment in
+                guard moment != nil else { return }
+                Task {
+                    try? await Task.sleep(for: .seconds(2))
+                    showsTipJar = true
+                }
+            }
+            .sheet(isPresented: $showsTipJar) {
+                NavigationStack {
+                    TipJarView()
+                        .toolbar {
+                            ToolbarItem(placement: .cancellationAction) {
+                                Button("Not Now") { showsTipJar = false }
+                            }
+                        }
+                }
+            }
+    }
+}
+
 extension View {
+    /// Offer the tip jar once, after a good number of stamps.
+    func tipPromptAfterStamps() -> some View {
+        modifier(TipPromptModifier())
+    }
+
     /// Ask for an App Store rating when a stamp completes a city or campus.
     func reviewPromptAfterCompletingCity() -> some View {
         modifier(ReviewPromptModifier())

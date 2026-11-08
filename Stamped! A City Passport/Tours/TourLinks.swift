@@ -102,6 +102,19 @@ struct ViatorLinkBuilder {
 
 // The Vision Pro app shares this file but not the iPhone design tokens (DS),
 // so it has its own tour links on the landmark card.
+/// Remembers which cities have had the after-tour offer, so it never nags.
+enum TourOffer {
+    private static let shownKey = "tourOfferShownCities"
+
+    /// True the first time it's called for a city, false after that.
+    static func claim(city: String, defaults: UserDefaults = .standard) -> Bool {
+        var shown = Set(defaults.stringArray(forKey: shownKey) ?? [])
+        guard shown.insert(city).inserted else { return false }
+        defaults.set(Array(shown), forKey: shownKey)
+        return true
+    }
+}
+
 #if !os(visionOS)
 /// "Tours & Tickets on GetYourGuide" for a landmark, with the commission note under it.
 struct ToursButton: View {
@@ -152,4 +165,94 @@ struct ToursButton: View {
         }
     }
 }
+
+/// Identifies the place a tour offer is for, so it can drive `.sheet(item:)`.
+struct TourOfferPlace: Identifiable {
+    let name: String
+    var id: String { name }
+}
+
+/// Shown once per city when a Time Walk finishes.
+struct TourOfferSheet: View {
+    let place: String
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        VStack(spacing: DS.Space.l) {
+            Text("Want to see \(place) in person?")
+                .font(.system(.title2, design: .serif))
+                .multilineTextAlignment(.center)
+            Text("Guided tours and tickets for your trip.")
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
+            ToursButton(landmark: "", place: place) { AnyView($0.tourTile(tint: DS.Palette.accent)) }
+                .buttonStyle(.plain)
+            Button("Not Now") { dismiss() }
+        }
+        .padding(DS.Space.section)
+        .presentationDetents([.medium])
+    }
+}
+
+/// A campus page's link to the school's own visit page, with hotels for the trip.
+struct CampusVisitSection: View {
+    let campus: CityLocation.City
+    var isHighContrast = false
+    @Environment(\.colorScheme) private var colorScheme
+    @State private var browserLink: BrowserLink?
+
+    private var accent: Color {
+        isHighContrast ? .primary : (campus.stampColor(darkMode: colorScheme == .dark) ?? DS.Palette.accent)
+    }
+
+    var body: some View {
+        if let url = campus.officialVisitURL {
+            VStack(alignment: .leading, spacing: DS.Space.m) {
+                Button {
+                    browserLink = BrowserLink(url: url)
+                } label: {
+                    Label("Official Campus Tour", systemImage: "building.columns.fill")
+                        .tourTile(tint: accent)
+                }
+                .buttonStyle(.plain)
+                Text("Opens the school's own visit page")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                HStack(alignment: .firstTextBaseline) {
+                    Text("Staying overnight?")
+                        .font(.subheadline.weight(.semibold))
+                    Spacer()
+                    FindHotelsButton(search: HotelSearch(city: campus))
+                        .font(.subheadline.weight(.semibold))
+                        .tint(accent)
+                }
+                Text(CollegeDisclaimer.text)
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .dsCard(isHighContrast: isHighContrast)
+            .dsPageMargin()
+            .inAppBrowser(item: $browserLink)
+        }
+    }
+}
+
+private extension View {
+    /// The tinted full-width tile the landing page uses for its actions.
+    func tourTile(tint: Color) -> some View {
+        font(.subheadline.weight(.semibold))
+            .foregroundColor(tint)
+            .padding(.vertical, DS.Space.m)
+            .padding(.horizontal, DS.Space.s)
+            .frame(maxWidth: .infinity, minHeight: 44)
+            .background(
+                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                    .fill(tint.opacity(0.12))
+            )
+    }
+}
+
 #endif

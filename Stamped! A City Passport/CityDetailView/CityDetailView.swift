@@ -98,6 +98,11 @@ struct CityDetailView: View {
                 
                 CityActionTiles(tiles: actionTiles, isHighContrast: isHighContrast)
                     .dsPageMargin()
+                #if !os(visionOS)
+                if viewModel.city.isCampus {
+                    CampusVisitSection(campus: viewModel.city, isHighContrast: isHighContrast)
+                }
+                #endif
                 
                 if viewModel.isCompleted {
                     PassportStampView(

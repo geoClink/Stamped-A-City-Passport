@@ -13,6 +13,60 @@
 import Foundation
 
 // MARK: - Result model
+/// One field of study and its share of the degrees a school awards.
+nonisolated struct CollegeProgram: Equatable {
+    /// The Scorecard's field name, e.g. "business_marketing"
+    let key: String
+    /// 0...1
+    let share: Double
+
+    var displayName: String {
+        guard let name = Self.names[key] else { return key }
+        return Bundle.main.localizedString(forKey: name, value: name, table: nil)
+    }
+
+    static let names: [String: String] = [
+        "agriculture": "Agriculture",
+        "resources": "Natural Resources",
+        "architecture": "Architecture",
+        "ethnic_cultural_gender": "Area and Gender Studies",
+        "communication": "Communication",
+        "communications_technology": "Communications Technology",
+        "computer": "Computer Science",
+        "personal_culinary": "Culinary and Personal Services",
+        "education": "Education",
+        "engineering": "Engineering",
+        "engineering_technology": "Engineering Technology",
+        "language": "Foreign Languages",
+        "family_consumer_science": "Family and Consumer Sciences",
+        "legal": "Legal Studies",
+        "english": "English",
+        "humanities": "Liberal Arts",
+        "library": "Library Science",
+        "biological": "Biology",
+        "mathematics": "Mathematics",
+        "military": "Military Science",
+        "multidiscipline": "Interdisciplinary Studies",
+        "parks_recreation_fitness": "Parks, Recreation and Fitness",
+        "philosophy_religious": "Philosophy and Religion",
+        "theology_religious_vocation": "Theology",
+        "physical_science": "Physical Sciences",
+        "science_technology": "Science Technology",
+        "psychology": "Psychology",
+        "security_law_enforcement": "Criminal Justice",
+        "public_administration_social_service": "Public Administration",
+        "social_science": "Social Sciences",
+        "construction": "Construction",
+        "mechanic_repair_technology": "Mechanics and Repair",
+        "precision_production": "Precision Production",
+        "transportation": "Transportation",
+        "visual_performing": "Visual and Performing Arts",
+        "health": "Health Professions",
+        "business_marketing": "Business",
+        "history": "History",
+    ]
+}
+
 
 /// The College Facts card's numbers. Any one can be nil when the Scorecard has no figure.
 nonisolated struct CollegeFacts: Equatable {
@@ -29,6 +83,10 @@ nonisolated struct CollegeFacts: Equatable {
     let graduationRate: Double?
     /// Median yearly earnings, in US dollars, 10 years after starting at the school
     let medianEarnings: Int?
+    /// Average yearly cost after grants and scholarships, in US dollars
+    var averageNetPrice: Int? = nil
+    /// The largest fields by share of degrees awarded, biggest first
+    var topPrograms: [CollegeProgram] = []
 
     /// True when the Scorecard sent the school but none of the numbers the card shows.
     var isEmpty: Bool {
@@ -65,6 +123,46 @@ actor CollegeScorecardService {
         "latest.cost.tuition.out_of_state",
         "latest.completion.completion_rate_4yr_150nt",
         "latest.earnings.10_yrs_after_entry.median",
+        "latest.cost.avg_net_price.public",
+        "latest.cost.avg_net_price.private",
+        "latest.academics.program_percentage.agriculture",
+        "latest.academics.program_percentage.resources",
+        "latest.academics.program_percentage.architecture",
+        "latest.academics.program_percentage.ethnic_cultural_gender",
+        "latest.academics.program_percentage.communication",
+        "latest.academics.program_percentage.communications_technology",
+        "latest.academics.program_percentage.computer",
+        "latest.academics.program_percentage.personal_culinary",
+        "latest.academics.program_percentage.education",
+        "latest.academics.program_percentage.engineering",
+        "latest.academics.program_percentage.engineering_technology",
+        "latest.academics.program_percentage.language",
+        "latest.academics.program_percentage.family_consumer_science",
+        "latest.academics.program_percentage.legal",
+        "latest.academics.program_percentage.english",
+        "latest.academics.program_percentage.humanities",
+        "latest.academics.program_percentage.library",
+        "latest.academics.program_percentage.biological",
+        "latest.academics.program_percentage.mathematics",
+        "latest.academics.program_percentage.military",
+        "latest.academics.program_percentage.multidiscipline",
+        "latest.academics.program_percentage.parks_recreation_fitness",
+        "latest.academics.program_percentage.philosophy_religious",
+        "latest.academics.program_percentage.theology_religious_vocation",
+        "latest.academics.program_percentage.physical_science",
+        "latest.academics.program_percentage.science_technology",
+        "latest.academics.program_percentage.psychology",
+        "latest.academics.program_percentage.security_law_enforcement",
+        "latest.academics.program_percentage.public_administration_social_service",
+        "latest.academics.program_percentage.social_science",
+        "latest.academics.program_percentage.construction",
+        "latest.academics.program_percentage.mechanic_repair_technology",
+        "latest.academics.program_percentage.precision_production",
+        "latest.academics.program_percentage.transportation",
+        "latest.academics.program_percentage.visual_performing",
+        "latest.academics.program_percentage.health",
+        "latest.academics.program_percentage.business_marketing",
+        "latest.academics.program_percentage.history",
     ]
 
     /// True when the API key is in Info.plist; without it the card never shows.
@@ -107,6 +205,22 @@ actor CollegeScorecardService {
 
     /// Reads the school with this UNITID out of a Scorecard response. Kept separate from
     /// the network call so the tests can feed it a saved sample.
+    /// The three largest fields with at least 5% of degrees. The API sends one flat key per field.
+    nonisolated static func topPrograms(in data: Data, unitID: Int) -> [CollegeProgram] {
+        let prefix = "latest.academics.program_percentage."
+        guard let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
+              let results = json["results"] as? [[String: Any]],
+              let school = results.first(where: { ($0["id"] as? Int) == unitID })
+        else { return [] }
+        return school.compactMap { key, value -> CollegeProgram? in
+            guard key.hasPrefix(prefix), let share = (value as? NSNumber)?.doubleValue, share >= 0.05 else { return nil }
+            return CollegeProgram(key: String(key.dropFirst(prefix.count)), share: share)
+        }
+        .sorted { ($0.share, $1.key) > ($1.share, $0.key) }
+        .prefix(3)
+        .map { $0 }
+    }
+
     nonisolated static func parse(_ data: Data, unitID: Int) -> CollegeFacts? {
         guard let decoded = try? JSONDecoder().decode(ScorecardResponse.self, from: data),
               let school = decoded.results.first(where: { $0.id == unitID })
@@ -120,7 +234,9 @@ actor CollegeScorecardService {
             inStateTuition: school.inStateTuition.map { Int($0.rounded()) },
             outOfStateTuition: school.outOfStateTuition.map { Int($0.rounded()) },
             graduationRate: school.completionRate,
-            medianEarnings: school.medianEarnings.map { Int($0.rounded()) }
+            medianEarnings: school.medianEarnings.map { Int($0.rounded()) },
+            averageNetPrice: (school.netPricePublic ?? school.netPricePrivate).map { Int($0.rounded()) },
+            topPrograms: topPrograms(in: data, unitID: unitID)
         )
         return facts.isEmpty ? nil : facts
     }
@@ -163,6 +279,8 @@ nonisolated private struct ScorecardSchool: Decodable {
     let outOfStateTuition: Double?
     let completionRate: Double?
     let medianEarnings: Double?
+    let netPricePublic: Double?
+    let netPricePrivate: Double?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -173,5 +291,7 @@ nonisolated private struct ScorecardSchool: Decodable {
         case outOfStateTuition = "latest.cost.tuition.out_of_state"
         case completionRate = "latest.completion.completion_rate_4yr_150nt"
         case medianEarnings = "latest.earnings.10_yrs_after_entry.median"
+        case netPricePublic = "latest.cost.avg_net_price.public"
+        case netPricePrivate = "latest.cost.avg_net_price.private"
     }
 }

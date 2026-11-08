@@ -77,6 +77,9 @@ struct CityMapView: View {
     @State private var userLocation: CLLocation?
     /// Then & Now: an old map of the city (OpenHistoricalMap) faded over today's
     @State private var showsOldMap = false
+    #if !os(visionOS)
+    @State private var tourOfferPlace: TourOfferPlace?
+    #endif
     @State private var oldMapYear = HistoricMap.defaultYear
     @State private var oldMapOpacity = 0.75
     /// Camera moves for the old map, which isn't driven by `position`
@@ -352,6 +355,11 @@ struct CityMapView: View {
         .sheet(item: $tappedApplePlace, onDismiss: { selectedFeature = nil }) { place in
             ApplePlaceSheet(mapItem: place.mapItem, cityName: cityName)
         }
+        #if !os(visionOS)
+        .sheet(item: $tourOfferPlace) { place in
+            TourOfferSheet(place: place.name)
+        }
+        #endif
         .sheet(isPresented: $showingAddPlace) {
             if let center = cityCenter {
                 // A search with a long list of results: a big sheet on iPad
@@ -955,8 +963,18 @@ struct CityMapView: View {
                 withAnimation(cameraAnimation(duration: 3)) { fitCamera() }
                 tourTask = nil
                 stopCitySound()
+                offerToursAfterTimeWalk()
             }
         }
+    }
+
+    /// A finished Time Walk is when someone most wants to see the place: once per city, offer tours.
+    private func offerToursAfterTimeWalk() {
+        #if !os(visionOS)
+        guard showsOldMap, let city = CityLocation.City(rawValue: cityName), !city.isCampus,
+              TourOffer.claim(city: cityName) else { return }
+        tourOfferPlace = TourOfferPlace(name: city.hotelSearchName)
+        #endif
     }
 
     private func tourSteps(for trip: Trip) -> [TripTourStep] {
