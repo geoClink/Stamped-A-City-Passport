@@ -40,6 +40,7 @@ struct LandmarkWindowView: View {
     private let selection = LandmarkSelection.shared
     private let store = VisionStore.shared
     @ObservedObject private var storyPlayer = AudioStoryPlayer.shared
+    @Environment(\.openWindow) private var openWindow
     @Environment(\.dismissWindow) private var dismissWindow
 
     var body: some View {
@@ -60,6 +61,12 @@ struct LandmarkWindowView: View {
                     .id(building.id)
                 }
             }
+        }
+        // Reopened by visionOS with nothing picked: go to the main window instead of a blank page
+        .onAppear {
+            guard selection.building == nil else { return }
+            openWindow(id: Tally_AVPApp.mainWindowID)
+            dismissWindow(id: Self.windowID)
         }
         // Closed with the window's own close button
         .onDisappear { selection.close() }
