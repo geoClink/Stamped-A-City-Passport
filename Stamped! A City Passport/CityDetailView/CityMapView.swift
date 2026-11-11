@@ -54,6 +54,8 @@ struct CityMapView: View {
     @State private var styleFilter: String?
     /// Which Apple Maps places to show alongside the landmarks (the chips at the top).
     @State private var category: MapCategory = .landmarks
+    /// Live bike-share docks for the Bikes chip (pilot cities only).
+    @State private var bikes = BikeShareStore()
 
     /// An Apple Maps place (restaurant, café, museum…) the user tapped on the map.
     @State private var selectedFeature: MapFeature?
@@ -244,6 +246,13 @@ struct CityMapView: View {
             if !isOn, let lastCamera { position = .camera(lastCamera) }
         }
         .task(id: showsOldMap) { if showsOldMap { await loadOldPhotos() } }
+        // Bike counts refresh about once a minute while the Bikes chip is on
+        .task(id: category) {
+            while category == .bikes && !Task.isCancelled {
+                await bikes.refresh(cityName: cityName)
+                try? await Task.sleep(for: .seconds(60))
+            }
+        }
         .overlay(alignment: .bottom) {
             if let building = selectedBuilding {
                 MapLandmarkCard(
@@ -400,6 +409,11 @@ struct CityMapView: View {
         }
     }
 
+    /// Every chip, with Bikes only in cities that have a live bike-share feed.
+    private var chipCategories: [MapCategory] {
+        MapCategory.allCases.filter { $0 != .bikes || BikeShare.isAvailable(in: cityName) }
+    }
+
     /// The category chips, or the year and fade controls while the old map is on, and
     /// the name of the sound playing under a tour
     @ViewBuilder
@@ -409,7 +423,7 @@ struct CityMapView: View {
                 HistoricMapControls(year: $oldMapYear, opacity: $oldMapOpacity,
                                     showsPhotoCredit: !oldPhotos.isEmpty)
             } else {
-                MapCategoryChips(selection: $category)
+                MapCategoryChips(selection: $category, categories: chipCategories)
             }
             if let citySound { citySoundCredit(citySound) }
         }
@@ -586,6 +600,14 @@ struct CityMapView: View {
                 case .landmark(let building): landmarkAnnotation(building)
                 case .place(let place):       placeAnnotation(place)
                 }
+            }
+        }
+        if category == .bikes, let center = lastCamera?.centerCoordinate ?? cityCenter {
+            ForEach(bikes.nearest(to: center)) { station in
+                Annotation(station.name, coordinate: station.coordinate, anchor: .center) {
+                    BikeDockPin(station: station)
+                }
+                .annotationTitles(.hidden)
             }
         }
         if userLocationInCity != nil {
@@ -1169,6 +1191,33 @@ enum MapFilter: String, CaseIterable, Identifiable {
 
 // MARK: - Pin
 
+/// A bike-share dock: how many bikes are free right now. Generic look, no operator branding.
+private struct BikeDockPin: View {
+    let station: BikeStation
+
+    private var isEmpty: Bool { !station.isRenting || station.bikes == 0 }
+
+    var body: some View {
+        HStack(spacing: 3) {
+            Image(systemName: "bicycle")
+                .font(.caption2.weight(.bold))
+            Text(station.isRenting ? "\(station.bikes)" : "–")
+                .font(.caption.weight(.bold).monospacedDigit())
+        }
+        .foregroundStyle(.white)
+        .padding(.horizontal, 7)
+        .padding(.vertical, 4)
+        .background(Capsule().fill(isEmpty ? Color.gray : Color.green.mix(with: .black, by: 0.15)))
+        .overlay(Capsule().stroke(.white, lineWidth: 1.5))
+        .shadow(color: .black.opacity(0.25), radius: 2, y: 1)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(Text(station.name))
+        .accessibilityValue(station.isRenting
+            ? Text("\(station.bikes) bikes, \(station.docks) free docks")
+            : Text("Not renting right now"))
+    }
+}
+
 private struct PinView: View {
     let isVisited: Bool
     let isWishlisted: Bool
@@ -1326,6 +1375,16 @@ private struct MapLandmarkCard: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .accessibilityHint("Opens the full page for \(building.name)")
+
+                // Transit directions in Apple Maps
+                if GetThere.canRoute(to: building) {
+                    Button { GetThere.open(building) } label: {
+                        Image(systemName: "tram.fill").frame(width: 28, height: 28)
+                    }
+                    .buttonStyle(.bordered)
+                    .accessibilityLabel("Get There")
+                    .accessibilityHint("Opens transit directions to \(building.name) in Apple Maps")
+                }
 
                 Button(action: onNext) {
                     Image(systemName: "chevron.right").frame(width: 28, height: 28)

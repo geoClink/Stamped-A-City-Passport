@@ -509,7 +509,7 @@ extension BuildingDetailView {
     }
 
     /// The Stamp button on its own line, then Want to Visit and Look Around side by side
-    /// (stacked at accessibility text sizes).
+    /// (stacked at accessibility text sizes), then Get There.
     var actionButtons: some View {
         let layout = shouldStack
             ? AnyLayout(VStackLayout(spacing: DS.Space.m))
@@ -523,7 +523,26 @@ extension BuildingDetailView {
                     lookAroundButton
                 }
             }
+            if GetThere.canRoute(to: building) {
+                getThereButton
+            }
         }
+    }
+
+    // MARK: - Get There button
+    /// Transit directions in Apple Maps from wherever the user is.
+    var getThereButton: some View {
+        Button {
+            HapticManager.shared.trigger(.selection)
+            GetThere.open(building)
+        } label: {
+            secondaryButtonStyle(
+                Label("Get There", systemImage: "tram.fill"),
+                tint: brandColor
+            )
+        }
+        .buttonStyle(.plain)
+        .accessibilityHint("Opens transit directions to \(building.name) in Apple Maps")
     }
  
     var aboutSection: some View {

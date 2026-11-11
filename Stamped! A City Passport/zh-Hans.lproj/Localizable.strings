@@ -1263,3 +1263,10 @@
 "Step into the Past" = "走进过去";
 "Film: Prelinger Archives, Internet Archive · Public domain" = "影片：Prelinger Archives，Internet Archive · 公有领域";
 "No old film or photos of this landmark yet." = "暂无此地标的老电影或旧照片。";
+
+/* Get There and bike-share docks */
+"Get There" = "前往";
+"Bikes" = "共享单车";
+"Opens transit directions to %@ in Apple Maps" = "在 Apple 地图中打开前往%@的公共交通路线";
+"%lld bikes, %lld free docks" = "%lld 辆单车，%lld 个空桩";
+"Not renting right now" = "目前暂停租借";

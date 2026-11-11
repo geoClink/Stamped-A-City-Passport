@@ -1263,3 +1263,10 @@
 "Step into the Past" = "Entre no passado";
 "Film: Prelinger Archives, Internet Archive · Public domain" = "Filme: Prelinger Archives, Internet Archive · Domínio público";
 "No old film or photos of this landmark yet." = "Ainda não há filmes nem fotos antigas deste monumento.";
+
+/* Get There and bike-share docks */
+"Get There" = "Como chegar";
+"Bikes" = "Bicicletas";
+"Opens transit directions to %@ in Apple Maps" = "Abre o trajeto de transporte público até %@ no Mapas da Apple";
+"%lld bikes, %lld free docks" = "%lld bicicletas, %lld vagas livres";
+"Not renting right now" = "Sem aluguel no momento";
