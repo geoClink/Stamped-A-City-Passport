@@ -1270,3 +1270,6 @@
 "Opens transit directions to %@ in Apple Maps" = "在 Apple 地图中打开前往%@的公共交通路线";
 "%lld bikes, %lld free docks" = "%lld 辆单车，%lld 个空桩";
 "Not renting right now" = "目前暂停租借";
+"Zoom in to see bikes" = "放大地图即可查看共享单车";
+"Bike data isn't available right now" = "目前无法获取共享单车数据";
+"Live from the bike operator · may change" = "来自单车运营商的实时数据 · 可能会变化";

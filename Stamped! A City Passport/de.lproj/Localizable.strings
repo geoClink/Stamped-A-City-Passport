@@ -1270,3 +1270,6 @@
 "Opens transit directions to %@ in Apple Maps" = "Öffnet die ÖPNV-Route zu %@ in Apple Karten";
 "%lld bikes, %lld free docks" = "%lld Räder, %lld freie Stellplätze";
 "Not renting right now" = "Gerade kein Verleih";
+"Zoom in to see bikes" = "Zum Anzeigen der Leihräder heranzoomen";
+"Bike data isn't available right now" = "Leihrad-Daten sind gerade nicht verfügbar";
+"Live from the bike operator · may change" = "Live vom Leihrad-Anbieter · kann sich ändern";

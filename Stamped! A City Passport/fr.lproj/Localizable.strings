@@ -1270,3 +1270,6 @@
 "Opens transit directions to %@ in Apple Maps" = "Ouvre l'itinéraire en transports en commun vers %@ dans Plans";
 "%lld bikes, %lld free docks" = "%lld vélos, %lld bornes libres";
 "Not renting right now" = "Pas de location pour le moment";
+"Zoom in to see bikes" = "Zoomez pour voir les vélos";
+"Bike data isn't available right now" = "Les données des vélos ne sont pas disponibles pour le moment";
+"Live from the bike operator · may change" = "En direct de l'opérateur de vélos · peut changer";
