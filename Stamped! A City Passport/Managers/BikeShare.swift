@@ -52,6 +52,8 @@ struct BikeStation: Identifiable, Equatable {
 @MainActor @Observable
 final class BikeShareStore {
     private(set) var stations: [BikeStation] = []
+    /// Every station's name and place, loaded once per city; `stations` is rebuilt from it.
+    private var allStations: [BikeStation] = []
     private(set) var failed = false
     private var loadedCity: String?
     private var lastStatus: Date = .distantPast
@@ -61,19 +63,27 @@ final class BikeShareStore {
         guard let base = BikeShare.feed(for: cityName) else { stations = []; return }
         if loadedCity != cityName {
             stations = []
+            allStations = []
             guard let info = await Self.fetchInfo(base) else { failed = true; return }
-            stations = info
+            allStations = info
             loadedCity = cityName
             lastStatus = .distantPast
         }
         // GBFS feeds update about once a minute; don't ask more often than that
         guard Date().timeIntervalSince(lastStatus) > 55 else { return }
-        guard let status = await Self.fetchStatus(base) else { failed = true; return }
+        guard let status = await Self.fetchStatus(base) else {
+            failed = true
+            // Never show old counts as live: after 3 minutes without an update, hide the docks
+            if Date().timeIntervalSince(lastStatus) > 180 { stations = [] }
+            return
+        }
         failed = false
         lastStatus = Date()
-        stations = stations.map { station in
+        // Only stations with live status: one missing from it is not installed (or not reporting)
+        stations = allStations.compactMap { station in
+            guard let live = status[station.id] else { return nil }
             var s = station
-            if let live = status[s.id] { s.bikes = live.bikes; s.docks = live.docks; s.isRenting = live.renting }
+            s.bikes = live.bikes; s.docks = live.docks; s.isRenting = live.renting
             return s
         }
     }
@@ -98,24 +108,28 @@ final class BikeShareStore {
     }
 
     private struct StatusFeed: Decodable {
+        /// When the operator last refreshed the feed (seconds since 1970).
+        let last_updated: Double?
         struct Data: Decodable { let stations: [Station] }
         struct Station: Decodable {
             let station_id: String
             let num_bikes_available: Int?
             let num_docks_available: Int?
             let is_renting: Bool?
+            let is_installed: Bool?
             // Some feeds send 0/1 instead of true/false
-            enum CodingKeys: String, CodingKey { case station_id, num_bikes_available, num_docks_available, is_renting }
+            enum CodingKeys: String, CodingKey { case station_id, num_bikes_available, num_docks_available, is_renting, is_installed }
             init(from decoder: Decoder) throws {
                 let c = try decoder.container(keyedBy: CodingKeys.self)
                 station_id = try c.decode(String.self, forKey: .station_id)
                 num_bikes_available = try c.decodeIfPresent(Int.self, forKey: .num_bikes_available)
                 num_docks_available = try c.decodeIfPresent(Int.self, forKey: .num_docks_available)
-                if let flag = try? c.decodeIfPresent(Bool.self, forKey: .is_renting) {
-                    is_renting = flag
-                } else {
-                    is_renting = (try? c.decodeIfPresent(Int.self, forKey: .is_renting)).map { $0 != 0 }
-                }
+                is_renting = Self.flag(c, .is_renting)
+                is_installed = Self.flag(c, .is_installed)
+            }
+            private static func flag(_ c: KeyedDecodingContainer<CodingKeys>, _ key: CodingKeys) -> Bool? {
+                if let value = try? c.decodeIfPresent(Bool.self, forKey: key) { return value }
+                return (try? c.decodeIfPresent(Int.self, forKey: key)).map { $0 != 0 }
             }
         }
         let data: Data
@@ -138,10 +152,14 @@ final class BikeShareStore {
         }
     }
 
+    /// Live counts by station. Stations the operator marks as not installed (removed, or not
+    /// built yet) are left out, so `refresh` drops them from the map.
     private static func fetchStatus(_ base: URL) async -> [String: (bikes: Int, docks: Int, renting: Bool)]? {
         guard let feed = await get(base.appendingPathComponent("station_status.json"), as: StatusFeed.self) else { return nil }
+        // A feed the operator stopped updating would show frozen counts: treat it as down
+        if let updated = feed.last_updated, Date().timeIntervalSince1970 - updated > 15 * 60 { return nil }
         var result: [String: (bikes: Int, docks: Int, renting: Bool)] = [:]
-        for s in feed.data.stations {
+        for s in feed.data.stations where s.is_installed != false {
             result[s.station_id] = (s.num_bikes_available ?? 0, s.num_docks_available ?? 0, s.is_renting ?? true)
         }
         return result

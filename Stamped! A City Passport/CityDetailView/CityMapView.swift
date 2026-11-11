@@ -409,6 +409,30 @@ struct CityMapView: View {
         }
     }
 
+    /// Under the chips while Bikes is on: zoom in, data unavailable, or where the counts come from.
+    private var bikesNote: some View {
+        Group {
+            if !bikesZoomedIn {
+                Label("Zoom in to see bikes", systemImage: "plus.magnifyingglass")
+            } else if bikes.failed && bikes.stations.isEmpty {
+                Label("Bike data isn't available right now", systemImage: "exclamationmark.triangle")
+            } else {
+                // The counts are the operator's own live feed, so say so and that they can change
+                Label("Live from the bike operator · may change", systemImage: "dot.radiowaves.left.and.right")
+            }
+        }
+        .font(.footnote.weight(.semibold))
+        .padding(.horizontal, 12)
+        .padding(.vertical, 6)
+        .background(Capsule().fill(.regularMaterial))
+        .transition(.opacity)
+    }
+
+    /// True once the camera is close enough (about street level) for bike docks to be readable.
+    private var bikesZoomedIn: Bool {
+        (lastCamera?.distance ?? .infinity) <= 4_000
+    }
+
     /// Every chip, with Bikes only in cities that have a live bike-share feed.
     private var chipCategories: [MapCategory] {
         MapCategory.allCases.filter { $0 != .bikes || BikeShare.isAvailable(in: cityName) }
@@ -424,6 +448,9 @@ struct CityMapView: View {
                                     showsPhotoCredit: !oldPhotos.isEmpty)
             } else {
                 MapCategoryChips(selection: $category, categories: chipCategories)
+            }
+            if category == .bikes && !showsOldMap {
+                bikesNote
             }
             if let citySound { citySoundCredit(citySound) }
         }
@@ -602,8 +629,9 @@ struct CityMapView: View {
                 }
             }
         }
-        if category == .bikes, let center = lastCamera?.centerCoordinate ?? cityCenter {
-            ForEach(bikes.nearest(to: center)) { station in
+        // Docks only at street level: zoomed out, dozens of them pile into one unreadable blob
+        if category == .bikes, bikesZoomedIn, let camera = lastCamera {
+            ForEach(bikes.nearest(to: camera.centerCoordinate, withinMeters: max(400, camera.distance * 0.6))) { station in
                 Annotation(station.name, coordinate: station.coordinate, anchor: .center) {
                     BikeDockPin(station: station)
                 }

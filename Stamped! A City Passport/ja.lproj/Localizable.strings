@@ -1270,3 +1270,6 @@
 "Opens transit directions to %@ in Apple Maps" = "Appleマップで%@までの交通機関の経路を開きます";
 "%lld bikes, %lld free docks" = "自転車%lld台、空きドック%lld";
 "Not renting right now" = "現在は貸し出し停止中";
+"Zoom in to see bikes" = "拡大するとシェアサイクルが表示されます";
+"Bike data isn't available right now" = "現在シェアサイクルの情報を取得できません";
+"Live from the bike operator · may change" = "運営会社のリアルタイム情報・変わる場合があります";
