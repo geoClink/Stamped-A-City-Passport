@@ -1273,3 +1273,6 @@
 "Zoom in to see bikes" = "拡大するとシェアサイクルが表示されます";
 "Bike data isn't available right now" = "現在シェアサイクルの情報を取得できません";
 "Live from the bike operator · may change" = "運営会社のリアルタイム情報・変わる場合があります";
+
+/* Home filter menu: pick which continent's cities to show */
+"Continent" = "大陸";

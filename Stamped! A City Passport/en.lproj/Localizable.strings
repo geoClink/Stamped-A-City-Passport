@@ -386,3 +386,9 @@
 "Opens a city's map in Stamped! and starts the tour of its landmarks, in walking order." = "Opens a city's map in Stamped! and starts the tour of its landmarks, in walking order.";
 "Start a walking tour of ${city}" = "Start a walking tour of ${city}";
 "Walking Tour" = "Walking Tour";
+
+/* Home filter menu title while Campuses is chosen */
+"Continents" = "Continents";
+
+/* Home filter menu: pick which continent's cities to show */
+"Continent" = "Continent";

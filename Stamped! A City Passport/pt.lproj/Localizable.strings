@@ -1273,3 +1273,6 @@
 "Zoom in to see bikes" = "Aproxime o mapa para ver as bicicletas";
 "Bike data isn't available right now" = "Os dados das bicicletas não estão disponíveis agora";
 "Live from the bike operator · may change" = "Ao vivo da operadora de bicicletas · pode mudar";
+
+/* Home filter menu: pick which continent's cities to show */
+"Continent" = "Continente";

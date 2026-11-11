@@ -1273,3 +1273,6 @@
 "Zoom in to see bikes" = "放大地图即可查看共享单车";
 "Bike data isn't available right now" = "目前无法获取共享单车数据";
 "Live from the bike operator · may change" = "来自单车运营商的实时数据 · 可能会变化";
+
+/* Home filter menu: pick which continent's cities to show */
+"Continent" = "大洲";

@@ -1273,3 +1273,6 @@
 "Zoom in to see bikes" = "Zum Anzeigen der Leihräder heranzoomen";
 "Bike data isn't available right now" = "Leihrad-Daten sind gerade nicht verfügbar";
 "Live from the bike operator · may change" = "Live vom Leihrad-Anbieter · kann sich ändern";
+
+/* Home filter menu: pick which continent's cities to show */
+"Continent" = "Kontinent";

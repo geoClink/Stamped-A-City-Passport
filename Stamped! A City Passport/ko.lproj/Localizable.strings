@@ -1273,3 +1273,6 @@
 "Zoom in to see bikes" = "확대하면 공유 자전거가 보입니다";
 "Bike data isn't available right now" = "지금은 공유 자전거 정보를 불러올 수 없습니다";
 "Live from the bike operator · may change" = "자전거 운영사 실시간 정보 · 바뀔 수 있음";
+
+/* Home filter menu: pick which continent's cities to show */
+"Continent" = "대륙";

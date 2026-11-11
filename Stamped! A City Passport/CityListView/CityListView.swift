@@ -317,35 +317,35 @@ struct CityListView: View {
                     exploreFilter = Self.campusFilter
                 }
             }
-            #if os(macOS)
-            // The sidebar is narrow and a mouse can't swipe, so the continents are a menu
+            // The continents are a menu, so none sit half cut off at the screen edge
+            // (on the Mac the sidebar is narrow and a mouse can't swipe either)
+            let current = continents.first { $0.rawValue == selected }
             Menu {
                 ForEach(continents, id: \.self) { continent in
-                    Button(continent.localizedName, systemImage: continent.iconName) {
-                        exploreFilter = continent.rawValue
-                    }
-                }
-            } label: {
-                Text((continents.first { $0.rawValue == selected } ?? continents.first)?.localizedName ?? "")
-            }
-            .fixedSize()
-            #else
-            ScrollViewReader { proxy in
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: DS.Space.s) {
-                        ForEach(continents, id: \.self) { continent in
-                            filterChip(continent.localizedName, systemImage: continent.iconName,
-                                       isSelected: selected == continent.rawValue) {
-                                exploreFilter = continent.rawValue
-                            }
-                            .id(continent.rawValue)
+                    Button {
+                        HapticManager.shared.trigger(.selection)
+                        withAnimation(.snappy) { exploreFilter = continent.rawValue }
+                    } label: {
+                        if continent.rawValue == selected {
+                            Label(continent.localizedName, systemImage: "checkmark")
+                        } else {
+                            Label(continent.localizedName, systemImage: continent.iconName)
                         }
                     }
                 }
-                // The chosen continent may be off the right edge (North America): bring it into view
-                .onAppear { proxy.scrollTo(selected, anchor: .center) }
+            } label: {
+                // While Campuses is chosen, no continent is: say what the menu holds instead
+                chipLabel(current?.localizedName
+                            ?? NSLocalizedString("Continents", comment: "Home filter menu title while Campuses is chosen"),
+                          systemImage: current?.iconName ?? "globe",
+                          isSelected: current != nil, showsChevron: true)
             }
-            #endif
+            .menuStyle(.button)
+            .buttonStyle(.plain)
+            // Fills the rest of the row next to Campuses
+            .frame(maxWidth: .infinity)
+            .accessibilityLabel(NSLocalizedString("Continent", comment: "Home filter menu: pick which continent's cities to show"))
+            .accessibilityValue(current?.localizedName ?? "")
         }
     }
 
@@ -364,16 +364,24 @@ struct CityListView: View {
         exploreFilter = city.isCampus ? Self.campusFilter : city.country.continent.rawValue
     }
 
-    private func filterChip(_ title: String, systemImage: String, isSelected: Bool,
-                            action: @escaping () -> Void) -> some View {
-        // A tap gesture, not a Button: every Button in a List row fires on any tap in the row
+    /// The look shared by the Campuses chip and the continent menu
+    private func chipLabel(_ title: String, systemImage: String, isSelected: Bool,
+                           showsChevron: Bool = false) -> some View {
         HStack(spacing: 6) {
             Image(systemName: systemImage)
                 .font(.footnote)
                 .foregroundStyle(isSelected ? AnyShapeStyle(isHighContrast ? Color(UIColor.systemBackground) : .white) : AnyShapeStyle(isHighContrast ? Color.primary : Color.adventureOrange))
                 .accessibilityHidden(true)
             Text(title)
+            if showsChevron {
+                // The menu chip is stretched to fill its row: chevron at the far end
+                Spacer(minLength: DS.Space.s)
+                Image(systemName: "chevron.down")
+                    .font(.caption2.weight(.bold))
+                    .accessibilityHidden(true)
+            }
         }
+            .frame(maxWidth: showsChevron ? .infinity : nil, alignment: .leading)
             .font(.subheadline.weight(.semibold))
             .lineLimit(1)
             .padding(.horizontal, 14)
@@ -387,6 +395,12 @@ struct CityListView: View {
             .overlay(Capsule().stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2))
             .contentShape(Capsule())
             .hoverEffect(.lift)
+    }
+
+    private func filterChip(_ title: String, systemImage: String, isSelected: Bool,
+                            action: @escaping () -> Void) -> some View {
+        // A tap gesture, not a Button: every Button in a List row fires on any tap in the row
+        chipLabel(title, systemImage: systemImage, isSelected: isSelected)
             .onTapGesture {
                 guard !isSelected else { return }
                 HapticManager.shared.trigger(.selection)
