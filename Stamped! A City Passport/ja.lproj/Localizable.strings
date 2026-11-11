@@ -1263,3 +1263,10 @@
 "Step into the Past" = "過去へ入る";
 "Film: Prelinger Archives, Internet Archive · Public domain" = "映像：Prelinger Archives、Internet Archive・パブリックドメイン";
 "No old film or photos of this landmark yet." = "このランドマークの古い映像や写真はまだありません。";
+
+/* Get There and bike-share docks */
+"Get There" = "経路";
+"Bikes" = "シェアサイクル";
+"Opens transit directions to %@ in Apple Maps" = "Appleマップで%@までの交通機関の経路を開きます";
+"%lld bikes, %lld free docks" = "自転車%lld台、空きドック%lld";
+"Not renting right now" = "現在は貸し出し停止中";

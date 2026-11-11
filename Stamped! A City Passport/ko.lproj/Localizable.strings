@@ -1263,3 +1263,10 @@
 "Step into the Past" = "과거로 들어가기";
 "Film: Prelinger Archives, Internet Archive · Public domain" = "영상: Prelinger Archives, Internet Archive · 퍼블릭 도메인";
 "No old film or photos of this landmark yet." = "이 랜드마크의 옛 영상이나 사진이 아직 없어요.";
+
+/* Get There and bike-share docks */
+"Get There" = "길찾기";
+"Bikes" = "공유 자전거";
+"Opens transit directions to %@ in Apple Maps" = "Apple 지도에서 %@까지 대중교통 길찾기를 엽니다";
+"%lld bikes, %lld free docks" = "자전거 %lld대, 빈 거치대 %lld개";
+"Not renting right now" = "지금은 대여 불가";

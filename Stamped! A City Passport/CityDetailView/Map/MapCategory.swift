@@ -2,7 +2,8 @@
 //  MapCategory.swift
 //  Stamped! A City Passport
 //
-//  The chips across the top of the city map: Landmarks · Food · Coffee · Culture · Stay.
+//  The chips across the top of the city map: Landmarks · Food · Coffee · Culture · Stay,
+//  plus Bikes in cities with a live bike-share feed (see BikeShare).
 //  Each chip decides which of Apple Maps' own places (restaurants, cafés, museums, hotels…)
 //  are drawn on the map. Stamped's landmark pins always show.
 //
@@ -11,7 +12,7 @@ import SwiftUI
 import MapKit
 
 enum MapCategory: String, CaseIterable, Identifiable {
-    case landmarks, food, coffee, culture, stay
+    case landmarks, food, coffee, culture, stay, bikes
     var id: Self { self }
 
     var title: String {
@@ -21,6 +22,7 @@ enum MapCategory: String, CaseIterable, Identifiable {
         case .coffee:    NSLocalizedString("Coffee", comment: "City map: category chip that shows cafés")
         case .culture:   NSLocalizedString("Culture", comment: "City map: category chip that shows museums, theaters and monuments")
         case .stay:      NSLocalizedString("Stay", comment: "City map: category chip that shows hotels")
+        case .bikes:     NSLocalizedString("Bikes", comment: "City map: category chip that shows bike-share docks with live bike counts")
         }
     }
 
@@ -31,13 +33,15 @@ enum MapCategory: String, CaseIterable, Identifiable {
         case .coffee:    "cup.and.saucer.fill"
         case .culture:   "theatermasks.fill"
         case .stay:      "bed.double.fill"
+        case .bikes:     "bicycle"
         }
     }
 
     /// Which Apple Maps places to draw. Landmarks hides them all so Stamped's pins stand out.
     var pointsOfInterest: PointOfInterestCategories {
         switch self {
-        case .landmarks:
+        case .landmarks, .bikes:
+            // Bikes draws Stamped's own dock pins instead of Apple's places
             .excludingAll
         case .food:
             .including([.restaurant, .bakery, .foodMarket, .brewery, .winery, .distillery])
@@ -57,7 +61,7 @@ enum MapCategory: String, CaseIterable, Identifiable {
         if satellite {
             // Plain satellite (.imagery) can't show place icons, so the other
             // categories switch to .hybrid: the same photos plus labels and icons.
-            return self == .landmarks
+            return self == .landmarks || self == .bikes
                 ? .imagery(elevation: .realistic)
                 : .hybrid(elevation: .realistic, pointsOfInterest: pointsOfInterest)
         }
@@ -70,6 +74,8 @@ enum MapCategory: String, CaseIterable, Identifiable {
 /// A row of capsule buttons, like the category chips under the Apple Maps search bar.
 struct MapCategoryChips: View {
     @Binding var selection: MapCategory
+    /// The chips to show; Bikes only where the city has a bike-share feed.
+    var categories: [MapCategory] = MapCategory.allCases.filter { $0 != .bikes }
 
     var body: some View {
         ScrollViewReader { proxy in
@@ -86,7 +92,7 @@ struct MapCategoryChips: View {
     private var chipRow: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 8) {
-                ForEach(MapCategory.allCases) { category in
+                ForEach(categories) { category in
                     let isSelected = category == selection
                     Button {
                         withAnimation(.snappy) { selection = category }
