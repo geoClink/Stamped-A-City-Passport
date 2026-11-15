@@ -3,7 +3,7 @@
 //  StampedTests
 //
 //  When the app asks for an App Store rating (GlobalProgressManager.shouldAskForReview):
-//  only right after a city or campus is fully stamped, and at most once per app version.
+//  on the 3rd stamp or right after a city or campus is fully stamped, at most once per app version.
 //
 
 import XCTest
@@ -36,5 +36,21 @@ final class ReviewPromptTests: XCTestCase {
             cityBuildings: buildings, visited: ids, lastAskedVersion: "2.8", currentVersion: "2.8"))
         XCTAssertTrue(GlobalProgressManager.shouldAskForReview(
             cityBuildings: buildings, visited: ids, lastAskedVersion: "2.7", currentVersion: "2.8"))
+    }
+
+    // Third stamp overall, spread over cities and with this city unfinished: ask
+    func testAsksOnThirdStamp() {
+        let ids: Set<String> = [buildings[0].id, "elsewhere-1", "elsewhere-2"]
+        XCTAssertTrue(GlobalProgressManager.shouldAskForReview(
+            cityBuildings: buildings, visited: ids, lastAskedVersion: nil, currentVersion: "2.15"))
+        XCTAssertFalse(GlobalProgressManager.shouldAskForReview(
+            cityBuildings: buildings, visited: ids, lastAskedVersion: "2.15", currentVersion: "2.15"))
+    }
+
+    // Two stamps in an unfinished city: not yet
+    func testDoesNotAskOnSecondStamp() {
+        let ids: Set<String> = [buildings[0].id, "elsewhere-1"]
+        XCTAssertFalse(GlobalProgressManager.shouldAskForReview(
+            cityBuildings: buildings, visited: ids, lastAskedVersion: nil, currentVersion: "2.15"))
     }
 }
