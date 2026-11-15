@@ -2,8 +2,8 @@
 //  ReviewPromptModifier.swift
 //  Stamped! A City Passport
 //
-//  Asks for an App Store rating right after a stamp completes a whole city or campus
-//  (GlobalProgressManager.reviewMoment), the moment someone is happiest with the app.
+//  Asks for an App Store rating on the 3rd stamp, or right after a stamp completes a whole
+//  city or campus (GlobalProgressManager.reviewMoment), when someone is enjoying the app.
 //  `requestReview` only asks: Apple decides whether to show the prompt and limits it to
 //  3 times a year, and the app asks at most once per version.
 //

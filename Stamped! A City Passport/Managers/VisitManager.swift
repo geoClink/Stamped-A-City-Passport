@@ -248,7 +248,7 @@ class GlobalProgressManager: ObservableObject {
                 visitDates[buildingID] = Date()
                 saveVisitDates()
             }
-            // This stamp finished the whole city or campus: a good moment to ask for a rating
+            // The 3rd stamp, or one that finished a whole city or campus: a good moment to ask for a rating
             if Self.shouldAskForReview(cityBuildings: cityBuildings, visited: visitedIDs,
                                        lastAskedVersion: defaults.string(forKey: reviewAskedVersionKey),
                                        currentVersion: Self.appVersion) {
@@ -278,21 +278,25 @@ class GlobalProgressManager: ObservableObject {
 
     // MARK: - Rating prompt
 
-    /// Set when a stamp completes a city or campus; ReviewPromptModifier asks for an App Store
-    /// rating when it changes. At most once per app version (Apple also limits it to 3 a year
+    /// Set on the `reviewPromptStampCount`th stamp or when a stamp completes a city or campus;
+    /// ReviewPromptModifier asks for an App Store rating when it changes. At most once per app version (Apple also limits it to 3 a year
     /// and decides itself whether to show the prompt).
     @Published private(set) var reviewMoment: Date?
     private let reviewAskedVersionKey = "reviewPromptAskedVersion"
+    /// Asking only after a whole city (17–31 stamps) left the app with 2 ratings by Nov 2026.
+    nonisolated static let reviewPromptStampCount = 3
 
     static var appVersion: String {
         Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
     }
 
-    /// True when every landmark of the city is now stamped and this version hasn't asked yet.
+    /// True when this version hasn't asked yet and either the user now has at least
+    /// `reviewPromptStampCount` stamps in total or every landmark of the city is stamped.
     nonisolated static func shouldAskForReview(cityBuildings: [Building], visited: Set<String>,
                                                lastAskedVersion: String?, currentVersion: String) -> Bool {
-        guard !cityBuildings.isEmpty, lastAskedVersion != currentVersion else { return false }
-        return cityBuildings.allSatisfy { visited.contains($0.id) }
+        guard lastAskedVersion != currentVersion else { return false }
+        if visited.count >= reviewPromptStampCount { return true }
+        return !cityBuildings.isEmpty && cityBuildings.allSatisfy { visited.contains($0.id) }
     }
 
     private func saveVisitDates() {
