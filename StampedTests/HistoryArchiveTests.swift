@@ -342,4 +342,17 @@ final class OldFilmTests: XCTestCase {
         XCTAssertEqual(OldFilmService.bestVideo(in: ["a.ogv", "a.mp4"]), "a.mp4")
         XCTAssertNil(OldFilmService.bestVideo(in: ["a.ogv"]))
     }
+
+    // MARK: Bundled campus archive photos
+
+    func testEveryPermittedMSUPhotoIsBundledWithItsCredit() throws {
+        let registry = try JSONSerialization.jsonObject(with: Data(contentsOf: XCTUnwrap(
+            Bundle.main.url(forResource: "BuildingRegistry", withExtension: "json")))) as? [String: Any]
+        let msu = try XCTUnwrap(registry?["Michigan State University"] as? [[String: Any]])
+        let photos = msu.compactMap { $0["id"] as? String }.flatMap { CampusArchivePhotos.photos(forBuildingID: $0) }
+        XCTAssertEqual(CampusArchivePhotos.buildingCount, 17)
+        XCTAssertEqual(photos.count, 17, "each of the 17 permitted photos is in the app and matches a building")
+        XCTAssertTrue(photos.allSatisfy { $0.credit == "Michigan State University Archives" && $0.largeURL.isFileURL })
+        XCTAssertFalse(photos.contains(where: OldPhotoSources.needsNoCredit))
+    }
 }

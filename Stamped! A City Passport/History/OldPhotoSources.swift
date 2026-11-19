@@ -21,8 +21,15 @@ enum OldPhotoSources {
     /// The most photos a landmark's gallery shows
     nonisolated static let maxGalleryPhotos = 12
 
-    /// The first archive that has something: enough for a slideshow or a photo on the map
+    /// Photos the app bundles for this landmark (always first), then the first archive
+    /// that has something: enough for a slideshow or a photo on the map
     static func photos(for building: Building, cityName: String) async -> [HistoricImage] {
+        let bundled = CampusArchivePhotos.photos(forBuildingID: building.id)
+        let found = await firstArchivePhotos(for: building, cityName: cityName)
+        return bundled.isEmpty ? found : merged([bundled, found])
+    }
+
+    private static func firstArchivePhotos(for building: Building, cityName: String) async -> [HistoricImage] {
         if LibraryOfCongressService.cityAndState(from: building.address) != nil {
             let survey = await LibraryOfCongressService.shared.images(
                 buildingID: building.id, name: building.name,
@@ -53,7 +60,8 @@ enum OldPhotoSources {
         async let smithsonian = ArchiveSearch.shared.smithsonian(name: building.name, city: cityName)
         async let dpla = ArchiveSearch.shared.dpla(name: building.name, city: cityName)
         let surveyImages = await survey.filter { includingDrawings || !$0.isDrawing }
-        return await merged([surveyImages, commons, europeana, smithsonian, dpla])
+        return await merged([CampusArchivePhotos.photos(forBuildingID: building.id),
+                             surveyImages, commons, europeana, smithsonian, dpla])
     }
 
     /// The lists in order, each photo once, up to the gallery's limit
