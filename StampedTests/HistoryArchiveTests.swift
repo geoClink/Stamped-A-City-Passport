@@ -428,10 +428,21 @@ final class OldFilmTests: XCTestCase {
             Bundle.main.url(forResource: "BuildingRegistry", withExtension: "json")))) as? [String: Any]
         let paris = try XCTUnwrap(registry?["Paris"] as? [[String: Any]])
         let photos = paris.compactMap { $0["id"] as? String }.flatMap { CampusArchivePhotos.photos(forBuildingID: $0) }
-        XCTAssertEqual(CampusArchivePhotos.parisBuildingCount, 6)
-        XCTAssertEqual(photos.count, 6, "each Paris photo is in the app and matches a landmark")
+        XCTAssertEqual(CampusArchivePhotos.parisBuildingCount, 7)
+        XCTAssertEqual(photos.count, 7, "each Paris photo is in the app and matches a landmark")
         XCTAssertTrue(photos.allSatisfy { $0.credit.hasSuffix("Paris Musées") && $0.largeURL.isFileURL })
         XCTAssertTrue(photos.allSatisfy { $0.itemURL.host == "www.parismuseescollections.paris.fr" })
         XCTAssertFalse(photos.contains(where: OldPhotoSources.needsNoCredit))
+    }
+
+    func testEveryBundledEuropeanaAndRijksmuseumImageIsInTheApp() throws {
+        let registry = try JSONSerialization.jsonObject(with: Data(contentsOf: XCTUnwrap(
+            Bundle.main.url(forResource: "BuildingRegistry", withExtension: "json")))) as? [String: [[String: Any]]]
+        let ids = try XCTUnwrap(registry).values.joined().compactMap { $0["id"] as? String }
+        let photos = ids.flatMap { CampusArchivePhotos.photos(forBuildingID: $0) }
+            .filter { $0.credit.hasSuffix("Europeana") || $0.credit.hasPrefix("Rijksmuseum") }
+        XCTAssertEqual(CampusArchivePhotos.europeBuildingCount, 20)
+        XCTAssertEqual(photos.count, 20, "every bundled image is in the app and matches a landmark")
+        XCTAssertTrue(photos.allSatisfy { $0.largeURL.isFileURL && ($0.credit.contains("Public domain") || $0.credit.contains("CC0")) })
     }
 }

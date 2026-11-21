@@ -14,6 +14,8 @@
 //  in its Digital Collections; credited and linked to each item.
 //  Paris Musées releases these 6 Musée Carnavalet photos under CC0 and asks for a credit to
 //  Paris Musées and the museum, with a link to its collections site.
+//  Europeana and the Rijksmuseum: photos, prints and paintings each marked Public Domain or
+//  CC0 by the institution that holds them, credited to it and linked to the record.
 //
 
 import Foundation
@@ -106,6 +108,58 @@ nonisolated enum CampusArchivePhotos {
         "paris-palais-garnier": carnavalet(490866, "The Palais Garnier under construction, with Paris Commune posters, 1871"),
         "paris-pantheon": carnavalet(91879, "Restoration work on the Panthéon, 1871"),
         "paris-sainte-chapelle": carnavalet(131587, "The Sainte-Chapelle at the Palais de Justice, ca. 1851"),
+        "paris-louvre-pyramid": carnavalet(151759, "The Pavillon de l'Horloge in the Louvre's Cour Carrée, before the pyramid"),
+    ]
+
+    /// A public-domain or CC0 image found through Europeana, credited to the institution that holds it
+    private static func europeana(_ file: String, _ page: String, _ caption: String,
+                                  provider: String, licence: String) -> [Entry] {
+        [Entry(file: file, caption: caption, credit: "\(provider) · \(licence) · Europeana", link: URL(string: page)!)]
+    }
+
+    /// A public-domain Rijksmuseum photo
+    private static func rijksmuseum(_ file: String, _ page: String, _ caption: String) -> [Entry] {
+        [Entry(file: file, caption: caption, credit: "Rijksmuseum · Public domain", link: URL(string: page)!)]
+    }
+
+    /// Building ID → its Europeana or Rijksmuseum image
+    private static let europe: [String: [Entry]] = [
+        "rom_colosseum": europeana("eu_rom_colosseum", "https://www.europeana.eu/item/2020903/KMS1776", "View of the interior of the Colosseum, painting by C. W. Eckersberg, 1816",
+                         provider: "National Gallery of Denmark", licence: "Public domain"),
+        "bcn_hospital_sant_pau": europeana("eu_bcn_hospital_sant_pau", "https://www.europeana.eu/item/773/https___catalonica_bnc_cat_catalonicahub_lod_oai_mdc_csuc_cat_bcsalvany____932_ent0", "Pavilions of the Hospital de Sant Pau, 1912",
+                         provider: "Digital Memory of Catalonia", licence: "Public domain"),
+        "bcn_santa_maria_mar": europeana("eu_bcn_santa_maria_mar", "https://www.europeana.eu/item/773/https___catalonica_bnc_cat_catalonicahub_lod_oai_mdc_csuc_cat_bcsalvany____6707_ent0", "The bell tower of Santa Maria del Mar, 1921",
+                         provider: "Digital Memory of Catalonia", licence: "Public domain"),
+        "nap-01": europeana("eu_nap-01", "https://www.europeana.eu/item/2020903/KKSgb2908", "Castel dell'Ovo, drawing, 1839",
+                         provider: "National Gallery of Denmark", licence: "Public domain"),
+        "athens-acropolis": europeana("eu_athens-acropolis", "https://www.europeana.eu/item/2059209/5476_11204625163_c41e7f75da_o_jpg", "The Temple of Athena Nike on the Acropolis, engraving, 1890",
+                         provider: "The British Library", licence: "Public domain"),
+        "florence-ponte-vecchio": europeana("eu_florence-ponte-vecchio", "https://www.europeana.eu/item/90402/RP_P_1954_519", "Ponte Vecchio, etching, 1914",
+                         provider: "Rijksmuseum", licence: "Public domain"),
+        "dublin-ha-penny-bridge": europeana("eu_dublin-ha-penny-bridge", "https://www.europeana.eu/item/2063628/IRE_280_001", "The Ha'penny Bridge, watercolour, 1818",
+                         provider: "National Library of Ireland", licence: "Public domain"),
+        "zurich-grossmunster": europeana("eu_zurich-grossmunster", "https://www.europeana.eu/item/2059209/5534_11147967504_776f935195_o_jpg", "The Grossmünster, engraving, 1881",
+                         provider: "The British Library", licence: "Public domain"),
+        "munich_feldherrnhalle": europeana("eu_munich_feldherrnhalle", "https://www.europeana.eu/item/90402/RP_F_F01131_B", "Odeonsplatz with the Feldherrnhalle and the Theatinerkirche, 1897",
+                         provider: "Rijksmuseum", licence: "Public domain"),
+        "hamburg_kunsthalle": europeana("eu_hamburg_kunsthalle", "https://www.europeana.eu/item/90402/RP_F_F05966", "The Hamburger Kunsthalle, stereo photograph, ca. 1876",
+                         provider: "Rijksmuseum", licence: "Public domain"),
+        "valencia_torres_de_serranos": europeana("eu_valencia_torres_de_serranos", "https://www.europeana.eu/item/343/https___hispana_mcu_es_lod_oai_bivaldi_gva_es_9778_ent0", "Torres de Serranos, ca. 1888",
+                         provider: "Valencian Digital Library", licence: "Public domain"),
+        "valencia_mercado_de_colon": europeana("eu_valencia_mercado_de_colon", "https://www.europeana.eu/item/343/https___hispana_mcu_es_lod_oai_bivaldi_gva_es_9096_ent0", "Mercado de Colón, postcard, ca. 1920",
+                         provider: "Valencian Digital Library", licence: "Public domain"),
+        "rotterdam_laurenskerk": europeana("eu_rotterdam_laurenskerk", "https://www.europeana.eu/item/90402/RP_P_1914_186", "The Laurenskerk, print, 1906",
+                         provider: "Rijksmuseum", licence: "Public domain"),
+        "granada_alhambra": europeana("eu_granada_alhambra", "https://www.europeana.eu/item/10501/bib_rnod_35599", "The Court of the Lions, Alhambra, print, ca. 1838",
+                         provider: "National Library of Portugal", licence: "Public domain"),
+        "granada_generalife": europeana("eu_granada_generalife", "https://www.europeana.eu/item/773/https___catalonica_bnc_cat_catalonicahub_lod_oai_mdc_csuc_cat_gravatsBRUB____430_ent0", "Garden of the Generalife, photograph by Schwartz, 19th century",
+                         provider: "Digital Memory of Catalonia", licence: "Public domain"),
+        "marseille_palais_longchamp": europeana("eu_marseille_palais_longchamp", "https://www.europeana.eu/item/2024903/photography_ProvidedCHO_KU_Leuven_9989063160101488", "Palais Longchamp, lantern slide, ca. 1862",
+                         provider: "Catholic University of Leuven", licence: "Public domain"),
+        "ams_royal_palace": rijksmuseum("rijks_ams_royal_palace", "https://www.rijksmuseum.nl/nl/collectie/object/RP-F-00-936--eaebcbbbac09da96efbbca7a4f98ccc3", "The Royal Palace on Dam Square, April 21, 1879"),
+        "ams_centraal": rijksmuseum("rijks_ams_centraal", "https://www.rijksmuseum.nl/nl/collectie/object/RP-F-00-765--45909940d1e510bd8bcb9f031f652b4f", "Centraal Station and the Sint-Nicolaaskerk, ca. 1880–1900"),
+        "ams_westerkerk": rijksmuseum("rijks_ams_westerkerk", "https://www.rijksmuseum.nl/nl/collectie/object/RP-F-00-775--f245b4943d7e5c7f1a473ca8daa89aa1", "The Prinsengracht with the Westerkerk, ca. 1880–1900"),
+        "ams_beurs_van_berlage": rijksmuseum("rijks_ams_beurs_van_berlage", "https://www.rijksmuseum.nl/nl/collectie/object/BI-B-71-10--2dd641a55b302c344ef6d5722a23afa3", "The Damrak façade of the Beurs van Berlage, 1903"),
     ]
 
     /// Building ID → its Cleveland Public Library photo
@@ -145,7 +199,7 @@ nonisolated enum CampusArchivePhotos {
 
     /// The bundled photos for a building, or none
     static func photos(forBuildingID id: String, bundle: Bundle = .main) -> [HistoricImage] {
-        (msu[id] ?? detroit[id] ?? cleveland[id] ?? newYork[id] ?? paris[id] ?? []).compactMap { entry in
+        (msu[id] ?? detroit[id] ?? cleveland[id] ?? newYork[id] ?? paris[id] ?? europe[id] ?? []).compactMap { entry in
             guard let url = bundle.url(forResource: entry.file, withExtension: "jpg") else { return nil }
             return HistoricImage(thumbnailURL: url, largeURL: url, caption: entry.caption,
                                  isDrawing: false, credit: entry.credit, itemURL: entry.link)
@@ -162,4 +216,6 @@ nonisolated enum CampusArchivePhotos {
     static var newYorkBuildingCount: Int { newYork.count }
     /// How many Paris landmarks have bundled photos (for tests)
     static var parisBuildingCount: Int { paris.count }
+    /// How many landmarks have a bundled Europeana or Rijksmuseum image (for tests)
+    static var europeBuildingCount: Int { europe.count }
 }
