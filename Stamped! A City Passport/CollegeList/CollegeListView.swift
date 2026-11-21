@@ -91,10 +91,13 @@ struct CollegeListView: View {
                     }
                 }
             }
+            #if !os(visionOS)
             .navigationDestination(for: CityLocation.City.self) { campus in
                 // CityDetailView scrolls by itself and draws its own page background
                 CityDetailView(city: campus)
             }
+            #endif
+            // Vision Pro always passes onOpenCampus: the campus opens on the main window's 3D map
         }
         .tint(DS.Palette.accent)
         .sheet(isPresented: $showingRoadTripPlanner, onDismiss: openCreatedTrip) {
@@ -122,7 +125,11 @@ struct CollegeListView: View {
         ContentUnavailableView {
             Label(NSLocalizedString("No Schools Yet", comment: "College list: empty state title"), systemImage: "graduationcap")
         } description: {
+            #if os(visionOS)
+            Text(NSLocalizedString("collegeList.empty.vision", value: "Open any campus and tap the graduation cap under the map to add it to your list. Schools you save on iPhone show up here too.", comment: "College list on Vision Pro: empty state explaining how to add schools"))
+            #else
             Text(NSLocalizedString("Open any campus in Campus Architecture and tap the heart to add it to your list. Then plan a road trip that visits them all, one campus a day.", comment: "College list: empty state explaining how to add schools"))
+            #endif
         }
         .listRowBackground(Color.clear)
     }

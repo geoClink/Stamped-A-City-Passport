@@ -157,7 +157,8 @@ private extension View {
     /// when the list scrolled. The Mac keeps its native sidebar.
     @ViewBuilder
     func solidSidebarBackground(_ color: Color) -> some View {
-        #if os(macOS)
+        #if os(macOS) || os(visionOS)
+        // The Mac and Vision Pro keep their native sidebar (glass on visionOS)
         self
         #else
         let solid = self

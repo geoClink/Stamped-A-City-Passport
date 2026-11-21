@@ -24,6 +24,14 @@ struct CityMapVisionView: View {
     @Environment(\.dismissWindow) private var dismissWindow
     @State private var showingQuiz = false
     @State private var showingWishlist = false
+    /// Campus traditions to check off, the same list as the iPhone campus page
+    @State private var showingTraditions = false
+    /// Schools saved for college visits, synced with the iPhone app over iCloud
+    @ObservedObject private var collegeList = CollegeListStore.shared
+    /// This map's campus, or nil for a city
+    private var campus: CityLocation.City? {
+        CityLocation.City(rawValue: cityName).flatMap { $0.isCampus ? $0 : nil }
+    }
     /// Show Apple Maps' own places (restaurants, cafés, museums…) on the map.
     @State private var showsPlaces = false
     /// The Apple Maps place the user tapped; MapKit shows its place card.
@@ -137,6 +145,25 @@ struct CityMapVisionView: View {
                 }
                 .disabled(mappableBuildings.count < 4)
 
+                if let campus {
+                    Button {
+                        showingTraditions = true
+                    } label: {
+                        Label("Traditions", systemImage: "flag.checkered")
+                    }
+                    .help("Campus traditions to do or see")
+
+                    // Add or remove this school from My College List (the heart on iPhone)
+                    Button {
+                        collegeList.toggle(campus)
+                    } label: {
+                        Label(collegeList.contains(campus)
+                              ? NSLocalizedString("Remove from My College List", comment: "Campus page: VoiceOver label for the college list button when the campus is on the list")
+                              : NSLocalizedString("Add to My College List", comment: "Campus page: VoiceOver label for the college list button when the campus isn't on the list"),
+                              systemImage: collegeList.contains(campus) ? "graduationcap.fill" : "graduationcap")
+                    }
+                }
+
                 // Explore this city together with friends on FaceTime
                 SharePlayButton(cityName: cityName)
             }
@@ -177,6 +204,24 @@ struct CityMapVisionView: View {
         }
         .sheet(isPresented: $showingQuiz) {
             VisionQuizView(cityName: cityName, buildings: store.buildings(for: cityName))
+        }
+        .sheet(isPresented: $showingTraditions) {
+            if let campus {
+                NavigationStack {
+                    ScrollView {
+                        CampusTraditionsSection(campus: campus, isHighContrast: false)
+                            .padding(DS.Space.xl)
+                    }
+                    .navigationTitle(campus.name)
+                    .toolbar {
+                        ToolbarItem(placement: .confirmationAction) {
+                            Button("Done") { showingTraditions = false }
+                        }
+                    }
+                }
+                .tint(DS.Palette.accent)
+                .frame(minWidth: 640, minHeight: 720)
+            }
         }
         .sheet(isPresented: $showingWishlist) {
             WantToVisitList(

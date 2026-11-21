@@ -14,6 +14,10 @@ struct CityListVisionView: View {
     @State private var selectedCity: String?
     @State private var searchText = ""
     @State private var showingTipJar = false
+    /// The iPhone app's passport and achievements, shared code, shown as sheets
+    @State private var showingPassport = false
+    @State private var showingAchievements = false
+    @State private var showingCollegeList = false
     /// Explore Together keeps everyone in a SharePlay session on the same city
     private let sharePlay = SharePlayExplorer.shared
     @Environment(\.openWindow) private var openWindow
@@ -51,6 +55,26 @@ struct CityListVisionView: View {
                     .accessibilityHint("Opens a 3D globe of every city in its own window")
                 }
                 ToolbarItem {
+                    // Every stamp from the iPhone app, synced over iCloud
+                    Button("My Passport", systemImage: "book.closed.fill") {
+                        showingPassport = true
+                    }
+                    .accessibilityHint("Shows your city and campus stamps")
+                }
+                ToolbarItem {
+                    // Schools saved on iPhone; picking one flies there on the map
+                    Button("My College List", systemImage: "graduationcap.fill") {
+                        showingCollegeList = true
+                    }
+                    .accessibilityHint("Shows the campuses you saved")
+                }
+                ToolbarItem {
+                    Button("Achievements", systemImage: "trophy.fill") {
+                        showingAchievements = true
+                    }
+                    .accessibilityHint("Shows the badges you've earned")
+                }
+                ToolbarItem {
                     // The iPhone app's trip planner, in its own window beside the map
                     Button("My Trips", systemImage: "suitcase.fill") {
                         openWindow(id: "trips")
@@ -86,6 +110,23 @@ struct CityListVisionView: View {
             }
             .tint(DS.Palette.accent)
             .frame(minWidth: 560, minHeight: 640)
+        }
+        .sheet(isPresented: $showingPassport) {
+            // No .tint here: on visionOS it fills the glass toolbar buttons orange, hiding their orange icons
+            PassportGalleryView(cities: CityLocation.City.allCases)
+                .frame(minWidth: 760, minHeight: 820)
+        }
+        .sheet(isPresented: $showingCollegeList) {
+            CollegeListView(onOpenCampus: { campus in
+                showingCollegeList = false
+                searchText = ""
+                selectedCity = campus.name
+            })
+            .frame(minWidth: 700, minHeight: 760)
+        }
+        .sheet(isPresented: $showingAchievements) {
+            AchievementsView()
+                .frame(minWidth: 760, minHeight: 820)
         }
         .onAppear {
             if selectedCity == nil { selectedCity = store.cityNames.contains("New York") ? "New York" : store.cityNames.first }
