@@ -131,6 +131,7 @@ struct CityMapView: View {
             case .notVisited: passesFilter = !progress.isVisited(building.id)
             case .stamped:    passesFilter = progress.isVisited(building.id)
             case .wishlist:   passesFilter = progress.isWishlisted(building.id)
+            case .thenNow:    passesFilter = CampusArchivePhotos.hasPhotos(forBuildingID: building.id)
             }
             return passesFilter && (styleFilter == nil || building.buildingStyle == styleFilter)
         }
@@ -151,6 +152,12 @@ struct CityMapView: View {
     private var selectionCoordinate: CLLocationCoordinate2D? {
         if let building = selectedBuilding { return coordinate(of: building) }
         return selectedPlace?.coordinate
+    }
+
+    /// "Then & Now Photos" only shows for cities that have at least one bundled historic photo.
+    private var availableFilters: [MapFilter] {
+        let hasPhotos = mappableBuildings.contains { CampusArchivePhotos.hasPhotos(forBuildingID: $0.id) }
+        return MapFilter.allCases.filter { $0 != .thenNow || hasPhotos }
     }
 
     private var styles: [String] {
@@ -783,7 +790,7 @@ struct CityMapView: View {
         ToolbarItem(placement: .topBarTrailing) {
             Menu {
                 Picker("Show", selection: $filter) {
-                    ForEach(MapFilter.allCases) { option in
+                    ForEach(availableFilters) { option in
                         Label(option.title, systemImage: option.icon).tag(option)
                     }
                 }
@@ -1194,7 +1201,7 @@ struct CityMapView: View {
 // MARK: - Filter
 
 enum MapFilter: String, CaseIterable, Identifiable {
-    case all, notVisited, stamped, wishlist
+    case all, notVisited, stamped, wishlist, thenNow
     var id: Self { self }
 
     // LocalizedStringKey so Label looks the titles up in Localizable.strings
@@ -1204,6 +1211,7 @@ enum MapFilter: String, CaseIterable, Identifiable {
         case .notVisited: "Not Visited"
         case .stamped:    "Stamped"
         case .wishlist:   "Want to Visit"
+        case .thenNow:    "Then & Now Photos"
         }
     }
 
@@ -1213,6 +1221,7 @@ enum MapFilter: String, CaseIterable, Identifiable {
         case .notVisited: "circle.dashed"
         case .stamped:    "checkmark.seal"
         case .wishlist:   "heart"
+        case .thenNow:    "photo.on.rectangle"
         }
     }
 }

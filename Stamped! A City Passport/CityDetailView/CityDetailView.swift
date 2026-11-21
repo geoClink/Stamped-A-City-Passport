@@ -391,7 +391,7 @@ struct CityDetailView: View {
                     showingExplore = true
                 } label: {
                     Image(systemName: "globe")
-                        .font(.system(size: 20))
+                        .font(.title3)
                         .fontWeight(isHighContrast ? .black : .regular)
                         .foregroundColor(brandColor)
                 }
@@ -413,7 +413,7 @@ struct CityDetailView: View {
                 showingMap = true
             } label: {
                 Image(systemName: "map")
-                    .font(.system(size: 20))
+                    .font(.title3)
                     .fontWeight(isHighContrast ? .black : .regular)
                     .foregroundColor(brandColor)
             }
@@ -438,7 +438,7 @@ struct CityDetailView: View {
                 }
             } label: {
                 Image(systemName: "ellipsis.circle.fill")
-                    .font(.system(size: 22))
+                    .font(.title2)
                     .fontWeight(isHighContrast ? .black : .regular)
                     .foregroundColor(brandColor)
                     .contentShape(Circle())

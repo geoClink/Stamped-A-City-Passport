@@ -445,4 +445,14 @@ final class OldFilmTests: XCTestCase {
         XCTAssertEqual(photos.count, 46, "every bundled image is in the app and matches a landmark")
         XCTAssertTrue(photos.allSatisfy { $0.largeURL.isFileURL && ($0.credit.contains("Public domain") || $0.credit.contains("CC0")) })
     }
+
+    func testEverySydneyCommonsImageIsBundledWithItsCredit() throws {
+        let registry = try JSONSerialization.jsonObject(with: Data(contentsOf: XCTUnwrap(
+            Bundle.main.url(forResource: "BuildingRegistry", withExtension: "json")))) as? [String: Any]
+        let sydney = try XCTUnwrap(registry?["Sydney"] as? [[String: Any]])
+        let photos = sydney.compactMap { $0["id"] as? String }.flatMap { CampusArchivePhotos.photos(forBuildingID: $0) }
+        XCTAssertEqual(CampusArchivePhotos.commonsBuildingCount, 6)
+        XCTAssertEqual(photos.count, 6, "each Sydney photo is in the app and matches a landmark")
+        XCTAssertTrue(photos.allSatisfy { $0.credit.hasSuffix("Wikimedia Commons") && $0.largeURL.isFileURL })
+    }
 }

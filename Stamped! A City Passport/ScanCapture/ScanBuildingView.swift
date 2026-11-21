@@ -84,10 +84,8 @@ struct ScanBuildingView: View {
                     tipRow(icon: "exclamationmark.triangle.fill", text: "Avoid glass walls — reflections confuse the model")
                     tipRow(icon: "photo.stack.fill",      text: "30+ photos gives the best result")
                 }
-                .padding(20)
-                .background(Color(UIColor.secondarySystemGroupedBackground))
-                .cornerRadius(16)
-                .padding(.horizontal, 20)
+                .dsCard(padding: DS.Space.xl)
+                .padding(.horizontal, DS.Space.xl)
 
                 PhotosPicker(
                     selection: $vm.selectedItems,

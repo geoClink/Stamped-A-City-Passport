@@ -58,6 +58,8 @@ actor DetroitPublishingPhotos {
         let inTown = location.map(LibraryOfCongressService.normalized).contains(normalizedTown)
             || parts.contains(normalizedTown)
         guard inTown else { return false }
+        // "[Dime, Penobscot, and Ford buildings, Detroit, Mich.]" shows several buildings
+        if parts.contains(where: { $0.hasSuffix(" buildings") || $0 == "buildings" }) { return false }
 
         var names: Set<String> = [LibraryOfCongressService.normalized(name)]
         for name in names where name.hasSuffix(" building") { names.insert(String(name.dropLast(" building".count))) }

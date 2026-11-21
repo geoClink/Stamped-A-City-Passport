@@ -202,10 +202,10 @@ private struct ClippingCard: View {
                 AsyncImage(url: clipping.imageURL) { image in
                     image.resizable().scaledToFill()
                 } placeholder: {
-                    Color.secondary.opacity(0.15)
+                    DSPlaceholder(systemImage: "newspaper")
                 }
                 .frame(width: imageWidth, height: imageWidth * 1.3)
-                .clipShape(RoundedRectangle(cornerRadius: 8))
+                .clipShape(RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous))
                 .accessibilityHidden(true)
 
                 VStack(alignment: .leading, spacing: DS.Space.xs) {

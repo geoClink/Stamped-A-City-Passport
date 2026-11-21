@@ -214,6 +214,28 @@ nonisolated enum CampusArchivePhotos {
                          provider: "Rijksmuseum", licence: "Public domain"),
     ]
 
+    /// A public-domain image on Wikimedia Commons, credited to the institution that holds the original
+    private static func commons(_ file: String, _ page: String, _ caption: String,
+                                institution: String, licence: String) -> [Entry] {
+        [Entry(file: file, caption: caption, credit: "\(institution) · \(licence) · Wikimedia Commons", link: URL(string: page)!)]
+    }
+
+    /// Building ID → its Wikimedia Commons image (Sydney: State Library of NSW and National Library of Australia)
+    private static let commonsPhotos: [String: [Entry]] = [
+        "syd_harbour_bridge": commons("commons_syd_harbour_bridge", "https://commons.wikimedia.org/wiki/File:SLNSW_42880_View_of_the_Sydney_Harbour_Bridge_from_the_north_side_showing_the_arch_completed_and_Dorman_Longs_workshop_in_foreground.jpg", "The arch just completed, seen from the north side, August 1930",
+                       institution: "State Library of New South Wales", licence: "Public domain"),
+        "syd_qvb": commons("commons_syd_qvb", "https://commons.wikimedia.org/wiki/File:SLNSW_796856_Victoria_Markets_Queen_Victoria_Building_Sydney.jpg", "Queen Victoria Markets (now the QVB), ca. 1900–1927",
+                       institution: "State Library of New South Wales", licence: "Public domain"),
+        "syd_art_gallery": commons("commons_syd_art_gallery", "https://commons.wikimedia.org/wiki/File:National_Art_Gallery_of_New_South_Wales,_ca._1900-1910_-_Star_Photo_Co._(3572499330).jpg", "National Art Gallery of New South Wales, ca. 1900–1910",
+                       institution: "State Library of New South Wales", licence: "Public domain"),
+        "syd_st_marys": commons("commons_syd_st_marys", "https://commons.wikimedia.org/wiki/File:Construction,_St._Mary%27s_Cathedral,_Sydney,_1920s.jpg", "St Mary's Cathedral under construction, 1920s",
+                       institution: "State Library of New South Wales", licence: "No restrictions"),
+        "syd_customs_house": commons("commons_syd_customs_house", "https://commons.wikimedia.org/wiki/File:Customs_House_Circular_Quay_Sydney.jpg", "Customs House, Circular Quay, 1913",
+                       institution: "National Library of Australia", licence: "Public domain"),
+        "syd_town_hall": commons("commons_syd_town_hall", "https://commons.wikimedia.org/wiki/File:Town_Hall,_Sydney,_Inauguration_of_Australian_Commonwealth.jpg", "Sydney Town Hall lit up for the inauguration of the Commonwealth, January 1, 1901",
+                       institution: "State Library of New South Wales", licence: "Public domain"),
+    ]
+
     /// Building ID → its Cleveland Public Library photo
     private static let cleveland: [String: [Entry]] = [
         "cle-02": cpl(2861, "New Union Station (Terminal Tower), postcard, 1928"),
@@ -251,11 +273,17 @@ nonisolated enum CampusArchivePhotos {
 
     /// The bundled photos for a building, or none
     static func photos(forBuildingID id: String, bundle: Bundle = .main) -> [HistoricImage] {
-        (msu[id] ?? detroit[id] ?? cleveland[id] ?? newYork[id] ?? paris[id] ?? europe[id] ?? []).compactMap { entry in
+        (msu[id] ?? detroit[id] ?? cleveland[id] ?? newYork[id] ?? paris[id] ?? europe[id] ?? commonsPhotos[id] ?? []).compactMap { entry in
             guard let url = bundle.url(forResource: entry.file, withExtension: "jpg") else { return nil }
             return HistoricImage(thumbnailURL: url, largeURL: url, caption: entry.caption,
                                  isDrawing: false, credit: entry.credit, itemURL: entry.link)
         }
+    }
+
+    /// Whether a building has a bundled historic photo. A dictionary lookup only, no file access.
+    static func hasPhotos(forBuildingID id: String) -> Bool {
+        msu[id] != nil || detroit[id] != nil || cleveland[id] != nil || newYork[id] != nil
+            || paris[id] != nil || europe[id] != nil || commonsPhotos[id] != nil
     }
 
     /// How many MSU buildings have bundled photos (for tests)
@@ -270,4 +298,6 @@ nonisolated enum CampusArchivePhotos {
     static var parisBuildingCount: Int { paris.count }
     /// How many landmarks have a bundled Europeana or Rijksmuseum image (for tests)
     static var europeBuildingCount: Int { europe.count }
+    /// How many landmarks have a bundled Wikimedia Commons image (for tests)
+    static var commonsBuildingCount: Int { commonsPhotos.count }
 }
