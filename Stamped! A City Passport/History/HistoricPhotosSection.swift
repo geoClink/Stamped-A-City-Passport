@@ -6,7 +6,8 @@
 //  iPhone and on its card on Vision Pro. A row of thumbnails, each with its own credit;
 //  tap one to see it large with its caption, credit and a link to its archive's page.
 //
-//  Shows nothing at all while loading or when no archive has the landmark.
+//  Shows the app's bundled photos at once, then adds the archives' as they arrive;
+//  shows nothing at all when no source has the landmark.
 //
 
 import SwiftUI
@@ -21,27 +22,29 @@ struct HistoricPhotosSection: View {
     var isHighContrast = false
 
     @State private var images: [HistoricImage] = []
-    @State private var loaded = false
     @State private var selected: HistoricImage?
 
     // Thumbnails grow with the text size, like the food cards
     @ScaledMetric(relativeTo: .subheadline) private var thumbnailHeight: CGFloat = 140
 
     var body: some View {
-        if !images.isEmpty {
-            section
-        } else if !loaded {
-            // Nothing to show yet: a zero-height view just to run the lookup
-            Color.clear
-                .frame(height: 0)
-                .task(id: building.id) { await load() }
+        // The lookup runs on this always-present container, so showing the bundled photos
+        // straight away doesn't cancel the archive searches still running
+        VStack(spacing: 0) {
+            if !images.isEmpty { section }
         }
+        .task(id: building.id) { await load() }
     }
 
     private func load() async {
-        images = await OldPhotoSources.gallery(for: building, cityName: cityName, inUnitedStates: inUnitedStates,
-                                               includingDrawings: includesDrawings)
-        loaded = true
+        // Photos bundled with the app show at once; the archives can take many seconds
+        let bundled = CampusArchivePhotos.photos(forBuildingID: building.id)
+        images = bundled
+        let all = await OldPhotoSources.gallery(for: building, cityName: cityName, inUnitedStates: inUnitedStates,
+                                                includingDrawings: includesDrawings)
+        guard !Task.isCancelled else { return }
+        // The gallery puts the bundled photos first; keep them if every archive failed
+        images = all.isEmpty ? bundled : all
     }
 
     private var section: some View {
