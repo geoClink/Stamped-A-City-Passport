@@ -198,11 +198,15 @@ struct DSChip: View {
     let text: String
     var systemImage: String? = nil
     var tint: Color = .secondary
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     var body: some View {
         HStack(spacing: DS.Space.xs) {
             if let systemImage { Image(systemName: systemImage).accessibilityHidden(true) }
-            Text(text).lineLimit(1)
+            // One line normally; wraps at accessibility sizes instead of cutting off ("Italian Renai…")
+            Text(text)
+                .lineLimit(dynamicTypeSize.isAccessibilitySize ? nil : 1)
+                .fixedSize(horizontal: false, vertical: true)
         }
         .font(.caption.weight(.semibold))
         .padding(.horizontal, DS.Space.m)
@@ -320,7 +324,7 @@ struct DSLinkRow: View {
             Image(systemName: systemImage)
                 .font(.body.weight(.semibold))
                 .foregroundStyle(isHighContrast ? Color.primary : DS.Palette.accent)
-                .frame(width: 28)
+                .frame(minWidth: 28)  // grows with the icon at large text sizes, so it never overlaps the title
                 .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 2) {
                 title
@@ -357,7 +361,7 @@ struct DSLinkLabelStyle: LabelStyle {
             configuration.icon
                 .font(.body.weight(.semibold))
                 .foregroundStyle(isHighContrast ? Color.primary : DS.Palette.accent)
-                .frame(width: 28)
+                .frame(minWidth: 28)  // grows with the icon at large text sizes, so it never overlaps the title
                 .accessibilityHidden(true)
             configuration.title
                 .font(.subheadline.weight(.semibold))
