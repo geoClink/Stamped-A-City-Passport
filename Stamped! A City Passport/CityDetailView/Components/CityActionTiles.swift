@@ -82,7 +82,7 @@ struct CityActionTiles: View {
                     .stroke(isHighContrast ? Color.primary : tileEdge, lineWidth: isHighContrast ? 2 : 1)
             )
         }
-        .buttonStyle(RoundedButtonStyle())
+        .buttonStyle(DSCardPressStyle())
         .hoverEffect(.lift)
         .accessibilityElement(children: .combine)
         .accessibilityLabel("\(tile.title). \(tile.detail)")

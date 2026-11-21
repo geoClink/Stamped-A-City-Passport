@@ -271,6 +271,7 @@ private struct CurrencyInfoModal: View {
             }
             .padding(DS.Space.l)
             .navigationTitle(Text(NSLocalizedString("modal.header", comment: "Modal header")))
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button(NSLocalizedString("modal.close", comment: "Close button")) { dismiss() }

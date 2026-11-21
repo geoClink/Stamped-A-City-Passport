@@ -92,7 +92,7 @@ struct AskBuildingView: View {
                 }
             }
             .padding(24)
-            .tint(.orange)
+            .tint(DS.Palette.accent)
             .navigationTitle(Text("Ask \(building.name)"))
             #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)

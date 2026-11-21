@@ -59,25 +59,25 @@ struct CityStampDetailView: View {
                         : AnyLayout(HStackLayout(spacing: DS.Space.l))
                     buttons {
                         CityStampShareButton(city: city) {
+                            // Secondary action next to Dismiss: brand tint, same shape and height
                             Label("Share Achievement", systemImage: "square.and.arrow.up")
                                 .font(.headline)
-                                .padding(DS.Space.l)
+                                .multilineTextAlignment(.center)
+                                .foregroundStyle(DS.Palette.accent)
+                                .padding(.vertical, DS.Space.l)
+                                .padding(.horizontal, DS.Space.m)
+                                .frame(maxWidth: .infinity, minHeight: 44)
                                 .background(
-                                    RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
-                                        .fill(Color.secondary.opacity(0.1))
+                                    RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                                        .fill(DS.Palette.accent.opacity(0.12))
                                 )
                         }
                         .buttonStyle(.plain)
                         
                         Button(action: { dismiss() }) {
                             Text("Dismiss")
-                                .font(.headline)
-                                .foregroundColor(.white)
-                                .padding(.vertical, DS.Space.l)
-                                .padding(.horizontal, DS.Space.section)
-                                .background(DS.Palette.accent)
-                                .clipShape(Capsule())
                         }
+                        .buttonStyle(DSPrimaryButtonStyle())
                     }
                     
                     Text("VERIFIED ON \(date.uppercased())")

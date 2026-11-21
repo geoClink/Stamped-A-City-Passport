@@ -45,6 +45,7 @@ struct TipPromptModifier: ViewModifier {
             .sheet(isPresented: $showsTipJar) {
                 NavigationStack {
                     TipJarView()
+                        .navigationBarTitleDisplayMode(.inline)
                         .toolbar {
                             ToolbarItem(placement: .cancellationAction) {
                                 Button("Not Now") { showsTipJar = false }

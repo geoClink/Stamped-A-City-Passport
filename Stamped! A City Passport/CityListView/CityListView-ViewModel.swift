@@ -274,7 +274,7 @@ extension CityListView {
         .padding(.vertical, 6)
         .background(
             RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                .fill(isHighContrast ? Color(UIColor.systemBackground) : Color(UIColor.secondarySystemGroupedBackground))
+                .fill(isHighContrast ? Color(UIColor.systemBackground) : DS.Palette.cardBackground)
         )
         .overlay(
             RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
@@ -514,7 +514,7 @@ struct ZeroProgressHeader: View {
     
     private var accent: Color { isHighContrast ? .primary : Color.adventureOrange }
     private var cardBG: Color {
-        isHighContrast ? Color(UIColor.systemBackground) : Color(.secondarySystemGroupedBackground)
+        isHighContrast ? Color(UIColor.systemBackground) : DS.Palette.cardBackground
     }
 
     // Accessible secondary color: strong enough in light mode to meet contrast requirements,
@@ -670,32 +670,11 @@ struct ProgressHeaderView: View {
                     }
                 }
             }
-            .padding(DS.Space.l)
-            .background {
-                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                    .fill(isHighContrast ? Color(UIColor.systemBackground) : Color(UIColor.secondarySystemGroupedBackground))
-            }
-            .overlay {
-                if isHighContrast {
-                    RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                        .strokeBorder(.primary, lineWidth: 2)
-                }
-            }
+            .dsCard(isHighContrast: isHighContrast)
         }
-        .buttonStyle(ScaledButtonStyle())
+        .buttonStyle(DSCardPressStyle())
     }
 }
-struct ScaledButtonStyle: ButtonStyle {
-    @Environment(\.accessibilityReduceMotion) private var reduceMotion
-
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            // With Reduce Motion on, the card doesn't shrink and spring back when pressed
-            .scaleEffect(configuration.isPressed && !reduceMotion ? 0.97 : 1.0)
-            .animation(reduceMotion ? nil : .spring(response: 0.3, dampingFraction: 0.6), value: configuration.isPressed)
-    }
-}
-
 struct CityRow: View {
     let city: CityLocation.City
     let isCompleted: Bool

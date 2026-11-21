@@ -394,3 +394,6 @@
 "Continent" = "Continent";
 "timeline.closed" = "Closed";
 "collegeList.empty.vision" = "Open any campus and tap the graduation cap under the map to add it to your list. Schools you save on iPhone show up here too.";
+
+/* Map filter: only landmarks with a bundled historic photo */
+"Then & Now Photos" = "Then & Now Photos";

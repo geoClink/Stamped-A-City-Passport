@@ -339,10 +339,10 @@ private extension QuizView {
             if option == viewModel.getCorrectAnswer() { return .green }
             if selected == option { return .red }
             
-            return isHighContrast ? Color(UIColor.systemBackground) : Color(UIColor.secondarySystemGroupedBackground).opacity(0.5)
+            return isHighContrast ? Color(UIColor.systemBackground) : DS.Palette.cardBackground.opacity(0.5)
         }
         
-        return isHighContrast ? Color(UIColor.systemBackground) : Color(UIColor.secondarySystemGroupedBackground)
+        return isHighContrast ? Color(UIColor.systemBackground) : DS.Palette.cardBackground
     }
     
     func buttonForegroundColor(for option: String) -> Color {
@@ -406,10 +406,10 @@ private extension QuizView {
                     }
                 }
             }
-        .padding(isIPad ? 32 : 24)
+        .padding(isIPad ? DS.Space.section : DS.Space.xl)
         .background(
-            RoundedRectangle(cornerRadius: 24)
-                .fill(isHighContrast ? Color(UIColor.systemBackground) : Color(UIColor.secondarySystemGroupedBackground))
+            RoundedRectangle(cornerRadius: DS.Radius.large, style: .continuous)
+                .fill(isHighContrast ? Color(UIColor.systemBackground) : DS.Palette.cardBackground)
         )
     }
 
@@ -630,7 +630,7 @@ private extension QuizView {
             }) {
                 HStack {
                     Image(systemName: viewModel.isListening ? "waveform" : "mic.fill")
-                        .font(.system(size: 18, weight: .bold))
+                        .font(.headline)
                         .accessibilityHidden(true)
                     
                     Text(viewModel.isListening ? "LISTENING..." : "ANSWER VIA VOICE")
@@ -664,7 +664,8 @@ private extension QuizView {
                 Image(systemName: "flame.fill").font(.system(size: 120))
                     .foregroundStyle(LinearGradient(colors: [.orange, .red], startPoint: .top, endPoint: .bottom))
                     .accessibilityHidden(true)
-                Text("\(viewModel.streakMilestone) IN A ROW").font(.system(size: 44, weight: .black)).foregroundColor(.white)
+                Text("\(viewModel.streakMilestone) IN A ROW").font(.system(.largeTitle, weight: .black)).foregroundColor(.white)
+                    .multilineTextAlignment(.center).padding(.horizontal, DS.Space.xl)
             }
         }
         .onAppear {

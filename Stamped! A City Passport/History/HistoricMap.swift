@@ -360,7 +360,7 @@ struct HistoricMapControls: View {
             Text("Now").font(.callout)
             Slider(value: $opacity, in: 0...1)
                 .frame(width: width)
-                .tint(.orange)
+                .tint(DS.Palette.accent)
                 .accessibilityLabel(Text("Old map"))
                 .accessibilityValue(Text("\(Int(opacity * 100)) percent"))
             Text(verbatim: String(year)).font(.callout).monospacedDigit()

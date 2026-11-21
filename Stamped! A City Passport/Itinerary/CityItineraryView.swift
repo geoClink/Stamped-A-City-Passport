@@ -227,7 +227,7 @@ struct ItineraryErrorView: View {
         VStack(alignment: .leading, spacing: 0) {
             VStack(spacing: 12) {
                 Image(systemName: "exclamationmark.triangle")
-                    .font(.system(size: 28))
+                    .font(.title)
                     .foregroundColor(.secondary)
                     .accessibilityHidden(true)
                 Text("Couldn't load itinerary")
@@ -357,7 +357,7 @@ struct BasicDaySection: View {
                     }
                     Spacer()
                     Image(systemName: "chevron.right")
-                        .font(.system(size: 12, weight: .semibold)).foregroundColor(.secondary)
+                        .font(.caption.weight(.semibold)).foregroundColor(.secondary)
                         .rotationEffect(.degrees(isExpanded ? 90 : 0))
                         .animation(reduceMotion ? nil : .spring(response: 0.35, dampingFraction: 0.8), value: isExpanded)
                         .accessibilityHidden(true)
@@ -843,7 +843,7 @@ struct ItineraryDaySection: View {
                     }
                     Spacer()
                     Image(systemName: "chevron.right")
-                        .font(.system(size: 12, weight: .semibold)).foregroundColor(.secondary)
+                        .font(.caption.weight(.semibold)).foregroundColor(.secondary)
                         .rotationEffect(.degrees(isExpanded ? 90 : 0))
                         .animation(reduceMotion ? nil : .spring(response: 0.35, dampingFraction: 0.8), value: isExpanded)
                         .accessibilityHidden(true)

@@ -390,7 +390,7 @@ struct CityListView: View {
             .background(
                 Capsule().fill(isSelected
                     ? (isHighContrast ? Color.primary : Color.adventureOrange)
-                    : (isHighContrast ? Color(UIColor.systemBackground) : Color(UIColor.secondarySystemGroupedBackground)))
+                    : (isHighContrast ? Color(UIColor.systemBackground) : DS.Palette.cardBackground))
             )
             .overlay(Capsule().stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2))
             .contentShape(Capsule())

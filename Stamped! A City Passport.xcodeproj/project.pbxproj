@@ -222,6 +222,12 @@
 				Resources/DPLArchives/dpl_bh028598.jpg,
 				Resources/DPLArchives/dpl_bh029791.jpg,
 				Resources/DPLArchives/dpl_na044496.jpg,
+				Resources/CommonsArchives/commons_syd_harbour_bridge.jpg,
+				Resources/CommonsArchives/commons_syd_qvb.jpg,
+				Resources/CommonsArchives/commons_syd_art_gallery.jpg,
+				Resources/CommonsArchives/commons_syd_st_marys.jpg,
+				Resources/CommonsArchives/commons_syd_customs_house.jpg,
+				Resources/CommonsArchives/commons_syd_town_hall.jpg,
 				Resources/EuropeanaArchives/eu_ber_brandenburg_gate.jpg,
 				Resources/EuropeanaArchives/eu_ams_rijksmuseum.jpg,
 				Resources/EuropeanaArchives/eu_ams_scheepvaartmuseum.jpg,
@@ -893,7 +899,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = PassportWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PassportWidget/Info.plist;
@@ -925,7 +931,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = PassportWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PassportWidget/Info.plist;
@@ -1128,7 +1134,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Stamped! A City Passport/Stamped! A City Passport.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1193,7 +1199,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Stamped! A City Passport/Stamped! A City Passport.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1257,7 +1263,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Tally-AVP/Tally-AVP.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1291,7 +1297,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Tally-AVP/Tally-AVP.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1370,7 +1376,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = DetroitDownloader/DetroitDownloader.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DetroitDownloader/Info.plist;
@@ -1402,7 +1408,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = DetroitDownloader/DetroitDownloader.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DetroitDownloader/Info.plist;

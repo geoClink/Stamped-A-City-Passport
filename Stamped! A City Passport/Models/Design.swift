@@ -245,6 +245,20 @@ struct DSPrimaryButtonStyle: ButtonStyle {
     }
 }
 
+/// The press feedback for a whole card that is a button (the home progress card, the city page
+/// tiles): a slight fade and shrink, with only the fade when Reduce Motion is on.
+/// The card keeps its own look; this only adds the press.
+struct DSCardPressStyle: ButtonStyle {
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .opacity(configuration.isPressed ? 0.8 : 1)
+            .scaleEffect(configuration.isPressed && !reduceMotion ? 0.98 : 1)
+            .animation(.easeOut(duration: 0.12), value: configuration.isPressed)
+    }
+}
+
 /// A compact action in a row of two to four under the primary button: icon over a short label
 /// on the card surface. Only the icon carries the tint, so a row of them reads as one group.
 struct DSActionTileStyle: ButtonStyle {

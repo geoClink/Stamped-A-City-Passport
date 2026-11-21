@@ -368,11 +368,13 @@ Preferred copy style:
 | Secondary actions next to it | `DSActionTileStyle`, two to four in one row (stacked at accessibility sizes) |
 | In-line extras by content (Listen, Ask) | `DSPillButtonStyle`, in a wrapping row |
 | Any outbound link (tours, tables, hotels, rentals) | `DSLinkLabelStyle` on the link's Label: a one-row card with an arrow |
+| A whole card that is a button (home progress card, city tiles) | `DSCardPressStyle` (fade and slight shrink; fade only with Reduce Motion) |
 | A list row that opens something | `DSLinkRow` with `DSRowDivider` inside `.dsCard(padding: 0)` |
 | Sideways card rows | `.dsRailCard(width:)` |
 | A missing photo | `DSPlaceholder` look: brand tint at 12% with one symbol (place thumbnails all use the accent; the symbol tells the kinds apart) |
 | Photo still loading | `.shimmering()` on the card color |
 | Data still loading | `DSLoadingRow("Finding …")` |
+| A secondary button beside a primary one | Brand tint at 12%, brand text, same shape and height as `DSPrimaryButtonStyle` (e.g. Share Achievement next to Dismiss) |
 | A sheet's title | inline title next to Done (`dsSheetTitle` or `.navigationBarTitleDisplayMode(.inline)`) |
 
 Action hierarchy on a detail page: one primary button, then one row of tiles, then content; outbound links sit with the content they relate to (Tours under the actions, OpenTable and food tours under Local Flavors, Booking and Vrbo under Stays), all in the link-card look.
