@@ -314,12 +314,11 @@ extension BuildingDetailView {
                 .foregroundStyle(isHighContrast ? Color.primary.gradient : brandColor.gradient)
             
             Text(L.Building.capturePhoto)
-                .font(.system(.caption, design: .monospaced))
-                .fontWeight(.bold)
-                .foregroundColor(isHighContrast ? .primary : brandColor.opacity(0.8))
+                .font(.caption.weight(.semibold))
+                .foregroundColor(isHighContrast ? .primary : .secondary)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(isHighContrast ? Color.clear : brandColor.opacity(0.05))
+        .background(isHighContrast ? Color.clear : brandColor.opacity(0.12))
         .clipShape(RoundedRectangle(cornerRadius: DS.Radius.large, style: .continuous))
     }
  
@@ -451,10 +450,10 @@ extension BuildingDetailView {
             }
             localFlavorsSection
             // Restaurant search on OpenTable near this building; hidden until the camref is set
-            OpenTableButton(latitude: building.latitude, longitude: building.longitude) { AnyView(secondaryButtonStyle($0, tint: brandColor)) }
+            OpenTableButton(latitude: building.latitude, longitude: building.longitude) { AnyView(linkStyle($0)) }
                 .buttonStyle(.plain)
             // Food tours on GetYourGuide (cities only), styled like Tours & Tickets
-            FoodToursButton(city: viewModel.city) { AnyView(secondaryButtonStyle($0, tint: brandColor)) }
+            FoodToursButton(city: viewModel.city) { AnyView(linkStyle($0)) }
                 .buttonStyle(.plain)
             StaysNearbySection(building: building, cityName: viewModel.city.name,
                                rentalSearchName: viewModel.city.hotelSearchName, isHighContrast: isHighContrast)
@@ -508,8 +507,8 @@ extension BuildingDetailView {
         }
     }
 
-    /// The Stamp button on its own line, then Want to Visit and Look Around side by side
-    /// (stacked at accessibility text sizes), then Get There.
+    /// The Stamp button on its own line, then one row of compact tiles: Want to Visit,
+    /// Look Around and Get There (stacked at accessibility text sizes).
     var actionButtons: some View {
         let layout = shouldStack
             ? AnyLayout(VStackLayout(spacing: DS.Space.m))
@@ -522,9 +521,9 @@ extension BuildingDetailView {
                 if lookAroundScene != nil {
                     lookAroundButton
                 }
-            }
-            if GetThere.canRoute(to: building) {
-                getThereButton
+                if GetThere.canRoute(to: building) {
+                    getThereButton
+                }
             }
         }
     }
@@ -536,18 +535,17 @@ extension BuildingDetailView {
             HapticManager.shared.trigger(.selection)
             GetThere.open(building)
         } label: {
-            secondaryButtonStyle(
-                Label("Get There", systemImage: "tram.fill"),
-                tint: brandColor
-            )
+            Label("Get There", systemImage: "tram.fill")
         }
-        .buttonStyle(.plain)
+        .buttonStyle(DSActionTileStyle(tint: brandColor, isHighContrast: isHighContrast))
         .accessibilityHint("Opens transit directions to \(building.name) in Apple Maps")
     }
  
     var aboutSection: some View {
         VStack(alignment: .leading, spacing: DS.Space.m) {
             DSSectionHeader("building.historicalSignificance", systemImage: "book.closed", isHighContrast: isHighContrast)
+            // Listen, Ask and Step into the Past as one wrapping row of pills
+            ChipFlowLayout(spacing: DS.Space.s) {
             // Hear the story read aloud, e.g. while standing in front of the building
             ListenButton(building: building, tint: brandColor)
             // Ask it a question; it answers from Stamped's facts, on the device
@@ -556,13 +554,8 @@ extension BuildingDetailView {
                     showingAsk = true
                 } label: {
                     Label("Ask", systemImage: "bubble.left.and.text.bubble.right")
-                        .font(.subheadline.weight(.semibold))
-                        .foregroundStyle(brandColor)
-                        .padding(.horizontal, DS.Space.m)
-                        .padding(.vertical, DS.Space.s)
-                        .background(Capsule().fill(brandColor.opacity(0.12)))
                 }
-                .buttonStyle(.plain)
+                .buttonStyle(DSPillButtonStyle(tint: brandColor, isHighContrast: isHighContrast))
                 .accessibilityHint(Text("Ask this landmark a question"))
             }
             // An old film of the city, or its old photos with the story read aloud
@@ -570,13 +563,9 @@ extension BuildingDetailView {
                 showingPast = true
             } label: {
                 Label("Step into the Past", systemImage: "film")
-                    .font(.subheadline.weight(.semibold))
-                    .foregroundStyle(brandColor)
-                    .padding(.horizontal, DS.Space.m)
-                    .padding(.vertical, DS.Space.s)
-                    .background(Capsule().fill(brandColor.opacity(0.12)))
             }
-            .buttonStyle(.plain)
+            .buttonStyle(DSPillButtonStyle(tint: brandColor, isHighContrast: isHighContrast))
+            }
             Text(building.description)
                 .font(.body)
                 .lineSpacing(DS.Space.xs)
@@ -597,7 +586,7 @@ extension BuildingDetailView {
     var toursButton: some View {
         if !viewModel.city.isCampus {
             ToursButton(landmark: building.name, place: viewModel.city.hotelSearchName) { label in
-                AnyView(secondaryButtonStyle(label, tint: brandColor))
+                AnyView(linkStyle(label))
             }
             .buttonStyle(.plain)
         }
@@ -608,12 +597,7 @@ extension BuildingDetailView {
         // Only show the section if the building has coordinates (so we can search)
         // or if there are legacy hardcoded spots to fall back on.
         if isLoadingVenues {
-            HStack(spacing: DS.Space.s) {
-                ProgressView().scaleEffect(0.7)
-                Text("Finding nearby spots…")
-                    .font(.caption).foregroundColor(.secondary)
-            }
-            .accessibilityElement(children: .combine)
+            DSLoadingRow(text: "Finding nearby spots…")
         } else if !nearbyVenues.isEmpty {
             VStack(alignment: .leading, spacing: DS.Space.m) {
                 DSSectionHeader("building.localFlavors", systemImage: "fork.knife", isHighContrast: isHighContrast)
@@ -650,18 +634,7 @@ extension BuildingDetailView {
 
     /// Food cards: the grouped card surface, a fixed width that grows with the text size.
     private func flavorCardStyle<Content: View>(_ content: Content) -> some View {
-        content
-            .padding(DS.Space.l)
-            .frame(width: flavorCardWidth, alignment: .leading)
-            .frame(minHeight: flavorCardWidth, alignment: .top)
-            .background(
-                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                    .fill(isHighContrast ? Color.clear : DS.Palette.cardBackground)
-            )
-            .overlay(
-                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                    .stroke(Color.primary, lineWidth: isHighContrast ? 2 : 0)
-            )
+        content.dsRailCard(width: flavorCardWidth, isHighContrast: isHighContrast)
     }
 
     /// A nearby restaurant card; a tap opens Apple's place card (photos, hours, ratings) in the app.
@@ -686,7 +659,7 @@ extension BuildingDetailView {
                 // wraps mid-label (a joined "4 min walk · CAFÉ" broke at the dot)
                 VStack(alignment: .leading, spacing: 2) {
                     Text(category.localizedUppercase)
-                        .font(.caption2.monospaced()).fontWeight(.semibold)
+                        .font(.caption2.weight(.semibold))
                     Text(distance)
                         .font(.caption2)
                 }
@@ -740,35 +713,18 @@ extension BuildingDetailView {
             Spacer(minLength: DS.Space.xs)
             
             Text(L.Building.nearby)
-                .font(.caption2.monospaced())
+                .font(.caption2.weight(.semibold))
                 .fontWeight(.semibold)
                 .foregroundColor(isHighContrast ? .primary : .secondary)
                 .textCase(.uppercase)
         })
     }
 
-    /// Fill and outline shared by the secondary buttons under Stamp.
-    private func secondaryButtonStyle<Content: View>(_ content: Content, tint: Color) -> some View {
-        content
-            .font(.subheadline.weight(.semibold))
-            // Two lines at normal sizes; as many as needed at accessibility sizes
-            .lineLimit(dynamicType.isAccessibilitySize ? nil : 2)
-            .minimumScaleFactor(0.8)
-            .multilineTextAlignment(.center)
-            .foregroundColor(isHighContrast ? .primary : tint)
-            .padding(.vertical, DS.Space.m)
-            .padding(.horizontal, DS.Space.s)
-            .frame(maxWidth: .infinity, minHeight: 44)
-            .background(
-                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                    .fill(isHighContrast ? Color.clear : tint.opacity(0.12))
-            )
-            .overlay(
-                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                    .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
-            )
+    /// Outbound links (tours, OpenTable, food tours) in the app's one link-card look.
+    private func linkStyle<Content: View>(_ content: Content) -> some View {
+        content.labelStyle(DSLinkLabelStyle(isHighContrast: isHighContrast))
     }
- 
+
     /// Saves the landmark to the user's "Want to Visit" list for a future trip.
     var wishlistButton: some View {
         let isSaved = progressManager.isWishlisted(building.id)
@@ -776,17 +732,14 @@ extension BuildingDetailView {
             withAnimation(reduceMotion ? nil : .spring()) { progressManager.toggleWishlist(building.id) }
             if hapticsEnabled { HapticManager.shared.trigger(.selection) }
         } label: {
-            secondaryButtonStyle(
-                Label {
-                    Text(isSaved ? LocalizedStringKey("Saved") : LocalizedStringKey("Want to Visit"))
-                } icon: {
-                    Image(systemName: isSaved ? "heart.fill" : "heart")
-                        .contentTransition(.symbolEffect(.replace))
-                },
-                tint: DS.Palette.wishlist
-            )
+            Label {
+                Text(isSaved ? LocalizedStringKey("Saved") : LocalizedStringKey("Want to Visit"))
+            } icon: {
+                Image(systemName: isSaved ? "heart.fill" : "heart")
+                    .contentTransition(.symbolEffect(.replace))
+            }
         }
-        .buttonStyle(.plain)
+        .buttonStyle(DSActionTileStyle(tint: DS.Palette.wishlist, isHighContrast: isHighContrast))
         .accessibilityLabel(isSaved ? Text("Remove from Want to Visit") : Text("Add to Want to Visit"))
     }
 
@@ -826,7 +779,7 @@ extension BuildingDetailView {
             
             VStack(alignment: .leading, spacing: 2) {
                 Text(label)
-                    .font(.caption.monospaced().bold())
+                    .font(.caption.weight(.semibold))
                     .textCase(.uppercase)
                     .foregroundColor(isHighContrast ? .primary : .secondary)
                 if label == L.Building.location {
@@ -958,12 +911,7 @@ extension BuildingDetailView {
             DSSectionHeader("3D Model", systemImage: "rotate.3d", isHighContrast: isHighContrast)
 
             if isCheckingScan {
-                HStack(spacing: DS.Space.s) {
-                    ProgressView().scaleEffect(0.8)
-                    Text("Checking for 3D model…")
-                        .font(.caption).foregroundStyle(.secondary)
-                }
-                .accessibilityElement(children: .combine)
+                DSLoadingRow(text: "Checking for 3D model…")
 
             } else if let record = existingScanRecord {
                 // A scan exists — show View button
@@ -1011,12 +959,9 @@ extension BuildingDetailView {
             HapticManager.shared.trigger(.selection)
             showingLookAround = true
         } label: {
-            secondaryButtonStyle(
-                Label("Look Around", systemImage: "binoculars.fill"),
-                tint: brandColor
-            )
+            Label("Look Around", systemImage: "binoculars.fill")
         }
-        .buttonStyle(.plain)
+        .buttonStyle(DSActionTileStyle(tint: brandColor, isHighContrast: isHighContrast))
         .accessibilityLabel("Look Around — street-level view near \(building.name)")
         .accessibilityHint("Opens Apple Maps Look Around viewer")
     }

@@ -47,11 +47,12 @@ final class PlaceThumbnailTests: XCTestCase {
         XCTAssertEqual(Set(kinds.map(\.symbol)).count, kinds.count)
     }
 
-    /// High contrast drops the colors and uses the text color instead.
-    func testHighContrastUsesPrimary() {
+    /// Every kind uses the brand accent (the symbol tells them apart); high contrast uses
+    /// the text color instead.
+    func testTintIsAccentOrPrimary() {
         XCTAssertEqual(PlaceThumbnailKind.hotel.tint(isHighContrast: true), .primary)
-        XCTAssertEqual(PlaceThumbnailKind.hotel.tint(isHighContrast: false), .indigo)
-        XCTAssertEqual(PlaceThumbnailKind.restaurant.tint(isHighContrast: false), .orange)
+        XCTAssertEqual(PlaceThumbnailKind.hotel.tint(isHighContrast: false), DS.Palette.accent)
+        XCTAssertEqual(PlaceThumbnailKind.restaurant.tint(isHighContrast: false), DS.Palette.accent)
     }
 
     // MARK: - Cache key

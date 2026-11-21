@@ -68,7 +68,8 @@ struct Achievement: Identifiable {
 
 // MARK: - All Achievements
 extension Achievement {
-    static let gold = Color(red: 0.85, green: 0.65, blue: 0.13)
+    /// Badges are brand orange; gold marks the mastery ones (style guide color rules)
+    static let gold = DS.Palette.gold
 
     static let allAchievements: [Achievement] = [
 
@@ -80,27 +81,27 @@ extension Achievement {
         },
         Achievement(id: "on_the_move", title: "On The Move",
                     description: "Visit 10 landmarks",
-                    icon: "figure.walk", color: .green, category: .landmarks) { m, _ in
+                    icon: "figure.walk", color: DS.Palette.accent, category: .landmarks) { m, _ in
             m.visitedIDs.count >= 10
         },
         Achievement(id: "passport_regular", title: "Passport Regular",
                     description: "Visit 50 landmarks",
-                    icon: "star.fill", color: .blue, category: .landmarks) { m, _ in
+                    icon: "star.fill", color: DS.Palette.accent, category: .landmarks) { m, _ in
             m.visitedIDs.count >= 50
         },
         Achievement(id: "century_club", title: "Century Club",
                     description: "Visit 100 landmarks",
-                    icon: "seal.fill", color: .purple, category: .landmarks) { m, _ in
+                    icon: "seal.fill", color: DS.Palette.accent, category: .landmarks) { m, _ in
             m.visitedIDs.count >= 100
         },
         Achievement(id: "night_stamper", title: "Night Stamper",
                     description: "Stamp a landmark between midnight and 5am",
-                    icon: "moon.stars.fill", color: .indigo, category: .landmarks) { m, _ in
+                    icon: "moon.stars.fill", color: DS.Palette.accent, category: .landmarks) { m, _ in
             m.visitDates.values.contains { Calendar.current.component(.hour, from: $0) < 5 }
         },
         Achievement(id: "weekend_wanderer", title: "Weekend Wanderer",
                     description: "Stamp a landmark on a Saturday or Sunday",
-                    icon: "sun.max.fill", color: .orange, category: .landmarks) { m, _ in
+                    icon: "sun.max.fill", color: DS.Palette.accent, category: .landmarks) { m, _ in
             m.visitDates.values.contains {
                 let w = Calendar.current.component(.weekday, from: $0)
                 return w == 1 || w == 7
@@ -110,29 +111,29 @@ extension Achievement {
         // MARK: Cities
         Achievement(id: "first_destination", title: "First Destination",
                     description: "Stamp a landmark in any city",
-                    icon: "mappin.fill", color: .red, category: .cities) { m, cities in
+                    icon: "mappin.fill", color: DS.Palette.accent, category: .cities) { m, cities in
             cities.contains { $0.buildings.contains { m.visitedIDs.contains($0.id) } }
         },
         Achievement(id: "multi_city", title: "Multi-City",
                     description: "Stamp landmarks in 5 different cities",
-                    icon: "map.fill", color: .teal, category: .cities) { m, cities in
+                    icon: "map.fill", color: DS.Palette.accent, category: .cities) { m, cities in
             cities.filter { $0.buildings.contains { m.visitedIDs.contains($0.id) } }.count >= 5
         },
         Achievement(id: "jet_setter", title: "Jet Setter",
                     description: "Stamp landmarks in 15 different cities",
-                    icon: "airplane", color: .adventureOrange, category: .cities) { m, cities in
+                    icon: "airplane", color: DS.Palette.accent, category: .cities) { m, cities in
             cities.filter { $0.buildings.contains { m.visitedIDs.contains($0.id) } }.count >= 15
         },
         Achievement(id: "world_traveler", title: "World Traveler",
                     description: "Stamp landmarks in 30 different cities",
-                    icon: "globe.americas.fill", color: .indigo, category: .cities) { m, cities in
+                    icon: "globe.americas.fill", color: DS.Palette.accent, category: .cities) { m, cities in
             cities.filter { $0.buildings.contains { m.visitedIDs.contains($0.id) } }.count >= 30
         },
 
         // MARK: Mastery
         Achievement(id: "completionist", title: "Completionist",
                     description: "Collect every stamp in a single city",
-                    icon: "checkmark.seal.fill", color: .green, category: .mastery) { m, cities in
+                    icon: "checkmark.seal.fill", color: DS.Palette.accent, category: .mastery) { m, cities in
             cities.contains { m.isCityComplete($0) }
         },
         Achievement(id: "triple_crown", title: "Triple Crown",
@@ -142,33 +143,33 @@ extension Achievement {
         },
         Achievement(id: "city_master", title: "City Master",
                     description: "Fully complete 10 cities",
-                    icon: "rosette", color: .purple, category: .mastery) { m, cities in
+                    icon: "rosette", color: DS.Palette.accent, category: .mastery) { m, cities in
             cities.filter { m.isCityComplete($0) }.count >= 10
         },
 
         // MARK: Continents
         Achievement(id: "bi_continental", title: "Bi-Continental",
                     description: "Stamp landmarks on 2 different continents",
-                    icon: "globe", color: .teal, category: .continents) { m, cities in
+                    icon: "globe", color: DS.Palette.accent, category: .continents) { m, cities in
             Set(cities.filter { $0.buildings.contains { m.visitedIDs.contains($0.id) } }
                 .map { $0.country.continent }).count >= 2
         },
         Achievement(id: "old_world", title: "Old World",
                     description: "Stamp landmarks in both Europe and Asia",
-                    icon: "building.columns.fill", color: .brown, category: .continents) { m, cities in
+                    icon: "building.columns.fill", color: DS.Palette.accent, category: .continents) { m, cities in
             let c = Set(cities.filter { $0.buildings.contains { m.visitedIDs.contains($0.id) } }
                 .map { $0.country.continent })
             return c.contains(.europe) && c.contains(.asia)
         },
         Achievement(id: "world_citizen", title: "World Citizen",
                     description: "Stamp landmarks on 4 different continents",
-                    icon: "globe.europe.africa.fill", color: .blue, category: .continents) { m, cities in
+                    icon: "globe.europe.africa.fill", color: DS.Palette.accent, category: .continents) { m, cities in
             Set(cities.filter { $0.buildings.contains { m.visitedIDs.contains($0.id) } }
                 .map { $0.country.continent }).count >= 4
         },
         Achievement(id: "around_the_world", title: "Around The World",
                     description: "Stamp landmarks on all 6 continents",
-                    icon: "globe.americas.fill", color: .indigo, category: .continents) { m, cities in
+                    icon: "globe.americas.fill", color: DS.Palette.accent, category: .continents) { m, cities in
             let visited = Set(cities.filter { $0.buildings.contains { m.visitedIDs.contains($0.id) } }
                 .map { $0.country.continent })
             return CityLocation.Continent.allCases.allSatisfy { visited.contains($0) }
@@ -183,12 +184,12 @@ extension Achievement {
         // MARK: Landmarks — Extra
         Achievement(id: "early_bird", title: "Early Bird",
                     description: "Stamp a landmark before 8am",
-                    icon: "sunrise.fill", color: .yellow, category: .landmarks) { m, _ in
+                    icon: "sunrise.fill", color: DS.Palette.accent, category: .landmarks) { m, _ in
             m.visitDates.values.contains { Calendar.current.component(.hour, from: $0) < 8 }
         },
         Achievement(id: "frequent_flyer", title: "Frequent Flyer",
                     description: "Stamp 5 landmarks in a single day",
-                    icon: "airplane.departure", color: .cyan, category: .landmarks) { m, _ in
+                    icon: "airplane.departure", color: DS.Palette.accent, category: .landmarks) { m, _ in
             let grouped = Dictionary(grouping: m.visitDates.values) {
                 Calendar.current.startOfDay(for: $0)
             }
@@ -196,12 +197,12 @@ extension Achievement {
         },
         Achievement(id: "seasoned_traveler", title: "Seasoned Traveler",
                     description: "Stamp landmarks across 3 different calendar months",
-                    icon: "calendar", color: .mint, category: .landmarks) { m, _ in
+                    icon: "calendar", color: DS.Palette.accent, category: .landmarks) { m, _ in
             Set(m.visitDates.values.map { Calendar.current.component(.month, from: $0) }).count >= 3
         },
         Achievement(id: "new_year_stamp", title: "New Year's Stamp",
                     description: "Stamp a landmark on January 1st",
-                    icon: "party.popper.fill", color: .pink, category: .landmarks) { m, _ in
+                    icon: "party.popper.fill", color: DS.Palette.accent, category: .landmarks) { m, _ in
             m.visitDates.values.contains {
                 let cal = Calendar.current
                 return cal.component(.month, from: $0) == 1 && cal.component(.day, from: $0) == 1
@@ -209,7 +210,7 @@ extension Achievement {
         },
         Achievement(id: "birthday_stamp", title: "Birthday Stamp",
                     description: "Stamp a landmark on your birthday",
-                    icon: "gift.fill", color: .pink, category: .landmarks) { m, _ in
+                    icon: "gift.fill", color: DS.Palette.accent, category: .landmarks) { m, _ in
             let ts = UserDefaults.standard.double(forKey: "birthdayTimestamp")
             guard ts > 0 else { return false }
             let bday = Date(timeIntervalSince1970: ts)
@@ -224,12 +225,12 @@ extension Achievement {
         // MARK: Cities — Extra
         Achievement(id: "home_turf", title: "Home Turf",
                     description: "Fully complete any US city",
-                    icon: "house.fill", color: .blue, category: .cities) { m, cities in
+                    icon: "house.fill", color: DS.Palette.accent, category: .cities) { m, cities in
             cities.filter { $0.country == .unitedStates }.contains { m.isCityComplete($0) }
         },
         Achievement(id: "island_hopper", title: "Island Hopper",
                     description: "Stamp landmarks in Honolulu, Bali, and Zanzibar",
-                    icon: "beach.umbrella.fill", color: .teal, category: .cities) { m, _ in
+                    icon: "beach.umbrella.fill", color: DS.Palette.accent, category: .cities) { m, _ in
             let islands: [CityLocation.City] = [.honolulu, .bali, .zanzibar]
             return islands.allSatisfy { city in
                 city.buildings.contains { m.visitedIDs.contains($0.id) }
@@ -239,7 +240,7 @@ extension Achievement {
         // MARK: Mastery — Extra
         Achievement(id: "halfway_there", title: "Halfway There",
                     description: "Reach 50% completion in any city",
-                    icon: "chart.pie.fill", color: .orange, category: .mastery) { m, cities in
+                    icon: "chart.pie.fill", color: DS.Palette.accent, category: .mastery) { m, cities in
             cities.contains { city in
                 let total = city.buildings.count
                 guard total > 0 else { return false }
@@ -254,19 +255,19 @@ extension Achievement {
         },
         Achievement(id: "legend", title: "Legend",
                     description: "Collect 500 total stamps",
-                    icon: "star.circle.fill", color: .purple, category: .mastery) { m, _ in
+                    icon: "star.circle.fill", color: DS.Palette.accent, category: .mastery) { m, _ in
             m.visitedIDs.count >= 500
         },
 
         // MARK: Campuses
         Achievement(id: "campus_tour", title: "Campus Tour",
                     description: "Stamp a building on any campus",
-                    icon: "graduationcap.fill", color: .indigo, category: .campuses) { m, campuses in
+                    icon: "graduationcap.fill", color: DS.Palette.accent, category: .campuses) { m, campuses in
             campuses.contains { $0.buildings.contains { m.visitedIDs.contains($0.id) } }
         },
         Achievement(id: "campus_hopper", title: "Campus Hopper",
                     description: "Stamp buildings on 5 different campuses",
-                    icon: "books.vertical.fill", color: .teal, category: .campuses) { m, campuses in
+                    icon: "books.vertical.fill", color: DS.Palette.accent, category: .campuses) { m, campuses in
             campuses.filter { $0.buildings.contains { m.visitedIDs.contains($0.id) } }.count >= 5
         },
         Achievement(id: "valedictorian", title: "Valedictorian",
@@ -276,14 +277,14 @@ extension Achievement {
         },
         Achievement(id: "honor_roll", title: "Honor Roll",
                     description: "Fully complete 5 campuses",
-                    icon: "rosette", color: .purple, category: .campuses) { m, campuses in
+                    icon: "rosette", color: DS.Palette.accent, category: .campuses) { m, campuses in
             campuses.filter { m.isCityComplete($0) }.count >= 5
         },
 
         // MARK: Campus traditions
         Achievement(id: "first_tradition", title: "New Tradition",
                     description: "Do your first campus tradition",
-                    icon: "bell.fill", color: .orange, category: .campuses) { m, _ in
+                    icon: "bell.fill", color: DS.Palette.accent, category: .campuses) { m, _ in
             !m.completedTraditionIDs.isEmpty
         },
         Achievement(id: "traditions_keeper", title: "Traditions Keeper",
@@ -295,7 +296,7 @@ extension Achievement {
         },
         Achievement(id: "tradition_collector", title: "Tradition Collector",
                     description: "Do 25 campus traditions",
-                    icon: "sparkles", color: .pink, category: .campuses) { m, _ in
+                    icon: "sparkles", color: DS.Palette.accent, category: .campuses) { m, _ in
             m.completedTraditionIDs.count >= 25
         },
     ] + conferenceAchievements
@@ -306,7 +307,7 @@ extension Achievement {
         .map { conference in
             Achievement(id: "conference_\(conference.rawValue)", title: "%@ Road Trip",
                         description: "Stamp a building on every %@ campus",
-                        icon: "flag.checkered", color: .orange, category: .campuses,
+                        icon: "flag.checkered", color: DS.Palette.accent, category: .campuses,
                         formatArgument: conference.name) { m, campuses in
                 let members = campuses.filter { $0.conference == conference }
                 return !members.isEmpty && members.allSatisfy { campus in

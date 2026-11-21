@@ -128,7 +128,7 @@ struct ToursButton: View {
 
     var body: some View {
         if let url = builder.url(landmark: landmark, place: place) {
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: DS.Space.s) {
                 Button {
                     browserLink = BrowserLink(url: url)
                 } label: {
@@ -149,11 +149,10 @@ struct ToursButton: View {
                         browserLink = BrowserLink(url: viatorURL)
                     } label: {
                         Label(NSLocalizedString("More tours on Viator", comment: "Landmark page: link under Tours & Tickets that opens Viator's tours for this landmark"),
-                              systemImage: "arrow.up.right.square")
-                            .font(.subheadline.weight(.semibold))
+                              systemImage: "binoculars")
+                            .labelStyle(DSLinkLabelStyle())
                     }
                     .buttonStyle(.plain)
-                    .foregroundStyle(DS.Palette.accent)
                     .accessibilityHint(NSLocalizedString("Opens Viator. Stamped! doesn't handle bookings or payments.", comment: "Viator link, VoiceOver hint"))
                 }
 

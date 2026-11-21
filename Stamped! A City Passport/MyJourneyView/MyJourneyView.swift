@@ -103,7 +103,7 @@ struct MyJourneyView: View {
             }
             .background(DS.Palette.pageBackground)
             .navigationTitle("My Journey")
-            .navigationBarTitleDisplayMode(.large)
+            .navigationBarTitleDisplayMode(.inline)
             #if !os(macOS)
             // On the Mac this is its own window, closed with the window's close button
             .toolbar {

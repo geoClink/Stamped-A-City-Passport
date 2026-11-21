@@ -411,10 +411,10 @@ struct CityImmersiveView: View {
             HStack(spacing: 8) {
                 if visitedIDs.contains(building.id) {
                     Image(systemName: "checkmark.seal.fill")
-                        .foregroundStyle(.orange).font(.title3)
+                        .foregroundStyle(DS.Palette.accent).font(.title3)
                         .accessibilityLabel("Stamped")
                 }
-                Text(building.name).font(.title3.bold()).lineLimit(2)
+                Text(building.name).font(DS.Typography.display(.title3)).lineLimit(2)
             }
             if let subtitle = building.styleAndYear {
                 Text(subtitle)

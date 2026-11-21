@@ -107,7 +107,7 @@ struct CityVolumeView: View {
                         .font(.subheadline.bold())
                 }
                 .buttonStyle(.bordered)
-                .tint(.orange)
+                .tint(DS.Palette.accent)
                 .disabled(isOpeningSpace)
                 .accessibilityHint("Opens the city around you at room scale")
 
@@ -256,7 +256,7 @@ struct CityVolumeView: View {
             HStack(spacing: 8) {
                 if visitedIDs.contains(building.id) {
                     Image(systemName: "checkmark.seal.fill")
-                        .foregroundStyle(.orange)
+                        .foregroundStyle(DS.Palette.accent)
                         .accessibilityLabel("Stamped")
                 }
                 Text(building.name)

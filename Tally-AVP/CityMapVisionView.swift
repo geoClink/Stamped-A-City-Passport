@@ -203,7 +203,7 @@ struct CityMapVisionView: View {
                 id: building.id, title: building.name,
                 coordinate: CLLocationCoordinate2D(latitude: building.latitude!, longitude: building.longitude!),
                 systemImage: visited ? "checkmark" : "building.columns",
-                color: visited ? .orange : .gray,
+                color: visited ? UIColor(DS.Palette.accent) : .gray,
                 photoURL: oldPhotos[building.id])
         }
         let placePins = store.customPlaces(in: cityName).map { place in
@@ -265,7 +265,7 @@ struct CityMapVisionView: View {
                         .font(.system(size: 14, weight: .bold))
                         .foregroundStyle(.white)
                         .frame(width: 34, height: 34)
-                        .background(Color.pink, in: Circle())
+                        .background(DS.Palette.wishlist, in: Circle())
                         .shadow(radius: 4)
                         .onTapGesture { flyTo(place.coordinate) }
                         .hoverEffect()
@@ -453,7 +453,7 @@ private struct LandmarkPin: View {
     var body: some View {
         ZStack {
             Circle()
-                .fill(isVisited ? Color.orange : Color.gray)
+                .fill(isVisited ? DS.Palette.accent : Color.gray)
                 .frame(width: isSelected ? 44 : 34, height: isSelected ? 44 : 34)
                 .shadow(radius: 4)
             Image(systemName: isVisited ? "checkmark" : "building.columns")
@@ -466,7 +466,7 @@ private struct LandmarkPin: View {
                     .font(.system(size: 10))
                     .foregroundStyle(.white)
                     .padding(4)
-                    .background(Color.pink, in: Circle())
+                    .background(DS.Palette.wishlist, in: Circle())
                     .offset(x: 6, y: -6)
             }
         }
@@ -508,7 +508,7 @@ struct LandmarkCard: View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(alignment: .top) {
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(building.name).font(.title2.bold())
+                    Text(building.name).font(DS.Typography.display(.title2))
                         .accessibilityAddTraits(.isHeader)
                     if let subtitle = building.styleAndYear {
                         Text(subtitle)
@@ -518,7 +518,7 @@ struct LandmarkCard: View {
                     if isVisited {
                         Label("Stamped", systemImage: "checkmark.seal.fill")
                             .font(.callout.bold())
-                            .foregroundStyle(.orange)
+                            .foregroundStyle(DS.Palette.accent)
                     }
                 }
                 Spacer()
@@ -581,7 +581,7 @@ struct LandmarkCard: View {
                 let title: LocalizedStringKey = isPlaying ? "Stop" : "Listen"
                 Label(title, systemImage: isPlaying ? "stop.fill" : "speaker.wave.2.fill")
             }
-            .tint(.orange)
+            .tint(DS.Palette.accent)
             PanoramaButton(building: building)
             // Ask the building a question; it answers from Stamped's facts
             Button { showingAsk = true } label: {
@@ -598,7 +598,7 @@ struct LandmarkCard: View {
                 let title: LocalizedStringKey = isWishlisted ? "Saved" : "Want to Go"
                 Label(title, systemImage: isWishlisted ? "heart.fill" : "heart")
             }
-            .tint(.pink)
+            .tint(DS.Palette.wishlist)
         }
     }
 

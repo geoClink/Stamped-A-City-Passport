@@ -90,7 +90,7 @@ struct WorldMapView: View {
                     Button("Done") { dismiss() }
                         .closesWithCommandW()
                         .fontWeight(.semibold)
-                        .foregroundStyle(Color.adventureOrange)
+                        .foregroundStyle(DS.Palette.accent)
                 }
             }
             #endif
@@ -121,7 +121,7 @@ struct WorldMapView: View {
                 ToolbarItem(placement: .topBarLeading) {
                     Button("Done") { cityDetailToShow = nil }
                         .fontWeight(.semibold)
-                        .foregroundStyle(Color.adventureOrange)
+                        .foregroundStyle(DS.Palette.accent)
                 }
             }
             #endif
@@ -207,18 +207,20 @@ struct WorldMapView: View {
             calloutHeaderLayout {
                 ZStack {
                     Circle()
-                        .fill(visited ? Color.adventureOrange.opacity(0.15) : Color(UIColor.tertiarySystemFill))
+                        .fill(visited ? DS.Palette.accent.opacity(0.15) : DS.Palette.insetFill)
                         .frame(width: 44, height: 44)
-                    Image(systemName: visited ? "checkmark.seal.fill" : "mappin.circle.fill")
-                        .font(.system(size: 20, weight: .semibold))
-                        .foregroundStyle(visited ? Color.adventureOrange : Color.secondary)
+                    // Empty stamp slot until visited, like the landmark rows
+                    Image(systemName: visited ? "checkmark.seal.fill" : "seal")
+                        .font(.title3.weight(.semibold))
+                        .foregroundStyle(visited ? DS.Palette.accent : Color.secondary)
                 }
                 // The stamp count below already says whether the city is visited
                 .accessibilityHidden(true)
 
                 VStack(alignment: .leading, spacing: 3) {
+                    // Serif for destination names, as on the city page
                     Text(city.name)
-                        .font(.headline)
+                        .font(DS.Typography.display(.headline))
                         .foregroundStyle(.primary)
                     Text(city.country.localizedName)
                         .font(.caption)
@@ -232,8 +234,8 @@ struct WorldMapView: View {
 
                 VStack(alignment: dynamicTypeSize.isAccessibilitySize ? .leading : .trailing, spacing: 2) {
                     Text("\(stamped)/\(total)")
-                        .font(.title3.bold())
-                        .foregroundStyle(visited ? Color.adventureOrange : Color.secondary)
+                        .font(.title3.monospacedDigit().bold())
+                        .foregroundStyle(visited ? DS.Palette.accent : Color.secondary)
                     Text("stamps")
                         .font(.caption2)
                         .foregroundStyle(.secondary)
@@ -243,11 +245,11 @@ struct WorldMapView: View {
                 .accessibilityLabel(Text("\(stamped) of \(total)") + Text(verbatim: " ") + Text("stamps"))
             }
             .accessibilityElement(children: .combine)
-            .padding(.horizontal, 20)
-            .padding(.top, 14)
-            .padding(.bottom, 10)
+            .padding(.horizontal, DS.Space.l)
+            .padding(.top, DS.Space.m)
+            .padding(.bottom, DS.Space.m)
 
-            Divider().padding(.horizontal, 20)
+            Divider().padding(.horizontal, DS.Space.l)
 
             Button {
                 HapticManager.shared.trigger(.selection)
@@ -268,13 +270,18 @@ struct WorldMapView: View {
                         .font(.caption.weight(.semibold))
                         .accessibilityHidden(true)
                 }
-                .foregroundStyle(Color.adventureOrange)
-                .padding(.horizontal, 20)
-                .padding(.vertical, 12)
+                .foregroundStyle(DS.Palette.accent)
+                .padding(.horizontal, DS.Space.l)
+                .padding(.vertical, DS.Space.m)
+                .frame(minHeight: 44)
+                .contentShape(Rectangle())
             }
         }
-        .background(Color(UIColor.secondarySystemBackground))
-        .cornerRadius(16)
+        .background(
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .fill(DS.Palette.cardBackground)
+        )
+        // Floating over the map is the one place a card keeps a shadow (style guide)
         .shadow(color: .black.opacity(0.12), radius: 12, x: 0, y: 4)
         .macReadableWidth(560)
         .padding(.horizontal, 16)
@@ -300,7 +307,7 @@ struct WorldMapView: View {
             HStack(alignment: .lastTextBaseline, spacing: 4) {
                 Text("\(visited)")
                     .font(.title2.bold())
-                    .foregroundStyle(Color.adventureOrange)
+                    .foregroundStyle(DS.Palette.accent)
                 Text("/ \(total)")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
@@ -335,8 +342,8 @@ struct WorldMapView: View {
                 pinLegend(visited: false, label: "Not yet")
             }
         }
-        .padding(.horizontal, 20)
-        .padding(.vertical, 14)
+        .padding(.horizontal, DS.Space.l)
+        .padding(.vertical, DS.Space.m)
         .background(.ultraThinMaterial)
         .safeAreaPadding(.bottom)
     }
@@ -345,7 +352,7 @@ struct WorldMapView: View {
         HStack(spacing: 6) {
             ZStack {
                 Circle()
-                    .fill(visited ? Color.adventureOrange : Color.white)
+                    .fill(visited ? DS.Palette.accent : Color.white)
                     .frame(width: 12, height: 12)
                     .overlay(
                         Circle().stroke(
@@ -374,7 +381,7 @@ private struct CityMapPin: View {
             if visited {
                 // Solid orange with white border — pops on any map background
                 Circle()
-                    .fill(Color.adventureOrange)
+                    .fill(DS.Palette.accent)
                     .frame(width: isSelected ? 20 : 14, height: isSelected ? 20 : 14)
                     .overlay(
                         Circle().stroke(Color.white, lineWidth: 2.5)
@@ -393,7 +400,7 @@ private struct CityMapPin: View {
 
             if isSelected {
                 Circle()
-                    .stroke(visited ? Color.adventureOrange : Color(UIColor.systemGray2), lineWidth: 2)
+                    .stroke(visited ? DS.Palette.accent : Color(UIColor.systemGray2), lineWidth: 2)
                     .frame(width: visited ? 30 : 24, height: visited ? 30 : 24)
                     .opacity(0.5)
             }

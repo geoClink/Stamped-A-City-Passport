@@ -92,7 +92,7 @@ private struct AccessibilityFactRow: View {
                 .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 2) {
                 Text(label)
-                    .font(.caption.monospaced().bold())
+                    .font(.caption.weight(.semibold))
                     .textCase(.uppercase)
                     .foregroundStyle(isHighContrast ? Color.primary : Color.secondary)
                 Text(value)

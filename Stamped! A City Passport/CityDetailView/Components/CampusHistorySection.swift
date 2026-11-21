@@ -67,7 +67,7 @@ struct CampusHistorySection: View {
                         .font(.caption)
                         .accessibilityHidden(true)
                     Text("From Wikipedia")
-                        .font(.caption2.monospaced().weight(.semibold))
+                        .font(.caption2.weight(.semibold))
                 }
                 .foregroundColor(isHighContrast ? .primary : .secondary)
 

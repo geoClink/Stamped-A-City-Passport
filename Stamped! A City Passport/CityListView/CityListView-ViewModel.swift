@@ -209,7 +209,7 @@ extension CityListView {
         // One gap everywhere on home: between these blocks and between the list sections
         VStack(spacing: DS.Space.m) {
             // The welcome banner stays until the first stamp of any kind, city or campus
-            if viewModel.masteredCount + viewModel.masteredCampusCount == 0 {
+            if CityViewModel.showsWelcomeBanner(stampCount: viewModel.stampCount) {
                 ZeroProgressHeader(isHighContrast: isHighContrast)
             } else {
                 ProgressHeaderView(viewModel: viewModel, isHighContrast: isHighContrast) {
@@ -459,9 +459,9 @@ struct CountryHeaderLabel: View {
             if isMastered {
                 Text(congratsMessage)
                     // A text style, so it grows with Dynamic Type (was a fixed 10 pt)
-                    .font(.system(.caption2, design: .rounded, weight: .black))
+                    .font(DS.Typography.label)
                     .foregroundColor(isHighContrast ? .primary : .adventureOrange)
-                    .tracking(1)
+                    .tracking(1.2)
             }
             
             HStack(alignment: .center, spacing: 8) {
@@ -540,12 +540,13 @@ struct ZeroProgressHeader: View {
             .accessibilityHidden(true)
 
             VStack(alignment: .leading, spacing: 3) {
+                // Same eyebrow voice as the section headers (DSSectionHeader)
                 Text("YOUR ODYSSEY AWAITS")
-                    .font(.system(.caption2, design: .monospaced))
-                    .fontWeight(.bold)
-                    .tracking(2)
+                    .font(DS.Typography.label)
+                    .tracking(1.2)
                     .foregroundColor(accessibleSecondary)
-                Text("Unlock your first badge")
+                // "Stamp", not "badge": achievements can already be unlocked before the first stamp
+                Text("Collect your first stamp")
                     .font(.headline)
                     .foregroundColor(.primary)
                 Text("Pick a city or campus below, then stamp every landmark.")
@@ -592,9 +593,8 @@ struct ProgressHeaderView: View {
                 HStack(alignment: .firstTextBaseline) {
                     VStack(alignment: .leading, spacing: 4) {
                         Text("WORLD EXPLORER")
-                            .font(.system(.caption2, design: .rounded))
-                            .fontWeight(.heavy)
-                            .tracking(1.5)
+                            .font(DS.Typography.label)
+                            .tracking(1.2)
                             .foregroundColor(isHighContrast ? .primary : Color.adventureOrange)
                         
                         Text("\(viewModel.masteredCount) of \(viewModel.totalCities) Cities Mastered")
@@ -648,12 +648,21 @@ struct ProgressHeaderView: View {
                                     .font(.caption2.bold())
                                     .foregroundColor(isHighContrast ? .primary : .adventureOrange)
                             }
-                            Spacer()
+                            // A Spacer would stretch vertically once the counts stack
+                            if !dynamicTypeSize.isAccessibilitySize { Spacer() }
+                            // Landmarks stamped so far, so early progress shows before a whole city is done
+                            if viewModel.stampCount > 0 {
+                                (Text("Total Stamps") + Text(verbatim: " \(viewModel.stampCount)"))
+                                    .font(.caption2.bold())
+                                    .foregroundColor(isHighContrast ? .primary : .adventureOrange)
+                            }
                             Image(systemName: "flag.checkered")
                                 .font(.caption2)
                                 .foregroundColor(.secondary.opacity(0.5))
                                 .accessibilityHidden(true)
                         }
+                        // Left-aligned when the counts stack at accessibility sizes
+                        .frame(maxWidth: .infinity, alignment: .leading)
                     } else {
                         Label("Global Master Achieved!", systemImage: "checkmark.seal.fill")
                             .font(.caption2.bold())

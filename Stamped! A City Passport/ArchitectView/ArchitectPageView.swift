@@ -182,7 +182,7 @@ struct ArchitectPageView: View {
                         .font(.caption)
                         .accessibilityHidden(true)
                     Text(L.Architect.fromWikipedia)
-                        .font(.caption2.monospaced().weight(.semibold))
+                        .font(.caption2.weight(.semibold))
                 }
                 .foregroundColor(isHighContrast ? .primary : .secondary)
                 Text(summary.extract)

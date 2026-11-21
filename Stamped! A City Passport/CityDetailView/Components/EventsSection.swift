@@ -37,12 +37,8 @@ struct EventsSection: View {
             // Unified card container
             VStack(alignment: .leading, spacing: 0) {
                 if service.isLoading {
-                    HStack(spacing: DS.Space.s) {
-                        ProgressView().scaleEffect(0.7)
-                        Text("Finding events…")
-                            .font(.caption).foregroundColor(.secondary)
-                    }
-                    .padding(DS.Space.l)
+                    DSLoadingRow(text: "Finding events…")
+                        .padding(DS.Space.l)
                 } else if service.events.isEmpty {
                     HStack(spacing: DS.Space.m) {
                         Image(systemName: "ticket.fill")
@@ -318,17 +314,11 @@ private struct EventRow: View {
 // MARK: - Category color
 
 private extension TicketmasterEvent.EventCategory {
-    /// Event categories keep their own semantic colors; high contrast drops the color coding.
+    /// One accent for every category: the symbol tells them apart, and the style guide keeps
+    /// orange as the only accent (the old blue/purple/teal chips competed with the content).
+    /// High contrast drops the color.
     func tint(brandColor: Color, isHighContrast: Bool) -> Color {
-        if isHighContrast { return .primary }
-        switch self {
-        case .music:  return .purple
-        case .sports: return .blue
-        case .arts:   return .teal  // pink is reserved for Want to Visit
-        case .film:   return .indigo
-        case .family: return .green
-        default:      return brandColor
-        }
+        isHighContrast ? .primary : brandColor
     }
 }
 

@@ -53,23 +53,23 @@ struct HistoryTimelineSection: View {
         VStack(alignment: .leading, spacing: DS.Space.m) {
             DSSectionHeader("Timeline", systemImage: "clock.arrow.circlepath", isHighContrast: isHighContrast)
 
-            if !heritage.isEmpty {
-                HeritageBadges(heritage: heritage, isHighContrast: isHighContrast)
-            }
-
-            VStack(alignment: .leading, spacing: 0) {
-                ForEach(events) { event in
-                    TimelineRow(event: event, isLast: event.id == events.last?.id, isHighContrast: isHighContrast)
+            // Listings and dated events read as one placard
+            VStack(alignment: .leading, spacing: DS.Space.l) {
+                if !heritage.isEmpty {
+                    HeritageBadges(heritage: heritage, isHighContrast: isHighContrast)
+                }
+                if !events.isEmpty {
+                    VStack(alignment: .leading, spacing: 0) {
+                        ForEach(events) { event in
+                            TimelineRow(event: event, isLast: event.id == events.last?.id, isHighContrast: isHighContrast)
+                        }
+                    }
                 }
             }
+            .dsCard(isHighContrast: isHighContrast)
 
             if searchingPapers {
-                HStack(spacing: DS.Space.s) {
-                    ProgressView()
-                    Text("Searching old newspapers…")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                }
+                DSLoadingRow(text: "Searching old newspapers…")
             } else if !clippings.isEmpty {
                 papersSection
             }
@@ -106,16 +106,10 @@ private struct TimelineRow: View {
     let isLast: Bool
     var isHighContrast = false
 
-    @ScaledMetric(relativeTo: .subheadline) private var yearWidth: CGFloat = 92
-
     var body: some View {
+        // Dot and line on the left, then the date over the event, so long dates
+        // ("Dec 24, 1895") never wrap in a narrow column
         HStack(alignment: .top, spacing: DS.Space.m) {
-            Text(dateText)
-                .font(.subheadline.bold().monospacedDigit())
-                .foregroundStyle(isHighContrast ? Color.primary : DS.Palette.accent)
-                .frame(width: yearWidth, alignment: .trailing)
-                .fixedSize(horizontal: false, vertical: true)
-
             // The dot and the line down to the next one
             VStack(spacing: 0) {
                 Image(systemName: icon)
@@ -132,11 +126,16 @@ private struct TimelineRow: View {
             }
             .accessibilityHidden(true)
 
-            Text(title)
-                .font(.subheadline)
-                .fixedSize(horizontal: false, vertical: true)
-                .padding(.top, 2)
-                .padding(.bottom, isLast ? 0 : DS.Space.m)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(dateText)
+                    .font(DS.Typography.data)
+                    .foregroundStyle(isHighContrast ? Color.primary : DS.Palette.accent)
+                Text(title)
+                    .font(.subheadline)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            .padding(.top, 2)
+            .padding(.bottom, isLast ? 0 : DS.Space.l)
             Spacer(minLength: 0)
         }
         .accessibilityElement(children: .combine)

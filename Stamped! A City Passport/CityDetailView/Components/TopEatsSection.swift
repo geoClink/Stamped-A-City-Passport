@@ -21,13 +21,8 @@ struct TopEatsSection: View {
 
             VStack(spacing: 0) {
                 if service.isLoading {
-                    HStack(spacing: DS.Space.s) {
-                        ProgressView().scaleEffect(0.7)
-                        Text("Finding nearby spots…")
-                            .font(.caption).foregroundColor(.secondary)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(DS.Space.l)
+                    DSLoadingRow(text: "Finding nearby spots…")
+                        .padding(DS.Space.l)
                 } else if service.venues.isEmpty {
                     Group {
                         if service.failed {

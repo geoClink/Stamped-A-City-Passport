@@ -446,6 +446,8 @@
 "%d Cities Stamped" = "%d 都市にスタンプ";
 "%d of %d campuses" = "%d / %d キャンパス";
 "CAMPUSES" = "キャンパス";
+"All Campuses" = "すべてのキャンパス";
+"CITIES" = "都市";
 "Stamp every landmark on a campus to add its stamp here, in school colors." = "キャンパスのすべてのランドマークにスタンプを押すと、スクールカラーのスタンプがここに加わります。";
 "+ %d campuses" = "+ %d キャンパス";
 "+ 1 campus" = "+ 1 キャンパス";
@@ -586,6 +588,7 @@
 "My Passport" = "マイパスポート";
 "YOUR ODYSSEY AWAITS" = "冒険があなたを待っている";
 "Unlock your first badge" = "最初のバッジを獲得しよう";
+"Collect your first stamp" = "最初のスタンプを集めよう";
 "Unlock Your Collection" = "コレクションを解放しよう";
 "Every city mastered is a stamp earned." = "都市を制覇するたびにスタンプを獲得。";
 "PASSPORT STAMPED" = "パスポートにスタンプ";
@@ -1276,3 +1279,6 @@
 
 /* Home filter menu: pick which continent's cities to show */
 "Continent" = "大陸";
+"Breakfast" = "朝食";
+"Lunch" = "昼食";
+"Dinner" = "夕食";

@@ -44,7 +44,7 @@ struct CampusTraditionsSection: View {
                     }
                     .frame(width: 18, height: 18)
                     Text("\(doneCount)/\(traditions.count)")
-                        .font(.caption.monospaced().bold())
+                        .font(DS.Typography.data)
                         .foregroundColor(accent)
                 }
                 .accessibilityElement(children: .ignore)

@@ -38,8 +38,33 @@ enum DS {
         static let wishlist = Color.pink
         /// Mastery and full completion only
         static let gold = Color(red: 0.85, green: 0.65, blue: 0.13)
+        #if os(visionOS)
+        /// On visionOS cards sit on window glass: a light lift reads as a platter, where the
+        /// grouped gray drew opaque dark boxes
+        static let cardBackground = Color.white.opacity(0.08)
+        #else
         static let cardBackground = Color(UIColor.secondarySystemGroupedBackground)
+        #endif
         static let pageBackground = Color(UIColor.systemGroupedBackground)
+        /// Boxes inside a card (a timeline tile, a stat cell): a faint tint, never a second card color
+        static let insetFill = Color.primary.opacity(0.05)
+    }
+
+    /// Five text roles beyond the system styles. Screens use these instead of picking sizes.
+    /// All scale with Dynamic Type.
+    enum Typography {
+        /// City and landmark names, passport headings: the serif display face
+        static func display(_ style: Font.TextStyle = .title) -> Font {
+            .system(style, design: .serif).weight(.bold)
+        }
+        /// Card titles
+        static let cardTitle = Font.headline
+        /// Tracked uppercase labels (section headers, eyebrow tags). Use with `.tracking(1.2)`.
+        static let label = Font.footnote.weight(.bold)
+        /// Numbers, dates, progress, dossier metadata: the only monospaced role
+        static let data = Font.caption.monospaced().weight(.bold)
+        /// Source notes and fine print under a section
+        static let fineprint = Font.caption2
     }
 }
 
@@ -150,7 +175,7 @@ struct DSSectionHeader<Trailing: View>: View {
             Spacer(minLength: DS.Space.s)
             trailing()
         }
-        .font(.footnote.weight(.bold))
+        .font(DS.Typography.label)
         .textCase(.uppercase)
         .accessibilityElement(children: .combine)
         .accessibilityAddTraits(.isHeader)
@@ -184,6 +209,265 @@ struct DSChip: View {
         .padding(.vertical, 6)
         .foregroundStyle(tint)
         .background(Capsule().fill(tint.opacity(0.12)))
+    }
+}
+
+// MARK: - Buttons
+
+/// The one filled button a screen gets: Stamp, Start Quiz, Save for Offline.
+struct DSPrimaryButtonStyle: ButtonStyle {
+    var tint: Color = DS.Palette.accent
+    var isHighContrast = false
+
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .font(.headline)
+            .lineLimit(2)
+            .minimumScaleFactor(0.8)
+            .multilineTextAlignment(.center)
+            .padding(.vertical, DS.Space.l)
+            .padding(.horizontal, DS.Space.m)
+            .frame(maxWidth: .infinity, minHeight: 44)
+            .foregroundStyle(isHighContrast ? Color.primary : Color.white)
+            .background(
+                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                    .fill(isHighContrast ? Color.clear : tint)
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                    .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
+            )
+            .opacity(configuration.isPressed ? 0.8 : 1)
+    }
+}
+
+/// A compact action in a row of two to four under the primary button: icon over a short label
+/// on the card surface. Only the icon carries the tint, so a row of them reads as one group.
+struct DSActionTileStyle: ButtonStyle {
+    var tint: Color = DS.Palette.accent
+    var isHighContrast = false
+
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .labelStyle(DSTileLabelStyle(tint: isHighContrast ? .primary : tint))
+            .frame(maxWidth: .infinity, minHeight: 64)
+            .padding(.vertical, DS.Space.m)
+            .padding(.horizontal, DS.Space.xs)
+            .background(
+                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                    .fill(isHighContrast ? Color.clear : DS.Palette.cardBackground)
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                    .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
+            )
+            .contentShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+            .opacity(configuration.isPressed ? 0.7 : 1)
+    }
+}
+
+private struct DSTileLabelStyle: LabelStyle {
+    let tint: Color
+    func makeBody(configuration: Configuration) -> some View {
+        VStack(spacing: DS.Space.xs) {
+            configuration.icon
+                .font(.title3)
+                .foregroundStyle(tint)
+                .accessibilityHidden(true)
+            configuration.title
+                .font(.caption.weight(.semibold))
+                .foregroundStyle(.primary)
+                .lineLimit(2)
+                .minimumScaleFactor(0.8)
+                .multilineTextAlignment(.center)
+        }
+    }
+}
+
+/// A small tinted capsule for in-line extras next to content: Listen, Ask, Step into the Past.
+struct DSPillButtonStyle: ButtonStyle {
+    var tint: Color = DS.Palette.accent
+    var isHighContrast = false
+
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .font(.subheadline.weight(.semibold))
+            .foregroundStyle(isHighContrast ? Color.primary : tint)
+            .padding(.horizontal, DS.Space.m)
+            .padding(.vertical, DS.Space.s)
+            .frame(minHeight: 36)
+            .background(Capsule().fill(isHighContrast ? Color.clear : tint.opacity(0.12)))
+            .overlay(Capsule().stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2))
+            .contentShape(Capsule())
+            .opacity(configuration.isPressed ? 0.7 : 1)
+    }
+}
+
+// MARK: - Link row
+
+/// One row of a links card: tours, restaurants, hotels, the address. Every outbound link in
+/// the app uses this, stacked inside a `dsCard(padding: 0)` with `DSRowDivider`s between rows.
+struct DSLinkRow: View {
+    let title: Text
+    var subtitle: Text? = nil
+    let systemImage: String
+    /// arrow.up.right for another app or site, chevron.right for a page in Stamped
+    var trailingSymbol = "arrow.up.right"
+    var isHighContrast = false
+
+    var body: some View {
+        HStack(spacing: DS.Space.m) {
+            Image(systemName: systemImage)
+                .font(.body.weight(.semibold))
+                .foregroundStyle(isHighContrast ? Color.primary : DS.Palette.accent)
+                .frame(width: 28)
+                .accessibilityHidden(true)
+            VStack(alignment: .leading, spacing: 2) {
+                title
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(.primary)
+                if let subtitle {
+                    subtitle
+                        .font(.caption)
+                        .foregroundStyle(isHighContrast ? Color.primary : Color.secondary)
+                }
+            }
+            .multilineTextAlignment(.leading)
+            Spacer(minLength: DS.Space.s)
+            Image(systemName: trailingSymbol)
+                .font(.footnote.weight(.semibold))
+                .foregroundStyle(isHighContrast ? Color.primary : Color.secondary)
+                .accessibilityHidden(true)
+        }
+        .padding(.horizontal, DS.Space.l)
+        .padding(.vertical, DS.Space.m)
+        .frame(maxWidth: .infinity, minHeight: 52, alignment: .leading)
+        .contentShape(Rectangle())
+    }
+}
+
+/// Every outbound link (tours, tables, hotels, rentals) as one look: a single-row card with the
+/// icon in brand orange and an arrow showing it leaves the page. Put it on the link's Label, or
+/// on a container to style the Labels of link buttons inside it.
+struct DSLinkLabelStyle: LabelStyle {
+    var isHighContrast = false
+
+    func makeBody(configuration: Configuration) -> some View {
+        HStack(spacing: DS.Space.m) {
+            configuration.icon
+                .font(.body.weight(.semibold))
+                .foregroundStyle(isHighContrast ? Color.primary : DS.Palette.accent)
+                .frame(width: 28)
+                .accessibilityHidden(true)
+            configuration.title
+                .font(.subheadline.weight(.semibold))
+                .foregroundStyle(.primary)
+                .multilineTextAlignment(.leading)
+            Spacer(minLength: DS.Space.s)
+            Image(systemName: "arrow.up.right")
+                .font(.footnote.weight(.semibold))
+                .foregroundStyle(isHighContrast ? Color.primary : Color.secondary)
+                .accessibilityHidden(true)
+        }
+        .padding(.horizontal, DS.Space.l)
+        .padding(.vertical, DS.Space.m)
+        .frame(maxWidth: .infinity, minHeight: 52, alignment: .leading)
+        .background(
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .fill(isHighContrast ? Color.clear : DS.Palette.cardBackground)
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
+        )
+        .contentShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+    }
+}
+
+/// The hairline between rows in a links card, inset to line up with the row titles.
+struct DSRowDivider: View {
+    var body: some View {
+        Divider().padding(.leading, DS.Space.l + 28 + DS.Space.m)
+    }
+}
+
+// MARK: - Placeholder
+
+/// What shows where a photo hasn't loaded or doesn't exist: the brand tint and one symbol.
+/// Used for landmark thumbnails, rail cards and hero images so missing pictures look alike.
+struct DSPlaceholder: View {
+    var systemImage = "building.columns"
+    var isHighContrast = false
+    var cornerRadius: CGFloat = DS.Radius.small
+
+    var body: some View {
+        RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+            .fill(isHighContrast ? Color.primary.opacity(0.08) : DS.Palette.accent.opacity(0.12))
+            .overlay {
+                Image(systemName: systemImage)
+                    .font(.title3.weight(.semibold))
+                    .foregroundStyle(isHighContrast ? Color.primary : DS.Palette.accent.opacity(0.8))
+            }
+            .accessibilityHidden(true)
+    }
+}
+
+// MARK: - Loading row
+
+/// The one "still fetching" line: a small spinner and a short caption, e.g. "Finding nearby spots…".
+struct DSLoadingRow: View {
+    let text: LocalizedStringKey
+
+    var body: some View {
+        HStack(spacing: DS.Space.s) {
+            ProgressView().controlSize(.small)
+            Text(text)
+                .font(.caption)
+                .foregroundStyle(.secondary)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .accessibilityElement(children: .combine)
+    }
+}
+
+// MARK: - Rail card
+
+/// A card in a sideways-scrolling row (Local Flavors, Stays Near Here): fixed width that grows
+/// with text size, the card surface, content pinned to the top.
+struct DSRailCard: ViewModifier {
+    let width: CGFloat
+    var isHighContrast = false
+
+    func body(content: Content) -> some View {
+        content
+            .padding(DS.Space.m)
+            .frame(width: width, alignment: .leading)
+            .frame(minHeight: width, alignment: .top)
+            .background(
+                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                    .fill(isHighContrast ? Color.clear : DS.Palette.cardBackground)
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                    .stroke(Color.primary, lineWidth: isHighContrast ? 2 : 0)
+            )
+            .contentShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+    }
+}
+
+extension View {
+    func dsRailCard(width: CGFloat, isHighContrast: Bool = false) -> some View {
+        modifier(DSRailCard(width: width, isHighContrast: isHighContrast))
+    }
+
+    /// The standard title for a screen shown in a sheet: inline, so every sheet's header lines up
+    /// with its Done button. Top-level pages pushed in a stack keep their own large titles.
+    func dsSheetTitle(_ title: LocalizedStringKey) -> some View {
+        #if os(iOS)
+        navigationTitle(title).navigationBarTitleDisplayMode(.inline)
+        #else
+        navigationTitle(title)
+        #endif
     }
 }
 

@@ -55,17 +55,17 @@ struct VisionQuizView: View {
                 Spacer()
                 Label("\(quiz.score)", systemImage: "star.fill")
                     .font(.headline)
-                    .foregroundStyle(.orange)
+                    .foregroundStyle(DS.Palette.accent)
                     // The star alone doesn't say it's the score
                     .accessibilityLabel(Text("Score: \(quiz.score)"))
             }
             ProgressView(value: Double(quiz.questionNumber - 1), total: Double(QuizRound.length))
-                .tint(.orange)
+                .tint(DS.Palette.accent)
                 .accessibilityHidden(true)   // "Question 3 of 10" above says the same
 
             // A clue card about the building (hides whatever is being asked)
             VStack(alignment: .leading, spacing: 8) {
-                if quiz.type != .name { Text(building.name).font(.title2.bold()) }
+                if quiz.type != .name { Text(building.name).font(DS.Typography.display(.title2)) }
                 Text(building.description)
                     .font(.body)
                     .foregroundStyle(.secondary)
@@ -128,7 +128,7 @@ struct VisionQuizView: View {
         VStack(spacing: 20) {
             Image(systemName: quiz.score >= 8 ? "rosette" : "checkmark.seal")
                 .font(.system(size: 80))
-                .foregroundStyle(.orange)
+                .foregroundStyle(DS.Palette.accent)
                 .accessibilityHidden(true)   // decoration; the score is read below
             Text("\(quiz.score) out of \(QuizRound.length)")
                 .font(.extraLargeTitle)
@@ -137,7 +137,7 @@ struct VisionQuizView: View {
                 .foregroundStyle(.secondary)
             Button("Play Again") { quiz = QuizRound(buildings: buildings) }
                 .buttonStyle(.borderedProminent)
-                .tint(.orange)
+                .tint(DS.Palette.accent)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }

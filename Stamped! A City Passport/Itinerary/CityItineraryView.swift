@@ -581,7 +581,7 @@ struct TimelineBar: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             Text("TIMELINE")
-                .font(.system(size: labelSize, weight: .semibold)).foregroundColor(.secondary).kerning(1.0)
+                .font(DS.Typography.label).foregroundColor(.secondary).tracking(1.2)
                 .accessibilityAddTraits(.isHeader)
 
             // Dot track — dots are visual indicators; tapping still works where spacing allows
@@ -639,7 +639,7 @@ struct TimelineBar: View {
                         }
                     } label: {
                         Image(systemName: "chevron.left")
-                            .font(.system(size: 11, weight: .semibold))
+                            .font(.caption.weight(.semibold))
                             .foregroundColor(selectedIndex == 0 ? .secondary.opacity(0.4) : brandColor)
                             .frame(width: 28, height: 28)
                             .background(Circle().fill(Color.primary.opacity(0.06)))
@@ -673,7 +673,7 @@ struct TimelineBar: View {
                         }
                     } label: {
                         Image(systemName: "chevron.right")
-                            .font(.system(size: 11, weight: .semibold))
+                            .font(.caption.weight(.semibold))
                             .foregroundColor(selectedIndex == sorted.count - 1 ? .secondary.opacity(0.4) : brandColor)
                             .frame(width: 28, height: 28)
                             .background(Circle().fill(Color.primary.opacity(0.06)))
@@ -701,25 +701,27 @@ struct LiveMealsRow: View {
 
     var body: some View {
         if isLoading && dayMeals == nil {
-            HStack(spacing: 8) {
-                ProgressView().scaleEffect(0.6)
-                Text("Finding nearby restaurants...")
-                    .font(.caption).foregroundColor(.secondary)
-            }
-            .padding(.horizontal, 16).padding(.vertical, 12)
+            DSLoadingRow(text: "Finding nearby restaurants...")
+                .padding(.horizontal, DS.Space.l).padding(.vertical, DS.Space.m)
         } else if let meals = dayMeals {
-            VStack(alignment: .leading, spacing: 0) {
-                Divider().padding(.leading, 16)
-                VStack(alignment: .leading, spacing: 10) {
-                    Label("Eat & Drink", systemImage: "fork.knife.circle.fill")
-                        .font(.caption).fontWeight(.semibold).foregroundColor(brandColor)
-                        .accessibilityAddTraits(.isHeader)
-                    MealTypeRow(label: "Breakfast", meals: meals.breakfast, brandColor: brandColor)
-                    MealTypeRow(label: "Lunch", meals: meals.lunch, brandColor: brandColor)
-                    MealTypeRow(label: "Dinner", meals: meals.dinner, brandColor: brandColor)
-                }
-                .padding(.horizontal, 16).padding(.vertical, 12)
+            // Meals sit in their own inset box, so they read apart from the day's stops
+            VStack(alignment: .leading, spacing: DS.Space.m) {
+                Label("Eat & Drink", systemImage: "fork.knife")
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundColor(brandColor)
+                    .accessibilityAddTraits(.isHeader)
+                MealTypeRow(label: "Breakfast", meals: meals.breakfast, brandColor: brandColor)
+                MealTypeRow(label: "Lunch", meals: meals.lunch, brandColor: brandColor)
+                MealTypeRow(label: "Dinner", meals: meals.dinner, brandColor: brandColor)
             }
+            .padding(DS.Space.m)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(
+                RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
+                    .fill(DS.Palette.insetFill)
+            )
+            .padding(.horizontal, DS.Space.l)
+            .padding(.vertical, DS.Space.m)
         }
     }
 }
@@ -728,33 +730,33 @@ private struct MealTypeRow: View {
     let label: String
     let meals: [MealRecommendation]
     let brandColor: Color
-    /// The small 10 pt meal names still grow with the text size
-    @ScaledMetric(relativeTo: .caption2) private var labelSize: CGFloat = 10
-
     var body: some View {
         if !meals.isEmpty {
-            VStack(alignment: .leading, spacing: 4) {
-                Text(label)
-                    .font(.system(size: labelSize, weight: .semibold))
+            VStack(alignment: .leading, spacing: DS.Space.xs) {
+                // Meal headings in the app's tracked label voice
+                Text(LocalizedStringKey(label))
+                    .font(DS.Typography.label)
+                    .textCase(.uppercase)
+                    .tracking(1.2)
                     .foregroundColor(.secondary)
-                    .kerning(0.5)
                 ForEach(meals.prefix(2)) { meal in
                     if let url = meal.mapsURL {
                         Link(destination: url) {
-                            HStack(spacing: 6) {
-                                Image(systemName: "mappin.circle.fill")
-                                    .font(.system(size: 11)).foregroundColor(brandColor.opacity(0.7))
-                                    .accessibilityHidden(true)
-                                Text(meal.name)
-                                    .font(.caption).foregroundColor(.primary)
-                                Text("·").font(.caption).foregroundColor(.secondary).accessibilityHidden(true)
-                                Text(meal.category)
-                                    .font(.caption2).foregroundColor(.secondary)
-                                Spacer()
+                            HStack(spacing: DS.Space.s) {
+                                VStack(alignment: .leading, spacing: 1) {
+                                    Text(meal.name)
+                                        .font(.subheadline).foregroundColor(.primary)
+                                        .multilineTextAlignment(.leading)
+                                    Text(meal.category)
+                                        .font(.caption).foregroundColor(.secondary)
+                                }
+                                Spacer(minLength: DS.Space.s)
                                 Image(systemName: "arrow.up.right")
-                                    .font(.system(size: 9)).foregroundColor(.secondary)
+                                    .font(.footnote.weight(.semibold)).foregroundColor(.secondary)
                                     .accessibilityHidden(true)
                             }
+                            .frame(minHeight: 44)
+                            .contentShape(Rectangle())
                         }
                     }
                 }

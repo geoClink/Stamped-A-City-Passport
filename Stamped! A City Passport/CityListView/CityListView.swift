@@ -427,7 +427,7 @@ struct CityListView: View {
                 Spacer()
                 if !collegeList.isEmpty {
                     Text("\(collegeList.campuses.count)")
-                        .font(.caption.monospaced().bold())
+                        .font(DS.Typography.data)
                         .foregroundColor(.secondary)
                 }
                 Image(systemName: "chevron.right")
