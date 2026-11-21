@@ -15,6 +15,8 @@ class CityViewModel: ObservableObject {
     @Published var masteredCount: Int = 0
     /// Campuses with every landmark stamped; they're passport stamps too, counted apart from cities
     @Published var masteredCampusCount: Int = 0
+    /// Landmarks stamped anywhere, finished city or not (the same count First Stamp uses)
+    @Published var stampCount: Int = 0
     @Published var totalCities: Int = 0
     @Published var searchText: String = ""
     
@@ -44,6 +46,14 @@ class CityViewModel: ObservableObject {
     func refreshData() {
         self.masteredCount = cityCases.filter { isCityCompleted($0) }.count
         self.masteredCampusCount = CityLocation.City.campusCases.filter { isCityCompleted($0) }.count
+        self.stampCount = progressManager.visitedIDs.count
+    }
+
+    /// The home welcome banner ("Collect your first stamp") is for people with no stamps at all.
+    /// It used to wait for a whole finished city, so it kept asking for a first stamp after the
+    /// user had several (and First Stamp was already earned).
+    static func showsWelcomeBanner(stampCount: Int) -> Bool {
+        stampCount == 0
     }
     
     func isCityCompleted(_ city: CityLocation.City) -> Bool {

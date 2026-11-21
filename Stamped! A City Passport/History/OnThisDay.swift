@@ -116,17 +116,16 @@ struct OnThisDayCard: View {
                 // Nothing to show yet: a zero-height view just to run the lookup
                 Color.clear.frame(height: 0)
             } else {
-                VStack(alignment: .leading, spacing: 10) {
-                    Label("On This Day", systemImage: "calendar")
-                        .font(.headline)
+                VStack(alignment: .leading, spacing: DS.Space.m) {
+                    DSSectionHeader("On This Day", systemImage: "calendar")
                     ForEach(events) { event in
                         // A tap gesture, not a Button: every Button in a List row fires on any tap in the row
                         VStack(alignment: .leading, spacing: 2) {
                             Text(verbatim: "\(event.year) · \(event.landmarkName ?? event.cityName)")
-                                .font(.caption.bold())
-                                .foregroundStyle(.orange)
+                                .font(.footnote.weight(.semibold))
+                                .foregroundStyle(DS.Palette.accent)
                             Text(verbatim: event.text)
-                                .font(.caption)
+                                .font(.footnote)
                                 .lineLimit(3)
                                 .multilineTextAlignment(.leading)
                         }
@@ -142,11 +141,10 @@ struct OnThisDayCard: View {
                         .accessibilityHint(Text("Opens \(event.cityName)"))
                     }
                     Text("From Wikipedia (CC BY-SA)")
-                        .font(.caption2)
+                        .font(DS.Typography.fineprint)
                         .foregroundStyle(.secondary)
                 }
-                .padding(14)
-                .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 16))
+                .dsCard()
                 #if os(visionOS)
                 .padding(.horizontal, 12)
                 #endif

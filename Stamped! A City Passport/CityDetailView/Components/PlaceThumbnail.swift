@@ -140,20 +140,9 @@ enum PlaceThumbnailKind: Equatable {
         }
     }
 
-    /// System colors, so each one adjusts itself for light and dark mode.
-    var color: Color {
-        switch self {
-        case .restaurant: .orange
-        case .cafe:       .brown
-        case .bakery:     .pink
-        case .bar:        .purple
-        case .brewery:    .yellow
-        case .winery:     .red
-        case .market:     .green
-        case .hotel:      .indigo
-        case .other:      .gray
-        }
-    }
+    /// One brand tint for every kind: the symbol tells them apart, and the style guide keeps
+    /// orange as the only accent (a rainbow of category colors read as clutter in the rails).
+    var color: Color { DS.Palette.accent }
 
     func tint(isHighContrast: Bool) -> Color {
         isHighContrast ? .primary : color

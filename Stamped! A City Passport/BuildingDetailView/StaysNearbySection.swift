@@ -63,13 +63,14 @@ struct StaysNearbySection: View {
                         .padding(.horizontal, 2)
                     }
                     // Hotels around here on a second site, so people can compare
-                    BookingButton(search: HotelSearch(destination: cityName, coordinate: coordinate))
-                        .font(.subheadline.weight(.semibold))
-                        .tint(isHighContrast ? .primary : DS.Palette.accent)
-                    // Whole homes nearby, for families and groups
-                    VrboButton(search: HotelSearch(destination: rentalSearchName ?? cityName, coordinate: coordinate))
-                        .font(.subheadline.weight(.semibold))
-                        .tint(isHighContrast ? .primary : DS.Palette.accent)
+                    // Same link-card look as Tours & Tickets and OpenTable
+                    VStack(spacing: DS.Space.s) {
+                        BookingButton(search: HotelSearch(destination: cityName, coordinate: coordinate))
+                        // Whole homes nearby, for families and groups
+                        VrboButton(search: HotelSearch(destination: rentalSearchName ?? cityName, coordinate: coordinate))
+                    }
+                    .buttonStyle(.plain)
+                    .labelStyle(DSLinkLabelStyle(isHighContrast: isHighContrast))
                     VStack(alignment: .leading, spacing: 2) {
                         Text(NSLocalizedString("Hotel data from Apple Maps.", comment: "Building page, Stays Near Here: data source note under the hotel cards"))
                             .font(.caption2)
@@ -126,18 +127,7 @@ struct StaysNearbySection: View {
                         .foregroundColor(isHighContrast ? .primary : .secondary)
                 }
             }
-            .padding(DS.Space.l)
-            .frame(width: cardWidth, alignment: .leading)
-            .frame(minHeight: cardWidth, alignment: .top)
-            .background(
-                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                    .fill(isHighContrast ? Color.clear : DS.Palette.cardBackground)
-            )
-            .overlay(
-                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                    .stroke(Color.primary, lineWidth: isHighContrast ? 2 : 0)
-            )
-            .contentShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+            .dsRailCard(width: cardWidth, isHighContrast: isHighContrast)
         }
         .buttonStyle(.plain)
         .accessibilityLabel("\(hotel.name), \(distance)")

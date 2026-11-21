@@ -446,6 +446,8 @@
 "%d Cities Stamped" = "%d ciudades selladas";
 "%d of %d campuses" = "%d de %d campus";
 "CAMPUSES" = "CAMPUS";
+"All Campuses" = "Todos los campus";
+"CITIES" = "CIUDADES";
 "Stamp every landmark on a campus to add its stamp here, in school colors." = "Sella todos los monumentos de un campus para añadir aquí su sello con los colores de la universidad.";
 "+ %d campuses" = "+ %d campus";
 "+ 1 campus" = "+ 1 campus";
@@ -586,6 +588,7 @@
 "My Passport" = "Mi pasaporte";
 "YOUR ODYSSEY AWAITS" = "TU ODISEA TE ESPERA";
 "Unlock your first badge" = "Desbloquea tu primera insignia";
+"Collect your first stamp" = "Consigue tu primer sello";
 "Unlock Your Collection" = "Desbloquea tu colección";
 "Every city mastered is a stamp earned." = "Cada ciudad dominada es un sello ganado.";
 "PASSPORT STAMPED" = "PASAPORTE SELLADO";
@@ -1276,3 +1279,6 @@
 
 /* Home filter menu: pick which continent's cities to show */
 "Continent" = "Continente";
+"Breakfast" = "Desayuno";
+"Lunch" = "Almuerzo";
+"Dinner" = "Cena";

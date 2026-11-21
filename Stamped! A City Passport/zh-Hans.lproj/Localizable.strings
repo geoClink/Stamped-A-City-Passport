@@ -446,6 +446,8 @@
 "%d Cities Stamped" = "已盖章 %d 座城市";
 "%d of %d campuses" = "%d/%d 个校园";
 "CAMPUSES" = "校园";
+"All Campuses" = "所有校园";
+"CITIES" = "城市";
 "Stamp every landmark on a campus to add its stamp here, in school colors." = "为校园的每个地标盖章，即可在这里添加该校校色的印章。";
 "+ %d campuses" = "+ %d 个校园";
 "+ 1 campus" = "+ 1 个校园";
@@ -586,6 +588,7 @@
 "My Passport" = "我的护照";
 "YOUR ODYSSEY AWAITS" = "你的旅程正在等待";
 "Unlock your first badge" = "解锁你的第一枚徽章";
+"Collect your first stamp" = "收集你的第一枚印章";
 "Unlock Your Collection" = "解锁你的收藏";
 "Every city mastered is a stamp earned." = "每征服一座城市，就获得一枚印章。";
 "PASSPORT STAMPED" = "护照已盖章";
@@ -1276,3 +1279,6 @@
 
 /* Home filter menu: pick which continent's cities to show */
 "Continent" = "大洲";
+"Breakfast" = "早餐";
+"Lunch" = "午餐";
+"Dinner" = "晚餐";

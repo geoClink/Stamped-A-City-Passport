@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import CoreLocation
 @testable import Stamped_
 
 @MainActor
@@ -91,5 +92,44 @@ final class PolishTests: XCTestCase {
             original: WikiImage(source: original, width: 900),
             thumbnail: WikiImage(source: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Small.jpg/330px-Small.jpg", width: 330))
         XCTAssertEqual(url?.absoluteString, original)
+    }
+}
+
+/// The home welcome banner ("Collect your first stamp") disappears with the first stamp,
+/// not only after a whole city is finished.
+@MainActor
+final class WelcomeBannerTests: XCTestCase {
+    func testBannerShowsOnlyWithNoStamps() {
+        XCTAssertTrue(CityViewModel.showsWelcomeBanner(stampCount: 0))
+        XCTAssertFalse(CityViewModel.showsWelcomeBanner(stampCount: 1))
+        XCTAssertFalse(CityViewModel.showsWelcomeBanner(stampCount: 4))
+    }
+}
+
+/// Plan tab meals: only places near the stop, and saved meals only reused for the same stops.
+@MainActor
+final class MealRecommendationTests: XCTestCase {
+    private let groveArcade = CLLocation(latitude: 35.5958, longitude: -82.5559)  // Asheville
+
+    func testNearbyPlaceIsKept() {
+        // About 300 m away in downtown Asheville
+        XCTAssertTrue(MealRecommendationService.isNearby(CLLocationCoordinate2D(latitude: 35.5935, longitude: -82.5535), to: groveArcade))
+    }
+
+    func testPlaceInAnotherCityIsDropped() {
+        // Brush Park, Detroit: what Apple Maps returned when the phone was in Michigan
+        XCTAssertFalse(MealRecommendationService.isNearby(CLLocationCoordinate2D(latitude: 42.3436, longitude: -83.0510), to: groveArcade))
+    }
+
+    private func stop(_ id: String, day: Int) -> PlannedStop {
+        PlannedStop(id: id, buildingID: id, distanceMeters: 0, travelMinsFromPrev: 0,
+                    arrivalOffsetMins: 0, dayNumber: day, requiresTransit: false, visitDurationMins: 30)
+    }
+
+    func testSignatureChangesWhenTheStopsChange() {
+        let twoDays = [[stop("a", day: 1), stop("b", day: 1)], [stop("c", day: 2)]]
+        let threeDays = [[stop("a", day: 1)], [stop("b", day: 2)], [stop("c", day: 3)]]
+        XCTAssertEqual(MealRecommendationService.signature(of: twoDays), "a,b|c")
+        XCTAssertNotEqual(MealRecommendationService.signature(of: twoDays), MealRecommendationService.signature(of: threeDays))
     }
 }

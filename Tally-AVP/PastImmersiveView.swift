@@ -103,7 +103,7 @@ struct PastImmersiveView: View {
     private var panel: some View {
         VStack(spacing: 10) {
             if let place {
-                Text(place.building.name).font(.title2.bold())
+                Text(place.building.name).font(DS.Typography.display(.title2))
             }
             switch content {
             case .film(let film, _):

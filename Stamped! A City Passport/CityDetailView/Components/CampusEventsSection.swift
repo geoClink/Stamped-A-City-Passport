@@ -37,13 +37,8 @@ struct CampusEventsSection: View {
 
                 VStack(alignment: .leading, spacing: 0) {
                     if service.isLoading {
-                        HStack(spacing: DS.Space.s) {
-                            ProgressView().scaleEffect(0.7)
-                            // LocalizedStringKey on one side, so the pair is translated rather than shown as a String
-                            Text(campus.isCampus ? LocalizedStringKey("Finding campus events…") : "Finding local events…")
-                                .font(.caption).foregroundColor(.secondary)
-                        }
-                        .padding(DS.Space.l)
+                        DSLoadingRow(text: campus.isCampus ? LocalizedStringKey("Finding campus events…") : "Finding local events…")
+                            .padding(DS.Space.l)
                     } else {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(alignment: .top, spacing: DS.Space.m) {

@@ -309,16 +309,17 @@ class GlobalProgressManager: ObservableObject {
         let total = buildings.count
         let visitedCount = buildings.filter { visitedIDs.contains($0.id) }.count
         
-        guard total > 0 else { return ("Tourist", .blue, 0.0, 0) }
+        guard total > 0 else { return ("Tourist", DS.Palette.accent, 0.0, 0) }
         let percentage = Double(visitedCount) / Double(total)
         
         switch percentage {
-        case 0..<0.25: return ("Tourist", .blue, percentage, visitedCount)
-        case 0.25..<0.50: return ("Explorer", .green, percentage, visitedCount)
-        case 0.50..<0.75: return ("Urban Insider", .purple, percentage, visitedCount)
-        case 0.75..<1.0: return ("Local Legend", Color.adventureOrange, percentage, visitedCount)
-        case 1.0: return ("Master Collector", Color(red: 0.85, green: 0.65, blue: 0.13), 1.0, visitedCount)
-        default: return ("Tourist", .blue, 0, visitedCount)
+        // Every rank uses the brand orange; gold is kept for full mastery (style guide color rules)
+        case 0..<0.25: return ("Tourist", DS.Palette.accent, percentage, visitedCount)
+        case 0.25..<0.50: return ("Explorer", DS.Palette.accent, percentage, visitedCount)
+        case 0.50..<0.75: return ("Urban Insider", DS.Palette.accent, percentage, visitedCount)
+        case 0.75..<1.0: return ("Local Legend", DS.Palette.accent, percentage, visitedCount)
+        case 1.0: return ("Master Collector", DS.Palette.gold, 1.0, visitedCount)
+        default: return ("Tourist", DS.Palette.accent, 0, visitedCount)
         }
     }
     

@@ -84,7 +84,7 @@ struct CityListVisionView: View {
                         }
                     }
             }
-            .tint(.orange)
+            .tint(DS.Palette.accent)
             .frame(minWidth: 560, minHeight: 640)
         }
         .onAppear {
@@ -125,7 +125,7 @@ private struct CityRow: View {
                 Spacer()
                 if total > 0 && visitedCount == total {
                     // The count below already says every landmark is stamped
-                    Image(systemName: "checkmark.seal.fill").foregroundStyle(.orange)
+                    Image(systemName: "checkmark.seal.fill").foregroundStyle(DS.Palette.accent)
                         .accessibilityHidden(true)
                 }
             }
@@ -135,7 +135,7 @@ private struct CityRow: View {
                 // VoiceOver would read the slash; say it in words instead
                 .accessibilityLabel(Text("\(visitedCount) of \(total) landmarks stamped"))
             ProgressView(value: total == 0 ? 0 : Double(visitedCount) / Double(total))
-                .tint(.orange)
+                .tint(DS.Palette.accent)
                 .accessibilityHidden(true)   // same number as the text above
         }
         .padding(.vertical, 4)

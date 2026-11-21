@@ -130,7 +130,7 @@ struct GameDaySection: View {
             VStack(alignment: .leading, spacing: DS.Space.xs) {
                 if let sport = display.sport {
                     Text(sport.localizedUppercase)
-                        .font(.caption2.monospaced().weight(.semibold))
+                        .font(.caption2.weight(.semibold))
                         .foregroundColor(isHighContrast ? .primary : accent)
                 }
                 Text(display.title)

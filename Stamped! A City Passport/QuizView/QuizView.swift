@@ -411,7 +411,6 @@ private extension QuizView {
             RoundedRectangle(cornerRadius: 24)
                 .fill(isHighContrast ? Color(UIColor.systemBackground) : Color(UIColor.secondarySystemGroupedBackground))
         )
-        .shadow(color: Color.black.opacity(isHighContrast ? 0 : 0.05), radius: 15, y: 5)
     }
 
     func dossierRow(label: LocalizedStringKey, value: String, icon: String, hide: Bool) -> some View {

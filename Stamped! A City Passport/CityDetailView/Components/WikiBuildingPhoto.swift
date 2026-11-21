@@ -67,11 +67,12 @@ struct WikiBuildingPhoto: View {
 
     // Shown when Wikipedia has no photo and no asset exists in the catalog
     private var assetFallback: some View {
+        // The app's one missing-photo look (DSPlaceholder colors): brand tint and a building
         VStack(spacing: DS.Space.s) {
-            Image(systemName: "photo.slash")
+            Image(systemName: "building.columns")
                 // Small thumbnails (like the Chronology strip) get a smaller icon and no caption
-                .font(.system(size: min(fallbackIconSize, height * 0.4)))
-                .foregroundStyle(.secondary)
+                .font(.system(size: min(fallbackIconSize, height * 0.4), weight: .semibold))
+                .foregroundStyle(DS.Palette.accent.opacity(0.8))
             if height >= 100 {
                 Text("No photo available")
                     .font(.caption)
@@ -80,7 +81,7 @@ struct WikiBuildingPhoto: View {
         }
         .frame(maxWidth: .infinity)
         .frame(height: height)
-        .background(DS.Palette.cardBackground)
+        .background(DS.Palette.accent.opacity(0.12))
         .accessibilityElement(children: .combine)
         .accessibilityLabel(accessibilityLabelText == nil ? String(localized: "No photo available for \(building.name)") : String(localized: "No photo available"))
         .onAppear { onUnavailable?() }
@@ -120,7 +121,7 @@ struct WikiDescriptionCard: View {
                             .font(.caption)
                             .accessibilityHidden(true)
                         Text("From Wikipedia")
-                            .font(.caption2.monospaced().weight(.semibold))
+                            .font(.caption2.weight(.semibold))
                     }
                     .foregroundColor(isHighContrast ? .primary : .secondary)
                     Text(text)

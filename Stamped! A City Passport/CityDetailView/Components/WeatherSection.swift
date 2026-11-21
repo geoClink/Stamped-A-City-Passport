@@ -23,12 +23,8 @@ struct WeatherSection: View {
             // One card that holds current conditions + forecast strip (or the loading/failed state)
             VStack(alignment: .leading, spacing: 0) {
                 if weather.isLoading {
-                    HStack(spacing: DS.Space.s) {
-                        ProgressView().scaleEffect(0.7)
-                        Text("Fetching weather…")
-                            .font(.caption).foregroundColor(.secondary)
-                    }
-                    .padding(DS.Space.l)
+                    DSLoadingRow(text: "Fetching weather…")
+                        .padding(DS.Space.l)
                 } else if weather.showsSetupError {
                     // Debug builds only — a missing WeatherKit capability is the usual cause
                     ContentUnavailableView(

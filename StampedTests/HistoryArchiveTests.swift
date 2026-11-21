@@ -355,4 +355,17 @@ final class OldFilmTests: XCTestCase {
         XCTAssertTrue(photos.allSatisfy { $0.credit == "Michigan State University Archives" && $0.largeURL.isFileURL })
         XCTAssertFalse(photos.contains(where: OldPhotoSources.needsNoCredit))
     }
+
+    func testEveryApprovedDetroitPublicLibraryPhotoIsBundledWithItsCredit() throws {
+        let registry = try JSONSerialization.jsonObject(with: Data(contentsOf: XCTUnwrap(
+            Bundle.main.url(forResource: "BuildingRegistry", withExtension: "json")))) as? [String: Any]
+        let detroit = try XCTUnwrap(registry?["Detroit"] as? [[String: Any]])
+        let photos = detroit.compactMap { $0["id"] as? String }.flatMap { CampusArchivePhotos.photos(forBuildingID: $0) }
+        XCTAssertEqual(CampusArchivePhotos.detroitBuildingCount, 22)
+        XCTAssertEqual(photos.count, 22, "each of the 22 approved photos is in the app and matches a landmark")
+        XCTAssertTrue(photos.allSatisfy { $0.credit.hasSuffix(", Detroit Public Library") && $0.largeURL.isFileURL })
+        XCTAssertTrue(photos.allSatisfy { $0.itemURL.host == "digitalcollections.detroitpubliclibrary.org" })
+        XCTAssertEqual(photos.filter { $0.credit == CampusArchivePhotos.dplAutomotiveCredit }.count, 1)
+        XCTAssertFalse(photos.contains(where: OldPhotoSources.needsNoCredit))
+    }
 }

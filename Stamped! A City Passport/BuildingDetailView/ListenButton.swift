@@ -31,13 +31,8 @@ struct ListenButton: View {
                 Label(playing ? NSLocalizedString("Stop", comment: "Audio story: stops reading the landmark's story aloud")
                               : NSLocalizedString("Listen", comment: "Audio story: reads the landmark's story aloud"),
                       systemImage: playing ? "stop.fill" : "speaker.wave.2.fill")
-                    .font(.subheadline.weight(.semibold))
-                    .foregroundColor(tint)
-                    .padding(.horizontal, DS.Space.m)
-                    .padding(.vertical, DS.Space.s)
-                    .background(Capsule().fill(tint.opacity(0.12)))
             }
-            .buttonStyle(.plain)
+            .buttonStyle(DSPillButtonStyle(tint: tint))
             .accessibilityHint(playing ? "" : NSLocalizedString("Reads this landmark's story aloud in English", comment: "Audio story: VoiceOver hint for Listen"))
 
             if showVoiceTip && !voiceTipDismissed {

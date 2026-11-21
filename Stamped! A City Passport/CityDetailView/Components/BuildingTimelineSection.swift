@@ -113,7 +113,7 @@ private struct TimelineCell: View {
             RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
                 .fill(isVisited
                     ? (isHighContrast ? Color.primary.opacity(0.08) : DS.Palette.accent.opacity(0.07))
-                    : Color(UIColor.tertiarySystemGroupedBackground))
+                    : DS.Palette.insetFill)
         )
         .overlay(
             RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)

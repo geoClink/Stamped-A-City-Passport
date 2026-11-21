@@ -179,6 +179,28 @@
 				Resources/MSUArchives/msu_A006972_80.jpg,
 				Resources/MSUArchives/msu_A009333.jpg,
 				Resources/MSUArchives/msu_A009957.jpg,
+				Resources/DPLArchives/dpl_DPA3368.jpg,
+				Resources/DPLArchives/dpl_EB02f192.jpg,
+				Resources/DPLArchives/dpl_EB02f233.jpg,
+				Resources/DPLArchives/dpl_MR0530.jpg,
+				Resources/DPLArchives/dpl_bh000509.jpg,
+				Resources/DPLArchives/dpl_bh007290.jpg,
+				Resources/DPLArchives/dpl_bh007538.jpg,
+				Resources/DPLArchives/dpl_bh007544.jpg,
+				Resources/DPLArchives/dpl_bh009274.jpg,
+				Resources/DPLArchives/dpl_bh009902.jpg,
+				Resources/DPLArchives/dpl_bh009956.jpg,
+				Resources/DPLArchives/dpl_bh009960.jpg,
+				Resources/DPLArchives/dpl_bh009962.jpg,
+				Resources/DPLArchives/dpl_bh010122.jpg,
+				Resources/DPLArchives/dpl_bh010452.jpg,
+				Resources/DPLArchives/dpl_bh010868.jpg,
+				Resources/DPLArchives/dpl_bh017707.jpg,
+				Resources/DPLArchives/dpl_bh019583.jpg,
+				Resources/DPLArchives/dpl_bh023971.jpg,
+				Resources/DPLArchives/dpl_bh028598.jpg,
+				Resources/DPLArchives/dpl_bh029791.jpg,
+				Resources/DPLArchives/dpl_na044496.jpg,
 				Resources/night_crickets.m4a,
 				Resources/rain_loop.m4a,
 				SettingsView/TipJarView.swift,
@@ -788,7 +810,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = PassportWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PassportWidget/Info.plist;
@@ -800,7 +822,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.16;
+				MARKETING_VERSION = 2.17;
 				PRODUCT_BUNDLE_IDENTIFIER = "name.GeorgeClinkscales.Stamped--A-City-Passport.PassportWidget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -820,7 +842,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = PassportWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PassportWidget/Info.plist;
@@ -832,7 +854,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.16;
+				MARKETING_VERSION = 2.17;
 				PRODUCT_BUNDLE_IDENTIFIER = "name.GeorgeClinkscales.Stamped--A-City-Passport.PassportWidget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1023,7 +1045,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Stamped! A City Passport/Stamped! A City Passport.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1060,7 +1082,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				MARKETING_VERSION = 2.16;
+				MARKETING_VERSION = 2.17;
 				PRODUCT_BUNDLE_IDENTIFIER = "name.GeorgeClinkscales.Stamped--A-City-Passport";
 				PRODUCT_NAME = "Stamped!";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1088,7 +1110,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Stamped! A City Passport/Stamped! A City Passport.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1125,7 +1147,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				MARKETING_VERSION = 2.16;
+				MARKETING_VERSION = 2.17;
 				PRODUCT_BUNDLE_IDENTIFIER = "name.GeorgeClinkscales.Stamped--A-City-Passport";
 				PRODUCT_NAME = "Stamped!";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1152,7 +1174,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Tally-AVP/Tally-AVP.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1162,7 +1184,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.16;
+				MARKETING_VERSION = 2.17;
 				PRODUCT_BUNDLE_IDENTIFIER = "name.GeorgeClinkscales.Stamped--A-City-Passport";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = xros;
@@ -1186,7 +1208,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Tally-AVP/Tally-AVP.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1196,7 +1218,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.16;
+				MARKETING_VERSION = 2.17;
 				PRODUCT_BUNDLE_IDENTIFIER = "name.GeorgeClinkscales.Stamped--A-City-Passport";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = xros;
@@ -1265,7 +1287,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = DetroitDownloader/DetroitDownloader.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DetroitDownloader/Info.plist;
@@ -1276,7 +1298,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.16;
+				MARKETING_VERSION = 2.17;
 				PRODUCT_BUNDLE_IDENTIFIER = "name.GeorgeClinkscales.Stamped--A-City-Passport.DetroitDownloader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = xros;
@@ -1297,7 +1319,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = DetroitDownloader/DetroitDownloader.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DetroitDownloader/Info.plist;
@@ -1308,7 +1330,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.16;
+				MARKETING_VERSION = 2.17;
 				PRODUCT_BUNDLE_IDENTIFIER = "name.GeorgeClinkscales.Stamped--A-City-Passport.DetroitDownloader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = xros;

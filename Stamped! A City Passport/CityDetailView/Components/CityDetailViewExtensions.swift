@@ -47,7 +47,7 @@ extension CityDetailView {
                 
                 if title == "Currency" {
                     Text("Rates updated February 2026. Offline mode.")
-                        .font(.system(size: 10, weight: .light))
+                        .font(DS.Typography.fineprint)
                         .italic()
                         .foregroundStyle(.tertiary)
                 }
@@ -130,7 +130,7 @@ private extension CityDetailView {
                 // Input Side
                 VStack(alignment: .leading, spacing: 4) {
                     Text(viewModel.isSwapped ? "Local (\(viewModel.city.details.currencyCode))" : "Home (\(viewModel.selectedHomeCurrency))")
-                        .font(.system(size: 10, weight: .bold))
+                        .font(.caption2.weight(.bold))
                         .foregroundStyle(.secondary)
                         .lineLimit(1)
                         .minimumScaleFactor(0.8)
@@ -151,7 +151,7 @@ private extension CityDetailView {
                 
                 VStack(alignment: .trailing, spacing: 4) {
                     Text(viewModel.isSwapped ? "Home (\(viewModel.selectedHomeCurrency))" : "Local (\(viewModel.city.details.currencyCode))")
-                        .font(.system(size: 10, weight: .bold))
+                        .font(.caption2.weight(.bold))
                         .foregroundStyle(.secondary)
                         .lineLimit(1)
                         .minimumScaleFactor(0.8)

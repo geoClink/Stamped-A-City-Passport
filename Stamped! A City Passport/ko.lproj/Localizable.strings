@@ -446,6 +446,8 @@
 "%d Cities Stamped" = "도시 %d곳 스탬프";
 "%d of %d campuses" = "캠퍼스 %d/%d곳";
 "CAMPUSES" = "캠퍼스";
+"All Campuses" = "모든 캠퍼스";
+"CITIES" = "도시";
 "Stamp every landmark on a campus to add its stamp here, in school colors." = "캠퍼스의 모든 랜드마크에 스탬프를 찍으면 학교 색상의 스탬프가 여기에 추가됩니다.";
 "+ %d campuses" = "+ 캠퍼스 %d곳";
 "+ 1 campus" = "+ 캠퍼스 1곳";
@@ -586,6 +588,7 @@
 "My Passport" = "내 여권";
 "YOUR ODYSSEY AWAITS" = "당신의 여정이 기다립니다";
 "Unlock your first badge" = "첫 배지를 잠금 해제하세요";
+"Collect your first stamp" = "첫 스탬프를 모아 보세요";
 "Unlock Your Collection" = "컬렉션을 잠금 해제하세요";
 "Every city mastered is a stamp earned." = "도시를 정복할 때마다 스탬프를 얻습니다.";
 "PASSPORT STAMPED" = "여권 스탬프 완료";
@@ -1276,3 +1279,6 @@
 
 /* Home filter menu: pick which continent's cities to show */
 "Continent" = "대륙";
+"Breakfast" = "아침";
+"Lunch" = "점심";
+"Dinner" = "저녁";

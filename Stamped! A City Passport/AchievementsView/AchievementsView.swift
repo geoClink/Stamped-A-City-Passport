@@ -52,7 +52,7 @@ struct AchievementsView: View {
             }
             .background(DS.Palette.pageBackground)
             .navigationTitle("Achievements")
-            .navigationBarTitleDisplayMode(.large)
+            .navigationBarTitleDisplayMode(.inline)
             #if !os(macOS)
             // On the Mac this is its own window, closed with the window's close button
             .toolbar {
@@ -225,12 +225,16 @@ private struct AchievementCard: View {
                 .lineLimit(dynamicTypeSize.isAccessibilitySize ? nil : 3)
                 .fixedSize(horizontal: false, vertical: true)
 
+            // Category pinned to the bottom, so every card in a row lines up
+            Spacer(minLength: 0)
             Text(achievement.category.localizedName.localizedUppercase)
                 .font(.caption2.weight(.semibold))
                 .foregroundStyle(isHighContrast ? Color.primary : (earned ? achievement.color : Color(UIColor.tertiaryLabel)))
                 .lineLimit(1)
                 .minimumScaleFactor(0.8)
         }
+        // Fill the row's height: cards side by side stay the same size
+        .frame(maxHeight: .infinity, alignment: .top)
         .dsCard(padding: DS.Space.m, isHighContrast: isHighContrast)
         // Dimming would undo high contrast, so locked cards only fade in standard mode
         .opacity(earned || isHighContrast ? 1.0 : 0.85)  // quiet, but the goal text stays readable

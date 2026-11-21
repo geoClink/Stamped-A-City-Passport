@@ -140,18 +140,19 @@ struct VisionArchitectPage: View {
                         AsyncImage(url: url) { image in
                             image.resizable().scaledToFill()
                         } placeholder: {
-                            Color.secondary.opacity(0.2)
+                            // The app's one missing/loading-photo look
+                            DSPlaceholder(systemImage: "person.fill", cornerRadius: 16)
                         }
                         .frame(width: 110, height: 138)
                         .clipShape(RoundedRectangle(cornerRadius: 16))
                         .accessibilityLabel(Text("Photo of \(architect.displayName)"))
                     }
                     Text(architect.displayName)
-                        .font(.largeTitle.bold())
+                        .font(DS.Typography.display(.largeTitle))
                         .accessibilityAddTraits(.isHeader)
                 }
                 if isLoading {
-                    ProgressView()
+                    DSLoadingRow(text: "Loading…")
                 } else if let summary {
                     VStack(alignment: .leading, spacing: 8) {
                         Label("From Wikipedia", systemImage: "w.circle.fill")
@@ -193,7 +194,7 @@ struct VisionArchitectPage: View {
                             .overlay(alignment: .topTrailing) {
                                 if isVisited {
                                     Image(systemName: "checkmark.seal.fill")
-                                        .foregroundStyle(.white, .orange)
+                                        .foregroundStyle(.white, DS.Palette.accent)
                                         .padding(4)
                                 }
                             }

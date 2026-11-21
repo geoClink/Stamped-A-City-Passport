@@ -23,10 +23,11 @@ struct LandmarkRow: View {
         layout {
             // Orange once stamped, gray until then: the same two colors as the map's pins.
             // (Unvisited pins used to be blue and all pulse at once.)
-            Image(systemName: isVisited ? "checkmark.seal.fill" : "mappin.circle.fill")
+            // An empty stamp slot until visited, then the orange stamp (same seal as the Stamp button)
+            Image(systemName: isVisited ? "checkmark.seal.fill" : "seal")
                 .font(.title)
                 .foregroundColor(
-                    isHighContrast ? .primary : (isVisited ? DS.Palette.accent : Color(UIColor.systemGray3))
+                    isHighContrast ? .primary : (isVisited ? DS.Palette.accent : Color.secondary.opacity(0.6))
                 )
                 .accessibilityHidden(true)
                 .accessibilityLabel(isVisited ? "Visited, \(building.name)" : "Next goal: \(building.name)")

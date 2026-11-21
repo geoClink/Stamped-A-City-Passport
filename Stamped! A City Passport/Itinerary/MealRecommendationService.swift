@@ -57,24 +57,41 @@ final class MealRecommendationService: ObservableObject {
     @Published var isLoading = false
 
     private let searchRadiusMeters: Double = 600
+    /// A result farther than this from the stop is dropped. Apple Maps treats the search region
+    /// as a hint and can answer with places near the device instead (Detroit restaurants on an
+    /// Asheville plan when the phone was in Michigan).
+    static let maxDistanceMeters: CLLocationDistance = 1500
 
     // MARK: - Cache
 
-    private func cacheKey(for city: String) -> String {
-        "meals_\(city.lowercased().replacingOccurrences(of: " ", with: "_"))"
+    /// What a saved plan's meals were found for, so they're only reused for the same stops
+    private struct CachedMeals: Codable {
+        let signature: String
+        let mealsByDay: [Int: DayMeals]
     }
 
-    private func loadCache(for city: String) -> Bool {
+    /// v2: v1 was keyed by city alone, so it kept far-away results and reused meals after the
+    /// itinerary changed. The new key drops those saved results.
+    private func cacheKey(for city: String) -> String {
+        "meals_v2_\(city.lowercased().replacingOccurrences(of: " ", with: "_"))"
+    }
+
+    /// The stops of every day, in order: "a,b|c,d"
+    static func signature(of itinerary: [[PlannedStop]]) -> String {
+        itinerary.map { $0.map(\.buildingID).joined(separator: ",") }.joined(separator: "|")
+    }
+
+    private func loadCache(for city: String, signature: String) -> Bool {
         guard let data = UserDefaults.standard.data(forKey: cacheKey(for: city)),
-              let decoded = try? JSONDecoder().decode([Int: DayMeals].self, from: data),
-              !decoded.isEmpty
+              let decoded = try? JSONDecoder().decode(CachedMeals.self, from: data),
+              decoded.signature == signature, !decoded.mealsByDay.isEmpty
         else { return false }
-        mealsByDay = decoded
+        mealsByDay = decoded.mealsByDay
         return true
     }
 
-    private func saveCache(for city: String) {
-        guard let data = try? JSONEncoder().encode(mealsByDay) else { return }
+    private func saveCache(for city: String, signature: String) {
+        guard let data = try? JSONEncoder().encode(CachedMeals(signature: signature, mealsByDay: mealsByDay)) else { return }
         UserDefaults.standard.set(data, forKey: cacheKey(for: city))
     }
 
@@ -87,10 +104,13 @@ final class MealRecommendationService: ObservableObject {
 
     func generateMeals(for itinerary: [[PlannedStop]], buildings: [Building], cityKey: String) async {
         guard !isLoading else { return }
-        if loadCache(for: cityKey) { return }
+        let signature = Self.signature(of: itinerary)
+        if loadCache(for: cityKey, signature: signature) { return }
 
         isLoading = true
         defer { isLoading = false }
+        // A new or changed plan: don't show the old plan's meals while searching
+        mealsByDay = [:]
 
         for (dayIndex, stops) in itinerary.enumerated() {
             let dayBuildings = stops.compactMap { stop in buildings.first { $0.id == stop.buildingID } }
@@ -117,7 +137,7 @@ final class MealRecommendationService: ObservableObject {
             )
         }
 
-        saveCache(for: cityKey)
+        saveCache(for: cityKey, signature: signature)
     }
 
     // MARK: - Search
@@ -140,10 +160,23 @@ final class MealRecommendationService: ObservableObject {
             longitudinalMeters: searchRadiusMeters
         )
         request.resultTypes = .pointOfInterest
+        // Only places inside the region, not ones near wherever the device is
+        request.regionPriority = .required
+        let center = CLLocation(latitude: lat, longitude: lon)
 
         do {
             let response = try await MKLocalSearch(request: request).start()
-            return response.mapItems.prefix(limit).compactMap { item in
+            let nearby = response.mapItems.filter { item in
+                let coordinate: CLLocationCoordinate2D
+                if #available(iOS 26.0, macOS 26.0, *) {
+                    coordinate = item.location.coordinate
+                } else {
+                    guard let loc = item.placemark.location else { return false }
+                    coordinate = loc.coordinate
+                }
+                return Self.isNearby(coordinate, to: center)
+            }
+            return nearby.prefix(limit).compactMap { item in
                 guard let name = item.name else { return nil }
                 let coord: CLLocationCoordinate2D
                 if #available(iOS 26.0, *) {
@@ -175,6 +208,11 @@ final class MealRecommendationService: ObservableObject {
     }
 
     // MARK: - Helpers
+
+    /// True when a place is close enough to the stop to suggest for a meal there
+    static func isNearby(_ coordinate: CLLocationCoordinate2D, to center: CLLocation) -> Bool {
+        center.distance(from: CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)) <= maxDistanceMeters
+    }
 
     // Returns the building closest to the middle of the day's list
     private func midday(of buildings: [Building]) -> Building {

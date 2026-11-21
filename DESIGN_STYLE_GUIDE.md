@@ -98,7 +98,8 @@ Use this scale as the baseline visual spec:
 - Use uppercase tracked micro-labels sparingly for moments like `JOURNEY LOG`, `FIELD DATA`, `EXPLORATION PROGRESS`, and nickname tags.
 - Keep body copy sentence case.
 - Use serif only for important destination identity, not long-form paragraphs.
-- Use monospaced captions for numerical progress, stats, and dossier-like metadata.
+- Monospaced type is for data only: numbers, dates, counts, progress (`DS.Typography.data`). Words such as "From Wikipedia", categories or field labels use the sans `caption`/`caption2` semibold. The quiz dossier and passport stamps are the two places where mono labels stay, as part of their metaphor.
+- Never use fixed point sizes for UI text (`.system(size:)`); use text styles so Dynamic Type works. Share-card images are the exception, since they render at a fixed size.
 - Dynamic Type must not clip card content; layouts should stack before text shrinks aggressively.
 
 ## Spacing and Layout
@@ -119,7 +120,7 @@ Adopt a restrained spacing scale derived from current screens:
 | `5XL` | 60 |
 
 ### Layout Rules
-- Default horizontal page padding on iPhone: `20` to `24`
+- Default horizontal page padding on iPhone: `16` (`DS.Space.page`)
 - Default horizontal page padding on iPad content columns: `40`
 - Preferred card spacing: `16` to `24`
 - Preferred section spacing: `24` to `32`
@@ -354,20 +355,39 @@ Preferred copy style:
 - Introduce generic glassy tech-card aesthetics that conflict with the passport metaphor.
 
 ## Implementation Notes
-To make this guide actionable in code, the next design-system step would be to centralize:
+`Models/Design.swift` (`DS`) is the source of truth for the numbers and the shared pieces. Screens build from these instead of styling their own:
 
-- color tokens
-- typography tokens
-- corner radius tokens
-- spacing tokens
-- shared card styles
-- shared button styles
+| Need | Use |
+| --- | --- |
+| Spacing, radii, colors | `DS.Space`, `DS.Radius`, `DS.Palette` (incl. `insetFill` for boxes inside a card) |
+| Text roles | `DS.Typography.display(_:)`, `.cardTitle`, `.label`, `.data`, `.fineprint` |
+| A surface | `.dsCard()`. No materials or shadows on content cards. |
+| A section start | `DSSectionHeader` (tracked uppercase label, orange icon, optional trailing count) |
+| Facts | `DSChip` |
+| The screen's one main action | `DSPrimaryButtonStyle` (one per screen) |
+| Secondary actions next to it | `DSActionTileStyle`, two to four in one row (stacked at accessibility sizes) |
+| In-line extras by content (Listen, Ask) | `DSPillButtonStyle`, in a wrapping row |
+| Any outbound link (tours, tables, hotels, rentals) | `DSLinkLabelStyle` on the link's Label: a one-row card with an arrow |
+| A list row that opens something | `DSLinkRow` with `DSRowDivider` inside `.dsCard(padding: 0)` |
+| Sideways card rows | `.dsRailCard(width:)` |
+| A missing photo | `DSPlaceholder` look: brand tint at 12% with one symbol (place thumbnails all use the accent; the symbol tells the kinds apart) |
+| Photo still loading | `.shimmering()` on the card color |
+| Data still loading | `DSLoadingRow("Finding …")` |
+| A sheet's title | inline title next to Done (`dsSheetTitle` or `.navigationBarTitleDisplayMode(.inline)`) |
 
-Recommended future files:
-- `DesignTokens.swift`
-- `AppTypography.swift`
-- `AppCardStyle.swift`
-- `AppButtonStyle.swift`
+Action hierarchy on a detail page: one primary button, then one row of tiles, then content; outbound links sit with the content they relate to (Tours under the actions, OpenTable and food tours under Local Flavors, Booking and Vrbo under Stays), all in the link-card look.
+
+Platforms:
+- iPad and Mac use the same pieces. The iPad Passport sidebar shows the progress card, then Campuses and Cities sections, with a stamped/total count on each country.
+- Vision Pro keeps its native glass buttons (the platform's own style), but uses the brand orange (`DS.Palette.accent`, never system `.orange`), the wishlist pink token, and serif landmark names (`DS.Typography.display`). On visionOS `DS.Palette.cardBackground` is a light lift (white at 8%) so cards read as platters on window glass instead of opaque gray boxes.
+
+Colors in practice: city ranks (Tourist … Local Legend) and achievement badges all use the brand orange; gold is only for Master Collector and the mastery badges. Event categories and place thumbnails use orange too, told apart by their symbols.
+
+Shadows: content cards have none. The one exception is a card floating over a map (the World Map city callout).
+
+Grouping rule: text and lists (Wikipedia, Timeline, On This Day, weather) sit in a card; photo rails and rail cards sit on the page background.
+
+Landmark rows show an empty `seal` until stamped and `checkmark.seal.fill` after, the same seal as the Stamp button.
 
 ## PDF Export Notes
 For a portfolio-style PDF, this document should be laid out in the following order:

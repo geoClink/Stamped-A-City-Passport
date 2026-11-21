@@ -84,7 +84,14 @@ struct PassportGalleryView: View {
                             }
                             // Campuses first: the countries below are mostly locked cities
                             campusSection(columns: stampColumns)
-                            countryGridSection
+                            // A Cities header to match Campuses, so the country groups below
+                            // read as cities rather than more campuses
+                            if !visibleCountries.isEmpty {
+                                VStack(alignment: .leading, spacing: DS.Space.l) {
+                                    citiesHeader
+                                    VStack(spacing: DS.Space.section) { countryGridSection }
+                                }
+                            }
                         }
                         .dsPageMargin()
                         .padding(.vertical, DS.Space.l)
@@ -180,6 +187,14 @@ private extension View {
 private extension PassportGalleryView {
     var sidebarList: some View {
         List(selection: $selectedCountry) {
+            // The same progress card as on iPhone, at the top of the sidebar
+            if !isSearching {
+                Section {
+                    passportHeader
+                        .listRowInsets(EdgeInsets())
+                        .listRowBackground(Color.clear)
+                }
+            }
             // Campuses first, like on iPhone, so they aren't buried below 60+ countries
             if !allCampuses.isEmpty && (!isSearching || !campusesToShow.isEmpty) {
                 Section {
@@ -188,24 +203,34 @@ private extension PassportGalleryView {
                         showingCampusPage = true
                     } label: {
                         HStack {
-                            Text(NSLocalizedString("CAMPUSES", comment: "Passport: section of campus stamps"))
-                                .font(.system(.headline, design: .rounded))
-                                .fontWeight(highContrast ? .black : .bold)
+                            Label {
+                                Text(NSLocalizedString("All Campuses", comment: "Passport, iPad sidebar: the row that opens every campus stamp"))
+                                    .foregroundStyle(.primary)
+                            } icon: {
+                                Image(systemName: "graduationcap.fill")
+                                    .foregroundStyle(brandColor)
+                            }
+                            .font(.headline)
                             Spacer()
                             Text("\(stampedCampuses.count)/\(allCampuses.count)")
-                                .font(.caption.monospaced())
+                                .font(DS.Typography.data)
                                 .foregroundStyle(.secondary)
                                 // Read as "3 of 101", not "3 slash 101"
                                 .accessibilityLabel(Text("\(stampedCampuses.count) of \(allCampuses.count)"))
                         }
                     }
                     .listRowBackground(showingCampusPage ? brandColor.opacity(0.1) : Color.clear)
+                } header: {
+                    DSSectionHeader(title: "CAMPUSES", systemImage: "graduationcap.fill", isHighContrast: highContrast) { EmptyView() }
                 }
             }
             Section {
                 ForEach(visibleCountries, id: \.self) { country in
                     countryRow(country)
                 }
+            } header: {
+                // Same Cities header as on iPhone, so countries read as city groups
+                citiesHeader
             }
         }
         .solidSidebarBackground(sidebarBackground)
@@ -217,14 +242,21 @@ private extension PassportGalleryView {
     func countryRow(_ country: CityLocation.Country) -> some View {
             NavigationLink(value: country) {
                 HStack {
-                    Text(country.passportName.localizedUppercase)
-                        .font(.system(.headline, design: .rounded))
-                        .fontWeight(highContrast ? .black : .bold)
+                    Text(country.passportName)
+                        .font(.headline)
                     Spacer()
                     if isCountryComplete(country) {
                         Image(systemName: "checkmark.seal.fill")
                             .foregroundColor(masteryColor)
                             .accessibilityLabel("All cities stamped")
+                    } else {
+                        // Stamped cities out of the country's total, like the Campuses count
+                        let inCountry = groupedCities[country] ?? []
+                        let done = inCountry.filter { isCityCompleted($0) }.count
+                        Text("\(done)/\(inCountry.count)")
+                            .font(DS.Typography.data)
+                            .foregroundStyle(.secondary)
+                            .accessibilityLabel(Text("\(done) of \(inCountry.count)"))
                     }
                 }
             }
@@ -328,8 +360,8 @@ private extension PassportGalleryView {
             HStack(alignment: .top) {
                 VStack(alignment: .leading, spacing: DS.Space.xs) {
                     Text("EXPLORATION PROGRESS")
-                        .font(.caption2.monospaced().weight(.black))
-                        .tracking(1)
+                        .font(DS.Typography.label)
+                        .tracking(1.2)
                         .foregroundColor(highContrast ? brandColor : .white.opacity(0.8))
                         // Two lines at the largest text sizes, where one was cut off
                         .lineLimit(2)
@@ -366,6 +398,16 @@ private extension PassportGalleryView {
             RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
                 .stroke(highContrast ? brandColor : Color.clear, lineWidth: 2)
         )
+    }
+
+    /// Group header over the country sections, styled like the Campuses header
+    var citiesHeader: some View {
+        DSSectionHeader(title: "CITIES", systemImage: "building.2.fill", isHighContrast: highContrast) {
+            Text("\(completedCount)/\(cityCount)")
+                .font(DS.Typography.data)
+                .foregroundColor(brandColor)
+                .accessibilityLabel(Text("\(completedCount) of \(cityCount)"))
+        }
     }
 
     var countryGridSection: some View {
@@ -439,7 +481,7 @@ private extension PassportGalleryView {
         VStack(alignment: .leading, spacing: DS.Space.m) {
             DSSectionHeader(title: "CAMPUSES", systemImage: "graduationcap.fill", isHighContrast: highContrast) {
                 Text("\(stampedCampuses.count)/\(allCampuses.count)")
-                    .font(.caption.monospaced().bold())
+                    .font(DS.Typography.data)
                     .foregroundColor(brandColor)
                     .accessibilityLabel(Text("\(stampedCampuses.count) of \(allCampuses.count)"))
             }
