@@ -1,3 +1,3 @@
 // written by studio init: source pixel size + screen names (use the name as data-src / data-crop)
 window.SRC = { w: 1320, h: 2868 };
-window.SCREEN_NAMES = ["01-home","02-college-list","03-campus","04-traditions","05-map3d","06-passport","07-road-trip","08-trip","09-celebration","10-then-now","11-time-walk","12-then-now-fade"];
+window.SCREEN_NAMES = ["01-home","02-passport","03-celebration","03b-celebration-paris","04-landmark-now","05-then-viewer","06-then-now-map","07-time-walk","08-campus-celebration","09-campus-page","10-traditions","11-map3d","12-plan"];

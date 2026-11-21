@@ -121,7 +121,8 @@ struct ToursButton: View {
     let landmark: String
     let place: String
     /// Lets a screen dress the label like its own buttons (the landmark page's tinted tiles)
-    var styleLabel: (AnyView) -> AnyView = { $0 }
+    /// Defaults to the app's link-card look; the Viator link below uses the same style
+    var styleLabel: (AnyView) -> AnyView = { AnyView($0.labelStyle(DSLinkLabelStyle())) }
 
     private let builder = TourLinkBuilder()
     @State private var browserLink: BrowserLink?
@@ -148,9 +149,10 @@ struct ToursButton: View {
                     Button {
                         browserLink = BrowserLink(url: viatorURL)
                     } label: {
-                        Label(NSLocalizedString("More tours on Viator", comment: "Landmark page: link under Tours & Tickets that opens Viator's tours for this landmark"),
-                              systemImage: "binoculars")
-                            .labelStyle(DSLinkLabelStyle())
+                        styleLabel(AnyView(
+                            Label(NSLocalizedString("More tours on Viator", comment: "Landmark page: link under Tours & Tickets that opens Viator's tours for this landmark"),
+                                  systemImage: "binoculars")
+                        ))
                     }
                     .buttonStyle(.plain)
                     .accessibilityHint(NSLocalizedString("Opens Viator. Stamped! doesn't handle bookings or payments.", comment: "Viator link, VoiceOver hint"))
