@@ -392,3 +392,4 @@
 
 /* Home filter menu: pick which continent's cities to show */
 "Continent" = "Continent";
+"timeline.closed" = "Closed";

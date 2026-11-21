@@ -1,5 +1,5 @@
 {
-  "source": "/private/tmp/claude-504/-Users-georgeclinkscales-Documents-Stamped-A-City-Passport-Stamped--A-City-Passport/ab9f353d-0249-4504-a131-0911bd27c2c5/scratchpad/raw25",
+  "source": "/private/tmp/claude-504/-Users-georgeclinkscales-Documents-Stamped-A-City-Passport/89f83925-6fef-4170-a2f9-783dd7839d23/scratchpad/raw217",
   "src": {
     "w": 1320,
     "h": 2868
@@ -13,82 +13,89 @@
       "statusbarCleaned": true
     },
     {
-      "file": "02-college-list.png",
-      "slug": "02-college-list",
+      "file": "02-passport.png",
+      "slug": "02-passport",
       "w": 1320,
       "h": 2868,
       "statusbarCleaned": true
     },
     {
-      "file": "03-campus.png",
-      "slug": "03-campus",
+      "file": "03-celebration.png",
+      "slug": "03-celebration",
       "w": 1320,
       "h": 2868,
       "statusbarCleaned": true
     },
     {
-      "file": "04-traditions.png",
-      "slug": "04-traditions",
+      "file": "03b-celebration-paris.png",
+      "slug": "03b-celebration-paris",
       "w": 1320,
       "h": 2868,
       "statusbarCleaned": true
     },
     {
-      "file": "05-map3d.png",
-      "slug": "05-map3d",
+      "file": "04-landmark-now.png",
+      "slug": "04-landmark-now",
       "w": 1320,
       "h": 2868,
       "statusbarCleaned": true
     },
     {
-      "file": "06-passport.png",
-      "slug": "06-passport",
+      "file": "05-then-viewer.png",
+      "slug": "05-then-viewer",
       "w": 1320,
       "h": 2868,
       "statusbarCleaned": true
     },
     {
-      "file": "07-road-trip.png",
-      "slug": "07-road-trip",
+      "file": "06-then-now-map.png",
+      "slug": "06-then-now-map",
       "w": 1320,
       "h": 2868,
       "statusbarCleaned": true
     },
     {
-      "file": "08-trip.png",
-      "slug": "08-trip",
+      "file": "07-time-walk.png",
+      "slug": "07-time-walk",
       "w": 1320,
       "h": 2868,
       "statusbarCleaned": true
     },
     {
-      "file": "09-celebration.png",
-      "slug": "09-celebration",
+      "file": "08-campus-celebration.png",
+      "slug": "08-campus-celebration",
       "w": 1320,
       "h": 2868,
       "statusbarCleaned": true
     },
     {
-      "file": "10-then-now.png",
-      "slug": "10-then-now",
+      "file": "09-campus-page.png",
+      "slug": "09-campus-page",
       "w": 1320,
       "h": 2868,
       "statusbarCleaned": true
     },
     {
-      "file": "11-time-walk.png",
-      "slug": "11-time-walk",
+      "file": "10-traditions.png",
+      "slug": "10-traditions",
       "w": 1320,
       "h": 2868,
       "statusbarCleaned": true
     },
     {
-      "file": "12-then-now-fade.png",
-      "slug": "12-then-now-fade",
+      "file": "11-map3d.png",
+      "slug": "11-map3d",
+      "w": 1320,
+      "h": 2868,
+      "statusbarCleaned": true
+    },
+    {
+      "file": "12-plan.png",
+      "slug": "12-plan",
       "w": 1320,
       "h": 2868,
       "statusbarCleaned": true
     }
   ],
-  "created": "2026-10-25T01:34:42.451Z"
+  "created": "2026-11-21T18:17:32.160Z"
 }

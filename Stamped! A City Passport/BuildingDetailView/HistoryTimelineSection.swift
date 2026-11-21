@@ -146,7 +146,9 @@ private struct TimelineRow: View {
         switch event.kind {
         case .built: return String(localized: "Built", comment: "Timeline: the year a landmark was built")
         case .opened: return String(localized: "Opened", comment: "Timeline: the date a landmark opened")
-        case .demolished: return String(localized: "Demolished", comment: "Timeline: the date a landmark was demolished or closed")
+        // Wikidata's P576 is "dissolved, abolished or demolished". For the standing landmarks in the
+        // app it is almost always a closure (Michigan Central: closed 1988, reopened 2024), so say "Closed".
+        case .demolished: return String(localized: "timeline.closed", defaultValue: "Closed", comment: "Timeline: the date a landmark closed (Wikidata's dissolved, abolished or demolished date)")
         case .event: return label
         case .heritage: return String(localized: "Listed: \(label)", comment: "Timeline: a heritage listing, e.g. \"Listed: National Historic Landmark\"")
         case .replaces: return String(localized: "Replaced \(label)", comment: "Timeline: the building that stood here before")
@@ -158,7 +160,7 @@ private struct TimelineRow: View {
         switch event.kind {
         case .built: "hammer.fill"
         case .opened: "door.left.hand.open"
-        case .demolished: "xmark"
+        case .demolished: "door.left.hand.closed"
         case .event: "star.fill"
         case .heritage: "seal.fill"
         case .replaces, .replacedBy: "arrow.triangle.swap"
