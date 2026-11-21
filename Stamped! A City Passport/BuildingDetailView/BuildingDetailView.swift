@@ -268,6 +268,7 @@ extension BuildingDetailView {
             
             // Floating over the photo, so this one keeps its shadow
             photoControls
+                .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
                 .padding(DS.Space.m)
                 .shadow(color: .black.opacity(isHighContrast ? 0 : 0.2), radius: 10, x: 0, y: 5)
         }
@@ -325,6 +326,8 @@ extension BuildingDetailView {
     private var photoControls: some View {
         let userImage = GlobalProgressManager.shared.userImages[building.id]
         
+        // Small icon buttons floating on the photo: capped at the largest standard text size, since
+        // at accessibility sizes the icons outgrew their 44 pt buttons and overlapped. Each has a label.
         return HStack(spacing: 0) {
             if userImage != nil {
                 Button {
