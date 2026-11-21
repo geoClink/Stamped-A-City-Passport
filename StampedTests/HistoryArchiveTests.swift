@@ -441,8 +441,8 @@ final class OldFilmTests: XCTestCase {
         let ids = try XCTUnwrap(registry).values.joined().compactMap { $0["id"] as? String }
         let photos = ids.flatMap { CampusArchivePhotos.photos(forBuildingID: $0) }
             .filter { $0.credit.hasSuffix("Europeana") || $0.credit.hasPrefix("Rijksmuseum") }
-        XCTAssertEqual(CampusArchivePhotos.europeBuildingCount, 20)
-        XCTAssertEqual(photos.count, 20, "every bundled image is in the app and matches a landmark")
+        XCTAssertEqual(CampusArchivePhotos.europeBuildingCount, 46)
+        XCTAssertEqual(photos.count, 46, "every bundled image is in the app and matches a landmark")
         XCTAssertTrue(photos.allSatisfy { $0.largeURL.isFileURL && ($0.credit.contains("Public domain") || $0.credit.contains("CC0")) })
     }
 }
