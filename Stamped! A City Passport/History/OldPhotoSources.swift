@@ -35,6 +35,10 @@ enum OldPhotoSources {
                 buildingID: building.id, name: building.name,
                 address: building.address, cityName: cityName).filter { !$0.isDrawing }
             if !survey.isEmpty { return survey }
+            let publishing = await DetroitPublishingPhotos.shared.photos(
+                buildingID: building.id, name: building.name,
+                address: building.address, cityName: cityName)
+            if !publishing.isEmpty { return publishing }
         }
         let commons = await HeritageService.shared.oldPhotos(for: building)
         if !commons.isEmpty { return commons }
@@ -59,9 +63,13 @@ enum OldPhotoSources {
         async let europeana = ArchiveSearch.shared.europeana(name: building.name, city: cityName)
         async let smithsonian = ArchiveSearch.shared.smithsonian(name: building.name, city: cityName)
         async let dpla = ArchiveSearch.shared.dpla(name: building.name, city: cityName)
+        async let publishing = searchSurveys
+            ? DetroitPublishingPhotos.shared.photos(buildingID: building.id, name: building.name,
+                                                    address: building.address, cityName: cityName)
+            : []
         let surveyImages = await survey.filter { includingDrawings || !$0.isDrawing }
         return await merged([CampusArchivePhotos.photos(forBuildingID: building.id),
-                             surveyImages, commons, europeana, smithsonian, dpla])
+                             surveyImages, publishing, commons, europeana, smithsonian, dpla])
     }
 
     /// The lists in order, each photo once, up to the gallery's limit

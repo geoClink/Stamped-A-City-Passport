@@ -368,4 +368,70 @@ final class OldFilmTests: XCTestCase {
         XCTAssertEqual(photos.filter { $0.credit == CampusArchivePhotos.dplAutomotiveCredit }.count, 1)
         XCTAssertFalse(photos.contains(where: OldPhotoSources.needsNoCredit))
     }
+
+    func testEveryClevelandPublicLibraryPhotoIsBundledWithItsCredit() throws {
+        let registry = try JSONSerialization.jsonObject(with: Data(contentsOf: XCTUnwrap(
+            Bundle.main.url(forResource: "BuildingRegistry", withExtension: "json")))) as? [String: Any]
+        let cleveland = try XCTUnwrap(registry?["Cleveland"] as? [[String: Any]])
+        let photos = cleveland.compactMap { $0["id"] as? String }.flatMap { CampusArchivePhotos.photos(forBuildingID: $0) }
+        XCTAssertEqual(CampusArchivePhotos.clevelandBuildingCount, 5)
+        XCTAssertEqual(photos.count, 5, "each Cleveland photo is in the app and matches a landmark")
+        XCTAssertTrue(photos.allSatisfy { $0.credit == CampusArchivePhotos.cplCredit && $0.largeURL.isFileURL })
+        XCTAssertTrue(photos.allSatisfy { $0.itemURL.host == "cplorg.contentdm.oclc.org" })
+        XCTAssertFalse(photos.contains(where: OldPhotoSources.needsNoCredit))
+    }
+
+    // MARK: Detroit Publishing Company photos
+
+    func testDetroitPublishingTitlesMatchTheRightLandmark() {
+        let detroit = ["united states", "detroit", "michigan"]
+        XCTAssertTrue(DetroitPublishingPhotos.isMatch(title: "Penobscot Building, Detroit, Mich.", location: detroit,
+                                                      name: "Penobscot Building", town: "Detroit"))
+        XCTAssertTrue(DetroitPublishingPhotos.isMatch(title: "[Detroit, Mich., Penobscot Building]", location: detroit,
+                                                      name: "Penobscot Building", town: "Detroit"))
+        // A title naming several buildings isn't a photo of this one
+        XCTAssertFalse(DetroitPublishingPhotos.isMatch(title: "[Dime, Penobscot, and Ford buildings, Detroit, Mich.]",
+                                                       location: detroit, name: "Penobscot Building", town: "Detroit"))
+        // Another town
+        XCTAssertFalse(DetroitPublishingPhotos.isMatch(title: "Penobscot Building, Bangor, Me.", location: ["bangor", "maine"],
+                                                       name: "Penobscot Building", town: "Detroit"))
+        // A one-word name must be a whole part: "Euclid Arcade" isn't "The Arcade"
+        let cleveland = ["cleveland", "ohio"]
+        XCTAssertTrue(DetroitPublishingPhotos.isMatch(title: "The Arcade, Cleveland, Ohio", location: cleveland,
+                                                      name: "The Arcade", town: "Cleveland"))
+        XCTAssertFalse(DetroitPublishingPhotos.isMatch(title: "Euclid Arcade, Cleveland, Ohio", location: cleveland,
+                                                       name: "The Arcade", town: "Cleveland"))
+        XCTAssertTrue(DetroitPublishingPhotos.isMatch(title: "Tribune Building, Chicago, Ill.", location: ["chicago", "illinois"],
+                                                      name: "Tribune Building", town: "Chicago"))
+    }
+
+    func testDetroitPublishingPhotosNeedNoExtraCredit() {
+        let photo = HistoricImage(thumbnailURL: URL(string: "https://tile.loc.gov/a_r.jpg")!,
+                                  largeURL: URL(string: "https://tile.loc.gov/a_v.jpg")!, caption: nil, isDrawing: false,
+                                  credit: DetroitPublishingPhotos.credit, itemURL: URL(string: "https://www.loc.gov/item/1/")!)
+        XCTAssertTrue(OldPhotoSources.needsNoCredit(photo))
+    }
+
+    func testEveryNewYorkPublicLibraryPhotoIsBundledWithItsCredit() throws {
+        let registry = try JSONSerialization.jsonObject(with: Data(contentsOf: XCTUnwrap(
+            Bundle.main.url(forResource: "BuildingRegistry", withExtension: "json")))) as? [String: Any]
+        let newYork = try XCTUnwrap(registry?["New York"] as? [[String: Any]])
+        let photos = newYork.compactMap { $0["id"] as? String }.flatMap { CampusArchivePhotos.photos(forBuildingID: $0) }
+        XCTAssertEqual(CampusArchivePhotos.newYorkBuildingCount, 4)
+        XCTAssertEqual(photos.count, 4, "each New York photo is in the app and matches a landmark")
+        XCTAssertTrue(photos.allSatisfy { $0.credit == CampusArchivePhotos.nyplCredit && $0.largeURL.isFileURL })
+        XCTAssertTrue(photos.allSatisfy { $0.itemURL.host == "digitalcollections.nypl.org" })
+    }
+
+    func testEveryParisMuseesPhotoIsBundledWithItsCredit() throws {
+        let registry = try JSONSerialization.jsonObject(with: Data(contentsOf: XCTUnwrap(
+            Bundle.main.url(forResource: "BuildingRegistry", withExtension: "json")))) as? [String: Any]
+        let paris = try XCTUnwrap(registry?["Paris"] as? [[String: Any]])
+        let photos = paris.compactMap { $0["id"] as? String }.flatMap { CampusArchivePhotos.photos(forBuildingID: $0) }
+        XCTAssertEqual(CampusArchivePhotos.parisBuildingCount, 6)
+        XCTAssertEqual(photos.count, 6, "each Paris photo is in the app and matches a landmark")
+        XCTAssertTrue(photos.allSatisfy { $0.credit.hasSuffix("Paris Musées") && $0.largeURL.isFileURL })
+        XCTAssertTrue(photos.allSatisfy { $0.itemURL.host == "www.parismuseescollections.paris.fr" })
+        XCTAssertFalse(photos.contains(where: OldPhotoSources.needsNoCredit))
+    }
 }

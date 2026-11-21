@@ -8,6 +8,12 @@
 //  Detroit Public Library (Burton Historical Collection) approved these 22 Detroit photos
 //  on 2026-11-20, for as long as the app is available, credited by collection and linked
 //  to each item's page (docs/detroit-public-library/). DPL takes no responsibility for copyright.
+//  Cleveland Public Library neither grants nor denies permission for its Digital Gallery and
+//  asks only for a credit; these 5 were published before 1931 (docs/archive-outreach/).
+//  The New York Public Library marks these 4 "No Copyright - United States" (public domain)
+//  in its Digital Collections; credited and linked to each item.
+//  Paris Musées releases these 6 Musée Carnavalet photos under CC0 and asks for a credit to
+//  Paris Musées and the museum, with a link to its collections site.
 //
 
 import Foundation
@@ -56,6 +62,61 @@ nonisolated enum CampusArchivePhotos {
         "campus_michstate_breslin_center": [Entry(file: "msu_A009957", caption: "Breslin Center construction, July 13, 1988")],
     ]
 
+    static let cplCredit = "Cleveland Public Library Digital Gallery"
+
+    /// A Cleveland Public Library Digital Gallery photo, linked to its own page
+    private static func cpl(_ id: Int, _ caption: String) -> [Entry] {
+        [Entry(file: "cpl_\(id)", caption: caption, credit: cplCredit,
+               link: URL(string: "https://cplorg.contentdm.oclc.org/digital/collection/p4014coll18/id/\(id)")!)]
+    }
+
+    static let nyplCredit = "The New York Public Library Digital Collections"
+
+    /// A New York Public Library photo, linked to its own page in the Digital Collections
+    private static func nypl(_ imageID: String, item: String, _ caption: String) -> [Entry] {
+        [Entry(file: "nypl_\(imageID)", caption: caption, credit: nyplCredit,
+               link: URL(string: "https://digitalcollections.nypl.org/items/\(item)")!)]
+    }
+
+    /// Building ID → its New York Public Library photo
+    private static let newYork: [String: [Entry]] = [
+        "nyc-04": nypl("836609", item: "e629ed10-c55a-012f-832f-58d385a7bc34",
+                       "Flat Iron Building, New York, Detroit Publishing Co. postcard, ca. 1913"),
+        "nyc-05": nypl("1648996", item: "5e66b3e8-fffa-d471-e040-e00a180654d7",
+                       "Woolworth Building under construction, July 1912, by Irving Underhill"),
+        "nyc-02": nypl("482796", item: "510d47d9-4f7b-a3d9-e040-e00a18064a99",
+                       "The Chrysler Building from East 39th Street, 1938, by Berenice Abbott"),
+        "nyc-06": nypl("482746", item: "510d47d9-4f43-a3d9-e040-e00a18064a99",
+                       "Rockefeller Center from 444 Madison Avenue, 1937, by Berenice Abbott"),
+    ]
+
+    static let parisMuseesCredit = "Musée Carnavalet, Histoire de Paris / Paris Musées"
+
+    /// A Paris Musées (Musée Carnavalet) photo, linked to its own page in the collections
+    private static func carnavalet(_ node: Int, _ caption: String) -> [Entry] {
+        [Entry(file: "pm_\(node)", caption: caption, credit: parisMuseesCredit,
+               link: URL(string: "https://www.parismuseescollections.paris.fr/node/\(node)")!)]
+    }
+
+    /// Building ID → its Paris Musées photo
+    private static let paris: [String: [Entry]] = [
+        "paris-eiffel-tower": carnavalet(78191, "Construction of the Eiffel Tower"),
+        "paris-sacre-coeur": carnavalet(130586, "Construction of the Sacré-Cœur basilica, ca. 1895"),
+        "paris-arc-de-triomphe": carnavalet(490926, "The Arc de Triomphe from the Avenue de la Grande Armée, 1871"),
+        "paris-palais-garnier": carnavalet(490866, "The Palais Garnier under construction, with Paris Commune posters, 1871"),
+        "paris-pantheon": carnavalet(91879, "Restoration work on the Panthéon, 1871"),
+        "paris-sainte-chapelle": carnavalet(131587, "The Sainte-Chapelle at the Palais de Justice, ca. 1851"),
+    ]
+
+    /// Building ID → its Cleveland Public Library photo
+    private static let cleveland: [String: [Entry]] = [
+        "cle-02": cpl(2861, "New Union Station (Terminal Tower), postcard, 1928"),
+        "cle-03": cpl(8144, "Interior of the Arcade, 1896"),
+        "cle-07": cpl(2863, "New West Side Market, postcard, ca. 1912"),
+        "cle-08": cpl(1517, "Cleveland Trust Bank under construction, 1907"),
+        "cle-14": cpl(2009, "Federal Building and Post Office, 1911"),
+    ]
+
     /// Building ID → its approved Detroit Public Library photo
     private static let detroit: [String: [Entry]] = [
         "detroit_first_national": dpl("bh010122", node: 47566, "First National Bank building during construction"),
@@ -84,7 +145,7 @@ nonisolated enum CampusArchivePhotos {
 
     /// The bundled photos for a building, or none
     static func photos(forBuildingID id: String, bundle: Bundle = .main) -> [HistoricImage] {
-        (msu[id] ?? detroit[id] ?? []).compactMap { entry in
+        (msu[id] ?? detroit[id] ?? cleveland[id] ?? newYork[id] ?? paris[id] ?? []).compactMap { entry in
             guard let url = bundle.url(forResource: entry.file, withExtension: "jpg") else { return nil }
             return HistoricImage(thumbnailURL: url, largeURL: url, caption: entry.caption,
                                  isDrawing: false, credit: entry.credit, itemURL: entry.link)
@@ -95,4 +156,10 @@ nonisolated enum CampusArchivePhotos {
     static var buildingCount: Int { msu.count }
     /// How many Detroit landmarks have bundled photos (for tests)
     static var detroitBuildingCount: Int { detroit.count }
+    /// How many Cleveland landmarks have bundled photos (for tests)
+    static var clevelandBuildingCount: Int { cleveland.count }
+    /// How many New York landmarks have bundled photos (for tests)
+    static var newYorkBuildingCount: Int { newYork.count }
+    /// How many Paris landmarks have bundled photos (for tests)
+    static var parisBuildingCount: Int { paris.count }
 }
