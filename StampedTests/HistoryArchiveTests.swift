@@ -466,9 +466,21 @@ final class OldFilmTests: XCTestCase {
         let getty = all.filter { $0.credit == "Getty Museum · CC0" }
         XCTAssertEqual(photochrom.count, CampusArchivePhotos.photochromCount, "every photochrom file is bundled")
         XCTAssertEqual(getty.count, CampusArchivePhotos.gettyCount, "every Getty file is bundled")
-        XCTAssertEqual(all.filter { $0.credit.hasSuffix("Wikimedia Commons") }.count,
+        XCTAssertEqual(all.filter { $0.credit.hasSuffix("Wikimedia Commons") && !$0.largeURL.lastPathComponent.hasPrefix("ma_") }.count,
                        CampusArchivePhotos.commonsBuildingCount + CampusArchivePhotos.worldPhotosCount)
         XCTAssertTrue(all.allSatisfy { $0.largeURL.isFileURL })
+    }
+
+    func testEveryNovemberBatchImageIsBundledAndCredited() throws {
+        let registry = try JSONSerialization.jsonObject(with: Data(contentsOf: XCTUnwrap(
+            Bundle.main.url(forResource: "BuildingRegistry", withExtension: "json")))) as? [String: [[String: Any]]]
+        let ids = try XCTUnwrap(registry).values.joined().compactMap { $0["id"] as? String }
+        let more = ids.flatMap { CampusArchivePhotos.photos(forBuildingID: $0) }
+            .filter { $0.largeURL.lastPathComponent.hasPrefix("ma_") }
+        XCTAssertEqual(more.count, CampusArchivePhotos.morePhotosFileCount, "every file is bundled under a real landmark ID")
+        XCTAssertGreaterThanOrEqual(CampusArchivePhotos.morePhotosCount, 150)
+        XCTAssertTrue(more.allSatisfy { !$0.credit.isEmpty && ($0.caption ?? "").count > 5 })
+        XCTAssertTrue(more.allSatisfy { $0.itemURL.host?.contains("wikimedia.org") == true || $0.itemURL.host?.contains("loc.gov") == true })
     }
 
     func testALandmarkCanShowSeveralBundledImages() {
