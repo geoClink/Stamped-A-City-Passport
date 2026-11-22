@@ -428,6 +428,7 @@ final class OldFilmTests: XCTestCase {
             Bundle.main.url(forResource: "BuildingRegistry", withExtension: "json")))) as? [String: Any]
         let paris = try XCTUnwrap(registry?["Paris"] as? [[String: Any]])
         let photos = paris.compactMap { $0["id"] as? String }.flatMap { CampusArchivePhotos.photos(forBuildingID: $0) }
+            .filter { $0.credit.hasSuffix("Paris Musées") }
         XCTAssertEqual(CampusArchivePhotos.parisBuildingCount, 7)
         XCTAssertEqual(photos.count, 7, "each Paris photo is in the app and matches a landmark")
         XCTAssertTrue(photos.allSatisfy { $0.credit.hasSuffix("Paris Musées") && $0.largeURL.isFileURL })
@@ -440,7 +441,7 @@ final class OldFilmTests: XCTestCase {
             Bundle.main.url(forResource: "BuildingRegistry", withExtension: "json")))) as? [String: [[String: Any]]]
         let ids = try XCTUnwrap(registry).values.joined().compactMap { $0["id"] as? String }
         let photos = ids.flatMap { CampusArchivePhotos.photos(forBuildingID: $0) }
-            .filter { $0.credit.hasSuffix("Europeana") || $0.credit.hasPrefix("Rijksmuseum") }
+            .filter { $0.credit.hasSuffix("Europeana") || $0.credit == "Rijksmuseum · Public domain" }
         XCTAssertEqual(CampusArchivePhotos.europeBuildingCount, 46)
         XCTAssertEqual(photos.count, 46, "every bundled image is in the app and matches a landmark")
         XCTAssertTrue(photos.allSatisfy { $0.largeURL.isFileURL && ($0.credit.contains("Public domain") || $0.credit.contains("CC0")) })
@@ -454,5 +455,25 @@ final class OldFilmTests: XCTestCase {
         XCTAssertEqual(CampusArchivePhotos.commonsBuildingCount, 6)
         XCTAssertEqual(photos.count, 6, "each Sydney photo is in the app and matches a landmark")
         XCTAssertTrue(photos.allSatisfy { $0.credit.hasSuffix("Wikimedia Commons") && $0.largeURL.isFileURL })
+    }
+
+    func testEveryPhotochromGettyAndWorldImageIsBundled() throws {
+        let registry = try JSONSerialization.jsonObject(with: Data(contentsOf: XCTUnwrap(
+            Bundle.main.url(forResource: "BuildingRegistry", withExtension: "json")))) as? [String: [[String: Any]]]
+        let ids = try XCTUnwrap(registry).values.joined().compactMap { $0["id"] as? String }
+        let all = ids.flatMap { CampusArchivePhotos.photos(forBuildingID: $0) }
+        let photochrom = all.filter { $0.credit == "Library of Congress, Photochrom Print Collection" }
+        let getty = all.filter { $0.credit == "Getty Museum · CC0" }
+        XCTAssertEqual(photochrom.count, CampusArchivePhotos.photochromCount, "every photochrom file is bundled")
+        XCTAssertEqual(getty.count, CampusArchivePhotos.gettyCount, "every Getty file is bundled")
+        XCTAssertEqual(all.filter { $0.credit.hasSuffix("Wikimedia Commons") }.count,
+                       CampusArchivePhotos.commonsBuildingCount + CampusArchivePhotos.worldPhotosCount)
+        XCTAssertTrue(all.allSatisfy { $0.largeURL.isFileURL })
+    }
+
+    func testALandmarkCanShowSeveralBundledImages() {
+        // The Pantheon has a Paris Musées photo and a photochrom
+        XCTAssertGreaterThanOrEqual(CampusArchivePhotos.photos(forBuildingID: "paris-pantheon").count, 2)
+        XCTAssertTrue(CampusArchivePhotos.hasPhotos(forBuildingID: "tokyo-station"))
     }
 }
