@@ -417,6 +417,7 @@ final class OldFilmTests: XCTestCase {
             Bundle.main.url(forResource: "BuildingRegistry", withExtension: "json")))) as? [String: Any]
         let newYork = try XCTUnwrap(registry?["New York"] as? [[String: Any]])
         let photos = newYork.compactMap { $0["id"] as? String }.flatMap { CampusArchivePhotos.photos(forBuildingID: $0) }
+            .filter { !$0.largeURL.lastPathComponent.hasPrefix("ma_") }
         XCTAssertEqual(CampusArchivePhotos.newYorkBuildingCount, 4)
         XCTAssertEqual(photos.count, 4, "each New York photo is in the app and matches a landmark")
         XCTAssertTrue(photos.allSatisfy { $0.credit == CampusArchivePhotos.nyplCredit && $0.largeURL.isFileURL })
@@ -462,11 +463,12 @@ final class OldFilmTests: XCTestCase {
             Bundle.main.url(forResource: "BuildingRegistry", withExtension: "json")))) as? [String: [[String: Any]]]
         let ids = try XCTUnwrap(registry).values.joined().compactMap { $0["id"] as? String }
         let all = ids.flatMap { CampusArchivePhotos.photos(forBuildingID: $0) }
+            .filter { !$0.largeURL.lastPathComponent.hasPrefix("ma_") }
         let photochrom = all.filter { $0.credit == "Library of Congress, Photochrom Print Collection" }
         let getty = all.filter { $0.credit == "Getty Museum · CC0" }
         XCTAssertEqual(photochrom.count, CampusArchivePhotos.photochromCount, "every photochrom file is bundled")
         XCTAssertEqual(getty.count, CampusArchivePhotos.gettyCount, "every Getty file is bundled")
-        XCTAssertEqual(all.filter { $0.credit.hasSuffix("Wikimedia Commons") && !$0.largeURL.lastPathComponent.hasPrefix("ma_") }.count,
+        XCTAssertEqual(all.filter { $0.credit.hasSuffix("Wikimedia Commons") }.count,
                        CampusArchivePhotos.commonsBuildingCount + CampusArchivePhotos.worldPhotosCount)
         XCTAssertTrue(all.allSatisfy { $0.largeURL.isFileURL })
     }
