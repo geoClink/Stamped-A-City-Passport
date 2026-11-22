@@ -1,0 +1,5883 @@
+{
+ "made": "2026-11-22",
+ "note": "Landmarks built by 1950 that still have no bundled old photo, minus the batch still running locally (Houston to Lima). Candidates were found on Nov 21-22 but not downloaded because of Wikimedia rate limits.",
+ "landmarks": [
+  {
+   "city": "Bath",
+   "id": "uk_holburne_museum",
+   "name": "The Holburne Museum",
+   "year": 1799,
+   "address": "Great Pulteney St, Bath BA2 4DB"
+  },
+  {
+   "city": "Bath",
+   "id": "uk_the_circus",
+   "name": "The Circus",
+   "year": 1768,
+   "address": "The Circus, Bath BA1 2ET"
+  },
+  {
+   "city": "Bath",
+   "id": "uk_prior_park",
+   "name": "Prior Park Mansion",
+   "year": 1742,
+   "address": "Ralph Allen Dr, Bath BA2 5AH"
+  },
+  {
+   "city": "Bath",
+   "id": "uk_assembly_rooms",
+   "name": "Bath Assembly Rooms",
+   "year": 1771,
+   "address": "Bennett St, Bath BA1 2QH"
+  },
+  {
+   "city": "Bath",
+   "id": "uk_guildhall",
+   "name": "Bath Guildhall",
+   "year": 1775,
+   "address": "High St, Bath BA1 5AW"
+  },
+  {
+   "city": "Bath",
+   "id": "uk_beckfords_tower",
+   "name": "Beckford's Tower",
+   "year": 1827,
+   "address": "Lansdown Rd, Bath BA1 9BH"
+  },
+  {
+   "city": "Bath",
+   "id": "uk_theatre_royal",
+   "name": "Theatre Royal Bath",
+   "year": 1805,
+   "address": "Saw Close, Bath BA1 1ET"
+  },
+  {
+   "city": "Bath",
+   "id": "uk_milsom_place",
+   "name": "Milsom Place",
+   "year": 1762,
+   "address": "Milsom St, Bath BA1 1BZ"
+  },
+  {
+   "city": "Bath",
+   "id": "uk_green_park_station",
+   "name": "Green Park Station",
+   "year": 1870,
+   "address": "Green Park Rd, Bath BA1 1JB"
+  },
+  {
+   "city": "Los Angeles",
+   "id": "glbl_apple_tower_theatre",
+   "name": "Apple Tower Theatre",
+   "year": 1927,
+   "address": "802 South Broadway, Los Angeles, CA 90014"
+  },
+  {
+   "city": "Los Angeles",
+   "id": "la_griffith_observatory",
+   "name": "Griffith Observatory",
+   "year": 1935,
+   "address": "2800 East Observatory Road, Los Angeles, CA 90027"
+  },
+  {
+   "city": "Los Angeles",
+   "id": "la_hollyhock_house",
+   "name": "Hollyhock House",
+   "year": 1921,
+   "address": "4800 Hollywood Boulevard, Los Angeles, CA 90027"
+  },
+  {
+   "city": "Los Angeles",
+   "id": "la_eastern_columbia",
+   "name": "Eastern Columbia Building",
+   "year": 1930,
+   "address": "849 South Broadway, Los Angeles, CA 90014"
+  },
+  {
+   "city": "Los Angeles",
+   "id": "la_union_station",
+   "name": "Union Station",
+   "year": 1939,
+   "address": "800 North Alameda Street, Los Angeles, CA 90012"
+  },
+  {
+   "city": "New Orleans",
+   "id": "nola_preservation_hall",
+   "name": "Preservation Hall",
+   "year": 1803,
+   "address": "726 St Peter St, New Orleans, LA 70116"
+  },
+  {
+   "city": "New Orleans",
+   "id": "nola_hotel_monteleone",
+   "name": "Hotel Monteleone",
+   "year": 1886,
+   "address": "214 Royal St, New Orleans, LA 70130"
+  },
+  {
+   "city": "New Orleans",
+   "id": "nola_commanders_palace",
+   "name": "Commander's Palace",
+   "year": 1893,
+   "address": "1403 Washington Ave, New Orleans, LA 70130"
+  },
+  {
+   "city": "New Orleans",
+   "id": "nola_pitot_house",
+   "name": "The Pitot House",
+   "year": 1799,
+   "address": "1440 Moss St, New Orleans, LA 70119"
+  },
+  {
+   "city": "New Orleans",
+   "id": "nola_cornstalk_hotel",
+   "name": "The Cornstalk Hotel",
+   "year": 1816,
+   "address": "915 Royal St, New Orleans, LA 70116"
+  },
+  {
+   "city": "Orlando",
+   "id": "orl_citrus_bowl",
+   "name": "Camping World Stadium",
+   "year": 1936,
+   "address": "1 Citrus Bowl Pl, Orlando, FL 32805"
+  },
+  {
+   "city": "Singapore",
+   "id": "sg_victoria_theatre",
+   "name": "Victoria Theatre & Concert Hall",
+   "year": 1862,
+   "address": "11 Empress Place, Singapore 179558"
+  },
+  {
+   "city": "Singapore",
+   "id": "sg_old_hill_street",
+   "name": "Old Hill Street Police Station",
+   "year": 1934,
+   "address": "140 Hill Street, Singapore 179369"
+  },
+  {
+   "city": "Portland",
+   "id": "pdx_pioneer_courthouse",
+   "name": "Pioneer Courthouse",
+   "year": 1869,
+   "address": "700 SW 6th Avenue, Portland, OR 97204"
+  },
+  {
+   "city": "Portland",
+   "id": "pdx_commonwealth_building",
+   "name": "The Commonwealth Building",
+   "year": 1948,
+   "address": "421 SW 6th Avenue, Portland, OR 97204"
+  },
+  {
+   "city": "Washington D.C.",
+   "id": "dc-01",
+   "name": "The United States Capitol",
+   "year": 1800,
+   "address": "First St SE, Washington, DC 20004"
+  },
+  {
+   "city": "Washington D.C.",
+   "id": "glbl_apple_carnegie_library",
+   "name": "Apple Carnegie Library",
+   "year": 1903,
+   "address": "801 K St NW, Washington, DC 20001"
+  },
+  {
+   "city": "Washington D.C.",
+   "id": "dc-02",
+   "name": "The White House",
+   "year": 1800,
+   "address": "1600 Pennsylvania Avenue NW, Washington, DC 20500"
+  },
+  {
+   "city": "Washington D.C.",
+   "id": "dc-05",
+   "name": "The Pentagon",
+   "year": 1943,
+   "address": "1400 Defense Pentagon, Arlington, VA 22202"
+  },
+  {
+   "city": "Miami",
+   "id": "mia-03",
+   "name": "The Carlyle",
+   "year": 1939,
+   "address": "1250 Ocean Dr, Miami Beach, FL 33139"
+  },
+  {
+   "city": "Miami",
+   "id": "mia-04",
+   "name": "Vizcaya Museum & Gardens",
+   "year": 1916,
+   "address": "3251 S Miami Ave, Miami, FL 33129"
+  },
+  {
+   "city": "Atlanta",
+   "id": "atl-03",
+   "name": "Ponce City Market",
+   "year": 1926,
+   "address": "675 Ponce De Leon Ave NE, Atlanta, GA 30308"
+  },
+  {
+   "city": "Atlanta",
+   "id": "atl-07",
+   "name": "The Fox Theatre",
+   "year": 1929,
+   "address": "660 Peachtree St NE, Atlanta, GA 30308"
+  },
+  {
+   "city": "Atlanta",
+   "id": "atl-08",
+   "name": "Swan House",
+   "year": 1928,
+   "address": "130 W Paces Ferry Rd NW, Atlanta, GA 30305"
+  },
+  {
+   "city": "Honolulu",
+   "id": "hnl-02",
+   "name": "Aliʻiōlani Hale",
+   "year": 1874,
+   "address": "417 S King St, Honolulu, HI 96813"
+  },
+  {
+   "city": "Honolulu",
+   "id": "hnl-03",
+   "name": "Aloha Tower",
+   "year": 1926,
+   "address": "155 Ala Moana Blvd, Honolulu, HI 96813"
+  },
+  {
+   "city": "Honolulu",
+   "id": "hnl-07",
+   "name": "Hawaii Theatre",
+   "year": 1922,
+   "address": "1130 Bethel St, Honolulu, HI 96813"
+  },
+  {
+   "city": "Honolulu",
+   "id": "hnl-08",
+   "name": "Alexander & Baldwin Building",
+   "year": 1929,
+   "address": "822 Bishop St, Honolulu, HI 96813"
+  },
+  {
+   "city": "Honolulu",
+   "id": "hnl-10",
+   "name": "Kawaiahaʻo Church",
+   "year": 1842,
+   "address": "957 Punchbowl St, Honolulu, HI 96813"
+  },
+  {
+   "city": "Chicago",
+   "id": "chi-08",
+   "name": "Carson Pirie Scott Building",
+   "year": 1899,
+   "address": "1 S State St, Chicago, IL 60603"
+  },
+  {
+   "city": "Chicago",
+   "id": "chi-11",
+   "name": "Chicago Board of Trade Building",
+   "year": 1930,
+   "address": "141 W Jackson Blvd, Chicago, IL 60604"
+  },
+  {
+   "city": "Boston",
+   "id": "bos-10",
+   "name": "Boston Public Library (McKim Building)",
+   "year": 1895,
+   "address": "700 Boylston St, Boston, MA 02116"
+  },
+  {
+   "city": "Denver",
+   "id": "den-03",
+   "name": "Denver Union Station",
+   "year": 1914,
+   "address": "1701 Wynkoop St, Denver, CO 80202"
+  },
+  {
+   "city": "Denver",
+   "id": "den-04",
+   "name": "Colorado State Capitol",
+   "year": 1894,
+   "address": "200 E Colfax Ave, Denver, CO 80203"
+  },
+  {
+   "city": "Denver",
+   "id": "den-15",
+   "name": "The Crawford Hill Mansion",
+   "year": 1906,
+   "address": "150 E 10th Ave, Denver, CO 80203"
+  },
+  {
+   "city": "Pittsburgh",
+   "id": "pit-02",
+   "name": "Cathedral of Learning",
+   "year": 1934,
+   "address": "4200 Fifth Ave, Pittsburgh, PA 15260"
+  },
+  {
+   "city": "Pittsburgh",
+   "id": "pit-03",
+   "name": "The Gulf Tower",
+   "year": 1932,
+   "address": "707 Grant St, Pittsburgh, PA 15219"
+  },
+  {
+   "city": "Pittsburgh",
+   "id": "pit-04",
+   "name": "Fallingwater",
+   "year": 1935,
+   "address": "1491 Mill Run Rd, Mill Run, PA 15464"
+  },
+  {
+   "city": "Pittsburgh",
+   "id": "pit-05",
+   "name": "Smithfield United Church",
+   "year": 1926,
+   "address": "623 Smithfield St, Pittsburgh, PA 15222"
+  },
+  {
+   "city": "Pittsburgh",
+   "id": "pit-06",
+   "name": "Union Trust Building",
+   "year": 1917,
+   "address": "501 Grant St, Pittsburgh, PA 15219"
+  },
+  {
+   "city": "Pittsburgh",
+   "id": "pit-09",
+   "name": "Allegheny County Courthouse",
+   "year": 1888,
+   "address": "436 Grant St, Pittsburgh, PA 15219"
+  },
+  {
+   "city": "Pittsburgh",
+   "id": "pit-10",
+   "name": "Heinz Hall",
+   "year": 1927,
+   "address": "600 Penn Ave, Pittsburgh, PA 15222"
+  },
+  {
+   "city": "Pittsburgh",
+   "id": "pit-13",
+   "name": "Frick Building",
+   "year": 1902,
+   "address": "437 Grant St, Pittsburgh, PA 15219"
+  },
+  {
+   "city": "Pittsburgh",
+   "id": "pit-14",
+   "name": "Benedum Center for the Performing Arts",
+   "year": 1928,
+   "address": "237 7th St, Pittsburgh, PA 15222"
+  },
+  {
+   "city": "Pittsburgh",
+   "id": "pit-15",
+   "name": "Koppers Building",
+   "year": 1929,
+   "address": "436 Seventh Ave, Pittsburgh, PA 15219"
+  },
+  {
+   "city": "Philadelphia",
+   "id": "phi-03",
+   "name": "Philadelphia Museum of Art",
+   "year": 1928,
+   "address": "2600 Benjamin Franklin Pkwy, Philadelphia, PA 19130"
+  },
+  {
+   "city": "Philadelphia",
+   "id": "phi-06",
+   "name": "Pennsylvania Academy of the Fine Arts (PAFA)",
+   "year": 1876,
+   "address": "118 N Broad St, Philadelphia, PA 19102"
+  },
+  {
+   "city": "Philadelphia",
+   "id": "phi-07",
+   "name": "The PSFS Building",
+   "year": 1932,
+   "address": "1200 Market St, Philadelphia, PA 19107"
+  },
+  {
+   "city": "Philadelphia",
+   "id": "phi-08",
+   "name": "Fisher Fine Arts Library",
+   "year": 1891,
+   "address": "220 S 34th St, Philadelphia, PA 19104"
+  },
+  {
+   "city": "Philadelphia",
+   "id": "phi-10",
+   "name": "Eastern State Penitentiary",
+   "year": 1829,
+   "address": "2027 Fairmount Ave, Philadelphia, PA 19130"
+  },
+  {
+   "city": "Philadelphia",
+   "id": "phi-11",
+   "name": "Apple Walnut Street",
+   "year": 1924,
+   "address": "1607 Walnut St, Philadelphia, PA 19103"
+  },
+  {
+   "city": "Philadelphia",
+   "id": "phi-15",
+   "name": "30th Street Station",
+   "year": 1933,
+   "address": "2955 Market St, Philadelphia, PA 19104"
+  },
+  {
+   "city": "Vancouver",
+   "id": "yvr-02",
+   "name": "Vancouver Art Gallery (Old Courthouse)",
+   "year": 1911,
+   "address": "750 Hornby St, Vancouver, BC V6Z 2H7"
+  },
+  {
+   "city": "Vancouver",
+   "id": "yvr-05",
+   "name": "Hotel Vancouver",
+   "year": 1939,
+   "address": "900 W Georgia St, Vancouver, BC V6C 2W6"
+  },
+  {
+   "city": "Vancouver",
+   "id": "yvr-10",
+   "name": "Sun Tower",
+   "year": 1912,
+   "address": "128 W Pender St, Vancouver, BC V6B 1R8"
+  },
+  {
+   "city": "Cleveland",
+   "id": "cle-04",
+   "name": "Guardian Building (668 Euclid)",
+   "year": 1950,
+   "address": "668 Euclid Ave, Cleveland, OH 44114"
+  },
+  {
+   "city": "Cleveland",
+   "id": "cle-12",
+   "name": "Cleveland Public Library (Main)",
+   "year": 1925,
+   "address": "325 Superior Ave, Cleveland, OH 44114"
+  },
+  {
+   "city": "Cleveland",
+   "id": "cle-13",
+   "name": "Severance Music Center",
+   "year": 1931,
+   "address": "11001 Euclid Ave, Cleveland, OH 44106"
+  },
+  {
+   "city": "Cleveland",
+   "id": "cle-15",
+   "name": "Playhouse Square (State Theatre)",
+   "year": 1921,
+   "address": "1519 Euclid Ave, Cleveland, OH 44115"
+  },
+  {
+   "city": "Victoria",
+   "id": "vic-02",
+   "name": "The Fairmont Empress",
+   "year": 1908,
+   "address": "721 Government St, Victoria, BC V8W 1W5"
+  },
+  {
+   "city": "Victoria",
+   "id": "vic-03",
+   "name": "Craigdarroch Castle",
+   "year": 1890,
+   "address": "1050 Joan Crescent, Victoria, BC V8S 3L5"
+  },
+  {
+   "city": "Victoria",
+   "id": "vic-05",
+   "name": "Fan Tan Alley (Building Complex)",
+   "year": 1885,
+   "address": "Fan Tan Alley, Victoria, BC V8W 1W4"
+  },
+  {
+   "city": "Victoria",
+   "id": "vic-07",
+   "name": "St. Andrew’s Cathedral",
+   "year": 1892,
+   "address": "740 View St, Victoria, BC V8W 1J8"
+  },
+  {
+   "city": "Victoria",
+   "id": "vic-08",
+   "name": "Hatley Castle",
+   "year": 1908,
+   "address": "2005 Sooke Rd, Victoria, BC V9B 5Y2"
+  },
+  {
+   "city": "Victoria",
+   "id": "vic-09",
+   "name": "The Customs House",
+   "year": 1914,
+   "address": "816 Government St, Victoria, BC V8W 1W9"
+  },
+  {
+   "city": "Victoria",
+   "id": "vic-11",
+   "name": "Christ Church Cathedral",
+   "year": 1929,
+   "address": "930 Burdett Ave, Victoria, BC V8V 3G8"
+  },
+  {
+   "city": "Victoria",
+   "id": "vic-12",
+   "name": "Victoria City Hall",
+   "year": 1878,
+   "address": "1 Centennial Square, Victoria, BC V8W 1P6"
+  },
+  {
+   "city": "Victoria",
+   "id": "vic-13",
+   "name": "The Janion Building",
+   "year": 1891,
+   "address": "1612 Store St, Victoria, BC V8W 1V3"
+  },
+  {
+   "city": "Victoria",
+   "id": "vic-15",
+   "name": "Market Square",
+   "year": 1880,
+   "address": "560 Johnson St, Victoria, BC V8W 3C6"
+  },
+  {
+   "city": "Amsterdam",
+   "id": "ams_het_schip",
+   "name": "Het Schip",
+   "year": 1921,
+   "address": "Oostzaanstraat 45, 1013 WG Amsterdam"
+  },
+  {
+   "city": "Amsterdam",
+   "id": "ams_apple_hirsch",
+   "name": "Apple Haarlemmerstraat (Leidseplein)",
+   "year": 1912,
+   "address": "Leidseplein 25, 1017 PS Amsterdam"
+  },
+  {
+   "city": "Beijing",
+   "id": "pek_forbidden_city",
+   "name": "Forbidden City (Hall of Supreme Harmony)",
+   "year": 1420,
+   "address": "4 Jingshan Front Street, Dongcheng District, Beijing, 100009"
+  },
+  {
+   "city": "Beijing",
+   "id": "pek_white_pagoda",
+   "name": "White Dagoba (Miaoying Temple)",
+   "year": 1279,
+   "address": "171 Fuchengmen Inner Street, Xicheng District, Beijing, 100034"
+  },
+  {
+   "city": "Mumbai",
+   "id": "bom_cst",
+   "name": "Chhatrapati Shivaji Terminus",
+   "year": 1888,
+   "address": "Chhatrapati Shivaji Terminus Area, Fort, Mumbai, Maharashtra 400001, India"
+  },
+  {
+   "city": "Mumbai",
+   "id": "bom_gateway",
+   "name": "Gateway of India",
+   "year": 1924,
+   "address": "Apollo Bandar, Colaba, Mumbai, Maharashtra 400001, India"
+  },
+  {
+   "city": "Mumbai",
+   "id": "bom_taj_palace",
+   "name": "Taj Mahal Palace Hotel",
+   "year": 1903,
+   "address": "Apollo Bandar, Colaba, Mumbai, Maharashtra 400001, India"
+  },
+  {
+   "city": "Mumbai",
+   "id": "bom_municipal",
+   "name": "BMC Headquarters",
+   "year": 1893,
+   "address": "Mahapalika Marg, Dhobi Talao, Fort, Mumbai, Maharashtra 400001, India"
+  },
+  {
+   "city": "Mumbai",
+   "id": "bom_metro_inox",
+   "name": "Metro Inox Cinema",
+   "year": 1938,
+   "address": "Mahatma Gandhi Road, Dhobi Talao, Marine Lines, Mumbai, Maharashtra 400020, India"
+  },
+  {
+   "city": "Mumbai",
+   "id": "bom_national_gallery",
+   "name": "NGMA (Sir Cowasji Jehangir Hall)",
+   "year": 1911,
+   "address": "Sir Cowasji Jehangir Public Hall, Mahatma Gandhi Road, Fort, Mumbai, Maharashtra 400032, India"
+  },
+  {
+   "city": "Milan",
+   "id": "mil_stazione",
+   "name": "Milano Centrale",
+   "year": 1931,
+   "address": "Piazza Duca d'Aosta, 1, 20124 Milano MI, Italy"
+  },
+  {
+   "city": "Milan",
+   "id": "mil_villa_necchi",
+   "name": "Villa Necchi Campiglio",
+   "year": 1935,
+   "address": "Via Mozart, 14, 20122 Milano MI, Italy"
+  },
+  {
+   "city": "Milan",
+   "id": "mil_triennale",
+   "name": "Palazzo dell'Arte (Triennale)",
+   "year": 1933,
+   "address": "Viale Emilio Alemagna, 6, 20121 Milano MI, Italy"
+  },
+  {
+   "city": "Milan",
+   "id": "mil_ca_brutta",
+   "name": "Ca' Brütta",
+   "year": 1922,
+   "address": "Via della Moscova, 2, 20121 Milano MI, Italy"
+  },
+  {
+   "city": "Milan",
+   "id": "mil_san_siro",
+   "name": "San Siro Stadium",
+   "year": 1926,
+   "address": "Piazzale Angelo Moratti, 20151 Milano MI, Italy"
+  },
+  {
+   "city": "Copenhagen",
+   "id": "cph_round_tower",
+   "name": "Rundetårn",
+   "year": 1642,
+   "address": "Købmagergade 52A, 1150 København K, Denmark"
+  },
+  {
+   "city": "Copenhagen",
+   "id": "cph_apple_kongens",
+   "name": "Apple Kongens Nytorv",
+   "year": 1866,
+   "address": "Kongens Nytorv 26, 1050 København K, Denmark"
+  },
+  {
+   "city": "Copenhagen",
+   "id": "cph_royal_library",
+   "name": "Old Royal Library",
+   "year": 1906,
+   "address": "Søren Kierkegaards Plads 1, 1221 København K, Denmark"
+  },
+  {
+   "city": "Copenhagen",
+   "id": "cph_tivoli_nimb",
+   "name": "Nimb Hotel (Tivoli Gardens)",
+   "year": 1909,
+   "address": "Bernstorffsgade 5, 1577 København V, Denmark"
+  },
+  {
+   "city": "Tel Aviv",
+   "id": "tlv_rubinsky",
+   "name": "Rubinsky House",
+   "year": 1935,
+   "address": "Shenkin St 65, Tel Aviv-Yafo, 6523303, Israel"
+  },
+  {
+   "city": "Tel Aviv",
+   "id": "tlv_habima",
+   "name": "Habima National Theatre",
+   "year": 1945,
+   "address": "Tarsat Ave 2, Tel Aviv-Yafo, 6428301, Israel"
+  },
+  {
+   "city": "Tel Aviv",
+   "id": "tlv_center_bauhaus",
+   "name": "The White City Center (Liebling Haus)",
+   "year": 1936,
+   "address": "Idelson St 29, Tel Aviv-Yafo, 6332414, Israel"
+  },
+  {
+   "city": "Tel Aviv",
+   "id": "tlv_independence_hall",
+   "name": "Independence Hall (Dizengoff House)",
+   "year": 1910,
+   "address": "Rothschild Blvd 16, Tel Aviv-Yafo, 6688119, Israel"
+  },
+  {
+   "city": "Rome",
+   "id": "rom_st_peters",
+   "name": "St. Peter's Basilica",
+   "year": 1626,
+   "address": "Piazza San Pietro, 00120 Città del Vaticano, Vatican City"
+  },
+  {
+   "city": "Rome",
+   "id": "rom_vittorio",
+   "name": "Altare della Patria",
+   "year": 1911,
+   "address": "Piazza Venezia, 00186 Roma RM, Italy"
+  },
+  {
+   "city": "Rome",
+   "id": "rom_fendi",
+   "name": "Palazzo della Civiltà Italiana",
+   "year": 1943,
+   "address": "Quadrato della Concordia 3, 00144 Roma RM, Italy"
+  },
+  {
+   "city": "Rome",
+   "id": "rom_doria_pamphilj",
+   "name": "Palazzo Doria Pamphilj",
+   "year": 1734,
+   "address": "Via del Corso 305, 00186 Roma RM, Italy"
+  },
+  {
+   "city": "Rome",
+   "id": "rom_apple_corso",
+   "name": "Apple Via del Corso",
+   "year": 1873,
+   "address": "Via del Corso 184, 00186 Roma RM, Italy"
+  },
+  {
+   "city": "Rome",
+   "id": "rom_vatican_museums",
+   "name": "Vatican Museums (The Spiral Ramp)",
+   "year": 1932,
+   "address": "Viale Vaticano, 00165 Roma RM, Italy"
+  },
+  {
+   "city": "Rome",
+   "id": "rom_borromini_church",
+   "name": "San Carlo alle Quattro Fontane",
+   "year": 1646,
+   "address": "Via del Quirinale 23, 00187 Roma RM, Italy"
+  },
+  {
+   "city": "Rome",
+   "id": "rom_villa_borghese",
+   "name": "Galleria Borghese",
+   "year": 1613,
+   "address": "Piazzale Scipione Borghese 5, 00197 Roma RM, Italy"
+  },
+  {
+   "city": "Barcelona",
+   "id": "bcn_sagrada_familia",
+   "name": "Sagrada Família",
+   "year": 1882,
+   "address": "Carrer de Mallorca 401, 08013 Barcelona, Spain"
+  },
+  {
+   "city": "Barcelona",
+   "id": "bcn_casa_batllo",
+   "name": "Casa Batlló",
+   "year": 1906,
+   "address": "Passeig de Gràcia 43, 08007 Barcelona, Spain"
+  },
+  {
+   "city": "Barcelona",
+   "id": "bcn_pabellon",
+   "name": "Barcelona Pavilion",
+   "year": 1929,
+   "address": "Av. Francesc Ferrer i Guàrdia 7, 08038 Barcelona, Spain"
+  },
+  {
+   "city": "Barcelona",
+   "id": "bcn_apple_gracia",
+   "name": "Apple Passeig de Gràcia",
+   "year": 1890,
+   "address": "Passeig de Gràcia 1, 08007 Barcelona, Spain"
+  },
+  {
+   "city": "Cupertino",
+   "id": "cup_le_petit_trianon",
+   "name": "Le Petit Trianon",
+   "year": 1895,
+   "address": "21250 Stevens Creek Blvd, Cupertino, CA 95014, USA"
+  },
+  {
+   "city": "Cupertino",
+   "id": "cup_mcclellan_ranch",
+   "name": "McClellan Ranch Milk Barn",
+   "year": 1930,
+   "address": "22221 McClellan Rd, Cupertino, CA 95014, USA"
+  },
+  {
+   "city": "Shanghai",
+   "id": "sha_customs_house",
+   "name": "Customs House",
+   "year": 1927,
+   "address": "13 The Bund (Zhongshan East 1st Rd), Huangpu District, Shanghai 200002, China"
+  },
+  {
+   "city": "Shanghai",
+   "id": "sha_wu_kang",
+   "name": "Wukang Mansion",
+   "year": 1924,
+   "address": "1850 Wukang Rd, Xuhui District, Shanghai 200031, China"
+  },
+  {
+   "city": "Shanghai",
+   "id": "sha_peace_hotel",
+   "name": "Fairmont Peace Hotel",
+   "year": 1929,
+   "address": "20 Nanjing Rd East, Huangpu District, Shanghai 200002, China"
+  },
+  {
+   "city": "Shanghai",
+   "id": "sha_jingan_temple",
+   "name": "Jing’an Temple",
+   "year": 1216,
+   "address": "1686 Nanjing West Road, Jing'an District, Shanghai 200040, China"
+  },
+  {
+   "city": "Shanghai",
+   "id": "sha_1933_old_millfun",
+   "name": "1933 Old Millfun",
+   "year": 1933,
+   "address": "10 Shajing Rd, Hongkou District, Shanghai 200080, China"
+  },
+  {
+   "city": "Bangkok",
+   "id": "bkk_nailert_park",
+   "name": "Nai Lert Park Heritage Home",
+   "year": 1915,
+   "address": "4 Soi Somkid, Ploenchit Rd, Lumphini, Pathum Wan, Bangkok 10330, Thailand"
+  },
+  {
+   "city": "Buffalo",
+   "id": "buf_city_hall",
+   "name": "Buffalo City Hall",
+   "year": 1931,
+   "address": "65 Niagara Square, Buffalo, NY 14202, United States"
+  },
+  {
+   "city": "Buffalo",
+   "id": "buf_darwin_martin",
+   "name": "Darwin D. Martin House",
+   "year": 1905,
+   "address": "125 Jewett Pkwy, Buffalo, NY 14214, United States"
+  },
+  {
+   "city": "Buffalo",
+   "id": "buf_guaranty_building",
+   "name": "Guaranty Building",
+   "year": 1896,
+   "address": "28 Church St, Buffalo, NY 14202, United States"
+  },
+  {
+   "city": "Buffalo",
+   "id": "buf_richardson_olmsted",
+   "name": "Richardson Olmsted Campus",
+   "year": 1870,
+   "address": "444 Forest Ave, Buffalo, NY 14213, United States"
+  },
+  {
+   "city": "Buffalo",
+   "id": "buf_albright_knox",
+   "name": "Buffalo AKG Art Museum",
+   "year": 1905,
+   "address": "1285 Elmwood Ave, Buffalo, NY 14222, United States"
+  },
+  {
+   "city": "Buffalo",
+   "id": "buf_electric_tower",
+   "name": "Electric Tower",
+   "year": 1912,
+   "address": "535 Washington St, Buffalo, NY 14203, United States"
+  },
+  {
+   "city": "Buffalo",
+   "id": "buf_gold_dome",
+   "name": "Buffalo Savings Bank (Gold Dome)",
+   "year": 1901,
+   "address": "545 Main St, Buffalo, NY 14203, United States"
+  },
+  {
+   "city": "Buffalo",
+   "id": "buf_kleinhans",
+   "name": "Kleinhans Music Hall",
+   "year": 1940,
+   "address": "3 Symphony Circle, Buffalo, NY 14201, United States"
+  },
+  {
+   "city": "Buffalo",
+   "id": "buf_st_louis",
+   "name": "St. Louis Roman Catholic Church",
+   "year": 1889,
+   "address": "35 Edward St, Buffalo, NY 14202, United States"
+  },
+  {
+   "city": "Buffalo",
+   "id": "buf_old_post_office",
+   "name": "Old Post Office (ECC City Campus)",
+   "year": 1901,
+   "address": "121 Ellicott St, Buffalo, NY 14203, United States"
+  },
+  {
+   "city": "Buffalo",
+   "id": "buf_statler_city",
+   "name": "Statler City",
+   "year": 1923,
+   "address": "107 Delaware Ave, Buffalo, NY 14202, United States"
+  },
+  {
+   "city": "Buffalo",
+   "id": "buf_darwin_martin_gardners",
+   "name": "Gardner's Cottage (Martin House Complex)",
+   "year": 1908,
+   "address": "118 Summit Ave, Buffalo, NY 14214, United States"
+  },
+  {
+   "city": "Cairo",
+   "id": "cai_baron_empain",
+   "name": "Baron Empain Palace",
+   "year": 1911,
+   "address": "El-Orouba St, Heliopolis, Cairo Governorate 4460303, Egypt"
+  },
+  {
+   "city": "Cairo",
+   "id": "cai_bab_zuwayla",
+   "name": "Bab Zuwayla",
+   "year": 1092,
+   "address": "Al-Muizz li-Din Allah St, El-Darb El-Ahmar, Cairo Governorate 4252010, Egypt"
+  },
+  {
+   "city": "Cairo",
+   "id": "cai_st_virgin_mary",
+   "name": "The Hanging Church",
+   "year": 690,
+   "address": "Kom Ghorab, Old Cairo, Cairo Governorate 4243101, Egypt"
+  },
+  {
+   "city": "Cairo",
+   "id": "cai_abdeen_palace",
+   "name": "Abdeen Palace",
+   "year": 1874,
+   "address": "Moustafa Kamel Square, Abdeen, Cairo Governorate 4251201, Egypt"
+  },
+  {
+   "city": "Cairo",
+   "id": "cai_egyptian_museum_tahrir",
+   "name": "Museum of Egyptian Antiquities (The Red Museum)",
+   "year": 1902,
+   "address": "Tahrir Square, Ismailia, Qasr el-Nil, Cairo Governorate 4251002, Egypt"
+  },
+  {
+   "city": "Sydney",
+   "id": "syd_rose_seidler",
+   "name": "Rose Seidler House",
+   "year": 1950,
+   "address": "71 Clissold Rd, Wahroonga NSW 2076, Australia"
+  },
+  {
+   "city": "Mexico City",
+   "id": "mex_casas_estudio",
+   "name": "Museo Casa Estudio Diego Rivera y Frida Kahlo",
+   "year": 1932,
+   "address": "Diego Rivera 2, San Ángel Inn, Álvaro Obregón, 01060 Ciudad de México, CDMX, Mexico"
+  },
+  {
+   "city": "Mexico City",
+   "id": "mex_postal_palace",
+   "name": "Palacio de Correos de México",
+   "year": 1907,
+   "address": "Tacuba 1, Centro Histórico, Cuauhtémoc, 06000 Ciudad de México, CDMX, Mexico"
+  },
+  {
+   "city": "Mexico City",
+   "id": "mex_casa_barragan",
+   "name": "Casa Luis Barragán",
+   "year": 1948,
+   "address": "Gral. Francisco Ramírez 12, Ampliación Daniel Garza, Miguel Hidalgo, 11840 Ciudad de México, CDMX, Mexico"
+  },
+  {
+   "city": "Melbourne",
+   "id": "flinders-street-station",
+   "name": "Flinders Street Station",
+   "year": 1909,
+   "address": "Flinders Street & Swanston Street, Melbourne VIC 3000, Australia"
+  },
+  {
+   "city": "São Paulo",
+   "id": "br_altino_arantes",
+   "name": "Farol Santander (Altino Arantes Building)",
+   "year": 1947,
+   "address": "Rua João Brícola, 24, Centro, São Paulo - SP"
+  },
+  {
+   "city": "São Paulo",
+   "id": "br_pinacoteca",
+   "name": "Pinacoteca do Estado",
+   "year": 1900,
+   "address": "Praça da Luz, 2, Luz, São Paulo - SP"
+  },
+  {
+   "city": "São Paulo",
+   "id": "br_mosteiro_sao_bento",
+   "name": "Saint Benedict Monastery",
+   "year": 1922,
+   "address": "Largo de São Bento, Centro, São Paulo - SP"
+  },
+  {
+   "city": "São Paulo",
+   "id": "br_mercadao",
+   "name": "Municipal Market of São Paulo",
+   "year": 1933,
+   "address": "Rua Cantareira, 306, Centro, São Paulo - SP"
+  },
+  {
+   "city": "São Paulo",
+   "id": "br_casa_das_rosas",
+   "name": "Casa das Rosas",
+   "year": 1935,
+   "address": "Av. Paulista, 37, Bela Vista, São Paulo - SP"
+  },
+  {
+   "city": "Asheville",
+   "id": "nc_basilica_st_lawrence",
+   "name": "Basilica of Saint Lawrence",
+   "year": 1905,
+   "address": "97 Haywood St, Asheville, NC 28801"
+  },
+  {
+   "city": "Asheville",
+   "id": "nc_grove_arcade",
+   "name": "Grove Arcade",
+   "year": 1929,
+   "address": "1 Page Ave, Asheville, NC 28801"
+  },
+  {
+   "city": "Athens",
+   "id": "athens-panathenaic",
+   "name": "Panathenaic Stadium",
+   "year": -330,
+   "address": "Leoforos Vasileos Konstantinou, Athens 116 35, Greece"
+  },
+  {
+   "city": "Budapest",
+   "id": "budapest-szechenyi-bath",
+   "name": "Széchenyi Thermal Bath",
+   "year": 1913,
+   "address": "Állatkerti körút 9-11, Budapest 1146, Hungary"
+  },
+  {
+   "city": "Edinburgh",
+   "id": "edinburgh-royal-mile",
+   "name": "Royal Mile",
+   "year": 1200,
+   "address": "Royal Mile, Edinburgh, Scotland"
+  },
+  {
+   "city": "Edinburgh",
+   "id": "edinburgh-national-museum",
+   "name": "National Museum of Scotland",
+   "year": 1866,
+   "address": "Chambers St, Edinburgh EH1 1JF, Scotland"
+  },
+  {
+   "city": "Florence",
+   "id": "florence-santa-croce",
+   "name": "Basilica of Santa Croce, Florence",
+   "year": 1385,
+   "address": "Piazza di Santa Croce 16, 50122 Firenze FI, Italy"
+  },
+  {
+   "city": "Dublin",
+   "id": "dublin-trinity-college",
+   "name": "Trinity College Dublin",
+   "year": 1592,
+   "address": "College Green, Dublin 2, Ireland"
+  },
+  {
+   "city": "Dublin",
+   "id": "dublin-guinness-storehouse",
+   "name": "Guinness Storehouse",
+   "year": 1904,
+   "address": "St. James's Gate, Dublin 8, Ireland"
+  },
+  {
+   "city": "Johannesburg",
+   "id": "johannesburg-constitution-hill",
+   "name": "Constitution Hill",
+   "year": 1892,
+   "address": "1 Hospital St, Braamfontein, Johannesburg 2017, South Africa"
+  },
+  {
+   "city": "Johannesburg",
+   "id": "johannesburg-vilakazi-street",
+   "name": "Vilakazi Street",
+   "year": 1950,
+   "address": "Vilakazi St, Orlando West, Soweto 1804, South Africa"
+  },
+  {
+   "city": "Kuala Lumpur",
+   "id": "kl-batu-caves",
+   "name": "Batu Caves",
+   "year": 1890,
+   "address": "Gombak, 68100 Batu Caves, Selangor, Malaysia"
+  },
+  {
+   "city": "Kuala Lumpur",
+   "id": "kl-sultan-samad",
+   "name": "Sultan Abdul Samad Building",
+   "year": 1897,
+   "address": "Jalan Raja, City Centre, 50050 Kuala Lumpur, Malaysia"
+  },
+  {
+   "city": "Ho Chi Minh City",
+   "id": "hcmc-notre-dame",
+   "name": "Notre-Dame Cathedral Basilica of Saigon",
+   "year": 1880,
+   "address": "1 Công xã Paris, Bến Nghé Ward, District 1, Ho Chi Minh City, Vietnam"
+  },
+  {
+   "city": "Ho Chi Minh City",
+   "id": "hcmc-cu-chi-tunnels",
+   "name": "Cu Chi tunnels",
+   "year": 1948,
+   "address": "Phú Mỹ Hưng, Củ Chi District, Ho Chi Minh City, Vietnam"
+  },
+  {
+   "city": "Zurich",
+   "id": "zurich-fraumunster",
+   "name": "Fraumünster",
+   "year": 853,
+   "address": "Münsterhof 2, 8001 Zürich, Switzerland"
+  },
+  {
+   "city": "Zurich",
+   "id": "zurich-kunsthaus",
+   "name": "Kunsthaus Zürich",
+   "year": 1910,
+   "address": "Heimplatz 1, 8001 Zürich, Switzerland"
+  },
+  {
+   "city": "Zurich",
+   "id": "zurich-swiss-national-museum",
+   "name": "Swiss National Museum",
+   "year": 1898,
+   "address": "Museumstrasse 2, 8001 Zürich, Switzerland"
+  },
+  {
+   "city": "Zurich",
+   "id": "zurich-bahnhofstrasse",
+   "name": "Bahnhofstrasse",
+   "year": 1867,
+   "address": "Bahnhofstrasse, 8001 Zürich, Switzerland"
+  },
+  {
+   "city": "Stockholm",
+   "id": "stockholm-gamla-stan",
+   "name": "Gamla stan",
+   "year": 1250,
+   "address": "Gamla stan, 111 29 Stockholm, Sweden"
+  },
+  {
+   "city": "Stockholm",
+   "id": "stockholm-city-hall",
+   "name": "Stockholm City Hall",
+   "year": 1923,
+   "address": "Hantverkargatan 1, 111 52 Stockholm, Sweden"
+  },
+  {
+   "city": "Bogotá",
+   "id": "bogota-monserrate",
+   "name": "Monserrate",
+   "year": 1650,
+   "address": "Cerro Monserrate, Bogotá, Colombia"
+  },
+  {
+   "city": "Bogotá",
+   "id": "bogota-la-candelaria",
+   "name": "La Candelaria",
+   "year": 1538,
+   "address": "La Candelaria, Bogotá, Colombia"
+  },
+  {
+   "city": "Bogotá",
+   "id": "bogota-museo-nacional",
+   "name": "Museo Nacional de Colombia",
+   "year": 1874,
+   "address": "Cra. 7 #28-66, Bogotá, Colombia"
+  },
+  {
+   "city": "Casablanca",
+   "id": "casablanca-mohammed-v-square",
+   "name": "Mohammed V Square (Casablanca)",
+   "year": 1930,
+   "address": "Place Mohammed V, Casablanca, Morocco"
+  },
+  {
+   "city": "Casablanca",
+   "id": "casablanca-old-medina",
+   "name": "Old Medina of Casablanca",
+   "year": 1750,
+   "address": "Ancienne Médina, Casablanca, Morocco"
+  },
+  {
+   "city": "Casablanca",
+   "id": "casablanca-villa-des-arts",
+   "name": "Villa des Arts de Casablanca",
+   "year": 1934,
+   "address": "316 Bd Brahim Roudani, Casablanca 20100, Morocco"
+  },
+  {
+   "city": "Casablanca",
+   "id": "casablanca-corniche",
+   "name": "Ain Diab",
+   "year": 1950,
+   "address": "Corniche Ain Diab, Casablanca, Morocco"
+  },
+  {
+   "city": "Lagos",
+   "id": "lagos-freedom-park",
+   "name": "Freedom Park (Lagos)",
+   "year": 1879,
+   "address": "Old Prison Grounds, Broad St, Lagos Island, Lagos, Nigeria"
+  },
+  {
+   "city": "Accra",
+   "id": "accra-christiansborg-castle",
+   "name": "Christiansborg Castle",
+   "year": 1661,
+   "address": "Independence Ave, Accra, Ghana"
+  },
+  {
+   "city": "Accra",
+   "id": "accra-makola-market",
+   "name": "Makola Market",
+   "year": 1950,
+   "address": "Makola, Accra, Ghana"
+  },
+  {
+   "city": "Addis Ababa",
+   "id": "addis-holy-trinity-cathedral",
+   "name": "Holy Trinity Cathedral (Addis Ababa)",
+   "year": 1941,
+   "address": "Arat Kilo, Addis Ababa, Ethiopia"
+  },
+  {
+   "city": "Addis Ababa",
+   "id": "addis-national-museum-ethiopia",
+   "name": "National Museum of Ethiopia",
+   "year": 1936,
+   "address": "King George VI St, Addis Ababa, Ethiopia"
+  },
+  {
+   "city": "Doha",
+   "id": "doha-souq-waqif",
+   "name": "Souq Waqif",
+   "year": 1950,
+   "address": "Al Souq St, Al Jasra, Doha, Qatar"
+  },
+  {
+   "city": "Amman",
+   "id": "amman-citadel",
+   "name": "Amman Citadel",
+   "year": -1500,
+   "address": "Citadel Hill, Amman, Jordan"
+  },
+  {
+   "city": "Amman",
+   "id": "amman-roman-theatre",
+   "name": "Roman Theatre (Amman)",
+   "year": 169,
+   "address": "Hashimi St, Downtown Amman, Jordan"
+  },
+  {
+   "city": "Amman",
+   "id": "amman-rainbow-street",
+   "name": "Rainbow Street, Amman",
+   "year": 1920,
+   "address": "Rainbow St, Jabal Amman, Amman, Jordan"
+  },
+  {
+   "city": "Muscat",
+   "id": "muscat-mutrah-souq",
+   "name": "Mutrah Souq",
+   "year": 1200,
+   "address": "Mutrah Corniche, Muscat, Oman"
+  },
+  {
+   "city": "Muscat",
+   "id": "muscat-al-jalali-fort",
+   "name": "Fort Al Jalali",
+   "year": 1587,
+   "address": "Old Muscat, Muscat, Oman"
+  },
+  {
+   "city": "Manila",
+   "id": "manila-intramuros",
+   "name": "Intramuros",
+   "year": 1571,
+   "address": "Intramuros, Manila, Philippines"
+  },
+  {
+   "city": "Manila",
+   "id": "manila-rizal-park",
+   "name": "Rizal Park",
+   "year": 1820,
+   "address": "Roxas Blvd, Ermita, Manila, Philippines"
+  },
+  {
+   "city": "Manila",
+   "id": "manila-san-agustin-church",
+   "name": "San Agustín Church (Manila)",
+   "year": 1607,
+   "address": "General Luna St, Intramuros, Manila, Philippines"
+  },
+  {
+   "city": "Manila",
+   "id": "manila-fort-santiago",
+   "name": "Fort Santiago",
+   "year": 1593,
+   "address": "General Luna St, Intramuros, Manila, Philippines"
+  },
+  {
+   "city": "Manila",
+   "id": "manila-national-museum-fine-arts",
+   "name": "National Museum of Fine Arts (Philippines)",
+   "year": 1918,
+   "address": "Padre Burgos Ave, Ermita, Manila, Philippines"
+  },
+  {
+   "city": "Oslo",
+   "id": "oslo-vigeland-park",
+   "name": "Vigeland installation",
+   "year": 1940,
+   "address": "Nobels gate 32, 0268 Oslo, Norway"
+  },
+  {
+   "city": "Helsinki",
+   "id": "helsinki-suomenlinna",
+   "name": "Suomenlinna",
+   "year": 1748,
+   "address": "Suomenlinna, 00190 Helsinki, Finland"
+  },
+  {
+   "city": "Helsinki",
+   "id": "helsinki-national-museum",
+   "name": "National Museum of Finland",
+   "year": 1916,
+   "address": "Mannerheimintie 34, 00100 Helsinki, Finland"
+  },
+  {
+   "city": "Havana",
+   "id": "havana-museum-of-revolution",
+   "name": "Museum of the Revolution (Cuba)",
+   "year": 1920,
+   "address": "Calle Refugio 1, Havana, Cuba"
+  },
+  {
+   "city": "Sana'a",
+   "id": "sanaa-old-city",
+   "name": "Old Sana'a",
+   "year": -500,
+   "address": "Old City, Sana'a, Yemen"
+  },
+  {
+   "city": "Sana'a",
+   "id": "sanaa-great-mosque",
+   "name": "Great Mosque of Sanaa",
+   "year": 630,
+   "address": "Old City, Sana'a, Yemen"
+  },
+  {
+   "city": "Sana'a",
+   "id": "sanaa-bab-al-yemen",
+   "name": "Bab al-Yemen",
+   "year": 1200,
+   "address": "Bab al-Yemen, Sana'a, Yemen"
+  },
+  {
+   "city": "Sana'a",
+   "id": "sanaa-dar-al-hajar",
+   "name": "Dar al-Hajar",
+   "year": 1930,
+   "address": "Wadi Dhahr, Sana'a, Yemen"
+  },
+  {
+   "city": "New Delhi",
+   "id": "in_qutb_minar",
+   "name": "Qutb Minar",
+   "year": 1193,
+   "address": "Mehrauli, New Delhi 110030"
+  },
+  {
+   "city": "New Delhi",
+   "id": "in_humayuns_tomb",
+   "name": "Humayun's Tomb",
+   "year": 1572,
+   "address": "Mathura Rd, Hazrat Nizamuddin, New Delhi"
+  },
+  {
+   "city": "New Delhi",
+   "id": "in_india_gate",
+   "name": "India Gate",
+   "year": 1931,
+   "address": "Kartavya Path, India Gate, New Delhi"
+  },
+  {
+   "city": "Jaipur",
+   "id": "in_hawa_mahal",
+   "name": "Hawa Mahal",
+   "year": 1799,
+   "address": "Hawa Mahal Rd, Badi Choupad, J.D.A. Market, Pink City, Jaipur"
+  },
+  {
+   "city": "Jaipur",
+   "id": "in_amber_fort",
+   "name": "Amber Fort",
+   "year": 1592,
+   "address": "Devisinghpura, Amer, Jaipur, Rajasthan 302028"
+  },
+  {
+   "city": "Jaipur",
+   "id": "in_city_palace_jaipur",
+   "name": "City Palace, Jaipur",
+   "year": 1729,
+   "address": "Tulsi Marg, Gangori Bazaar, J.D.A. Market, Pink City, Jaipur"
+  },
+  {
+   "city": "Jaipur",
+   "id": "in_jantar_mantar_jaipur",
+   "name": "Jantar Mantar, Jaipur",
+   "year": 1735,
+   "address": "Gangori Bazaar, J.D.A. Market, Pink City, Jaipur, Rajasthan"
+  },
+  {
+   "city": "Jaipur",
+   "id": "in_nahargarh_fort",
+   "name": "Nahargarh Fort",
+   "year": 1734,
+   "address": "Krishna Nagar, Brahampuri, Jaipur, Rajasthan"
+  },
+  {
+   "city": "Xi'an",
+   "id": "cn_terracotta_army",
+   "name": "Terracotta Army",
+   "year": -210,
+   "address": "Lintong District, Xi'an, Shaanxi 710600"
+  },
+  {
+   "city": "Xi'an",
+   "id": "cn_xian_city_wall",
+   "name": "Xi'an City Wall",
+   "year": 1378,
+   "address": "Nanmen, Beilin District, Xi'an, Shaanxi"
+  },
+  {
+   "city": "Xi'an",
+   "id": "cn_giant_wild_goose_pagoda",
+   "name": "Giant Wild Goose Pagoda",
+   "year": 652,
+   "address": "Yanta District, Xi'an, Shaanxi 710061"
+  },
+  {
+   "city": "Xi'an",
+   "id": "cn_bell_tower_xian",
+   "name": "Bell Tower of Xi'an",
+   "year": 1384,
+   "address": "West Fifth Rd, Lianhu District, Xi'an, Shaanxi"
+  },
+  {
+   "city": "Xi'an",
+   "id": "cn_muslim_quarter_xian",
+   "name": "Muslim Quarter, Xi'an",
+   "year": 650,
+   "address": "Beiyuanmen, Lianhu District, Xi'an, Shaanxi"
+  },
+  {
+   "city": "Chengdu",
+   "id": "cn_leshan_giant_buddha",
+   "name": "Leshan Giant Buddha",
+   "year": 803,
+   "address": "Leshan, Sichuan Province (90km from Chengdu)"
+  },
+  {
+   "city": "Chengdu",
+   "id": "cn_wuhou_shrine",
+   "name": "Wuhou Shrine",
+   "year": 223,
+   "address": "Wuhou Ci Street, Wuhou District, Chengdu, Sichuan"
+  },
+  {
+   "city": "Chengdu",
+   "id": "cn_dujiangyan",
+   "name": "Dujiangyan",
+   "year": -256,
+   "address": "Dujiangyan City, Sichuan Province (55km from Chengdu)"
+  },
+  {
+   "city": "Cartagena",
+   "id": "co_castillo_san_felipe",
+   "name": "Castillo de San Felipe de Barajas",
+   "year": 1657,
+   "address": "Cra. 17 #36-112, San Felipe, Cartagena"
+  },
+  {
+   "city": "Cartagena",
+   "id": "co_cartagena_cathedral",
+   "name": "Cartagena Cathedral",
+   "year": 1612,
+   "address": "Calle de los Santos de Piedra, Cartagena"
+  },
+  {
+   "city": "Cartagena",
+   "id": "co_murallas_cartagena",
+   "name": "Las Murallas de Cartagena",
+   "year": 1796,
+   "address": "Old City, Cartagena de Indias"
+  },
+  {
+   "city": "Cartagena",
+   "id": "co_palacio_inquisicion",
+   "name": "Palacio de la Inquisición",
+   "year": 1770,
+   "address": "Plaza Bolivar, Cartagena"
+  },
+  {
+   "city": "Cartagena",
+   "id": "co_convento_popa",
+   "name": "Convento de la Popa",
+   "year": 1607,
+   "address": "La Popa Hill, Cartagena"
+  },
+  {
+   "city": "Fukuoka",
+   "id": "jp_fukuoka_castle",
+   "name": "Fukuoka Castle",
+   "year": 1607,
+   "address": "2-1-1 Jonai, Chuo Ward, Fukuoka"
+  },
+  {
+   "city": "Fukuoka",
+   "id": "jp_kushida_shrine",
+   "name": "Kushida Shrine",
+   "year": 757,
+   "address": "2-1 Kamikawabata-machi, Hakata Ward, Fukuoka"
+  },
+  {
+   "city": "Fukuoka",
+   "id": "jp_dazaifu_tenmangu",
+   "name": "Dazaifu Tenman-gū",
+   "year": 919,
+   "address": "4-7-1 Saifu, Dazaifu, Fukuoka Prefecture"
+  },
+  {
+   "city": "Fukuoka",
+   "id": "jp_ohori_park",
+   "name": "Ohori Park",
+   "year": 1929,
+   "address": "1-2 Ohorikoen, Chuo Ward, Fukuoka"
+  },
+  {
+   "city": "Chiang Mai",
+   "id": "th_wat_doi_suthep",
+   "name": "Wat Phra That Doi Suthep",
+   "year": 1383,
+   "address": "99 Moo 6, Su Thep, Mueang Chiang Mai District, Chiang Mai"
+  },
+  {
+   "city": "Chiang Mai",
+   "id": "th_wat_chedi_luang",
+   "name": "Wat Chedi Luang",
+   "year": 1441,
+   "address": "103 Phra Poklao Rd, Si Phum, Mueang Chiang Mai, Chiang Mai"
+  },
+  {
+   "city": "Chiang Mai",
+   "id": "th_chiang_mai_night_bazaar",
+   "name": "Chiang Mai Night Bazaar",
+   "year": 1910,
+   "address": "Chang Khlan Rd, Chang Khlan, Mueang Chiang Mai District"
+  },
+  {
+   "city": "Salzburg",
+   "id": "at_salzburg_cathedral",
+   "name": "Salzburg Cathedral",
+   "year": 1628,
+   "address": "Domplatz 1a, 5020 Salzburg, Austria"
+  },
+  {
+   "city": "Salzburg",
+   "id": "at_mirabell_palace",
+   "name": "Mirabell Palace",
+   "year": 1721,
+   "address": "Mirabellplatz 4, 5020 Salzburg, Austria"
+  },
+  {
+   "city": "Salzburg",
+   "id": "at_mozarts_birthplace",
+   "name": "Mozart's Birthplace",
+   "year": 1400,
+   "address": "Getreidegasse 9, 5020 Salzburg, Austria"
+  },
+  {
+   "city": "Nice",
+   "id": "fr_castle_hill_nice",
+   "name": "Castle Hill, Nice",
+   "year": 1885,
+   "address": "Colline du Chateau, 06000 Nice, France"
+  },
+  {
+   "city": "Nice",
+   "id": "fr_nice_cathedral",
+   "name": "Nice Cathedral",
+   "year": 1699,
+   "address": "Place Rossetti, 06300 Nice, France"
+  },
+  {
+   "city": "Seville",
+   "id": "es_plaza_espana_seville",
+   "name": "Plaza de España, Seville",
+   "year": 1928,
+   "address": "Av. Isabel la Catolica, 41004 Sevilla, Spain"
+  },
+  {
+   "city": "Guadalajara",
+   "id": "mx_guadalajara_cathedral",
+   "name": "Guadalajara Metropolitan Cathedral",
+   "year": 1618,
+   "address": "Av. 16 de Septiembre 16, Centro Historico, 44100 Guadalajara, Mexico"
+  },
+  {
+   "city": "Guadalajara",
+   "id": "mx_hospicio_cabanas",
+   "name": "Hospicio Cabañas",
+   "year": 1810,
+   "address": "Cabanas 8, El Santuario, 44360 Guadalajara, Mexico"
+  },
+  {
+   "city": "Guadalajara",
+   "id": "mx_teatro_degollado",
+   "name": "Teatro Degollado",
+   "year": 1866,
+   "address": "Degollado, 44100 Guadalajara, Mexico"
+  },
+  {
+   "city": "Guadalajara",
+   "id": "mx_tlaquepaque",
+   "name": "Tlaquepaque",
+   "year": 1650,
+   "address": "El Parian, Independencia 186, Tlaquepaque, Jalisco"
+  },
+  {
+   "city": "Quebec City",
+   "id": "ca_plains_of_abraham",
+   "name": "Plains of Abraham",
+   "year": 1759,
+   "address": "835 Avenue Wilfrid Laurier, Quebec City, QC G1S 3C4, Canada"
+  },
+  {
+   "city": "Brisbane",
+   "id": "au_story_bridge",
+   "name": "Story Bridge",
+   "year": 1940,
+   "address": "Main St, Kangaroo Point QLD 4169, Australia"
+  },
+  {
+   "city": "Brisbane",
+   "id": "au_brisbane_city_hall",
+   "name": "Brisbane City Hall",
+   "year": 1930,
+   "address": "64 Adelaide St, Brisbane City QLD 4000, Australia"
+  },
+  {
+   "city": "Kathmandu",
+   "id": "np_boudhanath",
+   "name": "Boudhanath",
+   "year": 1350,
+   "address": "Boudha, Kathmandu 44600, Nepal"
+  },
+  {
+   "city": "Kathmandu",
+   "id": "np_swayambhunath",
+   "name": "Swayambhunath",
+   "year": 450,
+   "address": "Swayambhu, Kathmandu 44600, Nepal"
+  },
+  {
+   "city": "Kathmandu",
+   "id": "np_pashupatinath_temple",
+   "name": "Pashupatinath Temple",
+   "year": 450,
+   "address": "Pashupatinath, Kathmandu 44621, Nepal"
+  },
+  {
+   "city": "Kathmandu",
+   "id": "np_kathmandu_durbar_square",
+   "name": "Kathmandu Durbar Square",
+   "year": 1650,
+   "address": "Basantapur Durbar Square, Kathmandu 44600, Nepal"
+  },
+  {
+   "city": "Kathmandu",
+   "id": "np_garden_of_dreams",
+   "name": "Garden of Dreams, Kathmandu",
+   "year": 1920,
+   "address": "Kaiser Mahal, Kantipath, Kathmandu 44600, Nepal"
+  },
+  {
+   "city": "Reykjavik",
+   "id": "is_national_museum_iceland",
+   "name": "National Museum of Iceland",
+   "year": 1950,
+   "address": "Sudurgata 41, 102 Reykjavik, Iceland"
+  },
+  {
+   "city": "St. Petersburg",
+   "id": "ru_winter_palace",
+   "name": "Winter Palace",
+   "year": 1762,
+   "address": "Palace Square 2, St. Petersburg 190000, Russia"
+  },
+  {
+   "city": "St. Petersburg",
+   "id": "ru_church_savior_on_blood",
+   "name": "Church of the Savior on Blood",
+   "year": 1907,
+   "address": "Naberezhnaya kanala Griboedova 2B, St. Petersburg 191186, Russia"
+  },
+  {
+   "city": "St. Petersburg",
+   "id": "ru_mariinsky_theatre",
+   "name": "Mariinsky Theatre",
+   "year": 1860,
+   "address": "1 Teatralnaya Square, St. Petersburg 190000, Russia"
+  },
+  {
+   "city": "Tbilisi",
+   "id": "ge_narikala_fortress",
+   "name": "Narikala Fortress",
+   "year": 350,
+   "address": "Narikala Fortress, Abanotubani district, Tbilisi, Georgia"
+  },
+  {
+   "city": "Tbilisi",
+   "id": "ge_metekhi_church",
+   "name": "Metekhi Church",
+   "year": 1278,
+   "address": "Metekhi Rise, Tbilisi 0105, Georgia"
+  },
+  {
+   "city": "Tbilisi",
+   "id": "ge_georgian_national_museum",
+   "name": "Georgian National Museum",
+   "year": 1929,
+   "address": "3 Rustaveli Avenue, Tbilisi 0108, Georgia"
+  },
+  {
+   "city": "Tbilisi",
+   "id": "ge_tbilisi_botanical_garden",
+   "name": "Tbilisi Botanical Garden",
+   "year": 1650,
+   "address": "1 Botanikuri St, Tbilisi 0105, Georgia"
+  },
+  {
+   "city": "Colombo",
+   "id": "lk_gangaramaya_temple",
+   "name": "Gangaramaya Temple",
+   "year": 1885,
+   "address": "61 Sri Jinarathana Rd, Colombo 00200, Sri Lanka"
+  },
+  {
+   "city": "Colombo",
+   "id": "lk_national_museum_colombo",
+   "name": "National Museum of Colombo",
+   "year": 1877,
+   "address": "Sir Marcus Fernando Mawatha, Colombo 00700, Sri Lanka"
+  },
+  {
+   "city": "Colombo",
+   "id": "lk_independence_memorial_hall",
+   "name": "Independence Memorial Hall, Colombo",
+   "year": 1948,
+   "address": "Independence Avenue, Colombo 00700, Sri Lanka"
+  },
+  {
+   "city": "Colombo",
+   "id": "lk_pettah_market",
+   "name": "Pettah Market",
+   "year": 1650,
+   "address": "Main Street, Pettah, Colombo 00011, Sri Lanka"
+  },
+  {
+   "city": "Dakar",
+   "id": "sn_house_of_slaves",
+   "name": "House of Slaves",
+   "year": 1776,
+   "address": "Goree Island, Dakar, Senegal"
+  },
+  {
+   "city": "Dakar",
+   "id": "sn_ifan_museum",
+   "name": "IFAN Museum of African Arts",
+   "year": 1938,
+   "address": "Place Soweto, Dakar, Senegal"
+  },
+  {
+   "city": "Zanzibar",
+   "id": "tz_stone_town",
+   "name": "Stone Town, Zanzibar City",
+   "year": 1830,
+   "address": "Stone Town, Zanzibar City, Tanzania"
+  },
+  {
+   "city": "Zanzibar",
+   "id": "tz_house_of_wonders",
+   "name": "House of Wonders",
+   "year": 1883,
+   "address": "Forodhani, Stone Town, Zanzibar City, Tanzania"
+  },
+  {
+   "city": "Zanzibar",
+   "id": "tz_old_fort_zanzibar",
+   "name": "Old Fort, Zanzibar",
+   "year": 1701,
+   "address": "Old Fort, Forodhani, Stone Town, Zanzibar City, Tanzania"
+  },
+  {
+   "city": "Zanzibar",
+   "id": "tz_freddie_mercury_birthplace",
+   "name": "Freddie Mercury's Birthplace",
+   "year": 1900,
+   "address": "Kenyatta Road, Stone Town, Zanzibar City, Tanzania"
+  },
+  {
+   "city": "Munich",
+   "id": "munich_new_town_hall",
+   "name": "New Town Hall",
+   "year": 1906,
+   "address": "Marienplatz 8, 80331 Munich, Germany"
+  },
+  {
+   "city": "Munich",
+   "id": "munich_st_peters_church",
+   "name": "St. Peter's Church",
+   "year": 1368,
+   "address": "Rindermarkt 1, 80331 Munich, Germany"
+  },
+  {
+   "city": "Munich",
+   "id": "munich_asam_church",
+   "name": "Asam Church",
+   "year": 1746,
+   "address": "Sendlinger Straße, 80331 Munich, Germany"
+  },
+  {
+   "city": "Munich",
+   "id": "munich_theatine_church",
+   "name": "Theatine Church",
+   "year": 1768,
+   "address": "Salvatorplatz 2a, 80333 Munich, Germany"
+  },
+  {
+   "city": "Hamburg",
+   "id": "hamburg_chilehaus",
+   "name": "Chilehaus",
+   "year": 1924,
+   "address": "Fischertwiete, Hamburg, Germany"
+  },
+  {
+   "city": "Hamburg",
+   "id": "hamburg_speicherstadt",
+   "name": "Speicherstadt",
+   "year": 1927,
+   "address": "HafenCity, Hamburg, Germany"
+  },
+  {
+   "city": "Hamburg",
+   "id": "hamburg_st_michaels_church",
+   "name": "St. Michael's Church",
+   "year": 1912,
+   "address": "Neustadt, Hamburg, Germany"
+  },
+  {
+   "city": "Hamburg",
+   "id": "hamburg_st_peters_church",
+   "name": "St. Peter's Church",
+   "year": 1878,
+   "address": "Altstadt, Hamburg, Germany"
+  },
+  {
+   "city": "Hamburg",
+   "id": "hamburg_st_catherines_church",
+   "name": "St. Catherine's Church",
+   "year": 1657,
+   "address": "Altstadt, Hamburg, Germany"
+  },
+  {
+   "city": "Hamburg",
+   "id": "hamburg_old_elbe_tunnel",
+   "name": "Old Elbe Tunnel",
+   "year": 1911,
+   "address": "St. Pauli, Hamburg, Germany"
+  },
+  {
+   "city": "Hamburg",
+   "id": "hamburg_laeiszhalle",
+   "name": "Laeiszhalle",
+   "year": 1908,
+   "address": "Johannes-Brahms-Platz 20, 20355 Hamburg, Germany"
+  },
+  {
+   "city": "Bilbao",
+   "id": "bilbao_azkuna_zentroa",
+   "name": "Azkuna Zentroa",
+   "year": 1909,
+   "address": "Arriquibar Plaza 4, Bilbao, Spain"
+  },
+  {
+   "city": "Bilbao",
+   "id": "bilbao_teatro_arriaga",
+   "name": "Teatro Arriaga",
+   "year": 1890,
+   "address": "Arriaga Plaza, Bilbao, Spain"
+  },
+  {
+   "city": "Bilbao",
+   "id": "bilbao_fine_arts_museum",
+   "name": "Bilbao Fine Arts Museum",
+   "year": 1945,
+   "address": "Doña Casilda Iturrizar Park, Bilbao, Spain"
+  },
+  {
+   "city": "Bilbao",
+   "id": "bilbao_cathedral",
+   "name": "Bilbao Cathedral",
+   "year": 1887,
+   "address": "Done Jakue Plazatxoa 1, Bilbao, Spain"
+  },
+  {
+   "city": "Bilbao",
+   "id": "bilbao_basilica_of_begona",
+   "name": "Basilica of Begoña",
+   "year": 1511,
+   "address": "Begoña, Bilbao, Spain"
+  },
+  {
+   "city": "Bilbao",
+   "id": "bilbao_vizcaya_bridge",
+   "name": "Vizcaya Bridge",
+   "year": 1893,
+   "address": "Portugalete – Las Arenas (Getxo), Biscay, Spain"
+  },
+  {
+   "city": "Bilbao",
+   "id": "bilbao_abando_station",
+   "name": "Bilbao-Abando railway station",
+   "year": 1948,
+   "address": "Gran Vía 1, 48001 Bilbao, Spain"
+  },
+  {
+   "city": "Bilbao",
+   "id": "bilbao_city_hall",
+   "name": "Bilbao City Hall",
+   "year": 1892,
+   "address": "Ernesto Erkoreka Plaza 1, 48007 Bilbao, Spain"
+  },
+  {
+   "city": "Bilbao",
+   "id": "bilbao_ribera_market",
+   "name": "Mercado de la Ribera",
+   "year": 1929,
+   "address": "Casco Viejo, Bilbao, Spain"
+  },
+  {
+   "city": "Valencia",
+   "id": "valencia_mercado_central",
+   "name": "Mercado Central",
+   "year": 1928,
+   "address": "Plaça del Mercat, Valencia, Spain"
+  },
+  {
+   "city": "Valencia",
+   "id": "valencia_estacio_del_nord",
+   "name": "Estació del Nord",
+   "year": 1917,
+   "address": "Carrer de Xàtiva 24, 46007 Valencia, Spain"
+  },
+  {
+   "city": "Valencia",
+   "id": "valencia_city_hall",
+   "name": "Valencia City Hall",
+   "year": 1930,
+   "address": "Plaça de l'Ajuntament, Valencia, Spain"
+  },
+  {
+   "city": "Valencia",
+   "id": "valencia_plaza_de_toros",
+   "name": "Plaza de Toros de Valencia",
+   "year": 1859,
+   "address": "Carrer de Xàtiva, Valencia, Spain"
+  },
+  {
+   "city": "Rotterdam",
+   "id": "rotterdam_van_nelle_factory",
+   "name": "Van Nelle Factory",
+   "year": 1931,
+   "address": "Van Nelleweg 1, Rotterdam, Netherlands"
+  },
+  {
+   "city": "Rotterdam",
+   "id": "rotterdam_city_hall",
+   "name": "Rotterdam City Hall",
+   "year": 1920,
+   "address": "Coolsingel 40, 3011 AD Rotterdam, Netherlands"
+  },
+  {
+   "city": "Rotterdam",
+   "id": "rotterdam_witte_huis",
+   "name": "Witte Huis",
+   "year": 1898,
+   "address": "Wijnhaven 3, Rotterdam, Netherlands"
+  },
+  {
+   "city": "Rotterdam",
+   "id": "rotterdam_hotel_new_york",
+   "name": "Hotel New York",
+   "year": 1917,
+   "address": "Koninginnenhoofd 1, Rotterdam, Netherlands"
+  },
+  {
+   "city": "Rotterdam",
+   "id": "rotterdam_schielandshuis",
+   "name": "Schielandshuis",
+   "year": 1665,
+   "address": "Korte Hoogstraat 31, Rotterdam, Netherlands"
+  },
+  {
+   "city": "Glasgow",
+   "id": "glasgow_the_lighthouse",
+   "name": "The Lighthouse",
+   "year": 1895,
+   "address": "11 Mitchell Lane, Glasgow, United Kingdom"
+  },
+  {
+   "city": "Glasgow",
+   "id": "glasgow_willow_tearooms",
+   "name": "Willow Tearooms",
+   "year": 1903,
+   "address": "217 Sauchiehall Street, Glasgow, United Kingdom"
+  },
+  {
+   "city": "Glasgow",
+   "id": "glasgow_queens_cross_church",
+   "name": "Queen's Cross Church",
+   "year": 1899,
+   "address": "Garscube Road, Glasgow, United Kingdom"
+  },
+  {
+   "city": "Glasgow",
+   "id": "glasgow_scotland_street_school",
+   "name": "Scotland Street School Museum",
+   "year": 1906,
+   "address": "Scotland Street, Glasgow, United Kingdom"
+  },
+  {
+   "city": "Glasgow",
+   "id": "glasgow_peoples_palace",
+   "name": "People's Palace",
+   "year": 1898,
+   "address": "Glasgow Green, Glasgow G40 1AT, United Kingdom"
+  },
+  {
+   "city": "Glasgow",
+   "id": "glasgow_templeton_on_the_green",
+   "name": "Templeton On The Green",
+   "year": 1892,
+   "address": "Glasgow Green, Glasgow, United Kingdom"
+  },
+  {
+   "city": "Glasgow",
+   "id": "glasgow_provands_lordship",
+   "name": "Provand's Lordship",
+   "year": 1471,
+   "address": "Castle Street, Glasgow, United Kingdom"
+  },
+  {
+   "city": "Glasgow",
+   "id": "glasgow_st_vincent_street_church",
+   "name": "St Vincent Street Church",
+   "year": 1859,
+   "address": "St Vincent Street, Glasgow, United Kingdom"
+  },
+  {
+   "city": "Columbus, Indiana",
+   "id": "columbus_in_bartholomew_county_courthouse",
+   "name": "Bartholomew County Courthouse",
+   "year": 1874,
+   "address": "Third St & Washington St, Columbus, IN"
+  },
+  {
+   "city": "Columbus, Indiana",
+   "id": "columbus_in_old_city_hall",
+   "name": "Columbus City Hall",
+   "year": 1895,
+   "address": "Fifth St & Franklin St, Columbus, IN"
+  },
+  {
+   "city": "Columbus, Indiana",
+   "id": "columbus_in_crump_theatre",
+   "name": "Crump Theatre",
+   "year": 1889,
+   "address": "425 Third St, Columbus, IN"
+  },
+  {
+   "city": "Oak Park",
+   "id": "oak_park_frank_lloyd_wright_home_and_studio",
+   "name": "Frank Lloyd Wright Home and Studio",
+   "year": 1889,
+   "address": "951 Chicago Ave, Oak Park, IL 60302"
+  },
+  {
+   "city": "Oak Park",
+   "id": "oak_park_unity_temple",
+   "name": "Unity Temple",
+   "year": 1908,
+   "address": "875 Lake St, Oak Park, IL 60301"
+  },
+  {
+   "city": "Oak Park",
+   "id": "oak_park_arthur_heurtley_house",
+   "name": "Arthur Heurtley House",
+   "year": 1902,
+   "address": "318 Forest Ave, Oak Park, IL 60302"
+  },
+  {
+   "city": "Oak Park",
+   "id": "oak_park_frank_w_thomas_house",
+   "name": "Frank W. Thomas House",
+   "year": 1901,
+   "address": "210 Forest Ave, Oak Park, IL 60302"
+  },
+  {
+   "city": "Oak Park",
+   "id": "oak_park_edwin_h_cheney_house",
+   "name": "Edwin H. Cheney House",
+   "year": 1903,
+   "address": "520 N East Ave, Oak Park, IL 60302"
+  },
+  {
+   "city": "Oak Park",
+   "id": "oak_park_peter_a_beachy_house",
+   "name": "Peter A. Beachy House",
+   "year": 1906,
+   "address": "238 Forest Ave, Oak Park, IL 60302"
+  },
+  {
+   "city": "Oak Park",
+   "id": "oak_park_laura_gale_house",
+   "name": "Laura Gale House",
+   "year": 1909,
+   "address": "6 Elizabeth Ct, Oak Park, IL 60302"
+  },
+  {
+   "city": "Oak Park",
+   "id": "oak_park_edward_r_hills_house",
+   "name": "Edward R. Hills House",
+   "year": 1906,
+   "address": "313 Forest Ave, Oak Park, IL 60302"
+  },
+  {
+   "city": "Oak Park",
+   "id": "oak_park_william_g_fricke_house",
+   "name": "William G. Fricke House",
+   "year": 1902,
+   "address": "540 Fair Oaks Ave, Oak Park, IL 60302"
+  },
+  {
+   "city": "Oak Park",
+   "id": "oak_park_walter_gale_house",
+   "name": "Walter Gale House",
+   "year": 1893,
+   "address": "1031 Chicago Ave, Oak Park, IL 60302"
+  },
+  {
+   "city": "Oak Park",
+   "id": "oak_park_thomas_h_gale_house",
+   "name": "Thomas H. Gale House",
+   "year": 1892,
+   "address": "1027 Chicago Ave, Oak Park, IL 60302"
+  },
+  {
+   "city": "Oak Park",
+   "id": "oak_park_robert_p_parker_house",
+   "name": "Robert P. Parker House",
+   "year": 1892,
+   "address": "1019 Chicago Ave, Oak Park, IL 60302"
+  },
+  {
+   "city": "Oak Park",
+   "id": "oak_park_pleasant_home",
+   "name": "Pleasant Home",
+   "year": 1897,
+   "address": "217 Home Ave, Oak Park, IL 60302"
+  },
+  {
+   "city": "Oak Park",
+   "id": "oak_park_ernest_hemingway_birthplace",
+   "name": "Ernest Hemingway Birthplace",
+   "year": 1890,
+   "address": "Oak Park, IL 60302"
+  },
+  {
+   "city": "Palm Springs",
+   "id": "palm_springs_kaufmann_desert_house",
+   "name": "Kaufmann Desert House",
+   "year": 1946,
+   "address": "470 W Vista Chino, Palm Springs, CA 92262"
+  },
+  {
+   "city": "Palm Springs",
+   "id": "palm_springs_frank_sinatra_house",
+   "name": "Twin Palms",
+   "year": 1947,
+   "address": "1148 E Alejo Rd, Palm Springs, CA 92262"
+  },
+  {
+   "city": "Palm Springs",
+   "id": "palm_springs_villa_hermosa",
+   "name": "Villa Hermosa",
+   "year": 1946,
+   "address": "155 W Hermosa Pl, Palm Springs, CA 92262"
+  },
+  {
+   "city": "Palm Springs",
+   "id": "palm_springs_plaza_theatre",
+   "name": "Plaza Theatre",
+   "year": 1936,
+   "address": "128 S Palm Canyon Dr, Palm Springs, CA 92262"
+  },
+  {
+   "city": "Palm Springs",
+   "id": "palm_springs_cornelia_white_house",
+   "name": "Cornelia White House",
+   "year": 1893,
+   "address": "Village Green Heritage Center, Palm Springs, CA 92262"
+  },
+  {
+   "city": "Fort Worth",
+   "id": "fort_worth_stockyards",
+   "name": "Fort Worth Stockyards",
+   "year": 1890,
+   "address": "Stockyards Historic District, Fort Worth, TX"
+  },
+  {
+   "city": "Fort Worth",
+   "id": "fort_worth_tp_station",
+   "name": "T&P Station",
+   "year": 1931,
+   "address": "221 W Lancaster Ave, Fort Worth, TX 76102"
+  },
+  {
+   "city": "Fort Worth",
+   "id": "fort_worth_will_rogers_memorial_center",
+   "name": "Will Rogers Memorial Center",
+   "year": 1936,
+   "address": "3401 W Lancaster Ave, Fort Worth, TX 76107"
+  },
+  {
+   "city": "Fort Worth",
+   "id": "fort_worth_st_patrick_cathedral",
+   "name": "St. Patrick Cathedral",
+   "year": 1892,
+   "address": "1206 Throckmorton St, Fort Worth, TX 76102"
+  },
+  {
+   "city": "Fort Worth",
+   "id": "fort_worth_public_market",
+   "name": "Fort Worth Public Market",
+   "year": 1930,
+   "address": "1400 Henderson St, Fort Worth, TX 76102"
+  },
+  {
+   "city": "Kansas City",
+   "id": "kansas_city_nelson_atkins_museum",
+   "name": "Nelson-Atkins Museum of Art",
+   "year": 1933,
+   "address": "4525 Oak St, Kansas City, MO"
+  },
+  {
+   "city": "Kansas City",
+   "id": "kansas_city_liberty_memorial",
+   "name": "National World War I Museum and Memorial",
+   "year": 1926,
+   "address": "Penn Valley Park, Kansas City, MO"
+  },
+  {
+   "city": "Kansas City",
+   "id": "kansas_city_city_hall",
+   "name": "Kansas City City Hall",
+   "year": 1937,
+   "address": "414 E 12th St, Kansas City, MO"
+  },
+  {
+   "city": "Kansas City",
+   "id": "kansas_city_jackson_county_courthouse",
+   "name": "Jackson County Courthouse",
+   "year": 1934,
+   "address": "415 E 12th St, Kansas City, MO"
+  },
+  {
+   "city": "Kansas City",
+   "id": "kansas_city_power_and_light_building",
+   "name": "Kansas City Power and Light Building",
+   "year": 1931,
+   "address": "1330 Baltimore Ave, Kansas City, MO 64105"
+  },
+  {
+   "city": "Kansas City",
+   "id": "kansas_city_909_walnut",
+   "name": "909 Walnut",
+   "year": 1931,
+   "address": "909 Walnut St, Kansas City, MO"
+  },
+  {
+   "city": "Kansas City",
+   "id": "kansas_city_country_club_plaza",
+   "name": "Country Club Plaza",
+   "year": 1923,
+   "address": "Between 46th St and Brush Creek, Kansas City, MO"
+  },
+  {
+   "city": "Kansas City",
+   "id": "kansas_city_western_auto_building",
+   "name": "Western Auto Building",
+   "year": 1914,
+   "address": "2107 Grand Blvd, Kansas City, MO"
+  },
+  {
+   "city": "Kansas City",
+   "id": "kansas_city_community_christian_church",
+   "name": "Community Christian Church",
+   "year": 1942,
+   "address": "4601 Main St, Kansas City, MO 64112"
+  },
+  {
+   "city": "Savannah",
+   "id": "savannah_cathedral_st_john_the_baptist",
+   "name": "Cathedral Basilica of St. John the Baptist",
+   "year": 1876,
+   "address": "222 E Harris St, Savannah, GA 31401"
+  },
+  {
+   "city": "Savannah",
+   "id": "savannah_owens_thomas_house",
+   "name": "Owens–Thomas House",
+   "year": 1819,
+   "address": "124 Abercorn St, Savannah, GA 31401"
+  },
+  {
+   "city": "Savannah",
+   "id": "savannah_mercer_house",
+   "name": "Mercer House",
+   "year": 1868,
+   "address": "429 Bull St, Savannah, GA 31401"
+  },
+  {
+   "city": "Savannah",
+   "id": "savannah_congregation_mickve_israel",
+   "name": "Congregation Mickve Israel",
+   "year": 1878,
+   "address": "20 E Gordon St, Savannah, GA 31401"
+  },
+  {
+   "city": "Savannah",
+   "id": "savannah_william_scarbrough_house",
+   "name": "William Scarbrough House",
+   "year": 1819,
+   "address": "41 Martin Luther King Jr Blvd, Savannah, GA 31401"
+  },
+  {
+   "city": "Charleston",
+   "id": "charleston_old_exchange_provost_dungeon",
+   "name": "Old Exchange and Provost Dungeon",
+   "year": 1771,
+   "address": "East Bay St & Broad St, Charleston, SC 29401"
+  },
+  {
+   "city": "Charleston",
+   "id": "charleston_nathaniel_russell_house",
+   "name": "Nathaniel Russell House",
+   "year": 1808,
+   "address": "51 Meeting St, Charleston, SC 29401"
+  },
+  {
+   "city": "Charleston",
+   "id": "charleston_aiken_rhett_house",
+   "name": "Aiken-Rhett House",
+   "year": 1820,
+   "address": "48 Elizabeth St, Charleston, SC 29403"
+  },
+  {
+   "city": "Charleston",
+   "id": "charleston_joseph_manigault_house",
+   "name": "Joseph Manigault House",
+   "year": 1803,
+   "address": "350 Meeting St, Charleston, SC 29403"
+  },
+  {
+   "city": "Charleston",
+   "id": "charleston_fireproof_building",
+   "name": "Fireproof Building",
+   "year": 1827,
+   "address": "100 Meeting St, Charleston, SC 29401"
+  },
+  {
+   "city": "Charleston",
+   "id": "charleston_kahal_kadosh_beth_elohim",
+   "name": "Kahal Kadosh Beth Elohim",
+   "year": 1840,
+   "address": "90 Hasell St, Charleston, SC 29401"
+  },
+  {
+   "city": "Baltimore",
+   "id": "baltimore_basilica",
+   "name": "Baltimore Basilica",
+   "year": 1821,
+   "address": "409 Cathedral St, Baltimore, MD"
+  },
+  {
+   "city": "Baltimore",
+   "id": "baltimore_bromo_seltzer_tower",
+   "name": "Bromo-Seltzer Tower",
+   "year": 1911,
+   "address": "21 S Eutaw St, Baltimore, MD"
+  },
+  {
+   "city": "Baltimore",
+   "id": "baltimore_george_peabody_library",
+   "name": "George Peabody Library",
+   "year": 1878,
+   "address": "17 E Mount Vernon Pl, Baltimore, MD"
+  },
+  {
+   "city": "Baltimore",
+   "id": "baltimore_penn_station",
+   "name": "Baltimore Penn Station",
+   "year": 1911,
+   "address": "1500 N Charles St, Baltimore, MD 21201"
+  },
+  {
+   "city": "Baltimore",
+   "id": "baltimore_phoenix_shot_tower",
+   "name": "Phoenix Shot Tower",
+   "year": 1828,
+   "address": "Baltimore, MD"
+  },
+  {
+   "city": "Baltimore",
+   "id": "baltimore_lovely_lane_church",
+   "name": "Lovely Lane Methodist Church",
+   "year": 1884,
+   "address": "2200 St. Paul St, Baltimore, MD"
+  },
+  {
+   "city": "San Diego",
+   "id": "san_diego_museum_of_us",
+   "name": "Museum of Us",
+   "year": 1915,
+   "address": "1350 El Prado, San Diego, CA"
+  },
+  {
+   "city": "San Diego",
+   "id": "san_diego_spreckels_organ_pavilion",
+   "name": "Spreckels Organ Pavilion",
+   "year": 1914,
+   "address": "1549 El Prado, San Diego, CA 92101"
+  },
+  {
+   "city": "San Diego",
+   "id": "san_diego_casa_de_balboa",
+   "name": "Casa de Balboa",
+   "year": 1915,
+   "address": "Balboa Park, San Diego, CA"
+  },
+  {
+   "city": "San Diego",
+   "id": "san_diego_county_administration_center",
+   "name": "San Diego County Administration Center",
+   "year": 1938,
+   "address": "1600 Pacific Hwy, San Diego, CA"
+  },
+  {
+   "city": "San Diego",
+   "id": "san_diego_spreckels_theatre",
+   "name": "Spreckels Theatre",
+   "year": 1912,
+   "address": "Broadway, San Diego, CA"
+  },
+  {
+   "city": "San Diego",
+   "id": "san_diego_mission_san_diego_de_alcala",
+   "name": "Mission San Diego de Alcalá",
+   "year": 1769,
+   "address": "10818 San Diego Mission Rd, San Diego, CA 92108"
+  },
+  {
+   "city": "Antwerp",
+   "id": "antwerp_central_station",
+   "name": "Antwerp-Central Station",
+   "year": 1905,
+   "address": "Koningin Astridplein 27, 2018 Antwerp, Belgium"
+  },
+  {
+   "city": "Antwerp",
+   "id": "antwerp_st_charles_borromeo_church",
+   "name": "St. Charles Borromeo Church",
+   "year": 1621,
+   "address": "Hendrik Conscienceplein 12, 2000 Antwerp, Belgium"
+  },
+  {
+   "city": "Antwerp",
+   "id": "antwerp_st_james_church",
+   "name": "St. James' Church",
+   "year": 1656,
+   "address": "Sint-Jacobstraat 9, 2000 Antwerp, Belgium"
+  },
+  {
+   "city": "Antwerp",
+   "id": "antwerp_zurenborg",
+   "name": "Zurenborg",
+   "year": 1906,
+   "address": "Cogels-Osylei, 2600 Berchem, Antwerp, Belgium"
+  },
+  {
+   "city": "Antwerp",
+   "id": "antwerp_royal_museum_of_fine_arts",
+   "name": "Royal Museum of Fine Arts Antwerp",
+   "year": 1894,
+   "address": "Plaatsnijdersstraat 2A, 2000 Antwerp, Belgium"
+  },
+  {
+   "city": "Antwerp",
+   "id": "antwerp_bourla_theatre",
+   "name": "Bourla Theatre",
+   "year": 1834,
+   "address": "Komedieplaats 18, 2000 Antwerp, Belgium"
+  },
+  {
+   "city": "Antwerp",
+   "id": "antwerp_st_pauls_church",
+   "name": "St. Paul's Church",
+   "year": 1571,
+   "address": "Sint-Paulusstraat 22, 2000 Antwerp, Belgium"
+  },
+  {
+   "city": "Granada",
+   "id": "granada_granada_cathedral",
+   "name": "Granada Cathedral",
+   "year": 1704,
+   "address": "Gran Vía de Colón 5, Granada, Spain"
+  },
+  {
+   "city": "Granada",
+   "id": "granada_royal_chapel",
+   "name": "Royal Chapel",
+   "year": 1517,
+   "address": "Calle Oficios, Granada, Spain"
+  },
+  {
+   "city": "Granada",
+   "id": "granada_corral_del_carbon",
+   "name": "Corral del Carbón",
+   "year": 1336,
+   "address": "Calle Mariana Pineda, Granada, Spain"
+  },
+  {
+   "city": "Granada",
+   "id": "granada_madrasa_of_granada",
+   "name": "Madrasa of Granada",
+   "year": 1729,
+   "address": "Calle Oficios 14, Granada, Spain"
+  },
+  {
+   "city": "Granada",
+   "id": "granada_dar_al_horra",
+   "name": "Dar al-Horra",
+   "year": 1417,
+   "address": "Callejón de las Monjas, Albaicín, Granada, Spain"
+  },
+  {
+   "city": "Granada",
+   "id": "granada_granada_charterhouse",
+   "name": "Granada Charterhouse",
+   "year": 1764,
+   "address": "Calle Profesor Vicente Callao, Granada, Spain"
+  },
+  {
+   "city": "Granada",
+   "id": "granada_san_juan_de_dios_hospital",
+   "name": "San Juan de Dios Hospital",
+   "year": 1544,
+   "address": "Calle San Juan de Dios, Granada, Spain"
+  },
+  {
+   "city": "Granada",
+   "id": "granada_church_of_san_salvador",
+   "name": "Church of San Salvador",
+   "year": 1610,
+   "address": "Plaza del Salvador, Albaicín, Granada, Spain"
+  },
+  {
+   "city": "Granada",
+   "id": "granada_gate_of_the_pomegranates",
+   "name": "Gate of the Pomegranates",
+   "year": 1526,
+   "address": "Cuesta de Gomérez, Granada, Spain"
+  },
+  {
+   "city": "Granada",
+   "id": "granada_monastery_of_san_jeronimo",
+   "name": "Monastery of San Jerónimo",
+   "year": 1522,
+   "address": "Calle Compás de San Jerónimo, Granada, Spain"
+  },
+  {
+   "city": "Granada",
+   "id": "granada_church_of_san_miguel_bajo",
+   "name": "Church of San Miguel Bajo",
+   "year": 1577,
+   "address": "Placeta de San Miguel Bajo, Albaicín, Granada, Spain"
+  },
+  {
+   "city": "Hanoi",
+   "id": "hanoi_opera_house",
+   "name": "Hanoi Opera House",
+   "year": 1911,
+   "address": "1 Tràng Tiền Street, Hoàn Kiếm, Hanoi, Vietnam"
+  },
+  {
+   "city": "Hanoi",
+   "id": "hanoi_presidential_palace",
+   "name": "Presidential Palace",
+   "year": 1906,
+   "address": "Ba Đình, Hanoi, Vietnam"
+  },
+  {
+   "city": "Hanoi",
+   "id": "hanoi_turtle_tower",
+   "name": "Turtle Tower",
+   "year": 1886,
+   "address": "Hoàn Kiếm Lake, Hoàn Kiếm, Hanoi, Vietnam"
+  },
+  {
+   "city": "Hanoi",
+   "id": "hanoi_tran_quoc_pagoda",
+   "name": "Trấn Quốc Pagoda",
+   "year": 1615,
+   "address": "Thanh Niên Road, Tây Hồ, Hanoi, Vietnam"
+  },
+  {
+   "city": "Hanoi",
+   "id": "hanoi_hoa_lo_prison",
+   "name": "Hỏa Lò Prison",
+   "year": 1901,
+   "address": "Hỏa Lò Street, Hoàn Kiếm, Hanoi, Vietnam"
+  },
+  {
+   "city": "Hanoi",
+   "id": "hanoi_national_museum_of_history",
+   "name": "Vietnam National Museum of History",
+   "year": 1932,
+   "address": "216 Trần Quang Khải Street, Hoàn Kiếm, Hanoi, Vietnam"
+  },
+  {
+   "city": "Hiroshima",
+   "id": "hiroshima_atomic_bomb_dome",
+   "name": "Atomic Bomb Dome",
+   "year": 1915,
+   "address": "1-10 Ōtemachi, Naka-ku, Hiroshima, Japan"
+  },
+  {
+   "city": "Hiroshima",
+   "id": "hiroshima_castle",
+   "name": "Hiroshima Castle",
+   "year": 1599,
+   "address": "Motomachi, Naka-ku, Hiroshima, Japan"
+  },
+  {
+   "city": "Hiroshima",
+   "id": "hiroshima_shukkei_en",
+   "name": "Shukkei-en",
+   "year": 1620,
+   "address": "Kaminobori-chō, Naka-ku, Hiroshima, Japan"
+  },
+  {
+   "city": "Hiroshima",
+   "id": "hiroshima_itsukushima_shrine",
+   "name": "Itsukushima Shrine",
+   "year": 1168,
+   "address": "Itsukushima (Miyajima), Hatsukaichi, Hiroshima Prefecture, Japan"
+  },
+  {
+   "city": "Kraków",
+   "id": "krakow_wawel_castle",
+   "name": "Wawel Castle",
+   "year": 1536,
+   "address": "Wawel Hill, Kraków, Poland"
+  },
+  {
+   "city": "Kraków",
+   "id": "krakow_st_marys_basilica",
+   "name": "St. Mary's Basilica",
+   "year": 1347,
+   "address": "Mariacki Square 5, Kraków, Poland"
+  },
+  {
+   "city": "Kraków",
+   "id": "krakow_cloth_hall",
+   "name": "Cloth Hall",
+   "year": 1559,
+   "address": "Main Market Square 3, Kraków, Poland"
+  },
+  {
+   "city": "Kraków",
+   "id": "krakow_wawel_cathedral",
+   "name": "Wawel Cathedral",
+   "year": 1364,
+   "address": "Wawel 1, Kraków, Poland"
+  },
+  {
+   "city": "Kraków",
+   "id": "krakow_barbican",
+   "name": "Barbican",
+   "year": 1498,
+   "address": "Basztowa Street, Kraków, Poland"
+  },
+  {
+   "city": "Kraków",
+   "id": "krakow_collegium_maius",
+   "name": "Collegium Maius",
+   "year": 1364,
+   "address": "Jagiellońska Street 15, Kraków, Poland"
+  },
+  {
+   "city": "Kraków",
+   "id": "krakow_town_hall_tower",
+   "name": "Town Hall Tower",
+   "year": 1400,
+   "address": "Main Market Square 1, Kraków, Poland"
+  },
+  {
+   "city": "Kraków",
+   "id": "krakow_juliusz_slowacki_theatre",
+   "name": "Juliusz Słowacki Theatre",
+   "year": 1893,
+   "address": "Świętego Ducha Square 1, Kraków, Poland"
+  },
+  {
+   "city": "Kraków",
+   "id": "krakow_church_of_saints_peter_and_paul",
+   "name": "Church of Saints Peter and Paul",
+   "year": 1619,
+   "address": "Grodzka Street 52a, Kraków, Poland"
+  },
+  {
+   "city": "Kraków",
+   "id": "krakow_st_florians_gate",
+   "name": "St. Florian's Gate",
+   "year": 1307,
+   "address": "Pijarska Street, Kraków, Poland"
+  },
+  {
+   "city": "Kraków",
+   "id": "krakow_philharmonic_hall",
+   "name": "Kraków Philharmonic Hall",
+   "year": 1931,
+   "address": "Zwierzyniecka Street 1, Kraków, Poland"
+  },
+  {
+   "city": "Kraków",
+   "id": "krakow_oskar_schindlers_enamel_factory",
+   "name": "Oskar Schindler's Enamel Factory",
+   "year": 1937,
+   "address": "Lipowa Street 4, Kraków, Poland"
+  },
+  {
+   "city": "Kraków",
+   "id": "krakow_collegium_novum",
+   "name": "Collegium Novum",
+   "year": 1887,
+   "address": "Gołębia Street 24, Kraków, Poland"
+  },
+  {
+   "city": "Marseille",
+   "id": "marseille_cathedral",
+   "name": "Marseille Cathedral",
+   "year": 1896,
+   "address": "1 Avenue Robert Schuman, 13002 Marseille, France"
+  },
+  {
+   "city": "Marseille",
+   "id": "marseille_fort_saint_jean",
+   "name": "Fort Saint-Jean",
+   "year": 1660,
+   "address": "Promenade Louis Brauquier, 13002 Marseille, France"
+  },
+  {
+   "city": "Marseille",
+   "id": "marseille_vieille_charite",
+   "name": "Vieille Charité",
+   "year": 1749,
+   "address": "2 Rue de la Charité, 13002 Marseille, France"
+  },
+  {
+   "city": "Marseille",
+   "id": "marseille_city_hall",
+   "name": "Marseille City Hall",
+   "year": 1673,
+   "address": "Quai du Port, 13002 Marseille, France"
+  },
+  {
+   "city": "Marseille",
+   "id": "marseille_stade_velodrome",
+   "name": "Stade Vélodrome",
+   "year": 1937,
+   "address": "3 Boulevard Michelet, 13008 Marseille, France"
+  },
+  {
+   "city": "Marseille",
+   "id": "marseille_saint_charles_station",
+   "name": "Marseille-Saint-Charles Station",
+   "year": 1848,
+   "address": "Square Narvik, Marseille, France"
+  },
+  {
+   "city": "Milwaukee",
+   "id": "milwaukee_pabst_mansion",
+   "name": "Pabst Mansion",
+   "year": 1892,
+   "address": "2000 W Wisconsin Ave, Milwaukee, WI"
+  },
+  {
+   "city": "Milwaukee",
+   "id": "milwaukee_american_system_built_homes",
+   "name": "American System-Built Homes",
+   "year": 1916,
+   "address": "2714 W Burnham St, Milwaukee, WI"
+  },
+  {
+   "city": "Milwaukee",
+   "id": "milwaukee_germania_building",
+   "name": "Germania Building",
+   "year": 1896,
+   "address": "135 W Wells St, Milwaukee, WI"
+  },
+  {
+   "city": "Milwaukee",
+   "id": "milwaukee_iron_block_building",
+   "name": "Iron Block Building",
+   "year": 1860,
+   "address": "205 E Wisconsin Ave, Milwaukee, WI"
+  },
+  {
+   "city": "Milwaukee",
+   "id": "milwaukee_villa_terrace",
+   "name": "Villa Terrace",
+   "year": 1924,
+   "address": "2220 N Terrace Ave, Milwaukee, WI"
+  },
+  {
+   "city": "Milwaukee",
+   "id": "milwaukee_st_joan_of_arc_chapel",
+   "name": "St. Joan of Arc Chapel",
+   "year": 1420,
+   "address": "1421 W Wisconsin Ave, Milwaukee, WI"
+  },
+  {
+   "city": "Porto",
+   "id": "porto_livraria_lello",
+   "name": "Livraria Lello",
+   "year": 1906,
+   "address": "Rua das Carmelitas 144, Porto, Portugal"
+  },
+  {
+   "city": "Porto",
+   "id": "porto_sao_bento_station",
+   "name": "São Bento Station",
+   "year": 1916,
+   "address": "Praça de Almeida Garrett, Porto, Portugal"
+  },
+  {
+   "city": "Porto",
+   "id": "porto_dom_luis_i_bridge",
+   "name": "Dom Luís I Bridge",
+   "year": 1886,
+   "address": "Douro River, Porto, Portugal"
+  },
+  {
+   "city": "Porto",
+   "id": "porto_palacio_da_bolsa",
+   "name": "Palácio da Bolsa",
+   "year": 1910,
+   "address": "Rua de Ferreira Borges, Porto, Portugal"
+  },
+  {
+   "city": "Porto",
+   "id": "porto_porto_cathedral",
+   "name": "Porto Cathedral",
+   "year": 1737,
+   "address": "Terreiro da Sé, Porto, Portugal"
+  },
+  {
+   "city": "Porto",
+   "id": "porto_church_of_sao_francisco",
+   "name": "Church of São Francisco",
+   "year": 1425,
+   "address": "Rua do Infante Dom Henrique, Porto, Portugal"
+  },
+  {
+   "city": "Porto",
+   "id": "porto_capela_das_almas",
+   "name": "Capela das Almas",
+   "year": 1929,
+   "address": "Rua de Santa Catarina, Porto, Portugal"
+  },
+  {
+   "city": "Porto",
+   "id": "porto_maria_pia_bridge",
+   "name": "Maria Pia Bridge",
+   "year": 1877,
+   "address": "Douro River, Porto, Portugal"
+  },
+  {
+   "city": "Porto",
+   "id": "porto_coliseu_do_porto",
+   "name": "Coliseu do Porto",
+   "year": 1941,
+   "address": "Rua de Passos Manuel 137, Porto, Portugal"
+  },
+  {
+   "city": "Riga",
+   "id": "riga_house_of_the_blackheads",
+   "name": "House of the Blackheads",
+   "year": 1334,
+   "address": "Mazā Grēcinieku iela 7, Riga, Latvia"
+  },
+  {
+   "city": "Riga",
+   "id": "riga_st_peters_church",
+   "name": "St. Peter's Church",
+   "year": 1209,
+   "address": "Reformācijas laukums 1, Riga, Latvia"
+  },
+  {
+   "city": "Riga",
+   "id": "riga_cathedral",
+   "name": "Riga Cathedral",
+   "year": 1211,
+   "address": "Herdera laukums 6, Riga, Latvia"
+  },
+  {
+   "city": "Riga",
+   "id": "riga_freedom_monument",
+   "name": "Freedom Monument",
+   "year": 1935,
+   "address": "Brīvības laukums, Riga, Latvia"
+  },
+  {
+   "city": "Riga",
+   "id": "riga_central_market",
+   "name": "Riga Central Market",
+   "year": 1930,
+   "address": "Prāgas iela, Riga, Latvia"
+  },
+  {
+   "city": "Riga",
+   "id": "riga_three_brothers",
+   "name": "Three Brothers",
+   "year": 1718,
+   "address": "Mazā Pils iela 17, 19 and 21, Riga, Latvia"
+  },
+  {
+   "city": "Riga",
+   "id": "riga_castle",
+   "name": "Riga Castle",
+   "year": 1515,
+   "address": "Pils laukums 3, Riga, Latvia"
+  },
+  {
+   "city": "Riga",
+   "id": "riga_latvian_national_opera",
+   "name": "Latvian National Opera",
+   "year": 1863,
+   "address": "Aspazijas bulvāris 3, Riga, Latvia"
+  },
+  {
+   "city": "Riga",
+   "id": "riga_nativity_cathedral",
+   "name": "Nativity Cathedral",
+   "year": 1883,
+   "address": "Brīvības bulvāris 23, Riga, Latvia"
+  },
+  {
+   "city": "Riga",
+   "id": "riga_cat_house",
+   "name": "Cat House",
+   "year": 1909,
+   "address": "Meistaru iela 10, Riga, Latvia"
+  },
+  {
+   "city": "Riga",
+   "id": "riga_albert_street",
+   "name": "Albert Street",
+   "year": 1901,
+   "address": "Alberta iela, Riga, Latvia"
+  },
+  {
+   "city": "Tulsa",
+   "id": "tulsa_boston_avenue_methodist_church",
+   "name": "Boston Avenue Methodist Church",
+   "year": 1929,
+   "address": "1301 S Boston Ave, Tulsa, OK"
+  },
+  {
+   "city": "Tulsa",
+   "id": "tulsa_philbrook_museum_of_art",
+   "name": "Philbrook Museum of Art",
+   "year": 1927,
+   "address": "2727 S Rockford Rd, Tulsa, OK"
+  },
+  {
+   "city": "Tulsa",
+   "id": "tulsa_mayo_hotel",
+   "name": "Mayo Hotel",
+   "year": 1925,
+   "address": "115 W 5th St, Tulsa, OK"
+  },
+  {
+   "city": "Tulsa",
+   "id": "tulsa_westhope",
+   "name": "Westhope",
+   "year": 1931,
+   "address": "3704 S Birmingham Ave, Tulsa, OK"
+  },
+  {
+   "city": "Tulsa",
+   "id": "tulsa_union_depot",
+   "name": "Tulsa Union Depot",
+   "year": 1931,
+   "address": "5 S Boston Ave, Tulsa, OK"
+  },
+  {
+   "city": "Tulsa",
+   "id": "tulsa_fire_alarm_building",
+   "name": "Tulsa Fire Alarm Building",
+   "year": 1931,
+   "address": "1010 E 8th St, Tulsa, OK"
+  },
+  {
+   "city": "Tulsa",
+   "id": "tulsa_mid_continent_tower",
+   "name": "Mid-Continent Tower",
+   "year": 1918,
+   "address": "401 S Boston Ave, Tulsa, OK"
+  },
+  {
+   "city": "Tulsa",
+   "id": "tulsa_atlas_life_building",
+   "name": "Atlas Life Building",
+   "year": 1922,
+   "address": "415 S Boston Ave, Tulsa, OK"
+  },
+  {
+   "city": "Tulsa",
+   "id": "tulsa_cains_ballroom",
+   "name": "Cain's Ballroom",
+   "year": 1924,
+   "address": "423 N Main St, Tulsa, OK"
+  },
+  {
+   "city": "Tulsa",
+   "id": "tulsa_philtower_building",
+   "name": "Philtower Building",
+   "year": 1928,
+   "address": "427 S Boston Ave, Tulsa, OK"
+  },
+  {
+   "city": "University of Melbourne",
+   "id": "campus_unimelbourne_old_pathology_building",
+   "name": "Old Pathology Building",
+   "year": 1885,
+   "address": "156-292 Grattan Street, Parkville VIC"
+  },
+  {
+   "city": "University of Melbourne",
+   "id": "campus_unimelbourne_newman_college",
+   "name": "Newman College",
+   "year": 1918,
+   "address": "887 Swanston St, Parkville VIC"
+  },
+  {
+   "city": "University of Melbourne",
+   "id": "campus_unimelbourne_chemistry_building",
+   "name": "Chemistry Building",
+   "year": 1938,
+   "address": "Masson Road, Parkville VIC"
+  },
+  {
+   "city": "University of Sydney",
+   "id": "campus_unisydney_great_hall",
+   "name": "Great Hall of the University of Sydney",
+   "year": 1859,
+   "address": "Main Quadrangle, Camperdown NSW"
+  },
+  {
+   "city": "University of Tokyo",
+   "id": "campus_utokyo_yasuda_auditorium",
+   "name": "Yasuda Auditorium",
+   "year": 1925,
+   "address": "7-3-1 Hongō, Bunkyō, Tokyo 113-8654"
+  },
+  {
+   "city": "University of Tokyo",
+   "id": "campus_utokyo_general_library",
+   "name": "General Library (University of Tokyo)",
+   "year": 1928,
+   "address": "7-3-1 Hongō, Bunkyō, Tokyo 113-8654"
+  },
+  {
+   "city": "University of Texas at Austin",
+   "id": "campus_ut_austin_main_building",
+   "name": "UT Tower",
+   "year": 1937,
+   "address": "110 Inner Campus Drive, Austin, TX 78712"
+  },
+  {
+   "city": "University of Texas at Austin",
+   "id": "campus_ut_austin_battle_hall",
+   "name": "Battle Hall",
+   "year": 1911,
+   "address": "University of Texas at Austin, Austin, TX 78712"
+  },
+  {
+   "city": "University of Texas at Austin",
+   "id": "campus_ut_austin_garrison_hall",
+   "name": "Garrison Hall",
+   "year": 1926,
+   "address": "128 Inner Campus Drive, Austin, TX 78712"
+  },
+  {
+   "city": "University of Texas at Austin",
+   "id": "campus_ut_austin_texas_memorial_museum",
+   "name": "Texas Memorial Museum",
+   "year": 1939,
+   "address": "University of Texas at Austin, Austin, TX 78712"
+  },
+  {
+   "city": "University of Texas at Austin",
+   "id": "campus_ut_austin_littlefield_house",
+   "name": "Littlefield House",
+   "year": 1893,
+   "address": "302 W 24th St, Austin, TX 78712"
+  },
+  {
+   "city": "University College London",
+   "id": "campus_ucl_main_building",
+   "name": "UCL Main Building",
+   "year": 1829,
+   "address": "Gower Street, London WC1E 6BT"
+  },
+  {
+   "city": "University College London",
+   "id": "campus_ucl_senate_house",
+   "name": "Senate House",
+   "year": 1937,
+   "address": "Malet Street, London WC1E 7HU"
+  },
+  {
+   "city": "King's College London",
+   "id": "campus_kcl_chapel",
+   "name": "Chapel of King's College London",
+   "year": 1864,
+   "address": "King's Building, Strand, London WC2R 2LS"
+  },
+  {
+   "city": "King's College London",
+   "id": "campus_kcl_maughan_library",
+   "name": "Maughan Library",
+   "year": 1858,
+   "address": "Chancery Lane, London WC2A 1LR"
+  },
+  {
+   "city": "King's College London",
+   "id": "campus_kcl_somerset_house",
+   "name": "Somerset House",
+   "year": 1801,
+   "address": "Strand, London WC2R 1LA"
+  },
+  {
+   "city": "University of Paris (Sorbonne)",
+   "id": "campus_sorbonne_sorbonne_building",
+   "name": "The Sorbonne",
+   "year": 1901,
+   "address": "47 Rue des Écoles, 75005 Paris"
+  },
+  {
+   "city": "University of Paris (Sorbonne)",
+   "id": "campus_sorbonne_chapel",
+   "name": "Sorbonne Chapel",
+   "year": 1648,
+   "address": "17 Rue de la Sorbonne, 75005 Paris"
+  },
+  {
+   "city": "University of Paris (Sorbonne)",
+   "id": "campus_sorbonne_sainte_genevieve_library",
+   "name": "Sainte-Geneviève Library",
+   "year": 1851,
+   "address": "10 Place du Panthéon, 75005 Paris"
+  },
+  {
+   "city": "University of Paris (Sorbonne)",
+   "id": "campus_sorbonne_ecole_de_medecine",
+   "name": "École de Médecine",
+   "year": 1774,
+   "address": "12 Rue de l'École-de-Médecine, 75006 Paris"
+  },
+  {
+   "city": "University of Paris (Sorbonne)",
+   "id": "campus_sorbonne_faculty_of_law",
+   "name": "Faculty of Law of Paris",
+   "year": 1774,
+   "address": "Place du Panthéon, 75005 Paris"
+  },
+  {
+   "city": "University of Padua",
+   "id": "campus_padua_anatomical_theatre",
+   "name": "Anatomical Theatre of Padua",
+   "year": 1595,
+   "address": "Via VIII Febbraio 2, 35122 Padua"
+  },
+  {
+   "city": "University of Padua",
+   "id": "campus_padua_orto_botanico",
+   "name": "Orto botanico di Padova",
+   "year": 1545,
+   "address": "Orto Botanico, Padua"
+  },
+  {
+   "city": "University of Padua",
+   "id": "campus_padua_la_specola",
+   "name": "La Specola",
+   "year": 1767,
+   "address": "La Specola, Padua"
+  },
+  {
+   "city": "University of Padua",
+   "id": "campus_padua_palazzo_maldura",
+   "name": "Palazzo Maldura",
+   "year": 1769,
+   "address": "Palazzo Maldura, Padua"
+  },
+  {
+   "city": "KU Leuven",
+   "id": "campus_kuleuven_university_hall",
+   "name": "University Hall, Leuven",
+   "year": 1317,
+   "address": "Naamsestraat 22, 3000 Leuven"
+  },
+  {
+   "city": "KU Leuven",
+   "id": "campus_kuleuven_university_library",
+   "name": "KU Leuven University Library",
+   "year": 1928,
+   "address": "Mgr. Ladeuzeplein, 3000 Leuven"
+  },
+  {
+   "city": "KU Leuven",
+   "id": "campus_kuleuven_great_beguinage",
+   "name": "Great Beguinage, Leuven",
+   "year": 1234,
+   "address": "Groot Begijnhof, 3000 Leuven"
+  },
+  {
+   "city": "KU Leuven",
+   "id": "campus_kuleuven_arenberg_castle",
+   "name": "Arenberg Castle",
+   "year": 1515,
+   "address": "Kasteelpark Arenberg, 3001 Heverlee"
+  },
+  {
+   "city": "Uppsala University",
+   "id": "campus_uppsala_university_hall",
+   "name": "University Hall",
+   "year": 1887,
+   "address": "University Park, Uppsala"
+  },
+  {
+   "city": "Uppsala University",
+   "id": "campus_uppsala_gustavianum",
+   "name": "Gustavianum",
+   "year": 1625,
+   "address": "Akademigatan 3, Uppsala"
+  },
+  {
+   "city": "Uppsala University",
+   "id": "campus_uppsala_carolina_rediviva",
+   "name": "Carolina Rediviva",
+   "year": 1841,
+   "address": "Carolina Rediviva, Uppsala"
+  },
+  {
+   "city": "Uppsala University",
+   "id": "campus_uppsala_linnaean_garden",
+   "name": "Linnaean Garden",
+   "year": 1655,
+   "address": "Linnéträdgården, Uppsala"
+  },
+  {
+   "city": "University of Coimbra",
+   "id": "campus_coimbra_joanina_library",
+   "name": "Biblioteca Joanina",
+   "year": 1728,
+   "address": "Paço das Escolas, Coimbra"
+  },
+  {
+   "city": "University of Coimbra",
+   "id": "campus_coimbra_chapel_sao_miguel",
+   "name": "Chapel of São Miguel",
+   "year": 1522,
+   "address": "Paço das Escolas, Coimbra"
+  },
+  {
+   "city": "University of Coimbra",
+   "id": "campus_coimbra_university_tower",
+   "name": "Coimbra University Tower",
+   "year": 1733,
+   "address": "Paço das Escolas, Coimbra"
+  },
+  {
+   "city": "University of Coimbra",
+   "id": "campus_coimbra_porta_ferrea",
+   "name": "Porta Férrea",
+   "year": 1634,
+   "address": "Largo da Porta Férrea, Coimbra"
+  },
+  {
+   "city": "University of Coimbra",
+   "id": "campus_coimbra_old_cathedral",
+   "name": "Old Cathedral of Coimbra",
+   "year": 1162,
+   "address": "Largo da Sé Velha, Coimbra"
+  },
+  {
+   "city": "University of Salamanca",
+   "id": "campus_salamanca_fonseca",
+   "name": "Colegio del Arzobispo Fonseca",
+   "year": 1578,
+   "address": "Calle Fonseca, Salamanca"
+  },
+  {
+   "city": "University of Salamanca",
+   "id": "campus_salamanca_anaya_palace",
+   "name": "Anaya Palace",
+   "year": 1760,
+   "address": "Plaza de Anaya, Salamanca"
+  },
+  {
+   "city": "University of Salamanca",
+   "id": "campus_salamanca_clerecia",
+   "name": "La Clerecía",
+   "year": 1754,
+   "address": "Calle de la Compañía, Salamanca"
+  },
+  {
+   "city": "Florida Southern College",
+   "id": "campus_flsouthern_pfeiffer_chapel",
+   "name": "Annie Pfeiffer Chapel",
+   "year": 1941,
+   "address": "111 Lake Hollingsworth Drive, Lakeland, FL 33801"
+  },
+  {
+   "city": "Florida Southern College",
+   "id": "campus_flsouthern_buckner_building",
+   "name": "Thad Buckner Building",
+   "year": 1948,
+   "address": "Johnson Avenue, Florida Southern College, Lakeland, FL 33801"
+  },
+  {
+   "city": "Florida Southern College",
+   "id": "campus_flsouthern_administration_buildings",
+   "name": "Watson and Fine Administration Buildings",
+   "year": 1948,
+   "address": "Johnson Avenue, Florida Southern College, Lakeland, FL 33801"
+  },
+  {
+   "city": "Florida Southern College",
+   "id": "campus_flsouthern_water_dome",
+   "name": "Water Dome",
+   "year": 1948,
+   "address": "Johnson Avenue, Florida Southern College, Lakeland, FL 33801"
+  },
+  {
+   "city": "Florida Southern College",
+   "id": "campus_flsouthern_raulerson_building",
+   "name": "L. A. Raulerson Building",
+   "year": 1941,
+   "address": "Frank Lloyd Wright Way, Florida Southern College, Lakeland, FL 33803"
+  },
+  {
+   "city": "Boston College",
+   "id": "campus_bc_gasson_hall",
+   "name": "Gasson Hall",
+   "year": 1913,
+   "address": "140 Commonwealth Ave, Chestnut Hill, MA 02467"
+  },
+  {
+   "city": "Boston College",
+   "id": "campus_bc_bapst_library",
+   "name": "Bapst Library",
+   "year": 1928,
+   "address": "140 Commonwealth Ave, Chestnut Hill, MA 02467"
+  },
+  {
+   "city": "Boston College",
+   "id": "campus_bc_st_marys_hall",
+   "name": "St. Mary's Hall",
+   "year": 1917,
+   "address": "140 Commonwealth Ave, Chestnut Hill, MA 02467"
+  },
+  {
+   "city": "Boston College",
+   "id": "campus_bc_devlin_hall",
+   "name": "Devlin Hall",
+   "year": 1924,
+   "address": "140 Commonwealth Ave, Chestnut Hill, MA 02467"
+  },
+  {
+   "city": "Boston College",
+   "id": "campus_bc_fulton_hall",
+   "name": "Fulton Hall",
+   "year": 1948,
+   "address": "140 Commonwealth Ave, Chestnut Hill, MA 02467"
+  },
+  {
+   "city": "Clemson University",
+   "id": "campus_clemson_fort_hill",
+   "name": "Fort Hill",
+   "year": 1802,
+   "address": "Clemson, SC 29634"
+  },
+  {
+   "city": "Clemson University",
+   "id": "campus_clemson_hanover_house",
+   "name": "Hanover House",
+   "year": 1716,
+   "address": "Cherry Road, Clemson, SC 29634"
+  },
+  {
+   "city": "Clemson University",
+   "id": "campus_clemson_memorial_stadium",
+   "name": "Memorial Stadium",
+   "year": 1942,
+   "address": "Avenue of Champions, Clemson, SC 29634"
+  },
+  {
+   "city": "Duke University",
+   "id": "campus_duke_chapel",
+   "name": "Duke Chapel",
+   "year": 1935,
+   "address": "West Campus, Duke University, Durham, NC 27708"
+  },
+  {
+   "city": "Duke University",
+   "id": "campus_duke_cameron_indoor",
+   "name": "Cameron Indoor Stadium",
+   "year": 1940,
+   "address": "115 Whitford Dr, Durham, NC 27708"
+  },
+  {
+   "city": "Duke University",
+   "id": "campus_duke_hart_house",
+   "name": "J. Deryl Hart House",
+   "year": 1934,
+   "address": "2324 Duke University Rd, Durham, NC 27708"
+  },
+  {
+   "city": "Duke University",
+   "id": "campus_duke_wallace_wade",
+   "name": "Wallace Wade Stadium",
+   "year": 1929,
+   "address": "Frank Bassett Dr, Durham, NC 27708"
+  },
+  {
+   "city": "Florida State University",
+   "id": "campus_fsu_westcott_building",
+   "name": "Westcott Building",
+   "year": 1910,
+   "address": "Florida State University, Tallahassee, FL 32306"
+  },
+  {
+   "city": "Florida State University",
+   "id": "campus_fsu_dodd_hall",
+   "name": "Dodd Hall",
+   "year": 1923,
+   "address": "641 University Way, Tallahassee, FL 32306"
+  },
+  {
+   "city": "Florida State University",
+   "id": "campus_fsu_doak_campbell",
+   "name": "Doak Campbell Stadium",
+   "year": 1950,
+   "address": "403 Stadium Dr W, Tallahassee, FL 32304"
+  },
+  {
+   "city": "University of Louisville",
+   "id": "campus_uofl_grawemeyer_hall",
+   "name": "Grawemeyer Hall",
+   "year": 1926,
+   "address": "2301 S 3rd St, Louisville, KY 40292"
+  },
+  {
+   "city": "University of Louisville",
+   "id": "campus_uofl_playhouse",
+   "name": "University Playhouse",
+   "year": 1874,
+   "address": "1911 S 3rd St, Louisville, KY 40208"
+  },
+  {
+   "city": "University of Miami",
+   "id": "campus_umiami_merrick_building",
+   "name": "Merrick Building",
+   "year": 1950,
+   "address": "5202 University Dr, Coral Gables, FL 33146"
+  },
+  {
+   "city": "North Carolina State University",
+   "id": "campus_ncstate_belltower",
+   "name": "Memorial Belltower",
+   "year": 1937,
+   "address": "Raleigh, NC 27695"
+  },
+  {
+   "city": "North Carolina State University",
+   "id": "campus_ncstate_gregg_museum",
+   "name": "Gregg Museum of Art & Design",
+   "year": 1928,
+   "address": "1903 Hillsborough St, Raleigh, NC 27607"
+  },
+  {
+   "city": "North Carolina State University",
+   "id": "campus_ncstate_reynolds_coliseum",
+   "name": "Reynolds Coliseum",
+   "year": 1949,
+   "address": "103 Dunn Ave, Raleigh, NC 27607"
+  },
+  {
+   "city": "University of North Carolina at Chapel Hill",
+   "id": "campus_unc_old_east",
+   "name": "Old East",
+   "year": 1793,
+   "address": "Cameron Ave, Chapel Hill, NC 27514"
+  },
+  {
+   "city": "University of North Carolina at Chapel Hill",
+   "id": "campus_unc_playmakers_theatre",
+   "name": "Playmakers Theatre",
+   "year": 1850,
+   "address": "Cameron Ave, Chapel Hill, NC 27514"
+  },
+  {
+   "city": "University of North Carolina at Chapel Hill",
+   "id": "campus_unc_wilson_library",
+   "name": "Wilson Library",
+   "year": 1929,
+   "address": "Chapel Hill, NC 27514"
+  },
+  {
+   "city": "University of North Carolina at Chapel Hill",
+   "id": "campus_unc_bell_tower",
+   "name": "Morehead-Patterson Bell Tower",
+   "year": 1931,
+   "address": "Chapel Hill, NC 27514"
+  },
+  {
+   "city": "University of Pittsburgh",
+   "id": "campus_pitt_heinz_chapel",
+   "name": "Heinz Memorial Chapel",
+   "year": 1938,
+   "address": "Fifth Ave and S Bellefield Ave, Pittsburgh, PA 15260"
+  },
+  {
+   "city": "University of Pittsburgh",
+   "id": "campus_pitt_stephen_foster_memorial",
+   "name": "Stephen Foster Memorial",
+   "year": 1937,
+   "address": "Forbes Ave, Pittsburgh, PA 15260"
+  },
+  {
+   "city": "Southern Methodist University",
+   "id": "campus_smu_dallas_hall",
+   "name": "Dallas Hall",
+   "year": 1915,
+   "address": "3225 University Blvd, University Park, TX 75205"
+  },
+  {
+   "city": "Southern Methodist University",
+   "id": "campus_smu_mcfarlin_auditorium",
+   "name": "McFarlin Memorial Auditorium",
+   "year": 1926,
+   "address": "6405 Boaz Ln, University Park, TX 75205"
+  },
+  {
+   "city": "Southern Methodist University",
+   "id": "campus_smu_perkins_hall",
+   "name": "Perkins Hall of Administration",
+   "year": 1925,
+   "address": "University Park, TX 75205"
+  },
+  {
+   "city": "Southern Methodist University",
+   "id": "campus_smu_hyer_hall",
+   "name": "Hyer Hall",
+   "year": 1927,
+   "address": "University Park, TX 75205"
+  },
+  {
+   "city": "Syracuse University",
+   "id": "campus_syracuse_hendricks_chapel",
+   "name": "Hendricks Chapel",
+   "year": 1930,
+   "address": "Syracuse, NY 13244"
+  },
+  {
+   "city": "Syracuse University",
+   "id": "campus_syracuse_carnegie_library",
+   "name": "Carnegie Library",
+   "year": 1907,
+   "address": "130 Sims Dr, Syracuse, NY 13210"
+  },
+  {
+   "city": "Virginia Tech",
+   "id": "campus_vt_burruss_hall",
+   "name": "Burruss Hall",
+   "year": 1936,
+   "address": "800 Drillfield Dr, Blacksburg, VA 24061"
+  },
+  {
+   "city": "Virginia Tech",
+   "id": "campus_vt_lane_hall",
+   "name": "Lane Hall",
+   "year": 1888,
+   "address": "280 Alumni Mall, Blacksburg, VA 24061"
+  },
+  {
+   "city": "Virginia Tech",
+   "id": "campus_vt_solitude",
+   "name": "Solitude",
+   "year": 1804,
+   "address": "West Campus Dr, Blacksburg, VA 24061"
+  },
+  {
+   "city": "Wake Forest University",
+   "id": "campus_wfu_reynolda_house",
+   "name": "Reynolda House",
+   "year": 1917,
+   "address": "2250 Reynolda Rd, Winston-Salem, NC 27106"
+  },
+  {
+   "city": "University of Arizona",
+   "id": "campus_uarizona_old_main",
+   "name": "Old Main",
+   "year": 1891,
+   "address": "University of Arizona campus, Tucson, AZ"
+  },
+  {
+   "city": "University of Arizona",
+   "id": "campus_uarizona_state_museum",
+   "name": "Arizona State Museum",
+   "year": 1935,
+   "address": "University of Arizona campus, Tucson, AZ"
+  },
+  {
+   "city": "University of Arizona",
+   "id": "campus_uarizona_centennial_hall",
+   "name": "Centennial Hall",
+   "year": 1937,
+   "address": "1020 E University Blvd, Tucson, AZ"
+  },
+  {
+   "city": "University of Arizona",
+   "id": "campus_uarizona_bear_down_gym",
+   "name": "Bear Down Gym",
+   "year": 1926,
+   "address": "E Fourth St, University of Arizona campus, Tucson, AZ"
+  },
+  {
+   "city": "Arizona State University",
+   "id": "campus_asu_industrial_arts",
+   "name": "Industrial Arts Building",
+   "year": 1914,
+   "address": "ASU Campus (Building 4), Tempe, AZ"
+  },
+  {
+   "city": "Arizona State University",
+   "id": "campus_asu_matthews_hall",
+   "name": "Matthews Hall",
+   "year": 1918,
+   "address": "925 S Forest Mall, Tempe, AZ"
+  },
+  {
+   "city": "Arizona State University",
+   "id": "campus_asu_admin_science",
+   "name": "Administration/Science Building",
+   "year": 1909,
+   "address": "425 E University Dr, Tempe, AZ"
+  },
+  {
+   "city": "Brigham Young University",
+   "id": "campus_byu_eyring_science",
+   "name": "Eyring Science Center",
+   "year": 1950,
+   "address": "Brigham Young University campus, Provo, UT"
+  },
+  {
+   "city": "University of Houston",
+   "id": "campus_uhouston_ezekiel_cullen",
+   "name": "Ezekiel W. Cullen Building",
+   "year": 1950,
+   "address": "Cullen Family Plaza, University of Houston, Houston, TX"
+  },
+  {
+   "city": "University of Houston",
+   "id": "campus_uhouston_roy_cullen",
+   "name": "Roy G. Cullen Building",
+   "year": 1939,
+   "address": "University of Houston campus, Houston, TX"
+  },
+  {
+   "city": "Iowa State University",
+   "id": "campus_iastate_beardshear",
+   "name": "Beardshear Hall",
+   "year": 1906,
+   "address": "Morrill Rd, Iowa State University, Ames, IA"
+  },
+  {
+   "city": "Iowa State University",
+   "id": "campus_iastate_lab_of_mechanics",
+   "name": "Laboratory of Mechanics",
+   "year": 1883,
+   "address": "Union Dr, Iowa State University, Ames, IA"
+  },
+  {
+   "city": "University of Kansas",
+   "id": "campus_ku_dyche_hall",
+   "name": "Dyche Hall",
+   "year": 1901,
+   "address": "14th St and Oread Ave, Lawrence, KS"
+  },
+  {
+   "city": "University of Kansas",
+   "id": "campus_ku_strong_hall",
+   "name": "Strong Hall",
+   "year": 1911,
+   "address": "Jayhawk Dr and Poplar Ln, Lawrence, KS"
+  },
+  {
+   "city": "University of Kansas",
+   "id": "campus_ku_bailey_hall",
+   "name": "Bailey Hall",
+   "year": 1905,
+   "address": "Jayhawk Dr and Sunflower Rd, Lawrence, KS"
+  },
+  {
+   "city": "Kansas State University",
+   "id": "campus_kstate_anderson_hall",
+   "name": "Anderson Hall",
+   "year": 1879,
+   "address": "Kansas State University campus, Manhattan, KS"
+  },
+  {
+   "city": "Kansas State University",
+   "id": "campus_kstate_nichols_hall",
+   "name": "Nichols Hall",
+   "year": 1911,
+   "address": "Kansas State University campus, Manhattan, KS"
+  },
+  {
+   "city": "Kansas State University",
+   "id": "campus_kstate_seaton_hall",
+   "name": "Seaton Hall",
+   "year": 1908,
+   "address": "Kansas State University campus, Manhattan, KS"
+  },
+  {
+   "city": "Kansas State University",
+   "id": "campus_kstate_hale_library",
+   "name": "Hale Library",
+   "year": 1927,
+   "address": "Kansas State University campus, Manhattan, KS"
+  },
+  {
+   "city": "Oklahoma State University",
+   "id": "campus_okstate_student_union",
+   "name": "Student Union",
+   "year": 1950,
+   "address": "Oklahoma State University campus, Stillwater, OK"
+  },
+  {
+   "city": "Texas Tech University",
+   "id": "campus_ttu_administration",
+   "name": "Administration Building",
+   "year": 1925,
+   "address": "Texas Tech University campus, Lubbock, TX"
+  },
+  {
+   "city": "Texas Tech University",
+   "id": "campus_ttu_west_hall",
+   "name": "West Hall",
+   "year": 1934,
+   "address": "2500 Broadway St, Lubbock, TX"
+  },
+  {
+   "city": "Texas Tech University",
+   "id": "campus_ttu_dairy_barn",
+   "name": "Dairy Barn",
+   "year": 1927,
+   "address": "Texas Tech University campus, Lubbock, TX"
+  },
+  {
+   "city": "Texas Tech University",
+   "id": "campus_ttu_ag_pavilion",
+   "name": "Agricultural Pavilion",
+   "year": 1925,
+   "address": "Texas Tech University campus, Lubbock, TX"
+  },
+  {
+   "city": "West Virginia University",
+   "id": "campus_wvu_woodburn_circle",
+   "name": "Woodburn Circle",
+   "year": 1876,
+   "address": "University Ave, Morgantown, WV"
+  },
+  {
+   "city": "West Virginia University",
+   "id": "campus_wvu_stewart_hall",
+   "name": "Stewart Hall",
+   "year": 1902,
+   "address": "West Virginia University campus, Morgantown, WV"
+  },
+  {
+   "city": "West Virginia University",
+   "id": "campus_wvu_elizabeth_moore",
+   "name": "Elizabeth Moore Hall",
+   "year": 1928,
+   "address": "University Ave, Morgantown, WV"
+  },
+  {
+   "city": "West Virginia University",
+   "id": "campus_wvu_oglebay_hall",
+   "name": "Oglebay Hall",
+   "year": 1918,
+   "address": "University Ave, Morgantown, WV"
+  },
+  {
+   "city": "West Virginia University",
+   "id": "campus_wvu_purinton_house",
+   "name": "Purinton House",
+   "year": 1904,
+   "address": "University Ave, Morgantown, WV"
+  },
+  {
+   "city": "Baylor University",
+   "id": "campus_baylor_pat_neff_hall",
+   "name": "Pat Neff Hall",
+   "year": 1939,
+   "address": "Baylor University campus, Waco, TX"
+  },
+  {
+   "city": "University of Cincinnati",
+   "id": "campus_ucincy_nippert_stadium",
+   "name": "Nippert Stadium",
+   "year": 1915,
+   "address": "2700 Bearcats Way, Cincinnati, OH"
+  },
+  {
+   "city": "University of Colorado Boulder",
+   "id": "campus_cuboulder_norlin_quad",
+   "name": "Norlin Quadrangle",
+   "year": 1876,
+   "address": "University of Colorado campus, Boulder, CO"
+  },
+  {
+   "city": "University of Colorado Boulder",
+   "id": "campus_cuboulder_henderson",
+   "name": "Henderson Building (Museum of Natural History)",
+   "year": 1937,
+   "address": "15th St and Broadway, Boulder, CO"
+  },
+  {
+   "city": "Texas Christian University",
+   "id": "campus_tcu_amon_carter_stadium",
+   "name": "Amon G. Carter Stadium",
+   "year": 1930,
+   "address": "2850 Stadium Dr, Fort Worth, TX"
+  },
+  {
+   "city": "University of Utah",
+   "id": "campus_uutah_park_building",
+   "name": "Park Building",
+   "year": 1914,
+   "address": "Presidents Circle, University of Utah, Salt Lake City, UT"
+  },
+  {
+   "city": "University of Utah",
+   "id": "campus_uutah_kingsbury_hall",
+   "name": "Kingsbury Hall",
+   "year": 1930,
+   "address": "1395 E Presidents Circle, Salt Lake City, UT"
+  },
+  {
+   "city": "University of Utah",
+   "id": "campus_uutah_thomas_building",
+   "name": "George Thomas Building",
+   "year": 1935,
+   "address": "Presidents Circle, University of Utah, Salt Lake City, UT"
+  },
+  {
+   "city": "University of Illinois Urbana-Champaign",
+   "id": "campus_illinois_altgeld_hall",
+   "name": "Altgeld Hall",
+   "year": 1897,
+   "address": "1409 W Green St, Urbana, IL 61801"
+  },
+  {
+   "city": "University of Illinois Urbana-Champaign",
+   "id": "campus_illinois_foellinger_auditorium",
+   "name": "Foellinger Auditorium",
+   "year": 1907,
+   "address": "709 S Mathews Ave, Urbana, IL 61801"
+  },
+  {
+   "city": "University of Illinois Urbana-Champaign",
+   "id": "campus_illinois_main_library",
+   "name": "Main Library",
+   "year": 1924,
+   "address": "1408 W Gregory Dr, Urbana, IL 61801"
+  },
+  {
+   "city": "University of Illinois Urbana-Champaign",
+   "id": "campus_illinois_smith_memorial_hall",
+   "name": "Smith Memorial Hall",
+   "year": 1920,
+   "address": "805 S Mathews Ave, Urbana, IL 61801"
+  },
+  {
+   "city": "Indiana University Bloomington",
+   "id": "campus_indiana_memorial_union",
+   "name": "Indiana Memorial Union",
+   "year": 1932,
+   "address": "Indiana University, Bloomington, IN 47405"
+  },
+  {
+   "city": "Indiana University Bloomington",
+   "id": "campus_indiana_wylie_house",
+   "name": "Wylie House",
+   "year": 1835,
+   "address": "307 E 2nd St, Bloomington, IN 47401"
+  },
+  {
+   "city": "University of Iowa",
+   "id": "campus_uiowa_macbride_hall",
+   "name": "Macbride Hall",
+   "year": 1908,
+   "address": "17 N Clinton St, Iowa City, IA 52242"
+  },
+  {
+   "city": "University of Maryland, College Park",
+   "id": "campus_umd_morrill_hall",
+   "name": "Morrill Hall",
+   "year": 1898,
+   "address": "Morrill Quad, University of Maryland, College Park, MD 20742"
+  },
+  {
+   "city": "University of Minnesota Twin Cities",
+   "id": "campus_umn_northrop",
+   "name": "Northrop Auditorium",
+   "year": 1929,
+   "address": "84 Church St SE, Minneapolis, MN 55455"
+  },
+  {
+   "city": "University of Minnesota Twin Cities",
+   "id": "campus_umn_walter_library",
+   "name": "Walter Library",
+   "year": 1924,
+   "address": "117 Pleasant St SE, Minneapolis, MN 55455"
+  },
+  {
+   "city": "University of Minnesota Twin Cities",
+   "id": "campus_umn_coffman_union",
+   "name": "Coffman Memorial Union",
+   "year": 1940,
+   "address": "300 Washington Ave SE, Minneapolis, MN 55455"
+  },
+  {
+   "city": "University of Nebraska–Lincoln",
+   "id": "campus_unl_old_university_library",
+   "name": "Architecture Hall",
+   "year": 1895,
+   "address": "11th and R Streets, Lincoln, NE 68588"
+  },
+  {
+   "city": "University of Nebraska–Lincoln",
+   "id": "campus_unl_mueller_tower",
+   "name": "Mueller Tower",
+   "year": 1949,
+   "address": "City Campus, University of Nebraska–Lincoln, Lincoln, NE 68588"
+  },
+  {
+   "city": "Northwestern University",
+   "id": "campus_northwestern_university_hall",
+   "name": "University Hall",
+   "year": 1869,
+   "address": "Northwestern University, Evanston, IL 60208"
+  },
+  {
+   "city": "Northwestern University",
+   "id": "campus_northwestern_deering_library",
+   "name": "Deering Library",
+   "year": 1933,
+   "address": "Northwestern University, Evanston, IL 60208"
+  },
+  {
+   "city": "Northwestern University",
+   "id": "campus_northwestern_dearborn_observatory",
+   "name": "Dearborn Observatory",
+   "year": 1889,
+   "address": "Northwestern University, Evanston, IL 60208"
+  },
+  {
+   "city": "Pennsylvania State University",
+   "id": "campus_pennstate_old_main",
+   "name": "Old Main",
+   "year": 1930,
+   "address": "Penn State University Park, PA 16802"
+  },
+  {
+   "city": "Pennsylvania State University",
+   "id": "campus_pennstate_rec_hall",
+   "name": "Rec Hall",
+   "year": 1929,
+   "address": "Curtin Rd, University Park, PA 16802"
+  },
+  {
+   "city": "Purdue University",
+   "id": "campus_purdue_elliott_hall",
+   "name": "Elliott Hall of Music",
+   "year": 1940,
+   "address": "712 3rd St, West Lafayette, IN 47907"
+  },
+  {
+   "city": "Rutgers University–New Brunswick",
+   "id": "campus_rutgers_old_queens",
+   "name": "Old Queens",
+   "year": 1825,
+   "address": "83 Somerset St, New Brunswick, NJ 08901"
+  },
+  {
+   "city": "Rutgers University–New Brunswick",
+   "id": "campus_rutgers_kirkpatrick_chapel",
+   "name": "Kirkpatrick Chapel",
+   "year": 1873,
+   "address": "Queens Campus, Rutgers University, New Brunswick, NJ 08901"
+  },
+  {
+   "city": "Rutgers University–New Brunswick",
+   "id": "campus_rutgers_geology_hall",
+   "name": "Geology Hall",
+   "year": 1872,
+   "address": "Queens Campus, Rutgers University, New Brunswick, NJ 08901"
+  },
+  {
+   "city": "Rutgers University–New Brunswick",
+   "id": "campus_rutgers_winants_hall",
+   "name": "Winants Hall",
+   "year": 1890,
+   "address": "7 College Ave, New Brunswick, NJ 08901"
+  },
+  {
+   "city": "University of Wisconsin–Madison",
+   "id": "campus_wisc_red_gym",
+   "name": "Red Gym",
+   "year": 1894,
+   "address": "716 Langdon St, Madison, WI 53706"
+  },
+  {
+   "city": "University of Wisconsin–Madison",
+   "id": "campus_wisc_memorial_union",
+   "name": "Memorial Union",
+   "year": 1928,
+   "address": "800 Langdon St, Madison, WI 53706"
+  },
+  {
+   "city": "University of Wisconsin–Madison",
+   "id": "campus_wisc_washburn_observatory",
+   "name": "Washburn Observatory",
+   "year": 1881,
+   "address": "1401 Observatory Dr, Madison, WI 53706"
+  },
+  {
+   "city": "University of Wisconsin–Madison",
+   "id": "campus_wisc_north_hall",
+   "name": "North Hall",
+   "year": 1851,
+   "address": "Bascom Hill, University of Wisconsin–Madison, Madison, WI 53706"
+  },
+  {
+   "city": "University of Oregon",
+   "id": "campus_uoregon_university_hall",
+   "name": "University Hall",
+   "year": 1876,
+   "address": "University of Oregon, Eugene, OR 97403"
+  },
+  {
+   "city": "University of Oregon",
+   "id": "campus_uoregon_villard_hall",
+   "name": "Villard Hall",
+   "year": 1886,
+   "address": "University of Oregon, Eugene, OR 97403"
+  },
+  {
+   "city": "University of Oregon",
+   "id": "campus_uoregon_knight_library",
+   "name": "Knight Library",
+   "year": 1937,
+   "address": "University of Oregon, Eugene, OR 97403"
+  },
+  {
+   "city": "University of Oregon",
+   "id": "campus_uoregon_jsma",
+   "name": "Jordan Schnitzer Museum of Art",
+   "year": 1930,
+   "address": "1430 Johnson Ln, Eugene, OR 97403"
+  },
+  {
+   "city": "University of Oregon",
+   "id": "campus_uoregon_johnson_hall",
+   "name": "Johnson Hall",
+   "year": 1915,
+   "address": "University of Oregon, Eugene, OR 97403"
+  },
+  {
+   "city": "University of Southern California",
+   "id": "campus_southerncal_doheny_library",
+   "name": "Doheny Library",
+   "year": 1932,
+   "address": "University Park Campus, Los Angeles, CA 90089"
+  },
+  {
+   "city": "University of Southern California",
+   "id": "campus_southerncal_widney_alumni_house",
+   "name": "Widney Alumni House",
+   "year": 1880,
+   "address": "650 Childs Way, Los Angeles, CA 90089"
+  },
+  {
+   "city": "University of Southern California",
+   "id": "campus_southerncal_zumberge_hall",
+   "name": "Zumberge Hall of Science",
+   "year": 1928,
+   "address": "University Park Campus, Los Angeles, CA 90089"
+  },
+  {
+   "city": "University of Alabama",
+   "id": "campus_ua_denny_chimes",
+   "name": "Denny Chimes",
+   "year": 1929,
+   "address": "The Quad, University of Alabama, Tuscaloosa, AL 35487"
+  },
+  {
+   "city": "University of Alabama",
+   "id": "campus_ua_presidents_mansion",
+   "name": "President's Mansion",
+   "year": 1841,
+   "address": "University Blvd, University of Alabama, Tuscaloosa, AL 35487"
+  },
+  {
+   "city": "University of Alabama",
+   "id": "campus_ua_maxwell_hall",
+   "name": "Maxwell Hall (Old Observatory)",
+   "year": 1844,
+   "address": "University of Alabama, Tuscaloosa, AL 35487"
+  },
+  {
+   "city": "University of Alabama",
+   "id": "campus_ua_smith_hall",
+   "name": "Smith Hall",
+   "year": 1909,
+   "address": "Smith Hall, University of Alabama, Tuscaloosa, AL 35487"
+  },
+  {
+   "city": "University of Arkansas",
+   "id": "campus_uark_old_main",
+   "name": "Old Main",
+   "year": 1875,
+   "address": "Old Main, University of Arkansas, Fayetteville, AR 72701"
+  },
+  {
+   "city": "University of Arkansas",
+   "id": "campus_uark_vol_walker",
+   "name": "Vol Walker Hall",
+   "year": 1935,
+   "address": "Campus Dr, University of Arkansas, Fayetteville, AR 72701"
+  },
+  {
+   "city": "University of Arkansas",
+   "id": "campus_uark_greek_theatre",
+   "name": "Chi Omega Greek Theatre",
+   "year": 1930,
+   "address": "Dickson St, University of Arkansas, Fayetteville, AR 72701"
+  },
+  {
+   "city": "University of Arkansas",
+   "id": "campus_uark_chemistry",
+   "name": "Chemistry Building",
+   "year": 1935,
+   "address": "Campus Dr, University of Arkansas, Fayetteville, AR 72701"
+  },
+  {
+   "city": "University of Arkansas",
+   "id": "campus_uark_peabody_hall",
+   "name": "Peabody Hall",
+   "year": 1913,
+   "address": "Peabody Hall, University of Arkansas, Fayetteville, AR 72701"
+  },
+  {
+   "city": "Auburn University",
+   "id": "campus_auburn_samford_hall",
+   "name": "Samford Hall",
+   "year": 1888,
+   "address": "Samford Hall, Auburn University, Auburn, AL 36849"
+  },
+  {
+   "city": "Auburn University",
+   "id": "campus_auburn_langdon_hall",
+   "name": "Langdon Hall",
+   "year": 1846,
+   "address": "College St, Auburn, AL 36849"
+  },
+  {
+   "city": "Auburn University",
+   "id": "campus_auburn_chapel",
+   "name": "Auburn University Chapel",
+   "year": 1851,
+   "address": "College St at Thach Ave, Auburn, AL 36849"
+  },
+  {
+   "city": "Auburn University",
+   "id": "campus_auburn_cater_hall",
+   "name": "Cater Hall",
+   "year": 1915,
+   "address": "277 W Thach Ave, Auburn, AL 36849"
+  },
+  {
+   "city": "University of Florida",
+   "id": "campus_uf_auditorium",
+   "name": "University Auditorium",
+   "year": 1924,
+   "address": "University Auditorium, University of Florida, Gainesville, FL 32611"
+  },
+  {
+   "city": "University of Florida",
+   "id": "campus_uf_thomas_hall",
+   "name": "Thomas Hall",
+   "year": 1905,
+   "address": "Murphree Area, University of Florida, Gainesville, FL 32612"
+  },
+  {
+   "city": "University of Florida",
+   "id": "campus_uf_buckman_hall",
+   "name": "Buckman Hall",
+   "year": 1906,
+   "address": "Murphree Area, University of Florida, Gainesville, FL 32612"
+  },
+  {
+   "city": "University of Florida",
+   "id": "campus_uf_anderson_hall",
+   "name": "Anderson Hall",
+   "year": 1913,
+   "address": "Anderson Hall, University of Florida, Gainesville, FL 32611"
+  },
+  {
+   "city": "University of Georgia",
+   "id": "campus_uga_presidents_house",
+   "name": "President's House",
+   "year": 1856,
+   "address": "570 Prince Ave, Athens, GA 30601"
+  },
+  {
+   "city": "University of Georgia",
+   "id": "campus_uga_seney_stovall",
+   "name": "Seney–Stovall Chapel",
+   "year": 1885,
+   "address": "N Milledge Ave, Athens, GA 30601"
+  },
+  {
+   "city": "Louisiana State University",
+   "id": "campus_lsu_memorial_tower",
+   "name": "Memorial Tower",
+   "year": 1926,
+   "address": "Memorial Tower, Louisiana State University, Baton Rouge, LA 70803"
+  },
+  {
+   "city": "Louisiana State University",
+   "id": "campus_lsu_field_house",
+   "name": "Huey P. Long Field House",
+   "year": 1932,
+   "address": "Field House Dr, Louisiana State University, Baton Rouge, LA 70803"
+  },
+  {
+   "city": "Louisiana State University",
+   "id": "campus_lsu_tiger_stadium",
+   "name": "Tiger Stadium",
+   "year": 1924,
+   "address": "W Stadium Rd, Baton Rouge, LA 70803"
+  },
+  {
+   "city": "Louisiana State University",
+   "id": "campus_lsu_french_house",
+   "name": "French House",
+   "year": 1935,
+   "address": "French House, Louisiana State University, Baton Rouge, LA 70803"
+  },
+  {
+   "city": "University of Mississippi",
+   "id": "campus_olemiss_lyceum",
+   "name": "The Lyceum",
+   "year": 1848,
+   "address": "The Circle, University, MS 38677"
+  },
+  {
+   "city": "University of Mississippi",
+   "id": "campus_olemiss_barnard",
+   "name": "Barnard Observatory",
+   "year": 1859,
+   "address": "Barnard Observatory, University, MS 38677"
+  },
+  {
+   "city": "University of Mississippi",
+   "id": "campus_olemiss_kennon",
+   "name": "Kennon Observatory",
+   "year": 1939,
+   "address": "Kennon Observatory, University, MS 38677"
+  },
+  {
+   "city": "University of Mississippi",
+   "id": "campus_olemiss_rowan_oak",
+   "name": "Rowan Oak",
+   "year": 1844,
+   "address": "Old Taylor Rd, Oxford, MS 38655"
+  },
+  {
+   "city": "University of Missouri",
+   "id": "campus_mizzou_jesse_hall",
+   "name": "Jesse Hall",
+   "year": 1895,
+   "address": "Jesse Hall, Columbia, MO 65211"
+  },
+  {
+   "city": "University of Missouri",
+   "id": "campus_mizzou_columns",
+   "name": "The Columns",
+   "year": 1843,
+   "address": "Francis Quadrangle, Columbia, MO 65211"
+  },
+  {
+   "city": "University of Missouri",
+   "id": "campus_mizzou_switzler_hall",
+   "name": "Switzler Hall",
+   "year": 1872,
+   "address": "Francis Quadrangle, Columbia, MO 65211"
+  },
+  {
+   "city": "University of Missouri",
+   "id": "campus_mizzou_memorial_union",
+   "name": "Memorial Union",
+   "year": 1926,
+   "address": "Memorial Union, Columbia, MO 65211"
+  },
+  {
+   "city": "University of Oklahoma",
+   "id": "campus_ou_bizzell_library",
+   "name": "Bizzell Memorial Library",
+   "year": 1929,
+   "address": "401 W Brooks St, Norman, OK 73019"
+  },
+  {
+   "city": "University of Oklahoma",
+   "id": "campus_ou_memorial_union",
+   "name": "Oklahoma Memorial Union",
+   "year": 1929,
+   "address": "Oklahoma Memorial Union, Norman, OK 73019"
+  },
+  {
+   "city": "University of Oklahoma",
+   "id": "campus_ou_boyd_house",
+   "name": "Boyd House",
+   "year": 1906,
+   "address": "407 W Boyd St, Norman, OK 73069"
+  },
+  {
+   "city": "University of South Carolina",
+   "id": "campus_uofsc_horseshoe",
+   "name": "The Horseshoe",
+   "year": 1805,
+   "address": "Horseshoe, Sumter St, Columbia, SC 29208"
+  },
+  {
+   "city": "University of South Carolina",
+   "id": "campus_uofsc_longstreet_theatre",
+   "name": "Longstreet Theatre",
+   "year": 1855,
+   "address": "1300 Greene St, Columbia, SC 29208"
+  },
+  {
+   "city": "University of South Carolina",
+   "id": "campus_uofsc_currell_college",
+   "name": "Currell College",
+   "year": 1919,
+   "address": "Currell College, Columbia, SC 29208"
+  },
+  {
+   "city": "University of South Carolina",
+   "id": "campus_uofsc_horry_guignard",
+   "name": "Horry-Guignard House",
+   "year": 1813,
+   "address": "Pendleton St, Columbia, SC 29208"
+  },
+  {
+   "city": "Vanderbilt University",
+   "id": "campus_vandy_kirkland_hall",
+   "name": "Kirkland Hall",
+   "year": 1874,
+   "address": "Kirkland Hall, Vanderbilt University, Nashville, TN 37235"
+  },
+  {
+   "city": "Vanderbilt University",
+   "id": "campus_vandy_alumni_hall",
+   "name": "Alumni Hall",
+   "year": 1925,
+   "address": "2205 West End Ave, Nashville, TN 37235"
+  },
+  {
+   "city": "Vanderbilt University",
+   "id": "campus_vandy_old_gym",
+   "name": "Old Gym",
+   "year": 1880,
+   "address": "2301 West End Ave, Nashville, TN 37235"
+  },
+  {
+   "city": "Vanderbilt University",
+   "id": "campus_vandy_home_economics",
+   "name": "Home Economics Building",
+   "year": 1912,
+   "address": "134 Magnolia Cir, Nashville, TN 37203"
+  },
+  {
+   "city": "Vanderbilt University",
+   "id": "campus_vandy_mayborn",
+   "name": "Mayborn Building",
+   "year": 1914,
+   "address": "130 Magnolia Cir, Nashville, TN 37203"
+  },
+  {
+   "city": "University of Kentucky",
+   "id": "campus_uky_main_building",
+   "name": "Main Building",
+   "year": 1882,
+   "address": "Main Building, University of Kentucky, Lexington, KY 40506"
+  },
+  {
+   "city": "University of Kentucky",
+   "id": "campus_uky_memorial_hall",
+   "name": "Memorial Hall",
+   "year": 1929,
+   "address": "610 S Limestone, Lexington, KY 40506"
+  },
+  {
+   "city": "University of Kentucky",
+   "id": "campus_uky_king_library",
+   "name": "Margaret I. King Library",
+   "year": 1931,
+   "address": "179 Funkhouser Dr, Lexington, KY 40506"
+  },
+  {
+   "city": "Mississippi State University",
+   "id": "campus_msstate_lee_hall",
+   "name": "Lee Hall",
+   "year": 1909,
+   "address": "Lee Blvd, Mississippi State, MS 39762"
+  },
+  {
+   "city": "Mississippi State University",
+   "id": "campus_msstate_montgomery_hall",
+   "name": "Montgomery Hall",
+   "year": 1903,
+   "address": "Old Main Plaza, Mississippi State, MS 39762"
+  },
+  {
+   "city": "Mississippi State University",
+   "id": "campus_msstate_mitchell_library",
+   "name": "Mitchell Memorial Library",
+   "year": 1950,
+   "address": "395 Hardy Rd, Mississippi State, MS 39762"
+  },
+  {
+   "city": "Mississippi State University",
+   "id": "campus_msstate_davis_wade",
+   "name": "Davis Wade Stadium",
+   "year": 1914,
+   "address": "90 BS Hood Dr, Mississippi State, MS 39762"
+  },
+  {
+   "city": "University of Tennessee",
+   "id": "campus_utk_ayres_hall",
+   "name": "Ayres Hall",
+   "year": 1921,
+   "address": "1403 Circle Dr, Knoxville, TN 37996"
+  },
+  {
+   "city": "University of Tennessee",
+   "id": "campus_utk_neyland_stadium",
+   "name": "Neyland Stadium",
+   "year": 1921,
+   "address": "1235 Phillip Fulmer Way, Knoxville, TN 37916"
+  },
+  {
+   "city": "Texas A&M University",
+   "id": "campus_tamu_academic_building",
+   "name": "Academic Building",
+   "year": 1914,
+   "address": "Academic Building, Texas A&M University, College Station, TX 77843"
+  },
+  {
+   "city": "Texas A&M University",
+   "id": "campus_tamu_administration_building",
+   "name": "Jack K. Williams Administration Building",
+   "year": 1932,
+   "address": "400 Bizzell St, College Station, TX 77843"
+  },
+  {
+   "city": "Texas A&M University",
+   "id": "campus_tamu_cushing_library",
+   "name": "Cushing Memorial Library",
+   "year": 1930,
+   "address": "Nagle St, College Station, TX 77843"
+  },
+  {
+   "city": "University of Oxford",
+   "id": "campus_oxford_radcliffe_camera",
+   "name": "Radcliffe Camera",
+   "year": 1748,
+   "address": "Radcliffe Square, Oxford OX1 3BG"
+  },
+  {
+   "city": "University of Oxford",
+   "id": "campus_oxford_divinity_school",
+   "name": "Divinity School",
+   "year": 1483,
+   "address": "Broad Street, Oxford OX1 3BG"
+  },
+  {
+   "city": "University of Oxford",
+   "id": "campus_oxford_clarendon_building",
+   "name": "Clarendon Building",
+   "year": 1715,
+   "address": "Broad Street, Oxford OX1 3BG"
+  },
+  {
+   "city": "University of Oxford",
+   "id": "campus_oxford_bridge_of_sighs",
+   "name": "Bridge of Sighs",
+   "year": 1914,
+   "address": "New College Lane, Oxford OX1 3BW"
+  },
+  {
+   "city": "University of Oxford",
+   "id": "campus_oxford_museum_natural_history",
+   "name": "Oxford University Museum of Natural History",
+   "year": 1860,
+   "address": "Parks Road, Oxford OX1 3PW"
+  },
+  {
+   "city": "University of Cambridge",
+   "id": "campus_cambridge_wren_library",
+   "name": "Wren Library",
+   "year": 1695,
+   "address": "Trinity College, Trinity Lane, Cambridge CB2 1TQ"
+  },
+  {
+   "city": "University of Cambridge",
+   "id": "campus_cambridge_university_library",
+   "name": "Cambridge University Library",
+   "year": 1934,
+   "address": "West Road, Cambridge CB3 9DR"
+  },
+  {
+   "city": "University of St Andrews",
+   "id": "campus_st_andrews_st_salvators_chapel",
+   "name": "St Salvator's Chapel",
+   "year": 1450,
+   "address": "North Street, St Andrews KY16 9AL"
+  },
+  {
+   "city": "University of St Andrews",
+   "id": "campus_st_andrews_st_marys_college",
+   "name": "St Mary's College",
+   "year": 1538,
+   "address": "South Street, St Andrews KY16 9JU"
+  },
+  {
+   "city": "University of St Andrews",
+   "id": "campus_st_andrews_younger_hall",
+   "name": "Younger Hall",
+   "year": 1929,
+   "address": "North Street, St Andrews KY16 9AJ"
+  },
+  {
+   "city": "University of Glasgow",
+   "id": "campus_glasgow_memorial_chapel",
+   "name": "University of Glasgow Memorial Chapel",
+   "year": 1929,
+   "address": "University Avenue, Glasgow G12 8QQ"
+  },
+  {
+   "city": "University of Glasgow",
+   "id": "campus_glasgow_lion_unicorn_staircase",
+   "name": "Lion and Unicorn Staircase",
+   "year": 1690,
+   "address": "University Avenue, Glasgow G12 8QQ"
+  },
+  {
+   "city": "University of Glasgow",
+   "id": "campus_glasgow_university_union",
+   "name": "Glasgow University Union",
+   "year": 1931,
+   "address": "32 University Avenue, Glasgow G12 8LX"
+  },
+  {
+   "city": "University of Edinburgh",
+   "id": "campus_edinburgh_old_college",
+   "name": "Old College",
+   "year": 1827,
+   "address": "South Bridge, Edinburgh EH8 9YL"
+  },
+  {
+   "city": "University of Edinburgh",
+   "id": "campus_edinburgh_mcewan_hall",
+   "name": "McEwan Hall",
+   "year": 1897,
+   "address": "Bristo Square, Edinburgh EH8 9AG"
+  },
+  {
+   "city": "University of Edinburgh",
+   "id": "campus_edinburgh_new_college",
+   "name": "New College",
+   "year": 1846,
+   "address": "Mound Place, Edinburgh EH1 2LX"
+  },
+  {
+   "city": "University of Edinburgh",
+   "id": "campus_edinburgh_st_cecilias_hall",
+   "name": "St Cecilia's Hall",
+   "year": 1763,
+   "address": "50 Niddry Street, Edinburgh EH1 1LG"
+  },
+  {
+   "city": "University of Edinburgh",
+   "id": "campus_edinburgh_teviot_row_house",
+   "name": "Teviot Row House",
+   "year": 1889,
+   "address": "13 Bristo Square, Edinburgh EH8 9AJ"
+  },
+  {
+   "city": "Durham University",
+   "id": "campus_durham_cosins_library",
+   "name": "Cosin's Library",
+   "year": 1668,
+   "address": "Palace Green, Durham DH1 3RN"
+  },
+  {
+   "city": "Trinity College Dublin",
+   "id": "campus_tcd_old_library",
+   "name": "The Old Library",
+   "year": 1732,
+   "address": "College Street, Dublin 2"
+  },
+  {
+   "city": "Trinity College Dublin",
+   "id": "campus_tcd_campanile",
+   "name": "The Campanile",
+   "year": 1854,
+   "address": "Library Square, Trinity College, Dublin 2"
+  },
+  {
+   "city": "Trinity College Dublin",
+   "id": "campus_tcd_museum_building",
+   "name": "Museum Building",
+   "year": 1857,
+   "address": "New Square, Trinity College, Dublin 2"
+  },
+  {
+   "city": "Trinity College Dublin",
+   "id": "campus_tcd_printing_house",
+   "name": "The Printing House",
+   "year": 1734,
+   "address": "Trinity College, Dublin 2"
+  },
+  {
+   "city": "Trinity College Dublin",
+   "id": "campus_tcd_provosts_house",
+   "name": "Provost's House",
+   "year": 1759,
+   "address": "1 Grafton Street, Dublin 2"
+  },
+  {
+   "city": "Wayne State University",
+   "id": "campus_wayne_maccabees_building",
+   "name": "Maccabees Building",
+   "year": 1927,
+   "address": "5057 Woodward Ave, Detroit, MI 48202"
+  },
+  {
+   "city": "Wayne State University",
+   "id": "campus_wayne_freer_house",
+   "name": "Charles Lang Freer House",
+   "year": 1892,
+   "address": "71 E Ferry St, Detroit, MI 48202"
+  },
+  {
+   "city": "Wayne State University",
+   "id": "campus_wayne_hilberry_theatre",
+   "name": "Hilberry Theatre",
+   "year": 1917,
+   "address": "4743 Cass Ave, Detroit, MI"
+  },
+  {
+   "city": "Western Michigan University",
+   "id": "campus_wmu_heritage_hall",
+   "name": "Heritage Hall (East Hall)",
+   "year": 1905,
+   "address": "Oakland Dr, Kalamazoo, MI 49008"
+  },
+  {
+   "city": "Western Michigan University",
+   "id": "campus_wmu_waldo_stadium",
+   "name": "Waldo Stadium",
+   "year": 1939,
+   "address": "Stadium Dr, Kalamazoo, MI 49008"
+  },
+  {
+   "city": "Western Michigan University",
+   "id": "campus_wmu_hyames_field",
+   "name": "Hyames Field",
+   "year": 1939,
+   "address": "Stadium Dr, Kalamazoo, MI 49008"
+  },
+  {
+   "city": "Eastern Michigan University",
+   "id": "campus_emu_starkweather_hall",
+   "name": "Starkweather Hall",
+   "year": 1896,
+   "address": "901 W Forest Ave, Ypsilanti, MI 48197"
+  },
+  {
+   "city": "Eastern Michigan University",
+   "id": "campus_emu_pease_auditorium",
+   "name": "Pease Auditorium",
+   "year": 1915,
+   "address": "494 College Pl, Ypsilanti, MI 48197"
+  },
+  {
+   "city": "Eastern Michigan University",
+   "id": "campus_emu_mckenny_hall",
+   "name": "McKenny Hall",
+   "year": 1931,
+   "address": "Eastern Michigan University, Ypsilanti, MI 48197"
+  },
+  {
+   "city": "Michigan Technological University",
+   "id": "campus_mtu_college_club_house",
+   "name": "College Club House and Gymnasium",
+   "year": 1904,
+   "address": "1416 College Ave, Houghton, MI 49931"
+  },
+  {
+   "city": "Oakland University",
+   "id": "campus_oakland_meadow_brook_hall",
+   "name": "Meadow Brook Hall",
+   "year": 1929,
+   "address": "350 Estate Dr, Rochester Hills, MI 48309"
+  },
+  {
+   "city": "Oakland University",
+   "id": "campus_oakland_john_dodge_house",
+   "name": "John Dodge House",
+   "year": 1898,
+   "address": "Oakland University, Rochester Hills, MI 48309"
+  },
+  {
+   "city": "Central Michigan University",
+   "id": "campus_cmich_warriner_hall",
+   "name": "Warriner Hall",
+   "year": 1928,
+   "address": "Central Michigan University, Mount Pleasant, MI 48859"
+  },
+  {
+   "city": "Cranbrook Academy of Art",
+   "id": "campus_cranbrook_saarinen_house",
+   "name": "Saarinen House",
+   "year": 1930,
+   "address": "39221 Woodward Ave, Bloomfield Hills, MI 48304"
+  },
+  {
+   "city": "Cranbrook Academy of Art",
+   "id": "campus_cranbrook_art_museum",
+   "name": "Cranbrook Art Museum",
+   "year": 1942,
+   "address": "39221 Woodward Ave, Bloomfield Hills, MI 48304"
+  },
+  {
+   "city": "Cranbrook Academy of Art",
+   "id": "campus_cranbrook_house",
+   "name": "Cranbrook House",
+   "year": 1908,
+   "address": "380 Lone Pine Rd, Bloomfield Hills, MI 48304"
+  },
+  {
+   "city": "Cranbrook Academy of Art",
+   "id": "campus_cranbrook_christ_church",
+   "name": "Christ Church Cranbrook",
+   "year": 1928,
+   "address": "470 Church Rd, Bloomfield Hills, MI 48304"
+  },
+  {
+   "city": "Cranbrook Academy of Art",
+   "id": "campus_cranbrook_kingswood_school",
+   "name": "Kingswood School Cranbrook",
+   "year": 1931,
+   "address": "39221 Woodward Ave, Bloomfield Hills, MI 48304"
+  },
+  {
+   "city": "Cranbrook Academy of Art",
+   "id": "campus_cranbrook_school",
+   "name": "Cranbrook School",
+   "year": 1927,
+   "address": "39221 Woodward Ave, Bloomfield Hills, MI 48304"
+  },
+  {
+   "city": "Cranbrook Academy of Art",
+   "id": "campus_cranbrook_institute_of_science",
+   "name": "Cranbrook Institute of Science",
+   "year": 1938,
+   "address": "39221 Woodward Ave, Bloomfield Hills, MI 48304"
+  },
+  {
+   "city": "Yale University",
+   "id": "campus_yale_sterling_library",
+   "name": "Sterling Memorial Library",
+   "year": 1931,
+   "address": "120 High St, New Haven, CT 06511"
+  },
+  {
+   "city": "Yale University",
+   "id": "campus_yale_harkness_tower",
+   "name": "Harkness Tower",
+   "year": 1921,
+   "address": "Memorial Quadrangle (Branford College), New Haven, CT 06511"
+  },
+  {
+   "city": "Harvard University",
+   "id": "campus_harvard_massachusetts_hall",
+   "name": "Massachusetts Hall",
+   "year": 1720,
+   "address": "Harvard Yard, Cambridge, MA 02138"
+  },
+  {
+   "city": "Harvard University",
+   "id": "campus_harvard_university_hall",
+   "name": "University Hall",
+   "year": 1815,
+   "address": "Harvard Yard, Cambridge, MA 02138"
+  },
+  {
+   "city": "Harvard University",
+   "id": "campus_harvard_sever_hall",
+   "name": "Sever Hall",
+   "year": 1878,
+   "address": "Harvard Yard, Cambridge, MA 02138"
+  },
+  {
+   "city": "Harvard University",
+   "id": "campus_harvard_widener_library",
+   "name": "Widener Library",
+   "year": 1915,
+   "address": "Harvard Yard, Cambridge, MA 02138"
+  },
+  {
+   "city": "Princeton University",
+   "id": "campus_princeton_chapel",
+   "name": "Princeton University Chapel",
+   "year": 1928,
+   "address": "Princeton University, Princeton, NJ 08544"
+  },
+  {
+   "city": "Princeton University",
+   "id": "campus_princeton_firestone_library",
+   "name": "Firestone Library",
+   "year": 1948,
+   "address": "1 Washington Rd, Princeton, NJ 08544"
+  },
+  {
+   "city": "Princeton University",
+   "id": "campus_princeton_alexander_hall",
+   "name": "Alexander Hall",
+   "year": 1894,
+   "address": "Class of 1975 Walk, Princeton, NJ 08544"
+  },
+  {
+   "city": "Princeton University",
+   "id": "campus_princeton_prospect_house",
+   "name": "Prospect House",
+   "year": 1851,
+   "address": "Princeton University campus, Princeton, NJ 08544"
+  },
+  {
+   "city": "Cornell University",
+   "id": "campus_cornell_andrew_dickson_white_house",
+   "name": "A. D. White House",
+   "year": 1871,
+   "address": "Cornell University, Ithaca, NY 14853"
+  },
+  {
+   "city": "Columbia University",
+   "id": "campus_columbia_low_library",
+   "name": "Low Memorial Library",
+   "year": 1897,
+   "address": "116th St & Broadway, New York, NY 10027"
+  },
+  {
+   "city": "Columbia University",
+   "id": "campus_columbia_butler_library",
+   "name": "Butler Library",
+   "year": 1934,
+   "address": "535 W 114th St, New York, NY 10027"
+  },
+  {
+   "city": "Columbia University",
+   "id": "campus_columbia_st_pauls_chapel",
+   "name": "St. Paul's Chapel",
+   "year": 1907,
+   "address": "1160 Amsterdam Ave, New York, NY 10027"
+  },
+  {
+   "city": "Columbia University",
+   "id": "campus_columbia_philosophy_hall",
+   "name": "Philosophy Hall",
+   "year": 1910,
+   "address": "1150 Amsterdam Ave, New York, NY 10027"
+  },
+  {
+   "city": "Columbia University",
+   "id": "campus_columbia_casa_italiana",
+   "name": "Casa Italiana",
+   "year": 1927,
+   "address": "1161 Amsterdam Ave, New York, NY 10027"
+  },
+  {
+   "city": "University of Pennsylvania",
+   "id": "campus_penn_fisher_fine_arts_library",
+   "name": "Fisher Fine Arts Library",
+   "year": 1891,
+   "address": "220 S 34th St, Philadelphia, PA 19104"
+  },
+  {
+   "city": "University of Pennsylvania",
+   "id": "campus_penn_college_hall",
+   "name": "College Hall",
+   "year": 1872,
+   "address": "3450 Woodland Walk, Philadelphia, PA 19104"
+  },
+  {
+   "city": "University of Pennsylvania",
+   "id": "campus_penn_museum",
+   "name": "Penn Museum",
+   "year": 1899,
+   "address": "3260 South St, Philadelphia, PA 19104"
+  },
+  {
+   "city": "Brown University",
+   "id": "campus_brown_university_hall",
+   "name": "University Hall",
+   "year": 1770,
+   "address": "The College Green, Providence, RI 02912"
+  },
+  {
+   "city": "Dartmouth College",
+   "id": "campus_dartmouth_baker_berry_library",
+   "name": "Baker-Berry Library",
+   "year": 1928,
+   "address": "25 N Main St, Hanover, NH 03755"
+  },
+  {
+   "city": "Dartmouth College",
+   "id": "campus_dartmouth_rauner_library",
+   "name": "Rauner Special Collections Library",
+   "year": 1907,
+   "address": "Hanover, NH 03755"
+  },
+  {
+   "city": "Georgetown University",
+   "id": "campus_georgetown_healy_hall",
+   "name": "Healy Hall",
+   "year": 1879,
+   "address": "Georgetown University, Washington, DC 20057"
+  },
+  {
+   "city": "Georgetown University",
+   "id": "campus_georgetown_old_north",
+   "name": "Old North",
+   "year": 1795,
+   "address": "Georgetown University, Washington, DC 20057"
+  },
+  {
+   "city": "Georgetown University",
+   "id": "campus_georgetown_observatory",
+   "name": "Georgetown University Astronomical Observatory",
+   "year": 1844,
+   "address": "Georgetown University, Washington, DC 20057"
+  },
+  {
+   "city": "Johns Hopkins University",
+   "id": "campus_jhu_homewood_museum",
+   "name": "Homewood Museum",
+   "year": 1801,
+   "address": "3400 N Charles St, Baltimore, MD 21218"
+  },
+  {
+   "city": "Johns Hopkins University",
+   "id": "campus_jhu_gilman_hall",
+   "name": "Gilman Hall",
+   "year": 1915,
+   "address": "3400 N Charles St, Baltimore, MD 21218"
+  },
+  {
+   "city": "Johns Hopkins University",
+   "id": "campus_jhu_homewood_field",
+   "name": "Homewood Field",
+   "year": 1906,
+   "address": "3400 N Charles St, Baltimore, MD 21218"
+  },
+  {
+   "city": "Johns Hopkins University",
+   "id": "campus_jhu_wyman_park_building",
+   "name": "Wyman Park Building",
+   "year": 1934,
+   "address": "3100 Wyman Park Dr, Baltimore, MD 21211"
+  },
+  {
+   "city": "New York University",
+   "id": "campus_nyu_silver_center",
+   "name": "Silver Center",
+   "year": 1892,
+   "address": "32 Waverly Pl, New York, NY"
+  },
+  {
+   "city": "New York University",
+   "id": "campus_nyu_brown_building",
+   "name": "Brown Building",
+   "year": 1901,
+   "address": "23–29 Washington Pl, New York, NY"
+  },
+  {
+   "city": "New York University",
+   "id": "campus_nyu_provincetown_playhouse",
+   "name": "Provincetown Playhouse",
+   "year": 1918,
+   "address": "133 MacDougal St, New York, NY"
+  },
+  {
+   "city": "New York University",
+   "id": "campus_nyu_casa_italiana",
+   "name": "Casa Italiana Zerilli-Marimò",
+   "year": 1851,
+   "address": "24 W 12th St, New York, NY"
+  },
+  {
+   "city": "Carnegie Mellon University",
+   "id": "campus_cmu_hamerschlag_hall",
+   "name": "Hamerschlag Hall",
+   "year": 1906,
+   "address": "425 Hamerschlag Dr, Pittsburgh, PA 15213"
+  },
+  {
+   "city": "Carnegie Mellon University",
+   "id": "campus_cmu_college_of_fine_arts",
+   "name": "College of Fine Arts Building",
+   "year": 1912,
+   "address": "4914 Frew St, Pittsburgh, PA 15213"
+  },
+  {
+   "city": "Carnegie Mellon University",
+   "id": "campus_cmu_margaret_morrison",
+   "name": "Margaret Morrison Carnegie Hall",
+   "year": 1906,
+   "address": "5001 Margaret Morrison St, Pittsburgh, PA 15213"
+  },
+  {
+   "city": "Carnegie Mellon University",
+   "id": "campus_cmu_baker_hall",
+   "name": "Baker Hall",
+   "year": 1914,
+   "address": "4825 Frew St, Pittsburgh, PA 15213"
+  },
+  {
+   "city": "Carnegie Mellon University",
+   "id": "campus_cmu_doherty_hall",
+   "name": "Doherty Hall",
+   "year": 1908,
+   "address": "281 Hamerschlag Dr, Pittsburgh, PA 15213"
+  },
+  {
+   "city": "Carnegie Mellon University",
+   "id": "campus_cmu_hamburg_hall",
+   "name": "Hamburg Hall",
+   "year": 1917,
+   "address": "4800 Forbes Ave, Pittsburgh, PA 15213"
+  },
+  {
+   "city": "Carnegie Mellon University",
+   "id": "campus_cmu_mellon_institute",
+   "name": "Mellon Institute",
+   "year": 1937,
+   "address": "4400 Fifth Ave, Pittsburgh, PA 15213"
+  },
+  {
+   "city": "University of Chicago",
+   "id": "campus_uchicago_rockefeller_chapel",
+   "name": "Rockefeller Chapel",
+   "year": 1928,
+   "address": "5850 S Woodlawn Ave, Chicago, IL 60637"
+  },
+  {
+   "city": "University of Chicago",
+   "id": "campus_uchicago_robie_house",
+   "name": "Robie House",
+   "year": 1910,
+   "address": "5757 S Woodlawn Ave, Chicago, IL 60637"
+  },
+  {
+   "city": "University of Chicago",
+   "id": "campus_uchicago_isac",
+   "name": "Institute for the Study of Ancient Cultures",
+   "year": 1931,
+   "address": "1155 E 58th St, Chicago, IL 60637"
+  },
+  {
+   "city": "University of Chicago",
+   "id": "campus_uchicago_ida_noyes_hall",
+   "name": "Ida Noyes Hall",
+   "year": 1916,
+   "address": "1212 E 59th St, Chicago, IL 60637"
+  },
+  {
+   "city": "University of Notre Dame",
+   "id": "campus_notre_dame_main_building",
+   "name": "Main Building (Golden Dome)",
+   "year": 1879,
+   "address": "Main Quad, Notre Dame, IN 46556"
+  },
+  {
+   "city": "University of Notre Dame",
+   "id": "campus_notre_dame_basilica",
+   "name": "Basilica of the Sacred Heart",
+   "year": 1888,
+   "address": "Main Quad, Notre Dame, IN 46556"
+  },
+  {
+   "city": "University of Notre Dame",
+   "id": "campus_notre_dame_sorin_hall",
+   "name": "Sorin Hall",
+   "year": 1889,
+   "address": "Main Quad, Notre Dame, IN 46556"
+  },
+  {
+   "city": "University of Notre Dame",
+   "id": "campus_notre_dame_alumni_hall",
+   "name": "Alumni Hall",
+   "year": 1931,
+   "address": "South Quad, Notre Dame, IN 46556"
+  },
+  {
+   "city": "University of Michigan",
+   "id": "campus_umich_burton_tower",
+   "name": "Burton Memorial Tower",
+   "year": 1936,
+   "address": "230 N Ingalls St, Ann Arbor, MI 48109"
+  },
+  {
+   "city": "University of Michigan",
+   "id": "campus_umich_clements_library",
+   "name": "William L. Clements Library",
+   "year": 1923,
+   "address": "South University Ave, Ann Arbor, MI 48109"
+  },
+  {
+   "city": "University of Michigan",
+   "id": "campus_umich_detroit_observatory",
+   "name": "Detroit Observatory",
+   "year": 1854,
+   "address": "Observatory St and Ann St, Ann Arbor, MI 48109"
+  },
+  {
+   "city": "University of Michigan",
+   "id": "campus_umich_martha_cook",
+   "name": "Martha Cook Building",
+   "year": 1915,
+   "address": "906 S University Ave, Ann Arbor, MI 48109"
+  },
+  {
+   "city": "University of Michigan",
+   "id": "campus_umich_museum_of_art",
+   "name": "University of Michigan Museum of Art",
+   "year": 1910,
+   "address": "South State St, Ann Arbor, MI 48109"
+  },
+  {
+   "city": "University of Virginia",
+   "id": "campus_uva_rotunda",
+   "name": "The Rotunda",
+   "year": 1826,
+   "address": "1826 University Ave, Charlottesville, VA 22904"
+  },
+  {
+   "city": "University of Virginia",
+   "id": "campus_uva_lawn",
+   "name": "The Lawn",
+   "year": 1817,
+   "address": "The Lawn, Charlottesville, VA 22904"
+  },
+  {
+   "city": "University of Virginia",
+   "id": "campus_uva_clark_hall",
+   "name": "Clark Hall",
+   "year": 1932,
+   "address": "University of Virginia, Charlottesville, VA 22904"
+  },
+  {
+   "city": "University of Virginia",
+   "id": "campus_uva_carrs_hill",
+   "name": "Carr's Hill",
+   "year": 1906,
+   "address": "Carr's Hill, Charlottesville, VA 22903"
+  },
+  {
+   "city": "Rice University",
+   "id": "campus_rice_lovett_hall",
+   "name": "Lovett Hall",
+   "year": 1912,
+   "address": "6100 Main St, Houston, TX 77005"
+  },
+  {
+   "city": "Rice University",
+   "id": "campus_rice_fondren_library",
+   "name": "Fondren Library",
+   "year": 1949,
+   "address": "6100 Main St, Houston, TX 77005"
+  },
+  {
+   "city": "Rice University",
+   "id": "campus_rice_herzstein_hall",
+   "name": "Herzstein Hall",
+   "year": 1914,
+   "address": "6100 Main St, Houston, TX 77005"
+  },
+  {
+   "city": "Rice University",
+   "id": "campus_rice_maxfield_hall",
+   "name": "Maxfield Hall",
+   "year": 1912,
+   "address": "6100 Main St, Houston, TX 77005"
+  },
+  {
+   "city": "Rice University",
+   "id": "campus_rice_cohen_house",
+   "name": "Cohen House",
+   "year": 1927,
+   "address": "6100 Main St, Houston, TX 77005"
+  },
+  {
+   "city": "Rice University",
+   "id": "campus_rice_stadium",
+   "name": "First Community Stadium",
+   "year": 1950,
+   "address": "6100 Main St, Houston, TX 77005"
+  },
+  {
+   "city": "Rice University",
+   "id": "campus_rice_tudor_fieldhouse",
+   "name": "Tudor Fieldhouse",
+   "year": 1950,
+   "address": "6100 Main St, Houston, TX 77005"
+  },
+  {
+   "city": "Emory University",
+   "id": "campus_emory_candler_library",
+   "name": "Candler Library",
+   "year": 1926,
+   "address": "550 Asbury Cir, Atlanta, GA 30322"
+  },
+  {
+   "city": "Emory University",
+   "id": "campus_emory_glenn_memorial",
+   "name": "Glenn Memorial Church",
+   "year": 1931,
+   "address": "1652 N Decatur Rd, Atlanta, GA"
+  },
+  {
+   "city": "Emory University",
+   "id": "campus_emory_university_hospital",
+   "name": "Emory University Hospital",
+   "year": 1922,
+   "address": "1364 Clifton Rd NE, Atlanta, GA 30322"
+  },
+  {
+   "city": "Emory University",
+   "id": "campus_emory_lullwater_house",
+   "name": "Lullwater House",
+   "year": 1926,
+   "address": "Lullwater Preserve, Atlanta, GA 30322"
+  },
+  {
+   "city": "Tulane University",
+   "id": "campus_tulane_gibson_hall",
+   "name": "Gibson Hall",
+   "year": 1894,
+   "address": "6823 St Charles Ave, New Orleans, LA 70118"
+  },
+  {
+   "city": "Tulane University",
+   "id": "campus_tulane_richardson_memorial",
+   "name": "Richardson Memorial Hall",
+   "year": 1908,
+   "address": "West Rd, New Orleans, LA 70118"
+  },
+  {
+   "city": "Tulane University",
+   "id": "campus_tulane_mcalister_auditorium",
+   "name": "McAlister Auditorium",
+   "year": 1940,
+   "address": "McAlister Pl, New Orleans, LA 70118"
+  },
+  {
+   "city": "Tulane University",
+   "id": "campus_tulane_devlin_fieldhouse",
+   "name": "Devlin Fieldhouse",
+   "year": 1933,
+   "address": "Tulane University, New Orleans, LA 70118"
+  },
+  {
+   "city": "Washington University in St. Louis",
+   "id": "campus_washu_graham_chapel",
+   "name": "Graham Chapel",
+   "year": 1909,
+   "address": "Danforth Campus, Washington University, St. Louis, MO 63130"
+  },
+  {
+   "city": "Washington University in St. Louis",
+   "id": "campus_washu_busch_hall",
+   "name": "Busch Hall",
+   "year": 1900,
+   "address": "Danforth Campus, Washington University, St. Louis, MO 63130"
+  },
+  {
+   "city": "Washington University in St. Louis",
+   "id": "campus_washu_ridgley_hall",
+   "name": "Ridgley Hall",
+   "year": 1901,
+   "address": "Danforth Campus, Washington University, St. Louis, MO 63130"
+  },
+  {
+   "city": "Washington University in St. Louis",
+   "id": "campus_washu_eads_hall",
+   "name": "Eads Hall",
+   "year": 1902,
+   "address": "Danforth Campus, Washington University, St. Louis, MO 63130"
+  },
+  {
+   "city": "Washington University in St. Louis",
+   "id": "campus_washu_francis_field",
+   "name": "Francis Olympic Field",
+   "year": 1904,
+   "address": "Forsyth Blvd, St. Louis County, MO 63105"
+  },
+  {
+   "city": "Stanford University",
+   "id": "campus_stanford_main_quad",
+   "name": "Main Quad",
+   "year": 1906,
+   "address": "Main Quad, Stanford, CA 94305"
+  },
+  {
+   "city": "Stanford University",
+   "id": "campus_stanford_memorial_church",
+   "name": "Stanford Memorial Church",
+   "year": 1903,
+   "address": "Main Quad, Stanford, CA 94305"
+  },
+  {
+   "city": "Stanford University",
+   "id": "campus_stanford_hoover_tower",
+   "name": "Hoover Tower",
+   "year": 1941,
+   "address": "Stanford, CA 94305"
+  },
+  {
+   "city": "Stanford University",
+   "id": "campus_stanford_hanna_honeycomb_house",
+   "name": "Hanna–Honeycomb House",
+   "year": 1937,
+   "address": "737 Frenchmans Road, Stanford, CA 94305"
+  },
+  {
+   "city": "University of California, Berkeley",
+   "id": "campus_berkeley_sather_tower",
+   "name": "Sather Tower",
+   "year": 1914,
+   "address": "Sather Tower, UC Berkeley, Berkeley, CA 94720"
+  },
+  {
+   "city": "University of California, Berkeley",
+   "id": "campus_berkeley_doe_library",
+   "name": "Doe Memorial Library",
+   "year": 1911,
+   "address": "Doe Library, UC Berkeley, Berkeley, CA 94720"
+  },
+  {
+   "city": "University of California, Berkeley",
+   "id": "campus_berkeley_hearst_mining_building",
+   "name": "Hearst Memorial Mining Building",
+   "year": 1907,
+   "address": "Hearst Memorial Mining Building, UC Berkeley, Berkeley, CA 94720"
+  },
+  {
+   "city": "University of California, Berkeley",
+   "id": "campus_berkeley_greek_theatre",
+   "name": "Hearst Greek Theatre",
+   "year": 1903,
+   "address": "2001 Gayley Rd, Berkeley, CA 94720"
+  },
+  {
+   "city": "University of California, Berkeley",
+   "id": "campus_berkeley_sather_gate",
+   "name": "Sather Gate",
+   "year": 1910,
+   "address": "Sather Gate, UC Berkeley, Berkeley, CA 94720"
+  },
+  {
+   "city": "University of California, Berkeley",
+   "id": "campus_berkeley_hearst_gymnasium",
+   "name": "Hearst Gymnasium for Women",
+   "year": 1927,
+   "address": "Bancroft Way, Berkeley, CA 94720"
+  },
+  {
+   "city": "University of California, Los Angeles",
+   "id": "campus_ucla_royce_hall",
+   "name": "Royce Hall",
+   "year": 1929,
+   "address": "340 Royce Drive, Los Angeles, CA 90095"
+  },
+  {
+   "city": "University of California, Los Angeles",
+   "id": "campus_ucla_powell_library",
+   "name": "Powell Library",
+   "year": 1929,
+   "address": "Powell Library, UCLA, Los Angeles, CA 90095"
+  },
+  {
+   "city": "University of Washington",
+   "id": "campus_uw_suzzallo_library",
+   "name": "Suzzallo Library",
+   "year": 1926,
+   "address": "Suzzallo Library, University of Washington, Seattle, WA 98195"
+  },
+  {
+   "city": "University of Washington",
+   "id": "campus_uw_denny_hall",
+   "name": "Denny Hall",
+   "year": 1895,
+   "address": "Denny Hall, University of Washington, Seattle, WA 98195"
+  },
+  {
+   "city": "University of Washington",
+   "id": "campus_uw_quad",
+   "name": "University of Washington Quad",
+   "year": 1950,
+   "address": "Liberal Arts Quadrangle, University of Washington, Seattle, WA 98195"
+  },
+  {
+   "city": "University of Washington",
+   "id": "campus_uw_gerberding_hall",
+   "name": "Gerberding Hall",
+   "year": 1949,
+   "address": "1704 NE Grant Lane, Seattle, WA 98195"
+  },
+  {
+   "city": "University of Washington",
+   "id": "campus_uw_henry_art_gallery",
+   "name": "Henry Art Gallery",
+   "year": 1927,
+   "address": "4100 15th Ave NE, Seattle, WA 98105"
+  },
+  {
+   "city": "McGill University",
+   "id": "campus_mcgill_redpath_museum",
+   "name": "Redpath Museum",
+   "year": 1882,
+   "address": "859 Sherbrooke Street West, Montreal, QC"
+  },
+  {
+   "city": "McGill University",
+   "id": "campus_mcgill_redpath_hall",
+   "name": "Redpath Hall",
+   "year": 1893,
+   "address": "3461 McTavish Street, Montreal, QC"
+  },
+  {
+   "city": "McGill University",
+   "id": "campus_mcgill_macdonald_harrington",
+   "name": "Macdonald-Harrington Building",
+   "year": 1897,
+   "address": "815 Sherbrooke Street West, Montreal, QC"
+  },
+  {
+   "city": "University of Toronto",
+   "id": "campus_uoft_university_college",
+   "name": "University College",
+   "year": 1859,
+   "address": "15 King's College Circle, Toronto, ON"
+  },
+  {
+   "city": "University of Toronto",
+   "id": "campus_uoft_hart_house",
+   "name": "Hart House",
+   "year": 1919,
+   "address": "7 Hart House Circle, Toronto, ON"
+  },
+  {
+   "city": "University of Toronto",
+   "id": "campus_uoft_soldiers_tower",
+   "name": "Soldiers' Tower",
+   "year": 1924,
+   "address": "7 Hart House Circle, Toronto, ON"
+  },
+  {
+   "city": "California Institute of Technology",
+   "id": "campus_caltech_athenaeum",
+   "name": "The Athenaeum",
+   "year": 1930,
+   "address": "California Institute of Technology, Pasadena, CA 91125"
+  },
+  {
+   "city": "California Institute of Technology",
+   "id": "campus_caltech_guggenheim_lab",
+   "name": "Guggenheim Aeronautical Laboratory",
+   "year": 1929,
+   "address": "California Institute of Technology, Pasadena, CA 91125"
+  },
+  {
+   "city": "California Institute of Technology",
+   "id": "campus_caltech_dabney_hall",
+   "name": "Dabney Hall",
+   "year": 1928,
+   "address": "California Institute of Technology, Pasadena, CA 91125"
+  },
+  {
+   "city": "California Institute of Technology",
+   "id": "campus_caltech_parsons_gates",
+   "name": "Parsons-Gates Hall of Administration",
+   "year": 1917,
+   "address": "California Institute of Technology, Pasadena, CA 91125"
+  },
+  {
+   "city": "California Institute of Technology",
+   "id": "campus_caltech_bridge_lab",
+   "name": "Norman Bridge Laboratory of Physics",
+   "year": 1922,
+   "address": "California Institute of Technology, Pasadena, CA 91125"
+  },
+  {
+   "city": "California Institute of Technology",
+   "id": "campus_caltech_kerckhoff_labs",
+   "name": "Kerckhoff Laboratories of the Biological Sciences",
+   "year": 1928,
+   "address": "California Institute of Technology, Pasadena, CA 91125"
+  },
+  {
+   "city": "Colorado State University",
+   "id": "campus_colostate_routt_hall",
+   "name": "Routt Hall",
+   "year": 1890,
+   "address": "Colorado State University campus, Fort Collins, CO 80523"
+  }
+ ],
+ "candidates": [
+  {
+   "id": "campus_duke_wallace_wade",
+   "title": "The Stadium, Duke University, Durham, N.C. Gymnasium in Background.jpg",
+   "licence": "Public domain",
+   "date": "1932",
+   "page": "https://commons.wikimedia.org/wiki/File:The_Stadium,_Duke_University,_Durham,_N.C._Gymnasium_in_Background.jpg"
+  },
+  {
+   "id": "campus_umiami_merrick_building",
+   "title": "University of Miami - Merrick Building.jpg",
+   "licence": "Public domain",
+   "date": "1950",
+   "page": "https://commons.wikimedia.org/wiki/File:University_of_Miami_-_Merrick_Building.jpg"
+  },
+  {
+   "id": "campus_syracuse_hendricks_chapel",
+   "title": "Hendricks-chapel syracuse-u.jpg",
+   "licence": "Public domain",
+   "date": "Unknown date",
+   "page": "https://commons.wikimedia.org/wiki/File:Hendricks-chapel_syracuse-u.jpg"
+  },
+  {
+   "id": "campus_syracuse_carnegie_library",
+   "title": "Construction of Carnegie Library at Syracuse University circa 1906.png",
+   "licence": "Public domain",
+   "date": "1906",
+   "page": "https://commons.wikimedia.org/wiki/File:Construction_of_Carnegie_Library_at_Syracuse_University_circa_1906.png"
+  },
+  {
+   "id": "campus_vt_lane_hall",
+   "title": "Lane Hall c 1888-89.jpg",
+   "licence": "Public domain",
+   "date": "",
+   "page": "https://commons.wikimedia.org/wiki/File:Lane_Hall_c_1888-89.jpg"
+  },
+  {
+   "id": "campus_iastate_lab_of_mechanics",
+   "title": "Labofmech.jpg",
+   "licence": "Public domain",
+   "date": "06/10/08",
+   "page": "https://commons.wikimedia.org/wiki/File:Labofmech.jpg"
+  },
+  {
+   "id": "campus_ku_strong_hall",
+   "title": "StrongHall1918.jpg",
+   "licence": "Public domain",
+   "date": "1918-06-08",
+   "page": "https://commons.wikimedia.org/wiki/File:StrongHall1918.jpg"
+  },
+  {
+   "id": "campus_kstate_anderson_hall",
+   "title": "Anderson Hall 1912.jpg",
+   "licence": "Public domain",
+   "date": "",
+   "page": "https://commons.wikimedia.org/wiki/File:Anderson_Hall_1912.jpg"
+  },
+  {
+   "id": "campus_ttu_administration",
+   "title": "Texas Tech Adminstration Building 1923.jpg",
+   "licence": "Public domain",
+   "date": "c 1925",
+   "page": "https://commons.wikimedia.org/wiki/File:Texas_Tech_Adminstration_Building_1923.jpg"
+  },
+  {
+   "id": "campus_ttu_west_hall",
+   "title": "West hall postcard.jpg",
+   "licence": "Public domain",
+   "date": "1913",
+   "page": "https://commons.wikimedia.org/wiki/File:West_hall_postcard.jpg"
+  },
+  {
+   "id": "campus_illinois_altgeld_hall",
+   "title": "WEB ML Chimes 1920 Altgeld-Bells COUIAlumniAssociation.jpg",
+   "licence": "Public domain",
+   "date": "1920",
+   "page": "https://commons.wikimedia.org/wiki/File:WEB_ML_Chimes_1920_Altgeld-Bells_COUIAlumniAssociation.jpg"
+  },
+  {
+   "id": "campus_pennstate_old_main",
+   "title": "Old Main Penn State.png",
+   "licence": "Public domain",
+   "date": "1904-10-01",
+   "page": "https://commons.wikimedia.org/wiki/File:Old_Main_Penn_State.png"
+  },
+  {
+   "id": "campus_pennstate_old_main",
+   "title": "Old Main Willow.jpg",
+   "licence": "Public domain",
+   "date": "1892-1923",
+   "page": "https://commons.wikimedia.org/wiki/File:Old_Main_Willow.jpg"
+  },
+  {
+   "id": "campus_pennstate_rec_hall",
+   "title": "RecHall1.jpg",
+   "licence": "Public domain",
+   "date": "",
+   "page": "https://commons.wikimedia.org/wiki/File:RecHall1.jpg"
+  },
+  {
+   "id": "campus_rutgers_old_queens",
+   "title": "Old Queens, 1910.png",
+   "licence": "Public domain",
+   "date": "1910",
+   "page": "https://commons.wikimedia.org/wiki/File:Old_Queens,_1910.png"
+  },
+  {
+   "id": "campus_rutgers_kirkpatrick_chapel",
+   "title": "Kirkpatrick Chapel Library Rutgers c1890s.jpg",
+   "licence": "Public domain",
+   "date": "1890s",
+   "page": "https://commons.wikimedia.org/wiki/File:Kirkpatrick_Chapel_Library_Rutgers_c1890s.jpg"
+  },
+  {
+   "id": "campus_rutgers_winants_hall",
+   "title": "Winants Hall c1901 Queen's Campus Rutgers College New Brunswick NJ.jpg",
+   "licence": "Public domain",
+   "date": "1901",
+   "page": "https://commons.wikimedia.org/wiki/File:Winants_Hall_c1901_Queen%27s_Campus_Rutgers_College_New_Brunswick_NJ.jpg"
+  },
+  {
+   "id": "campus_wisc_washburn_observatory",
+   "title": "Washburn Observatory.jpeg",
+   "licence": "Public domain",
+   "date": "1885",
+   "page": "https://commons.wikimedia.org/wiki/File:Washburn_Observatory.jpeg"
+  },
+  {
+   "id": "campus_uoregon_villard_hall",
+   "title": "Villard Hall Oregon 1920.jpg",
+   "licence": "Public domain",
+   "date": "1922",
+   "page": "https://commons.wikimedia.org/wiki/File:Villard_Hall_Oregon_1920.jpg"
+  },
+  {
+   "id": "campus_ua_presidents_mansion",
+   "title": "UA President's Mansion.jpg",
+   "licence": "Public domain",
+   "date": "",
+   "page": "https://commons.wikimedia.org/wiki/File:UA_President%27s_Mansion.jpg"
+  },
+  {
+   "id": "campus_ua_maxwell_hall",
+   "title": "Old University of Alabama Observatory 01.jpg",
+   "licence": "Public domain",
+   "date": "1934-04-04",
+   "page": "https://commons.wikimedia.org/wiki/File:Old_University_of_Alabama_Observatory_01.jpg"
+  },
+  {
+   "id": "campus_ua_maxwell_hall",
+   "title": "Old University of Alabama Observatory 02.jpg",
+   "licence": "Public domain",
+   "date": "1936-08-15",
+   "page": "https://commons.wikimedia.org/wiki/File:Old_University_of_Alabama_Observatory_02.jpg"
+  },
+  {
+   "id": "campus_auburn_samford_hall",
+   "title": "1890s Samford Hall Auburn Alabama.jpg",
+   "licence": "Public domain",
+   "date": "1897",
+   "page": "https://commons.wikimedia.org/wiki/File:1890s_Samford_Hall_Auburn_Alabama.jpg"
+  },
+  {
+   "id": "campus_auburn_samford_hall",
+   "title": "Main Building later Samford Hall Auburn University circa 1890-1891.jpg",
+   "licence": "Public domain",
+   "date": "1890",
+   "page": "https://commons.wikimedia.org/wiki/File:Main_Building_later_Samford_Hall_Auburn_University_circa_1890-1891.jpg"
+  },
+  {
+   "id": "campus_uf_auditorium",
+   "title": "UniversityAuditorium.jpg",
+   "licence": "Public domain",
+   "date": "",
+   "page": "https://commons.wikimedia.org/wiki/File:UniversityAuditorium.jpg"
+  },
+  {
+   "id": "campus_lsu_tiger_stadium",
+   "title": "LSU Tiger Stadium 1924 - Opening Day.jpg",
+   "licence": "Public domain",
+   "date": "1924-11-27",
+   "page": "https://commons.wikimedia.org/wiki/File:LSU_Tiger_Stadium_1924_-_Opening_Day.jpg"
+  },
+  {
+   "id": "campus_mizzou_jesse_hall",
+   "title": "Jesse Hall, Missouri University, Columbia, Mo (67656).jpg",
+   "licence": "Public domain",
+   "date": "between circa 1930 and ci",
+   "page": "https://commons.wikimedia.org/wiki/File:Jesse_Hall,_Missouri_University,_Columbia,_Mo_(67656).jpg"
+  },
+  {
+   "id": "campus_mizzou_columns",
+   "title": "Historic columns, Missouri University, Columbia, Mo (69653).jpg",
+   "licence": "Public domain",
+   "date": "between circa 1930 and ci",
+   "page": "https://commons.wikimedia.org/wiki/File:Historic_columns,_Missouri_University,_Columbia,_Mo_(69653).jpg"
+  },
+  {
+   "id": "campus_uofsc_longstreet_theatre",
+   "title": "Columbia - Gymnasium, University of South Carolina.jpg",
+   "licence": "Public domain",
+   "date": "circa 1926date QS:P,+1926",
+   "page": "https://commons.wikimedia.org/wiki/File:Columbia_-_Gymnasium,_University_of_South_Carolina.jpg"
+  },
+  {
+   "id": "campus_vandy_kirkland_hall",
+   "title": "Kirkland Hall, Vanderbilt University, Nashville, Tenn (74041).jpg",
+   "licence": "Public domain",
+   "date": "between circa 1930 and ci",
+   "page": "https://commons.wikimedia.org/wiki/File:Kirkland_Hall,_Vanderbilt_University,_Nashville,_Tenn_(74041).jpg"
+  },
+  {
+   "id": "campus_ncstate_belltower",
+   "title": "1953 Dixie Classic program page 02.jpg",
+   "licence": "Public domain",
+   "date": "1953-12",
+   "page": "https://commons.wikimedia.org/wiki/File:1953_Dixie_Classic_program_page_02.jpg"
+  },
+  {
+   "id": "campus_uhouston_roy_cullen",
+   "title": "Roy G. Cullen Memorial building library.jpg",
+   "licence": "Public domain",
+   "date": "1945",
+   "page": "https://commons.wikimedia.org/wiki/File:Roy_G._Cullen_Memorial_building_library.jpg"
+  }
+ ],
+ "candidate_hints": [
+  "Havana presidential palace (2 Commons postcards)",
+  "Jaipur Hawa Mahal",
+  "Jaipur City Palace",
+  "Cartagena city walls",
+  "Rotterdam City Hall",
+  "Rotterdam Witte Huis",
+  "Rotterdam Schielandshuis",
+  "Mariinsky Theatre",
+  "Tbilisi botanical garden",
+  "Zanzibar Old Fort",
+  "Munich St. Peter's Church",
+  "Delhi India Gate",
+  "Columbus Indiana old City Hall",
+  "Quebec Plains of Abraham",
+  "Mississippi State Montgomery Hall",
+  "EMU Starkweather Hall",
+  "Harvard University Hall",
+  "UW Denny Hall",
+  "St Andrews St Salvator's Chapel",
+  "McGill Redpath Library",
+  "Toronto Hart House"
+ ]
+}
