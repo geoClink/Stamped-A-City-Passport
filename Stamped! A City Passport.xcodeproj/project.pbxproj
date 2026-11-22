@@ -222,6 +222,135 @@
 				Resources/DPLArchives/dpl_bh028598.jpg,
 				Resources/DPLArchives/dpl_bh029791.jpg,
 				Resources/DPLArchives/dpl_na044496.jpg,
+				Resources/PhotochromArchives/pc_uk_bath_abbey.jpg,
+				Resources/PhotochromArchives/pc_ber_reichstag.jpg,
+				Resources/PhotochromArchives/pc_ber_kaiser_wilhelm.jpg,
+				Resources/PhotochromArchives/pc_pek_temple_heaven.jpg,
+				Resources/PhotochromArchives/pc_mil_duomo.jpg,
+				Resources/PhotochromArchives/pc_rom_pantheon.jpg,
+				Resources/PhotochromArchives/pc_rom_castel_sant.jpg,
+				Resources/PhotochromArchives/pc_bcn_catedral.jpg,
+				Resources/PhotochromArchives/pc_cai_mosque_madrasa_sultan_hassan.jpg,
+				Resources/PhotochromArchives/pc_crk-01.jpg,
+				Resources/PhotochromArchives/pc_crk-07.jpg,
+				Resources/PhotochromArchives/pc_nap-05.jpg,
+				Resources/PhotochromArchives/pc_paris-eiffel-tower.jpg,
+				Resources/PhotochromArchives/pc_paris-arc-de-triomphe.jpg,
+				Resources/PhotochromArchives/pc_paris-pantheon.jpg,
+				Resources/PhotochromArchives/pc_paris-sainte-chapelle.jpg,
+				Resources/PhotochromArchives/pc_st-pauls-cathedral.jpg,
+				Resources/PhotochromArchives/pc_palace-of-westminster.jpg,
+				Resources/PhotochromArchives/pc_tower-of-london.jpg,
+				Resources/PhotochromArchives/pc_ist_topkapi_palace.jpg,
+				Resources/PhotochromArchives/pc_ist_hagia_sophia.jpg,
+				Resources/PhotochromArchives/pc_ist_suleymaniye.jpg,
+				Resources/PhotochromArchives/pc_ist_chora_mosque.jpg,
+				Resources/PhotochromArchives/pc_schonbrunn-palace.jpg,
+				Resources/PhotochromArchives/pc_belem-tower.jpg,
+				Resources/PhotochromArchives/pc_jeronimos-monastery.jpg,
+				Resources/PhotochromArchives/pc_charles-bridge.jpg,
+				Resources/PhotochromArchives/pc_athens-parthenon.jpg,
+				Resources/PhotochromArchives/pc_athens-zeus-temple.jpg,
+				Resources/PhotochromArchives/pc_edinburgh-castle.jpg,
+				Resources/PhotochromArchives/pc_edinburgh-holyrood.jpg,
+				Resources/PhotochromArchives/pc_florence-cathedral.jpg,
+				Resources/PhotochromArchives/pc_venice-rialto-bridge.jpg,
+				Resources/PhotochromArchives/pc_venice-bridge-of-sighs.jpg,
+				Resources/PhotochromArchives/pc_venice-grand-canal.jpg,
+				Resources/PhotochromArchives/pc_venice-st-marks.jpg,
+				Resources/PhotochromArchives/pc_madrid-prado.jpg,
+				Resources/PhotochromArchives/pc_madrid-royal-palace.jpg,
+				Resources/PhotochromArchives/pc_madrid-plaza-mayor.jpg,
+				Resources/PhotochromArchives/pc_dublin-st-patricks.jpg,
+				Resources/PhotochromArchives/pc_stockholm-skansen.jpg,
+				Resources/PhotochromArchives/pc_brussels-manneken-pis.jpg,
+				Resources/PhotochromArchives/pc_brussels-royal-palace.jpg,
+				Resources/PhotochromArchives/pc_brussels-grand-place.jpg,
+				Resources/PhotochromArchives/pc_at_hohensalzburg.jpg,
+				Resources/PhotochromArchives/pc_at_hellbrunn_palace.jpg,
+				Resources/PhotochromArchives/pc_es_real_alcazar_seville.jpg,
+				Resources/PhotochromArchives/pc_es_seville_cathedral.jpg,
+				Resources/PhotochromArchives/pc_ru_peter_paul_fortress.jpg,
+				Resources/PhotochromArchives/pc_munich_frauenkirche.jpg,
+				Resources/PhotochromArchives/pc_munich_nymphenburg_palace.jpg,
+				Resources/PhotochromArchives/pc_valencia_miguelete_tower.jpg,
+				Resources/PhotochromArchives/pc_glasgow_cathedral.jpg,
+				Resources/PhotochromArchives/pc_antwerp_city_hall.jpg,
+				Resources/PhotochromArchives/pc_antwerp_het_steen.jpg,
+				Resources/PhotochromArchives/pc_marseille_notre_dame_de_la_garde.jpg,
+				Resources/PhotochromArchives/pc_marseille_chateau_d_if.jpg,
+				Resources/PhotochromArchives/pc_helsinki-cathedral.jpg,
+				Resources/PhotochromArchives/pc_budapest-buda-castle.jpg,
+				Resources/PhotochromArchives/pc_hamburg_st_nicholas_church.jpg,
+				Resources/PhotochromArchives/pc_campus_oxford_sheldonian_theatre.jpg,
+				Resources/PhotochromArchives/pc_campus_oxford_tom_tower.jpg,
+				Resources/PhotochromArchives/pc_campus_oxford_magdalen_tower.jpg,
+				Resources/PhotochromArchives/pc_campus_cambridge_kings_college_chapel.jpg,
+				Resources/PhotochromArchives/pc_campus_cambridge_bridge_of_sighs.jpg,
+				Resources/PhotochromArchives/pc_campus_cambridge_senate_house.jpg,
+				Resources/PhotochromArchives/pc_campus_salamanca_escuelas_mayores.jpg,
+				Resources/PhotochromArchives/pc_campus_salamanca_casa_conchas.jpg,
+				Resources/PhotochromArchives/pc_campus_durham_castle.jpg,
+				Resources/GettyArchives/getty_rom_pantheon.jpg,
+				Resources/GettyArchives/getty_rom_castel_sant.jpg,
+				Resources/GettyArchives/getty_cai_great_pyramid.jpg,
+				Resources/GettyArchives/getty_cai_muhammad_ali.jpg,
+				Resources/GettyArchives/getty_cai_al_azhar.jpg,
+				Resources/GettyArchives/getty_cai_mosque_madrasa_sultan_hassan.jpg,
+				Resources/GettyArchives/getty_nap-04.jpg,
+				Resources/GettyArchives/getty_nap-05.jpg,
+				Resources/GettyArchives/getty_palace-of-westminster.jpg,
+				Resources/GettyArchives/getty_st-pauls-cathedral.jpg,
+				Resources/GettyArchives/getty_buckingham-palace.jpg,
+				Resources/GettyArchives/getty_ist_hagia_sophia.jpg,
+				Resources/GettyArchives/getty_ist_galata_tower.jpg,
+				Resources/GettyArchives/getty_athens-parthenon.jpg,
+				Resources/GettyArchives/getty_athens-agora.jpg,
+				Resources/GettyArchives/getty_athens-zeus-temple.jpg,
+				Resources/GettyArchives/getty_florence-uffizi.jpg,
+				Resources/GettyArchives/getty_florence-palazzo-vecchio.jpg,
+				Resources/GettyArchives/getty_venice-doges-palace.jpg,
+				Resources/GettyArchives/getty_venice-rialto-bridge.jpg,
+				Resources/GettyArchives/getty_venice-grand-canal.jpg,
+				Resources/GettyArchives/getty_venice-bridge-of-sighs.jpg,
+				Resources/GettyArchives/getty_madrid-royal-palace.jpg,
+				Resources/GettyArchives/getty_mil_duomo.jpg,
+				Resources/GettyArchives/getty_mil_galleria.jpg,
+				Resources/GettyArchives/getty_in_red_fort.jpg,
+				Resources/GettyArchives/getty_kyo_kinkaku_ji.jpg,
+				Resources/GettyArchives/getty_bkk_wat_arun.jpg,
+				Resources/WorldCommonsArchives/wc_old-city-hall-toronto.jpg,
+				Resources/WorldCommonsArchives/wc_ca_chateau_frontenac.jpg,
+				Resources/WorldCommonsArchives/wc_ca_citadelle_quebec.jpg,
+				Resources/WorldCommonsArchives/wc_ca_funiculaire_quebec.jpg,
+				Resources/WorldCommonsArchives/wc_ca_petit_champlain.jpg,
+				Resources/WorldCommonsArchives/wc_tokyo-station.jpg,
+				Resources/WorldCommonsArchives/wc_kyo_fushimi_inari.jpg,
+				Resources/WorldCommonsArchives/wc_kyo_kinkaku_ji.jpg,
+				Resources/WorldCommonsArchives/wc_osaka-castle.jpg,
+				Resources/WorldCommonsArchives/wc_osaka-dotonbori.jpg,
+				Resources/WorldCommonsArchives/wc_osaka-shinsekai.jpg,
+				Resources/WorldCommonsArchives/wc_pek_drum_tower.jpg,
+				Resources/WorldCommonsArchives/wc_bkk_grand_palace.jpg,
+				Resources/WorldCommonsArchives/wc_bkk_wat_phra_kaew.jpg,
+				Resources/WorldCommonsArchives/wc_hanoi_temple_of_literature.jpg,
+				Resources/WorldCommonsArchives/wc_hanoi_long_bien_bridge.jpg,
+				Resources/WorldCommonsArchives/wc_hanoi_one_pillar_pagoda.jpg,
+				Resources/WorldCommonsArchives/wc_hanoi_st_josephs_cathedral.jpg,
+				Resources/WorldCommonsArchives/wc_hanoi_flag_tower.jpg,
+				Resources/WorldCommonsArchives/wc_hanoi_sofitel_legend_metropole.jpg,
+				Resources/WorldCommonsArchives/wc_hcmc-ben-thanh-market.jpg,
+				Resources/WorldCommonsArchives/wc_mex_met_cathedral.jpg,
+				Resources/WorldCommonsArchives/wc_mex_bellas_artes.jpg,
+				Resources/WorldCommonsArchives/wc_casa-rosada.jpg,
+				Resources/WorldCommonsArchives/wc_teatro-colon.jpg,
+				Resources/WorldCommonsArchives/wc_rio-copacabana-palace.jpg,
+				Resources/WorldCommonsArchives/wc_rio-teatro-municipal.jpg,
+				Resources/WorldCommonsArchives/wc_br_estacao_da_luz.jpg,
+				Resources/WorldCommonsArchives/wc_havana-old-havana.jpg,
+				Resources/WorldCommonsArchives/wc_havana-el-capitolio.jpg,
+				Resources/WorldCommonsArchives/wc_havana-malecon.jpg,
+				Resources/WorldCommonsArchives/wc_havana-morro-castle.jpg,
 				Resources/CommonsArchives/commons_syd_harbour_bridge.jpg,
 				Resources/CommonsArchives/commons_syd_qvb.jpg,
 				Resources/CommonsArchives/commons_syd_art_gallery.jpg,
@@ -899,7 +1028,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = PassportWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PassportWidget/Info.plist;
@@ -931,7 +1060,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = PassportWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PassportWidget/Info.plist;
@@ -1134,7 +1263,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Stamped! A City Passport/Stamped! A City Passport.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1199,7 +1328,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Stamped! A City Passport/Stamped! A City Passport.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1263,7 +1392,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Tally-AVP/Tally-AVP.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1297,7 +1426,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Tally-AVP/Tally-AVP.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1376,7 +1505,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = DetroitDownloader/DetroitDownloader.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DetroitDownloader/Info.plist;
@@ -1408,7 +1537,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = DetroitDownloader/DetroitDownloader.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DetroitDownloader/Info.plist;
