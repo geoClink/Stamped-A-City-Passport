@@ -135,7 +135,7 @@ struct CityListView: View {
                 // Hidden while searching, so it never covers results or sits on the keyboard
                 if hasSeenPassportHint && searchText.isEmpty && !isSearchActive {
                     passportFloatingButton
-                        .padding(.vertical, 8)
+                        .padding(.vertical, DS.Space.s)
                         .background {
                             Rectangle()
                                 .fill(.ultraThinMaterial)
@@ -176,7 +176,7 @@ struct CityListView: View {
             .dsSolidTopScrollEdge()
             #endif
             // No bounce with Reduce Motion on
-            .animation(reduceMotion ? nil : .spring(response: 0.35, dampingFraction: 0.8), value: searchText.isEmpty)
+            .animation(reduceMotion ? nil : DS.Motion.snappy, value: searchText.isEmpty)
 
         } detail: {
             NavigationStack {
@@ -385,7 +385,7 @@ struct CityListView: View {
             .font(.subheadline.weight(.semibold))
             .lineLimit(1)
             .padding(.horizontal, 14)
-            .padding(.vertical, 8)
+            .padding(.vertical, DS.Space.s)
             .foregroundStyle(isSelected ? (isHighContrast ? Color(UIColor.systemBackground) : .white) : .primary)
             .background(
                 Capsule().fill(isSelected
@@ -470,7 +470,7 @@ struct CityListView: View {
                     .foregroundColor(.secondary)
             }
         }
-        .padding(.vertical, 4)
+        .padding(.vertical, DS.Space.xs)
     }
 }
 

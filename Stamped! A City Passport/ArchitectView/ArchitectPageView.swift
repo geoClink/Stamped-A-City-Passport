@@ -159,7 +159,7 @@ struct ArchitectPageView: View {
                 .fixedSize(horizontal: false, vertical: true)
                 .accessibilityAddTraits(.isHeader)
         }
-        .animation(.easeIn(duration: 0.2), value: summary?.photoURL)
+        .animation(DS.Motion.fadeIn, value: summary?.photoURL)
     }
 
     // MARK: Bio

@@ -158,7 +158,7 @@ struct WorldMapView: View {
                         CityMapPin(visited: visited, isSelected: isSelected)
                             .onTapGesture {
                                 HapticManager.shared.trigger(.selection)
-                                withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) {
+                                withAnimation(DS.Motion.snappy) {
                                     selectedCity = (selectedCity == city) ? nil : city
                                 }
                             }
@@ -282,10 +282,10 @@ struct WorldMapView: View {
                 .fill(DS.Palette.cardBackground)
         )
         // Floating over the map is the one place a card keeps a shadow (style guide)
-        .shadow(color: .black.opacity(0.12), radius: 12, x: 0, y: 4)
+        .dsShadow(.floating)
         .macReadableWidth(560)
-        .padding(.horizontal, 16)
-        .padding(.bottom, 8)
+        .padding(.horizontal, DS.Space.l)
+        .padding(.bottom, DS.Space.s)
         // Tapping the map closes the card; VoiceOver's two-finger scrub does the same
         .accessibilityAction(.escape) {
             withAnimation { selectedCity = nil }
@@ -386,7 +386,7 @@ private struct CityMapPin: View {
                     .overlay(
                         Circle().stroke(Color.white, lineWidth: 2.5)
                     )
-                    .shadow(color: .black.opacity(0.3), radius: 2, x: 0, y: 1)
+                    .dsShadow(.pin)
             } else {
                 // Hollow white with gray outline — clearly "not yet"
                 Circle()

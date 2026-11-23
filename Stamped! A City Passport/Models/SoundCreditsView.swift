@@ -72,7 +72,7 @@ struct SoundCreditsView: View {
                     }
                     .padding(.top, 2)
                 }
-                .padding(.vertical, 4)
+                .padding(.vertical, DS.Space.xs)
                 // One stop per credit for VoiceOver instead of five
                 .accessibilityElement(children: .combine)
             }

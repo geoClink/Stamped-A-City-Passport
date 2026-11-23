@@ -27,7 +27,7 @@ struct ContinentHeader: View {
                 .tracking(2.0)
                 .foregroundColor(isHighContrast ? .primary : .adventureOrange)
         }
-        .padding(.vertical, 8)
+        .padding(.vertical, DS.Space.s)
         .accessibilityAddTraits(.isHeader) 
     }
 
@@ -61,7 +61,7 @@ struct CampusSectionHeader: View {
                 .tracking(2.0)
                 .foregroundColor(isHighContrast ? .primary : .adventureOrange)
         }
-        .padding(.vertical, 8)
+        .padding(.vertical, DS.Space.s)
         .accessibilityAddTraits(.isHeader)
     }
 }
@@ -70,7 +70,7 @@ extension LinearGradient {
     /// One brand gradient for every section icon in the city list (continents and campuses),
     /// instead of a different color per continent; the style guide keeps one accent color.
     static let sectionIcon = LinearGradient(
-        colors: [Color(red: 0xFF / 255, green: 0x8A / 255, blue: 0x57 / 255), .adventureOrange],
+        colors: [DS.Palette.warm, .adventureOrange],
         startPoint: .topLeading, endPoint: .bottomTrailing
     )
 }

@@ -288,8 +288,8 @@ struct CityMapView: View {
                         selectedBuilding = nil
                     }
                 )
-                .padding(.horizontal, 12)
-                .padding(.bottom, 8)
+                .padding(.horizontal, DS.Space.m)
+                .padding(.bottom, DS.Space.s)
                 .transition(cardTransition)
             } else if let place = selectedPlace {
                 CustomPlaceCard(
@@ -307,8 +307,8 @@ struct CityMapView: View {
                     },
                     onClose: { selectedPlace = nil }
                 )
-                .padding(.horizontal, 12)
-                .padding(.bottom, 8)
+                .padding(.horizontal, DS.Space.m)
+                .padding(.bottom, DS.Space.s)
                 .transition(cardTransition)
             } else {
                 legendButton
@@ -320,9 +320,9 @@ struct CityMapView: View {
             if filteredBuildings.isEmpty && category == .landmarks {
                 Text("No landmarks match this filter")
                     .font(.subheadline.bold())
-                    .padding(.horizontal, 16).padding(.vertical, 10)
+                    .padding(.horizontal, DS.Space.l).padding(.vertical, 10)
                     .background(.regularMaterial, in: Capsule())
-                    .padding(.top, 12)
+                    .padding(.top, DS.Space.m)
             }
         }
         .overlay(alignment: .top) {
@@ -337,7 +337,7 @@ struct CityMapView: View {
                 .padding(.horizontal, 22)
                 .padding(.vertical, 10)
                 .background(.regularMaterial, in: Capsule())
-                .padding(.top, 12)
+                .padding(.top, DS.Space.m)
                 .transition(reduceMotion ? .opacity : .move(edge: .top).combined(with: .opacity))
                 .accessibilityElement(children: .combine)
             }
@@ -390,7 +390,7 @@ struct CityMapView: View {
                         .ignoresSafeArea()
                     Button("Done") { showingLookAround = false }
                         .font(.body.weight(.semibold))
-                        .padding(.horizontal, 16).padding(.vertical, 8)
+                        .padding(.horizontal, DS.Space.l).padding(.vertical, DS.Space.s)
                         .background(.regularMaterial, in: Capsule())
                         .padding()
                 }
@@ -429,7 +429,7 @@ struct CityMapView: View {
             }
         }
         .font(.footnote.weight(.semibold))
-        .padding(.horizontal, 12)
+        .padding(.horizontal, DS.Space.m)
         .padding(.vertical, 6)
         .background(Capsule().fill(.regularMaterial))
         .transition(.opacity)
@@ -502,7 +502,7 @@ struct CityMapView: View {
         .ignoresSafeArea(edges: .bottom)
         .sheet(item: $viewedOldPhoto) { image in
             HistoricImageViewer(image: image, buildingName: viewedOldPhotoName)
-                .dsLargeSheet()
+                .dsPhotoSheet()
         }
     }
 
@@ -533,10 +533,10 @@ struct CityMapView: View {
             }
             .accessibilityLabel(Text("Turn Off City Sounds"))
         }
-        .padding(.horizontal, 12)
+        .padding(.horizontal, DS.Space.m)
         .padding(.vertical, 6)
         .background(.regularMaterial, in: Capsule())
-        .padding(.horizontal, 12)
+        .padding(.horizontal, DS.Space.m)
     }
 
     /// One old photo per landmark (see OldPhotoSources), fetched one at a time so the
@@ -926,7 +926,7 @@ struct CityMapView: View {
         }
         .padding(10)
         .background {
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DS.Radius.small)
                 .fill(reduceTransparency
                     ? AnyShapeStyle(Color(UIColor.secondarySystemBackground))
                     : AnyShapeStyle(.ultraThinMaterial))
@@ -1243,10 +1243,10 @@ private struct BikeDockPin: View {
         }
         .foregroundStyle(.white)
         .padding(.horizontal, 7)
-        .padding(.vertical, 4)
+        .padding(.vertical, DS.Space.xs)
         .background(Capsule().fill(isEmpty ? Color.gray : Color.green.mix(with: .black, by: 0.15)))
         .overlay(Capsule().stroke(.white, lineWidth: 1.5))
-        .shadow(color: .black.opacity(0.25), radius: 2, y: 1)
+        .dsShadow(.pin)
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(Text(station.name))
         .accessibilityValue(station.isRenting
@@ -1335,7 +1335,7 @@ private struct MapLandmarkCard: View {
             HStack(alignment: .top, spacing: 12) {
                 WikiBuildingPhoto(building: building, height: 84)
                     .frame(width: 84)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                    .clipShape(RoundedRectangle(cornerRadius: DS.Radius.small))
                     // New identity per building, so the photo reloads instead of
                     // keeping the previous landmark's image when the card switches
                     .id(building.id)
@@ -1372,8 +1372,8 @@ private struct MapLandmarkCard: View {
             if let lookAroundScene {
                 CardLookAroundPreview(scene: lookAroundScene)
                     .frame(height: 110)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
-                    .contentShape(RoundedRectangle(cornerRadius: 12))
+                    .clipShape(RoundedRectangle(cornerRadius: DS.Radius.small))
+                    .contentShape(RoundedRectangle(cornerRadius: DS.Radius.small))
                     .onTapGesture(perform: onLookAround)
                     // A fresh preview per landmark, so it doesn't keep the previous street
                     .id(building.id)
@@ -1441,14 +1441,14 @@ private struct MapLandmarkCard: View {
             }
         }
         .tint(.adventureOrange)
-        .padding(16)
+        .padding(DS.Space.l)
         .frame(maxWidth: 520)
         .background {
-            RoundedRectangle(cornerRadius: 24)
+            RoundedRectangle(cornerRadius: DS.Radius.large)
                 .fill(reduceTransparency
                     ? AnyShapeStyle(Color(UIColor.secondarySystemBackground))
                     : AnyShapeStyle(.regularMaterial))
-                .shadow(color: .black.opacity(0.15), radius: 12, y: 4)
+                .dsShadow(.floating)
         }
     }
 }
@@ -1475,11 +1475,11 @@ private struct QuickAction: View {
                     .minimumScaleFactor(0.8)
             }
             .frame(maxWidth: .infinity)
-            .padding(.vertical, 8)
+            .padding(.vertical, DS.Space.s)
         }
         .buttonStyle(.bordered)
         .foregroundStyle(isOn ? Color.white : Color.adventureOrange)
-        .background(isOn ? Color.adventureOrange : Color.clear, in: RoundedRectangle(cornerRadius: 12))
+        .background(isOn ? Color.adventureOrange : Color.clear, in: RoundedRectangle(cornerRadius: DS.Radius.small))
         .accessibilityAddTraits(isOn ? .isSelected : [])
     }
 }
@@ -1601,7 +1601,7 @@ private struct CustomPlaceCard: View {
                     .font(.title2)
                     .foregroundStyle(.white)
                     .frame(width: 52, height: 52)
-                    .background(DS.Palette.wishlist, in: RoundedRectangle(cornerRadius: 12))
+                    .background(DS.Palette.wishlist, in: RoundedRectangle(cornerRadius: DS.Radius.small))
                     .accessibilityHidden(true)
                 VStack(alignment: .leading, spacing: 4) {
                     Text(place.name).font(.headline).lineLimit(2)
@@ -1657,14 +1657,14 @@ private struct CustomPlaceCard: View {
             }
         }
         .tint(.adventureOrange)
-        .padding(16)
+        .padding(DS.Space.l)
         .frame(maxWidth: 520)
         .background {
-            RoundedRectangle(cornerRadius: 24)
+            RoundedRectangle(cornerRadius: DS.Radius.large)
                 .fill(reduceTransparency
                     ? AnyShapeStyle(Color(UIColor.secondarySystemBackground))
                     : AnyShapeStyle(.regularMaterial))
-                .shadow(color: .black.opacity(0.15), radius: 12, y: 4)
+                .dsShadow(.floating)
         }
     }
 }

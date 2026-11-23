@@ -52,7 +52,7 @@ extension CityDetailView {
                         .foregroundStyle(.tertiary)
                 }
             }
-            .padding(.vertical, 8)
+            .padding(.vertical, DS.Space.s)
         } label: {
             HStack(alignment: .center, spacing: 12) {
                 Image(systemName: icon)
@@ -75,7 +75,7 @@ extension CityDetailView {
                     .fixedSize(horizontal: false, vertical: true)
                     .layoutPriority(1)
             }
-            .padding(.vertical, 4)
+            .padding(.vertical, DS.Space.xs)
             .contentShape(Rectangle())
         }
         .padding()
@@ -138,7 +138,7 @@ private extension CityDetailView {
                     TextField("1.00", text: $viewModel.userBaseAmount)
                         .keyboardType(.decimalPad)
                         .font(.title3.bold())
-                        .padding(8)
+                        .padding(DS.Space.s)
                         .background(isHighContrast ? Color.clear : Color(.systemGray6))
                         .overlay(isHighContrast ? Rectangle().stroke(Color.primary, lineWidth: 2) : nil)
                         .cornerRadius(8)
@@ -147,7 +147,7 @@ private extension CityDetailView {
                 Image(systemName: "equal")
                     .foregroundStyle(.tertiary)
                     .font(.body.bold())
-                    .padding(.top, 16)
+                    .padding(.top, DS.Space.l)
                 
                 VStack(alignment: .trailing, spacing: 4) {
                     Text(viewModel.isSwapped ? "Home (\(viewModel.selectedHomeCurrency))" : "Local (\(viewModel.city.details.currencyCode))")
@@ -166,9 +166,9 @@ private extension CityDetailView {
                 }
             }
         }
-        .padding(12)
+        .padding(DS.Space.m)
         .background(isHighContrast ? Color.clear : Color.adventureOrange.opacity(0.05))
-        .overlay(isHighContrast ? RoundedRectangle(cornerRadius: 12).stroke(Color.primary, lineWidth: 2) : nil)
+        .overlay(isHighContrast ? RoundedRectangle(cornerRadius: DS.Radius.small).stroke(Color.primary, lineWidth: 2) : nil)
         .cornerRadius(12)
     }
 }

@@ -784,7 +784,7 @@
                         <h3>Cards</h3>
                         <ul>
                             <li>Use light semantic surfaces with 20-24 pt padding.</li>
-                            <li>Keep shadows soft in standard mode and replace them with borders in high contrast.</li>
+                            <li>Cards stay flat with a subtle outline. Shadows are only for things floating over a map or photo, in three heights: <code>.pin</code>, <code>.floating</code> and <code>.lifted</code>. High contrast drops them for stronger borders.</li>
                             <li>Cards should feel dossier-like, grouped, and tactile.</li>
                         </ul>
                     </article>
@@ -815,7 +815,7 @@
                     <article class="component-card">
                         <h3>Motion and Feedback</h3>
                         <ul>
-                            <li>Use spring for reveal, expansion, and tap response.</li>
+                            <li>Use the shared timings: <code>DS.Motion.snappy</code> for taps and toggles, <code>.gentle</code> for larger moves, <code>.quick</code> for small state changes, <code>.fadeIn</code> for loaded content.</li>
                             <li>Reserve scale and ceremonial transitions for success states.</li>
                             <li>Respect Reduce Motion by swapping to opacity or no animation.</li>
                         </ul>

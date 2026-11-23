@@ -241,7 +241,7 @@ private extension QuizView {
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(Text("\(viewModel.currentStreak) correct in a row"))
         .font(.headline.bold()).foregroundColor(.white)
-        .padding(.horizontal, 16).padding(.vertical, 8)
+        .padding(.horizontal, DS.Space.l).padding(.vertical, DS.Space.s)
         .background(
             LinearGradient(colors: [brandColor, .orange], startPoint: .topLeading, endPoint: .bottomTrailing)
         )
@@ -286,18 +286,18 @@ private extension QuizView {
                     
                     selectionIcon(for: option)
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DS.Space.xl)
                 .padding(.vertical, 18)
                 .frame(maxWidth: .infinity)
                 // Fixed height normally; grows with the text at accessibility sizes
                 .frame(height: dynamicTypeSize.isAccessibilitySize ? nil : (isIPad ? 80 : 70))
                 .background(
-                    RoundedRectangle(cornerRadius: 16)
+                    RoundedRectangle(cornerRadius: DS.Radius.card)
                         .fill(buttonBackgroundColor(for: option))
                 )
                 .foregroundColor(buttonForegroundColor(for: option))
                 .overlay(
-                    RoundedRectangle(cornerRadius: 16)
+                    RoundedRectangle(cornerRadius: DS.Radius.card)
                         .stroke(isHighContrast ? Color.primary : Color.primary.opacity(0.1), lineWidth: 1)
                 )
             }
@@ -616,7 +616,7 @@ private extension QuizView {
             if viewModel.showHint {
                 Text(viewModel.getHintText())
                     .padding()
-                    .background(RoundedRectangle(cornerRadius: 12).fill(brandColor.opacity(0.15)))
+                    .background(RoundedRectangle(cornerRadius: DS.Radius.small).fill(brandColor.opacity(0.15)))
                     .padding(.horizontal, 20)
             }
         }
@@ -641,7 +641,7 @@ private extension QuizView {
                 .background(viewModel.isListening ? Color.red.opacity(0.1) : Color.clear)
                 .foregroundColor(viewModel.isListening ? .red : brandColor)
                 .overlay(
-                    RoundedRectangle(cornerRadius: 12)
+                    RoundedRectangle(cornerRadius: DS.Radius.small)
                         .stroke(viewModel.isListening ? Color.red : brandColor, lineWidth: 2)
                 )
             }

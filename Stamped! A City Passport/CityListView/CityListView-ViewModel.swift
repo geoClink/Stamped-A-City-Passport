@@ -171,7 +171,7 @@ extension CityListView {
                         cityRowWrapper(city: city)
                     }
                 } header: {
-                    header.padding(.vertical, 8)
+                    header.padding(.vertical, DS.Space.s)
                 }
             } else {
                 Section {
@@ -242,7 +242,8 @@ extension CityListView {
             AnyView(quickAction("World Map", systemImage: "globe") { showingWorldMap = true }),
             AnyView(quickAction("My Trips", systemImage: "suitcase.fill", hint: "Your trips, including New Trip Anywhere") { showingMyTrips = true }),
         ]
-        let perRow = dynamicTypeSize.isAccessibilitySize ? 2 : 4
+        // One per row at the very largest sizes: two across still cut off "Achievements"
+        let perRow = dynamicTypeSize >= .accessibility3 ? 1 : (dynamicTypeSize.isAccessibilitySize ? 2 : 4)
         return Grid(horizontalSpacing: DS.Space.m, verticalSpacing: DS.Space.m) {
             ForEach(Array(stride(from: 0, to: tiles.count, by: perRow)), id: \.self) { start in
                 GridRow {
@@ -269,7 +270,7 @@ extension CityListView {
                 .lineLimit(1)
                 .minimumScaleFactor(0.7)
         }
-        .padding(.horizontal, 4)
+        .padding(.horizontal, DS.Space.xs)
         .frame(maxWidth: .infinity, minHeight: 52)
         .padding(.vertical, 6)
         .background(
@@ -481,8 +482,8 @@ struct CountryHeaderLabel: View {
             if isMastered {
                 Text(masterBadge)
                     .font(.caption2.weight(.black))
-                    .padding(.horizontal, 8)
-                    .padding(.vertical, 4)
+                    .padding(.horizontal, DS.Space.s)
+                    .padding(.vertical, DS.Space.xs)
                     .background(isHighContrast ? Color.primary : Color.adventureOrange.opacity(0.15))
                     .foregroundColor(isHighContrast ? Color(UIColor.systemBackground) : Color.adventureOrange)
                     .cornerRadius(4)
@@ -590,19 +591,27 @@ struct ProgressHeaderView: View {
     var body: some View {
         Button(action: action) {
             VStack(alignment: .leading, spacing: 20) {
-                HStack(alignment: .firstTextBaseline) {
+                // Stacked at accessibility text sizes: beside the percentage, the title was cut off
+                let titleLayout = dynamicTypeSize.isAccessibilitySize
+                    ? AnyLayout(VStackLayout(alignment: .leading, spacing: DS.Space.xs))
+                    : AnyLayout(HStackLayout(alignment: .firstTextBaseline))
+                titleLayout {
                     VStack(alignment: .leading, spacing: 4) {
                         Text("WORLD EXPLORER")
                             .font(DS.Typography.label)
                             .tracking(1.2)
                             .foregroundColor(isHighContrast ? .primary : Color.adventureOrange)
+                            .lineLimit(2)
+                            .minimumScaleFactor(0.7)
                         
                         Text("\(viewModel.masteredCount) of \(viewModel.totalCities) Cities Mastered")
                             .font(.system(.title3, design: .rounded))
                             .fontWeight(.bold)
+                            // Takes the height it needs: at the largest sizes it was squeezed to one line and cut off
+                            .fixedSize(horizontal: false, vertical: true)
                     }
                     
-                    Spacer()
+                    if !dynamicTypeSize.isAccessibilitySize { Spacer() }
                     
                     Text("\(progressPercentage)%")
                         .font(.system(.body, design: .monospaced))
@@ -699,7 +708,7 @@ struct CityRow: View {
                     .font(.system(.caption, design: .monospaced))
                     .fontWeight(.bold)
                     .foregroundColor(isCompleted ? (isHighContrast ? .primary : Color.adventureOrange) : (isHighContrast ? .primary : (colorScheme == .dark ? Color.primary.opacity(0.85) : Color.primary.opacity(0.95))))
-                    .padding(8)
+                    .padding(DS.Space.s)
             }
             .frame(minWidth: stampSize, minHeight: stampSize)
             .fixedSize()
@@ -716,7 +725,7 @@ struct CityRow: View {
             if !dynamicTypeSize.isAccessibilitySize { Spacer() }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(.vertical, 8)
+        .padding(.vertical, DS.Space.s)
         .contentShape(Rectangle())
         .hoverEffect(.highlight)
         .accessibilityElement(children: .combine)
@@ -841,7 +850,7 @@ struct PassportHintOverlayView: View {
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
             }
-            .padding(.top, 8)
+            .padding(.top, DS.Space.s)
         }
         .padding(isWide ? 44 : 30)
         .frame(width: isWide ? 400 : 300)
@@ -853,8 +862,8 @@ struct PassportHintOverlayView: View {
 
     private var stampBackground: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 24).fill(Color(UIColor.systemBackground))
-            RoundedRectangle(cornerRadius: 24).strokeBorder(isHighContrast ? Color.primary : Color.adventureOrange.opacity(0.2), lineWidth: 1)
+            RoundedRectangle(cornerRadius: DS.Radius.large).fill(Color(UIColor.systemBackground))
+            RoundedRectangle(cornerRadius: DS.Radius.large).strokeBorder(isHighContrast ? Color.primary : Color.adventureOrange.opacity(0.2), lineWidth: 1)
             RoundedRectangle(cornerRadius: 22).strokeBorder(isHighContrast ? Color.primary : Color.adventureOrange, style: StrokeStyle(lineWidth: isHighContrast ? 4 : 3, dash: isHighContrast ? [] : [8, 4])).padding(6)
         }
     }
@@ -884,7 +893,7 @@ struct PassportHintOverlayView: View {
                 .background(isHighContrast ? Color.primary : Color.adventureOrange)
                 .cornerRadius(20)
                 .padding(.horizontal, horizontalClass == .regular ? 60 : 24)
-                .padding(.vertical, 24)
+                .padding(.vertical, DS.Space.xl)
         }
         .background(Color(UIColor.systemBackground).shadow(color: .black.opacity(0.08), radius: 10, y: -5))
     }
@@ -928,7 +937,7 @@ struct PassportHintOverlayView: View {
 
     private func dismissHint() {
         HapticManager.shared.trigger(.heavy)
-        withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
+        withAnimation(DS.Motion.gentle) {
             hasSeenHint = true
             // Do not auto-select San Francisco on first-run. Instead, leave the detail pane showing the
             // ZeroProgressHeader / "Unlock your first badge" placeholder so users can begin there.

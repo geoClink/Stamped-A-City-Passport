@@ -56,7 +56,7 @@ struct BuildingPhotoGallery: View {
                     .accessibilityHidden(true)
             }
         }
-        .animation(.easeIn(duration: 0.2), value: photos.isEmpty)
+        .animation(DS.Motion.fadeIn, value: photos.isEmpty)
         .task(id: building.id) {
             photos = await WikiGalleryService.shared.photos(for: building.name, buildingID: building.id)
         }

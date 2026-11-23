@@ -45,7 +45,7 @@ struct CollegeFactsSection: View {
                         .accessibilityHidden(true)
                         .task(id: unitID) {
                             let loaded = await CollegeScorecardService.shared.facts(forUnitID: unitID)
-                            withAnimation(.easeIn(duration: 0.2)) {
+                            withAnimation(DS.Motion.fadeIn) {
                                 facts = loaded
                                 isLoading = false
                             }

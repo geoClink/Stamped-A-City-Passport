@@ -100,7 +100,7 @@ struct MapCategoryChips: View {
                         Label(category.title, systemImage: category.icon)
                             .font(.subheadline.weight(.semibold))
                             .padding(.horizontal, 14)
-                            .padding(.vertical, 8)
+                            .padding(.vertical, DS.Space.s)
                             .foregroundStyle(isSelected ? Color.white : Color.primary)
                             .background {
                                 if isSelected {
@@ -116,7 +116,7 @@ struct MapCategoryChips: View {
                     .accessibilityAddTraits(isSelected ? .isSelected : [])
                 }
             }
-            .padding(.horizontal, 12)
+            .padding(.horizontal, DS.Space.m)
             .padding(.vertical, 6)
         }
         // A soft fade at the edges says "there's more", instead of a hard cut through a chip

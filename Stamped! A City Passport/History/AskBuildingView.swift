@@ -65,7 +65,7 @@ struct AskBuildingView: View {
                                 }
                             }
                             if isThinking {
-                                ProgressView().padding(.vertical, 4)
+                                ProgressView().padding(.vertical, DS.Space.xs)
                             }
                             if answers.isEmpty && !isThinking {
                                 // A few questions to start with
@@ -91,7 +91,7 @@ struct AskBuildingView: View {
                         .foregroundStyle(.secondary)
                 }
             }
-            .padding(24)
+            .padding(DS.Space.xl)
             .tint(DS.Palette.accent)
             .navigationTitle(Text("Ask \(building.name)"))
             #if os(iOS)

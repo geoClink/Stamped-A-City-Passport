@@ -55,7 +55,7 @@ struct AdaptiveContrastCard: ViewModifier {
             .background(isHighContrast ? Color(.systemBackground) : Color.primary.opacity(0.05))
             .cornerRadius(15)
             .overlay(
-                RoundedRectangle(cornerRadius: 15)
+                RoundedRectangle(cornerRadius: DS.Radius.card)
                     .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
             )
     }

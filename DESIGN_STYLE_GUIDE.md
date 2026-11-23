@@ -39,7 +39,7 @@ Use Apple semantic backgrounds for most surfaces and reserve brand color for emp
 | Token | Value | Usage |
 | --- | --- | --- |
 | `Brand / Primary` | `#F2743F` | CTA buttons, progress, active icons, stamps |
-| `Brand / Warm Gradient End` | `#FF8A57` | Brand gradients, celebratory fills |
+| `Brand / Warm Gradient End` | `#FF8A57` (`DS.Colors.warm`) | The light end of the celebration gradient, always paired with the primary orange |
 | `Success` | System green | Visited/completed confirmation |
 | `Error` | System red | Destructive actions, wrong answers |
 | `Warning / Reward Gold` | `#D9A621` | Trophy/mastery moments only |
@@ -138,8 +138,16 @@ Adopt a restrained spacing scale derived from current screens:
 | High contrast mode | Reduce decorative radius if clarity improves |
 
 ### Borders and Shadows
-- Standard mode: use soft shadows and subtle 1 pt outlines.
-- High contrast mode: remove low-contrast shadows and replace with stronger outlines.
+- Cards stay flat: a subtle 1 pt outline, no shadow. Shadows are only for things that float over a map or photo.
+- Use one of three heights through `.dsShadow(_:)`:
+
+| `DS.Shadow` | Use | Opacity | Radius | Y |
+| --- | --- | --- | --- | --- |
+| `.pin` | Map pins and labels over satellite imagery | 30% | 2 | 1 |
+| `.floating` | Controls and cards floating over the map | 15% | 12 | 4 |
+| `.lifted` | A stamp or photo lifted off the page | 20% | 20 | 10 |
+
+- High contrast mode: pass `enabled: false` to drop the shadow and rely on stronger outlines.
 - Stamp treatments may use dashed borders for an analog passport feel.
 
 ## Imagery
@@ -179,6 +187,15 @@ The app’s photography should feel documentary and place-based. Images are used
 Motion should feel springy, celebratory, and tactile, but not noisy.
 
 ### Motion Rules
+- Use the `DS.Motion` timings so motion feels the same on every screen:
+
+| `DS.Motion` | Use | Animation |
+| --- | --- | --- |
+| `.snappy` | Taps, toggles, cards appearing | spring, response 0.35, damping 0.8 |
+| `.gentle` | Larger moves, a sheet's content, a celebration settling | spring, response 0.6, damping 0.8 |
+| `.quick` | Expanding text, small state changes | ease in-out, 0.2 s |
+| `.fadeIn` | Content fading in once loaded | ease in, 0.2 s |
+
 - Use spring animations for expansion, reveal, and button response.
 - Use scale plus opacity for reward moments such as stamp unlocks and quiz completion.
 - Use subtle lift effects for tappable cards.
@@ -221,7 +238,7 @@ Shared card characteristics:
 - Light semantic surface
 - 16 to 24 radius
 - Interior padding of `20` to `24`
-- Soft shadow in standard mode
+- Flat: a subtle outline, no shadow (shadows are for floating elements only)
 - Stronger border in high contrast mode
 
 Card types:
@@ -375,6 +392,8 @@ Preferred copy style:
 | Photo still loading | `.shimmering()` on the card color |
 | Data still loading | `DSLoadingRow("Finding …")` |
 | A secondary button beside a primary one | Brand tint at 12%, brand text, same shape and height as `DSPrimaryButtonStyle` (e.g. Share Achievement next to Dismiss) |
+| A single photo with its caption | `.dsPhotoSheet()`: half sheet on iPhone that drags to full height, so the credit fits and the page stays in view; a page-size sheet on iPad |
+| Section header at accessibility text sizes | the count drops under the title so neither is cut off (built into the section header) |
 | A sheet's title | inline title next to Done (`dsSheetTitle` or `.navigationBarTitleDisplayMode(.inline)`) |
 
 Action hierarchy on a detail page: one primary button, then one row of tiles, then content; outbound links sit with the content they relate to (Tours under the actions, OpenTable and food tours under Local Flavors, Booking and Vrbo under Stays), all in the link-card look.

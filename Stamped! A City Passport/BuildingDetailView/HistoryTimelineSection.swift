@@ -80,7 +80,7 @@ struct HistoryTimelineSection: View {
                 .font(.caption2)
                 .foregroundStyle(isHighContrast ? .primary : .secondary)
         }
-        .animation(.easeInOut(duration: 0.2), value: clippings)
+        .animation(DS.Motion.quick, value: clippings)
     }
 
     private var papersSection: some View {

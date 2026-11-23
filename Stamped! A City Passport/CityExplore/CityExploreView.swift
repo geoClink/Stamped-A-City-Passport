@@ -109,7 +109,7 @@ struct CityExploreView: View {
                         .ignoresSafeArea()
                     Button("Done") { showingLookAround = false }
                         .font(.body.weight(.semibold))
-                        .padding(.horizontal, 16).padding(.vertical, 8)
+                        .padding(.horizontal, DS.Space.l).padding(.vertical, DS.Space.s)
                         .background(.regularMaterial, in: Capsule())
                         .padding()
                 }
@@ -165,7 +165,7 @@ struct CityExploreView: View {
             }
             .padding(.horizontal, 20)
             .padding(.top, 60)
-            .padding(.bottom, 12)
+            .padding(.bottom, DS.Space.m)
 
             HStack(spacing: 16) {
                 // AR / Object picker
@@ -200,7 +200,7 @@ struct CityExploreView: View {
                 .buttonStyle(.plain)
                 .accessibilityLabel("Sound Credits")
             }
-            .padding(.bottom, 12)
+            .padding(.bottom, DS.Space.m)
         }
         .background(.ultraThinMaterial.opacity(0.85))
     }
@@ -238,7 +238,7 @@ struct CityExploreView: View {
                 Button { vm.selectedBuilding = nil } label: {
                     Image(systemName: "xmark")
                         .foregroundStyle(.white.opacity(0.6))
-                        .padding(4)
+                        .padding(DS.Space.xs)
                 }
                 .accessibilityLabel("Close")
             }
@@ -253,14 +253,14 @@ struct CityExploreView: View {
                         .foregroundStyle(.white)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 10)
-                        .background(Color.adventureOrange, in: RoundedRectangle(cornerRadius: 10))
+                        .background(Color.adventureOrange, in: RoundedRectangle(cornerRadius: DS.Radius.small))
                 }
                 .buttonStyle(.plain)
             }
         }
-        .padding(16)
-        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 16))
-        .padding(.horizontal, 16)
+        .padding(DS.Space.l)
+        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: DS.Radius.card))
+        .padding(.horizontal, DS.Space.l)
     }
 }
 
@@ -598,7 +598,7 @@ struct CityARView: View {
         if vm.modelMissing {
             Label("No 3D model for \(cityName) yet", systemImage: "cube.transparent")
                 .font(.subheadline.bold()).foregroundStyle(.white)
-                .padding(.horizontal, 20).padding(.vertical, 12)
+                .padding(.horizontal, 20).padding(.vertical, DS.Space.m)
                 .background(.ultraThinMaterial, in: Capsule())
         } else if vm.isLoading {
             HStack(spacing: 10) {
@@ -606,12 +606,12 @@ struct CityARView: View {
                 Text("Loading…").font(.subheadline).foregroundStyle(.white)
             }
             .accessibilityElement(children: .combine)
-            .padding(.horizontal, 20).padding(.vertical, 12)
+            .padding(.horizontal, 20).padding(.vertical, DS.Space.m)
             .background(.ultraThinMaterial, in: Capsule())
         } else {
             Label("Point at a flat surface", systemImage: "arrow.down.to.line")
                 .font(.subheadline.bold()).foregroundStyle(.white)
-                .padding(.horizontal, 20).padding(.vertical, 12)
+                .padding(.horizontal, 20).padding(.vertical, DS.Space.m)
                 .background(.ultraThinMaterial, in: Capsule())
         }
     }

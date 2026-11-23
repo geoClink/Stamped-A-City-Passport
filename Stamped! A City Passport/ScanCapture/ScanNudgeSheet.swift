@@ -36,14 +36,14 @@ struct ScanNudgeSheet: View {
             Capsule()
                 .fill(Color.secondary.opacity(0.4))
                 .frame(width: 36, height: 4)
-                .padding(.top, 12)
-                .padding(.bottom, 24)
+                .padding(.top, DS.Space.m)
+                .padding(.bottom, DS.Space.xl)
                 .accessibilityHidden(true)
 
             Image(systemName: "camera.viewfinder")
                 .font(.system(size: 52))
                 .foregroundStyle(Color.adventureOrange)
-                .padding(.bottom, 16)
+                .padding(.bottom, DS.Space.l)
                 .accessibilityHidden(true)
 
             Text("Help Build \(cityName) in 3D")
@@ -56,7 +56,7 @@ struct ScanNudgeSheet: View {
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 28)
-                .padding(.top, 8)
+                .padding(.top, DS.Space.s)
 
             VStack(spacing: 12) {
                 Button {
@@ -67,9 +67,9 @@ struct ScanNudgeSheet: View {
                         .font(.headline.bold())
                         .foregroundStyle(.white)
                         .frame(maxWidth: .infinity)
-                        .padding(.vertical, 16)
+                        .padding(.vertical, DS.Space.l)
                         .background(Color.adventureOrange)
-                        .clipShape(RoundedRectangle(cornerRadius: 14))
+                        .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card))
                 }
 
                 Button {
@@ -82,9 +82,9 @@ struct ScanNudgeSheet: View {
                         .padding(.vertical, 14)
                 }
             }
-            .padding(.horizontal, 24)
+            .padding(.horizontal, DS.Space.xl)
             .padding(.top, 28)
-            .padding(.bottom, 16)
+            .padding(.bottom, DS.Space.l)
         }
     }
 }

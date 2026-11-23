@@ -146,7 +146,7 @@ struct OnThisDayCard: View {
                 }
                 .dsCard()
                 #if os(visionOS)
-                .padding(.horizontal, 12)
+                .padding(.horizontal, DS.Space.m)
                 #endif
                 .padding(.top, topGap)
             }

@@ -37,7 +37,7 @@ struct CampusHistorySection: View {
                         .accessibilityHidden(true)
                         .task(id: title) {
                             let loaded = await CampusHistoryService.shared.history(forArticle: title)
-                            withAnimation(.easeIn(duration: 0.2)) {
+                            withAnimation(DS.Motion.fadeIn) {
                                 history = loaded
                                 isLoading = false
                             }

@@ -371,6 +371,7 @@ private extension PassportGalleryView {
                     Text(String(format: NSLocalizedString("%d Cities Stamped", comment: "Passport header: completed cities"), completedCount))
                         .font(.title2.bold())
                         .foregroundColor(highContrast ? brandColor : .white)
+                        .minimumScaleFactor(0.7)
                     if !allCampuses.isEmpty {
                         Text(String(format: NSLocalizedString("%d of %d campuses", comment: "Passport header: completed campuses, e.g. 2 of 101 campuses"), stampedCampuses.count, allCampuses.count))
                             .font(.subheadline.weight(.semibold))
@@ -378,10 +379,13 @@ private extension PassportGalleryView {
                     }
                 }
                 Spacer(minLength: DS.Space.s)
-                Image(systemName: "globe.americas.fill")
-                    .font(.largeTitle)
-                    .foregroundColor(highContrast ? brandColor : .white.opacity(0.5))
-                    .accessibilityHidden(true)
+                // Decorative; at accessibility text sizes the words need its width
+                if !dynamicTypeSize.isAccessibilitySize {
+                    Image(systemName: "globe.americas.fill")
+                        .font(.largeTitle)
+                        .foregroundColor(highContrast ? brandColor : .white.opacity(0.5))
+                        .accessibilityHidden(true)
+                }
             }
             
             ProgressView(value: Double(completedCount), total: Double(max(cityCount, 1)))

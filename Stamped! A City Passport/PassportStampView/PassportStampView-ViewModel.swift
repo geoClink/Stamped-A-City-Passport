@@ -122,7 +122,7 @@ struct StampCelebrationView: View {
                     )
                     .dsPageMargin()
                     // Lifts the stamp off the dark backdrop
-                    .shadow(color: isHighContrast ? .clear : .black.opacity(0.3), radius: 20, x: 0, y: 10)
+                    .dsShadow(.lifted, enabled: !isHighContrast)
                     
                     if showButton {
                         actionButton
@@ -196,7 +196,7 @@ extension StampCelebrationView {
         let delay = reduceMotion ? 0.2 : 1.0
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             // A plain fade under Reduce Motion instead of the spring
-            withAnimation(reduceMotion ? .easeInOut(duration: 0.2) : .spring(response: 0.6, dampingFraction: 0.8)) {
+            withAnimation(reduceMotion ? DS.Motion.quick : DS.Motion.gentle) {
                 showButton = true
             }
         }

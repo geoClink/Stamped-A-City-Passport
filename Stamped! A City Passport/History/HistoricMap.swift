@@ -333,15 +333,15 @@ struct HistoricMapControls: View {
             }
         }
         #if os(visionOS)
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DS.Space.xl)
         .padding(.vertical, 14)
         .glassBackgroundEffect()
         #else
-        .padding(12)
+        .padding(DS.Space.m)
         .background(reduceTransparency ? AnyShapeStyle(Color(UIColor.systemBackground)) : AnyShapeStyle(.regularMaterial),
-                    in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-        .padding(.horizontal, 12)
-        .padding(.top, 8)
+                    in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+        .padding(.horizontal, DS.Space.m)
+        .padding(.top, DS.Space.s)
         #endif
     }
 

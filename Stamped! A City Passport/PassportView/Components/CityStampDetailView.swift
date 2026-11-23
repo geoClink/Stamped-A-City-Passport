@@ -39,7 +39,7 @@ struct CityStampDetailView: View {
                     .matchedGeometryEffect(id: manualReduceMotion ? nil : city.id, in: namespace)
                     .scaleEffect(stampScale)
                     .opacity(stampOpacity)
-                    .shadow(color: .black.opacity(0.2), radius: 20, x: 0, y: 10)
+                    .dsShadow(.lifted)
                     
                     if sizeClass == .regular {
                         // Extra detail for iPad users

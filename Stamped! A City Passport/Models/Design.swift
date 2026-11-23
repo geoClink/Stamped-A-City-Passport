@@ -38,6 +38,8 @@ enum DS {
         static let wishlist = Color.pink
         /// Mastery and full completion only
         static let gold = Color(red: 0.85, green: 0.65, blue: 0.13)
+        /// The lighter end of the celebration gradient (#FF8A57), always paired with `accent`
+        static let warm = Color(red: 0xFF / 255, green: 0x8A / 255, blue: 0x57 / 255)
         #if os(visionOS)
         /// On visionOS cards sit on window glass: a light lift reads as a platter, where the
         /// grouped gray drew opaque dark boxes
@@ -66,6 +68,50 @@ enum DS {
         /// Source notes and fine print under a section
         static let fineprint = Font.caption2
     }
+
+    /// Three heights of shadow. Cards stay flat; shadows are for things that float over a map or photo.
+    enum Shadow {
+        /// Map pins and labels: a tight edge so they read over satellite imagery
+        case pin
+        /// Floating controls and cards over the map
+        case floating
+        /// A stamp or photo lifted off the page
+        case lifted
+
+        var color: Color {
+            switch self {
+            case .pin: .black.opacity(0.3)
+            case .floating: .black.opacity(0.15)
+            case .lifted: .black.opacity(0.2)
+            }
+        }
+        var radius: CGFloat {
+            switch self {
+            case .pin: 2
+            case .floating: 12
+            case .lifted: 20
+            }
+        }
+        var y: CGFloat {
+            switch self {
+            case .pin: 1
+            case .floating: 4
+            case .lifted: 10
+            }
+        }
+    }
+
+    /// The app's animation timings, so motion feels the same on every screen.
+    enum Motion {
+        /// Taps, toggles and cards appearing: quick with a little give
+        static let snappy = Animation.spring(response: 0.35, dampingFraction: 0.8)
+        /// Larger moves, like a sheet's content or a celebration settling
+        static let gentle = Animation.spring(response: 0.6, dampingFraction: 0.8)
+        /// Expanding or collapsing text and small state changes
+        static let quick = Animation.easeInOut(duration: 0.2)
+        /// Content fading in once it has loaded
+        static let fadeIn = Animation.easeIn(duration: 0.2)
+    }
 }
 
 // MARK: - Card
@@ -93,6 +139,11 @@ struct DSCard: ViewModifier {
 
 extension View {
     /// Wraps the view in the app's standard card.
+    /// One of the three shadow heights. `enabled: false` drops it (high contrast uses borders instead).
+    func dsShadow(_ shadow: DS.Shadow, enabled: Bool = true) -> some View {
+        self.shadow(color: enabled ? shadow.color : .clear, radius: shadow.radius, x: 0, y: shadow.y)
+    }
+
     func dsCard(padding: CGFloat = DS.Space.l, isHighContrast: Bool = false) -> some View {
         modifier(DSCard(padding: padding, isHighContrast: isHighContrast))
     }
@@ -115,6 +166,18 @@ extension View {
     func dsLargeSheet() -> some View {
         #if os(iOS)
         presentationSizing(.page)
+        #else
+        self
+        #endif
+    }
+
+    /// A single photo with its caption: on iPhone it opens as a half sheet (the photo and its
+    /// credit fit, and the page behind stays in view) and drags up to full height; a big sheet on iPad.
+    func dsPhotoSheet() -> some View {
+        #if os(iOS)
+        presentationDetents([.medium, .large])
+            .presentationDragIndicator(.visible)
+            .presentationSizing(.page)
         #else
         self
         #endif
@@ -158,8 +221,33 @@ struct DSSectionHeader<Trailing: View>: View {
     var systemImage: String? = nil
     var isHighContrast = false
     @ViewBuilder var trailing: () -> Trailing
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     var body: some View {
+        // At accessibility text sizes the count goes under the title: side by side, one of them was cut off
+        if dynamicTypeSize.isAccessibilitySize {
+            VStack(alignment: .leading, spacing: DS.Space.xs) {
+                titleRow
+                trailing()
+            }
+            .font(DS.Typography.label)
+            .textCase(.uppercase)
+            .accessibilityElement(children: .combine)
+            .accessibilityAddTraits(.isHeader)
+        } else {
+            HStack(alignment: .firstTextBaseline, spacing: DS.Space.s) {
+                titleRow
+                Spacer(minLength: DS.Space.s)
+                trailing()
+            }
+            .font(DS.Typography.label)
+            .textCase(.uppercase)
+            .accessibilityElement(children: .combine)
+            .accessibilityAddTraits(.isHeader)
+        }
+    }
+
+    private var titleRow: some View {
         HStack(alignment: .firstTextBaseline, spacing: DS.Space.s) {
             if let systemImage {
                 Image(systemName: systemImage)
@@ -172,13 +260,7 @@ struct DSSectionHeader<Trailing: View>: View {
                 .foregroundStyle(isHighContrast ? Color.primary : Color.secondary)
                 .lineLimit(2)
                 .minimumScaleFactor(0.8)
-            Spacer(minLength: DS.Space.s)
-            trailing()
         }
-        .font(DS.Typography.label)
-        .textCase(.uppercase)
-        .accessibilityElement(children: .combine)
-        .accessibilityAddTraits(.isHeader)
     }
 }
 

@@ -49,7 +49,7 @@ struct GameDaySection: View {
 
     private func loadGames() async {
         let games = await GameDayService.shared.homeGames(for: campus)
-        withAnimation(.easeIn(duration: 0.2)) {
+        withAnimation(DS.Motion.fadeIn) {
             homeGames = games
             isLoading = false
         }

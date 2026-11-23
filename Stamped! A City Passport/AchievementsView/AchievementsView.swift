@@ -101,7 +101,7 @@ struct AchievementsView: View {
                     Capsule()
                         .fill(isHighContrast ? Color.primary : DS.Palette.accent)
                         .frame(width: geo.size.width * CGFloat(earnedCount) / CGFloat(Achievement.allAchievements.count), height: 8)
-                        .animation(reduceMotion ? nil : .spring(response: 0.6, dampingFraction: 0.8), value: earnedCount)
+                        .animation(reduceMotion ? nil : DS.Motion.gentle, value: earnedCount)
                 }
             }
             .frame(height: 8)

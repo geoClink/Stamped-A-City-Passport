@@ -210,7 +210,7 @@ struct MapClusterBubble: View {
             .frame(minWidth: diameter, minHeight: diameter, maxHeight: diameter)
             .background(Capsule().fill(fill))
             .overlay(Capsule().stroke(stroke, lineWidth: strokeWidth))
-            .shadow(color: .black.opacity(0.3), radius: 2, x: 0, y: 1)
+            .dsShadow(.pin)
             .contentShape(Capsule())
             .accessibilityElement(children: .ignore)
             .accessibilityLabel(label ?? Text("\(count) places"))

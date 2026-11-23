@@ -39,7 +39,7 @@ struct CityHeroHeader: View {
                         .foregroundColor(isHighContrast ? .primary : .secondary)
                         .lineLimit(isExpanded ? nil : 3)
                     Button {
-                        withAnimation(.easeInOut(duration: 0.2)) { isExpanded.toggle() }
+                        withAnimation(DS.Motion.quick) { isExpanded.toggle() }
                     } label: {
                         Text(isExpanded ? "Show less" : "Read more")
                             // 44 pt tall, Apple's smallest comfortable tap target (the text alone is 18)
@@ -51,6 +51,10 @@ struct CityHeroHeader: View {
                     .buttonStyle(.plain)
                 }
                 .transition(.opacity)
+            }
+            // An old view of the city, if there's a good one (campuses don't have one)
+            if !city.isCampus, let old = CityThenPhotos.photo(forCity: city.name), let url = old.url() {
+                oldCityPhoto(old, url: url)
             }
         }
         .dsPageMargin()
@@ -124,6 +128,29 @@ struct CityHeroHeader: View {
             RoundedRectangle(cornerRadius: DS.Radius.large, style: .continuous)
                 .stroke(isHighContrast ? Color.primary : Color.clear, lineWidth: 2)
         )
+    }
+
+    /// The old city view: one wide photo with its caption, credit and source link
+    private func oldCityPhoto(_ old: CityThenPhotos.Photo, url: URL) -> some View {
+        VStack(alignment: .leading, spacing: DS.Space.xs) {
+            AsyncImage(url: url) { phase in
+                if let image = phase.image {
+                    image.resizable().scaledToFit()
+                } else {
+                    DS.Palette.cardBackground.aspectRatio(16 / 9, contentMode: .fit)
+                }
+            }
+            .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+            .accessibilityLabel(Text(verbatim: old.caption))
+            Text(verbatim: old.caption)
+                .font(.footnote)
+                .foregroundStyle(isHighContrast ? Color.primary : Color.secondary)
+            // The credit opens the photo's source page
+            Link(destination: old.link) {
+                Text(verbatim: old.credit).font(.caption2)
+            }
+            .foregroundStyle(isHighContrast ? Color.primary : Color.secondary)
+        }
     }
 
     @ViewBuilder

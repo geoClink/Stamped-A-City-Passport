@@ -130,7 +130,7 @@ struct WikiDescriptionCard: View {
                         .lineLimit(expanded ? nil : 4)
                         .fixedSize(horizontal: false, vertical: true)
                     if !expanded {
-                        Button("Read more") { withAnimation(.easeInOut(duration: 0.2)) { expanded = true } }
+                        Button("Read more") { withAnimation(DS.Motion.quick) { expanded = true } }
                             .font(.caption.bold())
                             .foregroundColor(isHighContrast ? .primary : DS.Palette.accent)
                             .accessibilityLabel("Read more about \(building.name)")
@@ -142,7 +142,7 @@ struct WikiDescriptionCard: View {
             }
             // If loaded and no extract: render nothing (no reserved space needed)
         }
-        .animation(.easeIn(duration: 0.2), value: isLoading)
+        .animation(DS.Motion.fadeIn, value: isLoading)
         .task {
             let summary = await WikimediaService.shared.summary(for: building.name, buildingID: building.id)
             extract = summary.extract

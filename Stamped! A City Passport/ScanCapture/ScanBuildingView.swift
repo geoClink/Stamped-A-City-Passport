@@ -64,7 +64,7 @@ struct ScanBuildingView: View {
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                         .multilineTextAlignment(.center)
-                        .padding(.horizontal, 24)
+                        .padding(.horizontal, DS.Space.xl)
                 }
 
                 // Tips card
@@ -74,7 +74,7 @@ struct ScanBuildingView: View {
                         .font(.caption2.weight(.black))
                         .foregroundStyle(Color.adventureOrange)
                         .tracking(2)
-                        .padding(.bottom, 4)
+                        .padding(.bottom, DS.Space.xs)
                         .accessibilityAddTraits(.isHeader)
 
                     tipRow(icon: "1.circle.fill",         text: "Walk slowly around the building — one full circle per level")
@@ -96,7 +96,7 @@ struct ScanBuildingView: View {
                         .font(.headline.bold())
                         .foregroundStyle(.white)
                         .frame(maxWidth: 300)
-                        .padding(.vertical, 16)
+                        .padding(.vertical, DS.Space.l)
                         .background(Color.adventureOrange)
                         .clipShape(Capsule())
                 }
@@ -142,7 +142,7 @@ struct ScanBuildingView: View {
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 32)
+                    .padding(.horizontal, DS.Space.section)
             }
 
             VStack(spacing: 12) {
@@ -150,7 +150,7 @@ struct ScanBuildingView: View {
                     .font(.headline.bold())
                     .foregroundStyle(.white)
                     .frame(maxWidth: 300)
-                    .padding(.vertical, 16)
+                    .padding(.vertical, DS.Space.l)
                     .background(Color.adventureOrange)
                     .clipShape(Capsule())
 
@@ -194,7 +194,7 @@ struct ScanBuildingView: View {
                     .font(.caption)
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 32)
+                    .padding(.horizontal, DS.Space.section)
             }
 
             Spacer()
@@ -216,7 +216,7 @@ struct ScanBuildingView: View {
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
-                .padding(.horizontal, 32)
+                .padding(.horizontal, DS.Space.section)
             Spacer()
         }
     }
@@ -240,14 +240,14 @@ struct ScanBuildingView: View {
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 32)
+                    .padding(.horizontal, DS.Space.section)
             }
 
             Button("Done") { dismiss() }
                 .font(.headline.bold())
                 .foregroundStyle(.white)
                 .frame(maxWidth: 300)
-                .padding(.vertical, 16)
+                .padding(.vertical, DS.Space.l)
                 .background(Color.adventureOrange)
                 .clipShape(Capsule())
 
@@ -274,14 +274,14 @@ struct ScanBuildingView: View {
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 32)
+                    .padding(.horizontal, DS.Space.section)
             }
 
             Button("Close") { dismiss() }
                 .font(.headline.bold())
                 .foregroundStyle(.white)
                 .frame(maxWidth: 300)
-                .padding(.vertical, 16)
+                .padding(.vertical, DS.Space.l)
                 .background(Color.adventureOrange)
                 .clipShape(Capsule())
 
@@ -308,14 +308,14 @@ struct ScanBuildingView: View {
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
-                .padding(.horizontal, 32)
+                .padding(.horizontal, DS.Space.section)
 
             VStack(spacing: 12) {
                 Button("Try Again") { vm.phase = .intro }
                     .font(.headline.bold())
                     .foregroundStyle(.white)
                     .frame(maxWidth: 300)
-                    .padding(.vertical, 16)
+                    .padding(.vertical, DS.Space.l)
                     .background(Color.adventureOrange)
                     .clipShape(Capsule())
 

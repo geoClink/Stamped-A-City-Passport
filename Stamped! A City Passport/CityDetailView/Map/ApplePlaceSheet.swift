@@ -90,7 +90,7 @@ struct ApplePlaceSheet: View {
                 VStack(spacing: 8) { primaryActions }
             }
         }
-        .padding(.horizontal, 16)
+        .padding(.horizontal, DS.Space.l)
         .padding(.vertical, 10)
         .background(.bar)
     }

@@ -29,7 +29,7 @@ struct TipJarView: View {
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.center)
             }
-            .padding(24)
+            .padding(DS.Space.xl)
             .frame(maxWidth: 520)
             .frame(maxWidth: .infinity)
         }
@@ -156,7 +156,7 @@ struct TipJarView: View {
                         .monospacedDigit()
                 }
             }
-            .padding(.vertical, 8)
+            .padding(.vertical, DS.Space.s)
             .frame(maxWidth: .infinity, alignment: dynamicTypeSize.isAccessibilitySize ? .leading : .center)
         }
         .buttonStyle(.bordered)
@@ -199,7 +199,7 @@ private struct StatusCard: View {
             Spacer(minLength: 0)
         }
         .padding()
-        .background(.tint.opacity(0.12), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+        .background(.tint.opacity(0.12), in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
         .accessibilityElement(children: .combine)
     }
 }

@@ -237,10 +237,10 @@ struct ItineraryErrorView: View {
                 Button(action: onRetry) {
                     Text("Try Again")
                         .font(.caption).fontWeight(.semibold).foregroundColor(.white)
-                        .padding(.horizontal, 20).padding(.vertical, 8)
+                        .padding(.horizontal, 20).padding(.vertical, DS.Space.s)
                         .background(brandColor).cornerRadius(20)
                 }
-                .padding(.top, 4)
+                .padding(.top, DS.Space.xs)
             }
             .frame(maxWidth: .infinity)
             .padding(.vertical, 40)
@@ -328,7 +328,7 @@ struct BasicDaySection: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Button {
-                withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) { isExpanded.toggle() }
+                withAnimation(DS.Motion.snappy) { isExpanded.toggle() }
                 HapticManager.shared.trigger(.selection)
             } label: {
                 HStack(spacing: 14) {
@@ -359,10 +359,10 @@ struct BasicDaySection: View {
                     Image(systemName: "chevron.right")
                         .font(.caption.weight(.semibold)).foregroundColor(.secondary)
                         .rotationEffect(.degrees(isExpanded ? 90 : 0))
-                        .animation(reduceMotion ? nil : .spring(response: 0.35, dampingFraction: 0.8), value: isExpanded)
+                        .animation(reduceMotion ? nil : DS.Motion.snappy, value: isExpanded)
                         .accessibilityHidden(true)
                 }
-                .padding(.horizontal, 16).padding(.vertical, 14)
+                .padding(.horizontal, DS.Space.l).padding(.vertical, 14)
             }
             .buttonStyle(.plain)
             .accessibilityValue(isExpanded ? Text("Expanded") : Text("Collapsed"))
@@ -374,14 +374,14 @@ struct BasicDaySection: View {
                     }
                     InfoPill(icon: "clock.fill", text: "Starts 9:00 AM", brandColor: brandColor)
                 }
-                .padding(.horizontal, 16).padding(.bottom, 10)
+                .padding(.horizontal, DS.Space.l).padding(.bottom, 10)
                 .transition(rowTransition)
 
                 TimelineBar(stops: stops, service: service, brandColor: brandColor)
-                    .padding(.horizontal, 16).padding(.bottom, 12)
+                    .padding(.horizontal, DS.Space.l).padding(.bottom, DS.Space.m)
                     .transition(rowTransition)
 
-                Divider().padding(.leading, 16)
+                Divider().padding(.leading, DS.Space.l)
 
                 ForEach(stops, id: \.id) { stop in
                     if let building = service.building(for: stop) {
@@ -424,7 +424,7 @@ struct InfoPill: View {
                 .accessibilityHidden(true)
             Text(text).font(.caption2.weight(.medium)).foregroundColor(.secondary)
         }
-        .padding(.horizontal, 8).padding(.vertical, 4)
+        .padding(.horizontal, DS.Space.s).padding(.vertical, DS.Space.xs)
         .background(brandColor.opacity(0.08)).cornerRadius(8)
     }
 }
@@ -534,7 +534,7 @@ struct BasicStopRow: View {
                     .accessibilityLabel(Text("Walking directions to \(building.name)"))
                 }
             }
-            .padding(.horizontal, 16).padding(.vertical, 12)
+            .padding(.horizontal, DS.Space.l).padding(.vertical, DS.Space.m)
 
             if !isLast { Divider().padding(.leading, 86) }
         }
@@ -818,7 +818,7 @@ struct ItineraryDaySection: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Button {
-                withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) { isExpanded.toggle() }
+                withAnimation(DS.Motion.snappy) { isExpanded.toggle() }
                 HapticManager.shared.trigger(.selection)
             } label: {
                 HStack(spacing: 14) {
@@ -845,10 +845,10 @@ struct ItineraryDaySection: View {
                     Image(systemName: "chevron.right")
                         .font(.caption.weight(.semibold)).foregroundColor(.secondary)
                         .rotationEffect(.degrees(isExpanded ? 90 : 0))
-                        .animation(reduceMotion ? nil : .spring(response: 0.35, dampingFraction: 0.8), value: isExpanded)
+                        .animation(reduceMotion ? nil : DS.Motion.snappy, value: isExpanded)
                         .accessibilityHidden(true)
                 }
-                .padding(.horizontal, 16).padding(.vertical, 14)
+                .padding(.horizontal, DS.Space.l).padding(.vertical, 14)
             }
             .buttonStyle(.plain)
             .accessibilityValue(isExpanded ? Text("Expanded") : Text("Collapsed"))
@@ -859,12 +859,12 @@ struct ItineraryDaySection: View {
                         .font(.subheadline).foregroundColor(.primary.opacity(0.85))
                         .padding(14).frame(maxWidth: .infinity, alignment: .leading)
                         .background(Color(UIColor.tertiarySystemBackground)).cornerRadius(12)
-                        .padding(.horizontal, 16).padding(.bottom, 10)
+                        .padding(.horizontal, DS.Space.l).padding(.bottom, 10)
                         .transition(rowTransition)
                 } else if narrativeService.isGenerating {
-                    RoundedRectangle(cornerRadius: 12)
+                    RoundedRectangle(cornerRadius: DS.Radius.small)
                         .fill(Color(UIColor.tertiarySystemBackground)).frame(height: 60)
-                        .padding(.horizontal, 16).padding(.bottom, 10)
+                        .padding(.horizontal, DS.Space.l).padding(.bottom, 10)
                         .shimmering().transition(.opacity)
                 }
 
@@ -874,12 +874,12 @@ struct ItineraryDaySection: View {
                             .accessibilityHidden(true)
                         Text(spotlight).font(.caption).foregroundColor(.secondary)
                     }
-                    .padding(.horizontal, 16).padding(.bottom, 10)
+                    .padding(.horizontal, DS.Space.l).padding(.bottom, 10)
                     .transition(rowTransition)
                 }
 
                 TimelineBar(stops: stops, service: service, brandColor: brandColor)
-                    .padding(.horizontal, 16).padding(.bottom, 12)
+                    .padding(.horizontal, DS.Space.l).padding(.bottom, DS.Space.m)
                     .transition(rowTransition)
 
                 Divider().padding(.leading, 66)
@@ -981,7 +981,7 @@ struct ItineraryStopRow: View {
                     .accessibilityLabel(Text("Walking directions to \(building.name)"))
                 }
             }
-            .padding(.horizontal, 16).padding(.vertical, 12)
+            .padding(.horizontal, DS.Space.l).padding(.vertical, DS.Space.m)
 
             if !isLast { Divider().padding(.leading, 82) }
         }
