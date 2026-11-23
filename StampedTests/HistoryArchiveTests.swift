@@ -373,7 +373,9 @@ final class OldFilmTests: XCTestCase {
         let registry = try JSONSerialization.jsonObject(with: Data(contentsOf: XCTUnwrap(
             Bundle.main.url(forResource: "BuildingRegistry", withExtension: "json")))) as? [String: Any]
         let cleveland = try XCTUnwrap(registry?["Cleveland"] as? [[String: Any]])
+        // Only the Cleveland Public Library files (other batches may add more Cleveland photos)
         let photos = cleveland.compactMap { $0["id"] as? String }.flatMap { CampusArchivePhotos.photos(forBuildingID: $0) }
+            .filter { $0.largeURL.lastPathComponent.hasPrefix("cpl_") }
         XCTAssertEqual(CampusArchivePhotos.clevelandBuildingCount, 5)
         XCTAssertEqual(photos.count, 5, "each Cleveland photo is in the app and matches a landmark")
         XCTAssertTrue(photos.allSatisfy { $0.credit == CampusArchivePhotos.cplCredit && $0.largeURL.isFileURL })
@@ -483,6 +485,23 @@ final class OldFilmTests: XCTestCase {
         XCTAssertGreaterThanOrEqual(CampusArchivePhotos.morePhotosCount, 150)
         XCTAssertTrue(more.allSatisfy { !$0.credit.isEmpty && ($0.caption ?? "").count > 5 })
         XCTAssertTrue(more.allSatisfy { $0.itemURL.host?.contains("wikimedia.org") == true || $0.itemURL.host?.contains("loc.gov") == true })
+    }
+
+    func testEveryCityThenPhotoIsBundledAndCredited() throws {
+        let registry = try JSONSerialization.jsonObject(with: Data(contentsOf: XCTUnwrap(
+            Bundle.main.url(forResource: "BuildingRegistry", withExtension: "json")))) as? [String: [[String: Any]]]
+        let cities = try XCTUnwrap(registry).keys
+        let photos = cities.compactMap { CityThenPhotos.photo(forCity: $0) }
+        XCTAssertEqual(photos.count, CityThenPhotos.count, "every old view is keyed by a real city name")
+        XCTAssertGreaterThanOrEqual(CityThenPhotos.count, 50)
+        for photo in photos {
+            XCTAssertNotNil(photo.url(), "\(photo.file).jpg is bundled")
+            XCTAssertTrue(photo.file.hasPrefix("cityThen_"))
+            XCTAssertGreaterThan(photo.caption.count, 5)
+            XCTAssertFalse(photo.credit.isEmpty)
+            XCTAssertLessThanOrEqual(Int(photo.year) ?? .max, 1950, "\(photo.file) is an old view")
+            XCTAssertEqual(photo.link.host, "commons.wikimedia.org")
+        }
     }
 
     func testALandmarkCanShowSeveralBundledImages() {
