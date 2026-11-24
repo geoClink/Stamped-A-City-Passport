@@ -35,7 +35,7 @@ struct ScanBuildingView: View {
             .navigationTitle("Scan \(building.name)")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
+                AppToolbarItem(placement: .navigationBarLeading) {
                     if vm.phase == .intro || vm.phase == .selected {
                         Button("Cancel") { dismiss() }
                     }

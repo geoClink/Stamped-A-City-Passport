@@ -386,7 +386,7 @@ struct CityDetailView: View {
         #if os(iOS)
         // Only show Explore for cities that have a bundled USDZ.
         if Bundle.main.url(forResource: viewModel.city.name.lowercased(), withExtension: "usdz") != nil {
-            ToolbarItem(placement: .navigationBarTrailing) {
+            AppToolbarItem(placement: .navigationBarTrailing) {
                 Button {
                     showingExplore = true
                 } label: {
@@ -403,12 +403,12 @@ struct CityDetailView: View {
 
         // Campuses only: add the school to My College List
         if viewModel.city.isCampus {
-            ToolbarItem(placement: .navigationBarTrailing) {
+            AppToolbarItem(placement: .navigationBarTrailing) {
                 CollegeListButton(campus: viewModel.city)
             }
         }
 
-        ToolbarItem(placement: .navigationBarTrailing) {
+        AppToolbarItem(placement: .navigationBarTrailing) {
             Button {
                 showingMap = true
             } label: {
@@ -421,7 +421,7 @@ struct CityDetailView: View {
             .accessibilityHint("Shows all landmarks on a map")
         }
 
-        ToolbarItem(placement: .navigationBarTrailing) {
+        AppToolbarItem(placement: .navigationBarTrailing) {
             Menu {
                 Section("Report") {
                     if let url = reportCityURL() {

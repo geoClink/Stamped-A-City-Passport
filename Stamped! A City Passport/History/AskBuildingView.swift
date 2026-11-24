@@ -98,7 +98,7 @@ struct AskBuildingView: View {
             .navigationBarTitleDisplayMode(.inline)
             #endif
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
+                AppToolbarItem(placement: .cancellationAction) {
                     Button("Done") { dismiss() }
                 }
             }

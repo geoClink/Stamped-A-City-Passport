@@ -324,7 +324,7 @@ extension CityListView {
     
     /// Only Settings stays up here; the other screens are labeled tiles at the top of the list.
     var sidebarToolbar: some ToolbarContent {
-        ToolbarItem(placement: .navigationBarLeading) {
+        AppToolbarItem(placement: .navigationBarLeading) {
             Button {
                 HapticManager.shared.trigger(.selection)
                 showingSettings = true
@@ -350,7 +350,7 @@ extension CityListView {
     }
 
     var detailToolbar: some ToolbarContent {
-        ToolbarItem(placement: .navigationBarLeading) {
+        AppToolbarItem(placement: .navigationBarLeading) {
             if isIPad && columnVisibility == .detailOnly {
                 Button {
                     HapticManager.shared.trigger(.selection)

@@ -233,6 +233,42 @@ extension ToolbarItemPlacement {
     }
 }
 
+/// Use instead of `ToolbarItem`: the same thing, plus `macToolbarButtonStyle()` on its content,
+/// so on the Mac its button sits in a proper round or capsule glass pill instead of a tall,
+/// narrow oval (see `macToolbarButtonStyle()`). Identical to `ToolbarItem` on iPhone/iPad/Vision Pro.
+struct AppToolbarItem<Content: View>: ToolbarContent {
+    let placement: ToolbarItemPlacement
+    @ViewBuilder let content: () -> Content
+
+    init(placement: ToolbarItemPlacement = .automatic, @ViewBuilder content: @escaping () -> Content) {
+        self.placement = placement
+        self.content = content
+    }
+
+    var body: some ToolbarContent {
+        ToolbarItem(placement: placement) {
+            content().macToolbarButtonStyle()
+        }
+    }
+}
+
+/// Use instead of `ToolbarItemGroup`, for the same reason as `AppToolbarItem`.
+struct AppToolbarItemGroup<Content: View>: ToolbarContent {
+    let placement: ToolbarItemPlacement
+    @ViewBuilder let content: () -> Content
+
+    init(placement: ToolbarItemPlacement = .automatic, @ViewBuilder content: @escaping () -> Content) {
+        self.placement = placement
+        self.content = content
+    }
+
+    var body: some ToolbarContent {
+        ToolbarItemGroup(placement: placement) {
+            content().macToolbarButtonStyle()
+        }
+    }
+}
+
 extension SearchFieldPlacement {
     /// The search field that always shows under the navigation bar on iPhone/iPad;
     /// on the Mac, the window's own search field (at the top of the sidebar when there is one).
@@ -272,6 +308,29 @@ extension View {
     /// closes a window (iPad, and sheets on the Mac, which Command-W doesn't close by itself).
     func closesWithCommandW() -> some View {
         keyboardShortcut("w", modifiers: .command)
+    }
+
+    /// Mac: toolbar buttons get the system toolbar look (a round or capsule glass pill).
+    /// The window sets `.buttonStyle(.borderless)` for the app's own iOS-style buttons, and
+    /// that reached the toolbar too: each glass pill lost its padding and squeezed into a
+    /// tall, narrow oval around the icon. No change on iPhone/iPad.
+    func macToolbarButtonStyle() -> some View {
+        #if os(macOS)
+        buttonStyle(.automatic)
+        #else
+        self
+        #endif
+    }
+
+    /// Mac: the app's own buttons draw their own circles, capsules and cards, so they skip
+    /// the Mac's gray push-button bezel. Put this on a split view's columns, under the
+    /// toolbar, so the toolbar and the sidebar button keep `macToolbarButtonStyle()`.
+    func macContentButtonStyle() -> some View {
+        #if os(macOS)
+        buttonStyle(.borderless)
+        #else
+        self
+        #endif
     }
 
     /// Mac: keeps content to a comfortable width, centered, however wide the window gets,

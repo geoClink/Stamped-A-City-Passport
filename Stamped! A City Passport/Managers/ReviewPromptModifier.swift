@@ -47,7 +47,7 @@ struct TipPromptModifier: ViewModifier {
                     TipJarView()
                         .navigationBarTitleDisplayMode(.inline)
                         .toolbar {
-                            ToolbarItem(placement: .cancellationAction) {
+                            AppToolbarItem(placement: .cancellationAction) {
                                 Button("Not Now") { showsTipJar = false }
                             }
                         }

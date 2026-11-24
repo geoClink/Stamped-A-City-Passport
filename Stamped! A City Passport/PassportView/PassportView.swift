@@ -65,7 +65,7 @@ struct PassportView: View {
             }
             .navigationTitle("Your Passport")
             .toolbar {
-                ToolbarItem(placement: .primaryAction) {
+                AppToolbarItem(placement: .primaryAction) {
                     Button {
                         HapticManager.shared.trigger(.selection) // Add this
                         withAnimation(reduceMotion ? nil : .spring()) { showingProgressDetails.toggle() }

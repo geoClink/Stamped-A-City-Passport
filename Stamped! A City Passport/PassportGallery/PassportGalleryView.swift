@@ -52,16 +52,22 @@ struct PassportGalleryView: View {
                     sidebarList
                         .navigationTitle("Countries")
                         .searchable(text: $searchText, placement: .sidebar, prompt: searchPrompt)
+                        .macContentButtonStyle()
                 } detail: {
-                    if showingCampusPage {
-                        ScrollView { campusSection(columns: [GridItem(.adaptive(minimum: 220))]).padding(DS.Space.section) }
-                            .background(pageBackground)
-                    } else if let country = selectedCountry {
-                        passportPage(for: country)
-                    } else {
-                        emptyBookState
+                    Group {
+                        if showingCampusPage {
+                            ScrollView { campusSection(columns: [GridItem(.adaptive(minimum: 220))]).padding(DS.Space.section) }
+                                .background(pageBackground)
+                        } else if let country = selectedCountry {
+                            passportPage(for: country)
+                        } else {
+                            emptyBookState
+                        }
                     }
+                    .macContentButtonStyle()
                 }
+                // Mac: the split view's sidebar button gets the normal round toolbar look
+                .macToolbarButtonStyle()
                 .onAppear {
                     guard selectedCountry == nil, !showingCampusPage else { return }
                     // Open on a page with stamps, not on the alphabetically first country
@@ -105,7 +111,7 @@ struct PassportGalleryView: View {
                     .navigationBarTitleDisplayMode(.inline)
                     .background(pageBackground)
                     .toolbar {
-                        ToolbarItem(placement: .navigationBarLeading) {
+                        AppToolbarItem(placement: .navigationBarLeading) {
                             Button {
                                 showingShareCard = true
                             } label: {
@@ -114,7 +120,7 @@ struct PassportGalleryView: View {
                             }
                             .accessibilityLabel("Share Passport")
                         }
-                        ToolbarItem(placement: .confirmationAction) {
+                        AppToolbarItem(placement: .confirmationAction) {
                             Button("Done") { dismiss() }
                                 .closesWithCommandW()
                                 .fontWeight(highContrast ? .black : .bold)
@@ -316,7 +322,7 @@ private extension PassportGalleryView {
         }
         .background(pageBackground)
         .toolbar {
-            ToolbarItem(placement: .confirmationAction) {
+            AppToolbarItem(placement: .confirmationAction) {
                 Button("Done") { dismiss() }
                     .fontWeight(highContrast ? .black : .bold)
                     .foregroundColor(brandColor)
@@ -711,7 +717,7 @@ struct ZoomedStampView: View {
             .navigationTitle(city.name)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
+                AppToolbarItem(placement: .confirmationAction) {
                     Button("Close") { dismiss() }
                         .fontWeight(passedHighContrast ? .black : .bold)
                         .foregroundColor(adaptiveFg)

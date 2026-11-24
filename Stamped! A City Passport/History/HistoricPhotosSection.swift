@@ -191,7 +191,7 @@ struct HistoricImageViewer: View {
             .navigationTitle(buildingName)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
+                AppToolbarItem(placement: .confirmationAction) {
                     Button("Done") { dismiss() }
                 }
             }

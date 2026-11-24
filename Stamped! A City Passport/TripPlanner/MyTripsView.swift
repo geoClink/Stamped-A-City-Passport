@@ -44,19 +44,25 @@ struct MyTripsView: View {
     var body: some View {
         NavigationSplitView(columnVisibility: $columnVisibility, preferredCompactColumn: $compactColumn) {
             tripList
+                .macContentButtonStyle()
         } detail: {
-            if let selectedTripID, let trip = store.trip(withID: selectedTripID) {
-                tripDetail(trip)
-                    // A fresh view per trip, so edit mode and sheets don't carry over
-                    .id(selectedTripID)
-            } else {
-                ContentUnavailableView(
-                    "No Trip Selected",
-                    systemImage: "map",
-                    description: Text("Pick a trip or plan a new one anywhere.")
-                )
+            Group {
+                if let selectedTripID, let trip = store.trip(withID: selectedTripID) {
+                    tripDetail(trip)
+                        // A fresh view per trip, so edit mode and sheets don't carry over
+                        .id(selectedTripID)
+                } else {
+                    ContentUnavailableView(
+                        "No Trip Selected",
+                        systemImage: "map",
+                        description: Text("Pick a trip or plan a new one anywhere.")
+                    )
+                }
             }
+            .macContentButtonStyle()
         }
+        // Mac: the split view's sidebar button gets the normal round toolbar look
+        .macToolbarButtonStyle()
         .navigationSplitViewStyle(.balanced)
         .tint(DS.Palette.accent)
         .sheet(isPresented: $showingAreaSearch) {
@@ -135,12 +141,12 @@ struct MyTripsView: View {
             #if !os(macOS)
             // On the Mac My Trips is its own window, closed with the window's close button
             // Trailing, like the other modals' Done buttons
-            ToolbarItem(placement: .confirmationAction) {
+            AppToolbarItem(placement: .confirmationAction) {
                 Button("Done") { dismiss() }
                     .closesWithCommandW()
             }
             #endif
-            ToolbarItem(placement: .primaryAction) {
+            AppToolbarItem(placement: .primaryAction) {
                 Button {
                     showingAreaSearch = true
                 } label: {

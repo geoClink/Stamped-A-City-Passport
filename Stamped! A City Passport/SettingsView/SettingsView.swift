@@ -58,7 +58,7 @@ private extension SettingsView {
             .navigationTitle(L.Settings.title)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
+                AppToolbarItem(placement: .navigationBarLeading) {
                     Button { dismiss() } label: {
                         Image(systemName: "chevron.left")
                             .fontWeight(viewModel.highContrast ? .black : .medium)
@@ -97,15 +97,19 @@ private extension SettingsView {
             .toolbar {
                 // "Done" on the trailing side, like the app's other full-screen modals
                 // (.confirmationAction is also where a Mac sheet puts its buttons)
-                ToolbarItem(placement: .confirmationAction) {
+                AppToolbarItem(placement: .confirmationAction) {
                     Button("Done") { dismiss() }
                         .fontWeight(viewModel.highContrast ? .black : .bold)
                         .foregroundColor(viewModel.highContrast ? .primary : DS.Palette.accent)
                 }
             }
+            .macContentButtonStyle()
         } detail: {
             detailView
+                .macContentButtonStyle()
         }
+        // Mac: the split view's sidebar button gets the normal round toolbar look
+        .macToolbarButtonStyle()
         // Tinting the whole split view (not just one section) makes the
         // selected sidebar row brand orange instead of system blue
         .tint(viewModel.highContrast ? .primary : viewModel.brandColor)

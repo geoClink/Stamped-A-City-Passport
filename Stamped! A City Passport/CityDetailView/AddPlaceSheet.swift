@@ -45,7 +45,7 @@ struct AddPlaceSheet: View {
             .navigationTitle("Want to Visit")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
+                AppToolbarItem(placement: .confirmationAction) {
                     Button("Done") { dismiss() }
                 }
             }

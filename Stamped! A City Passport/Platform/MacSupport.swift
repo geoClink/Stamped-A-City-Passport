@@ -43,7 +43,7 @@ struct MacCityWorkspace: View {
             .inspectorColumnWidth(min: 360, ideal: 420, max: 560)
         }
         .toolbar {
-            ToolbarItem(placement: .primaryAction) {
+            AppToolbarItem(placement: .primaryAction) {
                 Button {
                     withAnimation { showingDetails.toggle() }
                 } label: {
