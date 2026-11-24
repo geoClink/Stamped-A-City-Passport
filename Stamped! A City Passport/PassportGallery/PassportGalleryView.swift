@@ -376,6 +376,8 @@ private extension PassportGalleryView {
                         Text(String(format: NSLocalizedString("%d of %d campuses", comment: "Passport header: completed campuses, e.g. 2 of 101 campuses"), stampedCampuses.count, allCampuses.count))
                             .font(.subheadline.weight(.semibold))
                             .foregroundColor(highContrast ? brandColor : .white.opacity(0.85))
+                            // Shrinks a little at the largest text sizes, where it was cut off
+                            .minimumScaleFactor(0.7)
                     }
                 }
                 Spacer(minLength: DS.Space.s)
