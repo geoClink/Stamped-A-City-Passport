@@ -11,7 +11,7 @@ The story text must match AudioStoryPlayer.story(for:) in the app exactly.
     HF_HUB_OFFLINE=1 .venv/bin/python -I record.py --city Paris  # one city
     ... --shard 0/2 and --shard 1/2 in two terminals to go twice as fast
 """
-import argparse, hashlib, json, os, subprocess, sys, tempfile, time
+import argparse, hashlib, json, os, re, subprocess, sys, tempfile, time
 from pathlib import Path
 
 HERE = Path(__file__).parent
@@ -45,8 +45,9 @@ def sha(text):
 
 def for_speech(text, fixes):
     # Spoken spellings for names Kokoro gets wrong; changes only the audio, not the hash
+    # Whole words only, so a fix for "POST" leaves "POSTECH" alone
     for written, spoken in fixes.items():
-        text = text.replace(written, spoken)
+        text = re.sub(r"(?<!\w)" + re.escape(written) + r"(?!\w)", spoken, text)
     return text
 
 

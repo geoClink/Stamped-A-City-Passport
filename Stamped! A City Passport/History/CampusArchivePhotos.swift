@@ -8,6 +8,10 @@
 //  Detroit Public Library (Burton Historical Collection) approved these 22 Detroit photos
 //  on 2026-11-20, for as long as the app is available, credited by collection and linked
 //  to each item's page (docs/detroit-public-library/). DPL takes no responsibility for copyright.
+//  Wayne State's Walter P. Reuther Library allowed this web-resolution Old Main photo (Wayne State
+//  University Photograph Collection) on 2026-11-24, through updates while the app is free, credited
+//  and linked to its page on their CONTENTdm platform (docs/reuther-library/). Freer House and the
+//  Hilberry Theatre are in collections Molly handles; they wait for her answer.
 //  Cleveland Public Library neither grants nor denies permission for its Digital Gallery and
 //  asks only for a credit; these 5 were published before 1931 (docs/archive-outreach/).
 //  The New York Public Library marks these 4 "No Copyright - United States" (public domain)
@@ -515,6 +519,20 @@ nonisolated enum CampusArchivePhotos {
         "cle-14": cpl(2009, "Federal Building and Post Office, 1911"),
     ]
 
+    static let reutherCredit = "Walter P. Reuther Library, Archives of Labor and Urban Affairs, Wayne State University"
+
+    /// A Reuther Library photo, linked to its own page on wayne.contentdm.oclc.org
+    private static func reuther(_ id: String, collection: String, record: Int, _ caption: String) -> [Entry] {
+        [Entry(file: "rl_\(id)", caption: caption, credit: reutherCredit,
+               link: URL(string: "https://wayne.contentdm.oclc.org/digital/collection/\(collection)/id/\(record)")!)]
+    }
+
+    /// Wayne State building ID → its permitted photo
+    private static let wayneState: [String: [Entry]] = [
+        "campus_wayne_old_main": reuther("26188", collection: "wsu-buildings", record: 1127,
+                                         "Old Main, Wayne State University, circa 1950s"),
+    ]
+
     /// Building ID → its approved Detroit Public Library photo
     private static let detroit: [String: [Entry]] = [
         "detroit_first_national": dpl("bh010122", node: 47566, "First National Bank building during construction"),
@@ -920,7 +938,7 @@ nonisolated enum CampusArchivePhotos {
 
     /// Every bundled source, oldest partnership first: a landmark's photos show in this order
     private static var allSources: [[String: [Entry]]] {
-        [msu, detroit, cleveland, newYork, paris, europe, commonsPhotos, photochrom, getty, worldPhotos, morePhotos]
+        [msu, detroit, wayneState, cleveland, newYork, paris, europe, commonsPhotos, photochrom, getty, worldPhotos, morePhotos]
     }
 
     /// The bundled photos for a building, or none
@@ -946,6 +964,8 @@ nonisolated enum CampusArchivePhotos {
     static var buildingCount: Int { msu.count }
     /// How many Detroit landmarks have bundled photos (for tests)
     static var detroitBuildingCount: Int { detroit.count }
+    /// How many Wayne State buildings have a bundled Reuther Library photo (for tests)
+    static var wayneStateBuildingCount: Int { wayneState.count }
     /// How many Cleveland landmarks have bundled photos (for tests)
     static var clevelandBuildingCount: Int { cleveland.count }
     /// How many New York landmarks have bundled photos (for tests)
