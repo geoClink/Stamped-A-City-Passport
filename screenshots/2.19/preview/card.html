@@ -1,0 +1,58 @@
+<!doctype html>
+<!-- Background frames for the 2.19 App Preview videos (same 2.18 look as the stills).
+     make_preview.mjs opens this with ?spec=<json> and saves a PNG; ffmpeg then lays the app footage
+     on top inside the footage box (mode "band"), or shows the PNG on its own (mode "end").
+     Spec: { mode: "band"|"end", locale, scale: 1 (1920x1080) or 2 (3840x2160), h, sub, icon } -->
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter:wght@400..700&display=block" rel="stylesheet">
+<style>
+  :root{--base:#F2743F;--base2:#c4430d;--glow:#ffb08a;--accent:#fff1e2;--ink:#28140b}
+  html,body{margin:0;overflow:hidden}
+  .slide{position:relative;overflow:hidden;width:1920px;height:1080px;transform-origin:0 0;
+    background:radial-gradient(60% 80% at 50% 60%,color-mix(in srgb,var(--glow) 55%,transparent),transparent 70%),
+               linear-gradient(170deg,var(--base),var(--base2))}
+  .h{font-family:"Bricolage Grotesque",var(--cjk);font-weight:800;font-variation-settings:"opsz" 96;
+     letter-spacing:-.045em;color:#fff;white-space:nowrap;line-height:1.1}
+  .h em{font-style:normal;display:inline-block;background:var(--accent);color:var(--ink);
+     padding:0 .14em .06em;border-radius:.18em;transform:rotate(-2.5deg);margin-left:.08em}
+  .cjk .h{letter-spacing:0}
+  .band .h{position:absolute;left:0;right:0;top:70px;text-align:center;font-size:96px}
+  /* The footage box: ffmpeg puts the app recording here (240,250 1440x810 at 1920x1080) */
+  .box{position:absolute;left:240px;top:250px;width:1440px;height:810px;border-radius:22px;background:#3a1606;
+       box-shadow:0 40px 80px -20px rgba(70,18,0,.6)}
+  .end{display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .end img{width:260px;height:260px;border-radius:58px;box-shadow:0 30px 60px -15px rgba(70,18,0,.6)}
+  .end .name{font-family:"Bricolage Grotesque";font-weight:800;font-size:110px;color:#fff;margin-top:50px;letter-spacing:-.04em}
+  .end .h{font-size:72px;margin-top:24px}
+</style></head><body>
+<div class="slide" id="slide"></div>
+<script>
+const spec = JSON.parse(new URLSearchParams(location.search).get('spec'));
+const cjkFonts = { ja: '"Hiragino Kaku Gothic StdN","Hiragino Sans"', ko: '"Apple SD Gothic Neo"', 'zh-Hans': '"PingFang SC","Hiragino Sans GB"' };
+const isCJK = spec.locale in cjkFonts;
+document.documentElement.style.setProperty('--cjk', (cjkFonts[spec.locale] || '') + (isCJK ? ',' : '') + 'sans-serif');
+if (isCJK) document.body.classList.add('cjk');
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+// *chip* -> <em>chip</em>, all on one line
+const headline = s => esc(s).replace(/\*(.+?)\*/, '<em>$1</em>');
+const slide = document.getElementById('slide');
+slide.classList.add(spec.mode);
+if (spec.mode === 'band') {
+  slide.innerHTML = `<div class="h" id="h"><span id="t">${headline(spec.h)}</span></div><div class="box"></div>`;
+} else {
+  slide.innerHTML = `<img src="${spec.icon}"><div class="name">Stamped!</div><div class="h" id="h"><span id="t">${headline(spec.h)}</span></div>`;
+}
+slide.style.transform = `scale(${spec.scale || 1})`;
+// The scaled slide needs a page that big too, or the screenshot shows white below 1080
+Object.assign(document.body.style, { width: 1920 * (spec.scale || 1) + 'px', height: 1080 * (spec.scale || 1) + 'px' });
+(async () => {
+  await document.fonts.ready;
+  await Promise.all([...document.images].map(i => i.decode().catch(() => {})));
+  // Shrink the one-line headline until it fits the width
+  // (offsetWidth ignores the scale transform, so this measures in 1920-wide units)
+  const h = document.getElementById('h'), t = document.getElementById('t');
+  let size = parseFloat(getComputedStyle(h).fontSize);
+  while (t.offsetWidth > 1760 && size > 40) { size -= 2; h.style.fontSize = size + 'px'; }
+  document.body.dataset.ready = 1;
+})();
+</script></body></html>
