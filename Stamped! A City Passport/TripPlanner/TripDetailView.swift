@@ -139,7 +139,7 @@ struct TripDetailView: View {
         .navigationTitle(trip.name)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            ToolbarItemGroup(placement: .primaryAction) {
+            AppToolbarItemGroup(placement: .primaryAction) {
                 EditButton()
                 Menu {
                     Button {

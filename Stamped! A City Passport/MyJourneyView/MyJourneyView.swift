@@ -107,7 +107,7 @@ struct MyJourneyView: View {
             #if !os(macOS)
             // On the Mac this is its own window, closed with the window's close button
             .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
+                AppToolbarItem(placement: .confirmationAction) {
                     Button("Done") { dismiss() }
                         .closesWithCommandW()
                         .fontWeight(.semibold)

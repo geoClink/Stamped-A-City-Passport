@@ -63,7 +63,7 @@ struct QuizView: View {
                 // On the Mac the quiz is its own window, closed with the window's close button
                 .toolbar {
                     // Trailing, like the other modals' Done buttons
-                    ToolbarItem(placement: .confirmationAction) {
+                    AppToolbarItem(placement: .confirmationAction) {
                         Button("Exit") { dismiss() }
                             .closesWithCommandW()
                             .fontWeight(isHighContrast ? .black : .bold)

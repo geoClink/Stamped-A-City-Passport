@@ -164,6 +164,9 @@ struct CityListView: View {
                 searchResults = viewModel.filteredResults(query: searchText)
                 searchedText = searchText
             }
+            // Mac: the sidebar's own buttons skip the gray bezel; applied here, under the
+            // toolbar, so the Settings and sidebar buttons keep the normal toolbar look
+            .macContentButtonStyle()
             .toolbar { sidebarToolbar }
             #if os(macOS)
             .navigationSplitViewColumnWidth(min: 280, ideal: 340, max: 460)
@@ -196,7 +199,10 @@ struct CityListView: View {
                     welcomePlaceholder
                 }
             }
+            .macContentButtonStyle()
         }
+        // Mac: the sidebar toggle the split view adds gets the normal round toolbar button
+        .macToolbarButtonStyle()
         .accentColor(brandColor)
         .fullScreenCover(isPresented: $showingSettings) { SettingsView() }
         #if os(macOS)

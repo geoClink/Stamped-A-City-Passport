@@ -81,7 +81,7 @@ struct AddTripStopSheet: View {
             .navigationTitle("Add Stops")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
+                AppToolbarItem(placement: .confirmationAction) {
                     Button("Done") { dismiss() }
                         .closesWithCommandW()
                 }

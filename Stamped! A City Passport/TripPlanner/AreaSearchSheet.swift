@@ -78,7 +78,7 @@ struct AreaSearchSheet: View {
             .navigationTitle("New Trip Anywhere")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
+                AppToolbarItem(placement: .cancellationAction) {
                     Button("Cancel") { dismiss() }
                 }
             }

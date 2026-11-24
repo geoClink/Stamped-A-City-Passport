@@ -73,10 +73,10 @@ struct CollegeRoadTripSheet: View {
             .navigationTitle(NSLocalizedString("College Road Trip", comment: "Trip planner: place label for a trip that visits several campuses"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
+                AppToolbarItem(placement: .cancellationAction) {
                     Button(NSLocalizedString("Cancel", comment: "College road trip planner: closes without making a trip")) { dismiss() }
                 }
-                ToolbarItem(placement: .confirmationAction) {
+                AppToolbarItem(placement: .confirmationAction) {
                     Button(alreadyMade
                            ? NSLocalizedString("Open", comment: "College road trip planner: opens the road trip already made for these schools")
                            : NSLocalizedString("Create", comment: "College road trip planner: makes the road trip")) {

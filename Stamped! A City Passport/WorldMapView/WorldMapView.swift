@@ -86,7 +86,7 @@ struct WorldMapView: View {
             #if !os(macOS)
             // On the Mac the map is its own window, closed with the window's close button
             .toolbar {
-                ToolbarItem(placement: .closeSheet) {
+                AppToolbarItem(placement: .closeSheet) {
                     Button("Done") { dismiss() }
                         .closesWithCommandW()
                         .fontWeight(.semibold)
@@ -118,7 +118,7 @@ struct WorldMapView: View {
             #if os(iOS)
             // Full screen can't be swiped away, so it needs a way back to the map
             .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
+                AppToolbarItem(placement: .topBarLeading) {
                     Button("Done") { cityDetailToShow = nil }
                         .fontWeight(.semibold)
                         .foregroundStyle(DS.Palette.accent)

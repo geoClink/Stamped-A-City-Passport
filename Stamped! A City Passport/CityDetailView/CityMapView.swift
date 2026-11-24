@@ -778,7 +778,7 @@ struct CityMapView: View {
     private var toolbarContent: some ToolbarContent {
         // Swiping down pans the map instead of closing it, so every device gets a Done button
         if showsDoneButton {
-            ToolbarItem(placement: .cancellationAction) {
+            AppToolbarItem(placement: .cancellationAction) {
                 Button("Done") {
                     stopTour()
                     dismiss()
@@ -787,7 +787,7 @@ struct CityMapView: View {
             }
         }
         // Filters, Add a Place and the satellite switch share one menu, so the title has room
-        ToolbarItem(placement: .topBarTrailing) {
+        AppToolbarItem(placement: .topBarTrailing) {
             Menu {
                 Picker("Show", selection: $filter) {
                     ForEach(availableFilters) { option in
@@ -831,7 +831,7 @@ struct CityMapView: View {
             .accessibilityValue(filter == .all && styleFilter == nil ? Text(verbatim: "") : Text("Filter on"))
             .accessibilityHint("Filter landmarks, switch to satellite view or add a place")
         }
-        ToolbarItem(placement: .topBarTrailing) {
+        AppToolbarItem(placement: .topBarTrailing) {
             if isTouring {
                 Button {
                     stopTour()

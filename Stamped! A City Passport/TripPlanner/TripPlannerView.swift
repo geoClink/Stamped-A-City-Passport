@@ -40,21 +40,27 @@ struct TripPlannerView: View {
     var body: some View {
         NavigationSplitView(columnVisibility: $columnVisibility, preferredCompactColumn: $compactColumn) {
             tripList
+                .macContentButtonStyle()
         } detail: {
-            if let selectedTripID {
-                TripDetailView(tripID: selectedTripID, viewModel: viewModel)
-                    // A fresh view per trip, so edit mode and sheets don't carry over
-                    .id(selectedTripID)
-            } else if cityTrips.isEmpty && showsEmptyStateInDetail {
-                emptyState
-            } else {
-                ContentUnavailableView(
-                    "No Trip Selected",
-                    systemImage: "map",
-                    description: Text("Pick a trip or create a new one.")
-                )
+            Group {
+                if let selectedTripID {
+                    TripDetailView(tripID: selectedTripID, viewModel: viewModel)
+                        // A fresh view per trip, so edit mode and sheets don't carry over
+                        .id(selectedTripID)
+                } else if cityTrips.isEmpty && showsEmptyStateInDetail {
+                    emptyState
+                } else {
+                    ContentUnavailableView(
+                        "No Trip Selected",
+                        systemImage: "map",
+                        description: Text("Pick a trip or create a new one.")
+                    )
+                }
             }
+            .macContentButtonStyle()
         }
+        // Mac: the split view's sidebar button gets the normal round toolbar look
+        .macToolbarButtonStyle()
         .navigationSplitViewStyle(.balanced)
         .tint(DS.Palette.accent)
         .alert("New Trip", isPresented: $showingNewTrip) {
@@ -111,12 +117,12 @@ struct TripPlannerView: View {
         .toolbar {
             #if !os(macOS)
             // On the Mac the planner is its own window, closed with the window's close button
-            ToolbarItem(placement: .confirmationAction) {
+            AppToolbarItem(placement: .confirmationAction) {
                 Button("Done") { dismiss() }
                     .closesWithCommandW()
             }
             #endif
-            ToolbarItem(placement: .primaryAction) {
+            AppToolbarItem(placement: .primaryAction) {
                 Button {
                     promptNewTrip()
                 } label: {
