@@ -4,12 +4,12 @@
     "airportInfo": "La enorme Terminal A presenta un diseño distintivo en forma de X que reduce significativamente los tiempos de caminata para los pasajeros en tránsito. Su techo ondulado está inspirado en las dunas de arena del desierto, y el interior puede albergar hasta 45 millones de viajeros al año con tecnología biométrica ultramoderna.",
     "airportName": "Zayed International",
     "currencyCode": "AED",
-    "currencyInfo": "UAE Dirham (د.إ)",
+    "currencyInfo": "Dírham de los Emiratos Árabes Unidos (د.إ)",
     "funFact": "La leyenda dice que la ciudad fue fundada después de que una gacela condujera a una tribu errante hacia aguas dulces en una isla. Hoy en día, se ha transformado en una potencia cultural que equilibra su herencia beduina con monumentos futuristas como el Louvre Abu Dhabi y la Gran Mezquita Sheikh Zayed.",
     "language": "árabe e inglés",
     "languageInfo": "Si bien el árabe es el idioma oficial, el inglés es el principal puente para la gran población de expatriados de la ciudad. Descubrirá que las señales comerciales y viales son casi universalmente bilingües.",
-    "nickname": "Land of the Gazelle",
-    "transportation": "ART & Buses",
+    "nickname": "La Tierra de la Gacela",
+    "transportation": "ART y autobuses",
     "transportationFact": "Abu Dabi utiliza vehículos de alta tecnología sin raíles, los 'Automated Rapid Transit' (ART), que parecen una mezcla entre autobús y tren. Toda la red de autobuses de la ciudad cuenta con aire acondicionado y dispone de marquesinas de espera especiales que protegen a los pasajeros del calor. Los autobuses regionales ofrecen además una conexión de alta frecuencia con la vecina ciudad de Dubái."
   },
   "Accra": {
@@ -35,7 +35,7 @@
     "language": "Amárico",
     "languageInfo": "El amárico es el idioma oficial de Etiopía, escrito en el guion Geʿez, uno de los pocos sistemas de escritura originales aún en uso activo. Etiopía tiene más de 80 idiomas. El café se originó aquí, y la ceremonia del café es una parte central de la cultura social.",
     "nickname": "La Nueva Flor",
-    "transportation": "TLR y Minibúses",
+    "transportation": "LRT y minibuses",
     "transportationFact": "Addis Abeba opera el primer sistema moderno de Tránsito Rápido en Tren (LRT) de África. Los minibúses azules y blancos (llamados \"burros azules\" por los locales) son el principal transporte público."
   },
   "Amman": {
@@ -61,7 +61,7 @@
     "language": "Neerlandés",
     "languageInfo": "El holandés es el idioma oficial, pero Ámsterdam cuenta con el mayor dominio del inglés como segunda lengua del mundo. Los visitantes descubrirán que casi todos los residentes hablan un inglés impecable en el momento en que son recibidos.",
     "nickname": "Venecia del Norte",
-    "transportation": "GVB Trams",
+    "transportation": "Tranvías GVB",
     "transportationFact": "El centro histórico de Ámsterdam cuenta principalmente con una extensa red de tranvías GVB azules y blancos. La ciudad es mundialmente famosa por tener más bicicletas que residentes, con senderos exclusivos que cubren casi todas las calles. Los ferries detrás de la Estación Central brindan tránsito gratuito a través del río IJ para peatones y ciclistas."
   },
   "Antwerp": {
@@ -69,7 +69,7 @@
     "airportInfo": "El aeropuerto propio de Amberes, Antwerp International, es un pequeño aeródromo a unos 5 km al sur de la ciudad, por lo que la mayoría de los visitantes vuela al aeropuerto de Bruselas, en Zaventem, el principal centro internacional de Bélgica. Desde 2012, la línea ferroviaria Diabolo une directamente el aeropuerto con Malinas y Amberes.",
     "airportName": "Brussels Airport",
     "currencyCode": "EUR",
-    "currencyInfo": "euros (€)",
+    "currencyInfo": "Euro (€)",
     "funFact": "Según la leyenda, el nombre de la ciudad viene de «lanzar la mano»: el héroe Silvio Brabo cortó la mano de un gigante cruel y la arrojó al Escalda. Amberes es además el centro del comercio mundial de diamantes: cerca del 85 % de los diamantes en bruto del mundo pasa cada año por su barrio de los diamantes.",
     "language": "neerlandés",
     "languageInfo": "El neerlandés es la lengua oficial de Amberes, situada en la región belga de Flandes, y también se oye el dialecto local amberino. A los habitantes de Amberes se les apoda «Sinjoren», del español «señor», un recuerdo de los nobles españoles que gobernaron la ciudad en el siglo XVII.",
@@ -99,8 +99,8 @@
     "funFact": "Atenas es una de las ciudades más antiguas del mundo, con una historia documentada de más de 3.400 años. Es la cuna de la democracia, de la filosofía occidental y de los Juegos Olímpicos. La Acrópolis, coronada por el Partenón, domina la ciudad desde hace casi 2.500 años y sigue siendo uno de los monumentos más reconocibles de la Tierra.",
     "language": "Griego",
     "languageInfo": "El griego es una de las lenguas documentadas más antiguas del mundo, con una historia escrita de más de 3.000 años. Aunque el griego moderno difiere de su forma antigua, muchas palabras cotidianas proceden directamente de raíces clásicas. La mayoría de las personas del centro de Atenas y del sector turístico hablan inglés.",
-    "nickname": "The Cradle of Civilization",
-    "transportation": "Metro & Bus",
+    "nickname": "La Cuna de la Civilización",
+    "transportation": "Metro y autobús",
     "transportationFact": "Atenas cuenta con un moderno metro de tres líneas que conecta el aeropuerto directamente con el centro de la ciudad y con el puerto del Pireo. Varias estaciones funcionan como museos subterráneos, con objetos antiguos descubiertos durante las obras expuestos tras vitrinas en los andenes. Los históricos trolebuses amarillos recorren el centro de la ciudad desde la década de 1940."
   },
   "Atlanta": {
@@ -126,7 +126,7 @@
     "language": "Inglés y maorí",
     "languageInfo": "El inglés es el idioma principal, pero verá una fuerte y orgullosa influencia de Te Reo Māori en los nombres de los lugares y los saludos diarios. La mayoría de las comunicaciones y carteles oficiales son bilingües para honrar la herencia indígena del país.",
     "nickname": "ciudad de velas",
-    "transportation": "Britomart & AT Metro",
+    "transportation": "Britomart y AT Metro",
     "transportationFact": "Britomart es un importante centro de tránsito y sirve como la única estación ferroviaria subterránea diésel del mundo. AT Metro opera una flota de trenes eléctricos que conectan los suburbios del sur, oeste y este con el centro de la ciudad. La extensa red de ferry de Auckland es un vínculo vital para los residentes que viven en la costa norte y la isla Waiheke."
   },
   "Austin": {
@@ -164,7 +164,7 @@
     "funFact": "Durante el bombardeo británico de Fort McHenry en septiembre de 1814, ver la bandera estadounidense todavía ondeando al amanecer inspiró a Francis Scott Key a escribir el poema que se convirtió en 'The Star-Spangled Banner', el himno nacional de EE. UU. La ciudad también tiene la primera catedral católica construida en Estados Unidos tras la independencia.",
     "language": "Inglés",
     "languageInfo": "El inglés se habla en todas partes y a los locales les encantan los apodos de su ciudad. A Baltimore se la llama 'Charm City' o, abreviado, 'B'more', mientras que el antiguo apodo 'Mobtown' recuerda su turbulento pasado del siglo XIX.",
-    "nickname": "Charm City",
+    "nickname": "La Ciudad Encantadora",
     "transportation": "Light RailLink",
     "transportationFact": "La Maryland Transit Administration opera el Light RailLink y el Metro SubwayLink, además de una red de autobuses BaltimoreLink. Los autobuses gratuitos del Charm City Circulator recorren el centro y llegan a lugares como Fells Point, Federal Hill y Fort McHenry. La estación Baltimore Penn conecta la ciudad con el Corredor Noreste de Amtrak."
   },
@@ -186,7 +186,7 @@
     "airportInfo": "El aeropuerto cuenta con la impresionante Terminal 1, una brillante estructura con paredes de vidrio diseñada por el arquitecto Ricardo Bofill para maximizar la luz natural del Mediterráneo. Está constantemente clasificado como uno de los aeropuertos más eficientes de Europa y ofrece a los viajeros vistas panorámicas del mar a su llegada o salida.",
     "airportName": "El Prat",
     "currencyCode": "EUR",
-    "currencyInfo": "euros (€)",
+    "currencyInfo": "Euro (€)",
     "funFact": "La Sagrada Familia, la obra maestra inacabada de Antoni Gaudí, lleva más de 140 años en construcción, más tiempo del que llevó construir las Grandes Pirámides. La ciudad también es única por su distrito del Eixample, diseñado en un estricto patrón de cuadrícula con esquinas biseladas para permitir más luz solar y un mejor flujo de aire.",
     "language": "español y catalán",
     "languageInfo": "Barcelona es una ciudad bilingüe donde el catalán es la lengua principal de identidad y administración junto con el español. Si bien todos entienden el español, verá todos los carteles y anuncios públicos en ambos idiomas.",
@@ -212,13 +212,13 @@
     "airportInfo": "Si bien Bath no tiene su propio aeropuerto, la mayoría de los visitantes llegan a través del aeropuerto de Bristol o en un tren de alta velocidad desde London Paddington, que llega a la histórica estación Bath Spa, diseñada por el legendario ingeniero Isambard Kingdom Brunel.",
     "airportName": "Bristol Airport",
     "currencyCode": "GBP",
-    "currencyInfo": "Libra británica (£)",
+    "currencyInfo": "Libra esterlina (£)",
     "funFact": "Bath es la única ciudad del Reino Unido designada en su totalidad como Patrimonio de la Humanidad por la UNESCO. Es mundialmente famoso por sus baños romanos, su impresionante arquitectura georgiana de color miel como el Royal Crescent y su profunda asociación con la autora Jane Austen, quien vivió y escribió aquí.",
     "language": "inglés británico",
     "languageInfo": "El acento local es un tono suave del \"West Country\", caracterizado por suaves sonidos de \"r\" y un ritmo rítmico. Si bien es moderna y cosmopolita, la ciudad conserva un tono educado y sofisticado que refleja su historia como centro turístico social del siglo XVIII.",
     "nickname": "La Ciudad Romana",
-    "transportation": "Primer autobús / Bath Park & ​​Ride",
-    "transportationFact": "El centro de la ciudad es muy transitable y en su mayoría peatonal. Para llegar a las afueras, la amplia red de autobuses y el sistema 'Park & ​​Ride' son los principales modos de transporte, ya que conducir por las calles estrechas e históricas puede ser un desafío."
+    "transportation": "First Bus / Park & Ride de Bath",
+    "transportationFact": "El centro de la ciudad es muy transitable y en su mayoría peatonal. Para llegar a las afueras, la amplia red de autobuses y el sistema 'Park & Ride' son los principales modos de transporte, ya que conducir por las calles estrechas e históricas puede ser un desafío."
   },
   "Beijing": {
     "airportCode": "PKX",
@@ -238,7 +238,7 @@
     "airportInfo": "La terminal más nueva del aeropuerto está diseñada como una 'Terminal en un jardín', con enormes jardines colgantes y estructuras de bambú sustentables en todo el interior. Su objetivo es reflejar el patrimonio botánico de la ciudad, creando un ambiente tranquilo que utiliza luz natural y exuberante vegetación para calmar a los viajeros.",
     "airportName": "Kempegowda Int'l",
     "currencyCode": "INR",
-    "currencyInfo": "Rupia india ($)",
+    "currencyInfo": "Rupia india (₹)",
     "funFact": "Bengaluru fue la primera ciudad de Asia en introducir farolas eléctricas en 1905, mucho antes que muchas otras capitales del mundo. Hoy en día, es conocida como la \"Ciudad Jardín\" por sus extensos parques y el \"Silicon Valley de la India\" por su papel como centro tecnológico y de startups líder del país.",
     "language": "Canarés e inglés",
     "languageInfo": "El kannada es el idioma local, pero el estatus de Bengaluru como centro tecnológico global hace que el inglés sea el idioma principal de trabajo y de la vida diaria para muchos. Es una verdadera ciudad políglota donde muchos residentes cambian sin esfuerzo entre cuatro o cinco idiomas diferentes.",
@@ -251,7 +251,7 @@
     "airportInfo": "El tan esperado aeropuerto de Brandeburgo presenta un diseño minimalista \"estilo Bauhaus\" que se centra en líneas limpias y eficiencia funcional. La sala principal de la terminal está enmarcada por una enorme fachada de vidrio y detalles en madera de nogal, creando una puerta de entrada moderna que finalmente unificó todo el tráfico aéreo de Berlín bajo un mismo techo.",
     "airportName": "Berlin Brandenburg",
     "currencyCode": "EUR",
-    "currencyInfo": "euros (€)",
+    "currencyInfo": "Euro (€)",
     "funFact": "A pesar de su ubicación en el interior, Berlín tiene más puentes que Venecia: más de 1.700 tramos cruzan sus distintos ríos y canales. Es una ciudad que lleva su historia en la manga, donde los restos del Muro de Berlín se erigen como un poderoso monumento a su división y eventual reunificación a mediados de siglo.",
     "language": "Alemán",
     "languageInfo": "El alemán es el idioma oficial, aunque la población internacional de Berlín la convierte en una ciudad muy amigable con el inglés. Los lugareños son conocidos por el 'Berliner Schnauze', una forma directa y a menudo contundente de hablar que refleja el carácter valiente y honesto de la ciudad.",
@@ -264,7 +264,7 @@
     "airportInfo": "El aeropuerto de Bilbao se encuentra a unos 9 km al norte de la ciudad, en Loiu, y es el de mayor tráfico del País Vasco y de todo el norte de España. Su terminal principal, inaugurada en 2000, fue diseñada por Santiago Calatrava y es un hito arquitectónico por sí misma. El metro aún no llega al aeropuerto, aunque está prevista una prolongación de la Línea 3.",
     "airportName": "Bilbao Airport",
     "currencyCode": "EUR",
-    "currencyInfo": "euros (€)",
+    "currencyInfo": "Euro (€)",
     "funFact": "Bilbao fue fundada en 1300 mediante una carta puebla otorgada por Diego López V de Haro, señor de Vizcaya. La apertura del Museo Guggenheim en 1997 desencadenó una transformación urbana tan espectacular que urbanistas de todo el mundo hablan hoy del «efecto Bilbao». Los vecinos llaman cariñosamente a su ciudad «el Botxo» —«el agujero»— porque se asienta en un valle rodeado de montañas.",
     "language": "español y euskera",
     "languageInfo": "El español es la lengua más hablada en Bilbao, seguida del euskera, cooficial en todo el País Vasco. Según el Ayuntamiento, al menos la mitad de los vecinos habla algo de euskera, y las escuelas ofrecen modelos de enseñanza bilingüe. Los nombres en euskera aparecen por todas partes, desde las placas de las calles hasta lugares emblemáticos como Azkuna Zentroa o Isozaki Atea.",
@@ -277,11 +277,11 @@
     "airportInfo": "El Aeropuerto Internacional El Dorado, cuyo nombre evoca la legendaria ciudad de oro que buscaban los conquistadores españoles, es el principal centro de aviación de Colombia y uno de los aeropuertos de carga con más tráfico de América Latina. Su Terminal 1, renovada en 2015, presenta un diseño amplio y envolvente que ha obtenido reconocimiento internacional en arquitectura. El aeropuerto está a gran altitud, lo que afecta al rendimiento de los aviones y contribuye a la singular atmósfera brumosa de las llegadas a Bogotá.",
     "airportName": "El Dorado International Airport",
     "currencyCode": "COP",
-    "currencyInfo": "Colombian Peso ($)",
+    "currencyInfo": "Peso colombiano ($)",
     "funFact": "Bogotá se encuentra a 2.600 metros sobre el nivel del mar, lo que la convierte en una de las capitales más altas del mundo; la altitud puede sorprender a los visitantes con una leve falta de aliento al llegar. La ciudad ha vivido una notable transformación urbana desde principios de la década de 2000 y ha puesto en marcha una ciclovía de fama mundial: cada domingo, más de 120 km de vías se cierran al tráfico y se abren exclusivamente a ciclistas, corredores y peatones, uno de los mayores eventos sin coches del mundo.",
     "language": "Español",
     "languageInfo": "El español de Bogotá está considerado como uno de los más claros y neutros del mundo hispanohablante, lo que lo hace muy popular entre quienes aprenden español. La tradición intelectual de la ciudad, reflejada en su designación como Ciudad del Libro de la UNESCO y en el apodo de Atenas de Sudamérica, impregna el habla cotidiana, que suele ser formal y elocuente. El español colombiano emplea el usted (tratamiento formal) incluso en contextos informales y familiares, reflejo de una cultura de trato respetuoso.",
-    "nickname": "The Athens of South America",
+    "nickname": "La Atenas Sudamericana",
     "transportation": "TransMilenio BRT",
     "transportationFact": "El TransMilenio de Bogotá es uno de los sistemas de autobús de tránsito rápido (BRT) más grandes y exitosos del mundo, con carriles exclusivos para autobuses y pago de la tarifa antes de subir, lo que le permite trasladar pasajeros por la ciudad a velocidades propias de un metro. Transporta más de 2 millones de pasajeros en un día laborable normal. La red permanente de la ciudad, con 550 km de ciclovías protegidas (la mayor de América Latina), hace de la bicicleta una forma habitual de desplazarse."
   },
@@ -316,12 +316,12 @@
     "airportInfo": "El Aeropuerto de Brisbane es la principal puerta de entrada internacional de Queensland y el tercer aeropuerto con más tráfico de Australia. El servicio ferroviario Airtrain conecta las terminales internacional y nacional con la Central Station de la ciudad en unos 30 minutos, con trenes frecuentes a lo largo del día. El aeropuerto se sitúa en las zonas bajas junto a la bahía, al noreste de la ciudad, y combina tráfico nacional australiano con rutas internacionales hacia el Pacífico, Asia y destinos de largo recorrido.",
     "airportName": "Brisbane Airport",
     "currencyCode": "AUD",
-    "currencyInfo": "Australian Dollar ($)",
+    "currencyInfo": "Dólar australiano ($)",
     "funFact": "Brisbane es la tercera ciudad más grande de Australia y la capital de Queensland, conocido como el Estado del Sol por sus más de 300 días de sol al año. La ciudad se asienta a orillas del río Brisbane y se está transformando rápidamente de cara a los Juegos Olímpicos de Verano de 2032: los proyectos de infraestructura ya están remodelando la ribera, el distrito de South Bank y el barrio de las artes. Brisbane es también la puerta de entrada a los parques temáticos y las playas de la Gold Coast y al interior de la Sunshine Coast.",
     "language": "Inglés",
     "languageInfo": "El inglés australiano se habla aquí con la calidez e informalidad características de Queensland: 'arvo' (tarde), 'servo' (gasolinera) y 'sunnies' (gafas de sol) forman parte del habla cotidiana. Los habitantes de Queensland tienen una cultura especialmente relajada y orientada a la vida al aire libre, moldeada por el clima subtropical. La ciudad cuenta con importantes comunidades de isleños del Pacífico y de origen asiático, reflejo de la creciente diversidad de Queensland.",
     "nickname": "Brisvegas",
-    "transportation": "TransLink Trains & Ferries",
+    "transportation": "Trenes y ferris TransLink",
     "transportationFact": "El transporte público de Brisbane lo gestiona TransLink, que integra tren, autobús y ferri en un único sistema de tarjeta go card. El servicio de ferris City Cat por el río Brisbane es a la vez una ruta práctica para el día a día y una experiencia panorámica: los ferris CityCat y City Hopper hacen parada en los principales distritos ribereños, desde la University of Queensland hasta Hamilton. La red de trenes del sureste de Queensland llega hasta la Gold Coast y la Sunshine Coast. La creciente red ciclista de la ciudad y las bicicletas de alquiler hacen que los paseos junto al río sean una actividad muy popular."
   },
   "Brussels": {
@@ -342,12 +342,12 @@
     "airportInfo": "El Aeropuerto Internacional Ferenc Liszt de Budapest lleva el nombre del compositor más célebre de Hungría. Su terminal Skycourt, inaugurada en 2011, destaca por su característico techo ondulado y es uno de los centros de aviación con más tráfico de Europa Central. El aeropuerto ofrece conexiones directas con más de 100 destinos de Europa y del resto del mundo.",
     "airportName": "Budapest Ferenc Liszt International",
     "currencyCode": "HUF",
-    "currencyInfo": "Hungarian Forint (Ft)",
+    "currencyInfo": "Forinto húngaro (Ft)",
     "funFact": "Budapest se formó en 1873 con la unificación de tres ciudades: Buda, Óbuda y Pest, separadas por el río Danubio. La ciudad es famosa por su cultura de baños termales, con más de 80 manantiales geotérmicos bajo la ciudad que abastecen una red de balnearios históricos. El Parlamento húngaro, terminado en 1904, es el tercer edificio parlamentario más grande del mundo.",
     "language": "Húngaro",
     "languageInfo": "El húngaro (magyar) es una lengua ugrofinesa sin relación con las de sus vecinos europeos, por lo que tiene fama de ser muy difícil de aprender para los extranjeros. Aun así, el inglés está muy extendido entre los budapestinos más jóvenes y en todo el sector turístico. Los habitantes agradecen cualquier intento de decir unas palabras en magyar.",
-    "nickname": "The Pearl of the Danube",
-    "transportation": "BKK Metro & Trams",
+    "nickname": "La Perla del Danubio",
+    "transportation": "Metro y tranvías BKK",
     "transportationFact": "La Línea 1 del metro de Budapest (el Metro del Milenio) es el ferrocarril subterráneo eléctrico más antiguo de la Europa continental: data de 1896 y hoy es Patrimonio de la Humanidad de la UNESCO. La extensa red de tranvías de la ciudad incluye la línea 4-6, una de las líneas de tranvía con más pasajeros del mundo. Una sola tarjeta de transporte BKK sirve para todos los autobuses, tranvías, líneas de metro y trenes suburbanos HÉV."
   },
   "Buenos Aires": {
@@ -355,7 +355,7 @@
     "airportInfo": "Comúnmente conocido como 'Ezeiza', este aeropuerto es el principal centro para viajes internacionales a Argentina y cuenta con comodidades únicas como 'Tango Lounges' para los viajeros. Recientemente se han realizado importantes mejoras en su infraestructura, incluido un nuevo edificio terminal 'Zeppelin' que es una maravilla de la arquitectura moderna de acero y vidrio.",
     "airportName": "Ministro Pistarini",
     "currencyCode": "ARS",
-    "currencyInfo": "Peso Argentino ($)",
+    "currencyInfo": "Peso argentino ($)",
     "funFact": "Buenos Aires es famosa por su gran arquitectura de estilo europeo y la avenida más ancha del mundo, la Avenida 9 de Julio. Es la cuna del Tango, un baile apasionante que aún se puede encontrar interpretado en las históricas calles adoquinadas del barrio de San Telmo.",
     "language": "Español",
     "languageInfo": "La ciudad es conocida por su singular español rioplatense, que presenta una entonación similar a la italiana y el uso de 'vos' en lugar de 'tu'. Es una versión melódica y expresiva del lenguaje que refleja la herencia europea de la ciudad.",
@@ -407,12 +407,12 @@
     "airportInfo": "Votado constantemente como el mejor y más limpio aeropuerto de África, CPT es elogiado por su facilidad de navegación y su amable personal. Ofrece vistas espectaculares de las montañas Hottentots Holland durante el despegue y ha sido reconocido mundialmente por su compromiso con la sostenibilidad ambiental.",
     "airportName": "Cape Town Int'l",
     "currencyCode": "ZAR",
-    "currencyInfo": "South African Rand (R)",
+    "currencyInfo": "Rand sudafricano (R)",
     "funFact": "Ciudad del Cabo está dominada por la majestuosa Table Mountain, cuya antigüedad se estima en 600 millones de años, más que los Andes y el Himalaya. La ciudad es un punto clave de biodiversidad, hogar del singular fynbos y de la famosa colonia de pingüinos de Boulders Beach.",
     "language": "Inglés y afrikáans",
     "languageInfo": "En la ciudad se oye una mezcla melódica de inglés, afrikáans y los rítmicos chasquidos del xhosa. El inglés es la lengua predominante en la administración, en los negocios y entre la mayoría de los visitantes.",
-    "nickname": "The Mother City",
-    "transportation": "MyCiTi Bus",
+    "nickname": "La Ciudad Madre",
+    "transportation": "Autobús MyCiTi",
     "transportationFact": "El sistema de autobuses MyCiTi utiliza carriles exclusivos y estaciones con andenes a nivel, lo que hace que funcione de forma muy parecida a un metro en superficie. Los autobuses de Golden Arrow ofrecen el servicio tradicional de cercanías, que opera en la ciudad desde hace más de 150 años. La Southern Line de Metrorail ofrece un recorrido en tren panorámico a lo largo de la costa hacia la famosa Kalk Bay."
   },
   "Cartagena": {
@@ -420,12 +420,12 @@
     "airportInfo": "El Aeropuerto Internacional Rafael Núñez se encuentra sorprendentemente cerca de la ciudad antigua, a solo unos minutos de las murallas coloniales y de la costa caribeña. Lleva el nombre del presidente colombiano que escribió el himno nacional, y su proximidad al centro histórico hace que la llegada resulte inmediata y llena de ambiente. El aeropuerto gestiona un creciente tráfico turístico y los picos de temporada de los cruceros que atracan en la bahía.",
     "airportName": "Rafael Núñez International Airport",
     "currencyCode": "COP",
-    "currencyInfo": "Colombian Peso ($)",
+    "currencyInfo": "Peso colombiano ($)",
     "funFact": "Cartagena de Indias es Patrimonio de la Humanidad de la UNESCO, y su centro colonial amurallado es uno de los mejor conservados de América. La ciudad fue uno de los principales puertos del imperio colonial español y estaba defendida por el sistema de fortificaciones más extenso de Sudamérica: las murallas tardaron 208 años en completarse. Gabriel García Márquez, el escritor colombiano ganador del Premio Nobel, vivió aquí gran parte de su vida, y el carácter mágico de la ciudad impregna su obra.",
     "language": "Español",
     "languageInfo": "El español de Cartagena tiene una cadencia claramente caribeña, más suave y musical que los acentos de Bogotá o Medellín. Las comunidades afrocolombianas del barrio de Getsemaní mantienen tradiciones culturales como la música de cumbia y el palenquero, una lengua criolla de base española que se habla en el cercano pueblo de San Basilio de Palenque, el primer pueblo africano libre de América.",
     "nickname": "La Ciudad Heróica",
-    "transportation": "Buses & Horse Carriages",
+    "transportation": "Autobuses y coches de caballos",
     "transportationFact": "La ciudad histórica amurallada se recorre mejor a pie: sus calles coloniales están cerradas a la mayoría de los vehículos. Los coches de caballos (coches) son el transporte emblemático de la ciudad antigua y una experiencia turística muy popular, sobre todo de noche, cuando las murallas iluminadas brillan con un tono dorado. Las lanchas rápidas conectan el continente con las Islas del Rosario y la península de Barú. Los taxis y la creciente flota de bicitaxis dan servicio al resto de la ciudad."
   },
   "Casablanca": {
@@ -485,12 +485,12 @@
     "airportInfo": "El Aeropuerto Internacional Tianfu de Chengdu, inaugurado en 2021, es uno de los grandes aeropuertos más nuevos de China y sirve como puerta de entrada al oeste del país. Complementa al antiguo Aeropuerto Shuangliu de Chengdu (CTU), que sigue en funcionamiento. Tianfu es uno de los aeropuertos más grandes de China por superficie y está diseñado para convertirse con el tiempo en un centro mundial que conecte el oeste de China con el resto del mundo.",
     "airportName": "Chengdu Tianfu International Airport",
     "currencyCode": "CNY",
-    "currencyInfo": "Chinese Yuan (¥)",
+    "currencyInfo": "Yuan chino (¥)",
     "funFact": "Chengdu es la capital de la provincia de Sichuan y alberga la Chengdu Research Base of Giant Panda Breeding, donde podrá ver pandas gigantes y pandas rojos en hábitats casi naturales. La cocina de Sichuan, famosa por sus sabores mala (picantes y adormecedores) procedentes de la pimienta de Sichuan, nació en Chengdu, y la ciudad tiene más restaurantes por habitante que casi cualquier otra de China. Hace poco fue designada Ciudad Creativa de la Gastronomía por la UNESCO.",
     "language": "Chino mandarín y sichuanense",
     "languageInfo": "El mandarín es la lengua oficial, pero el dialecto de Sichuan (una rama del mandarín del suroeste) es lo bastante distinto como para celebrarse como parte de la identidad cultural de la región. Este dialecto se asocia a un estilo de vida relajado y amante de los placeres: Chengdu tiene fama de ser una de las grandes ciudades más tranquilas de China. La cultura de las casas de té es el centro de la vida social, y en ellas los habitantes pasan horas jugando al mahjong y charlando ante tazas de té de jazmín de Sichuan.",
     "nickname": "Tierra de Abundancia",
-    "transportation": "Chengdu Metro & Didi",
+    "transportation": "Metro de Chengdu y Didi",
     "transportationFact": "El metro de Chengdu se ha ampliado rápidamente hasta cubrir la mayor parte de la ciudad, con más de una docena de líneas que llegan a lugares clave como la base de los pandas. El tren de alta velocidad conecta Chengdu con Xi'an, Chongqing (40 minutos) y Pekín. Didi (la aplicación de transporte con conductor de China) es la opción más práctica para los visitantes. Las bicicletas y los patinetes eléctricos son muy habituales para trayectos cortos por las calles llanas y aptas para la bicicleta de la ciudad."
   },
   "Chiang Mai": {
@@ -498,7 +498,7 @@
     "airportInfo": "El Aeropuerto Internacional de Chiang Mai es uno de los aeropuertos regionales con más tráfico de Tailandia y el principal centro del norte del país y de la región del Triángulo de Oro. Su tamaño relativamente pequeño lo convierte en uno de los aeropuertos más fáciles de recorrer del Sudeste Asiático. Hay planes de ampliación en marcha para hacer frente al rápido crecimiento de la ciudad como centro de teletrabajo y de nómadas digitales.",
     "airportName": "Chiang Mai International Airport",
     "currencyCode": "THB",
-    "currencyInfo": "Thai Baht (฿)",
+    "currencyInfo": "Baht tailandés (฿)",
     "funFact": "Chiang Mai fue la capital del reino independiente de Lanna desde 1296 hasta 1558, y su antigua Ciudad Vieja rodeada de fosos aún conserva el trazado cuadrado original diseñado por sus fundadores. La ciudad tiene más de 300 templos budistas, más que ninguna otra ciudad de Tailandia, y es el corazón cultural de la civilización del norte del país. Cada año, el Festival de los Farolillos Yi Peng convierte el cielo nocturno en una constelación de farolillos luminosos que miles de fieles lanzan al aire.",
     "language": "Tailandés y norte tailandés",
     "languageInfo": "El tailandés central es la lengua oficial y de la enseñanza, mientras que el tailandés del norte (kham mueang) es la lengua regional tradicional, con escritura y vocabulario propios, distintos de los del tailandés central. Chiang Mai se ha convertido en una de las comunidades de nómadas digitales y expatriados más importantes de Asia, por lo que el inglés se entiende ampliamente en el sector turístico. Los templos budistas de la ciudad mantienen la antigua lengua pali en las ceremonias religiosas.",
@@ -537,12 +537,12 @@
     "airportInfo": "El Aeropuerto Internacional Bandaranaike, que lleva el nombre de Solomon Bandaranaike (primer ministro asesinado), se encuentra a unos 30 km al norte de Colombo, en Katunayake. Una nueva autopista ha reducido considerablemente el tiempo de viaje hasta la ciudad. El aeropuerto es la base de SriLankan Airlines y combina rutas regionales e internacionales de largo recorrido. Una ampliación reciente de la terminal ha modernizado notablemente las instalaciones.",
     "airportName": "Bandaranaike International Airport",
     "currencyCode": "LKR",
-    "currencyInfo": "Sri Lankan Rupee (Rs)",
+    "currencyInfo": "Rupia de Sri Lanka (Rs)",
     "funFact": "Colombo es la capital comercial y la ciudad más grande de Sri Lanka, aunque Sri Jayawardenepura Kotte es la capital legislativa. La ciudad es una vibrante mezcla de arquitectura de la época colonial (neerlandesa, portuguesa y británica), torres modernas y antiguos templos budistas. Sri Lanka produce algunos de los mejores tés de Ceilán del mundo, y el distrito comercial de Pettah, en Colombo, es uno de los bazares mayoristas más animados y concentrados del sur de Asia. La situación de la isla en las antiguas rutas comerciales del océano Índico la convirtió en un cruce de culturas durante más de 2.000 años.",
     "language": "Cingalés, tamil e inglés",
     "languageInfo": "Sri Lanka tiene tres lenguas oficiales: el cingalés (hablado por la mayoría cingalesa), el tamil (hablado por las comunidades tamiles del norte y el este y por muchos trabajadores de las plantaciones) y el inglés (usado en la administración, la justicia y los negocios). Colombo es notablemente multilingüe: en una sola conversación puede oír cingalés, tamil e inglés mezclados con total naturalidad. El inglés de Sri Lanka tiene un acento y un vocabulario propios, moldeados por la singular historia colonial del país.",
     "nickname": "La Capital Comercial",
-    "transportation": "CTB Buses & Tuk-tuks",
+    "transportation": "Autobuses CTB y tuk-tuks",
     "transportationFact": "El principal transporte público de Colombo es la red de autobuses de la CTB (Ceylon Transport Board), complementada por autobuses privados en las mismas rutas. Los mototaxis de tres ruedas (tuk-tuks) están por todas partes y son la forma más práctica de moverse por la ciudad para los visitantes. El tren de cercanías de Colombo conecta el centro con los barrios periféricos a lo largo de la costa. Hay en construcción un proyecto de tren ligero (LRT) para ofrecer una opción de transporte rápido moderna a la creciente población de la ciudad."
   },
   "Columbus, Indiana": {
@@ -576,7 +576,7 @@
     "airportInfo": "El aeropuerto de Cork es votado regularmente como el aeropuerto más amigable de Europa, conocido por sus cortas colas y la cálida hospitalidad de su personal. La terminal presenta un diseño de techo moderno en forma de ondas que hace eco de la cercana costa atlántica y proporciona un punto de entrada perfecto a la pintoresca Ruta Atlántica Salvaje.",
     "airportName": "Cork Airport",
     "currencyCode": "EUR",
-    "currencyInfo": "euros (€)",
+    "currencyInfo": "Euro (€)",
     "funFact": "En el siglo XIX, Cork era el mayor exportador de mantequilla del mundo y comercializaba su \"oro comestible\" a través del Imperio Británico desde su histórica Bolsa de Mantequilla. Hoy en día, la ciudad es conocida como la \"Ciudad Rebelde\" debido a su larga historia de independencia y al feroz orgullo de sus residentes por su cultura y escena culinaria local.",
     "language": "Inglés e irlandés",
     "languageInfo": "El inglés es el idioma principal, hablado con un distintivo \"acento de corcho\" agudo y cantarino. También verá irlandés (Gaeilge) en todas las señales de tráfico y documentos oficiales como un guiño al profundo patrimonio de la región.",
@@ -615,12 +615,12 @@
     "airportInfo": "El Aeropuerto Internacional Blaise Diagne, que lleva el nombre del primer africano elegido para el parlamento francés, se inauguró en 2017 en sustitución del antiguo aeropuerto. Situado a 47 km al este del centro de la ciudad, está conectado por la línea ferroviaria rápida TER (Train Express Régional), inaugurada en 2021 y una de las conexiones ferroviarias más modernas de África Occidental. El aeropuerto es el principal centro de Senegal para las conexiones internacionales con África, Europa y América.",
     "airportName": "Blaise Diagne International Airport",
     "currencyCode": "XOF",
-    "currencyInfo": "West African CFA Franc (CFA)",
+    "currencyInfo": "Franco CFA de África Occidental (CFA)",
     "funFact": "Dakar es la ciudad más occidental del África continental y se asienta en la península de Cabo Verde, que se adentra en el Atlántico. La isla de Gorée, a solo 3 km de la costa, fue uno de los centros de comercio de esclavos más importantes de África Occidental entre los siglos XV y XIX, y hoy es Patrimonio de la Humanidad de la UNESCO, visitada por dignatarios y descendientes de la diáspora de todo el mundo. Dakar es también la meta tradicional del Rally Dakar, una de las pruebas de motor más duras del mundo.",
     "language": "Francés y wólof",
     "languageInfo": "El francés es la lengua oficial de Senegal y se usa en la administración y la enseñanza, mientras que el wolof es la verdadera lengua franca, hablada por más del 90% de la población sin importar su etnia. La influencia del wolof ha dado lugar a un francés senegalés propio que aporta calidez y ritmo al habla cotidiana. La cultura senegalesa se define por el concepto de teranga (hospitalidad), una obligación de generosidad hacia los invitados que impregna todos los aspectos de la vida social.",
     "nickname": "Cap-Vert",
-    "transportation": "TER Train & Car Rapide",
+    "transportation": "Tren TER y Car Rapide",
     "transportationFact": "El transporte de Dakar se ha transformado gracias al TER (Train Express Régional), que conecta el aeropuerto con el centro de la ciudad en unos 45 minutos y continúa hasta el barrio periférico de Diamniadio. Los emblemáticos car rapides de la ciudad, minibuses Renault pintados de colores vivos y cubiertos de lemas y adornos religiosos, llevan décadas circulando por Dakar y son un símbolo cultural, aunque poco a poco los están sustituyendo los modernos autobuses de Dakar Dem Dikk. Los atascos en Dakar son extremos en las horas punta."
   },
   "Dhaka": {
@@ -646,7 +646,7 @@
     "language": "Inglés",
     "languageInfo": "El acento local es un acento nítido del norte de Texas, donde la palabra \"todos ustedes\" se considera una herramienta gramatical esencial y educada. La comunicación es generalmente amplia y entusiasta, coincidiendo con la filosofía de \"cuanto más grande, mejor\" por la que Dallas es famosa.",
     "nickname": "gran d",
-    "transportation": "DARDO",
+    "transportation": "DART",
     "transportationFact": "DART opera la red de tren ligero más larga de los Estados Unidos con cuatro líneas distintas codificadas por colores. El Trinity Railway Express proporciona un enlace de tren pesado entre el centro de Dallas y Fort Worth. El histórico McKinney Avenue Trolley ofrece servicio gratuito de tranvía antiguo por el barrio Uptown."
   },
   "Denver": {
@@ -659,8 +659,8 @@
     "language": "Inglés",
     "languageInfo": "Denver es conocido por su inglés \"Mountain West\", claro y prácticamente sin acento, que a menudo se cita como uno de los dialectos más neutrales del país. El tono es informal y al aire libre, con un alto grado de énfasis social en la conciencia y el bienestar ambiental.",
     "nickname": "La ciudad de una milla de altura",
-    "transportation": "IDT",
-    "transportationFact": "El tren del aeropuerto 'A Line' utiliza pesados ​​vagones de cercanías para llegar a Union Station en 37 minutos. Las líneas de tren ligero RTD se extienden por los suburbios del sur y del oeste para aliviar la congestión de las carreteras. El servicio de transporte Free MallRide ofrece servicio de autobús eléctrico de alta frecuencia a lo largo del centro comercial peatonal de 16th Street."
+    "transportation": "RTD",
+    "transportationFact": "El tren del aeropuerto 'A Line' utiliza pesados vagones de cercanías para llegar a Union Station en 37 minutos. Las líneas de tren ligero RTD se extienden por los suburbios del sur y del oeste para aliviar la congestión de las carreteras. El servicio de transporte Free MallRide ofrece servicio de autobús eléctrico de alta frecuencia a lo largo del centro comercial peatonal de 16th Street."
   },
   "Detroit": {
     "airportCode": "DTW",
@@ -693,7 +693,7 @@
     "airportInfo": "Constantemente clasificado como el aeropuerto más transitado del mundo para pasajeros internacionales, DXB sirve como un enorme cruce global que conecta más de 240 destinos. Los viajeros pueden disfrutar de compras libres de impuestos de primer nivel, jardines zen interiores e incluso dormir en 'SnoozeCubes' dentro de las terminales.",
     "airportName": "Dubai International",
     "currencyCode": "AED",
-    "currencyInfo": "Dirham de los Emiratos Árabes Unidos (د.إ)",
+    "currencyInfo": "Dírham de los Emiratos Árabes Unidos (د.إ)",
     "funFact": "Dubai es una ciudad superlativa, hogar del edificio más alto del mundo, el centro comercial más grande y la piscina de buceo más profunda. Su fuerza policial es igualmente legendaria y patrulla las calles en una flota de superdeportivos que incluye Lamborghinis, Ferraris e incluso un Bugatti Veyron.",
     "language": "árabe e inglés",
     "languageInfo": "El inglés es la lengua franca indiscutible de la vida diaria, el comercio y el turismo en este centro global. Si bien el árabe sigue siendo el idioma oficial del gobierno y la ley, la mayoría de los residentes se comunican en inglés.",
@@ -710,8 +710,8 @@
     "funFact": "Dublín es una de las capitales más jóvenes de Europa, con una población cuya edad media es inferior a 35 años. La fábrica de Guinness de St. James's Gate funciona desde 1759: Arthur Guinness firmó un asombroso contrato de arrendamiento del terreno por 9.000 años a £45 al año. Dublín es la ciudad natal de cuatro escritores ganadores del Premio Nobel: W.B. Yeats, George Bernard Shaw, Samuel Beckett y Seamus Heaney, un legado literario extraordinario para una ciudad tan pequeña.",
     "language": "Irlandés (gaélico) e inglés",
     "languageInfo": "Irlanda tiene dos lenguas oficiales: el irlandés (gaeilge) y el inglés. Aunque el irlandés se enseña en todas las escuelas y se habla a diario en las regiones rurales de la Gaeltacht, en la costa oeste, el inglés es la lengua principal de Dublín. Los carteles en irlandés aparecen por toda la ciudad, y oirá el irlandés en la administración, en las emisiones de radio y en los actos culturales. El acento de Dublín es cálido, musical y con un carácter muy propio.",
-    "nickname": "The Fair City",
-    "transportation": "Dublin Bus & DART",
+    "nickname": "La Bella Ciudad",
+    "transportation": "Dublin Bus y DART",
     "transportationFact": "El DART (Dublin Area Rapid Transit) de Dublín es una línea de cercanías costera que ofrece vistas espectaculares de la bahía de Dublín en su recorrido entre Malahide, al norte, y Greystones, al sur. Las dos líneas del tranvía Luas atraviesan la ciudad y conectan los barrios periféricos con el centro, cruzándose en puntos clave. El compacto centro georgiano de la ciudad se recorre muy bien a pie, y un sistema público de bicicletas facilita los trayectos cortos."
   },
   "Edinburgh": {
@@ -719,12 +719,12 @@
     "airportInfo": "El Aeropuerto de Edimburgo es el más transitado de Escocia y uno de los de más rápido crecimiento del Reino Unido. Su conexión en tranvía, inaugurada en 2014 tras décadas de debate, une la terminal directamente con el centro de la ciudad. Una ampliación reciente ha prolongado la línea de tranvía hacia Newhaven, por lo que llegar y sentir de inmediato la energía de la ciudad es hoy más fácil que nunca.",
     "airportName": "Edinburgh Airport",
     "currencyCode": "GBP",
-    "currencyInfo": "British Pound Sterling (£)",
+    "currencyInfo": "Libra esterlina (£)",
     "funFact": "El Castillo de Edimburgo se alza sobre una roca volcánica extinta y ha servido como fortaleza, residencia real y prisión durante más de 1.000 años. La ciudad acoge el mayor festival de artes del mundo, el Edinburgh Festival Fringe, que cada agosto ocupa todos los escenarios de la ciudad. La Royal Mile, que va del Castillo al Palacio de Holyroodhouse, atraviesa uno de los paisajes urbanos medievales mejor conservados de Europa.",
     "language": "Inglés y gaélico escocés",
     "languageInfo": "En Edimburgo se habla inglés con un marcado acento escocés, y es posible que oiga escocés (scots), una lengua germánica estrechamente emparentada con el inglés, en conversaciones informales. El gaélico escocés, antaño la lengua predominante de las Highlands, se enseña en las escuelas y aparece en las señales de tráfico bilingües. La rica tradición literaria de la ciudad vio nacer a Robert Louis Stevenson, Arthur Conan Doyle y J.K. Rowling.",
     "nickname": "Auld Reekie",
-    "transportation": "Lothian Buses & Trams",
+    "transportation": "Lothian Buses y tranvías",
     "transportationFact": "Los emblemáticos autobuses rojos de Lothian Buses están entre los autobuses urbanos más frecuentes del Reino Unido, y algunas líneas pasan cada pocos minutos por el centro. La línea de tranvía une el aeropuerto con York Place por Princes Street, la principal arteria comercial de la ciudad. Gracias a su tamaño compacto, gran parte de la Old Town y la New Town puede recorrerse a pie, aunque sus empinadas cuestas suponen un ejercicio legendario."
   },
   "Florence": {
@@ -736,8 +736,8 @@
     "funFact": "Florencia está considerada la cuna del Renacimiento, el movimiento cultural y artístico que transformó Europa. De aquí salieron Miguel Ángel, Leonardo da Vinci, Galileo, Dante y Maquiavelo, entre otros. La cúpula de la catedral de Brunelleschi, el Duomo, se terminó en 1436 y sigue siendo la mayor cúpula de ladrillo jamás construida. La Galería Uffizi alberga una de las colecciones de pintura renacentista más importantes del mundo.",
     "language": "Italiano",
     "languageInfo": "Florencia ocupa un lugar destacado en la historia de la lengua italiana: el dialecto toscano que se hablaba aquí durante el Renacimiento se convirtió en la base del italiano estándar moderno. La Divina Comedia de Dante, escrita en lengua vernácula florentina, creó de hecho la literatura italiana. Aunque los habitantes hablan italiano estándar, el acento florentino tiene un carácter propio que los italianos de todo el país reconocen.",
-    "nickname": "The Cradle of the Renaissance",
-    "transportation": "ATAF Buses & Trams",
+    "nickname": "La Cuna del Renacimiento",
+    "transportation": "Autobuses y tranvías ATAF",
     "transportationFact": "El centro histórico de Florencia es una Zona de Tráfico Limitado (ZTL), que restringe el paso de coches particulares por las calles medievales durante buena parte del día. La mejor forma de recorrer la ciudad es a pie o en bicicleta; una popular red de bicicletas compartidas llamada Mobike funciona en todo el centro. Las líneas de tranvía T1 y T2 conectan la estación principal de tren con los barrios periféricos, mientras que los autobuses naranjas de ATAF dan servicio al área metropolitana."
   },
   "Fort Worth": {
@@ -771,12 +771,12 @@
     "airportInfo": "El Aeropuerto de Fukuoka goza de una ubicación excepcional: está a solo dos paradas de metro de la estación de Hakata, en el centro, una de las distancias más cortas entre un gran aeropuerto y el centro urbano de Japón. Esta extraordinaria comodidad hace de Fukuoka una de las ciudades más accesibles de Asia. El aeropuerto opera vuelos nacionales a todas las grandes ciudades japonesas y rutas internacionales a Corea, China, el Sudeste Asiático y otros destinos.",
     "airportName": "Fukuoka Airport",
     "currencyCode": "JPY",
-    "currencyInfo": "Japanese Yen (¥)",
+    "currencyInfo": "Yen japonés (¥)",
     "funFact": "Fukuoka es la gran ciudad de Japón que más rápido crece y la puerta de entrada a la isla de Kyushu. Es famosa por ser la cuna del ramen tonkotsu, el caldo rico y cremoso de huesos de cerdo que ha dado lugar a innumerables variantes regionales en Japón y en todo el mundo. Su cultura de yatai (puestos de comida al aire libre) la distingue de cualquier otra ciudad japonesa: cada noche, hileras de pequeños puestos se alinean junto al río Naka y ofrecen ramen, yakitori y oden bajo el brillo del neón. La ciudad mantiene además estrechos lazos históricos con China y Corea, que se reflejan en su arquitectura, su gastronomía y su cultura.",
     "language": "Japonés",
     "languageInfo": "Junto al japonés estándar se habla el dialecto local de Hakata (Hakata-ben), conocido por su vocabulario particular y su tono cálido y directo. El dialecto de Hakata se ha difundido por todo el país gracias a la comedia y la televisión, lo que ha dado a Fukuoka una fuerte identidad cultural. Por la cercanía con Corea, el coreano se oye con frecuencia en los numerosos restaurantes coreanos de la ciudad y entre los turistas coreanos.",
     "nickname": "Hakata",
-    "transportation": "Fukuoka City Subway & Nishitetsu",
+    "transportation": "Metro de Fukuoka y Nishitetsu",
     "transportationFact": "Fukuoka cuenta con tres líneas de metro urbano que conectan con eficacia el aeropuerto, la estación de Hakata y los principales barrios de ocio. El ferrocarril privado Nishitetsu llega hasta ciudades del sur de Kyushu. La estación de Hakata es también un nudo del shinkansen, con trenes bala que llegan a Osaka en menos de 2,5 horas y a Tokio en 5 horas. Su centro, compacto y fácil de recorrer a pie, permite llegar caminando a muchas de las mejores experiencias gastronómicas y culturales."
   },
   "Glasgow": {
@@ -797,7 +797,7 @@
     "airportInfo": "El aeropuerto Federico García Lorca Granada-Jaén está junto a Chauchina y Santa Fe, a unos 15 km al oeste de la ciudad. Las obras comenzaron en 1970 y se inauguró como aeropuerto de Granada en 1972. En 2006 recibió el nombre del poeta andaluz Federico García Lorca.",
     "airportName": "Federico García Lorca Granada Airport",
     "currencyCode": "EUR",
-    "currencyInfo": "euros (€)",
+    "currencyInfo": "Euro (€)",
     "funFact": "El 2 de enero de 1492, el emir Muhammad XI, a quien los castellanos llamaban Boabdil, entregó Granada a Fernando e Isabel y puso fin al último estado musulmán de la península ibérica. La granada es el emblema heráldico de la ciudad y da nombre también a la Puerta de las Granadas.",
     "language": "español",
     "languageInfo": "En Granada se habla español (castellano), que se escribe con el alfabeto latino y letras como la ñ. Para saludar se dice «Hola» o «Buenos días», y para dar las gracias, «Gracias».",
@@ -810,12 +810,12 @@
     "airportInfo": "El Aeropuerto Internacional Miguel Hidalgo y Costilla, que lleva el nombre del sacerdote que inició el movimiento de independencia de México, es el segundo aeropuerto más transitado del país. Por su cercanía a la región de Tequila, algunos visitantes internacionales llegan expresamente para conocer el paisaje agavero de Jalisco, también Patrimonio de la Humanidad de la UNESCO. El aeropuerto tiene vuelos directos a ciudades de Norteamérica y a varios centros de conexión europeos.",
     "airportName": "Miguel Hidalgo y Costilla Guadalajara International Airport",
     "currencyCode": "MXN",
-    "currencyInfo": "Mexican Peso ($)",
+    "currencyInfo": "Peso mexicano ($)",
     "funFact": "Guadalajara es la segunda ciudad más grande de México y la capital cultural del occidente del país. El mariachi, el tequila y la charreada (el rodeo mexicano) nacieron en el estado de Jalisco, cuya capital es Guadalajara. La ciudad alberga el Hospicio Cabañas, Patrimonio de la Humanidad de la UNESCO, que contiene los monumentales murales de José Clemente Orozco, considerados entre las grandes obras del arte mexicano del siglo XX.",
     "language": "Español",
     "languageInfo": "El español mexicano que se habla en Guadalajara tiene un tono cálido y melodioso, y se considera uno de los acentos más claros de México. Los tapatíos (como se llaman a sí mismos los habitantes de Guadalajara) son conocidos por su fuerte orgullo regional y su apasionado apego a las tradiciones de su ciudad. El origen de la palabra 'guadalajara' se atribuye a veces al náhuatl y es objeto de debate, aunque lo más probable es que los colonizadores bautizaran la ciudad con el nombre de su homónima española.",
     "nickname": "Perla del Occidente",
-    "transportation": "Tren Ligero & Macrobús",
+    "transportation": "Tren Ligero y Macrobús",
     "transportationFact": "El Tren Ligero de Guadalajara tiene dos líneas que atraviesan el área metropolitana. El Macrobús, un sistema de autobús de tránsito rápido con carriles exclusivos, cubre los corredores de mayor demanda. En 2020 se inauguró la nueva Línea 3 del tren ligero, que amplió notablemente la cobertura. La ciudad invierte con fuerza en infraestructura ciclista, y un sistema de bicicletas compartidas (MiBici) ha convertido la bicicleta en una opción urbana realista. Uber opera ampliamente en Guadalajara."
   },
   "Hamburg": {
@@ -823,7 +823,7 @@
     "airportInfo": "El aeropuerto de Hamburgo abrió en enero de 1911, lo que lo convierte en el aeropuerto internacional más antiguo del mundo que sigue en funcionamiento. Está a unos 8,5 km al norte del centro, en Fuhlsbüttel, lleva desde 2016 el nombre del excanciller Helmut Schmidt y tiene su propia línea de S-Bahn hasta la ciudad.",
     "airportName": "Hamburg Airport",
     "currencyCode": "EUR",
-    "currencyInfo": "euros (€)",
+    "currencyInfo": "Euro (€)",
     "funFact": "Los ríos y canales de Hamburgo están cruzados por unos 2.500 puentes, más que Londres, Ámsterdam y Venecia juntas. La ciudad alberga además cinco de las iglesias más altas del mundo, y durante dos años, en la década de 1870, la aguja de San Nicolás fue el edificio más alto del planeta.",
     "language": "Alemán",
     "languageInfo": "El alemán estándar se habla en todas partes, pero la lengua original de Hamburgo es el bajo alemán, conocido aquí como 'Hamborger Platt'. Su huella sigue viva en muchos nombres de calles y lugares, y en antiguas canciones marineras como 'Hamborger Veermaster'.",
@@ -888,12 +888,12 @@
     "airportInfo": "El Aeropuerto de Tan Son Nhat, que conserva el código IATA SGN de su época como Saigón, es el aeropuerto más transitado de Vietnam. Está muy cerca del centro, a solo unos kilómetros del Distrito 1, por lo que el trayecto en taxi es uno de los más cortos de cualquier gran ciudad asiática. Se está construyendo en Long Thanh un segundo aeropuerto internacional, proyectado desde hace años, para absorber el crecimiento explosivo del transporte aéreo en el país.",
     "airportName": "Tan Son Nhat International Airport",
     "currencyCode": "VND",
-    "currencyInfo": "Vietnamese Dong (₫)",
+    "currencyInfo": "Dong vietnamita (₫)",
     "funFact": "Ciudad Ho Chi Minh, todavía conocida por muchos por su antiguo nombre, Saigón, es la ciudad más grande y dinámica de Vietnam. Se calcula que 8 millones de motos comparten sus calles y forman un río constante de vehículos de dos ruedas que los visitantes deben aprender a cruzar a pie, avanzando despacio y sin detenerse. Su cultura cafetera es legendaria: el café helado vietnamita (cà phê sữa đá), preparado con granos robusta intensos y leche condensada azucarada, es una de las grandes bebidas de café del mundo.",
     "language": "Vietnamita",
     "languageInfo": "El vietnamita es una lengua tonal con seis tonos distintos, de modo que una misma sílaba pronunciada con diferente entonación tiene significados completamente distintos. Utiliza un alfabeto de base latina (quốc ngữ) creado por misioneros en el siglo XVII, lo que lo hace más legible a primera vista para los visitantes occidentales que la mayoría de las escrituras del Sudeste Asiático. El vietnamita del sur, tal como se habla en Ciudad Ho Chi Minh, suena más cálido y melodioso que el dialecto del norte de Hanói.",
-    "nickname": "The Pearl of the Far East",
-    "transportation": "Buses & Grab Motorbikes",
+    "nickname": "La Perla del Lejano Oriente",
+    "transportation": "Autobuses y motos Grab",
     "transportationFact": "La red pública de autobuses de Ciudad Ho Chi Minh cubre toda la ciudad, pero el medio más práctico para los visitantes es Grab, la aplicación de transporte dominante en el Sudeste Asiático, que ofrece tanto viajes en coche como mototaxis. La Línea 1 del metro, que une el Mercado Bến Thành con los suburbios del este, se inauguró a finales de 2024 y supuso un paso histórico en la modernización del transporte de la ciudad."
   },
   "Hong Kong": {
@@ -944,8 +944,8 @@
     "funFact": "Estambul es la única ciudad del mundo que se extiende por dos continentes, conectando físicamente Europa y Asia a través del Estrecho del Bósforo. A lo largo de la historia, ha sido capital de cuatro grandes imperios, dejando tras de sí un rico legado arquitectónico que va desde cúpulas bizantinas hasta palacios otomanos.",
     "language": "Turco",
     "languageInfo": "El turco es la lengua oficial y ocupa un lugar central en la vida social de la ciudad y en sus rituales en torno al té. Aunque el inglés es habitual en zonas turísticas como Sultanahmet, los comerciantes locales agradecerán mucho unas pocas palabras en turco.",
-    "nickname": "City of Seven Hills",
-    "transportation": "Tünel & Ferries",
+    "nickname": "La Ciudad de las Siete Colinas",
+    "transportation": "Tünel y ferris",
     "transportationFact": "El Tünel es la segunda línea ferroviaria subterránea más antigua del mundo; se inauguró en 1875. Los enormes ferris públicos son parte esencial de la vida diaria y trasladan cada hora a miles de personas entre Europa y Asia. El Metrobús circula por un carril exclusivo que cruza el Puente del Bósforo para esquivar el denso tráfico."
   },
   "Jaipur": {
@@ -953,7 +953,7 @@
     "airportInfo": "El Aeropuerto Internacional de Jaipur se amplió de forma importante en 2009 y de nuevo en los últimos años, lo que lo ha consolidado como la principal puerta aérea de Rajastán. Su terminal luce motivos arquitectónicos rajastaníes, como ornamentadas ventanas jharokha y diseños geométricos tradicionales en la fachada. Hay vuelos directos que conectan Jaipur con las principales ciudades de la India y con algunos destinos internacionales.",
     "airportName": "Jaipur International Airport",
     "currencyCode": "INR",
-    "currencyInfo": "Indian Rupee (₹)",
+    "currencyInfo": "Rupia india (₹)",
     "funFact": "Jaipur se conoce como la Ciudad Rosa porque en 1876 toda la ciudad antigua se pintó de rosa terracota para recibir al Príncipe de Gales. Desde entonces la ley obliga a mantener ese color, que da a la ciudad antigua su característico brillo cálido. Forma parte del Triángulo de Oro de la India (Delhi-Agra-Jaipur) y alberga el Hawa Mahal (Palacio de los Vientos), cuyas 953 pequeñas ventanas se diseñaron para que las damas de la realeza pudieran observar la vida de la calle sin ser vistas.",
     "language": "Hindi y rajasthaní",
     "languageInfo": "La lengua hablada principal es el hindi rajastaní, una variedad del hindi con vocabulario y entonación propios. El hindi estándar y el inglés se usan en la educación y el comercio. Los mercados y bazares de la ciudad antigua son espacios llenos de vida donde la tradición rajastaní del regateo es un arte social: vendedores y compradores se enfrascan en negociaciones animadas y a menudo teatrales.",
@@ -966,12 +966,12 @@
     "airportInfo": "El Aeropuerto Internacional O.R. Tambo, que lleva el nombre del líder antiapartheid Oliver Reginald Tambo, es el aeropuerto más transitado de África y el principal centro aéreo del continente. Destaca por una espectacular terminal de vidrio y acero con amplias vistas del paisaje del Highveld. El aeropuerto conecta Johannesburgo con más de 70 destinos internacionales y es la base principal de South African Airways.",
     "airportName": "O.R. Tambo International Airport",
     "currencyCode": "ZAR",
-    "currencyInfo": "South African Rand (R)",
+    "currencyInfo": "Rand sudafricano (R)",
     "funFact": "Johannesburgo se fundó en 1886 tras el descubrimiento del mayor yacimiento de oro del mundo en el Witwatersrand, que convirtió una pradera vacía en una ciudad en pleno auge en menos de una década. Hoy es la capital económica de África y alberga en Sandton el único distrito financiero de categoría mundial del continente. Se dice además que la ciudad tiene el mayor bosque urbano plantado por el ser humano del mundo: más de 10 millones de árboles plantados por los primeros colonos en una región que originalmente era una sabana de highveld sin árboles.",
     "language": "Zulú, sotho e inglés",
     "languageInfo": "Johannesburgo es una de las ciudades más multilingües del planeta, reflejo de las 11 lenguas oficiales de Sudáfrica. El zulú y el sotho son las más habladas en los townships de Joburg, mientras que el inglés es la lengua principal de los negocios y del centro de la ciudad. Saludos en isiZulu como 'Sawubona' (te veo) encierran un significado profundo arraigado en la filosofía Ubuntu, la creencia en una humanidad compartida.",
     "nickname": "Egoli",
-    "transportation": "Gautrain & Rea Vaya BRT",
+    "transportation": "Gautrain y BRT Rea Vaya",
     "transportationFact": "El tren rápido Gautrain une el Aeropuerto O.R. Tambo con el centro financiero de Sandton en solo 15 minutos, una de las conexiones ferroviarias entre aeropuerto y ciudad más rápidas de África. Continúa hasta Pretoria, la capital administrativa, lo que lo convierte en un enlace regional clave. El sistema de autobús de tránsito rápido Rea Vaya circula por carriles exclusivos a través de la ciudad. Para la mayoría de los visitantes, las aplicaciones privadas de transporte son la forma más práctica de desplazarse."
   },
   "Kansas City": {
@@ -992,7 +992,7 @@
     "airportInfo": "El Aeropuerto Internacional Tribhuvan, el único aeropuerto internacional de Nepal, se sitúa de forma espectacular en el valle de Katmandú, rodeado por las estribaciones del Himalaya. Su única pista y su complicada aproximación entre montañas lo convierten en uno de los aeropuertos técnicamente más exigentes para los pilotos. Pese a su tamaño relativamente modesto, opera con más de 50 aerolíneas internacionales. Para resolver sus limitaciones de capacidad se planean una gran ampliación y la posible construcción de un nuevo aeropuerto internacional en Nijgadh.",
     "airportName": "Tribhuvan International Airport",
     "currencyCode": "NPR",
-    "currencyInfo": "Nepalese Rupee (₨)",
+    "currencyInfo": "Rupia nepalí (₨)",
     "funFact": "El valle de Katmandú reúne siete sitios Patrimonio de la Humanidad de la UNESCO a pocos kilómetros unos de otros, más monumentos de la UNESCO concentrados en una zona que casi en ningún otro lugar del planeta. La ciudad se encuentra a 1.400 metros sobre el nivel del mar, rodeada por el Himalaya, y es el punto de partida de las expediciones al Monte Everest y al Circuito del Annapurna. La antigua ciudad se remonta al siglo VII, y su arquitectura newari, caracterizada por templos de pagoda de varios niveles, ornamentadas tallas en madera y patios abiertos, es única en el mundo.",
     "language": "Nepalés",
     "languageInfo": "El nepalí es la lengua nacional, un idioma derivado del sánscrito emparentado con el hindi y escrito en alfabeto devanagari. Katmandú es también el hogar de la comunidad newar, cuya lengua, el newari (Nepal Bhasa), tiene una escritura propia y una larga tradición literaria. El inglés se habla ampliamente en el sector turístico y entre los habitantes de Katmandú con estudios, y la señalización suele ser bilingüe. Su papel como punto de encuentro de senderistas y alpinistas del Himalaya hace de la ciudad un lugar extraordinariamente cosmopolita.",
@@ -1005,7 +1005,7 @@
     "airportInfo": "El Aeropuerto Internacional Juan Pablo II de Cracovia-Balice está en el pueblo de Balice, a unos 11 km al oeste del centro, y lleva el nombre del papa Juan Pablo II. Es el segundo aeropuerto con más tráfico de Polonia, después del de Varsovia-Chopin, y atendió a más de 11 millones de pasajeros en 2024. Un tren une la terminal con la estación Kraków Główny en unos 17 minutos.",
     "airportName": "John Paul II Kraków-Balice International Airport",
     "currencyCode": "PLN",
-    "currencyInfo": "esloti polaco (zł)",
+    "currencyInfo": "Esloti polaco (zł)",
     "funFact": "Cracovia fue la capital real de Polonia hasta que el rey Segismundo III Vasa trasladó la corte a Varsovia en 1596, y su Plaza del Mercado es la plaza de mercado medieval más grande de Europa. Tanto el bagel como su pariente en forma de anillo, el obwarzanek krakowski, nacieron en Cracovia.",
     "language": "Polaco",
     "languageInfo": "El polaco es una lengua eslava occidental que se escribe con el alfabeto latino y letras adicionales como ł, ż y ś. Saluda con un 'Dzień dobry' (buenos días) o, entre amigos, con un informal 'Cześć'.",
@@ -1018,12 +1018,12 @@
     "airportInfo": "El Aeropuerto Internacional de Kuala Lumpur (KLIA) es uno de los principales centros aéreos del Sudeste Asiático, con una llamativa terminal principal de acero y vidrio inspirada en el dosel de la selva que la rodea. KLIA2, la terminal de aerolíneas de bajo costo, es una de las mayores terminales del mundo dedicadas exclusivamente a este tipo de compañías. El tren KLIA Ekspres conecta el aeropuerto con el centro en solo 28 minutos, una de las conexiones ferroviarias aeroportuarias más rápidas de Asia.",
     "airportName": "Kuala Lumpur International Airport",
     "currencyCode": "MYR",
-    "currencyInfo": "Malaysian Ringgit (RM)",
+    "currencyInfo": "Ringgit malayo (RM)",
     "funFact": "Las Torres Gemelas Petronas dominaron el horizonte mundial como los edificios más altos de 1998 a 2004 y siguen siendo las torres gemelas más altas del mundo. Están unidas por una pasarela aérea en los pisos 41 y 42, que ofrece vistas panorámicas sobre el horizonte de la ciudad, envuelto en vegetación. Kuala Lumpur es una de las ciudades con mayor diversidad cultural del mundo: las tradiciones malaya, china, india e indígena conviven en su gastronomía, sus festivales y su arquitectura, y su oferta culinaria es legendaria.",
     "language": "Malayo, inglés y mandarín",
     "languageInfo": "Malasia es un país extraordinariamente multilingüe. El bahasa malasio (malayo) es la lengua nacional, y el inglés se usa ampliamente en los negocios, la educación y el turismo. Las comunidades chinas de Malasia hablan cantonés, mandarín, hokkien y otros dialectos chinos. En KL oirá a menudo el manglish: inglés mezclado libremente con palabras en malayo, cantonés y tamil en una misma frase.",
     "nickname": "KL",
-    "transportation": "LRT, MRT & KL Monorail",
+    "transportation": "LRT, MRT y KL Monorail",
     "transportationFact": "La red de transporte público de KL incluye varios sistemas ferroviarios: el LRT, con dos líneas urbanas; el MRT, que da servicio al gran Valle de Klang, y el KL Monorail, que conecta la zona de hoteles y tiendas del centro. Todos se pueden usar con una sola tarjeta Touch 'n Go. La ciudad cuenta además con un servicio gratuito de autobús, el GoKL City Bus, que recorre en circuito las zonas céntricas, de modo que los trayectos cortos entre lugares emblemáticos no cuestan nada."
   },
   "Kyoto": {
@@ -1031,12 +1031,12 @@
     "airportInfo": "El aeropuerto es una maravilla de la ingeniería civil, construido íntegramente sobre una enorme isla artificial en la bahía de Osaka para reducir la contaminación acústica en tierra firme. Lo diseñó el arquitecto Renzo Piano para que recordara al ala de un avión gigante, y se apoya sobre gatos hidráulicos que compensan el hundimiento gradual de la isla en el lecho marino.",
     "airportName": "Kansai Int'l",
     "currencyCode": "JPY",
-    "currencyInfo": "Japanese Yen (¥)",
+    "currencyInfo": "Yen japonés (¥)",
     "funFact": "Kioto fue la capital imperial de Japón durante más de 1.000 años y sigue siendo el corazón cultural del país, con más de 1.600 templos budistas y 400 santuarios sintoístas. Es el lugar de nacimiento de la tradicional ceremonia del té y es mundialmente conocido por su bien conservado distrito de Gion, donde las geishas todavía caminan por las calles.",
     "language": "Japonés",
     "languageInfo": "La ciudad es famosa por el 'Kyoto-ben', un dialecto refinado y suave que refleja su pasado imperial. Todo el mundo usa el japonés estándar, y en los principales templos y santuarios se ofrece información en inglés con frecuencia.",
-    "nickname": "1,000 Year Capital",
-    "transportation": "Kyoto City Bus",
+    "nickname": "La Capital Milenaria",
+    "transportation": "Autobús municipal de Kioto",
     "transportationFact": "Como la ciudad cuenta con más de 1.600 templos, la red de autobuses es la forma principal de llegar a la mayoría de los lugares históricos. Dos líneas de metro y varios ferrocarriles privados, como Keihan y Hankyu, conectan Kioto con Osaka y Nara. El Sagano Scenic Railway ofrece un nostálgico viaje en tren descubierto a través del hermoso desfiladero de Hozukyo."
   },
   "Lagos": {
@@ -1070,7 +1070,7 @@
     "airportInfo": "El Aeropuerto Internacional Jorge Chávez ha sido constantemente nombrado el mejor aeropuerto de América del Sur debido a su eficiencia y su papel como importante centro de la costa del Pacífico. En 2025, inauguró una enorme nueva terminal de pasajeros que triplicó su capacidad y contó con tecnología de punta para atender a más de 30 millones de viajeros al año.",
     "airportName": "Jorge Chávez",
     "currencyCode": "PEN",
-    "currencyInfo": "Sol Peruano (S/)",
+    "currencyInfo": "Sol peruano (S/)",
     "funFact": "Lima es la segunda ciudad más grande del mundo construida en un desierto, sólo superada por El Cairo en Egipto. Es ampliamente considerada la \"Capital Gastronómica del Mundo\", donde siglos de historia y diversas culturas de inmigrantes se han combinado para crear una escena culinaria de fama mundial.",
     "language": "Español",
     "languageInfo": "El español peruano es ampliamente considerado como uno de los más claros y fáciles de entender en América del Sur. La mayoría de los lugareños hablan con un acento neutral que resulta muy acogedor para los estudiantes del idioma.",
@@ -1083,11 +1083,11 @@
     "airportInfo": "Humberto Delgado es uno de los pocos aeropuertos europeos importantes ubicado directamente dentro del centro de la ciudad, lo que ofrece a los pasajeros una vista espectacular a baja altitud del centro de la ciudad durante el aterrizaje. Su proximidad al centro de la ciudad significa que los viajeros pueden llegar al histórico distrito de Alfama en metro en menos de 20 minutos.",
     "airportName": "Humberto Delgado",
     "currencyCode": "EUR",
-    "currencyInfo": "euros (€)",
+    "currencyInfo": "Euro (€)",
     "funFact": "Lisboa es una de las ciudades más antiguas del mundo y es cuatro siglos anterior a otras capitales europeas modernas como Londres, París e incluso Roma. Está construido sobre siete colinas empinadas, lo que proporciona innumerables 'miradouros' o miradores que ofrecen impresionantes vistas del río Tajo y los tejados de tejas rojas de la ciudad.",
     "language": "portugués",
     "languageInfo": "El portugués es el idioma nativo y los visitantes notarán que la versión europea suena más rítmica y cerrada que el portugués brasileño. El inglés es un idioma ampliamente hablado entre la generación más joven y en todo el bullicioso sector turístico.",
-    "nickname": "Ciudad de las Siete Colinas",
+    "nickname": "La Ciudad de las Siete Colinas",
     "transportation": "Funiculares y tranvías",
     "transportationFact": "Los tranvías amarillos Remodelado son mundialmente famosos por recorrer las calles increíblemente estrechas y empinadas de Alfama. Tres funiculares históricos y el Elevador de Santa Justa permiten el tránsito vertical entre los distintos niveles de la ciudad. El metro de Lisboa cuenta con estaciones con hermosos azulejos que muestran el trabajo de artistas portugueses contemporáneos."
   },
@@ -1115,7 +1115,7 @@
     "languageInfo": "Los Ángeles es un enorme crisol multicultural donde con frecuencia se entremezclan la jerga del Valle, la taquigrafía de la industria del entretenimiento y los préstamos en español. Es una ciudad donde las conversaciones giran tanto en torno a la producción cinematográfica como en una mezcla de inglés y varios idiomas asiáticos o latinoamericanos.",
     "nickname": "Ciudad de los Ángeles",
     "transportation": "Metro de Los Ángeles",
-    "transportationFact": "La Línea A es ahora la línea de tren ligero más larga del mundo y se extiende desde Long Beach hasta Azusa. Metrolink ofrece un servicio regional de trenes pesados ​​que llega a seis condados diferentes del sur de California. El icónico funicular Angels Flight es el ferrocarril más corto del mundo y sirve al empinado distrito de Bunker Hill."
+    "transportationFact": "La Línea A es ahora la línea de tren ligero más larga del mundo y se extiende desde Long Beach hasta Azusa. Metrolink ofrece un servicio regional de trenes pesados que llega a seis condados diferentes del sur de California. El icónico funicular Angels Flight es el ferrocarril más corto del mundo y sirve al empinado distrito de Bunker Hill."
   },
   "Madrid": {
     "airportCode": "MAD",
@@ -1126,7 +1126,7 @@
     "funFact": "Madrid es la capital más alta de la Unión Europea, situada a 667 metros sobre el nivel del mar, altura suficiente para que la ciudad tenga inviernos notablemente fríos y veranos calurosos. El Museo del Prado alberga una de las mejores colecciones de arte europeo del mundo, con obras maestras de Velázquez, Goya y El Greco. Los madrileños son famosos por su vida nocturna: la cena rara vez empieza antes de las 9 de la noche, y la noche se prolonga mucho más allá de la medianoche cualquier día de la semana.",
     "language": "Español",
     "languageInfo": "El español castellano (castellano) que se habla en Madrid se considera el dialecto de prestigio del mundo hispanohablante, y es el que la mayoría de los estudiantes aprende como español estándar. El acento madrileño destaca por su pronunciación característica de los sonidos de la 'c' y la 'z', un rasgo que no existe en el español de América Latina. La ciudad es una gran encrucijada mundial donde oirá decenas de idiomas.",
-    "nickname": "The Bear and the Strawberry Tree",
+    "nickname": "El Oso y el Madroño",
     "transportation": "Metro de Madrid",
     "transportationFact": "El metro de Madrid es uno de los más grandes del mundo, con 13 líneas y más de 300 estaciones, lo que lo convierte en la forma más completa de moverse por la ciudad. Un billete sencillo sirve para toda la red, y el metro funciona hasta la 1:30 de la madrugada entre semana y las 24 horas los fines de semana, reflejo de la famosa vida nocturna de la ciudad. La red de autobuses de la EMT complementa el metro con más de 200 líneas que circulan también de noche."
   },
@@ -1161,7 +1161,7 @@
     "airportInfo": "El aeropuerto de Menara es citado a menudo como uno de los más bellos del mundo, y cuenta con una terminal que combina vidrio moderno con intrincados patrones geométricos arabescos. El diseño permite que la luz natural se filtre a través de la fachada, proyectando hermosas sombras que reflejan la tradicional carpintería 'mashrabiya' de Marruecos.",
     "airportName": "Menara Airport",
     "currencyCode": "MAD",
-    "currencyInfo": "Dirham marroquí (د.م.)",
+    "currencyInfo": "Dírham marroquí (د.م.)",
     "funFact": "Por ley, todos los edificios de Marrakech deben estar pintados en tonos rosa salmón u ocre para que coincidan con la histórica piedra arenisca roja de sus paredes del siglo XII. Esto crea un brillo impresionante y uniforme al atardecer, particularmente en la bulliciosa plaza Jemaa el-Fna, donde se reúnen narradores y encantadores de serpientes.",
     "language": "árabe y francés",
     "languageInfo": "El paisaje lingüístico es una rica mezcla de árabe marroquí (darija), bereber y francés. Si bien el árabe es oficial, el francés se utiliza ampliamente en la hostelería y entre los numerosos residentes internacionales de la ciudad.",
@@ -1174,7 +1174,7 @@
     "airportInfo": "El aeropuerto de Marsella Provenza está a unos 27 km al noroeste de la ciudad, en Marignane, y es el quinto aeropuerto de Francia por tráfico de pasajeros. En las décadas de 1920 y 1930 fue base de hidroaviones, y en junio de 2024 se inauguró una nueva Terminal 1. Un autobús lo conecta con la cercana estación de tren de Vitrolles Aéroport Marseille Provence.",
     "airportName": "Marseille Provence Airport",
     "currencyCode": "EUR",
-    "currencyInfo": "euros (€)",
+    "currencyInfo": "Euro (€)",
     "funFact": "Fundada hacia el año 600 a. C. por colonos griegos de Focea, Marsella es la ciudad más antigua de Francia y uno de los asentamientos habitados sin interrupción más antiguos de Europa. El himno nacional francés también lleva su nombre: «La Marsellesa» se llama así porque los voluntarios de Marsella fueron los primeros en cantarla en París en 1792.",
     "language": "francés",
     "languageInfo": "El francés se habla en todas partes, pero preste atención al dialecto marsellés, una variedad melodiosa del francés influida por el provenzal. En occitano la ciudad se llama Marselha, y el árabe y el occitano figuran entre las muchas lenguas que se oyen en este animado puerto mediterráneo.",
@@ -1187,12 +1187,12 @@
     "airportInfo": "El Aeropuerto Internacional José María Córdova es el principal aeropuerto del área metropolitana de Medellín y el segundo más transitado de Colombia. Se encuentra en las montañas que dominan el Valle de Aburrá, y su aproximación a gran altitud entre terreno montañoso hace del aterrizaje uno de los técnicamente más exigentes de Sudamérica. Un sistema de teleférico del metro (Metrocable) conecta la zona del aeropuerto con la ciudad, situada más abajo.",
     "airportName": "José María Córdova International Airport",
     "currencyCode": "COP",
-    "currencyInfo": "Colombian Peso ($)",
+    "currencyInfo": "Peso colombiano ($)",
     "funFact": "A principios de los años noventa, durante el reinado de terror de Pablo Escobar, Medellín llegó a ser calificada como la ciudad más peligrosa del mundo. Hoy se celebra como una de las historias de transformación urbana más notables del planeta. En 2013 la ciudad ganó el premio a la Ciudad Más Innovadora del Urban Land Institute por utilizar la arquitectura, la infraestructura y la cultura para volver a conectar sus comunas de ladera con el centro. Las escaleras mecánicas al aire libre construidas en los empinados barrios de las Comunas siguen siendo una de las intervenciones urbanísticas más citadas.",
     "language": "Español",
     "languageInfo": "El español colombiano que se habla en Medellín (el dialecto paisa) es conocido por ser especialmente cálido, expresivo y lírico. Los paisas (los habitantes de la región de Antioquia) son famosos en toda Colombia por su espíritu emprendedor y su acento característico. La expresión local 'parce' (amigo, compañero) y el uso creativo de los diminutivos dan al español paisa su tono cariñoso tan particular.",
     "nickname": "La Ciudad de la Eterna Primavera",
-    "transportation": "Metro & Metrocable",
+    "transportation": "Metro y Metrocable",
     "transportationFact": "El metro de Medellín es el único sistema de metro pesado de Colombia y motivo de inmenso orgullo local: los habitantes de Medellín lo mantienen impecable y lo consideran un símbolo de la transformación de la ciudad. El sistema de góndolas Metrocable lleva el transporte a barrios de ladera que antes estaban aislados del centro, una conexión literal y simbólica entre todas las partes de la ciudad. La línea de tranvía Tranvía de Ayacucho completa la red en el este."
   },
   "Melbourne": {
@@ -1239,7 +1239,7 @@
     "airportInfo": "Malpensa sirve como puerta de entrada de lujo a Italia, con una \"Plaza del Lujo\" llena de boutiques emblemáticas de famosas casas de moda italianas. Está estratégicamente ubicado cerca de los Alpes, lo que ofrece a los viajeros una hermosa vista de las montañas mientras transitan por las espaciosas y modernas terminales del aeropuerto.",
     "airportName": "Malpensa",
     "currencyCode": "EUR",
-    "currencyInfo": "euros (€)",
+    "currencyInfo": "Euro (€)",
     "funFact": "El impresionante Duomo di Milano, la pieza central de la ciudad, tardó casi 600 años en completarse y está adornado con más de 3400 estatuas. Si bien es famosa por la alta costura, Milán es también el corazón financiero de Italia y el hogar del icónico mural de Leonardo da Vinci, \"La Última Cena\".",
     "language": "italiano",
     "languageInfo": "El italiano es el idioma principal, hablado aquí con una nítida eficiencia norteña que refleja la cultura empresarial de la ciudad. El inglés es muy común en los distritos financieros y de la moda, aunque el italiano sigue siendo el idioma del corazón y la cocina.",
@@ -1256,7 +1256,7 @@
     "funFact": "Milwaukee llegó a albergar cuatro de las mayores cervecerías del mundo, Schlitz, Blatz, Pabst y Miller, y durante muchos años produjo más cerveza que ninguna otra ciudad, lo que le valió el apodo de Brew City. Cada verano, su orilla del lago acoge además Summerfest, un festival de 11 días considerado uno de los mayores festivales de música del mundo.",
     "language": "Inglés",
     "languageInfo": "Se habla inglés con un amable acento del Medio Oeste. La herencia alemana es profunda: hacia 1900, cerca de un tercio de los habitantes tenía raíces alemanas, y Milwaukee llegó a ser conocida como la más alemana de las ciudades estadounidenses.",
-    "nickname": "Brew City",
+    "nickname": "La Ciudad Cervecera",
     "transportation": "Tranvía The Hop",
     "transportationFact": "El tranvía The Hop empezó a funcionar el 2 de noviembre de 2018 y une la Milwaukee Intermodal Station con el centro, el Lower East Side y el Historic Third Ward a lo largo de su M-Line de 2,1 millas. En 2024 se sumó la corta L-Line del frente lacustre, y el viaje sigue siendo gratuito."
   },
@@ -1283,7 +1283,7 @@
     "language": "francés e inglés",
     "languageInfo": "Montreal es una ciudad verdaderamente bilingüe donde las interacciones sociales a menudo comienzan con un amistoso \"Bonjour-Hi\" para permitir que el hablante elija su lengua preferida. El francés local 'Québécois' es distinto del francés europeo y a menudo se mezcla con el inglés para crear un 'Franglais' local único.",
     "nickname": "La ciudad de los santos",
-    "transportation": "Montreal Metro",
+    "transportation": "Metro de Montreal",
     "transportationFact": "El metro de Montreal circula íntegramente sobre neumáticos de caucho, lo que hace el viaje notablemente silencioso en comparación con los sistemas de ruedas de acero. La ciudad cuenta también con el REM, un nuevo tren ligero automatizado que conecta los suburbios. Los trenes de cercanías de Exo ofrecen un transporte de larga distancia esencial para el área del Gran Montreal."
   },
   "Mumbai": {
@@ -1291,12 +1291,12 @@
     "airportInfo": "La Terminal 2 del aeropuerto de Bombay cuenta con un impresionante 'Art Wall' de 3 kilómetros de largo que exhibe miles de objetos y obras de arte de toda la India. El techo de la terminal se inspira en las plumas danzantes de un pavo real y crea una experiencia cultural envolvente y sobrecogedora para los viajeros que llegan.",
     "airportName": "Chhatrapati Shivaji",
     "currencyCode": "INR",
-    "currencyInfo": "Indian Rupee (₹)",
+    "currencyInfo": "Rupia india (₹)",
     "funFact": "Bombay es una ciudad de escala inmensa, donde los trenes locales transportan a más de 7 millones de personas cada día, más que toda la población de muchos países pequeños. Es el corazón de la industria cinematográfica de Bollywood y una ciudad donde la histórica Puerta de la India se alza como símbolo de su pasado colonial y marítimo.",
     "language": "Maratí e hindi",
     "languageInfo": "Bombay es un crisol lingüístico donde el maratí es la lengua del estado y el hindi es la lengua común. Oirá con frecuencia el 'Bambaiya Hindi', una jerga rítmica y callejera propia de la cultura acelerada de la ciudad.",
     "nickname": "ciudad de los sueños",
-    "transportation": "Local Trains",
+    "transportation": "Trenes locales",
     "transportationFact": "El Mumbai Suburban Railway se conoce como la 'Lifeline of Mumbai' (la línea vital de Bombay) y es esencial para el funcionamiento de la ciudad. El Mumbai Metro es una incorporación reciente y en rápido crecimiento que ofrece a los viajeros la comodidad del aire acondicionado. Los icónicos taxis negros y amarillos 'Kaali-Peeli' y los autorickshaws cubren el último tramo del trayecto para la mayoría de los residentes."
   },
   "Munich": {
@@ -1304,7 +1304,7 @@
     "airportInfo": "El aeropuerto de Múnich abrió en 1992 a unos 28,5 km al noreste de la ciudad, cerca de Freising, y lleva el nombre del antiguo ministro-presidente bávaro Franz Josef Strauss. Es un gran centro de operaciones de Lufthansa con dos terminales de pasajeros y tiene su propia estación de S-Bahn con conexión directa al centro.",
     "airportName": "Munich Airport",
     "currencyCode": "EUR",
-    "currencyInfo": "euros (€)",
+    "currencyInfo": "Euro (€)",
     "funFact": "Múnich es la sede del Oktoberfest, la mayor fiesta popular (Volksfest) del mundo, que nació de la celebración de una boda real en octubre de 1810. Con unos 4.800 habitantes por kilómetro cuadrado, es además el municipio más densamente poblado de Alemania.",
     "language": "Alemán",
     "languageInfo": "El alemán estándar se habla en todas partes, pero Múnich es la segunda ciudad más grande del área del dialecto bávaro, después de Viena. Los dialectos bávaros están reconocidos como lenguas regionales, así que quizá oigas un amable 'Servus' o 'Grüß Gott' en lugar de 'Hallo'.",
@@ -1330,11 +1330,11 @@
     "airportInfo": "Como principal puerta de entrada a los safaris de África Oriental, el aeropuerto es un centro bullicioso para los viajeros que se dirigen al Maasai Mara y más allá. Recientemente se sometió a importantes renovaciones para modernizar sus terminales y mejorar la experiencia de tránsito de su creciente número de visitantes internacionales.",
     "airportName": "Jomo Kenyatta",
     "currencyCode": "KES",
-    "currencyInfo": "Kenyan Shilling (KSh)",
+    "currencyInfo": "Chelín keniano (KSh)",
     "funFact": "Nairobi es la única ciudad del mundo que alberga un parque nacional completo dentro de sus límites, donde leones y rinocerontes deambulan con los rascacielos de fondo. También se ha convertido en uno de los principales polos tecnológicos de África, a menudo llamado 'Silicon Savannah' por sus prósperas innovaciones en dinero móvil.",
     "language": "Suajili e inglés",
     "languageInfo": "El inglés y el suajili son idiomas oficiales, aunque a menudo escucharás 'Sheng', una mezcla genial de los dos que usan los lugareños. El inglés es el idioma principal para la instrucción y los negocios.",
-    "nickname": "Green City in the Sun",
+    "nickname": "La Ciudad Verde bajo el Sol",
     "transportation": "Matatus",
     "transportationFact": "Los matatus son minibuses privados y coloridos, famosos por sus elaborados grafitis, su iluminación personalizada y sus potentes equipos de sonido. El ferrocarril de ancho estándar (SGR) ofrece una conexión moderna y de alta velocidad entre Nairobi y la ciudad costera de Mombasa. Los trenes de cercanías y los boda-bodas (mototaxis) son esenciales para moverse entre el denso tráfico de la ciudad."
   },
@@ -1347,7 +1347,7 @@
     "funFact": "Nápoles es la legendaria cuna de la pizza, donde la variedad Margherita se creó en 1889 en honor a la reina de Italia durante su visita. La ciudad se asienta sobre una compleja red de túneles y catacumbas antiguas, mientras la imponente silueta del Vesubio domina su pintoresca bahía.",
     "language": "Italiano",
     "languageInfo": "Aunque el italiano es la lengua oficial, el napolitano local es tan distintivo que la UNESCO lo reconoce como una lengua propia. Es una forma de hablar expresiva y rítmica, a menudo acompañada de los famosos gestos teatrales con las manos de la ciudad.",
-    "nickname": "City of the Sun",
+    "nickname": "La Ciudad del Sol",
     "transportation": "Estaciones de arte del metro",
     "transportationFact": "El metro de Nápoles es mundialmente famoso por sus 'Estaciones del Arte', y la estación Toledo suele citarse como la más bella de Europa. La Circumvesuviana es un histórico ferrocarril de vía estrecha que conecta la ciudad con Pompeya y Sorrento. Cuatro líneas de funicular ayudan a los residentes a recorrer el terreno extremadamente empinado y accidentado de la ciudad."
   },
@@ -1356,11 +1356,11 @@
     "airportInfo": "El código del aeropuerto, BNA, significa Berry Field Nashville, en honor al coronel que estableció el aeródromo original en 1937. Fiel a sus raíces, los escenarios de la terminal ofrecen actuaciones de música en vivo durante todo el día, para que los viajeros reciban una serenata desde el momento en que aterrizan.",
     "airportName": "Nashville Int'l",
     "currencyCode": "USD",
-    "currencyInfo": "US Dollar ($)",
+    "currencyInfo": "Dólar estadounidense ($)",
     "funFact": "Nashville es el corazón indiscutible de la industria de la música country, hogar del histórico Grand Ole Opry y de la 'Honky Tonk Highway' iluminada con neones. Más allá de la música, es un importante centro de atención sanitaria y la cuna del famoso y picante 'Nashville Hot Chicken'.",
     "language": "Inglés",
     "languageInfo": "La ciudad habla con un tono rítmico sureño que a menudo se describe como el \"estándar de Nashville\", que es refinado pero hospitalario. Debido a su condición de capital creativa, también encontrará una alta concentración de jerga musical y conversaciones centradas en la narración de historias en la vida cotidiana.",
-    "nickname": "Music City",
+    "nickname": "La Ciudad de la Música",
     "transportation": "WeGo",
     "transportationFact": "La estación WeGo Central es el centro principal de casi todas las rutas de autobús de la ciudad. El Music City Star es el único tren de cercanías de Tennessee y presta servicio entre Lebanon y el centro de Nashville. Modernos autobuses regionales ofrecen servicio exprés a quienes viajan desde los condados vecinos."
   },
@@ -1369,7 +1369,7 @@
     "airportInfo": "El Aeropuerto Internacional Indira Gandhi, que lleva el nombre de la primera mujer en ocupar el cargo de primera ministra de la India, es el aeropuerto más concurrido del sur de Asia. La Terminal 3, inaugurada en 2010, es una de las terminales aeroportuarias más grandes del mundo por superficie y puede atender a 34 millones de pasajeros al año. El Airport Metro Express conecta la terminal con la estación de ferrocarril de Nueva Delhi en menos de 20 minutos.",
     "airportName": "Indira Gandhi International Airport",
     "currencyCode": "INR",
-    "currencyInfo": "Indian Rupee (₹)",
+    "currencyInfo": "Rupia india (₹)",
     "funFact": "Nueva Delhi es la capital de la India y una de las ciudades con más capas históricas del mundo: ha sido la capital de al menos siete imperios sucesivos y ha sido destruida y reconstruida varias veces. La ciudad alberga la Tumba de Humayun, que inspiró directamente el diseño del Taj Mahal. El Qutb Minar, un minarete de 72,5 metros construido en 1193, es el minarete de ladrillo más alto del mundo y Patrimonio de la Humanidad de la UNESCO.",
     "language": "Hindi e inglés",
     "languageInfo": "El hindi es la lengua oficial de la India y la lengua materna de la mayoría de la población de Delhi. El inglés es cooficial y se usa ampliamente en el gobierno, la educación y los negocios. Delhi es un crisol de las numerosas lenguas de la India: también oirá panyabí, urdu y decenas de otras lenguas regionales en los diversos barrios de la ciudad.",
@@ -1386,7 +1386,7 @@
     "funFact": "Nueva Orleans es la cuna del jazz y del cóctel estadounidense, una ciudad con alma donde la historia se celebra con festivales vibrantes como el Mardi Gras. Su singular arquitectura del Barrio Francés y su mundialmente famosa cocina criolla y cajún la convierten en una de las ciudades con mayor identidad cultural de Norteamérica.",
     "language": "Inglés",
     "languageInfo": "El habla local es un rico tapiz con influencias de la herencia francesa, española y africana, que ha dado lugar a una variedad de dialectos locales únicos. El más notable es el acento 'Yat', que, sorprendentemente, guarda más similitudes fonéticas con el acento tradicional de Brooklyn que con el de los estados sureños vecinos.",
-    "nickname": "The Big Easy",
+    "nickname": "La Gran Tranquila",
     "transportation": "tranvías",
     "transportationFact": "La línea St. Charles es el tranvía continuo más antiguo del mundo y es un Monumento Histórico Nacional. Las líneas Canal Street y Riverfront utilizan automóviles rojos de época moderna para dar servicio al Barrio Francés y a los distritos comerciales. Los autobuses RTA complementan los tranvías para brindar cobertura en toda la parroquia de Nueva Orleans."
   },
@@ -1399,8 +1399,8 @@
     "funFact": "La ciudad de Nueva York es un titán financiero y cultural mundial, hogar de la bóveda de oro más grande del mundo ubicada en las profundidades del Banco de la Reserva Federal. Es una ciudad de ocho millones de habitantes que hablan más de 800 idiomas, lo que la convierte en el lugar con mayor diversidad lingüística del planeta.",
     "language": "Inglés",
     "languageInfo": "Nueva York es un centro de 'dialectos globales' donde puede oír cientos de idiomas y cientos de acentos distintos del inglés en un solo trayecto en metro. El estilo de comunicación local es famoso por ser directo, rápido y eficiente, reflejo de la mentalidad de 'la ciudad que nunca duerme'.",
-    "nickname": "The Big Apple",
-    "transportation": "MTA Subway",
+    "nickname": "La Gran Manzana",
+    "transportation": "Metro de la MTA",
     "transportationFact": "El NYC Subway es el sistema más grande del mundo por número de estaciones y funciona las 24 horas del día. El Long Island Rail Road y el Metro-North ofrecen un amplio servicio de cercanías hacia los suburbios. El sistema NYC Ferry ofrece una forma panorámica de viajar entre los cinco distritos por el East River."
   },
   "Nice": {
@@ -1413,7 +1413,7 @@
     "language": "Francés",
     "languageInfo": "El francés es la lengua oficial, aunque en entornos tradicionales oirá el nizardo, un dialecto occitano local emparentado con el provenzal. Por la herencia italiana de la ciudad, muchos residentes mayores entienden el italiano, y la cocina refleja las influencias piamontesas y ligures de la región vecina. El dialecto nizardo dio nombre a la famosa ensalada niçoise, un plato cuyos ingredientes auténticos los nizardos debaten con pasión.",
     "nickname": "La Bella del Mediodía",
-    "transportation": "Tramway de Nice",
+    "transportation": "Tranvía de Niza",
     "transportationFact": "El moderno tranvía de Niza tiene tres líneas que conectan el casco antiguo, el puerto, el aeropuerto y los distritos universitarios. El recorrido de la Línea 1 atraviesa la ciudad y une la estación de tren principal con el paseo marítimo. Las amplias zonas peatonales a lo largo del litoral y por el Vieux-Nice (casco antiguo) hacen que la ciudad sea muy fácil de recorrer a pie. Los ferris conectan el puerto antiguo con Córcega y Cerdeña."
   },
   "Oak Park": {
@@ -1438,8 +1438,8 @@
     "funFact": "Orlando es la capital mundial de los parques temáticos y alberga destinos icónicos como Walt Disney World y Universal Studios dentro de su extensa área metropolitana. Más allá de los parques, la ciudad es conocida por sus hermosos lagos y su estatus como uno de los centros tecnológicos y aeroespaciales de más rápido crecimiento en Florida.",
     "language": "Inglés",
     "languageInfo": "El lenguaje aquí es generalmente un \"estándar americano\" muy neutral, en gran medida para dar cabida a los millones de turistas internacionales que lo visitan anualmente. Sin embargo, la presencia de una gran comunidad puertorriqueña asegura que el español también sea una parte importante e influyente del panorama lingüístico local.",
-    "nickname": "La ciudad hermosa",
-    "transportation": "SunRail & Lynx",
+    "nickname": "La Ciudad Bella",
+    "transportation": "SunRail y Lynx",
     "transportationFact": "SunRail es un sistema de trenes de cercanías de dos pisos equipado con mesas de trabajo y Wi-Fi gratuito. La red de autobuses Lynx es el principal transporte público local e incluye el circulador gratuito LYMMO en el centro de la ciudad. El tren de alta velocidad de Brightline conecta ahora el Aeropuerto Internacional de Orlando directamente con el sur de Florida."
   },
   "Osaka": {
@@ -1447,12 +1447,12 @@
     "airportInfo": "El Aeropuerto Internacional de Kansai es una proeza de ingeniería construida sobre una isla artificial en la bahía de Osaka. Cuando la isla empezó a hundirse más rápido de lo previsto tras su construcción, los ingenieros tuvieron que elevar la terminal con gatos hidráulicos para compensarlo; se ha elevado varias veces desde su inauguración en 1994. Se añadió una segunda pista sobre una segunda isla artificial, y el aeropuerto atiende hoy a decenas de millones de pasajeros al año.",
     "airportName": "Kansai International Airport",
     "currencyCode": "JPY",
-    "currencyInfo": "Japanese Yen (¥)",
+    "currencyInfo": "Yen japonés (¥)",
     "funFact": "Osaka es la capital culinaria indiscutible de Japón, famosa por su cultura local del kuidaore: comer hasta caer rendido. Sus comidas callejeras más emblemáticas, el takoyaki (bolitas de pulpo) y el okonomiyaki (tortitas saladas), se comen en puestos de pie por toda la ciudad. El Castillo de Osaka, construido originalmente por el señor de la guerra Toyotomi Hideyoshi en 1583, desempeñó un papel central en la unificación de Japón y sigue siendo uno de los monumentos históricos más visitados del país.",
     "language": "Japonés",
     "languageInfo": "El dialecto local de Osaka, el Kansai-ben (u Osaka-ben), es posiblemente el dialecto regional más reconocido de Japón, conocido por su ritmo característico y su energía cómica. Aunque el japonés estándar se entiende en todas partes, los habitantes de Osaka están orgullosos de su dialecto y lo usan en la vida diaria. La ciudad es la cuna de gran parte de la comedia en vivo popular de Japón (manzai), y a menudo notará el ingenio y la calidez en las conversaciones cotidianas.",
-    "nickname": "The Nation's Kitchen",
-    "transportation": "Osaka Metro & JR Loop",
+    "nickname": "La Cocina de la Nación",
+    "transportation": "Osaka Metro y línea circular JR",
     "transportationFact": "Osaka tiene uno de los sistemas de metro más eficientes del mundo, con 9 líneas del Osaka Metro identificadas por colores que forman una densa red por toda la ciudad. La JR Osaka Loop Line rodea el centro de la ciudad, de forma muy parecida a la Yamanote Line de Tokio. Una sola tarjeta ICOCA sirve para el Osaka Metro, las líneas JR y los ferrocarriles privados Hankyu y Hanshin, lo que hace que moverse sea notablemente sencillo."
   },
   "Oslo": {
@@ -1499,7 +1499,7 @@
     "airportInfo": "El aeropuerto cuenta con una colección de arte permanente de calidad museística que exhibe la obra de artistas locales de Filadelfia en sus siete terminales. Está estratégicamente situado cerca del centro de la ciudad y es un importante centro de conexiones para los vuelos transatlánticos de American Airlines a Europa.",
     "airportName": "Philadelphia Int'l",
     "currencyCode": "USD",
-    "currencyInfo": "US Dollar ($)",
+    "currencyInfo": "Dólar estadounidense ($)",
     "funFact": "Filadelfia fue la capital original de los Estados Unidos y alberga el Salón de la Independencia, donde se firmaron tanto la Declaración de Independencia como la Constitución. También cuenta con el primer zoológico y el primer hospital del país, lo que refleja su larga historia de innovación estadounidense.",
     "language": "Inglés",
     "languageInfo": "Filadelfia es famosa por su acento agudo y distintivo y el uso versátil de la palabra del argot local 'Jawn', que puede referirse a cualquier persona, lugar o cosa. El estilo de comunicación es notoriamente valiente y apasionado, especialmente cuando la conversación gira hacia los deportes o la historia locales.",
@@ -1564,7 +1564,7 @@
     "airportInfo": "El aeropuerto Francisco Sá Carneiro, antes llamado Pedras Rubras, se inauguró en 1945 y está a unos 11 km al noroeste de la Torre de los Clérigos. En 2025 atendió a casi 17 millones de pasajeros y es base de easyJet y Ryanair. La línea E del metro va directamente de la terminal al centro de la ciudad.",
     "airportName": "Francisco Sá Carneiro Airport",
     "currencyCode": "EUR",
-    "currencyInfo": "euros (€)",
+    "currencyInfo": "Euro (€)",
     "funFact": "El nombre romano de Oporto, Portus Cale, suele citarse como el origen del nombre de Portugal. A sus vecinos se les llama «tripeiros» (comedores de tripas) porque, según cuenta la tradición, la ciudad entregó su mejor carne a las expediciones navales y se quedó con las tripas; el guiso Tripas à moda do Porto sigue siendo su plato emblemático.",
     "language": "portugués",
     "languageInfo": "El portugués es una lengua romance que se escribe con el alfabeto latino y signos como la ã y la ç. Para saludar se dice «Bom dia» (buenos días) o un simple «Olá», y para dar las gracias, «Obrigado» (u «Obrigada» si eres mujer).",
@@ -1603,12 +1603,12 @@
     "airportInfo": "El Aeropuerto Internacional Jean Lesage de Quebec es un moderno aeropuerto regional con un número creciente de rutas internacionales directas, además de sus conexiones nacionales dentro de Canadá. En los últimos años ha ampliado su terminal para atender el aumento de visitantes, sobre todo en invierno, cuando el famoso Carnaval de Invierno de Quebec atrae a visitantes de toda Norteamérica y Europa. El trayecto en taxi o autobús hasta la ciudad antigua dura unos 20 minutos.",
     "airportName": "Quebec City Jean Lesage International Airport",
     "currencyCode": "CAD",
-    "currencyInfo": "Canadian Dollar ($)",
+    "currencyInfo": "Dólar canadiense ($)",
     "funFact": "Quebec es la única ciudad amurallada de Norteamérica al norte de México, y su casco antiguo fortificado (Vieux-Québec) es Patrimonio de la Humanidad de la UNESCO. La ciudad fue fundada en 1608 por Samuel de Champlain y es el asentamiento habitado de forma continua más antiguo de Canadá. Es la ciudad más francesa de Norteamérica: aquí el francés no solo es oficial, sino la lengua materna y viva de casi el 95% de los residentes, lo que da a Quebec un aire genuinamente europeo que la distingue por completo de otras ciudades norteamericanas.",
     "language": "Francés",
     "languageInfo": "El francés es la lengua oficial y el idioma cotidiano de la gran mayoría de los residentes: Quebec es el corazón francófono de Canadá. El francés quebequense local tiene un vocabulario, unas expresiones y unos sonidos propios que difieren notablemente del francés de París. El inglés se entiende en las zonas turísticas y los hoteles, pero incluso un pequeño esfuerzo por hablar francés se agradece de corazón y transforma la experiencia. La vida cultural de la ciudad (literatura, música, teatro) se desarrolla íntegramente en francés.",
     "nickname": "La Vieja Capital",
-    "transportation": "RTC Buses & Funicular",
+    "transportation": "Autobuses RTC y funicular",
     "transportationFact": "El transporte público de Quebec lo gestiona la red de autobuses RTC (Réseau de transport de la Capitale). La Ciudad Alta y la Ciudad Baja de la ciudad antigua están unidas de forma espectacular por el famoso Funiculaire du Vieux-Québec, un funicular histórico que sube y baja pasajeros por el escarpado acantilado desde 1879. Las calles empedradas de la ciudad antigua se recorren mejor a pie, y en invierno la nieve da un aire de cuento de hadas a las fortificaciones de piedra y a las iglesias con campanario."
   },
   "Queenstown": {
@@ -1616,11 +1616,11 @@
     "airportInfo": "El aeropuerto de Queenstown es famoso entre los entusiastas de la aviación por su impresionante acceso a las montañas, donde los aviones deben navegar entre estrechos picos alpinos para aterrizar. Es uno de los aeropuertos más pintorescos del hemisferio sur y ofrece a los viajeros una introducción inmediata e impresionante a la belleza escarpada de los Alpes de Nueva Zelanda.",
     "airportName": "Queenstown Airport",
     "currencyCode": "NZD",
-    "currencyInfo": "New Zealand Dollar ($)",
+    "currencyInfo": "Dólar neozelandés ($)",
     "funFact": "Queenstown es la indiscutible capital mundial de la aventura y el lugar de nacimiento del puenting comercial en el histórico puente Kawarau. Ubicado a orillas del lago Wakatipu y rodeado por la cadena montañosa \"Remarkables\", es un destino durante todo el año para practicar esquí, paseos en lancha motora y senderismo.",
     "language": "Inglés",
     "languageInfo": "El inglés local es excepcionalmente amable e informal, y gira en torno al estilo de vida aventurero y al aire libre de la ciudad. Los visitantes se acostumbrarán pronto al relajado acento kiwi y al acogedor 'Kia Ora' que se usa en toda la región.",
-    "nickname": "Adventure Capital",
+    "nickname": "La Capital de la Aventura",
     "transportation": "Orbus",
     "transportationFact": "Orbus es un sistema de autobuses simplificado y de tarifa plana diseñado para hacer que el transporte público sea accesible tanto para los locales como para los esquiadores visitantes. El sistema incluye soportes especializados en la parte delantera de los autobuses para transportar bicicletas de montaña y equipo para la nieve. Los taxis acuáticos ofrecen una alternativa pintoresca y rápida para cruzar el lago Wakatipu entre los principales centros turísticos."
   },
@@ -1642,12 +1642,12 @@
     "airportInfo": "El Aeropuerto Internacional de Keflavik se encuentra a unos 50 km al suroeste de Reikiavik y funciona como centro de conexiones transatlánticas de Icelandair. Su ubicación a medio camino entre Norteamérica y Europa lo convierte en un punto de escala natural, y el Flybus conecta la terminal con el centro de Reikiavik en unos 45 minutos. Una nueva ampliación de la terminal ha aumentado notablemente la capacidad del aeropuerto para atender el auge turístico del país.",
     "airportName": "Keflavik International Airport",
     "currencyCode": "ISK",
-    "currencyInfo": "Icelandic Krona (kr)",
+    "currencyInfo": "Corona islandesa (kr)",
     "funFact": "Reikiavik es la capital más septentrional del mundo y se calienta casi por completo con energía geotérmica procedente del paisaje volcánico de Islandia, lo que le da uno de los aires más limpios y una de las calefacciones más baratas de todas las capitales del mundo. En verano, el sol apenas se pone (el fenómeno del sol de medianoche), mientras que en invierno los visitantes pueden contemplar la aurora boreal danzando justo sobre la ciudad. Islandia nunca ha tenido un ejército permanente y figura sistemáticamente entre los países más pacíficos, igualitarios y felices del mundo.",
     "language": "Islandés",
     "languageInfo": "El islandés es una lengua germánica septentrional sorprendentemente cercana al nórdico antiguo que hablaban los vikingos hace 1.000 años: los islandeses de hoy pueden leer las sagas vikingas medievales en su lengua original. El idioma se ha preservado de forma deliberada mediante la creación de vocabulario nuevo (los islandeses inventan palabras islandesas en lugar de tomarlas del inglés, de modo que 'computer' pasa a ser 'tolva', un compuesto de 'número' y 'vidente'). El inglés lo habla prácticamente toda la población de Reikiavik.",
     "nickname": "Bahía de los Humos",
-    "transportation": "Straeto Buses & Taxis",
+    "transportation": "Autobuses Straeto y taxis",
     "transportationFact": "Reikiavik cuenta con una red de autobuses (Straeto) que cubre la ciudad y los suburbios cercanos, pero la ciudad es lo bastante pequeña como para que muchos residentes se desplacen a pie o en bicicleta la mayor parte del tiempo. Alquilar un coche es casi imprescindible para explorar los espectaculares paisajes de Islandia más allá de la ciudad. En invierno, las piscinas al aire libre climatizadas con energía geotérmica son un eje de la vida social de Reikiavik: las piscinas públicas abren todo el año, haga el tiempo que haga, y son tanto centros comunitarios como instalaciones deportivas."
   },
   "Riga": {
@@ -1655,7 +1655,7 @@
     "airportInfo": "El aeropuerto RIX de Riga está en el municipio de Mārupe, a unos 10 km al oeste del centro, y es el mayor de los países bálticos, con vuelos directos a 107 destinos en septiembre de 2024. Se construyó en 1973 para sustituir al anticuado aeropuerto de Spilve y es la base principal de la aerolínea nacional airBaltic.",
     "airportName": "RIX Riga Airport",
     "currencyCode": "EUR",
-    "currencyInfo": "euro (€)",
+    "currencyInfo": "Euro (€)",
     "funFact": "Los edificios modernistas (Art Nouveau) suponen cerca de un tercio de todos los edificios del centro de Riga, la mayor concentración de este estilo del mundo según el historiador Jānis Krastiņš. Riga fue Capital Europea de la Cultura en 2014.",
     "language": "Letón",
     "languageInfo": "El letón es una lengua báltica que se escribe con el alfabeto latino y letras adicionales como ā, č y ļ. Para saludar se dice 'Sveiki' y para felicitar, 'Apsveicam'.",
@@ -1668,7 +1668,7 @@
     "airportInfo": "Galeão se encuentra en la Isla del Gobernador, y su nombre recuerda un gran galeón construido allí en el siglo XVII. Desde 1999 rinde homenaje oficialmente a Antonio Carlos 'Tom' Jobim, coautor de 'The Girl from Ipanema', cuya canción 'Samba do Avião' describe la alegría de aterrizar en Río.",
     "airportName": "Galeão Int'l",
     "currencyCode": "BRL",
-    "currencyInfo": "Brazilian Real (R$)",
+    "currencyInfo": "Real brasileño (R$)",
     "funFact": "De 1808 a 1821, Río fue la capital de todo el Imperio portugués después de que la corte real huyera de la invasión de Napoleón, un caso poco común de un imperio europeo gobernado desde las Américas. En 2012 la UNESCO declaró su paisaje entre la montaña y el mar Patrimonio de la Humanidad.",
     "language": "Portugués",
     "languageInfo": "El acento carioca es fácil de reconocer: una 's' al final de sílaba se convierte en una 'sh' suave, de modo que 'mais' suena como 'maish'. Los locales dicen 'maneiro' para algo genial y 'mermão' para mi hermano, y un rápido 'valeu' significa gracias.",
@@ -1681,7 +1681,7 @@
     "airportInfo": "El aeropuerto es célebre por sus emblemáticas terminales triangulares, que se alzan como un espejismo en el paisaje desértico del Najd. Recientemente ha sido objeto de enormes ampliaciones para convertirse en un pilar clave de Saudi Vision 2030, con el objetivo de ser un 'megacentro' de seis pistas conocido como King Salman International.",
     "airportName": "King Khalid",
     "currencyCode": "SAR",
-    "currencyInfo": "Saudi Riyal (ر.س)",
+    "currencyInfo": "Riyal saudí (ر.س)",
     "funFact": "El nombre Riad se deriva de la palabra árabe que significa \"jardines\", una referencia a los fértiles huertos que alguna vez definieron este oasis en el desierto. Ahora es una de las ciudades de más rápido crecimiento del mundo y ha evolucionado hasta convertirse en un centro financiero global al tiempo que preserva sitios históricos como la Fortaleza Masmak.",
     "language": "árabe",
     "languageInfo": "El árabe es el alma de la ciudad, siendo el dialecto local Najdi la forma hablada más común. El inglés se utiliza ampliamente en el mundo empresarial y entre la generación más joven, lo que facilita la navegación a los viajeros.",
@@ -1694,7 +1694,7 @@
     "airportInfo": "El aeropuerto de Fiumicino gana constantemente premios internacionales por su gastronomía de alta calidad, que incluye auténticos bistrós italianos y colaboraciones de chefs con estrellas Michelin. Sirve como puerta principal al Vaticano y está conectado con el centro de la ciudad mediante un tren expreso de alta velocidad que lleva el nombre de Leonardo da Vinci.",
     "airportName": "Fiumicino",
     "currencyCode": "EUR",
-    "currencyInfo": "euros (€)",
+    "currencyInfo": "Euro (€)",
     "funFact": "Roma alberga un museo dedicado enteramente a la historia y la ciencia de la pasta, que celebra la exportación culinaria más famosa de Italia. La ciudad es un museo al aire libre donde templos y estadios de 2000 años de antigüedad se encuentran junto a oficinas modernas y concurridas y cafés bulliciosos.",
     "language": "italiano",
     "languageInfo": "El italiano es el idioma oficial, pero a menudo escucharás el dialecto \"romanesco\" en las trattorias locales, conocido por su humor y teatralidad. El inglés es común en el centro histórico, aunque algunas palabras en italiano te ayudarán a navegar por la ciudad como un local.",
@@ -1725,7 +1725,7 @@
     "language": "Alemán",
     "languageInfo": "El alemán austriaco es el idioma oficial, y el dialecto local de Salzburgo (Salzburgerisch) tiene sonidos vocálicos y un vocabulario propios que difieren del alto alemán estándar. La ciudad tiene una fuerte cultura musical: el Festival de Salzburgo, que se celebra cada verano, es uno de los eventos de artes escénicas más prestigiosos del mundo y llena la ciudad de músicos, directores de orquesta y cantantes de ópera de todo el planeta. El inglés se habla ampliamente en el extenso sector turístico de la ciudad.",
     "nickname": "La Roma del Norte",
-    "transportation": "Salzburg Buses & Trolleybuses",
+    "transportation": "Autobuses y trolebuses de Salzburgo",
     "transportationFact": "El centro de Salzburgo es compacto y muy fácil de recorrer a pie: el casco antiguo se puede atravesar caminando en unos 20 minutos. La red de autobuses y los trolebuses eléctricos (O-Buses) dan servicio al área metropolitana. Los funiculares conectan el casco antiguo, a orillas del río, con la fortaleza que lo domina y con la meseta del Mönchsberg. Muchos visitantes alquilan bicicletas para seguir los caminos ribereños y explorar el valle del Salzach que rodea la ciudad."
   },
   "San Diego": {
@@ -1829,7 +1829,7 @@
     "language": "Español",
     "languageInfo": "El español andaluz que se habla en Sevilla es famoso por su acento característico: la suavización o pérdida de ciertas consonantes, sobre todo la 's' final, le da una cualidad musical y fluida muy distinta del español castellano o de los dialectos latinoamericanos. Los sevillanos son orgullosos y expresivos, y la cultura de las tapas de la ciudad (que nacieron en Andalucía) invita a quedarse en los bares tanto por la conversación como por la comida.",
     "nickname": "La Ciudad de la Gracia",
-    "transportation": "Tussam Buses & Metro",
+    "transportation": "Autobuses Tussam y metro",
     "transportationFact": "El transporte público de Sevilla incluye cuatro líneas de metro, una amplia red de autobuses y un tranvía histórico (Metrocentro) que recorre el centro peatonal de la ciudad. Sevilla está reconocida internacionalmente como una de las mejores ciudades de Europa para ir en bicicleta: pasó de casi no tener infraestructura ciclista a una red de 180 km de carriles bici segregados en solo dos años (2006-2008), y la bicicleta se convirtió en un medio de transporte habitual prácticamente de la noche a la mañana. El sistema de bicicletas compartidas Sevici cuenta con miles de estaciones."
   },
   "Shanghai": {
@@ -1854,7 +1854,7 @@
     "funFact": "Singapur es un raro ejemplo de ciudad-estado, que actúa como país, capital y ciudad al mismo tiempo dentro de sus compactos 730 kilómetros cuadrados. Es famosa por sus leyes estrictas y su increíble limpieza, así como por su iniciativa 'Ciudad en un jardín' que ha integrado la naturaleza en cada rascacielos y calle.",
     "language": "Multilingüe",
     "languageInfo": "El inglés es el idioma principal en los negocios y la educación, y sirve de puente común entre los diversos grupos étnicos de la ciudad. Oirá con frecuencia el 'Singlish', una mezcla única y eficiente de inglés, malayo y varios dialectos chinos.",
-    "nickname": "Garden City",
+    "nickname": "La Ciudad Jardín",
     "transportation": "MRT",
     "transportationFact": "El sistema Mass Rapid Transit (MRT) es la columna vertebral de Singapur y es famoso por su extrema limpieza y eficiencia. Está estrictamente prohibido comer, beber y fumar en todas las líneas de transporte y conlleva fuertes multas. Los autobuses públicos complementan la red ferroviaria con un sencillo sistema de pago 'Tap In, Tap Out' mediante cualquier tarjeta de crédito."
   },
@@ -1863,11 +1863,11 @@
     "airportInfo": "Las icónicas cúpulas blancas de la terminal, diseñadas por el arquitecto Minoru Yamasaki, fueron tan revolucionarias que inspiraron directamente los diseños posteriores de JFK en Nueva York y CDG en París. Lambert fue también el lugar donde se financió y planificó el 'Spirit of St. Louis' de Charles Lindbergh antes de su histórico vuelo en solitario.",
     "airportName": "St. Louis Lambert",
     "currencyCode": "USD",
-    "currencyInfo": "US Dollar ($)",
+    "currencyInfo": "Dólar estadounidense ($)",
     "funFact": "El cono de helado se popularizó en la Exposición Universal de 1904 en St. Louis cuando un vendedor de gofres ayudó a un puesto de helados vecino que se había quedado sin platos. La ciudad está anclada en el Arco Gateway, el monumento creado por el hombre más alto del hemisferio occidental, que simboliza la expansión hacia el oeste americano.",
     "language": "Inglés",
     "languageInfo": "El inglés local es una intersección lingüística única, que combina vocales del Medio Oeste con un toque de vocabulario sureño. Con frecuencia escuchará la cadencia hospitalaria del \"agradable Medio Oeste\", y términos locales como \"el Lou\" se usan comúnmente para describir la ciudad con orgullo.",
-    "nickname": "Gateway to the West",
+    "nickname": "La Puerta del Oeste",
     "transportation": "MetroEnlace",
     "transportationFact": "MetroLink está constantemente clasificado como uno de los sistemas de tren ligero más eficientes de los Estados Unidos. El sistema utiliza antiguos corredores ferroviarios de carga para proporcionar un tránsito rápido entre el aeropuerto y los suburbios de Illinois. MetroBus proporciona conectividad local, con varias rutas centradas en el histórico Forest Park de la ciudad."
   },
@@ -1876,12 +1876,12 @@
     "airportInfo": "El Aeropuerto de Púlkovo es el segundo con más tráfico de Rusia y la principal puerta de entrada a una de las grandes capitales culturales del mundo. La terminal actual se inauguró en 2014 con un diseño característico que incluye un altísimo techo de cristal sobre la sala de salidas. El aeropuerto se conecta con el centro de la ciudad en metro en unos 40 minutos a través de la estación Moskovskaya, y hay autobuses exprés con salidas frecuentes.",
     "airportName": "Pulkovo Airport",
     "currencyCode": "RUB",
-    "currencyInfo": "Russian Ruble (₽)",
+    "currencyInfo": "Rublo ruso (₽)",
     "funFact": "San Petersburgo fue fundada por Pedro el Grande en 1703 como la 'ventana a Occidente' de Rusia y fue la capital imperial rusa durante más de 200 años. El Museo del Hermitage, situado en el Palacio de Invierno, es uno de los museos de arte más grandes y visitados del mundo, con más de 3 millones de piezas en su colección. Los 342 puentes de la ciudad cruzan 93 ríos y canales, lo que le confiere un carácter acuático que inspiró su apodo veneciano. Las Noches Blancas de junio, cuando el cielo nunca llega a oscurecerse del todo, atraen a visitantes de todo el mundo.",
     "language": "Ruso",
     "languageInfo": "El ruso es el idioma oficial y se habla en toda la vida cultural, política y social de la ciudad. San Petersburgo tiene una tradición literaria y artística especialmente fuerte: es la ciudad de Dostoievski, Gógol, Chaikovski y los Ballets Rusos. Gracias a la cultura intelectual de la ciudad, la educación y las artes gozan de un prestigio especial. El inglés se habla ampliamente en los museos y el sector turístico, aunque en la vida cotidiana se usa casi exclusivamente el ruso.",
     "nickname": "La Venecia del Norte",
-    "transportation": "St. Petersburg Metro",
+    "transportation": "Metro de San Petersburgo",
     "transportationFact": "El metro de San Petersburgo es uno de los más profundos del mundo: varias estaciones están a más de 80 metros bajo tierra, ya que el suelo blando y pantanoso del delta del Nevá exige cimientos muy por debajo del nivel freático. Las estaciones son famosas por sus elaborados mosaicos de la era soviética, sus lámparas de araña y sus interiores de mármol, concebidos como 'palacios para el pueblo'. El metro tiene cinco líneas identificadas por colores y funciona hasta la 1am. Las marshrutkas (minibuses compartidos) complementan al metro para desplazarse en superficie."
   },
   "Stockholm": {
@@ -1889,12 +1889,12 @@
     "airportInfo": "El Aeropuerto de Estocolmo-Arlanda, situado a 40 km al norte de la ciudad, es el aeropuerto internacional con más tráfico de Suecia y el tercero más grande de Escandinavia. El tren de alta velocidad Arlanda Express conecta la terminal con la Estación Central de Estocolmo en solo 18 minutos, lo que lo convierte en uno de los enlaces aeroportuarios más eficientes de Escandinavia. El complejo de terminales está bien pensado para escalas largas, con un hotel y una amplia oferta de tiendas integrados directamente en las zonas de salidas.",
     "airportName": "Stockholm Arlanda Airport",
     "currencyCode": "SEK",
-    "currencyInfo": "Swedish Krona (kr)",
+    "currencyInfo": "Corona sueca (kr)",
     "funFact": "Estocolmo está construida sobre 14 islas donde el lago Mälaren se une al mar Báltico, conectadas por más de 50 puentes. Es la cuna de IKEA, Spotify, Minecraft, Skype y Mojang, lo que le da una de las mayores concentraciones de unicornios tecnológicos per cápita fuera de Silicon Valley. El Tunnelbana (metro) de la ciudad suele llamarse la galería de arte más larga del mundo, ya que más de 90 de sus 100 estaciones están decoradas con esculturas, mosaicos, pinturas e instalaciones de artistas suecos.",
     "language": "Sueco",
     "languageInfo": "El sueco es una lengua germánica septentrional estrechamente emparentada con el noruego y el danés: los hablantes de estas tres lenguas pueden entenderse en gran medida entre sí. Los habitantes de Estocolmo tienen uno de los niveles de inglés más altos del mundo fuera de los países de habla inglesa. La tradición sueca del lagom, el concepto de la medida justa, ni demasiado ni demasiado poco, moldea la cultura social discreta e igualitaria de la ciudad.",
-    "nickname": "Beauty on Water",
-    "transportation": "Tunnelbana & SL Trams",
+    "nickname": "La Belleza sobre el Agua",
+    "transportation": "Tunnelbana y tranvías SL",
     "transportationFact": "El metro de Estocolmo (Tunnelbana, o T-bana) es famoso en todo el mundo por el arte de sus estaciones: más de 150 artistas transformaron los túneles de roca desnuda en vibrantes instalaciones artísticas concebidas para cada lugar. La autoridad de transporte SL gestiona una red perfectamente integrada de metro, tranvías, trenes de cercanías y ferris, todo cubierto por una única tarjeta SL Access. El tranvía histórico Djurgårdslinjen sigue circulando entre el centro de la ciudad y la isla de los museos, Djurgården."
   },
   "Surabaya": {
@@ -1921,7 +1921,7 @@
     "languageInfo": "En la ciudad se habla una versión relajada del inglés donde \"No hay preocupaciones\" sirve como saludo y filosofía nacional. Descubrirá que la comunicación es generalmente informal, amigable y salpicada de modismos australianos únicos.",
     "nickname": "Ciudad Esmeralda",
     "transportation": "Ferris de Sídney",
-    "transportationFact": "Los ferries de Sídney son el medio de transporte más emblemático de la ciudad y ofrecen increíbles vistas de la Ópera y el Puente del Puerto. La red de trenes de Sydney ofrece un servicio masivo de trenes pesados ​​que conecta el CBD con los suburbios del oeste en expansión. Recientemente se inauguró una nueva línea de Metro sin conductor, con trenes de alta frecuencia y puertas mosquiteras en los andenes."
+    "transportationFact": "Los ferries de Sídney son el medio de transporte más emblemático de la ciudad y ofrecen increíbles vistas de la Ópera y el Puente del Puerto. La red de trenes de Sydney ofrece un servicio masivo de trenes pesados que conecta el CBD con los suburbios del oeste en expansión. Recientemente se inauguró una nueva línea de Metro sin conductor, con trenes de alta frecuencia y puertas mosquiteras en los andenes."
   },
   "São Paulo": {
     "airportCode": "GRU",
@@ -1941,12 +1941,12 @@
     "airportInfo": "El Aeropuerto Internacional de Taiwán Taoyuan, situado al suroeste de la ciudad, figura sistemáticamente entre los mejores aeropuertos de Asia por su servicio y eficiencia. Es un importante centro de tránsito entre el noreste y el sudeste asiático, y el complejo de tiendas y restaurantes de su Terminal 2 es un destino en sí mismo. Una línea de MRT al aeropuerto, inaugurada en 2017, ofrece una conexión directa de 35 minutos con la Estación Principal de Taipéi.",
     "airportName": "Taiwan Taoyuan International Airport",
     "currencyCode": "TWD",
-    "currencyInfo": "New Taiwan Dollar (NT$)",
+    "currencyInfo": "Nuevo dólar taiwanés (NT$)",
     "funFact": "Taipei 101, que ostentó el título de edificio más alto del mundo de 2004 a 2010, está diseñado para parecerse a un tallo de bambú y alberga en su interior un enorme péndulo de acero de 660 toneladas que amortigua las vibraciones de los terremotos. Los mercados nocturnos de la ciudad, en especial Shilin y Raohe, son legendarios entre los viajeros gastronómicos y ofrecen cientos de comidas callejeras en un solo lugar. El té de burbujas de Taiwán (té con leche boba) se inventó en Taichung en la década de 1980 y se convirtió en un fenómeno mundial exportado en gran parte desde la cultura de cafeterías de Taipéi.",
     "language": "Chino mandarín",
     "languageInfo": "El chino mandarín es el idioma oficial de Taiwán, aunque el acento y el vocabulario locales difieren ligeramente del chino continental. El hokkien taiwanés (taigi) está muy extendido, sobre todo entre los residentes de más edad, y lo oirá en los mercados y en los barrios tradicionales. Las palabras japonesas incorporadas durante los 50 años del periodo colonial siguen formando parte del habla cotidiana. El inglés se habla habitualmente en los ámbitos tecnológico y empresarial de Taipéi.",
-    "nickname": "City of Azaleas",
-    "transportation": "MRT & YouBike",
+    "nickname": "La Ciudad de las Azaleas",
+    "transportation": "MRT y YouBike",
     "transportationFact": "El MRT de Taipéi figura sistemáticamente entre los sistemas de metro más limpios, puntuales y asequibles del mundo. Su tarjeta de pago sin contacto EasyCard sirve para el MRT, los autobuses urbanos, las estaciones de alquiler de YouBike e incluso muchas tiendas de conveniencia. El sistema público de bicicletas YouBike tiene miles de estaciones de anclaje por toda la ciudad y es muy popular para trayectos cortos. Está terminantemente prohibido comer y beber en el MRT, una norma que se cumple de forma notable."
   },
   "Tangerang": {
@@ -1967,12 +1967,12 @@
     "airportInfo": "El Aeropuerto Internacional de Tiflis ha crecido rápidamente al ritmo de la aparición de Georgia como uno de los destinos de viaje más atractivos del mundo. El aeropuerto se encuentra a unos 18 km del centro de la ciudad, y los taxis y minibuses son las principales conexiones. La terminal se ha modernizado y ampliado, y varias aerolíneas nuevas han añadido rutas a medida que ha crecido la reputación de Georgia en el turismo enológico, gastronómico y de aventura.",
     "airportName": "Tbilisi International Airport",
     "currencyCode": "GEL",
-    "currencyInfo": "Georgian Lari (₾)",
+    "currencyInfo": "Lari georgiano (₾)",
     "funFact": "Tiflis tiene uno de los alfabetos más singulares del mundo: la escritura georgiana (mjedruli) se creó específicamente para la lengua georgiana en el siglo V y no guarda relación con ningún otro sistema de escritura. El casco antiguo de la ciudad es un laberinto de casas de madera con balcones, baños de influencia persa e iglesias medievales agrupadas en la garganta del río Mtkvari, bajo la mirada de la fortaleza de Narikala. Georgia es uno de los países productores de vino más antiguos de la Tierra, con una tradición vinícola de 8.000 años basada en el método tradicional de las vasijas de barro qvevri, hoy Patrimonio Inmaterial de la UNESCO.",
     "language": "Georgiano",
     "languageInfo": "El georgiano (kartuli) es el idioma oficial y una de las lenguas literarias más antiguas del mundo: el primer texto en georgiano data del siglo V. El georgiano pertenece a su propia familia lingüística (la kartveliana), sin relación alguna con las lenguas indoeuropeas ni semíticas. El alfabeto georgiano, con su característica escritura curvilínea, es uno de los 14 sistemas de escritura del mundo que se consideran inventados de forma única y no derivados de otros. El inglés crece rápidamente como segunda lengua, sobre todo entre la población joven y abierta al mundo de Tiflis.",
     "nickname": "La Ciudad del Amor",
-    "transportation": "Tbilisi Metro & Marshrutka",
+    "transportation": "Metro de Tiflis y marshrutka",
     "transportationFact": "El metro de Tiflis tiene dos líneas que conectan los principales distritos de la ciudad y es barato y eficiente. La tarjeta Metromoney sirve para el metro y los autobuses urbanos. Las marshrutkas (minibuses privados) llegan a donde no llega el metro y son el principal medio de transporte para muchos residentes. Al famoso barrio de los baños de azufre (Abanotubani), excavado en la ladera, es mejor llegar en teleférico para disfrutar de las mejores vistas. Los taxis son baratos y Bolt (servicio de transporte por aplicación) opera ampliamente."
   },
   "Tel Aviv": {
@@ -1984,13 +1984,13 @@
     "funFact": "Tel Aviv recibe el sobrenombre de \"Ciudad Blanca\" porque contiene más de 4.000 edificios diseñados al estilo Bauhaus, la colección más grande de su tipo en el mundo. Es un punto de acceso mediterráneo famoso por su vida nocturna las 24 horas, su vibrante escena tecnológica y kilómetros de playas de arena dorada.",
     "language": "Hebreo e inglés",
     "languageInfo": "El hebreo es el idioma principal, pero casi todos en esta ciudad tecnológica hablan inglés con fluidez. Descubrirá que la mayoría de los carteles y menús están disponibles en ambos idiomas.",
-    "nickname": "La ciudad blanca",
+    "nickname": "La Ciudad Blanca",
     "transportation": "Autobús y tren ligero Dan",
     "transportationFact": "La recién inaugurada 'Línea Roja' es el primer tren ligero de alta tecnología de Tel Aviv y cuenta con varios tramos subterráneos. Los autobuses Dan y Egged proporcionan la red de transporte principal, y la mayoría de las rutas operan hasta el comienzo del Shabat. Israel Railways conecta Tel Aviv con Jerusalén en sólo 34 minutos a través de una línea electrificada de alta velocidad."
   },
   "Tokyo": {
     "airportCode": "NRT",
-    "airportInfo": "Narita es líder mundial en robótica aeroportuaria y utiliza sistemas de equipaje automatizados y robots de servicio impulsados ​​por inteligencia artificial para ayudar a los viajeros en toda la terminal. Recientemente añadió una terminal especializada para aerolíneas de bajo coste que cuenta con pistas interiores para guiar a los pasajeros a través de las puertas.",
+    "airportInfo": "Narita es líder mundial en robótica aeroportuaria y utiliza sistemas de equipaje automatizados y robots de servicio impulsados por inteligencia artificial para ayudar a los viajeros en toda la terminal. Recientemente añadió una terminal especializada para aerolíneas de bajo coste que cuenta con pistas interiores para guiar a los pasajeros a través de las puertas.",
     "airportName": "Narita",
     "currencyCode": "JPY",
     "currencyInfo": "Yen japonés (¥)",
@@ -2032,7 +2032,7 @@
     "airportInfo": "El aeropuerto de Valencia, también conocido como aeropuerto de Manises, está a unos 8 km al oeste de la ciudad, en el municipio de Manises. En 2025 atendió a 11,8 millones de pasajeros en 140 rutas por Europa, Canadá y el norte de África, la mayoría internacionales. Es el segundo aeropuerto con más tráfico de la Comunidad Valenciana, después del de Alicante.",
     "airportName": "Valencia Airport",
     "currencyCode": "EUR",
-    "currencyInfo": "euros (€)",
+    "currencyInfo": "Euro (€)",
     "funFact": "Fundada por los romanos en el año 138 a. C. como Valentia Edetanorum, Valencia es una de las ciudades más antiguas de España. Es la cuna de la paella y de la horchata, la bebida fría de chufa. Tras una devastadora riada en 1957, el río Turia se desvió fuera de la ciudad, y su antiguo cauce se convirtió en el Jardín del Turia, una franja verde que termina en la Ciudad de las Artes y las Ciencias.",
     "language": "español y valenciano",
     "languageInfo": "El español y el valenciano son lenguas oficiales, y el valenciano es obligatorio para todos los escolares de la ciudad. En la vida diaria predomina el español: según una encuesta municipal de 2019, el 76 % de los vecinos usa solo el español, y cerca del 18 % utiliza ambas lenguas. La variedad del valenciano que se habla en la ciudad y sus alrededores se conoce como apitxat.",
@@ -2049,7 +2049,7 @@
     "funFact": "Vancouver tiene la densidad de población más alta de América del Norte después de la ciudad de Nueva York, pero está rodeada por una de las zonas naturales más prístinas del continente. Es una ciudad donde teóricamente puedes esquiar en una montaña y navegar en el océano todo en la misma tarde.",
     "language": "Inglés",
     "languageInfo": "Si bien el inglés es el idioma oficial, el estatus de Vancouver como puerta de entrada al Pacífico significa que también se hablan ampliamente el cantonés, el mandarín y el punjabi. Esta mezcla multicultural crea un ambiente lingüístico donde muchos residentes son cómodamente multilingües.",
-    "nickname": "Rain City",
+    "nickname": "La Ciudad de la Lluvia",
     "transportation": "tren aéreo",
     "transportationFact": "El SkyTrain es el sistema de tránsito rápido sin conductor, totalmente automatizado y más largo del mundo. El SeaBus es un ferry exclusivo para pasajeros que cruza Burrard Inlet cada 15 minutos. TransLink también opera el West Coast Express, un servicio de tren de cercanías para el este de Fraser Valley."
   },
@@ -2063,7 +2063,7 @@
     "language": "Italiano",
     "languageInfo": "El véneto es una lengua romance propia que se habla junto al italiano en la región del Véneto, con raíces anteriores a la influencia del italiano toscano. Venecia fue durante siglos el centro de un imperio comercial mediterráneo, y su dialecto conserva rastros del griego, el árabe y otras lenguas absorbidas a través del comercio. En el concurrido centro turístico, el inglés se habla ampliamente.",
     "nickname": "La Serenissima",
-    "transportation": "Vaporetto Water Buses",
+    "transportation": "Vaporettos (autobuses acuáticos)",
     "transportationFact": "Venecia no tiene carreteras: todo el transporte público es acuático. La red de vaporetti (autobuses acuáticos) de ACTV cubre rutas a lo largo del Gran Canal y entre las islas exteriores de Murano, Burano y el Lido. Las icónicas góndolas privadas, guiadas por gondoleros con licencia, son hoy sobre todo una experiencia turística; los residentes usan los traghetti (góndolas de travesía) para cruzar rápidamente los canales y los taxis acuáticos privados cuando necesitan rapidez."
   },
   "Victoria": {
@@ -2084,7 +2084,7 @@
     "airportInfo": "La terminal del aeropuerto cuenta con un enorme muro de medios digitales abierto las 24 horas, los 7 días de la semana, que muestra imágenes artísticas e información de viaje en tiempo real a los huéspedes que llegan. Es conocido por su extrema eficiencia y su papel como punto de transferencia clave para los viajeros que se dirigen a Europa Central y del Este.",
     "airportName": "Vienna International",
     "currencyCode": "EUR",
-    "currencyInfo": "euros (€)",
+    "currencyInfo": "Euro (€)",
     "funFact": "Viena ha sido el hogar de más compositores famosos (incluidos Mozart, Beethoven y Strauss) que cualquier otra ciudad del mundo. Su legendaria cultura de cafetería está reconocida por la UNESCO como \"Patrimonio Cultural Inmaterial\", donde los lugareños van a leer, escribir y debatir durante horas.",
     "language": "Alemán",
     "languageInfo": "La ciudad habla alemán austríaco, que a menudo se considera más melódico y suave que el alemán que se habla en el norte. El inglés es muy común, especialmente en los museos de talla mundial y en las cafeterías históricas.",
@@ -2123,12 +2123,12 @@
     "airportInfo": "El Aeropuerto Internacional de Xi'an Xianyang es uno de los de mayor tráfico del noroeste de China y se ha ampliado de forma continua para acompañar el creciente papel de la ciudad como centro turístico. Un enlace ferroviario de alta velocidad conecta el aeropuerto con la Estación de Ferrocarril Norte de la ciudad. El aeropuerto es centro de operaciones de varias aerolíneas chinas y tiene conexiones con las principales ciudades internacionales de Asia.",
     "airportName": "Xi'an Xianyang International Airport",
     "currencyCode": "CNY",
-    "currencyInfo": "Chinese Yuan (¥)",
+    "currencyInfo": "Yuan chino (¥)",
     "funFact": "Xi'an fue la capital de China durante más de 1.100 años a lo largo de 13 dinastías, lo que la convierte en una de las ciudades más antiguas e históricamente importantes del mundo. Alberga el Ejército de Terracota: más de 8.000 soldados de arcilla de tamaño natural enterrados junto al primer emperador, Qin Shi Huang, hacia el 210 a. C. y redescubiertos por unos campesinos en 1974. Xi'an es también el extremo oriental de la antigua Ruta de la Seda, la red comercial que conectaba China con Roma.",
     "language": "Chino mandarín",
     "languageInfo": "El chino mandarín (putonghua) es el idioma estándar, aunque el dialecto local de Xi'an (una variedad del mandarín de Zhongyuan) tiene pronunciaciones características que notarían quienes hayan visitado Pekín. La comunidad hui del antiguo Barrio Musulmán también mantiene en la vida diaria una tradición de mezcla lingüística chino-árabe. Los caracteres chinos escritos conectan Xi'an con 4.000 años de historia escrita continua.",
     "nickname": "Cuna de la Civilización China",
-    "transportation": "Xi'an Metro & Buses",
+    "transportation": "Metro y autobuses de Xi'an",
     "transportationFact": "La red de metro de Xi'an ha crecido rápidamente, con varias líneas que conectan la antigua ciudad amurallada con los modernos suburbios. La propia muralla antigua se ha convertido en un hito del transporte: puede alquilar una bicicleta y recorrer los 13,7 km completos de la parte superior de la muralla. La red de autobuses de la ciudad es amplia, y el tren de alta velocidad conecta Xi'an con Pekín (4,5 horas) y Chengdu (3 horas)."
   },
   "Zanzibar": {
@@ -2136,12 +2136,12 @@
     "airportInfo": "El Aeropuerto Internacional Abeid Amani Karume, que lleva el nombre del primer presidente de Zanzíbar tras la revolución, se encuentra a solo 6 km de Stone Town. Recibe una combinación de vuelos chárter desde Europa, vuelos nacionales desde la Tanzania continental y conexiones regionales africanas. El aeropuerto se ha ampliado considerablemente para atender la creciente llegada de turistas y tiene cada vez más actividad durante todo el año. También hay ferris que conectan Zanzíbar con Dar es Salaam, en el continente.",
     "airportName": "Abeid Amani Karume International Airport",
     "currencyCode": "TZS",
-    "currencyInfo": "Tanzanian Shilling (TSh)",
+    "currencyInfo": "Chelín tanzano (TSh)",
     "funFact": "Zanzíbar es un archipiélago semiautónomo frente a la costa de Tanzania, conocido por sus playas de arena blanca, sus aguas turquesas y el comercio de especias que lo convirtió en uno de los lugares más valiosos de la Tierra en el siglo XIX. Stone Town, la capital histórica de Zanzíbar, es Patrimonio de la Humanidad de la UNESCO, donde las tradiciones arquitectónicas árabes, persas, indias y africanas se funden en un laberinto de calles estrechas, puertas de madera tallada y mezquitas. Freddie Mercury, el legendario cantante de Queen, nació en Zanzíbar en 1946.",
     "language": "Suajili y árabe",
     "languageInfo": "El suajili (kiswahili) nació en la costa de África Oriental, y el archipiélago de Zanzíbar desempeñó un papel central en su desarrollo como lengua comercial. El dialecto zanzibareño del suajili (kiunguja) se considera el estándar de prestigio: es el dialecto que se usa en los medios formales en suajili y en su enseñanza en todo el mundo. La influencia árabe es fuerte tras siglos de dominio omaní, y las expresiones árabes están entretejidas en el suajili cotidiano. El inglés se habla en el sector turístico.",
     "nickname": "La Isla de las Especias",
-    "transportation": "Dala-dalas & Tuk-tuks",
+    "transportation": "Dala-dalas y tuk-tuks",
     "transportationFact": "Stone Town se recorre mejor a pie: en muchos lugares sus estrechos callejones son demasiado angostos para los coches, y perderse por sus calles sinuosas es uno de los grandes placeres de la visita. Los dala-dalas (minibuses compartidos) cubren rutas hacia las playas y los pueblos de la isla. Los tuk-tuks son el principal medio de transporte turístico dentro del casco antiguo y sus alrededores. Puede alquilar bicicletas y scooters para explorar la isla a su propio ritmo. Los tradicionales dhows todavía navegan entre las islas."
   },
   "Zurich": {
@@ -2149,12 +2149,12 @@
     "airportInfo": "El Aeropuerto de Zúrich (Kloten) está reconocido sistemáticamente como uno de los aeropuertos mejor gestionados de Europa, célebre por su puntualidad, su eficiencia y un diseño que evita el estrés. Su estación de tren, situada justo debajo de la terminal, ofrece una conexión directa con la estación central de Zúrich (Hauptbahnhof) en solo 10 minutos. El centro comercial subterráneo ShopVille del aeropuerto, que conecta las terminales con la estación de tren, es un animado centro comercial que usan a diario quienes viajan al trabajo.",
     "airportName": "Zurich Airport",
     "currencyCode": "CHF",
-    "currencyInfo": "Swiss Franc (Fr.)",
+    "currencyInfo": "Franco suizo (Fr.)",
     "funFact": "Zúrich figura sistemáticamente entre las ciudades con mejor calidad de vida del mundo y es la ciudad más grande de Suiza, pero conserva el ambiente de una ciudad europea compacta y fácil de recorrer a pie. Se encuentra en el extremo norte del lago de Zúrich, rodeada de colinas con vistas a los Alpes. La ciudad alberga más de 50 museos en un área relativamente pequeña, entre ellos el Museo Nacional Suizo y el Kunsthaus, una de las colecciones de arte más importantes de Suiza. Por la tradición suiza de democracia directa, los residentes votan sobre asuntos locales, cantonales y nacionales varias veces al año.",
     "language": "Alemán suizo, francés e italiano",
     "languageInfo": "Suiza tiene cuatro idiomas nacionales: alemán, francés, italiano y romanche. Zúrich está en la parte germanoparlante del país, pero el idioma hablado a diario es el alemán suizo (Schweizerdeutsch), un conjunto de dialectos regionales que difieren notablemente del alto alemán estándar. El alemán estándar se usa por escrito y en contextos formales, mientras que el inglés se habla muy ampliamente como cuarto idioma.",
-    "nickname": "Little Big City",
-    "transportation": "ZVV Trams & S-Bahn",
+    "nickname": "La Pequeña Gran Ciudad",
+    "transportation": "Tranvías ZVV y S-Bahn",
     "transportationFact": "Zúrich cuenta con una de las redes de transporte público más puntuales y completas del mundo. La ZVV (Zürcher Verkehrsverbund) integra tranvías, autobuses, trenes de cercanías S-Bahn, barcos del lago y teleféricos en un único sistema de tarifas. Los tranvías eléctricos recorren el centro de la ciudad de forma ininterrumpida desde 1882. Los trenes circulan con la legendaria precisión suiza: un retraso de dos minutos se considera importante y se informa públicamente."
   },
   "University of Melbourne": {
@@ -2348,7 +2348,7 @@
     "funFact": "La Gasson Tower, terminada en 1913, marcó el modelo de las altas torres góticas que luego se construyeron en Princeton, Yale y Duke.",
     "language": "Inglés",
     "languageInfo": "Los colores de la universidad son el granate y el dorado, y sus equipos son los Eagles.",
-    "nickname": "Ever to Excel",
+    "nickname": "Siempre a la excelencia",
     "transportation": "A pie / MBTA Green Line",
     "transportationFact": "El campus principal se puede recorrer a pie. La rama B de la Green Line termina en la estación Boston College, en Commonwealth Avenue, con trenes directos hacia el centro de Boston."
   },
@@ -2439,7 +2439,7 @@
     "funFact": "El Memorial Belltower, monumento a la Primera Guerra Mundial, está construido con 1.400 toneladas de granito extraído en Mount Airy, Carolina del Norte.",
     "language": "Inglés",
     "languageInfo": "Los colores de la universidad son el rojo y el blanco, y sus equipos son la Wolfpack.",
-    "nickname": "Think and Do",
+    "nickname": "Pensar y hacer",
     "transportation": "A pie / Wolfline",
     "transportationFact": "El North Campus se puede recorrer a pie. Los autobuses gratuitos Wolfline unen los campus Main y Centennial."
   },
@@ -2478,7 +2478,7 @@
     "funFact": "El primer presidente de SMU eligió la arquitectura georgiana de ladrillo rojo siguiendo la Universidad de Virginia de Thomas Jefferson, y la cúpula de Dallas Hall se inspiró en el Panteón.",
     "language": "Inglés",
     "languageInfo": "Los colores de la universidad son el rojo y el azul, y sus equipos son los Mustangs.",
-    "nickname": "The Hilltop",
+    "nickname": "La Colina",
     "transportation": "A pie / lanzaderas SMU Express / DART",
     "transportationFact": "El campus se puede recorrer a pie. Las lanzaderas gratuitas SMU Express unen el campus con la estación SMU/Mockingbird de DART, en las líneas Roja, Azul y Naranja."
   },
@@ -2569,7 +2569,7 @@
     "funFact": "El Roy G. Cullen Building, terminado en 1939, es el edificio más antiguo del campus y se cree que fue el primero de un campus universitario de Estados Unidos con aire acondicionado.",
     "language": "Inglés",
     "languageInfo": "Los colores de la universidad son el rojo escarlata y el blanco, y sus equipos son los Cougars.",
-    "nickname": "Go Coogs",
+    "nickname": "¡Vamos, Coogs!",
     "transportation": "A pie / METRORail Purple Line",
     "transportationFact": "La Purple Line de METRORail tiene paradas a lo largo del campus y llega al centro de Houston."
   },
@@ -2647,7 +2647,7 @@
     "funFact": "La torre central del Woodburn Hall tiene un reloj Seth Thomas desde 1910. Antes estuvo en la cúpula del Martin Hall, el edificio más antiguo de la universidad, en la misma plaza.",
     "language": "Inglés",
     "languageInfo": "Los colores de la universidad son el oro viejo y el azul, y sus equipos son los Mountaineers.",
-    "nickname": "Let's Go Mountaineers",
+    "nickname": "¡Vamos, Mountaineers!",
     "transportation": "A pie / Personal Rapid Transit (PRT)",
     "transportationFact": "El Personal Rapid Transit de WVU mueve pequeñas cabinas sin conductor por una vía que une el centro de Morgantown, el campus de Evansdale y el campus de Ciencias de la Salud."
   },
@@ -2699,7 +2699,7 @@
     "funFact": "La mayoría de los edificios de TCU usan una mezcla de ladrillo dorado llamada «TCU buff» con tejados de teja roja. La Robert Carr Chapel rompió la regla con ladrillo color salmón, y los antiguos alumnos protestaron cuando se inauguró.",
     "language": "Inglés",
     "languageInfo": "Los colores de la universidad son el morado y el blanco, y sus equipos son los Horned Frogs.",
-    "nickname": "Go Frogs",
+    "nickname": "¡Vamos, Frogs!",
     "transportation": "A pie / Trinity Metro",
     "transportationFact": "El campus es compacto y se recorre a pie. Trinity Metro gestiona los autobuses y trenes públicos de Fort Worth."
   },
@@ -2712,7 +2712,7 @@
     "funFact": "El campus principal de UCF está trazado en anillos: Gemini Boulevard y luego Apollo, Mercury y Pegasus Circle. Es uno de los dos únicos campus de Estados Unidos con planta de círculos concéntricos, junto con UC Irvine.",
     "language": "Inglés",
     "languageInfo": "Los colores de la universidad son el negro y el dorado, y sus equipos son los Knights.",
-    "nickname": "Charge On",
+    "nickname": "A la carga",
     "transportation": "A pie / Lanzaderas de UCF",
     "transportationFact": "El núcleo circular se recorre a pie. Las lanzaderas de UCF unen el campus principal con más de 20 complejos de apartamentos cercanos, y los estudiantes usan gratis los autobuses LYNX con su identificación."
   },
@@ -2725,7 +2725,7 @@
     "funFact": "Cuando el Huntsman Center abrió en 1969, su cúpula de madera de 364 pies (111 m) de diámetro era la mayor cúpula de madera sin apoyos intermedios del mundo.",
     "language": "Inglés",
     "languageInfo": "Los colores de la universidad son el carmesí y el blanco, y sus equipos son los Utes.",
-    "nickname": "Go Utes",
+    "nickname": "¡Vamos, Utes!",
     "transportation": "A pie / TRAX Red Line",
     "transportationFact": "La TRAX Red Line de UTA entra en el campus, con paradas en el estadio, el campus sur y el centro médico."
   },
@@ -2777,7 +2777,7 @@
     "funFact": "Morrill Hall, terminado en 1898, fue el único edificio académico que quedó intacto tras el gran incendio de 1912 que arrasó el campus.",
     "language": "Inglés",
     "languageInfo": "Los colores de la universidad son el rojo, el blanco, el negro y el dorado, y sus equipos son los Terrapins.",
-    "nickname": "Fear the Turtle",
+    "nickname": "Teme a la tortuga",
     "transportation": "A pie / Shuttle-UM / Metro",
     "transportationFact": "Los autobuses Shuttle-UM de la universidad dan servicio al campus y a los barrios cercanos, y la estación de metro College Park–University of Maryland conecta con Washington."
   },
@@ -2790,7 +2790,7 @@
     "funFact": "La Beaumont Tower se levanta donde estuvo College Hall, el primer edificio de Estados Unidos construido para enseñar agricultura científica.",
     "language": "Inglés",
     "languageInfo": "Los colores de la universidad son el verde y el blanco, y sus equipos son los Spartans.",
-    "nickname": "Spartans Will",
+    "nickname": "Los Spartans pueden",
     "transportation": "A pie / autobuses CATA",
     "transportationFact": "Los autobuses CATA cruzan el campus y lo conectan con East Lansing y Lansing."
   },
@@ -2816,7 +2816,7 @@
     "funFact": "El Sheldon Museum of Art de Philip Johnson, inaugurado en 1963, está construido en travertino italiano en torno a un gran vestíbulo y una escalera central.",
     "language": "Inglés",
     "languageInfo": "Los colores de la universidad son el escarlata y el crema, y sus equipos son los Cornhuskers.",
-    "nickname": "There Is No Place Like Nebraska",
+    "nickname": "No hay lugar como Nebraska",
     "transportation": "A pie / StarTran",
     "transportationFact": "Los autobuses StarTran unen los campus City, East e Innovation, y los estudiantes reciben un pase de autobús con su tasa de transporte."
   },
@@ -2894,7 +2894,7 @@
     "funFact": "North Hall, construido en 1851 según el diseño de John F. Rague, fue el primer edificio de la universidad y sigue en pie en Bascom Hill.",
     "language": "Inglés",
     "languageInfo": "Los colores de la universidad son el cardenal y el blanco, y sus equipos son los Badgers.",
-    "nickname": "On, Wisconsin!",
+    "nickname": "¡Adelante, Wisconsin!",
     "transportation": "A pie / Madison Metro",
     "transportationFact": "Los autobuses de Madison Metro cruzan el campus, y los estudiantes viajan con un pase de la universidad."
   },
@@ -2907,7 +2907,7 @@
     "funFact": "Ellis F. Lawrence, decano de la escuela de arquitectura de la universidad, diseñó tanto la Knight Library como el museo de arte.",
     "language": "Inglés",
     "languageInfo": "Los colores de la universidad son el verde y el amarillo, y sus equipos son los Ducks.",
-    "nickname": "Go Ducks",
+    "nickname": "¡Vamos, Ducks!",
     "transportation": "A pie / LTD EmX",
     "transportationFact": "El autobús de tránsito rápido EmX del Lane Transit District para en el borde del campus, y los estudiantes viajan en los autobuses LTD con su identificación."
   },
@@ -2920,7 +2920,7 @@
     "funFact": "Widney Alumni House, inaugurada en 1880, es el edificio universitario más antiguo del sur de California.",
     "language": "Inglés",
     "languageInfo": "Los colores de la universidad son el cardenal y el dorado, y sus equipos son los Trojans.",
-    "nickname": "Fight On!",
+    "nickname": "¡A luchar!",
     "transportation": "A pie / Metro E Line",
     "transportationFact": "La Metro E Line tiene estaciones junto al campus a lo largo de Exposition Park, y la USC opera sus propios autobuses lanzadera."
   },
@@ -2972,7 +2972,7 @@
     "funFact": "William Augustus Edwards proyectó casi todo el campus original en estilo gótico universitario, y la Century Tower sigue las proporciones de la Bell Harry Tower de la catedral de Canterbury.",
     "language": "Inglés",
     "languageInfo": "Los colores de la universidad son el naranja y el azul, y sus equipos son los Gators.",
-    "nickname": "Go Gators",
+    "nickname": "¡Vamos, Gators!",
     "transportation": "A pie / Autobuses RTS",
     "transportationFact": "El distrito histórico se recorre a pie. Los autobuses RTS de Gainesville pasan con frecuencia por el campus."
   },
@@ -2985,7 +2985,7 @@
     "funFact": "Los edificios más antiguos de la UGA son de estilo federal. Demosthenian Hall, de 1824, conserva un ornamentado medallón de yeso en el techo basado en un modelo de Asher Benjamin.",
     "language": "Inglés",
     "languageInfo": "Los colores de la universidad son el rojo y el negro, y sus equipos son los Bulldogs.",
-    "nickname": "Go Dawgs",
+    "nickname": "¡Vamos, Dawgs!",
     "transportation": "A pie / UGA Campus Transit",
     "transportationFact": "El North Campus se recorre a pie. Los autobuses de UGA Campus Transit recorren todo el campus."
   },
@@ -3063,7 +3063,7 @@
     "funFact": "Kirkland Hall se construyó en 1874 en estilo gótico victoriano y se reconstruyó en estilo italianizante tras un incendio en 1905, mientras que el campus de Peabody se inspiró en la Universidad de Virginia de Jefferson.",
     "language": "Inglés",
     "languageInfo": "Los colores de la universidad son el negro y el dorado, y sus equipos son los Commodores.",
-    "nickname": "Anchor Down",
+    "nickname": "Anclas abajo",
     "transportation": "A pie / VandyRide",
     "transportationFact": "El campus se recorre a pie. Los VandyRide circulan por el campus y los autobuses urbanos WeGo pasan por West End Avenue."
   },
@@ -3076,7 +3076,7 @@
     "funFact": "La William T. Young Library, inaugurada en 1998, tiene planta octogonal con arcadas de ladrillo y piedra de dos pisos en cada fachada, y el vestíbulo de Memorial Hall guarda un fresco de 1934 de Ann Rice O'Hanlon.",
     "language": "Inglés",
     "languageInfo": "Los colores de la universidad son el azul y el blanco, y sus equipos son los Wildcats.",
-    "nickname": "Go Big Blue",
+    "nickname": "¡Vamos, Big Blue!",
     "transportation": "A pie / Autobuses Lextran",
     "transportationFact": "El campus central se recorre a pie. Las rutas de autobús del campus de UK, operadas con Lextran, son gratuitas, y estudiantes y personal viajan gratis en los autobuses urbanos de Lextran con su identificación de UK."
   },
@@ -3089,7 +3089,7 @@
     "funFact": "El Drill Field, usado antes por el Cuerpo de Cadetes, está cerrado en sus extremos norte y sur por dos edificios idénticos en espejo, Lee Hall y Swalm Hall.",
     "language": "Inglés",
     "languageInfo": "Los colores de la universidad son el granate y el blanco, y sus equipos son los Bulldogs.",
-    "nickname": "Hail State",
+    "nickname": "¡Viva State!",
     "transportation": "A pie / Autobuses SMART",
     "transportationFact": "El campus alrededor del Drill Field se recorre a pie. Starkville–MSU Area Rapid Transit tiene autobuses gratuitos en el campus y en la ciudad."
   },
@@ -3102,7 +3102,7 @@
     "funFact": "La restauración de Ayres Hall de 2008 a 2011 añadió esferas de reloj y suelos de terrazo que figuraban en el diseño de 1921 pero nunca se construyeron por su coste.",
     "language": "Inglés",
     "languageInfo": "Los colores de la universidad son el naranja y el blanco, y sus equipos son los Volunteers.",
-    "nickname": "Go Vols",
+    "nickname": "¡Vamos, Vols!",
     "transportation": "A pie / Autobuses T",
     "transportationFact": "Los autobuses gratuitos T de la UT recorren rutas fijas por el campus, y los estudiantes viajan gratis en los autobuses de Knoxville Area Transit con su VolCard."
   },
@@ -3219,7 +3219,7 @@
     "funFact": "Old Main, el corazón del campus con su torre del reloj, se construyó en la década de 1890 como la Central High School de Detroit. Las clases universitarias que empezaron allí dieron origen a la Wayne State University.",
     "language": "Inglés",
     "languageInfo": "Los colores de la universidad son el verde y el dorado, y sus equipos son los Warriors.",
-    "nickname": "Warrior Strong",
+    "nickname": "Fuerza Warrior",
     "transportation": "A pie / tranvía QLINE",
     "transportationFact": "El campus principal, en Midtown, se recorre fácilmente a pie. El tranvía QLINE circula por Woodward Avenue, en el borde este del campus, y lo conecta con el centro de Detroit y New Center."
   },
@@ -3232,7 +3232,7 @@
     "funFact": "Hyames Field, el estadio de béisbol de la WMU en el East Campus, acogió la primera College World Series de la historia en 1947 y de nuevo en 1948.",
     "language": "Inglés",
     "languageInfo": "Los colores de la universidad son el marrón y el dorado, y sus equipos son los Broncos.",
-    "nickname": "So That All May Learn",
+    "nickname": "Para que todos aprendan",
     "transportation": "A pie / autobuses Metro",
     "transportationFact": "Los autobuses Metro de Kalamazoo dan servicio a la Western Michigan University, a la ciudad y a sus alrededores."
   },
@@ -3297,7 +3297,7 @@
     "funFact": "Con 35.127 asientos, el Kelly/Shorts Stadium es el mayor estadio dentro de un campus de la Mid-American Conference.",
     "language": "Inglés",
     "languageInfo": "Los colores de la universidad son el granate y el dorado, y sus equipos son los Chippewas.",
-    "nickname": "Fire Up, Chips!",
+    "nickname": "¡Ánimo, Chips!",
     "transportation": "A pie",
     "transportationFact": "El campus es fácil de recorrer a pie: Warriner Hall, en el norte, está a unos 1,5 km del Kelly/Shorts Stadium, en el sureste."
   },
@@ -3427,7 +3427,7 @@
     "funFact": "La torre de 200 pies de la Baker Library, inspirada en el Independence Hall de Filadelfia, es el símbolo del college, y su sótano alberga el fresco de José Clemente Orozco La epopeya de la civilización americana, declarado National Historic Landmark.",
     "language": "Inglés",
     "languageInfo": "Los estudiantes llaman 'the Hop' al Hopkins Center for the Arts.",
-    "nickname": "The Big Green",
+    "nickname": "El Gran Verde",
     "transportation": "A pie / Advance Transit",
     "transportationFact": "Los edificios de Dartmouth rodean el Green en el centro de Hanover, así que todo está a un corto paseo. Los autobuses gratuitos de Advance Transit unen Hanover con los pueblos cercanos."
   },
