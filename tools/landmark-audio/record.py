@@ -1,7 +1,8 @@
 """Records every landmark's "Listen" story with Kokoro (voice af_heart).
 
 Writes output/clips/<landmark id>.m4a and output/manifest.json. The manifest keeps the
-SHA-256 of each story's text, so a later run only records stories whose text changed, and
+SHA-256 of each story's text, so a later run only records stories whose text (or spoken
+spelling in pronunciations.json) changed, and
 the app only plays a clip whose text still matches (otherwise it uses the device voice).
 
 The story text must match AudioStoryPlayer.story(for:) in the app exactly.
@@ -67,8 +68,11 @@ def main():
         for b in buildings:
             text = story(b)
             done = CLIPS / f"{b['id']}.json"
-            if (CLIPS / f"{b['id']}.m4a").exists() and done.exists() and json.load(open(done))["sha256"] == sha(text):
-                continue
+            if (CLIPS / f"{b['id']}.m4a").exists() and done.exists():
+                meta = json.load(open(done))
+                # Same text and same spoken spellings (pronunciations.json) as last time
+                if meta["sha256"] == sha(text) and meta.get("spoken_sha256", meta["sha256"]) == sha(for_speech(text, fixes)):
+                    continue
             todo.append((city, b, text))
     todo = todo[shard::shards]
     print(f"{len(todo)} stories to record", flush=True)
@@ -87,7 +91,8 @@ def main():
                         str(CLIPS / f"{b['id']}.m4a")], check=True)
         os.remove(tmp.name)
         # Written last, so a clip cut off mid-run is recorded again next time
-        json.dump({"city": city, "sha256": sha(text), "seconds": round(len(audio) / 24000, 1)},
+        json.dump({"city": city, "sha256": sha(text), "spoken_sha256": sha(for_speech(text, fixes)),
+                   "seconds": round(len(audio) / 24000, 1)},
                   open(CLIPS / f"{b['id']}.json", "w"))
         if n % 25 == 0 or n == len(todo):
             left = (time.time() - start) / n * (len(todo) - n) / 60
