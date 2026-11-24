@@ -1,0 +1,83 @@
+<!doctype html>
+<!-- One landscape App Store screenshot (Mac 2880x1800 or Vision Pro 3840x2160) in the 2.18 look.
+     render.mjs opens this page once per shot with ?spec=<json> and saves a screenshot of it.
+     Spec: { kind: "mac"|"vision", locale, h, sub, images: [{src, x, y, w, rot, round}] }
+     h uses *chip* for the highlighted phrase (same idea as <em> in store-screenshots/final/src/screens.html). -->
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter:wght@400..700&display=block" rel="stylesheet">
+<style>
+  :root{--base:#F2743F;--base2:#c4430d;--glow:#ffb08a;--accent:#fff1e2;--ink:#28140b}
+  html,body{margin:0;overflow:hidden}
+  .slide{position:relative;overflow:hidden;
+    background:radial-gradient(60% 80% at 72% 45%,color-mix(in srgb,var(--glow) 55%,transparent),transparent 70%),
+               linear-gradient(170deg,var(--base),var(--base2))}
+  .copy{position:absolute;z-index:5}
+  .h{font-family:"Bricolage Grotesque",var(--cjk);font-weight:800;font-variation-settings:"opsz" 96;
+     line-height:.98;letter-spacing:-.045em;color:#fff}
+  .h em{font-style:normal;display:inline-block;background:var(--accent);color:var(--ink);
+     padding:0 .14em .06em;border-radius:.18em;transform:rotate(-2.5deg);margin:.04em 0 0 -.05em}
+  .sub{font-family:Inter,var(--cjk);font-weight:500;line-height:1.28;color:rgba(255,255,255,.92)}
+  .cjk .h{letter-spacing:0;line-height:1.32}
+  /* CJK has no spaces, so the browser would break inside a word: keep each part whole and shrink to fit instead */
+  .cjk .h .part{white-space:nowrap}
+  .shot{position:absolute;display:block;box-shadow:0 60px 120px -30px rgba(70,18,0,.6),0 10px 30px rgba(70,18,0,.25)}
+  .shot.win{box-shadow:none;filter:drop-shadow(0 50px 60px rgba(70,18,0,.5)) drop-shadow(0 8px 16px rgba(70,18,0,.25))}
+</style></head><body>
+<div class="slide" id="slide"><div class="copy" id="copy"><div class="h" id="h"></div><div class="sub" id="sub"></div></div></div>
+<script>
+const spec = JSON.parse(new URLSearchParams(location.search).get('spec'));
+const L = { mac:    { W: 2880, H: 1800, copyX: 150, copyW: 1000, h: 168, sub: 54 },
+            vision: { W: 3840, H: 2160, copyX: 200, copyW: 1300, h: 210, sub: 66 } }[spec.kind];
+const cjkFonts = { ja: '"Hiragino Kaku Gothic StdN","Hiragino Sans"', ko: '"Apple SD Gothic Neo"', 'zh-Hans': '"PingFang SC","Hiragino Sans GB"' };
+const isCJK = spec.locale in cjkFonts;
+document.documentElement.style.setProperty('--cjk', (cjkFonts[spec.locale] || '') + (isCJK ? ',' : '') + 'sans-serif');
+if (isCJK) document.body.classList.add('cjk');
+
+const slide = document.getElementById('slide');
+Object.assign(slide.style, { width: L.W + 'px', height: L.H + 'px' });
+
+// Headline: text before the chip on its own line, then the chip (Latin languages), like the iPhone set
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+const m = spec.h.match(/^(.*?)\*(.+?)\*(.*)$/);
+let html = esc(spec.h);
+if (m) {
+  const before = esc(m[1]).trim(), chip = esc(m[2]), after = esc(m[3]);
+  if (isCJK) {
+    const part = t => t.trim() ? '<span class="part">' + t + '</span>' : '';
+    // Before-text, chip and after-text each on their own line if they don't fit together
+    html = part(before) + (before ? '<br>' : '') + '<em class="part">' + chip + '</em>' + (after.trim() ? '<wbr>' + part(after) : '');
+  } else {
+    html = (before ? before + '<br>' : '') + '<em>' + chip + '</em>' + after;
+  }
+}
+const h = document.getElementById('h'), sub = document.getElementById('sub'), copy = document.getElementById('copy');
+h.innerHTML = html; sub.textContent = spec.sub;
+
+// App pictures
+for (const im of spec.images) {
+  const el = document.createElement('img');
+  el.src = im.src; el.className = 'shot' + (im.win ? ' win' : '');
+  Object.assign(el.style, { left: im.x + 'px', top: im.y + 'px', width: im.w + 'px',
+    borderRadius: (im.round || 0) + 'px', transform: `rotate(${im.rot || 0}deg)`, zIndex: im.z || 1 });
+  slide.appendChild(el);
+}
+
+(async () => {
+  await document.fonts.ready;
+  await Promise.all([...document.images].map(i => i.decode().catch(() => {})));
+  // Fit: start at the design size, shrink until the headline block fits its column and no word overflows
+  let scale = 1;
+  const fit = () => {
+    h.style.fontSize = L.h * scale + 'px'; sub.style.fontSize = L.sub * Math.max(scale, .8) + 'px';
+    sub.style.marginTop = 44 * scale + 'px';
+    Object.assign(copy.style, { left: L.copyX + 'px', width: L.copyW + 'px' });
+    copy.style.top = Math.round((L.H - copy.offsetHeight) / 2 - L.H * .04) + 'px';
+  };
+  fit();
+  const tooWide = () => [...h.querySelectorAll('em')].some(e => e.getBoundingClientRect().width > L.copyW + 10) ||
+                         h.scrollWidth > L.copyW + 10 || copy.offsetHeight > L.H * .8 || h.offsetHeight > L.h * 3.6;
+  while (tooWide() && scale > .45) { scale -= .02; fit(); }
+  document.body.dataset.scale = scale.toFixed(2);
+  document.body.dataset.ready = 1;
+})();
+</script></body></html>

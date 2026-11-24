@@ -1,0 +1,20 @@
+{
+  "mac": [
+    [{"file": "01-michigan-central.png", "x": 1240, "y": 360, "w": 1560, "win": true},
+     {"file": "01b-archive-1913.png", "x": 1110, "y": 1130, "w": 560, "rot": -4, "round": 18, "z": 3}],
+    [{"file": "02-old-map-london.png", "x": 1240, "y": 412, "w": 1560, "win": true}],
+    [{"file": "03-time-walk-london.png", "x": 1240, "y": 412, "w": 1560, "win": true}],
+    [{"file": "04-main-new-york.png", "x": 1300, "y": 260, "w": 1480, "win": true},
+     {"file": "c-journey.png", "x": 1160, "y": 1080, "w": 600, "rot": -3, "win": true, "z": 3},
+     {"file": "c-achievements.png", "x": 2140, "y": 1160, "w": 640, "rot": 3, "win": true, "z": 4}],
+    [{"file": "05-main-chicago.png", "x": 1240, "y": 250, "w": 1480, "win": true},
+     {"file": "05-my-trips-nyc.png", "x": 1860, "y": 1080, "w": 920, "win": true, "z": 3}]
+  ],
+  "vision": [
+    [{"file": "c1-past.png", "x": 1640, "y": 490, "w": 2100, "round": 44}],
+    [{"file": "c2-oldmap.png", "x": 1650, "y": 330, "w": 2050, "round": 44}],
+    [{"file": "c3-timewalk.png", "x": 1600, "y": 511, "w": 2200, "round": 44}],
+    [{"file": "04-panorama-360.png", "x": 1640, "y": 490, "w": 2100, "round": 44}],
+    [{"file": "c5-main.png", "x": 1650, "y": 360, "w": 2050, "round": 44}]
+  ]
+}

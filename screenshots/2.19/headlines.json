@@ -1,0 +1,462 @@
+{
+ "en-US": {
+  "mac": [
+   {
+    "h": "See the city *as it was.*",
+    "sub": "Real archive photos, side by side with today."
+   },
+   {
+    "h": "Old maps over *today's streets.*",
+    "sub": "Slide from now back to 1850."
+   },
+   {
+    "h": "Walk *through time.*",
+    "sub": "A guided tour that turns the map back at every stop."
+   },
+   {
+    "h": "2,400 landmarks. *One passport.*",
+    "sub": "166 cities and 122 college campuses to stamp."
+   },
+   {
+    "h": "Every day, *planned.*",
+    "sub": "Stops, walking times and places to eat."
+   }
+  ],
+  "vision": [
+   {
+    "h": "Step *into the past.*",
+    "sub": "Stand in the old city, all around you."
+   },
+   {
+    "h": "Old maps over *today's streets.*",
+    "sub": "Slide from now back to 1850."
+   },
+   {
+    "h": "Walk *through time.*",
+    "sub": "A guided tour that turns the map back at every stop."
+   },
+   {
+    "h": "Stand *inside* landmarks.",
+    "sub": "26 panoramas in 360°."
+   },
+   {
+    "h": "166 cities. *122 campuses.*",
+    "sub": "Passport, achievements and traditions, synced with your iPhone."
+   }
+  ]
+ },
+ "de-DE": {
+  "mac": [
+   {
+    "h": "Sieh die Stadt, *wie sie war.*",
+    "sub": "Echte Archivfotos, direkt neben heute."
+   },
+   {
+    "h": "Alte Karten über *heutigen Straßen.*",
+    "sub": "Schieb von heute zurück bis 1850."
+   },
+   {
+    "h": "Reise *durch die Zeit.*",
+    "sub": "Eine Tour, die die Karte an jedem Halt zurückdreht."
+   },
+   {
+    "h": "2.400 Wahrzeichen. *Ein Pass.*",
+    "sub": "166 Städte und 122 Unis zum Abstempeln."
+   },
+   {
+    "h": "Jeder Tag, *geplant.*",
+    "sub": "Stopps, Gehzeiten und Orte zum Essen."
+   }
+  ],
+  "vision": [
+   {
+    "h": "Tritt *in die Vergangenheit.*",
+    "sub": "Die alte Stadt rund um dich herum."
+   },
+   {
+    "h": "Alte Karten über *heutigen Straßen.*",
+    "sub": "Schieb von heute zurück bis 1850."
+   },
+   {
+    "h": "Reise *durch die Zeit.*",
+    "sub": "Eine Tour, die die Karte an jedem Halt zurückdreht."
+   },
+   {
+    "h": "Steh *mitten in* Wahrzeichen.",
+    "sub": "26 Panoramen in 360°."
+   },
+   {
+    "h": "166 Städte. *122 Unis.*",
+    "sub": "Pass, Erfolge und Traditionen, synchron mit deinem iPhone."
+   }
+  ]
+ },
+ "es-ES": {
+  "mac": [
+   {
+    "h": "Mira la ciudad *como era.*",
+    "sub": "Fotos de archivo reales, junto a las de hoy."
+   },
+   {
+    "h": "Mapas antiguos sobre *las calles de hoy.*",
+    "sub": "Desliza de hoy hasta 1850."
+   },
+   {
+    "h": "Viaja *en el tiempo.*",
+    "sub": "Una ruta guiada que retrocede el mapa en cada parada."
+   },
+   {
+    "h": "2400 monumentos. *Un pasaporte.*",
+    "sub": "166 ciudades y 122 campus para sellar."
+   },
+   {
+    "h": "Cada día, *planificado.*",
+    "sub": "Paradas, tiempos a pie y sitios para comer."
+   }
+  ],
+  "vision": [
+   {
+    "h": "Entra *en el pasado.*",
+    "sub": "La ciudad antigua, a tu alrededor."
+   },
+   {
+    "h": "Mapas antiguos sobre *las calles de hoy.*",
+    "sub": "Desliza de hoy hasta 1850."
+   },
+   {
+    "h": "Viaja *en el tiempo.*",
+    "sub": "Una ruta guiada que retrocede el mapa en cada parada."
+   },
+   {
+    "h": "Entra *dentro de* los monumentos.",
+    "sub": "26 panorámicas en 360°."
+   },
+   {
+    "h": "166 ciudades. *122 campus.*",
+    "sub": "Pasaporte, logros y tradiciones, sincronizados con tu iPhone."
+   }
+  ]
+ },
+ "es-MX": {
+  "mac": [
+   {
+    "h": "Mira la ciudad *como era.*",
+    "sub": "Fotos de archivo reales, junto a las de hoy."
+   },
+   {
+    "h": "Mapas antiguos sobre *las calles de hoy.*",
+    "sub": "Desliza de hoy hasta 1850."
+   },
+   {
+    "h": "Viaja *en el tiempo.*",
+    "sub": "Un recorrido guiado que regresa el mapa en cada parada."
+   },
+   {
+    "h": "2,400 monumentos. *Un pasaporte.*",
+    "sub": "166 ciudades y 122 campus para sellar."
+   },
+   {
+    "h": "Cada día, *planeado.*",
+    "sub": "Paradas, tiempos caminando y lugares para comer."
+   }
+  ],
+  "vision": [
+   {
+    "h": "Entra *al pasado.*",
+    "sub": "La ciudad antigua, a tu alrededor."
+   },
+   {
+    "h": "Mapas antiguos sobre *las calles de hoy.*",
+    "sub": "Desliza de hoy hasta 1850."
+   },
+   {
+    "h": "Viaja *en el tiempo.*",
+    "sub": "Un recorrido guiado que regresa el mapa en cada parada."
+   },
+   {
+    "h": "Entra *a los* monumentos.",
+    "sub": "26 panorámicas en 360°."
+   },
+   {
+    "h": "166 ciudades. *122 campus.*",
+    "sub": "Pasaporte, logros y tradiciones, sincronizados con tu iPhone."
+   }
+  ]
+ },
+ "fr-FR": {
+  "mac": [
+   {
+    "h": "La ville *d'autrefois.*",
+    "sub": "De vraies photos d'archives, à côté d'aujourd'hui."
+   },
+   {
+    "h": "Les vieux plans sur *les rues d'aujourd'hui.*",
+    "sub": "Remontez jusqu'en 1850."
+   },
+   {
+    "h": "Voyagez *dans le temps.*",
+    "sub": "Une visite guidée qui remonte le temps à chaque étape."
+   },
+   {
+    "h": "2 400 monuments. *Un passeport.*",
+    "sub": "166 villes et 122 campus à tamponner."
+   },
+   {
+    "h": "Chaque jour, *planifié.*",
+    "sub": "Étapes, temps de marche et où manger."
+   }
+  ],
+  "vision": [
+   {
+    "h": "Entrez *dans le passé.*",
+    "sub": "La ville d'autrefois, tout autour de vous."
+   },
+   {
+    "h": "Les vieux plans sur *les rues d'aujourd'hui.*",
+    "sub": "Remontez jusqu'en 1850."
+   },
+   {
+    "h": "Voyagez *dans le temps.*",
+    "sub": "Une visite guidée qui remonte le temps à chaque étape."
+   },
+   {
+    "h": "Entrez *dans* les monuments.",
+    "sub": "26 panoramas à 360°."
+   },
+   {
+    "h": "166 villes. *122 campus.*",
+    "sub": "Passeport, trophées et traditions, synchronisés avec votre iPhone."
+   }
+  ]
+ },
+ "it": {
+  "mac": [
+   {
+    "h": "La città *com'era.*",
+    "sub": "Vere foto d'archivio, accanto a quelle di oggi."
+   },
+   {
+    "h": "Mappe antiche sulle *strade di oggi.*",
+    "sub": "Scorri da oggi fino al 1850."
+   },
+   {
+    "h": "Viaggia *nel tempo.*",
+    "sub": "Un tour guidato che riporta indietro la mappa a ogni tappa."
+   },
+   {
+    "h": "2.400 monumenti. *Un passaporto.*",
+    "sub": "166 città e 122 campus da timbrare."
+   },
+   {
+    "h": "Ogni giorno, *pianificato.*",
+    "sub": "Tappe, tempi a piedi e posti dove mangiare."
+   }
+  ],
+  "vision": [
+   {
+    "h": "Entra *nel passato.*",
+    "sub": "La città antica, tutta intorno a te."
+   },
+   {
+    "h": "Mappe antiche sulle *strade di oggi.*",
+    "sub": "Scorri da oggi fino al 1850."
+   },
+   {
+    "h": "Viaggia *nel tempo.*",
+    "sub": "Un tour guidato che riporta indietro la mappa a ogni tappa."
+   },
+   {
+    "h": "Entra *dentro* i monumenti.",
+    "sub": "26 panorami a 360°."
+   },
+   {
+    "h": "166 città. *122 campus.*",
+    "sub": "Passaporto, traguardi e tradizioni, sincronizzati con il tuo iPhone."
+   }
+  ]
+ },
+ "ja": {
+  "mac": [
+   {
+    "h": "*昔の街並み*を見よう。",
+    "sub": "本物の古写真を、今の姿と並べて。"
+   },
+   {
+    "h": "古地図を*今の街*に重ねて。",
+    "sub": "今から1850年までスライド。"
+   },
+   {
+    "h": "*時をさかのぼって*歩こう。",
+    "sub": "立ち寄るたびに地図が昔に戻るガイドツアー。"
+   },
+   {
+    "h": "2,400のランドマーク。*パスポートはひとつ。*",
+    "sub": "166都市と122キャンパスでスタンプを集めよう。"
+   },
+   {
+    "h": "毎日の予定を*まるごと。*",
+    "sub": "立ち寄り先、徒歩時間、食事どころ。"
+   }
+  ],
+  "vision": [
+   {
+    "h": "*過去の世界*へ。",
+    "sub": "昔の街があなたを包み込む。"
+   },
+   {
+    "h": "古地図を*今の街*に重ねて。",
+    "sub": "今から1850年までスライド。"
+   },
+   {
+    "h": "*時をさかのぼって*歩こう。",
+    "sub": "立ち寄るたびに地図が昔に戻るガイドツアー。"
+   },
+   {
+    "h": "名所の*中に*立とう。",
+    "sub": "360°パノラマ26か所。"
+   },
+   {
+    "h": "166都市。*122キャンパス。*",
+    "sub": "パスポート、実績、伝統をiPhoneと同期。"
+   }
+  ]
+ },
+ "ko": {
+  "mac": [
+   {
+    "h": "*옛 도시의 모습*을 보세요.",
+    "sub": "실제 기록 사진을 오늘의 모습과 나란히."
+   },
+   {
+    "h": "옛 지도를 *오늘의 거리* 위에.",
+    "sub": "지금부터 1850년까지 밀어 보세요."
+   },
+   {
+    "h": "*시간을 거슬러* 걸어요.",
+    "sub": "정류장마다 지도가 과거로 돌아가는 가이드 투어."
+   },
+   {
+    "h": "랜드마크 2,400곳. *여권은 하나.*",
+    "sub": "도시 166곳과 대학 캠퍼스 122곳에서 스탬프를."
+   },
+   {
+    "h": "하루하루 *완벽한 계획.*",
+    "sub": "방문지, 도보 시간, 맛집까지."
+   }
+  ],
+  "vision": [
+   {
+    "h": "*과거 속으로* 들어가세요.",
+    "sub": "옛 도시가 사방에 펼쳐집니다."
+   },
+   {
+    "h": "옛 지도를 *오늘의 거리* 위에.",
+    "sub": "지금부터 1850년까지 밀어 보세요."
+   },
+   {
+    "h": "*시간을 거슬러* 걸어요.",
+    "sub": "정류장마다 지도가 과거로 돌아가는 가이드 투어."
+   },
+   {
+    "h": "랜드마크 *안에* 서 보세요.",
+    "sub": "360° 파노라마 26곳."
+   },
+   {
+    "h": "도시 166곳. *캠퍼스 122곳.*",
+    "sub": "여권, 업적, 전통을 iPhone과 동기화."
+   }
+  ]
+ },
+ "pt-BR": {
+  "mac": [
+   {
+    "h": "Veja a cidade *como ela era.*",
+    "sub": "Fotos de arquivo reais, lado a lado com hoje."
+   },
+   {
+    "h": "Mapas antigos sobre *as ruas de hoje.*",
+    "sub": "Deslize de hoje até 1850."
+   },
+   {
+    "h": "Viaje *no tempo.*",
+    "sub": "Um tour guiado que volta o mapa no tempo a cada parada."
+   },
+   {
+    "h": "2.400 pontos turísticos. *Um passaporte.*",
+    "sub": "166 cidades e 122 campi para carimbar."
+   },
+   {
+    "h": "Cada dia, *planejado.*",
+    "sub": "Paradas, tempo de caminhada e onde comer."
+   }
+  ],
+  "vision": [
+   {
+    "h": "Entre *no passado.*",
+    "sub": "A cidade antiga, toda ao seu redor."
+   },
+   {
+    "h": "Mapas antigos sobre *as ruas de hoje.*",
+    "sub": "Deslize de hoje até 1850."
+   },
+   {
+    "h": "Viaje *no tempo.*",
+    "sub": "Um tour guiado que volta o mapa no tempo a cada parada."
+   },
+   {
+    "h": "Entre *nos* pontos turísticos.",
+    "sub": "26 panoramas em 360°."
+   },
+   {
+    "h": "166 cidades. *122 campi.*",
+    "sub": "Passaporte, conquistas e tradições, sincronizados com seu iPhone."
+   }
+  ]
+ },
+ "zh-Hans": {
+  "mac": [
+   {
+    "h": "看见城市*昔日的模样。*",
+    "sub": "真实档案老照片，与今日并排对比。"
+   },
+   {
+    "h": "老地图叠在*今天的街道*上。",
+    "sub": "从今天一路滑回1850年。"
+   },
+   {
+    "h": "*穿越时光*漫步。",
+    "sub": "每到一站，地图就回到过去的导览。"
+   },
+   {
+    "h": "2,400处地标。*一本护照。*",
+    "sub": "166座城市和122所大学校园等你盖章。"
+   },
+   {
+    "h": "每一天，*都已安排好。*",
+    "sub": "景点、步行时间和美食去处。"
+   }
+  ],
+  "vision": [
+   {
+    "h": "*走进过去。*",
+    "sub": "老城就在你身边。"
+   },
+   {
+    "h": "老地图叠在*今天的街道*上。",
+    "sub": "从今天一路滑回1850年。"
+   },
+   {
+    "h": "*穿越时光*漫步。",
+    "sub": "每到一站，地图就回到过去的导览。"
+   },
+   {
+    "h": "站在地标*之中。*",
+    "sub": "26个360°全景。"
+   },
+   {
+    "h": "166座城市。*122所校园。*",
+    "sub": "护照、成就和传统，与iPhone同步。"
+   }
+  ]
+ }
+}
