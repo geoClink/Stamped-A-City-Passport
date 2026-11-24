@@ -10,6 +10,15 @@ How to use this file:
 
 ## [Unreleased]
 
+## [2.19] – not yet submitted (iPhone, iPad and Mac; nothing new for Vision Pro)
+
+- City guides in every language: about 1,700 fun facts, airport notes, language tips and getting-around guides that still showed in English are translated into all 8 other languages, with a test that catches English text. (#130)
+- Currency names, transit names and city nicknames translated and made consistent; wrong currency symbols fixed (Indian rupee, Chinese yuan in Korean, broken Arabic symbols in Chinese) and brand names that had been translated word by word restored (DART, RTD, TTC, First Bus). (#132, #133, #134)
+- 9 Brazilian and 5 Indonesian cities that shared one copied country entry each get their own airport, nickname and fact-checked details. (#131)
+- Passport: the campus count is no longer cut off at the largest text sizes; Portuguese gets the missing Dhaka details; the widget gets its own privacy manifest; release-check tests. (#128)
+- English city details: 7 typos fixed. (#129)
+- App Store text for 2.19 (iPhone and Mac) in `docs/app-store/localization/2.19` and `2.19-macos`, based on the live 2.18 pages with a new What's New.
+
 ## [2.11] (build 16) – not yet submitted (iPhone, iPad, Mac and Vision Pro)
 
 - History on every device: Then & Now old maps with a fade slider, Time Walk tours, old photos on the map, Step into the Past, Ask the building, On This Day and city street sounds now on iPhone, iPad, Mac and Vision Pro.
