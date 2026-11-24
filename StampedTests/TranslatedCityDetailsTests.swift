@@ -144,4 +144,31 @@ final class TranslatedCityDetailsTests: XCTestCase {
                           "\(language): \(stillEnglish.count) fields are still in English: \(stillEnglish.sorted())")
         }
     }
+
+    // Goes through the app's real loader, the code the city screens use.
+    // The checks above read each .lproj file by path, so they kept passing while the app
+    // itself showed English in every language: the loader asked Bundle for "CityDetails.json",
+    // and Bundle hands back the English copy at the top of the bundle before any .lproj copy.
+    func testLoaderReturnsTheUsersLanguage() {
+        let recifeNickname: [String: String] = [
+            "es": "Venecia Brasileña",
+            "de": "Brasilianisches Venedig",
+            "ja": "ブラジルのベネチア",
+            "pt": "Veneza Brasileira",
+            "zh-Hans": "巴西威尼斯",
+            "en": "Brazilian Venice",
+        ]
+        for (language, nickname) in recifeNickname {
+            let details = CityDetailsStore.loadDetails(for: [language])
+            XCTAssertEqual(details["Recife"]?.nickname, nickname, "\(language) shows the wrong Recife nickname")
+        }
+    }
+
+    // A language with a region ("pt-BR") uses its base folder, and a language the app
+    // doesn't have (Swedish) gets English instead of an empty screen.
+    func testLoaderFallsBack() {
+        XCTAssertEqual(CityDetailsStore.loadDetails(for: ["pt-BR"])["Recife"]?.nickname, "Veneza Brasileira")
+        XCTAssertEqual(CityDetailsStore.loadDetails(for: ["sv"])["Recife"]?.nickname, "Brazilian Venice")
+        XCTAssertEqual(CityDetailsStore.loadDetails(for: [])["Recife"]?.nickname, "Brazilian Venice")
+    }
 }
