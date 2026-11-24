@@ -24,7 +24,7 @@ struct ListenButton: View {
             Button {
                 HapticManager.shared.trigger(.selection)
                 player.toggle(building)
-                if !voiceTipDismissed && AudioStoryPlayer.hasOnlyBasicVoice {
+                if !voiceTipDismissed && !player.hasRecording(building) && AudioStoryPlayer.hasOnlyBasicVoice {
                     showVoiceTip = true
                 }
             } label: {
@@ -39,6 +39,8 @@ struct ListenButton: View {
                 VoiceTip(tint: tint) { voiceTipDismissed = true }
             }
         }
+        // Fetch the recording of this city's stories while the person reads the page
+        .task(id: building.id) { player.prepare(for: building) }
     }
 }
 
