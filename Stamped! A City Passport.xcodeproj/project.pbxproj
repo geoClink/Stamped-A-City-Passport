@@ -17,6 +17,7 @@
 		DE2C6FE8304D222900F657DA /* WeatherKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2C6FE7304D222900F657DA /* WeatherKit.framework */; };
 		DE57C156305351770036884C /* detroit.usdz in Resources */ = {isa = PBXBuildFile; fileRef = DE57C155305351770036884C /* detroit.usdz */; };
 		DEA370C33050AE24004BA2BB /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = DEA370C23050AE24004BA2BB /* RealityKitContent */; };
+		DED7D0013060000000A1B012 /* DetroitDownloader.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = DED7D0013060000000A1B001 /* DetroitDownloader.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DED7D0013060000000A1B002 /* DetroitDownloader.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = DED7D0013060000000A1B001 /* DetroitDownloader.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,13 @@
 			remoteGlobalIDString = DEA370BD3050AE24004BA2BB;
 			remoteInfo = "Tally-AVP";
 		};
+		DED7D0013060000000A1B014 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE4ECE242F4F65D600D107CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DED7D0013060000000A1B006;
+			remoteInfo = DetroitDownloader;
+		};
 		DED7D0013060000000A1B00A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DE4ECE242F4F65D600D107CF /* Project object */;
@@ -68,6 +76,17 @@
 				DE2C6F9C304CB5B000F657DA /* PassportWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DED7D0013060000000A1B013 /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				DED7D0013060000000A1B012 /* DetroitDownloader.appex in Embed ExtensionKit Extensions */,
+			);
+			name = "Embed ExtensionKit Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DED7D0013060000000A1B003 /* Embed ExtensionKit Extensions */ = {
@@ -1114,11 +1133,13 @@
 				DE4ECE292F4F65D600D107CF /* Frameworks */,
 				DE4ECE2A2F4F65D600D107CF /* Resources */,
 				DE2C6F9D304CB5B000F657DA /* Embed Foundation Extensions */,
+				DED7D0013060000000A1B013 /* Embed ExtensionKit Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				DE2C6F9B304CB5B000F657DA /* PBXTargetDependency */,
+				DED7D0013060000000A1B015 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				DE4ECE2E2F4F65D600D107CF /* Stamped! A City Passport */,
@@ -1389,6 +1410,11 @@
 			target = DEA370BD3050AE24004BA2BB /* Tally-AVP */;
 			targetProxy = DEA370D03050AE53004BA2BB /* PBXContainerItemProxy */;
 		};
+		DED7D0013060000000A1B015 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DED7D0013060000000A1B006 /* DetroitDownloader */;
+			targetProxy = DED7D0013060000000A1B014 /* PBXContainerItemProxy */;
+		};
 		DED7D0013060000000A1B00B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DED7D0013060000000A1B006 /* DetroitDownloader */;
@@ -1410,7 +1436,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = PassportWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 35;
+				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PassportWidget/Info.plist;
@@ -1422,7 +1448,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.19;
+				MARKETING_VERSION = 2.20;
 				PRODUCT_BUNDLE_IDENTIFIER = "name.GeorgeClinkscales.Stamped--A-City-Passport.PassportWidget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1442,7 +1468,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = PassportWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 35;
+				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PassportWidget/Info.plist;
@@ -1454,7 +1480,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.19;
+				MARKETING_VERSION = 2.20;
 				PRODUCT_BUNDLE_IDENTIFIER = "name.GeorgeClinkscales.Stamped--A-City-Passport.PassportWidget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1645,7 +1671,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Stamped! A City Passport/Stamped! A City Passport.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 35;
+				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1682,7 +1708,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				MARKETING_VERSION = 2.19;
+				MARKETING_VERSION = 2.20;
 				PRODUCT_BUNDLE_IDENTIFIER = "name.GeorgeClinkscales.Stamped--A-City-Passport";
 				PRODUCT_NAME = "Stamped!";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1710,7 +1736,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Stamped! A City Passport/Stamped! A City Passport.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 35;
+				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1747,7 +1773,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				MARKETING_VERSION = 2.19;
+				MARKETING_VERSION = 2.20;
 				PRODUCT_BUNDLE_IDENTIFIER = "name.GeorgeClinkscales.Stamped--A-City-Passport";
 				PRODUCT_NAME = "Stamped!";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1774,7 +1800,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Tally-AVP/Tally-AVP.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 35;
+				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1784,7 +1810,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.19;
+				MARKETING_VERSION = 2.20;
 				PRODUCT_BUNDLE_IDENTIFIER = "name.GeorgeClinkscales.Stamped--A-City-Passport";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = xros;
@@ -1808,7 +1834,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Tally-AVP/Tally-AVP.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 35;
+				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1818,7 +1844,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.19;
+				MARKETING_VERSION = 2.20;
 				PRODUCT_BUNDLE_IDENTIFIER = "name.GeorgeClinkscales.Stamped--A-City-Passport";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = xros;
@@ -1887,9 +1913,11 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = DetroitDownloader/DetroitDownloader.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 35;
+				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
+				ENABLE_APP_SANDBOX = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				INFOPLIST_FILE = DetroitDownloader/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = DetroitDownloader;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -1898,18 +1926,19 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.19;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 2.20;
 				PRODUCT_BUNDLE_IDENTIFIER = "name.GeorgeClinkscales.Stamped--A-City-Passport.DetroitDownloader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = xros;
+				SDKROOT = auto;
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 7;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 				XROS_DEPLOYMENT_TARGET = 26.5;
 			};
 			name = Debug;
@@ -1919,9 +1948,11 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = DetroitDownloader/DetroitDownloader.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 35;
+				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_TEAM = S4RSN4KFD3;
+				ENABLE_APP_SANDBOX = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				INFOPLIST_FILE = DetroitDownloader/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = DetroitDownloader;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -1930,18 +1961,19 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.19;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 2.20;
 				PRODUCT_BUNDLE_IDENTIFIER = "name.GeorgeClinkscales.Stamped--A-City-Passport.DetroitDownloader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = xros;
+				SDKROOT = auto;
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 7;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 				XROS_DEPLOYMENT_TARGET = 26.5;
 			};
 			name = Release;

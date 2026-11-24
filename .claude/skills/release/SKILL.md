@@ -1,6 +1,6 @@
 ---
 name: release
-description: 'Ship Stamped! A City Passport to iOS, Mac and Vision Pro: version bump, Europeana key removal, archive, upload, App Store text in every language and submission. Use when George says release, ship, submit, new build or bump the version.'
+description: 'Ship Stamped! A City Passport to iOS, Mac and Vision Pro: version bump, landmark audio, Europeana key removal, archive, upload, App Store text in every language and submission. Use when George says release, ship, submit, new build or bump the version.'
 ---
 
 # Release Stamped!
@@ -19,22 +19,26 @@ Read live: `MARKETING_VERSION` and `CURRENT_PROJECT_VERSION` in the project file
 
 Run the unit tests and a Release build. Real-device checks go on George's list.
 
-## 3. Remove Europeana before archiving
+## 3. Landmark audio (the Kokoro narrator)
+
+Every landmark's Listen story is a recording in one of 40 Apple-hosted asset packs (`tools/landmark-audio`, read its README). If any landmark text changed, or a city or landmark was added, record and repackage before shipping, or those stories fall back to the device voice: `HF_HUB_OFFLINE=1 .venv/bin/python -I record.py`, then `.venv/bin/python -I package.py`. Run `check_names.py` on new cities and fix bad names in `pronunciations.json`. Upload only the packs that changed, with `xcrun altool --api-key … --api-issuer … --upload-asset-pack <pack>.aar --apple-id 6759680336` (login options before the command). That's an upload: ask first, and say which packs. Never change the pack count (40).
+
+## 4. Remove Europeana before archiving
 
 The Europeana key must not ship. Remove it from both gitignored `Secrets.plist` files (`Stamped! A City Passport/Resources` and `Tally-AVP`), archive, check the archive doesn't hold it, then restore it. Build 17 shipped with it by mistake and had to be expired. Don't skip this, and don't upload until the check passes.
 
-## 4. Archive and upload
+## 5. Archive and upload
 
 This Mac can do release builds. Schemes: "Stamped! A City Passport" (iOS and native Mac) and "Tally-AVP" (Vision Pro). Export with `-allowProvisioningUpdates` and no `-authenticationKey` flags: the API key fails with a cloud signing error, and the Apple account in Xcode works. The 0-byte `detroit.usdz` is harmless.
 
-## 5. Store text and screenshots
+## 6. Store text and screenshots
 
 Text is in `docs/app-store/localization/<version>/`, one file per language. Upload with `tools/appstore-metadata/upload_metadata.py` (`--texts <version>-<platform> --create-version`, `--screenshots`), reading its README first. Marketing leads with Then & Now and Time Walk. Screenshots use the simulator "Stamped Shots iPhone".
 
-## 6. Submit
+## 7. Submit
 
 Export compliance: no non-exempt encryption. New in-app purchases must go with an app version, and the API can't attach first-time ones, so plan that in App Store Connect.
 
-## 7. After
+## 8. After
 
 Update the release setup note in memory. Say plainly what wasn't tested and what only George can do.
