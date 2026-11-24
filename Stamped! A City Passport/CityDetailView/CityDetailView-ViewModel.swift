@@ -70,6 +70,16 @@ class CityDetailViewModel: ObservableObject {
         self.currentRates = offlineRates
         loadInitialProgress()
 
+        // Start from the city's real state. The $visitedIDs subscription below
+        // sends its current value right away; without this, an already-finished
+        // city would look like a brand-new completion every time it is opened.
+        previouslyCompleted = isCompleted
+        // Older data can have a finished city with no saved date: fill it in
+        // quietly (no celebration) so the passport stamp is not left blank.
+        if isCompleted && completionDate.isEmpty {
+            handleCompletion()
+        }
+
         // Set an initial status based on current path (if available)
         if pathMonitor.currentPath.status == .satisfied {
             self.currencyStatusText = NSLocalizedString("checking.rates", comment: "Short status shown while fetching currency rates")
