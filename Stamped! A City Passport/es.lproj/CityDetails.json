@@ -143,17 +143,17 @@
     "transportationFact": "La Línea Roja es un sistema ferroviario de carga compartida único que conecta el centro con los suburbios del norte. Las líneas de autobuses locales y MetroRapid brindan servicio de alta frecuencia a lo largo de los principales corredores de la ciudad. La aplicación CapMetro permite emitir billetes móviles sin problemas en todos los modos de transporte."
   },
   "Bali": {
-    "airportCode": "CGK",
-    "airportInfo": "Las terminales del aeropuerto tienen un diseño exclusivo con techos tradicionales javaneses 'Joglo' y exuberantes jardines tropicales ubicados entre las áreas de embarque. La Terminal 3 más nueva es una enorme instalación de alta tecnología que exhibe arte contemporáneo de Indonesia y sirve como centro para la aerolínea nacional, Garuda Indonesia.",
-    "airportName": "Soekarno-Hatta",
+    "airportCode": "DPS",
+    "airportInfo": "El aeropuerto comenzó en 1931 como una pista de hierba en Tuban y lleva el nombre de I Gusti Ngurah Rai, un héroe balinés de la independencia que murió luchando contra los neerlandeses en 1946. Su única pista se adentra en el mar, y cada año todo el aeropuerto cierra durante 24 horas en Nyepi, el Día del Silencio balinés.",
+    "airportName": "Ngurah Rai Int'l",
     "currencyCode": "IDR",
     "currencyInfo": "Rupia indonesia (Rp)",
-    "funFact": "Indonesia es el archipiélago más grande del mundo y se extiende a lo largo de más de 17.000 islas y tres zonas horarias. Es una tierra de increíble diversidad, hogar del templo budista más grande del mundo en Borobudur y más de 700 idiomas y dialectos locales distintos.",
+    "funFact": "Bali es la única provincia de Indonesia de mayoría hindú, y sus aldeas, arrozales y complejos familiares están salpicados de miles de templos y ofrendas florales diarias. El sistema 'subak' de la isla, una forma centenaria de compartir el agua de riego a través de los templos, se incorporó a la Lista del Patrimonio Mundial de la UNESCO en 2012.",
     "language": "indonesio",
-    "languageInfo": "El bahasa indonesio sirve como lengua unificadora en las miles de islas del archipiélago. Es un lenguaje sencillo sin género gramatical, lo que lo hace accesible para que los visitantes aprendan frases básicas.",
-    "nickname": "Esmeralda del Ecuador",
-    "transportation": "TransJakarta y MRT",
-    "transportationFact": "TransJakarta es el sistema de autobús de tránsito rápido más largo del mundo y utiliza carriles exclusivos para evitar el intenso tráfico de la ciudad. El nuevo MRT de Yakarta ofrece una alternativa subterránea rápida y moderna para el principal corredor norte-sur de la ciudad. El tren del aeropuerto Railink ofrece una conexión premium con aire acondicionado entre Soekarno-Hatta y el centro de la ciudad."
+    "languageInfo": "La mayoría de los locales hablan balinés en casa e indonesio en la vida diaria, mientras que el inglés es común en las zonas turísticas. El balinés tiene niveles de habla cortés e informal que se eligen según con quién se hable, y los letreros de las calles suelen mostrar su propia escritura balinesa de trazos curvos.",
+    "nickname": "Isla de los Dioses",
+    "transportation": "Motonetas y Trans Metro Dewata",
+    "transportationFact": "Bali no tiene ferrocarril, así que la mayoría de la gente se desplaza en motoneta, con chofer privado o con aplicaciones de transporte como Gojek y Grab. Los autobuses rojos Trans Metro Dewata cubren rutas de tarifa baja que conectan Denpasar con zonas cercanas como Sanur y Kuta. El tráfico en el sur puede ser lento, así que prevea tiempo adicional para ir al aeropuerto."
   },
   "Baltimore": {
     "airportCode": "BWI",
@@ -195,17 +195,17 @@
     "transportationFact": "El Metro de Barcelona incluye varias 'estaciones fantasma' que permanecen visibles para los pasajeros a través de las ventanillas del tren. Los trenes FGC complementan el metro llegando a las zonas más altas de la ciudad y los suburbios. El histórico tranvía azul y los teleféricos de Montjuïc ofrecen un tránsito panorámico especializado para los visitantes."
   },
   "Batam": {
-    "airportCode": "CGK",
-    "airportInfo": "Las terminales del aeropuerto tienen un diseño exclusivo con techos tradicionales javaneses 'Joglo' y exuberantes jardines tropicales ubicados entre las áreas de embarque. La Terminal 3 más nueva es una enorme instalación de alta tecnología que exhibe arte contemporáneo de Indonesia y sirve como centro para la aerolínea nacional, Garuda Indonesia.",
-    "airportName": "Soekarno-Hatta",
+    "airportCode": "BTH",
+    "airportInfo": "Hang Nadim lleva el nombre de un legendario almirante malayo y tiene una pista de unos 4 kilómetros, citada a menudo como la más larga de Indonesia. El aeropuerto se concibió como puerta de entrada a la zona industrial de Batam, y también alberga los grandes hangares de mantenimiento de Batam Aero Technic, la división de reparaciones del grupo Lion Air.",
+    "airportName": "Hang Nadim Int'l",
     "currencyCode": "IDR",
     "currencyInfo": "Rupia indonesia (Rp)",
-    "funFact": "Indonesia es el archipiélago más grande del mundo y se extiende a lo largo de más de 17.000 islas y tres zonas horarias. Es una tierra de increíble diversidad, hogar del templo budista más grande del mundo en Borobudur y más de 700 idiomas y dialectos locales distintos.",
+    "funFact": "Batam fue una isla poco poblada hasta la década de 1970, cuando Indonesia empezó a desarrollarla como zona industrial justo al otro lado del estrecho de Singapur. Su emblemático Puente Barelang es una cadena de seis puentes, impulsada por B.J. Habibie, que une Batam con las islas de Rempang y Galang.",
     "language": "indonesio",
-    "languageInfo": "El bahasa indonesio sirve como lengua unificadora en las miles de islas del archipiélago. Es un lenguaje sencillo sin género gramatical, lo que lo hace accesible para que los visitantes aprendan frases básicas.",
-    "nickname": "Esmeralda del Ecuador",
-    "transportation": "TransJakarta y MRT",
-    "transportationFact": "TransJakarta es el sistema de autobús de tránsito rápido más largo del mundo y utiliza carriles exclusivos para evitar el intenso tráfico de la ciudad. El nuevo MRT de Yakarta ofrece una alternativa subterránea rápida y moderna para el principal corredor norte-sur de la ciudad. El tren del aeropuerto Railink ofrece una conexión premium con aire acondicionado entre Soekarno-Hatta y el centro de la ciudad."
+    "languageInfo": "El indonesio se usa en todas partes, y la isla se encuentra en el corazón malayo de Riau, cuya lengua se convirtió en la base del indonesio moderno. Trabajadores de toda Indonesia traen el javanés, el batak y el minang, y en las comunidades chinas se oyen el hokkien y el teochew.",
+    "nickname": "La Ciudad Industrial",
+    "transportation": "Ferris y Trans Batam",
+    "transportationFact": "Los ferris rápidos desde Batam Centre, Harbour Bay, Sekupang y Nongsapura llegan a las terminales HarbourFront y Tanah Merah de Singapur en aproximadamente una hora. En la isla, los autobuses Trans Batam recorren las vías principales, pero la mayoría de los visitantes usan taxis y aplicaciones de transporte para llegar a centros comerciales, complejos turísticos y el Puente Barelang."
   },
   "Bath": {
     "airportCode": "BRS",
@@ -299,17 +299,17 @@
     "transportationFact": "La Línea Verde es la línea de metro más antigua de los Estados Unidos y opera vehículos únicos estilo tranvía. Las líneas de trenes de cercanías se extienden desde las estaciones Norte y Sur para llegar a las comunidades costeras y suburbanas. El sistema de ferry MBTA ofrece una alternativa panorámica para los viajeros que cruzan el puerto de Boston."
   },
   "Brasília": {
-    "airportCode": "GRU",
-    "airportInfo": "Como principal puerta de entrada internacional a Brasil, Guarulhos es el aeropuerto más transitado de Sudamérica por volumen de pasajeros. Es un enorme complejo que se modernizó significativamente para la Copa del Mundo y los Juegos Olímpicos, y cuenta con una terminal exclusiva para vuelos internacionales de larga distancia con amplias comodidades de lujo.",
-    "airportName": "Guarulhos Int'l",
+    "airportCode": "BSB",
+    "airportInfo": "El aeropuerto lleva el nombre del presidente Juscelino Kubitschek, quien construyó Brasilia desde cero a finales de la década de 1950. Gracias a la ubicación de la capital en el centro del país, funciona como un importante centro de conexiones donde los viajeros cambian de avión entre el norte, el sur y la costa de Brasil.",
+    "airportName": "Brasília Int'l",
     "currencyCode": "BRL",
     "currencyInfo": "Real brasileño (R$)",
-    "funFact": "Brasil es un gigante continental que ocupa casi la mitad de América del Sur y ha sido el mayor productor de café del mundo durante más de 150 años. Es una nación definida por su vibrante crisol cultural, que va desde la selva amazónica hasta las mundialmente famosas celebraciones del Carnaval de Río.",
+    "funFact": "Brasilia se construyó en poco más de tres años y se inauguró como capital el 21 de abril de 1960. El urbanista Lúcio Costa la trazó con forma de avión, mientras que Oscar Niemeyer diseñó sus emblemáticos edificios modernistas, y todo el plan fue declarado Patrimonio de la Humanidad por la UNESCO en 1987.",
     "language": "portugués",
-    "languageInfo": "El portugués es el único idioma oficial y se habla con un acento musical y abierto que difiere significativamente de la versión europea. La mayoría de los lugareños aprecian cualquier esfuerzo por hablar 'português' y son muy pacientes con los estudiantes.",
-    "nickname": "Tierra de Garoa",
-    "transportation": "Curitiba BRT y Metro",
-    "transportationFact": "Curitiba fue el pionero mundial del concepto 'Autobús como tren', utilizando icónicas estaciones de tubo de vidrio para abordar a nivel. El Metrô de São Paulo es uno de los más limpios y eficientes del mundo y atiende a millones de pasajeros en seis líneas. Río de Janeiro utiliza el tranvía 'Bondinho' en Santa Teresa y un moderno sistema de tren ligero VLT en la revitalizada zona portuaria."
+    "languageInfo": "Como casi todas las familias llegaron de otras partes, el acento de Brasilia es una mezcla neutra de todo el país. Los locales saludan a sus amigos con 'véi' (viejo), y las direcciones son códigos como 'SQS 308' que se refieren a las supermanzanas numeradas de la ciudad.",
+    "nickname": "Capital de la Esperanza",
+    "transportation": "Metrô-DF y BRT",
+    "transportationFact": "Brasilia se diseñó pensando en el automóvil, con amplias autopistas e intercambiadores en trébol en lugar de esquinas. El Metrô-DF opera una línea Verde y una Naranja desde el centro hasta las ciudades satélite, y el corredor de autobuses BRT Sul conecta las zonas de Gama y Santa Maria con la estación central de autobuses."
   },
   "Brisbane": {
     "airportCode": "BNE",
@@ -390,17 +390,17 @@
     "transportationFact": "El Metro de El Cairo fue el primer sistema de metro completo construido en el continente africano y es un sustento vital para la ciudad. El sistema incluye coches exclusivos específicamente para mujeres para garantizar la comodidad durante las horas punta. Actualmente se está construyendo un nuevo sistema de monorraíl para conectar el centro de la ciudad con la Nueva Capital Administrativa."
   },
   "Campinas": {
-    "airportCode": "GRU",
-    "airportInfo": "Como principal puerta de entrada internacional a Brasil, Guarulhos es el aeropuerto más transitado de Sudamérica por volumen de pasajeros. Es un enorme complejo que se modernizó significativamente para la Copa del Mundo y los Juegos Olímpicos, y cuenta con una terminal exclusiva para vuelos internacionales de larga distancia con amplias comodidades de lujo.",
-    "airportName": "Guarulhos Int'l",
+    "airportCode": "VCP",
+    "airportInfo": "Viracopos fue la principal puerta de entrada internacional de São Paulo antes de que abriera Guarulhos en 1985. Hoy es la mayor base de Azul Linhas Aéreas Brasileiras y una importante terminal de carga aérea, y según una leyenda local su nombre, 'voltear los vasos', proviene de una antigua y ruidosa fiesta en la zona.",
+    "airportName": "Viracopos Int'l",
     "currencyCode": "BRL",
     "currencyInfo": "Real brasileño (R$)",
-    "funFact": "Brasil es un gigante continental que ocupa casi la mitad de América del Sur y ha sido el mayor productor de café del mundo durante más de 150 años. Es una nación definida por su vibrante crisol cultural, que va desde la selva amazónica hasta las mundialmente famosas celebraciones del Carnaval de Río.",
+    "funFact": "Campinas es la ciudad natal del compositor Carlos Gomes, cuya ópera 'Il Guarany' se estrenó en La Scala de Milán en 1870 y lo convirtió en el primer compositor brasileño famoso en Europa. Hoy la ciudad es un polo tecnológico que alberga la Universidad Estatal de Campinas (Unicamp) y numerosos centros de investigación.",
     "language": "portugués",
-    "languageInfo": "El portugués es el único idioma oficial y se habla con un acento musical y abierto que difiere significativamente de la versión europea. La mayoría de los lugareños aprecian cualquier esfuerzo por hablar 'português' y son muy pacientes con los estudiantes.",
-    "nickname": "Tierra de Garoa",
-    "transportation": "Curitiba BRT y Metro",
-    "transportationFact": "Curitiba fue el pionero mundial del concepto 'Autobús como tren', utilizando icónicas estaciones de tubo de vidrio para abordar a nivel. El Metrô de São Paulo es uno de los más limpios y eficientes del mundo y atiende a millones de pasajeros en seis líneas. Río de Janeiro utiliza el tranvía 'Bondinho' en Santa Teresa y un moderno sistema de tren ligero VLT en la revitalizada zona portuaria."
+    "languageInfo": "En Campinas se habla con el acento 'caipira' del interior de São Paulo, que pronuncia una 'r' fuerte, parecida a la estadounidense, en palabras como 'porta'. El habla aquí tiene el ritmo amable y pausado del interior, y los locales se llaman con orgullo 'campineiros' por su ciudad.",
+    "nickname": "Princesa d'Oeste",
+    "transportation": "BRT Campinas y autobuses",
+    "transportationFact": "La red de BRT de la ciudad entró en pleno funcionamiento en 2025, con carriles exclusivos para autobuses en los corredores Ouro Verde, Campo Grande y Perimetral que alimentan la Terminal Central. Los autobuses urbanos regulares cubren el resto de Campinas, y los autobuses interurbanos la conectan con São Paulo en unos 90 minutos."
   },
   "Cape Town": {
     "airportCode": "CPT",
@@ -443,16 +443,16 @@
   },
   "Central Jakarta": {
     "airportCode": "CGK",
-    "airportInfo": "Las terminales del aeropuerto tienen un diseño singular, con tejados tradicionales javaneses 'Joglo' y exuberantes jardines tropicales entre las zonas de embarque. La nueva Terminal 3 es una enorme instalación de alta tecnología que exhibe arte indonesio contemporáneo y sirve de base a la aerolínea nacional, Garuda Indonesia.",
+    "airportInfo": "Bautizado en honor al primer presidente y al primer vicepresidente de Indonesia, quienes proclamaron la independencia en 1945, el aeropuerto abrió en 1985. El arquitecto francés Paul Andreu diseñó sus primeras terminales como conjuntos de pabellones con techos de estilo javanés entre jardines tropicales. El tren del aeropuerto lo conecta con la estación BNI City, en el corazón de Yakarta Central.",
     "airportName": "Soekarno-Hatta",
     "currencyCode": "IDR",
     "currencyInfo": "Rupia indonesia (Rp)",
-    "funFact": "Indonesia es el archipiélago más grande del mundo y se extiende a lo largo de más de 17.000 islas y tres zonas horarias. Es una tierra de increíble diversidad, hogar del templo budista más grande del mundo en Borobudur y más de 700 idiomas y dialectos locales distintos.",
+    "funFact": "Yakarta Central alberga el Monas, el Monumento Nacional de 132 metros coronado por una llama cubierta de oro, que se alza en el centro de la vasta Plaza Merdeka. Cerca de allí, la Mezquita Istiqlal, la más grande del Sudeste Asiático, está frente a la Catedral de Yakarta, y un 'Túnel de la Amistad' subterráneo que une ambas se inauguró oficialmente en 2024.",
     "language": "Indonesio",
-    "languageInfo": "El bahasa indonesio es la lengua que une los miles de islas del archipiélago. Es un idioma sencillo y sin género gramatical, por lo que a los visitantes les resulta fácil aprender frases básicas.",
-    "nickname": "Esmeralda del Ecuador",
+    "languageInfo": "El indonesio es la lengua de la vida diaria, pero la jerga informal de Yakarta se nutre en gran medida del betawi, el habla de base malaya de los habitantes originarios de la ciudad. Palabras como 'gue' (yo) y 'lu' (tú) llegaron a través del betawi desde el hokkien, y el inglés es común en hoteles y oficinas.",
+    "nickname": "El Gran Durián",
     "transportation": "TransJakarta y MRT",
-    "transportationFact": "TransJakarta es el sistema de autobús de tránsito rápido más largo del mundo y utiliza carriles exclusivos para evitar el intenso tráfico de la ciudad. El nuevo MRT de Yakarta ofrece una alternativa subterránea rápida y moderna para el principal corredor norte-sur de la ciudad. El tren del aeropuerto Railink ofrece una conexión premium con aire acondicionado entre Soekarno-Hatta y el centro de la ciudad."
+    "transportationFact": "TransJakarta, lanzado en 2004, opera autobuses en carriles exclusivos por toda la ciudad, con estaciones en medio de la calzada. El MRT circula bajo tierra bajo Jalan Thamrin y Sudirman desde 2019, y su extensión hacia el norte, en dirección a Kota, está en construcción. Los trenes de cercanías y los autobuses completan el resto."
   },
   "Chandigarh": {
     "airportCode": "IXC",
@@ -598,17 +598,17 @@
     "transportationFact": "El tren ligero y los autobuses VTA proporcionan el transporte local principal en todo el Valle de Santa Clara. Caltrain ofrece un enlace vital que conecta a los trabajadores tecnológicos de Cupertino con San Francisco y Palo Alto. Muchos campus tecnológicos importantes también operan extensas redes de transporte privado para sus empleados."
   },
   "Curitiba": {
-    "airportCode": "GRU",
-    "airportInfo": "Como principal puerta de entrada internacional a Brasil, Guarulhos es el aeropuerto más transitado de Sudamérica por volumen de pasajeros. Es un enorme complejo que se modernizó significativamente para la Copa del Mundo y los Juegos Olímpicos, y cuenta con una terminal exclusiva para vuelos internacionales de larga distancia con amplias comodidades de lujo.",
-    "airportName": "Guarulhos Int'l",
+    "airportCode": "CWB",
+    "airportInfo": "Afonso Pena se encuentra en la vecina São José dos Pinhais, a unos 18 km del centro, y lleva el nombre de un expresidente brasileño. Su ubicación en una meseta alta y fresca hace que los viajeros a veces se encuentren con la famosa niebla invernal de la región, muy lejos de la imagen tropical de Brasil.",
+    "airportName": "Afonso Pena Int'l",
     "currencyCode": "BRL",
     "currencyInfo": "Real brasileño (R$)",
-    "funFact": "Brasil es un gigante continental que ocupa casi la mitad de América del Sur y ha sido el mayor productor de café del mundo durante más de 150 años. Es una nación definida por su vibrante crisol cultural, que va desde la selva amazónica hasta las mundialmente famosas celebraciones del Carnaval de Río.",
+    "funFact": "Curitiba es conocida por una planificación urbana que dio prioridad a los parques, los peatones y el transporte público. En 1972 convirtió la Rua XV de Novembro en una de las primeras calles peatonales de Brasil, y la Ópera de Arame, un teatro construido con tubos de acero junto a un lago, se ha convertido en un ícono de la ciudad.",
     "language": "portugués",
-    "languageInfo": "El portugués es el único idioma oficial y se habla con un acento musical y abierto que difiere significativamente de la versión europea. La mayoría de los lugareños aprecian cualquier esfuerzo por hablar 'português' y son muy pacientes con los estudiantes.",
-    "nickname": "Tierra de Garoa",
-    "transportation": "Curitiba BRT y Metro",
-    "transportationFact": "Curitiba fue el pionero mundial del concepto 'Autobús como tren', utilizando icónicas estaciones de tubo de vidrio para abordar a nivel. El Metrô de São Paulo es uno de los más limpios y eficientes del mundo y atiende a millones de pasajeros en seis líneas. Río de Janeiro utiliza el tranvía 'Bondinho' en Santa Teresa y un moderno sistema de tren ligero VLT en la revitalizada zona portuaria."
+    "languageInfo": "Los curitibanos son conocidos por pronunciar con claridad cada 'e' final, de modo que 'leite quente' suena tal como se escribe. Entre las palabras locales están 'piá' para un niño y 'vina' para la salchicha de perro caliente, que pueden desconcertar a visitantes de otras partes de Brasil.",
+    "nickname": "Capital Ecológica",
+    "transportation": "BRT de Curitiba y estaciones tubo",
+    "transportationFact": "Curitiba inauguró carriles exclusivos para autobuses expresos en 1974, un modelo pionero de los sistemas de autobuses de tránsito rápido que luego se construyeron en todo el mundo. Los pasajeros pagan antes de abordar dentro de 'estaciones tubo' de vidrio alineadas con las puertas del autobús, y el autobús de dos pisos Linha Turismo recorre los principales lugares de interés."
   },
   "Dakar": {
     "airportCode": "DSS",
@@ -754,17 +754,17 @@
     "transportationFact": "TEXRail recorre 27,2 millas desde la T&P Station, en el centro de Fort Worth, hasta la Terminal B del aeropuerto DFW, con nueve estaciones. El Trinity Railway Express une el centro de Fort Worth con el centro de Dallas, y la Fort Worth Central Station es el principal centro de transbordo de los autobuses de Trinity Metro."
   },
   "Fortaleza": {
-    "airportCode": "GRU",
-    "airportInfo": "Como principal puerta de entrada internacional a Brasil, Guarulhos es el aeropuerto más transitado de Sudamérica por volumen de pasajeros. Es un enorme complejo que se modernizó significativamente para la Copa del Mundo y los Juegos Olímpicos, y cuenta con una terminal exclusiva para vuelos internacionales de larga distancia con amplias comodidades de lujo.",
-    "airportName": "Guarulhos Int'l",
+    "airportCode": "FOR",
+    "airportInfo": "El aeropuerto rinde homenaje a Euclides Pinto Martins, un aviador nacido en Ceará que fue copiloto de un vuelo pionero de Nueva York a Río de Janeiro que partió en 1922. Lo opera la alemana Fraport y se encuentra a pocos kilómetros del centro de la ciudad, por lo que el trayecto a los hoteles frente a la playa es rápido.",
+    "airportName": "Pinto Martins Int'l",
     "currencyCode": "BRL",
     "currencyInfo": "Real brasileño (R$)",
-    "funFact": "Brasil es un gigante continental que ocupa casi la mitad de América del Sur y ha sido el mayor productor de café del mundo durante más de 150 años. Es una nación definida por su vibrante crisol cultural, que va desde la selva amazónica hasta las mundialmente famosas celebraciones del Carnaval de Río.",
+    "funFact": "Fortaleza, que significa 'fortaleza', creció alrededor de un fuerte construido por los neerlandeses en 1649 y tomado más tarde por los portugueses. El estado de Ceará liberó a sus esclavos en 1884, cuatro años antes que el resto de Brasil, y las playas de la ciudad disfrutan de sol la mayor parte del año.",
     "language": "portugués",
-    "languageInfo": "El portugués es el único idioma oficial y se habla con un acento musical y abierto que difiere significativamente de la versión europea. La mayoría de los lugareños aprecian cualquier esfuerzo por hablar 'português' y son muy pacientes con los estudiantes.",
-    "nickname": "Tierra de Garoa",
-    "transportation": "Curitiba BRT y Metro",
-    "transportationFact": "Curitiba fue el pionero mundial del concepto 'Autobús como tren', utilizando icónicas estaciones de tubo de vidrio para abordar a nivel. El Metrô de São Paulo es uno de los más limpios y eficientes del mundo y atiende a millones de pasajeros en seis líneas. Río de Janeiro utiliza el tranvía 'Bondinho' en Santa Teresa y un moderno sistema de tren ligero VLT en la revitalizada zona portuaria."
+    "languageInfo": "Los cearenses hablan rápido y con mucho humor, y la ciudad es famosa en todo Brasil por sus comediantes. Preste atención a 'macho' usado entre amigos, a 'mah' intercalado en medio de una frase y a 'botar boneco' para referirse a armar un gran escándalo por algo.",
+    "nickname": "Terra da Luz",
+    "transportation": "Metrofor y VLT",
+    "transportationFact": "El Metrofor opera las líneas Sur y Oeste hacia los suburbios, mientras que el tren ligero VLT conecta Parangaba con la zona portuaria de Mucuripe. Se está construyendo una Línea Este subterránea. La mayoría de los visitantes se mueven en autobuses urbanos, viajes por aplicación y largas caminatas por el concurrido paseo marítimo de Beira Mar."
   },
   "Fukuoka": {
     "airportCode": "FUK",
@@ -1131,17 +1131,17 @@
     "transportationFact": "El metro de Madrid es uno de los más grandes del mundo, con 13 líneas y más de 300 estaciones, lo que lo convierte en la forma más completa de moverse por la ciudad. Un billete sencillo sirve para toda la red, y el metro funciona hasta la 1:30 de la madrugada entre semana y las 24 horas los fines de semana, reflejo de la famosa vida nocturna de la ciudad. La red de autobuses de la EMT complementa el metro con más de 200 líneas que circulan también de noche."
   },
   "Manaus": {
-    "airportCode": "GRU",
-    "airportInfo": "Como principal puerta de entrada internacional a Brasil, Guarulhos es el aeropuerto más transitado de Sudamérica por volumen de pasajeros. Es un enorme complejo que se modernizó significativamente para la Copa del Mundo y los Juegos Olímpicos, y cuenta con una terminal exclusiva para vuelos internacionales de larga distancia con amplias comodidades de lujo.",
-    "airportName": "Guarulhos Int'l",
+    "airportCode": "MAO",
+    "airportInfo": "Eduardo Gomes es la principal puerta aérea de la Amazonia, ya que las conexiones por carretera entre Manaos y el resto de Brasil son muy limitadas. Fue renovado para el Mundial de 2014 y también maneja un intenso tráfico de carga para las fábricas de la Zona Franca de Manaos, que envían productos electrónicos y motocicletas a todo el país.",
+    "airportName": "Eduardo Gomes Int'l",
     "currencyCode": "BRL",
     "currencyInfo": "Real brasileño (R$)",
-    "funFact": "Brasil es un gigante continental que ocupa casi la mitad de América del Sur y ha sido el mayor productor de café del mundo durante más de 150 años. Es una nación definida por su vibrante crisol cultural, que va desde la selva amazónica hasta las mundialmente famosas celebraciones del Carnaval de Río.",
+    "funFact": "Durante el auge del caucho, Manaos se enriqueció lo suficiente para construir el teatro de ópera Teatro Amazonas, inaugurado en 1896 con materiales importados de Europa. Justo a las afueras de la ciudad, el oscuro río Negro y el arenoso Solimões fluyen uno junto al otro durante varios kilómetros sin mezclarse, un espectáculo llamado el Encuentro de las Aguas.",
     "language": "portugués",
-    "languageInfo": "El portugués es el único idioma oficial y se habla con un acento musical y abierto que difiere significativamente de la versión europea. La mayoría de los lugareños aprecian cualquier esfuerzo por hablar 'português' y son muy pacientes con los estudiantes.",
-    "nickname": "Tierra de Garoa",
-    "transportation": "Curitiba BRT y Metro",
-    "transportationFact": "Curitiba fue el pionero mundial del concepto 'Autobús como tren', utilizando icónicas estaciones de tubo de vidrio para abordar a nivel. El Metrô de São Paulo es uno de los más limpios y eficientes del mundo y atiende a millones de pasajeros en seis líneas. Río de Janeiro utiliza el tranvía 'Bondinho' en Santa Teresa y un moderno sistema de tren ligero VLT en la revitalizada zona portuaria."
+    "languageInfo": "El acento de Manaos es suave y cantado, y el portugués local toma muchas palabras de lenguas indígenas, como nombres de peces y frutas. Los amigos se llaman 'mano' y 'mana', y 'leseira' describe cualquier cosa tonta o sin sentido.",
+    "nickname": "París de los Trópicos",
+    "transportation": "Autobuses y barcos fluviales de Manaos",
+    "transportationFact": "Los autobuses urbanos son la principal forma de moverse por Manaos, ya que la ciudad no tiene metro ni tren ligero. Los ríos funcionan como carreteras, así que desde el puerto salen barcos hacia comunidades cercanas y excursiones al Encuentro de las Aguas, y el Puente Río Negro, inaugurado en 2011, lleva el tráfico hasta Iranduba."
   },
   "Manila": {
     "airportCode": "MNL",
@@ -1573,17 +1573,17 @@
     "transportationFact": "El Metro de Oporto se inauguró en diciembre de 2002 como una red de metro ligero que circula bajo tierra en el centro y en superficie hacia las afueras. Hoy sus seis líneas dan servicio a 85 estaciones en unos 70 km, y en 2013 recibió el Premio Veronica Rudge Green de Diseño Urbano de la Universidad de Harvard."
   },
   "Porto Alegre": {
-    "airportCode": "GRU",
-    "airportInfo": "Como principal puerta de entrada internacional a Brasil, Guarulhos es el aeropuerto más transitado de Sudamérica por volumen de pasajeros. Es un enorme complejo que se modernizó significativamente para la Copa del Mundo y los Juegos Olímpicos, y cuenta con una terminal exclusiva para vuelos internacionales de larga distancia con amplias comodidades de lujo.",
-    "airportName": "Guarulhos Int'l",
+    "airportCode": "POA",
+    "airportInfo": "Salgado Filho se inundó y permaneció cerrado unos cinco meses durante las inundaciones de 2024; reabrió en octubre de 2024 y recuperó su pista completa de 3.200 metros en diciembre de ese año. El Aeromóvel, un sistema de transporte automatizado impulsado por aire y construido con tecnología brasileña, conecta la terminal con la línea de tren de la ciudad.",
+    "airportName": "Salgado Filho Int'l",
     "currencyCode": "BRL",
     "currencyInfo": "Real brasileño (R$)",
-    "funFact": "Brasil es un gigante continental que ocupa casi la mitad de América del Sur y ha sido el mayor productor de café del mundo durante más de 150 años. Es una nación definida por su vibrante crisol cultural, que va desde la selva amazónica hasta las mundialmente famosas celebraciones del Carnaval de Río.",
+    "funFact": "Porto Alegre fue colonizada en el siglo XVIII por parejas de las islas Azores de Portugal, lo que le valió el nombre temprano de 'Porto dos Casais'. En 1989 fue pionera del presupuesto participativo, que permite a los residentes votar sobre cómo se gasta el dinero público, y en 2001 acogió el primer Foro Social Mundial.",
     "language": "portugués",
-    "languageInfo": "El portugués es el único idioma oficial y se habla con un acento musical y abierto que difiere significativamente de la versión europea. La mayoría de los lugareños aprecian cualquier esfuerzo por hablar 'português' y son muy pacientes con los estudiantes.",
-    "nickname": "Tierra de Garoa",
-    "transportation": "Curitiba BRT y Metro",
-    "transportationFact": "Curitiba fue el pionero mundial del concepto 'Autobús como tren', utilizando icónicas estaciones de tubo de vidrio para abordar a nivel. El Metrô de São Paulo es uno de los más limpios y eficientes del mundo y atiende a millones de pasajeros en seis líneas. Río de Janeiro utiliza el tranvía 'Bondinho' en Santa Teresa y un moderno sistema de tren ligero VLT en la revitalizada zona portuaria."
+    "languageInfo": "Los gaúchos usan 'tu' en lugar de 'você' y salpican su habla con 'bah' para expresar sorpresa, 'tchê' para un amigo y 'tri' para cualquier cosa genial. Compartir chimarrão, un mate amargo que se sorbe con una bombilla de metal, es un ritual social que verá por todas partes.",
+    "nickname": "Porto dos Casais",
+    "transportation": "Trensurb y autobuses",
+    "transportationFact": "Trensurb opera una única línea de tren desde la estación Mercado, en el centro, hacia el norte hasta Novo Hamburgo, con una parada que conecta con el aeropuerto mediante el Aeromóvel. Una amplia red de autobuses urbanos cubre la mayoría de los demás trayectos, y a los atardeceres sobre el lago Guaíba es mejor llegar a pie por la costanera."
   },
   "Prague": {
     "airportCode": "PRG",
@@ -1625,17 +1625,17 @@
     "transportationFact": "Orbus es un sistema de autobuses simplificado y de tarifa plana diseñado para hacer que el transporte público sea accesible tanto para los locales como para los esquiadores visitantes. El sistema incluye soportes especializados en la parte delantera de los autobuses para transportar bicicletas de montaña y equipo para la nieve. Los taxis acuáticos ofrecen una alternativa pintoresca y rápida para cruzar el lago Wakatipu entre los principales centros turísticos."
   },
   "Recife": {
-    "airportCode": "GRU",
-    "airportInfo": "Como principal puerta de entrada internacional a Brasil, Guarulhos es el aeropuerto más concurrido de Sudamérica por volumen de pasajeros. Es un enorme complejo que se modernizó notablemente para el Mundial y los Juegos Olímpicos, y cuenta con una terminal dedicada a los vuelos internacionales de larga distancia con numerosos servicios de lujo.",
-    "airportName": "Guarulhos Int'l",
+    "airportCode": "REC",
+    "airportInfo": "El nombre completo del aeropuerto rinde homenaje a las Batallas de Guararapes, libradas contra los neerlandeses en la década de 1640, y al sociólogo recifense Gilberto Freyre. Su terminal está cerca de la playa de Boa Viagem, a un corto trayecto de los hoteles frente al mar, y una estación cercana de la Línea Sur del metro se llama Aeroporto.",
+    "airportName": "Guararapes Int'l",
     "currencyCode": "BRL",
     "currencyInfo": "Real brasileño (R$)",
-    "funFact": "Brasil es un gigante continental que ocupa casi la mitad de América del Sur y ha sido el mayor productor de café del mundo durante más de 150 años. Es una nación definida por su vibrante crisol cultural, que va desde la selva amazónica hasta las mundialmente famosas celebraciones del Carnaval de Río.",
+    "funFact": "Recife debe su nombre a los arrecifes que bordean su costa, y su centro se extiende sobre islas unidas por decenas de puentes. Durante el dominio neerlandés, colonos judíos construyeron la sinagoga Kahal Zur Israel, considerada la primera de las Américas, y su sitio restaurado es hoy un museo.",
     "language": "portugués",
-    "languageInfo": "El portugués es la única lengua oficial y se habla con un acento musical y abierto que difiere notablemente de la variante europea. La mayoría de los locales agradecen cualquier esfuerzo por hablar 'Português' y son muy pacientes con quienes están aprendiendo.",
-    "nickname": "Terra da Garoa",
-    "transportation": "Curitiba BRT & Metrô",
-    "transportationFact": "Curitiba fue pionera mundial del concepto de 'autobús como tren', con sus icónicas estaciones tubulares de vidrio para embarcar a nivel. El Metrô de São Paulo es uno de los más limpios y eficientes del mundo y da servicio a millones de pasajeros en seis líneas. Río de Janeiro cuenta con el tranvía 'Bondinho' en Santa Teresa y un moderno sistema de tren ligero VLT en la renovada zona portuaria."
+    "languageInfo": "El acento de Recife es abierto y musical, con las vocales amplias y abiertas típicas del Nordeste. Los locales llaman 'arretado' a algo genial, saludan a un amigo con 'ô boy' y terminan las frases con 'visse?' (¿ve?), mientras los ritmos de frevo y maracatu llenan las calles en Carnaval.",
+    "nickname": "Venecia Brasileña",
+    "transportation": "Metrô do Recife y autobuses",
+    "transportationFact": "El Metrô do Recife opera una Línea Centro y una Línea Sur, además de un ramal de tren ligero diésel, aunque los trenes envejecidos hacen que el servicio pueda interrumpirse. Las terminales de autobuses integradas permiten cambiar entre autobuses y trenes con una sola tarifa, y los viajes por aplicación son comunes para ir a Boa Viagem."
   },
   "Reykjavik": {
     "airportCode": "KEF",
@@ -1664,17 +1664,17 @@
     "transportationFact": "El transporte público lo gestiona Rīgas Satiksme, con tranvías, autobuses y trolebuses en una amplia red de líneas por toda la ciudad. Desde 2012 una única empresa municipal opera también los microbuses que antes llevaban operadores privados."
   },
   "Rio de Janeiro": {
-    "airportCode": "GRU",
-    "airportInfo": "Como principal puerta de entrada internacional a Brasil, Guarulhos es el aeropuerto con más pasajeros de Sudamérica. Es un complejo enorme que se modernizó a fondo con motivo de la Copa del Mundo y los Juegos Olímpicos, y cuenta con una terminal dedicada a los vuelos internacionales de largo recorrido con amplios servicios de lujo.",
-    "airportName": "Guarulhos Int'l",
+    "airportCode": "GIG",
+    "airportInfo": "Galeão se encuentra en la Isla del Gobernador, y su nombre recuerda un gran galeón construido allí en el siglo XVII. Desde 1999 rinde homenaje oficialmente a Antonio Carlos 'Tom' Jobim, coautor de 'The Girl from Ipanema', cuya canción 'Samba do Avião' describe la alegría de aterrizar en Río.",
+    "airportName": "Galeão Int'l",
     "currencyCode": "BRL",
     "currencyInfo": "Brazilian Real (R$)",
-    "funFact": "Brasil es un gigante continental que ocupa casi la mitad de Sudamérica y ha sido el mayor productor de café del mundo durante más de 150 años. Es una nación definida por su vibrante crisol cultural, que abarca desde la selva amazónica hasta las celebraciones del Carnaval de Río, famosas en todo el mundo.",
+    "funFact": "De 1808 a 1821, Río fue la capital de todo el Imperio portugués después de que la corte real huyera de la invasión de Napoleón, un caso poco común de un imperio europeo gobernado desde las Américas. En 2012 la UNESCO declaró su paisaje entre la montaña y el mar Patrimonio de la Humanidad.",
     "language": "Portugués",
-    "languageInfo": "El portugués es el único idioma oficial y se habla con un acento musical y abierto que difiere notablemente de la variante europea. La mayoría de los habitantes agradecen cualquier esfuerzo por hablar 'Português' y son muy pacientes con quienes están aprendiendo.",
-    "nickname": "Terra da Garoa",
-    "transportation": "Curitiba BRT & Metrô",
-    "transportationFact": "Curitiba fue pionera mundial del concepto de 'autobús como tren', con sus emblemáticas estaciones de tubo de cristal que permiten subir a nivel. El Metrô de São Paulo es uno de los más limpios y eficientes del mundo y transporta a millones de pasajeros en seis líneas. Río de Janeiro cuenta con el tranvía 'Bondinho' en Santa Teresa y con un moderno sistema de tren ligero VLT en la renovada zona portuaria."
+    "languageInfo": "El acento carioca es fácil de reconocer: una 's' al final de sílaba se convierte en una 'sh' suave, de modo que 'mais' suena como 'maish'. Los locales dicen 'maneiro' para algo genial y 'mermão' para mi hermano, y un rápido 'valeu' significa gracias.",
+    "nickname": "Ciudad Maravillosa",
+    "transportation": "MetrôRio y VLT",
+    "transportationFact": "Las tres líneas de MetrôRio conectan el centro, Copacabana, Ipanema y Barra da Tijuca. El tren ligero VLT Carioca, inaugurado en 2016, recorre el centro sin cables aéreos. Cuatro corredores de autobuses BRT, el más reciente TransBrasil, inaugurado en 2024, cubren las extensas zonas norte y oeste de la ciudad."
   },
   "Riyadh": {
     "airportCode": "RUH",
@@ -1898,17 +1898,17 @@
     "transportationFact": "El metro de Estocolmo (Tunnelbana, o T-bana) es famoso en todo el mundo por el arte de sus estaciones: más de 150 artistas transformaron los túneles de roca desnuda en vibrantes instalaciones artísticas concebidas para cada lugar. La autoridad de transporte SL gestiona una red perfectamente integrada de metro, tranvías, trenes de cercanías y ferris, todo cubierto por una única tarjeta SL Access. El tranvía histórico Djurgårdslinjen sigue circulando entre el centro de la ciudad y la isla de los museos, Djurgården."
   },
   "Surabaya": {
-    "airportCode": "CGK",
-    "airportInfo": "Las terminales del aeropuerto tienen un diseño singular, con tejados tradicionales javaneses 'Joglo' y exuberantes jardines tropicales entre las zonas de embarque. La nueva Terminal 3 es una instalación enorme y de alta tecnología que exhibe arte indonesio contemporáneo y sirve de centro de operaciones de la aerolínea nacional, Garuda Indonesia.",
-    "airportName": "Soekarno-Hatta",
+    "airportCode": "SUB",
+    "airportInfo": "Juanda lleva el nombre de Djuanda Kartawidjaja, el primer ministro cuya declaración de 1957 definió a Indonesia como una única nación archipelágica. Inaugurado en 1964, se encuentra justo a las afueras de la ciudad, en Sidoarjo, y aún comparte su aeródromo con una base aérea de la Armada de Indonesia, con las terminales de pasajeros funcionando junto a ella.",
+    "airportName": "Juanda Int'l",
     "currencyCode": "IDR",
     "currencyInfo": "Rupia indonesia (Rp)",
-    "funFact": "Indonesia es el archipiélago más grande del mundo y se extiende a lo largo de más de 17.000 islas y tres zonas horarias. Es una tierra de increíble diversidad, hogar del templo budista más grande del mundo en Borobudur y más de 700 idiomas y dialectos locales distintos.",
+    "funFact": "La Batalla de Surabaya, en noviembre de 1945, fue uno de los combates más feroces de la guerra de independencia de Indonesia, y el 10 de noviembre se celebra hoy en todo el país como el Día de los Héroes. El símbolo de la ciudad muestra un tiburón ('sura') y un cocodrilo ('baya'), y un famoso incidente en el que se rasgó una bandera tuvo lugar en el actual Hotel Majapahit.",
     "language": "indonesio",
-    "languageInfo": "El bahasa indonesio sirve como lengua unificadora en las miles de islas del archipiélago. Es un lenguaje sencillo sin género gramatical, lo que lo hace accesible para que los visitantes aprendan frases básicas.",
-    "nickname": "Esmeralda del Ecuador",
-    "transportation": "TransJakarta & MRT",
-    "transportationFact": "TransJakarta es el sistema de autobús de tránsito rápido más largo del mundo y utiliza carriles exclusivos para evitar el denso tráfico de la ciudad. El nuevo MRT de Yakarta ofrece una alternativa subterránea rápida y moderna para el principal corredor norte-sur de la ciudad. El tren aeroportuario Railink ofrece una conexión prémium con aire acondicionado entre Soekarno-Hatta y el centro de la ciudad."
+    "languageInfo": "Los locales hablan suroboyoan, una forma directa y animada del javanés conocida por usar muchos menos de los niveles de habla formal que se oyen en otras partes de Java. A los hombres se les saluda como 'Cak' y a las mujeres como 'Ning', también se oye mucho el madurés, y el indonesio se usa en todas partes.",
+    "nickname": "Ciudad de los Héroes",
+    "transportation": "Suroboyo Bus y Trans Semanggi",
+    "transportationFact": "El Suroboyo Bus fue noticia cuando se lanzó en 2018 por permitir a los pasajeros pagar su tarifa con botellas de plástico. Hoy funciona junto con los autobuses Trans Semanggi Suroboyo y las pequeñas camionetas alimentadoras Wirawiri que llegan a los barrios. Las aplicaciones de transporte son la forma más fácil de cruzar las concurridas calles de la ciudad."
   },
   "Sydney": {
     "airportCode": "SYD",
@@ -1925,16 +1925,16 @@
   },
   "São Paulo": {
     "airportCode": "GRU",
-    "airportInfo": "Como principal puerta de entrada internacional a Brasil, Guarulhos es el aeropuerto más transitado de Sudamérica por volumen de pasajeros. Es un enorme complejo que se modernizó significativamente para la Copa del Mundo y los Juegos Olímpicos, y cuenta con una terminal exclusiva para vuelos internacionales de larga distancia con amplias comodidades de lujo.",
+    "airportInfo": "Inaugurado en 1985 en la vecina ciudad de Guarulhos, es el aeropuerto con más tráfico de Brasil y su principal puerta de entrada para vuelos internacionales. Su gran Terminal 3 abrió en 2014, antes del Mundial, y desde 2018 el tren de la Línea 13-Jade de la CPTM conecta la zona del aeropuerto con la red ferroviaria de la ciudad.",
     "airportName": "Guarulhos Int'l",
     "currencyCode": "BRL",
     "currencyInfo": "Real brasileño (R$)",
-    "funFact": "Brasil es un gigante continental que ocupa casi la mitad de América del Sur y ha sido el mayor productor de café del mundo durante más de 150 años. Es una nación definida por su vibrante crisol cultural, que va desde la selva amazónica hasta las mundialmente famosas celebraciones del Carnaval de Río.",
+    "funFact": "São Paulo alberga una de las mayores comunidades japonesas fuera de Japón, concentrada en el barrio de Liberdade, con sus faroles rojos y su feria callejera de fin de semana. La ciudad también acoge cada año uno de los desfiles del Orgullo más grandes del mundo, que llena la Avenida Paulista, flanqueada por rascacielos.",
     "language": "portugués",
-    "languageInfo": "El portugués es el único idioma oficial y se habla con un acento musical y abierto que difiere significativamente de la versión europea. La mayoría de los lugareños aprecian cualquier esfuerzo por hablar 'português' y son muy pacientes con los estudiantes.",
-    "nickname": "Tierra de Garoa",
-    "transportation": "Curitiba BRT y Metro",
-    "transportationFact": "Curitiba fue el pionero mundial del concepto 'Autobús como tren', utilizando icónicas estaciones de tubo de vidrio para abordar a nivel. El Metrô de São Paulo es uno de los más limpios y eficientes del mundo y atiende a millones de pasajeros en seis líneas. Río de Janeiro utiliza el tranvía 'Bondinho' en Santa Teresa y un moderno sistema de tren ligero VLT en la revitalizada zona portuaria."
+    "languageInfo": "Los paulistanos son conocidos por la palabra 'meu' (amigo) y por alargar las vocales, como en 'orra, meu!' para expresar sorpresa. Los jóvenes dicen 'mano' para un amigo y 'rolê' para salir, y el antiguo barrio italiano de Mooca es conocido por un acento muy propio.",
+    "nickname": "Terra da Garoa",
+    "transportation": "Metro de São Paulo y CPTM",
+    "transportationFact": "El Metro de São Paulo opera líneas identificadas por colores, entre ellas la Línea 4-Amarilla sin conductor y el monorriel de la Línea 15-Plata. Los trenes de cercanías de la CPTM extienden la red a la región metropolitana, y los carriles exclusivos para autobuses ayudan a miles de autobuses urbanos a circular por parte del tráfico más denso de Brasil."
   },
   "Taipei": {
     "airportCode": "TPE",
@@ -1951,16 +1951,16 @@
   },
   "Tangerang": {
     "airportCode": "CGK",
-    "airportInfo": "Las terminales del aeropuerto tienen un diseño exclusivo con techos tradicionales javaneses 'Joglo' y exuberantes jardines tropicales ubicados entre las áreas de embarque. La Terminal 3 más nueva es una enorme instalación de alta tecnología que exhibe arte contemporáneo de Indonesia y sirve como centro para la aerolínea nacional, Garuda Indonesia.",
+    "airportInfo": "Aunque lleva el nombre de Yakarta, Soekarno-Hatta se encuentra en realidad dentro de la ciudad de Tangerang, justo al oeste de la capital. Su gran Terminal 3 abrió en 2016, y un Skytrain gratuito sin conductor, en funcionamiento desde 2017, conecta las terminales con la estación de tren del aeropuerto.",
     "airportName": "Soekarno-Hatta",
     "currencyCode": "IDR",
     "currencyInfo": "Rupia indonesia (Rp)",
-    "funFact": "Indonesia es el archipiélago más grande del mundo y se extiende a lo largo de más de 17.000 islas y tres zonas horarias. Es una tierra de increíble diversidad, hogar del templo budista más grande del mundo en Borobudur y más de 700 idiomas y dialectos locales distintos.",
+    "funFact": "Tangerang alberga a los Cina Benteng, una comunidad china cuyos antepasados se asentaron hace siglos cerca de un fuerte neerlandés ('benteng') a orillas del río Cisadane. Boen Tek Bio, el templo chino más antiguo de la ciudad, data de alrededor de 1684, y el cercano Museo Benteng Heritage cuenta su historia en una antigua casa restaurada.",
     "language": "indonesio",
-    "languageInfo": "El bahasa indonesio sirve como lengua unificadora en las miles de islas del archipiélago. Es un lenguaje sencillo sin género gramatical, lo que lo hace accesible para que los visitantes aprendan frases básicas.",
-    "nickname": "Esmeralda del Ecuador",
-    "transportation": "TransJakarta y MRT",
-    "transportationFact": "TransJakarta es el sistema de autobús de tránsito rápido más largo del mundo y utiliza carriles exclusivos para evitar el intenso tráfico de la ciudad. El nuevo MRT de Yakarta ofrece una alternativa subterránea rápida y moderna para el principal corredor norte-sur de la ciudad. El tren del aeropuerto Railink ofrece una conexión premium con aire acondicionado entre Soekarno-Hatta y el centro de la ciudad."
+    "languageInfo": "El indonesio es la lengua cotidiana, y el sundanés, el betawi y el javanés se hablan entre distintas comunidades. Los Cina Benteng hablan sobre todo un malayo de estilo betawi en lugar de chino, una muestra de lo profundamente que se han integrado en la vida local a lo largo de los siglos.",
+    "nickname": "Ciudad de las Mil Industrias",
+    "transportation": "KRL Commuter Line y autobuses",
+    "transportationFact": "La KRL Commuter Line va desde la estación de Tangerang hasta Duri, en Yakarta, donde los pasajeros pueden transbordar a otras líneas. El tren del aeropuerto también para en la estación Batu Ceper de Tangerang en su camino hacia Yakarta. Los autobuses alimentadores urbanos y las aplicaciones de transporte cubren los huecos entre los polígonos industriales y los barrios."
   },
   "Tbilisi": {
     "airportCode": "TBS",

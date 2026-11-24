@@ -36,6 +36,22 @@ final class TranslatedCityDetailsTests: XCTestCase {
         return try JSONDecoder().decode([String: [String: String]].self, from: Data(contentsOf: url))
     }
 
+    // No two places share the same English description. 9 Brazilian and 5 Indonesian cities
+    // once shared one copied country-level entry, so a Recife user read about São Paulo's airport.
+    func testNoTwoPlacesShareADescription() throws {
+        let english = try englishDetails()
+        for field in longFields {
+            var placesByText: [String: [String]] = [:]
+            for (place, fields) in english {
+                if let text = fields[field], !text.isEmpty {
+                    placesByText[text, default: []].append(place)
+                }
+            }
+            let shared = placesByText.values.filter { $0.count > 1 }.map { $0.sorted() }
+            XCTAssertTrue(shared.isEmpty, "\(field) is the same for: \(shared)")
+        }
+    }
+
     // Every long description in a translated language differs from the English one
     func testLongDescriptionsAreTranslated() throws {
         let english = try englishDetails()
