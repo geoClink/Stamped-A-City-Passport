@@ -8,9 +8,10 @@
 //  Detroit Public Library (Burton Historical Collection) approved these 22 Detroit photos
 //  on 2026-11-20, for as long as the app is available, credited by collection and linked
 //  to each item's page (docs/detroit-public-library/). DPL takes no responsibility for copyright.
-//  Wayne State's Walter P. Reuther Library allowed one web-resolution photo each for Old Main,
-//  the Maccabees Building, the Freer House and the Hilberry Theatre on 2026-11-24, free while the
-//  app is free, credited and linked to each image's page (docs/reuther-library/).
+//  Wayne State's Walter P. Reuther Library allowed this web-resolution Old Main photo (Wayne State
+//  University Photograph Collection) on 2026-11-24, through updates while the app is free, credited
+//  and linked to its page on their CONTENTdm platform (docs/reuther-library/). Freer House and the
+//  Hilberry Theatre are in collections Molly handles; they wait for her answer.
 //  Cleveland Public Library neither grants nor denies permission for its Digital Gallery and
 //  asks only for a credit; these 5 were published before 1931 (docs/archive-outreach/).
 //  The New York Public Library marks these 4 "No Copyright - United States" (public domain)
@@ -520,17 +521,16 @@ nonisolated enum CampusArchivePhotos {
 
     static let reutherCredit = "Walter P. Reuther Library, Archives of Labor and Urban Affairs, Wayne State University"
 
-    /// A Reuther Library photo, linked to its own page on reuther.wayne.edu
-    private static func reuther(_ id: String, node: Int, _ caption: String) -> [Entry] {
+    /// A Reuther Library photo, linked to its own page on wayne.contentdm.oclc.org
+    private static func reuther(_ id: String, collection: String, record: Int, _ caption: String) -> [Entry] {
         [Entry(file: "rl_\(id)", caption: caption, credit: reutherCredit,
-               link: URL(string: "https://reuther.wayne.edu/node/\(node)")!)]
+               link: URL(string: "https://wayne.contentdm.oclc.org/digital/collection/\(collection)/id/\(record)")!)]
     }
 
-    /// Wayne State building ID → its permitted photo (the Maccabees Building has none online yet)
+    /// Wayne State building ID → its permitted photo
     private static let wayneState: [String: [Entry]] = [
-        "campus_wayne_old_main": reuther("26188", node: 3290, "Old Main, Wayne State University, circa 1950s"),
-        "campus_wayne_freer_house": reuther("30744", node: 10878, "Freer House as the Merrill-Palmer School, circa 1920s"),
-        "campus_wayne_hilberry_theatre": reuther("11102", node: 4353, "A performance at the Hilberry Theatre, January 1961, by Tony Spina"),
+        "campus_wayne_old_main": reuther("26188", collection: "wsu-buildings", record: 1127,
+                                         "Old Main, Wayne State University, circa 1950s"),
     ]
 
     /// Building ID → its approved Detroit Public Library photo
