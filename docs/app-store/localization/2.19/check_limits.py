@@ -15,7 +15,7 @@ import sys
 from pathlib import Path
 
 LOCALIZATION_ROOT = Path(__file__).resolve().parent.parent
-FOLDERS = {"iPhone/iPad": "2.19", "Mac": "2.19-macos"}
+FOLDERS = {"iPhone/iPad": "2.19", "Mac": "2.19-macos", "Vision Pro": "2.19-visionos"}
 LOCALES = ["en-US", "de-DE", "es-ES", "es-MX", "fr-FR", "it", "ja", "ko", "pt-BR", "zh-Hans"]
 
 # Field -> limit. Keywords are bytes, everything else characters.
