@@ -623,6 +623,19 @@
     "transportation": "TER Train & Car Rapide",
     "transportationFact": "Dakar's transport has been transformed by the TER (Train Express Régional), which connects the airport to the city center in about 45 minutes and continues to the suburb of Diamniadio. The city's iconic car rapides — colorfully painted Renault minibuses covered in religious slogans and decorations — have served Dakar for decades and are a cultural symbol, though they are gradually being replaced by modern Dakar Dem Dikk buses. Traffic congestion in Dakar is extreme during peak hours."
   },
+  "Dhaka": {
+    "airportCode": "DAC",
+    "airportInfo": "O Aeroporto Internacional Hazrat Shahjalal (DAC) é o maior e mais movimentado aeroporto de Bangladesh, batizado em homenagem ao santo sufi do século XIV Hazrat Shahjalal, que levou o islamismo à região de Bengala. Localizado em Kurmitola, ao norte do centro de Daca, é a principal porta de entrada internacional do país. Um novo terceiro terminal está em construção para ampliar muito a capacidade e modernizar as operações de um dos mercados de aviação que mais crescem no Sul da Ásia.",
+    "airportName": "Hazrat Shahjalal International Airport",
+    "currencyCode": "BDT",
+    "currencyInfo": "Taka de Bangladesh (৳)",
+    "funFact": "Daca é uma das cidades mais densamente povoadas do planeta, com mais de 22 milhões de pessoas em sua região metropolitana. Fundada como capital provincial mogol em 1608, a cidade ficou famosa no mundo todo por sua musselina, um tecido tão incrivelmente fino que os imperadores mogóis o chamavam de 'ar tecido'. O horizonte da cidade é pontilhado por milhares de mesquitas — estima-se que Daca tenha mais de 700 — o que lhe rendeu o apelido de 'Cidade das Mesquitas'. A Casa do Parlamento Nacional, projetada pelo arquiteto americano Louis I. Kahn e concluída em 1982, é considerada uma das maiores obras arquitetônicas do século XX.",
+    "language": "Bengali (Bangla)",
+    "languageInfo": "O bengali (bangla) é a língua nacional de Bangladesh e é falado por praticamente toda a população. É a sétima língua mais falada do mundo em número de falantes nativos, com cerca de 230 milhões de falantes. O Movimento pela Língua Bengali de 1952 — quando estudantes e ativistas foram mortos defendendo o direito de usar o bengali como língua oficial contra as autoridades paquistanesas — é lembrado internacionalmente como o Dia Internacional da Língua Materna, em 21 de fevereiro.",
+    "nickname": "Cidade das Mesquitas",
+    "transportation": "Riquixás e auto-riquixás a GNV",
+    "transportationFact": "Daca é a capital mundial do riquixá, com algo entre 400 mil e 1 milhão de riquixás de bicicleta — mais do que qualquer outra cidade. O riquixá movido a pedal é um dos principais meios de transporte para trajetos curtos, sobretudo nas ruelas estreitas da Velha Daca, e o riquixá ricamente pintado virou um símbolo da arte popular de Bangladesh. Os auto-riquixás a GNV (triciclos movidos a gás natural comprimido) são a principal alternativa aos táxis com taxímetro. O metrô de Daca, cuja primeira linha foi inaugurada em 2022, está se expandindo rapidamente para aliviar o lendário trânsito da cidade."
+  },
   "Dallas": {
     "airportCode": "DFW",
     "airportInfo": "DFW é tão grande que é fisicamente maior que a ilha de Manhattan e ainda opera seu próprio CEP e força policial. Funciona como um enorme porto interior e serve como principal hub global para a American Airlines, com cinco terminais semicirculares.",
