@@ -94,6 +94,10 @@ private extension SettingsView {
                 }
             }
             .navigationTitle(L.Settings.title)
+            #if os(macOS)
+            // A narrow sidebar, so the settings themselves get most of the sheet
+            .navigationSplitViewColumnWidth(min: 200, ideal: 220, max: 260)
+            #endif
             .toolbar {
                 // "Done" on the trailing side, like the app's other full-screen modals
                 // (.confirmationAction is also where a Mac sheet puts its buttons)
@@ -110,6 +114,10 @@ private extension SettingsView {
         }
         // Mac: the split view's sidebar button gets the normal round toolbar look
         .macToolbarButtonStyle()
+        #if os(macOS)
+        // Settings opens as a sheet; the shared 720 x 600 sheet size left the detail too narrow
+        .frame(minWidth: 860, idealWidth: 900, minHeight: 620, idealHeight: 660)
+        #endif
         // Tinting the whole split view (not just one section) makes the
         // selected sidebar row brand orange instead of system blue
         .tint(viewModel.highContrast ? .primary : viewModel.brandColor)
@@ -151,6 +159,12 @@ private extension SettingsView {
             case .none: Text(L.Settings.selectSetting).foregroundColor(.secondary)
             }
         }
+        #if os(macOS)
+        // The Mac's default Form puts labels in a right-aligned left column and the controls in a
+        // right column, which pushed the preview and Test buttons past the sheet's edge. Grouped
+        // gives the rounded sections iPhone has, the same look as the Mac's own System Settings.
+        .formStyle(.grouped)
+        #endif
         .navigationTitle(detailTitle)
     }
 }
@@ -456,6 +470,10 @@ struct SettingsToggleRow: View {
                 }
             }
         }
+        #if os(macOS)
+        // A switch, as in the Mac's System Settings (the Mac's default toggle is a checkbox)
+        .toggleStyle(.switch)
+        #endif
     }
 
     private var titleText: some View {
