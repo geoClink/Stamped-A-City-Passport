@@ -9,7 +9,7 @@
     "language": "árabe e inglés",
     "languageInfo": "Si bien el árabe es el idioma oficial, el inglés es el principal puente para la gran población de expatriados de la ciudad. Descubrirá que las señales comerciales y viales son casi universalmente bilingües.",
     "nickname": "Land of the Gazelle",
-    "transportation": "ART & Buses",
+    "transportation": "ART y autobuses",
     "transportationFact": "Abu Dabi utiliza vehículos de alta tecnología sin raíles, los 'Automated Rapid Transit' (ART), que parecen una mezcla entre autobús y tren. Toda la red de autobuses de la ciudad cuenta con aire acondicionado y dispone de marquesinas de espera especiales que protegen a los pasajeros del calor. Los autobuses regionales ofrecen además una conexión de alta frecuencia con la vecina ciudad de Dubái."
   },
   "Accra": {
@@ -35,7 +35,7 @@
     "language": "Amárico",
     "languageInfo": "El amárico es el idioma oficial de Etiopía, escrito en el guion Geʿez, uno de los pocos sistemas de escritura originales aún en uso activo. Etiopía tiene más de 80 idiomas. El café se originó aquí, y la ceremonia del café es una parte central de la cultura social.",
     "nickname": "La Nueva Flor",
-    "transportation": "TLR y Minibúses",
+    "transportation": "LRT y minibuses",
     "transportationFact": "Addis Abeba opera el primer sistema moderno de Tránsito Rápido en Tren (LRT) de África. Los minibúses azules y blancos (llamados \"burros azules\" por los locales) son el principal transporte público."
   },
   "Amman": {
@@ -61,7 +61,7 @@
     "language": "Neerlandés",
     "languageInfo": "El holandés es el idioma oficial, pero Ámsterdam cuenta con el mayor dominio del inglés como segunda lengua del mundo. Los visitantes descubrirán que casi todos los residentes hablan un inglés impecable en el momento en que son recibidos.",
     "nickname": "Venecia del Norte",
-    "transportation": "GVB Trams",
+    "transportation": "Tranvías GVB",
     "transportationFact": "El centro histórico de Ámsterdam cuenta principalmente con una extensa red de tranvías GVB azules y blancos. La ciudad es mundialmente famosa por tener más bicicletas que residentes, con senderos exclusivos que cubren casi todas las calles. Los ferries detrás de la Estación Central brindan tránsito gratuito a través del río IJ para peatones y ciclistas."
   },
   "Antwerp": {
@@ -100,7 +100,7 @@
     "language": "Griego",
     "languageInfo": "El griego es una de las lenguas documentadas más antiguas del mundo, con una historia escrita de más de 3.000 años. Aunque el griego moderno difiere de su forma antigua, muchas palabras cotidianas proceden directamente de raíces clásicas. La mayoría de las personas del centro de Atenas y del sector turístico hablan inglés.",
     "nickname": "The Cradle of Civilization",
-    "transportation": "Metro & Bus",
+    "transportation": "Metro y autobús",
     "transportationFact": "Atenas cuenta con un moderno metro de tres líneas que conecta el aeropuerto directamente con el centro de la ciudad y con el puerto del Pireo. Varias estaciones funcionan como museos subterráneos, con objetos antiguos descubiertos durante las obras expuestos tras vitrinas en los andenes. Los históricos trolebuses amarillos recorren el centro de la ciudad desde la década de 1940."
   },
   "Atlanta": {
@@ -126,7 +126,7 @@
     "language": "Inglés y maorí",
     "languageInfo": "El inglés es el idioma principal, pero verá una fuerte y orgullosa influencia de Te Reo Māori en los nombres de los lugares y los saludos diarios. La mayoría de las comunicaciones y carteles oficiales son bilingües para honrar la herencia indígena del país.",
     "nickname": "ciudad de velas",
-    "transportation": "Britomart & AT Metro",
+    "transportation": "Britomart y AT Metro",
     "transportationFact": "Britomart es un importante centro de tránsito y sirve como la única estación ferroviaria subterránea diésel del mundo. AT Metro opera una flota de trenes eléctricos que conectan los suburbios del sur, oeste y este con el centro de la ciudad. La extensa red de ferry de Auckland es un vínculo vital para los residentes que viven en la costa norte y la isla Waiheke."
   },
   "Austin": {
@@ -217,8 +217,8 @@
     "language": "inglés británico",
     "languageInfo": "El acento local es un tono suave del \"West Country\", caracterizado por suaves sonidos de \"r\" y un ritmo rítmico. Si bien es moderna y cosmopolita, la ciudad conserva un tono educado y sofisticado que refleja su historia como centro turístico social del siglo XVIII.",
     "nickname": "La Ciudad Romana",
-    "transportation": "Primer autobús / Bath Park & ​​Ride",
-    "transportationFact": "El centro de la ciudad es muy transitable y en su mayoría peatonal. Para llegar a las afueras, la amplia red de autobuses y el sistema 'Park & ​​Ride' son los principales modos de transporte, ya que conducir por las calles estrechas e históricas puede ser un desafío."
+    "transportation": "First Bus / Park & Ride de Bath",
+    "transportationFact": "El centro de la ciudad es muy transitable y en su mayoría peatonal. Para llegar a las afueras, la amplia red de autobuses y el sistema 'Park & Ride' son los principales modos de transporte, ya que conducir por las calles estrechas e históricas puede ser un desafío."
   },
   "Beijing": {
     "airportCode": "PKX",
@@ -321,7 +321,7 @@
     "language": "Inglés",
     "languageInfo": "El inglés australiano se habla aquí con la calidez e informalidad características de Queensland: 'arvo' (tarde), 'servo' (gasolinera) y 'sunnies' (gafas de sol) forman parte del habla cotidiana. Los habitantes de Queensland tienen una cultura especialmente relajada y orientada a la vida al aire libre, moldeada por el clima subtropical. La ciudad cuenta con importantes comunidades de isleños del Pacífico y de origen asiático, reflejo de la creciente diversidad de Queensland.",
     "nickname": "Brisvegas",
-    "transportation": "TransLink Trains & Ferries",
+    "transportation": "Trenes y ferris TransLink",
     "transportationFact": "El transporte público de Brisbane lo gestiona TransLink, que integra tren, autobús y ferri en un único sistema de tarjeta go card. El servicio de ferris City Cat por el río Brisbane es a la vez una ruta práctica para el día a día y una experiencia panorámica: los ferris CityCat y City Hopper hacen parada en los principales distritos ribereños, desde la University of Queensland hasta Hamilton. La red de trenes del sureste de Queensland llega hasta la Gold Coast y la Sunshine Coast. La creciente red ciclista de la ciudad y las bicicletas de alquiler hacen que los paseos junto al río sean una actividad muy popular."
   },
   "Brussels": {
@@ -347,7 +347,7 @@
     "language": "Húngaro",
     "languageInfo": "El húngaro (magyar) es una lengua ugrofinesa sin relación con las de sus vecinos europeos, por lo que tiene fama de ser muy difícil de aprender para los extranjeros. Aun así, el inglés está muy extendido entre los budapestinos más jóvenes y en todo el sector turístico. Los habitantes agradecen cualquier intento de decir unas palabras en magyar.",
     "nickname": "The Pearl of the Danube",
-    "transportation": "BKK Metro & Trams",
+    "transportation": "Metro y tranvías BKK",
     "transportationFact": "La Línea 1 del metro de Budapest (el Metro del Milenio) es el ferrocarril subterráneo eléctrico más antiguo de la Europa continental: data de 1896 y hoy es Patrimonio de la Humanidad de la UNESCO. La extensa red de tranvías de la ciudad incluye la línea 4-6, una de las líneas de tranvía con más pasajeros del mundo. Una sola tarjeta de transporte BKK sirve para todos los autobuses, tranvías, líneas de metro y trenes suburbanos HÉV."
   },
   "Buenos Aires": {
@@ -412,7 +412,7 @@
     "language": "Inglés y afrikáans",
     "languageInfo": "En la ciudad se oye una mezcla melódica de inglés, afrikáans y los rítmicos chasquidos del xhosa. El inglés es la lengua predominante en la administración, en los negocios y entre la mayoría de los visitantes.",
     "nickname": "The Mother City",
-    "transportation": "MyCiTi Bus",
+    "transportation": "Autobús MyCiTi",
     "transportationFact": "El sistema de autobuses MyCiTi utiliza carriles exclusivos y estaciones con andenes a nivel, lo que hace que funcione de forma muy parecida a un metro en superficie. Los autobuses de Golden Arrow ofrecen el servicio tradicional de cercanías, que opera en la ciudad desde hace más de 150 años. La Southern Line de Metrorail ofrece un recorrido en tren panorámico a lo largo de la costa hacia la famosa Kalk Bay."
   },
   "Cartagena": {
@@ -425,7 +425,7 @@
     "language": "Español",
     "languageInfo": "El español de Cartagena tiene una cadencia claramente caribeña, más suave y musical que los acentos de Bogotá o Medellín. Las comunidades afrocolombianas del barrio de Getsemaní mantienen tradiciones culturales como la música de cumbia y el palenquero, una lengua criolla de base española que se habla en el cercano pueblo de San Basilio de Palenque, el primer pueblo africano libre de América.",
     "nickname": "La Ciudad Heróica",
-    "transportation": "Buses & Horse Carriages",
+    "transportation": "Autobuses y coches de caballos",
     "transportationFact": "La ciudad histórica amurallada se recorre mejor a pie: sus calles coloniales están cerradas a la mayoría de los vehículos. Los coches de caballos (coches) son el transporte emblemático de la ciudad antigua y una experiencia turística muy popular, sobre todo de noche, cuando las murallas iluminadas brillan con un tono dorado. Las lanchas rápidas conectan el continente con las Islas del Rosario y la península de Barú. Los taxis y la creciente flota de bicitaxis dan servicio al resto de la ciudad."
   },
   "Casablanca": {
@@ -490,7 +490,7 @@
     "language": "Chino mandarín y sichuanense",
     "languageInfo": "El mandarín es la lengua oficial, pero el dialecto de Sichuan (una rama del mandarín del suroeste) es lo bastante distinto como para celebrarse como parte de la identidad cultural de la región. Este dialecto se asocia a un estilo de vida relajado y amante de los placeres: Chengdu tiene fama de ser una de las grandes ciudades más tranquilas de China. La cultura de las casas de té es el centro de la vida social, y en ellas los habitantes pasan horas jugando al mahjong y charlando ante tazas de té de jazmín de Sichuan.",
     "nickname": "Tierra de Abundancia",
-    "transportation": "Chengdu Metro & Didi",
+    "transportation": "Metro de Chengdu y Didi",
     "transportationFact": "El metro de Chengdu se ha ampliado rápidamente hasta cubrir la mayor parte de la ciudad, con más de una docena de líneas que llegan a lugares clave como la base de los pandas. El tren de alta velocidad conecta Chengdu con Xi'an, Chongqing (40 minutos) y Pekín. Didi (la aplicación de transporte con conductor de China) es la opción más práctica para los visitantes. Las bicicletas y los patinetes eléctricos son muy habituales para trayectos cortos por las calles llanas y aptas para la bicicleta de la ciudad."
   },
   "Chiang Mai": {
@@ -542,7 +542,7 @@
     "language": "Cingalés, tamil e inglés",
     "languageInfo": "Sri Lanka tiene tres lenguas oficiales: el cingalés (hablado por la mayoría cingalesa), el tamil (hablado por las comunidades tamiles del norte y el este y por muchos trabajadores de las plantaciones) y el inglés (usado en la administración, la justicia y los negocios). Colombo es notablemente multilingüe: en una sola conversación puede oír cingalés, tamil e inglés mezclados con total naturalidad. El inglés de Sri Lanka tiene un acento y un vocabulario propios, moldeados por la singular historia colonial del país.",
     "nickname": "La Capital Comercial",
-    "transportation": "CTB Buses & Tuk-tuks",
+    "transportation": "Autobuses CTB y tuk-tuks",
     "transportationFact": "El principal transporte público de Colombo es la red de autobuses de la CTB (Ceylon Transport Board), complementada por autobuses privados en las mismas rutas. Los mototaxis de tres ruedas (tuk-tuks) están por todas partes y son la forma más práctica de moverse por la ciudad para los visitantes. El tren de cercanías de Colombo conecta el centro con los barrios periféricos a lo largo de la costa. Hay en construcción un proyecto de tren ligero (LRT) para ofrecer una opción de transporte rápido moderna a la creciente población de la ciudad."
   },
   "Columbus, Indiana": {
@@ -620,7 +620,7 @@
     "language": "Francés y wólof",
     "languageInfo": "El francés es la lengua oficial de Senegal y se usa en la administración y la enseñanza, mientras que el wolof es la verdadera lengua franca, hablada por más del 90% de la población sin importar su etnia. La influencia del wolof ha dado lugar a un francés senegalés propio que aporta calidez y ritmo al habla cotidiana. La cultura senegalesa se define por el concepto de teranga (hospitalidad), una obligación de generosidad hacia los invitados que impregna todos los aspectos de la vida social.",
     "nickname": "Cap-Vert",
-    "transportation": "TER Train & Car Rapide",
+    "transportation": "Tren TER y Car Rapide",
     "transportationFact": "El transporte de Dakar se ha transformado gracias al TER (Train Express Régional), que conecta el aeropuerto con el centro de la ciudad en unos 45 minutos y continúa hasta el barrio periférico de Diamniadio. Los emblemáticos car rapides de la ciudad, minibuses Renault pintados de colores vivos y cubiertos de lemas y adornos religiosos, llevan décadas circulando por Dakar y son un símbolo cultural, aunque poco a poco los están sustituyendo los modernos autobuses de Dakar Dem Dikk. Los atascos en Dakar son extremos en las horas punta."
   },
   "Dhaka": {
@@ -646,7 +646,7 @@
     "language": "Inglés",
     "languageInfo": "El acento local es un acento nítido del norte de Texas, donde la palabra \"todos ustedes\" se considera una herramienta gramatical esencial y educada. La comunicación es generalmente amplia y entusiasta, coincidiendo con la filosofía de \"cuanto más grande, mejor\" por la que Dallas es famosa.",
     "nickname": "gran d",
-    "transportation": "DARDO",
+    "transportation": "DART",
     "transportationFact": "DART opera la red de tren ligero más larga de los Estados Unidos con cuatro líneas distintas codificadas por colores. El Trinity Railway Express proporciona un enlace de tren pesado entre el centro de Dallas y Fort Worth. El histórico McKinney Avenue Trolley ofrece servicio gratuito de tranvía antiguo por el barrio Uptown."
   },
   "Denver": {
@@ -659,8 +659,8 @@
     "language": "Inglés",
     "languageInfo": "Denver es conocido por su inglés \"Mountain West\", claro y prácticamente sin acento, que a menudo se cita como uno de los dialectos más neutrales del país. El tono es informal y al aire libre, con un alto grado de énfasis social en la conciencia y el bienestar ambiental.",
     "nickname": "La ciudad de una milla de altura",
-    "transportation": "IDT",
-    "transportationFact": "El tren del aeropuerto 'A Line' utiliza pesados ​​vagones de cercanías para llegar a Union Station en 37 minutos. Las líneas de tren ligero RTD se extienden por los suburbios del sur y del oeste para aliviar la congestión de las carreteras. El servicio de transporte Free MallRide ofrece servicio de autobús eléctrico de alta frecuencia a lo largo del centro comercial peatonal de 16th Street."
+    "transportation": "RTD",
+    "transportationFact": "El tren del aeropuerto 'A Line' utiliza pesados vagones de cercanías para llegar a Union Station en 37 minutos. Las líneas de tren ligero RTD se extienden por los suburbios del sur y del oeste para aliviar la congestión de las carreteras. El servicio de transporte Free MallRide ofrece servicio de autobús eléctrico de alta frecuencia a lo largo del centro comercial peatonal de 16th Street."
   },
   "Detroit": {
     "airportCode": "DTW",
@@ -711,7 +711,7 @@
     "language": "Irlandés (gaélico) e inglés",
     "languageInfo": "Irlanda tiene dos lenguas oficiales: el irlandés (gaeilge) y el inglés. Aunque el irlandés se enseña en todas las escuelas y se habla a diario en las regiones rurales de la Gaeltacht, en la costa oeste, el inglés es la lengua principal de Dublín. Los carteles en irlandés aparecen por toda la ciudad, y oirá el irlandés en la administración, en las emisiones de radio y en los actos culturales. El acento de Dublín es cálido, musical y con un carácter muy propio.",
     "nickname": "The Fair City",
-    "transportation": "Dublin Bus & DART",
+    "transportation": "Dublin Bus y DART",
     "transportationFact": "El DART (Dublin Area Rapid Transit) de Dublín es una línea de cercanías costera que ofrece vistas espectaculares de la bahía de Dublín en su recorrido entre Malahide, al norte, y Greystones, al sur. Las dos líneas del tranvía Luas atraviesan la ciudad y conectan los barrios periféricos con el centro, cruzándose en puntos clave. El compacto centro georgiano de la ciudad se recorre muy bien a pie, y un sistema público de bicicletas facilita los trayectos cortos."
   },
   "Edinburgh": {
@@ -724,7 +724,7 @@
     "language": "Inglés y gaélico escocés",
     "languageInfo": "En Edimburgo se habla inglés con un marcado acento escocés, y es posible que oiga escocés (scots), una lengua germánica estrechamente emparentada con el inglés, en conversaciones informales. El gaélico escocés, antaño la lengua predominante de las Highlands, se enseña en las escuelas y aparece en las señales de tráfico bilingües. La rica tradición literaria de la ciudad vio nacer a Robert Louis Stevenson, Arthur Conan Doyle y J.K. Rowling.",
     "nickname": "Auld Reekie",
-    "transportation": "Lothian Buses & Trams",
+    "transportation": "Lothian Buses y tranvías",
     "transportationFact": "Los emblemáticos autobuses rojos de Lothian Buses están entre los autobuses urbanos más frecuentes del Reino Unido, y algunas líneas pasan cada pocos minutos por el centro. La línea de tranvía une el aeropuerto con York Place por Princes Street, la principal arteria comercial de la ciudad. Gracias a su tamaño compacto, gran parte de la Old Town y la New Town puede recorrerse a pie, aunque sus empinadas cuestas suponen un ejercicio legendario."
   },
   "Florence": {
@@ -737,7 +737,7 @@
     "language": "Italiano",
     "languageInfo": "Florencia ocupa un lugar destacado en la historia de la lengua italiana: el dialecto toscano que se hablaba aquí durante el Renacimiento se convirtió en la base del italiano estándar moderno. La Divina Comedia de Dante, escrita en lengua vernácula florentina, creó de hecho la literatura italiana. Aunque los habitantes hablan italiano estándar, el acento florentino tiene un carácter propio que los italianos de todo el país reconocen.",
     "nickname": "The Cradle of the Renaissance",
-    "transportation": "ATAF Buses & Trams",
+    "transportation": "Autobuses y tranvías ATAF",
     "transportationFact": "El centro histórico de Florencia es una Zona de Tráfico Limitado (ZTL), que restringe el paso de coches particulares por las calles medievales durante buena parte del día. La mejor forma de recorrer la ciudad es a pie o en bicicleta; una popular red de bicicletas compartidas llamada Mobike funciona en todo el centro. Las líneas de tranvía T1 y T2 conectan la estación principal de tren con los barrios periféricos, mientras que los autobuses naranjas de ATAF dan servicio al área metropolitana."
   },
   "Fort Worth": {
@@ -776,7 +776,7 @@
     "language": "Japonés",
     "languageInfo": "Junto al japonés estándar se habla el dialecto local de Hakata (Hakata-ben), conocido por su vocabulario particular y su tono cálido y directo. El dialecto de Hakata se ha difundido por todo el país gracias a la comedia y la televisión, lo que ha dado a Fukuoka una fuerte identidad cultural. Por la cercanía con Corea, el coreano se oye con frecuencia en los numerosos restaurantes coreanos de la ciudad y entre los turistas coreanos.",
     "nickname": "Hakata",
-    "transportation": "Fukuoka City Subway & Nishitetsu",
+    "transportation": "Metro de Fukuoka y Nishitetsu",
     "transportationFact": "Fukuoka cuenta con tres líneas de metro urbano que conectan con eficacia el aeropuerto, la estación de Hakata y los principales barrios de ocio. El ferrocarril privado Nishitetsu llega hasta ciudades del sur de Kyushu. La estación de Hakata es también un nudo del shinkansen, con trenes bala que llegan a Osaka en menos de 2,5 horas y a Tokio en 5 horas. Su centro, compacto y fácil de recorrer a pie, permite llegar caminando a muchas de las mejores experiencias gastronómicas y culturales."
   },
   "Glasgow": {
@@ -815,7 +815,7 @@
     "language": "Español",
     "languageInfo": "El español mexicano que se habla en Guadalajara tiene un tono cálido y melodioso, y se considera uno de los acentos más claros de México. Los tapatíos (como se llaman a sí mismos los habitantes de Guadalajara) son conocidos por su fuerte orgullo regional y su apasionado apego a las tradiciones de su ciudad. El origen de la palabra 'guadalajara' se atribuye a veces al náhuatl y es objeto de debate, aunque lo más probable es que los colonizadores bautizaran la ciudad con el nombre de su homónima española.",
     "nickname": "Perla del Occidente",
-    "transportation": "Tren Ligero & Macrobús",
+    "transportation": "Tren Ligero y Macrobús",
     "transportationFact": "El Tren Ligero de Guadalajara tiene dos líneas que atraviesan el área metropolitana. El Macrobús, un sistema de autobús de tránsito rápido con carriles exclusivos, cubre los corredores de mayor demanda. En 2020 se inauguró la nueva Línea 3 del tren ligero, que amplió notablemente la cobertura. La ciudad invierte con fuerza en infraestructura ciclista, y un sistema de bicicletas compartidas (MiBici) ha convertido la bicicleta en una opción urbana realista. Uber opera ampliamente en Guadalajara."
   },
   "Hamburg": {
@@ -893,7 +893,7 @@
     "language": "Vietnamita",
     "languageInfo": "El vietnamita es una lengua tonal con seis tonos distintos, de modo que una misma sílaba pronunciada con diferente entonación tiene significados completamente distintos. Utiliza un alfabeto de base latina (quốc ngữ) creado por misioneros en el siglo XVII, lo que lo hace más legible a primera vista para los visitantes occidentales que la mayoría de las escrituras del Sudeste Asiático. El vietnamita del sur, tal como se habla en Ciudad Ho Chi Minh, suena más cálido y melodioso que el dialecto del norte de Hanói.",
     "nickname": "The Pearl of the Far East",
-    "transportation": "Buses & Grab Motorbikes",
+    "transportation": "Autobuses y motos Grab",
     "transportationFact": "La red pública de autobuses de Ciudad Ho Chi Minh cubre toda la ciudad, pero el medio más práctico para los visitantes es Grab, la aplicación de transporte dominante en el Sudeste Asiático, que ofrece tanto viajes en coche como mototaxis. La Línea 1 del metro, que une el Mercado Bến Thành con los suburbios del este, se inauguró a finales de 2024 y supuso un paso histórico en la modernización del transporte de la ciudad."
   },
   "Hong Kong": {
@@ -945,7 +945,7 @@
     "language": "Turco",
     "languageInfo": "El turco es la lengua oficial y ocupa un lugar central en la vida social de la ciudad y en sus rituales en torno al té. Aunque el inglés es habitual en zonas turísticas como Sultanahmet, los comerciantes locales agradecerán mucho unas pocas palabras en turco.",
     "nickname": "City of Seven Hills",
-    "transportation": "Tünel & Ferries",
+    "transportation": "Tünel y ferris",
     "transportationFact": "El Tünel es la segunda línea ferroviaria subterránea más antigua del mundo; se inauguró en 1875. Los enormes ferris públicos son parte esencial de la vida diaria y trasladan cada hora a miles de personas entre Europa y Asia. El Metrobús circula por un carril exclusivo que cruza el Puente del Bósforo para esquivar el denso tráfico."
   },
   "Jaipur": {
@@ -971,7 +971,7 @@
     "language": "Zulú, sotho e inglés",
     "languageInfo": "Johannesburgo es una de las ciudades más multilingües del planeta, reflejo de las 11 lenguas oficiales de Sudáfrica. El zulú y el sotho son las más habladas en los townships de Joburg, mientras que el inglés es la lengua principal de los negocios y del centro de la ciudad. Saludos en isiZulu como 'Sawubona' (te veo) encierran un significado profundo arraigado en la filosofía Ubuntu, la creencia en una humanidad compartida.",
     "nickname": "Egoli",
-    "transportation": "Gautrain & Rea Vaya BRT",
+    "transportation": "Gautrain y BRT Rea Vaya",
     "transportationFact": "El tren rápido Gautrain une el Aeropuerto O.R. Tambo con el centro financiero de Sandton en solo 15 minutos, una de las conexiones ferroviarias entre aeropuerto y ciudad más rápidas de África. Continúa hasta Pretoria, la capital administrativa, lo que lo convierte en un enlace regional clave. El sistema de autobús de tránsito rápido Rea Vaya circula por carriles exclusivos a través de la ciudad. Para la mayoría de los visitantes, las aplicaciones privadas de transporte son la forma más práctica de desplazarse."
   },
   "Kansas City": {
@@ -1023,7 +1023,7 @@
     "language": "Malayo, inglés y mandarín",
     "languageInfo": "Malasia es un país extraordinariamente multilingüe. El bahasa malasio (malayo) es la lengua nacional, y el inglés se usa ampliamente en los negocios, la educación y el turismo. Las comunidades chinas de Malasia hablan cantonés, mandarín, hokkien y otros dialectos chinos. En KL oirá a menudo el manglish: inglés mezclado libremente con palabras en malayo, cantonés y tamil en una misma frase.",
     "nickname": "KL",
-    "transportation": "LRT, MRT & KL Monorail",
+    "transportation": "LRT, MRT y KL Monorail",
     "transportationFact": "La red de transporte público de KL incluye varios sistemas ferroviarios: el LRT, con dos líneas urbanas; el MRT, que da servicio al gran Valle de Klang, y el KL Monorail, que conecta la zona de hoteles y tiendas del centro. Todos se pueden usar con una sola tarjeta Touch 'n Go. La ciudad cuenta además con un servicio gratuito de autobús, el GoKL City Bus, que recorre en circuito las zonas céntricas, de modo que los trayectos cortos entre lugares emblemáticos no cuestan nada."
   },
   "Kyoto": {
@@ -1036,7 +1036,7 @@
     "language": "Japonés",
     "languageInfo": "La ciudad es famosa por el 'Kyoto-ben', un dialecto refinado y suave que refleja su pasado imperial. Todo el mundo usa el japonés estándar, y en los principales templos y santuarios se ofrece información en inglés con frecuencia.",
     "nickname": "1,000 Year Capital",
-    "transportation": "Kyoto City Bus",
+    "transportation": "Autobús municipal de Kioto",
     "transportationFact": "Como la ciudad cuenta con más de 1.600 templos, la red de autobuses es la forma principal de llegar a la mayoría de los lugares históricos. Dos líneas de metro y varios ferrocarriles privados, como Keihan y Hankyu, conectan Kioto con Osaka y Nara. El Sagano Scenic Railway ofrece un nostálgico viaje en tren descubierto a través del hermoso desfiladero de Hozukyo."
   },
   "Lagos": {
@@ -1115,7 +1115,7 @@
     "languageInfo": "Los Ángeles es un enorme crisol multicultural donde con frecuencia se entremezclan la jerga del Valle, la taquigrafía de la industria del entretenimiento y los préstamos en español. Es una ciudad donde las conversaciones giran tanto en torno a la producción cinematográfica como en una mezcla de inglés y varios idiomas asiáticos o latinoamericanos.",
     "nickname": "Ciudad de los Ángeles",
     "transportation": "Metro de Los Ángeles",
-    "transportationFact": "La Línea A es ahora la línea de tren ligero más larga del mundo y se extiende desde Long Beach hasta Azusa. Metrolink ofrece un servicio regional de trenes pesados ​​que llega a seis condados diferentes del sur de California. El icónico funicular Angels Flight es el ferrocarril más corto del mundo y sirve al empinado distrito de Bunker Hill."
+    "transportationFact": "La Línea A es ahora la línea de tren ligero más larga del mundo y se extiende desde Long Beach hasta Azusa. Metrolink ofrece un servicio regional de trenes pesados que llega a seis condados diferentes del sur de California. El icónico funicular Angels Flight es el ferrocarril más corto del mundo y sirve al empinado distrito de Bunker Hill."
   },
   "Madrid": {
     "airportCode": "MAD",
@@ -1192,7 +1192,7 @@
     "language": "Español",
     "languageInfo": "El español colombiano que se habla en Medellín (el dialecto paisa) es conocido por ser especialmente cálido, expresivo y lírico. Los paisas (los habitantes de la región de Antioquia) son famosos en toda Colombia por su espíritu emprendedor y su acento característico. La expresión local 'parce' (amigo, compañero) y el uso creativo de los diminutivos dan al español paisa su tono cariñoso tan particular.",
     "nickname": "La Ciudad de la Eterna Primavera",
-    "transportation": "Metro & Metrocable",
+    "transportation": "Metro y Metrocable",
     "transportationFact": "El metro de Medellín es el único sistema de metro pesado de Colombia y motivo de inmenso orgullo local: los habitantes de Medellín lo mantienen impecable y lo consideran un símbolo de la transformación de la ciudad. El sistema de góndolas Metrocable lleva el transporte a barrios de ladera que antes estaban aislados del centro, una conexión literal y simbólica entre todas las partes de la ciudad. La línea de tranvía Tranvía de Ayacucho completa la red en el este."
   },
   "Melbourne": {
@@ -1283,7 +1283,7 @@
     "language": "francés e inglés",
     "languageInfo": "Montreal es una ciudad verdaderamente bilingüe donde las interacciones sociales a menudo comienzan con un amistoso \"Bonjour-Hi\" para permitir que el hablante elija su lengua preferida. El francés local 'Québécois' es distinto del francés europeo y a menudo se mezcla con el inglés para crear un 'Franglais' local único.",
     "nickname": "La ciudad de los santos",
-    "transportation": "Montreal Metro",
+    "transportation": "Metro de Montreal",
     "transportationFact": "El metro de Montreal circula íntegramente sobre neumáticos de caucho, lo que hace el viaje notablemente silencioso en comparación con los sistemas de ruedas de acero. La ciudad cuenta también con el REM, un nuevo tren ligero automatizado que conecta los suburbios. Los trenes de cercanías de Exo ofrecen un transporte de larga distancia esencial para el área del Gran Montreal."
   },
   "Mumbai": {
@@ -1296,7 +1296,7 @@
     "language": "Maratí e hindi",
     "languageInfo": "Bombay es un crisol lingüístico donde el maratí es la lengua del estado y el hindi es la lengua común. Oirá con frecuencia el 'Bambaiya Hindi', una jerga rítmica y callejera propia de la cultura acelerada de la ciudad.",
     "nickname": "ciudad de los sueños",
-    "transportation": "Local Trains",
+    "transportation": "Trenes locales",
     "transportationFact": "El Mumbai Suburban Railway se conoce como la 'Lifeline of Mumbai' (la línea vital de Bombay) y es esencial para el funcionamiento de la ciudad. El Mumbai Metro es una incorporación reciente y en rápido crecimiento que ofrece a los viajeros la comodidad del aire acondicionado. Los icónicos taxis negros y amarillos 'Kaali-Peeli' y los autorickshaws cubren el último tramo del trayecto para la mayoría de los residentes."
   },
   "Munich": {
@@ -1400,7 +1400,7 @@
     "language": "Inglés",
     "languageInfo": "Nueva York es un centro de 'dialectos globales' donde puede oír cientos de idiomas y cientos de acentos distintos del inglés en un solo trayecto en metro. El estilo de comunicación local es famoso por ser directo, rápido y eficiente, reflejo de la mentalidad de 'la ciudad que nunca duerme'.",
     "nickname": "The Big Apple",
-    "transportation": "MTA Subway",
+    "transportation": "Metro de la MTA",
     "transportationFact": "El NYC Subway es el sistema más grande del mundo por número de estaciones y funciona las 24 horas del día. El Long Island Rail Road y el Metro-North ofrecen un amplio servicio de cercanías hacia los suburbios. El sistema NYC Ferry ofrece una forma panorámica de viajar entre los cinco distritos por el East River."
   },
   "Nice": {
@@ -1413,7 +1413,7 @@
     "language": "Francés",
     "languageInfo": "El francés es la lengua oficial, aunque en entornos tradicionales oirá el nizardo, un dialecto occitano local emparentado con el provenzal. Por la herencia italiana de la ciudad, muchos residentes mayores entienden el italiano, y la cocina refleja las influencias piamontesas y ligures de la región vecina. El dialecto nizardo dio nombre a la famosa ensalada niçoise, un plato cuyos ingredientes auténticos los nizardos debaten con pasión.",
     "nickname": "La Bella del Mediodía",
-    "transportation": "Tramway de Nice",
+    "transportation": "Tranvía de Niza",
     "transportationFact": "El moderno tranvía de Niza tiene tres líneas que conectan el casco antiguo, el puerto, el aeropuerto y los distritos universitarios. El recorrido de la Línea 1 atraviesa la ciudad y une la estación de tren principal con el paseo marítimo. Las amplias zonas peatonales a lo largo del litoral y por el Vieux-Nice (casco antiguo) hacen que la ciudad sea muy fácil de recorrer a pie. Los ferris conectan el puerto antiguo con Córcega y Cerdeña."
   },
   "Oak Park": {
@@ -1439,7 +1439,7 @@
     "language": "Inglés",
     "languageInfo": "El lenguaje aquí es generalmente un \"estándar americano\" muy neutral, en gran medida para dar cabida a los millones de turistas internacionales que lo visitan anualmente. Sin embargo, la presencia de una gran comunidad puertorriqueña asegura que el español también sea una parte importante e influyente del panorama lingüístico local.",
     "nickname": "La ciudad hermosa",
-    "transportation": "SunRail & Lynx",
+    "transportation": "SunRail y Lynx",
     "transportationFact": "SunRail es un sistema de trenes de cercanías de dos pisos equipado con mesas de trabajo y Wi-Fi gratuito. La red de autobuses Lynx es el principal transporte público local e incluye el circulador gratuito LYMMO en el centro de la ciudad. El tren de alta velocidad de Brightline conecta ahora el Aeropuerto Internacional de Orlando directamente con el sur de Florida."
   },
   "Osaka": {
@@ -1452,7 +1452,7 @@
     "language": "Japonés",
     "languageInfo": "El dialecto local de Osaka, el Kansai-ben (u Osaka-ben), es posiblemente el dialecto regional más reconocido de Japón, conocido por su ritmo característico y su energía cómica. Aunque el japonés estándar se entiende en todas partes, los habitantes de Osaka están orgullosos de su dialecto y lo usan en la vida diaria. La ciudad es la cuna de gran parte de la comedia en vivo popular de Japón (manzai), y a menudo notará el ingenio y la calidez en las conversaciones cotidianas.",
     "nickname": "The Nation's Kitchen",
-    "transportation": "Osaka Metro & JR Loop",
+    "transportation": "Osaka Metro y línea circular JR",
     "transportationFact": "Osaka tiene uno de los sistemas de metro más eficientes del mundo, con 9 líneas del Osaka Metro identificadas por colores que forman una densa red por toda la ciudad. La JR Osaka Loop Line rodea el centro de la ciudad, de forma muy parecida a la Yamanote Line de Tokio. Una sola tarjeta ICOCA sirve para el Osaka Metro, las líneas JR y los ferrocarriles privados Hankyu y Hanshin, lo que hace que moverse sea notablemente sencillo."
   },
   "Oslo": {
@@ -1608,7 +1608,7 @@
     "language": "Francés",
     "languageInfo": "El francés es la lengua oficial y el idioma cotidiano de la gran mayoría de los residentes: Quebec es el corazón francófono de Canadá. El francés quebequense local tiene un vocabulario, unas expresiones y unos sonidos propios que difieren notablemente del francés de París. El inglés se entiende en las zonas turísticas y los hoteles, pero incluso un pequeño esfuerzo por hablar francés se agradece de corazón y transforma la experiencia. La vida cultural de la ciudad (literatura, música, teatro) se desarrolla íntegramente en francés.",
     "nickname": "La Vieja Capital",
-    "transportation": "RTC Buses & Funicular",
+    "transportation": "Autobuses RTC y funicular",
     "transportationFact": "El transporte público de Quebec lo gestiona la red de autobuses RTC (Réseau de transport de la Capitale). La Ciudad Alta y la Ciudad Baja de la ciudad antigua están unidas de forma espectacular por el famoso Funiculaire du Vieux-Québec, un funicular histórico que sube y baja pasajeros por el escarpado acantilado desde 1879. Las calles empedradas de la ciudad antigua se recorren mejor a pie, y en invierno la nieve da un aire de cuento de hadas a las fortificaciones de piedra y a las iglesias con campanario."
   },
   "Queenstown": {
@@ -1647,7 +1647,7 @@
     "language": "Islandés",
     "languageInfo": "El islandés es una lengua germánica septentrional sorprendentemente cercana al nórdico antiguo que hablaban los vikingos hace 1.000 años: los islandeses de hoy pueden leer las sagas vikingas medievales en su lengua original. El idioma se ha preservado de forma deliberada mediante la creación de vocabulario nuevo (los islandeses inventan palabras islandesas en lugar de tomarlas del inglés, de modo que 'computer' pasa a ser 'tolva', un compuesto de 'número' y 'vidente'). El inglés lo habla prácticamente toda la población de Reikiavik.",
     "nickname": "Bahía de los Humos",
-    "transportation": "Straeto Buses & Taxis",
+    "transportation": "Autobuses Straeto y taxis",
     "transportationFact": "Reikiavik cuenta con una red de autobuses (Straeto) que cubre la ciudad y los suburbios cercanos, pero la ciudad es lo bastante pequeña como para que muchos residentes se desplacen a pie o en bicicleta la mayor parte del tiempo. Alquilar un coche es casi imprescindible para explorar los espectaculares paisajes de Islandia más allá de la ciudad. En invierno, las piscinas al aire libre climatizadas con energía geotérmica son un eje de la vida social de Reikiavik: las piscinas públicas abren todo el año, haga el tiempo que haga, y son tanto centros comunitarios como instalaciones deportivas."
   },
   "Riga": {
@@ -1725,7 +1725,7 @@
     "language": "Alemán",
     "languageInfo": "El alemán austriaco es el idioma oficial, y el dialecto local de Salzburgo (Salzburgerisch) tiene sonidos vocálicos y un vocabulario propios que difieren del alto alemán estándar. La ciudad tiene una fuerte cultura musical: el Festival de Salzburgo, que se celebra cada verano, es uno de los eventos de artes escénicas más prestigiosos del mundo y llena la ciudad de músicos, directores de orquesta y cantantes de ópera de todo el planeta. El inglés se habla ampliamente en el extenso sector turístico de la ciudad.",
     "nickname": "La Roma del Norte",
-    "transportation": "Salzburg Buses & Trolleybuses",
+    "transportation": "Autobuses y trolebuses de Salzburgo",
     "transportationFact": "El centro de Salzburgo es compacto y muy fácil de recorrer a pie: el casco antiguo se puede atravesar caminando en unos 20 minutos. La red de autobuses y los trolebuses eléctricos (O-Buses) dan servicio al área metropolitana. Los funiculares conectan el casco antiguo, a orillas del río, con la fortaleza que lo domina y con la meseta del Mönchsberg. Muchos visitantes alquilan bicicletas para seguir los caminos ribereños y explorar el valle del Salzach que rodea la ciudad."
   },
   "San Diego": {
@@ -1829,7 +1829,7 @@
     "language": "Español",
     "languageInfo": "El español andaluz que se habla en Sevilla es famoso por su acento característico: la suavización o pérdida de ciertas consonantes, sobre todo la 's' final, le da una cualidad musical y fluida muy distinta del español castellano o de los dialectos latinoamericanos. Los sevillanos son orgullosos y expresivos, y la cultura de las tapas de la ciudad (que nacieron en Andalucía) invita a quedarse en los bares tanto por la conversación como por la comida.",
     "nickname": "La Ciudad de la Gracia",
-    "transportation": "Tussam Buses & Metro",
+    "transportation": "Autobuses Tussam y metro",
     "transportationFact": "El transporte público de Sevilla incluye cuatro líneas de metro, una amplia red de autobuses y un tranvía histórico (Metrocentro) que recorre el centro peatonal de la ciudad. Sevilla está reconocida internacionalmente como una de las mejores ciudades de Europa para ir en bicicleta: pasó de casi no tener infraestructura ciclista a una red de 180 km de carriles bici segregados en solo dos años (2006-2008), y la bicicleta se convirtió en un medio de transporte habitual prácticamente de la noche a la mañana. El sistema de bicicletas compartidas Sevici cuenta con miles de estaciones."
   },
   "Shanghai": {
@@ -1881,7 +1881,7 @@
     "language": "Ruso",
     "languageInfo": "El ruso es el idioma oficial y se habla en toda la vida cultural, política y social de la ciudad. San Petersburgo tiene una tradición literaria y artística especialmente fuerte: es la ciudad de Dostoievski, Gógol, Chaikovski y los Ballets Rusos. Gracias a la cultura intelectual de la ciudad, la educación y las artes gozan de un prestigio especial. El inglés se habla ampliamente en los museos y el sector turístico, aunque en la vida cotidiana se usa casi exclusivamente el ruso.",
     "nickname": "La Venecia del Norte",
-    "transportation": "St. Petersburg Metro",
+    "transportation": "Metro de San Petersburgo",
     "transportationFact": "El metro de San Petersburgo es uno de los más profundos del mundo: varias estaciones están a más de 80 metros bajo tierra, ya que el suelo blando y pantanoso del delta del Nevá exige cimientos muy por debajo del nivel freático. Las estaciones son famosas por sus elaborados mosaicos de la era soviética, sus lámparas de araña y sus interiores de mármol, concebidos como 'palacios para el pueblo'. El metro tiene cinco líneas identificadas por colores y funciona hasta la 1am. Las marshrutkas (minibuses compartidos) complementan al metro para desplazarse en superficie."
   },
   "Stockholm": {
@@ -1894,7 +1894,7 @@
     "language": "Sueco",
     "languageInfo": "El sueco es una lengua germánica septentrional estrechamente emparentada con el noruego y el danés: los hablantes de estas tres lenguas pueden entenderse en gran medida entre sí. Los habitantes de Estocolmo tienen uno de los niveles de inglés más altos del mundo fuera de los países de habla inglesa. La tradición sueca del lagom, el concepto de la medida justa, ni demasiado ni demasiado poco, moldea la cultura social discreta e igualitaria de la ciudad.",
     "nickname": "Beauty on Water",
-    "transportation": "Tunnelbana & SL Trams",
+    "transportation": "Tunnelbana y tranvías SL",
     "transportationFact": "El metro de Estocolmo (Tunnelbana, o T-bana) es famoso en todo el mundo por el arte de sus estaciones: más de 150 artistas transformaron los túneles de roca desnuda en vibrantes instalaciones artísticas concebidas para cada lugar. La autoridad de transporte SL gestiona una red perfectamente integrada de metro, tranvías, trenes de cercanías y ferris, todo cubierto por una única tarjeta SL Access. El tranvía histórico Djurgårdslinjen sigue circulando entre el centro de la ciudad y la isla de los museos, Djurgården."
   },
   "Surabaya": {
@@ -1921,7 +1921,7 @@
     "languageInfo": "En la ciudad se habla una versión relajada del inglés donde \"No hay preocupaciones\" sirve como saludo y filosofía nacional. Descubrirá que la comunicación es generalmente informal, amigable y salpicada de modismos australianos únicos.",
     "nickname": "Ciudad Esmeralda",
     "transportation": "Ferris de Sídney",
-    "transportationFact": "Los ferries de Sídney son el medio de transporte más emblemático de la ciudad y ofrecen increíbles vistas de la Ópera y el Puente del Puerto. La red de trenes de Sydney ofrece un servicio masivo de trenes pesados ​​que conecta el CBD con los suburbios del oeste en expansión. Recientemente se inauguró una nueva línea de Metro sin conductor, con trenes de alta frecuencia y puertas mosquiteras en los andenes."
+    "transportationFact": "Los ferries de Sídney son el medio de transporte más emblemático de la ciudad y ofrecen increíbles vistas de la Ópera y el Puente del Puerto. La red de trenes de Sydney ofrece un servicio masivo de trenes pesados que conecta el CBD con los suburbios del oeste en expansión. Recientemente se inauguró una nueva línea de Metro sin conductor, con trenes de alta frecuencia y puertas mosquiteras en los andenes."
   },
   "São Paulo": {
     "airportCode": "GRU",
@@ -1946,7 +1946,7 @@
     "language": "Chino mandarín",
     "languageInfo": "El chino mandarín es el idioma oficial de Taiwán, aunque el acento y el vocabulario locales difieren ligeramente del chino continental. El hokkien taiwanés (taigi) está muy extendido, sobre todo entre los residentes de más edad, y lo oirá en los mercados y en los barrios tradicionales. Las palabras japonesas incorporadas durante los 50 años del periodo colonial siguen formando parte del habla cotidiana. El inglés se habla habitualmente en los ámbitos tecnológico y empresarial de Taipéi.",
     "nickname": "City of Azaleas",
-    "transportation": "MRT & YouBike",
+    "transportation": "MRT y YouBike",
     "transportationFact": "El MRT de Taipéi figura sistemáticamente entre los sistemas de metro más limpios, puntuales y asequibles del mundo. Su tarjeta de pago sin contacto EasyCard sirve para el MRT, los autobuses urbanos, las estaciones de alquiler de YouBike e incluso muchas tiendas de conveniencia. El sistema público de bicicletas YouBike tiene miles de estaciones de anclaje por toda la ciudad y es muy popular para trayectos cortos. Está terminantemente prohibido comer y beber en el MRT, una norma que se cumple de forma notable."
   },
   "Tangerang": {
@@ -1972,7 +1972,7 @@
     "language": "Georgiano",
     "languageInfo": "El georgiano (kartuli) es el idioma oficial y una de las lenguas literarias más antiguas del mundo: el primer texto en georgiano data del siglo V. El georgiano pertenece a su propia familia lingüística (la kartveliana), sin relación alguna con las lenguas indoeuropeas ni semíticas. El alfabeto georgiano, con su característica escritura curvilínea, es uno de los 14 sistemas de escritura del mundo que se consideran inventados de forma única y no derivados de otros. El inglés crece rápidamente como segunda lengua, sobre todo entre la población joven y abierta al mundo de Tiflis.",
     "nickname": "La Ciudad del Amor",
-    "transportation": "Tbilisi Metro & Marshrutka",
+    "transportation": "Metro de Tiflis y marshrutka",
     "transportationFact": "El metro de Tiflis tiene dos líneas que conectan los principales distritos de la ciudad y es barato y eficiente. La tarjeta Metromoney sirve para el metro y los autobuses urbanos. Las marshrutkas (minibuses privados) llegan a donde no llega el metro y son el principal medio de transporte para muchos residentes. Al famoso barrio de los baños de azufre (Abanotubani), excavado en la ladera, es mejor llegar en teleférico para disfrutar de las mejores vistas. Los taxis son baratos y Bolt (servicio de transporte por aplicación) opera ampliamente."
   },
   "Tel Aviv": {
@@ -1990,7 +1990,7 @@
   },
   "Tokyo": {
     "airportCode": "NRT",
-    "airportInfo": "Narita es líder mundial en robótica aeroportuaria y utiliza sistemas de equipaje automatizados y robots de servicio impulsados ​​por inteligencia artificial para ayudar a los viajeros en toda la terminal. Recientemente añadió una terminal especializada para aerolíneas de bajo coste que cuenta con pistas interiores para guiar a los pasajeros a través de las puertas.",
+    "airportInfo": "Narita es líder mundial en robótica aeroportuaria y utiliza sistemas de equipaje automatizados y robots de servicio impulsados por inteligencia artificial para ayudar a los viajeros en toda la terminal. Recientemente añadió una terminal especializada para aerolíneas de bajo coste que cuenta con pistas interiores para guiar a los pasajeros a través de las puertas.",
     "airportName": "Narita",
     "currencyCode": "JPY",
     "currencyInfo": "Yen japonés (¥)",
@@ -2063,7 +2063,7 @@
     "language": "Italiano",
     "languageInfo": "El véneto es una lengua romance propia que se habla junto al italiano en la región del Véneto, con raíces anteriores a la influencia del italiano toscano. Venecia fue durante siglos el centro de un imperio comercial mediterráneo, y su dialecto conserva rastros del griego, el árabe y otras lenguas absorbidas a través del comercio. En el concurrido centro turístico, el inglés se habla ampliamente.",
     "nickname": "La Serenissima",
-    "transportation": "Vaporetto Water Buses",
+    "transportation": "Vaporettos (autobuses acuáticos)",
     "transportationFact": "Venecia no tiene carreteras: todo el transporte público es acuático. La red de vaporetti (autobuses acuáticos) de ACTV cubre rutas a lo largo del Gran Canal y entre las islas exteriores de Murano, Burano y el Lido. Las icónicas góndolas privadas, guiadas por gondoleros con licencia, son hoy sobre todo una experiencia turística; los residentes usan los traghetti (góndolas de travesía) para cruzar rápidamente los canales y los taxis acuáticos privados cuando necesitan rapidez."
   },
   "Victoria": {
@@ -2128,7 +2128,7 @@
     "language": "Chino mandarín",
     "languageInfo": "El chino mandarín (putonghua) es el idioma estándar, aunque el dialecto local de Xi'an (una variedad del mandarín de Zhongyuan) tiene pronunciaciones características que notarían quienes hayan visitado Pekín. La comunidad hui del antiguo Barrio Musulmán también mantiene en la vida diaria una tradición de mezcla lingüística chino-árabe. Los caracteres chinos escritos conectan Xi'an con 4.000 años de historia escrita continua.",
     "nickname": "Cuna de la Civilización China",
-    "transportation": "Xi'an Metro & Buses",
+    "transportation": "Metro y autobuses de Xi'an",
     "transportationFact": "La red de metro de Xi'an ha crecido rápidamente, con varias líneas que conectan la antigua ciudad amurallada con los modernos suburbios. La propia muralla antigua se ha convertido en un hito del transporte: puede alquilar una bicicleta y recorrer los 13,7 km completos de la parte superior de la muralla. La red de autobuses de la ciudad es amplia, y el tren de alta velocidad conecta Xi'an con Pekín (4,5 horas) y Chengdu (3 horas)."
   },
   "Zanzibar": {
@@ -2141,7 +2141,7 @@
     "language": "Suajili y árabe",
     "languageInfo": "El suajili (kiswahili) nació en la costa de África Oriental, y el archipiélago de Zanzíbar desempeñó un papel central en su desarrollo como lengua comercial. El dialecto zanzibareño del suajili (kiunguja) se considera el estándar de prestigio: es el dialecto que se usa en los medios formales en suajili y en su enseñanza en todo el mundo. La influencia árabe es fuerte tras siglos de dominio omaní, y las expresiones árabes están entretejidas en el suajili cotidiano. El inglés se habla en el sector turístico.",
     "nickname": "La Isla de las Especias",
-    "transportation": "Dala-dalas & Tuk-tuks",
+    "transportation": "Dala-dalas y tuk-tuks",
     "transportationFact": "Stone Town se recorre mejor a pie: en muchos lugares sus estrechos callejones son demasiado angostos para los coches, y perderse por sus calles sinuosas es uno de los grandes placeres de la visita. Los dala-dalas (minibuses compartidos) cubren rutas hacia las playas y los pueblos de la isla. Los tuk-tuks son el principal medio de transporte turístico dentro del casco antiguo y sus alrededores. Puede alquilar bicicletas y scooters para explorar la isla a su propio ritmo. Los tradicionales dhows todavía navegan entre las islas."
   },
   "Zurich": {
@@ -2154,7 +2154,7 @@
     "language": "Alemán suizo, francés e italiano",
     "languageInfo": "Suiza tiene cuatro idiomas nacionales: alemán, francés, italiano y romanche. Zúrich está en la parte germanoparlante del país, pero el idioma hablado a diario es el alemán suizo (Schweizerdeutsch), un conjunto de dialectos regionales que difieren notablemente del alto alemán estándar. El alemán estándar se usa por escrito y en contextos formales, mientras que el inglés se habla muy ampliamente como cuarto idioma.",
     "nickname": "Little Big City",
-    "transportation": "ZVV Trams & S-Bahn",
+    "transportation": "Tranvías ZVV y S-Bahn",
     "transportationFact": "Zúrich cuenta con una de las redes de transporte público más puntuales y completas del mundo. La ZVV (Zürcher Verkehrsverbund) integra tranvías, autobuses, trenes de cercanías S-Bahn, barcos del lago y teleféricos en un único sistema de tarifas. Los tranvías eléctricos recorren el centro de la ciudad de forma ininterrumpida desde 1882. Los trenes circulan con la legendaria precisión suiza: un retraso de dos minutos se considera importante y se informa públicamente."
   },
   "University of Melbourne": {
