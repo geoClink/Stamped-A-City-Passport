@@ -52,6 +52,29 @@ final class TranslatedCityDetailsTests: XCTestCase {
         }
     }
 
+    // In each language, a currency reads the same in every city and keeps the English symbol.
+    // The same currency used to be translated in one city and left in English in the next,
+    // and one Chinese entry had a broken symbol: "(Î.Í)" instead of "(د.إ)".
+    func testCurrencyNamesAreConsistent() throws {
+        let english = try englishDetails()
+        for language in translatedLanguages {
+            let translated = try details(for: language)
+            var namesByEnglish: [String: Set<String>] = [:]
+            for (place, englishFields) in english {
+                guard let englishName = englishFields["currencyInfo"],
+                      let name = translated[place]?["currencyInfo"] else { continue }
+                namesByEnglish[englishName, default: []].insert(name)
+                // The symbol in brackets, for example "(€)", must match the English exactly
+                if let symbol = englishName.range(of: #"\(.*\)$"#, options: .regularExpression) {
+                    XCTAssertTrue(name.hasSuffix(String(englishName[symbol])),
+                                  "\(language) \(place): '\(name)' should end with \(englishName[symbol])")
+                }
+            }
+            let mixed = namesByEnglish.filter { $0.value.count > 1 }
+            XCTAssertTrue(mixed.isEmpty, "\(language): one currency written several ways: \(mixed)")
+        }
+    }
+
     // Every long description in a translated language differs from the English one
     func testLongDescriptionsAreTranslated() throws {
         let english = try englishDetails()
