@@ -15,7 +15,7 @@ final class TranslatedCityDetailsTests: XCTestCase {
 
     /// Languages whose long descriptions are fully translated. Add a language here
     /// once its CityDetails.json has been translated, so it can't slip back.
-    private let translatedLanguages = ["es", "de", "fr", "it", "pt"]
+    private let translatedLanguages = ["es", "de", "fr", "it", "pt", "ja", "ko", "zh-Hans"]
 
     /// The long fields. Short ones (airport name, nickname, transit name) are often
     /// proper names that stay the same in every language, so they aren't checked.
