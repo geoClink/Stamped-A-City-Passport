@@ -53,11 +53,17 @@ final class ReleaseReadinessTests: XCTestCase {
     // Every language's CityDetails.json has every city and campus, otherwise that
     // language shows placeholder details ("---" airport, empty facts) for the missing one
     func testEveryLanguageHasEveryCitysDetails() throws {
-        let languages = Bundle.main.localizations.filter { $0 != "Base" }
+        // English sits at the top of the bundle; every other language has its own .lproj copy
+        let languages = Bundle.main.localizations.filter { $0 != "Base" && $0 != "en" }
         XCTAssertFalse(languages.isEmpty, "No app languages found")
         for language in languages {
-            guard let url = Bundle.main.url(forResource: "CityDetails", withExtension: "json",
-                                            subdirectory: nil, localization: language) else { continue }
+            // The path is built by hand on purpose: Bundle.url(forResource:withExtension:subdirectory:localization:)
+            // returns the top-level English file whenever one exists, so it would always check English.
+            let url = Bundle.main.bundleURL.appendingPathComponent("\(language).lproj/CityDetails.json")
+            guard FileManager.default.fileExists(atPath: url.path) else {
+                XCTFail("\(language).lproj/CityDetails.json isn't in the app")
+                continue
+            }
             let details = try JSONDecoder().decode(
                 [String: CityLocation.City.CityDetails].self, from: Data(contentsOf: url)
             )
