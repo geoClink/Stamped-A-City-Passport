@@ -75,6 +75,23 @@ final class TranslatedCityDetailsTests: XCTestCase {
         }
     }
 
+    // A nickname shared by several places reads the same in each language
+    // ('The White City' was 'La Ciudad Blanca' in one city and 'La ciudad blanca' in another)
+    func testSharedNicknamesReadTheSame() throws {
+        let english = try englishDetails()
+        for language in translatedLanguages {
+            let translated = try details(for: language)
+            var namesByEnglish: [String: Set<String>] = [:]
+            for (place, englishFields) in english {
+                guard let englishName = englishFields["nickname"],
+                      let name = translated[place]?["nickname"] else { continue }
+                namesByEnglish[englishName, default: []].insert(name)
+            }
+            let mixed = namesByEnglish.filter { $0.value.count > 1 }
+            XCTAssertTrue(mixed.isEmpty, "\(language): one nickname written several ways: \(mixed)")
+        }
+    }
+
     // Transit brand names stay as they are. Word-by-word translation once turned Dallas's
     // DART into 'PFEIL' (arrow), Denver's RTD into '热电阻' (a thermometer part), Toronto's
     // TTC into '电讯委员会' (telecoms commission) and the First Bus company into 'first bus'.
