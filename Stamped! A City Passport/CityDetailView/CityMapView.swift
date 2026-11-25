@@ -311,9 +311,18 @@ struct CityMapView: View {
                 .padding(.bottom, DS.Space.s)
                 .transition(cardTransition)
             } else {
+                #if os(macOS)
+                // On Mac the compass and pitch toggle sit in the bottom-right corner, so
+                // the key goes bottom-left, just above the Apple Maps legal text
+                legendButton
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal)
+                    .padding(.bottom, 36)
+                #else
                 legendButton
                     .frame(maxWidth: .infinity, alignment: .trailing)
                     .padding()
+                #endif
             }
         }
         .overlay(alignment: .top) {

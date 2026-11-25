@@ -33,17 +33,22 @@ struct CityListVisionView: View {
 
     var body: some View {
         NavigationSplitView {
-            List(filteredCities, id: \.self, selection: $selectedCity) { city in
-                CityRow(
-                    cityName: city,
-                    visitedCount: store.visitedCount(for: city),
-                    total: store.buildings(for: city).count
-                )
-            }
-            // Today in history at the app's landmarks and cities
-            .safeAreaInset(edge: .top) {
-                OnThisDayCard(landmarks: store.buildingsByCity.mapValues { $0.map(\.name) },
-                              cities: store.cityNames) { city in selectedCity = city }
+            List(selection: $selectedCity) {
+                // Today in history at the app's landmarks and cities. A plain row (not a
+                // pinned inset) so it scrolls away with the list instead of covering it.
+                if searchText.isEmpty {
+                    OnThisDayCard(landmarks: store.buildingsByCity.mapValues { $0.map(\.name) },
+                                  cities: store.cityNames) { city in selectedCity = city }
+                        .listRowBackground(Color.clear)
+                        .listRowInsets(EdgeInsets(top: 4, leading: 0, bottom: 8, trailing: 0))
+                }
+                ForEach(filteredCities, id: \.self) { city in
+                    CityRow(
+                        cityName: city,
+                        visitedCount: store.visitedCount(for: city),
+                        total: store.buildings(for: city).count
+                    )
+                }
             }
             .navigationTitle("Stamped!")
             .searchable(text: $searchText, prompt: "Search cities")
