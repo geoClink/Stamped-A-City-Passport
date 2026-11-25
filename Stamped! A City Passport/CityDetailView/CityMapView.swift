@@ -1352,11 +1352,19 @@ private struct MapLandmarkCard: View {
 
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
+    /// The landmark photo beside the name. Bigger on Mac, where the card has no
+    /// street-level strip and there's room for it.
+    #if os(macOS)
+    private static let photoSize: CGFloat = 120
+    #else
+    private static let photoSize: CGFloat = 84
+    #endif
+
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(alignment: .top, spacing: 12) {
-                WikiBuildingPhoto(building: building, height: 84)
-                    .frame(width: 84)
+                WikiBuildingPhoto(building: building, height: Self.photoSize)
+                    .frame(width: Self.photoSize)
                     .clipShape(RoundedRectangle(cornerRadius: DS.Radius.small))
                     // New identity per building, so the photo reloads instead of
                     // keeping the previous landmark's image when the card switches
