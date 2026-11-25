@@ -275,11 +275,14 @@ struct LookAroundPreviewWrapper: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> MKLookAroundViewController {
         let vc = MKLookAroundViewController(scene: scene)
         vc.showsRoadLabels = true
+        vc.isNavigationEnabled = true   // drag to look around, click to move along the street
         return vc
     }
 
     func updateUIViewController(_ uiViewController: MKLookAroundViewController, context: Context) {
-        uiViewController.scene = scene
+        // Only a different landmark's scene: setting it again on every SwiftUI refresh
+        // puts the viewer back where it started, so dragging around never sticks
+        if uiViewController.scene !== scene { uiViewController.scene = scene }
     }
 }
 

@@ -360,8 +360,8 @@ struct CityMapView: View {
         .task(id: selectionKey) {
             lookAroundScene = nil
             guard let target = selectionCoordinate else { return }
-            let request = MKLookAroundSceneRequest(coordinate: target)
-            lookAroundScene = try? await request.scene
+            lookAroundScene = await LandmarkLookAround.scene(
+                named: selectedBuilding?.name ?? selectedPlace?.name, at: target)
         }
         // Tapped an Apple Maps place: close any Stamped card and load the place's details
         #if os(iOS)
@@ -397,6 +397,10 @@ struct CityMapView: View {
                 ZStack(alignment: .topTrailing) {
                     LookAroundPreviewWrapper(scene: scene)
                         .ignoresSafeArea()
+                        #if os(macOS)
+                        // A Mac sheet, so give it the room a full-screen cover gets on iPhone
+                        .frame(minWidth: 1100, minHeight: 720)
+                        #endif
                     Button("Done") { showingLookAround = false }
                         .font(.body.weight(.semibold))
                         .padding(.horizontal, DS.Space.l).padding(.vertical, DS.Space.s)
@@ -1380,10 +1384,16 @@ private struct MapLandmarkCard: View {
             // Small street-level preview. Tapping it opens Look Around full screen.
             if let lookAroundScene {
                 CardLookAroundPreview(scene: lookAroundScene)
-                    .frame(height: 110)
+                    // Tall enough to show a tall building, not just its front door
+                    .frame(height: 160)
                     .clipShape(RoundedRectangle(cornerRadius: DS.Radius.small))
-                    .contentShape(RoundedRectangle(cornerRadius: DS.Radius.small))
-                    .onTapGesture(perform: onLookAround)
+                    // A clear layer on top takes the tap: on Mac, Apple's Look Around view
+                    // keeps mouse clicks for itself, so a tap gesture on it never fires
+                    .overlay {
+                        Color.clear
+                            .contentShape(RoundedRectangle(cornerRadius: DS.Radius.small))
+                            .onTapGesture(perform: onLookAround)
+                    }
                     // A fresh preview per landmark, so it doesn't keep the previous street
                     .id(building.id)
                     .accessibilityLabel("Look Around preview of \(building.name)")
@@ -1403,14 +1413,13 @@ private struct MapLandmarkCard: View {
                 QuickAction(title: "Look Around", systemImage: "binoculars",
                             isOn: false, action: onLookAround)
                     .disabled(lookAroundScene == nil)
-                    .opacity(lookAroundScene == nil ? 0.4 : 1)
             }
 
             HStack(spacing: 8) {
                 Button(action: onPrevious) {
                     Image(systemName: "chevron.left").frame(width: 28, height: 28)
                 }
-                .buttonStyle(.bordered)
+                .buttonStyle(MapCardButtonStyle())
                 .accessibilityLabel("Previous landmark")
 
                 Button(action: onViewDetails) {
@@ -1419,7 +1428,7 @@ private struct MapLandmarkCard: View {
                         // minHeight, so the label can grow with large text
                         .frame(minHeight: 28)
                 }
-                .buttonStyle(.borderedProminent)
+                .buttonStyle(MapCardButtonStyle(filled: true))
                 .accessibilityHint("Opens the full page for \(building.name)")
 
                 // Transit directions in Apple Maps
@@ -1427,7 +1436,7 @@ private struct MapLandmarkCard: View {
                     Button { GetThere.open(building) } label: {
                         Image(systemName: "tram.fill").frame(width: 28, height: 28)
                     }
-                    .buttonStyle(.bordered)
+                    .buttonStyle(MapCardButtonStyle())
                     .accessibilityLabel("Get There")
                     .accessibilityHint("Opens transit directions to \(building.name) in Apple Maps")
                 }
@@ -1435,7 +1444,7 @@ private struct MapLandmarkCard: View {
                 Button(action: onNext) {
                     Image(systemName: "chevron.right").frame(width: 28, height: 28)
                 }
-                .buttonStyle(.bordered)
+                .buttonStyle(MapCardButtonStyle())
                 .accessibilityLabel("Next landmark")
             }
 
@@ -1475,21 +1484,49 @@ private struct QuickAction: View {
             VStack(spacing: 4) {
                 Image(systemName: systemImage)
                     .font(.title3)
+                    // Same height for every symbol, so the tiles line up (the suitcase is taller)
+                    .frame(height: 24)
                     .contentTransition(.symbolEffect(.replace))
                     // The title says it; VoiceOver shouldn't read the symbol's name too
                     .accessibilityHidden(true)
                 Text(title)
                     .font(.caption2.weight(.semibold))
+                    // The icon carries the orange; the label stays readable on the card surface
+                    .foregroundStyle(isOn ? Color.white : Color.primary)
                     .lineLimit(dynamicTypeSize.isAccessibilitySize ? 2 : 1)
                     .minimumScaleFactor(0.8)
             }
             .frame(maxWidth: .infinity)
             .padding(.vertical, DS.Space.s)
         }
-        .buttonStyle(.bordered)
-        .foregroundStyle(isOn ? Color.white : Color.adventureOrange)
-        .background(isOn ? Color.adventureOrange : Color.clear, in: RoundedRectangle(cornerRadius: DS.Radius.small))
+        .buttonStyle(MapCardButtonStyle(filled: isOn))
         .accessibilityAddTraits(isOn ? .isSelected : [])
+    }
+}
+
+/// The map cards' buttons, drawn the same on iPhone, iPad and Mac. The system's bordered
+/// styles look different on each (on Mac a gray bezel over the orange, faded when the window
+/// isn't focused), so the cards draw their own: solid orange with white for the main or "on"
+/// action, the card surface with an orange icon for the rest.
+private struct MapCardButtonStyle: ButtonStyle {
+    var filled = false
+    var tint: Color = .adventureOrange
+
+    @Environment(\.isEnabled) private var isEnabled
+    @Environment(\.colorSchemeContrast) private var contrast
+
+    func makeBody(configuration: Configuration) -> some View {
+        let shape = RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
+        configuration.label
+            .font(filled ? .body.weight(.semibold) : nil)
+            .padding(.horizontal, DS.Space.s)
+            .padding(.vertical, 6)
+            .foregroundStyle(filled ? Color.white : tint)
+            // Off: the solid card surface (as DSActionTileStyle), which stays crisp over the map
+            .background(shape.fill(filled ? tint : DS.Palette.cardBackground))
+            .overlay(shape.stroke(contrast == .increased && !filled ? Color.primary : .clear, lineWidth: 1.5))
+            .contentShape(shape)
+            .opacity(configuration.isPressed ? 0.75 : (isEnabled ? 1 : 0.4))
     }
 }
 
@@ -1513,6 +1550,38 @@ private struct QuickActionRow<Content: View>: View {
 
 // MARK: - Look Around preview
 
+/// Street-level imagery that looks at the landmark. A request by coordinate gets the nearest
+/// panorama facing any direction (often a fence or the next building), so we first look the
+/// place up by name nearby: a scene for an Apple Maps place is framed on that place, as in
+/// Apple Maps. Falls back to the coordinate when Apple has no matching place.
+enum LandmarkLookAround {
+    static func scene(named name: String?, at coordinate: CLLocationCoordinate2D) async -> MKLookAroundScene? {
+        if let name, !name.isEmpty, let item = await place(named: name, near: coordinate),
+           let scene = try? await MKLookAroundSceneRequest(mapItem: item).scene {
+            return scene
+        }
+        return try? await MKLookAroundSceneRequest(coordinate: coordinate).scene
+    }
+
+    /// The Apple Maps place with this name within about 250 m of the landmark
+    private static func place(named name: String, near coordinate: CLLocationCoordinate2D) async -> MKMapItem? {
+        let request = MKLocalSearch.Request()
+        request.naturalLanguageQuery = name
+        request.region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 600, longitudinalMeters: 600)
+        guard let items = try? await MKLocalSearch(request: request).start().mapItems else { return nil }
+        let here = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        return items.first { item in
+            let c: CLLocationCoordinate2D
+            if #available(iOS 26.0, macOS 26.0, visionOS 26.0, *) {
+                c = item.location.coordinate
+            } else {
+                c = item.placemark.coordinate
+            }
+            return CLLocation(latitude: c.latitude, longitude: c.longitude).distance(from: here) < 250
+        }
+    }
+}
+
 /// The card's small street-level picture. SwiftUI's LookAroundPreview shows
 /// full-screen Look Around's close button, compass and street name on iPad,
 /// because the iPad is a "regular width" screen. Wrapping Apple's view controller
@@ -1532,7 +1601,9 @@ private struct CardLookAroundPreview: UIViewControllerRepresentable {
     }
 
     func updateUIViewController(_ controller: MKLookAroundViewController, context: Context) {
-        controller.scene = scene
+        // Only a different landmark's scene: setting it again on every SwiftUI refresh
+        // puts the viewer back where it started, so dragging around never sticks
+        if controller.scene !== scene { controller.scene = scene }
     }
 }
 
@@ -1634,7 +1705,6 @@ private struct CustomPlaceCard: View {
             QuickActionRow {
                 QuickAction(title: "Look Around", systemImage: "binoculars", isOn: false, action: onLookAround)
                     .disabled(!hasLookAround)
-                    .opacity(hasLookAround ? 1 : 0.4)
                 if let website = place.websiteURL {
                     QuickAction(title: "Website", systemImage: "safari", isOn: false) { onOpenWebPage(website) }
                 }
@@ -1655,13 +1725,14 @@ private struct CustomPlaceCard: View {
                 Button(action: onAddToTrip) {
                     Label("Add to Trip", systemImage: "suitcase.rolling")
                         .frame(maxWidth: .infinity)
+                        .frame(minHeight: 28)
                 }
-                .buttonStyle(.borderedProminent)
+                .buttonStyle(MapCardButtonStyle(filled: true))
 
                 Button(role: .destructive, action: onRemove) {
-                    Image(systemName: "heart.slash")
+                    Image(systemName: "heart.slash").frame(width: 28, height: 28)
                 }
-                .buttonStyle(.bordered)
+                .buttonStyle(MapCardButtonStyle(tint: .red))
                 .accessibilityLabel("Remove from Want to Visit")
             }
         }

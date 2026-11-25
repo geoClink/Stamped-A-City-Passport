@@ -175,10 +175,8 @@ struct BuildingDetailView: View {
 
     private func fetchLookAroundScene() async {
         guard let lat = building.latitude, let lon = building.longitude else { return }
-        let request = MKLookAroundSceneRequest(
-            coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon)
-        )
-        lookAroundScene = try? await request.scene
+        lookAroundScene = await LandmarkLookAround.scene(
+            named: building.name, at: CLLocationCoordinate2D(latitude: lat, longitude: lon))
     }
 
     private func fetchNearbyVenues() async {
@@ -1114,6 +1112,7 @@ private struct LookAroundViewer: UIViewControllerRepresentable {
     }
 
     func updateUIViewController(_ vc: MKLookAroundViewController, context: Context) {
-        vc.scene = scene
+        // Only a different scene: setting it on every refresh resets where you've looked
+        if vc.scene !== scene { vc.scene = scene }
     }
 }
