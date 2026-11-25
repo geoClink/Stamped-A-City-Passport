@@ -49,3 +49,8 @@ screenshots/
 tools/detroit-model/output/
 Tally-AVP/Secrets.plist
 Stamped! A City Passport/Resources/Secrets.plist
+
+# Private correspondence drafts stay out of this public repo.
+# Keep them outside the project, for example in ~/Documents/Stamped-private-drafts.
+docs/reuther-library/*.md
+docs/archive-outreach/*-drafts.md
