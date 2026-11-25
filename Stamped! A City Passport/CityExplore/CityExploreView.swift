@@ -276,6 +276,8 @@ struct LookAroundPreviewWrapper: UIViewControllerRepresentable {
         let vc = MKLookAroundViewController(scene: scene)
         vc.showsRoadLabels = true
         vc.isNavigationEnabled = true   // drag to look around, click to move along the street
+        // The viewer runs under the status bar: Apple's "Look Around" badge would sit behind the clock
+        vc.badgePosition = .bottomTrailing
         return vc
     }
 

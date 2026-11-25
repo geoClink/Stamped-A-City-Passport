@@ -14,6 +14,9 @@
 //
 
 import SwiftUI
+#if os(macOS)
+import AppKit
+#endif
 import MapKit
 
 struct CityMapView: View {
@@ -392,15 +395,20 @@ struct CityMapView: View {
                     .dsLargeSheet()
             }
         }
+        #if os(macOS)
+        // Mac: Look Around inside an app shows a still picture (it can't be moved), so the
+        // button opens the landmark in Apple Maps, where Look Around works
+        .onChange(of: showingLookAround) { _, show in
+            guard show, let target = selectionCoordinate else { return }
+            showingLookAround = false
+            LandmarkLookAround.openInAppleMaps(name: selectedBuilding?.name ?? selectedPlace?.name, at: target)
+        }
+        #else
         .fullScreenCover(isPresented: $showingLookAround) {
             if let scene = lookAroundScene {
                 ZStack(alignment: .topTrailing) {
                     LookAroundPreviewWrapper(scene: scene)
                         .ignoresSafeArea()
-                        #if os(macOS)
-                        // A Mac sheet, so give it the room a full-screen cover gets on iPhone
-                        .frame(minWidth: 1100, minHeight: 720)
-                        #endif
                     Button("Done") { showingLookAround = false }
                         .font(.body.weight(.semibold))
                         .padding(.horizontal, DS.Space.l).padding(.vertical, DS.Space.s)
@@ -409,6 +417,7 @@ struct CityMapView: View {
                 }
             }
         }
+        #endif
         .sheet(item: $addToTrip) { request in
             AddToTripSheet(cityName: cityName, stop: request.stop, stopName: request.name)
         }
@@ -1381,14 +1390,16 @@ private struct MapLandmarkCard: View {
                 .accessibilityLabel("Close")
             }
 
-            // Small street-level preview. Tapping it opens Look Around full screen.
+            #if !os(macOS)
+            // Small street-level preview (not on Mac, where Look Around opens Apple Maps
+            // and a still picture here would add nothing). Tapping it opens Look Around.
             if let lookAroundScene {
                 CardLookAroundPreview(scene: lookAroundScene)
                     // Tall enough to show a tall building, not just its front door
                     .frame(height: 160)
                     .clipShape(RoundedRectangle(cornerRadius: DS.Radius.small))
-                    // A clear layer on top takes the tap: on Mac, Apple's Look Around view
-                    // keeps mouse clicks for itself, so a tap gesture on it never fires
+                    // A clear layer on top takes the tap, so it opens Look Around
+                    // instead of being swallowed by Apple's view underneath
                     .overlay {
                         Color.clear
                             .contentShape(RoundedRectangle(cornerRadius: DS.Radius.small))
@@ -1399,6 +1410,7 @@ private struct MapLandmarkCard: View {
                     .accessibilityLabel("Look Around preview of \(building.name)")
                     .accessibilityAddTraits(.isButton)
             }
+            #endif
 
             // Quick actions: four across, or two by two with very large text
             QuickActionRow {
@@ -1410,9 +1422,12 @@ private struct MapLandmarkCard: View {
                             isOn: isWishlisted, action: onWishlist)
                 QuickAction(title: "Add to Trip", systemImage: "suitcase.rolling",
                             isOn: false, action: onAddToTrip)
-                QuickAction(title: "Look Around", systemImage: "binoculars",
+                QuickAction(title: "Look Around", systemImage: LandmarkLookAround.buttonSymbol,
                             isOn: false, action: onLookAround)
                     .disabled(lookAroundScene == nil)
+                    #if os(macOS)
+                    .help(LandmarkLookAround.macHelp)
+                    #endif
             }
 
             HStack(spacing: 8) {
@@ -1563,6 +1578,24 @@ enum LandmarkLookAround {
         return try? await MKLookAroundSceneRequest(coordinate: coordinate).scene
     }
 
+    #if os(macOS)
+    /// Opens the place in Apple Maps (Look Around is one click away there)
+    static func openInAppleMaps(name: String?, at coordinate: CLLocationCoordinate2D) {
+        var components = URLComponents(string: "https://maps.apple.com/")!
+        components.queryItems = [URLQueryItem(name: "ll", value: "\(coordinate.latitude),\(coordinate.longitude)")]
+        if let name, !name.isEmpty { components.queryItems?.append(URLQueryItem(name: "q", value: name)) }
+        if let url = components.url { NSWorkspace.shared.open(url) }
+    }
+    #endif
+
+    /// The Look Around button's symbol: on Mac it leaves the app for Apple Maps, so it says so
+    #if os(macOS)
+    static let buttonSymbol = "arrow.up.forward.app"
+    static let macHelp = "Opens this place in Apple Maps, where you can look around"
+    #else
+    static let buttonSymbol = "binoculars"
+    #endif
+
     /// The Apple Maps place with this name within about 250 m of the landmark
     private static func place(named name: String, near coordinate: CLLocationCoordinate2D) async -> MKMapItem? {
         let request = MKLocalSearch.Request()
@@ -1703,8 +1736,11 @@ private struct CustomPlaceCard: View {
             }
 
             QuickActionRow {
-                QuickAction(title: "Look Around", systemImage: "binoculars", isOn: false, action: onLookAround)
+                QuickAction(title: "Look Around", systemImage: LandmarkLookAround.buttonSymbol, isOn: false, action: onLookAround)
                     .disabled(!hasLookAround)
+                    #if os(macOS)
+                    .help(LandmarkLookAround.macHelp)
+                    #endif
                 if let website = place.websiteURL {
                     QuickAction(title: "Website", systemImage: "safari", isOn: false) { onOpenWebPage(website) }
                 }

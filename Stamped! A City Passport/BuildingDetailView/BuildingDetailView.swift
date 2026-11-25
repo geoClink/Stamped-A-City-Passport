@@ -123,11 +123,22 @@ struct BuildingDetailView: View {
         } message: {
             Text(L.Building.deletePhotoMessage)
         }
+        #if os(macOS)
+        // Mac: Look Around inside an app shows a still picture (it can't be moved), so the
+        // button opens the landmark in Apple Maps, where Look Around works
+        .onChange(of: showingLookAround) { _, show in
+            guard show, let lat = building.latitude, let lon = building.longitude else { return }
+            showingLookAround = false
+            LandmarkLookAround.openInAppleMaps(name: building.name,
+                                               at: CLLocationCoordinate2D(latitude: lat, longitude: lon))
+        }
+        #else
         .fullScreenCover(isPresented: $showingLookAround) {
             if let scene = lookAroundScene {
                 LookAroundSheet(scene: scene, buildingName: building.name)
             }
         }
+        #endif
         #if os(iOS)
         .sheet(isPresented: $showingScan) {
             ScanBuildingView(building: building, cityName: viewModel.city.name)
@@ -960,11 +971,21 @@ extension BuildingDetailView {
             HapticManager.shared.trigger(.selection)
             showingLookAround = true
         } label: {
+            #if os(macOS)
+            // On Mac this opens the Apple Maps app, so the label says so
+            Label("Look Around in Maps", systemImage: "arrow.up.forward.app")
+            #else
             Label("Look Around", systemImage: "binoculars.fill")
+            #endif
         }
         .buttonStyle(DSActionTileStyle(tint: brandColor, isHighContrast: isHighContrast))
         .accessibilityLabel("Look Around — street-level view near \(building.name)")
+        #if os(macOS)
+        .accessibilityHint("Opens Apple Maps")
+        .help(LandmarkLookAround.macHelp)
+        #else
         .accessibilityHint("Opens Apple Maps Look Around viewer")
+        #endif
     }
 
     // MARK: - Report Issue
@@ -1108,6 +1129,8 @@ private struct LookAroundViewer: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> MKLookAroundViewController {
         let vc = MKLookAroundViewController(scene: scene)
         vc.showsRoadLabels = true
+        // The viewer runs under the status bar: Apple's "Look Around" badge would sit behind the clock
+        vc.badgePosition = .bottomTrailing
         return vc
     }
 
