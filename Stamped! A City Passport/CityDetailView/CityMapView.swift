@@ -1430,11 +1430,13 @@ private struct MapLandmarkCard: View {
                             isOn: isWishlisted, action: onWishlist)
                 QuickAction(title: "Add to Trip", systemImage: "suitcase.rolling",
                             isOn: false, action: onAddToTrip)
-                QuickAction(title: "Look Around", systemImage: LandmarkLookAround.buttonSymbol,
+                QuickAction(title: LandmarkLookAround.buttonTitle, systemImage: LandmarkLookAround.buttonSymbol,
                             isOn: false, action: onLookAround)
-                    .disabled(lookAroundScene == nil)
                     #if os(macOS)
+                    // Any landmark can open in Maps, street imagery or not
                     .help(LandmarkLookAround.macHelp)
+                    #else
+                    .disabled(lookAroundScene == nil)
                     #endif
             }
 
@@ -1596,11 +1598,13 @@ enum LandmarkLookAround {
     }
     #endif
 
-    /// The Look Around button's symbol: on Mac it leaves the app for Apple Maps, so it says so
+    /// The Look Around button: on Mac it leaves the app for Apple Maps, so it says so
     #if os(macOS)
+    static let buttonTitle = "Open in Maps"
     static let buttonSymbol = "arrow.up.forward.app"
     static let macHelp = "Opens this place in Apple Maps, where you can look around"
     #else
+    static let buttonTitle = "Look Around"
     static let buttonSymbol = "binoculars"
     #endif
 
@@ -1744,10 +1748,12 @@ private struct CustomPlaceCard: View {
             }
 
             QuickActionRow {
-                QuickAction(title: "Look Around", systemImage: LandmarkLookAround.buttonSymbol, isOn: false, action: onLookAround)
-                    .disabled(!hasLookAround)
+                QuickAction(title: LandmarkLookAround.buttonTitle, systemImage: LandmarkLookAround.buttonSymbol,
+                            isOn: false, action: onLookAround)
                     #if os(macOS)
                     .help(LandmarkLookAround.macHelp)
+                    #else
+                    .disabled(!hasLookAround)
                     #endif
                 if let website = place.websiteURL {
                     QuickAction(title: "Website", systemImage: "safari", isOn: false) { onOpenWebPage(website) }

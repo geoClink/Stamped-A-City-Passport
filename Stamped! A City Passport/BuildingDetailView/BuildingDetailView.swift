@@ -530,9 +530,16 @@ extension BuildingDetailView {
             bottomActionButton
             layout {
                 wishlistButton
+                #if os(macOS)
+                // Mac: Open in Maps, for any landmark on the map
+                if building.latitude != nil && building.longitude != nil {
+                    lookAroundButton
+                }
+                #else
                 if lookAroundScene != nil {
                     lookAroundButton
                 }
+                #endif
                 if GetThere.canRoute(to: building) {
                     getThereButton
                 }
@@ -973,7 +980,7 @@ extension BuildingDetailView {
         } label: {
             #if os(macOS)
             // On Mac this opens the Apple Maps app, so the label says so
-            Label("Look Around in Maps", systemImage: "arrow.up.forward.app")
+            Label("Open in Maps", systemImage: "arrow.up.forward.app")
             #else
             Label("Look Around", systemImage: "binoculars.fill")
             #endif
