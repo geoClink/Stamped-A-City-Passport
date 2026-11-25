@@ -54,7 +54,7 @@ struct CityListView: View {
     @State var columnVisibility = NavigationSplitViewVisibility.all
     
     var isHighContrast: Bool { manualHighContrast || systemContrast == .increased }
-    var isIPad: Bool { DeviceInfo.isLargeScreen }
+    @Environment(\.hasRoomForWideLayout) var hasRoomForWideLayout
     var brandColor: Color { isHighContrast ? .primary : Color.adventureOrange }
 
     var body: some View {

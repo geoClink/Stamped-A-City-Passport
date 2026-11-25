@@ -22,7 +22,7 @@ struct QuizView: View {
     private var isHighContrast: Bool { manualHighContrast || systemContrast == .increased }
     private var reduceMotion: Bool { manualReduceMotion || systemReduceMotion }
     private var brandColor: Color { isHighContrast ? .primary : Color.adventureOrange }
-    private var isIPad: Bool { DeviceInfo.isLargeScreen }
+    @Environment(\.hasRoomForWideLayout) private var hasRoomForWideLayout
 
     @ScaledMetric(relativeTo: .subheadline) private var factIconSize: CGFloat = 20
     @ScaledMetric(relativeTo: .headline) private var missIconSize: CGFloat = 16
@@ -37,7 +37,7 @@ struct QuizView: View {
     var body: some View {
         GeometryReader { proxy in
             let isPortrait = proxy.size.height > proxy.size.width
-            let useSideBySide = isIPad && horizontalSizeClass == .regular && !isPortrait
+            let useSideBySide = hasRoomForWideLayout && horizontalSizeClass == .regular && !isPortrait
             
             NavigationStack {
                 ZStack {
@@ -182,7 +182,7 @@ private extension QuizView {
                     .tracking(2)
                 
                 Text(viewModel.promptText)
-                    .font(.system(isIPad ? .title : .headline, design: .serif))
+                    .font(.system(hasRoomForWideLayout ? .title : .headline, design: .serif))
                     .fontWeight(isHighContrast ? .black : .bold)
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
@@ -251,7 +251,7 @@ private extension QuizView {
     @ViewBuilder
     func answerButtonSection(useSideBySide: Bool, isPortrait: Bool) -> some View {
         Group {
-            if isIPad && !isPortrait {
+            if hasRoomForWideLayout && !isPortrait {
                 LazyVGrid(columns: [GridItem(.flexible(), spacing: 20), GridItem(.flexible(), spacing: 20)], spacing: 16) {
                     buttonsContent
                 }
@@ -275,7 +275,7 @@ private extension QuizView {
             } label: {
                 HStack(spacing: 12) {
                     Text(option)
-                        .font(.system(isIPad ? .title3 : .body, design: .rounded))
+                        .font(.system(hasRoomForWideLayout ? .title3 : .body, design: .rounded))
                         .fontWeight(isHighContrast ? .black : .bold)
                         .multilineTextAlignment(.leading)
                         // At accessibility sizes the answer wraps instead of being cut off
@@ -290,7 +290,7 @@ private extension QuizView {
                 .padding(.vertical, 18)
                 .frame(maxWidth: .infinity)
                 // Fixed height normally; grows with the text at accessibility sizes
-                .frame(height: dynamicTypeSize.isAccessibilitySize ? nil : (isIPad ? 80 : 70))
+                .frame(height: dynamicTypeSize.isAccessibilitySize ? nil : (hasRoomForWideLayout ? 80 : 70))
                 .background(
                     RoundedRectangle(cornerRadius: DS.Radius.card)
                         .fill(buttonBackgroundColor(for: option))
@@ -369,7 +369,7 @@ private extension QuizView {
                 }
                 
                 Text(viewModel.currentQuestionType == .name ? "IDENTIFICATION REQUIRED" : building.name.uppercased())
-                    .font(.system(isIPad ? .title2 : .headline, design: .serif).bold())
+                    .font(.system(hasRoomForWideLayout ? .title2 : .headline, design: .serif).bold())
                     .foregroundColor(viewModel.currentQuestionType == .name ? .secondary : .primary)
                     .italic(viewModel.currentQuestionType == .name)
                 
@@ -381,7 +381,7 @@ private extension QuizView {
                     // swaps in a different question about this building.
                     WikiBuildingPhoto(
                         building: building,
-                        height: isIPad ? 280 : 200,
+                        height: hasRoomForWideLayout ? 280 : 200,
                         accessibilityLabelText: String(localized: "Photo of the building in question"),
                         onUnavailable: { viewModel.photoUnavailable(for: building.id) }
                     )
@@ -406,7 +406,7 @@ private extension QuizView {
                     }
                 }
             }
-        .padding(isIPad ? DS.Space.section : DS.Space.xl)
+        .padding(hasRoomForWideLayout ? DS.Space.section : DS.Space.xl)
         .background(
             RoundedRectangle(cornerRadius: DS.Radius.large, style: .continuous)
                 .fill(isHighContrast ? Color(UIColor.systemBackground) : DS.Palette.cardBackground)
@@ -426,7 +426,7 @@ private extension QuizView {
             VStack(alignment: .leading, spacing: 2) {
                 Text(label).font(.system(size: tagLabelSize, weight: .black)).foregroundColor(.secondary)
                 Text(hide ? "CLASSIFIED" : value)
-                    .font(.system(isIPad ? .headline : .subheadline, design: .rounded).bold())
+                    .font(.system(hasRoomForWideLayout ? .headline : .subheadline, design: .rounded).bold())
                     .foregroundColor(hide ? brandColor.opacity(0.6) : .primary)
             }
         }
@@ -654,7 +654,7 @@ private extension QuizView {
             }
         }
         // The iPhone keeps a little extra inset; on iPad the button matches the card's width
-        .padding(.horizontal, (useSideBySide || isIPad) ? 0 : 20)
+        .padding(.horizontal, (useSideBySide || hasRoomForWideLayout) ? 0 : 20)
     }
     
     var streakCelebrationOverlay: some View {

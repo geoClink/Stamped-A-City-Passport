@@ -290,15 +290,17 @@ extension SearchFieldPlacement {
     }
 }
 
-enum DeviceInfo {
-    /// True where the roomier iPad layouts fit: iPad and Mac.
-    static var isLargeScreen: Bool {
+extension EnvironmentValues {
+    /// True where the roomier iPad-style layouts fit. On iPhone and iPad it follows the window's width, so it
+    /// changes while the app runs: an iPhone Duo unfolding gains room, an iPad in a narrow Split View loses it.
+    /// The Mac always has room; Apple Vision Pro keeps its compact layouts.
+    var hasRoomForWideLayout: Bool {
         #if os(macOS)
         true
         #elseif os(visionOS)
         false
         #else
-        UIDevice.current.userInterfaceIdiom == .pad
+        horizontalSizeClass == .regular
         #endif
     }
 }
