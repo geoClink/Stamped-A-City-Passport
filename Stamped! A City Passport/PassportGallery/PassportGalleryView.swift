@@ -33,7 +33,7 @@ struct PassportGalleryView: View {
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     
     // MARK: - Platform Detection & Adaptive Colors
-    private var isIPad: Bool { DeviceInfo.isLargeScreen }
+    @Environment(\.hasRoomForWideLayout) private var hasRoomForWideLayout
     
     private var brandColor: Color {
         if highContrast {
@@ -47,7 +47,7 @@ struct PassportGalleryView: View {
 
     var body: some View {
         Group {
-            if isIPad {
+            if hasRoomForWideLayout {
                 NavigationSplitView {
                     sidebarList
                         .navigationTitle("Countries")

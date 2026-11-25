@@ -74,12 +74,28 @@ extension TripStore {
 }
 
 extension View {
-    /// Lets this landmark be dragged on Mac and iPad. iPhone shows one screen at a time,
-    /// with nowhere to drop it, so a long press there stays the context menu only.
-    @ViewBuilder
+    /// Lets this landmark be dragged when the window is wide enough to show a trip beside it (Mac, iPad, an
+    /// unfolded iPhone Duo). A narrow screen shows one thing at a time, with nowhere to drop it, so a long press
+    /// there stays the context menu only.
     func landmarkDraggable(_ building: Building) -> some View {
-        if DeviceInfo.isLargeScreen {
-            draggable(LandmarkDragItem(buildingID: building.id)) {
+        modifier(LandmarkDraggable(building: building))
+    }
+
+    /// A trip row that takes dropped landmarks, adding them to the end of its last day.
+    func acceptsLandmarkDrops(onto trip: Trip) -> some View {
+        modifier(TripRowDropTarget(trip: trip))
+    }
+}
+
+/// Reads the window's width from the environment, which a plain View function can't do.
+private struct LandmarkDraggable: ViewModifier {
+    let building: Building
+    @Environment(\.hasRoomForWideLayout) private var hasRoomForWideLayout
+
+    @ViewBuilder
+    func body(content: Content) -> some View {
+        if hasRoomForWideLayout {
+            content.draggable(LandmarkDragItem(buildingID: building.id)) {
                 Label(building.name, systemImage: "mappin.circle.fill")
                     .font(.headline)
                     .padding(.horizontal, DS.Space.m)
@@ -87,13 +103,8 @@ extension View {
                     .background(.regularMaterial, in: Capsule())
             }
         } else {
-            self
+            content
         }
-    }
-
-    /// A trip row that takes dropped landmarks, adding them to the end of its last day.
-    func acceptsLandmarkDrops(onto trip: Trip) -> some View {
-        modifier(TripRowDropTarget(trip: trip))
     }
 }
 

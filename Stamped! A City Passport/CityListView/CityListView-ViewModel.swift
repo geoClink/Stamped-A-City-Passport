@@ -165,7 +165,7 @@ extension CityListView {
     /// On iPad every group is shown open with a section header; on iPhone it is a disclosure group.
     private func citySection(cities: [CityLocation.City], isExpanded: Binding<Bool>, header: CountryHeaderLabel) -> some View {
         Group {
-            if isIPad {
+            if hasRoomForWideLayout {
                 Section {
                     ForEach(cities) { city in
                         cityRowWrapper(city: city)
@@ -351,7 +351,7 @@ extension CityListView {
 
     var detailToolbar: some ToolbarContent {
         AppToolbarItem(placement: .navigationBarLeading) {
-            if isIPad && columnVisibility == .detailOnly {
+            if hasRoomForWideLayout && columnVisibility == .detailOnly {
                 Button {
                     HapticManager.shared.trigger(.selection)
                     withAnimation(.spring()) { columnVisibility = .all }
@@ -385,8 +385,8 @@ extension CityListView {
                     // Read as the button's value instead of a bare number
                     .accessibilityHidden(true)
             }
-            .padding(.vertical, isIPad ? 18 : 14)
-            .padding(.horizontal, isIPad ? 32 : 24)
+            .padding(.vertical, hasRoomForWideLayout ? 18 : 14)
+            .padding(.horizontal, hasRoomForWideLayout ? 32 : 24)
             .background(isHighContrast ? Color.primary : Color.adventureOrange)
             .foregroundColor(isHighContrast ? Color(UIColor.systemBackground) : .white)
             .cornerRadius(isHighContrast ? 4 : 30)
