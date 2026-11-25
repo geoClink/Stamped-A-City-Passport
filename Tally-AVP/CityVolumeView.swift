@@ -23,6 +23,7 @@ struct CityVolumeView: View {
     @Environment(\.openImmersiveSpace) private var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) private var dismissImmersiveSpace
     @Environment(\.dismissWindow)      private var dismissWindow
+    @Environment(\.openWindow)         private var openWindow
     @Environment(\.dynamicTypeSize)    private var dynamicTypeSize
 
     @AppStorage("currentImmersiveCity") private var currentImmersiveCity = "Detroit"
@@ -68,7 +69,7 @@ struct CityVolumeView: View {
             contentAlignment: .top
         ) {
             if let building = selectedBuilding {
-                buildingCard(building)
+                buildingCardWithOpen(building)
             }
         }
         // ── "Enter City" button as a bottom ornament ──────────────────────────
@@ -280,10 +281,28 @@ struct CityVolumeView: View {
                     .padding(.top, 2)
             }
         }
+        .accessibilityElement(children: .combine)
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    /// The preview plus a button to the full landmark card (the same window the map opens)
+    private func buildingCardWithOpen(_ building: Building) -> some View {
+        VStack(alignment: .leading, spacing: 14) {
+            buildingCard(building)
+            Button {
+                LandmarkSelection.shared.show(building, in: cityName)
+                openWindow(id: LandmarkWindowView.windowID)
+            } label: {
+                Label("Open Landmark", systemImage: "building.columns.fill")
+                    .font(.subheadline.bold())
+            }
+            .buttonStyle(.bordered)
+            .tint(DS.Palette.accent)
+            .accessibilityHint("Shows the full card with photos, history and the story")
+        }
         .padding(20)
         .frame(minWidth: 300, maxWidth: 380)
         .glassBackgroundEffect(in: RoundedRectangle(cornerRadius: 16))
-        .accessibilityElement(children: .combine)
     }
 }
 
